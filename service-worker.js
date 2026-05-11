@@ -1,4 +1,4 @@
-const CACHE = 'deutsch-meister-v10';
+const CACHE = 'deutsch-meister-v11';
 const BASE = '/deutsch-meister';
 
 const STATIC = [
@@ -12,6 +12,8 @@ const STATIC = [
   BASE + '/js/lesson-render.js',
   BASE + '/js/exercises.js',
   BASE + '/js/flashcards.js',
+  BASE + '/js/tts.js',
+  BASE + '/js/telegram.js',
   BASE + '/icons/icon.svg',
 ];
 
