@@ -372,33 +372,27 @@ window.addEventListener('DOMContentLoaded', function() {
   document.body.appendChild(box);
   function log(t) { box.innerHTML += t + '<br>'; box.scrollTop = 9999; }
 
-  log('✓ inline script loaded');
+  log('✓ inline v14');
   log('speechSynthesis: ' + (!!window.speechSynthesis));
+  setTimeout(function() {
+    log('responsiveVoice: ' + (typeof responsiveVoice !== 'undefined'));
+  }, 1500);
 
   var btn = document.createElement('button');
-  btn.textContent = '🔊 TEST AUDIO';
+  btn.textContent = '🔊 TEST RV';
   btn.style.cssText = 'display:block;margin:6px 0;padding:8px 16px;background:#7c6af7;color:#fff;border:none;border-radius:8px;font-size:14px';
   btn.onclick = function() {
-    log('--- testing ---');
-    // Test 1: Web Speech API
-    if (window.speechSynthesis) {
-      var v = window.speechSynthesis.getVoices();
-      log('voices: ' + v.length);
-      var u = new SpeechSynthesisUtterance('Hallo');
-      u.lang = 'de-DE';
-      u.onerror = function(e) { log('speech error: ' + e.error); };
-      u.onstart = function() { log('speech started!'); };
-      u.onend   = function() { log('speech ended!'); };
-      window.speechSynthesis.speak(u);
+    log('--- testing RV ---');
+    if (typeof responsiveVoice !== 'undefined') {
+      log('RV loaded! speaking...');
+      responsiveVoice.speak('Hallo, wie geht es dir?', 'Deutsch Female', {
+        onstart: function() { log('RV onstart!'); },
+        onend:   function() { log('RV onend!'); },
+        onerror: function(e) { log('RV error: ' + e); }
+      });
     } else {
-      log('no speechSynthesis');
+      log('RV NOT loaded!');
     }
-    // Test 2: Audio fallback
-    var url = 'https://translate.googleapis.com/translate_tts?ie=UTF-8&tl=de&client=gtx&q=Hallo';
-    var a = new Audio(url);
-    a.onplay  = function() { log('audio playing!'); };
-    a.onerror = function(e) { log('audio error: ' + e.message); };
-    a.play().then(function(){ log('audio play() ok'); }).catch(function(e){ log('audio play() fail: ' + e); });
   };
   box.appendChild(btn);
 });
