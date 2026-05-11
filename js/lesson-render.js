@@ -308,6 +308,20 @@ function toggleTheme() {
     if (b) b.textContent = next === 'dark' ? '☀️' : '🌙';
   });
 }
-function openSidebar()   { document.getElementById('sidebar')?.classList.add('open'); document.getElementById('sidebarOverlay')?.classList.add('show'); }
-function closeSidebar()  { document.getElementById('sidebar')?.classList.remove('open'); document.getElementById('sidebarOverlay')?.classList.remove('show'); }
+function openSidebar() {
+  document.getElementById('sidebar')?.classList.add('open');
+  document.getElementById('sidebarOverlay')?.classList.add('show');
+  const btn = document.getElementById('sidebarToggle');
+  if (btn) btn.textContent = '✕';
+}
+function closeSidebar() {
+  document.getElementById('sidebar')?.classList.remove('open');
+  document.getElementById('sidebarOverlay')?.classList.remove('show');
+  const btn = document.getElementById('sidebarToggle');
+  if (btn) btn.textContent = '☰';
+}
+function toggleSidebar() {
+  const open = document.getElementById('sidebar')?.classList.contains('open');
+  open ? closeSidebar() : openSidebar();
+}
 function toggleLevel(id) { document.getElementById(id)?.classList.toggle('collapsed'); }
