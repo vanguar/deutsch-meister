@@ -9,9 +9,9 @@ if (TG) {
     document.documentElement.setAttribute('data-theme', 'light');
   }
 
-  // Кнопка "назад" на страницах уроков
+  // Кнопка "назад" на страницах уроков (только Telegram 6.1+)
   const isLesson = location.pathname.includes('/lessons/');
-  if (isLesson) {
+  if (isLesson && TG.isVersionAtLeast('6.1')) {
     TG.BackButton.show();
     TG.BackButton.onClick(() => history.back());
   }
