@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "Bash(python3 gen_lessons.py)"
+      "Bash(python3 gen_lessons.py)",
+      "Bash(gh auth *)"
     ]
   }
 }

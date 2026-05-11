@@ -1,17 +1,18 @@
 const CACHE = 'deutsch-meister-v1';
+const BASE = '/deutsch-meister';
 
 const STATIC = [
-  '/',
-  '/index.html',
-  '/manifest.json',
-  '/css/base.css',
-  '/css/sidebar.css',
-  '/css/lesson.css',
-  '/js/progress.js',
-  '/js/lesson-render.js',
-  '/js/exercises.js',
-  '/js/flashcards.js',
-  '/icons/icon.svg',
+  BASE + '/',
+  BASE + '/index.html',
+  BASE + '/manifest.json',
+  BASE + '/css/base.css',
+  BASE + '/css/sidebar.css',
+  BASE + '/css/lesson.css',
+  BASE + '/js/progress.js',
+  BASE + '/js/lesson-render.js',
+  BASE + '/js/exercises.js',
+  BASE + '/js/flashcards.js',
+  BASE + '/icons/icon.svg',
 ];
 
 const LEVELS = ['a1','a2','b1','b2'];
@@ -20,8 +21,8 @@ const LESSONS = [1,2,3,4,5,6,7,8];
 LEVELS.forEach(lvl => {
   LESSONS.forEach(n => {
     const pad = String(n).padStart(2,'0');
-    STATIC.push(`/lessons/${lvl}/lesson-${pad}/index.html`);
-    STATIC.push(`/data/${lvl}/${lvl}-lesson-${pad}.js`);
+    STATIC.push(`${BASE}/lessons/${lvl}/lesson-${pad}/index.html`);
+    STATIC.push(`${BASE}/data/${lvl}/${lvl}-lesson-${pad}.js`);
   });
 });
 
@@ -50,7 +51,7 @@ self.addEventListener('fetch', e => {
           caches.open(CACHE).then(c => c.put(e.request, clone));
         }
         return res;
-      }).catch(() => caches.match('/index.html'));
+      }).catch(() => caches.match(BASE + '/index.html'));
     })
   );
 });
