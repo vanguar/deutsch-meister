@@ -20,9 +20,9 @@ if (TG) {
   const isHome = !isLesson;
   console.log('[TG] isLesson:', isLesson, 'isHome:', isHome);
   console.log('[TG] initDataUnsafe:', JSON.stringify(TG.initDataUnsafe));
-  console.log('[TG] tg_welcomed:', sessionStorage.getItem('tg_welcomed'));
-  if (isHome && !sessionStorage.getItem('tg_welcomed')) {
-    sessionStorage.setItem('tg_welcomed', '1');
+  console.log('[TG] tg_welcomed:', localStorage.getItem('tg_welcomed'));
+  if (isHome && !localStorage.getItem('tg_welcomed')) {
+    localStorage.setItem('tg_welcomed', '1');
     const user = TG.initDataUnsafe?.user;
     const name = user?.first_name || 'друг';
     console.log('[TG] Showing welcome for:', name);
