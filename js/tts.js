@@ -71,3 +71,24 @@ const TTS = (() => {
 TTS.init();
 function speak(text)     { TTS.speak(text); }
 function speakSlow(text) { TTS.speakSlow(text); }
+
+/* ── Visual debug log (remove after debugging) ── */
+function vlog(msg) {
+  let box = document.getElementById('_vlog');
+  if (!box) {
+    box = document.createElement('div');
+    box.id = '_vlog';
+    box.style.cssText = 'position:fixed;bottom:0;left:0;right:0;max-height:200px;overflow-y:auto;background:rgba(0,0,0,.85);color:#0f0;font:12px monospace;padding:8px;z-index:99999';
+    document.body.appendChild(box);
+  }
+  box.innerHTML += msg + '<br>';
+  box.scrollTop = box.scrollHeight;
+}
+
+const _origSpeak = speak;
+window.speak = function(text) {
+  vlog('▶ speak: ' + text);
+  vlog('hasSpeechAPI: ' + !!(window.speechSynthesis));
+  if (window.speechSynthesis) vlog('voices: ' + window.speechSynthesis.getVoices().length);
+  _origSpeak(text);
+};
