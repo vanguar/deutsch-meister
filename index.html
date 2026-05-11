@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deutsch Meister — Курс немецкого языка A1–B2</title>
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#7c6af7">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Deutsch Meister">
+  <link rel="apple-touch-icon" href="/icons/icon.svg">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/sidebar.css">
+
+  <style>
+    /* ── Home page specific styles ── */
+    .home-app { display: flex; min-height: 100vh; position: relative; z-index: 1; }
+
+    .home-main {
+      flex: 1;
+      padding: 48px;
+      max-width: 900px;
+      min-width: 0;
+    }
+
+    /* Hero */
+    .hero {
+      margin-bottom: 56px;
+      animation: fadeUp .5s both;
+    }
+    .hero-eyebrow {
+      font-size: 11px; text-transform: uppercase; letter-spacing: 3px;
+      color: var(--accent2); font-weight: 600; margin-bottom: 14px;
+    }
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 52px; font-weight: 900; line-height: 1.05;
+      background: linear-gradient(135deg, var(--text-strong) 20%, var(--accent));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 16px;
+    }
+    .hero-sub {
+      font-size: 16px; color: var(--text-muted); line-height: 1.65;
+      max-width: 520px; margin-bottom: 28px;
+    }
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+
+    /* Stats row */
+    .stats-row {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px;
+      margin-bottom: 52px;
+      animation: fadeUp .5s .1s both;
+    }
+    .stat-card {
+      background: var(--surface2); border: 1px solid var(--border);
+      border-radius: var(--r-lg); padding: 20px;
+      text-align: center;
+    }
+    .stat-value {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px; font-weight: 900; color: var(--accent);
+    }
+    .stat-label { font-size: 12px; color: var(--text-muted); margin-top: 4px; }
+
+    /* Level sections */
+    .levels-section { animation: fadeUp .5s .15s both; }
+    .levels-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px; font-weight: 700; color: #fff;
+      margin-bottom: 24px;
+    }
+
+    .level-row { margin-bottom: 36px; }
+    .level-row-header {
+      display: flex; align-items: center; gap: 12px;
+      margin-bottom: 14px;
+    }
+    .level-name { font-size: 14px; font-weight: 600; color: var(--text); }
+    .level-desc { font-size: 13px; color: var(--text-muted); margin-left: auto; }
+
+    .lesson-cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+
+    .lesson-card {
+      background: var(--surface2); border: 1.5px solid var(--border);
+      border-radius: var(--r-lg); padding: 18px 16px;
+      display: flex; flex-direction: column; gap: 8px;
+      transition: all var(--t-normal); text-decoration: none; color: inherit;
+      position: relative; overflow: hidden;
+    }
+    .lesson-card.available:hover {
+      border-color: rgba(124,106,247,.45);
+      background: rgba(124,106,247,.06);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+    .lesson-card.locked { opacity: .38; cursor: not-allowed; pointer-events: none; }
+    .lesson-card.done   { border-color: rgba(86,216,153,.3); }
+
+    .lc-num {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px; color: var(--text-dim);
+    }
+    .lc-title { font-size: 13px; font-weight: 600; color: #fff; line-height: 1.3; }
+    .lc-icon  { font-size: 22px; margin-bottom: 2px; }
+    .lc-status {
+      font-size: 11px; margin-top: auto;
+      display: flex; align-items: center; gap: 5px;
+    }
+    .lc-status.done   { color: var(--green); }
+    .lc-status.open   { color: var(--accent2); }
+    .lc-status.locked { color: var(--text-dim); }
+
+    .lesson-card.available .lc-title { color: #fff; }
+    .lesson-card.available::after {
+      content: '→';
+      position: absolute; right: 14px; top: 50%;
+      transform: translateY(-50%) translateX(4px);
+      font-size: 16px; color: var(--accent2);
+      opacity: 0; transition: all var(--t-normal);
+    }
+    .lesson-card.available:hover::after { opacity: 1; transform: translateY(-50%) translateX(0); }
+
+    @media (max-width: 900px) {
+      .home-main { padding: 24px 20px; }
+      .hero-title { font-size: 36px; }
+      .stats-row  { grid-template-columns: repeat(2, 1fr); }
+      .lesson-cards { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 600px) {
+      .lesson-cards { grid-template-columns: 1fr 1fr; }
+      .hero-title { font-size: 28px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="bg-mesh"></div>
+
+<div class="home-app">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-logo">
+      <div class="logo-title"><span class="logo-flag">🇩🇪</span> Deutsch Meister</div>
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-top:2px">
+        <div class="logo-sub">Немецкий A1 → B2</div>
+        <button id="themeToggle" onclick="toggleTheme()" title="Сменить тему"
+          style="background:var(--surface3);border:1px solid var(--border);border-radius:var(--r-full);padding:3px 10px;font-size:14px;cursor:pointer">🌙</button>
+      </div>
+    </div>
+
+    <div class="sidebar-streak">
+      <div class="streak-fire">🔥</div>
+      <div>
+        <div class="streak-count" id="streakCount">1</div>
+        <div class="streak-label">день подряд</div>
+      </div>
+    </div>
+
+    <div class="sidebar-section-header">Программа курса</div>
+
+    <div class="level-group" id="lvl-a1">
+      <div class="level-toggle" onclick="toggleLevel('lvl-a1')">
+        <span class="badge badge-level current">A1</span>
+        <span style="font-size:13px;color:var(--text-muted)">Начинающий</span>
+        <span class="level-toggle-arrow">▼</span>
+      </div>
+      <div class="level-lessons">
+        <a class="lesson-item done" href="lessons/a1/lesson-01/index.html"><span class="lesson-num">01</span><span class="lesson-name">Приветствия</span><span class="lesson-status done">✓</span></a>
+        <a class="lesson-item" href="lessons/a1/lesson-02/index.html"><span class="lesson-num">02</span><span class="lesson-name">Числа 1–20</span></a>
+        <a class="lesson-item" href="lessons/a1/lesson-03/index.html"><span class="lesson-num">03</span><span class="lesson-name">Цвета</span></a>
+        <a class="lesson-item" href="lessons/a1/lesson-04/index.html"><span class="lesson-num">04</span><span class="lesson-name">Семья</span></a>
+        <a class="lesson-item" href="lessons/a1/lesson-05/index.html"><span class="lesson-num">05</span><span class="lesson-name">Дни недели</span></a>
+        <a class="lesson-item" href="lessons/a1/lesson-06/index.html"><span class="lesson-num">06</span><span class="lesson-name">Еда и напитки</span></a>
+        <a class="lesson-item" href="lessons/a1/lesson-07/index.html"><span class="lesson-num">07</span><span class="lesson-name">В городе</span></a>
+        <a class="lesson-item" href="lessons/a1/lesson-08/index.html"><span class="lesson-num">08</span><span class="lesson-name">Время</span></a>
+      </div>
+    </div>
+
+    <div class="level-group collapsed" id="lvl-a2">
+      <div class="level-toggle" onclick="toggleLevel('lvl-a2')">
+        <span class="badge badge-level">A2</span>
+        <span style="font-size:13px;color:var(--text-muted)">Элементарный</span>
+        <span class="level-toggle-arrow">▼</span>
+      </div>
+      <div class="level-lessons">
+        <a class="lesson-item" href="lessons/a2/lesson-01/index.html"><span class="lesson-num">01</span><span class="lesson-name">Распорядок дня</span></a>
+        <a class="lesson-item" href="lessons/a2/lesson-02/index.html"><span class="lesson-num">02</span><span class="lesson-name">Хобби и досуг</span></a>
+        <a class="lesson-item" href="lessons/a2/lesson-03/index.html"><span class="lesson-num">03</span><span class="lesson-name">У врача</span></a>
+        <a class="lesson-item" href="lessons/a2/lesson-04/index.html"><span class="lesson-num">04</span><span class="lesson-name">Путешествия</span></a>
+        <a class="lesson-item" href="lessons/a2/lesson-05/index.html"><span class="lesson-num">05</span><span class="lesson-name">Покупки и одежда</span></a>
+        <a class="lesson-item" href="lessons/a2/lesson-06/index.html"><span class="lesson-num">06</span><span class="lesson-name">Жильё и мебель</span></a>
+        <a class="lesson-item" href="lessons/a2/lesson-07/index.html"><span class="lesson-num">07</span><span class="lesson-name">Работа</span></a>
+        <a class="lesson-item" href="lessons/a2/lesson-08/index.html"><span class="lesson-num">08</span><span class="lesson-name">Погода</span></a>
+      </div>
+    </div>
+
+    <div class="level-group collapsed" id="lvl-b1">
+      <div class="level-toggle" onclick="toggleLevel('lvl-b1')">
+        <span class="badge badge-level">B1</span>
+        <span style="font-size:13px;color:var(--text-muted)">Средний</span>
+        <span class="level-toggle-arrow">▼</span>
+      </div>
+      <div class="level-lessons">
+        <a class="lesson-item" href="lessons/b1/lesson-01/index.html"><span class="lesson-num">01</span><span class="lesson-name">Konjunktiv II</span></a>
+        <a class="lesson-item" href="lessons/b1/lesson-02/index.html"><span class="lesson-num">02</span><span class="lesson-name">Пассивный залог</span></a>
+        <a class="lesson-item" href="lessons/b1/lesson-03/index.html"><span class="lesson-num">03</span><span class="lesson-name">Придаточные</span></a>
+        <a class="lesson-item" href="lessons/b1/lesson-04/index.html"><span class="lesson-num">04</span><span class="lesson-name">Союзы weil/dass</span></a>
+        <a class="lesson-item" href="lessons/b1/lesson-05/index.html"><span class="lesson-num">05</span><span class="lesson-name">Инфинитив (zu)</span></a>
+        <a class="lesson-item" href="lessons/b1/lesson-06/index.html"><span class="lesson-num">06</span><span class="lesson-name">Работа и резюме</span></a>
+        <a class="lesson-item" href="lessons/b1/lesson-07/index.html"><span class="lesson-num">07</span><span class="lesson-name">Аргументация</span></a>
+        <a class="lesson-item" href="lessons/b1/lesson-08/index.html"><span class="lesson-num">08</span><span class="lesson-name">Окружающая среда</span></a>
+      </div>
+    </div>
+
+    <div class="level-group collapsed" id="lvl-b2">
+      <div class="level-toggle" onclick="toggleLevel('lvl-b2')">
+        <span class="badge badge-level">B2</span>
+        <span style="font-size:13px;color:var(--text-muted)">Выше среднего</span>
+        <span class="level-toggle-arrow">▼</span>
+      </div>
+      <div class="level-lessons">
+        <a class="lesson-item" href="lessons/b2/lesson-01/index.html"><span class="lesson-num">01</span><span class="lesson-name">Причастия</span></a>
+        <a class="lesson-item" href="lessons/b2/lesson-02/index.html"><span class="lesson-num">02</span><span class="lesson-name">Модальные части.</span></a>
+        <a class="lesson-item" href="lessons/b2/lesson-03/index.html"><span class="lesson-num">03</span><span class="lesson-name">Коннекторы</span></a>
+        <a class="lesson-item" href="lessons/b2/lesson-04/index.html"><span class="lesson-num">04</span><span class="lesson-name">Номинализация</span></a>
+        <a class="lesson-item" href="lessons/b2/lesson-05/index.html"><span class="lesson-num">05</span><span class="lesson-name">Научный стиль</span></a>
+        <a class="lesson-item" href="lessons/b2/lesson-06/index.html"><span class="lesson-num">06</span><span class="lesson-name">Экономика</span></a>
+        <a class="lesson-item" href="lessons/b2/lesson-07/index.html"><span class="lesson-num">07</span><span class="lesson-name">Дискуссия</span></a>
+        <a class="lesson-item" href="lessons/b2/lesson-08/index.html"><span class="lesson-num">08</span><span class="lesson-name">Сложные тексты</span></a>
+      </div>
+    </div>
+
+    <div class="sidebar-bottom">
+      <div class="xp-row">
+        <span>⚡ Опыт</span>
+        <strong id="xpText">0 / 200 XP</strong>
+      </div>
+      <div class="xp-track">
+        <div class="xp-fill" id="xpFill" style="width:0%"></div>
+      </div>
+    </div>
+  </aside>
+
+  <div class="sidebar-overlay" id="sidebarOverlay" onclick="closeSidebar()"></div>
+
+  <!-- MAIN -->
+  <main class="home-main">
+
+    <!-- Hero -->
+    <div class="hero">
+      <div class="hero-eyebrow">🇩🇪 Добро пожаловать</div>
+      <h1 class="hero-title">Deutsch<br>Meister</h1>
+      <p class="hero-sub">
+        Интерактивный курс немецкого языка от нуля до B2.
+        Озвучка, упражнения, флэшкарты и умная система повторения.
+      </p>
+      <div class="hero-actions">
+        <a href="lessons/a1/lesson-01/index.html" class="btn btn-primary">
+          🚀 Начать урок 1
+        </a>
+        <button class="btn btn-ghost" onclick="document.getElementById('courseMap').scrollIntoView({behavior:'smooth'})">📋 Программа курса</button>
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats-row">
+      <div class="stat-card">
+        <div class="stat-value">32</div>
+        <div class="stat-label">Урока в курсе</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">600+</div>
+        <div class="stat-label">Новых слов</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">4</div>
+        <div class="stat-label">Уровня (A1→B2)</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="streakHome">1</div>
+        <div class="stat-label">🔥 Дней подряд</div>
+      </div>
+    </div>
+
+    <!-- Course Map -->
+    <div class="levels-section" id="courseMap">
+      <h2 class="levels-title">Карта курса</h2>
+
+      <!-- A1 -->
+      <div class="level-row">
+        <div class="level-row-header">
+          <span class="badge badge-level current">A1</span>
+          <span class="level-name">Начинающий</span>
+          <span class="level-desc">8 уроков · ~3 ч</span>
+        </div>
+        <div class="lesson-cards">
+          <a href="lessons/a1/lesson-01/index.html" class="lesson-card available done">
+            <div class="lc-num">A1 · 01</div><div class="lc-icon">👋</div>
+            <div class="lc-title">Приветствия</div>
+            <div class="lc-status done">✓ Пройден</div>
+          </a>
+          <a href="lessons/a1/lesson-02/index.html" class="lesson-card available">
+            <div class="lc-num">A1 · 02</div><div class="lc-icon">🔢</div>
+            <div class="lc-title">Числа 1–20</div>
+            <div class="lc-status open">→ Начать</div>
+          </a>
+          <a href="lessons/a1/lesson-03/index.html" class="lesson-card available">
+            <div class="lc-num">A1 · 03</div><div class="lc-icon">🎨</div>
+            <div class="lc-title">Цвета</div>
+            <div class="lc-status open">→ Начать</div>
+          </a>
+          <a href="lessons/a1/lesson-04/index.html" class="lesson-card available">
+            <div class="lc-num">A1 · 04</div><div class="lc-icon">👨‍👩‍👧</div>
+            <div class="lc-title">Семья</div>
+            <div class="lc-status open">→ Начать</div>
+          </a>
+          <a href="lessons/a1/lesson-05/index.html" class="lesson-card available">
+            <div class="lc-num">A1 · 05</div><div class="lc-icon">📅</div>
+            <div class="lc-title">Дни недели</div>
+            <div class="lc-status open">→ Начать</div>
+          </a>
+          <a href="lessons/a1/lesson-06/index.html" class="lesson-card available">
+            <div class="lc-num">A1 · 06</div><div class="lc-icon">☕</div>
+            <div class="lc-title">Еда и напитки</div>
+            <div class="lc-status open">→ Начать</div>
+          </a>
+          <a href="lessons/a1/lesson-07/index.html" class="lesson-card available">
+            <div class="lc-num">A1 · 07</div><div class="lc-icon">🏙️</div>
+            <div class="lc-title">В городе</div>
+            <div class="lc-status open">→ Начать</div>
+          </a>
+          <a href="lessons/a1/lesson-08/index.html" class="lesson-card available">
+            <div class="lc-num">A1 · 08</div><div class="lc-icon">⏰</div>
+            <div class="lc-title">Время</div>
+            <div class="lc-status open">→ Начать</div>
+          </a>
+        </div>
+      </div>
+
+      <!-- A2 -->
+      <div class="level-row">
+        <div class="level-row-header">
+          <span class="badge badge-level">A2</span>
+          <span class="level-name">Элементарный</span>
+          <span class="level-desc">8 уроков · ~4 ч</span>
+        </div>
+        <div class="lesson-cards">
+          <a href="lessons/a2/lesson-01/index.html" class="lesson-card available"><div class="lc-num">A2 · 01</div><div class="lc-icon">⏰</div><div class="lc-title">Распорядок дня</div><div class="lc-status open">→ Начать</div></a>
+          <a href="lessons/a2/lesson-02/index.html" class="lesson-card available"><div class="lc-num">A2 · 02</div><div class="lc-icon">🎨</div><div class="lc-title">Хобби и досуг</div><div class="lc-status open">→ Начать</div></a>
+          <a href="lessons/a2/lesson-03/index.html" class="lesson-card available"><div class="lc-num">A2 · 03</div><div class="lc-icon">🩺</div><div class="lc-title">У врача</div><div class="lc-status open">→ Начать</div></a>
+          <a href="lessons/a2/lesson-04/index.html" class="lesson-card available"><div class="lc-num">A2 · 04</div><div class="lc-icon">✈️</div><div class="lc-title">Путешествия</div><div class="lc-status open">→ Начать</div></a>
+          <a href="lessons/a2/lesson-05/index.html" class="lesson-card available"><div class="lc-num">A2 · 05</div><div class="lc-icon">🛍️</div><div class="lc-title">Покупки и одежда</div><div class="lc-status open">→ Начать</div></a>
+          <a href="lessons/a2/lesson-06/index.html" class="lesson-card available"><div class="lc-num">A2 · 06</div><div class="lc-icon">🏠</div><div class="lc-title">Жильё и мебель</div><div class="lc-status open">→ Начать</div></a>
+          <a href="lessons/a2/lesson-07/index.html" class="lesson-card available"><div class="lc-num">A2 · 07</div><div class="lc-icon">💼</div><div class="lc-title">Работа</div><div class="lc-status open">→ Начать</div></a>
+          <a href="lessons/a2/lesson-08/index.html" class="lesson-card available"><div class="lc-num">A2 · 08</div><div class="lc-icon">☀️</div><div class="lc-title">Погода</div><div class="lc-status open">→ Начать</div></a>
+        </div>
+      </div>
+
+      <!-- B1 -->
+      <div class="level-row">
+        <div class="level-row-header">
+          <span class="badge badge-level">B1</span>
+          <span class="level-name">Средний</span>
+          <span class="level-desc">8 уроков · ~5 ч</span>
+        </div>
+        <div class="lesson-cards">
+          <a href="lessons/b1/lesson-01/index.html" class="lesson-card available"><div class="lc-num">B1 · 01</div><div class="lc-icon">💭</div><div class="lc-title">Konjunktiv II</div><div class="lc-status open">→ Начать</div></a>
+          <a href="lessons/b1/lesson-02/index.html" class="lesson-card available"><div class="lc-num">B1 · 02</div><div class="lc-icon">🔄</div><div class="lc-title">Пассивный залог</div><div class="lc-status open">→ Начать</div></a>
+          <a href="lessons/b1/lesson-03/index.html" class="lesson-card available"><div class="lc-num">B1 · 03</div><div class="lc-icon">🔗</div><div class="lc-title">Придаточные</div><div class="lc-status open">→ Начать</div></a>
+          <a href="lessons/b1/lesson-04/index.html" class="lesson-card available"><div class="lc-num">B1 · 04</div><div class="lc-icon">📎</div><div class="lc-title">Союзы weil/dass</div><div class="lc-status open">→ Начать</div></a>
+          <a href="lessons/b1/lesson-05/index.html" class="lesson-card available"><div class="lc-num">B1 · 05</div><div class="lc-icon">∞</div><div class="lc-title">Инфинитив (zu)</div><div class="lc-status open">→ Начать</div></a>
+          <a href="lessons/b1/lesson-06/index.html" class="lesson-card available"><div class="lc-num">B1 · 06</div><div class="lc-icon">💼</div><div class="lc-title">Работа и резюме</div><div class="lc-status open">→ Начать</div></a>
+          <a href="lessons/b1/lesson-07/index.html" class="lesson-card available"><div class="lc-num">B1 · 07</div><div class="lc-icon">🗣️</div><div class="lc-title">Аргументация</div><div class="lc-status open">→ Начать</div></a>
+          <a href="lessons/b1/lesson-08/index.html" class="lesson-card available"><div class="lc-num">B1 · 08</div><div class="lc-icon">🌿</div><div class="lc-title">Окружающая среда</div><div class="lc-status open">→ Начать</div></a>
+        </div>
+      </div>
+
+      <!-- B2 -->
+      <div class="level-row">
+        <div class="level-row-header">
+          <span class="badge badge-level">B2</span>
+          <span class="level-name">Выше среднего</span>
+          <span class="level-desc">8 уроков · ~6 ч</span>
+        </div>
+        <div class="lesson-cards">
+          <a href="lessons/b2/lesson-01/index.html" class="lesson-card available"><div class="lc-num">B2 · 01</div><div class="lc-icon">📝</div><div class="lc-title">Причастия</div><div class="lc-status open">→ Начать</div></a>
+          <a href="lessons/b2/lesson-02/index.html" class="lesson-card available"><div class="lc-num">B2 · 02</div><div class="lc-icon">💬</div><div class="lc-title">Модальные части.</div><div class="lc-status open">→ Начать</div></a>
+          <a href="lessons/b2/lesson-03/index.html" class="lesson-card available"><div class="lc-num">B2 · 03</div><div class="lc-icon">⛓️</div><div class="lc-title">Коннекторы</div><div class="lc-status open">→ Начать</div></a>
+          <a href="lessons/b2/lesson-04/index.html" class="lesson-card available"><div class="lc-num">B2 · 04</div><div class="lc-icon">🔤</div><div class="lc-title">Номинализация</div><div class="lc-status open">→ Начать</div></a>
+          <a href="lessons/b2/lesson-05/index.html" class="lesson-card available"><div class="lc-num">B2 · 05</div><div class="lc-icon">🔬</div><div class="lc-title">Научный стиль</div><div class="lc-status open">→ Начать</div></a>
+          <a href="lessons/b2/lesson-06/index.html" class="lesson-card available"><div class="lc-num">B2 · 06</div><div class="lc-icon">💹</div><div class="lc-title">Экономика</div><div class="lc-status open">→ Начать</div></a>
+          <a href="lessons/b2/lesson-07/index.html" class="lesson-card available"><div class="lc-num">B2 · 07</div><div class="lc-icon">⚖️</div><div class="lc-title">Дискуссия</div><div class="lc-status open">→ Начать</div></a>
+          <a href="lessons/b2/lesson-08/index.html" class="lesson-card available"><div class="lc-num">B2 · 08</div><div class="lc-icon">📚</div><div class="lc-title">Сложные тексты</div><div class="lc-status open">→ Начать</div></a>
+        </div>
+      </div>
+
+    </div><!-- /levels-section -->
+
+  </main>
+</div>
+
+<button class="sidebar-mobile-toggle" id="sidebarToggle" onclick="openSidebar()">☰</button>
+
+<script src="js/progress.js"></script>
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/service-worker.js');
+  }
+</script>
+<script>
+  function openSidebar()     { document.getElementById('sidebar').classList.add('open'); document.getElementById('sidebarOverlay').classList.add('show'); }
+  function closeSidebar()    { document.getElementById('sidebar').classList.remove('open'); document.getElementById('sidebarOverlay').classList.remove('show'); }
+  function toggleLevel(id)   { document.getElementById(id)?.classList.toggle('collapsed'); }
+  function initTheme() {
+    const saved = localStorage.getItem('dm_theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', saved);
+    const btn = document.getElementById('themeToggle');
+    if (btn) btn.textContent = saved === 'dark' ? '☀️' : '🌙';
+  }
+  function toggleTheme() {
+    const cur = document.documentElement.getAttribute('data-theme') || 'dark';
+    const next = cur === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('dm_theme', next);
+    const btn = document.getElementById('themeToggle');
+    if (btn) btn.textContent = next === 'dark' ? '☀️' : '🌙';
+  }
+  document.addEventListener('DOMContentLoaded', () => {
+    initTheme();
+    Progress.init();
+    const s = Progress.getStreak();
+    const el = document.getElementById('streakHome');
+    if (el) el.textContent = s;
+  });
+</script>
+
+</body>
+</html>

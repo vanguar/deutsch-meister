@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#7c6af7">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Deutsch Meister">
+
+  <title>B1 · Урок 6 — Beruf und Bewerbung | Deutsch Meister</title>
+  <link rel="stylesheet" href="../../../css/base.css">
+  <link rel="stylesheet" href="../../../css/sidebar.css">
+  <link rel="stylesheet" href="../../../css/lesson.css">
+  <link rel="stylesheet" href="../../../css/exercises.css">
+  <script src="../../../data/b1/b1-lesson-06.js"></script>
+</head>
+<body>
+
+<div class="bg-mesh"></div>
+
+<div class="app">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-logo">
+      <div class="logo-title"><span class="logo-flag">🇩🇪</span> Deutsch Meister</div>
+      <div class="logo-sub">Немецкий A1 → B2</div>
+    </div>
+    <div class="sidebar-streak">
+      <div class="streak-fire">🔥</div>
+      <div>
+        <div class="streak-count" id="streakCount">1</div>
+        <div class="streak-label">день подряд</div>
+      </div>
+    </div>
+    <div class="sidebar-section-header">Программа курса</div>
+    <div id="lessonNav"></div>
+    <div class="sidebar-bottom">
+      <div class="xp-row">
+        <span>⚡ Опыт</span>
+        <strong id="xpText">0 / 200 XP</strong>
+      </div>
+      <div class="xp-track">
+        <div class="xp-fill" id="xpFill" style="width:0%"></div>
+      </div>
+    </div>
+  </aside>
+
+  <div class="sidebar-overlay" id="sidebarOverlay" onclick="closeSidebar()"></div>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <header class="lesson-header">
+      <div class="lesson-breadcrumb">
+        <a href="../../../index.html">Главная</a>
+        <span class="breadcrumb-sep">/</span>
+        <span>B1</span>
+        <span class="breadcrumb-sep">/</span>
+        <span>Урок 6</span>
+      </div>
+      <h1 class="lesson-title" id="lessonTitle">Beruf und Bewerbung</h1>
+      <div class="lesson-meta" id="lessonMeta">
+        <span class="badge badge-violet">🎯 B1</span>
+        <span class="badge badge-gold">⏱ загрузка…</span>
+        <span class="badge badge-green">📚 … слов</span>
+        <button id="themeToggle" onclick="toggleTheme()" title="Сменить тему"
+          style="margin-left:auto;background:var(--surface3);border:1px solid var(--border);
+                 border-radius:var(--r-full);padding:5px 12px;font-size:16px;cursor:pointer">🌙</button>
+      </div>
+      <div class="lesson-progress-bar">
+        <div class="lesson-progress-fill" id="lessonProgressFill" style="width:0%"></div>
+      </div>
+    </header>
+
+    <div class="lesson-content">
+
+      <!-- SECTION 1: PHRASES -->
+      <section class="lesson-section">
+        <div class="section-label">📢 Фразы урока</div>
+        <h2 class="section-title">Работа и резюме</h2>
+        <div class="phrase-grid" id="phraseGrid"></div>
+      </section>
+
+      <!-- SECTION 2: VOCABULARY -->
+      <section class="lesson-section">
+        <div class="section-label">📖 Словарь урока</div>
+        <h2 class="section-title">Ключевые слова</h2>
+        <table class="vocab-table">
+          <thead><tr><th>Немецкий</th><th>МФА</th><th>Русский</th></tr></thead>
+          <tbody id="vocabTableBody"></tbody>
+        </table>
+      </section>
+
+      <!-- SECTION 3: GRAMMAR -->
+      <section class="lesson-section">
+        <div class="section-label">📐 Грамматика</div>
+        <h2 class="section-title" id="grammarTitle">Грамматика урока</h2>
+        <div id="grammarBoxes"></div>
+      </section>
+
+      <!-- SECTION 4: EXERCISES -->
+      <section class="lesson-section">
+        <div class="section-label">✍️ Упражнения</div>
+        <h2 class="section-title">Закрепи материал</h2>
+        <div class="exercise-tabs">
+          <button class="ex-tab active" data-panel="fill">Заполни пропуски</button>
+          <button class="ex-tab" data-panel="choice">Выбор ответа</button>
+          <button class="ex-tab" data-panel="match">Сопоставление</button>
+          <button class="ex-tab" data-panel="dictation">Диктант</button>
+        </div>
+        <div class="exercise-panel active" id="panel-fill">
+          <div id="fillContainer"></div>
+          <button class="btn btn-primary" id="checkFillBtn" style="margin-top:16px">Проверить все ответы</button>
+          <div class="result-banner" id="fillResult"></div>
+        </div>
+        <div class="exercise-panel" id="panel-choice">
+          <div id="mcContainer"></div>
+          <div class="result-banner" id="choiceResult"></div>
+        </div>
+        <div class="exercise-panel" id="panel-match">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+            <div>
+              <div class="match-col-label">Немецкий</div>
+              <div class="match-items" id="matchLeft"></div>
+            </div>
+            <div>
+              <div class="match-col-label">Русский</div>
+              <div class="match-items" id="matchRight"></div>
+            </div>
+          </div>
+          <div class="result-banner" id="matchResult" style="margin-top:16px"></div>
+        </div>
+        <div class="exercise-panel" id="panel-dictation">
+          <div id="dictationContainer"></div>
+          <button class="btn btn-primary" id="checkDictBtn" style="margin-top:16px">Проверить диктант</button>
+          <div class="result-banner" id="dictResult"></div>
+        </div>
+      </section>
+
+      <!-- SECTION 5: FLASHCARDS -->
+      <section class="lesson-section flashcard-section">
+        <div class="section-label">🃏 Флэшкарты</div>
+        <h2 class="section-title">Интервальное повторение</h2>
+        <div class="flashcard-meta">
+          <span id="cardCounter">Карточка 1 из …</span>
+          <div class="flashcard-dots" id="cardDots"></div>
+        </div>
+        <div class="flashcard-viewport">
+          <div class="flashcard" id="flashcard">
+            <div class="card-face front">
+              <div class="card-de" id="cardDE">…</div>
+              <div class="card-hint">Нажмите, чтобы увидеть перевод &nbsp;🔊</div>
+            </div>
+            <div class="card-face back">
+              <div class="card-badge">Перевод</div>
+              <div class="card-ru" id="cardRU">…</div>
+              <div class="card-ipa" id="cardIPA"></div>
+            </div>
+          </div>
+        </div>
+        <div class="card-actions" id="cardActions" style="display:none">
+          <button class="card-btn again" onclick="cardAgain()">😕 Ещё раз</button>
+          <button class="card-btn good"  onclick="cardGood()">✓ Знаю!</button>
+        </div>
+        <div class="lesson-complete" id="lessonComplete">
+          <div class="complete-emoji">🎉</div>
+          <div class="complete-title">Урок завершён!</div>
+          <div class="complete-sub">Отличная работа! Урок B1·6 пройден.</div>
+          <div class="xp-earned">⚡ +150 XP получено!</div>
+          <br><br>
+          <a href="../../../index.html" class="btn btn-primary">На главную →</a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+</div>
+
+<button class="sidebar-mobile-toggle" id="sidebarToggle" onclick="openSidebar()">☰</button>
+
+<script src="../../../js/tts.js"></script>
+<script src="../../../js/progress.js"></script>
+<script src="../../../js/exercises.js"></script>
+<script src="../../../js/flashcards.js"></script>
+<script src="../../../js/lesson-render.js"></script>
+
+<script>
+  const CURRENT_LESSON_NUM   = 6;
+  const CURRENT_LESSON_LEVEL = 'b1';
+
+  function initTheme() {
+    const saved = localStorage.getItem('dm_theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', saved);
+    const btn = document.getElementById('themeToggle');
+    if (btn) btn.textContent = saved === 'dark' ? '☀️' : '🌙';
+  }
+  function toggleTheme() {
+    const cur  = document.documentElement.getAttribute('data-theme') || 'dark';
+    const next = cur === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('dm_theme', next);
+    const btn = document.getElementById('themeToggle');
+    if (btn) btn.textContent = next === 'dark' ? '☀️' : '🌙';
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    initTheme();
+    Progress.init();
+    LessonRender.init();
+    Exercises.init();
+    Flashcards.init();
+  });
+</script>
+
+  <script>if('serviceWorker' in navigator){navigator.serviceWorker.register('/service-worker.js');}</script>
+</body>
+</html>

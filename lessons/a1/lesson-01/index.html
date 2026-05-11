@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#7c6af7">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Deutsch Meister">
+
+  <title>A1 · Урок 1 — Приветствия | Deutsch Meister</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../../../css/base.css">
+  <link rel="stylesheet" href="../../../css/sidebar.css">
+  <link rel="stylesheet" href="../../../css/lesson.css">
+  <link rel="stylesheet" href="../../../css/exercises.css">
+
+  <!-- Lesson data (must come before engine scripts) -->
+  <script src="../../../data/a1-lesson-01.js"></script>
+</head>
+<body>
+
+<div class="bg-mesh"></div>
+
+<!-- ══════════════════════════════════════
+     APP SHELL
+     ══════════════════════════════════════ -->
+<div class="app">
+
+  <!-- ── SIDEBAR ── -->
+  <aside class="sidebar" id="sidebar">
+
+    <div class="sidebar-logo">
+      <div class="logo-title">
+        <span class="logo-flag">🇩🇪</span> Deutsch Meister
+      </div>
+      <div class="logo-sub">Немецкий A1 → B2</div>
+    </div>
+
+    <div class="sidebar-streak">
+      <div class="streak-fire">🔥</div>
+      <div>
+        <div class="streak-count" id="streakCount">1</div>
+        <div class="streak-label">день подряд</div>
+      </div>
+    </div>
+
+    <div class="sidebar-section-header">Программа курса</div>
+
+    <!-- A1 -->
+    <div class="level-group" id="lvl-a1">
+      <div class="level-toggle" onclick="toggleLevel('lvl-a1')">
+        <span class="badge badge-level current">A1</span>
+        <span style="font-size:13px;color:var(--text-muted)">Начинающий</span>
+        <span class="level-toggle-arrow">▼</span>
+      </div>
+      <div class="level-lessons">
+        <a class="lesson-item active" href="index.html">
+          <span class="lesson-num">01</span>
+          <span class="lesson-name">Приветствия</span>
+          <span class="lesson-status done">✓</span>
+        </a>
+        <div class="lesson-item locked">
+          <span class="lesson-num">02</span>
+          <span class="lesson-name">Числа 1–10</span>
+          <span class="lesson-status lock">🔒</span>
+        </div>
+        <div class="lesson-item locked">
+          <span class="lesson-num">03</span>
+          <span class="lesson-name">Цвета</span>
+          <span class="lesson-status lock">🔒</span>
+        </div>
+        <div class="lesson-item locked">
+          <span class="lesson-num">04</span>
+          <span class="lesson-name">Семья</span>
+          <span class="lesson-status lock">🔒</span>
+        </div>
+        <div class="lesson-item locked">
+          <span class="lesson-num">05</span>
+          <span class="lesson-name">Дни недели</span>
+          <span class="lesson-status lock">🔒</span>
+        </div>
+        <div class="lesson-item locked">
+          <span class="lesson-num">06</span>
+          <span class="lesson-name">Еда и напитки</span>
+          <span class="lesson-status lock">🔒</span>
+        </div>
+        <div class="lesson-item locked">
+          <span class="lesson-num">07</span>
+          <span class="lesson-name">В городе</span>
+          <span class="lesson-status lock">🔒</span>
+        </div>
+        <div class="lesson-item locked">
+          <span class="lesson-num">08</span>
+          <span class="lesson-name">Время</span>
+          <span class="lesson-status lock">🔒</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- A2 -->
+    <div class="level-group collapsed" id="lvl-a2">
+      <div class="level-toggle" onclick="toggleLevel('lvl-a2')">
+        <span class="badge badge-level">A2</span>
+        <span style="font-size:13px;color:var(--text-muted)">Элементарный</span>
+        <span class="level-toggle-arrow">▼</span>
+      </div>
+      <div class="level-lessons">
+        <div class="lesson-item locked">
+          <span class="lesson-num">09</span>
+          <span class="lesson-name">Хобби</span>
+          <span class="lesson-status lock">🔒</span>
+        </div>
+        <div class="lesson-item locked">
+          <span class="lesson-num">10</span>
+          <span class="lesson-name">В ресторане</span>
+          <span class="lesson-status lock">🔒</span>
+        </div>
+        <div class="lesson-item-stub">ещё 8 уроков…</div>
+      </div>
+    </div>
+
+    <!-- B1 -->
+    <div class="level-group collapsed" id="lvl-b1">
+      <div class="level-toggle" onclick="toggleLevel('lvl-b1')">
+        <span class="badge badge-level">B1</span>
+        <span style="font-size:13px;color:var(--text-muted)">Средний</span>
+        <span class="level-toggle-arrow">▼</span>
+      </div>
+      <div class="level-lessons">
+        <div class="lesson-item-stub">12 уроков — скоро…</div>
+      </div>
+    </div>
+
+    <!-- B2 -->
+    <div class="level-group collapsed" id="lvl-b2">
+      <div class="level-toggle" onclick="toggleLevel('lvl-b2')">
+        <span class="badge badge-level">B2</span>
+        <span style="font-size:13px;color:var(--text-muted)">Выше среднего</span>
+        <span class="level-toggle-arrow">▼</span>
+      </div>
+      <div class="level-lessons">
+        <div class="lesson-item-stub">14 уроков — скоро…</div>
+      </div>
+    </div>
+
+    <!-- XP bar -->
+    <div class="sidebar-bottom">
+      <div class="xp-row">
+        <span>⚡ Опыт</span>
+        <strong id="xpText">0 / 200 XP</strong>
+      </div>
+      <div class="xp-track">
+        <div class="xp-fill" id="xpFill" style="width:0%"></div>
+      </div>
+    </div>
+
+  </aside><!-- /sidebar -->
+
+  <!-- Mobile overlay -->
+  <div class="sidebar-overlay" id="sidebarOverlay" onclick="closeSidebar()"></div>
+
+  <!-- ── MAIN ── -->
+  <main class="main">
+
+    <!-- Lesson Header -->
+    <header class="lesson-header">
+      <div class="lesson-breadcrumb">
+        <a href="../../../index.html">Главная</a>
+        <span class="breadcrumb-sep">/</span>
+        <span>A1</span>
+        <span class="breadcrumb-sep">/</span>
+        <span>Урок 1</span>
+      </div>
+
+      <h1 class="lesson-title">Hallo! Wie heißt du?</h1>
+
+      <div class="lesson-meta">
+        <span class="badge badge-violet">🎯 A1 — Начало</span>
+        <span class="badge badge-gold">⏱ 15–20 мин</span>
+        <span class="badge badge-green">📚 10 слов</span>
+        <span class="badge" style="background:rgba(91,184,245,.1);border-color:rgba(91,184,245,.3);color:var(--blue)">✍️ 4 упражнения</span>
+        <button id="themeToggle" onclick="toggleTheme()" title="Сменить тему"
+          style="margin-left:auto;background:var(--surface3);border:1px solid var(--border);border-radius:var(--r-full);padding:5px 12px;font-size:16px;cursor:pointer;transition:all .2s">🌙</button>
+      </div>
+
+      <div class="lesson-progress-bar">
+        <div class="lesson-progress-fill" id="lessonProgressFill" style="width:0%"></div>
+      </div>
+    </header>
+
+    <!-- Content -->
+    <div class="lesson-content">
+
+      <!-- ══ SECTION 1: PHRASES ══ -->
+      <section class="lesson-section">
+        <div class="section-label">📢 Фразы урока</div>
+        <h2 class="section-title">Как поздороваться и представиться</h2>
+
+        <div class="phrase-grid" id="phraseGrid">
+          <!-- Rendered by JS -->
+        </div>
+      </section>
+
+      <!-- ══ SECTION 2: VOCABULARY ══ -->
+      <section class="lesson-section">
+        <div class="section-label">📖 Словарь урока</div>
+        <h2 class="section-title">Ключевые слова</h2>
+
+        <table class="vocab-table">
+          <thead>
+            <tr>
+              <th>Немецкий</th>
+              <th>МФА</th>
+              <th>Русский</th>
+            </tr>
+          </thead>
+          <tbody id="vocabTableBody">
+            <!-- Rendered by JS -->
+          </tbody>
+        </table>
+      </section>
+
+      <!-- ══ SECTION 3: GRAMMAR ══ -->
+      <section class="lesson-section">
+        <div class="section-label">📐 Грамматика</div>
+        <h2 class="section-title">Глагол «heißen» и формы обращения</h2>
+
+        <!-- Grammar box 1 – conjugation -->
+        <div class="grammar-box">
+          <div class="grammar-box-title">⚡ Спряжение глагола «heißen»</div>
+          <div class="grammar-rule">
+            Глагол <strong>heißen</strong> («называться, зваться») — один из первых немецких глаголов.
+            Корень <em>heiß</em> сохраняется, меняются только <strong>окончания</strong>.
+          </div>
+          <table class="pattern-table" id="conjugationTable">
+            <!-- Rendered by JS -->
+          </table>
+        </div>
+
+        <!-- Grammar box 2 – du vs Sie -->
+        <div class="grammar-box">
+          <div class="grammar-box-title">💡 Формальное vs неформальное</div>
+          <div class="grammar-rule">
+            В немецком есть два способа обращения:<br><br>
+            <strong>du</strong> — «ты», неформально (друзья, семья, дети)<br>
+            <strong>Sie</strong> (с заглавной!) — «Вы», вежливо (незнакомцы, начальство, старшие)<br><br>
+            <em>Wie heißt du?</em> → другу &nbsp;|&nbsp; <em>Wie heißen Sie?</em> → незнакомцу
+          </div>
+        </div>
+      </section>
+
+      <!-- ══ SECTION 4: EXERCISES ══ -->
+      <section class="lesson-section">
+        <div class="section-label">✍️ Упражнения</div>
+        <h2 class="section-title">Закрепи материал</h2>
+
+        <!-- Tab bar -->
+        <div class="exercise-tabs">
+          <button class="ex-tab active" data-panel="fill">Заполни пропуски</button>
+          <button class="ex-tab" data-panel="choice">Выбор ответа</button>
+          <button class="ex-tab" data-panel="match">Сопоставление</button>
+          <button class="ex-tab" data-panel="dictation">Диктант</button>
+        </div>
+
+        <!-- Panel: Fill in the blank -->
+        <div class="exercise-panel active" id="panel-fill">
+          <div id="fillContainer">
+            <!-- Rendered by JS from LESSON_DATA.exercises.fillBlanks -->
+          </div>
+          <button class="btn btn-primary" id="checkFillBtn" style="margin-top:16px">
+            Проверить все ответы
+          </button>
+          <div class="result-banner" id="fillResult"></div>
+        </div>
+
+        <!-- Panel: Multiple choice -->
+        <div class="exercise-panel" id="panel-choice">
+          <div id="mcContainer">
+            <!-- Rendered by Exercises.initMCPanel() -->
+          </div>
+          <div class="result-banner" id="choiceResult"></div>
+        </div>
+
+        <!-- Panel: Matching -->
+        <div class="exercise-panel" id="panel-match">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+            <div>
+              <div class="match-col-label">Немецкий</div>
+              <div class="match-items" id="matchLeft"></div>
+            </div>
+            <div>
+              <div class="match-col-label">Русский</div>
+              <div class="match-items" id="matchRight"></div>
+            </div>
+          </div>
+          <div class="result-banner" id="matchResult" style="margin-top:16px"></div>
+        </div>
+
+        <!-- Panel: Dictation -->
+        <div class="exercise-panel" id="panel-dictation">
+          <div id="dictationContainer">
+            <!-- Rendered by Exercises.initDictationPanel() -->
+          </div>
+          <button class="btn btn-primary" id="checkDictBtn" style="margin-top:16px">
+            Проверить диктант
+          </button>
+          <div class="result-banner" id="dictResult"></div>
+        </div>
+
+      </section>
+
+      <!-- ══ SECTION 5: FLASHCARDS ══ -->
+      <section class="lesson-section flashcard-section">
+        <div class="section-label">🃏 Флэшкарты</div>
+        <h2 class="section-title">Интервальное повторение</h2>
+
+        <div class="flashcard-meta">
+          <span id="cardCounter">Карточка 1 из 10</span>
+          <div class="flashcard-dots" id="cardDots"></div>
+        </div>
+
+        <div class="flashcard-viewport">
+          <div class="flashcard" id="flashcard">
+            <div class="card-face front">
+              <div class="card-de" id="cardDE">…</div>
+              <div class="card-hint">Нажмите, чтобы увидеть перевод &nbsp;🔊</div>
+            </div>
+            <div class="card-face back">
+              <div class="card-badge">Перевод</div>
+              <div class="card-ru" id="cardRU">…</div>
+              <div class="card-ipa" id="cardIPA"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-actions" id="cardActions" style="display:none">
+          <button class="card-btn again" onclick="cardAgain()">😕 Ещё раз</button>
+          <button class="card-btn good"  onclick="cardGood()">✓ Знаю!</button>
+        </div>
+
+        <!-- Completion -->
+        <div class="lesson-complete" id="lessonComplete">
+          <div class="complete-emoji">🎉</div>
+          <div class="complete-title">Урок завершён!</div>
+          <div class="complete-sub">Ты выучил все карточки первого урока. Отличная работа!</div>
+          <div class="xp-earned">⚡ +50 XP получено!</div>
+          <br><br>
+          <a href="../../../index.html" class="btn btn-primary">На главную →</a>
+        </div>
+      </section>
+
+    </div><!-- /lesson-content -->
+  </main>
+
+</div><!-- /app -->
+
+<!-- Mobile sidebar toggle -->
+<button class="sidebar-mobile-toggle" id="sidebarToggle" onclick="openSidebar()">☰</button>
+
+<!-- ── SCRIPTS ── -->
+<script src="../../../js/tts.js"></script>
+<script src="../../../js/progress.js"></script>
+<script src="../../../js/exercises.js"></script>
+<script src="../../../js/flashcards.js"></script>
+<script src="../../../js/lesson-render.js"></script>
+
+
+<script>
+  const CURRENT_LESSON_NUM = 1;
+
+/* ══════════════════════════════════════
+   THEME TOGGLE (light / dark)
+   ══════════════════════════════════════ */
+function initTheme() {
+  const saved = localStorage.getItem('dm_theme') || 'dark';
+  applyTheme(saved);
+}
+function applyTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+  localStorage.setItem('dm_theme', theme);
+  const btn = document.getElementById('themeToggle');
+  if (btn) btn.textContent = theme === 'dark' ? '☀️' : '🌙';
+}
+function toggleTheme() {
+  const cur = document.documentElement.getAttribute('data-theme') || 'dark';
+  applyTheme(cur === 'dark' ? 'light' : 'dark');
+}
+
+/* ══════════════════════════════════════
+   FIX 2: Phrase cards — word speaks ONLY the word
+   ══════════════════════════════════════ */
+function renderPhrases() {
+  const grid = document.getElementById('phraseGrid');
+  if (!grid || !LESSON_DATA?.phrases) return;
+
+  LESSON_DATA.phrases.forEach(p => {
+    const card = document.createElement('div');
+    card.className = 'phrase-card';
+
+    // Split phrase into tokens, wrap each word in a clickable span
+    // Punctuation stays outside the span so only the word is spoken
+    const tokens = p.de.match(/[A-Za-zÄäÖöÜüß]+|[^A-Za-zÄäÖöÜüß\s]+|\s+/g) || [p.de];
+    const deHtml = tokens.map(tok => {
+      // Word token
+      if (/[A-Za-zÄäÖöÜüß]/.test(tok)) {
+        const safe = tok.replace(/'/g, "\\'");
+        return `<span class="word-speak" onclick="event.stopPropagation();speak('${safe}')">${tok}<span class="wi">🔊</span></span>`;
+      }
+      return tok; // punctuation or space — no wrap
+    }).join('');
+
+    const audioSafe = p.audio.replace(/'/g, "\\'");
+    card.innerHTML = `
+      <div class="phrase-body">
+        <div class="phrase-de">${deHtml}</div>
+        <div class="phrase-ru">${p.ru}</div>
+        ${p.note ? `<div class="phrase-note">${p.note}</div>` : ''}
+      </div>
+      <button class="speak-btn" onclick="speak('${audioSafe}')" title="Озвучить всю фразу">🔊</button>
+    `;
+    grid.appendChild(card);
+  });
+}
+
+/* ══════════════════════════════════════
+   FIX 3: Vocab table — no speaker next to Russian
+   ══════════════════════════════════════ */
+function renderVocab() {
+  const tbody = document.getElementById('vocabTableBody');
+  if (!tbody || !LESSON_DATA?.vocabulary) return;
+
+  LESSON_DATA.vocabulary.forEach(w => {
+    const safe = w.de.replace(/'/g, "\\'");
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td class="vocab-de">
+        ${w.article ? `<span class="vocab-article">${w.article}</span>` : ''}
+        <span class="word-speak" onclick="speak('${safe}')">
+          ${w.de}<span class="wi" style="opacity:1;font-size:11px">🔊</span>
+        </span>
+      </td>
+      <td class="vocab-ipa">${w.ipa}</td>
+      <td>${w.ru}</td>
+    `;
+    // ↑ Removed the 4th column with speak-btn next to Russian
+    tbody.appendChild(tr);
+  });
+}
+
+/* ══════════════════════════════════════
+   FIX 4: Conjugation table — visible speaker icon on hover
+   ══════════════════════════════════════ */
+function renderConjugation() {
+  const tbl = document.getElementById('conjugationTable');
+  if (!tbl || !LESSON_DATA?.grammar?.[0]?.conjugation) return;
+
+  LESSON_DATA.grammar[0].conjugation.forEach(row => {
+    const safe = row.audio.replace(/'/g, "\\'");
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td>${row.pronoun}</td>
+      <td>
+        <span class="word-speak conj-word" onclick="speak('${safe}')">
+          <strong>${row.form}</strong><span class="wi">🔊</span>
+        </span>
+      </td>
+      <td>${row.translation}</td>
+    `;
+    tbl.appendChild(tr);
+  });
+}
+
+/* ── Render Fill-in-the-blank ── */
+function renderFillBlanks() {
+  const container = document.getElementById('fillContainer');
+  if (!container || !LESSON_DATA?.exercises?.fillBlanks) return;
+
+  LESSON_DATA.exercises.fillBlanks.forEach((q, i) => {
+    const div = document.createElement('div');
+    div.className = 'blank-question';
+    div.id = `bq-${i}`;
+
+    div.innerHTML = `
+      <div class="blank-sentence">
+        ${q.before ? `<span>${q.before}</span>` : ''}
+        <span class="blank-input-wrap" id="wrap-${i}">
+          <input class="blank-input"
+                 id="blank-${i}"
+                 placeholder="?"
+                 autocomplete="off"
+                 spellcheck="false"
+                 style="width:${Math.max(70, q.blank.length * 14 + 24)}px">
+        </span>
+        ${q.after ? `<span>${q.after}</span>` : ''}
+      </div>
+      <div class="blank-translation">${q.translation}</div>
+    `;
+    container.appendChild(div);
+
+    const input = div.querySelector('.blank-input');
+    if (typeof Exercises !== 'undefined' && Exercises.initBlankInput) {
+      Exercises.initBlankInput(input, q.blank, q.hintWord, q.hintRule);
+    }
+  });
+}
+
+/* ── Boot sequence ── */
+document.addEventListener('DOMContentLoaded', () => {
+  initTheme();
+  Progress.init();
+  renderPhrases();
+  renderVocab();
+  renderConjugation();
+  renderFillBlanks();
+  Exercises.init();
+  Flashcards.init();   // FIX 5: flashcards wired correctly
+});
+</script>
+
+  <script>if('serviceWorker' in navigator){navigator.serviceWorker.register('/service-worker.js');}</script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+patch_pwa.py
+gen_lessons.py
+gen_template.html
+*.pyc
+__pycache__/
+.DS_Store
+Thumbs.db
