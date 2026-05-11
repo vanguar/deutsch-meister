@@ -1,4 +1,4 @@
-const CACHE = 'deutsch-meister-v7';
+const CACHE = 'deutsch-meister-v8';
 const BASE = '/deutsch-meister';
 
 const STATIC = [

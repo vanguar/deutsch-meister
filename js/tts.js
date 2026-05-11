@@ -1,84 +1,72 @@
-/* ═══════════════════════════════════════════════
-   js/tts.js — Text-to-Speech (Web Speech API)
-               German pronunciation helper
-   ═══════════════════════════════════════════════ */
-
 const TTS = (() => {
   let voices = [];
   let preferredVoice = null;
-  let ready = false;
+  let audioEl = null;
 
-  /* Load and cache available voices */
+  const hasSpeechAPI = () => !!(window.speechSynthesis && typeof SpeechSynthesisUtterance !== 'undefined');
+
+  /* Google Translate TTS fallback — works in Telegram WebView */
+  function speakViaAudio(text) {
+    const url = 'https://translate.googleapis.com/translate_tts?ie=UTF-8&tl=de&client=gtx&q=' + encodeURIComponent(text);
+    if (!audioEl) {
+      audioEl = new Audio();
+      audioEl.crossOrigin = 'anonymous';
+    }
+    audioEl.pause();
+    audioEl.src = url;
+    audioEl.play().catch(() => {});
+  }
+
+  function pickBestVoice(list) {
+    return list.find(v => v.lang === 'de-DE')
+      || list.find(v => v.lang.startsWith('de'))
+      || null;
+  }
+
   function loadVoices() {
     voices = window.speechSynthesis.getVoices();
     preferredVoice = pickBestVoice(voices);
-    ready = true;
   }
 
-  /* Pick the best German voice available */
-  function pickBestVoice(list) {
-    // Priority 1: German (Germany) — de-DE
-    const deDE = list.find(v => v.lang === 'de-DE');
-    if (deDE) return deDE;
-
-    // Priority 2: any German
-    const de = list.find(v => v.lang.startsWith('de'));
-    if (de) return de;
-
-    // Fallback: null (browser default)
-    return null;
-  }
-
-  /* Speak a text string */
   function speak(text, { rate = 0.85, pitch = 1 } = {}) {
-    if (!window.speechSynthesis) {
-      console.warn('TTS: Web Speech API not supported in this browser.');
-      return;
+    if (hasSpeechAPI()) {
+      const voices = window.speechSynthesis.getVoices();
+      // если голосов нет — значит WebView не поддерживает, падаем на audio
+      if (voices.length === 0) {
+        speakViaAudio(text);
+        return;
+      }
+      window.speechSynthesis.cancel();
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang  = 'de-DE';
+      utterance.rate  = rate;
+      utterance.pitch = pitch;
+      if (preferredVoice) utterance.voice = preferredVoice;
+      utterance.onerror = () => speakViaAudio(text);
+      window.speechSynthesis.speak(utterance);
+    } else {
+      speakViaAudio(text);
     }
-
-    // Cancel any ongoing speech
-    window.speechSynthesis.cancel();
-
-    const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang  = 'de-DE';
-    utterance.rate  = rate;
-    utterance.pitch = pitch;
-
-    if (preferredVoice) {
-      utterance.voice = preferredVoice;
-    }
-
-    window.speechSynthesis.speak(utterance);
   }
 
-  /* Speak slowly — useful for dictation */
   function speakSlow(text) {
     speak(text, { rate: 0.65 });
   }
 
-  /* Init — handles the async nature of voice loading */
   function init() {
-    if (!window.speechSynthesis) return;
-
-    // Voices may already be loaded
+    if (!hasSpeechAPI()) return;
     const initial = window.speechSynthesis.getVoices();
     if (initial.length > 0) {
       voices = initial;
       preferredVoice = pickBestVoice(voices);
-      ready = true;
     }
-
-    // Or they arrive via event (Chrome, Edge)
     window.speechSynthesis.onvoiceschanged = loadVoices;
   }
 
-  /* Expose public API */
   return { init, speak, speakSlow };
 })();
 
-/* Auto-init on script load */
 TTS.init();
 
-/* Global shorthand — used inline via onclick="speak('...')" */
 function speak(text)     { TTS.speak(text); }
 function speakSlow(text) { TTS.speakSlow(text); }
