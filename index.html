@@ -11,6 +11,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="Deutsch Meister">
   <link rel="apple-touch-icon" href="/icons/icon.svg">
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/sidebar.css">
 
@@ -406,6 +407,7 @@
 <button class="sidebar-mobile-toggle" id="sidebarToggle" onclick="toggleSidebar()">☰</button>
 
 <script src="js/progress.js"></script>
+<script src="js/telegram.js"></script>
 <script>
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/deutsch-meister/service-worker.js');
