@@ -1,20 +1,17 @@
 const TTS = (() => {
-  let voices = [];
   let preferredVoice = null;
   let audioEl = null;
 
   const hasSpeechAPI = () => !!(window.speechSynthesis && typeof SpeechSynthesisUtterance !== 'undefined');
 
-  /* Google Translate TTS fallback — works in Telegram WebView */
   function speakViaAudio(text) {
+    console.log('[TTS] Using audio fallback for:', text);
     const url = 'https://translate.googleapis.com/translate_tts?ie=UTF-8&tl=de&client=gtx&q=' + encodeURIComponent(text);
-    if (!audioEl) {
-      audioEl = new Audio();
-      audioEl.crossOrigin = 'anonymous';
-    }
+    if (!audioEl) audioEl = new Audio();
     audioEl.pause();
     audioEl.src = url;
-    audioEl.play().catch(() => {});
+    const p = audioEl.play();
+    if (p) p.catch(e => console.warn('[TTS] Audio play failed:', e));
   }
 
   function pickBestVoice(list) {
@@ -24,41 +21,46 @@ const TTS = (() => {
   }
 
   function loadVoices() {
-    voices = window.speechSynthesis.getVoices();
-    preferredVoice = pickBestVoice(voices);
+    const v = window.speechSynthesis.getVoices();
+    preferredVoice = pickBestVoice(v);
+    console.log('[TTS] Voices loaded:', v.length, 'preferred:', preferredVoice?.name);
   }
 
   function speak(text, { rate = 0.85, pitch = 1 } = {}) {
+    console.log('[TTS] speak() called, hasSpeechAPI:', hasSpeechAPI());
     if (hasSpeechAPI()) {
-      const voices = window.speechSynthesis.getVoices();
-      // если голосов нет — значит WebView не поддерживает, падаем на audio
-      if (voices.length === 0) {
+      const v = window.speechSynthesis.getVoices();
+      console.log('[TTS] Available voices:', v.length);
+      if (v.length === 0) {
         speakViaAudio(text);
         return;
       }
       window.speechSynthesis.cancel();
-      const utterance = new SpeechSynthesisUtterance(text);
-      utterance.lang  = 'de-DE';
-      utterance.rate  = rate;
-      utterance.pitch = pitch;
-      if (preferredVoice) utterance.voice = preferredVoice;
-      utterance.onerror = () => speakViaAudio(text);
-      window.speechSynthesis.speak(utterance);
+      const u = new SpeechSynthesisUtterance(text);
+      u.lang  = 'de-DE';
+      u.rate  = rate;
+      u.pitch = pitch;
+      if (preferredVoice) u.voice = preferredVoice;
+      u.onerror = (e) => {
+        console.warn('[TTS] SpeechSynthesis error:', e.error, '— falling back to audio');
+        speakViaAudio(text);
+      };
+      window.speechSynthesis.speak(u);
     } else {
       speakViaAudio(text);
     }
   }
 
-  function speakSlow(text) {
-    speak(text, { rate: 0.65 });
-  }
+  function speakSlow(text) { speak(text, { rate: 0.65 }); }
 
   function init() {
-    if (!hasSpeechAPI()) return;
+    if (!hasSpeechAPI()) {
+      console.log('[TTS] No SpeechAPI, will use audio fallback');
+      return;
+    }
     const initial = window.speechSynthesis.getVoices();
     if (initial.length > 0) {
-      voices = initial;
-      preferredVoice = pickBestVoice(voices);
+      preferredVoice = pickBestVoice(initial);
     }
     window.speechSynthesis.onvoiceschanged = loadVoices;
   }
@@ -67,6 +69,5 @@ const TTS = (() => {
 })();
 
 TTS.init();
-
 function speak(text)     { TTS.speak(text); }
 function speakSlow(text) { TTS.speakSlow(text); }
