@@ -21,10 +21,8 @@ if (TG) {
   if (isHome && !sessionStorage.getItem('tg_welcomed')) {
     sessionStorage.setItem('tg_welcomed', '1');
     const user = TG.initDataUnsafe?.user;
-    if (user) {
-      const name = user.first_name || 'друг';
-      showTgWelcome(name);
-    }
+    const name = user?.first_name || 'друг';
+    showTgWelcome(name);
   }
 }
 
