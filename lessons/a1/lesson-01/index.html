@@ -361,6 +361,46 @@
 <button class="sidebar-mobile-toggle" id="sidebarToggle" onclick="toggleSidebar()">☰</button>
 
 <!-- ── SCRIPTS ── -->
+<script>
+// INLINE DEBUG - не зависит от кэша
+window.addEventListener('DOMContentLoaded', function() {
+  var box = document.createElement('div');
+  box.style.cssText = 'position:fixed;bottom:0;left:0;right:0;background:rgba(0,0,0,.9);color:#0f0;font:13px monospace;padding:10px;z-index:99999;max-height:180px;overflow-y:auto';
+  box.id = '_dbg';
+  document.body.appendChild(box);
+  function log(t) { box.innerHTML += t + '<br>'; box.scrollTop = 9999; }
+
+  log('✓ inline script loaded');
+  log('speechSynthesis: ' + (!!window.speechSynthesis));
+
+  var btn = document.createElement('button');
+  btn.textContent = '🔊 TEST AUDIO';
+  btn.style.cssText = 'display:block;margin:6px 0;padding:8px 16px;background:#7c6af7;color:#fff;border:none;border-radius:8px;font-size:14px';
+  btn.onclick = function() {
+    log('--- testing ---');
+    // Test 1: Web Speech API
+    if (window.speechSynthesis) {
+      var v = window.speechSynthesis.getVoices();
+      log('voices: ' + v.length);
+      var u = new SpeechSynthesisUtterance('Hallo');
+      u.lang = 'de-DE';
+      u.onerror = function(e) { log('speech error: ' + e.error); };
+      u.onstart = function() { log('speech started!'); };
+      u.onend   = function() { log('speech ended!'); };
+      window.speechSynthesis.speak(u);
+    } else {
+      log('no speechSynthesis');
+    }
+    // Test 2: Audio fallback
+    var url = 'https://translate.googleapis.com/translate_tts?ie=UTF-8&tl=de&client=gtx&q=Hallo';
+    var a = new Audio(url);
+    a.onplay  = function() { log('audio playing!'); };
+    a.onerror = function(e) { log('audio error: ' + e.message); };
+    a.play().then(function(){ log('audio play() ok'); }).catch(function(e){ log('audio play() fail: ' + e); });
+  };
+  box.appendChild(btn);
+});
+</script>
 <script src="../../../js/tts.js?v=11"></script>
 <script src="../../../js/progress.js?v=11"></script>
 <script src="../../../js/exercises.js?v=11"></script>
