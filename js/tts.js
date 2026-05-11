@@ -1,10 +1,25 @@
-/* TTS — ResponsiveVoice fallback for Telegram WebView */
-
 const TTS = (() => {
   let preferredVoice = null;
+  let audio = null;
 
-  const hasRV    = () => typeof responsiveVoice !== 'undefined';
-  const hasSpeech = () => !!(window.speechSynthesis && window.speechSynthesis.getVoices().length);
+  const hasSpeech = () => {
+    if (!window.speechSynthesis) return false;
+    return window.speechSynthesis.getVoices().length > 0;
+  };
+
+  function speakViaStream(text) {
+    const url = 'https://api.streamelements.com/kappa/v2/speech?voice=Marlene&text=' + encodeURIComponent(text);
+    if (!audio) audio = new Audio();
+    audio.pause();
+    audio.src = url;
+    audio.play().catch(() => speakViaRV(text));
+  }
+
+  function speakViaRV(text) {
+    if (typeof responsiveVoice !== 'undefined') {
+      responsiveVoice.speak(text, 'Deutsch Female');
+    }
+  }
 
   function pickBestVoice() {
     const v = window.speechSynthesis?.getVoices() || [];
@@ -18,25 +33,21 @@ const TTS = (() => {
       u.lang  = 'de-DE';
       u.rate  = rate;
       u.pitch = pitch;
-      u.voice = pickBestVoice();
-      u.onerror = () => speakRV(text);
+      u.voice = preferredVoice || pickBestVoice();
+      u.onerror = () => speakViaStream(text);
       window.speechSynthesis.speak(u);
-    } else if (hasRV()) {
-      speakRV(text, rate);
+    } else {
+      speakViaStream(text);
     }
-  }
-
-  function speakRV(text, rate = 0.85) {
-    responsiveVoice.speak(text, 'Deutsch Female', { rate });
   }
 
   function speakSlow(text) { speak(text, { rate: 0.65 }); }
 
   function init() {
     if (!window.speechSynthesis) return;
-    window.speechSynthesis.onvoiceschanged = () => { preferredVoice = pickBestVoice(); };
-    const v = window.speechSynthesis.getVoices();
-    if (v.length) preferredVoice = pickBestVoice();
+    const update = () => { preferredVoice = pickBestVoice(); };
+    window.speechSynthesis.onvoiceschanged = update;
+    update();
   }
 
   return { init, speak, speakSlow };

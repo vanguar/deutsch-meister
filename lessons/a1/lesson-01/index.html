@@ -2,6 +2,9 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="manifest" href="../../../manifest.json">
   <meta name="theme-color" content="#7c6af7">
@@ -363,40 +366,6 @@
 <button class="sidebar-mobile-toggle" id="sidebarToggle" onclick="toggleSidebar()">☰</button>
 
 <!-- ── SCRIPTS ── -->
-<script>
-// INLINE DEBUG - не зависит от кэша
-window.addEventListener('DOMContentLoaded', function() {
-  var box = document.createElement('div');
-  box.style.cssText = 'position:fixed;bottom:0;left:0;right:0;background:rgba(0,0,0,.9);color:#0f0;font:13px monospace;padding:10px;z-index:99999;max-height:180px;overflow-y:auto';
-  box.id = '_dbg';
-  document.body.appendChild(box);
-  function log(t) { box.innerHTML += t + '<br>'; box.scrollTop = 9999; }
-
-  log('✓ inline v14');
-  log('speechSynthesis: ' + (!!window.speechSynthesis));
-  setTimeout(function() {
-    log('responsiveVoice: ' + (typeof responsiveVoice !== 'undefined'));
-  }, 1500);
-
-  var btn = document.createElement('button');
-  btn.textContent = '🔊 TEST RV';
-  btn.style.cssText = 'display:block;margin:6px 0;padding:8px 16px;background:#7c6af7;color:#fff;border:none;border-radius:8px;font-size:14px';
-  btn.onclick = function() {
-    log('--- testing RV ---');
-    if (typeof responsiveVoice !== 'undefined') {
-      log('RV loaded! speaking...');
-      responsiveVoice.speak('Hallo, wie geht es dir?', 'Deutsch Female', {
-        onstart: function() { log('RV onstart!'); },
-        onend:   function() { log('RV onend!'); },
-        onerror: function(e) { log('RV error: ' + e); }
-      });
-    } else {
-      log('RV NOT loaded!');
-    }
-  };
-  box.appendChild(btn);
-});
-</script>
 <script src="../../../js/tts.js?v=11"></script>
 <script src="../../../js/progress.js?v=11"></script>
 <script src="../../../js/exercises.js?v=11"></script>
