@@ -501,19 +501,18 @@
 .step-next-btn {
   display: block;
   width: 100%;
-  margin-top: 14px;
-  padding: 14px;
-  background: var(--accent2);
+  margin-top: 16px;
+  padding: 15px;
+  background: linear-gradient(135deg, var(--accent2), #9b8aff);
   border: none;
-  border-radius: var(--r-md);
+  border-radius: var(--r-full);
   color: #fff;
   font-size: 16px;
   font-weight: 700;
+  letter-spacing: .4px;
   cursor: pointer;
-  transition: opacity var(--t-fast), transform var(--t-fast);
-  letter-spacing: .3px;
+  box-shadow: 0 4px 20px rgba(124,106,247,.45);
+  transition: all var(--t-normal);
 }
-.step-next-btn:active {
-  opacity: .85;
-  transform: scale(.98);
-}
+.step-next-btn:hover  { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(124,106,247,.55); }
+.step-next-btn:active { transform: translateY(0);    box-shadow: 0 2px 10px rgba(124,106,247,.35); }
