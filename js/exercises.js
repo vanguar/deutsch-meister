@@ -472,6 +472,19 @@ const Exercises = (() => {
     const checkAllBtn = document.getElementById('checkFillBtn');
     if (checkAllBtn) checkAllBtn.style.display = 'none';
 
+    function advance() {
+      qs[idx].style.display = 'none';
+      idx++;
+      if (idx < total) {
+        qs[idx].style.display = '';
+        _updateBar(bar, idx, total);
+        setTimeout(() => qs[idx].querySelector('.blank-input')?.focus(), 80);
+      } else {
+        showBanner('fillResult', ok, total);
+        Progress.markSectionDone('fill', Math.round(ok / total * 100));
+      }
+    }
+
     qs.forEach((q, qi) => {
       const inp = q.querySelector('.blank-input');
       if (!inp) return;
@@ -480,23 +493,26 @@ const Exercises = (() => {
       q.appendChild(btn);
 
       btn.addEventListener('click', () => {
-        // Evaluate if user hasn't pressed Enter yet
-        if (!inp.classList.contains('input-correct') &&
-            !inp.classList.contains('input-wrong')) {
-          if (inp._evaluate) inp._evaluate();
-        }
-        if (inp.classList.contains('input-correct')) ok++;
+        const wasCorrect = inp.classList.contains('input-correct');
+        const wasWrong   = inp.classList.contains('input-wrong');
 
-        q.style.display = 'none';
-        idx++;
-        if (idx < total) {
-          qs[idx].style.display = '';
-          _updateBar(bar, idx, total);
-          setTimeout(() => qs[idx].querySelector('.blank-input')?.focus(), 80);
-        } else {
-          showBanner('fillResult', ok, total);
-          Progress.markSectionDone('fill', Math.round(ok / total * 100));
+        if (!wasCorrect && !wasWrong) {
+          // Not yet checked — evaluate first, show result
+          if (inp._evaluate) inp._evaluate();
+
+          if (inp.classList.contains('input-correct')) {
+            ok++;
+            setTimeout(advance, 600); // brief pause to see green
+          } else {
+            // Wrong or empty — show red, change button to "Пропустить →"
+            btn.textContent = 'Пропустить →';
+          }
+          return;
         }
+
+        // Already checked — advance
+        if (wasCorrect) ok++;
+        advance();
       });
     });
   }
@@ -554,6 +570,19 @@ const Exercises = (() => {
     const checkDictBtn = document.getElementById('checkDictBtn');
     if (checkDictBtn) checkDictBtn.style.display = 'none';
 
+    function advance() {
+      cards[idx].style.display = 'none';
+      idx++;
+      if (idx < total) {
+        cards[idx].style.display = '';
+        _updateBar(bar, idx, total);
+        setTimeout(() => cards[idx].querySelector('.dictation-input')?.focus(), 80);
+      } else {
+        showBanner('dictResult', ok, total);
+        Progress.markSectionDone('dict', Math.round(ok / total * 100));
+      }
+    }
+
     cards.forEach((card, ci) => {
       const inp = card.querySelector('.dictation-input');
       if (!inp) return;
@@ -562,24 +591,26 @@ const Exercises = (() => {
       card.appendChild(btn);
 
       btn.addEventListener('click', () => {
-        // Evaluate if user hasn't pressed Enter yet
-        if (!inp.classList.contains('input-correct') &&
-            !inp.classList.contains('input-wrong')) {
+        const wasCorrect = inp.classList.contains('input-correct');
+        const wasWrong   = inp.classList.contains('input-wrong');
+
+        if (!wasCorrect && !wasWrong) {
+          // Not yet checked — evaluate first, show result
           const word = dictData[ci]?.word || '';
           if (inp.value.trim()) checkSingleDict(ci, word);
-        }
-        if (inp.classList.contains('input-correct')) ok++;
 
-        card.style.display = 'none';
-        idx++;
-        if (idx < total) {
-          cards[idx].style.display = '';
-          _updateBar(bar, idx, total);
-          setTimeout(() => cards[idx].querySelector('.dictation-input')?.focus(), 80);
-        } else {
-          showBanner('dictResult', ok, total);
-          Progress.markSectionDone('dict', Math.round(ok / total * 100));
+          if (inp.classList.contains('input-correct')) {
+            ok++;
+            setTimeout(advance, 600);
+          } else {
+            btn.textContent = 'Пропустить →';
+          }
+          return;
         }
+
+        // Already checked — advance
+        if (wasCorrect) ok++;
+        advance();
       });
     });
   }
