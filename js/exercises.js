@@ -417,11 +417,8 @@ const Exercises = (() => {
 
   /* ════════════════════════════════════
      MOBILE STEP MODE  (≤860 px)
-     Show one task at a time; skip after
-     STEP_SKIP_AFTER consecutive wrong answers.
+     One task at a time with "Далее →" button.
      ════════════════════════════════════ */
-
-  const STEP_SKIP_AFTER = 3;
 
   function _isMobile() { return window.innerWidth <= 860; }
 
@@ -450,22 +447,12 @@ const Exercises = (() => {
     if (numEl && idx < total) numEl.textContent = `${idx + 1} / ${total}`;
   }
 
-  function _addSkipBtn(bar, cb) {
-    if (bar.querySelector('.step-skip')) return;
+  function _mkNextBtn(isLast) {
     const b = document.createElement('button');
-    b.type = 'button'; b.className = 'step-skip';
-    b.textContent = 'Пропустить →';
-    b.onclick = () => { b.remove(); cb(); };
-    bar.appendChild(b);
-  }
-
-  function _addNextBtn(bar, cb) {
-    if (bar.querySelector('.step-next')) return;
-    const b = document.createElement('button');
-    b.type = 'button'; b.className = 'step-next';
-    b.textContent = 'Следующий →';
-    b.onclick = () => { b.remove(); cb(); };
-    bar.appendChild(b);
+    b.type = 'button';
+    b.className = 'step-next-btn';
+    b.textContent = isLast ? 'Завершить ✓' : 'Далее →';
+    return b;
   }
 
   /* ── Fill step ── */
@@ -476,40 +463,39 @@ const Exercises = (() => {
     const qs = [...cnt.querySelectorAll('.blank-question')];
     if (!qs.length) return;
 
-    let idx = 0, wrong = 0, ok = 0;
+    let idx = 0, ok = 0;
     const total = qs.length;
     const bar = _makeStepBar(total, cnt);
 
     qs.forEach((q, qi) => { if (qi > 0) q.style.display = 'none'; });
 
-    const checkBtn = document.getElementById('checkFillBtn');
-    if (checkBtn) checkBtn.style.display = 'none';
+    const checkAllBtn = document.getElementById('checkFillBtn');
+    if (checkAllBtn) checkAllBtn.style.display = 'none';
 
-    function next() {
-      qs[idx].style.display = 'none';
-      idx++; wrong = 0;
-      if (idx < total) {
-        qs[idx].style.display = '';
-        _updateBar(bar, idx, total);
-        setTimeout(() => qs[idx].querySelector('.blank-input')?.focus(), 80);
-      } else {
-        showBanner('fillResult', ok, total);
-        Progress.markSectionDone('fill', Math.round(ok / total * 100));
-      }
-    }
-
-    qs.forEach(q => {
+    qs.forEach((q, qi) => {
       const inp = q.querySelector('.blank-input');
       if (!inp) return;
-      let locked = false;
-      inp.addEventListener('keydown', e => {
-        if (e.key !== 'Enter' || locked) return;
-        if (inp.classList.contains('input-correct')) {
-          locked = true; ok++;
-          setTimeout(next, 500);
-        } else if (inp.classList.contains('input-wrong')) {
-          wrong++;
-          if (wrong >= STEP_SKIP_AFTER) _addSkipBtn(bar, next);
+
+      const btn = _mkNextBtn(qi === total - 1);
+      q.appendChild(btn);
+
+      btn.addEventListener('click', () => {
+        // Evaluate if user hasn't pressed Enter yet
+        if (!inp.classList.contains('input-correct') &&
+            !inp.classList.contains('input-wrong')) {
+          if (inp._evaluate) inp._evaluate();
+        }
+        if (inp.classList.contains('input-correct')) ok++;
+
+        q.style.display = 'none';
+        idx++;
+        if (idx < total) {
+          qs[idx].style.display = '';
+          _updateBar(bar, idx, total);
+          setTimeout(() => qs[idx].querySelector('.blank-input')?.focus(), 80);
+        } else {
+          showBanner('fillResult', ok, total);
+          Progress.markSectionDone('fill', Math.round(ok / total * 100));
         }
       });
     });
@@ -529,27 +515,23 @@ const Exercises = (() => {
 
     qs.forEach((q, qi) => { if (qi > 0) q.style.display = 'none'; });
 
-    function next() {
-      qs[idx].style.display = 'none';
-      idx++;
-      if (idx < total) { qs[idx].style.display = ''; _updateBar(bar, idx, total); }
-      // initMCPanel handles section completion when all questions are answered
-    }
+    qs.forEach((q, qi) => {
+      const btn = _mkNextBtn(qi === total - 1);
+      q.appendChild(btn);
 
-    qs.forEach(q => {
-      const optsEl = q.querySelector('.mc-options');
-      if (!optsEl) return;
-      let locked = false;
-      optsEl.addEventListener('click', e => {
-        const btn = e.target.closest('.mc-option');
-        if (!btn || locked) return;
-        // initMCPanel adds 'disabled' to btn synchronously before bubbling reaches here,
-        // so we must NOT check for 'disabled' — use our own 'locked' guard instead
-        locked = true;
-        requestAnimationFrame(() => {
-          if (btn.classList.contains('correct'))    setTimeout(next, 700);
-          else if (btn.classList.contains('wrong')) setTimeout(() => _addNextBtn(bar, next), 500);
-        });
+      btn.addEventListener('click', () => {
+        q.style.display = 'none';
+        idx++;
+        if (idx < total) {
+          qs[idx].style.display = '';
+          _updateBar(bar, idx, total);
+        } else {
+          // Count correct answers from DOM state
+          let correct = 0;
+          qs.forEach(q => { if (q.querySelector('.mc-option.correct')) correct++; });
+          showBanner('choiceResult', correct, total);
+          Progress.markSectionDone('choice', Math.round(correct / total * 100));
+        }
       });
     });
   }
@@ -562,40 +544,41 @@ const Exercises = (() => {
     const cards = [...cnt.querySelectorAll('.dictation-card')];
     if (!cards.length) return;
 
-    let idx = 0, wrong = 0, ok = 0;
+    const dictData = LESSON_DATA?.exercises?.dictation || [];
+    let idx = 0, ok = 0;
     const total = cards.length;
     const bar = _makeStepBar(total, cnt);
 
     cards.forEach((c, ci) => { if (ci > 0) c.style.display = 'none'; });
 
-    const checkBtn = document.getElementById('checkDictBtn');
-    if (checkBtn) checkBtn.style.display = 'none';
+    const checkDictBtn = document.getElementById('checkDictBtn');
+    if (checkDictBtn) checkDictBtn.style.display = 'none';
 
-    function next() {
-      cards[idx].style.display = 'none';
-      idx++; wrong = 0;
-      if (idx < total) {
-        cards[idx].style.display = '';
-        _updateBar(bar, idx, total);
-        setTimeout(() => cards[idx].querySelector('.dictation-input')?.focus(), 80);
-      } else {
-        showBanner('dictResult', ok, total);
-        Progress.markSectionDone('dict', Math.round(ok / total * 100));
-      }
-    }
-
-    cards.forEach(card => {
+    cards.forEach((card, ci) => {
       const inp = card.querySelector('.dictation-input');
       if (!inp) return;
-      let locked = false;
-      inp.addEventListener('keydown', e => {
-        if (e.key !== 'Enter' || locked) return;
-        if (inp.classList.contains('input-correct')) {
-          locked = true; ok++;
-          setTimeout(next, 500);
-        } else if (inp.classList.contains('input-wrong')) {
-          wrong++;
-          if (wrong >= STEP_SKIP_AFTER) _addSkipBtn(bar, next);
+
+      const btn = _mkNextBtn(ci === total - 1);
+      card.appendChild(btn);
+
+      btn.addEventListener('click', () => {
+        // Evaluate if user hasn't pressed Enter yet
+        if (!inp.classList.contains('input-correct') &&
+            !inp.classList.contains('input-wrong')) {
+          const word = dictData[ci]?.word || '';
+          if (inp.value.trim()) checkSingleDict(ci, word);
+        }
+        if (inp.classList.contains('input-correct')) ok++;
+
+        card.style.display = 'none';
+        idx++;
+        if (idx < total) {
+          cards[idx].style.display = '';
+          _updateBar(bar, idx, total);
+          setTimeout(() => cards[idx].querySelector('.dictation-input')?.focus(), 80);
+        } else {
+          showBanner('dictResult', ok, total);
+          Progress.markSectionDone('dict', Math.round(ok / total * 100));
         }
       });
     });
