@@ -415,6 +415,196 @@ const Exercises = (() => {
       .replace(/"/g,'&quot;');
   }
 
+  /* ════════════════════════════════════
+     MOBILE STEP MODE  (≤860 px)
+     Show one task at a time; skip after
+     STEP_SKIP_AFTER consecutive wrong answers.
+     ════════════════════════════════════ */
+
+  const STEP_SKIP_AFTER = 3;
+
+  function _isMobile() { return window.innerWidth <= 860; }
+
+  function _makeStepBar(total, anchor) {
+    const el = document.createElement('div');
+    el.className = 'step-bar';
+    const cap = Math.min(total, 12);
+    el.innerHTML =
+      `<div class="step-dots">${
+        Array.from({length: cap}, (_, i) =>
+          `<span class="sd${i === 0 ? ' sd-cur' : ''}"></span>`
+        ).join('')
+      }</div><span class="step-num">1 / ${total}</span>`;
+    anchor.parentNode.insertBefore(el, anchor);
+    return el;
+  }
+
+  function _updateBar(bar, idx, total) {
+    const cap = Math.min(total, 12);
+    bar.querySelectorAll('.sd').forEach((d, i) => {
+      d.className = 'sd' +
+        (i < Math.min(idx, cap) ? ' sd-done' :
+         i === idx && idx < cap  ? ' sd-cur'  : '');
+    });
+    const numEl = bar.querySelector('.step-num');
+    if (numEl && idx < total) numEl.textContent = `${idx + 1} / ${total}`;
+  }
+
+  function _addSkipBtn(bar, cb) {
+    if (bar.querySelector('.step-skip')) return;
+    const b = document.createElement('button');
+    b.type = 'button'; b.className = 'step-skip';
+    b.textContent = 'Пропустить →';
+    b.onclick = () => { b.remove(); cb(); };
+    bar.appendChild(b);
+  }
+
+  function _addNextBtn(bar, cb) {
+    if (bar.querySelector('.step-next')) return;
+    const b = document.createElement('button');
+    b.type = 'button'; b.className = 'step-next';
+    b.textContent = 'Следующий →';
+    b.onclick = () => { b.remove(); cb(); };
+    bar.appendChild(b);
+  }
+
+  /* ── Fill step ── */
+  function applyFillStep() {
+    if (!_isMobile()) return;
+    const cnt = document.getElementById('fillContainer');
+    if (!cnt) return;
+    const qs = [...cnt.querySelectorAll('.blank-question')];
+    if (!qs.length) return;
+
+    let idx = 0, wrong = 0, ok = 0;
+    const total = qs.length;
+    const bar = _makeStepBar(total, cnt);
+
+    qs.forEach((q, qi) => { if (qi > 0) q.style.display = 'none'; });
+
+    const checkBtn = document.getElementById('checkFillBtn');
+    if (checkBtn) checkBtn.style.display = 'none';
+
+    function next() {
+      qs[idx].style.display = 'none';
+      idx++; wrong = 0;
+      if (idx < total) {
+        qs[idx].style.display = '';
+        _updateBar(bar, idx, total);
+        setTimeout(() => qs[idx].querySelector('.blank-input')?.focus(), 80);
+      } else {
+        showBanner('fillResult', ok, total);
+        Progress.markSectionDone('fill', Math.round(ok / total * 100));
+      }
+    }
+
+    qs.forEach(q => {
+      const inp = q.querySelector('.blank-input');
+      if (!inp) return;
+      let locked = false;
+      inp.addEventListener('keydown', e => {
+        if (e.key !== 'Enter' || locked) return;
+        if (inp.classList.contains('input-correct')) {
+          locked = true; ok++;
+          setTimeout(next, 500);
+        } else if (inp.classList.contains('input-wrong')) {
+          wrong++;
+          if (wrong >= STEP_SKIP_AFTER) _addSkipBtn(bar, next);
+        }
+      });
+    });
+  }
+
+  /* ── Multiple-choice step ── */
+  function applyMCStep() {
+    if (!_isMobile()) return;
+    const cnt = document.getElementById('mcContainer');
+    if (!cnt) return;
+    const qs = [...cnt.querySelectorAll('.mc-question')];
+    if (!qs.length) return;
+
+    let idx = 0;
+    const total = qs.length;
+    const bar = _makeStepBar(total, cnt);
+
+    qs.forEach((q, qi) => { if (qi > 0) q.style.display = 'none'; });
+
+    function next() {
+      qs[idx].style.display = 'none';
+      idx++;
+      if (idx < total) { qs[idx].style.display = ''; _updateBar(bar, idx, total); }
+      // initMCPanel handles section completion when all questions are answered
+    }
+
+    qs.forEach(q => {
+      const optsEl = q.querySelector('.mc-options');
+      if (!optsEl) return;
+      let locked = false;
+      optsEl.addEventListener('click', e => {
+        const btn = e.target.closest('.mc-option');
+        if (!btn || btn.classList.contains('disabled') || locked) return;
+        locked = true;
+        requestAnimationFrame(() => {
+          if (btn.classList.contains('correct'))     setTimeout(next, 700);
+          else if (btn.classList.contains('wrong'))  setTimeout(() => _addNextBtn(bar, next), 500);
+        });
+      });
+    });
+  }
+
+  /* ── Dictation step ── */
+  function applyDictStep() {
+    if (!_isMobile()) return;
+    const cnt = document.getElementById('dictationContainer');
+    if (!cnt) return;
+    const cards = [...cnt.querySelectorAll('.dictation-card')];
+    if (!cards.length) return;
+
+    let idx = 0, wrong = 0, ok = 0;
+    const total = cards.length;
+    const bar = _makeStepBar(total, cnt);
+
+    cards.forEach((c, ci) => { if (ci > 0) c.style.display = 'none'; });
+
+    const checkBtn = document.getElementById('checkDictBtn');
+    if (checkBtn) checkBtn.style.display = 'none';
+
+    function next() {
+      cards[idx].style.display = 'none';
+      idx++; wrong = 0;
+      if (idx < total) {
+        cards[idx].style.display = '';
+        _updateBar(bar, idx, total);
+        setTimeout(() => cards[idx].querySelector('.dictation-input')?.focus(), 80);
+      } else {
+        showBanner('dictResult', ok, total);
+        Progress.markSectionDone('dict', Math.round(ok / total * 100));
+      }
+    }
+
+    cards.forEach(card => {
+      const inp = card.querySelector('.dictation-input');
+      if (!inp) return;
+      let locked = false;
+      inp.addEventListener('keydown', e => {
+        if (e.key !== 'Enter' || locked) return;
+        if (inp.classList.contains('input-correct')) {
+          locked = true; ok++;
+          setTimeout(next, 500);
+        } else if (inp.classList.contains('input-wrong')) {
+          wrong++;
+          if (wrong >= STEP_SKIP_AFTER) _addSkipBtn(bar, next);
+        }
+      });
+    });
+  }
+
+  function initStepModes() {
+    applyFillStep();
+    applyMCStep();
+    applyDictStep();
+  }
+
   /* ── Public init ── */
   function init() {
     initTabs();
@@ -422,6 +612,7 @@ const Exercises = (() => {
     initMCPanel();
     initMatchPanel();
     initDictationPanel();
+    initStepModes();
   }
 
   return { init, escapeHtml, initBlankInput };
