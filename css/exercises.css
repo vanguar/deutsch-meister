@@ -440,10 +440,22 @@
 @media (max-width: 600px) {
   .mc-options    { grid-template-columns: 1fr; }
   .match-grid    { grid-template-columns: 1fr; }
-  .exercise-tabs { gap: 2px; }
-  .ex-tab        { font-size: 12px; padding: 7px 8px; }
   .blank-sentence { font-size: 15px; }
   .mc-question-text { font-size: 15px; }
+
+  /* Tabs — 2×2 grid so text never overlaps */
+  .exercise-tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px;
+  }
+  .ex-tab {
+    font-size: 12px;
+    padding: 9px 6px;
+    white-space: normal;
+    text-align: center;
+    line-height: 1.3;
+  }
 }
 
 /* ══════════════════════════════════════

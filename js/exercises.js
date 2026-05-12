@@ -542,11 +542,13 @@ const Exercises = (() => {
       let locked = false;
       optsEl.addEventListener('click', e => {
         const btn = e.target.closest('.mc-option');
-        if (!btn || btn.classList.contains('disabled') || locked) return;
+        if (!btn || locked) return;
+        // initMCPanel adds 'disabled' to btn synchronously before bubbling reaches here,
+        // so we must NOT check for 'disabled' — use our own 'locked' guard instead
         locked = true;
         requestAnimationFrame(() => {
-          if (btn.classList.contains('correct'))     setTimeout(next, 700);
-          else if (btn.classList.contains('wrong'))  setTimeout(() => _addNextBtn(bar, next), 500);
+          if (btn.classList.contains('correct'))    setTimeout(next, 700);
+          else if (btn.classList.contains('wrong')) setTimeout(() => _addNextBtn(bar, next), 500);
         });
       });
     });
