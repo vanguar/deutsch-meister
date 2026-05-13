@@ -334,4 +334,7 @@
   }
   .lesson-title { font-size: 26px; }
   .phrase-grid  { grid-template-columns: 1fr; }
+  .vocab-table th { padding: 8px 10px; font-size: 10px; letter-spacing: 1px; }
+  .vocab-table td { padding: 9px 10px; font-size: 13px; }
+  .vocab-ipa      { font-size: 11px; word-break: break-word; }
 }
