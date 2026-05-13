@@ -7,12 +7,17 @@ const TTS = (() => {
     return window.speechSynthesis.getVoices().length > 0;
   };
 
-  function speakViaStream(text) {
-    const url = 'https://api.streamelements.com/kappa/v2/speech?voice=Marlene&text=' + encodeURIComponent(text);
-    if (!audio) audio = new Audio();
-    audio.pause();
+  function makeAudio(url) {
+    if (audio) audio.pause();
+    audio = new Audio();
     audio.src = url;
-    audio.play().catch(() => speakViaRV(text));
+    audio.load();
+    return audio;
+  }
+
+  function speakViaStream(text, primed) {
+    const el = primed || makeAudio('https://api.streamelements.com/kappa/v2/speech?voice=Marlene&text=' + encodeURIComponent(text));
+    el.play().catch(() => speakViaRV(text));
   }
 
   function speakViaRV(text) {
@@ -27,6 +32,11 @@ const TTS = (() => {
   }
 
   function speak(text, { rate = 0.85, pitch = 1 } = {}) {
+    // Always prime audio in sync user-gesture context so play() works even
+    // if called later from an async callback (Telegram WebView restriction).
+    const url = 'https://api.streamelements.com/kappa/v2/speech?voice=Marlene&text=' + encodeURIComponent(text);
+    const primed = makeAudio(url);
+
     if (hasSpeech()) {
       window.speechSynthesis.cancel();
       const u = new SpeechSynthesisUtterance(text);
@@ -34,10 +44,11 @@ const TTS = (() => {
       u.rate  = rate;
       u.pitch = pitch;
       u.voice = preferredVoice || pickBestVoice();
-      u.onerror = () => speakViaStream(text);
+      u.onstart = () => { primed.pause(); primed.src = ''; };
+      u.onerror = () => speakViaStream(text, primed);
       window.speechSynthesis.speak(u);
     } else {
-      speakViaStream(text);
+      speakViaStream(text, primed);
     }
   }
 
