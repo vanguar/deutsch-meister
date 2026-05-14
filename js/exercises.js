@@ -402,8 +402,9 @@ const Exercises = (() => {
       el.className = 'result-banner show success';
       el.innerHTML = `🎉 Отлично! ${correct} из ${total} верно!`;
     } else {
+      const wrong = total - correct;
       el.className = 'result-banner show fail';
-      el.innerHTML = `✅ Верно: ${correct} из ${total}. Попробуй исправить ошибки!`;
+      el.innerHTML = `❌ Ошибок: ${wrong} из ${total}. Верно: ${correct}. Попробуй исправить!`;
     }
   }
 
