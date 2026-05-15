@@ -1,6 +1,7 @@
-const CACHE = 'deutsch-meister-v23';
+const CACHE = 'deutsch-meister-v24';
 const BASE = '/deutsch-meister';
 
+// Only pre-cache the shell — lesson files are cached on first visit
 const STATIC = [
   BASE + '/',
   BASE + '/index.html',
@@ -17,17 +18,6 @@ const STATIC = [
   BASE + '/js/telegram.js',
   BASE + '/icons/icon.svg',
 ];
-
-const LEVELS = ['a1','a2','b1','b2'];
-const LESSONS = [1,2,3,4,5,6,7,8];
-
-LEVELS.forEach(lvl => {
-  LESSONS.forEach(n => {
-    const pad = String(n).padStart(2,'0');
-    STATIC.push(`${BASE}/lessons/${lvl}/lesson-${pad}/index.html`);
-    STATIC.push(`${BASE}/data/${lvl}/${lvl}-lesson-${pad}.js`);
-  });
-});
 
 self.addEventListener('install', e => {
   e.waitUntil(
