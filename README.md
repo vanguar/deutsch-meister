@@ -1,279 +1,81 @@
 # Deutsch Meister 🇩🇪
 
-**Deutsch Meister** — интерактивный курс немецкого языка от уровня A1 до B2.
+**Deutsch Meister** is a fully interactive German learning platform covering levels **A1 to B2**.
 
-Проект сделан как лёгкое веб-приложение без сложного backend: уроки открываются прямо в браузере, работают на GitHub Pages, поддерживают Telegram WebApp, PWA-режим, офлайн-кэширование, озвучку, упражнения, флэшкарты, XP и streak-систему.
+The project was built as a lightweight, offline-capable web application with a structured lesson engine, interactive exercises, spaced-repetition flashcards, speech synthesis, progress tracking, Telegram Mini App integration, and PWA support.
 
----
-
-## Демо
-
-GitHub Pages:
+Live demo:
 
 ```text
 https://vanguar.github.io/deutsch-meister/
 ```
 
-Telegram WebApp может открывать этот же адрес через кнопку бота.
+---
+
+## Overview
+
+Deutsch Meister is designed as a self-contained language learning application that works directly in the browser and can also be launched inside Telegram as a Mini App.
+
+The course includes:
+
+- **4 CEFR levels:** A1, A2, B1, B2
+- **32 complete lessons**
+- German phrases, vocabulary, grammar explanations and exercises
+- Audio pronunciation support
+- Flashcards with repeat/known logic
+- XP, streaks and lesson progress
+- Offline support through a Service Worker
+- Mobile-first responsive UI
+- Telegram WebApp support
+
+The goal of the project was to build not just static learning pages, but a reusable lesson system where lesson content is separated from rendering logic.
 
 ---
 
-## Возможности
+## Key Features
 
-- 🇩🇪 **Курс немецкого A1 → B2**
-  - 4 уровня: A1, A2, B1, B2
-  - 32 урока
-  - темы от приветствий до сложной грамматики B2
+### Complete A1–B2 Course
 
-- 📚 **Структура каждого урока**
-  - фразы урока;
-  - словарь с переводом и транскрипцией;
-  - грамматический блок;
-  - упражнения;
-  - флэшкарты;
-  - прогресс прохождения.
+The app contains a full course structure from beginner to upper-intermediate German:
 
-- 🔊 **Озвучка немецких слов и фраз**
-  - Web Speech API;
-  - fallback через StreamElements TTS;
-  - fallback через ResponsiveVoice.
+- **A1:** greetings, numbers, colors, family, weekdays, food, city, time
+- **A2:** daily routine, hobbies, doctor visit, travel, shopping, housing, work, weather
+- **B1:** Konjunktiv II, passive voice, relative clauses, subordinate clauses, infinitive constructions, work, opinions, environment
+- **B2:** participle constructions, modal particles, connectors, nominalization, academic style, economy, debate, complex texts
 
-- ✏️ **Интерактивные упражнения**
-  - заполнение пропусков;
-  - выбор ответа;
-  - сопоставление;
-  - диктант.
-
-- 🃏 **Флэшкарты**
-  - карточки строятся из словаря урока;
-  - пользователь отмечает: «знаю» / «ещё раз»;
-  - за правильные ответы начисляется XP.
-
-- ⚡ **XP и прогресс**
-  - опыт хранится в `localStorage`;
-  - сохраняются завершённые уроки;
-  - сохраняется прогресс по секциям урока;
-  - есть streak — количество дней подряд.
-
-- 📱 **PWA**
-  - можно установить как приложение;
-  - есть `manifest.json`;
-  - есть `service-worker.js`;
-  - основные файлы кэшируются для офлайн-работы.
-
-- 💬 **Telegram WebApp**
-  - открытие курса внутри Telegram;
-  - приветственное окно для пользователя;
-  - Telegram BackButton на страницах уроков;
-  - адаптация темы Telegram.
-
-- 🤖 **Telegram Bot**
-  - команда `/start`;
-  - приветственное сообщение;
-  - кнопка «Открыть курс».
+Each lesson follows a consistent structure and is rendered from a dedicated lesson data file.
 
 ---
 
-## Технологии
+## Lesson Structure
 
-Проект использует обычный frontend-стек без сборщика:
+Every lesson includes:
 
-- HTML
-- CSS
-- JavaScript
-- LocalStorage
-- Web Speech API
-- Telegram WebApp SDK
-- Service Worker
-- PWA Manifest
-- GitHub Pages
+- German phrases with Russian translations
+- pronunciation notes
+- vocabulary table with IPA transcription
+- grammar explanations
+- fill-in-the-blank exercises
+- multiple-choice exercises
+- matching exercises
+- dictation
+- flashcards
+- XP reward
+- section-based progress tracking
 
-Для Telegram-бота:
-
-- Python
-- aiogram
-
----
-
-## Структура проекта
-
-```text
-deutsch-meister/
-├── index.html                  # Главная страница курса
-├── 404.html                    # Redirect для GitHub Pages
-├── manifest.json               # PWA manifest
-├── service-worker.js           # Офлайн-кэширование
-├── bot.py                      # Telegram-бот для запуска WebApp
-│
-├── css/
-│   ├── base.css                # Глобальные стили и переменные
-│   ├── sidebar.css             # Боковое меню
-│   ├── lesson.css              # Layout урока
-│   └── exercises.css           # Стили упражнений
-│
-├── js/
-│   ├── progress.js             # XP, streak, прогресс уроков
-│   ├── lesson-render.js        # Рендер уроков из LESSON_DATA
-│   ├── exercises.js            # Логика упражнений
-│   ├── flashcards.js           # Флэшкарты
-│   ├── tts.js                  # Озвучка
-│   └── telegram.js             # Telegram WebApp-интеграция
-│
-├── data/
-│   ├── a1/
-│   │   └── a1-lesson-01.js
-│   ├── a2/
-│   │   └── a2-lesson-01.js
-│   ├── b1/
-│   │   └── b1-lesson-01.js
-│   └── b2/
-│       └── b2-lesson-01.js
-│
-├── lessons/
-│   ├── a1/
-│   ├── a2/
-│   ├── b1/
-│   └── b2/
-│
-└── tools/
-    ├── gen_lessons.py          # Генерация HTML-страниц уроков
-    ├── gen_template.html       # Шаблон урока
-    └── patch_*.py              # Скрипты для массовых правок путей/кэша/PWA
-```
+Lesson content is stored separately from the UI, which makes the system easier to extend and maintain.
 
 ---
 
-## Как запустить локально
+## Technical Highlights
 
-Так как проект статический, его можно открыть напрямую через `index.html`.
+### Data-Driven Lesson Engine
 
-Но лучше запускать через локальный сервер, чтобы корректно работали PWA, Service Worker и относительные пути.
+Lessons are defined as JavaScript data objects and rendered by a universal lesson renderer.
 
-### Вариант 1: Python
+This allows the application to reuse the same layout and logic across all 32 lessons instead of duplicating markup manually.
 
-```bash
-python -m http.server 8000
-```
-
-Открыть:
-
-```text
-http://localhost:8000
-```
-
-### Вариант 2: VS Code Live Server
-
-1. Открыть папку проекта в VS Code.
-2. Установить расширение **Live Server**.
-3. Нажать **Go Live**.
-4. Открыть главную страницу курса.
-
----
-
-## Деплой на GitHub Pages
-
-Проект рассчитан на публикацию по пути:
-
-```text
-/deutsch-meister/
-```
-
-Поэтому в `manifest.json`, `service-worker.js` и ссылках используется базовый путь:
-
-```text
-/deutsch-meister
-```
-
-Чтобы опубликовать:
-
-```bash
-git add .
-git commit -m "Обновляю Deutsch Meister"
-git push
-```
-
-Далее в GitHub:
-
-```text
-Settings → Pages → Deploy from branch → main → /root
-```
-
-После деплоя сайт будет доступен по адресу:
-
-```text
-https://USERNAME.github.io/deutsch-meister/
-```
-
----
-
-## Telegram WebApp
-
-В `index.html` и страницах уроков подключается Telegram WebApp SDK:
-
-```html
-<script src="https://telegram.org/js/telegram-web-app.js"></script>
-```
-
-Внутри Telegram приложение:
-
-- раскрывается на весь экран;
-- использует тему Telegram;
-- показывает приветственное окно;
-- на страницах уроков включает кнопку «Назад».
-
----
-
-## Telegram Bot
-
-Бот находится в файле:
-
-```text
-bot.py
-```
-
-Он отправляет приветственное сообщение и кнопку:
-
-```text
-🇩🇪 Открыть курс
-```
-
-### Установка зависимостей
-
-```bash
-pip install aiogram
-```
-
-### Запуск
-
-```bash
-python bot.py
-```
-
-### Безопасный вариант настройки токена
-
-Не храните токен прямо в `bot.py`.
-
-Лучше использовать переменную окружения:
-
-```bash
-export BOT_TOKEN="your_telegram_bot_token"
-```
-
-И в коде:
-
-```python
-import os
-
-BOT_TOKEN = os.getenv("BOT_TOKEN")
-```
-
----
-
-## Формат данных урока
-
-Каждый урок описывается в JS-файле через объект `LESSON_DATA`.
-
-Пример структуры:
+Example lesson data structure:
 
 ```js
 const LESSON_DATA = {
@@ -281,10 +83,10 @@ const LESSON_DATA = {
   level: 'A1',
   unit: 1,
   title: 'Hallo! Wie heißt du?',
-  subtitle: 'Приветствия, знакомство и происхождение',
+  subtitle: 'Greetings and introductions',
 
   meta: {
-    duration: '25–30 мин',
+    duration: '25–30 min',
     wordCount: 25,
     xpReward: 100
   },
@@ -296,163 +98,296 @@ const LESSON_DATA = {
 };
 ```
 
-Универсальный рендерер `lesson-render.js` читает `LESSON_DATA` и строит страницу урока автоматически.
+---
+
+### Progress Tracking
+
+User progress is stored locally in the browser using `localStorage`.
+
+The app tracks:
+
+- total XP
+- daily streak
+- completed lessons
+- completed lesson sections
+- exercise scores
+- selected theme
+- Telegram welcome state
+
+The lesson is considered complete only when all required sections are finished:
+
+```text
+flashcards
+fill-in-the-blank
+multiple choice
+matching
+dictation
+```
 
 ---
 
-## Генерация уроков
+### Flashcards
 
-Для генерации HTML-страниц используется:
+The flashcard module automatically builds a review deck from lesson vocabulary.
+
+Users can mark each card as:
+
+- **Known**
+- **Repeat**
+
+Cards marked for repetition are shown again in the same session. Correct answers add XP and update progress.
+
+---
+
+### Text-to-Speech
+
+The project includes German pronunciation support using multiple fallback layers:
+
+1. Browser Web Speech API
+2. StreamElements TTS fallback
+3. ResponsiveVoice fallback
+
+This improves compatibility across desktop browsers, mobile browsers and Telegram WebView.
+
+---
+
+### PWA and Offline Support
+
+Deutsch Meister is installable as a Progressive Web App.
+
+It includes:
+
+- `manifest.json`
+- `service-worker.js`
+- offline caching
+- app icons
+- standalone display mode
+- mobile-friendly launch experience
+
+The Service Worker pre-caches the main app shell, styles, scripts, lesson pages and lesson data.
+
+---
+
+### Telegram Mini App Integration
+
+The project supports Telegram WebApp mode.
+
+Inside Telegram, the app can:
+
+- expand to full screen
+- detect Telegram color scheme
+- show Telegram Back Button on lesson pages
+- display a personalized welcome screen
+- launch from a Telegram bot button
+
+The Telegram bot is implemented with Python and `aiogram`.
+
+---
+
+## Tech Stack
+
+### Frontend
+
+- HTML5
+- CSS3
+- Vanilla JavaScript
+- LocalStorage
+- Web Speech API
+- Service Worker
+- PWA Manifest
+- Telegram WebApp SDK
+
+### Bot
+
+- Python
+- aiogram
+- Telegram Bot API
+
+### Deployment
+
+- GitHub Pages
+- Static hosting
+- Offline-first architecture
+
+---
+
+## Project Structure
 
 ```text
-gen_lessons.py
+deutsch-meister/
+├── index.html
+├── 404.html
+├── manifest.json
+├── service-worker.js
+├── bot.py
+│
+├── css/
+│   ├── base.css
+│   ├── sidebar.css
+│   ├── lesson.css
+│   └── exercises.css
+│
+├── js/
+│   ├── progress.js
+│   ├── lesson-render.js
+│   ├── exercises.js
+│   ├── flashcards.js
+│   ├── tts.js
+│   └── telegram.js
+│
+├── data/
+│   ├── a1/
+│   ├── a2/
+│   ├── b1/
+│   └── b2/
+│
+├── lessons/
+│   ├── a1/
+│   ├── a2/
+│   ├── b1/
+│   └── b2/
+│
+└── tools/
+    ├── gen_lessons.py
+    ├── gen_template.html
+    └── patch_*.py
 ```
 
-Он берёт шаблон:
+---
 
-```text
-gen_template.html
-```
+## Running Locally
 
-И создаёт страницы вида:
+Because this is a static web application, it can be served with any local static server.
 
-```text
-lessons/a2/lesson-01/index.html
-lessons/b1/lesson-01/index.html
-lessons/b2/lesson-01/index.html
-```
-
-Запуск:
+Using Python:
 
 ```bash
-python gen_lessons.py
+python -m http.server 8000
 ```
 
-Перед запуском проверьте переменную `BASE` внутри скрипта и укажите актуальный путь к проекту.
-
----
-
-## PWA и офлайн-режим
-
-Проект содержит:
+Then open:
 
 ```text
-manifest.json
-service-worker.js
+http://localhost:8000
 ```
 
-Service Worker кэширует:
-
-- главную страницу;
-- CSS;
-- JavaScript;
-- иконку;
-- данные уроков;
-- страницы уроков.
-
-После первого открытия часть курса может работать офлайн.
-
-При изменении файлов нужно обновлять имя кэша в `service-worker.js`, например:
-
-```js
-const CACHE = 'deutsch-meister-v24';
-```
+For the best experience, use a local server instead of opening `index.html` directly, because Service Worker and PWA features require a proper web context.
 
 ---
 
-## Прогресс пользователя
+## Deployment
 
-Прогресс хранится локально в браузере через `localStorage`.
+The app is configured for GitHub Pages deployment under the `/deutsch-meister/` base path.
 
-Сохраняются:
+Typical deployment flow:
 
-- XP;
-- streak;
-- завершённые уроки;
-- завершённые секции урока;
-- результаты упражнений.
+```bash
+git add .
+git commit -m "Update Deutsch Meister"
+git push
+```
 
-Ключи:
+GitHub Pages configuration:
 
 ```text
-dm_progress
-dm_sections:<lesson-id>
-dm_theme
-tg_welcomed
+Settings → Pages → Deploy from branch → main → /root
 ```
 
 ---
 
-## Озвучка
+## Telegram Bot Setup
 
-Озвучка реализована в `tts.js`.
+The Telegram bot opens the web app through an inline keyboard button.
 
-Порядок работы:
+Install dependencies:
 
-1. Web Speech API с немецким голосом `de-DE`.
-2. StreamElements TTS.
-3. ResponsiveVoice fallback.
+```bash
+pip install aiogram
+```
 
-На страницах подключается:
+Recommended environment-based configuration:
 
-```html
-<script src="https://code.responsivevoice.org/responsivevoice.js?key=FREE"></script>
+```bash
+export BOT_TOKEN="your_telegram_bot_token"
+export APP_URL="https://your-username.github.io/deutsch-meister/"
+```
+
+Run the bot:
+
+```bash
+python bot.py
 ```
 
 ---
 
-## Безопасность
+## Engineering Decisions
 
-Перед публикацией проекта обязательно:
+### Why Vanilla JavaScript?
 
-- удалить реальные Telegram Bot Token из кода;
-- перевыпустить уже опубликованные токены;
-- добавить `.env` или переменные окружения;
-- не коммитить локальные настройки IDE;
-- не хранить приватные данные пользователей в репозитории;
-- проверить, что Service Worker не кэширует секретные файлы.
+The project intentionally uses vanilla JavaScript instead of a frontend framework.
 
-Рекомендуемый `.gitignore`:
+This keeps the application:
 
-```gitignore
-.env
-.env.local
-__pycache__/
-*.pyc
-.DS_Store
-.vscode/
-.idea/
-.claude/
-```
+- lightweight
+- easy to host on GitHub Pages
+- fast to load
+- simple to cache offline
+- independent from a build step
 
----
+### Why Data-Driven Lessons?
 
-## Планы развития
+A data-driven lesson architecture allows the same UI components to render different lesson content.
 
-- [ ] Добавить все уроки A1–B2
-- [ ] Вынести все темы и уроки в отдельную структуру данных
-- [ ] Добавить кнопку сброса прогресса
-- [ ] Добавить страницу статистики
-- [ ] Добавить выбор скорости озвучки
-- [ ] Добавить режим повторения слов
-- [ ] Добавить тест в конце каждого уровня
-- [ ] Добавить таблицу неправильных ответов
-- [ ] Добавить экспорт прогресса
-- [ ] Подключить backend для синхронизации прогресса между устройствами
-- [ ] Перенести токен Telegram-бота в переменные окружения
-- [ ] Добавить GitHub Actions для проверки ссылок и деплоя
+This makes the project scalable: new lessons can be added by creating new data files instead of duplicating HTML pages.
+
+### Why LocalStorage?
+
+For this version, progress is stored locally to avoid backend complexity and allow offline usage.
+
+This makes the app usable even without account registration or network connection.
 
 ---
 
-## Лицензия
+## What This Project Demonstrates
 
-Лицензия пока не указана.
+This project demonstrates practical experience with:
 
-Если проект планируется как открытый учебный курс, можно добавить MIT License.  
-Если курс личный или коммерческий, лучше указать собственные условия использования.
+- building a full educational web application from scratch
+- structuring a multi-level course system
+- designing reusable frontend architecture without a framework
+- implementing local progress persistence
+- building PWA/offline functionality
+- integrating Telegram Mini Apps
+- working with speech synthesis and browser APIs
+- creating responsive UI for desktop and mobile
+- organizing a static project for GitHub Pages deployment
+- automating repetitive page generation with Python scripts
 
 ---
 
-## Автор
+## Future Improvements
 
-Проект создан как интерактивный курс немецкого языка с поддержкой Telegram Mini App, PWA и офлайн-обучения.
+Possible next steps:
+
+- backend-based user accounts
+- cloud synchronization of progress
+- admin panel for editing lessons
+- spaced repetition scheduling by date
+- placement test
+- final tests for each CEFR level
+- analytics dashboard
+- TypeScript migration
+- automated tests for lesson data validation
+- CI/CD validation for broken links and missing assets
+
+---
+
+## Security Note
+
+For production use, bot tokens and other secrets should be stored in environment variables and never committed to the repository.
+
+---
+
+## Author
+
+Created by **Vladimir Zadorozhnyi** as a portfolio project demonstrating frontend architecture, PWA development, educational UX, Telegram Mini App integration and browser-based learning tools.
