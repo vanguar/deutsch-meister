@@ -37,13 +37,14 @@ const TTS = (() => {
     const url = 'https://api.streamelements.com/kappa/v2/speech?voice=Marlene&text=' + encodeURIComponent(text);
     const primed = makeAudio(url);
 
-    if (hasSpeech()) {
+    const bestVoice = pickBestVoice();
+    if (hasSpeech() && bestVoice) {
       window.speechSynthesis.cancel();
       const u = new SpeechSynthesisUtterance(text);
       u.lang  = 'de-DE';
       u.rate  = rate;
       u.pitch = pitch;
-      u.voice = preferredVoice || pickBestVoice();
+      u.voice = preferredVoice || bestVoice;
       u.onstart = () => { primed.pause(); primed.src = ''; };
       u.onerror = () => speakViaStream(text, primed);
       window.speechSynthesis.speak(u);
