@@ -1,4 +1,4 @@
-const CACHE = 'deutsch-meister-v24';
+const CACHE = 'deutsch-meister-v25';
 const BASE = '/deutsch-meister';
 
 // Only pre-cache the shell — lesson files are cached on first visit

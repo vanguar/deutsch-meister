@@ -1,6 +1,7 @@
 const TTS = (() => {
   let preferredVoice = null;
   let audio = null;
+  let responsiveVoicePromise = null;
 
   const hasSpeech = () => {
     if (!window.speechSynthesis) return false;
@@ -20,10 +21,28 @@ const TTS = (() => {
     el.play().catch(() => speakViaRV(text));
   }
 
+  function loadResponsiveVoice() {
+    if (typeof responsiveVoice !== 'undefined') return Promise.resolve(true);
+    if (responsiveVoicePromise) return responsiveVoicePromise;
+
+    responsiveVoicePromise = new Promise(resolve => {
+      const script = document.createElement('script');
+      script.src = 'https://code.responsivevoice.org/responsivevoice.js?key=FREE';
+      script.async = true;
+      script.onload = () => resolve(typeof responsiveVoice !== 'undefined');
+      script.onerror = () => resolve(false);
+      document.head.appendChild(script);
+    });
+
+    return responsiveVoicePromise;
+  }
+
   function speakViaRV(text) {
-    if (typeof responsiveVoice !== 'undefined') {
-      responsiveVoice.speak(text, 'Deutsch Female');
-    }
+    loadResponsiveVoice().then(ok => {
+      if (ok && typeof responsiveVoice !== 'undefined') {
+        responsiveVoice.speak(text, 'Deutsch Female');
+      }
+    });
   }
 
   function pickBestVoice() {

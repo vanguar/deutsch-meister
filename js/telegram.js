@@ -1,6 +1,25 @@
-const TG = window.Telegram?.WebApp;
+function isTelegramWebView() {
+  const ua = navigator.userAgent || '';
+  return /Telegram/i.test(ua) || /tgWebApp/i.test(location.hash + location.search);
+}
 
-if (TG) {
+function loadTelegramSdk() {
+  if (window.Telegram?.WebApp) return Promise.resolve(window.Telegram.WebApp);
+  if (!isTelegramWebView()) return Promise.resolve(null);
+
+  return new Promise(resolve => {
+    const script = document.createElement('script');
+    script.src = 'https://telegram.org/js/telegram-web-app.js';
+    script.async = true;
+    script.onload = () => resolve(window.Telegram?.WebApp || null);
+    script.onerror = () => resolve(null);
+    document.head.appendChild(script);
+  });
+}
+
+loadTelegramSdk().then(TG => {
+  if (!TG) return;
+
   TG.ready();
   TG.expand();
 
@@ -28,7 +47,7 @@ if (TG) {
     console.log('[TG] Showing welcome for:', name);
     showTgWelcome(name);
   }
-}
+});
 
 function showTgWelcome(name) {
   const overlay = document.createElement('div');
