@@ -1,23 +1,32 @@
 import asyncio
 import logging
-from aiogram import Bot, Dispatcher
-from aiogram.filters import Command
-from aiogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, WebAppInfo
+from aiogram import Bot, Dispatcher, F
+from aiogram.filters import Command, CommandStart
+from aiogram.types import (
+    Message, CallbackQuery, PreCheckoutQuery,
+    InlineKeyboardMarkup, InlineKeyboardButton, WebAppInfo, LabeledPrice,
+)
 from aiogram.client.default import DefaultBotProperties
 from aiogram.enums import ParseMode
 
 BOT_TOKEN = "7816498802:AAFycr1KVv9XEIZGcRMjqnEthjoeYxFV5V8"
 APP_URL   = "https://vanguar.github.io/deutsch-meister/"
 
+# Варианты поддержки звёздами (Telegram Stars, валюта XTR)
+DONATE_TIERS = [50, 100, 250, 500]
+
 logging.basicConfig(level=logging.INFO)
 
 def welcome_keyboard():
-    return InlineKeyboardMarkup(inline_keyboard=[[
-        InlineKeyboardButton(
-            text="🇩🇪 Открыть курс",
-            web_app=WebAppInfo(url=APP_URL)
-        )
-    ]])
+    return InlineKeyboardMarkup(inline_keyboard=[
+        [InlineKeyboardButton(text="🇩🇪 Открыть курс", web_app=WebAppInfo(url=APP_URL))],
+        [InlineKeyboardButton(text="❤️ Поддержать проект", callback_data="donate")],
+    ])
+
+def donate_keyboard():
+    rows = [[InlineKeyboardButton(text=f"⭐ {n}", callback_data=f"donate:{n}")]
+            for n in DONATE_TIERS]
+    return InlineKeyboardMarkup(inline_keyboard=rows)
 
 def build_welcome(first_name: str) -> str:
     return (
@@ -37,9 +46,54 @@ def build_welcome(first_name: str) -> str:
 
 async def cmd_start(message: Message):
     first_name = message.from_user.first_name or "друг"
+    # deep-link /start donate → сразу показываем поддержку
+    arg = (message.text or "").partition(" ")[2].strip()
+    if arg == "donate":
+        await cmd_donate(message)
+        return
+    await message.answer(build_welcome(first_name), reply_markup=welcome_keyboard())
+
+async def cmd_donate(message: Message):
     await message.answer(
-        build_welcome(first_name),
-        reply_markup=welcome_keyboard()
+        "❤️ <b>Поддержать Deutsch Meister</b>\n\n"
+        "Проект бесплатный и развивается на энтузиазме. "
+        "Ваша поддержка звёздами помогает добавлять новые уроки, "
+        "озвучку и книги на немецком. Спасибо! 🙏\n\n"
+        "Выберите количество звёзд:",
+        reply_markup=donate_keyboard(),
+    )
+
+async def on_donate_menu(callback: CallbackQuery):
+    await callback.answer()
+    await cmd_donate(callback.message)
+
+async def send_stars_invoice(bot: Bot, chat_id: int, stars: int):
+    # Для Telegram Stars: currency="XTR", provider_token="" (пустой)
+    await bot.send_invoice(
+        chat_id=chat_id,
+        title="Поддержка Deutsch Meister",
+        description=f"Спасибо за поддержку проекта на {stars} ⭐!",
+        payload=f"donate_{stars}",
+        provider_token="",
+        currency="XTR",
+        prices=[LabeledPrice(label=f"{stars} Stars", amount=stars)],
+    )
+
+async def on_donate_amount(callback: CallbackQuery, bot: Bot):
+    stars = int(callback.data.split(":", 1)[1])
+    await callback.answer()
+    await send_stars_invoice(bot, callback.message.chat.id, stars)
+
+async def on_pre_checkout(pre_checkout: PreCheckoutQuery, bot: Bot):
+    # Подтверждаем оплату (обязательно в течение 10 секунд)
+    await bot.answer_pre_checkout_query(pre_checkout.id, ok=True)
+
+async def on_successful_payment(message: Message):
+    amount = message.successful_payment.total_amount
+    await message.answer(
+        f"🎉 <b>Спасибо за поддержку!</b>\n\n"
+        f"Вы поддержали проект на {amount} ⭐. "
+        f"Это очень помогает развитию Deutsch Meister! ❤️"
     )
 
 async def main():
@@ -48,7 +102,12 @@ async def main():
         default=DefaultBotProperties(parse_mode=ParseMode.HTML)
     )
     dp = Dispatcher()
-    dp.message.register(cmd_start, Command("start"))
+    dp.message.register(cmd_start, CommandStart())
+    dp.message.register(cmd_donate, Command("donate"))
+    dp.callback_query.register(on_donate_menu, F.data == "donate")
+    dp.callback_query.register(on_donate_amount, F.data.startswith("donate:"))
+    dp.pre_checkout_query.register(on_pre_checkout)
+    dp.message.register(on_successful_payment, F.successful_payment)
     await dp.start_polling(bot)
 
 if __name__ == "__main__":

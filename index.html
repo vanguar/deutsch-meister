@@ -235,6 +235,23 @@
       </div>
     </div>
 
+    <div class="sidebar-extra">
+      <button class="side-action donate" onclick="openDonateModal()">
+        <span class="sa-ico">❤️</span>
+        <span class="sa-txt">
+          <span class="sa-title">Поддержать проект</span>
+          <span class="sa-sub">Звёзды Telegram или USDT</span>
+        </span>
+      </button>
+      <button class="side-action" onclick="openBooksModal()">
+        <span class="sa-ico">📖</span>
+        <span class="sa-txt">
+          <span class="sa-title">Скоро: книги на немецком</span>
+          <span class="sa-sub">С обучающим процессом</span>
+        </span>
+      </button>
+    </div>
+
     <div class="sidebar-bottom">
       <div class="xp-row">
         <span>⚡ Опыт</span>
@@ -408,6 +425,7 @@
 
 <script src="js/progress.js?v=11"></script>
 <script src="js/telegram.js?v=12"></script>
+<script src="js/support.js?v=4"></script>
 <script>
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/deutsch-meister/service-worker.js');
