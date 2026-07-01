@@ -1,4 +1,4 @@
-const CACHE = 'deutsch-meister-v26';
+const CACHE = 'deutsch-meister-v27';
 const BASE = '/deutsch-meister';
 
 // Only pre-cache the shell — lesson files are cached on first visit
@@ -34,15 +34,44 @@ self.addEventListener('activate', e => {
   );
 });
 
+// Allow the page to force-activate a waiting SW
+self.addEventListener('message', e => {
+  if (e.data === 'SKIP_WAITING') self.skipWaiting();
+});
+
+function isHtml(req) {
+  return req.mode === 'navigate' ||
+         (req.headers.get('accept') || '').includes('text/html');
+}
+
 self.addEventListener('fetch', e => {
-  if (e.request.method !== 'GET') return;
-  e.respondWith(
-    caches.match(e.request).then(cached => {
-      if (cached) return cached;
-      return fetch(e.request).then(res => {
-        if (res.ok) {
+  const req = e.request;
+  if (req.method !== 'GET') return;
+
+  // HTML / navigations → network-first, so new versions show immediately online
+  if (isHtml(req)) {
+    e.respondWith(
+      fetch(req).then(res => {
+        if (res && res.ok) {
           const clone = res.clone();
-          caches.open(CACHE).then(c => c.put(e.request, clone));
+          caches.open(CACHE).then(c => c.put(req, clone));
+        }
+        return res;
+      }).catch(() =>
+        caches.match(req).then(c => c || caches.match(BASE + '/index.html'))
+      )
+    );
+    return;
+  }
+
+  // Everything else → cache-first (assets are versioned via ?v= query)
+  e.respondWith(
+    caches.match(req).then(cached => {
+      if (cached) return cached;
+      return fetch(req).then(res => {
+        if (res && res.ok) {
+          const clone = res.clone();
+          caches.open(CACHE).then(c => c.put(req, clone));
         }
         return res;
       }).catch(() => caches.match(BASE + '/index.html'));

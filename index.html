@@ -428,7 +428,28 @@
 <script src="js/support.js?v=4"></script>
 <script>
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/deutsch-meister/service-worker.js');
+    let refreshing = false;
+    // Когда новый SW берёт управление — один раз перезагружаем страницу
+    navigator.serviceWorker.addEventListener('controllerchange', () => {
+      if (refreshing) return;
+      refreshing = true;
+      window.location.reload();
+    });
+    navigator.serviceWorker.register('/deutsch-meister/service-worker.js').then(reg => {
+      // Проверяем обновление при каждом запуске
+      reg.update();
+      // Если новая версия уже ждёт — активируем сразу
+      if (reg.waiting) reg.waiting.postMessage('SKIP_WAITING');
+      reg.addEventListener('updatefound', () => {
+        const nw = reg.installing;
+        if (!nw) return;
+        nw.addEventListener('statechange', () => {
+          if (nw.state === 'installed' && navigator.serviceWorker.controller) {
+            nw.postMessage('SKIP_WAITING');
+          }
+        });
+      });
+    });
   }
 </script>
 <script>
