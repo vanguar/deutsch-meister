@@ -5,3 +5,6 @@ gen_template.html
 __pycache__/
 .DS_Store
 Thumbs.db
+
+.vercel
+.env*
