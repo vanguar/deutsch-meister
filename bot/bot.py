@@ -1,3 +1,4 @@
+import os
 import asyncio
 import logging
 from aiogram import Bot, Dispatcher, F
@@ -9,8 +10,11 @@ from aiogram.types import (
 from aiogram.client.default import DefaultBotProperties
 from aiogram.enums import ParseMode
 
-BOT_TOKEN = "7816498802:AAFycr1KVv9XEIZGcRMjqnEthjoeYxFV5V8"
-APP_URL   = "https://vanguar.github.io/deutsch-meister/"
+# Токен НЕ хардкодим — берём из окружения. Запуск:
+#   Windows (PowerShell):  $env:BOT_TOKEN="123:abc"; python bot\bot.py
+#   Linux/macOS:           BOT_TOKEN=123:abc python bot/bot.py
+BOT_TOKEN = os.getenv("BOT_TOKEN", "")
+APP_URL   = os.getenv("APP_URL", "https://vanguar.github.io/deutsch-meister/")
 
 # Варианты поддержки звёздами (Telegram Stars, валюта XTR)
 DONATE_TIERS = [50, 100, 250, 500]
@@ -97,6 +101,8 @@ async def on_successful_payment(message: Message):
     )
 
 async def main():
+    if not BOT_TOKEN:
+        raise SystemExit("BOT_TOKEN не задан. Задайте переменную окружения BOT_TOKEN.")
     bot = Bot(
         token=BOT_TOKEN,
         default=DefaultBotProperties(parse_mode=ParseMode.HTML)

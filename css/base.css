@@ -604,6 +604,7 @@ h1, h2, h3 {
 .dm-choice .dm-cname { font-size: 15px; font-weight: 700; color: var(--text-strong); }
 .dm-choice .dm-cdesc { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
 .dm-choice .dm-carrow { margin-left: auto; color: var(--accent2); font-size: 18px; }
+.dm-choice.dm-star .dm-cname { font-size: 16px; }
 
 /* Wallet block */
 .dm-wallet-list {

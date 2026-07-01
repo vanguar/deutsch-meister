@@ -14,10 +14,16 @@ const DONATE = {
     { icon: '💠', name: 'Ethereum', net: 'ETH (ERC-20)',      addr: '0xf0e70cb55f38ad3Ca7ABCDD276A997092ecb7346' },
     { icon: '🟣', name: 'Solana',   net: 'SOL',               addr: '6u31e9B6RMMqWaU6JHX2GTskdsmcNLAKdyqKaUjPq9xk' },
   ],
-  // TODO: сюда backend (бот) должен положить invoice-ссылку, созданную через
-  //       createInvoiceLink с currency = "XTR". Пока пусто → используем fallback на бота.
-  starsInvoiceUrl: '',
-  // @username бота (ведём сюда за пределами Telegram / для доната звёздами)
+  // Invoice-ссылки Telegram Stars (createInvoiceLink, currency=XTR).
+  // Открываются нативно в мини-аппе через TG.openInvoice — оплата не выходит из апка.
+  // ⚠️ При смене токена бота ссылки нужно перегенерировать (см. DEPLOY.md).
+  starsTiers: [
+    { stars: 50,  url: 'https://t.me/$Uw2g_wP3KUobGAAAphv7F1Jx5Yw' },
+    { stars: 100, url: 'https://t.me/$kXjrKAP3KUocGAAARJsQ6jW1TsY' },
+    { stars: 250, url: 'https://t.me/$9cRO-wP3KUodGAAAhVHJE9PyOuI' },
+    { stars: 500, url: 'https://t.me/$2vFNhAP3KUoeGAAAYGTSN26uKDM' },
+  ],
+  // @username бота (для оплаты звёздами вне Telegram / открытия чата)
   botUsername: 'GermanMorningBot',
 };
 
@@ -92,48 +98,62 @@ function openDonateModal() {
 function donateStars() {
   dmHaptic('medium');
   const TG = dmTG();
+  const canNative = !!(TG && typeof TG.openInvoice === 'function');
 
-  // В Telegram и есть готовая invoice-ссылка → открываем нативную оплату
-  if (TG && typeof TG.openInvoice === 'function' && DONATE.starsInvoiceUrl) {
-    TG.openInvoice(DONATE.starsInvoiceUrl, status => {
+  const tiers = DONATE.starsTiers.map(t => `
+    <button class="dm-choice dm-star" onclick="dmPayStars(${t.stars})">
+      <span class="dm-ci">⭐</span>
+      <span><span class="dm-cname">${t.stars} звёзд</span></span>
+      <span class="dm-carrow">→</span>
+    </button>`).join('');
+
+  // Апк открыт не в Telegram → звёзды там недоступны, показываем подсказку
+  if (!canNative) {
+    dmOpen(`
+      <div class="dm-emoji">⭐</div>
+      <h2 class="dm-title">Оплата звёздами</h2>
+      <p class="dm-text">
+        Telegram Stars доступны только внутри приложения <b>Telegram</b>.
+        Откройте курс через бота <b>@${DONATE.botUsername}</b> — и оплата
+        пройдёт прямо в мини-аппе.
+      </p>
+      <button class="dm-btn stars" onclick="dmOpenBotDonate()">📲 Открыть в Telegram</button>
+      <button class="dm-btn-ghost" onclick="donateCrypto()">💎 Поддержать криптой</button>
+      <button class="dm-btn-ghost" onclick="openDonateModal()">← Назад</button>
+    `);
+    return;
+  }
+
+  dmOpen(`
+    <div class="dm-emoji">⭐</div>
+    <h2 class="dm-title">Поддержать звёздами</h2>
+    <p class="dm-text">Выберите количество Telegram Stars — оплата пройдёт прямо здесь.</p>
+    ${tiers}
+    <button class="dm-btn-ghost" onclick="openDonateModal()">← Назад</button>
+  `);
+}
+
+function dmPayStars(stars) {
+  const TG = dmTG();
+  const tier = DONATE.starsTiers.find(t => t.stars === stars);
+  if (!tier) return;
+  dmHaptic('medium');
+
+  // Нативная оплата прямо в мини-аппе
+  if (TG && typeof TG.openInvoice === 'function') {
+    TG.openInvoice(tier.url, status => {
       if (status === 'paid') {
         dmClose();
         dmToast('Спасибо за поддержку! ⭐');
       } else if (status === 'failed') {
         dmToast('Платёж не прошёл, попробуйте ещё раз');
       }
+      // 'cancelled' / 'pending' — тихо
     });
     return;
   }
-
-  // В Telegram, но invoice ещё не настроен → ведём в чат с ботом
-  if (TG) {
-    dmOpen(`
-      <div class="dm-emoji">⭐</div>
-      <h2 class="dm-title">Оплата звёздами</h2>
-      <p class="dm-text">
-        Оплата Telegram Stars скоро будет доступна прямо здесь.
-        А пока поддержать звёздами можно в чате с ботом командой
-        <b>/donate</b>.
-      </p>
-      <button class="dm-btn stars" onclick="dmOpenBotDonate()">⭐ Открыть бота</button>
-      <button class="dm-btn-ghost" onclick="openDonateModal()">← Назад</button>
-    `);
-    return;
-  }
-
-  // Не Telegram (обычный браузер / десктоп-сайт) → звёзды доступны только в Telegram
-  dmOpen(`
-    <div class="dm-emoji">⭐</div>
-    <h2 class="dm-title">Оплата звёздами</h2>
-    <p class="dm-text">
-      Telegram Stars доступны только внутри Telegram.
-      Откройте курс в приложении Telegram или поддержите криптовалютой.
-    </p>
-    <button class="dm-btn stars" onclick="dmOpenBotDonate()">📲 Открыть в Telegram</button>
-    <button class="dm-btn-ghost" onclick="donateCrypto()">💎 Поддержать через USDT</button>
-    <button class="dm-btn-ghost" onclick="openDonateModal()">← Назад</button>
-  `);
+  // На всякий случай — подсказка вернуться в Telegram
+  donateStars();
 }
 
 function dmOpenBotDonate() {
