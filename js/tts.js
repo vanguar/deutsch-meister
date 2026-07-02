@@ -1,67 +1,77 @@
 const TTS = (() => {
   let preferredVoice = null;
   let audio = null;
-  let responsiveVoicePromise = null;
+  let unlocked = false;
+
+  // Короткий "тихий" WAV (data URI, тот же origin) — им разблокируем аудиоканал
+  // на первом касании, чтобы дальше play() работал даже из async-колбэков.
+  const SILENT = 'data:audio/wav;base64,UklGRqQCAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YYACAACAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8A';
 
   const hasSpeech = () => {
     if (!window.speechSynthesis) return false;
     return window.speechSynthesis.getVoices().length > 0;
   };
 
-  // Telegram's in-app browser (WKWebView on iOS, System WebView on Android) exposes
-  // the Web Speech API but it is SILENT — speechSynthesis.speak() plays nothing and
-  // fires no error. So inside Telegram we must never rely on it: we play a real
-  // <audio> stream started directly inside the tap gesture, which works everywhere.
+  // Внутри Telegram (WKWebView на iOS, System WebView на Android) Web Speech API
+  // молчит — там всегда играем реальное аудио.
   function inTelegram() {
     const wa = window.Telegram && window.Telegram.WebApp;
     if (wa && wa.platform && wa.platform !== 'unknown') return true;
-    if (typeof window.TelegramWebviewProxy !== 'undefined') return true;          // iOS bridge
+    if (typeof window.TelegramWebviewProxy !== 'undefined') return true;
     if (typeof window.TelegramWebviewProxyProto !== 'undefined') return true;
     if (typeof isTelegramWebView === 'function' && isTelegramWebView()) return true;
     return /Telegram/i.test(navigator.userAgent || '');
   }
 
-  function streamUrl(text) {
-    return 'https://api.streamelements.com/kappa/v2/speech?voice=Marlene&text=' + encodeURIComponent(text);
+  // Google Translate TTS — стабильно отдаёт mp3 (в т.ч. с умляутами). Лимит ~200
+  // символов на запрос. Два хоста-зеркала на случай сбоя одного.
+  function gUrl(host, text) {
+    const t = String(text).slice(0, 200);
+    return 'https://' + host + '/translate_tts?ie=UTF-8&client=tw-ob&tl=de&q=' + encodeURIComponent(t);
   }
 
-  // Reuse ONE <audio> element. Once it has played once inside a gesture, iOS keeps
-  // it "unlocked", so subsequent plays are reliable even from async callbacks.
   function getAudio() {
     if (!audio) {
       audio = new Audio();
       audio.preload = 'auto';
+      audio.playsInline = true;
+      audio.setAttribute('playsinline', '');
     }
     return audio;
   }
 
-  function playPrimed(el, text) {
+  function unlock() {
+    if (unlocked) return;
+    const el = getAudio();
+    try {
+      el.muted = true;
+      el.src = SILENT;
+      const p = el.play();
+      const done = () => {
+        try { el.pause(); el.currentTime = 0; } catch (e) {}
+        el.muted = false;
+        unlocked = true;
+      };
+      if (p && typeof p.then === 'function') p.then(done).catch(() => { el.muted = false; });
+      else done();
+    } catch (e) {}
+  }
+
+  function playAudio(text) {
+    const el = getAudio();
+    el.muted = false;
+    // На ошибке первого хоста пробуем второй Google-хост
+    el.onerror = () => {
+      el.onerror = null;
+      el.src = gUrl('translate.googleapis.com', text);
+      el.load();
+      const p2 = el.play();
+      if (p2 && p2.catch) p2.catch(() => {});
+    };
+    el.src = gUrl('translate.google.com', text);
+    el.load();
     const p = el.play();
-    if (p && typeof p.catch === 'function') p.catch(() => speakViaRV(text));
-  }
-
-  function loadResponsiveVoice() {
-    if (typeof responsiveVoice !== 'undefined') return Promise.resolve(true);
-    if (responsiveVoicePromise) return responsiveVoicePromise;
-
-    responsiveVoicePromise = new Promise(resolve => {
-      const script = document.createElement('script');
-      script.src = 'https://code.responsivevoice.org/responsivevoice.js?key=FREE';
-      script.async = true;
-      script.onload = () => resolve(typeof responsiveVoice !== 'undefined');
-      script.onerror = () => resolve(false);
-      document.head.appendChild(script);
-    });
-
-    return responsiveVoicePromise;
-  }
-
-  function speakViaRV(text) {
-    loadResponsiveVoice().then(ok => {
-      if (ok && typeof responsiveVoice !== 'undefined') {
-        responsiveVoice.speak(text, 'Deutsch Female');
-      }
-    });
+    if (p && p.catch) p.catch(() => {});
   }
 
   function pickBestVoice() {
@@ -70,16 +80,9 @@ const TTS = (() => {
   }
 
   function speak(text, { rate = 0.85, pitch = 1 } = {}) {
-    // Prime the shared <audio> element synchronously inside the user gesture so
-    // playback is permitted even if we call .play() later from a callback.
-    const el = getAudio();
-    el.onerror = () => speakViaRV(text);
-    el.src = streamUrl(text);
-    el.load();
-
-    // Inside Telegram the Web Speech API is silent — go straight to the stream.
+    // В Telegram нативная озвучка не звучит — сразу играем аудио.
     if (inTelegram()) {
-      playPrimed(el, text);
+      playAudio(text);
       return;
     }
 
@@ -92,32 +95,38 @@ const TTS = (() => {
       u.pitch = pitch;
       u.voice = preferredVoice || bestVoice;
 
-      // Сторож: ровно один путь побеждает. Если нативная озвучка не стартовала
-      // за 500 мс (тихий сбой Web Speech в WebView — не всегда ловится onerror),
-      // проигрываем аудио-поток. Так звук будет даже если детект Telegram не сработал.
+      // Сторож: если нативная озвучка не стартовала за 500 мс (тихий сбой Web
+      // Speech), проигрываем аудио (элемент уже разблокирован первым касанием).
       let settled = false;
       const fallback = () => {
         if (settled) return;
         settled = true;
         try { window.speechSynthesis.cancel(); } catch (e) {}
-        playPrimed(el, text);
+        playAudio(text);
       };
-      u.onstart = () => { if (settled) return; settled = true; try { el.pause(); } catch (e) {} };
+      u.onstart = () => { settled = true; };
       u.onerror = fallback;
       window.speechSynthesis.speak(u);
       setTimeout(fallback, 500);
     } else {
-      playPrimed(el, text);
+      playAudio(text);
     }
   }
 
   function speakSlow(text) { speak(text, { rate: 0.65 }); }
 
   function init() {
-    if (!window.speechSynthesis) return;
-    const update = () => { preferredVoice = pickBestVoice(); };
-    window.speechSynthesis.onvoiceschanged = update;
-    update();
+    // Разблокировка аудио на первом же взаимодействии пользователя
+    const onGesture = () => unlock();
+    document.addEventListener('pointerdown', onGesture, { passive: true });
+    document.addEventListener('touchend',   onGesture, { passive: true });
+    document.addEventListener('click',      onGesture, { passive: true });
+
+    if (window.speechSynthesis) {
+      const update = () => { preferredVoice = pickBestVoice(); };
+      window.speechSynthesis.onvoiceschanged = update;
+      update();
+    }
   }
 
   return { init, speak, speakSlow };
