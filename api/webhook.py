@@ -329,8 +329,14 @@ class handler(BaseHTTPRequestHandler):
             self._json({"ok": True, "service": "progress"})
             return
 
-        # webhook health-check
-        self._text(b"Deutsch Meister bot webhook is running")
+        # webhook health-check (+ диагностика маршрутизации)
+        self._json({
+            "ok": True,
+            "service": "webhook",
+            "build": "dispatch-2",
+            "seen_path": self.path,
+            "route": route,
+        })
 
     # ── POST ──
     def do_POST(self):
