@@ -91,9 +91,21 @@ const TTS = (() => {
       u.rate  = rate;
       u.pitch = pitch;
       u.voice = preferredVoice || bestVoice;
-      u.onstart = () => { try { el.pause(); } catch (e) {} };
-      u.onerror = () => playPrimed(el, text);
+
+      // Сторож: ровно один путь побеждает. Если нативная озвучка не стартовала
+      // за 500 мс (тихий сбой Web Speech в WebView — не всегда ловится onerror),
+      // проигрываем аудио-поток. Так звук будет даже если детект Telegram не сработал.
+      let settled = false;
+      const fallback = () => {
+        if (settled) return;
+        settled = true;
+        try { window.speechSynthesis.cancel(); } catch (e) {}
+        playPrimed(el, text);
+      };
+      u.onstart = () => { if (settled) return; settled = true; try { el.pause(); } catch (e) {} };
+      u.onerror = fallback;
       window.speechSynthesis.speak(u);
+      setTimeout(fallback, 500);
     } else {
       playPrimed(el, text);
     }

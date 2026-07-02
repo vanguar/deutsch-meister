@@ -15,7 +15,13 @@
 const Progress = (() => {
   const STORAGE_KEY            = 'dm_progress';
   const SECTIONS_KEY_PREFIX    = 'dm_sections:';   // dm_sections:a1-01
+  const LAST_LESSON_KEY        = 'dm_last_lesson'; // id последнего открытого урока
   const XP_PER_LEVEL           = 200;
+
+  /* Подписчики на изменение прогресса (для облачной синхронизации) */
+  const _subs = [];
+  function subscribe(fn) { if (typeof fn === 'function') _subs.push(fn); }
+  function _notify() { _subs.forEach(fn => { try { fn(); } catch (e) {} }); }
 
   /* All sections that must be finished before a lesson counts as done */
   const REQUIRED_SECTIONS = ['flashcards', 'fill', 'choice', 'match', 'dict'];
@@ -60,6 +66,19 @@ const Progress = (() => {
     } catch {
       console.warn('Progress: localStorage not available.');
     }
+    _notify();
+  }
+
+  /* ════════════════════════════════════
+     Последний открытый урок
+     ════════════════════════════════════ */
+  function setLastLesson(id) {
+    if (!id) return;
+    try { localStorage.setItem(LAST_LESSON_KEY, id); } catch {}
+    _notify();
+  }
+  function getLastLesson() {
+    try { return localStorage.getItem(LAST_LESSON_KEY) || null; } catch { return null; }
   }
 
   /* ════════════════════════════════════
@@ -149,6 +168,17 @@ const Progress = (() => {
   function isLessonFullyDone() {
     _ensureLessonContext();
     return REQUIRED_SECTIONS.every(s => _doneSections.has(s));
+  }
+
+  /**
+   * Принудительно перечитать секции текущего урока из localStorage и обновить
+   * UI. Нужно после слияния облачного прогресса на странице урока.
+   */
+  function reloadSections() {
+    _currentLessonId = null;
+    _ensureLessonContext();
+    renderSectionProgress();
+    if (isLessonFullyDone()) tryFinishLesson();
   }
 
   function getCompletionStatus() {
@@ -347,6 +377,161 @@ const Progress = (() => {
   }
 
   /* ════════════════════════════════════
+     Home page — рендер реального прогресса
+     ════════════════════════════════════ */
+
+  /* href='lessons/a1/lesson-03/index.html?v=15' -> 'a1-03' */
+  function _lessonIdFromHref(href) {
+    const m = /lessons\/([a-z0-9]+)\/lesson-(\d+)/i.exec(href || '');
+    return m ? `${m[1].toLowerCase()}-${m[2]}` : null;
+  }
+
+  /**
+   * Пробегает по карточкам/пунктам меню на главной и приводит их состояние
+   * (пройден / текущий) в соответствие с реальным прогрессом. Подсвечивает
+   * урок, на котором пользователь остановился, и настраивает кнопку «Продолжить».
+   */
+  function renderHomeProgress() {
+    const cards = Array.from(document.querySelectorAll('.lesson-card[href]'));
+    const items = Array.from(document.querySelectorAll('.lesson-item[href]'));
+    if (!cards.length && !items.length) return;   // не главная страница
+
+    const completed = load().completedLessons || [];
+    const last      = getLastLesson();
+
+    // Куда ведёт «Продолжить»: последний открытый → иначе первый непройденный
+    let continueId = null;
+    if (last && cards.some(c => _lessonIdFromHref(c.getAttribute('href')) === last)) {
+      continueId = last;
+    }
+    if (!continueId) {
+      for (const c of cards) {
+        const id = _lessonIdFromHref(c.getAttribute('href'));
+        if (id && !completed.includes(id)) { continueId = id; break; }
+      }
+    }
+    if (!continueId && cards.length) {
+      continueId = _lessonIdFromHref(cards[0].getAttribute('href'));
+    }
+
+    // Карточки на главной
+    cards.forEach(card => {
+      const id = _lessonIdFromHref(card.getAttribute('href'));
+      if (!id) return;
+      const done   = completed.includes(id);
+      const status = card.querySelector('.lc-status');
+
+      card.classList.toggle('done', done);
+      card.classList.remove('continue');
+      card.style.outline   = '';
+      card.style.boxShadow = '';
+
+      if (status) {
+        status.classList.remove('done', 'open');
+        if (done) { status.classList.add('done'); status.textContent = '✓ Пройден'; }
+        else      { status.classList.add('open'); status.textContent = '→ Начать'; }
+      }
+
+      if (id === continueId) {
+        card.classList.add('continue');
+        card.style.outline   = '2px solid var(--accent2)';
+        card.style.boxShadow = '0 0 0 4px rgba(124,106,247,.18)';
+        if (status) {
+          status.classList.remove('done');
+          status.classList.add('open');
+          status.textContent = '▶ Продолжить';
+        }
+      }
+    });
+
+    // Пункты бокового меню
+    items.forEach(item => {
+      const id = _lessonIdFromHref(item.getAttribute('href'));
+      if (!id) return;
+      const done = completed.includes(id);
+      item.classList.toggle('done', done);
+      item.classList.toggle('current', id === continueId);
+
+      let st = item.querySelector('.lesson-status');
+      if (done) {
+        if (!st) { st = document.createElement('span'); item.appendChild(st); }
+        st.className = 'lesson-status done';
+        st.textContent = '✓';
+      } else if (st) {
+        st.remove();
+      }
+    });
+
+    // Кнопка «Продолжить» в hero
+    const btn = document.getElementById('continueBtn');
+    if (btn && continueId) {
+      const card  = cards.find(c => _lessonIdFromHref(c.getAttribute('href')) === continueId);
+      const title = card?.querySelector('.lc-title')?.textContent?.trim() || '';
+      if (card) btn.setAttribute('href', card.getAttribute('href'));
+      btn.textContent = completed.length ? `▶ Продолжить: ${title}` : '🚀 Начать урок 1';
+    }
+  }
+
+  /* ════════════════════════════════════
+     Экспорт / импорт / слияние (облако)
+     ════════════════════════════════════ */
+
+  function exportAll() {
+    const out = { progress: load(), sections: {}, lastLesson: getLastLesson() };
+    try {
+      Object.keys(localStorage).forEach(k => {
+        if (k.startsWith(SECTIONS_KEY_PREFIX)) {
+          out.sections[k.slice(SECTIONS_KEY_PREFIX.length)] = JSON.parse(localStorage.getItem(k) || 'null');
+        }
+      });
+    } catch {}
+    return out;
+  }
+
+  function _mergeGlobal(a, b) {
+    a = a || {}; b = b || {};
+    const m = { ...defaults, ...a };
+    m.xp         = Math.max(a.xp || 0, b.xp || 0);
+    m.streak     = Math.max(a.streak || 0, b.streak || 0);
+    m.lastActive = [a.lastActive, b.lastActive].filter(Boolean).sort().pop() || null;
+    m.completedLessons = Array.from(new Set([...(a.completedLessons || []), ...(b.completedLessons || [])]));
+    m.lessonScores = { ...(b.lessonScores || {}) };
+    Object.entries(a.lessonScores || {}).forEach(([k, v]) => {
+      m.lessonScores[k] = Math.max(v, m.lessonScores[k] || 0);
+    });
+    return m;
+  }
+
+  /**
+   * Влить облачный снимок в localStorage (берём максимум/объединение по полям,
+   * чтобы прогресс с разных устройств не затирался). Возвращает true, если
+   * что-то реально изменилось.
+   */
+  function importAll(cloud) {
+    if (!cloud || typeof cloud !== 'object') return false;
+
+    const before = JSON.stringify(exportAll());
+
+    save(_mergeGlobal(load(), cloud.progress));
+
+    const cs = cloud.sections || {};
+    Object.entries(cs).forEach(([id, val]) => {
+      if (!val) return;
+      const localRaw = _loadSections(id);
+      const done   = Array.from(new Set([...(localRaw.done || []), ...(val.done || [])]));
+      const scores = { ...(val.scores || {}) };
+      Object.entries(localRaw.scores || {}).forEach(([k, v]) => {
+        scores[k] = Math.max(v, scores[k] || 0);
+      });
+      try { localStorage.setItem(SECTIONS_KEY_PREFIX + id, JSON.stringify({ done, scores })); } catch {}
+    });
+
+    if (cloud.lastLesson && !getLastLesson()) setLastLesson(cloud.lastLesson);
+
+    return JSON.stringify(exportAll()) !== before;
+  }
+
+  /* ════════════════════════════════════
      Init
      ════════════════════════════════════ */
 
@@ -360,9 +545,16 @@ const Progress = (() => {
     renderXP(state.xp);
     renderStreak(state.streak);
 
+    // Запоминаем последний открытый урок (для «Продолжить» на главной)
+    const lid = (typeof LESSON_DATA !== 'undefined') ? LESSON_DATA?.id : null;
+    if (lid) setLastLesson(lid);
+
     // Per-lesson section state
     _ensureLessonContext();
     renderSectionProgress();
+
+    // Реальный прогресс на главной странице
+    renderHomeProgress();
 
     // If the lesson was already fully completed in a previous session,
     // re-show the completion banner (no XP awarded again).
@@ -387,6 +579,17 @@ const Progress = (() => {
     getCompletionStatus,
     tryFinishLesson,
     renderSectionProgress,
-    resetLessonProgress
+    resetLessonProgress,
+
+    // ✦ «Продолжить» + главная
+    setLastLesson,
+    getLastLesson,
+    renderHomeProgress,
+    reloadSections,
+
+    // ✦ Облачная синхронизация
+    subscribe,
+    exportAll,
+    importAll
   };
 })();

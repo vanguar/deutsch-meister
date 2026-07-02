@@ -1,4 +1,4 @@
-const CACHE = 'deutsch-meister-v29';
+const CACHE = 'deutsch-meister-v30';
 const BASE = '/deutsch-meister';
 
 // Only pre-cache the shell — lesson files are cached on first visit
@@ -16,6 +16,7 @@ const STATIC = [
   BASE + '/js/flashcards.js',
   BASE + '/js/tts.js',
   BASE + '/js/telegram.js',
+  BASE + '/js/cloud-sync.js',
   BASE + '/js/support.js',
   BASE + '/icons/icon.svg',
 ];
@@ -47,6 +48,11 @@ function isHtml(req) {
 self.addEventListener('fetch', e => {
   const req = e.request;
   if (req.method !== 'GET') return;
+
+  // Кросс-доменные запросы (озвучка StreamElements/ResponsiveVoice, Telegram SDK,
+  // аудио с Range-заголовками) НЕ трогаем — пусть браузер сам идёт в сеть. Иначе
+  // на iOS перехват медиа-запросов ломает воспроизведение звука.
+  if (new URL(req.url).origin !== self.location.origin) return;
 
   // HTML / navigations → network-first, so new versions show immediately online
   if (isHtml(req)) {

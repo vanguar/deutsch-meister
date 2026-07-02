@@ -28,12 +28,27 @@ loadTelegramSdk().then(TG => {
     document.documentElement.setAttribute('data-theme', 'light');
   }
 
-  // Кнопка "назад" на страницах уроков (только Telegram 6.1+)
+  // Кнопка "назад" (только Telegram 6.1+)
   const isLesson = location.pathname.includes('/lessons/');
-  if (isLesson && TG.isVersionAtLeast('6.1')) {
-    TG.BackButton.show();
-    TG.BackButton.onClick(() => history.back());
+  const HOME_URL = 'https://vanguar.github.io/deutsch-meister/';
+
+  if (TG.isVersionAtLeast('6.1')) {
+    if (isLesson) {
+      // На уроке: назад по истории, а если истории нет — на главную (не зависаем)
+      TG.BackButton.show();
+      TG.BackButton.onClick(() => {
+        if (window.history.length > 1) history.back();
+        else window.location.href = HOME_URL;
+      });
+    } else {
+      // На главной кнопку "назад" прячем, чтобы Telegram показал крестик "Закрыть"
+      TG.BackButton.hide();
+    }
   }
+
+  // Аппаратная кнопка "назад" на Android приходит как событие backButtonClicked —
+  // Telegram уже вызывает наш onClick выше. На всякий случай гарантируем закрытие
+  // приложения с главной по системной кнопке через closingBehavior по умолчанию.
 
   // Персональное приветствие только на главной
   const isHome = !isLesson;

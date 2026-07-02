@@ -277,7 +277,7 @@
         Озвучка, упражнения, флэшкарты и умная система повторения.
       </p>
       <div class="hero-actions">
-        <a href="lessons/a1/lesson-01/index.html?v=15" class="btn btn-primary">
+        <a id="continueBtn" href="lessons/a1/lesson-01/index.html?v=15" class="btn btn-primary">
           🚀 Начать урок 1
         </a>
         <button class="btn btn-ghost" onclick="document.getElementById('courseMap').scrollIntoView({behavior:'smooth'})">📋 Программа курса</button>
@@ -423,8 +423,9 @@
 
 <button class="sidebar-mobile-toggle" id="sidebarToggle" onclick="toggleSidebar()">☰</button>
 
-<script src="js/progress.js?v=11"></script>
-<script src="js/telegram.js?v=12"></script>
+<script src="js/progress.js?v=13"></script>
+<script src="js/telegram.js?v=13"></script>
+<script src="js/cloud-sync.js?v=1"></script>
 <script src="js/support.js?v=5"></script>
 <script>
   if ('serviceWorker' in navigator) {
