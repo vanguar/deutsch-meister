@@ -1,4 +1,4 @@
-const CACHE = 'deutsch-meister-v30';
+const CACHE = 'deutsch-meister-v31';
 const BASE = '/deutsch-meister';
 
 // Only pre-cache the shell — lesson files are cached on first visit
@@ -17,6 +17,7 @@ const STATIC = [
   BASE + '/js/tts.js',
   BASE + '/js/telegram.js',
   BASE + '/js/cloud-sync.js',
+  BASE + '/js/install-app.js',
   BASE + '/js/support.js',
   BASE + '/icons/icon.svg',
 ];
