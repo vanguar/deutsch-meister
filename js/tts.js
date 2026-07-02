@@ -1,19 +1,49 @@
 const TTS = (() => {
+  const VERSION = 'v15';
+  const PROXY = 'https://deutsch-meister-puce.vercel.app/api/tts';
+
   let preferredVoice = null;
   let audio = null;
+  let actx = null;
   let unlocked = false;
+  const bufCache = {};
 
-  // Короткий "тихий" WAV (data URI, тот же origin) — им разблокируем аудиоканал
-  // на первом касании, чтобы дальше play() работал даже из async-колбэков.
+  // Короткий "тихий" WAV (data URI, тот же origin) — разблокировка аудиоканала.
   const SILENT = 'data:audio/wav;base64,UklGRqQCAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YYACAACAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8A';
+
+  /* ── Экранная диагностика (видна в Telegram или при dm_tts_debug=1) ── */
+  function diag(msg) {
+    try {
+      let on = inTelegram();
+      if (!on) { try { on = localStorage.getItem('dm_tts_debug') === '1'; } catch (e) {} }
+      if (!on) return;
+      let box = document.getElementById('ttsDiag');
+      if (!box) {
+        box = document.createElement('div');
+        box.id = 'ttsDiag';
+        box.style.cssText =
+          'position:fixed;top:6px;left:6px;right:6px;z-index:100000;' +
+          'background:rgba(0,0,0,.86);color:#7dff7d;font:11px/1.45 monospace;' +
+          'padding:7px 9px;border-radius:8px;max-height:44vh;overflow:auto;' +
+          'white-space:pre-wrap;word-break:break-word;pointer-events:none';
+        (document.body || document.documentElement).appendChild(box);
+      }
+      box.textContent = '[TTS ' + VERSION + '] ' + msg + '\n' + box.textContent;
+      clearTimeout(box._t);
+      box._t = setTimeout(() => { try { box.remove(); } catch (e) {} }, 10000);
+    } catch (e) {}
+  }
 
   const hasSpeech = () => {
     if (!window.speechSynthesis) return false;
     return window.speechSynthesis.getVoices().length > 0;
   };
 
-  // Внутри Telegram (WKWebView на iOS, System WebView на Android) Web Speech API
-  // молчит — там всегда играем реальное аудио.
+  function platform() {
+    const wa = window.Telegram && window.Telegram.WebApp;
+    return (wa && wa.platform) || '';
+  }
+
   function inTelegram() {
     const wa = window.Telegram && window.Telegram.WebApp;
     if (wa && wa.platform && wa.platform !== 'unknown') return true;
@@ -23,11 +53,12 @@ const TTS = (() => {
     return /Telegram/i.test(navigator.userAgent || '');
   }
 
-  // Google Translate TTS — стабильно отдаёт mp3 (в т.ч. с умляутами). Лимит ~200
-  // символов на запрос. Два хоста-зеркала на случай сбоя одного.
-  function gUrl(host, text) {
-    const t = String(text).slice(0, 200);
-    return 'https://' + host + '/translate_tts?ie=UTF-8&client=tw-ob&tl=de&q=' + encodeURIComponent(t);
+  function getCtx() {
+    if (!actx) {
+      const C = window.AudioContext || window.webkitAudioContext;
+      if (C) { try { actx = new C(); } catch (e) {} }
+    }
+    return actx;
   }
 
   function getAudio() {
@@ -35,43 +66,86 @@ const TTS = (() => {
       audio = new Audio();
       audio.preload = 'auto';
       audio.playsInline = true;
-      audio.setAttribute('playsinline', '');
+      try { audio.setAttribute('playsinline', ''); } catch (e) {}
     }
     return audio;
   }
 
+  // Разблокировка на квалифицирующем жесте (click/touchend). touchstart на iOS
+  // НЕ считается активацией — поэтому его не используем.
   function unlock() {
-    if (unlocked) return;
-    const el = getAudio();
-    try {
-      el.muted = true;
-      el.src = SILENT;
-      const p = el.play();
-      const done = () => {
-        try { el.pause(); el.currentTime = 0; } catch (e) {}
-        el.muted = false;
-        unlocked = true;
-      };
-      if (p && typeof p.then === 'function') p.then(done).catch(() => { el.muted = false; });
-      else done();
-    } catch (e) {}
+    if (!unlocked) {
+      const el = getAudio();
+      try {
+        el.muted = true;
+        el.src = SILENT;
+        const p = el.play();
+        const done = () => {
+          try { el.pause(); el.currentTime = 0; } catch (e) {}
+          el.muted = false;
+          unlocked = true;
+        };
+        if (p && typeof p.then === 'function') p.then(done).catch(() => { el.muted = false; });
+        else done();
+      } catch (e) {}
+    }
+    const c = getCtx();
+    if (c && c.state === 'suspended') { try { c.resume(); } catch (e) {} }
   }
 
-  function playAudio(text) {
+  function gUrl(host, text) {
+    return 'https://' + host + '/translate_tts?ie=UTF-8&client=tw-ob&tl=de&q=' +
+           encodeURIComponent(String(text).slice(0, 200));
+  }
+  function proxyUrl(text) {
+    return PROXY + '?tl=de&text=' + encodeURIComponent(String(text).slice(0, 200));
+  }
+
+  /* ── Путь 1: Web Audio (надёжнее в WebView) ── */
+  function playWebAudio(text) {
+    const c = getCtx();
+    if (!c) return Promise.reject(new Error('no AudioContext'));
+    const key = text;
+    const get = bufCache[key]
+      ? Promise.resolve(bufCache[key])
+      : fetch(proxyUrl(text))
+          .then(r => { if (!r.ok) throw new Error('proxy HTTP ' + r.status); return r.arrayBuffer(); })
+          .then(ab => new Promise((res, rej) => { c.decodeAudioData(ab, res, rej); }))
+          .then(buf => { bufCache[key] = buf; return buf; });
+    return get.then(buf => {
+      if (c.state === 'suspended') { try { c.resume(); } catch (e) {} }
+      const s = c.createBufferSource();
+      s.buffer = buf;
+      s.connect(c.destination);
+      s.start(0);
+    });
+  }
+
+  /* ── Путь 2: <audio> с перебором источников ── */
+  function playAudioEl(text) {
+    const urls = [proxyUrl(text), gUrl('translate.google.com', text), gUrl('translate.googleapis.com', text)];
     const el = getAudio();
     el.muted = false;
-    // На ошибке первого хоста пробуем второй Google-хост
-    el.onerror = () => {
-      el.onerror = null;
-      el.src = gUrl('translate.googleapis.com', text);
+    let i = 0;
+    const tryNext = () => {
+      if (i >= urls.length) { diag('❌ audio: все источники молчат'); return; }
+      const url = urls[i++];
+      el.onerror = () => { diag('audio error code=' + (el.error && el.error.code) + ' на #' + i + ' → next'); tryNext(); };
+      el.onplaying = () => diag('▶ PLAYING (audio) #' + i);
+      el.src = url;
       el.load();
-      const p2 = el.play();
-      if (p2 && p2.catch) p2.catch(() => {});
+      const p = el.play();
+      if (p && typeof p.then === 'function') {
+        p.then(() => diag('play() ok (audio) #' + i)).catch(e => { diag('play() reject: ' + e.name + ' → next'); tryNext(); });
+      }
     };
-    el.src = gUrl('translate.google.com', text);
-    el.load();
-    const p = el.play();
-    if (p && p.catch) p.catch(() => {});
+    tryNext();
+  }
+
+  function speakAudio(text) {
+    playWebAudio(text)
+      .then(() => diag('✅ WebAudio сыграл'))
+      .catch(e => { diag('WebAudio не смог: ' + (e && e.message) + ' → <audio>'); playAudioEl(text); });
   }
 
   function pickBestVoice() {
@@ -80,11 +154,11 @@ const TTS = (() => {
   }
 
   function speak(text, { rate = 0.85, pitch = 1 } = {}) {
-    // В Telegram нативная озвучка не звучит — сразу играем аудио.
-    if (inTelegram()) {
-      playAudio(text);
-      return;
-    }
+    unlock();   // мы внутри пользовательского жеста (onclick) — разблокируем тут же
+    diag('speak "' + text + '"\nplatform=' + platform() + ' inTG=' + inTelegram() +
+         ' ctx=' + ((getCtx() || {}).state));
+
+    if (inTelegram()) { speakAudio(text); return; }
 
     const bestVoice = pickBestVoice();
     if (hasSpeech() && bestVoice) {
@@ -94,33 +168,28 @@ const TTS = (() => {
       u.rate  = rate;
       u.pitch = pitch;
       u.voice = preferredVoice || bestVoice;
-
-      // Сторож: если нативная озвучка не стартовала за 500 мс (тихий сбой Web
-      // Speech), проигрываем аудио (элемент уже разблокирован первым касанием).
       let settled = false;
-      const fallback = () => {
+      const fb = () => {
         if (settled) return;
         settled = true;
         try { window.speechSynthesis.cancel(); } catch (e) {}
-        playAudio(text);
+        speakAudio(text);
       };
       u.onstart = () => { settled = true; };
-      u.onerror = fallback;
+      u.onerror = fb;
       window.speechSynthesis.speak(u);
-      setTimeout(fallback, 500);
+      setTimeout(fb, 500);
     } else {
-      playAudio(text);
+      speakAudio(text);
     }
   }
 
   function speakSlow(text) { speak(text, { rate: 0.65 }); }
 
   function init() {
-    // Разблокировка аудио на первом же взаимодействии пользователя
-    const onGesture = () => unlock();
-    document.addEventListener('pointerdown', onGesture, { passive: true });
-    document.addEventListener('touchend',   onGesture, { passive: true });
-    document.addEventListener('click',      onGesture, { passive: true });
+    const g = () => unlock();
+    document.addEventListener('touchend', g, { passive: true });
+    document.addEventListener('click',    g, { passive: true });
 
     if (window.speechSynthesis) {
       const update = () => { preferredVoice = pickBestVoice(); };
