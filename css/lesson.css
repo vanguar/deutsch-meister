@@ -337,4 +337,28 @@
   .vocab-table th { padding: 8px 10px; font-size: 10px; letter-spacing: 1px; }
   .vocab-table td { padding: 9px 10px; font-size: 13px; }
   .vocab-ipa      { font-size: 11px; word-break: break-word; }
+  .grammar-box    { padding: 18px 16px; }
+  .pattern-table  { table-layout: fixed; }
+  .pattern-table td {
+    padding: 8px 8px;
+    font-size: 12px;
+    overflow-wrap: anywhere;
+  }
+  .pattern-table td:first-child {
+    width: 31%;
+    font-size: 12px;
+  }
+  .pattern-table td:nth-child(2) { width: 38%; }
+  .pattern-table td:last-child  { width: 31%; font-size: 12px; }
+  .conj-word {
+    max-width: 100%;
+    min-width: 0;
+    flex-wrap: wrap;
+    white-space: normal;
+    row-gap: 2px;
+  }
+  .conj-word strong {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
 }
