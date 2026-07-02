@@ -8,17 +8,36 @@ const TTS = (() => {
     return window.speechSynthesis.getVoices().length > 0;
   };
 
-  function makeAudio(url) {
-    if (audio) audio.pause();
-    audio = new Audio();
-    audio.src = url;
-    audio.load();
+  // Telegram's in-app browser (WKWebView on iOS, System WebView on Android) exposes
+  // the Web Speech API but it is SILENT — speechSynthesis.speak() plays nothing and
+  // fires no error. So inside Telegram we must never rely on it: we play a real
+  // <audio> stream started directly inside the tap gesture, which works everywhere.
+  function inTelegram() {
+    const wa = window.Telegram && window.Telegram.WebApp;
+    if (wa && wa.platform && wa.platform !== 'unknown') return true;
+    if (typeof window.TelegramWebviewProxy !== 'undefined') return true;          // iOS bridge
+    if (typeof window.TelegramWebviewProxyProto !== 'undefined') return true;
+    if (typeof isTelegramWebView === 'function' && isTelegramWebView()) return true;
+    return /Telegram/i.test(navigator.userAgent || '');
+  }
+
+  function streamUrl(text) {
+    return 'https://api.streamelements.com/kappa/v2/speech?voice=Marlene&text=' + encodeURIComponent(text);
+  }
+
+  // Reuse ONE <audio> element. Once it has played once inside a gesture, iOS keeps
+  // it "unlocked", so subsequent plays are reliable even from async callbacks.
+  function getAudio() {
+    if (!audio) {
+      audio = new Audio();
+      audio.preload = 'auto';
+    }
     return audio;
   }
 
-  function speakViaStream(text, primed) {
-    const el = primed || makeAudio('https://api.streamelements.com/kappa/v2/speech?voice=Marlene&text=' + encodeURIComponent(text));
-    el.play().catch(() => speakViaRV(text));
+  function playPrimed(el, text) {
+    const p = el.play();
+    if (p && typeof p.catch === 'function') p.catch(() => speakViaRV(text));
   }
 
   function loadResponsiveVoice() {
@@ -51,10 +70,18 @@ const TTS = (() => {
   }
 
   function speak(text, { rate = 0.85, pitch = 1 } = {}) {
-    // Always prime audio in sync user-gesture context so play() works even
-    // if called later from an async callback (Telegram WebView restriction).
-    const url = 'https://api.streamelements.com/kappa/v2/speech?voice=Marlene&text=' + encodeURIComponent(text);
-    const primed = makeAudio(url);
+    // Prime the shared <audio> element synchronously inside the user gesture so
+    // playback is permitted even if we call .play() later from a callback.
+    const el = getAudio();
+    el.onerror = () => speakViaRV(text);
+    el.src = streamUrl(text);
+    el.load();
+
+    // Inside Telegram the Web Speech API is silent — go straight to the stream.
+    if (inTelegram()) {
+      playPrimed(el, text);
+      return;
+    }
 
     const bestVoice = pickBestVoice();
     if (hasSpeech() && bestVoice) {
@@ -64,11 +91,11 @@ const TTS = (() => {
       u.rate  = rate;
       u.pitch = pitch;
       u.voice = preferredVoice || bestVoice;
-      u.onstart = () => { primed.pause(); primed.src = ''; };
-      u.onerror = () => speakViaStream(text, primed);
+      u.onstart = () => { try { el.pause(); } catch (e) {} };
+      u.onerror = () => playPrimed(el, text);
       window.speechSynthesis.speak(u);
     } else {
-      speakViaStream(text, primed);
+      playPrimed(el, text);
     }
   }
 
