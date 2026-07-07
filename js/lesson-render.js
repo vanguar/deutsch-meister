@@ -1110,6 +1110,7 @@ Zwar|хотя / правда|Наречие
   let wordLexicon = null;
   let wordTipCloseTimer = null;
   let activeWordTip = null;
+  let wordTipPinned = false;
 
   function keyOf(str) {
     const m = String(str || '').match(/[A-Za-zÄäÖöÜüß]+/);
@@ -1314,6 +1315,7 @@ Zwar|хотя / правда|Наречие
       activeWordTip.tip.removeAttribute('style');
       activeWordTip.placeholder.replaceWith(activeWordTip.tip);
       activeWordTip = null;
+      wordTipPinned = false;
     }
     document.querySelectorAll('.word-has-tip.word-tip-open').forEach(el => {
       if (el === except) return;
@@ -1379,21 +1381,18 @@ Zwar|хотя / правда|Наречие
     tip.style.setProperty('--word-tip-arrow-left', `${Math.round(arrowLeft)}px`);
   }
 
-  function openWordTip(el, autoClose = false) {
+  function openWordTip(el, pinned = false) {
     const tip = mountWordTip(el);
     if (!tip) return;
 
+    clearTimeout(wordTipCloseTimer);
     closeWordTips(el);
+    wordTipPinned = pinned;
     el.classList.add('word-tip-open');
     el.closest('.phrase-card')?.classList.add('word-tip-card-open');
     positionWordTip(el);
     tip.classList.add('word-tip-visible');
     requestAnimationFrame(() => positionWordTip(el));
-
-    if (autoClose) {
-      clearTimeout(wordTipCloseTimer);
-      wordTipCloseTimer = setTimeout(() => closeWordTips(), 3200);
-    }
   }
 
   function initWordTips() {
@@ -1408,7 +1407,8 @@ Zwar|хотя / правда|Наречие
     document.addEventListener('mouseout', event => {
       const el = wordTipTarget(event.target);
       if (!el || el.contains(event.relatedTarget)) return;
-      wordTipCloseTimer = setTimeout(() => closeWordTips(), 80);
+      if (wordTipPinned || activeWordTip?.el !== el) return;
+      wordTipCloseTimer = setTimeout(() => closeWordTips(), 120);
     }, true);
 
     document.addEventListener('click', event => {
