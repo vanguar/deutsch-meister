@@ -179,10 +179,10 @@
 
 .word-tip {
   position: fixed;
-  left: var(--word-tip-left, 50vw);
-  top: var(--word-tip-top, 50vh);
+  left: 12px;
+  top: 12px;
   bottom: auto;
-  transform: translate(-50%, 8px) scale(.98);
+  transform: translateY(8px) scale(.98);
   min-width: min(190px, calc(100vw - 24px));
   max-width: min(280px, calc(100vw - 24px));
   padding: 12px 14px;
@@ -217,26 +217,18 @@
   z-index: 80;
 }
 
-.word-has-tip:hover .word-tip,
-.word-has-tip:focus .word-tip,
-.word-has-tip.word-tip-open .word-tip,
 .word-tip.word-tip-visible {
   opacity: 1;
   visibility: visible;
-  transform: translate(-50%, 0) scale(1);
+  transform: translateY(0) scale(1);
 }
 
-.word-has-tip.word-tip-below .word-tip,
 .word-tip.word-tip-below {
-  transform: translate(-50%, -8px) scale(.98);
+  transform: translateY(-8px) scale(.98);
 }
-.word-has-tip.word-tip-below:hover .word-tip,
-.word-has-tip.word-tip-below:focus .word-tip,
-.word-has-tip.word-tip-below.word-tip-open .word-tip,
 .word-tip.word-tip-below.word-tip-visible {
-  transform: translate(-50%, 0) scale(1);
+  transform: translateY(0) scale(1);
 }
-.word-has-tip.word-tip-below .word-tip::after,
 .word-tip.word-tip-below::after {
   top: auto;
   bottom: 100%;

@@ -1342,29 +1342,40 @@ Zwar|хотя / правда|Наречие
     tip.classList.remove('word-tip-below');
     const pad = 10;
     const gap = 12;
+    const viewport = window.visualViewport;
+    const viewportLeft = viewport?.offsetLeft || 0;
+    const viewportTop = viewport?.offsetTop || 0;
+    const viewportWidth = viewport?.width || window.innerWidth;
+    const viewportHeight = viewport?.height || window.innerHeight;
+    const viewportRight = viewportLeft + viewportWidth;
+    const viewportBottom = viewportTop + viewportHeight;
     const target = el.getBoundingClientRect();
     const tipRect = tip.getBoundingClientRect();
-    const tipWidth = Math.min(tipRect.width || 240, window.innerWidth - pad * 2);
+    const tipWidth = Math.min(tipRect.width || 240, viewportWidth - pad * 2);
     const tipHeight = tipRect.height || 120;
     const targetCenter = target.left + target.width / 2;
+    const minLeft = viewportLeft + pad;
+    const maxLeft = viewportRight - pad - tipWidth;
+    const minTop = viewportTop + pad;
+    const maxTop = viewportBottom - pad - tipHeight;
 
-    let left = Math.max(pad + tipWidth / 2, Math.min(targetCenter, window.innerWidth - pad - tipWidth / 2));
+    let left = Math.max(minLeft, Math.min(targetCenter - tipWidth / 2, maxLeft));
     let top = target.top - tipHeight - gap;
-    const canFitAbove = top >= pad;
-    const canFitBelow = target.bottom + gap + tipHeight <= window.innerHeight - pad;
+    const canFitAbove = top >= minTop;
+    const belowTop = target.bottom + gap;
+    const canFitBelow = belowTop + tipHeight <= viewportBottom - pad;
 
     if (!canFitAbove && canFitBelow) {
       el.classList.add('word-tip-below');
       tip.classList.add('word-tip-below');
-      top = target.bottom + gap;
+      top = belowTop;
     } else {
-      top = Math.max(pad, Math.min(top, window.innerHeight - pad - tipHeight));
+      top = Math.max(minTop, Math.min(top, maxTop));
     }
 
-    const tipLeftEdge = left - tipWidth / 2;
-    const arrowLeft = Math.max(18, Math.min(targetCenter - tipLeftEdge, tipWidth - 18));
-    tip.style.setProperty('--word-tip-left', `${Math.round(left)}px`);
-    tip.style.setProperty('--word-tip-top', `${Math.round(top)}px`);
+    const arrowLeft = Math.max(18, Math.min(targetCenter - left, tipWidth - 18));
+    tip.style.left = `${Math.round(left)}px`;
+    tip.style.top = `${Math.round(top)}px`;
     tip.style.setProperty('--word-tip-arrow-left', `${Math.round(arrowLeft)}px`);
   }
 

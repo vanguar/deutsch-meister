@@ -1,4 +1,4 @@
-const CACHE = 'deutsch-meister-v51';
+const CACHE = 'deutsch-meister-v53';
 const SCOPE_PATH = new URL(self.registration.scope).pathname.replace(/\/$/, '');
 const BASE = SCOPE_PATH === '' ? '' : SCOPE_PATH;
 
@@ -9,10 +9,10 @@ const STATIC = [
   BASE + '/manifest.json',
   BASE + '/css/base.css?v=35',
   BASE + '/css/sidebar.css?v=36',
-  BASE + '/css/lesson.css?v=39',
+  BASE + '/css/lesson.css?v=41',
   BASE + '/css/exercises.css',
   BASE + '/js/progress.js?v=14',
-  BASE + '/js/lesson-render.js?v=25',
+  BASE + '/js/lesson-render.js?v=27',
   BASE + '/js/exercises.js?v=12',
   BASE + '/js/flashcards.js',
   BASE + '/js/tts.js?v=17',
