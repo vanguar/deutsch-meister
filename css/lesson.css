@@ -178,12 +178,13 @@
 }
 
 .word-tip {
-  position: absolute;
-  left: 50%;
-  bottom: calc(100% + 12px);
+  position: fixed;
+  left: var(--word-tip-left, 50vw);
+  top: var(--word-tip-top, 50vh);
+  bottom: auto;
   transform: translate(-50%, 8px) scale(.98);
-  min-width: 190px;
-  max-width: min(280px, calc(100vw - 42px));
+  min-width: min(190px, calc(100vw - 24px));
+  max-width: min(280px, calc(100vw - 24px));
   padding: 12px 14px;
   background: color-mix(in srgb, var(--surface) 94%, #000 6%);
   border: 1px solid color-mix(in srgb, var(--accent2) 34%, var(--border));
@@ -193,7 +194,7 @@
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  z-index: 500;
+  z-index: 1000;
   transition: opacity .18s ease, transform .18s ease, visibility .18s ease;
   white-space: normal;
   text-align: left;
@@ -202,7 +203,7 @@
 .word-tip::after {
   content: '';
   position: absolute;
-  left: 50%;
+  left: var(--word-tip-arrow-left, 50%);
   top: 100%;
   transform: translateX(-50%);
   border: 7px solid transparent;
@@ -218,37 +219,29 @@
 
 .word-has-tip:hover .word-tip,
 .word-has-tip:focus .word-tip,
-.word-has-tip.word-tip-open .word-tip {
+.word-has-tip.word-tip-open .word-tip,
+.word-tip.word-tip-visible {
   opacity: 1;
   visibility: visible;
   transform: translate(-50%, 0) scale(1);
 }
 
-.word-has-tip.word-tip-shift-right .word-tip {
-  left: 0;
-  transform: translate(0, 8px) scale(.98);
+.word-has-tip.word-tip-below .word-tip,
+.word-tip.word-tip-below {
+  transform: translate(-50%, -8px) scale(.98);
 }
-.word-has-tip.word-tip-shift-left .word-tip {
-  left: auto;
-  right: 0;
-  transform: translate(0, 8px) scale(.98);
+.word-has-tip.word-tip-below:hover .word-tip,
+.word-has-tip.word-tip-below:focus .word-tip,
+.word-has-tip.word-tip-below.word-tip-open .word-tip,
+.word-tip.word-tip-below.word-tip-visible {
+  transform: translate(-50%, 0) scale(1);
 }
-.word-has-tip.word-tip-shift-right .word-tip::after {
-  left: 18px;
-  transform: none;
-}
-.word-has-tip.word-tip-shift-left .word-tip::after {
-  left: auto;
-  right: 18px;
-  transform: none;
-}
-.word-has-tip.word-tip-shift-right:hover .word-tip,
-.word-has-tip.word-tip-shift-right:focus .word-tip,
-.word-has-tip.word-tip-shift-right.word-tip-open .word-tip,
-.word-has-tip.word-tip-shift-left:hover .word-tip,
-.word-has-tip.word-tip-shift-left:focus .word-tip,
-.word-has-tip.word-tip-shift-left.word-tip-open .word-tip {
-  transform: translate(0, 0) scale(1);
+.word-has-tip.word-tip-below .word-tip::after,
+.word-tip.word-tip-below::after {
+  top: auto;
+  bottom: 100%;
+  border-top-color: transparent;
+  border-bottom-color: color-mix(in srgb, var(--surface) 94%, #000 6%);
 }
 
 .word-tip-kicker,
