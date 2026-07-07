@@ -218,17 +218,28 @@ function openBooksModal() {
   dmHaptic('light');
   dmOpen(`
     <div class="dm-emoji">📖</div>
-    <h2 class="dm-title">Проект развивается</h2>
+    <h2 class="dm-title">Книга с переводом</h2>
     <p class="dm-text">
-      Мы активно работаем над Deutsch Meister! Уже скоро выйдут
-      <b>книги на немецком</b> с встроенным обучающим процессом:
-      чтение с озвучкой, разбором слов и упражнениями прямо по тексту.
+      Мы активно работаем над книгой на немецком с переводом:
+      чтение с озвучкой, переводом фраз, разбором отдельных слов
+      и упражнениями прямо по тексту.
     </p>
     <div class="dm-net-badge">🚀 Скоро в обновлении</div>
     <p class="dm-note">Следите за новостями — спасибо, что вы с нами!</p>
     <button class="dm-btn" onclick="dmClose()">Отлично, жду! 🙌</button>
   `);
 }
+
+Object.assign(window, {
+  dmClose,
+  openDonateModal,
+  donateStars,
+  donateCrypto,
+  dmPayStars,
+  dmOpenBotDonate,
+  dmCopyWallet,
+  openBooksModal
+});
 
 /* Закрытие по Esc */
 document.addEventListener('keydown', e => { if (e.key === 'Escape') dmClose(); });

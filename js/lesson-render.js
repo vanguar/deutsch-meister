@@ -135,6 +135,299 @@ const LessonRender = (() => {
     keine: { ru: 'никакая / никакие', kind: 'Отрицание' }
   };
 
+  const EXTRA_WORDS = {
+    // Question and pointing words
+    wie: { ru: 'как', kind: 'Вопросительное слово' },
+    was: { ru: 'что', kind: 'Вопросительное слово' },
+    wer: { ru: 'кто', kind: 'Вопросительное слово' },
+    wen: { ru: 'кого', kind: 'Вопросительное слово' },
+    wem: { ru: 'кому', kind: 'Вопросительное слово' },
+    wo: { ru: 'где', kind: 'Вопросительное слово' },
+    wohin: { ru: 'куда', kind: 'Вопросительное слово' },
+    woher: { ru: 'откуда', kind: 'Вопросительное слово' },
+    wann: { ru: 'когда', kind: 'Вопросительное слово' },
+    warum: { ru: 'почему', kind: 'Вопросительное слово' },
+    welcher: { ru: 'какой / который', kind: 'Вопросительное слово' },
+    welche: { ru: 'какая / какие / которые', kind: 'Вопросительное слово' },
+    welches: { ru: 'какое / которое', kind: 'Вопросительное слово' },
+    welchen: { ru: 'какого / который (Akk.)', kind: 'Вопросительное слово' },
+    wessen: { ru: 'чей / чья / чьё', kind: 'Вопросительное слово' },
+    zwischen: { ru: 'между', kind: 'Предлог' },
+    diese: { ru: 'эта / эти', kind: 'Указательное' },
+    dieser: { ru: 'этот / этой', kind: 'Указательное' },
+    dieses: { ru: 'это', kind: 'Указательное' },
+    diesen: { ru: 'этого / этот (Akk.)', kind: 'Указательное' },
+    diesem: { ru: 'этому / этим', kind: 'Указательное' },
+    andere: { ru: 'другие / другая', kind: 'Прилагательное' },
+    anderen: { ru: 'других / другому', kind: 'Прилагательное' },
+    jeder: { ru: 'каждый', kind: 'Местоимение' },
+    jeden: { ru: 'каждый / каждого', kind: 'Местоимение' },
+    alles: { ru: 'всё', kind: 'Местоимение' },
+    etwas: { ru: 'что-то / немного', kind: 'Местоимение' },
+
+    // Pronoun cases and polite forms
+    mich: { ru: 'меня / себя', kind: 'Местоимение' },
+    mir: { ru: 'мне', kind: 'Местоимение' },
+    dich: { ru: 'тебя / себя', kind: 'Местоимение' },
+    dir: { ru: 'тебе', kind: 'Местоимение' },
+    uns: { ru: 'нас / нам', kind: 'Местоимение' },
+    euch: { ru: 'вас / вам', kind: 'Местоимение' },
+    ihnen: { ru: 'им / Вам', kind: 'Местоимение' },
+
+    // Common adverbs and particles
+    ja: { ru: 'да', kind: 'Частица' },
+    nein: { ru: 'нет', kind: 'Частица' },
+    bitte: { ru: 'пожалуйста', kind: 'Частица' },
+    danke: { ru: 'спасибо', kind: 'Частица' },
+    sehr: { ru: 'очень', kind: 'Наречие' },
+    gut: { ru: 'хорошо / хороший', kind: 'Наречие / прилагательное' },
+    schlecht: { ru: 'плохо / плохой', kind: 'Наречие / прилагательное' },
+    so: { ru: 'так / такой', kind: 'Наречие' },
+    auch: { ru: 'тоже / также', kind: 'Наречие' },
+    nur: { ru: 'только', kind: 'Наречие' },
+    schon: { ru: 'уже', kind: 'Наречие' },
+    noch: { ru: 'ещё', kind: 'Наречие' },
+    wieder: { ru: 'снова / опять', kind: 'Наречие' },
+    hier: { ru: 'здесь', kind: 'Наречие' },
+    dort: { ru: 'там', kind: 'Наречие' },
+    da: { ru: 'там / тут', kind: 'Наречие' },
+    heute: { ru: 'сегодня', kind: 'Наречие времени' },
+    morgen: { ru: 'завтра / утро', kind: 'Наречие / существительное' },
+    gestern: { ru: 'вчера', kind: 'Наречие времени' },
+    jetzt: { ru: 'сейчас', kind: 'Наречие времени' },
+    oft: { ru: 'часто', kind: 'Наречие' },
+    immer: { ru: 'всегда', kind: 'Наречие' },
+    manchmal: { ru: 'иногда', kind: 'Наречие' },
+    nie: { ru: 'никогда', kind: 'Наречие' },
+    viel: { ru: 'много', kind: 'Наречие / местоимение' },
+    viele: { ru: 'многие / много', kind: 'Местоимение' },
+    mehr: { ru: 'больше', kind: 'Наречие' },
+    wenig: { ru: 'мало', kind: 'Наречие' },
+    bisschen: { ru: 'немного', kind: 'Наречие' },
+    zweimal: { ru: 'два раза', kind: 'Наречие' },
+    dreimal: { ru: 'три раза', kind: 'Наречие' },
+    ins: { ru: 'в; слитно in + das', kind: 'Предлог' },
+    pro: { ru: 'за / в расчёте на', kind: 'Предлог' },
+    etwa: { ru: 'примерно / около', kind: 'Наречие' },
+    kurz: { ru: 'коротко / ненадолго', kind: 'Наречие / прилагательное' },
+    zusammen: { ru: 'вместе', kind: 'Наречие' },
+
+    // Common adjectives and nouns that recur across lessons
+    groß: { ru: 'большой', kind: 'Прилагательное' },
+    klein: { ru: 'маленький', kind: 'Прилагательное' },
+    alt: { ru: 'старый', kind: 'Прилагательное' },
+    neu: { ru: 'новый', kind: 'Прилагательное' },
+    schön: { ru: 'красивый / хороший', kind: 'Прилагательное' },
+    wichtig: { ru: 'важный', kind: 'Прилагательное' },
+    richtig: { ru: 'правильный', kind: 'Прилагательное' },
+    falsch: { ru: 'неправильный', kind: 'Прилагательное' },
+    lecker: { ru: 'вкусный', kind: 'Прилагательное' },
+    teuer: { ru: 'дорогой', kind: 'Прилагательное' },
+    billig: { ru: 'дешёвый', kind: 'Прилагательное' },
+    krank: { ru: 'больной', kind: 'Прилагательное' },
+    fertig: { ru: 'готовый / законченный', kind: 'Прилагательное' },
+    reich: { ru: 'богатый', kind: 'Прилагательное' },
+    arm: { ru: 'бедный', kind: 'Прилагательное' },
+    glücklich: { ru: 'счастливый', kind: 'Прилагательное' },
+    einfach: { ru: 'простой / просто', kind: 'Прилагательное / наречие' },
+    schwer: { ru: 'тяжёлый / сложный', kind: 'Прилагательное' },
+    möglich: { ru: 'возможный', kind: 'Прилагательное' },
+    pünktlich: { ru: 'пунктуальный / вовремя', kind: 'Прилагательное / наречие' },
+    deutsch: { ru: 'немецкий / по-немецки', kind: 'Слово' },
+    Deutsch: { ru: 'немецкий язык / по-немецки', kind: 'Слово' },
+    Spanisch: { ru: 'испанский язык / по-испански', kind: 'Слово' },
+    Abend: { ru: 'вечер', kind: 'Существительное' },
+    Tag: { ru: 'день', kind: 'Существительное' },
+    Nacht: { ru: 'ночь', kind: 'Существительное' },
+    Woche: { ru: 'неделя', kind: 'Существительное' },
+    Wochenende: { ru: 'выходные', kind: 'Существительное' },
+    Monat: { ru: 'месяц', kind: 'Существительное' },
+    Jahr: { ru: 'год', kind: 'Существительное' },
+    Projekt: { ru: 'проект', kind: 'Существительное' },
+    Instrument: { ru: 'инструмент', kind: 'Существительное' },
+    Kino: { ru: 'кино / кинотеатр', kind: 'Существительное' },
+    Kaffee: { ru: 'кофе', kind: 'Существительное' },
+    Lust: { ru: 'желание / охота', kind: 'Существительное' },
+    Pizza: { ru: 'пицца', kind: 'Существительное' },
+    Tisch: { ru: 'стол', kind: 'Существительное' },
+    Spaß: { ru: 'удовольствие / веселье', kind: 'Существительное' },
+    Text: { ru: 'текст', kind: 'Существительное' },
+    Faden: { ru: 'нить / ход мысли', kind: 'Существительное' },
+    Aussagen: { ru: 'высказывания / утверждения', kind: 'Существительное' },
+    Hauptthese: { ru: 'главный тезис', kind: 'Существительное' },
+    Zeilen: { ru: 'строки', kind: 'Существительное' },
+    Kontext: { ru: 'контекст', kind: 'Существительное' },
+    Argument: { ru: 'аргумент', kind: 'Существительное' },
+    Schlussfolgerung: { ru: 'вывод / заключение', kind: 'Существительное' },
+    Struktur: { ru: 'структура', kind: 'Существительное' },
+    Autor: { ru: 'автор', kind: 'Существительное' },
+    Einwand: { ru: 'возражение', kind: 'Существительное' },
+    Kernaussage: { ru: 'ключевая мысль', kind: 'Существительное' },
+    Haltung: { ru: 'позиция / отношение', kind: 'Существительное' },
+    Widersprüche: { ru: 'противоречия', kind: 'Существительное' },
+    Standpunkt: { ru: 'точка зрения / позиция', kind: 'Существительное' },
+    Textbelege: { ru: 'текстовые доказательства', kind: 'Существительное' },
+    Fazit: { ru: 'итог / вывод', kind: 'Существительное' },
+    Hypothese: { ru: 'гипотеза', kind: 'Существительное' },
+    Relevanz: { ru: 'релевантность / значимость', kind: 'Существительное' },
+    Querverweise: { ru: 'перекрёстные ссылки', kind: 'Существительное' },
+    Textzusammenhang: { ru: 'связность текста / контекст', kind: 'Существительное' },
+    Nuancen: { ru: 'нюансы', kind: 'Существительное' },
+    Synthese: { ru: 'синтез / обобщение', kind: 'Существительное' },
+    Stilmittel: { ru: 'стилистическое средство', kind: 'Существительное' },
+    roten: { ru: 'красную / красный (склонённая форма)', kind: 'Прилагательное' },
+    Implizite: { ru: 'скрытые / подразумеваемые', kind: 'Прилагательное' },
+    kritische: { ru: 'критическая / критические', kind: 'Прилагательное' },
+    Subtile: { ru: 'тонкие / едва уловимые', kind: 'Прилагательное' },
+    zusammenfassen: { ru: 'резюмировать / кратко изложить', kind: 'Глагол' },
+    verfolgen: { ru: 'следить / отслеживать', kind: 'Глагол' },
+    erschließen: { ru: 'извлекать смысл / делать вывод', kind: 'Глагол' },
+    identifizieren: { ru: 'идентифицировать / определить', kind: 'Глагол' },
+    berücksichtigen: { ru: 'учитывать', kind: 'Глагол' },
+    entkräften: { ru: 'опровергать / ослаблять аргумент', kind: 'Глагол' },
+    ziehen: { ru: 'тянуть; делать вывод', kind: 'Глагол' },
+    analysieren: { ru: 'анализировать', kind: 'Глагол' },
+    zitieren: { ru: 'цитировать', kind: 'Глагол' },
+    eingehen: { ru: 'реагировать / подробно рассматривать', kind: 'Глагол' },
+    herausarbeiten: { ru: 'выделять / прорабатывать', kind: 'Глагол' },
+    einnehmen: { ru: 'занимать позицию / принимать', kind: 'Глагол' },
+    aufzeigen: { ru: 'указывать / показывать', kind: 'Глагол' },
+    vertreten: { ru: 'представлять / отстаивать', kind: 'Глагол' },
+    anführen: { ru: 'приводить / указывать', kind: 'Глагол' },
+    formulieren: { ru: 'формулировать', kind: 'Глагол' },
+    aufstellen: { ru: 'выдвигать / устанавливать', kind: 'Глагол' },
+    begründen: { ru: 'обосновывать', kind: 'Глагол' },
+    herstellen: { ru: 'устанавливать / создавать', kind: 'Глагол' },
+    verstehen: { ru: 'понимать', kind: 'Глагол' },
+    erkennen: { ru: 'распознавать / узнавать', kind: 'Глагол' },
+    erstellen: { ru: 'создавать / составлять', kind: 'Глагол' },
+
+    // Numbers
+    null: { ru: 'ноль', kind: 'Числительное' },
+    eins: { ru: 'один', kind: 'Числительное' },
+    zwei: { ru: 'два', kind: 'Числительное' },
+    drei: { ru: 'три', kind: 'Числительное' },
+    vier: { ru: 'четыре', kind: 'Числительное' },
+    fünf: { ru: 'пять', kind: 'Числительное' },
+    sechs: { ru: 'шесть', kind: 'Числительное' },
+    sieben: { ru: 'семь', kind: 'Числительное' },
+    acht: { ru: 'восемь', kind: 'Числительное' },
+    neun: { ru: 'девять', kind: 'Числительное' },
+    zehn: { ru: 'десять', kind: 'Числительное' },
+    elf: { ru: 'одиннадцать', kind: 'Числительное' },
+    zwölf: { ru: 'двенадцать', kind: 'Числительное' }
+  };
+
+  const COMMON_VERB_FORMS = [
+    ['haben', 'иметь / у кого-то есть', 'Infinitiv'],
+    ['habe', 'имею / у меня есть', 'ich habe'],
+    ['hast', 'имеешь / у тебя есть', 'du hast'],
+    ['hat', 'имеет / у него есть', 'er/sie/es hat'],
+    ['hatte', 'имел / было', 'Präteritum'],
+    ['hatten', 'имели / было', 'Präteritum Plural'],
+    ['war', 'был / была / было', 'sein: Präteritum'],
+    ['waren', 'были', 'sein: Präteritum Plural'],
+    ['wäre', 'был бы / была бы', 'sein: Konjunktiv II'],
+    ['wären', 'были бы', 'sein: Konjunktiv II Plural'],
+    ['werden', 'становиться / вспомогательный глагол', 'Infinitiv'],
+    ['werde', 'становлюсь / буду', 'ich werde'],
+    ['wirst', 'становишься / будешь', 'du wirst'],
+    ['wird', 'становится / будет', 'er/sie/es wird'],
+    ['wurde', 'стал / был сделан', 'werden: Präteritum'],
+    ['wurden', 'стали / были сделаны', 'werden: Präteritum Plural'],
+    ['gehen', 'идти', 'Infinitiv'],
+    ['gehe', 'иду', 'ich gehe'],
+    ['gehst', 'идёшь', 'du gehst'],
+    ['geht', 'идёт / идёте', 'er/sie/es geht · ihr geht'],
+    ['ging', 'шёл / пошёл', 'gehen: Präteritum'],
+    ['machen', 'делать', 'Infinitiv'],
+    ['mache', 'делаю', 'ich mache'],
+    ['machst', 'делаешь', 'du machst'],
+    ['macht', 'делает / делаете', 'er/sie/es macht · ihr macht'],
+    ['gemacht', 'сделанный / сделал', 'Partizip II'],
+    ['tun', 'делать', 'Infinitiv'],
+    ['tue', 'делаю', 'ich tue'],
+    ['tust', 'делаешь', 'du tust'],
+    ['tut', 'делает / болит', 'er/sie/es tut'],
+    ['kommen', 'приходить / приезжать', 'Infinitiv'],
+    ['komme', 'прихожу', 'ich komme'],
+    ['kommst', 'приходишь', 'du kommst'],
+    ['kommt', 'приходит / придёт', 'er/sie/es kommt'],
+    ['kam', 'пришёл / пришла', 'kommen: Präteritum'],
+    ['sagen', 'сказать / говорить', 'Infinitiv'],
+    ['sage', 'говорю / скажу', 'ich sage'],
+    ['sagst', 'говоришь', 'du sagst'],
+    ['sagt', 'говорит', 'er/sie/es sagt'],
+    ['wissen', 'знать', 'Infinitiv'],
+    ['weiß', 'знаю / знает', 'ich weiß · er/sie/es weiß'],
+    ['weißt', 'знаешь', 'du weißt'],
+    ['wusste', 'знал', 'wissen: Präteritum'],
+    ['finden', 'находить / считать', 'Infinitiv'],
+    ['finde', 'нахожу / считаю', 'ich finde'],
+    ['findest', 'находишь / считаешь', 'du findest'],
+    ['findet', 'находит / считает', 'er/sie/es findet'],
+    ['stehen', 'стоять', 'Infinitiv'],
+    ['stehe', 'стою', 'ich stehe'],
+    ['stehst', 'стоишь', 'du stehst'],
+    ['steht', 'стоит', 'er/sie/es steht'],
+    ['wohnen', 'жить / проживать', 'Infinitiv'],
+    ['wohne', 'живу', 'ich wohne'],
+    ['wohnst', 'живёшь', 'du wohnst'],
+    ['wohnt', 'живёт', 'er/sie/es wohnt'],
+    ['arbeiten', 'работать', 'Infinitiv'],
+    ['arbeite', 'работаю', 'ich arbeite'],
+    ['arbeitest', 'работаешь', 'du arbeitest'],
+    ['arbeitet', 'работает', 'er/sie/es arbeitet'],
+    ['warten', 'ждать', 'Infinitiv'],
+    ['warte', 'жду', 'ich warte'],
+    ['wartest', 'ждёшь', 'du wartest'],
+    ['wartet', 'ждёт', 'er/sie/es wartet'],
+    ['sehen', 'видеть / смотреть', 'Infinitiv'],
+    ['sehe', 'вижу / смотрю', 'ich sehe'],
+    ['siehst', 'видишь', 'du siehst'],
+    ['sieht', 'видит', 'er/sie/es sieht'],
+    ['helfen', 'помогать', 'Infinitiv'],
+    ['helfe', 'помогаю', 'ich helfe'],
+    ['hilfst', 'помогаешь', 'du hilfst'],
+    ['hilft', 'помогает', 'er/sie/es hilft'],
+    ['nehmen', 'брать / принимать', 'Infinitiv'],
+    ['nehme', 'беру / принимаю', 'ich nehme'],
+    ['nimmst', 'берёшь / принимаешь', 'du nimmst'],
+    ['nimmt', 'берёт / принимает', 'er/sie/es nimmt'],
+    ['geben', 'давать', 'Infinitiv'],
+    ['gebe', 'даю', 'ich gebe'],
+    ['gibst', 'даёшь', 'du gibst'],
+    ['gibt', 'даёт / есть', 'er/sie/es gibt'],
+    ['lesen', 'читать', 'Infinitiv'],
+    ['lese', 'читаю', 'ich lese'],
+    ['liest', 'читаешь / читает', 'du liest · er/sie/es liest'],
+    ['lest', 'читаете', 'ihr lest'],
+    ['müssen', 'быть должным / нужно', 'Infinitiv'],
+    ['muss', 'должен / должна / нужно', 'ich muss · er/sie/es muss'],
+    ['musst', 'должен / должна', 'du musst'],
+    ['müssen', 'должны', 'wir/Sie/sie müssen'],
+    ['können', 'мочь / уметь', 'Infinitiv'],
+    ['kann', 'могу / может', 'ich kann · er/sie/es kann'],
+    ['kannst', 'можешь', 'du kannst'],
+    ['wollen', 'хотеть', 'Infinitiv'],
+    ['will', 'хочу / хочет', 'ich will · er/sie/es will'],
+    ['willst', 'хочешь', 'du willst'],
+    ['möchten', 'хотел бы / хотели бы', 'Konjunktiv II'],
+    ['möchte', 'хотел бы / хотела бы', 'ich möchte · er/sie/es möchte'],
+    ['möchtest', 'хотел бы ты', 'du möchtest'],
+    ['hören', 'слушать / слышать', 'Infinitiv'],
+    ['höre', 'слушаю / слышу', 'ich höre'],
+    ['hörst', 'слушаешь / слышишь', 'du hörst'],
+    ['hört', 'слушает / слышит', 'er/sie/es hört'],
+    ['reisen', 'путешествовать', 'Infinitiv'],
+    ['reise', 'путешествую', 'ich reise'],
+    ['reist', 'путешествует / путешествуешь', 'du reist · er/sie/es reist'],
+    ['rauchen', 'курить', 'Infinitiv'],
+    ['rauche', 'курю', 'ich rauche'],
+    ['rauchst', 'куришь', 'du rauchst'],
+    ['raucht', 'курит', 'er/sie/es raucht']
+  ];
+
   const NOUN_FORM_OVERRIDES = {
     buch: [
       { word: 'Bücher', ru: 'книги', kind: 'Форма мн. числа', detail: 'das Buch → die Bücher' }
@@ -144,6 +437,27 @@ const LessonRender = (() => {
     ],
     hobby: [
       { word: 'Hobbys', ru: 'хобби', kind: 'Форма мн. числа', detail: 'das Hobby → die Hobbys' }
+    ],
+    baum: [
+      { word: 'Bäume', ru: 'деревья', kind: 'Форма мн. числа', detail: 'der Baum → die Bäume' }
+    ],
+    haus: [
+      { word: 'Häuser', ru: 'дома', kind: 'Форма мн. числа', detail: 'das Haus → die Häuser' }
+    ],
+    tag: [
+      { word: 'Tage', ru: 'дни', kind: 'Форма мн. числа', detail: 'der Tag → die Tage' }
+    ],
+    stunde: [
+      { word: 'Stunden', ru: 'часы', kind: 'Форма мн. числа', detail: 'die Stunde → die Stunden' }
+    ],
+    kind: [
+      { word: 'Kinder', ru: 'дети', kind: 'Форма мн. числа', detail: 'das Kind → die Kinder' }
+    ],
+    sohn: [
+      { word: 'Söhne', ru: 'сыновья', kind: 'Форма мн. числа', detail: 'der Sohn → die Söhne' }
+    ],
+    wort: [
+      { word: 'Wörter', ru: 'слова', kind: 'Форма мн. числа', detail: 'das Wort → die Wörter' }
     ]
   };
 
@@ -260,9 +574,29 @@ const LessonRender = (() => {
     });
   }
 
+  function addPhraseContextFallbacks(map) {
+    (LESSON_DATA?.phrases || []).forEach(p => {
+      wordsOf(p.de).forEach(word => {
+        if (map.has(keyOf(word))) return;
+        addInfo(map, word, {
+          word,
+          kind: 'Контекст фразы',
+          detail: `Перевод фразы: ${p.ru}`
+        });
+      });
+    });
+  }
+
   function buildWordLexicon() {
     const map = new Map();
-    Object.entries(BASIC_WORDS).forEach(([word, info]) => addInfo(map, word, { ...info, word }));
+    Object.entries({ ...BASIC_WORDS, ...EXTRA_WORDS })
+      .forEach(([word, info]) => addInfo(map, word, { ...info, word }));
+    COMMON_VERB_FORMS.forEach(([word, ru, detail]) => addInfo(map, word, {
+      word,
+      kind: 'Форма глагола',
+      ru,
+      detail
+    }));
     addPhraseNoteTerms(map);
 
     (LESSON_DATA?.vocabulary || []).forEach(w => {
@@ -308,6 +642,8 @@ const LessonRender = (() => {
         });
       }
     });
+
+    addPhraseContextFallbacks(map);
 
     return map;
   }

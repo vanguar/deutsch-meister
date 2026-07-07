@@ -40,7 +40,22 @@
     </div>
     <div class="sidebar-section-header">Программа курса</div>
     <div id="lessonNav"></div>
-    <div class="sidebar-bottom">
+    <div class="sidebar-extra">
+      <button class="side-action donate" onclick="openDonateModal()">
+        <span class="sa-ico">❤️</span>
+        <span class="sa-txt">
+          <span class="sa-title">Поддержать проект</span>
+          <span class="sa-sub">Звёзды Telegram или USDT</span>
+        </span>
+      </button>
+      <button class="side-action" onclick="openBooksModal()">
+        <span class="sa-ico">📖</span>
+        <span class="sa-txt">
+          <span class="sa-title">Разработка книги с переводом</span>
+          <span class="sa-sub">Чтение, озвучка и упражнения</span>
+        </span>
+      </button>
+    </div>    <div class="sidebar-bottom">
       <div class="xp-row">
         <span>⚡ Опыт</span>
         <strong id="xpText">0 / 200 XP</strong>
@@ -188,7 +203,8 @@
 <script src="../../../js/progress.js?v=14"></script>
 <script src="../../../js/exercises.js?v=12"></script>
 <script src="../../../js/flashcards.js?v=11"></script>
-<script src="../../../js/lesson-render.js?v=19"></script>
+<script src="../../../js/lesson-render.js?v=23"></script>
+<script src="../../../js/support.js?v=7"></script>
 
 <script>
   const CURRENT_LESSON_NUM   = 3;
