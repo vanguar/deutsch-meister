@@ -1,5 +1,6 @@
-const CACHE = 'deutsch-meister-v35';
-const BASE = '/deutsch-meister';
+const CACHE = 'deutsch-meister-v44';
+const SCOPE_PATH = new URL(self.registration.scope).pathname.replace(/\/$/, '');
+const BASE = SCOPE_PATH === '' ? '' : SCOPE_PATH;
 
 // Only pre-cache the shell — lesson files are cached on first visit
 const STATIC = [
@@ -7,15 +8,15 @@ const STATIC = [
   BASE + '/index.html',
   BASE + '/manifest.json',
   BASE + '/css/base.css?v=35',
-  BASE + '/css/sidebar.css?v=35',
-  BASE + '/css/lesson.css?v=35',
+  BASE + '/css/sidebar.css?v=36',
+  BASE + '/css/lesson.css?v=37',
   BASE + '/css/exercises.css',
-  BASE + '/js/progress.js',
-  BASE + '/js/lesson-render.js',
-  BASE + '/js/exercises.js',
+  BASE + '/js/progress.js?v=14',
+  BASE + '/js/lesson-render.js?v=19',
+  BASE + '/js/exercises.js?v=12',
   BASE + '/js/flashcards.js',
-  BASE + '/js/tts.js',
-  BASE + '/js/telegram.js',
+  BASE + '/js/tts.js?v=17',
+  BASE + '/js/telegram.js?v=14',
   BASE + '/js/cloud-sync.js',
   BASE + '/js/install-app.js',
   BASE + '/js/support.js',

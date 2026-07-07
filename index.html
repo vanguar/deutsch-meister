@@ -13,7 +13,7 @@
   <link rel="icon" type="image/svg+xml" href="/deutsch-meister/icons/icon.svg">
 
   <link rel="stylesheet" href="css/base.css?v=35">
-  <link rel="stylesheet" href="css/sidebar.css?v=35">
+  <link rel="stylesheet" href="css/sidebar.css?v=36">
 
   <style>
     /* ── Home page specific styles ── */
@@ -423,21 +423,22 @@
 
 <button class="sidebar-mobile-toggle" id="sidebarToggle" onclick="toggleSidebar()">☰</button>
 
-<script src="js/progress.js?v=13"></script>
-<script src="js/telegram.js?v=13"></script>
+<script src="js/progress.js?v=14"></script>
+<script src="js/telegram.js?v=14"></script>
 <script src="js/cloud-sync.js?v=1"></script>
 <script src="js/install-app.js?v=1"></script>
 <script src="js/support.js?v=5"></script>
 <script>
   if ('serviceWorker' in navigator) {
     let refreshing = false;
+    const swBase = location.pathname.startsWith('/deutsch-meister/') ? '/deutsch-meister/' : '/';
     // Когда новый SW берёт управление — один раз перезагружаем страницу
     navigator.serviceWorker.addEventListener('controllerchange', () => {
       if (refreshing) return;
       refreshing = true;
       window.location.reload();
     });
-    navigator.serviceWorker.register('/deutsch-meister/service-worker.js').then(reg => {
+    navigator.serviceWorker.register(swBase + 'service-worker.js').then(reg => {
       // Проверяем обновление при каждом запуске
       reg.update();
       // Если новая версия уже ждёт — активируем сразу
@@ -451,7 +452,7 @@
           }
         });
       });
-    });
+    }).catch(() => {});
   }
 </script>
 <script>

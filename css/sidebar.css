@@ -234,7 +234,7 @@
 .sidebar-mobile-toggle {
   display: none;
   position: fixed;
-  bottom: 20px;
+  bottom: calc(20px + env(safe-area-inset-bottom, 0px));
   left: 20px;
   z-index: 200;
   background: rgba(124,106,247,.72);

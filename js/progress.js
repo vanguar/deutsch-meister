@@ -331,7 +331,7 @@ const Progress = (() => {
     badge.title = 'Кликни, чтобы посмотреть прогресс по урокам';
 
     // Insert before the theme-toggle button (which is pushed to the right)
-    const themeBtn = meta.querySelector('#themeToggle');
+    const themeBtn = meta.querySelector('#themeToggle,#themeToggle2');
     if (themeBtn) meta.insertBefore(badge, themeBtn);
     else          meta.appendChild(badge);
 

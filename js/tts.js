@@ -1,10 +1,11 @@
 const TTS = (() => {
-  const VERSION = 'v15';
+  const VERSION = 'v17';
   const PROXY = 'https://deutsch-meister-puce.vercel.app/api/tts';
 
   let preferredVoice = null;
   let audio = null;
   let actx = null;
+  let currentSource = null;
   let unlocked = false;
   const bufCache = {};
 
@@ -72,6 +73,31 @@ const TTS = (() => {
     return audio;
   }
 
+  function cleanText(text) {
+    return String(text || '').replace(/\s+/g, ' ').trim();
+  }
+
+  function wordCount(text) {
+    return (cleanText(text).match(/[A-Za-zÄäÖöÜüß]+/g) || []).length;
+  }
+
+  function stopCurrent() {
+    try { window.speechSynthesis?.cancel(); } catch (e) {}
+    try {
+      if (currentSource) {
+        currentSource.onended = null;
+        currentSource.stop(0);
+      }
+    } catch (e) {}
+    currentSource = null;
+    try {
+      if (audio) {
+        audio.pause();
+        audio.currentTime = 0;
+      }
+    } catch (e) {}
+  }
+
   // Разблокировка на квалифицирующем жесте (click/touchend). touchstart на iOS
   // НЕ считается активацией — поэтому его не используем.
   function unlock() {
@@ -116,8 +142,10 @@ const TTS = (() => {
     return get.then(buf => {
       if (c.state === 'suspended') { try { c.resume(); } catch (e) {} }
       const s = c.createBufferSource();
+      currentSource = s;
       s.buffer = buf;
       s.connect(c.destination);
+      s.onended = () => { if (currentSource === s) currentSource = null; };
       s.start(0);
     });
   }
@@ -126,6 +154,7 @@ const TTS = (() => {
   function playAudioEl(text) {
     const urls = [proxyUrl(text), gUrl('translate.google.com', text), gUrl('translate.googleapis.com', text)];
     const el = getAudio();
+    try { el.pause(); el.currentTime = 0; } catch (e) {}
     el.muted = false;
     let i = 0;
     const tryNext = () => {
@@ -154,16 +183,21 @@ const TTS = (() => {
     return v.find(x => x.lang === 'de-DE') || v.find(x => x.lang.startsWith('de')) || null;
   }
 
-  function speak(text, { rate = 0.85, pitch = 1 } = {}) {
+  function speak(text, { rate = 0.85, pitch = 1, fallbackDelay = null } = {}) {
+    text = cleanText(text);
+    if (!text) return;
+    const words = wordCount(text);
+    const delay = fallbackDelay ?? (words > 1 ? 1800 : 700);
+
+    stopCurrent();
     unlock();   // мы внутри пользовательского жеста (onclick) — разблокируем тут же
     diag('speak "' + text + '"\nplatform=' + platform() + ' inTG=' + inTelegram() +
-         ' ctx=' + ((getCtx() || {}).state));
+         ' ctx=' + ((getCtx() || {}).state) + ' words=' + words + ' fb=' + delay);
 
     if (inTelegram()) { speakAudio(text); return; }
 
     const bestVoice = pickBestVoice();
     if (hasSpeech() && bestVoice) {
-      window.speechSynthesis.cancel();
       const u = new SpeechSynthesisUtterance(text);
       u.lang  = 'de-DE';
       u.rate  = rate;
@@ -179,10 +213,14 @@ const TTS = (() => {
       u.onstart = () => { settled = true; };
       u.onerror = fb;
       window.speechSynthesis.speak(u);
-      setTimeout(fb, 500);
+      setTimeout(fb, delay);
     } else {
       speakAudio(text);
     }
+  }
+
+  function speakPhrase(text) {
+    speak(text, { rate: 0.82, fallbackDelay: 2200 });
   }
 
   function speakSlow(text) { speak(text, { rate: 0.65 }); }
@@ -199,9 +237,10 @@ const TTS = (() => {
     }
   }
 
-  return { init, speak, speakSlow };
+  return { init, speak, speakPhrase, speakSlow };
 })();
 
 TTS.init();
 function speak(text)     { TTS.speak(text); }
+function speakPhrase(text) { TTS.speakPhrase(text); }
 function speakSlow(text) { TTS.speakSlow(text); }

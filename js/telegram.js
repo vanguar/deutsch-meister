@@ -52,17 +52,22 @@ loadTelegramSdk().then(TG => {
 
   // Персональное приветствие только на главной
   const isHome = !isLesson;
-  console.log('[TG] isLesson:', isLesson, 'isHome:', isHome);
-  console.log('[TG] initDataUnsafe:', JSON.stringify(TG.initDataUnsafe));
-  console.log('[TG] tg_welcomed:', localStorage.getItem('tg_welcomed'));
   if (isHome && !localStorage.getItem('tg_welcomed')) {
     localStorage.setItem('tg_welcomed', '1');
     const user = TG.initDataUnsafe?.user;
     const name = user?.first_name || 'друг';
-    console.log('[TG] Showing welcome for:', name);
     showTgWelcome(name);
   }
 });
+
+function tgEsc(str) {
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
 
 function showTgWelcome(name) {
   const overlay = document.createElement('div');
@@ -70,7 +75,7 @@ function showTgWelcome(name) {
   overlay.innerHTML = `
     <div class="tgw-card">
       <div class="tgw-flag">🇩🇪</div>
-      <h2 class="tgw-title">Привет, ${name}!</h2>
+      <h2 class="tgw-title">Привет, ${tgEsc(name)}!</h2>
       <p class="tgw-text">
         Рад видеть тебя здесь — ты только что сделал отличный выбор! 🎉
       </p>

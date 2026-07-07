@@ -20,6 +20,33 @@ const Exercises = (() => {
     Progress.renderLessonProgress(pct);
   }
 
+  function normalizeMultipleChoice(raw) {
+    const items = Array.isArray(raw) ? raw : raw?.items;
+    if (!Array.isArray(items)) return [];
+    return items.map(q => ({
+      question: q.question,
+      options: q.options || [],
+      correctIndex: q.correctIndex ?? q.answer ?? 0
+    }));
+  }
+
+  function normalizeMatching(raw) {
+    const items = Array.isArray(raw) ? raw : raw?.pairs;
+    if (!Array.isArray(items)) return [];
+    return items.map((pair, i) => ({
+      id: pair.id ?? i + 1,
+      de: pair.de ?? pair.left ?? '',
+      ru: pair.ru ?? pair.right ?? ''
+    }));
+  }
+
+  function normalizeDictation(raw) {
+    if (Array.isArray(raw)) return raw;
+    const sentences = raw?.sentences;
+    if (!Array.isArray(sentences)) return [];
+    return sentences.map(sentence => ({ word: sentence, audio: sentence }));
+  }
+
   /* ════════════════════════════════════
      TAB SWITCHING
      ════════════════════════════════════ */
@@ -152,9 +179,11 @@ const Exercises = (() => {
    */
   function initMCPanel() {
     const container = document.getElementById('mcContainer');
-    if (!container || !LESSON_DATA?.exercises?.multipleChoice) return;
+    const raw = LESSON_DATA?.exercises?.multipleChoice;
+    if (!container || !raw) return;
 
-    const questions = LESSON_DATA.exercises.multipleChoice;
+    const questions = normalizeMultipleChoice(raw);
+    if (!questions.length) return;
     let answeredCount = 0;
     let correctCount  = 0;
 
@@ -216,9 +245,11 @@ const Exercises = (() => {
   function initMatchPanel() {
     const leftCol  = document.getElementById('matchLeft');
     const rightCol = document.getElementById('matchRight');
-    if (!leftCol || !rightCol || !LESSON_DATA?.exercises?.matching) return;
+    const raw = LESSON_DATA?.exercises?.matching;
+    if (!leftCol || !rightCol || !raw) return;
 
-    const pairs = LESSON_DATA.exercises.matching;
+    const pairs = normalizeMatching(raw);
+    if (!pairs.length) return;
     const totalPairs = pairs.length;
 
     // Build left column (German, in order)
@@ -309,23 +340,27 @@ const Exercises = (() => {
   function initDictationPanel() {
     const container = document.getElementById('dictationContainer');
     const checkBtn  = document.getElementById('checkDictBtn');
-    if (!container || !LESSON_DATA?.exercises?.dictation) return;
+    const raw = LESSON_DATA?.exercises?.dictation;
+    if (!container || !raw) return;
 
-    const words = LESSON_DATA.exercises.dictation;
+    const words = normalizeDictation(raw);
+    if (!words.length) return;
 
     words.forEach((item, i) => {
+      const isPhrase = String(item.word || '').trim().includes(' ');
+      const unitLabel = isPhrase ? 'Фраза' : 'Слово';
       const card = document.createElement('div');
       card.className = 'dictation-card';
       card.innerHTML = `
         <div class="dictation-top">
           <button class="big-play-btn" title="Прослушать" data-text="${escapeHtml(item.audio || item.word)}">🔊</button>
           <div class="dictation-info">
-            <span class="dictation-num">Слово ${i + 1} из ${words.length}</span><br>
+            <span class="dictation-num">${unitLabel} ${i + 1} из ${words.length}</span><br>
             Нажмите 🔊 и напишите то, что услышали
           </div>
         </div>
         <input class="dictation-input" id="dict-${i}"
-               placeholder="Введите слово…"
+               placeholder="${isPhrase ? 'Введите фразу…' : 'Введите слово…'}"
                autocomplete="off" spellcheck="false">
       `;
       // Speak button
@@ -561,7 +596,7 @@ const Exercises = (() => {
     const cards = [...cnt.querySelectorAll('.dictation-card')];
     if (!cards.length) return;
 
-    const dictData = LESSON_DATA?.exercises?.dictation || [];
+    const dictData = normalizeDictation(LESSON_DATA?.exercises?.dictation);
     let idx = 0, ok = 0;
     const total = cards.length;
     const bar = _makeStepBar(total, cnt);

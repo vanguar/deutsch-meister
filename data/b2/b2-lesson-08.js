@@ -1,5 +1,5 @@
 const LESSON_DATA = {
-  id: "b2-lesson-08",
+  id: "b2-08",
   level: "B2",
   unit: 8,
   title: "Komplexe Texte",
@@ -84,10 +84,10 @@ const LESSON_DATA = {
         headers: ["Stilmittel", "Definition", "Beispiel"],
         rows: [
           ["Metapher", "Übertragener Ausdruck", "Das Leben ist ein Fluss."],
-          ["Ironie", "Gegenteil des Gemeinten", "„Toll gemacht!" (nach Fehler)"],
+          ["Ironie", "Gegenteil des Gemeinten", "„Toll gemacht!“ (nach Fehler)"],
           ["Anapher", "Wiederholung am Satzanfang", "Ich will Frieden. Ich will Gerechtigkeit."],
           ["Antithese", "Gegenüberstellung von Gegensätzen", "Gut und Böse, Licht und Schatten"],
-          ["Euphemismus", "Beschönigung", "„entschlafen" statt „sterben""]
+          ["Euphemismus", "Beschönigung", "„entschlafen“ statt „sterben“"]
         ]
       }
     },
