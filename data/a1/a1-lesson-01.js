@@ -35,7 +35,7 @@ const LESSON_DATA = {
     { de: 'Es geht.',                     ru: 'Нормально. / Так себе.',        note: 'Когда дела не очень, но и не плохи', audio: 'Es geht' },
     { de: 'Nicht so gut.',                ru: 'Не очень хорошо.',              note: 'Если день не задался', audio: 'Nicht so gut' },
     { de: 'Woher kommst du?',             ru: 'Откуда ты?',                    note: 'woher = откуда. kommen aus + страна', audio: 'Woher kommst du' },
-    { de: 'Ich komme aus der Ukraine.',      ru: 'Я из Украины.',                  note: 'aus = из (страны обычно без артикля)', audio: 'Ich komme aus Russland' },
+    { de: 'Ich komme aus der Ukraine.',      ru: 'Я из Украины.',                  note: 'aus = из. Украина — с артиклем: aus der Ukraine (большинство стран — без артикля)', audio: 'Ich komme aus der Ukraine' },
     { de: 'Ich wohne in Berlin.',         ru: 'Я живу в Берлине.',             note: 'wohnen in + город (без артикля)', audio: 'Ich wohne in Berlin' },
     { de: 'Sprichst du Deutsch?',         ru: 'Ты говоришь по-немецки?',       note: 'sprechen = говорить', audio: 'Sprichst du Deutsch' },
     { de: 'Ein bisschen.',                ru: 'Немного.',                      note: 'Универсальный скромный ответ', audio: 'Ein bisschen' },
@@ -81,7 +81,7 @@ const LESSON_DATA = {
       body: '<strong>sein</strong> — главный глагол. Он неправильный, формы надо просто запомнить. Используется для имени, возраста, профессии, состояния, происхождения:<br><br>' +
             '<em>Ich bin Anna.</em> — Я Анна.<br>' +
             '<em>Du bist müde.</em> — Ты устал.<br>' +
-            '<em>Wir sind aus Russland.</em> — Мы из России.',
+            '<em>Wir sind aus der Ukraine.</em> — Мы из Украины.',
       conjugation: [
         { pronoun: 'ich',           form: 'bin',  audio: 'ich bin',   translation: 'я (есть)' },
         { pronoun: 'du',            form: 'bist', audio: 'du bist',   translation: 'ты (есть)' },
