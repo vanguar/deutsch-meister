@@ -49,7 +49,7 @@ const LESSON_DATA = {
     { de: 'mal',             ru: '-ка / просто / разок',         ipa: '[maːl]',        article: '' },
     { de: 'ja',              ru: 'ведь / же (удивление)',        ipa: '[jaː]',         article: '' },
     { de: 'eben',            ru: 'вот и всё / что поделать',     ipa: '[ˈeːbn̩]',      article: '' },
-    { de: 'halt',            ra: 'просто (южнонем. = eben)',     ipa: '[halt]',        article: '' },
+    { de: 'halt',            ru: 'просто (южнонем. = eben)',     ipa: '[halt]',        article: '' },
     { de: 'wohl',            ru: 'наверное / должно быть',       ipa: '[voːl]',        article: '' },
     { de: 'denn',            ru: 'же / а (в вопросах)',          ipa: '[dɛn]',         article: '' },
     { de: 'nun mal',         ru: 'уж так / раз уж так',          ipa: '[nuːn maːl]',   article: '' },

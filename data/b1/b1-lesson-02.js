@@ -67,8 +67,8 @@ const LESSON_DATA = {
     { de: 'der Sturm',       ru: 'буря, шторм',                        ipa: '[ʃtʊʁm]',       article: 'der' },
     { de: 'von',             ru: 'от, кем (исполнитель)',              ipa: '[fɔn]',         article: '' },
     { de: 'durch',           ru: 'через, посредством (причина)',       ipa: '[dʊʁç]',        article: '' },
-    { de: 'das Vorgangspassiv', ru: 'пассив процесса (werden)',        ipa: '',              article: '' },
-    { de: 'das Zustandspassiv', ru: 'пассив состояния (sein)',         ipa: '',              article: '' }
+    { de: 'das Vorgangspassiv', ru: 'пассив процесса (werden)',        ipa: '[ˈfoːɐ̯ɡaŋsˌpasiːf]',   article: 'das' },
+    { de: 'das Zustandspassiv', ru: 'пассив состояния (sein)',         ipa: '[ˈt͡suːʃtant͡sˌpasiːf]', article: 'das' }
   ],
 
   grammar: [

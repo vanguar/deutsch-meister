@@ -55,7 +55,7 @@ const LESSON_DATA = {
     { de: 'möchte',         ru: 'хотел бы',              ipa: '[ˈmœçtə]',       article: '' },
     { de: 'wünschte',       ru: 'пожелал бы',            ipa: '[ˈvʏnʃtə]',      article: '' },
     { de: 'die Hypothese',  ru: 'гипотеза',              ipa: '[hypoˈteːzə]',   article: 'die' },
-    { de: 'nirealen Fall',  ru: 'нереальный случай',     ipa: '[nɪˈʁeːaːln]',   article: '' },
+    { de: 'irreal',         ru: 'нереальный',            ipa: '[ɪʁeˈaːl]',      article: '' },
     { de: 'die Höflichkeit',ru: 'вежливость',            ipa: '[ˈhøːflɪçkaɪ̯t]', article: 'die' },
     { de: 'die Bedingung',  ru: 'условие',               ipa: '[bəˈdɪŋʊŋ]',    article: 'die' },
     { de: 'der Wunsch',     ru: 'желание',               ipa: '[vʊnʃ]',         article: 'der' },
@@ -68,7 +68,7 @@ const LESSON_DATA = {
     { de: 'als ob',         ru: 'как будто',             ipa: '[als ɔp]',       article: '' },
     { de: 'ohne',           ru: 'без',                   ipa: '[ˈoːnə]',        article: '' },
     { de: 'die Vergangenheit', ru: 'прошлое',            ipa: '[fɛʁˈɡaŋənhaɪ̯t]', article: 'die' },
-    { de: 'nirealen Konj.', ru: 'нереальное сослаг.',    ipa: '',               article: '' }
+    { de: 'der Irrealis',   ru: 'нереальное условие',    ipa: '[ɪʁeˈaːlɪs]',    article: 'der' }
   ],
 
   grammar: [
