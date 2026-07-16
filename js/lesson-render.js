@@ -15,7 +15,19 @@ const LessonRender = (() => {
     { num: 5,  title: 'Дни недели',     icon: '📅' },
     { num: 6,  title: 'Еда и напитки',  icon: '☕' },
     { num: 7,  title: 'В городе',       icon: '🏙️' },
-    { num: 8,  title: 'Время',          icon: '⏰' }
+    { num: 8,  title: 'Время',          icon: '⏰' },
+    { num: 9,  title: 'Части тела',     icon: '💪' },
+    { num: 10, title: 'Месяцы и сезоны', icon: '🍂' },
+    { num: 11, title: 'Животные',       icon: '🐾' },
+    { num: 12, title: 'Профессии',      icon: '🧑‍🍳' },
+    { num: 13, title: 'В супермаркете', icon: '🛒' },
+    { num: 14, title: 'Транспорт',      icon: '🚌' },
+    { num: 15, title: 'В кафе',         icon: '🥐' },
+    { num: 16, title: 'Числа до 100',   icon: '💶' },
+    { num: 17, title: 'Модальные глаголы', icon: '🎯' },
+    { num: 18, title: 'Perfekt',        icon: '⏪' },
+    { num: 19, title: 'Праздники',      icon: '🎉' },
+    { num: 20, title: 'Итоговый урок',  icon: '✅' }
   ];
 
   /* ── A2 nav config ── */
@@ -27,7 +39,19 @@ const LessonRender = (() => {
     { num: 5, title: 'Покупки и одежда', icon: '🛍️' },
     { num: 6, title: 'Жильё и мебель',   icon: '🏠' },
     { num: 7, title: 'Работа',           icon: '💼' },
-    { num: 8, title: 'Погода',           icon: '☀️' }
+    { num: 8, title: 'Погода',           icon: '☀️' },
+    { num: 9,  title: 'В ресторане',     icon: '🍽️' },
+    { num: 10, title: 'Праздники и традиции', icon: '🎄' },
+    { num: 11, title: 'Медиа и смартфон', icon: '📱' },
+    { num: 12, title: 'Чувства',         icon: '😊' },
+    { num: 13, title: 'Спорт и фитнес',  icon: '⚽' },
+    { num: 14, title: 'Как пройти?',     icon: '🗺️' },
+    { num: 15, title: 'Дружба',          icon: '🤝' },
+    { num: 16, title: 'Природа',         icon: '🏞️' },
+    { num: 17, title: 'Präteritum',      icon: '📜' },
+    { num: 18, title: 'Сравнение',       icon: '📊' },
+    { num: 19, title: 'Планы на будущее', icon: '🚀' },
+    { num: 20, title: 'Итоговый урок',   icon: '✅' }
   ];
 
   /* ── B1 nav config ── */
@@ -39,7 +63,13 @@ const LessonRender = (() => {
     { num: 5, title: 'Инфинитив (zu)',   icon: '∞'  },
     { num: 6, title: 'Работа и резюме',  icon: '💼' },
     { num: 7, title: 'Аргументация',     icon: '🗣️' },
-    { num: 8, title: 'Окружающая среда', icon: '🌿' }
+    { num: 8, title: 'Окружающая среда', icon: '🌿' },
+    { num: 9,  title: 'Склонение прилагательных', icon: '🧩' },
+    { num: 10, title: 'Генитив и предлоги', icon: '🗝️' },
+    { num: 11, title: 'Временные придаточные', icon: '⏳' },
+    { num: 12, title: 'Глаголы с предлогами', icon: '🧲' },
+    { num: 13, title: 'СМИ и новости',   icon: '📰' },
+    { num: 14, title: 'Итоговый урок',   icon: '✅' }
   ];
 
   /* ── B2 nav config ── */
@@ -51,7 +81,13 @@ const LessonRender = (() => {
     { num: 5, title: 'Научный стиль',    icon: '🔬' },
     { num: 6, title: 'Экономика',        icon: '💹' },
     { num: 7, title: 'Дискуссия',        icon: '⚖️' },
-    { num: 8, title: 'Сложные тексты',   icon: '📚' }
+    { num: 8, title: 'Сложные тексты',   icon: '📚' },
+    { num: 9,  title: 'Субъективные модальные', icon: '🕵️' },
+    { num: 10, title: 'Устойчивые сочетания', icon: '🧱' },
+    { num: 11, title: 'Идиомы',          icon: '🦊' },
+    { num: 12, title: 'Деловая коммуникация', icon: '✉️' },
+    { num: 13, title: 'Политика и СМИ',  icon: '🏛️' },
+    { num: 14, title: 'Итоговый урок',   icon: '✅' }
   ];
 
   const ALL_LEVELS = [
@@ -1689,7 +1725,7 @@ Zwar|хотя / правда|Наречие
     renderFillBlanks();
   }
 
-  return { init, wordHtml: renderWord, initWordTips };
+  return { init, wordHtml: renderWord, initWordTips, renderNav };
 })();
 
 /* ── Global helpers called from inline HTML ── */

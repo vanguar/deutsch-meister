@@ -52,102 +52,7 @@
 
     <div class="sidebar-section-header">Программа курса</div>
 
-    <!-- A1 -->
-    <div class="level-group" id="lvl-a1">
-      <div class="level-toggle" onclick="toggleLevel('lvl-a1')">
-        <span class="badge badge-level current">A1</span>
-        <span style="font-size:13px;color:var(--text-muted)">Начинающий</span>
-        <span class="level-toggle-arrow">▼</span>
-      </div>
-      <div class="level-lessons">
-        <a class="lesson-item active" href="index.html">
-          <span class="lesson-num">01</span>
-          <span class="lesson-name">Приветствия</span>
-          <span class="lesson-status done">✓</span>
-        </a>
-        <div class="lesson-item locked">
-          <span class="lesson-num">02</span>
-          <span class="lesson-name">Числа 1–10</span>
-          <span class="lesson-status lock">🔒</span>
-        </div>
-        <div class="lesson-item locked">
-          <span class="lesson-num">03</span>
-          <span class="lesson-name">Цвета</span>
-          <span class="lesson-status lock">🔒</span>
-        </div>
-        <div class="lesson-item locked">
-          <span class="lesson-num">04</span>
-          <span class="lesson-name">Семья</span>
-          <span class="lesson-status lock">🔒</span>
-        </div>
-        <div class="lesson-item locked">
-          <span class="lesson-num">05</span>
-          <span class="lesson-name">Дни недели</span>
-          <span class="lesson-status lock">🔒</span>
-        </div>
-        <div class="lesson-item locked">
-          <span class="lesson-num">06</span>
-          <span class="lesson-name">Еда и напитки</span>
-          <span class="lesson-status lock">🔒</span>
-        </div>
-        <div class="lesson-item locked">
-          <span class="lesson-num">07</span>
-          <span class="lesson-name">В городе</span>
-          <span class="lesson-status lock">🔒</span>
-        </div>
-        <div class="lesson-item locked">
-          <span class="lesson-num">08</span>
-          <span class="lesson-name">Время</span>
-          <span class="lesson-status lock">🔒</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- A2 -->
-    <div class="level-group collapsed" id="lvl-a2">
-      <div class="level-toggle" onclick="toggleLevel('lvl-a2')">
-        <span class="badge badge-level">A2</span>
-        <span style="font-size:13px;color:var(--text-muted)">Элементарный</span>
-        <span class="level-toggle-arrow">▼</span>
-      </div>
-      <div class="level-lessons">
-        <div class="lesson-item locked">
-          <span class="lesson-num">09</span>
-          <span class="lesson-name">Хобби</span>
-          <span class="lesson-status lock">🔒</span>
-        </div>
-        <div class="lesson-item locked">
-          <span class="lesson-num">10</span>
-          <span class="lesson-name">В ресторане</span>
-          <span class="lesson-status lock">🔒</span>
-        </div>
-        <div class="lesson-item-stub">ещё 8 уроков…</div>
-      </div>
-    </div>
-
-    <!-- B1 -->
-    <div class="level-group collapsed" id="lvl-b1">
-      <div class="level-toggle" onclick="toggleLevel('lvl-b1')">
-        <span class="badge badge-level">B1</span>
-        <span style="font-size:13px;color:var(--text-muted)">Средний</span>
-        <span class="level-toggle-arrow">▼</span>
-      </div>
-      <div class="level-lessons">
-        <div class="lesson-item-stub">12 уроков — скоро…</div>
-      </div>
-    </div>
-
-    <!-- B2 -->
-    <div class="level-group collapsed" id="lvl-b2">
-      <div class="level-toggle" onclick="toggleLevel('lvl-b2')">
-        <span class="badge badge-level">B2</span>
-        <span style="font-size:13px;color:var(--text-muted)">Выше среднего</span>
-        <span class="level-toggle-arrow">▼</span>
-      </div>
-      <div class="level-lessons">
-        <div class="lesson-item-stub">14 уроков — скоро…</div>
-      </div>
-    </div>
+    <div id="lessonNav"></div>
 
     <!-- XP bar -->
     <div class="sidebar-extra">
@@ -533,6 +438,9 @@ function renderFillBlanks() {
 document.addEventListener('DOMContentLoaded', () => {
   initTheme();
   Progress.init();
+  if (typeof LessonRender !== 'undefined' && LessonRender.renderNav) {
+    LessonRender.renderNav();
+  }
   renderPhrases();
   if (typeof LessonRender !== 'undefined' && LessonRender.initWordTips) {
     LessonRender.initWordTips();
