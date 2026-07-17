@@ -1088,6 +1088,496 @@ Zusammenarbeit|сотрудничество|Существительное
 Zusammenfassend|подводя итог|Наречие
 zwanzig|двадцать|Числительное
 Zwar|хотя / правда|Наречие
+Abschied|прощание|Существительное|der Abschied; Abschied nehmen — прощаться
+Abschluss|завершение|Существительное|der Abschluss; zum Abschluss kommen — завершиться
+achtes|восьмое|Числительное|порядковое от acht
+achtzehn|восемнадцать|Числительное
+allein|один / в одиночку|Наречие
+allen|всем / всех|Местоимение|склонённая форма alle
+älter|старше|Прилагательное|сравнительная степень от alt
+anfängt|начинает / начинается|Форма глагола|er/sie/es fängt an (anfangen); в придаточном — anfängt
+Angriff|атака / нападение|Существительное|etwas in Angriff nehmen — взяться за дело
+Angst|страх|Существительное|die Angst; Angst haben vor — бояться
+ankommen|прибывать|Глагол
+Anmerkungen|замечания / примечания|Форма мн. числа|die Anmerkung → die Anmerkungen
+Antwort|ответ|Существительное|die Antwort
+aufgestanden|встал / встала|Форма глагола|Partizip II от aufstehen
+aufwärmen|разогреваться / разминаться|Глагол|sich aufwärmen
+Augen|глаза|Форма мн. числа|das Auge → die Augen
+auswirken|сказываться / влиять|Глагол|sich auswirken auf — влиять на
+Autos|машины / автомобили|Форма мн. числа|das Auto → die Autos
+B|уровень языка B1/B2|Сокращение|европейская шкала уровней CEFR
+Baby|младенец / малыш|Существительное|das Baby
+Bahn|железная дорога / поезд|Существительное|die Bahn
+Balkon|балкон|Существительное|der Balkon
+Bank|банк; также скамейка|Существительное|auf die lange Bank schieben — откладывать в долгий ящик
+bar|наличными|Наречие|bar bezahlen — платить наличными
+bedanke|благодарю|Форма глагола|ich bedanke mich für — я благодарю за
+behauptet|утверждает / утверждается|Форма глагола|behaupten — утверждать
+Beim|при / во время|Предлог|слитно bei + dem
+Bein|нога|Существительное|das Bein
+Beinbruch|перелом ноги|Существительное|Hals- und Beinbruch! — ни пуха ни пера!
+Beine|ноги|Форма мн. числа|das Bein → die Beine
+bekannte|известная / знакомая|Прилагательное|склонённая форма bekannt
+bekomme|получаю|Форма глагола|ich bekomme (bekommen)
+bekommen|получать / получил|Глагол|Partizip II совпадает с инфинитивом
+belasten|обременять / нагружать|Глагол
+Berg|гора|Существительное|der Berg
+Bergen|горах|Форма слова|in den Bergen — в горах (der Berg)
+berichtet|сообщает / сообщил|Форма глагола|berichten über — сообщать о
+Beruhige|успокойся|Форма глагола|императив: Beruhige dich! (sich beruhigen)
+beschäftige|занимаюсь|Форма глагола|ich beschäftige mich mit — я занимаюсь чем-либо
+besonders|особенно|Наречие
+bestanden|сдал / выдержал (экзамен)|Форма глагола|Partizip II от bestehen
+bestandenen|сданного / сданному|Причастие|zum bestandenen Examen — со сданным экзаменом
+besteht|состоит / существует|Форма глагола|bestehen aus — состоять из
+bester|лучший|Прилагательное|превосходная степень от gut
+besucht|посещает / посетил|Форма глагола|besuchen; Partizip II — besucht
+beteiligen|участвовать|Глагол|sich beteiligen an — принимать участие в
+betonte|подчеркнул / подчеркнула|Форма глагола|Präteritum от betonen
+Betracht|рассмотрение|Существительное|in Betracht ziehen — принимать во внимание
+beziehe|ссылаюсь|Форма глагола|ich beziehe mich auf — я ссылаюсь на
+billiger|дешевле|Прилагательное|сравнительная степень от billig
+blaue|синяя / голубые|Прилагательное|склонённая форма blau
+Blätter|листья|Форма мн. числа|das Blatt → die Blätter
+brachte|принёс / принесла|Форма глагола|Präteritum от bringen
+braun|коричневый / карий|Прилагательное
+braune|коричневые / карие|Прилагательное|склонённая форма braun
+brennen|гореть|Глагол
+brennt|горит|Форма глагола|es brennt (brennen)
+bringen|приносить|Глагол
+Bruder|брат|Существительное|der Bruder
+Brüder|братья|Форма мн. числа|der Bruder → die Brüder
+Buches|книги|Форма Genitiv|das Buch → des Buches
+Bundestagswahl|выборы в Бундестаг|Существительное|die Bundestagswahl
+bunte|разноцветные / пёстрые|Прилагательное|склонённая форма bunt
+ärgert|злит / сердит|Форма глагола|sich ärgern über — злиться на
+später|позже / позднее|Наречие
+Freund|друг|Существительное|der Freund
+Deutschkurs|курс немецкого языка|Существительное|der Deutschkurs
+Büro|офис / бюро|Существительное|das Büro
+Bus|автобус|Существительное|der Bus
+Café|кафе|Существительное|das Café
+Campingplatz|кемпинг|Существительное|der Campingplatz
+dachte|думал / думала|Форма глагола|Präteritum от denken
+Damen|дамы|Форма мн. числа|Sehr geehrte Damen und Herren — уважаемые дамы и господа
+dann|потом / затем / тогда|Наречие
+daran|об этом / на этом|Местоименное наречие|denken an → daran; Übung macht den Meister
+Debatte|дебаты / дискуссия|Существительное|die Debatte
+deins|твоё|Притяжательное|местоимение без существительного
+Demokratie|демократия|Существительное|die Demokratie
+denn|же (в вопросе) / так как|Частица / союз
+deutsche|немецкая / немецкие|Прилагательное|склонённая форма deutsch
+deutschen|немецких / немецкой|Прилагательное|die Deutschen — немцы
+diskutiert|обсуждается / обсуждали|Форма глагола|diskutieren — обсуждать
+doch|же / всё-таки / ведь|Частица
+Donnerstag|четверг|Существительное|der Donnerstag
+Dr|доктор (сокращение Dr.)|Сокращение
+dran|на очереди (разг.)|Наречие|du bist dran — твоя очередь; сокращение от daran
+dreißig|тридцать|Числительное
+Drück|жми / держи|Форма глагола|Drück mir die Daumen! — Пожелай мне удачи!
+drücke|жму / давлю|Форма глагола|ich drücke die Daumen — держу кулачки (желаю удачи)
+Druck|давление|Существительное|der Druck; unter Druck setzen — оказывать давление
+drüben|там / на той стороне|Наречие|da drüben — вон там
+durchgehalten|выдержал / продержался|Форма глагола|Partizip II от durchhalten
+durften|могли / имели разрешение|Форма глагола|Präteritum от dürfen
+Echte|настоящие / истинные|Прилагательное|склонённая форма echt
+eigenen|собственного / собственной|Прилагательное|склонённая форма eigen
+eigentlich|собственно / вообще-то|Наречие
+Eier|яйца|Форма мн. числа|das Ei → die Eier
+Einfluss|влияние|Существительное|der Einfluss
+eingekauft|сделал покупки|Форма глагола|Partizip II от einkaufen
+einige|некоторые / несколько|Местоимение
+einmal|один раз / однажды|Наречие|noch einmal — ещё раз
+eines|одного (Genitiv)|Артикль|ein в Genitiv
+Eltern|родители|Существительное|die Eltern (только мн. число)
+Ende|конец|Существительное|das Ende; Ende November — в конце ноября
+endlich|наконец|Наречие
+Engagement|активная позиция / участие|Существительное|das Engagement
+Entscheidung|решение|Существительное|die Entscheidung; eine Entscheidung treffen — принять решение
+erinnere|вспоминаю / помню|Форма глагола|ich erinnere mich an — я помню о
+erklärte|заявил / объяснил|Форма глагола|Präteritum от erklären
+erschüttert|потрясает / потрясён|Форма глагола|erschüttern — потрясать
+erschwert|затрудняет / затруднён|Форма глагола|erschweren — затруднять
+Erstaunen|изумление|Существительное|in Erstaunen versetzen — изумлять
+Essens|еды|Форма Genitiv|das Essen → des Essens; während des Essens — во время еды
+Everest|Эверест|Название|Mount Everest — высочайшая гора мира
+Examen|экзамен|Существительное|das Examen
+Fachkräften|квалифицированных кадрах|Форма слова|die Fachkraft → den Fachkräften
+Fährst|едешь|Форма глагола|du fährst (fahren)
+Fall|случай / дело|Существительное|der Fall; auf jeden Fall — в любом случае
+fallen|падать|Глагол
+Familie|семья|Существительное|die Familie
+Familien|семьи|Форма мн. числа|die Familie → die Familien
+fand|нашёл / счёл|Форма глагола|Präteritum от finden
+fasse|подытоживаю / формулирую|Форма глагола|ich fasse zusammen — я подытоживаю
+Februar|февраль|Существительное|der Februar
+feiert|празднует|Форма глагола|er/sie/es feiert (feiern)
+feste|прочные / крепкие|Прилагательное|feste Schuhe — крепкая обувь
+Films|фильма|Форма Genitiv|der Film → des Films
+Fische|рыбы|Форма мн. числа|der Fisch → die Fische
+Fleisch|мясо|Существительное|das Fleisch
+fotografiert|сфотографировал / фотографирует|Форма глагола|fotografieren
+freuen|радоваться|Глагол|sich freuen auf/über — радоваться чему-либо
+freundlichen|дружеским / любезным|Прилагательное|Mit freundlichen Grüßen — с уважением
+frische|свежая / свежие|Прилагательное|склонённая форма frisch
+frischer|свежий / более свежий|Прилагательное|склонённая форма frisch
+Frisches|свежее|Прилагательное|Frisches Obst — свежие фрукты
+Frohe|радостного / весёлого|Прилагательное|Frohe Weihnachten! — С Рождеством!
+frohes|радостного / счастливого|Прилагательное|Frohes neues Jahr! — С Новым годом!
+Frühling|весна|Существительное|der Frühling
+fühlst|чувствуешь|Форма глагола|du fühlst dich (sich fühlen)
+fühlt|чувствует|Форма глагола|er/sie/es fühlt sich (sich fühlen)
+fünfundvierzig|сорок пять|Числительное
+fünfzig|пятьдесят|Числительное
+Fuß|нога / стопа|Существительное|der Fuß; zu Fuß — пешком
+Fußball|футбол|Существительное|der Fußball
+ganze|целая / вся|Прилагательное|склонённая форма ganz
+Gästen|гостям / гостей|Форма слова|der Gast → den Gästen (Dativ)
+gebracht|принёс / принесённый|Форма глагола|Partizip II от bringen
+Gebrauch|использование / употребление|Существительное|der Gebrauch
+Geburtstag|день рождения|Существительное|der Geburtstag
+Geburtstagslied|песня на день рождения|Существительное|das Geburtstagslied
+gefahren|поехал / ездил|Форма глагола|Partizip II от fahren
+gefeiert|отпраздновал / отмеченный|Форма глагола|Partizip II от feiern
+gegangen|пошёл / ушёл|Форма глагола|Partizip II от gehen
+gegeben|дал / данный|Форма глагола|Partizip II от geben
+gegenüber|напротив|Предлог
+geblieben|остался|Форма глагола|Partizip II от bleiben
+gekommen|пришёл / приехал|Форма глагола|Partizip II от kommen
+gelacht|смеялся|Форма глагола|Partizip II от lachen
+gemeldet|сообщено / сообщил|Форма глагола|Partizip II от melden
+Gemüse|овощи|Существительное|das Gemüse
+genau|точно / именно|Наречие
+genommen|взял / взятый|Форма глагола|Partizip II от nehmen
+gerade|как раз / сейчас / прямо|Наречие
+geradeaus|прямо (о направлении)|Наречие
+gerne|охотно / с удовольствием|Наречие
+geschützt|защищён|Форма глагола|Partizip II от schützen
+Geschenk|подарок|Существительное|das Geschenk
+Geschenks|подарка|Форма Genitiv|das Geschenk → des Geschenks
+Geschichte|история|Существительное|die Geschichte
+gesetzt|поставлен / поставил|Форма глагола|Partizip II от setzen
+gespielt|играл / сыгранный|Форма глагола|Partizip II от spielen
+Gespräch|разговор / беседа|Существительное|das Gespräch
+gestiegenen|выросшие / возросших|Причастие|Partizip II от steigen как прилагательное
+gestoßen|натолкнулся / столкнулся|Форма глагола|auf Kritik stoßen — встретить критику
+getreten|наступил / вступил|Форма глагола|ins Fettnäpfchen treten — попасть впросак
+gewandert|ходил в поход|Форма глагола|Partizip II от wandern
+geworden|стал / стала|Форма глагола|Partizip II от werden
+gewonnen|выиграл / выигранный|Форма глагола|Partizip II от gewinnen
+gewünschten|желаемый / запрошенный|Причастие|склонённая форма gewünscht
+glaub|думаю / верю (разг.)|Форма глагола|ich glaub = ich glaube (glauben)
+glauben|верить / полагать|Глагол
+Glückwunsch|поздравление|Существительное|Herzlichen Glückwunsch! — Поздравляю!
+gratuliere|поздравляю|Форма глагола|ich gratuliere zu (gratulieren)
+Großmutter|бабушка|Существительное|die Großmutter
+Grund|причина / основание|Существительное|kein Grund zur Sorge — нет повода для беспокойства
+grünes|зелёное|Прилагательное|склонённая форма grün
+günstige|выгодная / недорогая|Прилагательное|склонённая форма günstig
+gutes|хорошего|Прилагательное|Ein gutes neues Jahr! — Хорошего нового года!
+Haare|волосы|Форма мн. числа|das Haar → die Haare
+halb|половина / пол-|Числительное|halb drei — половина третьего
+Hals|шея / горло|Существительное|Hals- und Beinbruch! — ни пуха ни пера!
+halten|держать|Глагол|die Ohren steif halten — не вешать нос
+Hallo|привет|Приветствие
+Hände|руки / кисти рук|Форма мн. числа|die Hand → die Hände
+hängt|висит / зависит|Форма глагола|hängt ab von — зависит от
+Hausaufgaben|домашние задания|Существительное|die Hausaufgabe → die Hausaufgaben
+heftig|бурно / ожесточённо|Прилагательное / наречие
+Herbst|осень|Существительное|der Herbst
+Herren|господа|Форма мн. числа|der Herr → die Herren
+Herrn|господина / господину|Форма слова|der Herr → Herrn (Akk./Dat./Gen.)
+herzlich|сердечно / сердечный|Наречие / прилагательное
+Herzlichen|сердечный (склонённая форма)|Прилагательное|Herzlichen Glückwunsch! — Поздравляю!
+Hiermit|настоящим / этим|Наречие|деловой стиль: Hiermit bestätige ich…
+hoch|высокий / высоко|Прилагательное
+höchste|высочайший / самый высокий|Прилагательное|превосходная степень от hoch
+hundert|сто|Числительное
+Idee|идея|Существительное|die Idee
+ihrer|её / их (склонённая форма)|Притяжательное
+informieren|информировать / узнавать|Глагол|sich informieren über — узнавать о
+interessanten|интересной / интересных|Прилагательное|склонённая форма interessant
+interessanter|интереснее|Прилагательное|сравнительная степень от interessant
+interessantes|интересное|Прилагательное|склонённая форма interessant
+interessiere|интересуюсь|Форма глагола|ich interessiere mich für — я интересуюсь
+Internet|интернет|Существительное|das Internet
+interviewt|берёт интервью / проинтервьюировал|Форма глагола|interviewen
+irre|ошибаюсь|Форма глагола|wenn ich mich nicht irre — если я не ошибаюсь (sich irren)
+isst|ешь / ест|Форма глагола|du isst · er/sie/es isst (essen)
+Jahren|годах / годам|Форма слова|seit zwei Jahren — уже два года (das Jahr)
+Journalistin|журналистка|Существительное|die Journalistin
+Jugendliche|молодёжь / подростки|Существительное|der/die Jugendliche
+junge|молодая / молодые|Прилагательное|склонённая форма jung
+kaltes|холодное|Прилагательное|склонённая форма kalt
+kälter|холоднее|Прилагательное|сравнительная степень от kalt
+Kanzlerin|канцлер (женщина)|Существительное|die Kanzlerin
+Käse|сыр|Существительное|der Käse
+keinen|никакого / ни одного|Отрицание|kein в Akkusativ мужского рода
+kennen|знать (быть знакомым)|Глагол
+Kerzen|свечи|Форма мн. числа|die Kerze → die Kerzen
+Kilo|килограмм|Существительное|das Kilo
+Klimaschutz|защита климата|Существительное|der Klimaschutz
+kleine|маленькая / маленькие|Прилагательное|склонённая форма klein
+Koalition|коалиция|Существительное|die Koalition
+kochen|готовить / варить|Глагол
+kocht|готовит / варит|Форма глагола|er/sie/es kocht (kochen)
+Kollegen|коллеги / коллег|Форма слова|der Kollege → die Kollegen
+komplexer|сложных / более сложный|Прилагательное|форма от komplex
+komplizierter|сложнее|Прилагательное|сравнительная степень от kompliziert
+König|король|Существительное|der König
+Kontakt|контакт / связь|Существительное|der Kontakt
+Konzert|концерт|Существительное|das Konzert
+Kopf|голова|Существительное|der Kopf; Kopf hoch! — выше нос!
+Könnten|могли бы (вежливая просьба)|Форма глагола|Konjunktiv II от können: Könnten Sie…?
+Kowal|Коваль|Фамилия
+Kritik|критика|Существительное|die Kritik; auf Kritik stoßen — встретить критику
+kühl|прохладный / прохладно|Прилагательное
+kümmere|забочусь|Форма глагола|ich kümmere mich um — я забочусь о
+Kunden|клиенты / клиента|Форма слова|der Kunde → die Kunden
+Küche|кухня|Существительное|die Küche
+lade|приглашаю / загружаю|Форма глагола|ich lade ein (einladen) · ich lade herunter (herunterladen)
+lag|лежал / составлял|Форма глагола|Präteritum от liegen
+Lage|положение / ситуация|Существительное|die Lage
+Land|страна; сельская местность|Существительное|das Land; auf dem Land — в деревне
+landet|приземляется|Форма глагола|das Flugzeug landet (landen)
+lang|длинный / долго|Прилагательное
+langweilig|скучный / скучно|Прилагательное
+laufe|бегаю / хожу|Форма глагола|ich laufe (laufen)
+laut|громко / громкий; согласно|Наречие / предлог|laut + Dativ — согласно чему-либо
+lebe|живу|Форма глагола|ich lebe (leben)
+Lebens|жизни|Форма Genitiv|das Leben → des Lebens
+lebt|живёт|Форма глагола|er/sie/es lebt (leben)
+letzte|последний / последняя|Прилагательное
+letzten|последние / прошлых|Прилагательное|in den letzten Jahren — в последние годы
+Letztes|прошлый / в прошлом|Прилагательное|letztes Jahr — в прошлом году
+Licht|свет|Существительное|das Licht
+lieber|охотнее / лучше|Наречие|сравнительная степень от gern
+Lieblingsmonat|любимый месяц|Существительное|der Lieblingsmonat
+liegen|лежать / находиться|Глагол
+linke|левая|Прилагательное|zwei linke Hände haben — иметь руки-крюки
+links|налево / слева|Наречие
+Lotto|лото / лотерея|Существительное|im Lotto gewinnen — выиграть в лотерею
+Lösung|решение (задачи)|Существительное|die Lösung
+Luft|воздух|Существительное|die Luft
+lustige|весёлые / смешные|Прилагательное|склонённая форма lustig
+mal|раз / -ка (частица)|Частица|sag mal — скажи-ка
+manipuliert|манипулируют / сманипулирован|Форма глагола|manipulieren
+März|март|Существительное|der März
+Medien|СМИ / медиа|Существительное|die Medien (мн. число)
+Medizin|медицина|Существительное|die Medizin
+mehreren|нескольких / нескольким|Местоимение|склонённая форма mehrere
+Meinung|мнение|Существительное|meiner Meinung nach — по моему мнению
+meins|моё|Притяжательное|местоимение без существительного
+Meister|мастер|Существительное|Übung macht den Meister — повторение — мать учения
+melde|сообщаю / отзовусь|Форма глагола|ich melde mich — я дам о себе знать
+Milch|молоко|Существительное|die Milch
+Mimi|Мими|Имя|кличка кошки
+Minister|министр|Существительное|der Minister
+Ministerpräsident|премьер-министр (федеральной земли)|Существительное|der Ministerpräsident
+Moderator|ведущий (передачи)|Существительное|der Moderator
+Moment|момент / мгновение|Существительное|im Moment — сейчас
+Monaten|месяцах / месяцам|Форма слова|seit drei Monaten — уже три месяца
+Monats|месяца|Форма Genitiv|der Monat → des Monats
+Mount|гора (англ.)|Название|Mount Everest — Эверест
+Mund|рот|Существительное|der Mund
+Museen|музеи|Форма мн. числа|das Museum → die Museen
+Museum|музей|Существительное|das Museum
+Musik|музыка|Существительное|die Musik
+müsste|должен был бы|Форма глагола|Konjunktiv II от müssen
+München|Мюнхен|Название|город в Германии
+nächstes|следующее|Прилагательное|nächstes Jahr — в следующем году
+Nächste|следующий / следующая|Прилагательное
+Nachricht|новость / сообщение|Существительное|die Nachricht
+Nachrichten|новости / сообщения|Форма мн. числа|die Nachricht → die Nachrichten
+Näheres|подробности|Существительное|Näheres besprechen — обсудить детали
+Nase|нос|Существительное|die Nase voll haben — быть сытым по горло
+negativ|негативно / отрицательный|Прилагательное
+Nerven|нервы|Форма мн. числа|der Nerv → die Nerven
+neues|новое / нового|Прилагательное|склонённая форма neu
+neunzehn|девятнадцать|Числительное
+November|ноябрь|Существительное|der November
+Obst|фрукты|Существительное|das Obst
+öffnet|открывает|Форма глагола|er/sie/es öffnet (öffnen)
+Ohren|уши|Форма мн. числа|die Ohren steif halten — не вешать нос
+Oktoberfest|Октоберфест|Существительное|праздник пива в Мюнхене
+online|онлайн / в интернете|Наречие
+Ostern|Пасха|Существительное|das Ostern
+Parlament|парламент|Существительное|das Parlament
+Park|парк|Существительное|der Park
+Parteien|партии|Форма мн. числа|die Partei → die Parteien
+Patienten|пациенты / пациента|Форма слова|der Patient → die Patienten
+Personen|люди / персоны|Форма мн. числа|die Person → die Personen
+Picknick|пикник|Существительное|das Picknick
+Pilot|пилот / лётчик|Существительное|der Pilot
+Pilze|грибы|Форма мн. числа|der Pilz → die Pilze
+Plan|план|Существительное|der Plan
+Pläne|планы|Форма мн. числа|der Plan → die Pläne
+Podcast|подкаст|Существительное|der Podcast
+Podcasts|подкасты|Форма мн. числа|der Podcast → die Podcasts
+Politikerin|политик (женщина)|Существительное|die Politikerin
+Polizei|полиция|Существительное|die Polizei
+prägt|формирует / определяет|Форма глагола|er/sie/es prägt (prägen)
+Preise|цены|Форма мн. числа|der Preis → die Preise
+prüfen|проверять|Глагол
+Prüfung|экзамен|Существительное|die Prüfung
+Punkte|пункты / точки|Форма мн. числа|der Punkt → die Punkte
+Quellen|источники|Форма мн. числа|die Quelle → die Quellen
+Rad|велосипед / колесо|Существительное|Rad fahren — кататься на велосипеде
+Radio|радио|Существительное|das Radio
+Rande|краю|Форма слова|am Rande + Genitiv — на краю / окраине
+Rechnung|счёт|Существительное|die Rechnung
+reden|говорить / разговаривать|Глагол
+Reform|реформа|Существительное|die Reform
+Regens|дождя|Форма Genitiv|wegen des Regens — из-за дождя
+reinkommen|входить (разг.)|Глагол|= hereinkommen
+Reporterin|репортёр (женщина)|Существительное|die Reporterin
+Rücken|спина|Существительное|der Rücken
+Rücksicht|внимание / уважение|Существительное|Rücksicht nehmen auf — считаться с
+sagte|сказал / сказала|Форма глагола|Präteritum от sagen
+Samstag|суббота|Существительное|der Samstag
+Schalte|выключи / переключи|Форма глагола|императив: Schalte das Handy aus! (schalten)
+scharf|резкий / острый|Прилагательное|scharf kritisieren — резко критиковать
+schaue|смотрю|Форма глагола|ich schaue (schauen)
+Schlaf|сон|Существительное|der Schlaf
+Schlagzeilen|заголовки (газет)|Форма мн. числа|die Schlagzeile → die Schlagzeilen
+schlechte|плохая / плохие|Прилагательное|склонённая форма schlecht
+schlechten|плохого / плохой|Прилагательное|склонённая форма schlecht
+schließ|закрой|Форма глагола|императив от schließen: Schließ das Fenster!
+Schmidt|Шмидт|Фамилия|распространённая немецкая фамилия
+schneit|идёт снег|Форма глагола|es schneit (schneien)
+schnelle|быстрая / быстрый|Прилагательное|склонённая форма schnell
+schöner|красивее|Прилагательное|сравнительная степень от schön
+schönen|красивого / прекрасным|Прилагательное|склонённая форма schön
+schönste|красивейший / самый красивый|Прилагательное|превосходная степень от schön
+Schuhe|обувь / ботинки|Форма мн. числа|der Schuh → die Schuhe
+Schwarzen|Чёрном|Прилагательное|am Schwarzen Meer — на Чёрном море
+schwerer|тяжелее / труднее|Прилагательное|сравнительная степень от schwer
+Schwester|сестра|Существительное|die Schwester
+Schwierigkeiten|трудности|Форма мн. числа|die Schwierigkeit → die Schwierigkeiten
+schwimmen|плавать|Глагол
+seien|(якобы) являются|Форма глагола|Konjunktiv I от sein — косвенная речь
+seinen|его / своего|Притяжательное|склонённая форма sein
+seiner|его / своей|Притяжательное|склонённая форма sein
+selben|том же самом|Местоимение|im selben Boot sitzen — быть в одной лодке
+sicher|уверенный / наверняка|Прилагательное / наречие
+siebzig|семьдесят|Числительное
+Silvester|канун Нового года (31 декабря)|Существительное|das Silvester
+singen|петь|Глагол
+sitzen|сидеть|Глагол|im selben Boot sitzen — быть в одной лодке
+Skandal|скандал|Существительное|der Skandal
+sobald|как только|Союз
+Sofa|диван|Существительное|das Sofa
+Solaris|«Соларис»|Название|название фирмы в примере
+Soll|должен ли|Форма глагола|Soll ich…? — Мне…? (sollen)
+Sommer|лето|Существительное|der Sommer
+Sonnencreme|солнцезащитный крем|Существительное|die Sonnencreme
+Sonst|ещё / иначе|Наречие|Sonst noch etwas? — Что-нибудь ещё?
+Sorge|забота / беспокойство|Существительное|die Sorge
+spart|экономит|Форма глагола|das spart Zeit und Nerven — это экономит время и нервы
+Speisekarte|меню|Существительное|die Speisekarte
+spielt|играет|Форма глагола|er/sie/es spielt (spielen); eine Rolle spielen — играть роль
+Spinnen|пауки|Форма мн. числа|die Spinne → die Spinnen
+Sport|спорт|Существительное|der Sport; Sport treiben — заниматься спортом
+Sprachkurs|языковой курс|Существительное|der Sprachkurs
+Sprecher|представитель / спикер|Существительное|der Sprecher
+Städte|города|Форма мн. числа|die Stadt → die Städte
+stark|сильный / сильно|Прилагательное
+starke|сильная / сильные|Прилагательное|склонённая форма stark
+starken|сильного / сильное|Прилагательное|склонённая форма stark
+Station|станция / остановка|Существительное|die Station
+stattgefunden|состоялся|Форма глагола|Partizip II от stattfinden
+Stau|пробка (на дороге)|Существительное|der Stau; im Stau stehen — стоять в пробке
+Staus|пробки (Genitiv)|Форма Genitiv|der Stau → des Staus
+steif|жёсткий / неподвижный|Прилагательное|die Ohren steif halten — держаться бодро
+steige|сажусь / выхожу / пересаживаюсь|Форма глагола|ich steige ein/aus/um (ein-, aus-, umsteigen)
+stellt|ставит / задаёт|Форма глагола|Fragen stellen — задавать вопросы
+Steuerreform|налоговая реформа|Существительное|die Steuerreform
+stolz|гордый / горд|Прилагательное|stolz auf — гордиться чем-либо
+stoßen|чокаться / толкать|Глагол|anstoßen auf — чокаться за
+streikt|бастует|Форма глагола|er/sie/es streikt (streiken)
+Streiks|забастовки|Форма мн. числа|der Streik → die Streiks
+Studenten|студенты / студента|Форма слова|der Student → die Studenten
+super|супер / отлично|Разговорное
+Supermarkt|супермаркет|Существительное|der Supermarkt
+Talkshow|ток-шоу|Существительное|die Talkshow
+Tasche|сумка|Существительное|die Tasche
+Tee|чай|Существительное|der Tee
+teil|часть (отделяемая приставка)|Приставка|teilnehmen an — участвовать: ich nehme teil
+telefonieren|звонить / говорить по телефону|Глагол
+telefoniert|звонил / разговаривал по телефону|Форма глагола|Partizip II от telefonieren
+teurer|дороже|Прилагательное|сравнительная степень от teuer
+Texte|тексты|Форма мн. числа|der Text → die Texte
+tief|глубокий / глубоко|Прилагательное
+Tiere|животные|Форма мн. числа|das Tier → die Tiere
+Tipps|советы|Форма мн. числа|der Tipp → die Tipps
+tolle|отличная / классные|Прилагательное|склонённая форма toll
+Tomaten|помидоры|Форма мн. числа|die Tomate → die Tomaten
+traditionelles|традиционное|Прилагательное|склонённая форма traditionell
+tragen|носить / нести|Глагол
+trägt|носит / несёт|Форма глагола|er/sie/es trägt (tragen)
+treten|ступать / вступать|Глагол|in Kraft treten — вступать в силу
+trinke|пью|Форма глагола|ich trinke (trinken)
+Trinkgeld|чаевые|Существительное|das Trinkgeld
+Trotz|несмотря на|Предлог|trotz + Genitiv
+Übung|упражнение / практика|Существительное|Übung macht den Meister — повторение — мать учения
+Umwelt|окружающая среда|Существительное|die Umwelt
+unser|наш|Притяжательное
+Unsere|наша / наши|Притяжательное
+unserer|нашей / наших|Притяжательное|склонённая форма unser
+Urlaub|отпуск|Существительное|der Urlaub
+Urlaubs|отпуска|Форма Genitiv|der Urlaub → des Urlaubs
+Vater|отец|Существительное|der Vater
+Vaters|отца|Форма Genitiv|der Vater → des Vaters
+verbinden|соединять|Глагол|Ich verbinde Sie — я вас соединяю (по телефону)
+verbringt|проводит (время)|Форма глагола|er/sie/es verbringt (verbringen)
+verfehlen|пропустить / не заметить|Глагол|Sie können es nicht verfehlen — Вы не пройдёте мимо
+vergleichen|сравнивать|Глагол
+Verhandlungen|переговоры|Форма мн. числа|die Verhandlung → die Verhandlungen
+Verkäuferin|продавщица|Существительное|die Verkäuferin
+verlassen|покидать / оставлять|Глагол
+verletzt|травмирован / ранен|Форма глагола|Partizip II от verletzen
+versetzt|приводит (в состояние)|Форма глагола|in Erstaunen versetzen — изумлять
+vertragen|ладить / переносить|Глагол|sich vertragen — ладить друг с другом
+vertritt|представляет / отстаивает|Форма глагола|er/sie/es vertritt (vertreten)
+vierzehn|четырнадцать|Числительное
+vierzig|сорок|Числительное
+Videos|видео (мн. число)|Форма мн. числа|das Video → die Videos
+Vögel|птицы|Форма мн. числа|der Vogel → die Vögel
+vollem|полным|Прилагательное|mit vollem Mund — с полным ртом
+vorliegenden|данном / рассматриваемом|Причастие|im vorliegenden Text — в данном тексте
+Vorschlag|предложение|Существительное|der Vorschlag
+Vorstellungsgespräch|собеседование|Существительное|das Vorstellungsgespräch
+wahlberechtigt|имеющий право голоса|Прилагательное
+Wahlbeteiligung|явка на выборах|Существительное|die Wahlbeteiligung
+Wahlen|выборы|Форма мн. числа|die Wahl → die Wahlen
+wahr|правдивый / верный|Прилагательное|nicht wahr? — не так ли?
+warm|тёплый / тепло|Прилагательное
+Warnung|предупреждение|Существительное|die Warnung
+Wasch|мой / помой|Форма глагола|императив от waschen: Wasch dir die Hände!
+Weber|Вебер|Фамилия|распространённая немецкая фамилия
+Weihnachten|Рождество|Существительное|das Weihnachten
+Wetters|погоды|Форма Genitiv|trotz des schlechten Wetters — несмотря на плохую погоду
+wichtige|важная / важные|Прилагательное|склонённая форма wichtig
+wichtigste|важнейший / самый важный|Прилагательное|превосходная степень от wichtig
+wichtigsten|важнейшие / самых важных|Прилагательное|превосходная степень от wichtig
+Wiederholung|повторение|Существительное|die Wiederholung
+wiederzusehen|увидеть снова|Инфинитив с zu|wiedersehen → dich wiederzusehen
+WLAN|Wi-Fi / беспроводная сеть|Сокращение|das WLAN
+wohnte|жил / жила|Форма глагола|Präteritum от wohnen
+Wohnung|квартира|Существительное|die Wohnung
+Woran|о чём / над чем|Вопросительное слово|Woran denkst du? — О чём ты думаешь?
+worden|был / были (пассив)|Форма глагола|Partizip II от werden в пассиве Perfekt
+Worte|слова|Форма мн. числа|das Wort → die Worte (связная речь)
+Worum|о чём|Вопросительное слово|Worum geht es? — О чём идёт речь?
+wunderbaren|чудесный / чудесного|Прилагательное|склонённая форма wunderbar
+Wünsche|пожелания / желания|Форма мн. числа|der Wunsch → die Wünsche
+Yoga|йога|Существительное|das Yoga
+Zähne|зубы|Форма мн. числа|der Zahn → die Zähne
+Zitrone|лимон|Существительное|die Zitrone
+Zucker|сахар|Существительное|der Zucker
+zweite|вторая / второй|Числительное|порядковое от zwei
+zweiundzwanzig|двадцать два|Числительное
 `;
 
   const NOUN_FORM_OVERRIDES = {
@@ -1149,12 +1639,12 @@ Zwar|хотя / правда|Наречие
   let wordTipPinned = false;
 
   function keyOf(str) {
-    const m = String(str || '').match(/[A-Za-zÄäÖöÜüß]+/);
+    const m = String(str || '').match(/[A-Za-zÄäÖöÜüßÉé]+/);
     return m ? m[0].toLowerCase() : '';
   }
 
   function wordsOf(str) {
-    return String(str || '').match(/[A-Za-zÄäÖöÜüß]+/g) || [];
+    return String(str || '').match(/[A-Za-zÄäÖöÜüßÉé]+/g) || [];
   }
 
   function addInfo(map, word, info) {
@@ -1240,7 +1730,7 @@ Zwar|хотя / правда|Наречие
   function addPhraseNoteTerms(map) {
     (LESSON_DATA?.phrases || []).forEach(p => {
       const note = String(p.note || '');
-      const match = note.match(/\b([A-Za-zÄäÖöÜüß]+)\b\s*=\s*([^.;!,]+)/);
+      const match = note.match(/\b([A-Za-zÄäÖöÜüßÉé]+)\b\s*=\s*([^.;!,]+)/);
       if (!match) return;
       addGermanTerm(map, match[1], match[2].trim(), { kind: 'Заметка урока' });
     });
@@ -1590,9 +2080,9 @@ Zwar|хотя / правда|Наречие
       card.className = 'phrase-card';
 
       // Tokenise: words get speak spans, punctuation stays plain
-      const tokens = p.de.match(/[A-Za-zÄäÖöÜüß]+|[^A-Za-zÄäÖöÜüß\s]+|\s+/g) || [p.de];
+      const tokens = p.de.match(/[A-Za-zÄäÖöÜüßÉé]+|[^A-Za-zÄäÖöÜüßÉé\s]+|\s+/g) || [p.de];
       const deHtml = tokens.map(tok => {
-        if (/[A-Za-zÄäÖöÜüß]/.test(tok)) {
+        if (/[A-Za-zÄäÖöÜüßÉé]/.test(tok)) {
           return renderWord(tok, p);
         }
         return esc(tok).replace(/\s/g, ' ');
