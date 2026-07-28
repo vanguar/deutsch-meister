@@ -4,10 +4,11 @@
 
 const DONATE = {
   // Кошельки для доната (объединённый набор из проектов freetour + dawnmarketpulse)
-  // ⚠️ USDT TRC-20: взят актуальный адрес из активного бота dawnmarketpulse.
-  //    В проекте freetour был другой адрес (TJJ63iThrWz4mLRNob5C5GezYsRwQtwmeg) — подтвердить.
+  // TODO(владелец): подтвердить адрес USDT TRC-20 перед возвратом в UI.
+  //   Кандидаты: TZ6rTYbF5Go94Q4f9uZwcVZ4g3oAnzwDHN (dawnmarketpulse)
+  //   и TJJ63iThrWz4mLRNob5C5GezYsRwQtwmeg (freetour). Пока адрес не
+  //   подтверждён, TRC-20 в списке НЕ показываем.
   wallets: [
-    { icon: '🔴', name: 'USDT',     net: 'TRC-20 (Tron)',     addr: 'TZ6rTYbF5Go94Q4f9uZwcVZ4g3oAnzwDHN' },
     { icon: '💎', name: 'USDT',     net: 'ERC-20 (Ethereum)', addr: '0xf0e70cb55f38ad3Ca7ABCDD276A997092ecb7346' },
     { icon: '💧', name: 'TON',      net: 'The Open Network',  addr: 'UQB0W1KEAR7RFQ03AIA872jw-2G2ntydiXlyhfTN8rAb2KN5' },
     { icon: '🟡', name: 'Bitcoin',  net: 'BTC',               addr: 'bc1qq0rs5j43yh09tyvdynregg56c68d2yaz6ek8dx' },
