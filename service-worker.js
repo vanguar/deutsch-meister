@@ -1,4 +1,4 @@
-const CACHE = 'deutsch-meister-v59';
+const CACHE = 'deutsch-meister-v60';
 const SCOPE_PATH = new URL(self.registration.scope).pathname.replace(/\/$/, '');
 const BASE = SCOPE_PATH === '' ? '' : SCOPE_PATH;
 
@@ -7,19 +7,19 @@ const STATIC = [
   BASE + '/',
   BASE + '/index.html',
   BASE + '/manifest.json',
-  BASE + '/css/base.css?v=44',
-  BASE + '/css/sidebar.css?v=44',
-  BASE + '/css/lesson.css?v=44',
-  BASE + '/css/exercises.css?v=44',
-  BASE + '/js/progress.js?v=44',
-  BASE + '/js/lesson-render.js?v=44',
-  BASE + '/js/exercises.js?v=44',
-  BASE + '/js/flashcards.js?v=44',
-  BASE + '/js/tts.js?v=44',
-  BASE + '/js/telegram.js?v=44',
-  BASE + '/js/cloud-sync.js?v=44',
-  BASE + '/js/install-app.js?v=44',
-  BASE + '/js/support.js?v=44',
+  BASE + '/css/base.css?v=45',
+  BASE + '/css/sidebar.css?v=45',
+  BASE + '/css/lesson.css?v=45',
+  BASE + '/css/exercises.css?v=45',
+  BASE + '/js/progress.js?v=45',
+  BASE + '/js/lesson-render.js?v=45',
+  BASE + '/js/exercises.js?v=45',
+  BASE + '/js/flashcards.js?v=45',
+  BASE + '/js/tts.js?v=45',
+  BASE + '/js/telegram.js?v=45',
+  BASE + '/js/cloud-sync.js?v=45',
+  BASE + '/js/install-app.js?v=45',
+  BASE + '/js/support.js?v=45',
   BASE + '/icons/icon.svg',
 ];
 
