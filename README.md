@@ -19,7 +19,7 @@ Deutsch Meister is designed as a self-contained language learning application th
 The course includes:
 
 - **4 CEFR levels:** A1, A2, B1, B2
-- **32 complete lessons**
+- **68 complete lessons** (A1 — 20, A2 — 20, B1 — 14, B2 — 14)
 - German phrases, vocabulary, grammar explanations and exercises
 - Audio pronunciation support
 - Flashcards with repeat/known logic
@@ -73,7 +73,7 @@ Lesson content is stored separately from the UI, which makes the system easier t
 
 Lessons are defined as JavaScript data objects and rendered by a universal lesson renderer.
 
-This allows the application to reuse the same layout and logic across all 32 lessons instead of duplicating markup manually.
+This allows the application to reuse the same layout and logic across all 68 lessons instead of duplicating markup manually.
 
 Example lesson data structure:
 

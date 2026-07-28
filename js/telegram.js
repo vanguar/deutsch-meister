@@ -80,7 +80,7 @@ function showTgWelcome(name) {
         Рад видеть тебя здесь — ты только что сделал отличный выбор! 🎉
       </p>
       <div class="tgw-features">
-        <div class="tgw-feat">📚 32 урока · A1 → B2</div>
+        <div class="tgw-feat">📚 68 уроков · A1 → B2</div>
         <div class="tgw-feat">🔊 Озвучка всех фраз</div>
         <div class="tgw-feat">✏️ Интерактивные упражнения</div>
         <div class="tgw-feat">🃏 Флэшкарты</div>
