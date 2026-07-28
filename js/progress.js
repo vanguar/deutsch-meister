@@ -467,8 +467,22 @@ const Progress = (() => {
     if (btn && continueId) {
       const card  = cards.find(c => _lessonIdFromHref(c.getAttribute('href')) === continueId);
       const title = card?.querySelector('.lc-title')?.textContent?.trim() || '';
+      const num   = card?.querySelector('.lc-num')?.textContent?.trim()   || '';
       if (card) btn.setAttribute('href', card.getAttribute('href'));
-      btn.textContent = completed.length ? `▶ Продолжить: ${title}` : '🚀 Начать урок 1';
+      const started = completed.length || last;
+      btn.textContent = started
+        ? `▶ Продолжить: ${num ? num + ' — ' : ''}${title}`
+        : '🚀 Начать урок 1';
+    }
+
+    // Прокручиваем сайдбар к уроку, на котором остановились
+    // (только сам сайдбар, не страницу)
+    const curItem = items.find(i => i.classList.contains('current'));
+    const sidebar = document.getElementById('sidebar');
+    if (curItem && sidebar) {
+      const group = curItem.closest('.level-group');
+      if (group) group.classList.remove('collapsed');
+      sidebar.scrollTop = Math.max(0, curItem.offsetTop - sidebar.clientHeight / 2);
     }
   }
 

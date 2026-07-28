@@ -106,7 +106,7 @@
   text-decoration: none;
   border-radius: 0;
 }
-.lesson-item:hover:not(.locked) {
+.lesson-item:hover {
   color: var(--text);
   background: var(--tint);
 }
@@ -123,10 +123,10 @@
   background: var(--accent);
   border-radius: 0 2px 2px 0;
 }
-.lesson-item.locked {
-  opacity: .38;
-  cursor: not-allowed;
-  pointer-events: none;
+.lesson-item.current {
+  color: var(--accent2);
+  background: rgba(124,106,247,.08);
+  font-weight: 500;
 }
 .lesson-item.done .lesson-num { color: var(--green); }
 
@@ -142,7 +142,6 @@
   margin-left: auto;
 }
 .lesson-status.done { color: var(--green); }
-.lesson-status.lock { color: var(--text-dim); }
 
 /* Stub "more" item */
 .lesson-item-stub {

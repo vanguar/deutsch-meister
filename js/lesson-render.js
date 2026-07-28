@@ -2019,26 +2019,24 @@ zweiundzwanzig|двадцать два|Числительное
         const id     = `${level.key}-${String(l.num).padStart(2,'0')}`;
         const isDone = completed.includes(id);
         const isActive = isCurrent && l.num === curNum;
-        const isLocked = isCurrent && l.num > curNum && !isDone;
 
         const href = level.key === curLevel
           ? `../lesson-${String(l.num).padStart(2,'0')}/index.html`
           : `../../${level.key}/lesson-${String(l.num).padStart(2,'0')}/index.html`;
 
-        const el = document.createElement(isLocked ? 'div' : 'a');
-        if (!isLocked) el.href = href;
+        const el = document.createElement('a');
+        el.href = href;
         el.className = [
           'lesson-item',
           isActive ? 'active'            : '',
-          isLocked ? 'locked'            : '',
           isDone && !isActive ? 'done'   : ''
         ].filter(Boolean).join(' ');
 
         el.innerHTML = `
           <span class="lesson-num">${String(l.num).padStart(2,'0')}</span>
           <span class="lesson-name">${l.title}</span>
-          <span class="lesson-status ${isDone ? 'done' : isLocked ? 'lock' : ''}">
-            ${isDone ? '✓' : isLocked ? '🔒' : ''}
+          <span class="lesson-status ${isDone ? 'done' : ''}">
+            ${isDone ? '✓' : ''}
           </span>`;
         lessonsDiv.appendChild(el);
       });
@@ -2046,6 +2044,13 @@ zweiundzwanzig|двадцать два|Числительное
       group.appendChild(lessonsDiv);
       nav.appendChild(group);
     });
+
+    // Прокручиваем сайдбар к текущему уроку (только сам сайдбар, не страницу)
+    const activeEl = nav.querySelector('.lesson-item.active');
+    const sidebar  = document.getElementById('sidebar');
+    if (activeEl && sidebar) {
+      sidebar.scrollTop = Math.max(0, activeEl.offsetTop - sidebar.clientHeight / 2);
+    }
   }
 
   /* ── Lesson header ── */
