@@ -114,6 +114,13 @@ def send_invoice(chat_id, stars):
 
 
 def handle_update(update):
+    # Платёжный путь — строго первым: Telegram даёт на pre_checkout_query
+    # 10 секунд, иначе платёж отменяется. Никакой код не должен стоять раньше.
+    if "pre_checkout_query" in update:
+        pcq = update["pre_checkout_query"]
+        tg("answerPreCheckoutQuery", {"pre_checkout_query_id": pcq["id"], "ok": True})
+        return
+
     if "message" in update and "successful_payment" in update["message"]:
         msg = update["message"]
         amount = msg["successful_payment"]["total_amount"]
@@ -155,11 +162,6 @@ def handle_update(update):
                 send_invoice(chat_id, int(data.split(":", 1)[1]))
             except ValueError:
                 pass
-        return
-
-    if "pre_checkout_query" in update:
-        pcq = update["pre_checkout_query"]
-        tg("answerPreCheckoutQuery", {"pre_checkout_query_id": pcq["id"], "ok": True})
         return
 
 
