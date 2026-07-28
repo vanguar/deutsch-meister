@@ -1,8 +1,8 @@
 # Deutsch Meister 🇩🇪
 
-**Deutsch Meister** is a fully interactive German learning platform covering levels **A1 to B2**.
+**Deutsch Meister** is a fully interactive German learning platform for Russian speakers covering levels **A1 to B2**.
 
-The project was built as a lightweight, offline-capable web application with a structured lesson engine, interactive exercises, spaced-repetition flashcards, speech synthesis, progress tracking, Telegram Mini App integration, and PWA support.
+It is a lightweight, offline-capable web application with a data-driven lesson engine, interactive exercises, flashcards, speech synthesis, word-by-word tooltips, progress tracking with cloud sync, Telegram Mini App integration, donations, and PWA support.
 
 Live demo:
 
@@ -10,204 +10,92 @@ Live demo:
 https://vanguar.github.io/deutsch-meister/
 ```
 
+> This README (like `BOT_AND_DONATIONS.md` and `ДЕПЛОЙ-инструкция.md`) is written both for people and for AI assistants working on the project. Read those two documents before touching the bot, donations, or deploy process.
+
 ---
 
 ## Overview
 
-Deutsch Meister is designed as a self-contained language learning application that works directly in the browser and can also be launched inside Telegram as a Mini App.
+Deutsch Meister works directly in the browser, installs as a PWA, and runs inside Telegram as a Mini App (`@GermanMorningBot`).
 
-The course includes:
+The course:
 
-- **4 CEFR levels:** A1, A2, B1, B2
-- **68 complete lessons** (A1 — 20, A2 — 20, B1 — 14, B2 — 14)
-- German phrases, vocabulary, grammar explanations and exercises
-- Audio pronunciation support
-- Flashcards with repeat/known logic
-- XP, streaks and lesson progress
+- **4 CEFR levels, 68 lessons:** A1 — 20, A2 — 20, B1 — 14, B2 — 14 (each level ends with a review lesson)
+- German phrases with Russian translations, notes and audio
+- Hover/tap tooltips with a translation for **every word** in every phrase
+- Vocabulary tables with IPA transcription and articles
+- Grammar explanations, 4 exercise types, dictation, flashcards
+- XP, streaks, per-section lesson progress
+- Cloud progress sync inside Telegram (Upstash Redis)
 - Offline support through a Service Worker
-- Mobile-first responsive UI
-- Telegram WebApp support
 
-The goal of the project was to build not just static learning pages, but a reusable lesson system where lesson content is separated from rendering logic.
+Lesson topics per level:
 
----
-
-## Key Features
-
-### Complete A1–B2 Course
-
-The app contains a full course structure from beginner to upper-intermediate German:
-
-- **A1:** greetings, numbers, colors, family, weekdays, food, city, time
-- **A2:** daily routine, hobbies, doctor visit, travel, shopping, housing, work, weather
-- **B1:** Konjunktiv II, passive voice, relative clauses, subordinate clauses, infinitive constructions, work, opinions, environment
-- **B2:** participle constructions, modal particles, connectors, nominalization, academic style, economy, debate, complex texts
-
-Each lesson follows a consistent structure and is rendered from a dedicated lesson data file.
+- **A1:** greetings, numbers, colors, family, weekdays, food, city, time, body, seasons, animals, professions, supermarket, transport, café, numbers to 100, modal verbs, Perfekt, holidays + review
+- **A2:** daily routine, hobbies, doctor, travel, shopping, housing, work, weather, restaurant, traditions, media, feelings, sport, directions, friendship, nature, Präteritum, comparison, future plans + review
+- **B1:** Konjunktiv II, passive, relative/subordinate clauses, weil/dass, infinitive with zu, job applications, argumentation, environment, adjective declension, Genitiv, temporal clauses, verb+preposition, media + review
+- **B2:** participle constructions, modal particles, connectors, nominalization, academic style, economy, debate, complex texts, subjective modals, Nomen-Verb-Verbindungen, idioms, business communication, politics + review
 
 ---
 
-## Lesson Structure
+## Architecture: two independent parts
 
-Every lesson includes:
+| Part | Hosting | Deploy |
+|---|---|---|
+| Frontend (all static files) | GitHub Pages → `vanguar.github.io/deutsch-meister/` | automatic on `git push` to `main` |
+| Backend (`api/webhook.py`) | Vercel → `deutsch-meister-puce.vercel.app` | **manual**: `vercel --prod` (`make deploy-api`) |
 
-- German phrases with Russian translations
-- pronunciation notes
-- vocabulary table with IPA transcription
-- grammar explanations
-- fill-in-the-blank exercises
-- multiple-choice exercises
-- matching exercises
-- dictation
-- flashcards
-- XP reward
-- section-based progress tracking
-
-Lesson content is stored separately from the UI, which makes the system easier to extend and maintain.
+Zero dependencies by design: the frontend is vanilla HTML/CSS/JS with no build step; the backend is a single Python file using only the stdlib. Keep it that way.
 
 ---
 
-## Technical Highlights
+## Data-Driven Lesson Engine
 
-### Data-Driven Lesson Engine
+Content is separated from rendering. Each lesson is:
 
-Lessons are defined as JavaScript data objects and rendered by a universal lesson renderer.
+- `data/<level>/<level>-lesson-NN.js` — a `LESSON_DATA` object (id, title, meta with XP, `phrases[]`, `vocabulary[]` with IPA, `grammar[]`, `exercises{}`);
+- `lessons/<level>/lesson-NN/index.html` — a thin HTML shell that loads its data file plus the shared engine.
 
-This allows the application to reuse the same layout and logic across all 68 lessons instead of duplicating markup manually.
+`js/lesson-render.js` renders the whole page from `LESSON_DATA`: navigation for all four levels, phrases, vocabulary, grammar, exercises. It also contains the `COURSE_WORDS_RAW` dictionary powering per-word tooltips.
 
-Example lesson data structure:
+### JS modules
 
-```js
-const LESSON_DATA = {
-  id: 'a1-01',
-  level: 'A1',
-  unit: 1,
-  title: 'Hallo! Wie heißt du?',
-  subtitle: 'Greetings and introductions',
+| Module | Purpose |
+|---|---|
+| `lesson-render.js` | universal lesson renderer + word-tooltip lexicon (`COURSE_WORDS_RAW`, `BASIC_WORDS`) |
+| `exercises.js` | fill-in-the-blank, multiple choice, matching pairs, dictation; step-by-step mode on mobile |
+| `progress.js` | XP, streaks, 5 required sections per lesson, `localStorage` persistence, "continue where you left off", home-page progress rendering |
+| `flashcards.js` | flashcards from lesson vocabulary with known/repeat logic |
+| `tts.js` | speech: native `speechSynthesis` → `/api/tts` proxy + Web Audio (see below) |
+| `telegram.js` | lazy Telegram WebApp SDK load, expand, theme, BackButton, welcome overlay |
+| `cloud-sync.js` | cloud progress: pull+merge on open, debounced push, `sendBeacon` flush; Telegram-only (needs signed `initData`) |
+| `install-app.js` | "install as PWA" hint inside Telegram |
+| `support.js` | donation modal: Telegram Stars via `TG.openInvoice()` + crypto wallets |
 
-  meta: {
-    duration: '25–30 min',
-    wordCount: 25,
-    xpReward: 100
-  },
+All lessons are always accessible — progress is display-only and never locks content.
 
-  phrases: [],
-  vocabulary: [],
-  grammar: [],
-  exercises: {}
-};
-```
+### Text-to-Speech (fragile — read before touching)
 
----
+- Browser/PWA: native `speechSynthesis`.
+- Telegram WebView: `speechSynthesis` is silent, so the frontend fetches mp3 from our own proxy `/api/tts` (Vercel), which gets audio from Google Translate TTS and adds the CORS header, then plays via Web Audio API with a silent-WAV unlock.
+- The Service Worker deliberately does **not** intercept cross-origin requests — intercepting media breaks audio on iOS.
+- **StreamElements is dead (401). Never go back to it.**
 
-### Progress Tracking
+### Backend — one file on Vercel
 
-User progress is stored locally in the browser using `localStorage`.
+`api/webhook.py` (stdlib only) dispatches all `/api/*` routes:
 
-The app tracks:
+- `/api/webhook` — Telegram bot: `/start`, `/donate`, Stars invoices (XTR), `pre_checkout_query` confirmation (10-second deadline — this is why a live bot is mandatory);
+- `/api/tts?text=...&tl=de` — TTS proxy (mp3 + CORS, 7-day cache);
+- `/api/progress` — cloud progress in Upstash Redis with cryptographic Telegram `initData` verification (HMAC-SHA256, 24h max age). Requires `UPSTASH_REDIS_REST_URL/TOKEN` env vars on Vercel.
 
-- total XP
-- daily streak
-- completed lessons
-- completed lesson sections
-- exercise scores
-- selected theme
-- Telegram welcome state
+`bot/bot.py` is a polling (aiogram) variant for local testing only.
 
-The lesson is considered complete only when all required sections are finished:
+### Donations
 
-```text
-flashcards
-fill-in-the-blank
-multiple choice
-matching
-dictation
-```
-
----
-
-### Flashcards
-
-The flashcard module automatically builds a review deck from lesson vocabulary.
-
-Users can mark each card as:
-
-- **Known**
-- **Repeat**
-
-Cards marked for repetition are shown again in the same session. Correct answers add XP and update progress.
-
----
-
-### Text-to-Speech
-
-The project includes German pronunciation support using multiple fallback layers:
-
-1. Browser Web Speech API
-2. StreamElements TTS fallback
-3. ResponsiveVoice fallback
-
-This improves compatibility across desktop browsers, mobile browsers and Telegram WebView.
-
----
-
-### PWA and Offline Support
-
-Deutsch Meister is installable as a Progressive Web App.
-
-It includes:
-
-- `manifest.json`
-- `service-worker.js`
-- offline caching
-- app icons
-- standalone display mode
-- mobile-friendly launch experience
-
-The Service Worker pre-caches the main app shell, styles, scripts, lesson pages and lesson data.
-
----
-
-### Telegram Mini App Integration
-
-The project supports Telegram WebApp mode.
-
-Inside Telegram, the app can:
-
-- expand to full screen
-- detect Telegram color scheme
-- show Telegram Back Button on lesson pages
-- display a personalized welcome screen
-- launch from a Telegram bot button
-
-The Telegram bot is implemented with Python and `aiogram`.
-
----
-
-## Tech Stack
-
-### Frontend
-
-- HTML5
-- CSS3
-- Vanilla JavaScript
-- LocalStorage
-- Web Speech API
-- Service Worker
-- PWA Manifest
-- Telegram WebApp SDK
-
-### Bot
-
-- Python
-- aiogram
-- Telegram Bot API
-
-### Deployment
-
-- GitHub Pages
-- Static hosting
-- Offline-first architecture
+- Telegram Stars: invoice links opened natively via `TG.openInvoice()` (tiers 50/100/250/500 ⭐, links in `js/support.js`);
+- crypto wallets (USDT, TON, BTC, ETH, SOL) with copy buttons.
+- Details, pitfalls and regeneration instructions: `BOT_AND_DONATIONS.md`.
 
 ---
 
@@ -215,176 +103,113 @@ The Telegram bot is implemented with Python and `aiogram`.
 
 ```text
 deutsch-meister/
-├── index.html
+├── index.html                 # home: hero, stats, course map, SW registration
 ├── 404.html
 ├── manifest.json
-├── service-worker.js
-├── bot.py
+├── service-worker.js          # app-shell precache + cache-first assets
+├── Makefile                   # bump / validate / deploy-web / deploy-api / check-api
+├── bump_version.py            # one-command ?v=N + SW CACHE bump
 │
-├── css/
-│   ├── base.css
-│   ├── sidebar.css
-│   ├── lesson.css
-│   └── exercises.css
+├── css/                       # base / sidebar / lesson / exercises
+├── js/                        # 9 engine modules (see table above)
+├── data/{a1,a2,b1,b2}/        # 68 LESSON_DATA files
+├── lessons/{a1,a2,b1,b2}/     # 68 lesson HTML shells (lesson-NN/index.html)
 │
-├── js/
-│   ├── progress.js
-│   ├── lesson-render.js
-│   ├── exercises.js
-│   ├── flashcards.js
-│   ├── tts.js
-│   └── telegram.js
+├── api/webhook.py             # entire backend (Vercel serverless)
+├── bot/bot.py                 # polling bot for local testing
 │
-├── data/
-│   ├── a1/
-│   ├── a2/
-│   ├── b1/
-│   └── b2/
+├── scripts/
+│   └── validate_lessons.py    # CI validator (see below)
+├── .github/workflows/validate.yml
 │
-├── lessons/
-│   ├── a1/
-│   ├── a2/
-│   ├── b1/
-│   └── b2/
+├── tools/legacy/              # superseded one-off patch scripts
+├── patch_*.py                 # historical one-off migrations (already applied)
+├── gen_lessons.py             # lesson-shell generator (local only, gitignored)
+├── gen_template.html          # shell template for gen_lessons.py (local only)
 │
-└── tools/
-    ├── gen_lessons.py
-    ├── gen_template.html
-    └── patch_*.py
+├── README.md
+├── BOT_AND_DONATIONS.md       # donations + bot mechanics and pitfalls
+└── ДЕПЛОЙ-инструкция.md       # deploy checklists (RU)
 ```
-
----
-
-## Running Locally
-
-Because this is a static web application, it can be served with any local static server.
-
-Using Python:
-
-```bash
-python -m http.server 8000
-```
-
-Then open:
-
-```text
-http://localhost:8000
-```
-
-For the best experience, use a local server instead of opening `index.html` directly, because Service Worker and PWA features require a proper web context.
 
 ---
 
 ## Deployment
 
-The app is configured for GitHub Pages deployment under the `/deutsch-meister/` base path.
+**Short version** (full checklists in `ДЕПЛОЙ-инструкция.md`):
 
-Typical deployment flow:
+1. Changed JS/CSS/lesson data? Run `python bump_version.py` (or `make bump`) — it unifies `?v=N` in all HTML files, syncs the Service Worker `STATIC` list and bumps `CACHE`. Never bump versions by hand.
+2. `git push origin main` → GitHub Pages redeploys the frontend automatically.
+3. Changed anything in `api/`? Deploy the backend separately: `vercel --prod` (`make deploy-api`), then smoke-test with `scripts/check_api.sh`.
+
+Vercel is intentionally **not** connected to GitHub; backend deploys are manual.
+
+---
+
+## Validation and CI
+
+`python scripts/validate_lessons.py` (also `make validate`) checks:
+
+- lesson counts per level (20/20/14/14);
+- every `LESSON_DATA` has non-empty id/title/meta/phrases/vocabulary/grammar/exercises, ids match paths, no duplicates;
+- every data file has a shell and vice versa;
+- all `?v=N` versions are in sync (desync is an error);
+- word-tooltip coverage of phrase words (warnings only).
+
+GitHub Actions runs it on every push and pull request (`.github/workflows/validate.yml`).
+
+---
+
+## Adding a New Lesson
+
+1. Create `data/<level>/<level>-lesson-NN.js` with a `LESSON_DATA` object (copy a neighboring lesson as a template; `id` must be `<level>-NN`).
+2. Create the shell `lessons/<level>/lesson-NN/index.html` — either copy a neighboring shell and update the data-file path and titles, or use the local generator `gen_lessons.py` + `gen_template.html`.
+3. Add the lesson to the nav arrays in `js/lesson-render.js` (`A1_LESSONS`/`A2_LESSONS`/`B1_LESSONS`/`B2_LESSONS`), to the sidebar and course map in `index.html`, and update the expected count in `scripts/validate_lessons.py`.
+4. Check tooltip coverage: run the validator; add missing words to `COURSE_WORDS_RAW` in `js/lesson-render.js`.
+5. `python bump_version.py`, commit, push.
+
+---
+
+## Running Locally
 
 ```bash
-git add .
-git commit -m "Update Deutsch Meister"
-git push
+python -m http.server 8000
+# open http://localhost:8000
 ```
 
-GitHub Pages configuration:
+Use a local server (not `file://`) so the Service Worker and PWA features work.
 
-```text
-Settings → Pages → Deploy from branch → main → /root
+Local bot testing (polling, no Vercel needed):
+
+```bash
+export BOT_TOKEN="your_telegram_bot_token"
+python bot/bot.py
 ```
 
 ---
 
-## Telegram Bot Setup
+## Progress Tracking
 
-The Telegram bot opens the web app through an inline keyboard button.
+Progress lives in `localStorage` (`dm_progress`, `dm_sections:<id>`, `dm_last_lesson`): XP (200 per level), daily streak, completed lessons and section scores, last opened lesson. A lesson counts as complete when all five sections are done: flashcards, fill-in-the-blank, multiple choice, matching, dictation. XP is never granted twice.
 
-Install dependencies:
+Inside Telegram, progress is additionally synced to the cloud (`/api/progress`): the cloud snapshot is merged with local state taking the maximum/union of every field, so nothing is ever lost between devices.
 
-```bash
-pip install aiogram
-```
-
-Recommended environment-based configuration:
-
-```bash
-export BOT_TOKEN="your_telegram_bot_token"
-export APP_URL="https://your-username.github.io/deutsch-meister/"
-```
-
-Run the bot:
-
-```bash
-python bot.py
-```
+The home page shows a "Continue" button leading to the last opened lesson; the sidebar highlights it and auto-scrolls to it.
 
 ---
 
 ## Engineering Decisions
 
-### Why Vanilla JavaScript?
-
-The project intentionally uses vanilla JavaScript instead of a frontend framework.
-
-This keeps the application:
-
-- lightweight
-- easy to host on GitHub Pages
-- fast to load
-- simple to cache offline
-- independent from a build step
-
-### Why Data-Driven Lessons?
-
-A data-driven lesson architecture allows the same UI components to render different lesson content.
-
-This makes the project scalable: new lessons can be added by creating new data files instead of duplicating HTML pages.
-
-### Why LocalStorage?
-
-For this version, progress is stored locally to avoid backend complexity and allow offline usage.
-
-This makes the app usable even without account registration or network connection.
-
----
-
-## What This Project Demonstrates
-
-This project demonstrates practical experience with:
-
-- building a full educational web application from scratch
-- structuring a multi-level course system
-- designing reusable frontend architecture without a framework
-- implementing local progress persistence
-- building PWA/offline functionality
-- integrating Telegram Mini Apps
-- working with speech synthesis and browser APIs
-- creating responsive UI for desktop and mobile
-- organizing a static project for GitHub Pages deployment
-- automating repetitive page generation with Python scripts
-
----
-
-## Future Improvements
-
-Possible next steps:
-
-- backend-based user accounts
-- cloud synchronization of progress
-- admin panel for editing lessons
-- spaced repetition scheduling by date
-- placement test
-- final tests for each CEFR level
-- analytics dashboard
-- TypeScript migration
-- automated tests for lesson data validation
-- CI/CD validation for broken links and missing assets
+- **Vanilla JS, no build step** — lightweight, trivially hosted on GitHub Pages, easy to cache offline. Do not introduce bundlers or dependencies.
+- **Data-driven lessons** — new content is data files, not duplicated HTML.
+- **localStorage first, cloud second** — works offline and without accounts; cloud sync is an additive merge, never a destructive overwrite.
+- **Single stdlib backend file** — nothing to break, free hosting, no cold-start-heavy dependencies.
 
 ---
 
 ## Security Note
 
-For production use, bot tokens and other secrets should be stored in environment variables and never committed to the repository.
+Bot tokens and other secrets live in environment variables (Vercel project settings / `.env.local`, which is gitignored) and are never committed.
 
 ---
 
