@@ -167,15 +167,16 @@ def handle_update(update):
 #  TTS-прокси (Google Translate TTS -> mp3 + CORS)
 # ══════════════════════════════════════════════════════
 
-GOOGLE_TTS = "https://translate.google.com/translate_tts"
+GOOGLE_TTS = "https://translate.google.com/translate_tts"               # client=tw-ob
+GOOGLE_TTS_FALLBACK = "https://translate.googleapis.com/translate_tts"  # client=gtx
 UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/120.0 Safari/537.36")
 
 
-def fetch_tts(text, tl="de"):
+def _fetch_tts_once(base_url, client, text, tl):
     """Возвращает (audio_bytes, content_type) или (None, error_str)."""
-    url = GOOGLE_TTS + "?" + urllib.parse.urlencode({
-        "ie": "UTF-8", "client": "tw-ob", "tl": tl, "q": text[:200],
+    url = base_url + "?" + urllib.parse.urlencode({
+        "ie": "UTF-8", "client": client, "tl": tl, "q": text[:200],
     })
     req = urllib.request.Request(url, headers={
         "User-Agent": UA, "Referer": "https://translate.google.com/",
@@ -185,6 +186,26 @@ def fetch_tts(text, tl="de"):
             return r.read(), r.headers.get("Content-Type", "audio/mpeg")
     except Exception as e:  # noqa: BLE001
         return None, str(e)
+
+
+def fetch_tts(text, tl="de"):
+    """Возвращает (audio_bytes, content_type, source) или (None, error_str, None).
+
+    source: 'google' (translate.google.com, client=tw-ob) или
+    'fallback' (translate.googleapis.com, client=gtx). Запасной источник
+    пробуем при не-200 / пустом теле / не-audio content-type основного.
+    """
+    audio, ct = _fetch_tts_once(GOOGLE_TTS, "tw-ob", text, tl)
+    if audio and str(ct).startswith("audio"):
+        return audio, ct, "google"
+    err1 = ct if audio is None else "bad response: %s, %d bytes" % (ct, len(audio))
+
+    audio, ct = _fetch_tts_once(GOOGLE_TTS_FALLBACK, "gtx", text, tl)
+    if audio and str(ct).startswith("audio"):
+        return audio, ct, "fallback"
+    err2 = ct if audio is None else "bad response: %s, %d bytes" % (ct, len(audio))
+
+    return None, "google: %s; fallback: %s" % (err1, err2), None
 
 
 # ══════════════════════════════════════════════════════
@@ -310,7 +331,7 @@ class handler(BaseHTTPRequestHandler):
                 self.end_headers()
                 self.wfile.write(b"missing text")
                 return
-            audio, ct = fetch_tts(text, tl)
+            audio, ct, source = fetch_tts(text, tl)
             if audio is None:
                 self.send_response(502)
                 self._cors()
@@ -320,6 +341,7 @@ class handler(BaseHTTPRequestHandler):
             self.send_response(200)
             self.send_header("Content-Type", ct)
             self.send_header("Content-Length", str(len(audio)))
+            self.send_header("X-TTS-Source", source)
             self._cors()
             self.send_header("Cache-Control", "public, max-age=604800, immutable")
             self.end_headers()
