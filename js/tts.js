@@ -232,7 +232,10 @@ const TTS = (() => {
     diag('speak "' + text + '"\nplatform=' + platform() + ' inTG=' + inTelegram() +
          ' ctx=' + ((getCtx() || {}).state) + ' words=' + words + ' fb=' + delay);
 
-    if (inTelegram()) { speakAudio(text, spans); return; }
+    // Фразы с подсветкой всегда идём через аудио-путь: там известна точная
+    // длительность MP3, поэтому подсветка синхронна и в браузере, и в Telegram.
+    // (speechSynthesis.onboundary ненадёжен — на многих голосах не срабатывает.)
+    if (inTelegram() || (spans && spans.length)) { speakAudio(text, spans); return; }
 
     const bestVoice = pickBestVoice();
     if (hasSpeech() && bestVoice) {
@@ -242,16 +245,6 @@ const TTS = (() => {
       u.pitch = pitch;
       u.voice = preferredVoice || bestVoice;
       let settled = false;
-      // На десктопе Web Speech умеет точные границы слов — идём по спанам подряд.
-      if (spans && spans.length) {
-        let idx = -1;
-        hlSpans = spans;
-        u.onboundary = (e) => {
-          if (e.name && e.name !== 'word') return;
-          idx++;
-          spans.forEach((s, i) => s.classList.toggle('tts-on', i === idx));
-        };
-      }
       const fb = () => {
         if (settled) return;
         settled = true;
@@ -259,7 +252,6 @@ const TTS = (() => {
         speakAudio(text, spans);
       };
       u.onstart = () => { settled = true; };
-      u.onend   = () => { if (settled) hlClear(); };
       u.onerror = fb;
       window.speechSynthesis.speak(u);
       setTimeout(fb, delay);

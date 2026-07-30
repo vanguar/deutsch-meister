@@ -1,4 +1,4 @@
-const CACHE = 'deutsch-meister-v60';
+const CACHE = 'deutsch-meister-v61';
 const SCOPE_PATH = new URL(self.registration.scope).pathname.replace(/\/$/, '');
 const BASE = SCOPE_PATH === '' ? '' : SCOPE_PATH;
 
