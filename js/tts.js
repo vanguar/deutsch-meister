@@ -1,5 +1,5 @@
 const TTS = (() => {
-  const VERSION = 'v19';
+  const VERSION = 'v20';
   const PROXY = 'https://deutsch-meister-puce.vercel.app/api/tts';
 
   let preferredVoice = null;
@@ -83,17 +83,17 @@ const TTS = (() => {
   let hlTimers = [];
 
   // Визуал задаём inline-стилями (не CSS-классом) — чтобы не зависеть от кэша
-  // base.css, особенно в Telegram WebView. Плавное свечение вместо заливки.
-  const HL_TRANS = 'color .22s ease, text-shadow .22s ease';
+  // base.css, особенно в Telegram WebView. Только мягкое свечение (тень),
+  // БЕЗ смены цвета текста — иначе слова «рябят» при быстром переключении.
+  // Длинный transition даёт плавную волну: свечение соседних слов перетекает.
+  const HL_TRANS = 'text-shadow .38s ease';
   function hlOn(el) {
     el.style.transition = HL_TRANS;
-    el.style.color = 'var(--accent, #e8c547)';
-    el.style.textShadow = '0 0 12px var(--accent, #e8c547), 0 0 5px var(--accent, #e8c547)';
+    el.style.textShadow = '0 0 16px var(--accent, #e8c547), 0 0 7px var(--accent, #e8c547)';
   }
   function hlOff(el) {
     el.style.transition = HL_TRANS;
     el.style.textShadow = '0 0 0 rgba(0,0,0,0)';
-    el.style.color = '';
   }
 
   function hlClear() {
