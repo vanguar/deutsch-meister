@@ -1,4 +1,4 @@
-const CACHE = 'deutsch-meister-v63';
+const CACHE = 'deutsch-meister-v64';
 const SCOPE_PATH = new URL(self.registration.scope).pathname.replace(/\/$/, '');
 const BASE = SCOPE_PATH === '' ? '' : SCOPE_PATH;
 
@@ -72,17 +72,16 @@ self.addEventListener('fetch', e => {
     return;
   }
 
-  // Everything else → cache-first (assets are versioned via ?v= query)
+  // Everything else (JS/CSS/…) → network-first: всегда берём свежее из сети,
+  // а кэш держим только как офлайн-фолбэк. Так новые правки видно обычной
+  // перезагрузкой — без бампа ?v= и без ручной чистки кэша.
   e.respondWith(
-    caches.match(req).then(cached => {
-      if (cached) return cached;
-      return fetch(req).then(res => {
-        if (res && res.ok) {
-          const clone = res.clone();
-          caches.open(CACHE).then(c => c.put(req, clone));
-        }
-        return res;
-      }).catch(() => caches.match(BASE + '/index.html'));
-    })
+    fetch(req).then(res => {
+      if (res && res.ok) {
+        const clone = res.clone();
+        caches.open(CACHE).then(c => c.put(req, clone));
+      }
+      return res;
+    }).catch(() => caches.match(req).then(c => c || caches.match(BASE + '/index.html')))
   );
 });
