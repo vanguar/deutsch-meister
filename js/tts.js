@@ -1,5 +1,5 @@
 const TTS = (() => {
-  const VERSION = 'v18';
+  const VERSION = 'v19';
   const PROXY = 'https://deutsch-meister-puce.vercel.app/api/tts';
 
   let preferredVoice = null;
@@ -82,23 +82,41 @@ const TTS = (() => {
   let hlSpans = null;
   let hlTimers = [];
 
+  // Визуал задаём inline-стилями (не CSS-классом) — чтобы не зависеть от кэша
+  // base.css, особенно в Telegram WebView. Плавное свечение вместо заливки.
+  const HL_TRANS = 'color .22s ease, text-shadow .22s ease';
+  function hlOn(el) {
+    el.style.transition = HL_TRANS;
+    el.style.color = 'var(--accent, #e8c547)';
+    el.style.textShadow = '0 0 12px var(--accent, #e8c547), 0 0 5px var(--accent, #e8c547)';
+  }
+  function hlOff(el) {
+    el.style.transition = HL_TRANS;
+    el.style.textShadow = '0 0 0 rgba(0,0,0,0)';
+    el.style.color = '';
+  }
+
   function hlClear() {
     hlTimers.forEach(t => clearTimeout(t));
     hlTimers = [];
-    if (hlSpans) { hlSpans.forEach(s => s.classList.remove('tts-on')); }
+    if (hlSpans) { hlSpans.forEach(hlOff); }
     hlSpans = null;
   }
 
-  // Раскладка по реальной длительности аудио, пропорционально длине слов.
+  // Раскладка по длительности аудио, пропорционально длине слов.
+  // Если длительность неизвестна (в TG <audio> она часто не готова к старту) —
+  // оцениваем по буквам, чтобы подсветка запускалась в любом случае.
   function hlByDuration(spans, durSec) {
     hlClear();
-    if (!spans || !spans.length || !durSec || !isFinite(durSec) || durSec <= 0) return;
+    if (!spans || !spans.length) return;
     hlSpans = spans;
     const letters = s => Math.max(1, (s.textContent.match(/[A-Za-zÄäÖöÜüßÉé]/g) || []).length);
     const weights = spans.map(letters);
     const total = weights.reduce((a, b) => a + b, 0) || 1;
+    let ms = durSec * 1000;
+    let estimated = false;
+    if (!ms || !isFinite(ms) || ms <= 0) { ms = 300 + total * 70; estimated = true; }
     // У Google TTS есть небольшая пауза в начале/конце — чуть поджимаем.
-    const ms = durSec * 1000;
     const lead = Math.min(120, ms * 0.04);
     const usable = ms * 0.92;
     let acc = 0;
@@ -106,11 +124,12 @@ const TTS = (() => {
       const startAt = lead + (acc / total) * usable;
       acc += weights[i];
       const endAt = lead + (acc / total) * usable;
-      hlTimers.push(setTimeout(() => el.classList.add('tts-on'), startAt));
-      hlTimers.push(setTimeout(() => el.classList.remove('tts-on'), endAt));
+      hlTimers.push(setTimeout(() => hlOn(el), startAt));
+      hlTimers.push(setTimeout(() => hlOff(el), endAt));
     });
     hlTimers.push(setTimeout(hlClear, ms + 250));
-    diag('highlight: ' + spans.length + ' слов за ' + durSec.toFixed(2) + 'с');
+    diag('highlight: ' + spans.length + ' слов за ' + (ms / 1000).toFixed(2) + 'с' +
+         (estimated ? ' (оценка)' : ''));
   }
 
   function wordCount(text) {
