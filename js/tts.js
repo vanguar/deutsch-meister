@@ -1,5 +1,5 @@
 const TTS = (() => {
-  const VERSION = 'v17';
+  const VERSION = 'v18';
   const PROXY = 'https://deutsch-meister-puce.vercel.app/api/tts';
 
   let preferredVoice = null;
@@ -77,11 +77,48 @@ const TTS = (() => {
     return String(text || '').replace(/\s+/g, ' ').trim();
   }
 
+  /* ── Синхронная подсветка слов ────────────────────────────────
+     spans — массив DOM-элементов слов в порядке фразы.            */
+  let hlSpans = null;
+  let hlTimers = [];
+
+  function hlClear() {
+    hlTimers.forEach(t => clearTimeout(t));
+    hlTimers = [];
+    if (hlSpans) { hlSpans.forEach(s => s.classList.remove('tts-on')); }
+    hlSpans = null;
+  }
+
+  // Раскладка по реальной длительности аудио, пропорционально длине слов.
+  function hlByDuration(spans, durSec) {
+    hlClear();
+    if (!spans || !spans.length || !durSec || !isFinite(durSec) || durSec <= 0) return;
+    hlSpans = spans;
+    const letters = s => Math.max(1, (s.textContent.match(/[A-Za-zÄäÖöÜüßÉé]/g) || []).length);
+    const weights = spans.map(letters);
+    const total = weights.reduce((a, b) => a + b, 0) || 1;
+    // У Google TTS есть небольшая пауза в начале/конце — чуть поджимаем.
+    const ms = durSec * 1000;
+    const lead = Math.min(120, ms * 0.04);
+    const usable = ms * 0.92;
+    let acc = 0;
+    spans.forEach((el, i) => {
+      const startAt = lead + (acc / total) * usable;
+      acc += weights[i];
+      const endAt = lead + (acc / total) * usable;
+      hlTimers.push(setTimeout(() => el.classList.add('tts-on'), startAt));
+      hlTimers.push(setTimeout(() => el.classList.remove('tts-on'), endAt));
+    });
+    hlTimers.push(setTimeout(hlClear, ms + 250));
+    diag('highlight: ' + spans.length + ' слов за ' + durSec.toFixed(2) + 'с');
+  }
+
   function wordCount(text) {
     return (cleanText(text).match(/[A-Za-zÄäÖöÜüß]+/g) || []).length;
   }
 
   function stopCurrent() {
+    hlClear();
     try { window.speechSynthesis?.cancel(); } catch (e) {}
     try {
       if (currentSource) {
@@ -129,7 +166,7 @@ const TTS = (() => {
   }
 
   /* ── Путь 1: Web Audio (надёжнее в WebView) ── */
-  function playWebAudio(text) {
+  function playWebAudio(text, spans) {
     const c = getCtx();
     if (!c) return Promise.reject(new Error('no AudioContext'));
     const key = text;
@@ -147,11 +184,12 @@ const TTS = (() => {
       s.connect(c.destination);
       s.onended = () => { if (currentSource === s) currentSource = null; };
       s.start(0);
+      hlByDuration(spans, buf.duration);   // точная длительность из буфера
     });
   }
 
   /* ── Путь 2: <audio> с перебором источников ── */
-  function playAudioEl(text) {
+  function playAudioEl(text, spans) {
     const urls = [proxyUrl(text), gUrl('translate.google.com', text), gUrl('translate.googleapis.com', text)];
     const el = getAudio();
     try { el.pause(); el.currentTime = 0; } catch (e) {}
@@ -161,7 +199,7 @@ const TTS = (() => {
       if (i >= urls.length) { diag('❌ audio: все источники молчат'); return; }
       const url = urls[i++];
       el.onerror = () => { diag('audio error code=' + (el.error && el.error.code) + ' на #' + i + ' → next'); tryNext(); };
-      el.onplaying = () => diag('▶ PLAYING (audio) #' + i);
+      el.onplaying = () => { diag('▶ PLAYING (audio) #' + i); hlByDuration(spans, el.duration); };
       el.src = url;
       el.load();
       const p = el.play();
@@ -172,10 +210,10 @@ const TTS = (() => {
     tryNext();
   }
 
-  function speakAudio(text) {
-    playWebAudio(text)
+  function speakAudio(text, spans) {
+    playWebAudio(text, spans)
       .then(() => diag('✅ WebAudio сыграл'))
-      .catch(e => { diag('WebAudio не смог: ' + (e && e.message) + ' → <audio>'); playAudioEl(text); });
+      .catch(e => { diag('WebAudio не смог: ' + (e && e.message) + ' → <audio>'); playAudioEl(text, spans); });
   }
 
   function pickBestVoice() {
@@ -183,7 +221,7 @@ const TTS = (() => {
     return v.find(x => x.lang === 'de-DE') || v.find(x => x.lang.startsWith('de')) || null;
   }
 
-  function speak(text, { rate = 0.85, pitch = 1, fallbackDelay = null } = {}) {
+  function speak(text, { rate = 0.85, pitch = 1, fallbackDelay = null, spans = null } = {}) {
     text = cleanText(text);
     if (!text) return;
     const words = wordCount(text);
@@ -194,7 +232,7 @@ const TTS = (() => {
     diag('speak "' + text + '"\nplatform=' + platform() + ' inTG=' + inTelegram() +
          ' ctx=' + ((getCtx() || {}).state) + ' words=' + words + ' fb=' + delay);
 
-    if (inTelegram()) { speakAudio(text); return; }
+    if (inTelegram()) { speakAudio(text, spans); return; }
 
     const bestVoice = pickBestVoice();
     if (hasSpeech() && bestVoice) {
@@ -204,23 +242,34 @@ const TTS = (() => {
       u.pitch = pitch;
       u.voice = preferredVoice || bestVoice;
       let settled = false;
+      // На десктопе Web Speech умеет точные границы слов — идём по спанам подряд.
+      if (spans && spans.length) {
+        let idx = -1;
+        hlSpans = spans;
+        u.onboundary = (e) => {
+          if (e.name && e.name !== 'word') return;
+          idx++;
+          spans.forEach((s, i) => s.classList.toggle('tts-on', i === idx));
+        };
+      }
       const fb = () => {
         if (settled) return;
         settled = true;
         try { window.speechSynthesis.cancel(); } catch (e) {}
-        speakAudio(text);
+        speakAudio(text, spans);
       };
       u.onstart = () => { settled = true; };
+      u.onend   = () => { if (settled) hlClear(); };
       u.onerror = fb;
       window.speechSynthesis.speak(u);
       setTimeout(fb, delay);
     } else {
-      speakAudio(text);
+      speakAudio(text, spans);
     }
   }
 
-  function speakPhrase(text) {
-    speak(text, { rate: 0.82, fallbackDelay: 2200 });
+  function speakPhrase(text, spans) {
+    speak(text, { rate: 0.82, fallbackDelay: 2200, spans: spans || null });
   }
 
   function speakSlow(text) { speak(text, { rate: 0.65 }); }
@@ -244,3 +293,13 @@ TTS.init();
 function speak(text)     { TTS.speak(text); }
 function speakPhrase(text) { TTS.speakPhrase(text); }
 function speakSlow(text) { TTS.speakSlow(text); }
+
+// Озвучка фразы с синхронной подсветкой слов внутри её карточки.
+function speakPhraseEl(btn, text) {
+  let spans = [];
+  try {
+    const card = btn.closest('.phrase-card');
+    if (card) spans = Array.prototype.slice.call(card.querySelectorAll('.phrase-de .word-speak'));
+  } catch (e) {}
+  TTS.speakPhrase(text, spans);
+}

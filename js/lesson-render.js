@@ -2106,7 +2106,7 @@ zweiundzwanzig|двадцать два|Числительное
           <div class="phrase-ru">${esc(p.ru)}</div>
           ${p.note ? `<div class="phrase-note">${esc(p.note)}</div>` : ''}
         </div>
-        <button class="speak-btn" type="button" onclick="event.stopPropagation();speakPhrase('${jsStr(p.audio || p.de)}')" title="Озвучить фразу">🔊</button>
+        <button class="speak-btn" type="button" onclick="event.stopPropagation();speakPhraseEl(this,'${jsStr(p.audio || p.de)}')" title="Озвучить фразу">🔊</button>
       `;
       grid.appendChild(card);
     });

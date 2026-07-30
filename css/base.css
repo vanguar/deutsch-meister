@@ -257,6 +257,14 @@ h1, h2, h3 {
   line-height: 1;
 }
 .word-speak:hover .wi { opacity: 1; }
+/* Подсветка слова во время синхронной озвучки фразы */
+.word-speak.tts-on {
+  color: var(--bg, #10131a);
+  background: var(--accent);
+  border-radius: var(--r-sm);
+  box-shadow: 0 0 0 2px var(--accent);
+  transition: background .08s linear, color .08s linear;
+}
 
 /* ── Speak Button (standalone icon) ── */
 .speak-btn {
