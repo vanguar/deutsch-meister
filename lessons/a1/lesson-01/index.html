@@ -346,7 +346,7 @@ function renderPhrases() {
         <div class="phrase-ru">${p.ru}</div>
         ${p.note ? `<div class="phrase-note">${p.note}</div>` : ''}
       </div>
-      <button class="speak-btn" type="button" onclick="event.stopPropagation();speakPhrase('${audioSafe}')" title="Озвучить всю фразу">🔊</button>
+      <button class="speak-btn" type="button" onclick="event.stopPropagation();speakPhraseEl(this,'${audioSafe}')" title="Озвучить всю фразу">🔊</button>
     `;
     grid.appendChild(card);
   });
