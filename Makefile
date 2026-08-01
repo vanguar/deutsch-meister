@@ -1,7 +1,7 @@
 # Deutsch Meister — команды деплоя (см. ДЕПЛОЙ-инструкция.md)
 # Windows: запускать из Git Bash. Без make — прямые команды указаны в целях.
 
-.PHONY: bump validate deploy-web deploy-api check-api
+.PHONY: bump validate check-tips deploy-web deploy-api check-api
 
 # Поднять ?v=N во всех HTML + CACHE в service-worker.js (обязательно перед
 # пушем любых правок JS/CSS)
@@ -11,6 +11,11 @@ bump:
 # Проверить целостность уроков (данные <-> оболочки, версии, подсказки)
 validate:
 	python scripts/validate_lessons.py
+
+# Регресс подсказок: у каждого слова фраз всех уроков подсказка обязана
+# содержать русский перевод (кириллицу). Падает, если нет.
+check-tips:
+	node tools/check_tips.js
 
 # Фронтенд: GitHub Pages деплоит сам при пуше в main
 deploy-web:

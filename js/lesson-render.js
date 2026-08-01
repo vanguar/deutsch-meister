@@ -1585,6 +1585,53 @@ Zitrone|лимон|Существительное|die Zitrone
 Zucker|сахар|Существительное|der Zucker
 zweite|вторая / второй|Числительное|порядковое от zwei
 zweiundzwanzig|двадцать два|Числительное
+Mittag|полдень|Существительное|der Mittag — полдень
+Mitternacht|полночь|Существительное|die Mitternacht — полночь
+Arme|руки|Форма мн. числа|der Arm → die Arme
+Monate|месяцы|Форма мн. числа|der Monat → die Monate
+gelernt|учил / выучил|Форма глагола|Partizip II от lernen
+geschlafen|спал|Форма глагола|Partizip II от schlafen
+gekauft|купил|Форма глагола|Partizip II от kaufen
+Tagen|дням / дней|Форма слова|Dativ Pl.: der Tag → den Tagen
+geschmeckt|понравилось (на вкус)|Форма глагола|Partizip II от schmecken
+Kostüme|костюмы|Форма мн. числа|das Kostüm → die Kostüme
+Sorgen|заботы / тревоги|Существительное|sich Sorgen machen — беспокоиться
+Treibst|занимаешься|Форма глагола|Sport treiben — заниматься спортом
+verloren|проиграл / потерянный|Форма глагола|Partizip II от verlieren
+Ski|лыжи|Существительное|Ski fahren — кататься на лыжах
+treffen|встречать / принимать (решение)|Глагол|sich treffen — встречаться; eine Entscheidung treffen — принять решение
+gestritten|поссорился|Форма глагола|Partizip II от streiten
+entschuldigt|извинился|Форма глагола|sich entschuldigen — извиняться
+beste|лучший|Форма слова|превосходная степень от gut
+schnellsten|быстрее всех|Форма слова|am schnellsten — быстрее всего
+unterzeichnet|подписан|Форма глагола|Partizip II от unterzeichnen
+gedeckt|накрыт|Форма глагола|Partizip II от decken
+geraucht|курил|Форма глагола|Partizip II от rauchen
+bereit|готов|Прилагательное|bereit sein zu — быть готовым к
+eingestellt|принят (на работу)|Форма глагола|Partizip II от einstellen
+abgeholzt|вырублен|Форма глагола|Partizip II от abholzen
+leisten|совершать / вносить|Глагол|einen Beitrag leisten — вносить вклад
+nachhaltige|устойчивые|Форма слова|склонённая форма nachhaltig — устойчивый
+Falschmeldung|фейковая новость|Существительное|die Falschmeldung — дезинформация
+schlafende|спящий|Форма слова|Partizip I от schlafen
+gelesene|прочитанный|Форма слова|Partizip II от lesen
+ankommenden|прибывающие|Форма слова|Partizip I от ankommen
+wachsendes|растущее|Форма слова|Partizip I от wachsen
+gemeinte|подразумеваемый|Форма слова|Partizip II от meinen
+zerstörten|разрушенные|Форма слова|Partizip II от zerstören
+eröffnete|открытый|Форма слова|Partizip II от eröffnen
+festgestellt|установлено|Форма глагола|Partizip II от feststellen
+Rahmen|рамки|Существительное|im Rahmen — в рамках
+hin|указывать (частица)|Наречие|hindeuten auf — указывать на
+Verfügung|распоряжение|Существительное|zur Verfügung stehen — быть в распоряжении
+Platz|место|Существительное|Platz nehmen — садиться
+Rolle|роль|Существительное|eine Rolle spielen — играть роль
+stellen|ставить / задавать|Глагол|eine Frage stellen — задавать вопрос
+Bahnhof|вокзал|Существительное|nur Bahnhof verstehen — ничего не понимать
+voll|полный|Прилагательное|die Nase voll haben — быть сытым по горло
+Boot|лодка|Существительное|im selben Boot sitzen — быть в одной лодке
+Elefanten|слон|Форма слова|aus einer Mücke einen Elefanten machen — делать из мухи слона
+Kraft|сила|Существительное|in Kraft treten — вступать в силу
 `;
 
   const NOUN_FORM_OVERRIDES = {
@@ -1813,7 +1860,10 @@ zweiundzwanzig|двадцать два|Числительное
     if (!info) return '';
 
     const title = info?.word || word;
-    const translation = info?.translations?.[0] || '';
+    // Показываем именно русский перевод: берём первую строку с кириллицей,
+    // чтобы немецкие формы/подсказки (напр. «Sport treiben») не подменяли перевод.
+    const allTranslations = info?.translations || [];
+    const translation = allTranslations.find(t => /[А-Яа-яЁё]/.test(t)) || '';
     const kind = info?.kind || 'Слово';
     const details = (info?.details || []).filter(Boolean).slice(0, 2);
     const conjugations = (info?.conjugations || []).slice(0, 3);
