@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Библиотека — книги на немецком | Deutsch Meister</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#7c6af7">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Deutsch Meister">
+  <link rel="apple-touch-icon" href="/deutsch-meister/icons/icon.svg">
+  <link rel="icon" type="image/svg+xml" href="/deutsch-meister/icons/icon.svg">
+
+  <link rel="stylesheet" href="css/base.css?v=51">
+  <link rel="stylesheet" href="css/reader.css?v=51">
+</head>
+<body>
+
+<div class="bg-mesh"></div>
+
+<div class="lib-page">
+
+  <!-- ── ШАПКА ── -->
+  <header class="lib-header">
+    <a class="lib-back" href="index.html">← Главная</a>
+
+    <div class="lib-header-titles">
+      <h1 class="lib-h1">Библиотека</h1>
+      <div class="lib-h1-sub">Книги на немецком с переводом</div>
+    </div>
+
+    <button id="themeToggle" class="lib-theme-btn" onclick="toggleTheme()"
+      title="Сменить тему" aria-label="Сменить тему">🌙</button>
+  </header>
+
+  <!-- ── КАТАЛОГ: загрузка / ошибка / карточки — рисует js/library.js ── -->
+  <main id="libContent" aria-busy="true" aria-live="polite"></main>
+
+</div>
+
+<script src="js/library.js?v=51"></script>
+<script>
+  function initTheme() {
+    let saved = 'dark';
+    try { saved = localStorage.getItem('dm_theme') || 'dark'; } catch (e) {}
+    document.documentElement.setAttribute('data-theme', saved);
+    const btn = document.getElementById('themeToggle');
+    if (btn) btn.textContent = saved === 'dark' ? '☀️' : '🌙';
+  }
+  function toggleTheme() {
+    const cur = document.documentElement.getAttribute('data-theme') || 'dark';
+    const next = cur === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    try { localStorage.setItem('dm_theme', next); } catch (e) {}
+    const btn = document.getElementById('themeToggle');
+    if (btn) btn.textContent = next === 'dark' ? '☀️' : '🌙';
+  }
+  initTheme();
+</script>
+
+</body>
+</html>

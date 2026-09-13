@@ -1,0 +1,262 @@
+/* ═══════════════════════════════════════════════
+   reader.css — Библиотека и читалка книг
+   Deutsch Meister Course
+   Неймспейсы: lib- (библиотека), rd- (ридер, этап 2B)
+   ═══════════════════════════════════════════════ */
+
+/* ══ 1. КАРКАС СТРАНИЦЫ ══ */
+
+.lib-page {
+  position: relative;
+  z-index: 1;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 32px 24px 64px;
+}
+
+/* ══ 2. ШАПКА ══ */
+
+.lib-header {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-md);
+  margin-bottom: 28px;
+}
+
+.lib-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: var(--r-full);
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+  transition: all var(--t-fast);
+}
+.lib-back:hover {
+  border-color: var(--accent2);
+  color: var(--text-strong);
+  background: rgba(124,106,247,.08);
+}
+
+.lib-header-titles { flex: 1; min-width: 0; }
+
+.lib-h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 34px;
+  font-weight: 900;
+  line-height: 1.1;
+  color: var(--text-strong);
+}
+.lib-h1-sub {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.lib-theme-btn {
+  flex-shrink: 0;
+  background: var(--surface3);
+  border: 1px solid var(--border);
+  border-radius: var(--r-full);
+  padding: 6px 13px;
+  font-size: 15px;
+  line-height: 1;
+  transition: all var(--t-fast);
+}
+.lib-theme-btn:hover { border-color: var(--accent2); }
+
+/* ══ 3. СЕТКА КАРТОЧЕК ══ */
+
+.lib-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+.lib-card {
+  display: flex;
+  gap: var(--sp-md);
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: 18px;
+  animation: fadeUp .4s both;
+  transition: border-color var(--t-normal), transform var(--t-normal);
+}
+.lib-card:hover {
+  border-color: var(--border-light);
+  transform: translateY(-2px);
+}
+
+.lib-cover {
+  flex-shrink: 0;
+  width: 64px;
+  height: 84px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 34px;
+  background: var(--surface3);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.lib-body {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.lib-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--text-strong);
+}
+.lib-title-ru {
+  font-size: 13px;
+  color: var(--accent2);
+  margin-top: 2px;
+}
+
+.lib-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 14px;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+.lib-meta-item { color: var(--text); }
+/* минуты и главы держим одним неразрывным блоком, чтобы точка-разделитель
+   не оставалась висеть в конце строки при переносе */
+.lib-meta-stats { color: var(--text-dim); white-space: nowrap; }
+
+/* ══ 4. ПРОГРЕСС ══ */
+
+.lib-progress { margin-top: 2px; }
+
+.lib-bar {
+  height: 8px;
+  background: var(--surface3);
+  border: 1px solid var(--border-light);
+  border-radius: var(--r-full);
+  overflow: hidden;
+}
+.lib-bar-fill {
+  display: block;
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, var(--accent2), #9b8aff);
+  border-radius: var(--r-full);
+  transition: width var(--t-slow);
+}
+.lib-bar-fill.done {
+  background: linear-gradient(90deg, var(--green), #8ce9bb);
+}
+
+.lib-progress-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-sm);
+  margin-top: 7px;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+.lib-percent { font-weight: 600; color: var(--text); }
+.lib-percent.done { color: var(--green); }
+.lib-words { display: inline-flex; align-items: center; gap: 5px; }
+
+/* ══ 5. КНОПКА ДЕЙСТВИЯ ══ */
+
+.lib-cta {
+  align-self: flex-start;
+  margin-top: 4px;
+  padding: 10px 22px;
+  font-size: 13px;
+}
+
+/* ══ 6. СОСТОЯНИЯ: ЗАГРУЗКА / ОШИБКА / ПУСТО ══ */
+
+.lib-state {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: 40px 24px;
+  text-align: center;
+}
+.lib-state-icon { font-size: 40px; margin-bottom: 12px; }
+.lib-state-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-strong);
+  margin-bottom: 8px;
+}
+.lib-state-text {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  max-width: 460px;
+  margin: 0 auto;
+}
+.lib-state-detail {
+  display: block;
+  margin-top: 8px;
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  color: var(--text-dim);
+  word-break: break-word;
+}
+.lib-state-actions { margin-top: 20px; }
+
+.lib-state.error { border-color: rgba(240,107,107,.35); }
+.lib-state.error .lib-state-title { color: var(--accent3); }
+
+/* Спиннер загрузки */
+.lib-spinner {
+  width: 34px;
+  height: 34px;
+  margin: 0 auto 14px;
+  border: 3px solid var(--border);
+  border-top-color: var(--accent2);
+  border-radius: 50%;
+  animation: libSpin .8s linear infinite;
+}
+@keyframes libSpin { to { transform: rotate(360deg); } }
+
+/* ══ 7. СВЕТЛАЯ ТЕМА ══ */
+
+[data-theme="light"] .lib-card,
+[data-theme="light"] .lib-state { background: var(--surface); }
+[data-theme="light"] .lib-cover { background: var(--surface2); }
+
+/* ══ 8. АДАПТИВ ══ */
+
+@media (max-width: 720px) {
+  .lib-page { padding: 20px 16px 48px; }
+  .lib-grid { grid-template-columns: 1fr; }
+  .lib-h1   { font-size: 26px; }
+}
+
+@media (max-width: 420px) {
+  .lib-page { padding: 16px 12px 40px; }
+  .lib-header { flex-wrap: wrap; gap: 10px; }
+  .lib-header-titles { order: 3; flex-basis: 100%; }
+  .lib-h1 { font-size: 23px; }
+  .lib-card { padding: 14px; gap: 12px; }
+  .lib-cover { width: 52px; height: 68px; font-size: 27px; }
+  .lib-title { font-size: 16px; }
+  .lib-cta { align-self: stretch; text-align: center; justify-content: center; }
+  .lib-state { padding: 32px 16px; }
+}
