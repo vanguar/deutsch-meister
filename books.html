@@ -60,11 +60,26 @@
     <div class="rd-bar"><span class="rd-bar-fill" id="rdBarFill"></span></div>
     <div class="rd-controls">
       <button class="rd-nav-btn" id="rdPrev">‹ Назад</button>
-      <!-- место под кнопки этапов 2C/2D: перевод, озвучка, словарь -->
-      <div class="rd-slot" id="rdSlot"></div>
+      <div class="rd-slot" id="rdSlot">
+        <button class="rd-slot-btn" id="rdPrefsBtn" title="Настройки чтения"
+          aria-label="Настройки чтения">Aa</button>
+        <!-- здесь же добавится озвучка на этапе 2D -->
+      </div>
       <button class="rd-nav-btn" id="rdNext">Вперёд ›</button>
     </div>
   </footer>
+
+  <!-- ── НАСТРОЙКИ ЧТЕНИЯ: подложка + шторка, ряды строит js/reader.js ── -->
+  <div class="rd-sheet-back" id="rdSheetBack"></div>
+  <aside class="rd-sheet" id="rdSheet" role="dialog" aria-modal="true"
+    aria-label="Настройки чтения">
+    <div class="rd-sheet-grip"></div>
+    <div class="rd-sheet-head">
+      <div class="rd-sheet-title">Как читать</div>
+      <button class="rd-sheet-close" id="rdSheetClose" aria-label="Закрыть">✕</button>
+    </div>
+    <div id="rdSheetBody"></div>
+  </aside>
 
 </section>
 

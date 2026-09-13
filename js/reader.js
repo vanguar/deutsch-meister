@@ -5,13 +5,22 @@
    Пагинация — CSS multi-column, без ручного замера высоты:
      .rd-viewport { overflow: hidden }
      .rd-content  { column-width: <ширина вьюпорта>; height: <высота> }
-   Листание — transform: translateX(-page * (W + GAP)).
+   Листание — transform: translateX(-page * (W + gap)), зазор считается в
+   measure() и не меньше боковых полей: иначе соседняя страница видна в
+   полосе padding, которую overflow:hidden не режет.
 
-   Позиция — якорь { chapter, p, s } (первое видимое предложение),
-   номер страницы как позиция не хранится никогда: при другой
-   ширине экрана он означает другое место в тексте.
+   Позиция — якорь { chapter, p, s, w }: первое видимое слово (p — абзац,
+   s — предложение, w — слово в нём). Номер страницы как позиция не хранится
+   никогда: при другой ширине экрана он означает другое место в тексте.
+   Якорь именно по слову, а не по предложению: длинное предложение занимает
+   несколько страниц, и «первое предложение страницы» на таких страницах
+   указывало бы на колонку назад — каждая перепагинация отбрасывала бы
+   читателя на страницу раньше.
 
-   Zero dependencies. Жесты, тултип, озвучка и карточки — этапы 2C/2D.
+   Жесты — делегирование на .rd-viewport в capture-фазе, только Pointer
+   Events (иначе touch и click срабатывали бы дважды).
+
+   Zero dependencies. Тултип и перевод предложения — этап 3, озвучка — 2D.
    ═══════════════════════════════════════════════ */
 
 const Reader = (() => {
@@ -19,8 +28,43 @@ const Reader = (() => {
   /* ── Константы ── */
   const BOOKS_DIR = 'data/books/';
   const POS_KEY   = 'dm_book_pos:';
-  const GAP       = 32;    // px, зазор между колонками-страницами
+  const GAP_MIN   = 32;    // px, минимальный зазор между колонками-страницами
   const ANIM_MS   = 180;   // длительность листания, синхронно с css
+
+  /* ── Жесты ── */
+  const EDGE      = 0.18;  // доля ширины вьюпорта под боковые зоны листания
+  const SWIPE_MIN = 40;    // px, минимальный горизонтальный свайп
+  const SWIPE_MS  = 300;   // мс, дольше — уже не свайп
+  const TAP_SLOP  = 10;    // px, в пределах этого сдвига жест считается тапом
+
+  /* ── Настройки чтения (dm_reader_prefs) ── */
+  const PREFS_KEY = 'dm_reader_prefs';
+  const FS_STEPS  = [15, 17, 19, 21, 23];          // px
+  const LH_STEPS  = [1.5, 1.75, 2];
+  const MARGIN_STEPS = [                            // поля и ширина колонки
+    { pad: 12, measure: 860 },
+    { pad: 22, measure: 720 },
+    { pad: 38, measure: 580 }
+  ];
+  const THEMES = ['system', 'sepia', 'dark'];
+  const FONTS  = {
+    system: "'DM Sans', sans-serif",
+    serif:  "Georgia, 'Iowan Old Style', 'Times New Roman', serif"
+  };
+  const DEFAULT_PREFS = { fs: 1, lh: 1, theme: 'system', margin: 1, font: 'system' };
+
+  const SHEET_ROWS = [
+    { key: 'fs',     label: 'Размер шрифта',
+      opts: FS_STEPS.map((_, i) => ({ v: i, text: 'A', cls: 'fs-' + i })) },
+    { key: 'lh',     label: 'Межстрочный интервал',
+      opts: [{ v: 0, text: 'Плотно' }, { v: 1, text: 'Обычно' }, { v: 2, text: 'Свободно' }] },
+    { key: 'theme',  label: 'Тема страницы',
+      opts: [{ v: 'system', text: 'Системная' }, { v: 'sepia', text: 'Сепия' }, { v: 'dark', text: 'Тёмная' }] },
+    { key: 'margin', label: 'Поля',
+      opts: [{ v: 0, text: 'Узкие' }, { v: 1, text: 'Средние' }, { v: 2, text: 'Широкие' }] },
+    { key: 'font',   label: 'Шрифт',
+      opts: [{ v: 'system', text: 'Системный' }, { v: 'serif', text: 'Serif', cls: 'ff-serif' }] }
+  ];
 
   /* ── Состояние ── */
   const st = {
@@ -32,17 +76,22 @@ const Reader = (() => {
     chTotal: 0,
     page:    0,
     pages:   1,
+    gap:     GAP_MIN,  // фактический зазор, считается в measure()
     width:   0,
     height:  0,
     anchor:  null,   // { p, s } — первое видимое предложение
     open:    false,
     pushed:  false,  // мы добавили запись в history
-    retry:   null    // что повторить после ошибки
+    retry:   null,   // что повторить после ошибки
+    prefs:   null,   // настройки чтения
+    chromeHidden: false,
+    sheet:   false   // открыта шторка настроек
   };
 
   /* ── DOM ── */
   let elLib, elView, elViewport, elContent, elState,
-      elTitle, elSub, elPages, elBar, elPrev, elNext;
+      elTitle, elSub, elPages, elBar, elPrev, elNext,
+      elSheet, elSheetBack, elSheetBody;
 
   /* ── Утилиты ── */
 
@@ -86,8 +135,8 @@ const Reader = (() => {
     }
   }
 
-  // Формат из PROGRESS.md: { chapter, p, s, percent }.
-  // percent — только для карточки в библиотеке; восстановление идёт по p/s.
+  // Формат из PROGRESS.md: { chapter, p, s, percent } + w (слово в предложении).
+  // percent — только для карточки в библиотеке; восстановление идёт по p/s/w.
   function savePos() {
     if (!st.anchor || st.chTotal <= 0) return;
     const read    = (st.page + 1) / Math.max(1, st.pages);
@@ -96,6 +145,7 @@ const Reader = (() => {
       chapter: st.chIndex,
       p:       st.anchor.p,
       s:       st.anchor.s,
+      w:       st.anchor.w || 0,
       percent: Math.round(percent)
     };
     try {
@@ -114,13 +164,15 @@ const Reader = (() => {
   function renderSentence(text, p, s) {
     let out = '';
     let last = 0;
+    let i = 0;
     let m;
     WORD_RE.lastIndex = 0;
     while ((m = WORD_RE.exec(text)) !== null) {
       if (m.index > last) out += esc(text.slice(last, m.index));
       const w = m[0];
-      out += `<span class="bw" data-t="${esc(w.toLowerCase())}">${esc(w)}</span>`;
+      out += `<span class="bw" data-w="${i}" data-t="${esc(w.toLowerCase())}">${esc(w)}</span>`;
       last = m.index + w.length;
+      i++;
     }
     if (last < text.length) out += esc(text.slice(last));
     // Перевод предложения в DOM не кладём: он берётся из st.chapter по p/s (2C).
@@ -145,54 +197,74 @@ const Reader = (() => {
     // Ширину берём у самого .rd-content: у вьюпорта есть padding, и он
     // не должен попасть в шаг листания. Высоту — из вьюпорта минус padding.
     const cs = getComputedStyle(elViewport);
-    const padY = parseFloat(cs.paddingTop) + parseFloat(cs.paddingBottom);
+    const padL = parseFloat(cs.paddingLeft)  || 0;
+    const padR = parseFloat(cs.paddingRight) || 0;
+    const padY = (parseFloat(cs.paddingTop) || 0) + (parseFloat(cs.paddingBottom) || 0);
 
     st.width  = elContent.clientWidth;
     st.height = Math.max(0, elViewport.clientHeight - padY);
 
+    // overflow:hidden режет по padding-box вьюпорта, а не по колонке. Если
+    // зазор меньше боковых полей, левый край соседней страницы видно в полосе
+    // padding — поэтому зазор всегда не меньше самого широкого поля плюс запас.
+    st.gap = Math.max(GAP_MIN, Math.ceil(Math.max(padL, padR)) + 8);
+
     elContent.style.columnWidth = st.width + 'px';
-    elContent.style.columnGap   = GAP + 'px';
+    elContent.style.columnGap   = st.gap + 'px';
     elContent.style.height      = st.height + 'px';
 
-    // scrollWidth = pages * (W + GAP) - GAP
-    const step = st.width + GAP;
-    st.pages = step > 0 ? Math.max(1, Math.round(elContent.scrollWidth / step)) : 1;
+    // scrollWidth = pages * step - gap, поэтому делим (scrollWidth + gap):
+    // при большом зазоре (широкие поля на десктопе) простое
+    // round(scrollWidth / step) ошибается на страницу.
+    const step = st.width + st.gap;
+    st.pages = step > 0
+      ? Math.max(1, Math.round((elContent.scrollWidth + st.gap) / step))
+      : 1;
   }
 
   function colOf(el) {
-    const step = st.width + GAP;
+    const step = st.width + st.gap;
     if (!el || step <= 0) return 0;
     return Math.floor(el.offsetLeft / step);
   }
 
-  function sentences() {
-    return elContent.querySelectorAll('.bs');
-  }
-
-  // Первое предложение, начинающееся на текущей странице. Если страница
-  // целиком занята «хвостом» длинного предложения — берём его начало.
+  // Первое слово текущей страницы. Слово в колонку влезает целиком, поэтому
+  // такой якорь указывает ровно на видимую страницу. Переносимые по слогам
+  // слова могут быть разорваны колонкой — у них два client-прямоугольника,
+  // такие пропускаем.
   function anchorFromPage() {
+    const words = elContent.querySelectorAll('.bw');
     let fallback = null;
-    const list = sentences();
-    for (let i = 0; i < list.length; i++) {
-      const col = colOf(list[i]);
-      if (col === st.page) return list[i];
-      if (col < st.page) fallback = list[i];
+    for (let i = 0; i < words.length; i++) {
+      const col = colOf(words[i]);
+      if (col === st.page) {
+        if (words[i].getClientRects().length === 1) return words[i];
+        if (!fallback) fallback = words[i];
+      }
       if (col > st.page) break;
     }
-    return fallback;
+    return fallback || elContent.querySelector('.bw');
   }
 
   function syncAnchor() {
     const el = anchorFromPage();
-    st.anchor = el
-      ? { p: Number(el.dataset.p), s: Number(el.dataset.s) }
-      : { p: 0, s: 0 };
+    const bs = el ? el.closest('.bs') : null;
+    st.anchor = bs
+      ? { p: Number(bs.dataset.p), s: Number(bs.dataset.s), w: Number(el.dataset.w) || 0 }
+      : { p: 0, s: 0, w: 0 };
   }
 
+  // Ищем сохранённое слово; если его нет (позиция из старой версии, где
+  // якорь был по предложению, или текст главы изменился) — берём предложение.
   function anchorEl(anchor) {
     if (!anchor) return null;
-    return elContent.querySelector(`.bs[data-p="${anchor.p}"][data-s="${anchor.s}"]`);
+    const bs = elContent.querySelector(`.bs[data-p="${anchor.p}"][data-s="${anchor.s}"]`);
+    if (!bs) return null;
+    if (typeof anchor.w === 'number') {
+      const bw = bs.querySelector(`.bw[data-w="${anchor.w}"]`);
+      if (bw) return bw;
+    }
+    return bs;
   }
 
   function pageOfAnchor(anchor) {
@@ -203,7 +275,7 @@ const Reader = (() => {
 
   function applyTransform(animate) {
     elContent.style.transition = animate ? `transform ${ANIM_MS}ms ease` : 'none';
-    elContent.style.transform  = `translateX(${-st.page * (st.width + GAP)}px)`;
+    elContent.style.transform  = `translateX(${-st.page * (st.width + st.gap)}px)`;
     if (!animate) {
       // Сбрасываем inline-none, чтобы следующее листание снова было плавным
       void elContent.offsetWidth;
@@ -339,7 +411,11 @@ const Reader = (() => {
             && startPos.chapter >= 0 && startPos.chapter < st.chTotal) {
           index = startPos.chapter;
           if (typeof startPos.p === 'number' && typeof startPos.s === 'number') {
-            where = { anchor: { p: startPos.p, s: startPos.s } };
+            where = { anchor: {
+              p: startPos.p,
+              s: startPos.s,
+              w: typeof startPos.w === 'number' ? startPos.w : 0
+            } };
           }
         }
         return loadChapter(index, where);
@@ -379,6 +455,183 @@ const Reader = (() => {
     resizeTimer = setTimeout(repaginate, 120);
   }
 
+  /* ══ Настройки чтения ══ */
+
+  function clampIdx(v, len, def) {
+    const n = Number(v);
+    return Number.isInteger(n) && n >= 0 && n < len ? n : def;
+  }
+
+  function readPrefs() {
+    let raw = null;
+    try {
+      raw = localStorage.getItem(PREFS_KEY);
+    } catch (e) {
+      console.warn('[Reader] localStorage недоступен для настроек', e);
+      return Object.assign({}, DEFAULT_PREFS);
+    }
+    if (!raw) return Object.assign({}, DEFAULT_PREFS);
+    try {
+      const p = JSON.parse(raw) || {};
+      return {
+        fs:     clampIdx(p.fs,     FS_STEPS.length,     DEFAULT_PREFS.fs),
+        lh:     clampIdx(p.lh,     LH_STEPS.length,     DEFAULT_PREFS.lh),
+        margin: clampIdx(p.margin, MARGIN_STEPS.length, DEFAULT_PREFS.margin),
+        theme:  THEMES.indexOf(p.theme) >= 0 ? p.theme : DEFAULT_PREFS.theme,
+        font:   FONTS[p.font] ? p.font : DEFAULT_PREFS.font
+      };
+    } catch (e) {
+      console.warn('[Reader] повреждённые настройки → значения по умолчанию', e);
+      return Object.assign({}, DEFAULT_PREFS);
+    }
+  }
+
+  function savePrefs() {
+    try {
+      localStorage.setItem(PREFS_KEY, JSON.stringify(st.prefs));
+    } catch (e) {
+      console.warn('[Reader] не удалось сохранить настройки', e);
+    }
+  }
+
+  // Только CSS-переменные и data-rd-theme на .rd-view: тема ридера живёт
+  // в своём слое --rd-* и с глобальной data-theme не конфликтует.
+  function applyPrefs() {
+    if (!elView || !st.prefs) return;
+    const p = st.prefs;
+    const m = MARGIN_STEPS[p.margin];
+    elView.style.setProperty('--rd-fs', FS_STEPS[p.fs] + 'px');
+    elView.style.setProperty('--rd-lh', String(LH_STEPS[p.lh]));
+    elView.style.setProperty('--rd-font', FONTS[p.font]);
+    elView.style.setProperty('--rd-pad-x', m.pad + 'px');
+    elView.style.setProperty('--rd-measure', m.measure + 'px');
+    elView.setAttribute('data-rd-theme', p.theme);
+  }
+
+  // После смены настройки перепагинируем с сохранением якоря сразу же:
+  // measure() читает clientWidth/scrollWidth, а чтение форсирует layout
+  // с новыми переменными. Через requestAnimationFrame делать нельзя —
+  // в невидимой вкладке кадры не идут, и пересчёт отставал на один шаг.
+  // Второй проход — когда догрузится шрифт (смена на serif и обратно).
+  function afterPrefChange() {
+    if (!st.open || !st.chapter) return;
+    repaginate();
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(() => { if (st.open) repaginate(); });
+    }
+  }
+
+  function setPref(key, value) {
+    if (!st.prefs || !(key in st.prefs)) return;
+    const next = (key === 'theme' || key === 'font') ? String(value) : Number(value);
+    if (st.prefs[key] === next) return;
+    st.prefs[key] = next;
+    savePrefs();
+    applyPrefs();
+    markSheet();
+    afterPrefChange();
+  }
+
+  /* ── Шторка настроек ── */
+
+  function buildSheet() {
+    if (!elSheetBody) return;
+    elSheetBody.innerHTML = SHEET_ROWS.map(row => `
+      <div class="rd-row">
+        <div class="rd-row-label">${esc(row.label)}</div>
+        <div class="rd-seg" role="group" aria-label="${esc(row.label)}">
+          ${row.opts.map(o => `<button type="button" class="${esc(o.cls || '')}"
+            data-pref="${esc(row.key)}" data-value="${esc(o.v)}"
+            aria-pressed="${String(st.prefs[row.key]) === String(o.v)}"
+            >${esc(o.text)}</button>`).join('')}
+        </div>
+      </div>`).join('');
+  }
+
+  function markSheet() {
+    if (!elSheetBody) return;
+    elSheetBody.querySelectorAll('button[data-pref]').forEach(btn => {
+      const same = String(st.prefs[btn.dataset.pref]) === String(btn.dataset.value);
+      btn.setAttribute('aria-pressed', same ? 'true' : 'false');
+    });
+  }
+
+  function openSheet() {
+    if (!elSheet) return;
+    buildSheet();
+    st.sheet = true;
+    elSheet.classList.add('show');
+    elSheetBack.classList.add('show');
+  }
+
+  function closeSheet() {
+    if (!elSheet) return;
+    st.sheet = false;
+    elSheet.classList.remove('show');
+    elSheetBack.classList.remove('show');
+  }
+
+  /* ── Панели: скрыть / показать ── */
+
+  // Только класс на .rd-view → opacity/transform/pointer-events. Размеры
+  // .rd-viewport не меняются, поэтому перепагинации здесь нет и быть не должно.
+  function toggleChrome(force) {
+    const hide = (force === undefined) ? !st.chromeHidden : !!force;
+    st.chromeHidden = hide;
+    elView.classList.toggle('rd-chrome-hidden', hide);
+  }
+
+  /* ══ Жесты ══ */
+
+  let gesture = null;
+
+  function onPointerDown(e) {
+    if (e.pointerType === 'mouse' && e.button !== 0) return;
+    if (!e.isPrimary) { gesture = null; return; }   // второй палец — отменяем жест
+    gesture = { x: e.clientX, y: e.clientY, t: Date.now(), id: e.pointerId };
+  }
+
+  function onPointerUp(e) {
+    const g = gesture;
+    gesture = null;
+    if (!g || e.pointerId !== g.id || st.sheet) return;
+
+    // кнопки поверх текста (состояние загрузки/ошибки) — это не жест
+    if (e.target.closest && e.target.closest('button, a, .rd-state')) return;
+
+    const dx = e.clientX - g.x;
+    const dy = e.clientY - g.y;
+    const adx = Math.abs(dx);
+    const ady = Math.abs(dy);
+
+    // свайп: горизонтальный, быстрый и достаточно длинный
+    if (adx > SWIPE_MIN && adx > ady && (Date.now() - g.t) < SWIPE_MS) {
+      if (dx < 0) next(); else prev();
+      return;
+    }
+    if (ady > adx && ady > SWIPE_MIN) return;        // вертикальный свайп — игнор
+    if (adx > TAP_SLOP || ady > TAP_SLOP) return;    // перетаскивание, не тап
+
+    const r = elViewport.getBoundingClientRect();
+    const rel = r.width > 0 ? (e.clientX - r.left) / r.width : 0.5;
+    const word = e.target.closest && e.target.closest('.bw');
+
+    // Боковые зоны: тап по слову их выигрывает и страницу не листает —
+    // слово зарезервировано под тултип этапа 3.
+    if (rel < EDGE || rel > 1 - EDGE) {
+      if (word) return;
+      if (rel < EDGE) prev(); else next();
+      return;
+    }
+
+    // Центр: панели. Текст занимает почти весь центр, поэтому тап по слову
+    // здесь тоже переключает панели — иначе жест был бы недоступен.
+    // В этапе 3 тултип перехватит центральный тап по слову раньше.
+    toggleChrome();
+  }
+
+  function onPointerCancel() { gesture = null; }
+
   /* ── Открыть / закрыть ── */
 
   function open(id) {
@@ -388,6 +641,12 @@ const Reader = (() => {
     elLib.hidden  = true;
     elView.hidden = false;
     document.body.classList.add('rd-open');
+
+    // Настройки применяем до первой пагинации, иначе страницы посчитаются
+    // по дефолтной типографике и тут же пересчитаются заново
+    st.prefs = readPrefs();
+    applyPrefs();
+    toggleChrome(false);
 
     try {
       history.pushState({ view: 'reader', book: id }, '', '#book=' + encodeURIComponent(id));
@@ -411,6 +670,7 @@ const Reader = (() => {
     st.pushed = false;
     st.open = false;
     st.chapter = null;
+    closeSheet();
     elView.hidden = true;
     elLib.hidden  = false;
     document.body.classList.remove('rd-open');
@@ -435,11 +695,32 @@ const Reader = (() => {
     elBar      = document.getElementById('rdBarFill');
     elPrev     = document.getElementById('rdPrev');
     elNext     = document.getElementById('rdNext');
+    elSheet     = document.getElementById('rdSheet');
+    elSheetBack = document.getElementById('rdSheetBack');
+    elSheetBody = document.getElementById('rdSheetBody');
     if (!elView || !elViewport || !elContent) return;
 
     document.getElementById('rdBack')?.addEventListener('click', () => close());
+    // Кнопки листания оставлены специально: на десктопе мышью так удобнее
     elPrev.addEventListener('click', prev);
     elNext.addEventListener('click', next);
+
+    document.getElementById('rdPrefsBtn')?.addEventListener('click', openSheet);
+    document.getElementById('rdSheetClose')?.addEventListener('click', closeSheet);
+    elSheetBack?.addEventListener('click', closeSheet);
+    elSheetBody?.addEventListener('click', e => {
+      const btn = e.target.closest('button[data-pref]');
+      if (btn) setPref(btn.dataset.pref, btn.dataset.value);
+    });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && st.sheet) closeSheet();
+    });
+
+    // Жесты: делегирование на контейнер, capture-фаза, только pointer-события
+    // (touch + click дали бы двойное срабатывание)
+    elViewport.addEventListener('pointerdown', onPointerDown, true);
+    elViewport.addEventListener('pointerup', onPointerUp, true);
+    elViewport.addEventListener('pointercancel', onPointerCancel, true);
 
     window.addEventListener('resize', onResize);
     window.addEventListener('orientationchange', onResize);
@@ -449,7 +730,10 @@ const Reader = (() => {
     });
   }
 
-  return { init, open, close, next, prev, goTo, repaginate, state: st };
+  return {
+    init, open, close, next, prev, goTo, repaginate,
+    setPref, openSheet, closeSheet, toggleChrome, state: st
+  };
 })();
 
 document.addEventListener('DOMContentLoaded', () => Reader.init());
