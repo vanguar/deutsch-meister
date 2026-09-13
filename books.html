@@ -19,7 +19,7 @@
 
 <div class="bg-mesh"></div>
 
-<div class="lib-page">
+<div class="lib-page" id="libView">
 
   <!-- ── ШАПКА ── -->
   <header class="lib-header">
@@ -39,7 +39,37 @@
 
 </div>
 
+<!-- ── РИДЕР (вид переключается без перезагрузки, js/reader.js) ── -->
+<section class="rd-view" id="rdView" hidden>
+
+  <header class="rd-top">
+    <button class="rd-icon-btn" id="rdBack" title="В библиотеку" aria-label="В библиотеку">←</button>
+    <div class="rd-top-titles">
+      <div class="rd-chapter-title" id="rdChapterTitle"></div>
+      <div class="rd-chapter-sub" id="rdChapterSub"></div>
+    </div>
+    <div class="rd-pages" id="rdPages" aria-live="polite"></div>
+  </header>
+
+  <div class="rd-viewport" id="rdViewport">
+    <div class="rd-content" id="rdContent" lang="de"></div>
+    <div class="rd-state" id="rdState" hidden></div>
+  </div>
+
+  <footer class="rd-bottom">
+    <div class="rd-bar"><span class="rd-bar-fill" id="rdBarFill"></span></div>
+    <div class="rd-controls">
+      <button class="rd-nav-btn" id="rdPrev">‹ Назад</button>
+      <!-- место под кнопки этапов 2C/2D: перевод, озвучка, словарь -->
+      <div class="rd-slot" id="rdSlot"></div>
+      <button class="rd-nav-btn" id="rdNext">Вперёд ›</button>
+    </div>
+  </footer>
+
+</section>
+
 <script src="js/library.js?v=51"></script>
+<script src="js/reader.js?v=51"></script>
 <script>
   function initTheme() {
     let saved = 'dark';

@@ -16,6 +16,7 @@ const Library = (() => {
   const WORDS_KEY = 'dm_book_words:';
 
   let elRoot = null;
+  let cache  = [];   // последний прочитанный каталог, для refresh()
 
   /* ── Утилиты ── */
 
@@ -197,6 +198,7 @@ const Library = (() => {
 
   function renderBooks(books) {
     if (!elRoot) return;
+    cache = books;
     elRoot.setAttribute('aria-busy', 'false');
     elRoot.innerHTML = `<div class="lib-grid">${books.map(cardHtml).join('')}</div>`;
     elRoot.querySelectorAll('.lib-cta').forEach(btn => {
@@ -204,10 +206,21 @@ const Library = (() => {
     });
   }
 
-  /* ── Открытие книги: ридера ещё нет, это этап 2B ── */
+  /* ── Открытие книги: передаём в ридер (js/reader.js) ── */
 
   function openBook(id) {
-    console.log('[Library] открыть книгу:', id, '— ридер появится на этапе 2B');
+    // Reader объявлен через const — это лексический глобал, а не window.Reader
+    if (typeof Reader !== 'undefined' && typeof Reader.open === 'function') {
+      Reader.open(id);
+      return;
+    }
+    console.warn('[Library] ридер не подключён, книга не открыта:', id);
+  }
+
+  /* ── Перерисовать карточки из кеша: прогресс мог измениться в ридере ── */
+
+  function refresh() {
+    if (cache.length) renderBooks(cache);
   }
 
   /* ── Загрузка каталога ── */
@@ -246,7 +259,7 @@ const Library = (() => {
     load();
   }
 
-  return { init, load, openBook };
+  return { init, load, refresh, openBook };
 })();
 
 document.addEventListener('DOMContentLoaded', () => Library.init());
