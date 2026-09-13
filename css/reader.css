@@ -703,3 +703,61 @@ body.rd-open { overflow: hidden; }
   .rd-slot-btn { padding: 8px 12px; }
   .rd-top      { padding: 9px 12px; gap: 10px; }
 }
+
+/* ══ 17. РИДЕР: ТУЛТИП ПЕРЕВОДА ══ */
+
+/* База — .word-tip из css/lesson.css (переиспользуем, сам файл не трогаем).
+   Тултип живёт в body, слой --rd-* до него не доходит, поэтому тему ридера
+   зеркалим через data-rd-theme и переопределяем нужные токены точечно. */
+.word-tip--book {
+  pointer-events: auto;                         /* под кнопки этапов 4 и 3C */
+  max-width: min(320px, calc(100vw - 24px));
+}
+
+/* Открытое слово подсвечивается — это отклик на тап, не «подсветка» из 3B */
+.bw.word-tip-open { color: var(--rd-accent); }
+
+.word-tip-arrowto { color: var(--text-muted); font-weight: 400; }
+
+.word-tip-old {
+  display: block;
+  margin-top: 7px;
+  font-size: 11.5px;
+  line-height: 1.4;
+  color: var(--text-dim);
+}
+.word-tip-old b {
+  color: var(--text-muted);
+  font-weight: 700;
+  letter-spacing: .3px;
+}
+
+/* Место под 🔊 (этап 4) и «Предложение» (этап 3C) */
+.word-tip-actions { display: flex; gap: var(--sp-sm); margin-top: 10px; }
+.word-tip-actions:empty { display: none; }
+
+.word-tip--book[data-rd-theme="sepia"] {
+  --surface:      #ece1c8;
+  --border:       #cbb994;
+  --accent2:      #8a5f2b;
+  --accent:       #7a4a12;
+  --text:         #4a3f35;
+  --text-strong:  #2e261f;
+  --text-muted:   #7b6a58;
+  --text-dim:     #9c8b77;
+  --green:        #3f6b4a;
+  --tint-border:  rgba(0,0,0,.12);
+}
+
+.word-tip--book[data-rd-theme="dark"] {
+  --surface:      #1a1929;
+  --border:       #2e2b4a;
+  --accent2:      #7c6af7;
+  --accent:       #e8c547;
+  --text:         #e8e6f0;
+  --text-strong:  #ffffff;
+  --text-muted:   #8b87a8;
+  --text-dim:     #5c5878;
+  --green:        #56d899;
+  --tint-border:  rgba(255,255,255,.06);
+}

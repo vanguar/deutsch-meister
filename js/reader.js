@@ -18,7 +18,8 @@
    читателя на страницу раньше.
 
    Жесты — делегирование на .rd-viewport в capture-фазе, только Pointer
-   Events (иначе touch и click срабатывали бы дважды).
+   Events (иначе touch и click срабатывали бы дважды). Тап по слову отдаётся
+   в ReaderTip (js/reader-tip.js) и перехватывает и боковые зоны, и центр.
 
    Zero dependencies. Тултип и перевод предложения — этап 3, озвучка — 2D.
    ═══════════════════════════════════════════════ */
@@ -290,6 +291,7 @@ const Reader = (() => {
   // по умолчанию якорь выводится из страницы (обычное листание).
   function goTo(page, opts) {
     const o = opts || {};
+    tipClose();   // листание и перепагинация закрывают тултип
     st.page = Math.max(0, Math.min(st.pages - 1, page));
     applyTransform(o.animate !== false);
 
@@ -558,6 +560,7 @@ const Reader = (() => {
 
   function openSheet() {
     if (!elSheet) return;
+    tipClose();
     buildSheet();
     st.sheet = true;
     elSheet.classList.add('show');
@@ -569,6 +572,24 @@ const Reader = (() => {
     st.sheet = false;
     elSheet.classList.remove('show');
     elSheetBack.classList.remove('show');
+  }
+
+  /* ── Тултип перевода (js/reader-tip.js) ── */
+
+  function tipOpen(el) {
+    if (typeof ReaderTip === 'undefined') return;
+    ReaderTip.open(el, {
+      gloss: st.gloss,
+      theme: st.prefs ? st.prefs.theme : 'system'
+    });
+  }
+
+  function tipClose() {
+    if (typeof ReaderTip !== 'undefined') ReaderTip.close();
+  }
+
+  function tipIsOpen() {
+    return typeof ReaderTip !== 'undefined' && ReaderTip.isOpen();
   }
 
   /* ── Панели: скрыть / показать ── */
@@ -616,18 +637,17 @@ const Reader = (() => {
     const rel = r.width > 0 ? (e.clientX - r.left) / r.width : 0.5;
     const word = e.target.closest && e.target.closest('.bw');
 
-    // Боковые зоны: тап по слову их выигрывает и страницу не листает —
-    // слово зарезервировано под тултип этапа 3.
-    if (rel < EDGE || rel > 1 - EDGE) {
-      if (word) return;
-      if (rel < EDGE) prev(); else next();
-      return;
-    }
+    // Слово забирает тап в любой зоне: страница не листается и панели
+    // не переключаются — открывается тултип перевода.
+    if (word) { tipOpen(word); return; }
 
-    // Центр: панели. Текст занимает почти весь центр, поэтому тап по слову
-    // здесь тоже переключает панели — иначе жест был бы недоступен.
-    // В этапе 3 тултип перехватит центральный тап по слову раньше.
-    toggleChrome();
+    // Открытый тултип гасится первым тапом вне него, и этот тап больше
+    // ничего не делает: иначе закрытие заодно листало бы страницу.
+    if (tipIsOpen()) { tipClose(); return; }
+
+    if (rel < EDGE)          prev();
+    else if (rel > 1 - EDGE) next();
+    else                     toggleChrome();
   }
 
   function onPointerCancel() { gesture = null; }
@@ -671,6 +691,7 @@ const Reader = (() => {
     st.open = false;
     st.chapter = null;
     closeSheet();
+    tipClose();
     elView.hidden = true;
     elLib.hidden  = false;
     document.body.classList.remove('rd-open');
