@@ -8,3 +8,6 @@ Thumbs.db
 
 .vercel
 .env*
+
+# Рабочие артефакты сборки книг (генерируются scripts/build_book.py)
+tools/sources/*.tokens.txt

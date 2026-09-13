@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "books": [
+    {
+      "id": "bremer",
+      "title": "Die Bremer Stadtmusikanten",
+      "titleRu": "Бременские музыканты",
+      "author": "Brüder Grimm",
+      "level": "B1",
+      "year": 1819,
+      "chapters": 4,
+      "words": 1182,
+      "minutes": 9,
+      "cover": "🐓",
+      "source": "Projekt Gutenberg-DE",
+      "license": "public domain"
+    }
+  ]
+}
