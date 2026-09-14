@@ -23,8 +23,12 @@
    Тот же тап значит «не знаю»: лемма уходит в сборник (js/reader-words.js),
    и все её словоформы в главе получают .bw--seen. Перевод предложения
    раскрывается внутри тултипа — ru берётся из st.chapter по data-p/data-s.
-   Озвучка (слово, предложение, страница) — js/reader-speak.js, очередь
-   чанков идёт по onEnd из js/tts.js.
+   Озвучка (слово, предложение, «дальше») — js/reader-speak.js, очередь
+   чанков идёт по onEnd из js/tts.js. «Дальше» читает подряд от текущей
+   страницы до конца главы и сама листает: перед каждым предложением ридер
+   уходит на страницу, где оно видно (разорванное — где его большая часть).
+   Листает при этом goTo, а не next(): next() — жест читателя и обязан
+   обрывать чтение, а goTo перепагинации не вызывает.
 
    Zero dependencies. Перевод предложения — этап 3C, озвучка — 4.
    ═══════════════════════════════════════════════ */
@@ -812,33 +816,76 @@ const Reader = (() => {
     }
   }
 
-  // Предложения текущей страницы: те, что на ней начинаются
-  function pageSentences() {
+  // Страница, на которой предложение видно. Длинное предложение колонка
+  // рвёт между страницами — тогда берём ту, где лежит БОЛЬШАЯ его часть:
+  // считаем .bw по колонкам (colOf уже умеет это через offsetLeft).
+  // При равенстве побеждает колонка раньше — та, где предложение началось.
+  function pageOfSentence(bs) {
+    if (!bs) return st.page;
+    const words = bs.querySelectorAll('.bw');
+    if (!words.length) return clampPage(colOf(bs));
+
+    const count = Object.create(null);
+    words.forEach(w => {
+      const c = colOf(w);
+      count[c] = (count[c] || 0) + 1;
+    });
+
+    let best = -1;
+    let bestN = -1;
+    Object.keys(count).forEach(key => {
+      const col = Number(key);
+      const n = count[key];
+      if (n > bestN || (n === bestN && col < best)) { bestN = n; best = col; }
+    });
+    return clampPage(best);
+  }
+
+  function clampPage(page) {
+    return Math.max(0, Math.min(st.pages - 1, page));
+  }
+
+  // Очередь чтения: от первого предложения, начинающегося на странице
+  // page, и до конца главы. Следующую главу не берём — по её концу
+  // озвучка останавливается.
+  function sentencesFrom(page) {
     const out = [];
     if (!elContent || !st.chapter) return out;
-    elContent.querySelectorAll('.bs').forEach(bs => {
-      const first = bs.querySelector('.bw') || bs;
-      if (colOf(first) !== st.page) return;
+
+    const all = Array.from(elContent.querySelectorAll('.bs'));
+    let start = all.findIndex(bs => colOf(bs.querySelector('.bw') || bs) >= page);
+    if (start < 0) start = 0;
+
+    all.slice(start).forEach(bs => {
       const text = sentenceDeOf(bs);
       if (text) out.push({ el: bs, text: text });
     });
     return out;
   }
 
-  // Дочитала страницу — остановилась: сама не листает
-  function speakPage() {
+  // Кнопка «🔊 дальше»: читает подряд от текущей страницы и сама листает,
+  // чтобы звучащее предложение всегда было на экране. Листаем через goTo,
+  // а не через next(): next() — действие читателя и обязан обрывать
+  // озвучку. goTo перепагинацию не запускает (DOM тот же) и заново выводит
+  // якорь из новой страницы, поэтому позиция едет вместе с чтением.
+  function speakOn() {
     if (!speakReady()) return;
     if (ReaderSpeak.isPlaying('page')) { ReaderSpeak.stop(); return; }
 
-    const items = pageSentences();
+    const items = sentencesFrom(st.page);
     if (!items.length) return;
 
-    // Читаем всю страницу — подсказка по одному слову тут уже не нужна:
+    // Читаем подряд — подсказка по одному слову тут уже не нужна:
     // тултип закрывается совсем, от него остаётся только плашка со «стоп».
     tipClose();
 
     const started = ReaderSpeak.page(items, {
-      onItem: it => { setPlayingSentence(it.el); speakBarShow(it.text, it.el); },
+      onItem: it => {
+        const page = pageOfSentence(it.el);
+        if (page !== st.page) goTo(page);
+        setPlayingSentence(it.el);
+        speakBarShow(it.text, it.el);
+      },
       onDone: () => { setPlayingSentence(null); setSpeakBtn(false); speakBarHide(); }
     });
     setSpeakBtn(started);
@@ -1055,7 +1102,7 @@ const Reader = (() => {
     elNext.addEventListener('click', next);
 
     document.getElementById('rdPrefsBtn')?.addEventListener('click', openSheet);
-    document.getElementById('rdSpeakBtn')?.addEventListener('click', speakPage);
+    document.getElementById('rdSpeakBtn')?.addEventListener('click', speakOn);
     document.getElementById('rdSpeakStop')?.addEventListener('click', speakStop);
     elCardsBtn?.addEventListener('click', openCards);
     document.getElementById('rdDictBtn')?.addEventListener('click', openDict);
@@ -1086,7 +1133,7 @@ const Reader = (() => {
   return {
     init, open, close, next, prev, goTo, repaginate,
     setPref, openSheet, closeSheet, toggleChrome,
-    applySeen, markLemma, speakPage, pageSentences, state: st,
+    applySeen, markLemma, speakOn, sentencesFrom, pageOfSentence, state: st,
     refreshCards, openCards, openDict, theme: themeName
   };
 })();
