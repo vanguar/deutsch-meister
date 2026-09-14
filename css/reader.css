@@ -270,7 +270,8 @@
    переопределяют их локально и с глобальной темой не конфликтуют.
    Типографику (--rd-fs, --rd-lh, --rd-font, --rd-pad-x, --rd-measure)
    ставит js/reader.js из dm_reader_prefs. */
-.rd-view {
+.rd-view,
+.rd-scope {
   position: fixed;
   inset: 0;
   z-index: 20;
@@ -302,9 +303,11 @@
 }
 
 /* display:flex перебивает браузерное [hidden]{display:none} — гасим явно */
-.rd-view[hidden] { display: none; }
+.rd-view[hidden],
+.rd-scope[hidden] { display: none; }
 
-.rd-view[data-rd-theme="sepia"] {
+.rd-view[data-rd-theme="sepia"],
+.rd-scope[data-rd-theme="sepia"] {
   --rd-bg:         #f4ecd8;
   --rd-surface:    #ece1c8;
   --rd-surface2:   #e4d7ba;
@@ -328,7 +331,8 @@
    белая бумага (#ffffff против лавандового #f5f4ff глобальной светлой),
    тёмная — OLED-чёрная (#000000 против #0f0e17 глобальной тёмной).
    При любой глобальной теме все четыре варианта дают разный фон. */
-.rd-view[data-rd-theme="light"] {
+.rd-view[data-rd-theme="light"],
+.rd-scope[data-rd-theme="light"] {
   --rd-bg:         #ffffff;
   --rd-surface:    #f6f6fa;
   --rd-surface2:   #eeeef5;
@@ -343,7 +347,8 @@
   --rd-red:        #c0392b;
 }
 
-.rd-view[data-rd-theme="dark"] {
+.rd-view[data-rd-theme="dark"],
+.rd-scope[data-rd-theme="dark"] {
   --rd-bg:         #000000;
   --rd-surface:    #121218;
   --rd-surface2:   #1b1b23;
@@ -975,4 +980,256 @@ body.rd-open { overflow: hidden; }
   line-height: 1.3;
   color: var(--rd-muted);
   animation: rdPulse 1.6s ease-in-out infinite;
+}
+
+/* ══ 22. РИДЕР: КАРТОЧКИ КНИГИ ══ */
+
+/* Оверлей поверх ридера. Каркас (position: fixed, inset 0, flex-колонка)
+   и палитра --rd-* приходят из .rd-scope — того же блока, что и у
+   .rd-view, поэтому карточки автоматически живут во всех четырёх темах.
+   Ридер под оверлеем не размонтируется, .rd-viewport размеров не меняет,
+   значит страница и якорь переживают сессию карточек нетронутыми.
+
+   Сам переворот — .flashcard / .card-face из css/exercises.css, без
+   единого нового правила анимации. Здесь только раскладка и то, чего
+   в уроках нет: грамматика на обороте и кнопки 🔊. */
+.rd-cards { z-index: 32; }
+.rd-dict  { z-index: 33; }
+
+.rd-cards-body {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  padding: 16px var(--rd-pad-x) calc(20px + env(safe-area-inset-bottom, 0px));
+  max-width: 560px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.rd-cards-body .flashcard-dots { justify-content: center; }
+.rd-cards-body .flashcard { height: 260px; }
+
+/* Лицо и оборот берут цвета ридера, а не глобальные токены base.css */
+.rd-cards .card-face {
+  background: var(--rd-surface2);
+  border-color: var(--rd-border);
+  gap: 10px;
+}
+.rd-cards .card-de  { color: var(--rd-strong); font-size: 30px; text-align: center; }
+.rd-cards .card-ru  { color: var(--rd-accent); }
+.rd-cards .card-ipa { color: var(--rd-muted); }
+.rd-cards .card-hint { color: var(--rd-dim); }
+
+.fc-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  text-align: center;
+}
+.fc-meta-line {
+  font-size: 12.5px;
+  line-height: 1.35;
+  color: var(--rd-muted);
+}
+.fc-old {
+  font-size: 11.5px;
+  line-height: 1.4;
+  color: var(--rd-dim);
+  text-align: center;
+}
+.fc-old[hidden] { display: none; }
+
+/* 🔊 на обеих сторонах. Озвучивает js/reader-speak.js — теми же
+   вызовами, что и ридер; своей логики звука у карточек нет. */
+.fc-say {
+  background: var(--rd-accent-soft);
+  border: 1px solid var(--rd-accent);
+  border-radius: var(--r-full);
+  padding: 6px 14px;
+  font-size: 14px;
+  line-height: 1;
+  color: var(--rd-strong);
+  transition: all var(--t-fast);
+}
+.fc-say:hover { background: var(--rd-accent); color: var(--rd-bg); }
+
+.rd-cards .card-actions { max-width: 560px; width: 100%; margin: 0 auto; }
+.rd-cards .card-btn.again {
+  border-color: var(--rd-muted);
+  color: var(--rd-text);
+  background: color-mix(in srgb, var(--rd-muted) 10%, transparent);
+}
+.rd-cards .card-btn.good {
+  border-color: var(--rd-accent);
+  color: var(--rd-strong);
+  background: var(--rd-accent-soft);
+}
+
+/* Итог сессии */
+.fc-done {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+.fc-done[hidden] { display: none; }
+.fc-done-emoji { font-size: 40px; }
+.fc-done-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 21px;
+  font-weight: 700;
+  color: var(--rd-strong);
+}
+
+/* ══ 23. РИДЕР: СЛОВАРЬ КНИГИ ══ */
+
+.rd-dict-tools {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 12px var(--rd-pad-x);
+  border-bottom: 1px solid var(--rd-border);
+  background: var(--rd-surface);
+}
+
+.rd-dict-search {
+  width: 100%;
+  padding: 10px 12px;
+  background: var(--rd-surface2);
+  border: 1px solid var(--rd-border);
+  border-radius: var(--r-md);
+  color: var(--rd-text);
+  font-family: inherit;
+  font-size: 14px;
+}
+.rd-dict-search::placeholder { color: var(--rd-dim); }
+.rd-dict-search:focus { outline: none; border-color: var(--rd-accent); }
+
+.rd-dict-actions { display: flex; gap: 8px; }
+.rd-dict-actions .rd-slot-btn { flex: 1; justify-content: center; }
+.rd-dict-actions .rd-slot-btn[disabled] { opacity: .45; }
+
+/* Список прокручивается сам: тулбар сверху остаётся на месте */
+.rd-dict-list {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 8px var(--rd-pad-x) calc(20px + env(safe-area-inset-bottom, 0px));
+}
+
+.rd-dw {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 11px 0;
+  border-bottom: 1px solid var(--rd-border);
+}
+.rd-dw:last-child { border-bottom: none; }
+.rd-dw-main { flex: 1; min-width: 0; }
+
+.rd-dw-head { display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap; }
+.rd-dw-art  { font-size: 13px; color: var(--rd-muted); }
+.rd-dw-de {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--rd-strong);
+  cursor: pointer;
+}
+.rd-dw-n   { font-size: 11px; color: var(--rd-dim); }
+.rd-dw-ru  { font-size: 13.5px; color: var(--rd-text); margin-top: 2px; }
+.rd-dw-gram { font-size: 11.5px; color: var(--rd-muted); margin-top: 2px; }
+
+/* Бейдж — кнопка: тап переключает new ↔ known, как «Знаю» в карточках */
+.rd-dw-badge {
+  flex-shrink: 0;
+  padding: 4px 10px;
+  border-radius: var(--r-full);
+  border: 1px solid var(--rd-border);
+  background: var(--rd-surface2);
+  color: var(--rd-muted);
+  font-size: 11px;
+  font-weight: 600;
+  transition: all var(--t-fast);
+}
+.rd-dw-badge.known {
+  border-color: var(--rd-accent);
+  background: var(--rd-accent-soft);
+  color: var(--rd-strong);
+}
+
+.rd-dict-empty { text-align: center; padding: 48px 16px; }
+.rd-dict-empty-icon { font-size: 34px; margin-bottom: 10px; }
+.rd-dict-empty-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--rd-strong);
+}
+.rd-dict-empty-text {
+  margin-top: 6px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--rd-muted);
+}
+
+/* Экспорт: текст в поле. Файл не отдаём — в Telegram WebView скачивание
+   не работает, а скопировать текст можно откуда угодно. */
+.rd-export {
+  position: fixed;
+  inset: 0;
+  z-index: 34;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  background: rgba(0, 0, 0, .55);
+}
+.rd-export[hidden] { display: none; }
+.rd-export-box {
+  width: 100%;
+  max-width: 460px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+  background: var(--rd-surface);
+  border: 1px solid var(--rd-border);
+  border-radius: var(--r-xl);
+  box-shadow: var(--shadow-lg);
+}
+.rd-export-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-md);
+}
+.rd-export-text {
+  width: 100%;
+  resize: vertical;
+  padding: 10px 12px;
+  background: var(--rd-bg);
+  border: 1px solid var(--rd-border);
+  border-radius: var(--r-md);
+  color: var(--rd-text);
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* ══ 24. БИБЛИОТЕКА: РЯД КНОПОК НА КАРТОЧКЕ ══ */
+
+.lib-cta-row { display: flex; gap: 8px; }
+.lib-cta-row .lib-cta { flex: 1; }
+.lib-cta-row .lib-dict { flex-shrink: 0; }
+.lib-cta-row .lib-dict[disabled] { opacity: .45; cursor: default; }
+
+@media (max-width: 420px) {
+  .rd-cards-body .flashcard { height: 230px; }
+  .rd-cards .card-de { font-size: 26px; }
+  .lib-cta-row { flex-direction: column; }
 }

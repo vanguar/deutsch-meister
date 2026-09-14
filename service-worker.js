@@ -1,4 +1,4 @@
-const CACHE = 'deutsch-meister-v69';
+const CACHE = 'deutsch-meister-v70';
 const SCOPE_PATH = new URL(self.registration.scope).pathname.replace(/\/$/, '');
 const BASE = SCOPE_PATH === '' ? '' : SCOPE_PATH;
 
@@ -7,30 +7,32 @@ const STATIC = [
   BASE + '/',
   BASE + '/index.html',
   BASE + '/manifest.json',
-  BASE + '/css/base.css?v=54',
-  BASE + '/css/sidebar.css?v=54',
-  BASE + '/css/lesson.css?v=54',
-  BASE + '/css/exercises.css?v=54',
-  BASE + '/js/progress.js?v=54',
-  BASE + '/js/lesson-render.js?v=54',
-  BASE + '/js/exercises.js?v=54',
-  BASE + '/js/flashcards.js?v=54',
-  BASE + '/js/tts.js?v=54',
-  BASE + '/js/telegram.js?v=54',
-  BASE + '/js/cloud-sync.js?v=54',
-  BASE + '/js/install-app.js?v=54',
-  BASE + '/js/support.js?v=54',
+  BASE + '/css/base.css?v=55',
+  BASE + '/css/sidebar.css?v=55',
+  BASE + '/css/lesson.css?v=55',
+  BASE + '/css/exercises.css?v=55',
+  BASE + '/js/progress.js?v=55',
+  BASE + '/js/lesson-render.js?v=55',
+  BASE + '/js/exercises.js?v=55',
+  BASE + '/js/flashcards.js?v=55',
+  BASE + '/js/tts.js?v=55',
+  BASE + '/js/telegram.js?v=55',
+  BASE + '/js/cloud-sync.js?v=55',
+  BASE + '/js/install-app.js?v=55',
+  BASE + '/js/support.js?v=55',
   // Читалка: оболочка библиотеки и её движок. Каталог книг — маленький
   // и нужен сразу, поэтому он в прекеше; ?v= у .json нет намеренно:
   // bump_version.py версионирует только .js/.css, а запросы всё равно
   // идут network-first, так что свежее приходит из сети.
   BASE + '/books.html',
-  BASE + '/css/reader.css?v=54',
-  BASE + '/js/library.js?v=54',
-  BASE + '/js/reader.js?v=54',
-  BASE + '/js/reader-tip.js?v=54',
-  BASE + '/js/reader-words.js?v=54',
-  BASE + '/js/reader-speak.js?v=54',
+  BASE + '/css/reader.css?v=55',
+  BASE + '/js/library.js?v=55',
+  BASE + '/js/reader.js?v=55',
+  BASE + '/js/reader-tip.js?v=55',
+  BASE + '/js/reader-words.js?v=55',
+  BASE + '/js/reader-speak.js?v=55',
+  BASE + '/js/reader-cards.js?v=55',
+  BASE + '/js/reader-dict.js?v=55',
   BASE + '/data/books/index.json',
   BASE + '/icons/icon.svg',
 ];

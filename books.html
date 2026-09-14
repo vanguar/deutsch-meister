@@ -12,10 +12,13 @@
   <link rel="apple-touch-icon" href="/deutsch-meister/icons/icon.svg">
   <link rel="icon" type="image/svg+xml" href="/deutsch-meister/icons/icon.svg">
 
-  <link rel="stylesheet" href="css/base.css?v=54">
+  <link rel="stylesheet" href="css/base.css?v=55">
   <!-- lesson.css — только ради класса .word-tip, который переиспользует ридер -->
-  <link rel="stylesheet" href="css/lesson.css?v=54">
-  <link rel="stylesheet" href="css/reader.css?v=54">
+  <link rel="stylesheet" href="css/lesson.css?v=55">
+  <!-- exercises.css — ради анимации переворота карточки (.flashcard,
+       .card-face, .fc-dot): карточки книги переиспользуют её целиком -->
+  <link rel="stylesheet" href="css/exercises.css?v=55">
+  <link rel="stylesheet" href="css/reader.css?v=55">
 </head>
 <body>
 
@@ -51,6 +54,8 @@
       <div class="rd-chapter-sub" id="rdChapterSub"></div>
     </div>
     <div class="rd-pages" id="rdPages" aria-live="polite"></div>
+    <button class="rd-icon-btn" id="rdDictBtn" title="Словарь книги"
+      aria-label="Словарь книги">📗</button>
   </header>
 
   <div class="rd-viewport" id="rdViewport">
@@ -68,6 +73,9 @@
         <button class="rd-slot-btn" id="rdSpeakBtn" title="Озвучить страницу"
           aria-label="Озвучить страницу" aria-pressed="false">🔊<span
           class="rd-btn-label">страница</span></button>
+        <button class="rd-slot-btn" id="rdCardsBtn" title="Карточки этой главы"
+          aria-label="Карточки этой главы" disabled>🃏<span
+          class="rd-btn-label">карточки</span> <span id="rdCardsN">(0)</span></button>
       </div>
       <button class="rd-nav-btn" id="rdNext">Вперёд ›</button>
     </div>
@@ -95,12 +103,109 @@
 
 </section>
 
-<script src="js/tts.js?v=54"></script>
-<script src="js/library.js?v=54"></script>
-<script src="js/reader-words.js?v=54"></script>
-<script src="js/reader-speak.js?v=54"></script>
-<script src="js/reader-tip.js?v=54"></script>
-<script src="js/reader.js?v=54"></script>
+<!-- ── КАРТОЧКИ КНИГИ: оверлей поверх ридера, js/reader-cards.js.
+     Лежит на уровне body и несёт .rd-scope, потому что открывается и из
+     ридера, и из словаря; ридер при этом не размонтируется. ── -->
+<section class="rd-cards rd-scope" id="rdCards" hidden
+  role="dialog" aria-modal="true" aria-label="Карточки книги">
+
+  <header class="rd-top">
+    <button class="rd-icon-btn" id="rdCardsBack" title="Закрыть карточки"
+      aria-label="Закрыть карточки">←</button>
+    <div class="rd-top-titles">
+      <div class="rd-chapter-title">Карточки</div>
+      <div class="rd-chapter-sub" id="rdCardsSub"></div>
+    </div>
+    <div class="rd-pages" id="rdCardsCounter" aria-live="polite"></div>
+  </header>
+
+  <div class="rd-cards-body">
+    <div class="flashcard-dots" id="rdCardsDots"></div>
+
+    <div class="flashcard-viewport">
+      <div class="flashcard" id="rdCard">
+        <div class="card-face front">
+          <div class="card-de" id="rdCardDE">…</div>
+          <button type="button" class="fc-say" id="rdCardSayFront"
+            aria-label="Озвучить слово">🔊</button>
+          <div class="card-hint">Нажмите, чтобы увидеть перевод</div>
+        </div>
+        <div class="card-face back">
+          <div class="card-ru" id="rdCardRU">…</div>
+          <div class="fc-meta" id="rdCardMeta"></div>
+          <div class="fc-old" id="rdCardOld" hidden></div>
+          <div class="card-ipa" id="rdCardIPA"></div>
+          <button type="button" class="fc-say" id="rdCardSayBack"
+            aria-label="Озвучить слово">🔊</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-actions" id="rdCardActions" style="display:none">
+      <button class="card-btn again" id="rdCardAgain">↻ Повторить</button>
+      <button class="card-btn good"  id="rdCardGood">✓ Знаю</button>
+    </div>
+
+    <div class="fc-done" id="rdCardsDone" hidden>
+      <div class="fc-done-emoji">🃏</div>
+      <div class="fc-done-title" id="rdCardsDoneTitle"></div>
+      <button class="btn btn-primary" id="rdCardsBackToRead">Продолжить чтение →</button>
+    </div>
+  </div>
+</section>
+
+<!-- ── СЛОВАРЬ КНИГИ: js/reader-dict.js ── -->
+<section class="rd-dict rd-scope" id="rdDict" hidden
+  role="dialog" aria-modal="true" aria-label="Словарь книги">
+
+  <header class="rd-top">
+    <button class="rd-icon-btn" id="rdDictBack" title="Закрыть словарь"
+      aria-label="Закрыть словарь">←</button>
+    <div class="rd-top-titles">
+      <div class="rd-chapter-title">Словарь книги</div>
+      <div class="rd-chapter-sub" id="rdDictSub"></div>
+    </div>
+  </header>
+
+  <div class="rd-dict-tools">
+    <input type="search" class="rd-dict-search" id="rdDictSearch"
+      placeholder="Поиск по слову или переводу" aria-label="Поиск по словарю">
+    <div class="rd-seg rd-dict-filter" role="group" aria-label="Фильтр">
+      <button type="button" data-filter="all"   aria-pressed="true">Все</button>
+      <button type="button" data-filter="new"   aria-pressed="false">Новые</button>
+      <button type="button" data-filter="known" aria-pressed="false">Знаю</button>
+    </div>
+    <div class="rd-dict-actions">
+      <button class="rd-slot-btn" id="rdDictCards">🃏 Карточки <span id="rdDictCardsN">(0)</span></button>
+      <button class="rd-slot-btn" id="rdDictExport">⬇ Экспорт</button>
+    </div>
+  </div>
+
+  <div class="rd-dict-list" id="rdDictList"></div>
+
+  <!-- Экспорт: текст в поле, откуда его можно скопировать где угодно,
+       включая Telegram WebView, где скачивание файла не работает -->
+  <div class="rd-export" id="rdExport" hidden>
+    <div class="rd-export-box">
+      <div class="rd-export-head">
+        <span class="rd-sheet-title">Экспорт словаря</span>
+        <button class="rd-sheet-close" id="rdExportClose" aria-label="Закрыть">✕</button>
+      </div>
+      <textarea class="rd-export-text" id="rdExportText" readonly rows="10"></textarea>
+      <button class="btn btn-primary" id="rdExportCopy">Скопировать</button>
+    </div>
+  </div>
+</section>
+
+<script src="js/tts.js?v=55"></script>
+<script src="js/library.js?v=55"></script>
+<script src="js/reader-words.js?v=55"></script>
+<script src="js/reader-speak.js?v=55"></script>
+<script src="js/reader-tip.js?v=55"></script>
+<script src="js/reader-cards.js?v=55"></script>
+<script src="js/reader-dict.js?v=55"></script>
+<script src="js/flashcards.js?v=55"></script>
+<script src="js/reader.js?v=55"></script>
 <script>
   function initTheme() {
     let saved = 'dark';

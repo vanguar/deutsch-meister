@@ -103,7 +103,7 @@ const Reader = (() => {
   let elLib, elView, elViewport, elContent, elState,
       elTitle, elSub, elPages, elBar, elPrev, elNext,
       elSheet, elSheetBack, elSheetBody,
-      elSpeakBar, elSpeakBarText;
+      elSpeakBar, elSpeakBarText, elCardsBtn, elCardsN;
 
   /* ── Утилиты ── */
 
@@ -388,6 +388,7 @@ const Reader = (() => {
         st.chIndex = index;
         renderChapter(ch);
         applySeen();
+        refreshCards();   // в новой главе свой набор собранных слов
         hideState();
         measure();
 
@@ -638,7 +639,8 @@ const Reader = (() => {
     });
     if (!rec) return;
 
-    // Подсвечиваем сразу все формы этой леммы в главе, не только нажатую
+    // Подсвечиваем сразу все формы этой леммы в главе, не только нажатую.
+    // Счётчик карточек markLemma пересчитает сам.
     markLemma(info.lemma);
   }
 
@@ -661,12 +663,16 @@ const Reader = (() => {
     });
   }
 
+  // Смена пометки у леммы всегда меняет и набор активных слов главы,
+  // поэтому счётчик на кнопке карточек пересчитываем здесь же: иначе он
+  // отставал бы на всю сессию карточек, где «Знаю» идёт одно за другим.
   function markLemma(lemma) {
     if (!lemma || typeof ReaderWords === 'undefined' || !elContent) return;
     const on = ReaderWords.isMarked(lemma);
     elContent.querySelectorAll('.bw').forEach(el => {
       if (lemmaOf(el) === lemma) el.classList.toggle('bw--seen', on);
     });
+    refreshCards();
   }
 
   function tipClose() {
@@ -839,6 +845,73 @@ const Reader = (() => {
     if (!started) speakBarHide();
   }
 
+  /* ── Карточки главы и словарь книги ── */
+
+  // Область — ГЛАВА, не страница. На 360×640 глава занимает две страницы,
+  // а на десктопе умещается в одну («стр. 1 / 1»), и привязка к странице
+  // означала бы на каждом устройстве своё: то три слова, то вся глава.
+  // Глава от ширины экрана не зависит и совпадает с тем, что читатель
+  // видит подсвеченным в тексте.
+  function chapterLemmas() {
+    const out = [];
+    if (!elContent || typeof ReaderWords === 'undefined') return out;
+    const seen = Object.create(null);
+    elContent.querySelectorAll('.bw').forEach(el => {
+      const lemma = lemmaOf(el);
+      if (!lemma || seen[lemma]) return;
+      if (!ReaderWords.isMarked(lemma)) return;   // «знаю» из активных уходит
+      seen[lemma] = true;
+      out.push(lemma);
+    });
+    return out;
+  }
+
+  function chapterRecords() {
+    if (typeof ReaderWords === 'undefined') return [];
+    return chapterLemmas().map(l => ReaderWords.get(l)).filter(Boolean);
+  }
+
+  // Счётчик на кнопке: 0 — кнопка неактивна, тапать нечего
+  function refreshCards() {
+    if (!elCardsBtn) return;
+    const n = chapterLemmas().length;
+    if (elCardsN) elCardsN.textContent = '(' + n + ')';
+    elCardsBtn.disabled = n === 0;
+  }
+
+  function openCards() {
+    if (typeof ReaderCards === 'undefined') return;
+    const records = chapterRecords();
+    if (!records.length) return;
+
+    tipClose();
+    speakStop();
+    ReaderCards.open({
+      records: records,
+      subtitle: (st.chapter && st.chapter.title) || '',
+      theme: themeName(),
+      // Ридер под оверлеем живой: перепагинации не было, поэтому
+      // возвращаться некуда — просто обновляем счётчик и подсветку.
+      onClose: () => { applySeen(); refreshCards(); }
+    });
+  }
+
+  function openDict() {
+    if (typeof ReaderDict === 'undefined') return;
+    tipClose();
+    speakStop();
+    ReaderDict.open({
+      bookId: st.bookId,
+      title:  (st.meta && st.meta.title) || '',
+      theme:  themeName(),
+      onClose: () => { applySeen(); refreshCards(); }
+    });
+  }
+
+  function themeName() {
+    return (st.prefs && st.prefs.theme) || readPrefs().theme;
+  }
+
   /* ── Панели: скрыть / показать ── */
 
   // Только класс на .rd-view → opacity/transform/pointer-events. Размеры
@@ -967,6 +1040,8 @@ const Reader = (() => {
     elBar      = document.getElementById('rdBarFill');
     elPrev     = document.getElementById('rdPrev');
     elNext     = document.getElementById('rdNext');
+    elCardsBtn     = document.getElementById('rdCardsBtn');
+    elCardsN       = document.getElementById('rdCardsN');
     elSpeakBar     = document.getElementById('rdSpeakBar');
     elSpeakBarText = document.getElementById('rdSpeakBarText');
     elSheet     = document.getElementById('rdSheet');
@@ -982,6 +1057,8 @@ const Reader = (() => {
     document.getElementById('rdPrefsBtn')?.addEventListener('click', openSheet);
     document.getElementById('rdSpeakBtn')?.addEventListener('click', speakPage);
     document.getElementById('rdSpeakStop')?.addEventListener('click', speakStop);
+    elCardsBtn?.addEventListener('click', openCards);
+    document.getElementById('rdDictBtn')?.addEventListener('click', openDict);
     document.getElementById('rdSheetClose')?.addEventListener('click', closeSheet);
     elSheetBack?.addEventListener('click', closeSheet);
     elSheetBody?.addEventListener('click', e => {
@@ -1009,7 +1086,8 @@ const Reader = (() => {
   return {
     init, open, close, next, prev, goTo, repaginate,
     setPref, openSheet, closeSheet, toggleChrome,
-    applySeen, markLemma, speakPage, pageSentences, state: st
+    applySeen, markLemma, speakPage, pageSentences, state: st,
+    refreshCards, openCards, openDict, theme: themeName
   };
 })();
 

@@ -191,7 +191,11 @@ const Library = (() => {
             </div>
           </div>
 
-          <button class="btn btn-primary lib-cta" data-book-id="${esc(book.id)}">${cta} →</button>
+          <div class="lib-cta-row">
+            <button class="btn btn-primary lib-cta" data-book-id="${esc(book.id)}">${cta} →</button>
+            <button class="btn btn-ghost lib-dict" data-dict-id="${esc(book.id)}"
+              ${words ? '' : 'disabled'} title="Словарь книги">📗 Словарь</button>
+          </div>
         </div>
       </article>`;
   }
@@ -204,6 +208,9 @@ const Library = (() => {
     elRoot.querySelectorAll('.lib-cta').forEach(btn => {
       btn.addEventListener('click', () => openBook(btn.dataset.bookId));
     });
+    elRoot.querySelectorAll('.lib-dict').forEach(btn => {
+      btn.addEventListener('click', () => openDict(btn.dataset.dictId));
+    });
   }
 
   /* ── Открытие книги: передаём в ридер (js/reader.js) ── */
@@ -215,6 +222,22 @@ const Library = (() => {
       return;
     }
     console.warn('[Library] ридер не подключён, книга не открыта:', id);
+  }
+
+  /* ── Словарь книги: тот же вид, что открывается из ридера ── */
+
+  // Тема ридера живёт в dm_reader_prefs, и словарь обязан открыться в ней
+  // же — иначе из библиотеки он выглядел бы чужим видом.
+  function openDict(id) {
+    if (typeof ReaderDict === 'undefined') return;
+    const book = cache.find(b => b.id === id);
+    ReaderDict.open({
+      bookId: id,
+      title:  (book && book.title) || '',
+      theme:  (typeof Reader !== 'undefined' && typeof Reader.theme === 'function')
+        ? Reader.theme() : 'system',
+      onClose: refresh
+    });
   }
 
   /* ── Перерисовать карточки из кеша: прогресс мог измениться в ридере ── */
@@ -259,7 +282,7 @@ const Library = (() => {
     load();
   }
 
-  return { init, load, refresh, openBook };
+  return { init, load, refresh, openBook, openDict };
 })();
 
 document.addEventListener('DOMContentLoaded', () => Library.init());
