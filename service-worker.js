@@ -1,4 +1,4 @@
-const CACHE = 'deutsch-meister-v66';
+const CACHE = 'deutsch-meister-v68';
 const SCOPE_PATH = new URL(self.registration.scope).pathname.replace(/\/$/, '');
 const BASE = SCOPE_PATH === '' ? '' : SCOPE_PATH;
 
@@ -7,21 +7,48 @@ const STATIC = [
   BASE + '/',
   BASE + '/index.html',
   BASE + '/manifest.json',
-  BASE + '/css/base.css?v=51',
-  BASE + '/css/sidebar.css?v=51',
-  BASE + '/css/lesson.css?v=51',
-  BASE + '/css/exercises.css?v=51',
-  BASE + '/js/progress.js?v=51',
-  BASE + '/js/lesson-render.js?v=51',
-  BASE + '/js/exercises.js?v=51',
-  BASE + '/js/flashcards.js?v=51',
-  BASE + '/js/tts.js?v=51',
-  BASE + '/js/telegram.js?v=51',
-  BASE + '/js/cloud-sync.js?v=51',
-  BASE + '/js/install-app.js?v=51',
-  BASE + '/js/support.js?v=51',
+  BASE + '/css/base.css?v=53',
+  BASE + '/css/sidebar.css?v=53',
+  BASE + '/css/lesson.css?v=53',
+  BASE + '/css/exercises.css?v=53',
+  BASE + '/js/progress.js?v=53',
+  BASE + '/js/lesson-render.js?v=53',
+  BASE + '/js/exercises.js?v=53',
+  BASE + '/js/flashcards.js?v=53',
+  BASE + '/js/tts.js?v=53',
+  BASE + '/js/telegram.js?v=53',
+  BASE + '/js/cloud-sync.js?v=53',
+  BASE + '/js/install-app.js?v=53',
+  BASE + '/js/support.js?v=53',
+  // Читалка: оболочка библиотеки и её движок. Каталог книг — маленький
+  // и нужен сразу, поэтому он в прекеше; ?v= у .json нет намеренно:
+  // bump_version.py версионирует только .js/.css, а запросы всё равно
+  // идут network-first, так что свежее приходит из сети.
+  BASE + '/books.html',
+  BASE + '/css/reader.css?v=53',
+  BASE + '/js/library.js?v=53',
+  BASE + '/js/reader.js?v=53',
+  BASE + '/js/reader-tip.js?v=53',
+  BASE + '/js/reader-words.js?v=53',
+  BASE + '/js/reader-speak.js?v=53',
+  BASE + '/data/books/index.json',
   BASE + '/icons/icon.svg',
 ];
+
+// Главы (data/books/*/ch-NN.json) и glossary.json НЕ прекешируются:
+// библиотека будет расти, и складывать её целиком в кеш не масштабируется.
+// Они попадают в кеш на первом успешном чтении (обычная ветка fetch ниже)
+// и оттуда же отдаются без сети.
+// Исходники книг в кеш не кладём вообще: это материалы сборки, не рантайм.
+const NO_STORE = [
+  /\/data\/books\/[^/]+\/raw\.txt$/,
+  /\/tools\/sources\//
+];
+
+function isNoStore(url) {
+  const path = new URL(url).pathname;
+  return NO_STORE.some(re => re.test(path));
+}
 
 self.addEventListener('install', e => {
   e.waitUntil(
@@ -72,12 +99,12 @@ self.addEventListener('fetch', e => {
     return;
   }
 
-  // Everything else (JS/CSS/…) → network-first: всегда берём свежее из сети,
-  // а кэш держим только как офлайн-фолбэк. Так новые правки видно обычной
-  // перезагрузкой — без бампа ?v= и без ручной чистки кэша.
+  // Everything else (JS/CSS/JSON глав…) → network-first: всегда берём свежее
+  // из сети, а кэш держим как офлайн-фолбэк и как cache-on-read для глав книг.
+  // Так новые правки видно обычной перезагрузкой — без ручной чистки кэша.
   e.respondWith(
     fetch(req).then(res => {
-      if (res && res.ok) {
+      if (res && res.ok && !isNoStore(req.url)) {
         const clone = res.clone();
         caches.open(CACHE).then(c => c.put(req, clone));
       }

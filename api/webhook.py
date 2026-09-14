@@ -267,7 +267,92 @@ def read_progress(uid):
         return None
 
 
+def _num(v):
+    try:
+        return float(v)
+    except (TypeError, ValueError):
+        return 0.0
+
+
+def _merge_book_pos(old, new):
+    """Позиция чтения: last-write-wins по ts (запись без ts считается старой)."""
+    if not isinstance(old, dict):
+        return new if isinstance(new, dict) else None
+    if not isinstance(new, dict):
+        return old
+    return new if _num(new.get("ts")) > _num(old.get("ts")) else old
+
+
+def _merge_word(old, new):
+    """n — максимум, seen — объединение форм, «known» побеждает «new»."""
+    rec = dict(old)
+    rec.update(new)                      # словарные поля одинаковы
+    rec["n"] = max(_num(old.get("n")), _num(new.get("n")))
+    if rec["n"] == int(rec["n"]):
+        rec["n"] = int(rec["n"])
+    rec["ts"] = max(_num(old.get("ts")), _num(new.get("ts")))
+    if rec["ts"] == int(rec["ts"]):
+        rec["ts"] = int(rec["ts"])
+    rec["status"] = ("known"
+                     if "known" in (old.get("status"), new.get("status"))
+                     else (new.get("status") or old.get("status") or "new"))
+    seen, keys = [], set()
+    for form in list(old.get("seen") or []) + list(new.get("seen") or []):
+        key = str(form).lower()
+        if key in keys:
+            continue
+        keys.add(key)
+        seen.append(form)
+    rec["seen"] = seen
+    return rec
+
+
+def _merge_books(old, new):
+    """Узкая ветка для поля books: остальной снимок перезаписывается входящим,
+    а сборники слов и позиции сливаются, чтобы не терять чтение с других
+    устройств. Снимок старого клиента (без books) ничего не стирает."""
+    old = old if isinstance(old, dict) else {}
+    new = new if isinstance(new, dict) else {}
+    out = {}
+    for book_id in set(old) | set(new):
+        lo = old.get(book_id) or {}
+        ln = new.get(book_id) or {}
+        if not isinstance(lo, dict) or not isinstance(ln, dict):
+            out[book_id] = ln or lo
+            continue
+        rec = {}
+        pos = _merge_book_pos(lo.get("pos"), ln.get("pos"))
+        if pos:
+            rec["pos"] = pos
+        wo = lo.get("words") if isinstance(lo.get("words"), dict) else {}
+        wn = ln.get("words") if isinstance(ln.get("words"), dict) else {}
+        words = {}
+        for lemma in set(wo) | set(wn):
+            ro, rn = wo.get(lemma), wn.get(lemma)
+            if isinstance(ro, dict) and isinstance(rn, dict):
+                words[lemma] = _merge_word(ro, rn)
+            else:
+                words[lemma] = rn if isinstance(rn, dict) else ro
+        if words:
+            rec["words"] = words
+        if rec:
+            out[book_id] = rec
+    return out
+
+
 def write_progress(uid, data):
+    # Всё, кроме books, перезаписывается входящим снимком — как и раньше.
+    # books сливаем с сохранённым: иначе клиент без этого поля (старая версия)
+    # или с частичными данными стёр бы чтение, накопленное на другом устройстве.
+    if isinstance(data, dict):
+        stored = read_progress(uid)
+        if isinstance(stored, dict) and (stored.get("books") or data.get("books")):
+            data = dict(data)
+            merged = _merge_books(stored.get("books"), data.get("books"))
+            if merged:
+                data["books"] = merged
+            else:
+                data.pop("books", None)
     payload = json.dumps(data, ensure_ascii=False, separators=(",", ":"))
     res = _upstash(["SET", f"dm:progress:{uid}", payload])
     return bool(res and res.get("result") == "OK")

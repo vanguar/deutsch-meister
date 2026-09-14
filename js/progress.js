@@ -16,6 +16,8 @@ const Progress = (() => {
   const STORAGE_KEY            = 'dm_progress';
   const SECTIONS_KEY_PREFIX    = 'dm_sections:';   // dm_sections:a1-01
   const LAST_LESSON_KEY        = 'dm_last_lesson'; // id последнего открытого урока
+  const BOOK_POS_PREFIX        = 'dm_book_pos:';   // dm_book_pos:bremer
+  const BOOK_WORDS_PREFIX      = 'dm_book_words:'; // dm_book_words:bremer
   const XP_PER_LEVEL           = 200;
 
   /* Подписчики на изменение прогресса (для облачной синхронизации) */
@@ -499,7 +501,114 @@ const Progress = (() => {
         }
       });
     } catch {}
+    // Читалка: собственное поле верхнего уровня, dm_progress не трогаем
+    out.books = _loadBooks();
     return out;
+  }
+
+  /* ── Читалка: позиции и сборники слов ──────────────────────────
+     Формат books: { <bookId>: { pos: {...}, words: { <лемма>: {...} } } }
+     pos — из dm_book_pos:<id>, words — из dm_book_words:<id>.        */
+
+  function _readJson(key) {
+    try {
+      const raw = localStorage.getItem(key);
+      if (!raw) return null;
+      const val = JSON.parse(raw);
+      return (val && typeof val === 'object') ? val : null;
+    } catch {
+      return null;   // битое значение — как будто его нет
+    }
+  }
+
+  function _loadBooks() {
+    const books = {};
+    try {
+      Object.keys(localStorage).forEach(k => {
+        if (k.startsWith(BOOK_POS_PREFIX)) {
+          const id = k.slice(BOOK_POS_PREFIX.length);
+          const pos = _readJson(k);
+          if (pos) (books[id] = books[id] || {}).pos = pos;
+        } else if (k.startsWith(BOOK_WORDS_PREFIX)) {
+          const id = k.slice(BOOK_WORDS_PREFIX.length);
+          const words = _readJson(k);
+          if (words) (books[id] = books[id] || {}).words = words;
+        }
+      });
+    } catch {}
+    return books;
+  }
+
+  // Позиция: last-write-wins по ts. Без ts запись считается самой старой —
+  // так позиция из новой версии клиента не проигрывает записи без метки.
+  function _mergePos(a, b) {
+    if (!a || typeof a !== 'object') return (b && typeof b === 'object') ? b : null;
+    if (!b || typeof b !== 'object') return a;
+    return (Number(b.ts) || 0) > (Number(a.ts) || 0) ? b : a;
+  }
+
+  // Слово: n — максимум, seen — объединение форм, «known» побеждает «new».
+  // Словарные поля (de/ru/pos/art/pl/forms/decl/old) в обеих копиях одинаковы,
+  // ch/p — «где встретилось впервые», поэтому локальные в приоритете.
+  function _mergeWordRec(a, b) {
+    const rec = Object.assign({}, b, a);
+    rec.n  = Math.max(Number(a.n)  || 0, Number(b.n)  || 0);
+    rec.ts = Math.max(Number(a.ts) || 0, Number(b.ts) || 0);
+    rec.status = (a.status === 'known' || b.status === 'known')
+      ? 'known'
+      : (a.status || b.status || 'new');
+
+    const seen = [];
+    const seenKeys = new Set();
+    [].concat(Array.isArray(a.seen) ? a.seen : [], Array.isArray(b.seen) ? b.seen : [])
+      .forEach(form => {
+        const key = String(form).toLowerCase();
+        if (seenKeys.has(key)) return;
+        seenKeys.add(key);
+        seen.push(form);
+      });
+    rec.seen = seen;
+    return rec;
+  }
+
+  function _mergeWords(a, b) {
+    const out = {};
+    const ids = new Set([...Object.keys(a || {}), ...Object.keys(b || {})]);
+    ids.forEach(lemma => {
+      const ra = (a || {})[lemma];
+      const rb = (b || {})[lemma];
+      if (ra && rb) out[lemma] = _mergeWordRec(ra, rb);
+      else out[lemma] = ra || rb;
+    });
+    return out;
+  }
+
+  // Снимок без поля books (старый клиент) merge не ломает: считаем его пустым
+  function _mergeBooks(a, b) {
+    a = (a && typeof a === 'object') ? a : {};
+    b = (b && typeof b === 'object') ? b : {};
+    const out = {};
+    const ids = new Set([...Object.keys(a), ...Object.keys(b)]);
+    ids.forEach(id => {
+      const la = a[id] || {};
+      const lb = b[id] || {};
+      const rec = {};
+      const pos = _mergePos(la.pos, lb.pos);
+      if (pos) rec.pos = pos;
+      const words = _mergeWords(la.words, lb.words);
+      if (Object.keys(words).length) rec.words = words;
+      if (Object.keys(rec).length) out[id] = rec;
+    });
+    return out;
+  }
+
+  function _saveBooks(books) {
+    Object.entries(books || {}).forEach(([id, rec]) => {
+      try {
+        if (rec && rec.pos)   localStorage.setItem(BOOK_POS_PREFIX + id, JSON.stringify(rec.pos));
+        if (rec && rec.words) localStorage.setItem(BOOK_WORDS_PREFIX + id, JSON.stringify(rec.words));
+      } catch {}
+    });
   }
 
   function _mergeGlobal(a, b) {
@@ -541,6 +650,9 @@ const Progress = (() => {
     });
 
     if (cloud.lastLesson && !getLastLesson()) setLastLesson(cloud.lastLesson);
+
+    // Читалка: снимок без books ничего не меняет — _mergeBooks вернёт локальное
+    _saveBooks(_mergeBooks(_loadBooks(), cloud.books));
 
     return JSON.stringify(exportAll()) !== before;
   }

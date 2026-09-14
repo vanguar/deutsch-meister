@@ -141,7 +141,8 @@ const Reader = (() => {
     }
   }
 
-  // Формат из PROGRESS.md: { chapter, p, s, percent } + w (слово в предложении).
+  // Формат из PROGRESS.md: { chapter, p, s, percent } + w (слово в предложении)
+  // + ts (когда записали: по нему облачный merge выбирает свежую позицию).
   // percent — только для карточки в библиотеке; восстановление идёт по p/s/w.
   function savePos() {
     if (!st.anchor || st.chTotal <= 0) return;
@@ -152,7 +153,8 @@ const Reader = (() => {
       p:       st.anchor.p,
       s:       st.anchor.s,
       w:       st.anchor.w || 0,
-      percent: Math.round(percent)
+      percent: Math.round(percent),
+      ts:      Date.now()
     };
     try {
       localStorage.setItem(POS_KEY + st.bookId, JSON.stringify(data));
