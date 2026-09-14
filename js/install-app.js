@@ -10,7 +10,12 @@
      • пункт меню «Установить на телефон»,
      • модалку с инструкцией (отдельно для iPhone / Android) и кнопкой
        «Открыть в браузере» (из Telegram установка недоступна).
-   Стили инлайновые с фолбэками — правок CSS не требуется.
+   Стили инлайновые с фолбэками — правок CSS не требуется. Но цвет
+   обязан идти через var(--…): модалка стоит на общем фоне
+   var(--surface2), а он в светлой теме лавандовый #f0effe — жёсткий
+   #fff на заголовке давал там 1.14:1, нечитаемо. И фолбэк внутри
+   var() обязан соответствовать самой переменной: #7c6af7 стоял
+   при --accent, то есть при жёлтом, и белое по жёлтому — 1.68:1.
    ═══════════════════════════════════════════════ */
 (function () {
   const APP_URL = 'https://vanguar.github.io/deutsch-meister/';
@@ -48,16 +53,16 @@
       'box-shadow:0 20px 60px rgba(0,0,0,.5);max-height:90vh;overflow:auto">' +
         '<div style="font-size:40px;text-align:center;margin-bottom:8px">📲</div>' +
         '<h2 style="font-family:\'Playfair Display\',serif;font-size:22px;margin:0 0 6px;' +
-        'text-align:center;color:#fff">Установить приложение</h2>' +
+        'text-align:center;color:var(--text-strong,#fff)">Установить приложение</h2>' +
         '<p style="font-size:14px;color:var(--text-muted,#9a9);line-height:1.5;text-align:center;margin:0 0 16px">' +
           'Если в Telegram нет звука — установи Deutsch Meister на телефон и запускай ' +
           'с иконки. Там озвучка работает, плюс офлайн-доступ. 🔊' +
         '</p>' +
         (inTelegram()
           ? '<button id="installOpenBrowser" style="width:100%;border:0;border-radius:12px;' +
-            'padding:14px;font-size:15px;font-weight:600;background:var(--accent,#7c6af7);' +
-            'color:#fff;cursor:pointer;margin-bottom:8px">🌐 Открыть в браузере</button>' +
-            '<p style="font-size:12px;color:var(--text-dim,#777);text-align:center;margin:0 0 16px">' +
+            'padding:14px;font-size:15px;font-weight:600;background:var(--accent2,#7c6af7);' +
+            'color:var(--text-on-btn,#fff);cursor:pointer;margin-bottom:8px">🌐 Открыть в браузере</button>' +
+            '<p style="font-size:12px;color:var(--text-muted,#9a9);text-align:center;margin:0 0 16px">' +
             'Установка возможна только из браузера, не из Telegram.</p>'
           : '') +
         '<div style="background:var(--surface3,#232330);border-radius:12px;padding:14px;' +

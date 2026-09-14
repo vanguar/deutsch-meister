@@ -674,8 +674,11 @@ h1, h2, h3 {
 }
 .dm-btn-ghost:hover { color: var(--text); border-color: var(--accent2); }
 
+/* --text-dim на фоне карточки давал 2.33:1 (тёмная) и 3.15:1 (светлая) —
+   а это предупреждение про потерю средств, его надо читать. --text-muted:
+   4.57:1 и 5.98:1. Сам токен не трогаем, он используется и в других местах. */
 .dm-note {
-  font-size: 12px; color: var(--text-dim);
+  font-size: 12px; color: var(--text-muted);
   line-height: 1.5; margin-top: 14px;
 }
 
