@@ -175,9 +175,12 @@
       <button type="button" data-filter="new"   aria-pressed="false">Новые</button>
       <button type="button" data-filter="known" aria-pressed="false">Знаю</button>
     </div>
+    <!-- Главное действие экрана: подпись целиком ставит js/reader-dict.js,
+         она называет, что именно уйдёт в карточки (весь словарь или то,
+         что отобрано поиском и фильтром) -->
     <div class="rd-dict-actions">
-      <button class="rd-slot-btn" id="rdDictCards">🃏 Карточки <span id="rdDictCardsN">(0)</span></button>
-      <button class="rd-slot-btn" id="rdDictExport">⬇ Экспорт</button>
+      <button class="rd-dict-go" id="rdDictCards">▶ Учить</button>
+      <button class="rd-slot-btn rd-dict-export" id="rdDictExport">⬇ Экспорт</button>
     </div>
   </div>
 

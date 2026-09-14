@@ -17,12 +17,17 @@
    Экспорт отдаём текстом в поле, а не файлом: в Telegram WebView
    скачивание не работает, а скопировать можно везде.
 
+   Кнопка «Учить» — главное действие экрана (акцентный фон), «Экспорт»
+   рядом второстепенный. Подпись строится из visible(): того же списка,
+   который уходит в карточки, — поэтому и число, и формулировка всегда
+   совпадают с тем, что на экране.
+
    Zero dependencies.
    ═══════════════════════════════════════════════ */
 
 const ReaderDict = (() => {
 
-  let elView, elSub, elList, elSearch, elCardsN, elExport, elExportText;
+  let elView, elSub, elList, elSearch, elCards, elExport, elExportText;
   let bound  = false;
   let open_  = false;
 
@@ -116,14 +121,39 @@ const ReaderDict = (() => {
       </div>`;
   }
 
+  /* ── Подпись кнопки «Учить» ── */
+
+  // Кнопка стояла рядом с «Экспортом» и читалась как счётчик, поэтому
+  // подпись теперь начинается с действия. При активном поиске или фильтре
+  // она называет, что именно уйдёт в карточки: видимый список, а не весь
+  // словарь. Считаем по visible() — тому же источнику, что и startCards().
+  function cardsLabel(n) {
+    if (!n)                 return '▶ Учить';
+    if (query.trim())       return `▶ Учить найденные (${n})`;
+    if (filter === 'new')   return `▶ Учить новые (${n})`;
+    if (filter === 'known') return `▶ Учить «знаю» (${n})`;
+    return `▶ Учить ${n} ${plural(n, ['слово', 'слова', 'слов'])}`;
+  }
+
+  function cardsTitle(n) {
+    if (!n) return 'Нет слов для карточек';
+    const narrowed = query.trim() || filter !== 'all';
+    return narrowed
+      ? `Учить ${n} ${plural(n, ['отобранное слово', 'отобранных слова', 'отобранных слов'])}`
+      : `Учить ${n} ${plural(n, ['слово', 'слова', 'слов'])} словаря`;
+  }
+
   function render() {
     if (!elList) return;
     const list = visible();
     const total = records().length;
 
-    if (elCardsN) elCardsN.textContent = '(' + list.length + ')';
-    const cardsBtn = document.getElementById('rdDictCards');
-    if (cardsBtn) cardsBtn.disabled = list.length === 0;
+    if (elCards) {
+      elCards.textContent = cardsLabel(list.length);
+      elCards.title = cardsTitle(list.length);
+      elCards.setAttribute('aria-label', cardsTitle(list.length));
+      elCards.disabled = list.length === 0;
+    }
 
     if (!total) {
       elList.innerHTML = `
@@ -336,7 +366,7 @@ const ReaderDict = (() => {
     elSub        = document.getElementById('rdDictSub');
     elList       = document.getElementById('rdDictList');
     elSearch     = document.getElementById('rdDictSearch');
-    elCardsN     = document.getElementById('rdDictCardsN');
+    elCards      = document.getElementById('rdDictCards');
     elExport     = document.getElementById('rdExport');
     elExportText = document.getElementById('rdExportText');
     if (!elView || !elList) return false;

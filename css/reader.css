@@ -1110,8 +1110,38 @@ body.rd-open { overflow: hidden; }
 .rd-dict-search::placeholder { color: var(--rd-dim); }
 .rd-dict-search:focus { outline: none; border-color: var(--rd-accent); }
 
-.rd-dict-actions { display: flex; gap: 8px; }
-.rd-dict-actions .rd-slot-btn { flex: 1; justify-content: center; }
+/* «Учить» — главное действие экрана, а не счётчик рядом с «Экспортом»:
+   акцентный фон, глагол в подписи, занимает всю свободную ширину.
+   «Экспорт» ужимается до содержимого и остаётся второстепенным.
+   Подпись длинная («▶ Учить найденные (7)»), поэтому одна строка с
+   многоточием — кнопка не должна расти в высоту и ломать ряд. */
+.rd-dict-actions { display: flex; align-items: stretch; gap: 8px; }
+
+.rd-dict-go {
+  flex: 1 1 auto;
+  min-width: 0;
+  padding: 11px 14px;
+  border: 1px solid var(--rd-accent);
+  border-radius: var(--r-md);
+  background: var(--rd-accent);
+  color: var(--rd-bg);
+  font-size: 14.5px;
+  font-weight: 700;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: all var(--t-fast);
+}
+.rd-dict-go:hover:not([disabled]) { filter: brightness(1.08); }
+.rd-dict-go[disabled] {
+  background: var(--rd-surface2);
+  border-color: var(--rd-border);
+  color: var(--rd-dim);
+  cursor: default;
+}
+
+.rd-dict-actions .rd-dict-export { flex: 0 0 auto; }
 .rd-dict-actions .rd-slot-btn[disabled] { opacity: .45; }
 
 /* Список прокручивается сам: тулбар сверху остаётся на месте */
