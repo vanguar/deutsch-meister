@@ -21,7 +21,8 @@
    Events (иначе touch и click срабатывали бы дважды). Тап по слову отдаётся
    в ReaderTip (js/reader-tip.js) и перехватывает и боковые зоны, и центр.
    Тот же тап значит «не знаю»: лемма уходит в сборник (js/reader-words.js),
-   и все её словоформы в главе получают .bw--seen.
+   и все её словоформы в главе получают .bw--seen. Перевод предложения
+   раскрывается внутри тултипа — ru берётся из st.chapter по data-p/data-s.
 
    Zero dependencies. Перевод предложения — этап 3C, озвучка — 4.
    ═══════════════════════════════════════════════ */
@@ -579,11 +580,22 @@ const Reader = (() => {
 
   /* ── Тултип перевода (js/reader-tip.js) ── */
 
+  // Перевод предложения лежит в уже загруженной главе, в DOM его не дублируем
+  function sentenceRuOf(bs) {
+    if (!bs || !st.chapter || !Array.isArray(st.chapter.paragraphs)) return '';
+    const para = st.chapter.paragraphs[Number(bs.dataset.p)];
+    const sent = para && Array.isArray(para.s) ? para.s[Number(bs.dataset.s)] : null;
+    return (sent && sent.ru) || '';
+  }
+
   function tipOpen(el) {
     if (typeof ReaderTip === 'undefined') return;
+    const bs = el.closest('.bs');
     const opened = ReaderTip.open(el, {
       gloss: st.gloss,
-      theme: st.prefs ? st.prefs.theme : 'system'
+      theme: st.prefs ? st.prefs.theme : 'system',
+      sentenceRu: sentenceRuOf(bs),
+      bs: bs
     });
     // Тап, который тултип закрыл, «не знаю» не значит — n не растёт
     if (opened) collectWord(el);

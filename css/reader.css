@@ -775,3 +775,45 @@ body.rd-open { overflow: hidden; }
   text-underline-offset: 3px;
 }
 .bw--seen.word-tip-open { text-decoration-color: var(--rd-accent); }
+
+/* ══ 19. РИДЕР: ПЕРЕВОД ПРЕДЛОЖЕНИЯ ══ */
+
+.word-tip-act {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: color-mix(in srgb, var(--accent2) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent2) 34%, var(--border));
+  border-radius: var(--r-sm);
+  padding: 5px 10px;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.2;
+  transition: all var(--t-fast);
+}
+.word-tip-act:hover {
+  color: var(--text-strong);
+  border-color: var(--accent2);
+}
+.word-tip-caret { font-size: 10px; opacity: .8; }
+
+/* display:block перебил бы браузерное [hidden] — гасим явно (грабли 2B) */
+.word-tip-sentence[hidden] { display: none; }
+.word-tip-sentence {
+  display: block;
+  margin-top: 9px;
+  padding-top: 9px;
+  border-top: 1px solid var(--tint-border);
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--accent);
+}
+
+/* Подсветка раскрытого предложения: только цвет и фон, без метрик —
+   иначе поехала бы разбивка на страницы (как и у .bw--seen в 3B). */
+.bs--active {
+  background: color-mix(in srgb, var(--rd-accent) 15%, transparent);
+  border-radius: 3px;
+  color: var(--rd-strong);
+}

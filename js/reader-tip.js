@@ -14,8 +14,12 @@
    Вид — класс .word-tip из css/lesson.css + модификатор
    .word-tip--book в css/reader.css.
 
-   Zero dependencies. Кнопки 🔊 и «Предложение» — этапы 4 и 3C,
-   под них оставлен пустой .word-tip-actions.
+   Перевод предложения раскрывается внутри тултипа (кнопка
+   «Предложение» в .word-tip-actions), без отдельного окна. Раскрытие
+   меняет высоту, поэтому позиция пересчитывается тем же клампингом.
+
+   Zero dependencies. Кнопка 🔊 — этап 4, под неё место в том же
+   .word-tip-actions.
    ═══════════════════════════════════════════════ */
 
 const ReaderTip = (() => {
@@ -26,6 +30,12 @@ const ReaderTip = (() => {
   let elTip  = null;   // единственный узел тултипа
   let target = null;   // текущее слово .bw
   let bound  = false;
+
+  // Перевод предложения: раскрытое состояние живёт только до следующего
+  // слова — новое слово всегда открывается свёрнутым.
+  let sentenceRu = '';
+  let sentenceEl = null;   // .bs, которое подсвечиваем на время раскрытия
+  let expanded   = false;
 
   /* ── Утилиты ── */
 
@@ -42,6 +52,14 @@ const ReaderTip = (() => {
     if (elTip) return elTip;
     elTip = document.createElement('div');
     elTip.className = 'word-tip word-tip--book';
+    // Кнопки внутри тултипа переживают перерисовку содержимого, поэтому
+    // слушатель делегированный и навешивается один раз
+    elTip.addEventListener('click', e => {
+      const btn = e.target.closest && e.target.closest('[data-act="sentence"]');
+      if (!btn) return;
+      e.stopPropagation();
+      toggleSentence();
+    });
     document.body.appendChild(elTip);
     return elTip;
   }
@@ -89,13 +107,25 @@ const ReaderTip = (() => {
     return entry.forms;
   }
 
-  function render(word, info) {
+  // Кнопка «Предложение» и свёрнутый блок перевода. Место под 🔊 (этап 4)
+  // — тот же .word-tip-actions.
+  function actionsHtml(hasSentence) {
+    if (!hasSentence) return '<span class="word-tip-actions"></span>';
+    return '<span class="word-tip-actions">'
+      + '<button type="button" class="word-tip-act" data-act="sentence"'
+      + ' aria-expanded="false">Предложение <span class="word-tip-caret">⌄</span></button>'
+      + '</span>'
+      + '<span class="word-tip-sentence" hidden></span>';
+  }
+
+  function render(word, info, opts) {
     const parts = [];
+    const hasSentence = !!(opts && opts.hasSentence);
 
     if (!info || !info.entry) {
       parts.push(`<span class="word-tip-title">${esc(word)}</span>`);
       parts.push('<span class="word-tip-meta">нет в словаре</span>');
-      parts.push('<span class="word-tip-actions"></span>');
+      parts.push(actionsHtml(hasSentence));
       return parts.join('');
     }
 
@@ -123,9 +153,38 @@ const ReaderTip = (() => {
       if (note) parts.push(`<span class="word-tip-old"><b>устар.</b> ${esc(note)}</span>`);
     });
 
-    // Место под 🔊 (этап 4) и «Предложение» (этап 3C): пустой блок схлопнут
-    parts.push('<span class="word-tip-actions"></span>');
+    parts.push(actionsHtml(hasSentence));
     return parts.join('');
+  }
+
+  /* ── Перевод предложения ── */
+
+  // Раскрытие внутри тултипа: отдельного окна нет, высота меняется, поэтому
+  // в конце всегда пересчитываем позицию — тем же клампингом, что и при
+  // открытии, так что на нижних строках тултип переворачивается вверх.
+  function toggleSentence() {
+    if (!elTip || !sentenceRu) return;
+    const box   = elTip.querySelector('.word-tip-sentence');
+    const btn   = elTip.querySelector('[data-act="sentence"]');
+    const caret = elTip.querySelector('.word-tip-caret');
+    if (!box) return;
+
+    expanded = !expanded;
+
+    if (expanded) {
+      box.textContent = sentenceRu;
+      box.hidden = false;
+      if (sentenceEl) sentenceEl.classList.add('bs--active');
+    } else {
+      box.hidden = true;
+      box.textContent = '';
+      if (sentenceEl) sentenceEl.classList.remove('bs--active');
+    }
+
+    if (caret) caret.textContent = expanded ? '⌃' : '⌄';
+    if (btn) btn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+
+    if (target) position(target);
   }
 
   /* ── Позиционирование (логика из js/lesson-render.js) ── */
@@ -226,8 +285,16 @@ const ReaderTip = (() => {
     bind();
     close();
 
-    target = el;
-    tip.innerHTML = render(el.textContent, lookup(o.gloss, el.dataset.t || String(el.textContent).toLowerCase()));
+    target     = el;
+    sentenceRu = o.sentenceRu || '';
+    sentenceEl = o.bs || null;
+    expanded   = false;          // новое слово — всегда свёрнутый перевод
+
+    tip.innerHTML = render(
+      el.textContent,
+      lookup(o.gloss, el.dataset.t || String(el.textContent).toLowerCase()),
+      { hasSentence: !!sentenceRu }
+    );
     tip.dataset.rdTheme = o.theme || 'system';
     el.classList.add('word-tip-open');
 
@@ -242,11 +309,16 @@ const ReaderTip = (() => {
 
   function close() {
     if (target) target.classList.remove('word-tip-open');
-    target = null;
+    if (sentenceEl) sentenceEl.classList.remove('bs--active');
+    target     = null;
+    sentenceEl = null;
+    sentenceRu = '';
+    expanded   = false;
     if (elTip) elTip.classList.remove('word-tip-visible');
   }
 
-  function isOpen() { return !!target; }
+  function isOpen()     { return !!target; }
+  function isExpanded() { return expanded; }
 
-  return { open, close, isOpen, position, lookup, render };
+  return { open, close, isOpen, isExpanded, toggleSentence, position, lookup, render };
 })();
