@@ -710,7 +710,11 @@ body.rd-open { overflow: hidden; }
 .rd-seg.rd-seg--grid { flex-wrap: wrap; }
 .rd-seg.rd-seg--grid button { flex: 1 1 calc(50% - 3px); }
 
-.rd-seg button:hover { border-color: var(--rd-accent); }
+.rd-seg button:hover:not([disabled]) { border-color: var(--rd-accent); }
+
+/* «Служебные» без единого собранного слова: показываем, но не даём тапнуть —
+   так видно, что фильтр есть, и не надо гадать, куда делись артикли. */
+.rd-seg button[disabled] { opacity: .45; cursor: default; }
 .rd-seg button[aria-pressed="true"] {
   background: var(--rd-accent-soft);
   border-color: var(--rd-accent);

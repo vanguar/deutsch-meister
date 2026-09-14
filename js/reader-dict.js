@@ -7,8 +7,13 @@
    и размеров .rd-viewport не меняет.
 
    Показывает то, что собрано тапами по словам (dm_book_words:<id>):
-   поиск, фильтр «все / новые / знаю», запуск карточек по видимому
-   списку и экспорт в текст.
+   поиск, фильтр «все / новые / знаю / служебные», запуск карточек по
+   видимому списку и экспорт в текст.
+
+   Служебные слова (rec.fn — артикли, предлоги, союзы, частицы,
+   местоимения, междометия, числительные) по умолчанию не показываются:
+   они засоряли бы и список, и колоду. Но и не прячутся насовсем — у них
+   свой фильтр, откуда их так же можно отправить в карточки.
 
    Тултип по тапу на слово — тот же ReaderTip, что в ридере. Глоссарий
    ему собирается из самой записи сборника: в словаре книги глава может
@@ -72,12 +77,19 @@ const ReaderDict = (() => {
   }
 
   function isKnown(rec) { return rec.status === 'known'; }
+  function isFn(rec)    { return !!rec.fn; }
+
+  function contentRecords() { return records().filter(rec => !isFn(rec)); }
+  function fnRecords()      { return records().filter(isFn); }
 
   // Что сейчас на экране: фильтр + поиск. Карточки и экспорт берут
   // именно этот список, поэтому число на кнопке всегда совпадает с ним.
+  // «Все» — это все ПОЛНОЗНАЧНЫЕ: служебные показывает только свой фильтр.
   function visible() {
     const q = query.trim().toLowerCase();
     return sorted(records()).filter(rec => {
+      if (filter === 'fn') { if (!isFn(rec)) return false; }
+      else if (isFn(rec)) return false;
       if (filter === 'new'   && isKnown(rec)) return false;
       if (filter === 'known' && !isKnown(rec)) return false;
       if (!q) return true;
@@ -132,6 +144,7 @@ const ReaderDict = (() => {
     if (query.trim())       return `▶ Учить найденные (${n})`;
     if (filter === 'new')   return `▶ Учить новые (${n})`;
     if (filter === 'known') return `▶ Учить «знаю» (${n})`;
+    if (filter === 'fn')    return `▶ Учить служебные (${n})`;
     return `▶ Учить ${n} ${plural(n, ['слово', 'слова', 'слов'])}`;
   }
 
@@ -143,10 +156,24 @@ const ReaderDict = (() => {
       : `Учить ${n} ${plural(n, ['слово', 'слова', 'слов'])} словаря`;
   }
 
+  // Подпись фильтра «Служебные» несёт число: без него неясно, есть ли
+  // там вообще что-то, а список по умолчанию их не показывает.
+  function renderFilterCounts() {
+    const btn = elView && elView.querySelector('.rd-dict-filter button[data-filter="fn"]');
+    if (!btn) return;
+    const n = fnRecords().length;
+    btn.textContent = n ? `Служебные (${n})` : 'Служебные';
+    btn.disabled = n === 0;
+  }
+
   function render() {
     if (!elList) return;
     const list = visible();
-    const total = records().length;
+    // «Пусто» считаем по полнозначным: если собраны одни служебные,
+    // на вкладке «Все» честнее сказать «пока пусто» и показать,
+    // что они лежат в своём фильтре.
+    const total = filter === 'fn' ? fnRecords().length : contentRecords().length;
+    renderFilterCounts();
 
     if (elCards) {
       elCards.textContent = cardsLabel(list.length);
@@ -156,12 +183,15 @@ const ReaderDict = (() => {
     }
 
     if (!total) {
+      const fnCount = fnRecords().length;
       elList.innerHTML = `
         <div class="rd-dict-empty">
           <div class="rd-dict-empty-icon">📗</div>
           <div class="rd-dict-empty-title">Словарь пуст</div>
           <p class="rd-dict-empty-text">Тапайте по незнакомым словам в тексте —
-            они будут собираться сюда.</p>
+            они будут собираться сюда.${fnCount
+              ? ` Собранные служебные слова (${fnCount}) лежат в своём фильтре.`
+              : ''}</p>
         </div>`;
       return;
     }
@@ -179,7 +209,7 @@ const ReaderDict = (() => {
 
   function renderSub() {
     if (!elSub) return;
-    const all   = records();
+    const all   = contentRecords();
     const known = all.filter(isKnown).length;
     elSub.textContent = title
       ? `${title} · ${all.length} ${plural(all.length, ['слово', 'слова', 'слов'])}`
@@ -244,7 +274,7 @@ const ReaderDict = (() => {
 
   function exportText() {
     const list = visible();
-    const all  = records();
+    const all  = contentRecords();
     const known = all.filter(isKnown).length;
     const head = [
       (title || 'Книга') + ' — словарь',

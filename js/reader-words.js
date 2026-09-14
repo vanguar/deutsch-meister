@@ -7,7 +7,7 @@
    ging и gingen дают одну запись gehen со списком встреченных форм.
 
    Запись:
-     { de, ru, note, pos, art, pl, forms, decl, old,
+     { de, ru, note, pos, art, pl, forms, decl, old, fn: false,
        seen: ['ging','gingen'], n: 3,
        ch: 'ch-01', p: 4, ts: 1700000000000, status: 'new' }
 
@@ -16,12 +16,32 @@
    status: 'new' — слово в работе (подсвечивается), 'known' — выучено
    (подсветка снимается).
 
+   fn — служебное слово (артикль, предлог, союз, частица, местоимение,
+   междометие, числительное). Тап по нему работает как по любому другому:
+   тултип открывается, озвучка играет, запись создаётся — человек может
+   не знать dessen, и это нормально. Но в карточки и в подсветку такое
+   слово по умолчанию не идёт, иначе колода забивается aber/und/nicht.
+   Принцип «не запрещать, а не мешать»: слово никуда не пропадает,
+   у него свой фильтр в словаре книги.
+
    Zero dependencies.
    ═══════════════════════════════════════════════ */
 
 const ReaderWords = (() => {
 
   const KEY = 'dm_book_words:';
+
+  // Набор взят из фактических значений pos в data/books/*/glossary.json,
+  // а не придуман: артикль, предл., союз, частица, мест., межд., числ.
+  // Всё остальное (сущ., гл., прил., нареч., субст. прил., прозвище,
+  // выраж., геогр.) — полнозначное. Неизвестный pos тоже считается
+  // полнозначным: новая часть речи не должна молча исчезать из сборника.
+  const FUNCTION_POS = ['артикль', 'предл.', 'союз', 'частица',
+                        'мест.', 'межд.', 'числ.'];
+
+  function isFunctionPos(pos) {
+    return FUNCTION_POS.indexOf(String(pos || '').trim()) >= 0;
+  }
 
   let bookId = null;
   let words  = {};   // лемма → запись
@@ -46,10 +66,22 @@ const ReaderWords = (() => {
       const parsed = JSON.parse(raw);
       // Битый или чужой формат не должен ронять ридер: начинаем с пустого
       if (parsed && typeof parsed === 'object' && !Array.isArray(parsed)) {
+        let migrated = 0;
         Object.keys(parsed).forEach(lemma => {
           const rec = parsed[lemma];
-          if (rec && typeof rec === 'object') words[lemma] = rec;
+          if (!rec || typeof rec !== 'object') return;
+          // Записи, собранные до появления флага, размечаем на лету по их
+          // же pos — он лежит в самой записи с момента add(), и глоссарий
+          // для этого грузить не нужно (в словаре книги главы может не
+          // быть вовсе). Ничего не стираем: служебные слова просто
+          // уходят в свой фильтр.
+          if (!('fn' in rec)) {
+            rec.fn = isFunctionPos(rec.pos);
+            migrated++;
+          }
+          words[lemma] = rec;
         });
+        if (migrated) save();
       } else {
         console.warn('[ReaderWords] неожиданный формат dm_book_words → пустой сборник');
       }
@@ -74,10 +106,24 @@ const ReaderWords = (() => {
   function count() { return Object.keys(words).length; }
   function get(lemma) { return words[lemma] || null; }
 
-  // Подсвечиваем всё, что собрано и ещё не помечено выученным
+  // Подсвечиваем всё, что собрано, не помечено выученным и не служебное.
+  // Через эту же проверку идёт счётчик карточек главы (js/reader.js:
+  // chapterLemmas), поэтому служебные не попадают и в колоду.
   function isMarked(lemma) {
     const rec = words[lemma];
-    return !!rec && rec.status !== 'known';
+    return !!rec && rec.status !== 'known' && !rec.fn;
+  }
+
+  function isFunction(lemma) {
+    const rec = words[lemma];
+    return !!rec && !!rec.fn;
+  }
+
+  // Сколько собрано полнозначных слов: это число показывает библиотека.
+  // Служебные в него не входят — иначе счётчик книги мерил бы не
+  // словарный запас, а количество тапов по «und».
+  function countContent() {
+    return Object.keys(words).filter(l => !words[l].fn).length;
   }
 
   /* ── Запись ── */
@@ -116,6 +162,9 @@ const ReaderWords = (() => {
       // тултипу в словаре книги, где глава (а с ней и глоссарий) может
       // быть не загружена.
       if (e.note)  rec.note  = e.note;
+      // fn пишем всегда булевым, а не «только если true»: по отсутствию
+      // ключа load() отличает запись, которую ещё не размечали.
+      rec.fn = isFunctionPos(e.pos);
       words[lemma] = rec;
     }
 
@@ -146,5 +195,6 @@ const ReaderWords = (() => {
     return true;
   }
 
-  return { load, save, all, get, count, isMarked, add, setStatus, remove };
+  return { load, save, all, get, count, countContent, isMarked, isFunction,
+           isFunctionPos, add, setStatus, remove };
 })();

@@ -12,13 +12,13 @@
   <link rel="apple-touch-icon" href="/deutsch-meister/icons/icon.svg">
   <link rel="icon" type="image/svg+xml" href="/deutsch-meister/icons/icon.svg">
 
-  <link rel="stylesheet" href="css/base.css?v=56">
+  <link rel="stylesheet" href="css/base.css?v=57">
   <!-- lesson.css — только ради класса .word-tip, который переиспользует ридер -->
-  <link rel="stylesheet" href="css/lesson.css?v=56">
+  <link rel="stylesheet" href="css/lesson.css?v=57">
   <!-- exercises.css — ради анимации переворота карточки (.flashcard,
        .card-face, .fc-dot): карточки книги переиспользуют её целиком -->
-  <link rel="stylesheet" href="css/exercises.css?v=56">
-  <link rel="stylesheet" href="css/reader.css?v=56">
+  <link rel="stylesheet" href="css/exercises.css?v=57">
+  <link rel="stylesheet" href="css/reader.css?v=57">
 </head>
 <body>
 
@@ -170,10 +170,14 @@
   <div class="rd-dict-tools">
     <input type="search" class="rd-dict-search" id="rdDictSearch"
       placeholder="Поиск по слову или переводу" aria-label="Поиск по словарю">
-    <div class="rd-seg rd-dict-filter" role="group" aria-label="Фильтр">
+    <!-- «Все» — это все полнозначные. Служебные (артикли, предлоги, союзы)
+         показывает только их собственный фильтр: число в подписи ставит
+         js/reader-dict.js -->
+    <div class="rd-seg rd-seg--grid rd-dict-filter" role="group" aria-label="Фильтр">
       <button type="button" data-filter="all"   aria-pressed="true">Все</button>
       <button type="button" data-filter="new"   aria-pressed="false">Новые</button>
       <button type="button" data-filter="known" aria-pressed="false">Знаю</button>
+      <button type="button" data-filter="fn"    aria-pressed="false">Служебные</button>
     </div>
     <!-- Главное действие экрана: подпись целиком ставит js/reader-dict.js,
          она называет, что именно уйдёт в карточки (весь словарь или то,
@@ -200,15 +204,15 @@
   </div>
 </section>
 
-<script src="js/tts.js?v=56"></script>
-<script src="js/library.js?v=56"></script>
-<script src="js/reader-words.js?v=56"></script>
-<script src="js/reader-speak.js?v=56"></script>
-<script src="js/reader-tip.js?v=56"></script>
-<script src="js/reader-cards.js?v=56"></script>
-<script src="js/reader-dict.js?v=56"></script>
-<script src="js/flashcards.js?v=56"></script>
-<script src="js/reader.js?v=56"></script>
+<script src="js/tts.js?v=57"></script>
+<script src="js/library.js?v=57"></script>
+<script src="js/reader-words.js?v=57"></script>
+<script src="js/reader-speak.js?v=57"></script>
+<script src="js/reader-tip.js?v=57"></script>
+<script src="js/reader-cards.js?v=57"></script>
+<script src="js/reader-dict.js?v=57"></script>
+<script src="js/flashcards.js?v=57"></script>
+<script src="js/reader.js?v=57"></script>
 <script>
   function initTheme() {
     let saved = 'dark';

@@ -85,13 +85,29 @@ const Library = (() => {
   }
 
   // dm_book_words:<id> — массив слов, либо { words: [...] }, либо объект-словарь
+  // (актуальный формат: лемма → запись, см. js/reader-words.js).
+  //
+  // Считаем только ПОЛНОЗНАЧНЫЕ слова: служебные (артикли, предлоги,
+  // союзы) в сборник попадают, но счётчик книги должен мерить словарный
+  // запас, а не количество тапов по «und». Классификацию берём у
+  // ReaderWords — одна точка правды; если модуль почему-то не подключён,
+  // считаем как раньше, все записи.
+  function isFunctionRec(rec) {
+    if (!rec || typeof rec !== 'object') return false;
+    if ('fn' in rec) return !!rec.fn;
+    // запись со старого формата, ещё не размеченная load()
+    return typeof ReaderWords !== 'undefined'
+      && typeof ReaderWords.isFunctionPos === 'function'
+      && ReaderWords.isFunctionPos(rec.pos);
+  }
+
   function getWordsCount(book) {
     const data = readStore(WORDS_KEY + book.id);
     if (data === null) return 0;
     if (Array.isArray(data)) return data.length;
     if (typeof data === 'object') {
       if (Array.isArray(data.words)) return data.words.length;
-      return Object.keys(data).length;
+      return Object.keys(data).filter(l => !isFunctionRec(data[l])).length;
     }
     return 0;
   }
