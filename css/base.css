@@ -648,15 +648,6 @@ h1, h2, h3 {
 .dm-copy:hover { opacity: .88; transform: translateY(-1px); }
 .dm-copy.copied { background: var(--green); }
 
-.dm-net-badge {
-  display: inline-block;
-  background: rgba(86,216,153,.12);
-  border: 1px solid rgba(86,216,153,.3);
-  color: var(--green);
-  border-radius: var(--r-full);
-  padding: 3px 12px; font-size: 12px; font-weight: 600;
-  margin-bottom: 16px;
-}
 
 .dm-btn {
   width: 100%;

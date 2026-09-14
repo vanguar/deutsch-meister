@@ -214,21 +214,49 @@ function dmFallbackCopy(text, cb) {
   ta.remove();
 }
 
-/* ── Пункт: развитие проекта / книги ── */
+/* ── Пункт «Книги на немецком» ───────────────────────────────────
+   Имя openBooksModal() сохранено: его вызывают 68 оболочек уроков
+   через inline-onclick, менять их нельзя. Модалки-заглушки больше
+   нет — пункт ведёт в библиотеку.                                  */
+
+// Глубина страницы вычисляется по <link rel="manifest">: в корне это
+// manifest.json, в уроке — ../../../manifest.json. Отдельной константы
+// с базовым путём в проекте нет, а манифест есть на каждой странице.
+function dmBasePath() {
+  try {
+    const link = document.querySelector('link[rel="manifest"]');
+    const href = (link && link.getAttribute('href')) || '';
+    const base = href.replace(/manifest\.json(?:\?.*)?$/, '');
+    if (/manifest\.json/.test(href)) return base;
+  } catch (e) {}
+  return '';
+}
+
+function dmBooksUrl() { return dmBasePath() + 'books.html'; }
+
 function openBooksModal() {
   dmHaptic('light');
-  dmOpen(`
-    <div class="dm-emoji">📖</div>
-    <h2 class="dm-title">Книга с переводом</h2>
-    <p class="dm-text">
-      Мы активно работаем над книгой на немецком с переводом:
-      чтение с озвучкой, переводом фраз, разбором отдельных слов
-      и упражнениями прямо по тексту.
-    </p>
-    <div class="dm-net-badge">🚀 Скоро в обновлении</div>
-    <p class="dm-note">Следите за новостями — спасибо, что вы с нами!</p>
-    <button class="dm-btn" onclick="dmClose()">Отлично, жду! 🙌</button>
-  `);
+  window.location.href = dmBooksUrl();
+}
+
+// В 68 оболочках пункт подписан старым текстом заглушки, а сами оболочки
+// править нельзя — поправляем подпись на месте, при загрузке страницы.
+function dmFixBooksItem() {
+  try {
+    document.querySelectorAll('.side-action').forEach(btn => {
+      if (((btn.getAttribute('onclick') || '').indexOf('openBooksModal') < 0)) return;
+      const title = btn.querySelector('.sa-title');
+      const sub   = btn.querySelector('.sa-sub');
+      if (title) title.textContent = 'Книги на немецком';
+      if (sub)   sub.textContent   = 'Чтение с переводом и озвучкой';
+    });
+  } catch (e) {}
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', dmFixBooksItem);
+} else {
+  dmFixBooksItem();
 }
 
 Object.assign(window, {
@@ -239,7 +267,8 @@ Object.assign(window, {
   dmPayStars,
   dmOpenBotDonate,
   dmCopyWallet,
-  openBooksModal
+  openBooksModal,
+  dmBooksUrl
 });
 
 /* Закрытие по Esc */
