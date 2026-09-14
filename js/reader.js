@@ -97,7 +97,8 @@ const Reader = (() => {
   /* ── DOM ── */
   let elLib, elView, elViewport, elContent, elState,
       elTitle, elSub, elPages, elBar, elPrev, elNext,
-      elSheet, elSheetBack, elSheetBody;
+      elSheet, elSheetBack, elSheetBody,
+      elSpeakBar, elSpeakBarText;
 
   /* ── Утилиты ── */
 
@@ -468,6 +469,7 @@ const Reader = (() => {
 
   function onResize() {
     clearTimeout(resizeTimer);
+    speakBarPlace(speakBarBs);   // вьюпорт переехал — плашка следом
     resizeTimer = setTimeout(repaginate, 120);
   }
 
@@ -674,8 +676,22 @@ const Reader = (() => {
 
   function speakReady() { return typeof ReaderSpeak !== 'undefined'; }
 
+  // Плашку гасим и здесь: если очереди не было, onDone не придёт
   function speakStop() {
     if (speakReady()) ReaderSpeak.stop();
+    speakBarHide();
+    tipRestore();
+  }
+
+  function tipCollapse() {
+    if (typeof ReaderTip !== 'undefined') ReaderTip.collapse();
+  }
+
+  // Возвращает тултип только если сворачивали мы: если за время озвучки
+  // читатель открыл другое слово, close() внутри open() уже снял флаг
+  // и restore() молча ничего не делает.
+  function tipRestore() {
+    if (typeof ReaderTip !== 'undefined') ReaderTip.restore();
   }
 
   function sentenceDeOf(bs) {
@@ -689,6 +705,52 @@ const Reader = (() => {
     if (!elContent) return;
     elContent.querySelectorAll('.bs--playing').forEach(n => n.classList.remove('bs--playing'));
     if (el) el.classList.add('bs--playing');
+  }
+
+  /* ── Плашка озвучки (задача: тултип не закрывает читаемый текст) ── */
+
+  // Индикатор: первые слова предложения. Длинный текст плашку не растит —
+  // строка одна, хвост режется многоточием (см. .rd-speakbar-text).
+  function speakBarLabel(text) {
+    const words = String(text || '').trim().split(/\s+/).filter(Boolean);
+    if (!words.length) return '';
+    return words.slice(0, 4).join(' ') + (words.length > 4 ? '…' : '');
+  }
+
+  // Пришпиливаем к тому краю .rd-viewport, который дальше от подсвеченного
+  // предложения: так .bs--playing остаётся целиком на виду. position: fixed
+  // поверх, как панели в 2C, — размеры вьюпорта не меняются, значит
+  // перепагинация отсюда невозможна.
+  function speakBarPlace(bs) {
+    if (!elSpeakBar || elSpeakBar.hidden || !elViewport) return;
+    const vp = elViewport.getBoundingClientRect();
+    const h  = elSpeakBar.offsetHeight || 36;
+
+    let atTop = true;
+    if (bs) {
+      const r = bs.getBoundingClientRect();
+      atTop = (r.top - vp.top) >= (vp.bottom - r.bottom);
+    }
+    elSpeakBar.classList.toggle('rd-speakbar--top', atTop);
+    elSpeakBar.classList.toggle('rd-speakbar--bottom', !atTop);
+    elSpeakBar.style.top = Math.round(atTop ? vp.top : vp.bottom - h) + 'px';
+  }
+
+  let speakBarBs = null;   // предложение, под которое посчитан край
+
+  function speakBarShow(text, bs) {
+    if (!elSpeakBar) return;
+    if (elSpeakBarText) elSpeakBarText.textContent = speakBarLabel(text);
+    speakBarBs = bs || null;
+    elSpeakBar.hidden = false;   // высоту меряем уже показанной
+    speakBarPlace(speakBarBs);
+  }
+
+  function speakBarHide() {
+    if (!elSpeakBar) return;
+    speakBarBs = null;
+    elSpeakBar.hidden = true;
+    if (elSpeakBarText) elSpeakBarText.textContent = '';
   }
 
   function setSpeakBtn(on) {
@@ -720,9 +782,21 @@ const Reader = (() => {
       if (ReaderSpeak.isPlaying('sentence')) { ReaderSpeak.stop(); return; }
       const text = sentenceDeOf(ctx.bs);
       if (!text) return;
+      // Предложение звучит долго — тултип уходит в плашку, чтобы читатель
+      // видел подсвеченный текст. Слово короткое, там сворачивать нечего.
       ReaderSpeak.sentence(text, {
-        onItem: () => { tipSpeaking('sentence'); setPlayingSentence(ctx.bs); },
-        onDone: () => { tipSpeaking(null); setPlayingSentence(null); }
+        onItem: () => {
+          tipSpeaking('sentence');
+          setPlayingSentence(ctx.bs);
+          tipCollapse();
+          speakBarShow(text, ctx.bs);
+        },
+        onDone: () => {
+          tipSpeaking(null);
+          setPlayingSentence(null);
+          speakBarHide();
+          tipRestore();
+        }
       });
     }
   }
@@ -748,11 +822,16 @@ const Reader = (() => {
     const items = pageSentences();
     if (!items.length) return;
 
+    // Читаем всю страницу — подсказка по одному слову тут уже не нужна:
+    // тултип закрывается совсем, от него остаётся только плашка со «стоп».
+    tipClose();
+
     const started = ReaderSpeak.page(items, {
-      onItem: it => setPlayingSentence(it.el),
-      onDone: () => { setPlayingSentence(null); setSpeakBtn(false); }
+      onItem: it => { setPlayingSentence(it.el); speakBarShow(it.text, it.el); },
+      onDone: () => { setPlayingSentence(null); setSpeakBtn(false); speakBarHide(); }
     });
     setSpeakBtn(started);
+    if (!started) speakBarHide();
   }
 
   /* ── Панели: скрыть / показать ── */
@@ -883,6 +962,8 @@ const Reader = (() => {
     elBar      = document.getElementById('rdBarFill');
     elPrev     = document.getElementById('rdPrev');
     elNext     = document.getElementById('rdNext');
+    elSpeakBar     = document.getElementById('rdSpeakBar');
+    elSpeakBarText = document.getElementById('rdSpeakBarText');
     elSheet     = document.getElementById('rdSheet');
     elSheetBack = document.getElementById('rdSheetBack');
     elSheetBody = document.getElementById('rdSheetBody');
@@ -895,6 +976,7 @@ const Reader = (() => {
 
     document.getElementById('rdPrefsBtn')?.addEventListener('click', openSheet);
     document.getElementById('rdSpeakBtn')?.addEventListener('click', speakPage);
+    document.getElementById('rdSpeakStop')?.addEventListener('click', speakStop);
     document.getElementById('rdSheetClose')?.addEventListener('click', closeSheet);
     elSheetBack?.addEventListener('click', closeSheet);
     elSheetBody?.addEventListener('click', e => {

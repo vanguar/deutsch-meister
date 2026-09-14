@@ -42,6 +42,10 @@ const ReaderTip = (() => {
   let expanded   = false;
   let actCb      = null;   // колбэк ридера на кнопки тултипа
 
+  // Свёрнут на время озвучки: узел спрятан, но состояние живо и restore()
+  // возвращает тултип ровно таким, каким он был (в том числе раскрытым).
+  let collapsed  = false;
+
   /* ── Утилиты ── */
 
   function esc(s) {
@@ -284,6 +288,8 @@ const ReaderTip = (() => {
       if (!target || !e.target || !e.target.closest) return;
       if (e.target.closest('.word-tip') || e.target.closest('.bw')) return;
       if (e.target.closest('.rd-viewport')) return;
+      // «Стоп» на плашке озвучки обязан вернуть тултип, а не потерять его
+      if (e.target.closest('.rd-speakbar')) return;
       close();
     }, true);
 
@@ -338,6 +344,36 @@ const ReaderTip = (() => {
     return true;
   }
 
+  /* ── Сворачивание на время озвучки ── */
+
+  // Прячем только узел. target, expanded, текст перевода и подсветка
+  // .bs--active остаются на месте, содержимое не перерисовывается —
+  // поэтому возврат ничего не теряет и не мигает новым layout'ом.
+  function collapse() {
+    if (!target || !elTip || collapsed) return false;
+    collapsed = true;
+    elTip.classList.remove('word-tip-visible');
+    return true;
+  }
+
+  // Позицию считаем заново: за время озвучки читатель мог скрыть панели
+  // или повернуть экран, а размеры тултипа зависят от его же left (см.
+  // position()). Второй проход — после показа, как и в open().
+  function restore() {
+    if (!collapsed) return false;
+    collapsed = false;
+    if (!target || !elTip) return false;
+    const el = target;
+    position(el);
+    elTip.classList.add('word-tip-visible');
+    if (typeof requestAnimationFrame === 'function') {
+      requestAnimationFrame(() => { if (target === el) position(el); });
+    }
+    return true;
+  }
+
+  function isCollapsed() { return collapsed; }
+
   function close() {
     if (target) target.classList.remove('word-tip-open');
     if (sentenceEl) sentenceEl.classList.remove('bs--active');
@@ -345,6 +381,7 @@ const ReaderTip = (() => {
     sentenceEl = null;
     sentenceRu = '';
     expanded   = false;
+    collapsed  = false;
     if (elTip) elTip.classList.remove('word-tip-visible');
   }
 
@@ -353,6 +390,7 @@ const ReaderTip = (() => {
 
   return {
     open, close, isOpen, isExpanded, toggleSentence, setSpeaking,
+    collapse, restore, isCollapsed,
     position, lookup, render
   };
 })();

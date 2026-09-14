@@ -73,6 +73,14 @@
     </div>
   </footer>
 
+  <!-- ── ПЛАШКА ОЗВУЧКИ: на время чтения предложения тултип сворачивается
+       сюда, чтобы не закрывать текст. Край (верх/низ) ставит js/reader.js ── -->
+  <div class="rd-speakbar" id="rdSpeakBar" hidden>
+    <button class="rd-speakbar-stop" id="rdSpeakStop"
+      aria-label="Остановить озвучку">◼ Стоп</button>
+    <span class="rd-speakbar-text" id="rdSpeakBarText" aria-live="polite"></span>
+  </div>
+
   <!-- ── НАСТРОЙКИ ЧТЕНИЯ: подложка + шторка, ряды строит js/reader.js ── -->
   <div class="rd-sheet-back" id="rdSheetBack"></div>
   <aside class="rd-sheet" id="rdSheet" role="dialog" aria-modal="true"
