@@ -23,6 +23,8 @@
    Тот же тап значит «не знаю»: лемма уходит в сборник (js/reader-words.js),
    и все её словоформы в главе получают .bw--seen. Перевод предложения
    раскрывается внутри тултипа — ru берётся из st.chapter по data-p/data-s.
+   Озвучка (слово, предложение, страница) — js/reader-speak.js, очередь
+   чанков идёт по onEnd из js/tts.js.
 
    Zero dependencies. Перевод предложения — этап 3C, озвучка — 4.
    ═══════════════════════════════════════════════ */
@@ -295,6 +297,9 @@ const Reader = (() => {
   function goTo(page, opts) {
     const o = opts || {};
     tipClose();   // листание и перепагинация закрывают тултип
+    // Озвучку здесь НЕ останавливаем: goTo вызывает и repaginate (resize,
+    // смена настроек, поздняя загрузка шрифта), а это не действие читателя —
+    // чтение не должно обрываться само. Стоп висит на next/prev и загрузке главы.
     st.page = Math.max(0, Math.min(st.pages - 1, page));
     applyTransform(o.animate !== false);
 
@@ -365,6 +370,7 @@ const Reader = (() => {
 
   // where: { anchor } | { atEnd: true } | ничего → первая страница
   function loadChapter(index, where) {
+    speakStop();   // смена главы останавливает озвучку
     st.retry = () => loadChapter(index, where);
     showLoading('Загружаем главу');
 
@@ -435,11 +441,13 @@ const Reader = (() => {
   /* ── Листание, включая границы глав ── */
 
   function next() {
+    speakStop();   // листание читателем останавливает озвучку
     if (st.page < st.pages - 1) { goTo(st.page + 1); return; }
     if (st.chIndex < st.chTotal - 1) loadChapter(st.chIndex + 1, null);   // с первой страницы
   }
 
   function prev() {
+    speakStop();
     if (st.page > 0) { goTo(st.page - 1); return; }
     if (st.chIndex > 0) loadChapter(st.chIndex - 1, { atEnd: true });     // с последней
   }
@@ -565,6 +573,7 @@ const Reader = (() => {
   function openSheet() {
     if (!elSheet) return;
     tipClose();
+    speakStop();
     buildSheet();
     st.sheet = true;
     elSheet.classList.add('show');
@@ -595,7 +604,8 @@ const Reader = (() => {
       gloss: st.gloss,
       theme: st.prefs ? st.prefs.theme : 'system',
       sentenceRu: sentenceRuOf(bs),
-      bs: bs
+      bs: bs,
+      onAct: tipAct
     });
     // Тап, который тултип закрыл, «не знаю» не значит — n не растёт
     if (opened) collectWord(el);
@@ -656,6 +666,91 @@ const Reader = (() => {
 
   function tipIsOpen() {
     return typeof ReaderTip !== 'undefined' && ReaderTip.isOpen();
+  }
+
+  /* ── Озвучка (js/reader-speak.js) ── */
+
+  function speakReady() { return typeof ReaderSpeak !== 'undefined'; }
+
+  function speakStop() {
+    if (speakReady()) ReaderSpeak.stop();
+  }
+
+  function sentenceDeOf(bs) {
+    if (!bs || !st.chapter || !Array.isArray(st.chapter.paragraphs)) return '';
+    const para = st.chapter.paragraphs[Number(bs.dataset.p)];
+    const sent = para && Array.isArray(para.s) ? para.s[Number(bs.dataset.s)] : null;
+    return (sent && sent.de) || '';
+  }
+
+  function setPlayingSentence(el) {
+    if (!elContent) return;
+    elContent.querySelectorAll('.bs--playing').forEach(n => n.classList.remove('bs--playing'));
+    if (el) el.classList.add('bs--playing');
+  }
+
+  function setSpeakBtn(on) {
+    const btn = document.getElementById('rdSpeakBtn');
+    if (!btn) return;
+    btn.classList.toggle('is-playing', !!on);
+    btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+  }
+
+  function tipSpeaking(kind) {
+    if (typeof ReaderTip !== 'undefined') ReaderTip.setSpeaking(kind);
+  }
+
+  // Кнопки в тултипе: 🔊 слова и 🔊 раскрытого перевода
+  function tipAct(act, ctx) {
+    if (!speakReady()) return;
+
+    if (act === 'speak-word') {
+      if (ReaderSpeak.isPlaying('word')) { ReaderSpeak.stop(); return; }
+      // озвучиваем словоформу как в тексте, не лемму
+      ReaderSpeak.word(ctx.word, {
+        onItem: () => tipSpeaking('word'),
+        onDone: () => tipSpeaking(null)
+      });
+      return;
+    }
+
+    if (act === 'speak-sentence') {
+      if (ReaderSpeak.isPlaying('sentence')) { ReaderSpeak.stop(); return; }
+      const text = sentenceDeOf(ctx.bs);
+      if (!text) return;
+      ReaderSpeak.sentence(text, {
+        onItem: () => { tipSpeaking('sentence'); setPlayingSentence(ctx.bs); },
+        onDone: () => { tipSpeaking(null); setPlayingSentence(null); }
+      });
+    }
+  }
+
+  // Предложения текущей страницы: те, что на ней начинаются
+  function pageSentences() {
+    const out = [];
+    if (!elContent || !st.chapter) return out;
+    elContent.querySelectorAll('.bs').forEach(bs => {
+      const first = bs.querySelector('.bw') || bs;
+      if (colOf(first) !== st.page) return;
+      const text = sentenceDeOf(bs);
+      if (text) out.push({ el: bs, text: text });
+    });
+    return out;
+  }
+
+  // Дочитала страницу — остановилась: сама не листает
+  function speakPage() {
+    if (!speakReady()) return;
+    if (ReaderSpeak.isPlaying('page')) { ReaderSpeak.stop(); return; }
+
+    const items = pageSentences();
+    if (!items.length) return;
+
+    const started = ReaderSpeak.page(items, {
+      onItem: it => setPlayingSentence(it.el),
+      onDone: () => { setPlayingSentence(null); setSpeakBtn(false); }
+    });
+    setSpeakBtn(started);
   }
 
   /* ── Панели: скрыть / показать ── */
@@ -761,6 +856,7 @@ const Reader = (() => {
     st.chapter = null;
     closeSheet();
     tipClose();
+    speakStop();
     elView.hidden = true;
     elLib.hidden  = false;
     document.body.classList.remove('rd-open');
@@ -796,6 +892,7 @@ const Reader = (() => {
     elNext.addEventListener('click', next);
 
     document.getElementById('rdPrefsBtn')?.addEventListener('click', openSheet);
+    document.getElementById('rdSpeakBtn')?.addEventListener('click', speakPage);
     document.getElementById('rdSheetClose')?.addEventListener('click', closeSheet);
     elSheetBack?.addEventListener('click', closeSheet);
     elSheetBody?.addEventListener('click', e => {
@@ -823,7 +920,7 @@ const Reader = (() => {
   return {
     init, open, close, next, prev, goTo, repaginate,
     setPref, openSheet, closeSheet, toggleChrome,
-    applySeen, markLemma, state: st
+    applySeen, markLemma, speakPage, pageSentences, state: st
   };
 })();
 

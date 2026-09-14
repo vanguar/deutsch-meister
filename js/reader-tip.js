@@ -18,8 +18,12 @@
    «Предложение» в .word-tip-actions), без отдельного окна. Раскрытие
    меняет высоту, поэтому позиция пересчитывается тем же клампингом.
 
-   Zero dependencies. Кнопка 🔊 — этап 4, под неё место в том же
-   .word-tip-actions.
+   Кнопки 🔊 (слово и предложение) сам тултип не озвучивает: он
+   сообщает о нажатии через opts.onAct, а озвучку делает ридер
+   (js/reader.js + js/reader-speak.js). Состояние «играет» ставится
+   снаружи через setSpeaking().
+
+   Zero dependencies.
    ═══════════════════════════════════════════════ */
 
 const ReaderTip = (() => {
@@ -36,6 +40,7 @@ const ReaderTip = (() => {
   let sentenceRu = '';
   let sentenceEl = null;   // .bs, которое подсвечиваем на время раскрытия
   let expanded   = false;
+  let actCb      = null;   // колбэк ридера на кнопки тултипа
 
   /* ── Утилиты ── */
 
@@ -55,10 +60,17 @@ const ReaderTip = (() => {
     // Кнопки внутри тултипа переживают перерисовку содержимого, поэтому
     // слушатель делегированный и навешивается один раз
     elTip.addEventListener('click', e => {
-      const btn = e.target.closest && e.target.closest('[data-act="sentence"]');
+      const btn = e.target.closest && e.target.closest('[data-act]');
       if (!btn) return;
       e.stopPropagation();
-      toggleSentence();
+      const act = btn.dataset.act;
+      if (act === 'sentence') { toggleSentence(); return; }
+      if (typeof actCb === 'function') {
+        actCb(act, {
+          word: target ? target.textContent : '',
+          bs:   sentenceEl
+        });
+      }
     });
     document.body.appendChild(elTip);
     return elTip;
@@ -107,15 +119,32 @@ const ReaderTip = (() => {
     return entry.forms;
   }
 
-  // Кнопка «Предложение» и свёрнутый блок перевода. Место под 🔊 (этап 4)
-  // — тот же .word-tip-actions.
+  // Ряд действий: 🔊 слова и «Предложение». У раскрытого перевода —
+  // своя 🔊, она озвучивает предложение целиком.
   function actionsHtml(hasSentence) {
-    if (!hasSentence) return '<span class="word-tip-actions"></span>';
+    const say = '<button type="button" class="word-tip-say" data-act="speak-word"'
+      + ' title="Озвучить слово" aria-label="Озвучить слово">🔊</button>';
+    if (!hasSentence) {
+      return '<span class="word-tip-actions">' + say + '</span>';
+    }
     return '<span class="word-tip-actions">'
+      + say
       + '<button type="button" class="word-tip-act" data-act="sentence"'
       + ' aria-expanded="false">Предложение <span class="word-tip-caret">⌄</span></button>'
       + '</span>'
-      + '<span class="word-tip-sentence" hidden></span>';
+      + '<span class="word-tip-sentence" hidden>'
+      + '<button type="button" class="word-tip-say" data-act="speak-sentence"'
+      + ' title="Озвучить предложение" aria-label="Озвучить предложение">🔊</button>'
+      + '<span class="word-tip-sentence-ru"></span>'
+      + '</span>';
+  }
+
+  // Кнопку «играет» подсвечивает ридер: тултип сам про TTS не знает
+  function setSpeaking(kind) {
+    if (!elTip) return;
+    elTip.querySelectorAll('[data-act^="speak-"]').forEach(b => {
+      b.classList.toggle('is-playing', !!kind && b.dataset.act === 'speak-' + kind);
+    });
   }
 
   function render(word, info, opts) {
@@ -165,19 +194,20 @@ const ReaderTip = (() => {
   function toggleSentence() {
     if (!elTip || !sentenceRu) return;
     const box   = elTip.querySelector('.word-tip-sentence');
+    const ru    = elTip.querySelector('.word-tip-sentence-ru');
     const btn   = elTip.querySelector('[data-act="sentence"]');
     const caret = elTip.querySelector('.word-tip-caret');
-    if (!box) return;
+    if (!box || !ru) return;
 
     expanded = !expanded;
 
     if (expanded) {
-      box.textContent = sentenceRu;
+      ru.textContent = sentenceRu;
       box.hidden = false;
       if (sentenceEl) sentenceEl.classList.add('bs--active');
     } else {
       box.hidden = true;
-      box.textContent = '';
+      ru.textContent = '';
       if (sentenceEl) sentenceEl.classList.remove('bs--active');
     }
 
@@ -288,6 +318,7 @@ const ReaderTip = (() => {
     target     = el;
     sentenceRu = o.sentenceRu || '';
     sentenceEl = o.bs || null;
+    actCb      = (typeof o.onAct === 'function') ? o.onAct : null;
     expanded   = false;          // новое слово — всегда свёрнутый перевод
 
     tip.innerHTML = render(
@@ -320,5 +351,8 @@ const ReaderTip = (() => {
   function isOpen()     { return !!target; }
   function isExpanded() { return expanded; }
 
-  return { open, close, isOpen, isExpanded, toggleSentence, position, lookup, render };
+  return {
+    open, close, isOpen, isExpanded, toggleSentence, setSpeaking,
+    position, lookup, render
+  };
 })();

@@ -817,3 +817,55 @@ body.rd-open { overflow: hidden; }
   border-radius: 3px;
   color: var(--rd-strong);
 }
+
+/* ══ 20. РИДЕР: ОЗВУЧКА ══ */
+
+/* Подсветка читаемого предложения — как .bs--active и .bw--seen:
+   только цвет и фон, никаких метрик, иначе поедет пагинация. */
+.bs--playing {
+  background: color-mix(in srgb, var(--rd-accent) 22%, transparent);
+  border-radius: 3px;
+  color: var(--rd-strong);
+}
+
+/* 🔊 в тултипе: рядом с «Предложением» и у раскрытого перевода */
+.word-tip-say {
+  flex-shrink: 0;
+  background: color-mix(in srgb, var(--accent2) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent2) 34%, var(--border));
+  border-radius: var(--r-sm);
+  padding: 4px 8px;
+  font-size: 12px;
+  line-height: 1.2;
+  transition: all var(--t-fast);
+}
+.word-tip-say:hover { border-color: var(--accent2); }
+.word-tip-say.is-playing {
+  background: color-mix(in srgb, var(--accent2) 26%, transparent);
+  border-color: var(--accent2);
+  animation: rdPulse 1.1s ease-in-out infinite;
+}
+
+/* У раскрытого перевода кнопка стоит слева от текста */
+.word-tip-sentence { display: flex; align-items: flex-start; gap: var(--sp-sm); }
+.word-tip-sentence .word-tip-say { margin-top: 1px; }
+.word-tip-sentence-ru { display: block; }
+
+/* Кнопка «🔊 страница» в нижней панели */
+.rd-btn-label { margin-left: 6px; font-size: 12px; font-weight: 600; }
+.rd-slot-btn.is-playing {
+  background: var(--rd-accent-soft);
+  border-color: var(--rd-accent);
+  color: var(--rd-strong);
+  animation: rdPulse 1.1s ease-in-out infinite;
+}
+
+@keyframes rdPulse {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: .55; }
+}
+
+@media (max-width: 420px) {
+  /* на узком экране оставляем только значок */
+  .rd-btn-label { display: none; }
+}
