@@ -136,7 +136,82 @@ const TTS = (() => {
     return (cleanText(text).match(/[A-Za-zÄäÖöÜüß]+/g) || []).length;
   }
 
-  function stopCurrent() {
+  function letterCount(text) {
+    return (String(text || '').match(/[A-Za-zÄäÖöÜüßÉé]/g) || []).length;
+  }
+
+  /* ── Сессия озвучки ───────────────────────────────────────────
+     Один вызов speak() = одна сессия. Она гарантирует, что
+     opts.onEnd будет вызван РОВНО ОДИН РАЗ: при нормальном
+     завершении, при ошибке и при прерывании. Каскад
+     speechSynthesis → Web Audio → <audio> сессию не закрывает:
+     onEnd отдаётся на итоговом исходе, а не на каждом шаге.
+
+     Без onEnd сессия ничего не делает: ни таймеров, ни работы —
+     старые вызовы (68 уроков) идут прежним путём.               */
+
+  let activeSession = null;
+  let endedHandler  = null;   // слушатель 'ended' на singleton <audio>
+
+  // На <audio> держим не больше одного нашего слушателя.
+  // ses === null — снять любой, иначе снять только слушатель этой сессии.
+  function clearEnded(ses) {
+    if (!endedHandler || !audio) return;
+    if (ses && endedHandler.ses !== ses) return;
+    try { audio.removeEventListener('ended', endedHandler); } catch (e) {}
+    endedHandler = null;
+  }
+
+  // Без onEnd слушатель не нужен: у старых вызовов путь остаётся прежним
+  function attachEnded(ses) {
+    if (!ses || !ses.onEnd) return;
+    clearEnded(null);
+    endedHandler = () => ses.finish(true, 'end');
+    endedHandler.ses = ses;
+    getAudio().addEventListener('ended', endedHandler);
+  }
+
+  function newSession(text, onEnd) {
+    const ses = {
+      onEnd: (typeof onEnd === 'function') ? onEnd : null,
+      // Базовая страховка из длины текста; ветки уточняют её по реальной
+      // длительности, когда та известна (буфер Web Audio, <audio>.duration).
+      base: (300 + letterCount(text) * 70) * 1.6,
+      done: false,
+      timer: null,
+
+      finish(ok, reason) {
+        if (ses.done) return;
+        ses.done = true;
+        if (ses.timer) { clearTimeout(ses.timer); ses.timer = null; }
+        clearEnded(ses);
+        if (activeSession === ses) activeSession = null;
+        if (!ses.onEnd) return;
+        try {
+          ses.onEnd({ ok: !!ok, reason: reason || (ok ? 'end' : 'error') });
+        } catch (e) {
+          diag('onEnd бросил исключение: ' + (e && e.message));
+        }
+      },
+
+      // Аварийная страховка, а не основной механизм: если событие
+      // завершения не пришло, сессию закрываем сами.
+      arm(ms) {
+        if (!ses.onEnd || ses.done) return;
+        const wait = Math.max(ses.base, ms || 0);
+        if (ses.timer) clearTimeout(ses.timer);
+        ses.timer = setTimeout(() => {
+          diag('⏱ событие завершения не пришло за ' + Math.round(wait) + 'мс → страховка');
+          ses.finish(true, 'timeout');
+        }, wait);
+      }
+    };
+    return ses;
+  }
+
+  function stopCurrent(reason) {
+    const prev = activeSession;
+    activeSession = null;
     hlClear();
     try { window.speechSynthesis?.cancel(); } catch (e) {}
     try {
@@ -152,7 +227,13 @@ const TTS = (() => {
         audio.currentTime = 0;
       }
     } catch (e) {}
+    clearEnded(null);
+    // onEnd прерванной озвучки отдаём уже после фактической остановки
+    if (prev) prev.finish(false, reason || 'interrupted');
   }
+
+  // Остановить текущую озвучку: onEnd приходит с признаком прерывания.
+  function stop() { stopCurrent('interrupted'); }
 
   // Разблокировка на квалифицирующем жесте (click/touchend). touchstart на iOS
   // НЕ считается активацией — поэтому его не используем.
@@ -185,7 +266,7 @@ const TTS = (() => {
   }
 
   /* ── Путь 1: Web Audio (надёжнее в WebView) ── */
-  function playWebAudio(text, spans) {
+  function playWebAudio(text, spans, ses) {
     const c = getCtx();
     if (!c) return Promise.reject(new Error('no AudioContext'));
     const key = text;
@@ -201,24 +282,37 @@ const TTS = (() => {
       currentSource = s;
       s.buffer = buf;
       s.connect(c.destination);
-      s.onended = () => { if (currentSource === s) currentSource = null; };
+      s.onended = () => {
+        if (currentSource === s) currentSource = null;
+        if (ses) ses.finish(true, 'end');
+      };
       s.start(0);
       hlByDuration(spans, buf.duration);   // точная длительность из буфера
+      if (ses) ses.arm(buf.duration * 1000 * 1.6 + 500);
     });
   }
 
   /* ── Путь 2: <audio> с перебором источников ── */
-  function playAudioEl(text, spans) {
+  function playAudioEl(text, spans, ses) {
     const urls = [proxyUrl(text), gUrl('translate.google.com', text), gUrl('translate.googleapis.com', text)];
     const el = getAudio();
     try { el.pause(); el.currentTime = 0; } catch (e) {}
     el.muted = false;
+    attachEnded(ses);
     let i = 0;
     const tryNext = () => {
-      if (i >= urls.length) { diag('❌ audio: все источники молчат'); return; }
+      if (i >= urls.length) {
+        diag('❌ audio: все источники молчат');
+        if (ses) ses.finish(false, 'no-audio');
+        return;
+      }
       const url = urls[i++];
       el.onerror = () => { diag('audio error code=' + (el.error && el.error.code) + ' на #' + i + ' → next'); tryNext(); };
-      el.onplaying = () => { diag('▶ PLAYING (audio) #' + i); hlByDuration(spans, el.duration); };
+      el.onplaying = () => {
+        diag('▶ PLAYING (audio) #' + i);
+        hlByDuration(spans, el.duration);
+        if (ses && isFinite(el.duration)) ses.arm(el.duration * 1000 * 1.6 + 500);
+      };
       el.src = url;
       el.load();
       const p = el.play();
@@ -229,10 +323,10 @@ const TTS = (() => {
     tryNext();
   }
 
-  function speakAudio(text, spans) {
-    playWebAudio(text, spans)
+  function speakAudio(text, spans, ses) {
+    playWebAudio(text, spans, ses)
       .then(() => diag('✅ WebAudio сыграл'))
-      .catch(e => { diag('WebAudio не смог: ' + (e && e.message) + ' → <audio>'); playAudioEl(text, spans); });
+      .catch(e => { diag('WebAudio не смог: ' + (e && e.message) + ' → <audio>'); playAudioEl(text, spans, ses); });
   }
 
   function pickBestVoice() {
@@ -240,13 +334,21 @@ const TTS = (() => {
     return v.find(x => x.lang === 'de-DE') || v.find(x => x.lang.startsWith('de')) || null;
   }
 
-  function speak(text, { rate = 0.85, pitch = 1, fallbackDelay = null, spans = null } = {}) {
+  function speak(text, { rate = 0.85, pitch = 1, fallbackDelay = null, spans = null, onEnd = null } = {}) {
     text = cleanText(text);
-    if (!text) return;
+    if (!text) {
+      // Озвучивать нечего, но ждущий onEnd не должен зависнуть
+      if (typeof onEnd === 'function') setTimeout(() => onEnd({ ok: false, reason: 'empty' }), 0);
+      return;
+    }
     const words = wordCount(text);
     const delay = fallbackDelay ?? (words > 1 ? 1800 : 700);
 
-    stopCurrent();
+    stopCurrent();   // прерывает предыдущую озвучку и отдаёт её onEnd
+
+    const ses = newSession(text, onEnd);
+    activeSession = ses;
+    ses.arm(0);      // базовая страховка; ветки уточнят по длительности
     unlock();   // мы внутри пользовательского жеста (onclick) — разблокируем тут же
     diag('speak "' + text + '"\nplatform=' + platform() + ' inTG=' + inTelegram() +
          ' ctx=' + ((getCtx() || {}).state) + ' words=' + words + ' fb=' + delay);
@@ -254,7 +356,7 @@ const TTS = (() => {
     // Фразы с подсветкой всегда идём через аудио-путь: там известна точная
     // длительность MP3, поэтому подсветка синхронна и в браузере, и в Telegram.
     // (speechSynthesis.onboundary ненадёжен — на многих голосах не срабатывает.)
-    if (inTelegram() || (spans && spans.length)) { speakAudio(text, spans); return; }
+    if (inTelegram() || (spans && spans.length)) { speakAudio(text, spans, ses); return; }
 
     const bestVoice = pickBestVoice();
     if (hasSpeech() && bestVoice) {
@@ -264,26 +366,38 @@ const TTS = (() => {
       u.pitch = pitch;
       u.voice = preferredVoice || bestVoice;
       let settled = false;
+      let abandoned = false;   // ушли на аудио-путь: onend этой фразы не наш
       const fb = () => {
         if (settled) return;
         settled = true;
+        abandoned = true;
         try { window.speechSynthesis.cancel(); } catch (e) {}
-        speakAudio(text, spans);
+        speakAudio(text, spans, ses);
       };
       u.onstart = () => { settled = true; };
-      u.onerror = fb;
+      u.onend   = () => { if (!abandoned) ses.finish(true, 'end'); };
+      u.onerror = () => {
+        // Уже говорил и сломался — фолбэк не поможет, закрываем сессию
+        if (settled) { ses.finish(false, 'error'); return; }
+        fb();
+      };
       window.speechSynthesis.speak(u);
       setTimeout(fb, delay);
     } else {
-      speakAudio(text, spans);
+      speakAudio(text, spans, ses);
     }
   }
 
-  function speakPhrase(text, spans) {
-    speak(text, { rate: 0.82, fallbackDelay: 2200, spans: spans || null });
+  function speakPhrase(text, spans, opts) {
+    speak(text, Object.assign(
+      { rate: 0.82, fallbackDelay: 2200, spans: spans || null },
+      opts || {}
+    ));
   }
 
-  function speakSlow(text) { speak(text, { rate: 0.65 }); }
+  function speakSlow(text, opts) {
+    speak(text, Object.assign({ rate: 0.65 }, opts || {}));
+  }
 
   function init() {
     const g = () => unlock();
@@ -297,7 +411,7 @@ const TTS = (() => {
     }
   }
 
-  return { init, speak, speakPhrase, speakSlow };
+  return { init, speak, speakPhrase, speakSlow, stop };
 })();
 
 TTS.init();
