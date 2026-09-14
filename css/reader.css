@@ -761,3 +761,17 @@ body.rd-open { overflow: hidden; }
   --green:        #56d899;
   --tint-border:  rgba(255,255,255,.06);
 }
+
+/* ══ 18. РИДЕР: СОБРАННЫЕ СЛОВА ══ */
+
+/* Тонкий пунктир под словом, которое читатель добавил в сборник.
+   Только text-decoration: на метрики строки не влияет, поэтому
+   подсветка не может изменить разбивку на страницы. Ни border,
+   ни padding, ни font-weight здесь использовать нельзя. */
+.bw--seen {
+  text-decoration: underline dotted;
+  text-decoration-thickness: 1px;
+  text-decoration-color: color-mix(in srgb, var(--rd-accent) 62%, transparent);
+  text-underline-offset: 3px;
+}
+.bw--seen.word-tip-open { text-decoration-color: var(--rd-accent); }

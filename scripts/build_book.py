@@ -41,11 +41,10 @@ from collections import Counter, OrderedDict
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # ВАЖНО: регулярка токена ОБЯЗАНА совпадать с TOKEN_RE в
-# scripts/validate_books.py и с tokenRe в js/reader.js. Апостроф внутри
+# scripts/validate_books.py и с WORD_RE в js/reader.js. Апостроф внутри
 # слова — часть токена («war's», «wenn's»), иначе в глоссарии заводится
-# мусорный ключ «s».
-TOKEN_RE = re.compile("[A-Za-zÄäÖöÜüßÉé]+"
-                      "(?:['’][A-Za-zÄäÖöÜüß]+)*")
+# мусорный ключ «s». Дефис — тоже часть токена, как у ридера.
+TOKEN_RE = re.compile(r"[^\W\d_]+(?:[-'’][^\W\d_]+)*", re.UNICODE)
 
 CHAPTER_RE = re.compile(r'^#\s*(ch-\d+)\s*\|\s*([^|]+?)\s*\|\s*(.+?)\s*$')
 

@@ -213,12 +213,14 @@ const ReaderTip = (() => {
 
   // opts: { gloss, theme } — тема ридера, чтобы тултип в body не остался
   // в глобальной теме, когда в ридере выбрана сепия или тёмная
+  // Возвращает true, если тултип открылся, и false, если тап его закрыл:
+  // ридер по этому различает «спросил перевод» (n+1) и «убрал подсказку».
   function open(el, opts) {
-    if (!el) return;
+    if (!el) return false;
     const o = opts || {};
 
     // повторный тап по тому же слову закрывает
-    if (target === el) { close(); return; }
+    if (target === el) { close(); return false; }
 
     const tip = ensureTip();
     bind();
@@ -235,6 +237,7 @@ const ReaderTip = (() => {
     if (typeof requestAnimationFrame === 'function') {
       requestAnimationFrame(() => { if (target === el) position(el); });
     }
+    return true;
   }
 
   function close() {

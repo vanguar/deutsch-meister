@@ -39,10 +39,12 @@ import sys
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BOOKS_DIR = os.path.join(BASE, 'data', 'books')
 
-# ВАЖНО: должна совпадать с TOKEN_RE в scripts/build_book.py и с
-# tokenRe в js/reader.js. Расхождение = дырки в подсказках у читателя.
-TOKEN_RE = re.compile("[A-Za-zÄäÖöÜüßÉé]+"
-                      "(?:['’][A-Za-zÄäÖöÜüß]+)*")
+# ВАЖНО: должна совпадать с TOKEN_RE в scripts/build_book.py и с WORD_RE в
+# js/reader.js. Расхождение = дырки в подсказках у читателя. Источник
+# правды — то, что реально попадает в .bw: /[\p{L}\p{M}]+(?:[-'’][\p{L}\p{M}]+)*/gu.
+# В Python нет \p{L}, поэтому [^\W\d_] — тот же класс «любая буква».
+# Дефис склеивает токен так же, как у ридера: «Süd-Ost» — одно слово.
+TOKEN_RE = re.compile(r"[^\W\d_]+(?:[-'’][^\W\d_]+)*", re.UNICODE)
 
 INDEX_FIELDS = ('id', 'title', 'titleRu', 'author', 'level', 'year',
                 'chapters', 'words', 'minutes', 'cover', 'source', 'license')

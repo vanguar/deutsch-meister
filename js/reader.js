@@ -20,8 +20,10 @@
    Жесты — делегирование на .rd-viewport в capture-фазе, только Pointer
    Events (иначе touch и click срабатывали бы дважды). Тап по слову отдаётся
    в ReaderTip (js/reader-tip.js) и перехватывает и боковые зоны, и центр.
+   Тот же тап значит «не знаю»: лемма уходит в сборник (js/reader-words.js),
+   и все её словоформы в главе получают .bw--seen.
 
-   Zero dependencies. Тултип и перевод предложения — этап 3, озвучка — 2D.
+   Zero dependencies. Перевод предложения — этап 3C, озвучка — 4.
    ═══════════════════════════════════════════════ */
 
 const Reader = (() => {
@@ -370,6 +372,7 @@ const Reader = (() => {
         st.chapter = ch;
         st.chIndex = index;
         renderChapter(ch);
+        applySeen();
         hideState();
         measure();
 
@@ -578,9 +581,60 @@ const Reader = (() => {
 
   function tipOpen(el) {
     if (typeof ReaderTip === 'undefined') return;
-    ReaderTip.open(el, {
+    const opened = ReaderTip.open(el, {
       gloss: st.gloss,
       theme: st.prefs ? st.prefs.theme : 'system'
+    });
+    // Тап, который тултип закрыл, «не знаю» не значит — n не растёт
+    if (opened) collectWord(el);
+  }
+
+  /* ── Сборник слов: тап = «не знаю» ── */
+
+  // Слова без словарной записи («нет в словаре») в сборник не идут.
+  function collectWord(el) {
+    if (typeof ReaderWords === 'undefined' || typeof ReaderTip === 'undefined') return;
+
+    const token = el.dataset.t || String(el.textContent).toLowerCase();
+    const info  = ReaderTip.lookup(st.gloss, token);
+    if (!info || !info.entry) return;
+
+    const bs = el.closest('.bs');
+    const rec = ReaderWords.add(info, {
+      form: el.textContent,
+      ch:   (st.chapter && st.chapter.id) || '',
+      p:    bs ? Number(bs.dataset.p) : -1
+    });
+    if (!rec) return;
+
+    // Подсвечиваем сразу все формы этой леммы в главе, не только нажатую
+    markLemma(info.lemma);
+  }
+
+  /* ── Подсветка собранных слов ── */
+
+  // Форма → лемма через тот же glossary.w, что и тултип
+  function lemmaOf(el) {
+    if (typeof ReaderTip === 'undefined') return '';
+    const info = ReaderTip.lookup(st.gloss, el.dataset.t || String(el.textContent).toLowerCase());
+    return (info && info.lemma) || '';
+  }
+
+  // Пробегаем главу целиком: вызывается после рендера главы.
+  // text-decoration метрики не меняет, поэтому порядок с measure() не важен.
+  function applySeen() {
+    if (typeof ReaderWords === 'undefined' || !elContent) return;
+    elContent.querySelectorAll('.bw').forEach(el => {
+      const lemma = lemmaOf(el);
+      el.classList.toggle('bw--seen', !!lemma && ReaderWords.isMarked(lemma));
+    });
+  }
+
+  function markLemma(lemma) {
+    if (!lemma || typeof ReaderWords === 'undefined' || !elContent) return;
+    const on = ReaderWords.isMarked(lemma);
+    elContent.querySelectorAll('.bw').forEach(el => {
+      if (lemmaOf(el) === lemma) el.classList.toggle('bw--seen', on);
     });
   }
 
@@ -668,6 +722,9 @@ const Reader = (() => {
     applyPrefs();
     toggleChrome(false);
 
+    // Сборник слов книги: нужен до рендера главы, чтобы подсветка встала сразу
+    if (typeof ReaderWords !== 'undefined') ReaderWords.load(id);
+
     try {
       history.pushState({ view: 'reader', book: id }, '', '#book=' + encodeURIComponent(id));
       st.pushed = true;
@@ -753,7 +810,8 @@ const Reader = (() => {
 
   return {
     init, open, close, next, prev, goTo, repaginate,
-    setPref, openSheet, closeSheet, toggleChrome, state: st
+    setPref, openSheet, closeSheet, toggleChrome,
+    applySeen, markLemma, state: st
   };
 })();
 
