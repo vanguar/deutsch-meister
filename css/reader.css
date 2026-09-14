@@ -319,18 +319,42 @@
   --rd-red:        #b4462f;
 }
 
+/* «Светлая» и «Тёмная» жёстко задают свой набор --rd-*, глобальную
+   data-theme они не читают вообще. Это и есть их смысл: «Как в приложении»
+   почти всегда тёмная, и раньше «Тёмная» выглядела её точной копией
+   (обе брали --bg: #0f0e17).
+
+   Поэтому значения намеренно разведены с токенами base.css: светлая —
+   белая бумага (#ffffff против лавандового #f5f4ff глобальной светлой),
+   тёмная — OLED-чёрная (#000000 против #0f0e17 глобальной тёмной).
+   При любой глобальной теме все четыре варианта дают разный фон. */
+.rd-view[data-rd-theme="light"] {
+  --rd-bg:         #ffffff;
+  --rd-surface:    #f6f6fa;
+  --rd-surface2:   #eeeef5;
+  --rd-surface3:   #e4e4ee;
+  --rd-border:     #d8d8e4;
+  --rd-text:       #23222e;
+  --rd-strong:     #000000;
+  --rd-muted:      #6a6879;
+  --rd-dim:        #94929f;
+  --rd-accent:     #5b48e8;
+  --rd-accent-soft: rgba(91,72,232,.12);
+  --rd-red:        #c0392b;
+}
+
 .rd-view[data-rd-theme="dark"] {
-  --rd-bg:         #0f0e17;
-  --rd-surface:    #1a1929;
-  --rd-surface2:   #232136;
-  --rd-surface3:   #2a2740;
-  --rd-border:     #2e2b4a;
-  --rd-text:       #e8e6f0;
+  --rd-bg:         #000000;
+  --rd-surface:    #121218;
+  --rd-surface2:   #1b1b23;
+  --rd-surface3:   #24242e;
+  --rd-border:     #33333f;
+  --rd-text:       #cfcedb;
   --rd-strong:     #ffffff;
-  --rd-muted:      #8b87a8;
-  --rd-dim:        #5c5878;
-  --rd-accent:     #7c6af7;
-  --rd-accent-soft: rgba(124,106,247,.16);
+  --rd-muted:      #8c8a9c;
+  --rd-dim:        #5f5d6d;
+  --rd-accent:     #9a8cff;
+  --rd-accent-soft: rgba(154,140,255,.18);
   --rd-red:        #f06b6b;
 }
 
@@ -674,6 +698,13 @@ body.rd-open { overflow: hidden; }
   line-height: 1.2;
   transition: all var(--t-fast);
 }
+/* Четыре темы в один ряд на 360 px не помещаются, а резать подписи нельзя:
+   «Как в приложении» должно читаться целиком. Поэтому сетка 2×2.
+   Селектор из двух классов — у .rd-seg button тот же вес, и при равном
+   весе выиграл бы тот, что ниже по файлу. */
+.rd-seg.rd-seg--grid { flex-wrap: wrap; }
+.rd-seg.rd-seg--grid button { flex: 1 1 calc(50% - 3px); }
+
 .rd-seg button:hover { border-color: var(--rd-accent); }
 .rd-seg button[aria-pressed="true"] {
   background: var(--rd-accent-soft);
@@ -749,15 +780,28 @@ body.rd-open { overflow: hidden; }
   --tint-border:  rgba(0,0,0,.12);
 }
 
+.word-tip--book[data-rd-theme="light"] {
+  --surface:      #ffffff;
+  --border:       #d8d8e4;
+  --accent2:      #5b48e8;
+  --accent:       #7a4ad0;
+  --text:         #23222e;
+  --text-strong:  #000000;
+  --text-muted:   #6a6879;
+  --text-dim:     #94929f;
+  --green:        #2f7d52;
+  --tint-border:  rgba(0,0,0,.12);
+}
+
 .word-tip--book[data-rd-theme="dark"] {
-  --surface:      #1a1929;
-  --border:       #2e2b4a;
-  --accent2:      #7c6af7;
+  --surface:      #121218;
+  --border:       #33333f;
+  --accent2:      #9a8cff;
   --accent:       #e8c547;
-  --text:         #e8e6f0;
+  --text:         #cfcedb;
   --text-strong:  #ffffff;
-  --text-muted:   #8b87a8;
-  --text-dim:     #5c5878;
+  --text-muted:   #8c8a9c;
+  --text-dim:     #5f5d6d;
   --green:        #56d899;
   --tint-border:  rgba(255,255,255,.06);
 }

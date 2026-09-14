@@ -52,7 +52,11 @@ const Reader = (() => {
     { pad: 22, measure: 720 },
     { pad: 38, measure: 580 }
   ];
-  const THEMES = ['system', 'sepia', 'dark'];
+  // 'system' наследует глобальную data-theme, остальные три жёстко задают
+  // свой набор --rd-* в css/reader.css. Порядок важен только для сетки 2×2
+  // в шторке; сохранённое старое значение ('system' / 'sepia' / 'dark')
+  // остаётся валидным, поэтому dm_reader_prefs из прошлых версий не ломается.
+  const THEMES = ['system', 'sepia', 'light', 'dark'];
   const FONTS  = {
     system: "'DM Sans', sans-serif",
     serif:  "Georgia, 'Iowan Old Style', 'Times New Roman', serif"
@@ -64,8 +68,9 @@ const Reader = (() => {
       opts: FS_STEPS.map((_, i) => ({ v: i, text: 'A', cls: 'fs-' + i })) },
     { key: 'lh',     label: 'Межстрочный интервал',
       opts: [{ v: 0, text: 'Плотно' }, { v: 1, text: 'Обычно' }, { v: 2, text: 'Свободно' }] },
-    { key: 'theme',  label: 'Тема страницы',
-      opts: [{ v: 'system', text: 'Системная' }, { v: 'sepia', text: 'Сепия' }, { v: 'dark', text: 'Тёмная' }] },
+    { key: 'theme',  label: 'Тема страницы', segCls: 'rd-seg--grid',
+      opts: [{ v: 'system', text: 'Как в приложении' }, { v: 'sepia', text: 'Сепия' },
+             { v: 'light',  text: 'Светлая' },          { v: 'dark',  text: 'Тёмная' }] },
     { key: 'margin', label: 'Поля',
       opts: [{ v: 0, text: 'Узкие' }, { v: 1, text: 'Средние' }, { v: 2, text: 'Широкие' }] },
     { key: 'font',   label: 'Шрифт',
@@ -557,7 +562,7 @@ const Reader = (() => {
     elSheetBody.innerHTML = SHEET_ROWS.map(row => `
       <div class="rd-row">
         <div class="rd-row-label">${esc(row.label)}</div>
-        <div class="rd-seg" role="group" aria-label="${esc(row.label)}">
+        <div class="rd-seg ${esc(row.segCls || '')}" role="group" aria-label="${esc(row.label)}">
           ${row.opts.map(o => `<button type="button" class="${esc(o.cls || '')}"
             data-pref="${esc(row.key)}" data-value="${esc(o.v)}"
             aria-pressed="${String(st.prefs[row.key]) === String(o.v)}"
