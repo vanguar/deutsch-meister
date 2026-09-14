@@ -92,13 +92,17 @@ const Library = (() => {
   // запас, а не количество тапов по «und». Классификацию берём у
   // ReaderWords — одна точка правды; если модуль почему-то не подключён,
   // считаем как раньше, все записи.
-  function isFunctionRec(rec) {
+  // Считаем тем же правилом, что и ReaderWords, а не читаем rec.fn:
+  // библиотека рисуется до того, как ридер откроет книгу и пересчитает
+  // флаги, и на сохранённом раньше значении счётчик отставал бы на один
+  // заход. Если модуль не подключён — падаем на то, что записано.
+  function isFunctionRec(lemma, rec) {
     if (!rec || typeof rec !== 'object') return false;
-    if ('fn' in rec) return !!rec.fn;
-    // запись со старого формата, ещё не размеченная load()
-    return typeof ReaderWords !== 'undefined'
-      && typeof ReaderWords.isFunctionPos === 'function'
-      && ReaderWords.isFunctionPos(rec.pos);
+    if (typeof ReaderWords !== 'undefined'
+        && typeof ReaderWords.isFunctionWord === 'function') {
+      return ReaderWords.isFunctionWord(rec.pos, lemma);
+    }
+    return !!rec.fn;
   }
 
   function getWordsCount(book) {
@@ -107,7 +111,7 @@ const Library = (() => {
     if (Array.isArray(data)) return data.length;
     if (typeof data === 'object') {
       if (Array.isArray(data.words)) return data.words.length;
-      return Object.keys(data).filter(l => !isFunctionRec(data[l])).length;
+      return Object.keys(data).filter(l => !isFunctionRec(l, data[l])).length;
     }
     return 0;
   }
