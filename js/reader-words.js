@@ -7,7 +7,7 @@
    ging и gingen дают одну запись gehen со списком встреченных форм.
 
    Запись:
-     { de, ru, pos, art, pl, forms, decl, old,
+     { de, ru, note, pos, art, pl, forms, decl, old,
        seen: ['ging','gingen'], n: 3,
        ch: 'ch-01', p: 4, ts: 1700000000000, status: 'new' }
 
@@ -112,6 +112,10 @@ const ReaderWords = (() => {
       if (e.forms) rec.forms = e.forms;
       if (e.decl)  rec.decl  = e.decl;
       if (e.old)   rec.old   = e.old;
+      // note — разбор употребления. На карточке не показывается, но нужен
+      // тултипу в словаре книги, где глава (а с ней и глоссарий) может
+      // быть не загружена.
+      if (e.note)  rec.note  = e.note;
       words[lemma] = rec;
     }
 

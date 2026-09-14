@@ -8,7 +8,7 @@
       через Progress.markSectionDone('flashcards'), второй проход
       по «не знал». Ни одна из 68 оболочек не меняется.
 
-   2. init({ cards, ids, onDone, showProgress, onGood, onAgain })
+   2. init({ cards, ids, onDone, showProgress, onShow, onGood, onAgain })
       — произвольная колода на произвольной разметке. Ни XP, ни
       markSectionDone, ни баннера «Урок завершён» здесь нет вообще:
       итог отдаётся колбэком onDone. Этим режимом живут карточки
@@ -211,6 +211,12 @@ const Flashcards = (() => {
     elCardRU.textContent  = card.ru;
     elCardIPA.textContent = card.ipa || '';
     fillExtra(card);
+
+    // Произвольный режим может подстроиться под конкретную карточку
+    // (у книги это кегль перевода по длине оборота). В уроках хука нет.
+    if (mode === 'custom' && cfg && typeof cfg.onShow === 'function') {
+      safeCall(cfg.onShow, card);
+    }
 
     updateMeta();
     elActions.style.display = 'none';

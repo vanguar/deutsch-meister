@@ -198,6 +198,9 @@ const ReaderDict = (() => {
     if (rec.forms) entry.forms = rec.forms;
     if (rec.decl)  entry.decl  = rec.decl;
     if (rec.old)   entry.old   = rec.old;
+    // В строке списка — только ru; разбор употребления показывается
+    // при раскрытии, то есть в тултипе по тапу на слово.
+    if (rec.note)  entry.note  = rec.note;
 
     const w = {}; const l = {};
     w[String(rec.de).toLowerCase()] = rec.de;

@@ -571,17 +571,19 @@
       "forms": "alt · älter · am ältesten"
     },
     "an": {
-      "ru": "у, к, на (am = an dem); тж. отделяемая приставка: anfangen «начинать», annehmen, ansehen, anzünden",
-      "pos": "предл."
+      "ru": "у, к, на",
+      "pos": "предл.",
+      "note": "am = an dem. Тж. отделяемая приставка: anfangen «начинать», annehmen, ansehen, anzünden"
     },
     "anders": {
       "ru": "иначе, по-другому",
       "pos": "нареч."
     },
     "anfangen": {
-      "ru": "начинать; браться за дело. В тексте приставка оторвана: fingen … an — anfangen",
+      "ru": "начинать, браться за дело",
       "pos": "гл.",
-      "forms": "fing an · hat angefangen"
+      "forms": "fing an · hat angefangen",
+      "note": "В тексте приставка оторвана: fingen … an — anfangen"
     },
     "anhauchen": {
       "ru": "дохнуть на кого-л.",
@@ -615,10 +617,11 @@
       "pl": "die Arbeiten"
     },
     "Art": {
-      "ru": "вид, способ; eine Art haben — выйти складно",
+      "ru": "вид, способ",
       "pos": "сущ.",
       "art": "die",
-      "pl": "die Arten"
+      "pl": "die Arten",
+      "note": "eine Art haben — выйти складно"
     },
     "Asche": {
       "ru": "зола, пепел",
@@ -637,8 +640,9 @@
       "pos": "частица"
     },
     "auf": {
-      "ru": "на; в; тж. отделяемая приставка: aufspringen «вскочить», sich aufmachen",
-      "pos": "предл."
+      "ru": "на, в",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: aufspringen «вскочить», sich aufmachen"
     },
     "Auge": {
       "ru": "глаз",
@@ -647,8 +651,9 @@
       "pl": "die Augen"
     },
     "aus": {
-      "ru": "из; тж. отделяемая приставка: auslöschen «погасить»",
-      "pos": "предл."
+      "ru": "из",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: auslöschen «погасить»"
     },
     "bald": {
       "ru": "скоро",
@@ -751,8 +756,9 @@
       "pos": "нареч."
     },
     "daran": {
-      "ru": "на этом, об этом (dran — разг. форма)",
-      "pos": "нареч."
+      "ru": "на этом, об этом",
+      "pos": "нареч.",
+      "note": "dran — разговорная форма"
     },
     "darauf": {
       "ru": "затем, после этого; на этом",
@@ -781,8 +787,9 @@
       "pos": "союз"
     },
     "der/die/das": {
-      "ru": "определённый артикль; тж. относительное местоимение «который»",
-      "pos": "артикль"
+      "ru": "определённый артикль",
+      "pos": "артикль",
+      "note": "Тж. относительное местоимение «который»"
     },
     "dessen": {
       "ru": "чей, которого (род. п. от der/das)",
@@ -801,8 +808,9 @@
       "pos": "числ."
     },
     "du": {
-      "ru": "ты (dich — тебя, dir — тебе)",
-      "pos": "мест."
+      "ru": "ты",
+      "pos": "мест.",
+      "note": "dich — тебя, dir — тебе"
     },
     "durch": {
       "ru": "через, сквозь, из-за",
@@ -827,8 +835,9 @@
       "pos": "мест."
     },
     "ein/eine": {
-      "ru": "неопределённый артикль; einer — «один, некто»",
-      "pos": "артикль"
+      "ru": "неопределённый артикль",
+      "pos": "артикль",
+      "note": "einer — «один, некто»"
     },
     "einmal": {
       "ru": "однажды; раз",
@@ -855,8 +864,9 @@
       "forms": "entsetzlich · entsetzlicher · am entsetzlichsten"
     },
     "er": {
-      "ru": "он (ihn — его, ihm — ему)",
-      "pos": "мест."
+      "ru": "он",
+      "pos": "мест.",
+      "note": "ihn — его, ihm — ему"
     },
     "Erbarmen": {
       "ru": "жалость, сострадание",
@@ -900,23 +910,26 @@
       "pl": "die Esel"
     },
     "essen": {
-      "ru": "есть, кушать; das Essen — еда",
+      "ru": "есть, кушать",
       "pos": "гл.",
-      "forms": "aß · hat gegessen"
+      "forms": "aß · hat gegessen",
+      "note": "das Essen — еда"
     },
     "etwas": {
       "ru": "что-то, нечто; немного",
       "pos": "мест."
     },
     "fahren": {
-      "ru": "ехать; in die Höhe fahren — подскочить",
+      "ru": "ехать",
       "pos": "гл.",
-      "forms": "fuhr · ist gefahren"
+      "forms": "fuhr · ist gefahren",
+      "note": "in die Höhe fahren — подскочить"
     },
     "fangen": {
-      "ru": "ловить; Feuer fangen — загореться",
+      "ru": "ловить",
       "pos": "гл.",
-      "forms": "fing · hat gefangen"
+      "forms": "fing · hat gefangen",
+      "note": "Feuer fangen — загореться"
     },
     "Fenster": {
       "ru": "окно",
@@ -963,9 +976,10 @@
       "pl": null
     },
     "fliegen": {
-      "ru": "летать, лететь; в тексте с отделяемой приставкой: flog hinauf — hinauffliegen «взлететь»",
+      "ru": "летать, лететь",
       "pos": "гл.",
-      "forms": "flog · ist geflogen"
+      "forms": "flog · ist geflogen",
+      "note": "В тексте с отделяемой приставкой: flog hinauf — hinauffliegen «взлететь»"
     },
     "fliehen": {
       "ru": "бежать, спасаться бегством",
@@ -973,8 +987,9 @@
       "forms": "floh · ist geflohen"
     },
     "fort": {
-      "ru": "прочь; дальше; тж. отделяемая приставка: fortlaufen, fortgehen, fortziehen, fortkönnen",
-      "pos": "нареч."
+      "ru": "прочь, дальше",
+      "pos": "нареч.",
+      "note": "Тж. отделяемая приставка: fortlaufen, fortgehen, fortziehen, fortkönnen"
     },
     "fortgehen": {
       "ru": "уйти, отойти",
@@ -1039,9 +1054,10 @@
       "pos": "прил."
     },
     "gefallen": {
-      "ru": "нравиться; sich gefallen lassen — согласиться на что-л.",
+      "ru": "нравиться",
       "pos": "гл.",
-      "forms": "gefiel · hat gefallen"
+      "forms": "gefiel · hat gefallen",
+      "note": "sich gefallen lassen — согласиться на что-л."
     },
     "Gegend": {
       "ru": "местность, сторона",
@@ -1050,14 +1066,16 @@
       "pl": "die Gegenden"
     },
     "gehen": {
-      "ru": "идти, ходить; zu Ende gehen — подходить к концу; в тексте с отделяемой приставкой: geh mit / ging mit — mitgehen «пойти вместе»; gingen fort — fortgehen «уйти»",
+      "ru": "идти, ходить",
       "pos": "гл.",
-      "forms": "ging · ist gegangen"
+      "forms": "ging · ist gegangen",
+      "note": "zu Ende gehen — подходить к концу. В тексте с отделяемой приставкой: geh mit / ging mit — mitgehen «пойти вместе»; gingen fort — fortgehen «уйти»"
     },
     "gern": {
-      "ru": "охотно; lieber — охотнее, лучше",
+      "ru": "охотно",
       "pos": "нареч.",
-      "forms": "gern · lieber · am liebsten"
+      "forms": "gern · lieber · am liebsten",
+      "note": "lieber — охотнее, лучше"
     },
     "geschehen": {
       "ru": "происходить, случаться",
@@ -1079,10 +1097,11 @@
       "old": "в значении «товарищ» устарело; сегодня Kumpel, Gefährte. Geselle сейчас — «подмастерье»"
     },
     "Gesicht": {
-      "ru": "лицо; ein Gesicht machen — состроить мину",
+      "ru": "лицо",
       "pos": "сущ.",
       "art": "das",
-      "pl": "die Gesichter"
+      "pl": "die Gesichter",
+      "note": "ein Gesicht machen — состроить мину"
     },
     "Gespenst": {
       "ru": "привидение",
@@ -1100,9 +1119,10 @@
       "pos": "прил."
     },
     "Grauschimmel": {
-      "ru": "серый в яблоках конь; тут — обращение «сивый»",
+      "ru": "серый в яблоках конь",
       "pos": "прозвище",
-      "old": "как обращение к ослу — шутка из сказки; в живой речи не употребляется"
+      "old": "как обращение к ослу — шутка из сказки; в живой речи не употребляется",
+      "note": "Тут — обращение «сивый»"
     },
     "groß": {
       "ru": "большой, рослый",
@@ -1110,14 +1130,16 @@
       "forms": "groß · größer · am größten"
     },
     "gräulich": {
-      "ru": "жуткий, страшный (от Gräuel «ужас»). Не путать с gräulich «сероватый» от grau — пишутся одинаково, значения разные",
+      "ru": "жуткий, страшный",
       "pos": "прил.",
-      "forms": "gräulich · gräulicher · am gräulichsten"
+      "forms": "gräulich · gräulicher · am gräulichsten",
+      "note": "От Gräuel «ужас». Не путать с gräulich «сероватый» от grau — пишутся одинаково, значения разные"
     },
     "gut": {
-      "ru": "хороший, добрый; besser — лучше",
+      "ru": "хороший, добрый",
       "pos": "прил.",
-      "forms": "gut · besser · am besten"
+      "forms": "gut · besser · am besten",
+      "note": "besser — лучше"
     },
     "haben": {
       "ru": "иметь; вспомог. глагол",
@@ -1138,15 +1160,17 @@
       "old": "устарело; сегодня Hühnerstange, Sitzstange"
     },
     "Hals": {
-      "ru": "шея; горло (aus vollem Hals — во всё горло)",
+      "ru": "шея, горло",
       "pos": "сущ.",
       "art": "der",
-      "pl": "die Hälse"
+      "pl": "die Hälse",
+      "note": "aus vollem Hals — во всё горло"
     },
     "halten": {
-      "ru": "держать; halten für — считать кем/чем-л.",
+      "ru": "держать",
       "pos": "гл.",
-      "forms": "hielt · hat gehalten"
+      "forms": "hielt · hat gehalten",
+      "note": "halten für — считать кем/чем-л."
     },
     "Hauptmann": {
       "ru": "атаман, главарь; капитан",
@@ -1193,12 +1217,14 @@
       "pos": "нареч."
     },
     "herab": {
-      "ru": "вниз (сюда); тж. отделяемая приставка: herabrufen «крикнуть сверху»",
-      "pos": "нареч."
+      "ru": "вниз (сюда)",
+      "pos": "нареч.",
+      "note": "Тж. отделяемая приставка: herabrufen «крикнуть сверху»"
     },
     "heraus": {
-      "ru": "наружу (сюда); тж. отделяемая приставка: herauswollen «хотеть выйти»",
-      "pos": "нареч."
+      "ru": "наружу (сюда)",
+      "pos": "нареч.",
+      "note": "Тж. отделяемая приставка: herauswollen «хотеть выйти»"
     },
     "Herberge": {
       "ru": "приют, ночлег",
@@ -1247,12 +1273,14 @@
       "pos": "нареч."
     },
     "hinauf": {
-      "ru": "наверх (туда); тж. отделяемая приставка: hinauffliegen «взлететь»",
-      "pos": "нареч."
+      "ru": "наверх (туда)",
+      "pos": "нареч.",
+      "note": "Тж. отделяемая приставка: hinauffliegen «взлететь»"
     },
     "hinaus": {
-      "ru": "наружу (туда); тж. отделяемая приставка: hinauswollen, hinausjagen",
-      "pos": "нареч."
+      "ru": "наружу (туда)",
+      "pos": "нареч.",
+      "note": "Тж. отделяемая приставка: hinauswollen, hinausjagen"
     },
     "hinausjagen": {
       "ru": "выгнать",
@@ -1260,8 +1288,9 @@
       "forms": "jagte hinaus · hat hinausgejagt"
     },
     "hinein": {
-      "ru": "внутрь (туда); тж. отделяемая приставка: hineinstürzen «ринуться внутрь»",
-      "pos": "нареч."
+      "ru": "внутрь (туда)",
+      "pos": "нареч.",
+      "note": "Тж. отделяемая приставка: hineinstürzen «ринуться внутрь»"
     },
     "hingehen": {
       "ru": "пойти туда, дойти",
@@ -1308,22 +1337,25 @@
       "forms": "hungerte · hat gehungert"
     },
     "Höhe": {
-      "ru": "высота (in die Höhe fahren — подскочить)",
+      "ru": "высота",
       "pos": "сущ.",
       "art": "die",
-      "pl": "die Höhen"
+      "pl": "die Höhen",
+      "note": "in die Höhe fahren — подскочить"
     },
     "ich": {
-      "ru": "я (mich — меня, mir — мне)",
-      "pos": "мест."
+      "ru": "я",
+      "pos": "мест.",
+      "note": "mich — меня, mir — мне"
     },
     "ihr (её, их)": {
       "ru": "её; их",
       "pos": "мест."
     },
     "immer": {
-      "ru": "всегда; всё (immer größer — всё больше)",
-      "pos": "нареч."
+      "ru": "всегда, всё",
+      "pos": "нареч.",
+      "note": "immer größer — всё больше"
     },
     "in": {
       "ru": "в (im = in dem, ins = in das)",
@@ -1415,9 +1447,10 @@
       "pl": "die Kohlen"
     },
     "kommen": {
-      "ru": "приходить, приезжать; в тексте с отделяемой приставкой: kamen vorbei — vorbeikommen «проходить мимо»",
+      "ru": "приходить, приезжать",
       "pos": "гл.",
-      "forms": "kam · ist gekommen"
+      "forms": "kam · ist gekommen",
+      "note": "В тексте с отделяемой приставкой: kamen vorbei — vorbeikommen «проходить мимо»"
     },
     "Kopf": {
       "ru": "голова",
@@ -1432,10 +1465,11 @@
       "pl": "die Kräfte"
     },
     "Kragen": {
-      "ru": "воротник; einem an den Kragen gehen — дело идёт к горлу",
+      "ru": "воротник",
       "pos": "сущ.",
       "art": "der",
-      "pl": "die Kragen"
+      "pl": "die Kragen",
+      "note": "einem an den Kragen gehen — дело идёт к горлу"
     },
     "kratzen": {
       "ru": "царапать",
@@ -1454,9 +1488,10 @@
       "pl": "die Köchinnen"
     },
     "können": {
-      "ru": "мочь, уметь; в тексте с отделяемой приставкой: kann nicht fort — fortkönnen «не мочь уйти»",
+      "ru": "мочь, уметь",
       "pos": "гл.",
-      "forms": "konnte · hat gekonnt"
+      "forms": "konnte · hat gekonnt",
+      "note": "В тексте с отделяемой приставкой: kann nicht fort — fortkönnen «не мочь уйти»"
     },
     "Küche": {
       "ru": "кухня",
@@ -1481,9 +1516,10 @@
       "forms": "ließ · hat gelassen"
     },
     "laufen": {
-      "ru": "бежать; бегать; в тексте с отделяемой приставкой: lief fort — fortlaufen «убежать»; lief zurück — zurücklaufen «побежать назад»",
+      "ru": "бежать, бегать",
       "pos": "гл.",
-      "forms": "lief · ist gelaufen"
+      "forms": "lief · ist gelaufen",
+      "note": "В тексте с отделяемой приставкой: lief fort — fortlaufen «убежать»; lief zurück — zurücklaufen «побежать назад»"
     },
     "Laute": {
       "ru": "лютня",
@@ -1497,15 +1533,17 @@
       "forms": "lebendig · lebendiger · am lebendigsten"
     },
     "legen": {
-      "ru": "класть; sich legen — ложиться",
+      "ru": "класть",
       "pos": "гл.",
-      "forms": "legte · hat gelegt"
+      "forms": "legte · hat gelegt",
+      "note": "sich legen — ложиться"
     },
     "Leibeskräfte": {
-      "ru": "все силы (aus Leibeskräften — что было мочи)",
+      "ru": "все силы",
       "pos": "сущ.",
       "art": "die",
-      "pl": "только мн. ч."
+      "pl": "только мн. ч.",
+      "note": "aus Leibeskräften — что было мочи"
     },
     "Licht": {
       "ru": "свет; огонёк",
@@ -1541,14 +1579,16 @@
       "old": "субстантивированный инфинитив; сегодня просто der Lärm"
     },
     "löschen": {
-      "ru": "гасить, тушить; в тексте с отделяемой приставкой: löschten aus — auslöschen «погасить»",
+      "ru": "гасить, тушить",
       "pos": "гл.",
-      "forms": "löschte · hat gelöscht"
+      "forms": "löschte · hat gelöscht",
+      "note": "В тексте с отделяемой приставкой: löschten aus — auslöschen «погасить»"
     },
     "machen": {
-      "ru": "делать; sich auf den Weg machen — отправиться в путь",
+      "ru": "делать",
       "pos": "гл.",
-      "forms": "machte · hat gemacht"
+      "forms": "machte · hat gemacht",
+      "note": "sich auf den Weg machen — отправиться в путь"
     },
     "Mann": {
       "ru": "мужчина, человек",
@@ -1557,10 +1597,11 @@
       "pl": "die Männer"
     },
     "Mark": {
-      "ru": "костный мозг (durch Mark und Bein — до мозга костей)",
+      "ru": "костный мозг",
       "pos": "сущ.",
       "art": "das",
-      "pl": null
+      "pl": null,
+      "note": "durch Mark und Bein — до мозга костей"
     },
     "Maus": {
       "ru": "мышь",
@@ -1569,8 +1610,9 @@
       "pl": "die Mäuse"
     },
     "mehr": {
-      "ru": "больше; в nicht/kein … mehr — больше не. Формально компаратив от viel",
-      "pos": "нареч."
+      "ru": "больше",
+      "pos": "нареч.",
+      "note": "В nicht/kein … mehr — больше не. Формально компаратив от viel"
     },
     "mein": {
       "ru": "мой, моя",
@@ -1604,8 +1646,9 @@
       "pl": null
     },
     "mit": {
-      "ru": "с; тж. отделяемая приставка: mitgehen «пойти вместе»",
-      "pos": "предл."
+      "ru": "с",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: mitgehen «пойти вместе»"
     },
     "Mittel": {
       "ru": "средство",
@@ -1685,9 +1728,10 @@
       "pl": "die Naturen"
     },
     "nehmen": {
-      "ru": "брать; в тексте с отделяемой приставкой: nahmen vorlieb — vorliebnehmen «довольствоваться»; Reißaus genommen — Reißaus nehmen «дать дёру»",
+      "ru": "брать",
       "pos": "гл.",
-      "forms": "nahm · hat genommen"
+      "forms": "nahm · hat genommen",
+      "note": "В тексте с отделяемой приставкой: nahmen vorlieb — vorliebnehmen «довольствоваться»; Reißaus genommen — Reißaus nehmen «дать дёру»"
     },
     "nicht": {
       "ru": "не",
@@ -1762,9 +1806,10 @@
       "pl": "die Rotköpfe"
     },
     "rufen": {
-      "ru": "звать, кричать; в тексте с отделяемой приставкой: rief herab — herabrufen «крикнуть сверху»",
+      "ru": "звать, кричать",
       "pos": "гл.",
-      "forms": "rief · hat gerufen"
+      "forms": "rief · hat gerufen",
+      "note": "В тексте с отделяемой приставкой: rief herab — herabrufen «крикнуть сверху»"
     },
     "ruhig": {
       "ru": "спокойный, тихий",
@@ -1801,9 +1846,10 @@
       "forms": "sagte · hat gesagt"
     },
     "schaffen": {
-      "ru": "здесь: убрать, избавиться (aus dem Futter schaffen)",
+      "ru": "убрать, избавиться",
       "pos": "гл.",
-      "forms": "schaffte · hat geschafft"
+      "forms": "schaffte · hat geschafft",
+      "note": "Здесь — в обороте aus dem Futter schaffen"
     },
     "schauen": {
       "ru": "смотреть, глядеть",
@@ -1898,9 +1944,10 @@
       "forms": "schön · schöner · am schönsten"
     },
     "sehen": {
-      "ru": "видеть; в тексте с отделяемой приставкой: sah sich um — sich umsehen «оглядеться»",
+      "ru": "видеть",
       "pos": "гл.",
-      "forms": "sah · hat gesehen"
+      "forms": "sah · hat gesehen",
+      "note": "В тексте с отделяемой приставкой: sah sich um — sich umsehen «оглядеться»"
     },
     "sein": {
       "ru": "быть; вспомог. глагол",
@@ -1912,13 +1959,15 @@
       "pos": "мест."
     },
     "setzen": {
-      "ru": "сажать; sich setzen — садиться",
+      "ru": "сажать",
       "pos": "гл.",
-      "forms": "setzte · hat gesetzt"
+      "forms": "setzte · hat gesetzt",
+      "note": "sich setzen — садиться"
     },
     "sich": {
-      "ru": "себя, себе — возвратное местоимение. Часть возвратного глагола: sich auf den Weg machen, sich setzen, sich legen, sich nähern, sich gefallen lassen, sich getrauen, sich umsehen",
-      "pos": "мест."
+      "ru": "себя, себе",
+      "pos": "мест.",
+      "note": "Возвратное местоимение, часть возвратного глагола: sich auf den Weg machen, sich setzen, sich legen, sich nähern, sich gefallen lassen, sich getrauen, sich umsehen"
     },
     "sich aufmachen": {
       "ru": "отправляться в путь, собираться",
@@ -1987,10 +2036,11 @@
       "pl": "die Späße"
     },
     "speien": {
-      "ru": "плевать; о кошке — шипеть, фыркать",
+      "ru": "плевать",
       "pos": "гл.",
       "forms": "spie · hat gespien",
-      "old": "устарело; сегодня spucken"
+      "old": "устарело; сегодня spucken",
+      "note": "О кошке — шипеть, фыркать"
     },
     "spielen": {
       "ru": "играть",
@@ -2005,9 +2055,10 @@
       "old": "устарело; сегодня Musiker, Straßenmusiker"
     },
     "spinnen": {
-      "ru": "прясть; о кошке — мурлыкать",
+      "ru": "прясть",
       "pos": "гл.",
-      "forms": "spann · hat gesponnen"
+      "forms": "spann · hat gesponnen",
+      "note": "О кошке — мурлыкать"
     },
     "Spitze": {
       "ru": "верхушка, вершина",
@@ -2022,9 +2073,10 @@
       "old": "здесь sprach в значении «сказал» — книжно и устарело; в совр. речи sagte"
     },
     "springen": {
-      "ru": "прыгать, вскакивать; в тексте с отделяемой приставкой: sprang auf — aufspringen «вскочить»",
+      "ru": "прыгать, вскакивать",
       "pos": "гл.",
-      "forms": "sprang · ist gesprungen"
+      "forms": "sprang · ist gesprungen",
+      "note": "В тексте с отделяемой приставкой: sprang auf — aufspringen «вскочить»"
     },
     "Stadt": {
       "ru": "город",
@@ -2077,9 +2129,10 @@
       "forms": "stumpf · stumpfer · am stumpfsten"
     },
     "stürzen": {
-      "ru": "броситься, ринуться; падать; в тексте с отделяемой приставкой: stürzten hinein — hineinstürzen «ринуться внутрь»",
+      "ru": "броситься, ринуться; падать",
       "pos": "гл.",
-      "forms": "stürzte · ist gestürzt"
+      "forms": "stürzte · ist gestürzt",
+      "note": "В тексте с отделяемой приставкой: stürzten hinein — hineinstürzen «ринуться внутрь»"
     },
     "suchen": {
       "ru": "искать",
@@ -2099,9 +2152,10 @@
       "pl": "die Tage"
     },
     "teuer": {
-      "ru": "дорогой (guter Rat ist teuer — дело плохо)",
+      "ru": "дорогой",
       "pos": "прил.",
-      "forms": "teuer · teurer · am teuersten"
+      "forms": "teuer · teurer · am teuersten",
+      "note": "guter Rat ist teuer — дело плохо"
     },
     "Tier": {
       "ru": "животное, зверь",
@@ -2138,9 +2192,10 @@
       "forms": "trug · hat getragen"
     },
     "trinken": {
-      "ru": "пить; das Trinken — питьё",
+      "ru": "пить",
       "pos": "гл.",
-      "forms": "trank · hat getrunken"
+      "forms": "trank · hat getrunken",
+      "note": "das Trinken — питьё"
     },
     "trocknen": {
       "ru": "сушить; сохнуть",
@@ -2148,9 +2203,10 @@
       "forms": "trocknete · hat getrocknet"
     },
     "tun": {
-      "ru": "делать; gut tun — быть кстати",
+      "ru": "делать",
       "pos": "гл.",
-      "forms": "tat · hat getan"
+      "forms": "tat · hat getan",
+      "note": "gut tun — быть кстати"
     },
     "tüchtig": {
       "ru": "изрядный, добротный",
@@ -2164,8 +2220,9 @@
       "pl": "die Türen"
     },
     "um": {
-      "ru": "вокруг, в (о времени); um … zu — чтобы; тж. отделяемая приставка: sich umsehen «оглядеться»",
-      "pos": "предл."
+      "ru": "вокруг, в (о времени)",
+      "pos": "предл.",
+      "note": "um … zu — чтобы. Тж. отделяемая приставка: sich umsehen «оглядеться»"
     },
     "und": {
       "ru": "и, а",
@@ -2204,9 +2261,10 @@
       "forms": "verdiente · hat verdient"
     },
     "verstehen": {
-      "ru": "понимать; sich verstehen auf — знать толк в чём-л.",
+      "ru": "понимать",
       "pos": "гл.",
-      "forms": "verstand · hat verstanden"
+      "forms": "verstand · hat verstanden",
+      "note": "sich verstehen auf — знать толк в чём-л."
     },
     "vier": {
       "ru": "четыре",
@@ -2226,8 +2284,9 @@
       "pos": "предл."
     },
     "vorbei": {
-      "ru": "мимо; тж. отделяемая приставка: vorbeikommen «проходить мимо»",
-      "pos": "нареч."
+      "ru": "мимо",
+      "pos": "нареч.",
+      "note": "Тж. отделяемая приставка: vorbeikommen «проходить мимо»"
     },
     "vorbeirennen": {
       "ru": "пробежать мимо",
@@ -2297,9 +2356,10 @@
       "pl": "die Weilchen"
     },
     "weit": {
-      "ru": "далёкий, далеко; weiter — дальше, далее; von weitem — издали",
+      "ru": "далёкий, далеко",
       "pos": "прил.",
-      "forms": "weit · weiter · am weitesten"
+      "forms": "weit · weiter · am weitesten",
+      "note": "weiter — дальше, далее; von weitem — издали"
     },
     "wenn": {
       "ru": "если; когда",
@@ -2310,9 +2370,10 @@
       "pos": "мест."
     },
     "werden": {
-      "ru": "становиться; вспомог. глагол будущего и пассива",
+      "ru": "становиться",
       "pos": "гл.",
-      "forms": "wurde · ist geworden"
+      "forms": "wurde · ist geworden",
+      "note": "Вспомогательный глагол будущего времени и пассива"
     },
     "Wetter": {
       "ru": "погода",
@@ -2335,8 +2396,9 @@
       "pl": "die Winde"
     },
     "wir": {
-      "ru": "мы (uns — нас, нам)",
-      "pos": "мест."
+      "ru": "мы",
+      "pos": "мест.",
+      "note": "uns — нас, нам"
     },
     "wissen": {
       "ru": "знать",
@@ -2358,9 +2420,10 @@
       "pos": "нареч."
     },
     "wollen": {
-      "ru": "хотеть; в тексте с отделяемой приставкой: wollte hinaus — hinauswollen; heraus wollten — herauswollen",
+      "ru": "хотеть",
       "pos": "гл.",
-      "forms": "wollte · hat gewollt"
+      "forms": "wollte · hat gewollt",
+      "note": "В тексте с отделяемой приставкой: wollte hinaus — hinauswollen; heraus wollten — herauswollen"
     },
     "womit": {
       "ru": "чем, с помощью чего",
@@ -2384,13 +2447,15 @@
       "forms": "zerkratzte · hat zerkratzt"
     },
     "ziehen": {
-      "ru": "двигаться, отправляться (в тексте); тянуть; в тексте с отделяемой приставкой: zieh fort — fortziehen «уходить, отправляться»",
+      "ru": "двигаться, отправляться; тянуть",
       "pos": "гл.",
-      "forms": "zog · ist gezogen (двигаться) / hat gezogen (тянуть)"
+      "forms": "zog · ist gezogen (двигаться) / hat gezogen (тянуть)",
+      "note": "В тексте — «двигаться, отправляться». С отделяемой приставкой: zieh fort — fortziehen «уходить, отправляться»"
     },
     "zu": {
-      "ru": "к, в; слишком (zur = zu der, zum = zu dem)",
-      "pos": "предл."
+      "ru": "к, в; слишком",
+      "pos": "предл.",
+      "note": "zur = zu der, zum = zu dem"
     },
     "zufrieden": {
       "ru": "довольный",
@@ -2402,8 +2467,9 @@
       "pos": "нареч."
     },
     "zurück": {
-      "ru": "назад; тж. отделяемая приставка: zurücklaufen «побежать назад»",
-      "pos": "нареч."
+      "ru": "назад",
+      "pos": "нареч.",
+      "note": "Тж. отделяемая приставка: zurücklaufen «побежать назад»"
     },
     "zusammen": {
       "ru": "вместе",

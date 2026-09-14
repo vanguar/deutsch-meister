@@ -66,6 +66,9 @@ const ReaderCards = (() => {
     return lines;
   }
 
+  // note (обороты, отделяемые приставки, пояснения) на карточку НЕ идёт
+  // намеренно: карточка проверяет знание перевода, а разбор употребления
+  // читается в тултипе и в словаре книги.
   function cardOf(rec) {
     return {
       lemma: rec.de,          // ключ записи в dm_book_words
@@ -76,6 +79,21 @@ const ReaderCards = (() => {
       meta:  metaLines(rec),
       old:   rec.old || ''
     };
+  }
+
+  /* ── Кегль по длине оборота ── */
+
+  // Ступень считаем по длине текста, а не замером переполнения: замер
+  // требовал бы цикла после каждого показа, а ступеней всего три и
+  // граница у них устойчивая. Ниже 16 px не опускаемся — там уже
+  // работает скролл внутри стороны (css/reader.css, секция 22).
+  function sizeOf(card) {
+    const n = String(card.ru || '').length
+            + (Array.isArray(card.meta) ? card.meta.join(' ').length : 0)
+            + String(card.old || '').length;
+    if (n > 150) return 'xs';
+    if (n > 90)  return 's';
+    return 'm';
   }
 
   /* ── Озвучка: только через ReaderSpeak ── */
@@ -175,6 +193,7 @@ const ReaderCards = (() => {
       cards: deck,
       ids: IDS,
       showProgress: true,
+      onShow: card => { if (elCard) elCard.dataset.size = sizeOf(card); },
       onGood: card => {
         if (typeof ReaderWords !== 'undefined') ReaderWords.setStatus(card.lemma, 'known');
         unmark(card.lemma);
@@ -211,5 +230,5 @@ const ReaderCards = (() => {
 
   function isOpen() { return open_; }
 
-  return { open, close, isOpen, cardOf, metaLines, faceOf };
+  return { open, close, isOpen, cardOf, metaLines, faceOf, sizeOf };
 })();

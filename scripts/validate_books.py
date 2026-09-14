@@ -6,7 +6,8 @@ validate_books.py — проверка целостности книг чита�
          python scripts/validate_books.py bremer     # только одну
 Код возврата: 0 — ок, 1 — есть ошибки.
 
-Проверки (все — ошибки, warnings тут не бывает):
+Проверки (ошибки дают код возврата 1; предупреждения печатаются,
+но код возврата не меняют):
   * data/books/index.json парсится, у каждой книги есть обязательные поля;
   * meta.json каждой книги парсится, id совпадает с именем папки;
   * все ch-NN.json парсятся, число глав в meta и в index совпадает
@@ -21,6 +22,11 @@ validate_books.py — проверка целостности книг чита�
     (помета «устар.» на КОНКРЕТНОЙ словоформе: im Hause архаично,
     само Haus — нет); у объекта обязателен непустой l;
   * необязательное поле "old" (помета «устар.»), если есть, — непустая строка;
+  * необязательное поле "note" (обороты, отделяемые приставки, пояснения),
+    если есть, — непустая строка;
+  * ПРЕДУПРЕЖДЕНИЕ: ru длиннее 60 символов — скорее всего в перевод
+    затесался разбор употребления, которому место в note: на карточке
+    длинный ru не помещается;
   * у прозвища (pos «прозвище») нет и не должно быть art/pl/decl;
   * в glossary.l нет лемм, на которые не ссылается ни одна словоформа
     (мёртвый вес — либо опечатка в w, либо забытая запись).
@@ -57,10 +63,19 @@ SUBST_ADJ_POS = 'субст. прил.'
 NICKNAME_POS = 'прозвище'
 
 errors = []
+warnings = []
+
+# ru идёт на карточку, а там мало места. 60 символов — не предел вёрстки,
+# а сигнал: столько занимает уже не перевод, а разбор употребления.
+RU_WARN_LEN = 60
 
 
 def err(msg):
     errors.append(msg)
+
+
+def warn(msg):
+    warnings.append(msg)
 
 
 def load_json(path, label):
@@ -263,6 +278,17 @@ def check_book(book_id, index_entry=None):
             if not isinstance(info['old'], str) or not info['old'].strip():
                 err('%s/glossary.json: l."%s".old присутствует, но пустое или не строка'
                     % (tag, lemma))
+        # "note" — необязательный разбор употребления: обороты, отделяемые
+        # приставки, устойчивые выражения, пояснения. Всё, что НЕ перевод.
+        # Показывается в тултипе и в словаре книги, но не на карточке.
+        if 'note' in info:
+            if not isinstance(info['note'], str) or not info['note'].strip():
+                err('%s/glossary.json: l."%s".note присутствует, но пустое или не строка'
+                    % (tag, lemma))
+        ru_len = len((info.get('ru') or '').strip())
+        if ru_len > RU_WARN_LEN:
+            warn('%s/glossary.json: l."%s".ru — %d символов, длиннее %d: похоже, '
+                 'разделение ru/note неполное' % (tag, lemma, ru_len, RU_WARN_LEN))
 
     orphan = sorted(set(lemmas) - used_lemmas)
     if orphan:
@@ -321,8 +347,10 @@ def main():
 
     for e in errors:
         print('ERROR: ' + e)
-    print('\nПроверено книг: %d. Ошибок: %d.'
-          % (1 if args.book_id else len(entries), len(errors)))
+    for w in warnings:
+        print('WARN:  ' + w)
+    print('\nПроверено книг: %d. Ошибок: %d. Предупреждений: %d.'
+          % (1 if args.book_id else len(entries), len(errors), len(warnings)))
     return 1 if errors else 0
 
 

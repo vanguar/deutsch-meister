@@ -755,6 +755,18 @@ body.rd-open { overflow: hidden; }
 
 .word-tip-arrowto { color: var(--text-muted); font-weight: 400; }
 
+/* Разбор употребления (glossary.l.<лемма>.note): обороты, отделяемые
+   приставки, пояснения. Отдельной строкой под переводом и приглушённо —
+   перевод должен читаться первым. На карточке note не показывается
+   вовсе, там только ru; см. js/reader-cards.js. */
+.word-tip-note {
+  display: block;
+  margin-top: 5px;
+  font-size: 12px;
+  line-height: 1.45;
+  color: var(--text-muted);
+}
+
 .word-tip-old {
   display: block;
   margin-top: 7px;
@@ -1010,18 +1022,70 @@ body.rd-open { overflow: hidden; }
 }
 
 .rd-cards-body .flashcard-dots { justify-content: center; }
-.rd-cards-body .flashcard { height: 260px; }
+
+/* Карточка книги растёт под содержимое, а не обрезает его.
+
+   В уроках .flashcard — фиксированные 200 px, а обе .card-face лежат
+   position:absolute; inset:0. У слова из книги на обороте перевод,
+   грамматика и помета «устар.» — текст не влезал, вываливался наружу
+   и налезал на точки прогресса и кнопки, а сквозь него просвечивала
+   вторая сторона.
+
+   Обе стороны кладём в одну ячейку грида: высота карточки равна
+   большей из них. Выше 56vh не растём — дальше сторона прокручивается
+   сама, и ряд «точки → карточка → кнопки» остаётся целым.
+   Правила scoped под .rd-cards: 68 оболочек уроков не затрагиваются. */
+.rd-cards-body .flashcard {
+  display: grid;
+  height: auto;
+  min-height: 190px;
+}
 
 /* Лицо и оборот берут цвета ридера, а не глобальные токены base.css */
 .rd-cards .card-face {
+  position: relative;
+  grid-area: 1 / 1;
+  min-height: 0;
+  max-height: 56vh;
+  /* safe center: при переполнении flex-центрирование срезает верх
+     содержимого и до него не доскроллить */
+  justify-content: safe center;
+  overflow-y: auto;
+  overscroll-behavior: contain;
   background: var(--rd-surface2);
   border-color: var(--rd-border);
+  padding: 22px 18px;
   gap: 10px;
 }
-.rd-cards .card-de  { color: var(--rd-strong); font-size: 30px; text-align: center; }
-.rd-cards .card-ru  { color: var(--rd-accent); }
+
+/* Видимая сторона всегда сверху. backface-visibility прячет отвёрнутую,
+   но у прокручиваемой стороны свой слой: без явного порядка обратная
+   сторона перехватывала бы касания и просвечивала. */
+.rd-cards .flashcard:not(.flipped) .card-face.front,
+.rd-cards .flashcard.flipped       .card-face.back  { z-index: 1; }
+.rd-cards .flashcard:not(.flipped) .card-face.back,
+.rd-cards .flashcard.flipped       .card-face.front { z-index: 0; pointer-events: none; }
+
+.rd-cards .card-de  {
+  color: var(--rd-strong);
+  font-size: 30px;
+  text-align: center;
+  overflow-wrap: anywhere;   /* длинное составное существительное */
+}
+.rd-cards .card-ru  {
+  color: var(--rd-accent);
+  text-align: center;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
 .rd-cards .card-ipa { color: var(--rd-muted); }
 .rd-cards .card-hint { color: var(--rd-dim); }
+
+/* Кегль перевода ступенями по длине оборота (ставит js/reader-cards.js).
+   Ниже 16 px не опускаемся — дальше работает скролл внутри стороны. */
+.rd-cards .flashcard[data-size="s"]  .card-ru { font-size: 19px; }
+.rd-cards .flashcard[data-size="xs"] .card-ru { font-size: 16px; }
+.rd-cards .flashcard[data-size="xs"] .card-de { font-size: 26px; }
 
 .fc-meta {
   display: flex;
@@ -1259,7 +1323,9 @@ body.rd-open { overflow: hidden; }
 .lib-cta-row .lib-dict[disabled] { opacity: .45; cursor: default; }
 
 @media (max-width: 420px) {
-  .rd-cards-body .flashcard { height: 230px; }
+  .rd-cards-body .flashcard { min-height: 170px; }
+  .rd-cards .card-face { max-height: 52vh; padding: 20px 14px; }
   .rd-cards .card-de { font-size: 26px; }
+  .rd-cards .flashcard[data-size="xs"] .card-de { font-size: 23px; }
   .lib-cta-row { flex-direction: column; }
 }
