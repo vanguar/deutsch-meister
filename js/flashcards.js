@@ -34,6 +34,8 @@ const Flashcards = (() => {
 
     if (!elCard) return;
 
+    trimUI();
+
     // Build deck from vocabulary
     deck = LESSON_DATA.vocabulary.map(w => ({ ...w }));
     totalCards = deck.length;
@@ -51,6 +53,56 @@ const Flashcards = (() => {
       if (e.code === 'ArrowLeft')   handleAgain();
       if (e.code === 'ArrowRight')  handleGood();
     });
+  }
+
+  /* ── Чистка лишнего UI ──
+
+     Кнопку «Перевернуть», подсказку «или нажмите Пробел» и тексты
+     вокруг кнопок оценки снимаем из DOM здесь, а не в разметке:
+     флэшкарты живут в 68 оболочках вида lessons/<lvl>/lesson-NN,
+     и править их нельзя. Лишнее есть не везде — кнопка переворота
+     только в a1/lesson-02…08, поэтому каждый шаг молча выходит,
+     если цели нет.
+
+     Карточка переворачивается тапом по себе (слушатель на elCard),
+     а Space / ← / → продолжают работать — просто без видимых
+     подсказок. Подсчёт, XP и markSectionDone не затронуты.        */
+
+  function trimUI() {
+    dropFlipButton();
+    trimActions();
+    fixHowto();
+  }
+
+  function dropFlipButton() {
+    const btn = document.querySelector('button[onclick*="cardFlip"]');
+    if (!btn) return;
+    // Кнопка лежит в своей центрирующей обёртке вместе с подсказкой
+    // про Пробел — уносим обёртку целиком, если в ней нет чужого.
+    const wrap = btn.parentElement;
+    const keep = '#flashcard, #cardActions, #cardDots, #cardCounter, #lessonComplete';
+    const safe = wrap && wrap !== document.body && !wrap.querySelector(keep);
+    (safe ? wrap : btn).remove();
+  }
+
+  function trimActions() {
+    if (!elActions) return;
+    const btns = Array.from(elActions.querySelectorAll('.card-btn'));
+    if (!btns.length) return;
+    // Оставляем только сами кнопки: «Ты знал это слово?» и
+    // «← Не знал | Знаю →» уходят вместе со своей обёрткой.
+    // Сами кнопки — те же узлы с теми же onclick, их не пересоздаём.
+    elActions.innerHTML = '';
+    btns.forEach(b => elActions.appendChild(b));
+  }
+
+  // Подсказка над карточкой ссылалась на кнопку, которой больше нет
+  function fixHowto() {
+    const el = document.querySelector('.fc-howto');
+    if (!el || el.textContent.indexOf('Перевернуть') < 0) return;
+    el.textContent = el.textContent.replace(
+      /нажми\s+«Перевернуть»/,
+      'нажми на карточку');
   }
 
   /* ── Show card ── */
