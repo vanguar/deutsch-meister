@@ -35,6 +35,9 @@ const ReaderTip = (() => {
 
   const PAD = 10;   // отступ от краёв экрана
   const GAP = 12;   // зазор между словом и тултипом
+  // Ниже этого тултип не ужимаем: получится нечитаемый огрызок. Если и
+  // столько не влезает, лучше вернуться к клампингу по видимой области.
+  const MIN_BOX = 80;
 
   let elTip  = null;   // единственный узел тултипа
   let target = null;   // текущее слово .bw
@@ -156,6 +159,14 @@ const ReaderTip = (() => {
     });
   }
 
+  // Содержимое лежит в отдельной обёртке, а не прямо в .word-tip:
+  // при нехватке места по вертикали высоту ограничиваем именно ей.
+  // Вешать overflow на сам тултип нельзя — стрелка это ::after с
+  // top: 100%, то есть снаружи бокса, и её бы срезало.
+  function wrap(html) {
+    return '<span class="word-tip-scroll">' + html + '</span>';
+  }
+
   function render(word, info, opts) {
     const parts = [];
     const hasSentence = !!(opts && opts.hasSentence);
@@ -164,7 +175,7 @@ const ReaderTip = (() => {
       parts.push(`<span class="word-tip-title">${esc(word)}</span>`);
       parts.push('<span class="word-tip-meta">нет в словаре</span>');
       parts.push(actionsHtml(hasSentence));
-      return parts.join('');
+      return wrap(parts.join(''));
     }
 
     const e     = info.entry;
@@ -197,7 +208,7 @@ const ReaderTip = (() => {
     });
 
     parts.push(actionsHtml(hasSentence));
-    return parts.join('');
+    return wrap(parts.join(''));
   }
 
   /* ── Перевод предложения ── */
@@ -253,29 +264,56 @@ const ReaderTip = (() => {
     // сначала ставим left в минимум (места максимум) и только тогда меряем —
     // иначе клампинг считался бы по заниженной ширине и правый край уезжал
     // за экран. offsetWidth/Height берём до transform (у скрытого scale(.98)).
+    // Ограничение высоты снимаем ДО замера: position() зовут повторно
+    // (открытие, rAF, раскрытие перевода, возврат из плашки озвучки), и
+    // прошлый max-height занизил бы «естественную» высоту.
+    const box = elTip.querySelector('.word-tip-scroll');
+    if (box) box.style.maxHeight = '';
+
     elTip.style.left = PAD + 'px';
-    const tipWidth  = Math.min(elTip.offsetWidth || 240, vWidth - PAD * 2);
-    const tipHeight = elTip.offsetHeight || 120;
+    const tipWidth = Math.min(elTip.offsetWidth || 240, vWidth - PAD * 2);
+    const natural  = elTip.offsetHeight || 120;
 
     const center  = rect.left + rect.width / 2;
     const minLeft = vLeft + PAD;
     const maxLeft = vRight - PAD - tipWidth;
     const minTop  = vTop + PAD;
-    const maxTop  = vBottom - PAD - tipHeight;
 
     const left = Math.max(minLeft, Math.min(center - tipWidth / 2, Math.max(minLeft, maxLeft)));
 
-    let top = rect.top - tipHeight - GAP;
-    const belowTop = rect.bottom + GAP;
-    const fitsAbove = top >= minTop;
-    const fitsBelow = belowTop + tipHeight <= vBottom - PAD;
+    // Сколько места реально есть над словом и под ним — с учётом отступа
+    // от края экрана и зазора до самого слова.
+    const spaceAbove = rect.top - (vTop + PAD) - GAP;
+    const spaceBelow = (vBottom - PAD) - rect.bottom - GAP;
 
-    if (!fitsAbove && fitsBelow) {
-      elTip.classList.add('word-tip-below');
-      top = belowTop;
-    } else {
-      top = Math.max(minTop, Math.min(top, Math.max(minTop, maxTop)));
+    // Сторону выбираем по свободному месту. Сверху — по умолчанию: так
+    // тултип не закрывает текст, который читают дальше. Если сверху не
+    // влезает, а снизу влезает — вниз. Если не влезает НИГДЕ, берём
+    // сторону, где места больше, и ужимаем содержимое до неё.
+    // Раньше в этом случае срабатывал общий клампинг по видимой области,
+    // и тултип садился прямо на тапнутое слово.
+    let below;
+    let avail;
+    if (natural <= spaceAbove)      { below = false; avail = spaceAbove; }
+    else if (natural <= spaceBelow) { below = true;  avail = spaceBelow; }
+    else { below = spaceBelow > spaceAbove; avail = Math.max(spaceAbove, spaceBelow); }
+
+    if (natural > avail && box && avail >= MIN_BOX) {
+      // Ужимаем не сам тултип, а его содержимое: паддинги и рамка
+      // остаются, стрелка снаружи не срезается.
+      const chrome = natural - box.offsetHeight;
+      box.style.maxHeight = Math.max(MIN_BOX, avail - chrome) + 'px';
     }
+
+    const tipHeight = elTip.offsetHeight || natural;
+    const maxTop    = vBottom - PAD - tipHeight;
+
+    let top = below ? rect.bottom + GAP : rect.top - tipHeight - GAP;
+    if (below) elTip.classList.add('word-tip-below');
+
+    // Страховка: после ужатия top уже внутри видимой области, но если
+    // места не хватило даже на MIN_BOX, лучше остаться в кадре.
+    top = Math.max(minTop, Math.min(top, Math.max(minTop, maxTop)));
 
     const arrow = Math.max(18, Math.min(center - left, tipWidth - 18));
     elTip.style.left = Math.round(left) + 'px';

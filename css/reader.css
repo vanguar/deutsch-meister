@@ -790,6 +790,16 @@ body.rd-open { overflow: hidden; }
   max-width: min(320px, calc(100vw - 24px));
 }
 
+/* Содержимое тултипа. Живёт в своей обёртке, потому что при нехватке
+   места по вертикали js/reader-tip.js ограничивает высоту ИМЕННО ей:
+   повесить overflow на сам .word-tip нельзя — стрелка это ::after с
+   top: 100%, снаружи бокса, и её бы срезало. */
+.word-tip-scroll {
+  display: block;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
 /* Открытое слово подсвечивается — это отклик на тап, не «подсветка» из 3B */
 .bw.word-tip-open { color: var(--rd-accent); }
 
