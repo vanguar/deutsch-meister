@@ -88,11 +88,15 @@ const Reader = (() => {
     bookId:  null,
     meta:    null,
     gloss:   null,   // глоссарий грузим заранее, используем в 2C
+    chapters: [],    // ВСЕ главы книги: нужны для сквозной нумерации страниц
     chapter: null,   // данные текущей главы
     chIndex: 0,      // 0-based
     chTotal: 0,
     page:    0,
-    pages:   1,
+    pages:   1,      // страниц в текущей главе
+    chPages: [],     // страниц в каждой главе при текущей геометрии
+    bookPages: 0,    // страниц во всей книге
+    pagesKey: null,  // подпись геометрии, под которую посчитан chPages
     gap:     GAP_MIN,  // фактический зазор, считается в measure()
     width:   0,
     height:  0,
@@ -158,8 +162,13 @@ const Reader = (() => {
   // percent — только для карточки в библиотеке; восстановление идёт по p/s/w.
   function savePos() {
     if (!st.anchor || st.chTotal <= 0) return;
+    // Когда страницы книги посчитаны — процент по ним, он честнее оценки
+    // «глава из четырёх». Фолбэк оставлен на случай, если пересчёт ещё не
+    // прошёл (первый кадр после открытия).
     const read    = (st.page + 1) / Math.max(1, st.pages);
-    const percent = Math.max(0, Math.min(100, ((st.chIndex + read) / st.chTotal) * 100));
+    const percent = st.bookPages > 0
+      ? Math.max(0, Math.min(100, (bookPage() / st.bookPages) * 100))
+      : Math.max(0, Math.min(100, ((st.chIndex + read) / st.chTotal) * 100));
     const data = {
       chapter: st.chIndex,
       p:       st.anchor.p,
@@ -199,14 +208,17 @@ const Reader = (() => {
     return `<span class="bs" data-p="${p}" data-s="${s}">${out}</span>`;
   }
 
-  function renderChapter(ch) {
-    const paras = Array.isArray(ch.paragraphs) ? ch.paragraphs : [];
-    elContent.innerHTML = paras.map((para, p) => {
+  function chapterHtml(ch) {
+    const paras = Array.isArray(ch && ch.paragraphs) ? ch.paragraphs : [];
+    return paras.map((para, p) => {
       const sents = Array.isArray(para.s) ? para.s : [];
       const inner = sents.map((sent, s) => renderSentence(sent.de || '', p, s)).join(' ');
       return `<p class="rd-p">${inner}</p>`;
     }).join('');
+  }
 
+  function renderChapter(ch) {
+    elContent.innerHTML = chapterHtml(ch);
     elTitle.textContent = ch.title || '';
     elSub.textContent   = ch.titleRu || '';
   }
@@ -240,6 +252,83 @@ const Reader = (() => {
     st.pages = step > 0
       ? Math.max(1, Math.round((elContent.scrollWidth + st.gap) / step))
       : 1;
+  }
+
+  /* ── Сквозная нумерация страниц книги ── */
+
+  // Счётчик «стр. N / M» считал страницы ТЕКУЩЕЙ ГЛАВЫ, и на каждой новой
+  // главе знаменатель менялся: 1/2 → 1/4 → 1/3. Смена главы в счётчике
+  // ничем не отмечена, поэтому со стороны это выглядит поломкой. Теперь
+  // номер сквозной по всей книге.
+  //
+  // Цена: страницы считает CSS-вёрстка по ОТРЕНДЕРЕННОЙ главе, значит
+  // «сколько всего» можно узнать, только отрисовав каждую. Поэтому главы
+  // грузятся целиком при открытии книги (они маленькие, и это заодно
+  // убирает задержку при переходе между главами), а считаются в скрытом
+  // пробнике с той же геометрией колонок, что и у настоящего .rd-content.
+  let elProbe = null;
+
+  function probeEl() {
+    if (elProbe) return elProbe;
+    elProbe = document.createElement('div');
+    elProbe.className = 'rd-content';
+    elProbe.lang = 'de';
+    elProbe.setAttribute('aria-hidden', 'true');
+    // position: absolute — пробник не должен влиять на раскладку вьюпорта;
+    // никаких transform и transition, иначе замер поедет за анимацией
+    elProbe.style.cssText = 'position:absolute;left:0;top:0;visibility:hidden;'
+      + 'pointer-events:none;transform:none;transition:none';
+    elViewport.appendChild(elProbe);
+    return elProbe;
+  }
+
+  // Та же формула, что в measure(): scrollWidth = pages * step - gap
+  function pagesOfHtml(html) {
+    const step = st.width + st.gap;
+    if (step <= 0) return 1;
+    const probe = probeEl();
+    probe.style.width       = st.width + 'px';
+    probe.style.height      = st.height + 'px';
+    probe.style.columnWidth = st.width + 'px';
+    probe.style.columnGap   = st.gap + 'px';
+    probe.innerHTML = html;
+    const pages = Math.max(1, Math.round((probe.scrollWidth + st.gap) / step));
+    probe.innerHTML = '';   // держать в DOM текст всей книги незачем
+    return pages;
+  }
+
+  // Всё, от чего зависит разбивка на страницы. Совпала подпись — пересчитывать
+  // остальные главы не нужно, хватит обновить текущую.
+  function geometryKey() {
+    const p = st.prefs || {};
+    return [st.width, st.height, st.gap, p.fs, p.lh, p.margin, p.font].join('|');
+  }
+
+  // force: после repaginate() пересчитываем всегда. Геометрия могла остаться
+  // прежней, а разбивка измениться — например, когда доехали шрифты Google
+  // Fonts (document.fonts.ready) и строки стали другой ширины.
+  function measureBook(force) {
+    if (!st.chapters.length) { st.bookPages = st.pages; return; }
+    const key = geometryKey();
+    if (!force && st.pagesKey === key && st.chPages.length === st.chapters.length) {
+      st.chPages[st.chIndex] = st.pages;
+    } else {
+      st.chPages = st.chapters.map((ch, i) =>
+        i === st.chIndex ? st.pages : pagesOfHtml(chapterHtml(ch)));
+      st.pagesKey = key;
+    }
+    st.bookPages = st.chPages.reduce((sum, n) => sum + (n || 1), 0);
+  }
+
+  function pagesBefore(index) {
+    let n = 0;
+    for (let i = 0; i < index; i++) n += st.chPages[i] || 1;
+    return n;
+  }
+
+  // Номер текущей страницы в книге, 1-based
+  function bookPage() {
+    return pagesBefore(st.chIndex) + st.page + 1;
   }
 
   function colOf(el) {
@@ -327,9 +416,12 @@ const Reader = (() => {
   /* ── Панели ── */
 
   function paint() {
-    elPages.textContent = `стр. ${st.page + 1} / ${st.pages}`;
+    const total   = st.bookPages || st.pages;
+    const current = st.bookPages ? bookPage() : st.page + 1;
+    elPages.textContent = `стр. ${current} / ${total}`;
 
-    const done = st.pages > 1 ? (st.page / (st.pages - 1)) * 100 : 100;
+    // Полоса тоже по всей книге — иначе она спорила бы со счётчиком
+    const done = total > 1 ? ((current - 1) / (total - 1)) * 100 : 100;
     elBar.style.width = done + '%';
 
     elPrev.disabled = (st.chIndex === 0 && st.page === 0);
@@ -383,38 +475,39 @@ const Reader = (() => {
   /* ── Загрузка главы ── */
 
   // where: { anchor } | { atEnd: true } | ничего → первая страница
+  // Главы лежат в памяти с момента открытия книги, поэтому сеть тут больше
+  // не нужна и переход между главами мгновенный.
   function loadChapter(index, where) {
     speakStop();   // смена главы останавливает озвучку
     st.retry = () => loadChapter(index, where);
-    showLoading('Загружаем главу');
 
-    return getJson(chapterFile(index))
-      .then(ch => {
-        st.chapter = ch;
-        st.chIndex = index;
-        renderChapter(ch);
-        applySeen();
-        refreshCards();   // в новой главе свой набор собранных слов
-        hideState();
-        measure();
+    const ch = st.chapters[index];
+    if (!ch) {
+      showError(`${chapterFile(index)}: глава не загружена`);
+      return;
+    }
 
-        // Якорь восстанавливаем только если это предложение есть в главе
-        const anchor = where && where.anchor && anchorEl(where.anchor) ? where.anchor : null;
-        const page = anchor          ? pageOfAnchor(anchor)
-                   : where && where.atEnd ? st.pages - 1
-                   : 0;
-        goTo(page, { animate: false, anchor });
+    st.chapter = ch;
+    st.chIndex = index;
+    renderChapter(ch);
+    applySeen();
+    refreshCards();   // в новой главе свой набор собранных слов
+    hideState();
+    measure();
+    measureBook();
 
-        // Шрифты Google Fonts могут приехать после первой пагинации и
-        // изменить количество страниц — пересчитываем по якорю, когда готовы.
-        if (document.fonts && document.fonts.ready) {
-          document.fonts.ready.then(() => { if (st.open) repaginate(); });
-        }
-      })
-      .catch(err => {
-        console.error('[Reader] глава не загрузилась:', err);
-        showError(err && err.message ? err.message : String(err));
-      });
+    // Якорь восстанавливаем только если это предложение есть в главе
+    const anchor = where && where.anchor && anchorEl(where.anchor) ? where.anchor : null;
+    const page = anchor          ? pageOfAnchor(anchor)
+               : where && where.atEnd ? st.pages - 1
+               : 0;
+    goTo(page, { animate: false, anchor });
+
+    // Шрифты Google Fonts могут приехать после первой пагинации и изменить
+    // количество страниц — пересчитываем по якорю, когда они готовы.
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(() => { if (st.open) repaginate(); });
+    }
   }
 
   function loadBook(id, startPos) {
@@ -432,20 +525,31 @@ const Reader = (() => {
         st.gloss   = gloss;
         st.chTotal = Number(meta.chapters) || 1;
 
-        let index  = 0;
-        let where  = null;
-        if (startPos && typeof startPos.chapter === 'number'
-            && startPos.chapter >= 0 && startPos.chapter < st.chTotal) {
-          index = startPos.chapter;
-          if (typeof startPos.p === 'number' && typeof startPos.s === 'number') {
-            where = { anchor: {
-              p: startPos.p,
-              s: startPos.s,
-              w: typeof startPos.w === 'number' ? startPos.w : 0
-            } };
+        // Все главы сразу: без них не сказать, сколько страниц в книге, а
+        // счётчик внутри главы врал про общий объём. Главы маленькие, и
+        // переход между ними становится мгновенным.
+        const files = [];
+        for (let i = 0; i < st.chTotal; i++) files.push(getJson(chapterFile(i)));
+        return Promise.all(files).then(chapters => {
+          st.chapters = chapters;
+          st.chPages  = chapters.map(() => 1);
+          st.pagesKey = null;
+
+          let index  = 0;
+          let where  = null;
+          if (startPos && typeof startPos.chapter === 'number'
+              && startPos.chapter >= 0 && startPos.chapter < st.chTotal) {
+            index = startPos.chapter;
+            if (typeof startPos.p === 'number' && typeof startPos.s === 'number') {
+              where = { anchor: {
+                p: startPos.p,
+                s: startPos.s,
+                w: typeof startPos.w === 'number' ? startPos.w : 0
+              } };
+            }
           }
-        }
-        return loadChapter(index, where);
+          return loadChapter(index, where);
+        });
       })
       .catch(err => {
         console.error('[Reader] книга не открылась:', err);
@@ -475,6 +579,7 @@ const Reader = (() => {
     if (!st.open || !st.chapter) return;
     const anchor = st.anchor;
     measure();
+    measureBook(true);   // геометрия та же, а разбивка могла измениться
     // Без анимации и с сохранением якоря: читатель остаётся на своём предложении
     goTo(pageOfAnchor(anchor), { animate: false, keepAnchor: true });
   }
@@ -1144,6 +1249,10 @@ const Reader = (() => {
     st.pushed = false;
     st.open = false;
     st.chapter = null;
+    st.chapters = [];
+    st.chPages = [];
+    st.bookPages = 0;
+    st.pagesKey = null;
     closeSheet();
     tipClose();
     speakStop();
