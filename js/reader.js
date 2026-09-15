@@ -25,10 +25,12 @@
    раскрывается внутри тултипа — ru берётся из st.chapter по data-p/data-s.
    Озвучка (слово, предложение, «дальше») — js/reader-speak.js, очередь
    чанков идёт по onEnd из js/tts.js. «Дальше» читает подряд от текущей
-   страницы до конца главы и сама листает: перед каждым предложением ридер
-   уходит на страницу, где оно видно (разорванное — где его большая часть).
-   Листает при этом goTo, а не next(): next() — жест читателя и обязан
-   обрывать чтение, а goTo перепагинации не вызывает.
+   страницы до конца главы и сама листает. Предложение, разорванное между
+   страницами, РЕЖЕТСЯ по границе колонок (sentenceParts) и читается
+   частями: перед каждой частью ридер уходит на её страницу, поэтому
+   звучит только то, что видно. Листает при этом goTo, а не next():
+   next() — жест читателя и обязан обрывать чтение, а goTo перепагинации
+   не вызывает.
 
    Zero dependencies. Перевод предложения — этап 3C, озвучка — 4.
    ═══════════════════════════════════════════════ */
@@ -695,6 +697,7 @@ const Reader = (() => {
   function speakStop() {
     if (speakReady()) ReaderSpeak.stop();
     speakBarHide();
+    setPlayingPart(null);
     tipRestore();
   }
 
@@ -720,6 +723,20 @@ const Reader = (() => {
     if (!elContent) return;
     elContent.querySelectorAll('.bs--playing').forEach(n => n.classList.remove('bs--playing'));
     if (el) el.classList.add('bs--playing');
+  }
+
+  // Поверх .bs--playing (оно красит предложение целиком) отмечаем ту его
+  // часть, что звучит сейчас: иначе на разорванном предложении подсвечено
+  // всё видимое, а читается только половина. Ставится лишь когда частей
+  // больше одной. Только цвет и фон, как у всех подсветок ридера, —
+  // метрики строки не меняются, пагинация поехать не может.
+  function setPlayingPart(bs, page) {
+    if (!elContent) return;
+    elContent.querySelectorAll('.bw--speaking').forEach(n => n.classList.remove('bw--speaking'));
+    if (!bs) return;
+    bs.querySelectorAll('.bw').forEach(w => {
+      if (colOf(w) === page) w.classList.add('bw--speaking');
+    });
   }
 
   /* ── Плашка озвучки (задача: тултип не закрывает читаемый текст) ── */
@@ -816,33 +833,57 @@ const Reader = (() => {
     }
   }
 
-  // Страница, на которой предложение видно. Длинное предложение колонка
-  // рвёт между страницами — тогда берём ту, где лежит БОЛЬШАЯ его часть:
-  // считаем .bw по колонкам (colOf уже умеет это через offsetLeft).
-  // При равенстве побеждает колонка раньше — та, где предложение началось.
-  function pageOfSentence(bs) {
-    if (!bs) return st.page;
-    const words = bs.querySelectorAll('.bw');
-    if (!words.length) return clampPage(colOf(bs));
-
-    const count = Object.create(null);
-    words.forEach(w => {
-      const c = colOf(w);
-      count[c] = (count[c] || 0) + 1;
-    });
-
-    let best = -1;
-    let bestN = -1;
-    Object.keys(count).forEach(key => {
-      const col = Number(key);
-      const n = count[key];
-      if (n > bestN || (n === bestN && col < best)) { bestN = n; best = col; }
-    });
-    return clampPage(best);
-  }
-
   function clampPage(page) {
     return Math.max(0, Math.min(st.pages - 1, page));
+  }
+
+  // Разбивка предложения по границам страниц.
+  //
+  // Длинное предложение колонка рвёт между страницами. Читать его целиком,
+  // стоя на одной из них, нельзя ни при каком выборе страницы: вторая
+  // часть всё равно останется невидимой — «страница с большей частью»
+  // проблему не решает, а только уменьшает. Поэтому режем сам ТЕКСТ по
+  // границе колонок и читаем части подряд, переходя на страницу каждой.
+  //
+  // Смещения берём из DOM: .bs отрисован из того же sent.de, поэтому
+  // bs.textContent совпадает с ним символ в символ, и склейка частей даёт
+  // исходную строку. Если вдруг не совпало — отдаём одну часть целиком:
+  // лучше прежнее поведение, чем потерянный кусок текста.
+  function sentenceParts(bs) {
+    const text = sentenceDeOf(bs);
+    if (!bs || !text) return [];
+
+    const whole = [{ page: clampPage(colOf(bs)), text: text }];
+    if (bs.textContent !== text) return whole;
+
+    // Колонка слова — по его началу (colOf → offsetLeft). Слово,
+    // перенесённое по слогам через границу колонки, целиком уходит в ту,
+    // где начинается: рвать слово нельзя.
+    const words = [];
+    let offset = 0;
+    Array.prototype.forEach.call(bs.childNodes, node => {
+      const len = (node.textContent || '').length;
+      if (node.nodeType === 1 && node.classList && node.classList.contains('bw')) {
+        words.push({ start: offset, col: colOf(node) });
+      }
+      offset += len;
+    });
+    if (!words.length) return whole;
+
+    // Рез — ровно перед первым словом новой колонки. Всё, что между
+    // словами (пробел и знаки препинания), остаётся с предыдущей частью,
+    // а слово не рвётся никогда.
+    const parts = [];
+    let from = 0;
+    let col  = words[0].col;
+    for (let i = 1; i < words.length; i++) {
+      if (words[i].col === col) continue;
+      parts.push({ page: clampPage(col), text: text.slice(from, words[i].start) });
+      from = words[i].start;
+      col  = words[i].col;
+    }
+    parts.push({ page: clampPage(col), text: text.slice(from) });
+    return parts;
   }
 
   // Очередь чтения: от первого предложения, начинающегося на странице
@@ -872,7 +913,18 @@ const Reader = (() => {
     if (!speakReady()) return;
     if (ReaderSpeak.isPlaying('page')) { ReaderSpeak.stop(); return; }
 
-    const items = sentencesFrom(st.page);
+    // Очередь идёт ЧАСТЯМИ, а не предложениями: предложение на одной
+    // странице даёт одну часть, разорванное — по части на страницу.
+    // Внутри части работает прежний chunkForTts с лимитом прокси.
+    const items = [];
+    sentencesFrom(st.page).forEach(it => {
+      const parts = sentenceParts(it.el);
+      parts.forEach(part => {
+        if (!part.text) return;
+        items.push({ el: it.el, text: part.text, page: part.page,
+                     split: parts.length > 1 });
+      });
+    });
     if (!items.length) return;
 
     // Читаем подряд — подсказка по одному слову тут уже не нужна:
@@ -881,12 +933,18 @@ const Reader = (() => {
 
     const started = ReaderSpeak.page(items, {
       onItem: it => {
-        const page = pageOfSentence(it.el);
-        if (page !== st.page) goTo(page);
+        // Пауза на стыке страниц совпадает с перелистыванием — так и надо
+        if (it.page !== st.page) goTo(it.page);
         setPlayingSentence(it.el);
+        setPlayingPart(it.split ? it.el : null, it.page);
         speakBarShow(it.text, it.el);
       },
-      onDone: () => { setPlayingSentence(null); setSpeakBtn(false); speakBarHide(); }
+      onDone: () => {
+        setPlayingSentence(null);
+        setPlayingPart(null);
+        setSpeakBtn(false);
+        speakBarHide();
+      }
     });
     setSpeakBtn(started);
     if (!started) speakBarHide();
@@ -1133,7 +1191,7 @@ const Reader = (() => {
   return {
     init, open, close, next, prev, goTo, repaginate,
     setPref, openSheet, closeSheet, toggleChrome,
-    applySeen, markLemma, speakOn, sentencesFrom, pageOfSentence, state: st,
+    applySeen, markLemma, speakOn, sentencesFrom, sentenceParts, state: st,
     refreshCards, openCards, openDict, theme: themeName
   };
 })();

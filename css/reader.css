@@ -893,6 +893,17 @@ body.rd-open { overflow: hidden; }
   color: var(--rd-strong);
 }
 
+/* Читаемая ЧАСТЬ разорванного предложения. .bs--playing красит его целиком,
+   но при чтении по границе страниц звучит только та часть, что на этой
+   странице, — её и отмечаем сильнее. Ставится лишь когда частей больше
+   одной (js/reader.js: setPlayingPart). Опять только цвет и фон: метрики
+   строки не меняются, поэтому пагинация поехать не может. */
+.bs--playing .bw--speaking {
+  background: color-mix(in srgb, var(--rd-accent) 40%, transparent);
+  border-radius: 3px;
+  color: var(--rd-strong);
+}
+
 /* 🔊 в тултипе: рядом с «Предложением» и у раскрытого перевода */
 .word-tip-say {
   flex-shrink: 0;
