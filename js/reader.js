@@ -564,6 +564,25 @@ const Reader = (() => {
 
   /* ── Шторка настроек ── */
 
+  // Версия и аварийное обновление. Номер на виду, потому что иначе
+  // «у меня старая версия» невозможно ни подтвердить, ни опровергнуть —
+  // ровно на этом мы и застряли, когда телефон месяц держал старый
+  // воркер. Кнопка снимает регистрации и сносит кеши: «очистить кэш»
+  // в браузере этого не делает.
+  function sheetFooterHtml() {
+    const label = (typeof dmAppVersionLabel === 'function')
+      ? dmAppVersionLabel() : 'версия неизвестна';
+    return `
+      <div class="rd-row rd-row--app">
+        <div class="rd-app-ver" id="rdAppVer">Deutsch Meister · ${esc(label)}</div>
+        <button type="button" class="rd-app-reset" id="rdAppReset">
+          ⟳ Обновить приложение</button>
+        <div class="rd-app-note">Снимет service worker и очистит кеш,
+          затем перезагрузит страницу. Прогресс и собранные слова не
+          затрагиваются — они в localStorage.</div>
+      </div>`;
+  }
+
   function buildSheet() {
     if (!elSheetBody) return;
     elSheetBody.innerHTML = SHEET_ROWS.map(row => `
@@ -575,7 +594,14 @@ const Reader = (() => {
             aria-pressed="${String(st.prefs[row.key]) === String(o.v)}"
             >${esc(o.text)}</button>`).join('')}
         </div>
-      </div>`).join('');
+      </div>`).join('') + sheetFooterHtml();
+  }
+
+  function appReset() {
+    const btn = document.getElementById('rdAppReset');
+    if (btn) { btn.disabled = true; btn.textContent = '⟳ Обновляем…'; }
+    if (typeof dmHardReset === 'function') { dmHardReset(); return; }
+    location.reload();
   }
 
   function markSheet() {
@@ -1168,7 +1194,8 @@ const Reader = (() => {
     elSheetBack?.addEventListener('click', closeSheet);
     elSheetBody?.addEventListener('click', e => {
       const btn = e.target.closest('button[data-pref]');
-      if (btn) setPref(btn.dataset.pref, btn.dataset.value);
+      if (btn) { setPref(btn.dataset.pref, btn.dataset.value); return; }
+      if (e.target.closest('#rdAppReset')) appReset();
     });
     document.addEventListener('keydown', e => {
       if (e.key === 'Escape' && st.sheet) closeSheet();

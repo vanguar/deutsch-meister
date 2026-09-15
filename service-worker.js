@@ -1,4 +1,4 @@
-const CACHE = 'deutsch-meister-v73';
+const CACHE = 'deutsch-meister-v74';
 const SCOPE_PATH = new URL(self.registration.scope).pathname.replace(/\/$/, '');
 const BASE = SCOPE_PATH === '' ? '' : SCOPE_PATH;
 
@@ -7,32 +7,33 @@ const STATIC = [
   BASE + '/',
   BASE + '/index.html',
   BASE + '/manifest.json',
-  BASE + '/css/base.css?v=58',
-  BASE + '/css/sidebar.css?v=58',
-  BASE + '/css/lesson.css?v=58',
-  BASE + '/css/exercises.css?v=58',
-  BASE + '/js/progress.js?v=58',
-  BASE + '/js/lesson-render.js?v=58',
-  BASE + '/js/exercises.js?v=58',
-  BASE + '/js/flashcards.js?v=58',
-  BASE + '/js/tts.js?v=58',
-  BASE + '/js/telegram.js?v=58',
-  BASE + '/js/cloud-sync.js?v=58',
-  BASE + '/js/install-app.js?v=58',
-  BASE + '/js/support.js?v=58',
+  BASE + '/css/base.css?v=59',
+  BASE + '/css/sidebar.css?v=59',
+  BASE + '/css/lesson.css?v=59',
+  BASE + '/css/exercises.css?v=59',
+  BASE + '/js/progress.js?v=59',
+  BASE + '/js/lesson-render.js?v=59',
+  BASE + '/js/exercises.js?v=59',
+  BASE + '/js/flashcards.js?v=59',
+  BASE + '/js/tts.js?v=59',
+  BASE + '/js/telegram.js?v=59',
+  BASE + '/js/cloud-sync.js?v=59',
+  BASE + '/js/install-app.js?v=59',
+  BASE + '/js/support.js?v=59',
+  BASE + '/js/sw-register.js?v=59',
   // Читалка: оболочка библиотеки и её движок. Каталог книг — маленький
   // и нужен сразу, поэтому он в прекеше; ?v= у .json нет намеренно:
   // bump_version.py версионирует только .js/.css, а запросы всё равно
   // идут network-first, так что свежее приходит из сети.
   BASE + '/books.html',
-  BASE + '/css/reader.css?v=58',
-  BASE + '/js/library.js?v=58',
-  BASE + '/js/reader.js?v=58',
-  BASE + '/js/reader-tip.js?v=58',
-  BASE + '/js/reader-words.js?v=58',
-  BASE + '/js/reader-speak.js?v=58',
-  BASE + '/js/reader-cards.js?v=58',
-  BASE + '/js/reader-dict.js?v=58',
+  BASE + '/css/reader.css?v=59',
+  BASE + '/js/library.js?v=59',
+  BASE + '/js/reader.js?v=59',
+  BASE + '/js/reader-tip.js?v=59',
+  BASE + '/js/reader-words.js?v=59',
+  BASE + '/js/reader-speak.js?v=59',
+  BASE + '/js/reader-cards.js?v=59',
+  BASE + '/js/reader-dict.js?v=59',
   BASE + '/data/books/index.json',
   BASE + '/icons/icon.svg',
 ];
@@ -52,9 +53,22 @@ function isNoStore(url) {
   return NO_STORE.some(re => re.test(path));
 }
 
+// skipWaiting() зовём ПЕРВЫМ делом, до прекеша. Раньше он висел на
+// .then() после addAll — а addAll отклоняется целиком, если хотя бы один
+// URL не отдался. Один битый адрес в списке (или моргнувшая сеть) означал
+// проваленную установку: новый воркер не активировался НИКОГДА, старый
+// продолжал отдавать старые файлы, и пользователь не мог это починить
+// ни удалением PWA, ни очисткой кэша. Поэтому теперь каждый файл кладётся
+// отдельно и его неудача не роняет остальные: прекеш — оптимизация для
+// офлайна, а не условие работы.
 self.addEventListener('install', e => {
+  self.skipWaiting();
   e.waitUntil(
-    caches.open(CACHE).then(c => c.addAll(STATIC)).then(() => self.skipWaiting())
+    caches.open(CACHE).then(c => Promise.all(
+      STATIC.map(url => c.add(url).catch(err => {
+        console.warn('[SW] не удалось прекешировать ' + url, err);
+      }))
+    )).catch(err => console.warn('[SW] прекеш недоступен', err))
   );
 });
 
@@ -66,9 +80,12 @@ self.addEventListener('activate', e => {
   );
 });
 
-// Allow the page to force-activate a waiting SW
+// Страница может попросить ждущий воркер активироваться немедленно.
+// Принимаем и строку, и объект: разные версии страниц шлют по-разному,
+// а старая страница обязана уметь разбудить новый воркер.
 self.addEventListener('message', e => {
-  if (e.data === 'SKIP_WAITING') self.skipWaiting();
+  const d = e.data;
+  if (d === 'SKIP_WAITING' || (d && d.type === 'SKIP_WAITING')) self.skipWaiting();
 });
 
 function isHtml(req) {

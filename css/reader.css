@@ -730,6 +730,42 @@ body.rd-open { overflow: hidden; }
 .rd-seg .fs-4 { font-size: 19px; }
 .rd-seg .ff-serif { font-family: Georgia, 'Times New Roman', serif; }
 
+/* Версия и аварийное обновление — последний ряд шторки настроек.
+   Отделён линией: это не настройка чтения, а служебный блок. */
+.rd-row--app {
+  border-top: 1px solid var(--rd-border);
+  padding-top: 14px;
+  margin-top: 4px;
+}
+.rd-app-ver {
+  font-size: 12px;
+  color: var(--rd-muted);
+  margin-bottom: 8px;
+}
+.rd-app-reset {
+  width: 100%;
+  padding: 10px 14px;
+  background: var(--rd-surface2);
+  border: 1px solid var(--rd-border);
+  border-radius: var(--r-md);
+  color: var(--rd-text);
+  font-size: 13.5px;
+  font-weight: 600;
+  transition: all var(--t-fast);
+}
+.rd-app-reset:hover:not([disabled]) {
+  border-color: var(--rd-accent);
+  color: var(--rd-strong);
+  background: var(--rd-accent-soft);
+}
+.rd-app-reset[disabled] { opacity: .55; cursor: default; }
+.rd-app-note {
+  margin-top: 7px;
+  font-size: 11.5px;
+  line-height: 1.45;
+  color: var(--rd-dim);
+}
+
 /* ══ 16. РИДЕР: АДАПТИВ ══ */
 
 @media (min-width: 900px) {
@@ -1330,7 +1366,21 @@ body.rd-open { overflow: hidden; }
   line-height: 1.5;
 }
 
-/* ══ 24. БИБЛИОТЕКА: РЯД КНОПОК НА КАРТОЧКЕ ══ */
+/* ══ 24. БИБЛИОТЕКА: ПОДВАЛ С ВЕРСИЕЙ ══ */
+
+/* Номер версии на виду. Не украшение: пока его не было, «у меня старая
+   версия» нельзя было ни подтвердить, ни опровергнуть. */
+.lib-foot {
+  padding: 18px 16px calc(24px + env(safe-area-inset-bottom, 0px));
+  text-align: center;
+}
+.lib-ver {
+  font-size: 11.5px;
+  color: var(--text-dim);
+  letter-spacing: .2px;
+}
+
+/* ══ 25. БИБЛИОТЕКА: РЯД КНОПОК НА КАРТОЧКЕ ══ */
 
 .lib-cta-row { display: flex; gap: 8px; }
 .lib-cta-row .lib-cta { flex: 1; }

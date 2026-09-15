@@ -12,13 +12,13 @@
   <link rel="apple-touch-icon" href="/deutsch-meister/icons/icon.svg">
   <link rel="icon" type="image/svg+xml" href="/deutsch-meister/icons/icon.svg">
 
-  <link rel="stylesheet" href="css/base.css?v=58">
+  <link rel="stylesheet" href="css/base.css?v=59">
   <!-- lesson.css — только ради класса .word-tip, который переиспользует ридер -->
-  <link rel="stylesheet" href="css/lesson.css?v=58">
+  <link rel="stylesheet" href="css/lesson.css?v=59">
   <!-- exercises.css — ради анимации переворота карточки (.flashcard,
        .card-face, .fc-dot): карточки книги переиспользуют её целиком -->
-  <link rel="stylesheet" href="css/exercises.css?v=58">
-  <link rel="stylesheet" href="css/reader.css?v=58">
+  <link rel="stylesheet" href="css/exercises.css?v=59">
+  <link rel="stylesheet" href="css/reader.css?v=59">
 </head>
 <body>
 
@@ -41,6 +41,13 @@
 
   <!-- ── КАТАЛОГ: загрузка / ошибка / карточки — рисует js/library.js ── -->
   <main id="libContent" aria-busy="true" aria-live="polite"></main>
+
+  <!-- Версия на виду: пользователь должен уметь назвать её, а не гадать
+       по наличию кнопки, какой код у него на экране. Текст ставит
+       js/sw-register.js через dmAppVersionLabel(). -->
+  <footer class="lib-foot">
+    <span class="lib-ver" id="libVersion"></span>
+  </footer>
 
 </div>
 
@@ -204,15 +211,16 @@
   </div>
 </section>
 
-<script src="js/tts.js?v=58"></script>
-<script src="js/library.js?v=58"></script>
-<script src="js/reader-words.js?v=58"></script>
-<script src="js/reader-speak.js?v=58"></script>
-<script src="js/reader-tip.js?v=58"></script>
-<script src="js/reader-cards.js?v=58"></script>
-<script src="js/reader-dict.js?v=58"></script>
-<script src="js/flashcards.js?v=58"></script>
-<script src="js/reader.js?v=58"></script>
+<script src="js/sw-register.js?v=59"></script>
+<script src="js/tts.js?v=59"></script>
+<script src="js/library.js?v=59"></script>
+<script src="js/reader-words.js?v=59"></script>
+<script src="js/reader-speak.js?v=59"></script>
+<script src="js/reader-tip.js?v=59"></script>
+<script src="js/reader-cards.js?v=59"></script>
+<script src="js/reader-dict.js?v=59"></script>
+<script src="js/flashcards.js?v=59"></script>
+<script src="js/reader.js?v=59"></script>
 <script>
   function initTheme() {
     let saved = 'dark';
@@ -230,6 +238,12 @@
     if (btn) btn.textContent = next === 'dark' ? '☀️' : '🌙';
   }
   initTheme();
+
+  // Строка версии в подвале библиотеки
+  (function () {
+    const el = document.getElementById('libVersion');
+    if (el && typeof dmAppVersionLabel === 'function') el.textContent = dmAppVersionLabel();
+  })();
 </script>
 
 </body>
