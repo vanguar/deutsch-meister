@@ -1,5 +1,5 @@
 const TTS = (() => {
-  const VERSION = 'v20';
+  const VERSION = 'v21';
   const PROXY = 'https://deutsch-meister-puce.vercel.app/api/tts';
 
   let preferredVoice = null;
@@ -292,7 +292,16 @@ const TTS = (() => {
     });
   }
 
-  /* ── Путь 2: <audio> с перебором источников ── */
+  /* ── Путь 2: <audio> с перебором источников ──
+     Живая попытка ровно одна, её номер — me. Смена el.src обрывает
+     предыдущую загрузку, и её play() реджектится с AbortError уже ПОСЛЕ
+     того, как перебор ушёл к следующему источнику. Реагировать на такой
+     отказ нельзя: счётчик перескакивает через живой источник, список
+     «кончается» — и сессия закрывается с no-audio ровно в тот момент,
+     когда звук как раз пошёл. Отсюда и брался ложный тост «Озвучка
+     недоступна» при работающей озвучке. Событие устаревшей попытки
+     игнорируем молча, а на закрытой сессии (stop() делает audio.pause()
+     — тот же AbortError) следующий источник не запускаем вовсе. */
   function playAudioEl(text, spans, ses) {
     const urls = [proxyUrl(text), gUrl('translate.google.com', text), gUrl('translate.googleapis.com', text)];
     const el = getAudio();
@@ -300,16 +309,28 @@ const TTS = (() => {
     el.muted = false;
     attachEnded(ses);
     let i = 0;
-    const tryNext = () => {
+    let attempt = 0;
+    const stale = me => me !== attempt || !!(ses && ses.done);
+    const tryNext = me => {
+      if (me !== undefined && stale(me)) return;
+      if (ses && ses.done) return;
       if (i >= urls.length) {
         diag('❌ audio: все источники молчат');
+        el.onerror = null;
+        el.onplaying = null;
         if (ses) ses.finish(false, 'no-audio');
         return;
       }
+      const my = ++attempt;
       const url = urls[i++];
-      el.onerror = () => { diag('audio error code=' + (el.error && el.error.code) + ' на #' + i + ' → next'); tryNext(); };
+      el.onerror = () => {
+        if (stale(my)) return;
+        diag('audio error code=' + (el.error && el.error.code) + ' на #' + my + ' → next');
+        tryNext(my);
+      };
       el.onplaying = () => {
-        diag('▶ PLAYING (audio) #' + i);
+        if (stale(my)) return;
+        diag('▶ PLAYING (audio) #' + my);
         hlByDuration(spans, el.duration);
         if (ses && isFinite(el.duration)) ses.arm(el.duration * 1000 * 1.6 + 500);
       };
@@ -317,7 +338,14 @@ const TTS = (() => {
       el.load();
       const p = el.play();
       if (p && typeof p.then === 'function') {
-        p.then(() => diag('play() ok (audio) #' + i)).catch(e => { diag('play() reject: ' + e.name + ' → next'); tryNext(); });
+        p.then(() => diag('play() ok (audio) #' + my)).catch(e => {
+          if (stale(my)) { diag('play() reject на устаревшей #' + my + ': ' + e.name); return; }
+          // Воспроизведение оборвали pause() или новая загрузка — это не
+          // отказ источника, следующий пробовать не за что.
+          if (e && e.name === 'AbortError') { diag('play() abort #' + my); return; }
+          diag('play() reject: ' + e.name + ' → next');
+          tryNext(my);
+        });
       }
     };
     tryNext();
@@ -376,7 +404,15 @@ const TTS = (() => {
       };
       u.onstart = () => { settled = true; };
       u.onend   = () => { if (!abandoned) ses.finish(true, 'end'); };
-      u.onerror = () => {
+      u.onerror = (e) => {
+        // Мы уже ушли на аудио-путь: этот error — эхо нашего же cancel()
+        // внутри fb(). Закрывать здесь сессию значило бы сказать «озвучка
+        // недоступна» ровно в тот момент, когда Google TTS начинает играть.
+        if (abandoned) return;
+        // cancel() снаружи (новый speak() или stop()) — прерывание, а не
+        // поломка: сессию уже закрыл stopCurrent(), фолбэк не нужен.
+        const err = (e && e.error) || '';
+        if (err === 'canceled' || err === 'interrupted') return;
         // Уже говорил и сломался — фолбэк не поможет, закрываем сессию
         if (settled) { ses.finish(false, 'error'); return; }
         fb();
