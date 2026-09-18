@@ -106,14 +106,19 @@ const Reader = (() => {
     retry:   null,   // что повторить после ошибки
     prefs:   null,   // настройки чтения
     chromeHidden: false,
-    sheet:   false   // открыта шторка настроек
+    sheet:   false,  // открыта шторка настроек
+    // Режимы перевода живут только в текущем сеансе чтения. Они не входят в
+    // dm_reader_prefs: новая книга всегда открывается с немецким оригиналом.
+    interlinear: false,
+    fullTranslation: false
   };
 
   /* ── DOM ── */
   let elLib, elView, elViewport, elContent, elState,
       elTitle, elSub, elPages, elBar, elPrev, elNext,
       elSheet, elSheetBack, elSheetBody,
-      elSpeakBar, elSpeakBarText, elCardsBtn, elCardsN;
+      elCardsBtn, elCardsN,
+      elSpeakBtn, elInterlinearBtn, elFullTranslationBtn;
 
   /* ── Утилиты ── */
 
@@ -190,7 +195,33 @@ const Reader = (() => {
   // пробелы и цифры остаются голым текстом, без span.
   const WORD_RE = /[\p{L}\p{M}]+(?:[-'’][\p{L}\p{M}]+)*/gu;
 
-  function renderSentence(text, p, s) {
+  // Над словом нужен один короткий ориентир, а не полная словарная статья.
+  // В частности, скобочные пометы и второе значение превращали строку в
+  // нечитаемое облако мелкого текста. Полный ru с оттенками смысла остаётся
+  // в тултипе и карточках; здесь — только первое простое значение.
+  function compactWordRu(value) {
+    const raw = String(value || '').split(/[;,]/)[0]
+      .replace(/\s*\([^)]*\)/g, '')
+      .replace(/\s+/g, ' ')
+      .trim();
+    const grammar = {
+      'определённый артикль': 'этот',
+      'неопределённый артикль': 'один'
+    };
+    return grammar[raw] || raw;
+  }
+
+  function wordRu(token) {
+    if (typeof ReaderTip === 'undefined') return '';
+    const info = ReaderTip.lookup(st.gloss, String(token || '').toLowerCase());
+    return compactWordRu(info && info.entry && info.entry.ru);
+  }
+
+  // В немецком режиме .bw остаётся плоским: это важно для тултипа, TTS и
+  // сборника слов. Перевод лежит только в data-ru и появляется через CSS.
+  // В полном русском режиме используем отдельный .brw: он даёт пагинатору
+  // точные якоря, но не притворяется немецким словом для словаря.
+  function renderSentence(text, p, s, russian) {
     let out = '';
     let last = 0;
     let i = 0;
@@ -199,7 +230,13 @@ const Reader = (() => {
     while ((m = WORD_RE.exec(text)) !== null) {
       if (m.index > last) out += esc(text.slice(last, m.index));
       const w = m[0];
-      out += `<span class="bw" data-w="${i}" data-t="${esc(w.toLowerCase())}">${esc(w)}</span>`;
+      if (russian) {
+        out += `<span class="brw" data-w="${i}">${esc(w)}</span>`;
+      } else {
+        const ru = wordRu(w);
+        const ruAttr = ru ? ` data-ru="${esc(ru)}"` : '';
+        out += `<span class="bw" data-w="${i}" data-t="${esc(w.toLowerCase())}"${ruAttr}>${esc(w)}</span>`;
+      }
       last = m.index + w.length;
       i++;
     }
@@ -208,19 +245,48 @@ const Reader = (() => {
     return `<span class="bs" data-p="${p}" data-s="${s}">${out}</span>`;
   }
 
-  function chapterHtml(ch) {
+  // У каждой главы есть собственная заставка внутри текста. Она не только
+  // делает длинное чтение похожим на книгу, но и даёт читателю ясный ориентир
+  // после перехода между главами. Обложечный символ берём из meta: для другой
+  // книги не потребуется зашивать здесь её оформление.
+  function chapterOpening(ch, chapterIndex) {
+    const no = Math.max(1, Number(chapterIndex) + 1);
+    const russian = st.fullTranslation;
+    const label = russian ? `Глава ${no}` : `Kapitel ${no}`;
+    const title = russian
+      ? (ch.titleRu || ch.title || '')
+      : (ch.title || ch.titleRu || '');
+    const subtitle = russian ? '' : (ch.titleRu || '');
+    const icon = (st.meta && st.meta.cover) || '✦';
+    return `<header class="rd-chapter-opening">
+      <div class="rd-chapter-kicker"><span aria-hidden="true">✦</span><span>${esc(label)}</span><span aria-hidden="true">✦</span></div>
+      <div class="rd-chapter-icon" aria-hidden="true">${esc(icon)}</div>
+      <h1 class="rd-chapter-heading">${esc(title)}</h1>
+      ${subtitle ? `<p class="rd-chapter-translation">${esc(subtitle)}</p>` : ''}
+      <div class="rd-chapter-ornament" aria-hidden="true"><span></span><b>❦</b><span></span></div>
+    </header>`;
+  }
+
+  function chapterHtml(ch, chapterIndex = st.chIndex) {
     const paras = Array.isArray(ch && ch.paragraphs) ? ch.paragraphs : [];
-    return paras.map((para, p) => {
+    const prose = paras.map((para, p) => {
       const sents = Array.isArray(para.s) ? para.s : [];
-      const inner = sents.map((sent, s) => renderSentence(sent.de || '', p, s)).join(' ');
+      const inner = sents.map((sent, s) => renderSentence(
+        st.fullTranslation ? (sent.ru || sent.de || '') : (sent.de || ''),
+        p, s, st.fullTranslation
+      )).join(' ');
       return `<p class="rd-p">${inner}</p>`;
     }).join('');
+    return chapterOpening(ch || {}, chapterIndex) + prose;
   }
 
   function renderChapter(ch) {
-    elContent.innerHTML = chapterHtml(ch);
-    elTitle.textContent = ch.title || '';
-    elSub.textContent   = ch.titleRu || '';
+    elContent.innerHTML = chapterHtml(ch, st.chIndex);
+    elContent.lang = st.fullTranslation ? 'ru' : 'de';
+    elContent.classList.toggle('rd-interlinear', st.interlinear && !st.fullTranslation);
+    elContent.classList.toggle('rd-full-translation', st.fullTranslation);
+    elTitle.textContent = st.fullTranslation ? (ch.titleRu || ch.title || '') : (ch.title || '');
+    elSub.textContent   = st.fullTranslation ? '' : (ch.titleRu || '');
   }
 
   /* ── Пагинация ── */
@@ -287,6 +353,9 @@ const Reader = (() => {
     const step = st.width + st.gap;
     if (step <= 0) return 1;
     const probe = probeEl();
+    probe.lang = st.fullTranslation ? 'ru' : 'de';
+    probe.classList.toggle('rd-interlinear', st.interlinear && !st.fullTranslation);
+    probe.classList.toggle('rd-full-translation', st.fullTranslation);
     probe.style.width       = st.width + 'px';
     probe.style.height      = st.height + 'px';
     probe.style.columnWidth = st.width + 'px';
@@ -301,7 +370,8 @@ const Reader = (() => {
   // остальные главы не нужно, хватит обновить текущую.
   function geometryKey() {
     const p = st.prefs || {};
-    return [st.width, st.height, st.gap, p.fs, p.lh, p.margin, p.font].join('|');
+    return [st.width, st.height, st.gap, p.fs, p.lh, p.margin, p.font,
+            st.interlinear ? 1 : 0, st.fullTranslation ? 1 : 0].join('|');
   }
 
   // force: после repaginate() пересчитываем всегда. Геометрия могла остаться
@@ -314,7 +384,7 @@ const Reader = (() => {
       st.chPages[st.chIndex] = st.pages;
     } else {
       st.chPages = st.chapters.map((ch, i) =>
-        i === st.chIndex ? st.pages : pagesOfHtml(chapterHtml(ch)));
+        i === st.chIndex ? st.pages : pagesOfHtml(chapterHtml(ch, i)));
       st.pagesKey = key;
     }
     st.bookPages = st.chPages.reduce((sum, n) => sum + (n || 1), 0);
@@ -342,7 +412,7 @@ const Reader = (() => {
   // слова могут быть разорваны колонкой — у них два client-прямоугольника,
   // такие пропускаем.
   function anchorFromPage() {
-    const words = elContent.querySelectorAll('.bw');
+    const words = elContent.querySelectorAll(st.fullTranslation ? '.brw' : '.bw');
     let fallback = null;
     for (let i = 0; i < words.length; i++) {
       const col = colOf(words[i]);
@@ -370,8 +440,8 @@ const Reader = (() => {
     const bs = elContent.querySelector(`.bs[data-p="${anchor.p}"][data-s="${anchor.s}"]`);
     if (!bs) return null;
     if (typeof anchor.w === 'number') {
-      const bw = bs.querySelector(`.bw[data-w="${anchor.w}"]`);
-      if (bw) return bw;
+      const word = bs.querySelector(`${st.fullTranslation ? '.brw' : '.bw'}[data-w="${anchor.w}"]`);
+      if (word) return word;
     }
     return bs;
   }
@@ -586,7 +656,6 @@ const Reader = (() => {
 
   function onResize() {
     clearTimeout(resizeTimer);
-    speakBarPlace(speakBarBs);   // вьюпорт переехал — плашка следом
     resizeTimer = setTimeout(repaginate, 120);
   }
 
@@ -665,6 +734,87 @@ const Reader = (() => {
     applyPrefs();
     markSheet();
     afterPrefChange();
+  }
+
+  /* ── Режимы перевода ── */
+
+  // Смена вида меняет высоту строк и число CSS-колонок. Поэтому не
+  // ограничиваемся классом: перерисовываем текущую главу и пересчитываем
+  // ВСЮ книгу, сохраняя якорь читателя.
+  function copyAnchor() {
+    return st.anchor ? {
+      p: Number(st.anchor.p) || 0,
+      s: Number(st.anchor.s) || 0,
+      w: Number(st.anchor.w) || 0
+    } : null;
+  }
+
+  function redrawTranslationMode(anchor) {
+    if (!st.chapter) return;
+    renderChapter(st.chapter);
+    applySeen();
+    measure();
+    measureBook(true);
+    const kept = anchor && anchorEl(anchor) ? anchor : null;
+    goTo(kept ? pageOfAnchor(kept) : 0, { animate: false, anchor: kept });
+    refreshCards();
+  }
+
+  function updateTranslationControls() {
+    const interlinearOn = st.interlinear && !st.fullTranslation;
+
+    if (elInterlinearBtn) {
+      elInterlinearBtn.classList.toggle('is-active', interlinearOn);
+      elInterlinearBtn.setAttribute('aria-pressed', interlinearOn ? 'true' : 'false');
+      elInterlinearBtn.title = interlinearOn
+        ? 'Скрыть перевод над словами' : 'Показать перевод над словами';
+      elInterlinearBtn.setAttribute('aria-label', elInterlinearBtn.title);
+    }
+
+    if (elFullTranslationBtn) {
+      elFullTranslationBtn.classList.toggle('is-active', st.fullTranslation);
+      elFullTranslationBtn.setAttribute('aria-pressed', st.fullTranslation ? 'true' : 'false');
+      elFullTranslationBtn.title = st.fullTranslation
+        ? 'Показать немецкий текст' : 'Показать художественный перевод';
+      elFullTranslationBtn.setAttribute('aria-label', elFullTranslationBtn.title);
+      const icon = elFullTranslationBtn.querySelector('.rd-btn-icon');
+      const label = elFullTranslationBtn.querySelector('.rd-btn-label');
+      if (icon) icon.textContent = st.fullTranslation ? '🇩🇪' : '🇷🇺';
+      if (label) label.textContent = st.fullTranslation ? 'немецкий' : 'перевод';
+    }
+
+    if (elSpeakBtn) {
+      elSpeakBtn.disabled = st.fullTranslation;
+      elSpeakBtn.title = st.fullTranslation
+        ? 'Озвучка недоступна в режиме полного перевода' : 'Читать дальше вслух';
+      elSpeakBtn.setAttribute('aria-label', elSpeakBtn.title);
+    }
+  }
+
+  function toggleInterlinear() {
+    if (!st.chapter) return;
+    const anchor = copyAnchor();
+    tipClose();
+    speakStop();
+    if (st.fullTranslation) {
+      st.fullTranslation = false;
+      st.interlinear = true;
+    } else {
+      st.interlinear = !st.interlinear;
+    }
+    redrawTranslationMode(anchor);
+    updateTranslationControls();
+  }
+
+  function toggleFullTranslation() {
+    if (!st.chapter) return;
+    const anchor = copyAnchor();
+    tipClose();
+    speakStop();
+    st.fullTranslation = !st.fullTranslation;
+    if (st.fullTranslation) st.interlinear = false;
+    redrawTranslationMode(anchor);
+    updateTranslationControls();
   }
 
   /* ── Шторка настроек ── */
@@ -793,7 +943,7 @@ const Reader = (() => {
   // Пробегаем главу целиком: вызывается после рендера главы.
   // text-decoration метрики не меняет, поэтому порядок с measure() не важен.
   function applySeen() {
-    if (typeof ReaderWords === 'undefined' || !elContent) return;
+    if (st.fullTranslation || typeof ReaderWords === 'undefined' || !elContent) return;
     elContent.querySelectorAll('.bw').forEach(el => {
       const lemma = lemmaOf(el);
       el.classList.toggle('bw--seen', !!lemma && ReaderWords.isMarked(lemma));
@@ -805,6 +955,7 @@ const Reader = (() => {
   // отставал бы на всю сессию карточек, где «Знаю» идёт одно за другим.
   function markLemma(lemma) {
     if (!lemma || typeof ReaderWords === 'undefined' || !elContent) return;
+    if (st.fullTranslation) { refreshCards(); return; }
     const on = ReaderWords.isMarked(lemma);
     elContent.querySelectorAll('.bw').forEach(el => {
       if (lemmaOf(el) === lemma) el.classList.toggle('bw--seen', on);
@@ -824,11 +975,13 @@ const Reader = (() => {
 
   function speakReady() { return typeof ReaderSpeak !== 'undefined'; }
 
-  // Плашку гасим и здесь: если очереди не было, onDone не придёт
+  // Кнопка озвучки же становится кнопкой «стоп». Никаких плавающих плашек
+  // поверх текста: читатель всегда видит подсвеченную фразу целиком.
   function speakStop() {
     if (speakReady()) ReaderSpeak.stop();
-    speakBarHide();
+    setPlayingSentence(null);
     setPlayingPart(null);
+    setSpeakBtn(false);
     tipRestore();
   }
 
@@ -870,57 +1023,19 @@ const Reader = (() => {
     });
   }
 
-  /* ── Плашка озвучки (задача: тултип не закрывает читаемый текст) ── */
-
-  // Индикатор: первые слова предложения. Длинный текст плашку не растит —
-  // строка одна, хвост режется многоточием (см. .rd-speakbar-text).
-  function speakBarLabel(text) {
-    const words = String(text || '').trim().split(/\s+/).filter(Boolean);
-    if (!words.length) return '';
-    return words.slice(0, 4).join(' ') + (words.length > 4 ? '…' : '');
-  }
-
-  // Пришпиливаем к тому краю .rd-viewport, который дальше от подсвеченного
-  // предложения: так .bs--playing остаётся целиком на виду. position: fixed
-  // поверх, как панели в 2C, — размеры вьюпорта не меняются, значит
-  // перепагинация отсюда невозможна.
-  function speakBarPlace(bs) {
-    if (!elSpeakBar || elSpeakBar.hidden || !elViewport) return;
-    const vp = elViewport.getBoundingClientRect();
-    const h  = elSpeakBar.offsetHeight || 36;
-
-    let atTop = true;
-    if (bs) {
-      const r = bs.getBoundingClientRect();
-      atTop = (r.top - vp.top) >= (vp.bottom - r.bottom);
-    }
-    elSpeakBar.classList.toggle('rd-speakbar--top', atTop);
-    elSpeakBar.classList.toggle('rd-speakbar--bottom', !atTop);
-    elSpeakBar.style.top = Math.round(atTop ? vp.top : vp.bottom - h) + 'px';
-  }
-
-  let speakBarBs = null;   // предложение, под которое посчитан край
-
-  function speakBarShow(text, bs) {
-    if (!elSpeakBar) return;
-    if (elSpeakBarText) elSpeakBarText.textContent = speakBarLabel(text);
-    speakBarBs = bs || null;
-    elSpeakBar.hidden = false;   // высоту меряем уже показанной
-    speakBarPlace(speakBarBs);
-  }
-
-  function speakBarHide() {
-    if (!elSpeakBar) return;
-    speakBarBs = null;
-    elSpeakBar.hidden = true;
-    if (elSpeakBarText) elSpeakBarText.textContent = '';
-  }
-
   function setSpeakBtn(on) {
-    const btn = document.getElementById('rdSpeakBtn');
+    const btn = elSpeakBtn || document.getElementById('rdSpeakBtn');
     if (!btn) return;
-    btn.classList.toggle('is-playing', !!on);
-    btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+    const playing = !!on && !st.fullTranslation;
+    const label = btn.querySelector('.rd-btn-label');
+    btn.classList.toggle('is-playing', playing);
+    btn.setAttribute('aria-pressed', playing ? 'true' : 'false');
+    if (label) label.textContent = playing ? 'стоп' : 'дальше';
+    const title = st.fullTranslation
+      ? 'Озвучка недоступна в режиме полного перевода'
+      : (playing ? 'Остановить озвучку' : 'Читать дальше вслух');
+    btn.title = title;
+    btn.setAttribute('aria-label', title);
   }
 
   function tipSpeaking(kind) {
@@ -945,19 +1060,19 @@ const Reader = (() => {
       if (ReaderSpeak.isPlaying('sentence')) { ReaderSpeak.stop(); return; }
       const text = sentenceDeOf(ctx.bs);
       if (!text) return;
-      // Предложение звучит долго — тултип уходит в плашку, чтобы читатель
-      // видел подсвеченный текст. Слово короткое, там сворачивать нечего.
+      // Предложение подсвечивается в тексте, а та же кнопка «дальше» на
+      // нижней панели превращается в «стоп»: никаких слоёв над страницей.
       ReaderSpeak.sentence(text, {
         onItem: () => {
           tipSpeaking('sentence');
           setPlayingSentence(ctx.bs);
+          setSpeakBtn(true);
           tipCollapse();
-          speakBarShow(text, ctx.bs);
         },
         onDone: () => {
           tipSpeaking(null);
           setPlayingSentence(null);
-          speakBarHide();
+          setSpeakBtn(false);
           tipRestore();
         }
       });
@@ -1041,8 +1156,8 @@ const Reader = (() => {
   // озвучку. goTo перепагинацию не запускает (DOM тот же) и заново выводит
   // якорь из новой страницы, поэтому позиция едет вместе с чтением.
   function speakOn() {
-    if (!speakReady()) return;
-    if (ReaderSpeak.isPlaying('page')) { ReaderSpeak.stop(); return; }
+    if (st.fullTranslation || !speakReady()) return;
+    if (ReaderSpeak.isPlaying()) { speakStop(); return; }
 
     // Очередь идёт ЧАСТЯМИ, а не предложениями: предложение на одной
     // странице даёт одну часть, разорванное — по части на страницу.
@@ -1058,8 +1173,8 @@ const Reader = (() => {
     });
     if (!items.length) return;
 
-    // Читаем подряд — подсказка по одному слову тут уже не нужна:
-    // тултип закрывается совсем, от него остаётся только плашка со «стоп».
+    // Читаем подряд — подсказка по одному слову тут уже не нужна. Активная
+    // фраза видна по подсветке, а остановка доступна той же кнопкой внизу.
     tipClose();
 
     const started = ReaderSpeak.page(items, {
@@ -1068,17 +1183,14 @@ const Reader = (() => {
         if (it.page !== st.page) goTo(it.page);
         setPlayingSentence(it.el);
         setPlayingPart(it.split ? it.el : null, it.page);
-        speakBarShow(it.text, it.el);
       },
       onDone: () => {
         setPlayingSentence(null);
         setPlayingPart(null);
         setSpeakBtn(false);
-        speakBarHide();
       }
     });
     setSpeakBtn(started);
-    if (!started) speakBarHide();
   }
 
   /* ── Карточки главы и словарь книги ── */
@@ -1088,9 +1200,36 @@ const Reader = (() => {
   // означала бы на каждом устройстве своё: то три слова, то вся глава.
   // Глава от ширины экрана не зависит и совпадает с тем, что читатель
   // видит подсвеченным в тексте.
+  function chapterLemmasFromGermanText() {
+    const out = [];
+    if (!st.chapter || typeof ReaderWords === 'undefined' || typeof ReaderTip === 'undefined') return out;
+    const seen = Object.create(null);
+    const paras = Array.isArray(st.chapter.paragraphs) ? st.chapter.paragraphs : [];
+
+    paras.forEach(para => {
+      const sents = Array.isArray(para && para.s) ? para.s : [];
+      sents.forEach(sent => {
+        const text = String((sent && sent.de) || '');
+        WORD_RE.lastIndex = 0;
+        let match;
+        while ((match = WORD_RE.exec(text)) !== null) {
+          const info = ReaderTip.lookup(st.gloss, match[0].toLowerCase());
+          const lemma = (info && info.lemma) || '';
+          if (!lemma || seen[lemma] || !ReaderWords.isMarked(lemma)) continue;
+          seen[lemma] = true;
+          out.push(lemma);
+        }
+      });
+    });
+    return out;
+  }
+
   function chapterLemmas() {
     const out = [];
     if (!elContent || typeof ReaderWords === 'undefined') return out;
+    // В полном русском тексте .bw намеренно отсутствуют, однако карточки
+    // должны оставаться доступны. Берём те же немецкие формы из данных главы.
+    if (st.fullTranslation) return chapterLemmasFromGermanText();
     const seen = Object.create(null);
     elContent.querySelectorAll('.bw').forEach(el => {
       const lemma = lemmaOf(el);
@@ -1191,11 +1330,15 @@ const Reader = (() => {
 
     const r = elViewport.getBoundingClientRect();
     const rel = r.width > 0 ? (e.clientX - r.left) / r.width : 0.5;
-    const word = e.target.closest && e.target.closest('.bw');
+    const word = !st.fullTranslation && e.target.closest && e.target.closest('.bw');
 
     // Слово забирает тап в любой зоне: страница не листается и панели
     // не переключаются — открывается тултип перевода.
     if (word) { tipOpen(word); return; }
+
+    // Русский художественный текст не притворяется немецкими словами: у него
+    // нет словарного тултипа, и тап по слову не должен заодно скрывать панели.
+    if (st.fullTranslation && e.target.closest && e.target.closest('.brw')) return;
 
     // Открытый тултип гасится первым тапом вне него, и этот тап больше
     // ничего не делает: иначе закрытие заодно листало бы страницу.
@@ -1213,6 +1356,12 @@ const Reader = (() => {
   function open(id) {
     if (!elView || !id) return;
 
+    // readPos() ниже строит ключ через st.bookId. Раньше id ставился только
+    // внутри loadBook(), и при холодном открытии читалась позиция "null".
+    st.bookId = id;
+    st.interlinear = false;
+    st.fullTranslation = false;
+    updateTranslationControls();
     st.open = true;
     elLib.hidden  = true;
     elView.hidden = false;
@@ -1253,6 +1402,8 @@ const Reader = (() => {
     st.chPages = [];
     st.bookPages = 0;
     st.pagesKey = null;
+    st.interlinear = false;
+    st.fullTranslation = false;
     closeSheet();
     tipClose();
     speakStop();
@@ -1261,6 +1412,7 @@ const Reader = (() => {
     document.body.classList.remove('rd-open');
     elContent.innerHTML = '';
     hideState();
+    updateTranslationControls();
 
     // Карточка книги должна показать свежий процент
     if (typeof Library !== 'undefined' && typeof Library.refresh === 'function') Library.refresh();
@@ -1282,8 +1434,9 @@ const Reader = (() => {
     elNext     = document.getElementById('rdNext');
     elCardsBtn     = document.getElementById('rdCardsBtn');
     elCardsN       = document.getElementById('rdCardsN');
-    elSpeakBar     = document.getElementById('rdSpeakBar');
-    elSpeakBarText = document.getElementById('rdSpeakBarText');
+    elSpeakBtn     = document.getElementById('rdSpeakBtn');
+    elInterlinearBtn = document.getElementById('rdInterlinearBtn');
+    elFullTranslationBtn = document.getElementById('rdFullTranslationBtn');
     elSheet     = document.getElementById('rdSheet');
     elSheetBack = document.getElementById('rdSheetBack');
     elSheetBody = document.getElementById('rdSheetBody');
@@ -1295,9 +1448,10 @@ const Reader = (() => {
     elNext.addEventListener('click', next);
 
     document.getElementById('rdPrefsBtn')?.addEventListener('click', openSheet);
-    document.getElementById('rdSpeakBtn')?.addEventListener('click', speakOn);
-    document.getElementById('rdSpeakStop')?.addEventListener('click', speakStop);
+    elSpeakBtn?.addEventListener('click', speakOn);
     elCardsBtn?.addEventListener('click', openCards);
+    elInterlinearBtn?.addEventListener('click', toggleInterlinear);
+    elFullTranslationBtn?.addEventListener('click', toggleFullTranslation);
     document.getElementById('rdDictBtn')?.addEventListener('click', openDict);
     document.getElementById('rdSheetClose')?.addEventListener('click', closeSheet);
     elSheetBack?.addEventListener('click', closeSheet);
@@ -1322,13 +1476,15 @@ const Reader = (() => {
       const isReader = e.state && e.state.view === 'reader';
       if (st.open && !isReader) close(true);
     });
+    updateTranslationControls();
   }
 
   return {
     init, open, close, next, prev, goTo, repaginate,
     setPref, openSheet, closeSheet, toggleChrome,
     applySeen, markLemma, speakOn, sentencesFrom, sentenceParts, state: st,
-    refreshCards, openCards, openDict, theme: themeName
+    refreshCards, openCards, openDict, toggleInterlinear, toggleFullTranslation,
+    theme: themeName
   };
 })();
 

@@ -12,13 +12,13 @@
   <link rel="apple-touch-icon" href="/deutsch-meister/icons/icon.svg">
   <link rel="icon" type="image/svg+xml" href="/deutsch-meister/icons/icon.svg">
 
-  <link rel="stylesheet" href="css/base.css?v=62">
+  <link rel="stylesheet" href="css/base.css?v=64">
   <!-- lesson.css — только ради класса .word-tip, который переиспользует ридер -->
-  <link rel="stylesheet" href="css/lesson.css?v=62">
+  <link rel="stylesheet" href="css/lesson.css?v=64">
   <!-- exercises.css — ради анимации переворота карточки (.flashcard,
        .card-face, .fc-dot): карточки книги переиспользуют её целиком -->
-  <link rel="stylesheet" href="css/exercises.css?v=62">
-  <link rel="stylesheet" href="css/reader.css?v=62">
+  <link rel="stylesheet" href="css/exercises.css?v=64">
+  <link rel="stylesheet" href="css/reader.css?v=64">
 </head>
 <body>
 
@@ -83,18 +83,16 @@
         <button class="rd-slot-btn" id="rdCardsBtn" title="Карточки этой главы"
           aria-label="Карточки этой главы" disabled>🃏<span
           class="rd-btn-label">карточки</span> <span id="rdCardsN">(0)</span></button>
+        <button class="rd-slot-btn" id="rdInterlinearBtn" title="Показать перевод над словами"
+          aria-label="Показать перевод над словами" aria-pressed="false"><span
+          class="rd-btn-icon" aria-hidden="true">🔤</span><span class="rd-btn-label">слова</span></button>
+        <button class="rd-slot-btn" id="rdFullTranslationBtn" title="Показать художественный перевод"
+          aria-label="Показать художественный перевод" aria-pressed="false"><span
+          class="rd-btn-icon" aria-hidden="true">🇷🇺</span><span class="rd-btn-label">перевод</span></button>
       </div>
       <button class="rd-nav-btn" id="rdNext">Вперёд ›</button>
     </div>
   </footer>
-
-  <!-- ── ПЛАШКА ОЗВУЧКИ: на время чтения предложения тултип сворачивается
-       сюда, чтобы не закрывать текст. Край (верх/низ) ставит js/reader.js ── -->
-  <div class="rd-speakbar" id="rdSpeakBar" hidden>
-    <button class="rd-speakbar-stop" id="rdSpeakStop"
-      aria-label="Остановить озвучку">◼ Стоп</button>
-    <span class="rd-speakbar-text" id="rdSpeakBarText" aria-live="polite"></span>
-  </div>
 
   <!-- ── НАСТРОЙКИ ЧТЕНИЯ: подложка + шторка, ряды строит js/reader.js ── -->
   <div class="rd-sheet-back" id="rdSheetBack"></div>
@@ -211,16 +209,16 @@
   </div>
 </section>
 
-<script src="js/sw-register.js?v=62"></script>
-<script src="js/tts.js?v=62"></script>
-<script src="js/library.js?v=62"></script>
-<script src="js/reader-words.js?v=62"></script>
-<script src="js/reader-speak.js?v=62"></script>
-<script src="js/reader-tip.js?v=62"></script>
-<script src="js/reader-cards.js?v=62"></script>
-<script src="js/reader-dict.js?v=62"></script>
-<script src="js/flashcards.js?v=62"></script>
-<script src="js/reader.js?v=62"></script>
+<script src="js/sw-register.js?v=64"></script>
+<script src="js/tts.js?v=64"></script>
+<script src="js/library.js?v=64"></script>
+<script src="js/reader-words.js?v=64"></script>
+<script src="js/reader-speak.js?v=64"></script>
+<script src="js/reader-tip.js?v=64"></script>
+<script src="js/reader-cards.js?v=64"></script>
+<script src="js/reader-dict.js?v=64"></script>
+<script src="js/flashcards.js?v=64"></script>
+<script src="js/reader.js?v=64"></script>
 <script>
   function initTheme() {
     let saved = 'dark';

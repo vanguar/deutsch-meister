@@ -445,16 +445,143 @@ body.rd-open { overflow: hidden; }
   font-size: var(--rd-fs);
   line-height: var(--rd-lh);
   color: var(--rd-text);
+  font-kerning: normal;
   hyphens: auto;
   -webkit-hyphens: auto;
 }
 
-.rd-p { margin: 0 0 1.1em; }
+.rd-p { margin: 0 0 1.3em; }
 .rd-p:last-child { margin-bottom: 0; }
+
+/* Заставка живёт в потоке текста, а не в chrome: она не закрывает страницу
+   во время озвучки и автоматически попадает в расчёт CSS-пагинации. */
+.rd-chapter-opening {
+  break-inside: avoid;
+  break-after: avoid-column;
+  -webkit-column-break-inside: avoid;
+  -webkit-column-break-after: avoid;
+  margin: 0 0 1.45em;
+  padding: clamp(8px, 2vh, 22px) 0 1.35em;
+  border-bottom: 1px solid var(--rd-border);
+  text-align: center;
+}
+.rd-chapter-kicker {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .58em;
+  color: var(--rd-muted);
+  font-family: 'DM Sans', sans-serif;
+  font-size: .66em;
+  font-weight: 700;
+  letter-spacing: .14em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+.rd-chapter-kicker span[aria-hidden="true"] {
+  color: var(--rd-accent);
+  font-size: .9em;
+}
+.rd-chapter-icon {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  margin: .72em auto .5em;
+  border: 1px solid var(--rd-border);
+  border-radius: var(--r-full);
+  background: var(--rd-accent-soft);
+  font-size: 18px;
+  line-height: 1;
+}
+.rd-chapter-heading {
+  max-width: 26ch;
+  margin: 0 auto;
+  color: var(--rd-strong);
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(24px, 1.75em, 34px);
+  font-weight: 900;
+  line-height: 1.14;
+  text-wrap: balance;
+}
+.rd-chapter-translation {
+  margin: .5em 0 0;
+  color: var(--rd-muted);
+  font-family: 'DM Sans', sans-serif;
+  font-size: .76em;
+  line-height: 1.35;
+}
+.rd-chapter-ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .72em;
+  margin-top: .9em;
+  color: var(--rd-accent);
+  line-height: 1;
+}
+.rd-chapter-ornament span {
+  width: min(16%, 68px);
+  height: 1px;
+  background: var(--rd-border);
+}
+.rd-chapter-ornament b {
+  font-family: Georgia, serif;
+  font-size: 1.1em;
+  font-weight: 400;
+}
+
+/* В обычном режиме текст получает спокойный книжный ритм. Учебный
+   надсловный слой намеренно исключён: там важнее геометрия слов. */
+.rd-content:not(.rd-interlinear) .rd-p + .rd-p { text-indent: 1.15em; }
+.rd-content.rd-full-translation .rd-p { letter-spacing: .006em; }
+.rd-content:not(.rd-interlinear) .rd-p:first-of-type::first-letter {
+  float: left;
+  margin: .08em .12em 0 0;
+  color: var(--rd-accent);
+  font-family: 'Playfair Display', serif;
+  font-size: 3.15em;
+  font-weight: 900;
+  line-height: .76;
+}
 
 /* Слово и предложение: разметка для этапа 3 (перевод по тапу).
    Вида пока нет, но тап по слову уже не листает страницу. */
 .bw { -webkit-tap-highlight-color: transparent; }
+
+/* Надсловный перевод. Русский текст живёт в data-ru, а не внутри .bw:
+   так тултип, TTS и сборник слов продолжают видеть чистое немецкое слово.
+   Длинные варианты перевода переносятся в пределах своего слова, не лезут
+   за край колонки и никогда не получают словарные пояснения. */
+.rd-content.rd-interlinear .bw[data-ru] {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  min-width: 0;
+  max-width: min(14ch, 42vw);
+  margin: 2px 1px 5px;
+  vertical-align: baseline;
+  text-align: center;
+  line-height: 1.22;
+  break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+}
+.rd-content.rd-interlinear .bw[data-ru]::before {
+  content: attr(data-ru);
+  display: block;
+  max-width: 100%;
+  color: var(--rd-muted);
+  font-family: 'DM Sans', sans-serif;
+  font-size: .68em;
+  font-weight: 600;
+  line-height: 1.22;
+  overflow-wrap: anywhere;
+  hyphens: none;
+  pointer-events: none;
+}
+.rd-content.rd-interlinear { line-height: 2.25; }
+.rd-content.rd-interlinear .rd-p { margin-bottom: 1.8em; }
 
 /* ══ 12. РИДЕР: НИЖНЯЯ ПАНЕЛЬ ══ */
 
@@ -522,12 +649,51 @@ body.rd-open { overflow: hidden; }
   font-size: 14px;
   font-weight: 700;
   color: var(--rd-text);
+  white-space: nowrap;
   transition: all var(--t-fast);
 }
-.rd-slot-btn:hover {
+.rd-btn-icon {
+  display: inline-grid;
+  width: 1.1em;
+  place-items: center;
+}
+.rd-slot-btn:hover:not(:disabled) {
   border-color: var(--rd-accent);
   color: var(--rd-strong);
   background: var(--rd-accent-soft);
+}
+.rd-slot-btn[aria-pressed="true"],
+.rd-slot-btn.is-active {
+  border-color: var(--rd-accent);
+  color: var(--rd-strong);
+  background: var(--rd-accent-soft);
+}
+.rd-slot-btn:disabled {
+  opacity: .45;
+  cursor: not-allowed;
+}
+
+/* Пять действий вместе с листанием не должны вылезать за 320–720 px.
+   На узком экране навигация остаётся первой строкой, все действия — второй. */
+@media (max-width: 720px) {
+  .rd-controls {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 8px;
+  }
+  .rd-controls > #rdPrev { grid-column: 1; grid-row: 1; }
+  .rd-controls > #rdNext { grid-column: 2; grid-row: 1; }
+  .rd-controls > .rd-slot {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    flex-wrap: nowrap;
+  }
+  .rd-nav-btn { width: 100%; }
+}
+
+@media (max-width: 560px) {
+  .rd-btn-label { display: none; }
+  .rd-slot-btn { padding: 8px 10px; }
 }
 
 /* ══ 13. РИДЕР: СКРЫТИЕ ПАНЕЛЕЙ ══ */
@@ -992,70 +1158,7 @@ body.rd-open { overflow: hidden; }
   .rd-btn-label { display: none; }
 }
 
-/* ══ 21. РИДЕР: ПЛАШКА ОЗВУЧКИ ══ */
-
-/* На время чтения предложения тултип сворачивается в эту плашку: перевод
-   больше не накрывает текст, и читатель следит глазами за .bs--playing.
-   Прозрачность здесь не годится — буквы поверх букв читаются хуже, чем
-   честное перекрытие, поэтому тултип именно уходит, а не бледнеет.
-
-   position: fixed поверх вьюпорта, как панели в 2C: .rd-viewport своих
-   размеров не меняет, значит перепагинации быть не может. Координату top
-   ставит js/reader.js — край выбирается тот, что дальше от предложения.
-   Плашка живёт внутри .rd-view, поэтому слой --rd-* до неё доходит и тема
-   ридера (включая «светлую» из задачи 2) применяется сама. */
-.rd-speakbar {
-  position: fixed;
-  left: 0;
-  right: 0;
-  z-index: 25;
-  display: flex;
-  align-items: center;
-  gap: var(--sp-sm);
-  padding: 6px 12px;
-  background: var(--rd-surface2);
-  color: var(--rd-text);
-  border-top: 1px solid var(--rd-border);
-  border-bottom: 1px solid var(--rd-border);
-  box-shadow: 0 2px 14px rgba(0,0,0,.22);
-}
-
-/* display:flex перебил бы браузерное [hidden]{display:none} — грабли 2B */
-.rd-speakbar[hidden] { display: none; }
-
-/* У края экрана своя рамка не нужна — она бы висела в воздухе */
-.rd-speakbar--top    { border-top: none; }
-.rd-speakbar--bottom { border-bottom: none; }
-
-.rd-speakbar-stop {
-  flex-shrink: 0;
-  padding: 5px 13px;
-  background: var(--rd-accent-soft);
-  border: 1px solid var(--rd-accent);
-  border-radius: var(--r-sm);
-  color: var(--rd-strong);
-  font-size: 12px;
-  font-weight: 700;
-  line-height: 1.2;
-  transition: all var(--t-fast);
-}
-.rd-speakbar-stop:hover { background: var(--rd-accent); color: var(--rd-bg); }
-
-/* Индикатор: первые слова предложения. Одна строка с многоточием —
-   плашка обязана оставаться низкой, иначе она сама закроет текст. */
-.rd-speakbar-text {
-  flex: 1;
-  min-width: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  font-size: 12px;
-  line-height: 1.3;
-  color: var(--rd-muted);
-  animation: rdPulse 1.6s ease-in-out infinite;
-}
-
-/* ══ 22. РИДЕР: КАРТОЧКИ КНИГИ ══ */
+/* ══ 21. РИДЕР: КАРТОЧКИ КНИГИ ══ */
 
 /* Оверлей поверх ридера. Каркас (position: fixed, inset 0, flex-колонка)
    и палитра --rd-* приходят из .rd-scope — того же блока, что и у
