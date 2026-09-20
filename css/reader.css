@@ -552,12 +552,12 @@ body.rd-open { overflow: hidden; }
 /* Надсловный перевод. Русский текст живёт в data-ru, а не внутри .bw:
    так тултип, TTS и сборник слов продолжают видеть чистое немецкое слово.
    Длинные варианты перевода переносятся в пределах своего слова, не лезут
-   за край колонки и никогда не получают словарные пояснения. */
+   за край колонки и никогда не получают словарные пояснения.
+   Коробка — inline-block, а не inline-flex: базовая линия inline-block берётся
+   от ПОСЛЕДНЕЙ строки (немецкое слово), поэтому знаки препинания между словами
+   остаются на уровне немецкого текста, а не всплывают к русскому. */
 .rd-content.rd-interlinear .bw[data-ru] {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
+  display: inline-block;
   min-width: 0;
   max-width: min(14ch, 42vw);
   margin: 2px 1px 5px;
@@ -571,6 +571,7 @@ body.rd-open { overflow: hidden; }
   content: attr(data-ru);
   display: block;
   max-width: 100%;
+  margin-bottom: 4px;
   color: var(--rd-muted);
   font-family: 'DM Sans', sans-serif;
   font-size: .68em;
