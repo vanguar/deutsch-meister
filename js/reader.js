@@ -1058,20 +1058,39 @@ const Reader = (() => {
 
     if (act === 'speak-sentence') {
       if (ReaderSpeak.isPlaying('sentence')) { ReaderSpeak.stop(); return; }
-      const text = sentenceDeOf(ctx.bs);
-      if (!text) return;
+      // Предложение легко не помещается на странице целиком: хватает
+      // крупного шрифта или узкого экрана, чтобы хвост уехал за границу
+      // колонки. Поэтому читаем его ТЕМИ ЖЕ частями, что и кнопка
+      // «дальше», и переходим на страницу каждой части. Иначе вторая
+      // половина звучит на невидимой странице и вести текст глазами
+      // нельзя. Неразорванное предложение даёт одну часть — и ведёт себя
+      // ровно как раньше: ни перехода, ни лишней подсветки.
+      const parts = sentenceParts(ctx.bs).filter(part => part.text);
+      if (!parts.length) return;
+      const split = parts.length > 1;
+
       // Предложение подсвечивается в тексте, а та же кнопка «дальше» на
       // нижней панели превращается в «стоп»: никаких слоёв над страницей.
-      ReaderSpeak.sentence(text, {
-        onItem: () => {
+      ReaderSpeak.run(parts.map(part => ({
+        el:   ctx.bs,
+        text: part.text,
+        page: part.page
+      })), {
+        kind: 'sentence',
+        onItem: it => {
           tipSpeaking('sentence');
+          // goTo, а не next(): листание читателем обязано обрывать
+          // озвучку, а переход за звучащей частью — нет.
+          if (it.page !== st.page) goTo(it.page);
           setPlayingSentence(ctx.bs);
+          setPlayingPart(split ? ctx.bs : null, it.page);
           setSpeakBtn(true);
           tipCollapse();
         },
         onDone: () => {
           tipSpeaking(null);
           setPlayingSentence(null);
+          setPlayingPart(null);
           setSpeakBtn(false);
           tipRestore();
         }
