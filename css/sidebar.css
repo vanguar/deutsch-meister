@@ -230,11 +230,14 @@
 }
 
 /* ── Mobile toggle ── */
+/* Кнопка справа, а панель по-прежнему выезжает слева: на телефоне правый
+   нижний угол — зона большого пальца, и именно там её ищут. Внизу справа
+   ничего больше не закреплено, перекрывать нечего. */
 .sidebar-mobile-toggle {
   display: none;
   position: fixed;
   bottom: calc(20px + env(safe-area-inset-bottom, 0px));
-  left: 20px;
+  right: 20px;
   z-index: 200;
   background: rgba(124,106,247,.72);
   background: color-mix(in srgb, var(--accent2) 72%, transparent);
