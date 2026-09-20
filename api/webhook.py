@@ -54,6 +54,31 @@ def tg(method, payload):
         return {"ok": False, "error": str(e)}
 
 
+def _verdict(info):
+    """Человекочитаемый диагноз для /api/webhook?probe=1.
+
+    Порядок проверок — от корня к следствию: без токена бот не может даже
+    спросить Telegram, поэтому токен первым.
+    """
+    if not info["env"]["bot_token"]:
+        return "BOT_TOKEN не задан в окружении — бот не сможет ответить ни на что"
+    if info.get("bot") is None:
+        return ("BOT_TOKEN недействителен (%s) — скорее всего токен "
+                "пересоздали в BotFather, а в окружении остался старый"
+                % info.get("bot_error", "?"))
+    wh = info.get("webhook") or {}
+    if wh.get("error"):
+        return "не удалось спросить Telegram о вебхуке: %s" % wh["error"]
+    if not wh.get("url"):
+        return ("вебхук НЕ зарегистрирован — Telegram некуда слать апдейты. "
+                "Лечение: scripts/bot_doctor.sh")
+    if not info["env"]["webhook_secret"]:
+        return "WEBHOOK_SECRET не задан — проверка подписи Telegram отключена"
+    if wh.get("last_error"):
+        return "Telegram не может достучаться: %s" % wh["last_error"]
+    return "всё на месте"
+
+
 def welcome_text(first_name):
     return (
         f"👋 <b>Привет, {first_name}!</b>\n\n"
@@ -439,14 +464,59 @@ class handler(BaseHTTPRequestHandler):
             self._json({"ok": True, "service": "progress"})
             return
 
-        # webhook health-check (+ диагностика маршрутизации)
-        self._json({
+        # webhook health-check (+ диагностика маршрутизации и конфигурации)
+        #
+        # Зачем env: снаружи мёртвый BOT_TOKEN неотличим от рабочего. Health
+        # отдаёт 200, POST от Telegram отдаёт 200 — а бот молчит, потому что
+        # tg() сразу возвращает {"error": "BOT_TOKEN not set"} и до Telegram
+        # даже не доходит. Через `vercel env pull` этого тоже не видно:
+        # переменные помечены Sensitive и приезжают пустыми всегда.
+        info = {
             "ok": True,
             "service": "webhook",
-            "build": "dispatch-2",
+            "build": "dispatch-3",
             "seen_path": self.path,
             "route": route,
-        })
+            "env": {
+                "bot_token": bool(BOT_TOKEN),
+                "webhook_secret": bool(WEBHOOK_SECRET),
+                "app_url": bool(os.environ.get("APP_URL")),
+            },
+        }
+
+        # ?probe=1 — живой опрос Telegram: валиден ли токен и куда, по мнению
+        # Telegram, слать апдейты. Секретов в ответе нет: @username бота
+        # публичен, getWebhookInfo secret_token не возвращает никогда.
+        #
+        # Пересоздание токена в BotFather УДАЛЯЕТ вебхук. Поэтому пустой
+        # webhook.url почти всегда значит: токен сменили, а в окружении
+        # остался старый. Проверять эти две вещи надо вместе.
+        if (self._query().get("probe") or [""])[0] == "1":
+            me = tg("getMe", {})
+            if me.get("ok"):
+                info["bot"] = "@" + (me.get("result") or {}).get("username", "")
+            else:
+                info["bot"] = None
+                info["bot_error"] = str(
+                    me.get("error") or me.get("description") or "unknown"
+                )
+
+            wh = tg("getWebhookInfo", {})
+            if wh.get("ok"):
+                r = wh.get("result") or {}
+                info["webhook"] = {
+                    "url": r.get("url", ""),
+                    "pending": r.get("pending_update_count", 0),
+                    "last_error": r.get("last_error_message", ""),
+                }
+            else:
+                info["webhook"] = {"error": str(
+                    wh.get("error") or wh.get("description") or "unknown"
+                )}
+
+            info["verdict"] = _verdict(info)
+
+        self._json(info)
 
     # ── POST ──
     def do_POST(self):
