@@ -80,11 +80,11 @@
 
 .lib-card {
   display: flex;
-  gap: var(--sp-md);
+  gap: 18px;
   background: var(--surface2);
   border: 1px solid var(--border);
   border-radius: var(--r-lg);
-  padding: 18px;
+  padding: 20px;
   animation: fadeUp .4s both;
   transition: border-color var(--t-normal), transform var(--t-normal);
 }
@@ -93,18 +93,50 @@
   transform: translateY(-2px);
 }
 
+/* Обложка — не квадратная плашка, а корешок книги: пропорции тома,
+   скруглённый передний обрез справа, прямой корешок слева и тонкая
+   линия отстава вдоль него. Уровень сидит на самом корешке — там он
+   не отнимает строку у выходных данных и читается как метка на книге. */
 .lib-cover {
+  position: relative;
   flex-shrink: 0;
-  width: 64px;
-  height: 84px;
+  width: 74px;
+  height: 104px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 34px;
-  background: var(--surface3);
-  border: 1px solid var(--border);
-  border-radius: var(--r-md);
+  background: linear-gradient(145deg, var(--surface3), var(--surface));
+  border: 1px solid var(--border-light);
+  border-radius: 3px 10px 10px 3px;
   box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+.lib-cover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 7px;
+  width: 1px;
+  background: var(--border-light);
+  opacity: .8;
+}
+.lib-cover-art {
+  font-size: 34px;
+  line-height: 1;
+  margin-left: 8px;   /* компенсирует корешок: символ стоит по центру поля */
+}
+.lib-cover-level {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 3px 7px 3px 9px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  color: var(--text-on-btn);
+  background: var(--accent2);
+  border-radius: 0 6px 0 3px;
 }
 
 .lib-body {
@@ -115,17 +147,37 @@
   gap: 10px;
 }
 
+/* Шапка карточки набрана как титульный лист: подпись автора, заглавие,
+   перевод заглавия. Иерархия держится на кегле и насыщенности, а не на
+   приглушённом цвете, — поэтому все три строки остаются читаемыми. */
+.lib-head { display: flex; flex-direction: column; gap: 3px; }
+
+.lib-byline {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .02em;
+  line-height: 1.3;
+  color: var(--text);
+}
 .lib-title {
   font-family: 'Playfair Display', serif;
-  font-size: 18px;
+  font-size: 21px;
   font-weight: 700;
-  line-height: 1.25;
+  line-height: 1.2;
   color: var(--text-strong);
 }
 .lib-title-ru {
-  font-size: 13px;
-  color: var(--accent2);
-  margin-top: 2px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.35;
+  color: var(--text);
+}
+
+.lib-blurb {
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--text-muted);
 }
 
 .lib-meta {
@@ -133,13 +185,26 @@
   flex-wrap: wrap;
   align-items: center;
   gap: 6px 14px;
-  font-size: 12px;
+  font-size: 12.5px;
   color: var(--text-muted);
 }
-.lib-meta-item { color: var(--text); }
-/* минуты и главы держим одним неразрывным блоком, чтобы точка-разделитель
-   не оставалась висеть в конце строки при переносе */
-.lib-meta-stats { color: var(--text-dim); white-space: nowrap; }
+/* Главы, слова и минуты держим одним блоком: разделитель не должен
+   оставаться висеть в конце строки при переносе. --text-dim здесь не
+   годится — на --surface2 он даёт контраст 2.3:1 и не читается. */
+.lib-meta-stats { color: var(--text-muted); }
+.lib-dot { margin: 0 7px; color: var(--text-dim); }
+
+/* Откуда взят текст. Мелко и приглушённо, но не ниже --text-muted:
+   строка выходных данных — часть доверия к изданию, а не украшение. */
+.lib-source {
+  margin-top: 2px;
+  font-size: 11.5px;
+  line-height: 1.4;
+  color: var(--text-muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 
 /* ══ 4. ПРОГРЕСС ══ */
 
@@ -240,7 +305,9 @@
 
 [data-theme="light"] .lib-card,
 [data-theme="light"] .lib-state { background: var(--surface); }
-[data-theme="light"] .lib-cover { background: var(--surface2); }
+[data-theme="light"] .lib-cover {
+  background: linear-gradient(145deg, var(--surface2), #fff);
+}
 
 /* ══ 8. АДАПТИВ ══ */
 
@@ -256,8 +323,11 @@
   .lib-header-titles { order: 3; flex-basis: 100%; }
   .lib-h1 { font-size: 23px; }
   .lib-card { padding: 14px; gap: 12px; }
-  .lib-cover { width: 52px; height: 68px; font-size: 27px; }
-  .lib-title { font-size: 16px; }
+  .lib-cover { width: 58px; height: 82px; }
+  .lib-cover-art { font-size: 26px; margin-left: 6px; }
+  .lib-title { font-size: 18px; }
+  .lib-byline { font-size: 12.5px; }
+  .lib-blurb { font-size: 13px; }
   .lib-cta { align-self: stretch; text-align: center; justify-content: center; }
   .lib-state { padding: 32px 16px; }
 }
@@ -1170,8 +1240,13 @@ body.rd-open { overflow: hidden; }
    Сам переворот — .flashcard / .card-face из css/exercises.css, без
    единого нового правила анимации. Здесь только раскладка и то, чего
    в уроках нет: грамматика на обороте и кнопки 🔊. */
-.rd-cards { z-index: 32; }
+/* Карточки ВЫШЕ словаря: кнопка «Учить» открывает их прямо из словаря,
+   а словарь под ними остаётся смонтированным — по закрытии карточек он
+   перерисовывает счётчики (onClose в js/reader-dict.js). При обратном
+   порядке карточки открывались под словарём, и нажатие на «Учить»
+   выглядело как мёртвая кнопка. */
 .rd-dict  { z-index: 33; }
+.rd-cards { z-index: 34; }
 
 .rd-cards-body {
   flex: 1;
