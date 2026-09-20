@@ -170,6 +170,12 @@ const Library = (() => {
 
   /* ── Карточка книги ── */
 
+  // Разряды тонкой неразрывной шпацией: «1182 слова» читается как число,
+  // а не как случайный набор цифр, и при этом не разрывается переносом.
+  function grouped(n) {
+    return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+  }
+
   function cardHtml(book, i) {
     const percent = getPercent(book);
     const words   = getWordsCount(book);
@@ -178,27 +184,41 @@ const Library = (() => {
 
     const minutes  = Number(book.minutes)  || 0;
     const chapters = Number(book.chapters) || 0;
+    const total    = Number(book.words)    || 0;
 
+    // Порядок — от крупного к мелкому: сколько читать, сколько текста,
+    // сколько времени. Так строка отвечает на вопрос «потяну ли я это».
     const stats = [];
-    if (minutes)  stats.push(`~${minutes} мин`);
     if (chapters) stats.push(`${chapters} ${plural(chapters, ['глава', 'главы', 'глав'])}`);
+    if (total)    stats.push(`${grouped(total)} ${plural(total, ['слово', 'слова', 'слов'])}`);
+    if (minutes)  stats.push(`~${minutes} мин`);
+
+    // Автор и год — одной строкой-подписью над заглавием, как на
+    // титульном листе. Год берём только если он есть: выдумывать дату
+    // изданию, у которого её нет, нельзя.
+    const byline = [book.author, book.year].filter(Boolean).map(esc).join(' · ');
 
     const cta = done ? 'Читать заново' : (started ? 'Продолжить' : 'Читать');
 
     return `
       <article class="lib-card" style="animation-delay:${i * 60}ms">
-        <div class="lib-cover" aria-hidden="true">${esc(book.cover || '📖')}</div>
+        <div class="lib-cover" aria-hidden="true">
+          <span class="lib-cover-art">${esc(book.cover || '📖')}</span>
+          ${book.level ? `<span class="lib-cover-level">${esc(book.level)}</span>` : ''}
+        </div>
+
         <div class="lib-body">
-          <div>
+          <header class="lib-head">
+            ${byline ? `<div class="lib-byline">${byline}</div>` : ''}
             <h2 class="lib-title">${esc(book.title)}</h2>
             ${book.titleRu ? `<div class="lib-title-ru">${esc(book.titleRu)}</div>` : ''}
-          </div>
+          </header>
 
-          <div class="lib-meta">
-            ${book.level ? `<span class="badge badge-level">${esc(book.level)}</span>` : ''}
-            ${book.author ? `<span class="lib-meta-item">${esc(book.author)}</span>` : ''}
-            ${stats.length ? `<span class="lib-meta-stats">${stats.join(' · ')}</span>` : ''}
-          </div>
+          ${book.blurb ? `<p class="lib-blurb">${esc(book.blurb)}</p>` : ''}
+
+          ${stats.length ? `<div class="lib-meta">
+            <span class="lib-meta-stats">${stats.join('<span class="lib-dot">·</span>')}</span>
+          </div>` : ''}
 
           <div class="lib-progress">
             <div class="lib-bar" role="progressbar" aria-label="Прогресс чтения"
@@ -207,7 +227,7 @@ const Library = (() => {
             </div>
             <div class="lib-progress-row">
               <span class="lib-percent${done ? ' done' : ''}">${percent}% прочитано</span>
-              <span class="lib-words">📗 ${words} ${plural(words, ['слово', 'слова', 'слов'])}</span>
+              <span class="lib-words">📗 ${words} ${plural(words, ['слово', 'слова', 'слов'])} в словаре</span>
             </div>
           </div>
 
@@ -216,6 +236,8 @@ const Library = (() => {
             <button class="btn btn-ghost lib-dict" data-dict-id="${esc(book.id)}"
               ${words ? '' : 'disabled'} title="Словарь книги">📗 Словарь</button>
           </div>
+
+          ${book.source ? `<div class="lib-source" title="${esc(book.source)}">${esc(book.source)}</div>` : ''}
         </div>
       </article>`;
   }
