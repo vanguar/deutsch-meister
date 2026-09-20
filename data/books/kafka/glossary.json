@@ -1,0 +1,2566 @@
+{
+  "version": 1,
+  "w": {
+    "aber": "aber",
+    "ach": "ach",
+    "alle": "alle/alles",
+    "allein": "allein",
+    "allem": "alle/alles",
+    "alles": "alle/alles",
+    "als": "als",
+    "also": "also",
+    "alt": "alt",
+    "an": "an",
+    "anblick": "Anblick",
+    "andere": "ander",
+    "andern": {
+      "l": "ander",
+      "old": "стяжённая форма от anderen; сегодня die anderen"
+    },
+    "angeklagt": "anklagen",
+    "angst": "Angst",
+    "ans": "an",
+    "ansieht": "ansehen",
+    "antwort": "Antwort",
+    "auch": "auch",
+    "auf": "auf",
+    "aufeinander": "aufeinander",
+    "aufgefordert": "auffordern",
+    "aufgenommen": "aufnehmen",
+    "aufrichten": "aufrichten",
+    "augen": "Auge",
+    "augenblicklich": "augenblicklich",
+    "augenlicht": "Augenlicht",
+    "aus": "aus",
+    "ausgerüstet": "ausrüsten",
+    "aussicht": "Aussicht",
+    "außer": "außer",
+    "aßmann": "Aßmann",
+    "bald": "bald",
+    "bart": "Bart",
+    "bauernstube": "Bauernstube",
+    "bauernvolk": "Bauernvolk",
+    "befreien": "befreien",
+    "begann": "beginnen",
+    "beginnen": "beginnen",
+    "begreiflich": "begreiflich",
+    "bei": "bei",
+    "beiseite": "beiseite",
+    "bekommt": "bekommen",
+    "beobachtet": "beobachten",
+    "beruhigte": "beruhigen",
+    "besseren": "gut",
+    "bestechen": "bestechen",
+    "bestimmt": "bestimmen",
+    "beweis": "Beweis",
+    "bin": "sein",
+    "bis": "bis",
+    "bisher": "bisher",
+    "bist": "sein",
+    "bitten": "Bitte",
+    "bittet": "bitten",
+    "blicken": "Blick",
+    "blickten": "blicken",
+    "breit": "breit",
+    "bricht": "brechen",
+    "bringen": "bringen",
+    "bruder": "Bruder",
+    "brummt": "brummen",
+    "brüllt": "anbrüllen",
+    "bückt": "sich bücken",
+    "da": "da",
+    "dabei": "dabei",
+    "damit": "damit",
+    "dann": "dann",
+    "das": "der/die/das",
+    "dass": "dass",
+    "dem": "der/die/das",
+    "den": "der/die/das",
+    "denkt": "denken",
+    "denn": "denn",
+    "der": "der/die/das",
+    "des": "der/die/das",
+    "deswegen": "deswegen",
+    "dich": "du",
+    "die": "der/die/das",
+    "diese": "dieser",
+    "diesem": "dieser",
+    "dieser": "dieser",
+    "doch": "doch",
+    "dorf": "Dorf",
+    "dort": "dort",
+    "dritten": "Dritte",
+    "drohte": "drohen",
+    "drängte": "drängen",
+    "du": "du",
+    "dunkel": "Dunkel",
+    "dunkler": "dunkel",
+    "durch": "durch",
+    "dünnen": "dünn",
+    "dürfen": "dürfen",
+    "ehren": "Ehre",
+    "eilen": "eilen",
+    "ein": "ein/eine",
+    "eine": "ein/eine",
+    "einem": "ein/eine",
+    "einen": "ein/eine",
+    "einer": "ein/eine",
+    "eines": "ein/eine",
+    "eingang": "Eingang",
+    "eingelassen": "einlassen",
+    "eingemauert": "einmauern",
+    "einlass": "Einlass",
+    "einlassen": "einlassen",
+    "einmal": "einmal",
+    "einreiten": "einreiten",
+    "eintreten": "eintreten",
+    "eintritt": "Eintritt",
+    "einzige": "einzig",
+    "einzutreten": "eintreten",
+    "eiserner": "eisern",
+    "ende": "Ende",
+    "endlich": "endlich",
+    "enger": "eng",
+    "enthielten": "sich enthalten",
+    "entlassung": "Entlassung",
+    "entschließt": "sich entschließen",
+    "er": "er",
+    "erfahrungen": "Erfahrung",
+    "erhalten": "erhalten",
+    "erhob": "sich erheben",
+    "erinnerten": "erinnern",
+    "erkannt": "erkennen",
+    "erkennt": "erkennen",
+    "erlaubnis": "Erlaubnis",
+    "ermüdet": "ermüden",
+    "erreichen": "erreichen",
+    "erschrocken": "erschrecken",
+    "erstarrenden": "erstarren",
+    "erste": "erste",
+    "ersten": "erste",
+    "ertragen": "ertragen",
+    "erwartet": "erwarten",
+    "erwartete": "erwarten",
+    "es": "es",
+    "etwas": "etwas",
+    "falle": "Falle",
+    "fast": "fast",
+    "faust": "Faust",
+    "ferne": "Ferne",
+    "flamme": "Flamme",
+    "flöhe": "Floh",
+    "folgte": "folgen",
+    "fort": "fort",
+    "frage": "Frage",
+    "fragen": "Frage",
+    "fragt": "fragen",
+    "fragten": "fragen",
+    "fraß": "fressen",
+    "freundschaftlich": "freundschaftlich",
+    "für": "für",
+    "gang": "Gang",
+    "ganz": "ganz",
+    "ganzen": "ganz",
+    "gar": "gar",
+    "geantwortet": "antworten",
+    "gebückt": "sich bücken",
+    "gefunden": "finden",
+    "gefängnisses": "Gefängnis",
+    "gefängniszelle": "Gefängniszelle",
+    "geführt": "führen",
+    "gegenwärtigen": "gegenwärtig",
+    "gehe": "gehen",
+    "gehilfe": "Gehilfe",
+    "gehör": "Gehör",
+    "genannt": "nennen",
+    "genauer": "genau",
+    "genügen": "genügen",
+    "geschehen": "geschehen",
+    "gesetz": "Gesetz",
+    "gesetzes": "Gesetz",
+    "gestellt": "stellen",
+    "getan": "tun",
+    "gewendet": "wenden",
+    "gewähren": "gewähren",
+    "gibt": "geben",
+    "glanz": "Glanz",
+    "glaubst": "glauben",
+    "glaubte": "glauben",
+    "gleich": "gleich",
+    "gleichgültig": "gleichgültig",
+    "glücklich": "glücklich",
+    "große": "groß",
+    "größenunterschied": "Größenunterschied",
+    "haben": "haben",
+    "halb": "halb",
+    "hat": "haben",
+    "hatte": "haben",
+    "hatten": "haben",
+    "hauptsächlich": "hauptsächlich",
+    "haus": "Haus",
+    "hause": "Haus",
+    "heimat": "Heimat",
+    "heißer": "heiß",
+    "helfen": "helfen",
+    "herab": "herab",
+    "herren": "Herr",
+    "hervor": "hervor",
+    "hier": "hier",
+    "hin": "hin",
+    "hindernis": "Hindernis",
+    "hineinzugehen": "hineingehen",
+    "hinunterneigen": "sich hinunterneigen",
+    "hof": "Hof",
+    "hofbesitzer": "Hofbesitzer",
+    "hoftor": "Hoftor",
+    "hohen": "hoch",
+    "hosenträgern": "Hosenträger",
+    "hundert": "hundert",
+    "hätte": "haben",
+    "hörten": "anhören",
+    "ich": "ich",
+    "ihm": "er",
+    "ihn": "er",
+    "im": "in",
+    "immer": "immer",
+    "in": "in",
+    "innere": "Innere",
+    "ins": "in",
+    "irgendwo": "irgendwo",
+    "ist": "sein",
+    "jahre": "Jahr",
+    "jahrelangen": "jahrelang",
+    "jahren": "Jahr",
+    "jedem": "jeder",
+    "jetzt": "jetzt",
+    "junger": "jung",
+    "kahle": "kahl",
+    "kam": "kommen",
+    "kamen": "kommen",
+    "kann": "können",
+    "kannten": "kennen",
+    "katze": "Katze",
+    "kaum": "kaum",
+    "kindisch": "kindisch",
+    "kleid": "Kleid",
+    "kleine": "klein",
+    "kommen": "kommen",
+    "kommt": "kommen",
+    "konnte": "können",
+    "kopf": "Kopf",
+    "kopfe": {
+      "l": "Kopf",
+      "old": "старый дательный с -e (in seinem Kopfe); сегодня in seinem Kopf"
+    },
+    "könne": "können",
+    "könnte": "können",
+    "körper": "Körper",
+    "lacht": "lachen",
+    "lande": {
+      "l": "Land",
+      "old": "старый дательный с -e в обороте vom Lande; сегодня vom Land"
+    },
+    "landstraße": "Landstraße",
+    "lange": "lang",
+    "langen": "lang",
+    "langsam": "langsam",
+    "lanzen": "Lanze",
+    "lassen": "lassen",
+    "laufe": "laufen",
+    "laufrichtung": "Laufrichtung",
+    "laut": "laut",
+    "lebhafter": "lebhaft",
+    "lebt": "leben",
+    "leid": "leidtun",
+    "letzten": "letzte",
+    "leute": "Leute",
+    "leuten": "Leute",
+    "lieber": "gern",
+    "lief": "laufen",
+    "links": "links",
+    "lockt": "locken",
+    "luft": "Luft",
+    "lächelnd": "lächeln",
+    "lässt": "lassen",
+    "machen": "machen",
+    "macht": "machen",
+    "machte": "machen",
+    "man": "man",
+    "mann": "Mann",
+    "mannes": "Mann",
+    "mauern": "Mauer",
+    "maus": "Maus",
+    "mehr": "mehr",
+    "meine": "mein",
+    "meinen": "mein",
+    "meiner": "mein",
+    "meines": "mein",
+    "meinte": "meinen",
+    "merke": "merken",
+    "merkt": "merken",
+    "mich": "ich",
+    "mir": "ich",
+    "mit": "mit",
+    "mitte": "Mitte",
+    "muss": "müssen",
+    "musst": "müssen",
+    "mutwillen": "Mutwille",
+    "mächtig": "mächtig",
+    "mächtiger": "mächtig",
+    "möglich": "möglich",
+    "nach": "nach",
+    "nachhauseweg": "Nachhauseweg",
+    "nehme": "annehmen",
+    "nicht": "nicht",
+    "nickte": "nicken",
+    "niedersetzen": "sich niedersetzen",
+    "niemand": "niemand",
+    "nimmt": "annehmen",
+    "nirgends": "nirgends",
+    "noch": "noch",
+    "nun": "nun",
+    "nur": "nur",
+    "ob": "ob",
+    "oder": "oder",
+    "offen": "offen",
+    "offene": "offen",
+    "operationstisch": "Operationstisch",
+    "pelzkragen": "Pelzkragen",
+    "pelzmantel": "Pelzmantel",
+    "pferde": "Pferd",
+    "pferden": "Pferd",
+    "pritsche": "Pritsche",
+    "rauchwolke": "Rauchwolke",
+    "rechts": "rechts",
+    "reine": "ins Reine bringen",
+    "reise": "Reise",
+    "reiter": "Reiter",
+    "richter": "Richter",
+    "ring": "Ring",
+    "ruhig": "ruhig",
+    "rückend": "rücken",
+    "rücksichtslos": "rücksichtslos",
+    "saal": "Saal",
+    "sagt": "sagen",
+    "sagte": "sagen",
+    "sagten": "sagen",
+    "sah": "sehen",
+    "sahen": "sehen",
+    "sammeln": "sich sammeln",
+    "scharfen": "scharf",
+    "scheint": "scheinen",
+    "schemel": "Schemel",
+    "schien": "scheinen",
+    "schlag": "Schlag",
+    "schließe": "schließen",
+    "schließlich": "schließlich",
+    "schlug": "schlagen",
+    "schlusse": {
+      "l": "Schluss",
+      "old": "старый дательный с -e (zum Schlusse); сегодня zum Schluss"
+    },
+    "schmecken": "schmecken",
+    "schnell": "schnell",
+    "schon": "schon",
+    "schrecken": "Schrecken",
+    "schritte": "Schritt",
+    "schwach": "schwach",
+    "schwarzen": "schwarz",
+    "schwelle": "Schwelle",
+    "schwester": "Schwester",
+    "schwierigkeiten": "Schwierigkeit",
+    "sehen": "sehen",
+    "sehr": "sehr",
+    "sei": "sein",
+    "sein": "sein (его, свой)",
+    "seine": "sein (его, свой)",
+    "seinem": "sein (его, свой)",
+    "seinen": "sein (его, свой)",
+    "seitwärts": "seitwärts",
+    "selbst": "selbst",
+    "setzte": "setzen",
+    "sich": "sich",
+    "sie": "sie",
+    "sind": "sein",
+    "sitzt": "sitzen",
+    "so": "so",
+    "sogar": "sogar",
+    "solche": "solch",
+    "soll": "sollen",
+    "solle": "sollen",
+    "sommer": "Sommer",
+    "sondern": "sondern",
+    "sonst": "sonst",
+    "spitzen": "Spitze",
+    "spitznase": "Spitznase",
+    "später": "spät",
+    "staub": "Staub",
+    "stehen": "stehen",
+    "steht": "stehen",
+    "steinfliesen": "Steinfliese",
+    "stellen": "stellen",
+    "stellt": "anstellen",
+    "stiller": "still",
+    "streben": "streben",
+    "stube": "Stube",
+    "studium": "Studium",
+    "städter": "Städter",
+    "suchte": "suchen",
+    "tag": "Tag",
+    "tage": "Tag",
+    "tartarischen": "tartarisch",
+    "teilnahmslose": "teilnahmslos",
+    "tief": "tief",
+    "tode": {
+      "l": "Tod",
+      "old": "старый дательный с -e (vor seinem Tode); сегодня vor seinem Tod"
+    },
+    "tor": "Tor",
+    "treten": "treten",
+    "tritt": "treten",
+    "trotz": "trotz",
+    "truppe": "Truppe",
+    "tut": "leidtun",
+    "täuschen": "täuschen",
+    "tür": "Tür",
+    "türe": {
+      "l": "Tür",
+      "old": "устар. вариант: aus der Türe; сегодня aus der Tür"
+    },
+    "türhüter": "Türhüter",
+    "türhüters": "Türhüter",
+    "um": "um",
+    "umkleiden": "sich umkleiden",
+    "umzustimmen": "umstimmen",
+    "und": "und",
+    "unersättlich": "unersättlich",
+    "unglücklichen": "unglücklich",
+    "ungunsten": "zu Ungunsten",
+    "uns": "wir",
+    "unter": "unter",
+    "unterste": "unterste",
+    "untersuchung": "Untersuchung",
+    "ununterbrochen": "ununterbrochen",
+    "unverlöschlich": "unverlöschlich",
+    "urteils": "Urteil",
+    "verbotes": "Verbot",
+    "verflucht": "verfluchen",
+    "vergehendes": "vergehen",
+    "vergisst": "vergessen",
+    "verhöre": "Verhör",
+    "verhüllte": "verhüllen",
+    "verklagen": "verklagen",
+    "verlangt": "verlangen",
+    "verschwunden": "verschwinden",
+    "versuche": "Versuch",
+    "versäumt": "versäumen",
+    "verwendet": "verwenden",
+    "verändert": "verändern",
+    "viele": "viel",
+    "vielem": "viel",
+    "vielen": "viel",
+    "vielmehr": "vielmehr",
+    "vom": "von",
+    "von": "von",
+    "vor": "vor",
+    "vorgesprungen": "vorspringen",
+    "vorüber": "vorüberkommen",
+    "vorübergekommen": "vorüberkommen",
+    "wahrscheinlich": "wahrscheinlich",
+    "wand": "Wand",
+    "war": "sein",
+    "waren": "sein",
+    "warnend": "warnen",
+    "warten": "warten",
+    "wartet": "warten",
+    "was": "was",
+    "weg": "Weg",
+    "wege": {
+      "l": "Weg",
+      "old": "старый дательный с -e (auf dem Wege); сегодня auf dem Weg"
+    },
+    "weigerte": "sich weigern",
+    "weit": "weit",
+    "weiter": "weit",
+    "weiß": "wissen",
+    "welt": "Welt",
+    "wendenden": "sich wenden",
+    "wenigstens": "wenigstens",
+    "wenn": "wenn",
+    "werde": "werden",
+    "werden": "werden",
+    "wertvoll": "wertvoll",
+    "wichtig": "wichtig",
+    "wie": "wie",
+    "wieder": "wieder",
+    "wiegend": "wiegen",
+    "wieso": "wieso",
+    "willst": "wollen",
+    "winkel": "Winkel",
+    "winkt": "winken",
+    "winkten": "winken",
+    "wir": "wir",
+    "wird": "werden",
+    "wirklich": "wirklich",
+    "wissen": "wissen",
+    "wohl": "wohl",
+    "wort": "Wort",
+    "wurde": "werden",
+    "während": "während",
+    "wäre": "sein",
+    "würde": "werden",
+    "zeigten": "zeigen",
+    "zeit": "Zeit",
+    "zerstreutheit": "Zerstreutheit",
+    "zimmer": "Zimmer",
+    "zu": "zu",
+    "zuerst": "zuerst",
+    "zufall": "Zufall",
+    "zugänglich": "zugänglich",
+    "zum": "zu",
+    "zurück": "zurück",
+    "zustand": "Zustand",
+    "zwar": "zwar",
+    "zwei": "zwei",
+    "zweifel": "Zweifel",
+    "ähnlicher": "ähnlich",
+    "ändern": "ändern",
+    "ängstlich": "ängstlich",
+    "öfters": "öfters",
+    "über": "über",
+    "überlegt": "überlegen",
+    "überschritten": "überschreiten"
+  },
+  "l": {
+    "aber": {
+      "ru": "но, однако",
+      "pos": "союз"
+    },
+    "ach": {
+      "ru": "ах",
+      "pos": "межд."
+    },
+    "alle/alles": {
+      "ru": "все; всё",
+      "pos": "мест."
+    },
+    "allein": {
+      "ru": "один, в одиночку; только",
+      "pos": "нареч."
+    },
+    "als": {
+      "ru": "когда; как; чем",
+      "pos": "союз"
+    },
+    "also": {
+      "ru": "итак, стало быть",
+      "pos": "нареч."
+    },
+    "alt": {
+      "ru": "старый",
+      "pos": "прил.",
+      "forms": "alt · älter · am ältesten"
+    },
+    "an": {
+      "ru": "у, к, на",
+      "pos": "предлог",
+      "note": "также отделяемая приставка: anstellen, anhören, annehmen"
+    },
+    "Anblick": {
+      "ru": "вид, зрелище",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Anblicke"
+    },
+    "anbrüllen": {
+      "ru": "кричать на, рявкать",
+      "pos": "гл.",
+      "forms": "brüllte an · hat angebrüllt",
+      "note": "приставка отделяемая: brüllt ihn an"
+    },
+    "ander": {
+      "ru": "другой, иной",
+      "pos": "прил."
+    },
+    "Angst": {
+      "ru": "страх",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Ängste"
+    },
+    "anhören": {
+      "ru": "выслушивать",
+      "pos": "гл.",
+      "forms": "hörte an · hat angehört",
+      "note": "приставка отделяемая: hörten mich an"
+    },
+    "anklagen": {
+      "ru": "обвинять",
+      "pos": "гл.",
+      "forms": "klagte an · hat angeklagt"
+    },
+    "annehmen": {
+      "ru": "принимать, брать",
+      "pos": "гл.",
+      "forms": "nahm an · hat angenommen",
+      "note": "приставка отделяемая: nimmt alles an"
+    },
+    "ansehen": {
+      "ru": "смотреть на, разглядывать",
+      "pos": "гл.",
+      "forms": "sah an · hat angesehen"
+    },
+    "anstellen": {
+      "ru": "устраивать, затевать",
+      "pos": "гл.",
+      "forms": "stellte an · hat angestellt",
+      "note": "Verhöre anstellen — устраивать допросы"
+    },
+    "Antwort": {
+      "ru": "ответ",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Antworten"
+    },
+    "antworten": {
+      "ru": "отвечать",
+      "pos": "гл.",
+      "forms": "antwortete · hat geantwortet"
+    },
+    "auch": {
+      "ru": "тоже, также; даже",
+      "pos": "частица"
+    },
+    "auf": {
+      "ru": "на, в",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: aufspringen «вскочить», sich aufmachen"
+    },
+    "aufeinander": {
+      "ru": "друг на друга, друг к другу",
+      "pos": "нареч."
+    },
+    "auffordern": {
+      "ru": "предлагать, призывать, велеть",
+      "pos": "гл.",
+      "forms": "forderte auf · hat aufgefordert"
+    },
+    "aufnehmen": {
+      "ru": "принимать, воспринимать",
+      "pos": "гл.",
+      "forms": "nahm auf · hat aufgenommen"
+    },
+    "aufrichten": {
+      "ru": "выпрямлять, поднимать",
+      "pos": "гл.",
+      "forms": "richtete auf · hat aufgerichtet"
+    },
+    "Auge": {
+      "ru": "глаз",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Augen"
+    },
+    "augenblicklich": {
+      "ru": "сейчас, в данную минуту",
+      "pos": "нареч."
+    },
+    "Augenlicht": {
+      "ru": "зрение",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "aus": {
+      "ru": "из",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: auslöschen «погасить»"
+    },
+    "ausrüsten": {
+      "ru": "снаряжать, экипировать",
+      "pos": "гл.",
+      "forms": "rüstete aus · hat ausgerüstet"
+    },
+    "Aussicht": {
+      "ru": "вид; надежда, перспектива",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Aussichten"
+    },
+    "außer": {
+      "ru": "кроме, вне",
+      "pos": "предлог"
+    },
+    "Aßmann": {
+      "ru": "Асман (фамилия помощника судьи)",
+      "pos": "имя собств."
+    },
+    "bald": {
+      "ru": "скоро",
+      "pos": "нареч."
+    },
+    "Bart": {
+      "ru": "борода",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Bärte"
+    },
+    "Bauernstube": {
+      "ru": "крестьянская горница",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Bauernstuben"
+    },
+    "Bauernvolk": {
+      "ru": "мужичьё, крестьянский люд",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "befreien": {
+      "ru": "освобождать",
+      "pos": "гл.",
+      "forms": "befreite · hat befreit"
+    },
+    "beginnen": {
+      "ru": "начинать, начинаться",
+      "pos": "гл.",
+      "forms": "begann · hat begonnen"
+    },
+    "begreiflich": {
+      "ru": "понятный",
+      "pos": "прил.",
+      "note": "begreiflich machen — втолковать, растолковать"
+    },
+    "bei": {
+      "ru": "у, при, возле",
+      "pos": "предл."
+    },
+    "beiseite": {
+      "ru": "в сторону, в стороне",
+      "pos": "нареч."
+    },
+    "bekommen": {
+      "ru": "получать",
+      "pos": "гл.",
+      "forms": "bekam · hat bekommen"
+    },
+    "beobachten": {
+      "ru": "наблюдать",
+      "pos": "гл.",
+      "forms": "beobachtete · hat beobachtet"
+    },
+    "beruhigen": {
+      "ru": "успокаивать",
+      "pos": "гл.",
+      "forms": "beruhigte · hat beruhigt"
+    },
+    "bestechen": {
+      "ru": "подкупать",
+      "pos": "гл.",
+      "forms": "bestach · hat bestochen"
+    },
+    "bestimmen": {
+      "ru": "определять; предназначать",
+      "pos": "гл.",
+      "forms": "bestimmte · hat bestimmt"
+    },
+    "Beweis": {
+      "ru": "доказательство",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Beweise"
+    },
+    "bis": {
+      "ru": "до; пока не",
+      "pos": "союз"
+    },
+    "bisher": {
+      "ru": "до сих пор, до этого",
+      "pos": "нареч."
+    },
+    "Bitte": {
+      "ru": "просьба",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Bitten"
+    },
+    "bitten": {
+      "ru": "просить",
+      "pos": "гл.",
+      "forms": "bat · hat gebeten"
+    },
+    "Blick": {
+      "ru": "взгляд",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Blicke"
+    },
+    "blicken": {
+      "ru": "смотреть, виднеться",
+      "pos": "гл.",
+      "forms": "blickte · hat geblickt"
+    },
+    "brechen": {
+      "ru": "ломать(ся); пробиваться",
+      "pos": "гл.",
+      "forms": "brach · hat/ist gebrochen"
+    },
+    "breit": {
+      "ru": "широкий",
+      "pos": "прил."
+    },
+    "bringen": {
+      "ru": "приносить, приводить",
+      "pos": "гл.",
+      "forms": "brachte · hat gebracht"
+    },
+    "Bruder": {
+      "ru": "брат",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Brüder"
+    },
+    "brummen": {
+      "ru": "ворчать, бормотать",
+      "pos": "гл.",
+      "forms": "brummte · hat gebrummt"
+    },
+    "da": {
+      "ru": "тут, там; тогда",
+      "pos": "нареч."
+    },
+    "dabei": {
+      "ru": "при этом, при том",
+      "pos": "нареч."
+    },
+    "damit": {
+      "ru": "чтобы; тем самым",
+      "pos": "союз"
+    },
+    "dann": {
+      "ru": "потом, затем",
+      "pos": "нареч."
+    },
+    "dass": {
+      "ru": "что; чтобы",
+      "pos": "союз"
+    },
+    "denken": {
+      "ru": "думать",
+      "pos": "гл.",
+      "forms": "dachte · hat gedacht"
+    },
+    "denn": {
+      "ru": "ведь, так как",
+      "pos": "союз"
+    },
+    "der/die/das": {
+      "ru": "определённый артикль",
+      "pos": "артикль",
+      "note": "Тж. относительное местоимение «который»"
+    },
+    "deswegen": {
+      "ru": "поэтому, из-за этого",
+      "pos": "нареч."
+    },
+    "dieser": {
+      "ru": "этот, эта, это",
+      "pos": "мест."
+    },
+    "doch": {
+      "ru": "всё же, всё-таки; ведь",
+      "pos": "частица"
+    },
+    "Dorf": {
+      "ru": "деревня",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Dörfer"
+    },
+    "dort": {
+      "ru": "там",
+      "pos": "нареч."
+    },
+    "Dritte": {
+      "ru": "третий (о человеке)",
+      "pos": "субст. прил.",
+      "decl": "der Dritte / ein Dritter / die Dritten"
+    },
+    "drohen": {
+      "ru": "грозить, угрожать",
+      "pos": "гл.",
+      "forms": "drohte · hat gedroht"
+    },
+    "drängen": {
+      "ru": "теснить, торопить, гнать",
+      "pos": "гл.",
+      "forms": "drängte · hat gedrängt"
+    },
+    "du": {
+      "ru": "ты",
+      "pos": "мест.",
+      "note": "dich — тебя, dir — тебе"
+    },
+    "Dunkel": {
+      "ru": "тьма, темнота",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "dunkel": {
+      "ru": "тёмный",
+      "pos": "прил."
+    },
+    "durch": {
+      "ru": "через, сквозь, из-за",
+      "pos": "предл."
+    },
+    "dünn": {
+      "ru": "тонкий, жидкий",
+      "pos": "прил."
+    },
+    "dürfen": {
+      "ru": "сметь, иметь право",
+      "pos": "гл.",
+      "forms": "durfte · hat gedurft"
+    },
+    "Ehre": {
+      "ru": "честь",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Ehren",
+      "note": "unter Ehren — с честью, не уронив достоинства"
+    },
+    "eilen": {
+      "ru": "спешить, мчаться",
+      "pos": "гл.",
+      "forms": "eilte · ist geeilt"
+    },
+    "ein/eine": {
+      "ru": "неопределённый артикль; один (из них)",
+      "pos": "артикль"
+    },
+    "Eingang": {
+      "ru": "вход",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Eingänge"
+    },
+    "Einlass": {
+      "ru": "доступ, впуск",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Einlässe"
+    },
+    "einlassen": {
+      "ru": "впускать",
+      "pos": "гл.",
+      "forms": "ließ ein · hat eingelassen"
+    },
+    "einmal": {
+      "ru": "однажды; раз",
+      "pos": "нареч."
+    },
+    "einmauern": {
+      "ru": "вмуровывать",
+      "pos": "гл.",
+      "forms": "mauerte ein · hat eingemauert"
+    },
+    "einreiten": {
+      "ru": "въезжать верхом",
+      "pos": "гл.",
+      "forms": "ritt ein · ist eingeritten"
+    },
+    "eintreten": {
+      "ru": "входить, вступать",
+      "pos": "гл.",
+      "forms": "trat ein · ist eingetreten"
+    },
+    "Eintritt": {
+      "ru": "вход, доступ",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Eintritte"
+    },
+    "einzig": {
+      "ru": "единственный",
+      "pos": "прил."
+    },
+    "eisern": {
+      "ru": "железный",
+      "pos": "прил."
+    },
+    "Ende": {
+      "ru": "конец",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Enden"
+    },
+    "endlich": {
+      "ru": "наконец",
+      "pos": "нареч."
+    },
+    "eng": {
+      "ru": "тесный, узкий",
+      "pos": "прил."
+    },
+    "Entlassung": {
+      "ru": "освобождение, увольнение",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Entlassungen"
+    },
+    "er": {
+      "ru": "он",
+      "pos": "мест.",
+      "note": "ihn — его, ihm — ему"
+    },
+    "Erfahrung": {
+      "ru": "опыт; переживание",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Erfahrungen"
+    },
+    "erhalten": {
+      "ru": "получать",
+      "pos": "гл.",
+      "forms": "erhielt · hat erhalten"
+    },
+    "erinnern": {
+      "ru": "напоминать",
+      "pos": "гл.",
+      "forms": "erinnerte · hat erinnert"
+    },
+    "erkennen": {
+      "ru": "узнавать, распознавать",
+      "pos": "гл.",
+      "forms": "erkannte · hat erkannt"
+    },
+    "Erlaubnis": {
+      "ru": "разрешение",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Erlaubnisse"
+    },
+    "ermüden": {
+      "ru": "утомлять; уставать",
+      "pos": "гл.",
+      "forms": "ermüdete · hat/ist ermüdet"
+    },
+    "erreichen": {
+      "ru": "достигать, добираться",
+      "pos": "гл.",
+      "forms": "erreichte · hat erreicht"
+    },
+    "erschrecken": {
+      "ru": "пугаться; пугать",
+      "pos": "гл.",
+      "forms": "erschrak · ist erschrocken"
+    },
+    "erstarren": {
+      "ru": "коченеть, застывать",
+      "pos": "гл.",
+      "forms": "erstarrte · ist erstarrt"
+    },
+    "erste": {
+      "ru": "первый",
+      "pos": "числ."
+    },
+    "ertragen": {
+      "ru": "выносить, терпеть",
+      "pos": "гл.",
+      "forms": "ertrug · hat ertragen"
+    },
+    "erwarten": {
+      "ru": "ожидать, поджидать",
+      "pos": "гл.",
+      "forms": "erwartete · hat erwartet"
+    },
+    "es": {
+      "ru": "оно; это",
+      "pos": "мест."
+    },
+    "etwas": {
+      "ru": "что-то, нечто; немного",
+      "pos": "мест."
+    },
+    "Falle": {
+      "ru": "ловушка, мышеловка",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Fallen"
+    },
+    "fast": {
+      "ru": "почти",
+      "pos": "нареч."
+    },
+    "Faust": {
+      "ru": "кулак",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Fäuste"
+    },
+    "Ferne": {
+      "ru": "даль",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Fernen"
+    },
+    "finden": {
+      "ru": "находить",
+      "pos": "гл.",
+      "forms": "fand · hat gefunden"
+    },
+    "Flamme": {
+      "ru": "пламя",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Flammen"
+    },
+    "Floh": {
+      "ru": "блоха",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Flöhe"
+    },
+    "folgen": {
+      "ru": "следовать; слушаться",
+      "pos": "гл.",
+      "forms": "folgte · ist gefolgt"
+    },
+    "fort": {
+      "ru": "прочь, дальше",
+      "pos": "нареч.",
+      "note": "Тж. отделяемая приставка: fortlaufen, fortgehen, fortziehen, fortkönnen"
+    },
+    "Frage": {
+      "ru": "вопрос",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Fragen"
+    },
+    "fragen": {
+      "ru": "спрашивать",
+      "pos": "гл.",
+      "forms": "fragte · hat gefragt"
+    },
+    "fressen": {
+      "ru": "есть, жрать (о животных)",
+      "pos": "гл.",
+      "forms": "fraß · hat gefressen"
+    },
+    "freundschaftlich": {
+      "ru": "дружеский, дружески",
+      "pos": "прил."
+    },
+    "führen": {
+      "ru": "вести",
+      "pos": "гл.",
+      "forms": "führte · hat geführt",
+      "note": "einen Beweis führen — привести доказательство"
+    },
+    "für": {
+      "ru": "для, за",
+      "pos": "предл."
+    },
+    "Gang": {
+      "ru": "ход, походка; коридор",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Gänge",
+      "note": "in Gang setzen — привести в движение, двинуться"
+    },
+    "ganz": {
+      "ru": "весь, целый; совсем",
+      "pos": "прил."
+    },
+    "gar": {
+      "ru": "вовсе, совсем",
+      "pos": "нареч."
+    },
+    "geben": {
+      "ru": "давать",
+      "pos": "гл.",
+      "forms": "gab · hat gegeben"
+    },
+    "Gefängnis": {
+      "ru": "тюрьма",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Gefängnisse"
+    },
+    "Gefängniszelle": {
+      "ru": "тюремная камера",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Gefängniszellen"
+    },
+    "gegenwärtig": {
+      "ru": "нынешний, теперешний",
+      "pos": "прил."
+    },
+    "gehen": {
+      "ru": "идти, ходить",
+      "pos": "гл.",
+      "forms": "ging · ist gegangen",
+      "note": "zu Ende gehen — подходить к концу. В тексте с отделяемой приставкой: geh mit / ging mit — mitgehen «пойти вместе»; gingen fort — fortgehen «уйти»"
+    },
+    "Gehilfe": {
+      "ru": "помощник",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Gehilfen",
+      "decl": "des Gehilfen · dem/den Gehilfen (n-склонение)"
+    },
+    "Gehör": {
+      "ru": "слух",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "genau": {
+      "ru": "точный; genauer — пристальнее",
+      "pos": "прил."
+    },
+    "genügen": {
+      "ru": "быть достаточным, хватать",
+      "pos": "гл.",
+      "forms": "genügte · hat genügt"
+    },
+    "gern": {
+      "ru": "охотно",
+      "pos": "нареч.",
+      "forms": "gern · lieber · am liebsten",
+      "note": "lieber — охотнее, лучше"
+    },
+    "geschehen": {
+      "ru": "происходить, случаться",
+      "pos": "гл.",
+      "forms": "geschah · ist geschehen"
+    },
+    "Gesetz": {
+      "ru": "закон",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Gesetze"
+    },
+    "gewähren": {
+      "ru": "предоставлять, даровать",
+      "pos": "гл.",
+      "forms": "gewährte · hat gewährt"
+    },
+    "Glanz": {
+      "ru": "блеск, сияние",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "glauben": {
+      "ru": "верить, полагать",
+      "pos": "гл.",
+      "forms": "glaubte · hat geglaubt"
+    },
+    "gleich": {
+      "ru": "сразу, тотчас; одинаковый",
+      "pos": "нареч."
+    },
+    "gleichgültig": {
+      "ru": "равнодушный, безразличный",
+      "pos": "прил."
+    },
+    "glücklich": {
+      "ru": "счастливый",
+      "pos": "прил."
+    },
+    "groß": {
+      "ru": "большой, рослый",
+      "pos": "прил.",
+      "forms": "groß · größer · am größten"
+    },
+    "Größenunterschied": {
+      "ru": "разница в росте, в размере",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Größenunterschiede"
+    },
+    "gut": {
+      "ru": "хороший, добрый",
+      "pos": "прил.",
+      "forms": "gut · besser · am besten",
+      "note": "besser — лучше"
+    },
+    "haben": {
+      "ru": "иметь; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "hatte · hat gehabt"
+    },
+    "halb": {
+      "ru": "половинный; наполовину",
+      "pos": "прил."
+    },
+    "hauptsächlich": {
+      "ru": "главным образом, преимущественно",
+      "pos": "нареч."
+    },
+    "Haus": {
+      "ru": "дом",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Häuser"
+    },
+    "Heimat": {
+      "ru": "родина",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "heiß": {
+      "ru": "жаркий, горячий",
+      "pos": "прил."
+    },
+    "helfen": {
+      "ru": "помогать",
+      "pos": "гл.",
+      "forms": "half · hat geholfen"
+    },
+    "herab": {
+      "ru": "вниз (сюда)",
+      "pos": "нареч.",
+      "note": "Тж. отделяемая приставка: herabrufen «крикнуть сверху»"
+    },
+    "Herr": {
+      "ru": "господин",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Herren",
+      "decl": "des Herrn · dem/den Herrn (n-склонение)"
+    },
+    "hervor": {
+      "ru": "наружу, вперёд",
+      "pos": "нареч."
+    },
+    "hier": {
+      "ru": "здесь",
+      "pos": "нареч."
+    },
+    "hin": {
+      "ru": "туда",
+      "pos": "нареч."
+    },
+    "Hindernis": {
+      "ru": "препятствие, преграда",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Hindernisse"
+    },
+    "hineingehen": {
+      "ru": "входить внутрь",
+      "pos": "гл.",
+      "forms": "ging hinein · ist hineingegangen"
+    },
+    "hoch": {
+      "ru": "высокий",
+      "pos": "прил."
+    },
+    "Hof": {
+      "ru": "двор",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Höfe"
+    },
+    "Hofbesitzer": {
+      "ru": "владелец двора, хозяин усадьбы",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Hofbesitzer"
+    },
+    "Hoftor": {
+      "ru": "ворота двора",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Hoftore"
+    },
+    "Hosenträger": {
+      "ru": "подтяжки",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Hosenträger",
+      "note": "обычно во мн. ч.: die Hosenträger"
+    },
+    "hundert": {
+      "ru": "сто",
+      "pos": "числ."
+    },
+    "ich": {
+      "ru": "я",
+      "pos": "мест.",
+      "note": "mich — меня, mir — мне"
+    },
+    "immer": {
+      "ru": "всегда, всё",
+      "pos": "нареч.",
+      "note": "immer größer — всё больше"
+    },
+    "in": {
+      "ru": "в (im = in dem, ins = in das)",
+      "pos": "предл."
+    },
+    "Innere": {
+      "ru": "внутренность, нутро",
+      "pos": "субст. прил.",
+      "decl": "das Innere / ein Inneres / im Innern"
+    },
+    "ins Reine bringen": {
+      "ru": "уладить, привести в порядок",
+      "pos": "оборот",
+      "note": "ins Reine bringen — довести дело до ясности"
+    },
+    "irgendwo": {
+      "ru": "где-то, где-нибудь",
+      "pos": "нареч."
+    },
+    "Jahr": {
+      "ru": "год",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Jahre"
+    },
+    "jahrelang": {
+      "ru": "многолетний, годами",
+      "pos": "прил."
+    },
+    "jeder": {
+      "ru": "каждый, всякий",
+      "pos": "мест."
+    },
+    "jetzt": {
+      "ru": "сейчас, теперь",
+      "pos": "нареч."
+    },
+    "jung": {
+      "ru": "молодой",
+      "pos": "прил."
+    },
+    "kahl": {
+      "ru": "голый, лысый",
+      "pos": "прил."
+    },
+    "Katze": {
+      "ru": "кошка",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Katzen"
+    },
+    "kaum": {
+      "ru": "едва, едва ли",
+      "pos": "нареч."
+    },
+    "kennen": {
+      "ru": "знать, быть знакомым",
+      "pos": "гл.",
+      "forms": "kannte · hat gekannt"
+    },
+    "kindisch": {
+      "ru": "ребяческий, впавший в детство",
+      "pos": "прил."
+    },
+    "Kleid": {
+      "ru": "платье",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Kleider"
+    },
+    "klein": {
+      "ru": "маленький",
+      "pos": "прил."
+    },
+    "kommen": {
+      "ru": "приходить, приезжать",
+      "pos": "гл.",
+      "forms": "kam · ist gekommen",
+      "note": "В тексте с отделяемой приставкой: kamen vorbei — vorbeikommen «проходить мимо»"
+    },
+    "Kopf": {
+      "ru": "голова",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Köpfe"
+    },
+    "können": {
+      "ru": "мочь, уметь",
+      "pos": "гл.",
+      "forms": "konnte · hat gekonnt",
+      "note": "В тексте с отделяемой приставкой: kann nicht fort — fortkönnen «не мочь уйти»"
+    },
+    "Körper": {
+      "ru": "тело",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Körper"
+    },
+    "lachen": {
+      "ru": "смеяться",
+      "pos": "гл.",
+      "forms": "lachte · hat gelacht"
+    },
+    "Land": {
+      "ru": "страна; деревня, село",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Länder",
+      "note": "vom Lande — из деревни, из провинции"
+    },
+    "Landstraße": {
+      "ru": "просёлочная дорога, тракт",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Landstraßen"
+    },
+    "lang": {
+      "ru": "длинный, долгий",
+      "pos": "прил.",
+      "forms": "lang · länger · am längsten"
+    },
+    "langsam": {
+      "ru": "медленный; медленно",
+      "pos": "прил."
+    },
+    "Lanze": {
+      "ru": "копьё, пика",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Lanzen"
+    },
+    "lassen": {
+      "ru": "позволять, велеть; оставлять",
+      "pos": "гл.",
+      "forms": "ließ · hat gelassen"
+    },
+    "laufen": {
+      "ru": "бежать, бегать",
+      "pos": "гл.",
+      "forms": "lief · ist gelaufen",
+      "note": "В тексте с отделяемой приставкой: lief fort — fortlaufen «убежать»; lief zurück — zurücklaufen «побежать назад»"
+    },
+    "Laufrichtung": {
+      "ru": "направление бега",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Laufrichtungen"
+    },
+    "laut": {
+      "ru": "громко; громкий",
+      "pos": "нареч."
+    },
+    "leben": {
+      "ru": "жить",
+      "pos": "гл.",
+      "forms": "lebte · hat gelebt"
+    },
+    "lebhaft": {
+      "ru": "живой, оживлённый",
+      "pos": "прил."
+    },
+    "leidtun": {
+      "ru": "быть жаль",
+      "pos": "гл.",
+      "forms": "tat leid · hat leidgetan",
+      "note": "es tut mir leid — мне жаль; приставка отделяемая"
+    },
+    "letzte": {
+      "ru": "последний",
+      "pos": "прил."
+    },
+    "Leute": {
+      "ru": "люди",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Leute",
+      "note": "только мн. ч."
+    },
+    "links": {
+      "ru": "слева, налево",
+      "pos": "нареч."
+    },
+    "locken": {
+      "ru": "манить, привлекать",
+      "pos": "гл.",
+      "forms": "lockte · hat gelockt"
+    },
+    "Luft": {
+      "ru": "воздух",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Lüfte"
+    },
+    "lächeln": {
+      "ru": "улыбаться",
+      "pos": "гл.",
+      "forms": "lächelte · hat gelächelt"
+    },
+    "machen": {
+      "ru": "делать",
+      "pos": "гл.",
+      "forms": "machte · hat gemacht",
+      "note": "sich auf den Weg machen — отправиться в путь"
+    },
+    "man": {
+      "ru": "неопределённое «кто-то, люди, мы»",
+      "pos": "мест."
+    },
+    "Mann": {
+      "ru": "мужчина, человек",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Männer"
+    },
+    "Mauer": {
+      "ru": "стена (каменная)",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Mauern"
+    },
+    "Maus": {
+      "ru": "мышь",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Mäuse"
+    },
+    "mehr": {
+      "ru": "больше",
+      "pos": "нареч.",
+      "note": "В nicht/kein … mehr — больше не. Формально компаратив от viel"
+    },
+    "mein": {
+      "ru": "мой, моя",
+      "pos": "мест."
+    },
+    "meinen": {
+      "ru": "полагать, считать; иметь в виду",
+      "pos": "гл.",
+      "forms": "meinte · hat gemeint"
+    },
+    "merken": {
+      "ru": "замечать; запоминать",
+      "pos": "гл.",
+      "forms": "merkte · hat gemerkt"
+    },
+    "mit": {
+      "ru": "с",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: mitgehen «пойти вместе»"
+    },
+    "Mitte": {
+      "ru": "середина",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "Mutwille": {
+      "ru": "озорство, своеволие",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null,
+      "decl": "des Mutwillens · dem/den Mutwillen (n-склонение)"
+    },
+    "mächtig": {
+      "ru": "могущественный, сильный",
+      "pos": "прил."
+    },
+    "möglich": {
+      "ru": "возможный",
+      "pos": "прил."
+    },
+    "müssen": {
+      "ru": "быть вынужденным, должен",
+      "pos": "гл.",
+      "forms": "musste · hat gemusst"
+    },
+    "nach": {
+      "ru": "в, на, после, по",
+      "pos": "предл."
+    },
+    "Nachhauseweg": {
+      "ru": "дорога домой",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Nachhausewege"
+    },
+    "nennen": {
+      "ru": "называть",
+      "pos": "гл.",
+      "forms": "nannte · hat genannt"
+    },
+    "nicht": {
+      "ru": "не",
+      "pos": "частица"
+    },
+    "nicken": {
+      "ru": "кивать",
+      "pos": "гл.",
+      "forms": "nickte · hat genickt"
+    },
+    "niemand": {
+      "ru": "никто",
+      "pos": "мест."
+    },
+    "nirgends": {
+      "ru": "нигде",
+      "pos": "нареч."
+    },
+    "noch": {
+      "ru": "ещё",
+      "pos": "нареч."
+    },
+    "nun": {
+      "ru": "теперь; ну",
+      "pos": "нареч."
+    },
+    "nur": {
+      "ru": "только, лишь",
+      "pos": "частица"
+    },
+    "ob": {
+      "ru": "ли (в косвенном вопросе)",
+      "pos": "союз"
+    },
+    "oder": {
+      "ru": "или",
+      "pos": "союз"
+    },
+    "offen": {
+      "ru": "открытый",
+      "pos": "прил."
+    },
+    "Operationstisch": {
+      "ru": "операционный стол",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Operationstische"
+    },
+    "Pelzkragen": {
+      "ru": "меховой воротник",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Pelzkragen"
+    },
+    "Pelzmantel": {
+      "ru": "шуба",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Pelzmäntel"
+    },
+    "Pferd": {
+      "ru": "лошадь, конь",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Pferde"
+    },
+    "Pritsche": {
+      "ru": "нары, топчан",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Pritschen"
+    },
+    "Rauchwolke": {
+      "ru": "облако дыма",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Rauchwolken"
+    },
+    "rechts": {
+      "ru": "справа, направо",
+      "pos": "нареч."
+    },
+    "Reise": {
+      "ru": "поездка, путешествие",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Reisen"
+    },
+    "Reiter": {
+      "ru": "всадник",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Reiter"
+    },
+    "Richter": {
+      "ru": "судья",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Richter"
+    },
+    "Ring": {
+      "ru": "кольцо",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Ringe"
+    },
+    "ruhig": {
+      "ru": "спокойный, тихий",
+      "pos": "прил.",
+      "forms": "ruhig · ruhiger · am ruhigsten"
+    },
+    "rücken": {
+      "ru": "двигать, поправлять",
+      "pos": "гл.",
+      "forms": "rückte · hat gerückt"
+    },
+    "rücksichtslos": {
+      "ru": "безоглядный, бесцеремонный",
+      "pos": "прил."
+    },
+    "Saal": {
+      "ru": "зал",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Säle"
+    },
+    "sagen": {
+      "ru": "говорить, сказать",
+      "pos": "гл.",
+      "forms": "sagte · hat gesagt"
+    },
+    "scharf": {
+      "ru": "острый, резкий",
+      "pos": "прил."
+    },
+    "scheinen": {
+      "ru": "светить; казаться",
+      "pos": "гл.",
+      "forms": "schien · hat geschienen"
+    },
+    "Schemel": {
+      "ru": "скамеечка, табурет",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Schemel"
+    },
+    "Schlag": {
+      "ru": "удар",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Schläge"
+    },
+    "schlagen": {
+      "ru": "бить, ударять",
+      "pos": "гл.",
+      "forms": "schlug · hat geschlagen"
+    },
+    "schließen": {
+      "ru": "закрывать, запирать",
+      "pos": "гл.",
+      "forms": "schloss · hat geschlossen"
+    },
+    "schließlich": {
+      "ru": "в конце концов, наконец",
+      "pos": "нареч."
+    },
+    "Schluss": {
+      "ru": "конец, заключение",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Schlüsse",
+      "note": "zum Schluss — под конец, напоследок"
+    },
+    "schmecken": {
+      "ru": "пробовать на вкус; быть вкусным",
+      "pos": "гл.",
+      "forms": "schmeckte · hat geschmeckt"
+    },
+    "schnell": {
+      "ru": "быстрый, быстро",
+      "pos": "прил."
+    },
+    "schon": {
+      "ru": "уже",
+      "pos": "нареч."
+    },
+    "Schrecken": {
+      "ru": "ужас, испуг",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Schrecken"
+    },
+    "Schritt": {
+      "ru": "шаг",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Schritte"
+    },
+    "schwach": {
+      "ru": "слабый",
+      "pos": "прил."
+    },
+    "schwarz": {
+      "ru": "чёрный",
+      "pos": "прил."
+    },
+    "Schwelle": {
+      "ru": "порог",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Schwellen"
+    },
+    "Schwester": {
+      "ru": "сестра",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Schwestern"
+    },
+    "Schwierigkeit": {
+      "ru": "трудность",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Schwierigkeiten"
+    },
+    "sehen": {
+      "ru": "видеть",
+      "pos": "гл.",
+      "forms": "sah · hat gesehen",
+      "note": "В тексте с отделяемой приставкой: sah sich um — sich umsehen «оглядеться»"
+    },
+    "sehr": {
+      "ru": "очень",
+      "pos": "нареч."
+    },
+    "sein": {
+      "ru": "быть; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "war · ist gewesen"
+    },
+    "sein (его, свой)": {
+      "ru": "его, свой",
+      "pos": "мест.",
+      "note": "омоним: sein «быть» — zugänglich sein"
+    },
+    "seitwärts": {
+      "ru": "сбоку, в сторону",
+      "pos": "нареч."
+    },
+    "selbst": {
+      "ru": "сам; даже",
+      "pos": "мест."
+    },
+    "setzen": {
+      "ru": "сажать",
+      "pos": "гл.",
+      "forms": "setzte · hat gesetzt",
+      "note": "sich setzen — садиться"
+    },
+    "sich": {
+      "ru": "себя, себе",
+      "pos": "мест.",
+      "note": "Возвратное местоимение, часть возвратного глагола: sich auf den Weg machen, sich setzen, sich legen, sich nähern, sich gefallen lassen, sich getrauen, sich umsehen"
+    },
+    "sich bücken": {
+      "ru": "наклоняться, нагибаться",
+      "pos": "гл.",
+      "forms": "bückte sich · hat sich gebückt"
+    },
+    "sich enthalten": {
+      "ru": "воздерживаться",
+      "pos": "гл.",
+      "forms": "enthielt sich · hat sich enthalten"
+    },
+    "sich entschließen": {
+      "ru": "решаться",
+      "pos": "гл.",
+      "forms": "entschloss sich · hat sich entschlossen"
+    },
+    "sich erheben": {
+      "ru": "подниматься, вздыматься",
+      "pos": "гл.",
+      "forms": "erhob sich · hat sich erhoben"
+    },
+    "sich hinunterneigen": {
+      "ru": "склоняться вниз",
+      "pos": "гл.",
+      "forms": "neigte sich hinunter · hat sich hinuntergeneigt"
+    },
+    "sich niedersetzen": {
+      "ru": "садиться, усаживаться",
+      "pos": "гл.",
+      "forms": "setzte sich nieder · hat sich niedergesetzt"
+    },
+    "sich sammeln": {
+      "ru": "собираться, скапливаться",
+      "pos": "гл.",
+      "forms": "sammelte sich · hat sich gesammelt"
+    },
+    "sich umkleiden": {
+      "ru": "переодеваться",
+      "pos": "гл.",
+      "forms": "kleidete sich um · hat sich umgekleidet"
+    },
+    "sich weigern": {
+      "ru": "отказываться",
+      "pos": "гл.",
+      "forms": "weigerte sich · hat sich geweigert"
+    },
+    "sich wenden": {
+      "ru": "поворачивать(ся)",
+      "pos": "гл.",
+      "forms": "wandte sich · hat sich gewandt"
+    },
+    "sie": {
+      "ru": "она; они; Вы",
+      "pos": "мест."
+    },
+    "sitzen": {
+      "ru": "сидеть",
+      "pos": "гл.",
+      "forms": "saß · hat gesessen"
+    },
+    "so": {
+      "ru": "так; такой; то (в главном предложении)",
+      "pos": "нареч."
+    },
+    "sogar": {
+      "ru": "даже",
+      "pos": "частица"
+    },
+    "solch": {
+      "ru": "такой",
+      "pos": "мест."
+    },
+    "sollen": {
+      "ru": "быть должным, следует",
+      "pos": "гл.",
+      "forms": "sollte · hat gesollt"
+    },
+    "Sommer": {
+      "ru": "лето",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Sommer"
+    },
+    "sondern": {
+      "ru": "а, но (после отрицания)",
+      "pos": "союз"
+    },
+    "sonst": {
+      "ru": "иначе; помимо этого",
+      "pos": "нареч."
+    },
+    "Spitze": {
+      "ru": "остриё, верхушка",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Spitzen"
+    },
+    "Spitznase": {
+      "ru": "острый нос",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Spitznasen"
+    },
+    "spät": {
+      "ru": "поздний; spätero — позже",
+      "pos": "прил."
+    },
+    "Staub": {
+      "ru": "пыль",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "stehen": {
+      "ru": "стоять",
+      "pos": "гл.",
+      "forms": "stand · hat gestanden"
+    },
+    "Steinfliese": {
+      "ru": "каменная плита",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Steinfliesen"
+    },
+    "stellen": {
+      "ru": "ставить; задавать (вопрос)",
+      "pos": "гл.",
+      "forms": "stellte · hat gestellt",
+      "note": "Fragen stellen — задавать вопросы"
+    },
+    "still": {
+      "ru": "тихий, молчаливый",
+      "pos": "прил."
+    },
+    "streben": {
+      "ru": "стремиться",
+      "pos": "гл.",
+      "forms": "strebte · hat gestrebt"
+    },
+    "Stube": {
+      "ru": "комната, горница",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Stuben"
+    },
+    "Studium": {
+      "ru": "изучение, штудирование",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Studien"
+    },
+    "Städter": {
+      "ru": "горожанин",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Städter"
+    },
+    "suchen": {
+      "ru": "искать; стараться",
+      "pos": "гл.",
+      "forms": "suchte · hat gesucht"
+    },
+    "Tag": {
+      "ru": "день",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Tage"
+    },
+    "tartarisch": {
+      "ru": "татарский",
+      "pos": "прил.",
+      "old": "устар. написание; сегодня tatarisch"
+    },
+    "teilnahmslos": {
+      "ru": "безучастный, равнодушный",
+      "pos": "прил."
+    },
+    "tief": {
+      "ru": "глубокий; низко",
+      "pos": "прил."
+    },
+    "Tod": {
+      "ru": "смерть",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "Tor": {
+      "ru": "ворота",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Tore"
+    },
+    "treten": {
+      "ru": "ступать, шагать",
+      "pos": "гл.",
+      "forms": "trat · ist getreten"
+    },
+    "trotz": {
+      "ru": "несмотря на",
+      "pos": "предлог"
+    },
+    "Truppe": {
+      "ru": "отряд, войско",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Truppen"
+    },
+    "tun": {
+      "ru": "делать, совершать",
+      "pos": "гл.",
+      "forms": "tat · hat getan"
+    },
+    "täuschen": {
+      "ru": "обманывать",
+      "pos": "гл.",
+      "forms": "täuschte · hat getäuscht"
+    },
+    "Tür": {
+      "ru": "дверь",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Türen"
+    },
+    "Türhüter": {
+      "ru": "привратник, страж у двери",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Türhüter"
+    },
+    "um": {
+      "ru": "вокруг, около",
+      "pos": "предлог",
+      "note": "um … zu — чтобы"
+    },
+    "umstimmen": {
+      "ru": "переубеждать",
+      "pos": "гл.",
+      "forms": "stimmte um · hat umgestimmt"
+    },
+    "und": {
+      "ru": "и, а",
+      "pos": "союз"
+    },
+    "unersättlich": {
+      "ru": "ненасытный",
+      "pos": "прил."
+    },
+    "unglücklich": {
+      "ru": "несчастный, злополучный",
+      "pos": "прил."
+    },
+    "unter": {
+      "ru": "под, среди",
+      "pos": "предл."
+    },
+    "unterste": {
+      "ru": "самый нижний",
+      "pos": "прил."
+    },
+    "Untersuchung": {
+      "ru": "расследование, дознание",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Untersuchungen"
+    },
+    "ununterbrochen": {
+      "ru": "непрерывно, безостановочно",
+      "pos": "нареч."
+    },
+    "unverlöschlich": {
+      "ru": "неугасимый",
+      "pos": "прил.",
+      "note": "книжное; обычная форма — unauslöschlich"
+    },
+    "Urteil": {
+      "ru": "суждение; приговор",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Urteile"
+    },
+    "Verbot": {
+      "ru": "запрет",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Verbote"
+    },
+    "verfluchen": {
+      "ru": "проклинать",
+      "pos": "гл.",
+      "forms": "verfluchte · hat verflucht"
+    },
+    "vergehen": {
+      "ru": "проходить, угасать",
+      "pos": "гл.",
+      "forms": "verging · ist vergangen"
+    },
+    "vergessen": {
+      "ru": "забывать",
+      "pos": "гл.",
+      "forms": "vergaß · hat vergessen"
+    },
+    "Verhör": {
+      "ru": "допрос",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Verhöre"
+    },
+    "verhüllen": {
+      "ru": "окутывать, скрывать",
+      "pos": "гл.",
+      "forms": "verhüllte · hat verhüllt"
+    },
+    "verklagen": {
+      "ru": "подавать в суд на кого-л.",
+      "pos": "гл.",
+      "forms": "verklagte · hat verklagt"
+    },
+    "verlangen": {
+      "ru": "требовать, просить",
+      "pos": "гл.",
+      "forms": "verlangte · hat verlangt"
+    },
+    "verschwinden": {
+      "ru": "исчезать, скрываться",
+      "pos": "гл.",
+      "forms": "verschwand · ist verschwunden"
+    },
+    "Versuch": {
+      "ru": "попытка",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Versuche"
+    },
+    "versäumen": {
+      "ru": "упускать, пропускать",
+      "pos": "гл.",
+      "forms": "versäumte · hat versäumt"
+    },
+    "verwenden": {
+      "ru": "употреблять, тратить",
+      "pos": "гл.",
+      "forms": "verwendete · hat verwendet"
+    },
+    "verändern": {
+      "ru": "изменять(ся)",
+      "pos": "гл.",
+      "forms": "veränderte · hat verändert"
+    },
+    "viel": {
+      "ru": "много, многое",
+      "pos": "мест."
+    },
+    "vielmehr": {
+      "ru": "вернее, скорее",
+      "pos": "нареч."
+    },
+    "von": {
+      "ru": "от, из, о (vom = von dem)",
+      "pos": "предл."
+    },
+    "vor": {
+      "ru": "перед, до; от (страха)",
+      "pos": "предл."
+    },
+    "vorspringen": {
+      "ru": "выскакивать вперёд",
+      "pos": "гл.",
+      "forms": "sprang vor · ist vorgesprungen"
+    },
+    "vorüberkommen": {
+      "ru": "проходить мимо",
+      "pos": "гл.",
+      "forms": "kam vorüber · ist vorübergekommen"
+    },
+    "wahrscheinlich": {
+      "ru": "вероятный, скорее всего",
+      "pos": "прил."
+    },
+    "Wand": {
+      "ru": "стена (в помещении)",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Wände"
+    },
+    "warnen": {
+      "ru": "предостерегать",
+      "pos": "гл.",
+      "forms": "warnte · hat gewarnt"
+    },
+    "warten": {
+      "ru": "ждать",
+      "pos": "гл.",
+      "forms": "wartete · hat gewartet"
+    },
+    "was": {
+      "ru": "что; что-нибудь",
+      "pos": "мест."
+    },
+    "Weg": {
+      "ru": "путь, дорога",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Wege"
+    },
+    "weit": {
+      "ru": "далёкий, далеко",
+      "pos": "прил.",
+      "forms": "weit · weiter · am weitesten",
+      "note": "weiter — дальше, далее; von weitem — издали"
+    },
+    "Welt": {
+      "ru": "мир, свет",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Welten"
+    },
+    "wenden": {
+      "ru": "поворачивать",
+      "pos": "гл.",
+      "forms": "wandte/wendete · hat gewandt/gewendet"
+    },
+    "wenigstens": {
+      "ru": "по крайней мере, хотя бы",
+      "pos": "нареч."
+    },
+    "wenn": {
+      "ru": "если; когда",
+      "pos": "союз"
+    },
+    "werden": {
+      "ru": "становиться",
+      "pos": "гл.",
+      "forms": "wurde · ist geworden",
+      "note": "Вспомогательный глагол будущего времени и пассива"
+    },
+    "wertvoll": {
+      "ru": "ценный",
+      "pos": "прил."
+    },
+    "wichtig": {
+      "ru": "важный",
+      "pos": "прил."
+    },
+    "wie": {
+      "ru": "как; какой",
+      "pos": "союз"
+    },
+    "wieder": {
+      "ru": "снова",
+      "pos": "нареч."
+    },
+    "wiegen": {
+      "ru": "качать, покачивать",
+      "pos": "гл.",
+      "forms": "wiegte · hat gewiegt",
+      "note": "омоним: wiegen «весить» — wog · hat gewogen"
+    },
+    "wieso": {
+      "ru": "как же так, почему",
+      "pos": "нареч."
+    },
+    "Winkel": {
+      "ru": "угол",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Winkel"
+    },
+    "winken": {
+      "ru": "махать, подавать знак",
+      "pos": "гл.",
+      "forms": "winkte · hat gewinkt"
+    },
+    "wir": {
+      "ru": "мы",
+      "pos": "мест.",
+      "note": "uns — нас, нам"
+    },
+    "wirklich": {
+      "ru": "действительно, вправду",
+      "pos": "нареч."
+    },
+    "wissen": {
+      "ru": "знать",
+      "pos": "гл.",
+      "forms": "wusste · hat gewusst"
+    },
+    "wohl": {
+      "ru": "хорошо; пожалуй, вероятно",
+      "pos": "нареч."
+    },
+    "wollen": {
+      "ru": "хотеть",
+      "pos": "гл.",
+      "forms": "wollte · hat gewollt"
+    },
+    "Wort": {
+      "ru": "слово",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Worte (связная речь) / die Wörter (отдельные слова)"
+    },
+    "während": {
+      "ru": "в течение, во время",
+      "pos": "предлог"
+    },
+    "zeigen": {
+      "ru": "показывать, указывать",
+      "pos": "гл.",
+      "forms": "zeigte · hat gezeigt"
+    },
+    "Zeit": {
+      "ru": "время",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Zeiten"
+    },
+    "Zerstreutheit": {
+      "ru": "рассеянность",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "Zimmer": {
+      "ru": "комната",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Zimmer"
+    },
+    "zu": {
+      "ru": "к, в; слишком",
+      "pos": "предл.",
+      "note": "zur = zu der, zum = zu dem"
+    },
+    "zu Ungunsten": {
+      "ru": "не в пользу (кого-л.)",
+      "pos": "оборот",
+      "note": "zu Ungunsten + род. п.; сегодня чаще слитно zuungunsten"
+    },
+    "zuerst": {
+      "ru": "сначала, сперва",
+      "pos": "нареч."
+    },
+    "Zufall": {
+      "ru": "случай, случайность",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Zufälle"
+    },
+    "zugänglich": {
+      "ru": "доступный",
+      "pos": "прил."
+    },
+    "zurück": {
+      "ru": "назад",
+      "pos": "нареч.",
+      "note": "Тж. отделяемая приставка: zurücklaufen «побежать назад»"
+    },
+    "Zustand": {
+      "ru": "состояние, положение",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Zustände"
+    },
+    "zwar": {
+      "ru": "правда, хотя и",
+      "pos": "частица"
+    },
+    "zwei": {
+      "ru": "два",
+      "pos": "числ."
+    },
+    "Zweifel": {
+      "ru": "сомнение",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Zweifel"
+    },
+    "ähnlich": {
+      "ru": "похожий, подобный",
+      "pos": "прил."
+    },
+    "ändern": {
+      "ru": "менять, изменять",
+      "pos": "гл.",
+      "forms": "änderte · hat geändert"
+    },
+    "ängstlich": {
+      "ru": "боязливый, испуганно",
+      "pos": "прил."
+    },
+    "öfters": {
+      "ru": "нередко, частенько",
+      "pos": "нареч."
+    },
+    "über": {
+      "ru": "над, через, о",
+      "pos": "предл."
+    },
+    "überlegen": {
+      "ru": "обдумывать, размышлять",
+      "pos": "гл.",
+      "forms": "überlegte · hat überlegt"
+    },
+    "überschreiten": {
+      "ru": "переступать, пересекать",
+      "pos": "гл.",
+      "forms": "überschritt · hat überschritten"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "id": "kafka",
+  "title": "Vor dem Gesetz und andere Erzählungen",
+  "titleRu": "Перед Законом и другие рассказы",
+  "author": "Franz Kafka",
+  "level": "B2",
+  "year": 1915,
+  "chapters": 3,
+  "words": 1161,
+  "minutes": 9,
+  "cover": "🚪",
+  "source": "Первопечатки 1915 и 1931 гг., орфография приведена к современной норме",
+  "sourceUrl": "https://de.wikisource.org/wiki/Vor_dem_Gesetz",
+  "compared": "de.wikisource.org, вычитанные сканы: Selbstwehr, Jg. 9, Nr. 34, Prag, 7.09.1915, S. 2a-3 (Vor dem Gesetz); Beim Bau der Chinesischen Mauer, Gustav Kiepenheuer, Berlin 1931, S. 59 (Kleine Fabel) и S. 51-53 (Der Schlag ans Hoftor)",
+  "license": "public domain",
+  "yearNote": "1915 — год первой публикации «Vor dem Gesetz». «Kleine Fabel» (написана ок. 1920) и «Der Schlag ans Hoftor» напечатаны посмертно в 1931 г.; их заглавия даны издателями (Max Brod, H. J. Schoeps). Кафка умер в 1924 г. — все три текста в общественном достоянии.",
+  "levelNote": "B2, а не B1: длинные периоды с цепочками придаточных, Konjunktiv I косвенной речи (werde, könne, sei, solle), Präteritum сплошь, отглагольные обороты um … zu и причастные определения (der erstarrende Körper, die nach links sich wendende Landstraße).",
+  "normalized": [
+    "daß → dass (9)",
+    "Einlaß → Einlass (2)",
+    "läßt → lässt (1)",
+    "vergißt → vergisst (1)",
+    "muß → muss (1)",
+    "mußt → musst (1)",
+    "zu ungunsten → zu Ungunsten (1)",
+    "Steinfließen → Steinfliesen (1)",
+    "кавычки первопечатки „…“ приведены к »…«, как в остальных книгах читалки",
+    "запятая вынесена за закрывающую кавычку: „Es ist möglich,“ → »Es ist möglich«, (2)",
+    "добавлена запятая перед определительным придаточным: nach dem Hof an dem wir → nach dem Hof, an dem wir (1)",
+    "абзацное членение: «Vor dem Gesetz» в первопечатке идёт сплошным текстом — разбито на 6 абзацев; в «Kleine Fabel» тире смены говорящего заменено абзацным отбивом"
+  ],
+  "notNormalized": "Лексика, грамматика и порядок слов Кафки не тронуты: старый дательный с -e (zum Schlusse, in seinem Kopfe, vor seinem Tode, auf dem Wege, vom Lande), стяжённое andern, устаревшие tartarisch и Türe, книжное unverlöschlich. Устаревшее помечено полем old в glossary.w и glossary.l."
+}

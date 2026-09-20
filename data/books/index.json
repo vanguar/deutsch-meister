@@ -14,6 +14,20 @@
       "cover": "🐓",
       "source": "Projekt Gutenberg-DE",
       "license": "public domain"
+    },
+    {
+      "id": "kafka",
+      "title": "Vor dem Gesetz und andere Erzählungen",
+      "titleRu": "Перед Законом и другие рассказы",
+      "author": "Franz Kafka",
+      "level": "B2",
+      "year": 1915,
+      "chapters": 3,
+      "words": 1161,
+      "minutes": 9,
+      "cover": "🚪",
+      "source": "Первопечатки 1915 и 1931 гг. (de.wikisource.org)",
+      "license": "public domain"
     }
   ]
 }
