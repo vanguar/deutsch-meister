@@ -30,6 +30,21 @@
       "cover": "🚪",
       "source": "Первопечатки 1915 и 1931 гг. (de.wikisource.org)",
       "license": "public domain"
+    },
+    {
+      "id": "hebel",
+      "title": "Kannitverstan und andere Kalendergeschichten",
+      "titleRu": "Каннитферштан и другие календарные рассказы",
+      "blurb": "Немецкий подмастерье в Амстердаме на каждый свой вопрос слышит одно и то же слово — и принимает его за имя богатейшего человека города. Рядом ещё две притчи: отец с сыном и ослом, которым не угодить прохожим, и судья, ловящий лжеца на его же словах.",
+      "author": "Johann Peter Hebel",
+      "level": "B1",
+      "year": 1811,
+      "chapters": 3,
+      "words": 1502,
+      "minutes": 11,
+      "cover": "🪙",
+      "source": "Schatzkästlein des rheinischen Hausfreundes, 1811 (de.wikisource.org)",
+      "license": "public domain"
     }
   ]
 }

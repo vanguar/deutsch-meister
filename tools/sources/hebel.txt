@@ -1,0 +1,73 @@
+# Kannitverstan und andere Kalendergeschichten — Johann Peter Hebel
+# Исходники — вычитанные сканы de.wikisource, «Schatzkästlein des rheinischen
+# Hausfreundes», Cotta, Tübingen 1811:
+#   ch-01 Kannitverstan         — S. 162-165 (впервые: Der Rheinländische
+#                                 Hausfreund auf das Jahr 1809, Карлсруэ 1808)
+#   ch-02 Seltsamer Spazierritt — Schatzkästlein 1811
+#   ch-03 Der kluge Richter     — Schatzkästlein 1811
+# Хебель умер в 1826 году — все три текста в общественном достоянии.
+# Орфография приведена к современной норме. Список правок — data/books/hebel/meta.json.
+# Этот файл на прод НЕ уезжает: он вне data/.
+# Сборка: python scripts/build_book.py hebel
+
+# ch-01 | Kannitverstan | Каннитферштан
+
+Der Mensch hat wohl täglich Gelegenheit, in Emmendingen und Gundelfingen so gut als in Amsterdam Betrachtungen über den Unbestand aller irdischen Dinge anzustellen, wenn er will, und zufrieden zu werden mit seinem Schicksal, wenn auch nicht viel gebratene Tauben für ihn in der Luft herumfliegen. Aber auf dem seltsamsten Umweg kam ein deutscher Handwerksbursche in Amsterdam durch den Irrtum zur Wahrheit und zu ihrer Erkenntnis.
+
+Denn als er in diese große und reiche Handelsstadt, voll prächtiger Häuser, wogender Schiffe und geschäftiger Menschen, gekommen war, fiel ihm sogleich ein großes und schönes Haus in die Augen, wie er auf seiner ganzen Wanderschaft von Duttlingen bis nach Amsterdam noch keines erlebt hatte. Lange betrachtete er mit Verwunderung dies kostbare Gebäude, die sechs Kamine auf dem Dach, die schönen Gesimse und die hohen Fenster, größer als an des Vaters Haus daheim die Tür.
+
+Endlich konnte er sich nicht entbrechen, einen Vorübergehenden anzureden. »Guter Freund«, redete er ihn an, »könnt Ihr mir nicht sagen, wie der Herr heißt, dem dieses wunderschöne Haus gehört mit den Fenstern voll Tulipanen, Sternenblumen und Levkojen?« Der Mann aber, der vermutlich etwas Wichtigeres zu tun hatte und zum Unglück gerade so viel von der deutschen Sprache verstand als der Fragende von der holländischen, nämlich nichts, sagte kurz und schnauzig: »Kannitverstan!«, und schnurrte vorüber.
+
+Dies war ein holländisches Wort, oder drei, wenn man es recht betrachtet, und heißt auf Deutsch so viel als: Ich kann Euch nicht verstehn. Aber der gute Fremdling glaubte, es sei der Name des Mannes, nach dem er gefragt hatte. Das muss ein grundreicher Mann sein, der Herr Kannitverstan, dachte er, und ging weiter.
+
+Gass aus, Gass ein kam er endlich an den Meerbusen, der da heißt: Het Ey, oder auf Deutsch: das Ypsilon. Da stand nun Schiff an Schiff und Mastbaum an Mastbaum, und er wusste anfänglich nicht, wie er es mit seinen zwei einzigen Augen durchfechten werde, alle diese Merkwürdigkeiten genug zu sehen und zu betrachten, bis endlich ein großes Schiff seine Aufmerksamkeit an sich zog, das vor kurzem aus Ostindien angelangt war und jetzt eben ausgeladen wurde.
+
+Schon standen ganze Reihen von Kisten und Ballen auf- und nebeneinander am Lande. Noch immer wurden mehrere herausgewälzt, und Fässer voll Zucker und Kaffee, voll Reis und Pfeffer darunter. Als er aber lange zugesehen hatte, fragte er endlich einen, der eben eine Kiste auf der Achsel heraustrug, wie der glückliche Mann heiße, dem das Meer alle diese Waren an das Land bringe. »Kannitverstan!«, war die Antwort.
+
+Da dachte er: Haha, schaut es da heraus? Kein Wunder, wem das Meer solche Reichtümer an das Land schwemmt, der hat gut solche Häuser in die Welt stellen und solcherlei Tulipanen vor die Fenster in vergoldeten Scherben. Jetzt ging er wieder zurück und stellte eine recht traurige Betrachtung bei sich selbst an, was er für ein armer Mensch sei unter so viel reichen Leuten in der Welt.
+
+Aber als er eben dachte: Wenn ich es doch nur auch einmal so gut bekäme wie dieser Herr Kannitverstan es hat, kam er um eine Ecke und erblickte einen großen Leichenzug. Vier schwarz vermummte Pferde zogen einen ebenfalls schwarz überzogenen Leichenwagen langsam und traurig, als ob sie wüssten, dass sie einen Toten in seine Ruhe führten. Ein langer Zug von Freunden und Bekannten des Verstorbenen folgte nach, Paar und Paar, verhüllt in schwarze Mäntel und stumm. In der Ferne läutete ein einsames Glöcklein.
+
+Jetzt ergriff unsern Fremdling ein wehmütiges Gefühl, das an keinem guten Menschen vorübergeht, wenn er eine Leiche sieht, und blieb mit dem Hut in den Händen andächtig stehen, bis alles vorüber war. Doch machte er sich an den Letzten vom Zug, der eben in der Stille ausrechnete, was er an seiner Baumwolle gewinnen könnte, wenn der Zentner um zehn Gulden aufschlüge, ergriff ihn sachte am Mantel und bat ihn treuherzig um Exküse.
+
+»Das muss wohl auch ein guter Freund von Euch gewesen sein«, sagte er, »dem das Glöcklein läutet, dass Ihr so betrübt und nachdenklich mitgeht.« »Kannitverstan!«, war die Antwort. Da fielen unserm guten Duttlinger ein paar große Tränen aus den Augen, und es ward ihm auf einmal schwer und wieder leicht ums Herz.
+
+Armer Kannitverstan, rief er aus, was hast du nun von allem deinem Reichtum? Was ich einst von meiner Armut auch bekomme: ein Totenkleid und ein Leintuch, und von allen deinen schönen Blumen vielleicht einen Rosmarin auf die kalte Brust oder eine Raute.
+
+Mit diesen Gedanken begleitete er die Leiche, als wenn er dazu gehörte, bis ans Grab, sah den vermeinten Herrn Kannitverstan hinabsenken in seine Ruhestätte und ward von der holländischen Leichenpredigt, von der er kein Wort verstand, mehr gerührt als von mancher deutschen, auf die er nicht Acht gab.
+
+Endlich ging er leichten Herzens mit den andern wieder fort, verzehrte in einer Herberge, wo man Deutsch verstand, mit gutem Appetit ein Stück Limburger Käse, und wenn es ihm wieder einmal schwer fallen wollte, dass so viele Leute in der Welt so reich seien und er so arm, so dachte er nur an den Herrn Kannitverstan in Amsterdam, an sein großes Haus, an sein reiches Schiff und an sein enges Grab.
+
+# ch-02 | Seltsamer Spazierritt | Странная прогулка верхом
+
+Ein Mann reitet auf seinem Esel nach Haus und lässt seinen Buben zu Fuß nebenher laufen. Kommt ein Wanderer und sagt: »Das ist nicht recht, Vater, dass Ihr reitet und lasst Euern Sohn laufen; Ihr habt stärkere Glieder.« Da stieg der Vater vom Esel herab und ließ den Sohn reiten.
+
+Kommt wieder ein Wandersmann und sagt: »Das ist nicht recht, Bursche, dass du reitest und lässest deinen Vater zu Fuß gehen. Du hast jüngere Beine.« Da saßen beide auf und ritten eine Strecke.
+
+Kommt ein dritter Wandersmann und sagt: »Was ist das für ein Unverstand: zwei Kerle auf einem schwachen Tiere! Sollte man nicht einen Stock nehmen und euch beide hinabjagen?« Da stiegen beide ab und gingen selbdritt zu Fuß, rechts und links der Vater und Sohn und in der Mitte der Esel.
+
+Kommt ein vierter Wandersmann und sagt: »Ihr seid drei kuriose Gesellen. Ist es nicht genug, wenn zwei zu Fuß gehen? Geht es nicht leichter, wenn einer von euch reitet?« Da band der Vater dem Esel die vordern Beine zusammen, und der Sohn band ihm die hintern Beine zusammen, zogen einen starken Baumpfahl durch, der an der Straße stand, und trugen den Esel auf der Achsel heim.
+
+So weit kann es kommen, wenn man es allen Leuten will recht machen.
+
+# ch-03 | Der kluge Richter | Мудрый судья
+
+Dass nicht alles so uneben sei, was im Morgenlande geschieht, das haben wir schon einmal gehört. Auch folgende Begebenheit soll sich daselbst zugetragen haben.
+
+Ein reicher Mann hatte eine beträchtliche Geldsumme, welche in ein Tuch eingenäht war, aus Unvorsichtigkeit verloren. Er machte daher seinen Verlust bekannt und bot, wie man zu tun pflegt, dem ehrlichen Finder eine Belohnung an, und zwar von hundert Talern.
+
+Da kam bald ein guter und ehrlicher Mann dahergegangen. »Dein Geld habe ich gefunden. Dies wird es wohl sein! So nimm dein Eigentum zurück!« So sprach er mit dem heitern Blick eines ehrlichen Mannes und eines guten Gewissens, und das war schön.
+
+Der andere machte auch ein fröhliches Gesicht, aber nur, weil er sein verloren geschätztes Geld wieder hatte. Denn wie es um seine Ehrlichkeit aussah, das wird sich bald zeigen. Er zählte das Geld und dachte unterdessen geschwinde nach, wie er den treuen Finder um seine versprochene Belohnung bringen könnte.
+
+»Guter Freund«, sprach er hierauf, »es waren eigentlich achthundert Taler in dem Tuch eingenäht. Ich finde aber nur noch siebenhundert Taler. Ihr werdet also wohl eine Naht aufgetrennt und Eure hundert Taler Belohnung schon herausgenommen haben. Da habt Ihr wohl daran getan. Ich danke Euch.« Das war nicht schön.
+
+Aber wir sind auch noch nicht am Ende. Ehrlich währt am längsten, und Unrecht schlägt seinen eigenen Herrn. Der ehrliche Finder, dem es weniger um die hundert Taler als um seine unbescholtene Rechtschaffenheit zu tun war, versicherte, dass er das Päcklein so gefunden habe, wie er es bringe, und es so bringe, wie er es gefunden habe.
+
+Am Ende kamen sie vor den Richter. Beide bestunden auch hier noch auf ihrer Behauptung, der eine, dass achthundert Taler seien eingenäht gewesen, der andere, dass er von dem Gefundenen nichts genommen und das Päcklein nicht versehrt habe. Da war guter Rat teuer.
+
+Aber der kluge Richter, der die Ehrlichkeit des einen und die schlechte Gesinnung des andern zum Voraus zu kennen schien, griff die Sache so an: Er ließ sich von beiden über das, was sie aussagten, eine feste und feierliche Versicherung geben und tat hierauf folgenden Ausspruch.
+
+»Demnach, und wenn der eine von euch achthundert Taler verloren, der andere aber nur ein Päcklein mit siebenhundert Talern gefunden hat, so kann auch das Geld des Letztern nicht das nämliche sein, auf welches der Erstere ein Recht hat. Du, ehrlicher Freund, nimmst also das Geld, welches du gefunden hast, wieder zurück und behältst es in guter Verwahrung, bis der kommt, welcher nur siebenhundert Taler verloren hat. Und dir da weiß ich keinen Rat, als du geduldest dich, bis derjenige sich meldet, der deine achthundert Taler findet.«
+
+So sprach der Richter, und dabei blieb es.
