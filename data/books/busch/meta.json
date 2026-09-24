@@ -1,0 +1,33 @@
+{
+  "id": "busch",
+  "title": "Max und Moritz",
+  "titleRu": "Макс и Мориц",
+  "author": "Wilhelm Busch",
+  "level": "B1",
+  "year": 1865,
+  "chapters": 8,
+  "words": 2095,
+  "minutes": 16,
+  "cover": "🥨",
+  "verse": true,
+  "source": "Eine Bubengeschichte in sieben Streichen, Braun & Schneider, München 1865, орфография приведена к современной норме",
+  "sourceUrl": "https://de.wikisource.org/wiki/Max_und_Moritz",
+  "compared": "de.wikisource.org, вычитанный текст по «Wilhelm Busch. Historisch-kritische Gesamtausgabe», Bd. 1, S. 341 ff. (Hrsg. Friedrich Bohne, Vollmer, Wiesbaden 1960) — перепечатка первого издания, Braun & Schneider, München, конец октября 1865 г.",
+  "license": "public domain",
+  "yearNote": "1865 — год первого издания. Буш умер в 1908 г., текст в общественном достоянии.",
+  "levelNote": "B1, как у Гриммов и Хебеля, но трудности другие. Синтаксис короткий — четырёхстопный хорей держит фразу в две строки, — зато порядок слов подчинён рифме (инверсии, вынесенное вперёд дополнение, пропущенные глаголы: «Ob vermittelst seiner Pfeifen / Dieser Mann nicht anzugreifen»). Лексика густая и во многом устаревшая (Pfühle, Fidibus, Numro, Tobak, hienieden, von hinnen), плюс звукоподражания, которых нет ни в одном словаре (Ritzeratze, Schnupdiwup, Rickeracke), и две реплики на нижненемецком. Всё это закрыто подсказками: покрытие глоссария 100%.",
+  "verseNote": "Единица текста здесь — СТРОКА, а не предложение: и подсказка по тапу, и озвучка идут построчно, иначе двустишия склеились бы в прозу. Русский перевод намеренно построчный и буквальный, без рифмы: рифмованный увёл бы от немецкого слова, ради которого читалка и затевалась.",
+  "normalized": [
+    "daß → dass (8)",
+    "muß → muss (5)",
+    "Beschluß → Beschluss (1)",
+    "Tintenfaß → Tintenfass (1)",
+    "wußte → wusste (1)",
+    "faßt → fasst (2)",
+    "erfaßt → erfasst (1)",
+    "заглавные по современной норме: im stillen → im Stillen (1), das beste → das Beste (1)",
+    "кавычки первопечатки „…“ приведены к »…«, как в остальных книгах читалки",
+    "дефис в роли тире приведён к тире: в наборе 1865 г. и в сканах они не различены, а ридер переносит строку по дефису"
+  ],
+  "notNormalized": "Всё, что звучит, оставлено как у Буша: размер и рифма тут держат текст, и любая правка их ломает. Апокопы и стяжения (Müh’, Höh’, Ruh’, Freud’, Kist’, wär’, ist’s, man’s, sei’s, Ging’s, sollt’, welch’, Verstorb’nen, Bäckersleut’) не раскрыты — раскрытие добавляет слог; поэтому же оставлены Amtestätigkeiten вместо Amtstätigkeiten, zurechtemachen, Einstens, alsogleich, Fritzens, «aufs neu» и «in die Kreuz und in die Quer». Не тронута и лексика: Numro (Nummer), Tobak (Tabak), Pfühle, Fidibus, hienieden, von hinnen, perdü, Prise, Elle, Malter. Оставлены нижненемецкие реплики крестьянина («Dat Ding werd lichter», «Wat geiht meck dat an») и грамматически неправильное «Das kommt von dumme Witze» дядюшки Фрица: у Буша это речевая характеристика, а не опечатка. Оставлено и разорванное переносом ради рифмы слово «Mai- / Käfer». Устаревшее помечено полем old в glossary.w и glossary.l. Отдельно помечено слово Mohren в четвёртой проделке: в 1865 г. оно было нейтральным, сегодня оскорбительно и в свою речь не переносится."
+}

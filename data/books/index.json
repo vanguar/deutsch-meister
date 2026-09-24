@@ -45,6 +45,21 @@
       "cover": "🪙",
       "source": "Schatzkästlein, 1811 (de.wikisource.org)",
       "license": "public domain"
+    },
+    {
+      "id": "busch",
+      "title": "Max und Moritz",
+      "titleRu": "Макс и Мориц",
+      "blurb": "Два деревенских мальчишки разыгрывают всех подряд: топят кур вдовы Больте, подпиливают мостки портного, набивают порохом трубку учителя. Семь проделок — и седьмая для них последняя. Первая книга читалки в стихах.",
+      "author": "Wilhelm Busch",
+      "level": "B1",
+      "year": 1865,
+      "chapters": 8,
+      "words": 2095,
+      "minutes": 16,
+      "cover": "🥨",
+      "source": "Первое издание, Braun & Schneider, München 1865 (de.wikisource.org)",
+      "license": "public domain"
     }
   ]
 }

@@ -269,13 +269,20 @@ const Reader = (() => {
 
   function chapterHtml(ch, chapterIndex = st.chIndex) {
     const paras = Array.isArray(ch && ch.paragraphs) ? ch.paragraphs : [];
+    // В стихах предложение — это СТРОКА (так их собрал build_book.py),
+    // поэтому склеиваем их переносом, а не пробелом: иначе двустишия
+    // Буша слиплись бы в прозу. Разметка .bs/.bw та же, так что тап по
+    // слову, озвучка и сборник слов ничего не замечают.
+    const verse = !!(st.meta && st.meta.verse);
+    const glue = verse ? '<br>' : ' ';
+    const cls = verse ? 'rd-p rd-p--verse' : 'rd-p';
     const prose = paras.map((para, p) => {
       const sents = Array.isArray(para.s) ? para.s : [];
       const inner = sents.map((sent, s) => renderSentence(
         st.fullTranslation ? (sent.ru || sent.de || '') : (sent.de || ''),
         p, s, st.fullTranslation
-      )).join(' ');
-      return `<p class="rd-p">${inner}</p>`;
+      )).join(glue);
+      return `<p class="${cls}">${inner}</p>`;
     }).join('');
     return chapterOpening(ch || {}, chapterIndex) + prose;
   }

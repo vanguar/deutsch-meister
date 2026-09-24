@@ -20,6 +20,12 @@ build_book.py — сборка заготовок глав книги из ис�
     # ch-02 | Die Gefährten | Спутники
     ...
 
+Стихи: если в meta.json книги стоит "verse": true (или передан --verse),
+предложением считается СТРОКА исходника, а не кусок до точки. Иначе
+двустишия Буша склеились бы в прозу — с потерей и рифмы, и ритма, и
+переносов, ради которых у него половина шуток. Пустая строка по-прежнему
+разделяет абзацы (у стихов — строфы).
+
 Зачем отдельный шаг сборки: разбивка на предложения делается ОДИН РАЗ здесь,
 а не в рантайме читалки. В рантайме «z. B.», «Hr.», «usw.» и прямая речь
 вида „…?" ломают любой наивный сплит, а тут результат можно вычитать глазами
@@ -151,7 +157,12 @@ def split_sentences(par):
 # ══════════════════════════════════════════════════════
 
 def parse_source(text):
-    """→ [{'id','title','titleRu','paragraphs': [str, ...]}, ...]"""
+    """→ [{'id','title','titleRu','paragraphs': [[str, ...], ...]}, ...]
+
+    Абзац — список СТРОК исходника, а не склеенная строка: в стихах
+    строка и есть единица (см. verse в main), а в прозе строки всё
+    равно склеиваются обратно через пробел.
+    """
     chapters = []
     cur = None
     buf = []
@@ -159,10 +170,11 @@ def parse_source(text):
     def flush_par():
         if not buf:
             return
-        par = re.sub(r'\s+', ' ', ' '.join(buf)).strip()
+        lines = [re.sub(r'\s+', ' ', line).strip() for line in buf]
+        lines = [line for line in lines if line]
         del buf[:]
-        if par and cur is not None:
-            cur['paragraphs'].append(par)
+        if lines and cur is not None:
+            cur['paragraphs'].append(lines)
 
     for raw_line in text.splitlines():
         line = raw_line.strip()
@@ -185,6 +197,19 @@ def parse_source(text):
 
     flush_par()
     return chapters
+
+
+def is_verse(book_dir):
+    """Книга размечена как стихотворная? Источник правды — meta.json:
+    оттуда же про стихи узнаёт ридер, поэтому режим сборки нельзя забыть
+    передать флагом и молча получить другой результат."""
+    path = os.path.join(book_dir, 'meta.json')
+    if not os.path.isfile(path):
+        return False
+    try:
+        return bool(json.loads(read(path)).get('verse'))
+    except (ValueError, OSError):
+        return False
 
 
 def load_existing_ru(path):
@@ -213,6 +238,9 @@ def main():
     ap.add_argument('book_id', help='id книги, напр. bremer')
     ap.add_argument('--dry-run', action='store_true',
                     help='показать, что получится, ничего не записывать')
+    ap.add_argument('--verse', action='store_true',
+                    help='стихи: строка исходника = предложение '
+                         '(обычно берётся из "verse": true в meta.json)')
     args = ap.parse_args()
 
     src_path = os.path.join(BASE, 'tools', 'sources', args.book_id + '.txt')
@@ -221,6 +249,7 @@ def main():
         return 2
 
     out_dir = os.path.join(BASE, 'data', 'books', args.book_id)
+    verse = args.verse or is_verse(out_dir)
     chapters = parse_source(read(src_path))
     if not chapters:
         print('ОШИБКА: в исходнике нет ни одной главы', file=sys.stderr)
@@ -237,7 +266,11 @@ def main():
 
         paragraphs = []
         for par in ch['paragraphs']:
-            sentences = split_sentences(par)
+            # В стихах предложение = строка: резать Буша по точкам значило
+            # бы склеить двустишия в прозу и потерять и рифму, и ритм.
+            # В прозе строка исходника — просто перенос, склеиваем обратно.
+            sentences = par if verse else split_sentences(
+                re.sub(r'\s+', ' ', ' '.join(par)).strip())
             total_sent += len(sentences)
             paragraphs.append({'s': [{'de': s, 'ru': kept.get(s, '')} for s in sentences]})
             for s in sentences:
@@ -268,6 +301,8 @@ def main():
             f.write('\n'.join(lines) + '\n')
 
     mode = '[dry-run] ' if args.dry_run else ''
+    if verse:
+        print('\nРежим: стихи — строка исходника = предложение')
     print('\n%sГлав: %d, предложений: %d, слов: %d, уникальных токенов: %d'
           % (mode, len(chapters), total_sent, sum(freq.values()), len(freq)))
     print('%sЗаписано файлов глав: %d' % (mode, written))
