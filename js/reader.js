@@ -67,7 +67,15 @@ const Reader = (() => {
     system: "'DM Sans', sans-serif",
     serif:  "Georgia, 'Iowan Old Style', 'Times New Roman', serif"
   };
-  const DEFAULT_PREFS = { fs: 1, lh: 1, theme: 'system', margin: 1, font: 'system' };
+  // Какой русский показывать по кнопке 🇷🇺. 'plain' — дословный построчный,
+  // он есть у всех книг и остаётся основным: по нему видно, какое немецкое
+  // слово что значит. 'rhymed' — рифмованный, он есть только у стихов и
+  // только там, где мы его написали (поле rv у предложения).
+  const RU_STYLES = ['plain', 'rhymed'];
+
+  const DEFAULT_PREFS = {
+    fs: 1, lh: 1, theme: 'system', margin: 1, font: 'system', ruStyle: 'plain'
+  };
 
   const SHEET_ROWS = [
     { key: 'fs',     label: 'Размер шрифта',
@@ -80,8 +88,25 @@ const Reader = (() => {
     { key: 'margin', label: 'Поля',
       opts: [{ v: 0, text: 'Узкие' }, { v: 1, text: 'Средние' }, { v: 2, text: 'Широкие' }] },
     { key: 'font',   label: 'Шрифт',
-      opts: [{ v: 'system', text: 'Системный' }, { v: 'serif', text: 'Serif', cls: 'ff-serif' }] }
+      opts: [{ v: 'system', text: 'Системный' }, { v: 'serif', text: 'Serif', cls: 'ff-serif' }] },
+    // Только у книги с рифмованным переводом: у остальных выбирать не из чего,
+    // и лишняя строка в шторке врала бы, что выбор есть.
+    { key: 'ruStyle', label: 'Русский перевод', when: hasRhymed,
+      opts: [{ v: 'plain', text: 'Дословный' }, { v: 'rhymed', text: 'В рифму' }] }
   ];
+
+  function hasRhymed() {
+    return !!(st.meta && st.meta.rhymed);
+  }
+
+  // Текст предложения для режима полного перевода. Рифмованный берём только
+  // там, где он написан: книга может быть переведена в рифму не целиком, и
+  // тогда строка молча остаётся дословной — это честнее пустой строки.
+  function ruText(sent) {
+    const prefs = st.prefs || {};
+    if (prefs.ruStyle === 'rhymed' && sent && sent.rv) return sent.rv;
+    return (sent && sent.ru) || (sent && sent.de) || '';
+  }
 
   /* ── Состояние ── */
   const st = {
@@ -279,7 +304,7 @@ const Reader = (() => {
     const prose = paras.map((para, p) => {
       const sents = Array.isArray(para.s) ? para.s : [];
       const inner = sents.map((sent, s) => renderSentence(
-        st.fullTranslation ? (sent.ru || sent.de || '') : (sent.de || ''),
+        st.fullTranslation ? ruText(sent) : (sent.de || ''),
         p, s, st.fullTranslation
       )).join(glue);
       return `<p class="${cls}">${inner}</p>`;
@@ -378,7 +403,7 @@ const Reader = (() => {
   function geometryKey() {
     const p = st.prefs || {};
     return [st.width, st.height, st.gap, p.fs, p.lh, p.margin, p.font,
-            st.interlinear ? 1 : 0, st.fullTranslation ? 1 : 0].join('|');
+            p.ruStyle, st.interlinear ? 1 : 0, st.fullTranslation ? 1 : 0].join('|');
   }
 
   // force: после repaginate() пересчитываем всегда. Геометрия могла остаться
@@ -689,7 +714,8 @@ const Reader = (() => {
         lh:     clampIdx(p.lh,     LH_STEPS.length,     DEFAULT_PREFS.lh),
         margin: clampIdx(p.margin, MARGIN_STEPS.length, DEFAULT_PREFS.margin),
         theme:  THEMES.indexOf(p.theme) >= 0 ? p.theme : DEFAULT_PREFS.theme,
-        font:   FONTS[p.font] ? p.font : DEFAULT_PREFS.font
+        font:   FONTS[p.font] ? p.font : DEFAULT_PREFS.font,
+        ruStyle: RU_STYLES.indexOf(p.ruStyle) >= 0 ? p.ruStyle : DEFAULT_PREFS.ruStyle
       };
     } catch (e) {
       console.warn('[Reader] повреждённые настройки → значения по умолчанию', e);
@@ -734,12 +760,19 @@ const Reader = (() => {
 
   function setPref(key, value) {
     if (!st.prefs || !(key in st.prefs)) return;
-    const next = (key === 'theme' || key === 'font') ? String(value) : Number(value);
+    const strKey = (key === 'theme' || key === 'font' || key === 'ruStyle');
+    const next = strKey ? String(value) : Number(value);
     if (st.prefs[key] === next) return;
     st.prefs[key] = next;
     savePrefs();
     applyPrefs();
     markSheet();
+    // ruStyle меняет сам ТЕКСТ, а не геометрию: одной перепагинации мало,
+    // главу нужно перерисовать — как при переключении режима перевода.
+    if (key === 'ruStyle') {
+      if (st.open && st.chapter) redrawTranslationMode(copyAnchor());
+      return;
+    }
     afterPrefChange();
   }
 
@@ -847,7 +880,7 @@ const Reader = (() => {
 
   function buildSheet() {
     if (!elSheetBody) return;
-    elSheetBody.innerHTML = SHEET_ROWS.map(row => `
+    elSheetBody.innerHTML = SHEET_ROWS.filter(row => !row.when || row.when()).map(row => `
       <div class="rd-row">
         <div class="rd-row-label">${esc(row.label)}</div>
         <div class="rd-seg ${esc(row.segCls || '')}" role="group" aria-label="${esc(row.label)}">

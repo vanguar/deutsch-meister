@@ -212,8 +212,15 @@ def is_verse(book_dir):
         return False
 
 
+# Поля перевода, которые пересборка обязана донести до нового файла.
+# ru — дословный построчный, rv — рифмованный (только у стихов). Список,
+# а не одно поле ru: потерять рифмованный перевод на пересборке значило бы
+# выбросить работу, которую никакой скрипт не восстановит.
+TRANSLATION_FIELDS = ('ru', 'rv')
+
+
 def load_existing_ru(path):
-    """Карта {немецкое предложение: перевод} из уже существующей главы."""
+    """Карта {немецкое предложение: {поле: перевод}} из готовой главы."""
     if not os.path.isfile(path):
         return {}
     try:
@@ -223,9 +230,21 @@ def load_existing_ru(path):
     out = {}
     for par in data.get('paragraphs') or []:
         for s in par.get('s') or []:
-            de, ru = s.get('de'), s.get('ru')
-            if de and ru:
-                out[de] = ru
+            de = s.get('de')
+            if not de:
+                continue
+            kept = {f: s[f] for f in TRANSLATION_FIELDS if s.get(f)}
+            if kept:
+                out[de] = kept
+    return out
+
+
+def sentence(de, kept):
+    """Предложение главы: немецкий плюс все сохранённые переводы."""
+    out = {'de': de, 'ru': (kept or {}).get('ru', '')}
+    for field in TRANSLATION_FIELDS:
+        if field != 'ru' and (kept or {}).get(field):
+            out[field] = kept[field]
     return out
 
 
@@ -272,7 +291,7 @@ def main():
             sentences = par if verse else split_sentences(
                 re.sub(r'\s+', ' ', ' '.join(par)).strip())
             total_sent += len(sentences)
-            paragraphs.append({'s': [{'de': s, 'ru': kept.get(s, '')} for s in sentences]})
+            paragraphs.append({'s': [sentence(s, kept.get(s)) for s in sentences]})
             for s in sentences:
                 for tok in TOKEN_RE.findall(s):
                     key = tok.lower()
