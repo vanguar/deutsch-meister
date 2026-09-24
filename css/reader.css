@@ -770,6 +770,11 @@ body.rd-open { overflow: hidden; }
   color: var(--rd-strong);
   background: var(--rd-accent-soft);
 }
+/* Кнопка «в рифму» живёт в панели только у книги с рифмованным переводом
+   и гасится атрибутом hidden. Правило явное — на случай, если у кнопки
+   когда-нибудь появится display, который перебьёт браузерное [hidden]. */
+.rd-slot-btn[hidden] { display: none; }
+
 .rd-slot-btn:disabled {
   opacity: .45;
   cursor: not-allowed;
@@ -896,21 +901,27 @@ body.rd-open { overflow: hidden; }
   border-top: 1px solid var(--rd-border);
   border-radius: var(--r-xl) var(--r-xl) 0 0;
   box-shadow: var(--shadow-lg);
-  transform: translateY(100%);
+  /* --rd-sheet-drag — сдвиг под пальцем при свайпе вниз. Живёт внутри
+     transform, а не отдельным свойством, потому что у широкого экрана
+     шторка ещё и центрируется через translate(-50%): два трансформа на
+     один элемент не наложить, и палец обязан попасть в ту же формулу. */
+  transform: translateY(calc(100% + var(--rd-sheet-drag, 0px)));
   visibility: hidden;
   transition: transform var(--t-slow), visibility var(--t-slow);
 }
-.rd-sheet.show { transform: translateY(0); visibility: visible; }
+.rd-sheet.show { transform: translateY(var(--rd-sheet-drag, 0px)); visibility: visible; }
+/* Пока тянут пальцем — никакой анимации: она превратила бы жест в кисель. */
+.rd-sheet.is-dragging { transition: none; }
 
 @media (min-width: 720px) {
   .rd-sheet {
     left: 50%;
     right: auto;
     width: 460px;
-    transform: translate(-50%, 100%);
+    transform: translate(-50%, calc(100% + var(--rd-sheet-drag, 0px)));
     border-radius: var(--r-xl) var(--r-xl) 0 0;
   }
-  .rd-sheet.show { transform: translate(-50%, 0); }
+  .rd-sheet.show { transform: translate(-50%, var(--rd-sheet-drag, 0px)); }
 }
 
 .rd-sheet-grip {
@@ -919,6 +930,7 @@ body.rd-open { overflow: hidden; }
   margin: 0 auto 12px;
   border-radius: var(--r-full);
   background: var(--rd-border);
+  cursor: grab;
 }
 
 .rd-sheet-head {

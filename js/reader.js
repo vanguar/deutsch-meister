@@ -103,9 +103,21 @@ const Reader = (() => {
   // там, где он написан: книга может быть переведена в рифму не целиком, и
   // тогда строка молча остаётся дословной — это честнее пустой строки.
   function ruText(sent) {
-    const prefs = st.prefs || {};
-    if (prefs.ruStyle === 'rhymed' && sent && sent.rv) return sent.rv;
+    if (rhymeStyle() === 'rhymed' && sent && sent.rv) return sent.rv;
     return (sent && sent.ru) || (sent && sent.de) || '';
+  }
+
+  function rhymeStyle() {
+    return (st.prefs && st.prefs.ruStyle) || 'plain';
+  }
+
+  // Пишем через prefs, а не отдельным полем состояния: кнопка в панели и
+  // строка в шторке — два вида на одну настройку, разъехаться им нельзя.
+  function setRhymeStyle(value) {
+    if (!st.prefs || st.prefs.ruStyle === value) return;
+    st.prefs.ruStyle = value;
+    savePrefs();
+    markSheet();
   }
 
   /* ── Состояние ── */
@@ -143,7 +155,7 @@ const Reader = (() => {
       elTitle, elSub, elPages, elBar, elPrev, elNext,
       elSheet, elSheetBack, elSheetBody,
       elCardsBtn, elCardsN,
-      elSpeakBtn, elInterlinearBtn, elFullTranslationBtn;
+      elSpeakBtn, elInterlinearBtn, elFullTranslationBtn, elRhymeBtn;
 
   /* ── Утилиты ── */
 
@@ -626,6 +638,10 @@ const Reader = (() => {
         st.meta    = meta;
         st.gloss   = gloss;
         st.chTotal = Number(meta.chapters) || 1;
+        // Состав панели зависит от КНИГИ (кнопка «в рифму» есть не у всех),
+        // а open() успел отрисовать её до загрузки meta.json — обновляем,
+        // как только книга известна.
+        updateTranslationControls();
 
         // Все главы сразу: без них не сказать, сколько страниц в книге, а
         // счётчик внутри главы врал про общий объём. Главы маленькие, и
@@ -771,6 +787,9 @@ const Reader = (() => {
     // главу нужно перерисовать — как при переключении режима перевода.
     if (key === 'ruStyle') {
       if (st.open && st.chapter) redrawTranslationMode(copyAnchor());
+      // Кнопка «в рифму» показывает ту же настройку: переключили в шторке —
+      // подпись и нажатость на панели обязаны догнать.
+      updateTranslationControls();
       return;
     }
     afterPrefChange();
@@ -823,6 +842,20 @@ const Reader = (() => {
       if (label) label.textContent = st.fullTranslation ? 'немецкий' : 'перевод';
     }
 
+    if (elRhymeBtn) {
+      // Кнопка есть только у книги с рифмованным переводом: у прозы ей
+      // нечего показывать, а мёртвая кнопка в панели только путает.
+      elRhymeBtn.hidden = !hasRhymed();
+      const rhymeOn = st.fullTranslation && rhymeStyle() === 'rhymed';
+      elRhymeBtn.classList.toggle('is-active', rhymeOn);
+      elRhymeBtn.setAttribute('aria-pressed', rhymeOn ? 'true' : 'false');
+      elRhymeBtn.title = rhymeOn
+        ? 'Показать дословный перевод' : 'Показать перевод в рифму';
+      elRhymeBtn.setAttribute('aria-label', elRhymeBtn.title);
+      const label = elRhymeBtn.querySelector('.rd-btn-label');
+      if (label) label.textContent = rhymeOn ? 'дословно' : 'в рифму';
+    }
+
     if (elSpeakBtn) {
       elSpeakBtn.disabled = st.fullTranslation;
       elSpeakBtn.title = st.fullTranslation
@@ -853,6 +886,26 @@ const Reader = (() => {
     speakStop();
     st.fullTranslation = !st.fullTranslation;
     if (st.fullTranslation) st.interlinear = false;
+    redrawTranslationMode(anchor);
+    updateTranslationControls();
+  }
+
+  // Кнопка «в рифму» делает ОДИН понятный шаг: показывает рифмованный
+  // русский. Если читатель был на немецком, одной смены стиля мало — он бы
+  // не увидел ничего, поэтому заодно включаем полный перевод. Повторное
+  // нажатие возвращает дословный, не выкидывая из русского: выйти на
+  // немецкий — это 🇷🇺, и у каждой кнопки остаётся своё дело.
+  function toggleRhyme() {
+    if (!st.chapter || !hasRhymed()) return;
+    const anchor = copyAnchor();
+    tipClose();
+    speakStop();
+    const toRhymed = !(st.fullTranslation && rhymeStyle() === 'rhymed');
+    setRhymeStyle(toRhymed ? 'rhymed' : 'plain');
+    if (toRhymed && !st.fullTranslation) {
+      st.fullTranslation = true;
+      st.interlinear = false;
+    }
     redrawTranslationMode(anchor);
     updateTranslationControls();
   }
@@ -920,8 +973,57 @@ const Reader = (() => {
   function closeSheet() {
     if (!elSheet) return;
     st.sheet = false;
+    sheetDragReset();
     elSheet.classList.remove('show');
     elSheetBack.classList.remove('show');
+  }
+
+  /* ── Шторку можно смахнуть вниз ──────────────────────────────────────
+     Крестик остаётся, но тянуться до него на телефоне неудобно: шторка
+     внизу, палец уже там. Жест начинаем только если список не прокручен
+     (иначе свайп внутри длинного списка настроек закрывал бы шторку
+     вместо прокрутки) и не с кнопки — тап по настройке должен остаться
+     тапом. Сдвиг отдаём в CSS переменной: transform у шторки разный на
+     узком и широком экране, и JS не должен про это знать. */
+
+  const SHEET_DRAG_MIN  = 6;    // с какого сдвига это уже жест, а не дрожь
+  const SHEET_CLOSE_DY  = 70;   // дальше этого отпускание закрывает
+  let sheetDrag = null;
+
+  function sheetDragReset() {
+    sheetDrag = null;
+    if (!elSheet) return;
+    elSheet.classList.remove('is-dragging');
+    elSheet.style.removeProperty('--rd-sheet-drag');
+  }
+
+  function sheetDragStart(e) {
+    if (!st.sheet || !elSheet) return;
+    if (e.pointerType === 'mouse' && e.button !== 0) return;
+    if (elSheet.scrollTop > 0) return;
+    if (e.target.closest && e.target.closest('button')) return;
+    sheetDrag = { id: e.pointerId, y0: e.clientY, dy: 0, on: false };
+  }
+
+  function sheetDragMove(e) {
+    if (!sheetDrag || e.pointerId !== sheetDrag.id) return;
+    const dy = e.clientY - sheetDrag.y0;
+    if (!sheetDrag.on) {
+      if (dy < SHEET_DRAG_MIN) return;   // вверх шторка не тянется
+      sheetDrag.on = true;
+      elSheet.classList.add('is-dragging');
+      try { elSheet.setPointerCapture(e.pointerId); } catch (err) { /* не критично */ }
+    }
+    sheetDrag.dy = Math.max(0, dy);
+    elSheet.style.setProperty('--rd-sheet-drag', sheetDrag.dy + 'px');
+    if (e.cancelable) e.preventDefault();
+  }
+
+  function sheetDragEnd(e) {
+    if (!sheetDrag || (e && e.pointerId !== sheetDrag.id)) return;
+    const { dy, on } = sheetDrag;
+    sheetDragReset();
+    if (on && dy > SHEET_CLOSE_DY) closeSheet();
   }
 
   /* ── Тултип перевода (js/reader-tip.js) ── */
@@ -1496,6 +1598,7 @@ const Reader = (() => {
     elSpeakBtn     = document.getElementById('rdSpeakBtn');
     elInterlinearBtn = document.getElementById('rdInterlinearBtn');
     elFullTranslationBtn = document.getElementById('rdFullTranslationBtn');
+    elRhymeBtn     = document.getElementById('rdRhymeBtn');
     elSheet     = document.getElementById('rdSheet');
     elSheetBack = document.getElementById('rdSheetBack');
     elSheetBody = document.getElementById('rdSheetBody');
@@ -1511,8 +1614,13 @@ const Reader = (() => {
     elCardsBtn?.addEventListener('click', openCards);
     elInterlinearBtn?.addEventListener('click', toggleInterlinear);
     elFullTranslationBtn?.addEventListener('click', toggleFullTranslation);
+    elRhymeBtn?.addEventListener('click', toggleRhyme);
     document.getElementById('rdDictBtn')?.addEventListener('click', openDict);
     document.getElementById('rdSheetClose')?.addEventListener('click', closeSheet);
+    elSheet?.addEventListener('pointerdown', sheetDragStart);
+    elSheet?.addEventListener('pointermove', sheetDragMove, { passive: false });
+    elSheet?.addEventListener('pointerup', sheetDragEnd);
+    elSheet?.addEventListener('pointercancel', sheetDragEnd);
     elSheetBack?.addEventListener('click', closeSheet);
     elSheetBody?.addEventListener('click', e => {
       const btn = e.target.closest('button[data-pref]');

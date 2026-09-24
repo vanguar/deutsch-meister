@@ -12,13 +12,13 @@
   <link rel="apple-touch-icon" href="/deutsch-meister/icons/icon.svg">
   <link rel="icon" type="image/svg+xml" href="/deutsch-meister/icons/icon.svg">
 
-  <link rel="stylesheet" href="css/base.css?v=76">
+  <link rel="stylesheet" href="css/base.css?v=77">
   <!-- lesson.css — только ради класса .word-tip, который переиспользует ридер -->
-  <link rel="stylesheet" href="css/lesson.css?v=76">
+  <link rel="stylesheet" href="css/lesson.css?v=77">
   <!-- exercises.css — ради анимации переворота карточки (.flashcard,
        .card-face, .fc-dot): карточки книги переиспользуют её целиком -->
-  <link rel="stylesheet" href="css/exercises.css?v=76">
-  <link rel="stylesheet" href="css/reader.css?v=76">
+  <link rel="stylesheet" href="css/exercises.css?v=77">
+  <link rel="stylesheet" href="css/reader.css?v=77">
 </head>
 <body>
 
@@ -89,6 +89,11 @@
         <button class="rd-slot-btn" id="rdFullTranslationBtn" title="Показать художественный перевод"
           aria-label="Показать художественный перевод" aria-pressed="false"><span
           class="rd-btn-icon" aria-hidden="true">🇷🇺</span><span class="rd-btn-label">перевод</span></button>
+        <!-- Только у книги с рифмованным переводом (meta.rhymed). Скрыта
+             атрибутом hidden, показывает её js/reader.js при открытии книги. -->
+        <button class="rd-slot-btn" id="rdRhymeBtn" title="Показать перевод в рифму"
+          aria-label="Показать перевод в рифму" aria-pressed="false" hidden><span
+          class="rd-btn-icon" aria-hidden="true">🎵</span><span class="rd-btn-label">в рифму</span></button>
       </div>
       <button class="rd-nav-btn" id="rdNext">Вперёд ›</button>
     </div>
@@ -209,16 +214,16 @@
   </div>
 </section>
 
-<script src="js/sw-register.js?v=76"></script>
-<script src="js/tts.js?v=76"></script>
-<script src="js/library.js?v=76"></script>
-<script src="js/reader-words.js?v=76"></script>
-<script src="js/reader-speak.js?v=76"></script>
-<script src="js/reader-tip.js?v=76"></script>
-<script src="js/reader-cards.js?v=76"></script>
-<script src="js/reader-dict.js?v=76"></script>
-<script src="js/flashcards.js?v=76"></script>
-<script src="js/reader.js?v=76"></script>
+<script src="js/sw-register.js?v=77"></script>
+<script src="js/tts.js?v=77"></script>
+<script src="js/library.js?v=77"></script>
+<script src="js/reader-words.js?v=77"></script>
+<script src="js/reader-speak.js?v=77"></script>
+<script src="js/reader-tip.js?v=77"></script>
+<script src="js/reader-cards.js?v=77"></script>
+<script src="js/reader-dict.js?v=77"></script>
+<script src="js/flashcards.js?v=77"></script>
+<script src="js/reader.js?v=77"></script>
 <script>
   function initTheme() {
     let saved = 'dark';
