@@ -997,11 +997,22 @@ const Reader = (() => {
     elSheet.style.removeProperty('--rd-sheet-drag');
   }
 
+  // Тянуть можно за ручку и шапку: у них touch-action: none, и браузер не
+  // отнимает жест себе. По остальному телу шторки — только мышью и только
+  // когда список не прокручен: на тач-экране вертикальный свайп по
+  // прокручиваемой области принадлежит браузеру, он забирает его и присылает
+  // pointercancel. Именно поэтому шторка раньше дёргалась и вставала назад.
+  function sheetDragZone(target) {
+    return !!(target && target.closest &&
+      target.closest('.rd-sheet-grip, .rd-sheet-head'));
+  }
+
   function sheetDragStart(e) {
     if (!st.sheet || !elSheet) return;
     if (e.pointerType === 'mouse' && e.button !== 0) return;
-    if (elSheet.scrollTop > 0) return;
     if (e.target.closest && e.target.closest('button')) return;
+    if (!sheetDragZone(e.target) &&
+        (e.pointerType !== 'mouse' || elSheet.scrollTop > 0)) return;
     sheetDrag = { id: e.pointerId, y0: e.clientY, dy: 0, on: false };
   }
 
@@ -1621,6 +1632,11 @@ const Reader = (() => {
     elSheet?.addEventListener('pointermove', sheetDragMove, { passive: false });
     elSheet?.addEventListener('pointerup', sheetDragEnd);
     elSheet?.addEventListener('pointercancel', sheetDragEnd);
+    // Пока тянем — гасим системную прокрутку. touch-action на ручке закрывает
+    // основной случай, это страховка для краёв зоны захвата.
+    elSheet?.addEventListener('touchmove', e => {
+      if (sheetDrag && sheetDrag.on && e.cancelable) e.preventDefault();
+    }, { passive: false });
     elSheetBack?.addEventListener('click', closeSheet);
     elSheetBody?.addEventListener('click', e => {
       const btn = e.target.closest('button[data-pref]');
