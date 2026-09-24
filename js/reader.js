@@ -852,8 +852,10 @@ const Reader = (() => {
       elRhymeBtn.title = rhymeOn
         ? 'Показать дословный перевод' : 'Показать перевод в рифму';
       elRhymeBtn.setAttribute('aria-label', elRhymeBtn.title);
-      const label = elRhymeBtn.querySelector('.rd-btn-label');
-      if (label) label.textContent = rhymeOn ? 'дословно' : 'в рифму';
+      // Надпись не меняем: «рифма» — это ИМЯ кнопки, а не команда. Значок
+      // эмодзи тут не годится вовсе — рифму не нарисовать так, чтобы
+      // читатель понял без подписи, а на телефоне подписи скрыты.
+      // Включено или нет, видно по нажатому состоянию, как у 🔤 и 🇷🇺.
     }
 
     if (elSpeakBtn) {
