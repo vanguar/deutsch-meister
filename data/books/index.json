@@ -60,6 +60,21 @@
       "cover": "🥨",
       "source": "Первое издание, Braun & Schneider, München 1865 (de.wikisource.org)",
       "license": "public domain"
+    },
+    {
+      "id": "storm",
+      "title": "Der kleine Häwelmann",
+      "titleRu": "Маленький Хевельман",
+      "blurb": "Мальчику всё мало: сначала мать катает его кроватку по комнате, потом он поднимает парус из рубашки, выпрашивает у месяца луч и катится через спящий город, спящий лес и небо — пока не распугает звёзды и не останется в темноте один. Самая простая книга читалки.",
+      "author": "Theodor Storm",
+      "level": "A2–B1",
+      "year": 1851,
+      "chapters": 4,
+      "words": 1274,
+      "minutes": 10,
+      "cover": "🌙",
+      "source": "Sommergeschichten und Lieder, Duncker, Berlin 1851 (de.wikisource.org)",
+      "license": "public domain"
     }
   ]
 }

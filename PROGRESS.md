@@ -2212,3 +2212,87 @@ client-прямоугольников, и последний лежит уже �
 
 **После**: `python bump_version.py` → ?v=72 → 73, CACHE v87 → v88,
 71 файл из 72. Оба валидатора — 0 ошибок, 0 предупреждений.
+
+---
+
+## Пятая книга — «Der kleine Häwelmann» (Theodor Storm)
+
+Первая книга уровня **A2–B1**: до неё нижней ступенькой в библиотеке был
+B1 («Бременские музыканты»), и начинающему читателю входа не было вовсе.
+Сказка Storm'а 1849 года — сплошной Präteritum, короткие главные
+предложения на «und», и четыре рефрена, которые повторяют одно и то же
+слово по три-четыре раза («Junge, hast du noch nicht genug?», «Nein,
+mehr, mehr!», «Leuchte, alter Mond, leuchte!», «Die schlafen!»).
+
+**Источник.** Вычитанные сканы первопечатки: Theodor Storm,
+«Sommergeschichten und Lieder», Duncker, Berlin 1851, S. 24-30
+(`Seite:Theodor Storm Sommergeschichten und Lieder.djvu/32-38` на
+de.wikisource, статус вычитки «fertig»). Текст собран из страниц скриптом
+и сверен с оригиналом **пословно** через `difflib`: 1276 токенов
+первопечатки против 1274 наших, и весь диф — 28 намеренных правок
+орфографии, ни одного пропуска. Так проверять исходник дешевле, чем
+вычитывать глазами, и надёжнее.
+
+**Правки орфографии** (полный список — `data/books/storm/meta.json`):
+`daß → dass` (8), `Thiere → Tiere` (5), `mußte/wußte`, `Thür`,
+`Glockenthurme`, `Stadtthore`, `rothes`, `Maaßen`, `Haide`, `illuminire`,
+`über’s`, `Niemand`, `drei Mal → dreimal`, `herauf kam → heraufkam`.
+Набор 1851 года много ближе к норме, чем 1811-й у Хебеля, поэтому правки
+перечислены списками слов, а не правилами с примерами.
+
+**Три вмешательства крупнее орфографии** — все в `normalized`:
+
+1. **Прямая речь взята в »…«.** В первопечатке она не выделена ничем:
+   «Mutter, rief der kleine Häwelmann, ich will fahren!» идёт одним
+   потоком. Без кавычек читатель уровня A2 не видит, где кончается
+   рассказчик и начинается мальчик. Реплика, продолженная после вставки
+   автора, начинается с заглавной.
+2. **Абзацы.** У Storm их шесть, и третий — 669 слов подряд, от «Auf der
+   Straße war es ganz still» до «Da konnte er schwimmen lernen». На
+   странице ридера это глухая стена. Разбито по сменам сцены: стало 22.
+3. **Деление на главы наше** — у Storm сплошной текст без заголовков.
+   Границы взяты по трём просьбам Хевельмана: `Das Rollenbett` →
+   `Durch die Stadt` → `In den Wald` → `In den Himmel`.
+
+Лексика и грамматика не тронуты: `grade`, `dunkeln`, `des Nachts`,
+`des Nachmittags`, `all sein Lebetage`, `possierlich`, `Himmelbettstelle`,
+`kopfunter`, разговорное «und hast du nicht gesehen!» и девять старых
+дательных с -e (`im Walde`, `im Rollenbette`, `aus dem Meere`,
+`am Himmelsrande`, `in einem Eichbaume`, `zum Stadttore`, `zum Hause`,
+`auf dem Glockenturme`, `zum Walde`). Всё устаревшее помечено `old`.
+
+**Данные.** 4 главы, 22 абзаца, 67 предложений, 1274 слова, глоссарий
+392 словоформы / 302 леммы, покрытие 100 %. **238 словоформ и 178 лемм
+засеяны один в один из глоссариев четырёх прежних книг** скриптом — по
+первой книге, в которой словоформа встретилась; добрано 154.
+
+**Засев нельзя брать не глядя** — у Storm то же написание значит другое
+слово, и таких омографов нашлось девять:
+
+| словоформа | куда вела прежняя книга | что это у Storm |
+|---|---|---|
+| `backen` | `backen` «печь» | `die Backe` — *mit beiden Backen* |
+| `arm` | `arm` «бедный» | `der Arm` — *den Arm aus dem Bett* |
+| `dunkel` | `das Dunkel` «тьма» | прилагательное — *so dunkel* |
+| `quer` | `die Quere` | наречие — *kreuz und quer* |
+| `dritten` | `der Dritte` (субст. прил.) | числительное — *zum dritten Mal* |
+| `ihr` | `ihr` «вы» | дательный от `sie` — *wenn ihr der Arm …* |
+| `sein` | `sein` «быть» | притяжательное — *sein kleines Hemd* |
+| `mach` | — | `aufmachen` — *Mach mir die Tür auf!* |
+| `machten` | `machen` | `zumachen` — *machten die Augen zu* |
+
+Отдельно пришлось переписать **пометы `note`, приехавшие с засевом**: они
+ссылались на текст другой книги («da geht die Pfeife los» из Буша,
+«Reißaus genommen», «sah sich um»). Для читателя Storm'а это ложь про
+«в тексте». Заменены на оборот из этого текста или убраны совсем.
+
+**Аудит.** `scripts/audit_glossary.py storm` нашёл два огреха, которые
+`validate_books.py` увидеть не может: у `Eichbaum` помета `old` стояла
+и на словоформе, и на лемме (в тултипе — дубль), а `umherfahren` в этом
+тексте переходный («musste ihn umherfahren»), то есть перфект с `haben`,
+а не только `ist`. Оба поправлены.
+
+**После**: `python bump_version.py` → ?v=79 → 80, CACHE v94 → v95,
+71 файл из 72. Оба валидатора — 0 ошибок, 0 предупреждений. Файлы книги
+отдаются с локального сервера (200 по `index.json`, `meta.json`,
+`glossary.json`, `ch-01`, `ch-04`, `books.html`).
