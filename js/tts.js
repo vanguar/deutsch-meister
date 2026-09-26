@@ -1,6 +1,12 @@
 const TTS = (() => {
-  const VERSION = 'v21';
+  const VERSION = 'v22';
   const PROXY = 'https://deutsch-meister-puce.vercel.app/api/tts';
+
+  // Сколько ждём САМ звук до его начала: загрузку mp3 с прокси. Длина текста
+  // тут ни при чём — короткая фраза грузится столько же, сколько длинная, а
+  // на холодном прокси первый запрос доходил и за 3.4 с. Страховка из длины
+  // текста эту фазу покрывать не должна (см. newSession).
+  const NET_GRACE = 15000;
 
   let preferredVoice = null;
   let audio = null;
@@ -151,7 +157,24 @@ const TTS = (() => {
      старые вызовы (68 уроков) идут прежним путём.               */
 
   let activeSession = null;
+  // Ссылку на говорящий SpeechSynthesisUtterance держим снаружи: в Chrome
+  // собранный сборщиком мусора utterance обрывает речь на полуслове (объект
+  // ссылается только на свои же обработчики — цикл, и он собираем).
+  let activeUtterance = null;
   let endedHandler  = null;   // слушатель 'ended' на singleton <audio>
+
+  const EXT_MAX = 20;   // максимум секунд, которые страховка уступает звуку
+
+  // Играет ли звук ПРЯМО СЕЙЧАС — любым из трёх путей. Нужна только
+  // страховке: ей нельзя закрывать сессию под ещё звучащим словом.
+  function stillPlaying() {
+    try { if (window.speechSynthesis && window.speechSynthesis.speaking) return true; } catch (e) {}
+    if (currentSource) return true;   // Web Audio: обнуляется в onended/stop
+    try {
+      if (audio && audio.src && !audio.paused && !audio.ended) return true;
+    } catch (e) {}
+    return false;
+  }
 
   // На <audio> держим не больше одного нашего слушателя.
   // ses === null — снять любой, иначе снять только слушатель этой сессии.
@@ -176,9 +199,17 @@ const TTS = (() => {
       onEnd: (typeof onEnd === 'function') ? onEnd : null,
       // Базовая страховка из длины текста; ветки уточняют её по реальной
       // длительности, когда та известна (буфер Web Audio, <audio>.duration).
-      base: (300 + letterCount(text) * 70) * 1.6,
+      //
+      // Замеры Google TTS (de): 9 букв → 1.58 с, 27 → 2.4 с, 159 → 14.4 с,
+      // то есть ≈200 мс + 92 мс на букву. Прежние 70 мс × 1.6 давали на
+      // коротких фразах отрицательный запас (9 букв: страховка 1.49 с против
+      // 1.58 с звука) — таймер срабатывал посреди слова, очередь ридера шла
+      // дальше и обрывала фразу на полуслове. Берём 100 мс на букву × 2:
+      // запас ≈1.8× и на самой короткой фразе, и на самой длинной.
+      base: (500 + letterCount(text) * 100) * 2,
       done: false,
       timer: null,
+      ext: 0,        // сколько раз страховка уступила живому звуку
 
       finish(ok, reason) {
         if (ses.done) return;
@@ -200,10 +231,22 @@ const TTS = (() => {
         if (!ses.onEnd || ses.done) return;
         const wait = Math.max(ses.base, ms || 0);
         if (ses.timer) clearTimeout(ses.timer);
-        ses.timer = setTimeout(() => {
-          diag('⏱ событие завершения не пришло за ' + Math.round(wait) + 'мс → страховка');
+        const tick = () => {
+          // Обрывать ЖИВОЙ звук страховка не имеет права: в очереди ридера
+          // это ровно та осечка, из-за которой слово не доозвучивалось —
+          // следующий кусок стартовал и глушил ещё играющий. Пока источник
+          // играет, ждём дальше; но не бесконечно (EXT_MAX), иначе
+          // потерянное событие завершения подвесило бы очередь навсегда.
+          if (stillPlaying() && ses.ext < EXT_MAX) {
+            ses.ext++;
+            ses.timer = setTimeout(tick, 1000);
+            return;
+          }
+          diag('⏱ событие завершения не пришло за ' + Math.round(wait) +
+               'мс (+' + ses.ext + 'с) → страховка');
           ses.finish(true, 'timeout');
-        }, wait);
+        };
+        ses.timer = setTimeout(tick, wait);
       }
     };
     return ses;
@@ -214,6 +257,7 @@ const TTS = (() => {
     activeSession = null;
     hlClear();
     try { window.speechSynthesis?.cancel(); } catch (e) {}
+    activeUtterance = null;   // речь уже отменена — держать нечего
     try {
       if (currentSource) {
         currentSource.onended = null;
@@ -277,6 +321,12 @@ const TTS = (() => {
           .then(ab => new Promise((res, rej) => { c.decodeAudioData(ab, res, rej); }))
           .then(buf => { bufCache[key] = buf; return buf; });
     return get.then(buf => {
+      // Сессию уже закрыли (stop(), новый speak() или страховка), пока mp3
+      // ехал с прокси. Играть его теперь нельзя: звук лёг бы ПОВЕРХ уже
+      // начавшегося следующего куска, а ближайший stopCurrent() оборвал бы
+      // один из двух на полуслове. Буфер в кэше остался — второй раз эта
+      // фраза сыграет сразу.
+      if (ses && ses.done) { diag('буфер пришёл на закрытую сессию → не играем'); return; }
       if (c.state === 'suspended') { try { c.resume(); } catch (e) {} }
       const s = c.createBufferSource();
       currentSource = s;
@@ -332,7 +382,11 @@ const TTS = (() => {
         if (stale(my)) return;
         diag('▶ PLAYING (audio) #' + my);
         hlByDuration(spans, el.duration);
-        if (ses && isFinite(el.duration)) ses.arm(el.duration * 1000 * 1.6 + 500);
+        // Переармируем ВСЕГДА: в WebView el.duration к старту часто ещё NaN,
+        // и без этого страховка продолжала тикать с момента запроса, вместе с
+        // загрузкой, — звук обрывался в конце. Без длительности берём базовую
+        // оценку, но уже от начала звука.
+        if (ses) ses.arm(isFinite(el.duration) ? el.duration * 1000 * 1.6 + 500 : 0);
       };
       el.src = url;
       el.load();
@@ -376,7 +430,11 @@ const TTS = (() => {
 
     const ses = newSession(text, onEnd);
     activeSession = ses;
-    ses.arm(0);      // базовая страховка; ветки уточнят по длительности
+    // До старта звука ждём загрузку, а не «длину текста»: иначе медленный
+    // ответ прокси съедал страховку ещё до первого звука. Настоящий отказ
+    // источников закрывает сессию сам (no-audio), таймер тут — только от
+    // зависшего запроса. С началом звука ветки переармируют по длительности.
+    ses.arm(NET_GRACE);
     unlock();   // мы внутри пользовательского жеста (onclick) — разблокируем тут же
     diag('speak "' + text + '"\nplatform=' + platform() + ' inTG=' + inTelegram() +
          ' ctx=' + ((getCtx() || {}).state) + ' words=' + words + ' fb=' + delay);
@@ -402,7 +460,9 @@ const TTS = (() => {
         try { window.speechSynthesis.cancel(); } catch (e) {}
         speakAudio(text, spans, ses);
       };
-      u.onstart = () => { settled = true; };
+      // Речь пошла — страховку считаем от этого момента, а не от вызова:
+      // ожидание голоса в неё больше не входит.
+      u.onstart = () => { settled = true; ses.arm(0); };
       u.onend   = () => { if (!abandoned) ses.finish(true, 'end'); };
       u.onerror = (e) => {
         // Мы уже ушли на аудио-путь: этот error — эхо нашего же cancel()
@@ -417,6 +477,7 @@ const TTS = (() => {
         if (settled) { ses.finish(false, 'error'); return; }
         fb();
       };
+      activeUtterance = u;   // держим ссылку, пока говорит (см. выше)
       window.speechSynthesis.speak(u);
       setTimeout(fb, delay);
     } else {
