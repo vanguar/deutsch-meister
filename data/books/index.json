@@ -75,6 +75,21 @@
       "cover": "🌙",
       "source": "Sommergeschichten und Lieder, Duncker, Berlin 1851 (de.wikisource.org)",
       "license": "public domain"
+    },
+    {
+      "id": "kleist",
+      "title": "Das Bettelweib von Locarno und andere Anekdoten",
+      "titleRu": "Нищенка из Локарно и другие анекдоты",
+      "blurb": "Три газетных заметки о том, чего не бывает, а оно было. В пустой комнате каждую полночь кто-то невидимый встаёт с соломы и проходит за печку. Прусский рейтар посреди занятого французами села требует третий стакан водки. Старый офицер рассказывает три истории, в которые никто не верит, — и все три правда. Самая сложносочинённая книга ридера.",
+      "author": "Heinrich von Kleist",
+      "level": "B2",
+      "year": 1810,
+      "chapters": 11,
+      "words": 2749,
+      "minutes": 21,
+      "cover": "🕯️",
+      "source": "Berliner Abendblätter, 1810-1811 (de.wikisource.org, Bibliotheca Augustana)",
+      "license": "public domain"
     }
   ]
 }

@@ -1,0 +1,178 @@
+# Das Bettelweib von Locarno und andere Anekdoten — Heinrich von Kleist
+# Три текста из «Berliner Abendblätter», газеты, которую Клейст сам издавал
+# в Берлине с октября 1810 по март 1811 года:
+#   1. Das Bettelweib von Locarno — 10tes Blatt, 11. Oktober 1810, S. 39-42.
+#      Источник: вычитанные сканы первопечатки на de.wikisource
+#      (Seite:Berliner Abendblaetter 1810 039-042.jpg, статус «fertig»).
+#   2. Anekdote aus dem letzten preußischen Kriege — 6tes Blatt,
+#      6. Oktober 1810, S. 24-25. Источник: de.wikisource, статус «fertig»
+#      (по сканам на Commons и репринту VMA-Verlag, Wiesbaden 1980).
+#   3. Unwahrscheinliche Wahrhaftigkeiten — 1811, No. 8, 10. Januar 1811,
+#      S. 29-32. Источник: Bibliotheca Augustana (hs-augsburg.de) — тот же
+#      э-текст, на который как на основу ссылается и de.wikisource.
+# Клейст умер в 1811 году — всё в общественном достоянии.
+# Орфография приведена к современной норме, прямая речь взята в »…«.
+# Полный список правок — data/books/kleist/meta.json.
+# Деление на главы и абзацы наше: у Клейста заголовков нет, а абзац бывает
+# на 700 слов (вся «Anekdote» — один абзац).
+# Этот файл на прод НЕ уезжает: он вне data/.
+# Сборка: python scripts/build_book.py kleist
+
+# ch-01 | Das Bettelweib | Нищая старуха
+
+Am Fuße der Alpen, bei Locarno im oberen Italien, befand sich ein altes, einem Marchese gehöriges Schloss, das man jetzt, wenn man vom St. Gotthard kommt, in Schutt und Trümmern liegen sieht; ein Schloss, mit hohen und weitläufigen Zimmern, in deren einem einst, auf Stroh, das man ihr unterschüttete, eine alte, kranke Frau, die sich bettelnd vor der Tür eingefunden hatte, von der Hausfrau, aus Mitleiden, gebettet worden war.
+
+Der Marchese, der, bei der Rückkehr von der Jagd, zufällig in das Zimmer trat, wo er seine Büchse abzusetzen pflegte, befahl der Frau unwillig, aus dem Winkel, in welchem sie lag, aufzustehn, und sich hinter den Ofen zu verfügen. Die Frau, da sie sich erhob, glitschte mit der Krücke auf dem glatten Boden aus, und beschädigte sich auf eine gefährliche Weise das Kreuz; dergestalt, dass sie zwar noch mit unsäglicher Mühe aufstand, und quer, wie es ihr vorgeschrieben war, über das Zimmer ging: hinter den Ofen aber, unter Stöhnen und Ächzen, niedersank und verschied.
+
+
+# ch-02 | Der genuesische Ritter | Генуэзский рыцарь
+
+Mehrere Jahre darauf, da der Marchese, durch Krieg und Misswachs, in bedenkliche Vermögensumstände geraten war, fand sich ein genuesischer Ritter bei ihm ein, der das Schloss, seiner schönen Lage wegen, von ihm kaufen wollte. Der Marchese, dem viel an dem Handel gelegen war, gab seiner Frau auf, den Fremden in dem obenerwähnten, leerstehenden Zimmer, das sehr schön und bequem eingerichtet war, unterzubringen.
+
+Aber wie betreten war das Ehepaar, als der Ritter mitten in der Nacht, verstört und bleich, zu ihnen herunterkam, hoch und teuer versichernd, dass es in dem Zimmer spuke, indem etwas, das dem Blick unsichtbar gewesen, mit einem Geräusch, als ob es auf Stroh gelegen, im Zimmerwinkel aufgestanden, mit vernehmlichen Schritten, langsam und gebrechlich, quer über das Zimmer gegangen, und hinter dem Ofen, unter Stöhnen und Ächzen niedergesunken sei.
+
+Der Marchese erschrocken, er wusste selbst nicht recht warum, lachte den Ritter mit erkünstelter Heiterkeit aus, und sagte, er wolle sogleich aufstehen, und die Nacht, zu seiner Beruhigung, mit ihm in dem Zimmer zubringen. Doch der Ritter bat um die Gefälligkeit, ihm zu erlauben, dass er auf dem Lehnstuhl, in seinem Schlafzimmer übernachte; und als der Morgen kam, ließ er anspannen, empfahl sich und reiste ab.
+
+
+# ch-03 | Die Nacht des Marchese | Ночь маркиза
+
+Dieser Vorfall, der außerordentliches Aufsehen machte, schreckte, auf eine dem Marchese höchst unangenehme Weise, mehrere Käufer ab; dergestalt, dass, da sich unter seinem eigenen Hausgesinde, befremdend und unbegreiflich, das Gerücht erhob, dass es in dem Zimmer, zur Mitternachtstunde, umgehe, er, um es, mit einem kurzen Verfahren, niederzuschlagen, beschloss, die Sache in der nächsten Nacht selbst zu untersuchen. Demnach ließ er, beim Einbruch der Dämmerung, sein Bett in dem besagten Zimmer aufschlagen, und erharrte, ohne zu schlafen, die Mitternacht.
+
+Aber wie erschüttert war er, als er in der Tat, mit dem Schlage der Geisterstunde, das unbegreifliche Geräusch wahrnahm; es war, als ob ein Mensch sich von Stroh, das unter ihm knisterte, erhob, quer über das Zimmer ging, und hinter dem Ofen, unter Geseufz und Geröchel niedersank.
+
+Die Marquise, am andern Morgen, da er herunterkam, fragte ihn, wie die Untersuchung abgelaufen; und da er sich, mit scheuen und ungewissen Blicken, umsah, und, nachdem er die Tür verriegelt, versicherte, dass es mit dem Spuk seine Richtigkeit habe: so erschrak sie, wie sie in ihrem Leben nicht getan, und bat ihn, bevor er die Sache verlauten ließe, sie noch einmal, in ihrer Gesellschaft, einer kaltblütigen Prüfung zu unterwerfen. Sie hörten aber samt einen treuen Bedienten, den sie mitgenommen hatten, in der Tat, in der nächsten Nacht, dasselbe unbegreifliche, gespensterartige Geräusch; und nur der dringende Wunsch, das Schloss, es koste was es wolle, loszuwerden, vermochte sie, das Entsetzen, das sie griff, in Gegenwart ihres Dieners, zu unterdrücken, und dem Vorfall irgend eine gleichgültige und zufällige Ursache, die sich entdecken lassen müsse, unterzuschieben.
+
+
+# ch-04 | Der Hund | Пёс
+
+Am Abend des dritten Tages, da beide, um der Sache auf den Grund zu kommen, mit Herzklopfen wieder die Treppe zu dem Fremdenzimmer bestiegen, fand sich zufällig der Haushund, den man von der Kette losgelassen hatte, vor der Tür desselben ein; dergestalt, dass die Marquise, in der unwillkürlichen Absicht, außer ihrem Mann noch etwas Drittes, Lebendiges, bei sich zu haben, den Hund mit sich ins Zimmer nahm.
+
+Das Ehepaar, zwei Lichter auf dem Tisch, die Marquise unausgezogen, der Marchese Degen und Pistolen, die er aus dem Schrank genommen, neben sich, setzen sich, gegen eilf Uhr, jeder auf sein Bett; und während sie sich mit Gesprächen, so gut es sein kann, zu unterhalten suchen, legt sich der Hund, Kopf und Beine zusammengekauert, in der Mitte des Zimmers nieder, und schläft ein.
+
+Drauf, in dem Augenblick der Mitternacht, lässt sich das entsetzliche Geräusch wieder hören; jemand, den kein Mensch mit Augen sehen kann, hebt sich, auf Krücken, im Zimmerwinkel empor; man hört das Stroh, das unter ihm rauscht; und mit dem ersten Schritt: tapp! tapp! erwacht der Hund, hebt sich plötzlich, die Ohren spitzend, vom Boden empor, und knurrend und bellend, grad’ als ob ein Mensch auf ihn eingeschritten käme, rückwärts gegen den Ofen, weicht er aus.
+
+Bei diesem Anblick stürzt die Marquise, mit sträubenden Haaren, aus dem Zimmer; und während der Marchese, der den Degen ergriffen: werda? ruft, und da ihm niemand antwortet, gleich einem Rasenden, nach allen Richtungen, die Luft durchhaut, lässt sie den Wagen anspannen, in der Absicht, um nach der Stadt zu fahren. Aber ehe sie noch aus dem Tor gerasselt, sieht sie schon das Schloss ringsum in Flammen aufgehen.
+
+Der Marchese, von Entsetzen überreizt, hatte eine brennende Kerze genommen, und es an allen vier Ecken, müde seines Lebens, angesteckt. Vergebens schickte sie Leute hinein, den Unglücklichen zu retten; er war, auf die elendiglichste Weise bereits umgekommen, und noch jetzt liegen, von den Landleuten zusammengetragen, seine weißen Gebeine in dem Winkel des Zimmers, von welchem er, als er von der Jagd kam, das Bettelweib hatte aufstehen heißen.
+
+
+# ch-05 | Ein Glas Branntewein | Стакан водки
+
+In einem bei Jena liegenden Dorf, erzählte mir, auf einer Reise nach Frankfurt, der Gastwirt, dass sich mehrere Stunden nach der Schlacht, um die Zeit, da das Dorf schon ganz von der Armee des Prinzen von Hohenlohe verlassen und von Franzosen, die es für besetzt gehalten, umringt gewesen wäre, ein einzelner preußischer Reiter darin gezeigt hätte; und versicherte mir, dass wenn alle Soldaten, die an diesem Tage mitgefochten, so tapfer gewesen wären, wie dieser, die Franzosen hätten geschlagen werden müssen, wären sie auch noch dreimal stärker gewesen, als sie in der Tat waren.
+
+Dieser Kerl, sprach der Wirt, sprengte, ganz von Staub bedeckt, vor meinen Gasthof, und rief: »Herr Wirt!« und da ich frage: was gibt’s? »ein Glas Branntewein!« antwortet er, indem er sein Schwert in die Scheide wirft: »mich dürstet.«
+
+Gott im Himmel! sag’ ich: will er machen, Freund, dass er wegkömmt? Die Franzosen sind ja dicht vor dem Dorf! »Ei, was!« spricht er, indem er dem Pferde den Zügel über den Hals legt. »Ich habe den ganzen Tag nichts genossen!«
+
+Nun er ist, glaub’ ich, vom Satan besessen –! He! Liese! rief ich, und schaff’ ihm eine Flasche Danziger herbei, und sage: da! und will ihm die ganze Flasche in die Hand drücken, damit er nur reite. »Ach, was!« spricht er, indem er die Flasche wegstößt, und sich den Hut abnimmt: »wo soll ich mit dem Quark hin?«
+
+Und: »schenk’ er ein!« spricht er, indem er sich den Schweiß von der Stirn abtrocknet: »denn ich habe keine Zeit!«
+
+Nun er ist ein Kind des Todes, sag’ ich. Da! sag’ ich, und schenk’ ihm ein; da! trink’ er und reit’ er! Wohl mag’s ihm bekommen: »Noch Eins!« spricht der Kerl; während die Schüsse schon von allen Seiten ins Dorf prasseln.
+
+Ich sage: noch Eins? Plagt ihn –! »Noch Eins!« spricht er, und streckt mir das Glas hin – »Und gut gemessen« spricht er, indem er sich den Bart wischt, und sich vom Pferde herab schnäuzt: »denn es wird bar bezahlt!«
+
+Ei, mein Seel, so wollt ich doch, dass ihn –! Da! sag’ ich, und schenk’ ihm noch, wie er verlangt, ein Zweites, und schenk’ ihm, da er getrunken, noch ein Drittes ein, und frage: ist er nun zufrieden?
+
+
+# ch-06 | Bassa Manelka | «Басса манелка»
+
+»Ach!« – schüttelt sich der Kerl. »Der Schnaps ist gut! – Na!« spricht er, und setzt sich den Hut auf: »was bin ich schuldig?«
+
+Nichts! nichts! versetz’ ich. Pack’ er sich, ins Teufelsnamen; die Franzosen ziehen augenblicklich ins Dorf!
+
+»Na!« sagt er, indem er in seinen Stiefel greift: »so solls ihm Gott lohnen,« und holt, aus dem Stiefel, einen Pfeifenstummel hervor, und spricht, nachdem er den Kopf ausgeblasen: »schaff’ er mir Feuer!«
+
+Feuer? sag’ ich: plagt ihn –? »Feuer, ja!« spricht er: »denn ich will mir eine Pfeife Tabak anmachen.«
+
+Ei, den Kerl reiten Legionen –! He, Liese, ruf ich das Mädchen! und während der Kerl sich die Pfeife stopft, schafft das Mensch ihm Feuer.
+
+»Na!« sagt der Kerl, die Pfeife, die er sich angeschmaucht, im Maul: »nun sollen doch die Franzosen die Schwerenot kriegen!«
+
+Und damit, indem er sich den Hut in die Augen drückt, und zum Zügel greift, wendet er das Pferd und zieht von Leder.
+
+Ein Mordkerl! sag’ ich; ein verfluchter, verwetterter Galgenstrick! Will er sich ins Henkers Namen scheren, wo er hingehört? Drei Chasseurs – sieht er nicht? halten ja schon vor dem Tor?
+
+»Ei was!« spricht er, indem er ausspuckt; und fasst die drei Kerls blitzend ins Auge. »Wenn ihrer zehen wären, ich fürcht mich nicht.«
+
+Und in dem Augenblick reiten auch die drei Franzosen schon ins Dorf.
+
+»Bassa Manelka!« ruft der Kerl, und gibt seinem Pferde die Sporen und sprengt auf sie ein; sprengt, so wahr Gott lebt, auf sie ein, und greift sie, als ob er das ganze Hohenlohische Corps hinter sich hätte, an; dergestalt, dass, da die Chasseurs, ungewiss, ob nicht noch mehr Deutsche im Dorf sein mögen, einen Augenblick, wider ihre Gewohnheit, stutzen, er, mein Seel’, ehe man noch eine Hand umkehrt, alle drei vom Sattel haut, die Pferde, die auf dem Platz herumlaufen, aufgreift, damit bei mir vorbeisprengt, und: »Bassa Teremtetem!« ruft, und: »Sieht er wohl, Herr Wirt?« und »Adies!« und »auf Wiedersehn!« und: »hoho! hoho! hoho!« – –
+
+So einen Kerl, sprach der Wirt, habe ich Zeit meines Lebens nicht gesehen.
+
+
+# ch-07 | Drei Geschichten | Три истории
+
+»Drei Geschichten«, sagte ein alter Offizier in einer Gesellschaft, »sind von der Art, dass ich ihnen zwar selbst vollkommenen Glauben beimesse, gleichwohl aber Gefahr liefe, für einen Windbeutel gehalten zu werden, wenn ich sie erzählen wollte. Denn die Leute fordern, als erste Bedingung, von der Wahrheit, dass sie wahrscheinlich sei; und doch ist die Wahrscheinlichkeit, wie die Erfahrung lehrt, nicht immer auf Seiten der Wahrheit.«
+
+Erzählen Sie, riefen einige Mitglieder, erzählen Sie! – denn man kannte den Offizier als einen heitern und schätzenswürdigen Mann, der sich der Lüge niemals schuldig machte.
+
+Der Offizier sagte lachend, er wolle der Gesellschaft den Gefallen tun; erklärte aber noch einmal im Voraus, dass er auf den Glauben derselben, in diesem besonderen Fall, keinen Anspruch mache.
+
+Die Gesellschaft dagegen sagte ihm denselben im Voraus zu; sie forderte ihn nur auf, zu reden, und horchte.
+
+
+# ch-08 | Der Prellschuss | Пуля, обошедшая тело
+
+»Auf einem Marsch 1792 in der Rheincampagne«, begann der Offizier, »bemerkte ich, nach einem Gefecht, das wir mit dem Feinde gehabt hatten, einen Soldaten, der stramm, mit Gewehr und Gepäck, in Reih und Glied ging, obschon er einen Schuss mitten durch die Brust hatte; wenigstens sah man das Loch vorn im Riemen der Patrontasche, wo die Kugel eingeschlagen hatte, und hinten ein anderes im Rock, wo sie wieder herausgegangen war. Die Offiziere, die ihren Augen bei diesem seltsamen Anblick nicht trauten, forderten ihn zu wiederholten Malen auf, hinter die Front zu treten und sich verbinden zu lassen; aber der Mensch versicherte, dass er gar keine Schmerzen habe, und bat, ihn, um dieses Prellschusses willen, wie er es nannte, nicht von dem Regiment zu entfernen.
+
+»Abends, da wir ins Lager gerückt waren, untersuchte der herbeigerufene Chirurgus seine Wunde; und fand, dass die Kugel vom Brustknochen, den sie nicht Kraft genug gehabt, zu durchschlagen, zurückgeprellt, zwischen der Rippe und der Haut, welche auf elastische Weise nachgegeben, um den ganzen Leib herumgeglitscht, und hinten, da sie sich am Ende des Rückgrats gestoßen, zu ihrer ersten senkrechten Richtung zurückgekehrt, und aus der Haut wieder hervorgebrochen war.
+
+»Auch zog diese kleine Fleischwunde dem Kranken nichts als ein Wundfieber zu: und wenige Tage verflossen, so stand er wieder in Reih und Glied.«
+
+Wie? fragten einige Mitglieder der Gesellschaft betroffen, und glaubten, sie hätten nicht recht gehört.
+
+Die Kugel? Um den ganzen Leib herum? Im Kreise? – – Die Gesellschaft hatte Mühe, ein Gelächter zu unterdrücken.
+
+»Das war die erste Geschichte«, sagte der Offizier, indem er eine Prise Tabak nahm, und schwieg.
+
+Beim Himmel! platzte ein Landedelmann los: da haben Sie recht; diese Geschichte ist von der Art, dass man sie nicht glaubt!
+
+
+# ch-09 | Der Steinbruch bei Königstein | Каменоломня под Кёнигштайном
+
+»Eilf Jahre darauf«, sprach der Offizier, »im Jahr 1803, befand ich mich, mit einem Freunde, in dem Flecken Königstein in Sachsen, in dessen Nähe, wie bekannt, etwa auf eine halbe Stunde, am Rande des äußerst steilen, vielleicht dreihundert Fuß hohen, Elbufers, ein beträchtlicher Steinbruch ist.
+
+»Die Arbeiter pflegen, bei großen Blöcken, wenn sie mit Werkzeugen nicht mehr hinzukommen können, feste Körper, besonders Pfeifenstiele, in den Riss zu werfen, und überlassen der, keilförmig wirkenden, Gewalt dieser kleinen Körper das Geschäft, den Block völlig von dem Felsen abzulösen.
+
+»Es traf sich, dass, eben um diese Zeit, ein ungeheurer, mehrere tausend Kubikfuß messender, Block zum Fall auf die Fläche des Elbufers, in dem Steinbruch, bereit war; und da dieser Augenblick, wegen des sonderbar im Gebirge widerhallenden Donners, und mancher andern, aus der Erschütterung des Erdreichs hervorgehender Erscheinungen, die man nicht berechnen kann, merkwürdig ist: so begaben, unter vielen andern Einwohnern der Stadt, auch wir uns, mein Freund und ich, täglich Abends nach dem Steinbruch hinaus, um den Moment, da der Block fallen würde, zu erhaschen.
+
+»Der Block fiel aber in der Mittagsstunde, da wir eben, im Gasthof zu Königstein, an der Tafel saßen; und erst um 5 Uhr gegen Abend hatten wir Zeit, hinaus zu spazieren, und uns nach den Umständen, unter denen er gefallen war, zu erkundigen.
+
+
+# ch-10 | Der Kahn auf dem Trocknen | Барка на суше
+
+»Was aber war die Wirkung dieses seines Falls gewesen? Zuvörderst muss man wissen, dass, zwischen der Felswand des Steinbruchs und dem Bette der Elbe, noch ein beträchtlicher, etwa 50 Fuß in der Breite haltender Erdstrich befindlich war; dergestalt, dass der Block (welches hier wichtig ist) nicht unmittelbar ins Wasser der Elbe, sondern auf die sandige Fläche dieses Erdstrichs gefallen war.
+
+»Ein Elbkahn, meine Herren, das war die Wirkung dieses Falls gewesen, war, durch den Druck der Luft, der dadurch verursacht worden, aufs Trockne gesetzt worden; ein Kahn, der, etwa 60 Fuß lang und 30 breit, schwer mit Holz beladen, am andern, entgegengesetzten, Ufer der Elbe lag: diese Augen haben ihn im Sande – was sag’ ich? sie haben, am anderen Tage, noch die Arbeiter gesehen, welche, mit Hebeln und Walzen, bemüht waren, ihn wieder flottzumachen, und ihn, vom Ufer herab, wieder ins Wasser zu schaffen.
+
+»Es ist wahrscheinlich, dass die ganze Elbe (die Oberfläche derselben) einen Augenblick ausgetreten, auf das andere flache Ufer übergeschwappt und den Kahn, als einen festen Körper, daselbst zurückgelassen; etwa wie, auf dem Rande eines flachen Gefäßes, ein Stück Holz zurückbleibt, wenn das Wasser, auf welchem es schwimmt, erschüttert wird.«
+
+Und der Block, fragte die Gesellschaft, fiel nicht ins Wasser der Elbe?
+
+Der Offizier wiederholte: nein!
+
+Seltsam! rief die Gesellschaft.
+
+Der Landedelmann meinte, dass er die Geschichten, die seinen Satz belegen sollten, gut zu wählen wüsste.
+
+
+# ch-11 | Der Fahnenjunker | Знаменосец
+
+»Die dritte Geschichte«, fuhr der Offizier fort, »trug sich zu, im Freiheitskriege der Niederländer, bei der Belagerung von Antwerpen durch den Herzog von Parma. Der Herzog hatte die Schelde, vermittelst einer Schiffsbrücke, gesperrt, und die Antwerpner arbeiteten ihrerseits, unter Anleitung eines geschickten Italieners, daran, dieselbe durch Brander, die sie gegen die Brücke losließen, in die Luft zu sprengen.
+
+»In dem Augenblick, meine Herren, da die Fahrzeuge die Schelde herab, gegen die Brücke, anschwimmen, steht, das merken Sie wohl, ein Fahnenjunker, auf dem linken Ufer der Schelde, dicht neben dem Herzog von Parma; jetzt, verstehen Sie, jetzt geschieht die Explosion: und der Junker, Haut und Haar, samt Fahne und Gepäck, und ohne dass ihm das Mindeste auf dieser Reise zugestoßen, steht auf dem rechten.
+
+»Und die Schelde ist hier, wie Sie wissen werden, einen kleinen Kanonenschuss breit.«
+
+»Haben Sie verstanden?«
+
+Himmel, Tod und Teufel! rief der Landedelmann.
+
+Dixi! sprach der Offizier, nahm Stock und Hut und ging weg.
+
+Herr Hauptmann! riefen die andern lachend: Herr Hauptmann! – Sie wollten wenigstens die Quelle dieser abenteuerlichen Geschichte, die er für wahr ausgab, wissen.
+
+Lassen Sie ihn, sprach ein Mitglied der Gesellschaft; die Geschichte steht in dem Anhang zu Schillers Geschichte vom Abfall der vereinigten Niederlande; und der Verfasser bemerkt ausdrücklich, dass ein Dichter von diesem Faktum keinen Gebrauch machen könne, der Geschichtsschreiber aber, wegen der Unverwerflichkeit der Quellen und der Übereinstimmung der Zeugnisse, genötigt sei, dasselbe aufzunehmen.
+
