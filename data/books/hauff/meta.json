@@ -1,0 +1,30 @@
+{
+  "id": "hauff",
+  "title": "Die Geschichte von Kalif Storch",
+  "titleRu": "История о калифе-аисте",
+  "author": "Wilhelm Hauff",
+  "level": "B1–B2",
+  "year": 1826,
+  "chapters": 5,
+  "words": 3568,
+  "minutes": 27,
+  "cover": "🦉",
+  "source": "W. Hauffs Werke, Bd. II (Hrsg. Max Mendheim), Bibliographisches Institut, Leipzig und Wien 1891-1909, S. 72-82, орфография приведена к современной норме",
+  "sourceUrl": "https://de.wikisource.org/wiki/Die_Geschichte_von_Kalif_Storch",
+  "compared": "Вычитанные сканы на de.wikisource: Seite:De Wilhelm Hauff Bd 2 038-043.jpg, статус вычитки «fertig», pagequality 4. Текст собран из шести страниц скриптом и сверен с источником пословно через difflib: 3573 токена источника против 3573 наших, весь диф — 104 намеренные правки орфографии, ни одного пропуска. ВАЖНО: это не первопечатка 1826 года, а вычитанное научное издание конца XIX века — его орфография уже частично подновлена издателем (например, mitteilen вместо mittheilen), а остальное мы правили сами.",
+  "license": "public domain",
+  "yearNote": "1826 — год «Märchen-Almanach auf das Jahr 1826», в котором сказка вышла внутри рамочной повести «Die Karawane»; написана она в 1825 году, альманах печатался к новому году. Хауф умер в 1827-м, в двадцать пять лет. Год в каталоге читалки относится к изданию, по которому сказка известна; текст же сверен по изданию Мендхайма 1891-1909 гг. — других вычитанных сканов этой сказки нет.",
+  "levelNote": "B1–B2, новая ступенька: до неё в библиотеке были B1 (Гриммы, Хебель, Буш) и B2 (Кафка, Клейст), а между ними ничего. Трудность здесь не синтаксическая, как у Клейста, а объёмная: это первая книга читалки с настоящим сюжетом на пять частей, который надо удержать в голове — порошок, превращение, запрет смеяться, забытое слово, сова, условие, подслушанный пир, развязка. Фраза длинная, но прозрачная: сплошной Präteritum, сочинение через und и обычные придаточные с dass/als/wenn. Выше B1 поднимают Konjunktiv I косвенной речи (wo er schon oft viele Tiere gesehen habe, dass er der Kalif sei), Konjunktiv II предположений (wer hätte einem Storchen geglaubt?, würden die Einwohner einen Storchen zum Kalifen gewollt haben?) и придворная вежливость 1826 года: обращение Ihr вместо Sie (Ihr habt einen hübschen Schnabel, Nehmet es nicht ungütig, Eure Hoheit), формулы danke untertänigst, danke gehorsamst, gnädigster Herr und Gebieter. Лексика восточной сказки (Kalif, Großwesir, Moschee, Sklave, Prophet) и шутливые аистиные прозвища (Frau Langbein, Klapperschnabel, Langfüßler) закрыты подсказками: покрытие глоссария 100%.",
+  "normalizedNote": "Текст не перенабирался руками: он взят из вычитанных сканов и правился списком пословных правил, а потом сверен с источником токен за токеном через difflib — в дифе ровно те замены, что перечислены ниже.",
+  "normalized": [
+    "ß по современной норме: daß → dass (20 раз), Schloß → Schloss (2), entschloß → entschloss, faßte → fasste, gewiß → gewiss, Haß → Hass, häßlich → hässlich, laß’ → lass’ и Laß → Lass, müßte → müsste, riß → riss, wußte → wusste, wußten → wussten, wüßte → wüsste",
+    "th → t: Thüre → Türe (4 раза), Thränen → Tränen (3), gethan → getan, Thale → Tale, that → tat, Thaten → Taten, Thor → Tor, Thore → Tore, thäten → täten, thöricht → töricht, unterthänigst → untertänigst",
+    "eu → äu по правилу 1996 года: Greuel → Gräuel",
+    "Prinzeß → Prinzess: правка только по правилу ß → ss; сама форма оставлена и помечена old в glossary.w, потому что сегодня нормой стало Prinzessin (так же пишет и сам Хауф в других местах сказки)",
+    "прямая речь взята в »…«, как в остальных книгах читалки: в источнике она в „…“, а вложенная — в ‚…‘; вложенная приведена к ›…‹ (123 знака кавычек)",
+    "абзацы: разбиты два абзаца крупнее 250 слов — на 258 и на 437 токенов. Границы — по сменам сцены и говорящего; у Хауфа внутри них по пять-семь смен подряд, и на экране телефона такой абзац превращается в стену текста",
+    "номера страниц первопечатки убраны (9 штук), а разрывы страниц, разорвавшие абзац на два (3 штуки), склеены пробелом: иначе фраза «Selim fing an zu übersetzen: »Mensch, der du dieses findest,» срастается с продолжением «preise Allah für seine Gnade!» в разные абзацы",
+    "деление на главы НЕ наше: пять частей, пронумерованных римскими цифрами I-V, сделал сам Хауф. Цифры убраны из текста и стали границами глав; заголовки частей наши — у Хауфа только цифры"
+  ],
+  "notNormalized": "Лексика, грамматика и порядок слов Хауфа не тронуты. Оставлено и помечено old в glossary.w: старое слабое склонение einen Storchen, dem Storchen (сегодня den Storch), вариант der Kalife рядом с der Kalif, старые дательные с -e (im Tale, über ihrem Haupte), старый претерит ward (wurde) и hub an (hob an), schwur (schwor), старая форма 2 л. ед. ч. du lachest (du lachst), Konjunktiv I du seiest (du seist), написания hieher (hierher), schrieen (schrien), kreuzweis (kreuzweise), усечённое Eidechs (die Eidechse) и апокопы живой речи lass’, guck’, heiß’. Оставлены формы вежливого Ihr, которые сегодня заменились бы на Sie: Ihr habt, Ihr könnet, Ihr könntet, Nehmet, Eure Hoheit, mit Eurer Erlaubnis — на них в глоссарии отдельные пометы. Оставлены устаревшие и книжные слова: Gemach, Gemäuer, leutselig, gravitätisch, töricht, sehnlich, indes, drunten, schmausen, wandeln, getreu, Backenstreich, а рядом с ними шутливое Langfüßler, уменьшительные Froschschenkelein и Viertelchen и придуманное Хауфом Storchisch «по-аистиному». Оставлены и восточные формулы: Beim Bart des Propheten, Potz Mekka und Medina, Dein Wille geschehe, preise Allah für seine Gnade."
+}

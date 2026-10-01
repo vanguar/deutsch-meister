@@ -90,6 +90,21 @@
       "cover": "🕯️",
       "source": "Berliner Abendblätter, 1810-1811 (de.wikisource.org, Bibliotheca Augustana)",
       "license": "public domain"
+    },
+    {
+      "id": "hauff",
+      "title": "Die Geschichte von Kalif Storch",
+      "titleRu": "История о калифе-аисте",
+      "blurb": "Восточная сказка с сюжетом на пять частей. Калиф Багдада покупает у разносчика табакерку с порошком: понюхай, скажи «mutabor» — и станешь любым зверем и поймёшь звериную речь. Одно условие: не смеяться, иначе слово забудется. Калиф с визирем смеются и остаются аистами. Самая большая книга ридера.",
+      "author": "Wilhelm Hauff",
+      "level": "B1–B2",
+      "year": 1826,
+      "chapters": 5,
+      "words": 3568,
+      "minutes": 27,
+      "cover": "🦉",
+      "source": "W. Hauffs Werke, Bd. II, Leipzig und Wien 1891-1909 (de.wikisource.org)",
+      "license": "public domain"
     }
   ]
 }
