@@ -98,6 +98,22 @@ const LessonRender = (() => {
   ];
 
   /* ── Helpers ── */
+  /* Линейные SVG-иконки (цвет = currentColor) для шапки урока и подсказок */
+  const svg = body => `<svg class="ico" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${body}</svg>`;
+  const ICONS = {
+    level:   svg('<path d="M5 20v-5M12 20V10M19 20V4"/>'),
+    clock:   svg('<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>'),
+    book:    svg('<path d="M2 4h6a4 4 0 0 1 4 4v13a3 3 0 0 0-3-3H2z"/><path d="M22 4h-6a4 4 0 0 0-4 4v13a3 3 0 0 1 3-3h7z"/>'),
+    speaker: svg('<path d="M11 5 6 9H2v6h4l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M19 5a10 10 0 0 1 0 14"/>'),
+  };
+
+  function pluralRu(n, one, few, many) {
+    const m10 = n % 10, m100 = n % 100;
+    if (m10 === 1 && m100 !== 11) return one;
+    if (m10 >= 2 && m10 <= 4 && (m100 < 12 || m100 > 14)) return few;
+    return many;
+  }
+
   function esc(str) {
     return String(str)
       .replace(/&/g,'&amp;').replace(/</g,'&lt;')
@@ -1873,17 +1889,20 @@ Kraft|сила|Существительное|in Kraft treten — вступат
     return `
       <span class="word-tip" role="tooltip">
         <span class="word-tip-kicker">${esc(kind)}</span>
-        <span class="word-tip-title">${esc(title)}</span>
+        <span class="word-tip-head">
+          <span class="word-tip-title">${esc(title)}</span>
+          <button class="word-tip-play" type="button" data-say="${esc(word)}" aria-label="Озвучить слово" title="Озвучить">${ICONS.speaker}</button>
+        </span>
         ${translation ? `<span class="word-tip-ru">${esc(translation)}</span>` : ''}
         ${details.length ? `<span class="word-tip-meta">${details.map(esc).join('<br>')}</span>` : ''}
         ${conjugations.length ? `<span class="word-tip-conj">${conjugations.map(esc).join('<br>')}</span>` : ''}
-      </span>`;
+      </span>`.trim(); // без ведущего пробела: иначе он виден как пробел после слова
   }
 
   function renderWord(word, phrase = {}) {
     const tip = renderWordTip(word);
     const classes = `word-speak${tip ? ' word-has-tip' : ''}`;
-    return `<span class="${classes}" tabindex="0" onclick="event.stopPropagation();speak('${jsStr(word)}')">${esc(word)}<span class="wi">🔊</span>${tip}</span>`;
+    return `<span class="${classes}" tabindex="0" onclick="event.stopPropagation();speak('${jsStr(word)}')">${esc(word)}${tip}</span>`;
   }
 
   function wordTipTarget(target) {
@@ -1982,12 +2001,21 @@ Kraft|сила|Существительное|in Kraft treten — вступат
     if (document.documentElement.dataset.dmWordTipsReady === '1') return;
     document.documentElement.dataset.dmWordTipsReady = '1';
 
+    // Внутри открытой подсказки: кнопка «озвучить» и наведение не закрывают её
+    const inOpenTip = target => !!(activeWordTip && target?.closest && activeWordTip.tip.contains(target));
+
     document.addEventListener('mouseover', event => {
+      if (inOpenTip(event.target)) { clearTimeout(wordTipCloseTimer); return; }
       const el = wordTipTarget(event.target);
       if (el) openWordTip(el);
     }, true);
 
     document.addEventListener('mouseout', event => {
+      if (inOpenTip(event.target)) {
+        if (wordTipPinned || activeWordTip.tip.contains(event.relatedTarget) || activeWordTip.el.contains(event.relatedTarget)) return;
+        wordTipCloseTimer = setTimeout(() => closeWordTips(), 120);
+        return;
+      }
       const el = wordTipTarget(event.target);
       if (!el || el.contains(event.relatedTarget)) return;
       if (wordTipPinned || activeWordTip?.el !== el) return;
@@ -1995,6 +2023,12 @@ Kraft|сила|Существительное|in Kraft treten — вступат
     }, true);
 
     document.addEventListener('click', event => {
+      if (inOpenTip(event.target)) {
+        const play = event.target.closest('.word-tip-play');
+        if (play && typeof speak === 'function') speak(play.dataset.say);
+        wordTipPinned = true;
+        return;
+      }
       const el = wordTipTarget(event.target);
       if (el) {
         openWordTip(el, true);
@@ -2004,6 +2038,7 @@ Kraft|сила|Существительное|in Kraft treten — вступат
     }, true);
 
     document.addEventListener('touchstart', event => {
+      if (inOpenTip(event.target)) return;
       const el = wordTipTarget(event.target);
       if (el) {
         openWordTip(el, true);
@@ -2119,15 +2154,13 @@ Kraft|сила|Существительное|in Kraft treten — вступат
     titleEl.textContent = LESSON_DATA.title;
 
     if (metaEl) {
+      const words = LESSON_DATA.vocabulary?.length || 0;
+      const duration = String(LESSON_DATA.meta?.duration || '').replace(/\s*мин\.?$/, '');
       metaEl.innerHTML = `
-        <span class="badge badge-violet">🎯 ${esc(LESSON_DATA.level)}</span>
-        <span class="badge badge-gold">⏱ ${esc(LESSON_DATA.meta?.duration || '')}</span>
-        <span class="badge badge-green">📚 ${LESSON_DATA.vocabulary?.length || 0} слов</span>
-        <button id="themeToggle" onclick="toggleTheme()" title="Сменить тему"
-          style="margin-left:auto;background:var(--surface3);border:1px solid var(--border);
-                 border-radius:var(--r-full);padding:5px 12px;font-size:16px;cursor:pointer">
-          ${(localStorage.getItem('dm_theme')||'dark')==='dark'?'☀️':'🌙'}
-        </button>
+        <span class="meta-chip meta-chip-level" title="Уровень">${ICONS.level}${esc(LESSON_DATA.level)}</span>
+        ${duration ? `<span class="meta-chip" title="Время на урок">${ICONS.clock}${esc(duration)}<small>мин</small></span>` : ''}
+        <span class="meta-chip" title="Слов в уроке">${ICONS.book}${words}<small>${pluralRu(words, 'слово', 'слова', 'слов')}</small></span>
+        <button id="themeToggle" class="theme-toggle" onclick="toggleTheme()" title="Сменить тему">${(localStorage.getItem('dm_theme')||'dark')==='dark'?'☀️':'🌙'}</button>
       `;
     }
   }

@@ -324,12 +324,8 @@ const Progress = (() => {
     if (!meta) return;   // not on a lesson page
 
     const badge = document.createElement('span');
-    badge.className = 'badge section-progress-badge';
+    badge.className = 'meta-chip section-progress-badge';
     badge.id = 'sectionProgressBadge';
-    badge.style.cssText = [
-      'cursor:help',
-      'transition:all .25s ease'
-    ].join(';');
     badge.title = 'Кликни, чтобы посмотреть прогресс по урокам';
 
     // Insert before the theme-toggle button (which is pushed to the right)
@@ -358,24 +354,17 @@ const Progress = (() => {
 
     const done  = _doneSections.size;
     const total = REQUIRED_SECTIONS.length;
-    el.textContent = `✅ ${done}/${total} секций`;
-
-    if (done === total) {
-      // All sections finished — gold accent
-      el.style.background  = 'rgba(255,193,7,.15)';
-      el.style.borderColor = 'rgba(255,193,7,.4)';
-      el.style.color       = '#f9a825';
-    } else if (done > 0) {
-      // In-progress — green
-      el.style.background  = 'rgba(120,200,110,.1)';
-      el.style.borderColor = 'rgba(120,200,110,.3)';
-      el.style.color       = '#4caf50';
-    } else {
-      // Nothing done yet — neutral grey
-      el.style.background  = 'rgba(150,150,150,.08)';
-      el.style.borderColor = 'rgba(150,150,150,.25)';
-      el.style.color       = '#888';
-    }
+    // Мини-кольцо прогресса: длина окружности r=8 ≈ 50.27
+    const C = 50.27;
+    const dash = total ? (C * done / total).toFixed(2) : 0;
+    el.innerHTML =
+      '<svg class="ico ring" viewBox="0 0 20 20" width="16" height="16" aria-hidden="true">' +
+        '<circle cx="10" cy="10" r="8" fill="none" stroke="currentColor" stroke-width="2.5" opacity=".22"/>' +
+        '<circle cx="10" cy="10" r="8" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"' +
+        ' stroke-dasharray="' + dash + ' ' + C + '" transform="rotate(-90 10 10)"/>' +
+      '</svg>' + done + '/' + total + '<small>секций</small>';
+    el.classList.toggle('is-done', done === total);
+    el.classList.toggle('is-progress', done > 0 && done < total);
   }
 
   /* ════════════════════════════════════

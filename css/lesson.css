@@ -57,10 +57,72 @@
 .lesson-meta {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 8px;
   align-items: center;
   padding: 14px 0;
 }
+
+/* ── Чипы в шапке урока (уровень, время, слова, прогресс) ── */
+.meta-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 30px;
+  padding: 0 11px 0 9px;
+  border-radius: 10px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+  white-space: nowrap;
+  transition: background var(--t-fast), color var(--t-fast), border-color var(--t-fast);
+}
+.meta-chip small {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+.meta-chip .ico {
+  flex: none;
+  color: var(--accent2);
+}
+.meta-chip-level {
+  border-color: transparent;
+  background: linear-gradient(135deg, var(--accent2), color-mix(in srgb, var(--accent2) 60%, #c56cf0));
+  color: #fff;
+  letter-spacing: .4px;
+  box-shadow: 0 4px 14px color-mix(in srgb, var(--accent2) 30%, transparent);
+}
+.meta-chip-level .ico { color: rgba(255,255,255,.85); }
+.section-progress-badge { cursor: pointer; }
+.section-progress-badge .ico { color: var(--text-dim); }
+.section-progress-badge.is-progress .ico { color: var(--green); }
+.section-progress-badge.is-done {
+  background: color-mix(in srgb, var(--green) 14%, var(--surface2));
+  border-color: color-mix(in srgb, var(--green) 40%, var(--border));
+}
+.section-progress-badge.is-done .ico { color: var(--green); }
+.ring circle { transition: stroke-dasharray var(--t-slow); }
+
+.theme-toggle {
+  margin-left: auto;
+  display: inline-grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+  transition: background var(--t-fast), transform var(--t-fast);
+}
+.theme-toggle:hover { background: var(--surface3); }
+.theme-toggle:active { transform: scale(.92); }
 
 /* ── Lesson Progress Bar (thin line under header) ── */
 .lesson-progress-bar {
@@ -146,13 +208,17 @@
 .phrase-de {
   font-size: 16px;
   font-weight: 600;
+  line-height: 1.55;
   color: var(--text-strong);
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 5px;
   cursor: pointer;
   transition: color var(--t-fast);
+}
+/* Слова фразы — обычный текст: естественные пробелы, знаки препинания
+   не отрываются от слова на новую строку */
+.phrase-de .word-speak,
+.phrase-de .word-has-tip {
+  display: inline;
+  border-radius: 4px;
 }
 .phrase-de:hover { color: var(--accent); }
 
@@ -220,6 +286,7 @@
 .word-tip.word-tip-visible {
   opacity: 1;
   visibility: visible;
+  pointer-events: auto;
   transform: translateY(0) scale(1);
 }
 
@@ -235,6 +302,30 @@
   border-top-color: transparent;
   border-bottom-color: color-mix(in srgb, var(--surface) 94%, #000 6%);
 }
+
+.word-tip-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.word-tip-play {
+  flex: none;
+  display: inline-grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  margin: -4px -6px -4px 0;
+  border: none;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--accent2) 16%, transparent);
+  color: var(--accent2);
+  cursor: pointer;
+  transition: background var(--t-fast), transform var(--t-fast);
+}
+.word-tip-play:hover { background: color-mix(in srgb, var(--accent2) 26%, transparent); }
+.word-tip-play:active { transform: scale(.92); }
+.word-tip-play .ico { width: 17px; height: 17px; }
 
 .word-tip-kicker,
 .word-tip-title,
