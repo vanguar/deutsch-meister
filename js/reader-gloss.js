@@ -113,17 +113,20 @@ const ReaderGloss = (() => {
       if (el.dataset.glTo && bs) {
         const last = bs.querySelector(`.bw[data-w="${el.dataset.glTo}"]`);
         const lr = last && rectOf(last, base);
-        // скобку и общий центр даём только сочетанию на одной строке
+        // скобку и общий центр даём только сочетанию на одной строке;
+        // разорванное переносом строки подписываем над последним словом:
+        // первым обычно стоит короткий предлог в самом конце строки
         if (lr && Math.abs(lr.t - r.t) < 2 && lr.l > r.l) it.span = { l: r.l, r: lr.r };
+        else if (lr && lr.t > r.t + 2) it.r = lr;
       }
       if (el.dataset.glLink && bs) {
         const part = bs.querySelector(`.bw[data-w="${el.dataset.glLink}"]`);
         const pr = part && rectOf(part, base);
         if (pr && Math.abs(pr.t - r.t) < 2) it.link = pr;
       }
-      it.cx = it.span ? (it.span.l + it.span.r) / 2 : (r.l + r.r) / 2;
-      it.col = Math.floor((r.l + 1) / geo.step);
-      it.key = it.col + ':' + Math.round(r.t);
+      it.cx = it.span ? (it.span.l + it.span.r) / 2 : (it.r.l + it.r.r) / 2;
+      it.col = Math.floor((it.r.l + 1) / geo.step);
+      it.key = it.col + ':' + Math.round(it.r.t);
       it.w0 = w;
       items.push(it);
     });
@@ -173,6 +176,20 @@ const ReaderGloss = (() => {
         it.x = prev ? Math.min(Math.max(it.ideal, prev.x + prev.w + GAP), hi - it.w) : it.ideal;
         low.push(it);
       });
+      // У правого края колонки клампинг мог наложить подписи друг на друга:
+      // сдвигаем ряд влево, сколько позволяет место, потом снова вправо.
+      const pack = row => {
+        row.sort((a, b) => a.x - b.x);
+        for (let i = row.length - 1; i >= 0; i--) {
+          const lim = i === row.length - 1 ? hi - row[i].w : row[i + 1].x - GAP - row[i].w;
+          if (row[i].x > lim) row[i].x = Math.max(lo, lim);
+        }
+        for (let i = 1; i < row.length; i++) {
+          const min = row[i - 1].x + row[i - 1].w + GAP;
+          if (row[i].x < min) row[i].x = min;
+        }
+      };
+      pack(low); pack(high);
       // черта из верхнего ряда не должна резать подпись нижнего
       high.forEach(u => low.forEach((b, i) => {
         if (u.cx > b.x - 3 && u.cx < b.x + b.w + 3) {
