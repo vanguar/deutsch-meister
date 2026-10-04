@@ -107,22 +107,42 @@ const ReaderGloss = (() => {
     heads.forEach(el => {
       const r = rectOf(el, base);
       if (!r) return;
-      const it = { el, r, ru: el.dataset.ru, span: null, link: null };
+      const it = { el, r, ru: el.dataset.ru, span: null, link: null, brackets: [], head: r };
       const bs = el.closest('.bs');
       const w = Number(el.dataset.w);
       if (el.dataset.glTo && bs) {
-        const last = bs.querySelector(`.bw[data-w="${el.dataset.glTo}"]`);
-        const lr = last && rectOf(last, base);
-        // скобку и общий центр даём только сочетанию на одной строке;
-        // разорванное переносом строки подписываем над последним словом:
-        // первым обычно стоит короткий предлог в самом конце строки
-        if (lr && Math.abs(lr.t - r.t) < 2 && lr.l > r.l) it.span = { l: r.l, r: lr.r };
-        else if (lr && lr.t > r.t + 2) it.r = lr;
+        // Сочетание может разорвать конец строки (или колонки). Скобку
+        // рисуем над каждой частью, а подпись ставим над самой широкой:
+        // в начале обычно короткий предлог в конце строки.
+        const to = Number(el.dataset.glTo);
+        const parts = [];
+        for (let i = w; i <= to; i++) {
+          const we = i === w ? el : bs.querySelector(`.bw[data-w="${i}"]`);
+          const wr = we && rectOf(we, base);
+          if (!wr) continue;
+          const last = parts[parts.length - 1];
+          if (last && Math.abs(wr.t - last.t) < 2 && wr.l >= last.l) {
+            last.r = Math.max(last.r, wr.r); last.b = Math.max(last.b, wr.b);
+          } else {
+            parts.push({ l: wr.l, r: wr.r, t: wr.t, b: wr.b });
+          }
+        }
+        if (parts.length) {
+          let main = parts[0];
+          parts.forEach(pt => { if (pt.r - pt.l > main.r - main.l) main = pt; });
+          it.r = main;
+          it.span = { l: main.l, r: main.r };
+          it.brackets = parts.map((pt, i) => ({
+            l: pt.l, r: pt.r, t: pt.t,
+            openL: i > 0, openR: i < parts.length - 1
+          }));
+        }
       }
       if (el.dataset.glLink && bs) {
         const part = bs.querySelector(`.bw[data-w="${el.dataset.glLink}"]`);
         const pr = part && rectOf(part, base);
         if (pr && Math.abs(pr.t - r.t) < 2) it.link = pr;
+        else if (pr) it.linkFar = pr;   // часть на другой строке или странице
       }
       it.cx = it.span ? (it.span.l + it.span.r) / 2 : (it.r.l + it.r.r) / 2;
       it.col = Math.floor((it.r.l + 1) / geo.step);
@@ -219,10 +239,27 @@ const ReaderGloss = (() => {
           left: Math.round(it.cx) + 'px', top: bottom + 'px', height: Math.max(2, top - bottom - 1) + 'px'
         });
       }
-      if (it.span) {
-        add('rd-gl-bracket', {
-          left: (it.span.l + 1) + 'px', top: (top - 1) + 'px', width: (it.span.r - it.span.l - 2) + 'px'
-        });
+      // одиночное слово с glTo (сочетание из одного видимого куска) скобки не требует
+      if (it.brackets.length > 1 || (it.brackets.length === 1 && it.el.dataset.glTo !== it.el.dataset.w)) {
+        it.brackets.forEach(bk => add(
+          'rd-gl-bracket' + (bk.openL ? ' rd-gl-bracket--open-l' : '') + (bk.openR ? ' rd-gl-bracket--open-r' : ''),
+          { left: (bk.l + 1) + 'px', top: (bk.t - 1) + 'px', width: Math.max(4, bk.r - bk.l - 2) + 'px' }
+        ));
+      }
+      if (it.linkFar) {
+        // Части на разных строках: под каждой — хвост дуги в сторону переноса
+        const TAIL = 34;
+        const lo = it.col * geo.step, hi = lo + geo.width;
+        const head = it.head, far = it.linkFar;
+        const before = far.t > head.t || (Math.abs(far.t - head.t) < 2 && far.l > head.l);
+        const tails = before
+          ? [{ x1: (head.l + head.r) / 2, x2: Math.min((head.l + head.r) / 2 + TAIL, hi), y: head.b, cls: 'rd-gl-arc--open-r' },
+             { x1: Math.max((far.l + far.r) / 2 - TAIL, Math.floor((far.l + 1) / geo.step) * geo.step), x2: (far.l + far.r) / 2, y: far.b, cls: 'rd-gl-arc--open-l' }]
+          : [{ x1: Math.max((head.l + head.r) / 2 - TAIL, lo), x2: (head.l + head.r) / 2, y: head.b, cls: 'rd-gl-arc--open-l' },
+             { x1: (far.l + far.r) / 2, x2: Math.min((far.l + far.r) / 2 + TAIL, Math.floor((far.l + 1) / geo.step) * geo.step + geo.width), y: far.b, cls: 'rd-gl-arc--open-r' }];
+        tails.forEach(t => add('rd-gl-arc ' + t.cls, {
+          left: t.x1 + 'px', top: (t.y - 3) + 'px', width: Math.max(6, t.x2 - t.x1) + 'px'
+        }));
       }
       if (it.link) {
         const a = (it.r.l + it.r.r) / 2, b = (it.link.l + it.link.r) / 2;

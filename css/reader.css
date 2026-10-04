@@ -706,6 +706,11 @@ body.rd-open { overflow: hidden; }
   opacity: .3;
 }
 
+/* Сочетание, разорванное концом строки: у части без начала или конца
+   нет «уголка» — скобка уходит за край, как продолжение */
+.rd-gl-bracket.rd-gl-bracket--open-l { border-left: 0; border-top-left-radius: 0; }
+.rd-gl-bracket.rd-gl-bracket--open-r { border-right: 0; border-top-right-radius: 0; }
+
 /* Пунктирная дуга под частями отделяемого глагола на одной строке */
 .rd-gl-arc {
   position: absolute;
@@ -715,6 +720,9 @@ body.rd-open { overflow: hidden; }
   border-radius: 0 0 50% 50% / 0 0 100% 100%;
   opacity: .6;
 }
+/* Хвост дуги у частей, разнесённых по строкам: уходит к краю, как продолжение */
+.rd-gl-arc.rd-gl-arc--open-r { border-right: 0; border-radius: 0 0 0 100% / 0 0 0 100%; }
+.rd-gl-arc.rd-gl-arc--open-l { border-left: 0;  border-radius: 0 0 100% 0 / 0 0 100% 0; }
 
 /* ══ 12. РИДЕР: НИЖНЯЯ ПАНЕЛЬ ══ */
 
