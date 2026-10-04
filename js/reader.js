@@ -250,17 +250,24 @@ const Reader = (() => {
     return grammar[raw] || raw;
   }
 
+  // Артикли, личные местоимения и самые частые предлоги над текстом не
+  // подписываем (см. ReaderGloss.isQuiet): их перевод — по тапу.
   function wordRu(token) {
     if (typeof ReaderTip === 'undefined') return '';
     const info = ReaderTip.lookup(st.gloss, String(token || '').toLowerCase());
-    return compactWordRu(info && info.entry && info.entry.ru);
+    if (!info || (typeof ReaderGloss !== 'undefined' && ReaderGloss.isQuiet(info.lemma))) return '';
+    return compactWordRu(info.entry && info.entry.ru);
   }
 
   // В немецком режиме .bw остаётся плоским: это важно для тултипа, TTS и
-  // сборника слов. Перевод лежит только в data-ru и появляется через CSS.
+  // сборника слов. Перевод лежит только в data-ru, а рисует его отдельный
+  // слой js/reader-gloss.js. Разметка предложения (sent.g) уточняет перевод:
+  // форма по контексту, сочетание целиком, отделяемая приставка.
   // В полном русском режиме используем отдельный .brw: он даёт пагинатору
   // точные якоря, но не притворяется немецким словом для словаря.
-  function renderSentence(text, p, s, russian) {
+  function renderSentence(text, p, s, russian, g) {
+    const ann = (!russian && g && typeof ReaderGloss !== 'undefined')
+      ? ReaderGloss.sentenceGloss(g) : {};
     let out = '';
     let last = 0;
     let i = 0;
@@ -272,9 +279,13 @@ const Reader = (() => {
       if (russian) {
         out += `<span class="brw" data-w="${i}">${esc(w)}</span>`;
       } else {
-        const ru = wordRu(w);
-        const ruAttr = ru ? ` data-ru="${esc(ru)}"` : '';
-        out += `<span class="bw" data-w="${i}" data-t="${esc(w.toLowerCase())}"${ruAttr}>${esc(w)}</span>`;
+        const a = ann[i];
+        const ru = a ? (a.ru || '') : wordRu(w);
+        let attrs = ru ? ` data-ru="${esc(ru)}"` : '';
+        if (a && a.to != null)   attrs += ` data-gl-to="${a.to}"`;
+        if (a && a.link != null) attrs += ` data-gl-link="${a.link}"`;
+        const cls = (a && (a.link != null || a.part)) ? 'bw bw--sep' : 'bw';
+        out += `<span class="${cls}" data-w="${i}" data-t="${esc(w.toLowerCase())}"${attrs}>${esc(w)}</span>`;
       }
       last = m.index + w.length;
       i++;
@@ -319,7 +330,7 @@ const Reader = (() => {
       const sents = Array.isArray(para.s) ? para.s : [];
       const inner = sents.map((sent, s) => renderSentence(
         st.fullTranslation ? ruText(sent) : (sent.de || ''),
-        p, s, st.fullTranslation
+        p, s, st.fullTranslation, sent.g
       )).join(glue);
       return `<p class="${cls}">${inner}</p>`;
     }).join('');
@@ -345,6 +356,7 @@ const Reader = (() => {
     const padR = parseFloat(cs.paddingRight) || 0;
     const padY = (parseFloat(cs.paddingTop) || 0) + (parseFloat(cs.paddingBottom) || 0);
 
+    if (typeof ReaderGloss !== 'undefined') ReaderGloss.clear(elContent);
     st.width  = elContent.clientWidth;
     st.height = Math.max(0, elViewport.clientHeight - padY);
 
@@ -364,6 +376,12 @@ const Reader = (() => {
     st.pages = step > 0
       ? Math.max(1, Math.round((elContent.scrollWidth + st.gap) / step))
       : 1;
+
+    // Подписи кладём ПОСЛЕ подсчёта страниц: слой абсолютный и на колонки
+    // не влияет, но scrollWidth не должен его видеть.
+    if (st.interlinear && !st.fullTranslation && typeof ReaderGloss !== 'undefined') {
+      ReaderGloss.layout(elContent, { step, width: st.width });
+    }
   }
 
   /* ── Сквозная нумерация страниц книги ── */

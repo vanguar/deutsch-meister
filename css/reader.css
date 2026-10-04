@@ -650,40 +650,67 @@ body.rd-open { overflow: hidden; }
    Вида пока нет, но тап по слову уже не листает страницу. */
 .bw { -webkit-tap-highlight-color: transparent; }
 
-/* Надсловный перевод. Русский текст живёт в data-ru, а не внутри .bw:
-   так тултип, TTS и сборник слов продолжают видеть чистое немецкое слово.
-   Длинные варианты перевода переносятся в пределах своего слова, не лезут
-   за край колонки и никогда не получают словарные пояснения.
-   Коробка — inline-block, а не inline-flex: базовая линия inline-block берётся
-   от ПОСЛЕДНЕЙ строки (немецкое слово), поэтому знаки препинания между словами
-   остаются на уровне немецкого текста, а не всплывают к русскому. */
-.rd-content.rd-interlinear .bw[data-ru] {
-  display: inline-block;
-  min-width: 0;
-  max-width: min(14ch, 42vw);
-  margin: 2px 1px 5px;
-  vertical-align: baseline;
-  text-align: center;
-  line-height: 1.22;
-  break-inside: avoid;
-  -webkit-column-break-inside: avoid;
+/* Надсловный перевод (подстрочник). Немецкий текст идёт обычным абзацем:
+   переводы не раздвигают слова, а лежат в отдельном абсолютном слое
+   .rd-gl-layer, который расставляет js/reader-gloss.js по свёрстанным
+   строкам. Здесь — только межстрочный просвет под один-два ряда подписей
+   и вид самих подписей. Размеры подписей в em: они растут вместе с
+   шрифтом читалки. */
+.rd-content.rd-interlinear { line-height: max(2.95, calc(var(--rd-lh) + 1.15)); }
+.rd-content.rd-interlinear .rd-p { margin-bottom: .55em; }
+
+/* Разорванная конструкция (schliefen … ein): обе части — акцентом */
+.rd-content.rd-interlinear .bw--sep { color: var(--rd-accent); }
+
+.rd-gl-layer {
+  position: absolute;
+  left: 0; top: 0;
+  width: 0; height: 0;
+  overflow: visible;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-select: none;
 }
-.rd-content.rd-interlinear .bw[data-ru]::before {
-  content: attr(data-ru);
-  display: block;
-  max-width: 100%;
-  margin-bottom: 4px;
+.rd-gl {
+  position: absolute;
+  white-space: nowrap;
   color: var(--rd-muted);
   font-family: 'DM Sans', sans-serif;
-  font-size: .68em;
-  font-weight: 600;
-  line-height: 1.22;
-  overflow-wrap: anywhere;
-  hyphens: none;
-  pointer-events: none;
+  font-size: .62em;
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: .01em;
 }
-.rd-content.rd-interlinear { line-height: 2.25; }
-.rd-content.rd-interlinear .rd-p { margin-bottom: 1.8em; }
+.rd-gl.rd-gl--link { color: var(--rd-accent); font-weight: 700; }
+
+/* Черта от подписи второго ряда к своему слову */
+.rd-gl-stem {
+  position: absolute;
+  width: 0;
+  border-left: 1px solid var(--rd-muted);
+  opacity: .45;
+}
+.rd-gl-stem.rd-gl--link { border-left-color: var(--rd-accent); opacity: .7; }
+
+/* Скобка над сочетанием, переведённым целиком (setzte sich → «сел») */
+.rd-gl-bracket {
+  position: absolute;
+  height: 3px;
+  border: 1px solid var(--rd-muted);
+  border-bottom: 0;
+  border-radius: 2px 2px 0 0;
+  opacity: .3;
+}
+
+/* Пунктирная дуга под частями отделяемого глагола на одной строке */
+.rd-gl-arc {
+  position: absolute;
+  height: .45em;
+  border: 1px dashed var(--rd-accent);
+  border-top: 0;
+  border-radius: 0 0 50% 50% / 0 0 100% 100%;
+  opacity: .6;
+}
 
 /* ══ 12. РИДЕР: НИЖНЯЯ ПАНЕЛЬ ══ */
 
