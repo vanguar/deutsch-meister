@@ -1,7 +1,7 @@
 # Deutsch Meister — команды деплоя (см. ДЕПЛОЙ-инструкция.md)
 # Windows: запускать из Git Bash. Без make — прямые команды указаны в целях.
 
-.PHONY: bump validate check-tips deploy-web deploy-api check-api
+.PHONY: bump validate check-tips deploy-web deploy-api check-api i18n-check i18n-build test-i18n
 
 # Поднять ?v=N во всех HTML + CACHE в service-worker.js (обязательно перед
 # пушем любых правок JS/CSS)
@@ -28,3 +28,17 @@ deploy-api:
 # Смоук-проверка бэкенда после деплоя
 check-api:
 	bash scripts/check_api.sh
+
+# ── Языки интерфейса (i18n) ──
+# Покрытие переводов: каждая русская строка уроков/книг/интерфейса имеет украинский перевод
+i18n-check:
+	node tools/i18n.js check
+
+# Собрать рантайм-файлы i18n/uk/* из i18n/uk/src/*.json (после правки переводов или контента)
+i18n-build:
+	node tools/i18n.js build
+
+# Юнит-тесты: рантайм i18n и бот (выбор языка, /api/lang)
+test-i18n:
+	node tools/test_i18n.js
+	python scripts/test_bot_lang.py

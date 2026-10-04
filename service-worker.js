@@ -1,4 +1,4 @@
-const CACHE = 'deutsch-meister-v99';
+const CACHE = 'deutsch-meister-v101';
 const SCOPE_PATH = new URL(self.registration.scope).pathname.replace(/\/$/, '');
 const BASE = SCOPE_PATH === '' ? '' : SCOPE_PATH;
 
@@ -7,33 +7,35 @@ const STATIC = [
   BASE + '/',
   BASE + '/index.html',
   BASE + '/manifest.json',
-  BASE + '/css/base.css?v=84',
-  BASE + '/css/sidebar.css?v=84',
-  BASE + '/css/lesson.css?v=84',
-  BASE + '/css/exercises.css?v=84',
-  BASE + '/js/progress.js?v=84',
-  BASE + '/js/lesson-render.js?v=84',
-  BASE + '/js/exercises.js?v=84',
-  BASE + '/js/flashcards.js?v=84',
-  BASE + '/js/tts.js?v=84',
-  BASE + '/js/telegram.js?v=84',
-  BASE + '/js/cloud-sync.js?v=84',
-  BASE + '/js/install-app.js?v=84',
-  BASE + '/js/support.js?v=84',
-  BASE + '/js/sw-register.js?v=84',
+  BASE + '/css/base.css?v=86',
+  BASE + '/css/sidebar.css?v=86',
+  BASE + '/css/lesson.css?v=86',
+  BASE + '/css/exercises.css?v=86',
+  BASE + '/js/i18n.js?v=86',
+  BASE + '/js/progress.js?v=86',
+  BASE + '/js/lesson-render.js?v=86',
+  BASE + '/js/exercises.js?v=86',
+  BASE + '/js/flashcards.js?v=86',
+  BASE + '/js/tts.js?v=86',
+  BASE + '/js/telegram.js?v=86',
+  BASE + '/js/cloud-sync.js?v=86',
+  BASE + '/js/install-app.js?v=86',
+  BASE + '/js/support.js?v=86',
+  BASE + '/js/sw-register.js?v=86',
   // Читалка: оболочка библиотеки и её движок. Каталог книг — маленький
   // и нужен сразу, поэтому он в прекеше; ?v= у .json нет намеренно:
   // bump_version.py версионирует только .js/.css, а запросы всё равно
   // идут network-first, так что свежее приходит из сети.
   BASE + '/books.html',
-  BASE + '/css/reader.css?v=84',
-  BASE + '/js/library.js?v=84',
-  BASE + '/js/reader.js?v=84',
-  BASE + '/js/reader-tip.js?v=84',
-  BASE + '/js/reader-words.js?v=84',
-  BASE + '/js/reader-speak.js?v=84',
-  BASE + '/js/reader-cards.js?v=84',
-  BASE + '/js/reader-dict.js?v=84',
+  BASE + '/news.html',
+  BASE + '/css/reader.css?v=86',
+  BASE + '/js/library.js?v=86',
+  BASE + '/js/reader.js?v=86',
+  BASE + '/js/reader-tip.js?v=86',
+  BASE + '/js/reader-words.js?v=86',
+  BASE + '/js/reader-speak.js?v=86',
+  BASE + '/js/reader-cards.js?v=86',
+  BASE + '/js/reader-dict.js?v=86',
   BASE + '/data/books/index.json',
   BASE + '/icons/icon.svg',
 ];

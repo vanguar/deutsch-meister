@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#7c6af7">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Deutsch Meister">
+  <link rel="icon" type="image/svg+xml" href="/deutsch-meister/icons/icon.svg">
+  <title>Новости на немецком | Deutsch Meister</title>
+  <!-- язык интерфейса: первым, до данных и стилей -->
+  <script src="js/i18n.js?v=86"></script>
+  <link rel="stylesheet" href="css/base.css?v=86">
+  <style>
+    /* Раздел «Новости на немецком» — пока витрина: рубрики есть, статей нет */
+    .news-page { max-width: 760px; margin: 0 auto; padding: 18px 16px 48px; }
+    .news-head { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-bottom: 18px; }
+    .news-head .news-back { flex-basis: 100%; }
+    .news-back { color: var(--text-muted); text-decoration: none; font-size: 14px; white-space: nowrap; }
+    .news-back:hover { color: var(--accent); }
+    .news-titles { flex: 1; min-width: 0; }
+    .news-h1 { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 900; color: var(--text-strong); line-height: 1.15; }
+    .news-sub { font-size: 13px; color: var(--text-muted); margin-top: 2px; }
+    .news-btn {
+      display: inline-grid; place-items: center; min-width: 36px; height: 36px; padding: 0 10px;
+      border-radius: 999px; background: var(--surface2); border: 1px solid var(--border);
+      color: var(--text); font-size: 13px; font-weight: 700; cursor: pointer;
+    }
+    .news-soon {
+      display: flex; gap: 12px; align-items: flex-start;
+      padding: 14px 16px; margin-bottom: 18px; border-radius: 14px;
+      background: color-mix(in srgb, var(--accent) 12%, var(--surface));
+      border: 1px solid color-mix(in srgb, var(--accent) 40%, var(--border));
+      color: var(--text); font-size: 14px; line-height: 1.5;
+    }
+    .news-soon b { color: var(--text-strong); }
+    .news-soon-ico { font-size: 22px; line-height: 1; }
+    .news-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 12px; }
+    .news-tile {
+      position: relative; text-align: left; padding: 18px 16px 16px; border-radius: 16px;
+      background: var(--surface2); border: 1px solid var(--border); color: var(--text);
+      font: inherit; cursor: pointer; transition: transform var(--t-fast), border-color var(--t-fast);
+    }
+    .news-tile:hover { transform: translateY(-2px); border-color: var(--accent2); }
+    .news-tile-ico { font-size: 34px; line-height: 1; }
+    .news-tile-title { margin-top: 12px; font-size: 18px; font-weight: 800; color: var(--text-strong); }
+    .news-tile-text { margin-top: 6px; font-size: 13px; color: var(--text-muted); line-height: 1.45; }
+    .news-tile-badge {
+      position: absolute; top: 12px; right: 12px; padding: 3px 9px; border-radius: 999px;
+      font-size: 11px; font-weight: 700; letter-spacing: .3px;
+      background: color-mix(in srgb, var(--accent2) 16%, transparent); color: var(--accent2);
+    }
+    .news-note { margin-top: 18px; font-size: 13px; color: var(--text-dim); line-height: 1.5; }
+    .news-toast {
+      position: fixed; left: 50%; bottom: 24px; transform: translate(-50%, 20px); opacity: 0;
+      padding: 10px 16px; border-radius: 12px; background: var(--surface3); color: var(--text-strong);
+      border: 1px solid var(--border); font-size: 14px; transition: all .25s ease; pointer-events: none;
+      white-space: nowrap;
+    }
+    .news-toast.show { opacity: 1; transform: translate(-50%, 0); }
+  </style>
+</head>
+<body>
+  <div class="news-page">
+    <header class="news-head">
+      <a class="news-back" href="index.html">← Главная</a>
+      <div class="news-titles">
+        <h1 class="news-h1">Новости на немецком</h1>
+        <div class="news-sub">Свежие тексты на современном языке</div>
+      </div>
+      <button class="news-btn" data-lang-toggle onclick="I18N.toggle()" title="Язык · Мова">RU</button>
+      <button class="news-btn" id="themeToggle" onclick="toggleTheme()" title="Сменить тему">🌙</button>
+    </header>
+
+    <div class="news-soon" role="status">
+      <span class="news-soon-ico">🚧</span>
+      <span><b>Раздел в разработке.</b> Скоро здесь появятся актуальные новости на живом современном немецком — с переводом, подсказками над словами и озвучкой, как в книгах.</span>
+    </div>
+
+    <div class="news-grid">
+      <button class="news-tile" type="button" aria-disabled="true" onclick="newsSoon()">
+        <span class="news-tile-badge">Скоро</span>
+        <div class="news-tile-ico">💹</div>
+        <div class="news-tile-title">Экономика</div>
+        <div class="news-tile-text">Рынки, цены, работа и деньги</div>
+      </button>
+      <button class="news-tile" type="button" aria-disabled="true" onclick="newsSoon()">
+        <span class="news-tile-badge">Скоро</span>
+        <div class="news-tile-ico">🌍</div>
+        <div class="news-tile-title">События</div>
+        <div class="news-tile-text">Главное в Германии и мире</div>
+      </button>
+      <button class="news-tile" type="button" aria-disabled="true" onclick="newsSoon()">
+        <span class="news-tile-badge">Скоро</span>
+        <div class="news-tile-ico">🔭</div>
+        <div class="news-tile-title">Астрономия</div>
+        <div class="news-tile-text">Космос, открытия и миссии</div>
+      </button>
+    </div>
+
+    <p class="news-note">В отличие от книг, здесь будет язык сегодняшнего дня: короткие статьи уровня B1–B2, которые обновляются регулярно.</p>
+  </div>
+
+  <div class="news-toast" id="newsToast">🚧 Этот раздел пока в разработке</div>
+
+  <script>
+    function newsSoon() {
+      const t = document.getElementById('newsToast');
+      t.classList.add('show');
+      clearTimeout(newsSoon.timer);
+      newsSoon.timer = setTimeout(() => t.classList.remove('show'), 2200);
+    }
+    function initTheme() {
+      const saved = localStorage.getItem('dm_theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', saved);
+      document.getElementById('themeToggle').textContent = saved === 'dark' ? '☀️' : '🌙';
+    }
+    function toggleTheme() {
+      const next = (document.documentElement.getAttribute('data-theme') || 'dark') === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('dm_theme', next);
+      document.getElementById('themeToggle').textContent = next === 'dark' ? '☀️' : '🌙';
+    }
+    initTheme();
+  </script>
+  <script src="js/sw-register.js?v=86"></script>
+  <script src="js/telegram.js?v=86"></script>
+</body>
+</html>

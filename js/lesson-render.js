@@ -4,6 +4,10 @@
    Reads LESSON_DATA and CURRENT_LESSON_NUM globals.
    ═══════════════════════════════════════════════ */
 
+// Не-русский интерфейс: строки урока переводим до любой отрисовки
+// (упражнения, карточки и подсказки читают уже переведённые данные).
+if (typeof LESSON_DATA !== 'undefined' && window.I18N) I18N.data(LESSON_DATA);
+
 const LessonRender = (() => {
 
   /* ── A1 nav config ── */

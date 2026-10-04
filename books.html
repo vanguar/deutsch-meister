@@ -12,13 +12,15 @@
   <link rel="apple-touch-icon" href="/deutsch-meister/icons/icon.svg">
   <link rel="icon" type="image/svg+xml" href="/deutsch-meister/icons/icon.svg">
 
-  <link rel="stylesheet" href="css/base.css?v=84">
+  <!-- язык интерфейса: первым, до данных и стилей -->
+  <script src="js/i18n.js?v=86"></script>
+  <link rel="stylesheet" href="css/base.css?v=86">
   <!-- lesson.css — только ради класса .word-tip, который переиспользует ридер -->
-  <link rel="stylesheet" href="css/lesson.css?v=84">
+  <link rel="stylesheet" href="css/lesson.css?v=86">
   <!-- exercises.css — ради анимации переворота карточки (.flashcard,
        .card-face, .fc-dot): карточки книги переиспользуют её целиком -->
-  <link rel="stylesheet" href="css/exercises.css?v=84">
-  <link rel="stylesheet" href="css/reader.css?v=84">
+  <link rel="stylesheet" href="css/exercises.css?v=86">
+  <link rel="stylesheet" href="css/reader.css?v=86">
 </head>
 <body>
 
@@ -35,6 +37,8 @@
       <div class="lib-h1-sub">Книги на немецком с переводом</div>
     </div>
 
+    <button class="lib-theme-btn lang-toggle" data-lang-toggle onclick="I18N.toggle()"
+      title="Язык · Мова" aria-label="Язык · Мова" style="font-size:12px;font-weight:700">RU</button>
     <button id="themeToggle" class="lib-theme-btn" onclick="toggleTheme()"
       title="Сменить тему" aria-label="Сменить тему">🌙</button>
   </header>
@@ -213,16 +217,16 @@
   </div>
 </section>
 
-<script src="js/sw-register.js?v=84"></script>
-<script src="js/tts.js?v=84"></script>
-<script src="js/library.js?v=84"></script>
-<script src="js/reader-words.js?v=84"></script>
-<script src="js/reader-speak.js?v=84"></script>
-<script src="js/reader-tip.js?v=84"></script>
-<script src="js/reader-cards.js?v=84"></script>
-<script src="js/reader-dict.js?v=84"></script>
-<script src="js/flashcards.js?v=84"></script>
-<script src="js/reader.js?v=84"></script>
+<script src="js/sw-register.js?v=86"></script>
+<script src="js/tts.js?v=86"></script>
+<script src="js/library.js?v=86"></script>
+<script src="js/reader-words.js?v=86"></script>
+<script src="js/reader-speak.js?v=86"></script>
+<script src="js/reader-tip.js?v=86"></script>
+<script src="js/reader-cards.js?v=86"></script>
+<script src="js/reader-dict.js?v=86"></script>
+<script src="js/flashcards.js?v=86"></script>
+<script src="js/reader.js?v=86"></script>
 <script>
   function initTheme() {
     let saved = 'dark';

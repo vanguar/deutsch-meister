@@ -51,7 +51,8 @@ def is_external(url):
 def html_files():
     files = [os.path.join(BASE, 'index.html'),
              os.path.join(BASE, '404.html'),
-             os.path.join(BASE, 'books.html')]
+             os.path.join(BASE, 'books.html'),
+             os.path.join(BASE, 'news.html')]
     files += glob.glob(os.path.join(BASE, 'lessons', '*', '*', 'index.html'))
     return [f for f in files if os.path.isfile(f)]
 

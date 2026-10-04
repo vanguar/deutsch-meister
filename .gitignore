@@ -11,3 +11,6 @@ Thumbs.db
 
 # Рабочие артефакты сборки книг (генерируются scripts/build_book.py)
 tools/sources/*.tokens.txt
+
+# рабочие списки переводчика (tools/i18n.js todo)
+i18n/*/.todo/

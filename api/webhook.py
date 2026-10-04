@@ -8,6 +8,7 @@
   /api/webhook   — Telegram-бот (webhook)
   /api/tts       — прокси Google Translate TTS (mp3 + CORS) для звука
   /api/progress  — облачный прогресс (Upstash Redis, авторизация по initData)
+  /api/lang      — язык интерфейса (ru/uk) <-> бот (Upstash Redis, initData)
 
 ENV (Vercel → Project → Settings → Environment Variables):
   BOT_TOKEN                 — токен бота от @BotFather
@@ -79,24 +80,164 @@ def _verdict(info):
     return "всё на месте"
 
 
-def welcome_text(first_name):
-    return (
-        f"👋 <b>Привет, {first_name}!</b>\n\n"
-        f"Рад видеть тебя здесь — ты только что сделал отличный выбор! 🎉\n\n"
-        f"<b>🇩🇪 Deutsch Meister</b> — интерактивный курс немецкого от нуля до B2, "
-        f"прямо здесь в Telegram.\n\n"
-        f"📚 68 уроков (A1 — 20, A2 — 20, B1 — 14, B2 — 14) · 🔊 озвучка · "
-        f"✏️ упражнения · 🃏 флэшкарты · 🔥 стрики\n\n"
-        f"📖 <b>Книги на немецком</b> — читалка с переводом каждого "
-        f"предложения, подсказками над словами и озвучкой. Список постоянно пополняется.\n\n"
-        f"Нажми кнопку ниже и поехали! 👇"
-    )
+# ── Языки ─────────────────────────────────────────────
+# ru — исходный, uk — полностью переведён, ar — в разработке (кнопка есть,
+# но выбрать нельзя: показываем предупреждение).
+LANGS = ("ru", "uk")
+LANG_SOON = ("ar",)
+
+T = {
+    "ru": {
+        "welcome": (
+            "👋 <b>Привет, {name}!</b>\n\n"
+            "Рад видеть тебя здесь — ты только что сделал отличный выбор! 🎉\n\n"
+            "<b>🇩🇪 Deutsch Meister</b> — интерактивный курс немецкого от нуля до B2, "
+            "прямо здесь в Telegram.\n\n"
+            "📚 68 уроков (A1 — 20, A2 — 20, B1 — 14, B2 — 14) · 🔊 озвучка · "
+            "✏️ упражнения · 🃏 флэшкарты · 🔥 стрики\n\n"
+            "📖 <b>Книги на немецком</b> — читалка с переводом каждого "
+            "предложения, подсказками над словами и озвучкой. Список постоянно пополняется.\n\n"
+            "Нажми кнопку ниже и поехали! 👇"
+        ),
+        "friend": "друг",
+        "open": "🇩🇪 Открыть курс",
+        "menu": "Курс",
+        "donate_btn": "❤️ Поддержать проект",
+        "lang_btn": "🌐 Язык",
+        "donate": (
+            "❤️ <b>Поддержать Deutsch Meister</b>\n\n"
+            "Проект бесплатный и развивается на энтузиазме. Ваша поддержка "
+            "звёздами помогает добавлять новые уроки, озвучку и книги. Спасибо! 🙏\n\n"
+            "Выберите количество звёзд:"
+        ),
+        "invoice_title": "Поддержка Deutsch Meister",
+        "invoice_desc": "Спасибо за поддержку проекта на {stars} ⭐!",
+        "thanks": (
+            "🎉 <b>Спасибо за поддержку!</b>\n\n"
+            "Вы поддержали проект на {amount} ⭐. "
+            "Это очень помогает развитию Deutsch Meister! ❤️"
+        ),
+        "lang_set": "✅ Язык: Русский",
+        "cmd_start": "Открыть курс",
+        "cmd_language": "Сменить язык",
+        "cmd_donate": "Поддержать проект",
+    },
+    "uk": {
+        "welcome": (
+            "👋 <b>Привіт, {name}!</b>\n\n"
+            "Радий бачити тебе тут — ти щойно зробив чудовий вибір! 🎉\n\n"
+            "<b>🇩🇪 Deutsch Meister</b> — інтерактивний курс німецької з нуля до B2, "
+            "просто тут, у Telegram.\n\n"
+            "📚 68 уроків (A1 — 20, A2 — 20, B1 — 14, B2 — 14) · 🔊 озвучення · "
+            "✏️ вправи · 🃏 флешкартки · 🔥 стрики\n\n"
+            "📖 <b>Книжки німецькою</b> — читалка з перекладом кожного "
+            "речення, підказками над словами та озвученням. Список постійно поповнюється.\n\n"
+            "Натисни кнопку нижче — і вперед! 👇"
+        ),
+        "friend": "друже",
+        "open": "🇩🇪 Відкрити курс",
+        "menu": "Курс",
+        "donate_btn": "❤️ Підтримати проєкт",
+        "lang_btn": "🌐 Мова",
+        "donate": (
+            "❤️ <b>Підтримати Deutsch Meister</b>\n\n"
+            "Проєкт безкоштовний і розвивається на ентузіазмі. Ваша підтримка "
+            "зірками допомагає додавати нові уроки, озвучення та книжки. Дякуємо! 🙏\n\n"
+            "Оберіть кількість зірок:"
+        ),
+        "invoice_title": "Підтримка Deutsch Meister",
+        "invoice_desc": "Дякуємо за підтримку проєкту на {stars} ⭐!",
+        "thanks": (
+            "🎉 <b>Дякуємо за підтримку!</b>\n\n"
+            "Ви підтримали проєкт на {amount} ⭐. "
+            "Це дуже допомагає розвитку Deutsch Meister! ❤️"
+        ),
+        "lang_set": "✅ Мова: Українська",
+        "cmd_start": "Відкрити курс",
+        "cmd_language": "Змінити мову",
+        "cmd_donate": "Підтримати проєкт",
+    },
+}
+
+CHOOSE_TEXT = (
+    "🌐 <b>Выберите язык · Оберіть мову · اختر اللغة</b>\n\n"
+    "На этом языке будут переводы, объяснения и интерфейс курса.\n"
+    "Цією мовою будуть переклади, пояснення та інтерфейс курсу."
+)
+AR_SOON_ALERT = (
+    "🚧 العربية — قيد التطوير\n\n"
+    "Арабский язык в разработке — скоро будет!\n"
+    "Арабська мова в розробці — незабаром буде!"
+)
 
 
-def welcome_kb():
+def tr(lang, key, **kw):
+    text = T.get(lang, T["ru"]).get(key) or T["ru"][key]
+    return text.format(**kw) if kw else text
+
+
+def default_lang(user):
+    """Язык по умолчанию — из настроек Telegram (uk → uk), иначе ru."""
+    code = str((user or {}).get("language_code") or "").lower()[:2]
+    return "uk" if code == "uk" else "ru"
+
+
+def read_lang(uid):
+    """Сохранённый выбор: {"lang": "uk", "ts": <ms>} или None."""
+    res = _upstash(["GET", f"dm:lang:{uid}"])
+    if not res or res.get("result") in (None, "null"):
+        return None
+    try:
+        rec = json.loads(res["result"])
+    except (ValueError, TypeError):
+        return None
+    if isinstance(rec, dict) and rec.get("lang") in LANGS:
+        return {"lang": rec["lang"], "ts": int(_num(rec.get("ts")))}
+    return None
+
+
+def write_lang(uid, lang, ts=None):
+    """Last-write-wins: более старый ts не перетирает свежий выбор.
+    Возвращает действующую запись или None, если хранилище недоступно."""
+    if lang not in LANGS:
+        return None
+    ts = int(_num(ts) or time.time() * 1000)
+    cur = read_lang(uid)
+    if cur and cur["ts"] > ts:
+        return cur
+    rec = {"lang": lang, "ts": ts}
+    res = _upstash(["SET", f"dm:lang:{uid}", json.dumps(rec)])
+    return rec if res and res.get("result") == "OK" else None
+
+
+def user_lang(user):
+    """(lang, ts) пользователя: сохранённый выбор или язык Telegram (ts=0)."""
+    rec = read_lang(user.get("id")) if user and user.get("id") else None
+    if rec:
+        return rec["lang"], rec["ts"]
+    return default_lang(user), 0
+
+
+def app_url(lang, ts):
+    """Ссылка на мини-апп с выбранным языком. lts — время выбора: приложение
+    сравнивает его со своим и не даёт старой кнопке перебить новый выбор."""
+    sep = "&" if "?" in APP_URL else "?"
+    return f"{APP_URL}{sep}lang={lang}&lts={int(ts)}"
+
+
+def lang_kb():
     return {"inline_keyboard": [
-        [{"text": "🇩🇪 Открыть курс", "web_app": {"url": APP_URL}}],
-        [{"text": "❤️ Поддержать проект", "callback_data": "donate"}],
+        [{"text": "🇷🇺 Русский", "callback_data": "lang:ru"}],
+        [{"text": "🇺🇦 Українська", "callback_data": "lang:uk"}],
+        [{"text": "🇸🇦 العربية · 🚧 в разработке", "callback_data": "lang:ar"}],
+    ]}
+
+
+def welcome_kb(lang, ts):
+    return {"inline_keyboard": [
+        [{"text": tr(lang, "open"), "web_app": {"url": app_url(lang, ts)}}],
+        [{"text": tr(lang, "donate_btn"), "callback_data": "donate"}],
+        [{"text": tr(lang, "lang_btn"), "callback_data": "lang"}],
     ]}
 
 
@@ -106,34 +247,62 @@ def donate_kb():
     ]}
 
 
-def send_welcome(chat_id, first_name):
-    tg("sendMessage", {
+def set_menu_button(chat_id, lang, ts):
+    """Кнопка меню чата тоже открывает приложение на выбранном языке."""
+    return tg("setChatMenuButton", {
         "chat_id": chat_id,
-        "text": welcome_text(first_name),
-        "parse_mode": "HTML",
-        "reply_markup": welcome_kb(),
+        "menu_button": {
+            "type": "web_app",
+            "text": tr(lang, "menu"),
+            "web_app": {"url": app_url(lang, ts)},
+        },
     })
 
 
-def send_donate(chat_id):
+def set_commands(chat_id, lang):
+    """Меню команд «/» этого чата — на выбранном языке."""
+    return tg("setMyCommands", {
+        "commands": [
+            {"command": "start", "description": tr(lang, "cmd_start")},
+            {"command": "language", "description": tr(lang, "cmd_language")},
+            {"command": "donate", "description": tr(lang, "cmd_donate")},
+        ],
+        "scope": {"type": "chat", "chat_id": chat_id},
+    })
+
+
+def send_lang_choice(chat_id):
     tg("sendMessage", {
         "chat_id": chat_id,
-        "text": (
-            "❤️ <b>Поддержать Deutsch Meister</b>\n\n"
-            "Проект бесплатный и развивается на энтузиазме. Ваша поддержка "
-            "звёздами помогает добавлять новые уроки, озвучку и книги. Спасибо! 🙏\n\n"
-            "Выберите количество звёзд:"
-        ),
+        "text": CHOOSE_TEXT,
+        "parse_mode": "HTML",
+        "reply_markup": lang_kb(),
+    })
+
+
+def send_welcome(chat_id, first_name, lang, ts):
+    tg("sendMessage", {
+        "chat_id": chat_id,
+        "text": tr(lang, "welcome", name=first_name or tr(lang, "friend")),
+        "parse_mode": "HTML",
+        "reply_markup": welcome_kb(lang, ts),
+    })
+
+
+def send_donate(chat_id, lang="ru"):
+    tg("sendMessage", {
+        "chat_id": chat_id,
+        "text": tr(lang, "donate"),
         "parse_mode": "HTML",
         "reply_markup": donate_kb(),
     })
 
 
-def send_invoice(chat_id, stars):
+def send_invoice(chat_id, stars, lang="ru"):
     tg("sendInvoice", {
         "chat_id": chat_id,
-        "title": "Поддержка Deutsch Meister",
-        "description": f"Спасибо за поддержку проекта на {stars} ⭐!",
+        "title": tr(lang, "invoice_title"),
+        "description": tr(lang, "invoice_desc", stars=stars),
         "payload": f"donate_{stars}",
         "currency": "XTR",
         "prices": [{"label": f"{stars} Stars", "amount": stars}],
@@ -151,14 +320,11 @@ def handle_update(update):
     if "message" in update and "successful_payment" in update["message"]:
         msg = update["message"]
         amount = msg["successful_payment"]["total_amount"]
+        lang, _ = user_lang(msg.get("from") or {})
         tg("sendMessage", {
             "chat_id": msg["chat"]["id"],
             "parse_mode": "HTML",
-            "text": (
-                f"🎉 <b>Спасибо за поддержку!</b>\n\n"
-                f"Вы поддержали проект на {amount} ⭐. "
-                f"Это очень помогает развитию Deutsch Meister! ❤️"
-            ),
+            "text": tr(lang, "thanks", amount=amount),
         })
         return
 
@@ -166,27 +332,58 @@ def handle_update(update):
         msg = update["message"]
         text = (msg.get("text") or "").strip()
         chat_id = msg["chat"]["id"]
-        first_name = msg.get("from", {}).get("first_name", "друг")
+        user = msg.get("from") or {}
+        first_name = user.get("first_name", "")
+        cmd = text.split()[0].split("@")[0] if text else ""
         if text.startswith("/start"):
             arg = text[len("/start"):].strip()
+            rec = read_lang(user.get("id")) if user.get("id") else None
             if arg == "donate":
-                send_donate(chat_id)
+                send_donate(chat_id, rec["lang"] if rec else default_lang(user))
+            elif rec:
+                send_welcome(chat_id, first_name, rec["lang"], rec["ts"])
             else:
-                send_welcome(chat_id, first_name)
+                # Язык ещё не выбран — сначала выбор, потом приветствие
+                send_lang_choice(chat_id)
         elif text.startswith("/donate"):
-            send_donate(chat_id)
+            send_donate(chat_id, user_lang(user)[0])
+        elif cmd in ("/language", "/lang", "/mova", "/yazyk"):
+            send_lang_choice(chat_id)
         return
 
     if "callback_query" in update:
         cq = update["callback_query"]
         data = cq.get("data", "")
-        tg("answerCallbackQuery", {"callback_query_id": cq["id"]})
+        user = cq.get("from") or {}
         chat_id = cq["message"]["chat"]["id"]
-        if data == "donate":
-            send_donate(chat_id)
+
+        if data.startswith("lang:") and data[5:] in LANG_SOON:
+            tg("answerCallbackQuery", {"callback_query_id": cq["id"],
+                                       "text": AR_SOON_ALERT, "show_alert": True})
+            return
+
+        if data.startswith("lang:") and data[5:] in LANGS:
+            lang = data[5:]
+            rec = write_lang(user.get("id"), lang) if user.get("id") else None
+            # хранилище недоступно — всё равно открываем на выбранном языке
+            ts = rec["ts"] if rec else int(time.time() * 1000)
+            lang = rec["lang"] if rec else lang
+            tg("answerCallbackQuery", {"callback_query_id": cq["id"],
+                                       "text": tr(lang, "lang_set")})
+            set_menu_button(chat_id, lang, ts)
+            set_commands(chat_id, lang)
+            send_welcome(chat_id, user.get("first_name", ""), lang, ts)
+            return
+
+        tg("answerCallbackQuery", {"callback_query_id": cq["id"]})
+        lang = user_lang(user)[0]
+        if data == "lang":
+            send_lang_choice(chat_id)
+        elif data == "donate":
+            send_donate(chat_id, lang)
         elif data.startswith("donate:"):
             try:
-                send_invoice(chat_id, int(data.split(":", 1)[1]))
+                send_invoice(chat_id, int(data.split(":", 1)[1]), lang)
             except ValueError:
                 pass
         return
@@ -397,6 +594,8 @@ def _route(path):
         return "tts"
     if p.endswith("/progress"):
         return "progress"
+    if p.endswith("/lang"):
+        return "lang"
     return "webhook"
 
 
@@ -466,6 +665,10 @@ class handler(BaseHTTPRequestHandler):
             self._json({"ok": True, "service": "progress"})
             return
 
+        if route == "lang":
+            self._json({"ok": True, "service": "lang", "langs": list(LANGS)})
+            return
+
         # webhook health-check (+ диагностика маршрутизации и конфигурации)
         #
         # Зачем env: снаружи мёртвый BOT_TOKEN неотличим от рабочего. Health
@@ -476,7 +679,7 @@ class handler(BaseHTTPRequestHandler):
         info = {
             "ok": True,
             "service": "webhook",
-            "build": "dispatch-3",
+            "build": "dispatch-4-i18n",
             "seen_path": self.path,
             "route": route,
             "env": {
@@ -542,6 +745,38 @@ class handler(BaseHTTPRequestHandler):
                 self._json({"ok": ok, "saved": ok, "data": body["data"]})
             else:
                 self._json({"ok": True, "data": read_progress(uid)})
+            return
+
+        if route == "lang":
+            # Язык приложения <-> бот. Без lang — чтение, с lang — запись
+            # (last-write-wins по ts) + обновление кнопки меню чата.
+            try:
+                length = int(self.headers.get("content-length", 0) or 0)
+                raw = self.rfile.read(length) if length else b"{}"
+                body = json.loads(raw.decode("utf-8"))
+            except Exception:  # noqa: BLE001
+                self._json({"ok": False, "error": "bad_request"}, 400)
+                return
+            user = verify_init_data(body.get("initData", ""), BOT_TOKEN)
+            if not user or not user.get("id"):
+                self._json({"ok": False, "error": "unauthorized"}, 401)
+                return
+            uid = user["id"]
+            lang = body.get("lang")
+            if lang is None:
+                rec = read_lang(uid)
+                self._json({"ok": True, "lang": rec and rec["lang"],
+                            "ts": rec["ts"] if rec else 0})
+                return
+            if lang not in LANGS:
+                self._json({"ok": False, "error": "bad_lang"}, 400)
+                return
+            rec = write_lang(uid, lang, body.get("ts"))
+            if rec:
+                # личный чат с ботом: chat_id == user_id
+                set_menu_button(uid, rec["lang"], rec["ts"])
+            self._json({"ok": bool(rec), "lang": rec and rec["lang"],
+                        "ts": rec["ts"] if rec else 0})
             return
 
         # webhook (Telegram update)

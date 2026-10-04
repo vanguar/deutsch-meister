@@ -253,10 +253,46 @@ function dmFixBooksItem() {
   } catch (e) {}
 }
 
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', dmFixBooksItem);
-} else {
+/* ── Пункт «Новости на немецком» ─────────────────────────────────
+   Раздел пока в разработке (news.html — витрина рубрик). Пункт
+   добавляется сразу после «Книг» во всех меню, где они есть: так не
+   нужно править 68 оболочек уроков и главную по отдельности.        */
+function dmNewsUrl() { return dmBasePath() + 'news.html'; }
+
+function openNewsPage() {
+  dmHaptic('light');
+  window.location.href = dmNewsUrl();
+}
+
+function dmAddNewsItem() {
+  try {
+    document.querySelectorAll('.side-action').forEach(books => {
+      if (((books.getAttribute('onclick') || '').indexOf('openBooksModal') < 0)) return;
+      const parent = books.parentNode;
+      if (!parent || parent.querySelector('.side-action.news')) return;
+      const btn = document.createElement('button');
+      btn.className = 'side-action news';
+      btn.setAttribute('onclick', 'openNewsPage()');
+      btn.innerHTML =
+        '<span class="sa-ico">📰</span>' +
+        '<span class="sa-txt">' +
+          '<span class="sa-title">Новости на немецком</span>' +
+          '<span class="sa-sub">Экономика, события, астрономия · скоро</span>' +
+        '</span>';
+      books.insertAdjacentElement('afterend', btn);
+    });
+  } catch (e) {}
+}
+
+function dmSidebarExtras() {
   dmFixBooksItem();
+  dmAddNewsItem();
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', dmSidebarExtras);
+} else {
+  dmSidebarExtras();
 }
 
 Object.assign(window, {
@@ -268,7 +304,9 @@ Object.assign(window, {
   dmOpenBotDonate,
   dmCopyWallet,
   openBooksModal,
-  dmBooksUrl
+  dmBooksUrl,
+  openNewsPage,
+  dmNewsUrl
 });
 
 /* Закрытие по Esc */

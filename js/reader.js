@@ -72,6 +72,8 @@ const Reader = (() => {
   // слово что значит. 'rhymed' — рифмованный, он есть только у стихов и
   // только там, где мы его написали (поле rv у предложения).
   const RU_STYLES = ['plain', 'rhymed'];
+  // Язык перевода (для переносов и озвучки страницы): ru или uk из js/i18n.js
+  const TR_LANG = (window.I18N && I18N.lang) || 'ru';
 
   const DEFAULT_PREFS = {
     fs: 1, lh: 1, theme: 'system', margin: 1, font: 'system', ruStyle: 'plain'
@@ -326,7 +328,7 @@ const Reader = (() => {
 
   function renderChapter(ch) {
     elContent.innerHTML = chapterHtml(ch, st.chIndex);
-    elContent.lang = st.fullTranslation ? 'ru' : 'de';
+    elContent.lang = st.fullTranslation ? TR_LANG : 'de';
     elContent.classList.toggle('rd-interlinear', st.interlinear && !st.fullTranslation);
     elContent.classList.toggle('rd-full-translation', st.fullTranslation);
     elTitle.textContent = st.fullTranslation ? (ch.titleRu || ch.title || '') : (ch.title || '');
@@ -397,7 +399,7 @@ const Reader = (() => {
     const step = st.width + st.gap;
     if (step <= 0) return 1;
     const probe = probeEl();
-    probe.lang = st.fullTranslation ? 'ru' : 'de';
+    probe.lang = st.fullTranslation ? TR_LANG : 'de';
     probe.classList.toggle('rd-interlinear', st.interlinear && !st.fullTranslation);
     probe.classList.toggle('rd-full-translation', st.fullTranslation);
     probe.style.width       = st.width + 'px';
