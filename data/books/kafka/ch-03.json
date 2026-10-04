@@ -327,7 +327,8 @@
           "de": "Sie ist augenblicklich nicht hier, wurde ängstlich geantwortet, werde aber später kommen.",
           "ru": "Её сейчас здесь нет, ответили им испуганно, но позже она придёт.",
           "g": {
-            "1": "её",
+            "0": "её",
+            "1": "",
             "2": "сейчас",
             "3": "нет",
             "4": "здесь",
