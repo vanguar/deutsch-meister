@@ -658,6 +658,10 @@ body.rd-open { overflow: hidden; }
    шрифтом читалки. */
 .rd-content.rd-interlinear { line-height: max(2.95, calc(var(--rd-lh) + 1.15)); }
 .rd-content.rd-interlinear .rd-p { margin-bottom: .55em; }
+/* Перенос по слогам рвёт слово на две строки, и подпись повисает над
+   половинкой. В подстрочнике слово всегда целое. */
+.rd-content.rd-interlinear,
+.rd-content.rd-interlinear .rd-p { hyphens: none; -webkit-hyphens: none; }
 
 /* Разорванная конструкция (schliefen … ein): обе части — акцентом */
 .rd-content.rd-interlinear .bw--sep { color: var(--rd-accent); }
