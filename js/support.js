@@ -278,12 +278,44 @@ function dmAddNewsItem() {
       btn.innerHTML =
         '<span class="sa-ico">📰</span>' +
         '<span class="sa-txt">' +
-          '<span class="sa-title">Новости на немецком <span class="sa-new">Есть статьи</span></span>' +
+          '<span class="sa-title">Новости на немецком <span class="sa-new"><span>Есть статьи</span></span></span>' +
           '<span class="sa-sub">Свежие статьи с переводом и озвучкой</span>' +
         '</span>';
       books.insertAdjacentElement('afterend', btn);
     });
+    dmNewsBadgeLive();
   } catch (e) {}
+}
+
+/* Бейдж у «Новостей» — живой: пока есть статья не старше DM_NEWS_FRESH_DAYS
+   дней (по дате публикации в источнике), вместо «Есть статьи» горит
+   «🔥 Свежее». Правило то же, что у ленты (FRESH_DAYS в js/news.js).
+   Без сети или при ошибке остаётся «Есть статьи» — это всегда правда. */
+const DM_NEWS_FRESH_DAYS = 3;
+
+function dmNewsAgeDays(iso) {
+  const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(String(iso || ''));
+  if (!m) return Infinity;
+  const now = new Date();
+  const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  // локальная полночь, а не UTC — иначе западнее Гринвича «сегодня» станет «вчера»
+  return Math.round((today - new Date(+m[1], +m[2] - 1, +m[3])) / 864e5);
+}
+
+function dmNewsBadgeLive() {
+  if (!document.querySelector('.side-action.news .sa-new') || typeof fetch !== 'function') return;
+  fetch(dmBasePath() + 'data/news/index.json')
+    .then(r => (r.ok ? r.json() : null))
+    .then(idx => {
+      const items = (idx && idx.items) || [];
+      const fresh = items.some(it => dmNewsAgeDays(it.published) <= DM_NEWS_FRESH_DAYS);
+      document.querySelectorAll('.side-action.news .sa-new').forEach(b => {
+        b.classList.toggle('fresh', fresh);
+        // число/эмодзи и слово — в разных узлах, чтобы DOM-переводчик перевёл слово
+        b.innerHTML = fresh ? '🔥 <span>Свежее</span>' : '<span>Есть статьи</span>';
+      });
+    })
+    .catch(() => {});
 }
 
 /* ── Пункт «Связь с автором» ─────────────────────────────────────

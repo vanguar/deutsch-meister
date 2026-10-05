@@ -135,6 +135,51 @@ for (const p of PAGES.slice(0, 2)) {
   await c.shot(`sidebar_${p.url.replace(/\W+/g, '_')}_uk.png`);
 }
 
+// ── Живой бейдж у «Новостей»: «🔥 Свежее» / «Есть статьи» ──
+// Ожидание считаем по реальному index.json и сегодняшней дате — тем же правилом
+async function badgeState() {
+  return JSON.parse(await c.ev(`JSON.stringify([...document.querySelectorAll('.side-action.news .sa-new')]
+    .map(b => ({ text: b.textContent.trim(), fresh: b.classList.contains('fresh') })))`));
+}
+const iso = d => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+const daysAgo = n => { const d = new Date(); d.setDate(d.getDate() - n); return iso(d); };
+await c.ev(`localStorage.removeItem('dm_lang')`);
+for (const p of PAGES.slice(0, 2)) {
+  await c.go(B + p.url, 1800);
+  const expectFresh = await c.ev(`fetch('${B}/data/news/index.json').then(r => r.json())
+    .then(x => x.items.some(it => dmNewsAgeDays(it.published) <= 3))`);
+  await waitFor(`[...document.querySelectorAll('.side-action.news .sa-new')].every(b => /Свежее|Есть статьи/.test(b.textContent))`);
+  await c.wait(400);
+  const st = await badgeState();
+  ok(st.length > 0 && st.every(b => b.fresh === expectFresh && (expectFresh ? /🔥\s*Свежее/ : /^Есть статьи$/).test(b.text)),
+    `${p.name}: бейдж по реальным данным — ${st.map(b => b.text).join(', ')} (ожидалось ${expectFresh ? '«🔥 Свежее»' : '«Есть статьи»'})`);
+}
+// Подменяем данные: 3 дня назад — ещё свежее, 4 дня — уже нет, сеть упала — «Есть статьи»
+const mockFetch = items => `window.fetch = () => Promise.resolve({ ok: true, json: () => Promise.resolve({ items: ${JSON.stringify(items)} }) });
+  dmNewsBadgeLive();`;
+for (const [items, fresh, label] of [
+  [[{ published: daysAgo(0) }], true, 'сегодня'],
+  [[{ published: daysAgo(3) }, { published: daysAgo(10) }], true, '3 дня назад'],
+  [[{ published: daysAgo(4) }, { published: daysAgo(30) }], false, '4 дня назад'],
+  [[], false, 'статей нет в индексе']
+]) {
+  await c.ev(mockFetch(items)); await c.wait(200);
+  const st = await badgeState();
+  ok(st.every(b => b.fresh === fresh && (fresh ? /🔥\s*Свежее/ : /^Есть статьи$/).test(b.text)), `бейдж, новость ${label}: ${st.map(b => b.text).join(', ')}`);
+}
+await c.ev(`window.fetch = () => Promise.reject(new Error('offline')); dmNewsBadgeLive();`); await c.wait(200);
+ok((await badgeState()).every(b => b.text === 'Есть статьи' && !b.fresh), 'без сети остаётся «Есть статьи»');
+await c.ev(mockFetch([{ published: daysAgo(1) }])); await c.wait(200);
+await c.ev(`openSidebar(); document.querySelector('.sidebar-extra').scrollIntoView({ block: 'end' })`); await c.wait(500);
+await c.shot('sidebar_badge_fresh.png');
+// uk
+await c.ev(`localStorage.setItem('dm_lang', JSON.stringify({lang:'uk', ts: Date.now()}))`);
+await c.go(B + '/index.html', 1800);
+await c.ev(mockFetch([{ published: daysAgo(1) }])); await c.wait(500);
+ok((await badgeState()).every(b => /🔥\s*Свіже/.test(b.text)), 'uk: «🔥 Свіже» — ' + (await badgeState()).map(b => b.text).join(', '));
+await c.ev(mockFetch([{ published: daysAgo(9) }])); await c.wait(500);
+ok((await badgeState()).every(b => /Є статті/.test(b.text)), 'uk: «Є статті» — ' + (await badgeState()).map(b => b.text).join(', '));
+
 // ── Нигде в меню нет «Астрономия … скоро» ──
 await c.ev(`localStorage.removeItem('dm_lang')`);
 await c.go(B + '/index.html', 1500);

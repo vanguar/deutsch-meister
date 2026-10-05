@@ -370,3 +370,15 @@
   white-space: nowrap;
   box-shadow: 0 2px 6px rgba(255,138,61,.35);
 }
+/* «🔥 Свежее» — есть новости не старше 3 дней: тёплый градиент и мягкий пульс */
+.side-action .sa-new.fresh {
+  background: linear-gradient(135deg, #ff5f3d, #ff9f3d);
+  animation: dm-sa-pulse 2.4s ease-in-out infinite;
+}
+@keyframes dm-sa-pulse {
+  0%, 100% { box-shadow: 0 2px 6px rgba(255,95,61,.35); }
+  50%      { box-shadow: 0 2px 12px rgba(255,95,61,.75); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .side-action .sa-new.fresh { animation: none; }
+}
