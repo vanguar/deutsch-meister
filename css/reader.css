@@ -1684,3 +1684,159 @@ body.rd-open { overflow: hidden; }
   .rd-cards .flashcard[data-size="xs"] .card-de { font-size: 23px; }
   .lib-cta-row { flex-direction: column; }
 }
+
+/* ═══════════════════════════════════════════════
+   Статьи раздела «Новости» (news.html) — тот же ридер
+   ═══════════════════════════════════════════════ */
+
+/* Заставка статьи: рубрика и уровень, заголовок, перевод, две даты.
+   Как у главы книги — не рвётся между колонками. */
+.rd-news-opening {
+  break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  margin: 0 0 1.2em;
+  padding: clamp(6px, 1.5vh, 16px) 0 1em;
+  border-bottom: 1px solid var(--rd-border);
+}
+.rd-news-kicker {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .5em;
+  color: var(--rd-accent);
+  font-family: 'DM Sans', sans-serif;
+  font-size: .66em;
+  font-weight: 700;
+  letter-spacing: .12em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+.rd-news-level {
+  padding: .25em .6em;
+  border-radius: var(--r-full);
+  border: 1px solid var(--rd-border);
+  color: var(--rd-muted);
+  letter-spacing: .04em;
+}
+.rd-news-heading {
+  margin: .45em 0 0;
+  color: var(--rd-strong);
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(21px, 1.45em, 30px);
+  font-weight: 900;
+  line-height: 1.16;
+  text-wrap: balance;
+}
+.rd-news-opening .rd-chapter-translation { text-wrap: balance; }
+.rd-news-dates {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .25em 1.2em;
+  margin: .8em 0 0;
+  color: var(--rd-muted);
+  font-family: 'DM Sans', sans-serif;
+  font-size: .68em;
+  line-height: 1.4;
+}
+.rd-news-dates div { display: flex; gap: .4em; min-width: 0; }
+.rd-news-dates dt { color: var(--rd-dim); }
+.rd-news-dates dd { margin: 0; color: var(--rd-text); font-weight: 600; }
+
+/* Фото внутри статьи. Колонка-страница не умеет разрывать картинку,
+   поэтому фото ограничено по высоте долей страницы (--rd-page-h ставит
+   reader.js) и целиком переносится на следующую страницу, если не влезло.
+   aspect-ratio + width/height резервируют место до загрузки файла. */
+.rd-fig {
+  break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  display: block;
+  margin: .4em 0 1.1em;
+  text-align: center;
+  cursor: zoom-in;
+}
+.rd-fig img {
+  display: block;
+  /* ширина = min(колонка, доля высоты страницы × пропорции) — известна
+     до загрузки файла, высоту даёт aspect-ratio */
+  width: 100%;
+  width: min(100%, calc(var(--rd-page-h, 70vh) * .5 * var(--ar, 1.5)));
+  height: auto;
+  max-width: 100%;
+  margin: 0 auto;
+  border-radius: 10px;
+  background: var(--rd-surface2);
+  object-fit: contain;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+.rd-fig figcaption {
+  margin: .5em auto 0;
+  max-width: 60ch;
+  color: var(--rd-muted);
+  font-family: 'DM Sans', sans-serif;
+  font-size: .7em;
+  line-height: 1.4;
+  text-align: left;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+.rd-fig-credit {
+  display: block;
+  margin-top: .2em;
+  color: var(--rd-dim);
+  font-size: .9em;
+}
+
+/* Главное фото — сразу под заголовком, поэтому ниже остальных */
+.rd-fig--lead { margin-top: 0; }
+.rd-fig--lead img {
+  width: min(100%, calc(var(--rd-page-h, 70vh) * .3 * var(--ar, 1.5)));
+}
+
+/* Фото на весь экран — тап в любом месте закрывает */
+.rd-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 400;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: max(16px, env(safe-area-inset-top)) 16px max(16px, env(safe-area-inset-bottom));
+  background: rgba(0, 0, 0, .92);
+  cursor: zoom-out;
+  -webkit-tap-highlight-color: transparent;
+}
+.rd-lightbox[hidden] { display: none; }
+.rd-lightbox img {
+  max-width: 100%;
+  max-height: calc(100vh - 150px);
+  max-height: calc(100dvh - 150px);
+  object-fit: contain;
+  border-radius: 6px;
+}
+.rd-lightbox-cap {
+  max-width: 720px;
+  color: #d8d8e0;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  line-height: 1.45;
+}
+.rd-lightbox-cap .rd-fig-credit { color: #9a9aa8; }
+.rd-lightbox-close {
+  position: absolute;
+  top: max(10px, env(safe-area-inset-top));
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .14);
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+}
+.rd-news-dates a { color: var(--rd-accent); text-decoration: underline; text-underline-offset: 2px; }

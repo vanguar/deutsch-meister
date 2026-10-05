@@ -38,7 +38,12 @@
 const Reader = (() => {
 
   /* ── Константы ── */
-  const BOOKS_DIR = 'data/books/';
+  // Тот же ридер открывает и статьи раздела «Новости» (news.html): там у
+  // <body> стоит data-reader-dir="data/news/". Статья — «книга» из одной
+  // главы с абзацами-фото { fig }, у её meta.json kind: 'news'.
+  const BODY_DIR  = document.body && document.body.dataset.readerDir;
+  const BOOKS_DIR = BODY_DIR || 'data/books/';
+  const IS_NEWS   = BOOKS_DIR.indexOf('news') >= 0;
   const POS_KEY   = 'dm_book_pos:';
   const GAP_MIN   = 32;    // px, минимальный зазор между колонками-страницами
   const ANIM_MS   = 180;   // длительность листания, синхронно с css
@@ -299,7 +304,61 @@ const Reader = (() => {
   // делает длинное чтение похожим на книгу, но и даёт читателю ясный ориентир
   // после перехода между главами. Обложечный символ берём из meta: для другой
   // книги не потребуется зашивать здесь её оформление.
+  // Рубрики новостей по-немецки: заставка статьи — часть немецкого текста
+  const RUBRIC_DE = { astronomy: 'Astronomie', economy: 'Wirtschaft', events: 'Ereignisse' };
+
+  // ГГГГ-ММ-ДД → ДД.ММ.ГГГГ (так даты пишут и в немецких, и в русских СМИ)
+  function dateDots(iso) {
+    const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(String(iso || ''));
+    return m ? `${m[3]}.${m[2]}.${m[1]}` : String(iso || '');
+  }
+
+  // Заставка статьи: рубрика и уровень, заголовок, перевод заголовка и обе
+  // даты — публикации в источнике и появления у нас.
+  function newsOpening(ch) {
+    const m = st.meta || {};
+    const russian = st.fullTranslation;
+    const title = russian ? (ch.titleRu || ch.title || '') : (ch.title || ch.titleRu || '');
+    const subtitle = russian ? '' : (ch.titleRu || '');
+    const rubric = RUBRIC_DE[m.rubric] || 'Nachrichten';
+    return `<header class="rd-news-opening">
+      <div class="rd-news-kicker"><span>${esc(rubric)}</span>${m.level ? `<span class="rd-news-level">${esc(m.level)}</span>` : ''}</div>
+      <h1 class="rd-news-heading">${esc(title)}</h1>
+      ${subtitle ? `<p class="rd-chapter-translation">${esc(subtitle)}</p>` : ''}
+      <dl class="rd-news-dates">
+        <div><dt>Опубликовано</dt><dd>${esc(dateDots(m.published))}${m.source ? ` · ${m.sourceUrl
+          ? `<a href="${esc(m.sourceUrl)}" target="_blank" rel="noopener">${esc(m.source)}</a>`
+          : esc(m.source)}` : ''}</dd></div>
+        <div><dt>В приложении</dt><dd>${esc(dateDots(m.added))}</dd></div>
+      </dl>
+    </header>`;
+  }
+
+  // Абзац-фото. width/height — настоящие размеры файла: место под снимок
+  // резервируется до загрузки, и пагинация не прыгает. Высоту ограничивает
+  // css (доля высоты страницы через --rd-page-h), поэтому фото всегда
+  // целиком на одной странице. Тап по фото открывает его на весь экран.
+  //
+  // Ширину фото считает css из пропорций (--ar) и высоты страницы, а не
+  // браузер по загруженному файлу: страницы считаются сразу после рендера,
+  // когда картинка ещё грузится, и иначе её высота в замер не попадала —
+  // хвост статьи уезжал за последнюю страницу. Первое фото (p = 0) —
+  // главное: оно меньше и стоит прямо под заголовком.
+  function figureHtml(fig, p) {
+    if (!fig || !fig.src) return '';
+    const w = Number(fig.w) || 0;
+    const h = Number(fig.h) || 0;
+    const size = w && h
+      ? ` width="${w}" height="${h}" style="--ar:${(w / h).toFixed(4)};aspect-ratio:${w} / ${h}"`
+      : '';
+    return `<figure class="rd-fig${p === 0 ? ' rd-fig--lead' : ''}" data-p="${p}">
+      <img src="${esc(fig.src)}" alt="${esc(fig.cap || '')}"${size} decoding="async">
+      <figcaption>${esc(fig.cap || '')}${fig.credit ? ` <span class="rd-fig-credit">${esc(fig.credit)}</span>` : ''}</figcaption>
+    </figure>`;
+  }
+
   function chapterOpening(ch, chapterIndex) {
+    if (st.meta && st.meta.kind === 'news') return newsOpening(ch);
     const no = Math.max(1, Number(chapterIndex) + 1);
     const russian = st.fullTranslation;
     const label = russian ? `Глава ${no}` : `Kapitel ${no}`;
@@ -327,6 +386,7 @@ const Reader = (() => {
     const glue = verse ? '<br>' : ' ';
     const cls = verse ? 'rd-p rd-p--verse' : 'rd-p';
     const prose = paras.map((para, p) => {
+      if (para && para.fig) return figureHtml(para.fig, p);
       const sents = Array.isArray(para.s) ? para.s : [];
       const inner = sents.map((sent, s) => renderSentence(
         st.fullTranslation ? ruText(sent) : (sent.de || ''),
@@ -337,8 +397,24 @@ const Reader = (() => {
     return chapterOpening(ch || {}, chapterIndex) + prose;
   }
 
+  // Страховка к расчёту размеров в css: когда фото догрузилось, страницы
+  // пересчитываются (по якорю — читатель остаётся на своём месте).
+  let figTimer = 0;
+  function watchFigures() {
+    elContent.querySelectorAll('.rd-fig img').forEach(img => {
+      if (img.complete) return;
+      const again = () => {
+        clearTimeout(figTimer);
+        figTimer = setTimeout(() => { if (st.open) repaginate(); }, 120);
+      };
+      img.addEventListener('load', again, { once: true });
+      img.addEventListener('error', again, { once: true });
+    });
+  }
+
   function renderChapter(ch) {
     elContent.innerHTML = chapterHtml(ch, st.chIndex);
+    watchFigures();
     elContent.lang = st.fullTranslation ? TR_LANG : 'de';
     elContent.classList.toggle('rd-interlinear', st.interlinear && !st.fullTranslation);
     elContent.classList.toggle('rd-full-translation', st.fullTranslation);
@@ -368,6 +444,7 @@ const Reader = (() => {
     elContent.style.columnWidth = st.width + 'px';
     elContent.style.columnGap   = st.gap + 'px';
     elContent.style.height      = st.height + 'px';
+    elContent.style.setProperty('--rd-page-h', st.height + 'px');
 
     // scrollWidth = pages * step - gap, поэтому делим (scrollWidth + gap):
     // при большом зазоре (широкие поля на десктопе) простое
@@ -424,6 +501,7 @@ const Reader = (() => {
     probe.style.height      = st.height + 'px';
     probe.style.columnWidth = st.width + 'px';
     probe.style.columnGap   = st.gap + 'px';
+    probe.style.setProperty('--rd-page-h', st.height + 'px');
     probe.innerHTML = html;
     const pages = Math.max(1, Math.round((probe.scrollWidth + st.gap) / step));
     probe.innerHTML = '';   // держать в DOM текст всей книги незачем
@@ -592,7 +670,7 @@ const Reader = (() => {
         </p>
         <div class="rd-state-actions">
           <button class="btn btn-primary" id="rdRetry">Повторить</button>
-          <button class="btn btn-ghost" id="rdToLib">В библиотеку</button>
+          <button class="btn btn-ghost" id="rdToLib">${IS_NEWS ? 'К новостям' : 'В библиотеку'}</button>
         </div>
       </div>`;
     const retry = document.getElementById('rdRetry');
@@ -647,7 +725,7 @@ const Reader = (() => {
   function loadBook(id, startPos) {
     st.bookId = id;
     st.retry  = () => loadBook(id, startPos);
-    showLoading('Открываем книгу');
+    showLoading(IS_NEWS ? 'Открываем статью' : 'Открываем книгу');
 
     // Глоссарий грузим здесь же — в 2C он понадобится сразу, без дозагрузки
     return Promise.all([
@@ -691,7 +769,8 @@ const Reader = (() => {
       })
       .catch(err => {
         console.error('[Reader] книга не открылась:', err);
-        showError(err && err.message ? err.message : String(err), 'Книга не открылась');
+        showError(err && err.message ? err.message : String(err),
+          IS_NEWS ? 'Статья не открылась' : 'Книга не открылась');
       });
   }
 
@@ -1530,6 +1609,10 @@ const Reader = (() => {
     // не переключаются — открывается тултип перевода.
     if (word) { tipOpen(word); return; }
 
+    // Фото статьи — тоже в любой зоне: открываем его на весь экран
+    const fig = e.target.closest && e.target.closest('.rd-fig');
+    if (fig) { tipClose(); openFig(fig); return; }
+
     // Русский художественный текст не притворяется немецкими словами: у него
     // нет словарного тултипа, и тап по слову не должен заодно скрывать панели.
     if (st.fullTranslation && e.target.closest && e.target.closest('.brw')) return;
@@ -1544,6 +1627,37 @@ const Reader = (() => {
   }
 
   function onPointerCancel() { gesture = null; }
+
+  /* ── Фото на весь экран ── */
+
+  // Своя подложка, а не новая вкладка: в Telegram WebView вкладка вывела
+  // бы из приложения. Закрывается тапом в любом месте и клавишей Esc.
+  let elFig = null;
+
+  function openFig(figEl) {
+    const img = figEl.querySelector('img');
+    if (!img) return;
+    if (!elFig) {
+      elFig = document.createElement('div');
+      elFig.className = 'rd-lightbox';
+      elFig.setAttribute('role', 'dialog');
+      elFig.setAttribute('aria-modal', 'true');
+      elFig.innerHTML = '<button class="rd-lightbox-close" type="button" aria-label="Закрыть">✕</button>'
+        + '<img alt=""><div class="rd-lightbox-cap"></div>';
+      elFig.addEventListener('click', closeFig);
+      document.body.appendChild(elFig);
+    }
+    const big = elFig.querySelector('img');
+    big.src = img.currentSrc || img.src;
+    big.alt = img.alt;
+    const cap = figEl.querySelector('figcaption');
+    elFig.querySelector('.rd-lightbox-cap').innerHTML = cap ? cap.innerHTML : '';
+    elFig.hidden = false;
+  }
+
+  function closeFig() {
+    if (elFig) elFig.hidden = true;
+  }
 
   /* ── Открыть / закрыть ── */
 
@@ -1571,7 +1685,8 @@ const Reader = (() => {
     if (typeof ReaderWords !== 'undefined') ReaderWords.load(id);
 
     try {
-      history.pushState({ view: 'reader', book: id }, '', '#book=' + encodeURIComponent(id));
+      history.pushState({ view: 'reader', book: id }, '',
+        (IS_NEWS ? '#news=' : '#book=') + encodeURIComponent(id));
       st.pushed = true;
     } catch (e) {
       st.pushed = false;
@@ -1608,8 +1723,11 @@ const Reader = (() => {
     hideState();
     updateTranslationControls();
 
+    closeFig();
     // Карточка книги должна показать свежий процент
     if (typeof Library !== 'undefined' && typeof Library.refresh === 'function') Library.refresh();
+    // Лента новостей — отметку «прочитано»
+    if (typeof NewsFeed !== 'undefined' && typeof NewsFeed.refresh === 'function') NewsFeed.refresh();
   }
 
   /* ── Инициализация ── */
@@ -1667,6 +1785,7 @@ const Reader = (() => {
     });
     document.addEventListener('keydown', e => {
       if (e.key === 'Escape' && st.sheet) closeSheet();
+      if (e.key === 'Escape') closeFig();
     });
 
     // Жесты: делегирование на контейнер, capture-фаза, только pointer-события

@@ -1,0 +1,899 @@
+{
+  "version": 1,
+  "w": {
+    "ab": "ab",
+    "acht": "acht",
+    "afrika": "Afrika",
+    "allein": "allein",
+    "als": "als",
+    "am": "an",
+    "an": "an",
+    "angela": "Angela",
+    "annäherung": "Annäherung",
+    "april": "April",
+    "auf": "auf",
+    "aufgenommen": "aufnehmen",
+    "auskommen": "auskommen",
+    "außerdem": "außerdem",
+    "batteriestrom": "Batteriestrom",
+    "bedingungen": "Bedingung",
+    "bei": "bei",
+    "bekannten": "bekannt",
+    "betrieb": "Betrieb",
+    "bildes": "Bild",
+    "bis": "bis",
+    "dabei": "dabei",
+    "dann": "dann",
+    "das": "der/die/das",
+    "den": "der/die/das",
+    "der": "der/die/das",
+    "deren": "der/die/das",
+    "des": "der/die/das",
+    "die": "der/die/das",
+    "diese": "dieser",
+    "dietz": "Dietz",
+    "dort": "dort",
+    "durchquerte": "durchqueren",
+    "echtzeit": "Echtzeit",
+    "ecke": "Ecke",
+    "ein": "ein/eine",
+    "eine": "ein/eine",
+    "einmal": "einmal",
+    "einzige": "einzig",
+    "eismonde": "Eismond",
+    "erde": "Erde",
+    "erdschatten": "Erdschatten",
+    "erforderte": "erfordern",
+    "erkennen": "erkennen",
+    "erneut": "erneut",
+    "erreicht": "erreichen",
+    "esa": "ESA",
+    "etwa": "etwa",
+    "europa": "Europa",
+    "europäische": "europäisch",
+    "flog": "fliegen",
+    "forscher": "Forscher",
+    "fotografierte": "fotografieren",
+    "für": "für",
+    "ganymed": "Ganymed",
+    "geladene": "geladen",
+    "gelegenheit": "Gelegenheit",
+    "geplanten": "planen",
+    "grad": "Grad",
+    "grauer": "grau",
+    "größten": "groß",
+    "hatte": "haben",
+    "hochpräzise": "hochpräzise",
+    "im": "in",
+    "in": "in",
+    "indischen": "indisch",
+    "ingenieure": "Ingenieur",
+    "instrumente": "Instrument",
+    "ist": "sein",
+    "januar": "Januar",
+    "juice": "Juice",
+    "juli": "Juli",
+    "jupiter": "Jupiter",
+    "kallisto": "Kallisto",
+    "kameras": "Kamera",
+    "kein": "kein",
+    "kilometer": "Kilometer",
+    "kurskorrekturen": "Kurskorrektur",
+    "lenkte": "ablenken",
+    "machte": "machen",
+    "madagaskar": "Madagaskar",
+    "magnetfelder": "Magnetfeld",
+    "magnetschweif": "Magnetschweif",
+    "manöver": "Manöver",
+    "maß": "messen",
+    "mehrere": "mehrere",
+    "messinstrumente": "Messinstrument",
+    "mission": "Mission",
+    "mit": "mit",
+    "mitteleuropäischer": "mitteleuropäisch",
+    "mond": "Mond",
+    "musste": "müssen",
+    "navigation": "Navigation",
+    "navigationskamera": "Navigationskamera",
+    "noch": "noch",
+    "nur": "nur",
+    "näherte": "sich nähern",
+    "nötig": "nötig",
+    "oberfläche": "Oberfläche",
+    "ozean": "Ozean",
+    "ozeane": "Ozean",
+    "planeten": "Planet",
+    "pro": "pro",
+    "punkt": "Punkt",
+    "raumsonde": "Raumsonde",
+    "sagte": "sagen",
+    "schalteten": "einschalten",
+    "schmale": "schmal",
+    "schneller": "schnell",
+    "schon": "schon",
+    "schwerkraft": "Schwerkraft",
+    "sechs": "sechs",
+    "seit": "seit",
+    "sekunde": "Sekunde",
+    "seltene": "selten",
+    "september": "September",
+    "sich": "sich",
+    "sichel": "Sichel",
+    "sie": "sie",
+    "sogar": "sogar",
+    "sogenannter": "sogenannt",
+    "solcher": "solch",
+    "soll": "sollen",
+    "sommerzeit": "Sommerzeit",
+    "sonde": "Sonde",
+    "sondern": "sondern",
+    "spart": "sparen",
+    "stunden": "Stunde",
+    "swing-by": "Swing-by",
+    "teilchen": "Teilchen",
+    "testen": "testen",
+    "treibstoff": "Treibstoff",
+    "uhr": "Uhr",
+    "um": "um",
+    "und": "und",
+    "unserem": "unser",
+    "unter": "unter",
+    "untersuchen": "untersuchen",
+    "unterwegs": "unterwegs",
+    "verantwortlich": "verantwortlich",
+    "vermutet": "vermuten",
+    "von": "von",
+    "vor": "vor",
+    "vorbeifliegen": "vorbeifliegen",
+    "vorbeiflug": "Vorbeiflug",
+    "vorbeiflugs": "Vorbeiflug",
+    "vorbeigeflogen": "vorbeifliegen",
+    "war": "sein",
+    "weise": "Weise",
+    "werden": "werden",
+    "wertvollen": "wertvoll",
+    "winziger": "winzig",
+    "während": "während",
+    "zu": "zu",
+    "zufall": "Zufall",
+    "über": "über",
+    "überwachungskamera": "Überwachungskamera"
+  },
+  "l": {
+    "ab": {
+      "note": "Тж. отделяемая приставка: absteigen «слезать», abnehmen",
+      "pos": "предл.",
+      "ru": "от, с; прочь"
+    },
+    "ablenken": {
+      "ru": "отклонять",
+      "pos": "гл.",
+      "forms": "lenkte ab · hat abgelenkt"
+    },
+    "acht": {
+      "ru": "восемь",
+      "pos": "числ."
+    },
+    "Afrika": {
+      "ru": "Африка",
+      "pos": "геогр."
+    },
+    "allein": {
+      "ru": "один, в одиночку; только",
+      "pos": "нареч."
+    },
+    "als": {
+      "ru": "когда; как; чем",
+      "pos": "союз"
+    },
+    "an": {
+      "ru": "у, к, на",
+      "pos": "предл.",
+      "note": "am = an dem. Тж. отделяемая приставка: anfangen «начинать», annehmen, ansehen, anzünden"
+    },
+    "Angela": {
+      "ru": "Ангела (имя)",
+      "pos": "имя собств."
+    },
+    "Annäherung": {
+      "ru": "сближение",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Annäherungen"
+    },
+    "April": {
+      "ru": "апрель",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Aprile"
+    },
+    "auf": {
+      "ru": "на, в",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: aufspringen «вскочить», sich aufmachen"
+    },
+    "aufnehmen": {
+      "ru": "снимать (на камеру); принимать",
+      "pos": "гл.",
+      "forms": "nahm auf · hat aufgenommen"
+    },
+    "auskommen": {
+      "ru": "обходиться",
+      "pos": "гл.",
+      "forms": "kam aus · ist ausgekommen",
+      "note": "mit etwas auskommen — обходиться чем-то"
+    },
+    "außerdem": {
+      "ru": "кроме того",
+      "pos": "нареч."
+    },
+    "Batteriestrom": {
+      "ru": "питание от аккумулятора",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "Bedingung": {
+      "ru": "условие",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Bedingungen"
+    },
+    "bei": {
+      "ru": "у, при, возле",
+      "pos": "предл."
+    },
+    "bekannt": {
+      "ru": "известный, знакомый",
+      "pos": "прил."
+    },
+    "Betrieb": {
+      "ru": "работа, эксплуатация",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Betriebe",
+      "note": "также «предприятие»"
+    },
+    "Bild": {
+      "ru": "картина, снимок",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Bilder"
+    },
+    "bis": {
+      "ru": "до; пока не",
+      "pos": "союз"
+    },
+    "dabei": {
+      "ru": "при этом, при том",
+      "pos": "нареч."
+    },
+    "dann": {
+      "ru": "потом, затем",
+      "pos": "нареч."
+    },
+    "der/die/das": {
+      "ru": "определённый артикль",
+      "pos": "артикль",
+      "note": "Тж. относительное местоимение «который»"
+    },
+    "dieser": {
+      "ru": "этот, эта, это",
+      "pos": "мест."
+    },
+    "Dietz": {
+      "ru": "Диц (фамилия)",
+      "pos": "имя собств."
+    },
+    "dort": {
+      "ru": "там",
+      "pos": "нареч."
+    },
+    "durchqueren": {
+      "ru": "пересекать",
+      "pos": "гл.",
+      "forms": "durchquerte · hat durchquert"
+    },
+    "Echtzeit": {
+      "ru": "реальное время",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null,
+      "note": "in Echtzeit — в реальном времени"
+    },
+    "Ecke": {
+      "ru": "угол",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Ecken"
+    },
+    "ein/eine": {
+      "ru": "неопределённый артикль",
+      "pos": "артикль",
+      "note": "einer — «один, некто»"
+    },
+    "einmal": {
+      "ru": "однажды; раз",
+      "pos": "нареч."
+    },
+    "einschalten": {
+      "ru": "включать",
+      "pos": "гл.",
+      "forms": "schaltete ein · hat eingeschaltet"
+    },
+    "einzig": {
+      "ru": "единственный",
+      "pos": "прил."
+    },
+    "Eismond": {
+      "ru": "ледяной спутник",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Eismonde"
+    },
+    "Erde": {
+      "ru": "Земля (планета); земля, почва",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "Erdschatten": {
+      "ru": "тень Земли",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "erfordern": {
+      "ru": "требовать",
+      "pos": "гл.",
+      "forms": "erforderte · hat erfordert"
+    },
+    "erkennen": {
+      "ru": "узнавать; распознавать",
+      "pos": "гл.",
+      "forms": "erkannte · hat erkannt",
+      "note": "sich zu erkennen geben — открыться, назвать себя"
+    },
+    "erneut": {
+      "ru": "снова, повторно",
+      "pos": "нареч."
+    },
+    "erreichen": {
+      "ru": "достигать",
+      "pos": "гл.",
+      "forms": "erreichte · hat erreicht"
+    },
+    "ESA": {
+      "ru": "ЕКА, Европейское космическое агентство",
+      "pos": "сокр.",
+      "note": "die ESA = European Space Agency"
+    },
+    "etwa": {
+      "ru": "примерно, около",
+      "pos": "нареч."
+    },
+    "Europa": {
+      "ru": "Европа (спутник Юпитера; также континент)",
+      "pos": "имя собств."
+    },
+    "europäisch": {
+      "ru": "европейский",
+      "pos": "прил."
+    },
+    "fliegen": {
+      "ru": "летать, лететь",
+      "pos": "гл.",
+      "forms": "flog · ist geflogen"
+    },
+    "Forscher": {
+      "ru": "исследователь, учёный",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Forscher"
+    },
+    "fotografieren": {
+      "ru": "фотографировать",
+      "pos": "гл.",
+      "forms": "fotografierte · hat fotografiert"
+    },
+    "für": {
+      "ru": "для, за",
+      "pos": "предл."
+    },
+    "Ganymed": {
+      "ru": "Ганимед (спутник Юпитера)",
+      "pos": "имя собств."
+    },
+    "geladen": {
+      "ru": "заряженный",
+      "pos": "прил."
+    },
+    "Gelegenheit": {
+      "ru": "случай, возможность",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Gelegenheiten"
+    },
+    "Grad": {
+      "ru": "градус",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Grade",
+      "note": "после числа мн. ч. не ставится: 20 Grad"
+    },
+    "grau": {
+      "ru": "серый",
+      "pos": "прил."
+    },
+    "groß": {
+      "ru": "большой",
+      "pos": "прил.",
+      "forms": "groß · größer · am größten"
+    },
+    "haben": {
+      "ru": "иметь; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "hatte · hat gehabt"
+    },
+    "hochpräzise": {
+      "ru": "сверхточный",
+      "pos": "прил."
+    },
+    "in": {
+      "ru": "в (im = in dem, ins = in das)",
+      "pos": "предл."
+    },
+    "indisch": {
+      "ru": "индийский",
+      "pos": "прил.",
+      "note": "der Indische Ozean — Индийский океан"
+    },
+    "Ingenieur": {
+      "ru": "инженер",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Ingenieure"
+    },
+    "Instrument": {
+      "ru": "прибор, инструмент",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Instrumente"
+    },
+    "Januar": {
+      "ru": "январь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Januare"
+    },
+    "Juice": {
+      "ru": "Juice (зонд ЕКА)",
+      "pos": "имя собств.",
+      "note": "JUpiter ICy moons Explorer — исследователь ледяных лун Юпитера"
+    },
+    "Juli": {
+      "ru": "июль",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Julis"
+    },
+    "Jupiter": {
+      "ru": "Юпитер",
+      "pos": "имя собств.",
+      "note": "с артиклем: der Jupiter"
+    },
+    "Kallisto": {
+      "ru": "Каллисто (спутник Юпитера)",
+      "pos": "имя собств."
+    },
+    "Kamera": {
+      "ru": "камера",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Kameras"
+    },
+    "kein": {
+      "ru": "никакой, ни один",
+      "pos": "мест."
+    },
+    "Kilometer": {
+      "ru": "километр",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Kilometer"
+    },
+    "Kurskorrektur": {
+      "ru": "коррекция курса",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Kurskorrekturen"
+    },
+    "machen": {
+      "ru": "делать",
+      "pos": "гл.",
+      "forms": "machte · hat gemacht",
+      "note": "sich auf den Weg machen — отправиться в путь"
+    },
+    "Madagaskar": {
+      "ru": "Мадагаскар",
+      "pos": "геогр."
+    },
+    "Magnetfeld": {
+      "ru": "магнитное поле",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Magnetfelder"
+    },
+    "Magnetschweif": {
+      "ru": "магнитный хвост",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Magnetschweife"
+    },
+    "Manöver": {
+      "ru": "манёвр",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Manöver"
+    },
+    "mehrere": {
+      "pos": "мест.",
+      "ru": "несколько"
+    },
+    "messen": {
+      "ru": "измерять",
+      "pos": "гл.",
+      "forms": "maß · hat gemessen"
+    },
+    "Messinstrument": {
+      "ru": "измерительный прибор",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Messinstrumente"
+    },
+    "Mission": {
+      "ru": "миссия",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Missionen"
+    },
+    "mit": {
+      "ru": "с",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: mitgehen «пойти вместе»"
+    },
+    "mitteleuropäisch": {
+      "ru": "центральноевропейский",
+      "pos": "прил.",
+      "note": "mitteleuropäische Sommerzeit (MESZ) — летнее время Центральной Европы"
+    },
+    "Mond": {
+      "ru": "Луна; спутник планеты",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Monde"
+    },
+    "müssen": {
+      "ru": "быть вынужденным, должен",
+      "pos": "гл.",
+      "forms": "musste · hat gemusst"
+    },
+    "Navigation": {
+      "ru": "навигация",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "Navigationskamera": {
+      "ru": "навигационная камера",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Navigationskameras"
+    },
+    "noch": {
+      "ru": "ещё",
+      "pos": "нареч."
+    },
+    "nur": {
+      "ru": "только, лишь",
+      "pos": "частица"
+    },
+    "nötig": {
+      "ru": "нужный, необходимый",
+      "pos": "прил."
+    },
+    "Oberfläche": {
+      "ru": "поверхность",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Oberflächen"
+    },
+    "Ozean": {
+      "ru": "океан",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Ozeane"
+    },
+    "planen": {
+      "ru": "планировать",
+      "pos": "гл.",
+      "forms": "plante · hat geplant"
+    },
+    "Planet": {
+      "ru": "планета",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Planeten",
+      "note": "слабое склонение: den/dem/des Planeten"
+    },
+    "pro": {
+      "ru": "в, за (на единицу)",
+      "pos": "предл.",
+      "note": "3,5 Kilometer pro Sekunde — 3,5 км в секунду"
+    },
+    "Punkt": {
+      "ru": "точка",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Punkte"
+    },
+    "Raumsonde": {
+      "ru": "космический зонд",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Raumsonden"
+    },
+    "sagen": {
+      "ru": "говорить, сказать",
+      "pos": "гл.",
+      "forms": "sagte · hat gesagt"
+    },
+    "schmal": {
+      "ru": "узкий",
+      "pos": "прил."
+    },
+    "schnell": {
+      "ru": "быстрый",
+      "pos": "прил.",
+      "forms": "schnell · schneller · am schnellsten"
+    },
+    "schon": {
+      "ru": "уже",
+      "pos": "нареч."
+    },
+    "Schwerkraft": {
+      "ru": "сила тяжести, притяжение",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "sechs": {
+      "ru": "шесть",
+      "pos": "числ."
+    },
+    "sein": {
+      "ru": "быть; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "war · ist gewesen"
+    },
+    "seit": {
+      "ru": "с (какого-то времени)",
+      "pos": "предл."
+    },
+    "Sekunde": {
+      "ru": "секунда",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Sekunden"
+    },
+    "selten": {
+      "ru": "редкий",
+      "pos": "прил."
+    },
+    "September": {
+      "ru": "сентябрь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die September"
+    },
+    "sich": {
+      "ru": "себя, себе",
+      "pos": "мест.",
+      "note": "Возвратное местоимение, часть возвратного глагола: sich auf den Weg machen, sich setzen, sich legen, sich nähern, sich gefallen lassen, sich getrauen, sich umsehen"
+    },
+    "sich nähern": {
+      "ru": "приближаться",
+      "pos": "гл.",
+      "forms": "näherte sich · hat sich genähert"
+    },
+    "Sichel": {
+      "ru": "серп",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Sicheln"
+    },
+    "sie": {
+      "ru": "она; они; Вы",
+      "pos": "мест."
+    },
+    "sogar": {
+      "ru": "даже",
+      "pos": "частица"
+    },
+    "sogenannt": {
+      "ru": "так называемый",
+      "pos": "прил."
+    },
+    "solch": {
+      "ru": "такой",
+      "pos": "мест.",
+      "note": "ein solcher Vorbeiflug — такой пролёт"
+    },
+    "sollen": {
+      "ru": "быть должным, следует",
+      "pos": "гл.",
+      "forms": "sollte · hat gesollt"
+    },
+    "Sommerzeit": {
+      "ru": "летнее время",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "Sonde": {
+      "ru": "зонд",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Sonden"
+    },
+    "sondern": {
+      "ru": "а, но (после отрицания)",
+      "pos": "союз"
+    },
+    "sparen": {
+      "ru": "экономить, копить",
+      "pos": "гл.",
+      "forms": "sparte · hat gespart"
+    },
+    "Stunde": {
+      "art": "die",
+      "note": "eine halbe Stunde — тж. о расстоянии: полчаса ходу",
+      "pl": "die Stunden",
+      "pos": "сущ.",
+      "ru": "час"
+    },
+    "Swing-by": {
+      "ru": "гравитационный манёвр",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Swing-bys",
+      "note": "англицизм; по-немецки также Gravitationsmanöver"
+    },
+    "Teilchen": {
+      "ru": "частица",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Teilchen"
+    },
+    "testen": {
+      "ru": "испытывать, проверять",
+      "pos": "гл.",
+      "forms": "testete · hat getestet"
+    },
+    "Treibstoff": {
+      "ru": "топливо",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Treibstoffe"
+    },
+    "Uhr": {
+      "ru": "час (на часах); часы",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Uhren",
+      "note": "um 5 Uhr — в пять часов"
+    },
+    "um": {
+      "ru": "вокруг, в (о времени)",
+      "pos": "предл.",
+      "note": "um … zu — чтобы. Тж. отделяемая приставка: sich umsehen «оглядеться»"
+    },
+    "und": {
+      "ru": "и, а",
+      "pos": "союз"
+    },
+    "unser": {
+      "ru": "наш",
+      "pos": "мест."
+    },
+    "unter": {
+      "ru": "под, среди",
+      "pos": "предл."
+    },
+    "untersuchen": {
+      "ru": "исследовать, изучать",
+      "pos": "гл.",
+      "forms": "untersuchte · hat untersucht"
+    },
+    "unterwegs": {
+      "ru": "в пути",
+      "pos": "нареч."
+    },
+    "verantwortlich": {
+      "ru": "ответственный",
+      "pos": "прил.",
+      "note": "für etwas verantwortlich sein — отвечать за что-то"
+    },
+    "vermuten": {
+      "ru": "предполагать",
+      "pos": "гл.",
+      "forms": "vermutete · hat vermutet"
+    },
+    "von": {
+      "ru": "от, из, о (vom = von dem)",
+      "pos": "предл."
+    },
+    "vor": {
+      "ru": "перед, до; от (страха)",
+      "pos": "предл."
+    },
+    "vorbeifliegen": {
+      "ru": "пролетать мимо",
+      "pos": "гл.",
+      "forms": "flog vorbei · ist vorbeigeflogen",
+      "note": "an etwas (D) vorbeifliegen — пролететь мимо чего-то"
+    },
+    "Vorbeiflug": {
+      "ru": "пролёт мимо",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Vorbeiflüge"
+    },
+    "Weise": {
+      "ru": "способ, манера",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Weisen",
+      "note": "auf diese Weise — таким образом"
+    },
+    "werden": {
+      "ru": "становиться",
+      "pos": "гл.",
+      "forms": "wurde · ist geworden",
+      "note": "Вспомогательный глагол будущего времени и пассива"
+    },
+    "wertvoll": {
+      "ru": "ценный, драгоценный",
+      "pos": "прил."
+    },
+    "winzig": {
+      "ru": "крошечный",
+      "pos": "прил."
+    },
+    "während": {
+      "pos": "предлог",
+      "ru": "в течение, во время"
+    },
+    "zu": {
+      "ru": "к, в; слишком",
+      "pos": "предл.",
+      "note": "zur = zu der, zum = zu dem"
+    },
+    "Zufall": {
+      "ru": "случай, случайность",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Zufälle"
+    },
+    "über": {
+      "ru": "над, через, о",
+      "pos": "предл."
+    },
+    "Überwachungskamera": {
+      "ru": "камера наблюдения",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Überwachungskameras"
+    }
+  }
+}

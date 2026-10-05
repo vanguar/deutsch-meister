@@ -4,7 +4,7 @@
 
    Исходник переводов: i18n/<lang>/src/<группа>.json — {русская строка: перевод}.
    Группы: ui (интерфейс), lexicon (подсказки над словами), lessons/<a1-01>,
-   books/<id>, books-index.
+   books/<id>, books-index, news/<id>, news-index.
    Поиск перевода идёт по ВСЕМ группам (общая память переводов), так что
    одинаковая строка переводится один раз.
 
@@ -208,6 +208,14 @@ function bookFiles(id) {
   return fs.readdirSync(rel('data/books/' + id)).filter(f => f.endsWith('.json')).sort().map(f => `data/books/${id}/${f}`);
 }
 
+// Новости устроены как книги: data/news/index.json + data/news/<id>/*.json
+function newsIds() {
+  return exists('data/news/index.json') ? JSON.parse(read('data/news/index.json')).items.map(it => it.id) : [];
+}
+function newsFiles(id) {
+  return fs.readdirSync(rel('data/news/' + id)).filter(f => f.endsWith('.json')).sort().map(f => `data/news/${id}/${f}`);
+}
+
 function uniq(a) { return [...new Set(a)]; }
 
 /* Все группы и их ключи */
@@ -234,6 +242,12 @@ function extract() {
   groups['books-index'] = uniq(walkStrings(JSON.parse(read('data/books/index.json')), []));
   for (const id of bookIds()) {
     groups['books/' + id] = uniq(bookFiles(id).flatMap(f => walkStrings(JSON.parse(read(f)), [])));
+  }
+  if (exists('data/news/index.json')) {
+    groups['news-index'] = uniq(walkStrings(JSON.parse(read('data/news/index.json')), []));
+    for (const id of newsIds()) {
+      groups['news/' + id] = uniq(newsFiles(id).flatMap(f => walkStrings(JSON.parse(read(f)), [])));
+    }
   }
   return { groups, tplKeys };
 }
@@ -295,6 +309,15 @@ function cmdMerge(group, file, lang = 'uk', strict = false) {
   console.error(`[${group}] добавлено ${keys.length}${bad ? `, подозрительных: ${bad}` : ''}`);
 }
 
+// Глоссарий: ключи l (леммы) не переводятся, значит и ссылки на них из w
+// переводить нельзя — иначе «ihr (её, их)» в w становилось «ihr (її, їх)»
+// и словоформа теряла свою лемму (подсказки и карточки на uk пропадали).
+function translateFile(obj, tm) {
+  const out = translateObj(obj, tm);
+  if (obj && obj.w && typeof obj.w === 'object' && obj.l) out.w = obj.w;
+  return out;
+}
+
 function translateObj(obj, tm) {
   if (typeof obj === 'string') return CYR.test(obj) && tm[obj] !== undefined ? tm[obj] : obj;
   if (Array.isArray(obj)) return obj.map(x => translateObj(x, tm));
@@ -329,7 +352,15 @@ function cmdBuild(lang = 'uk') {
     const dst = f.replace(/^data\/books\//, `${out}/books/`);
     fs.mkdirSync(path.dirname(rel(dst)), { recursive: true });
     // компактно: книги большие
-    fs.writeFileSync(rel(dst), JSON.stringify(translateObj(JSON.parse(read(f)), tm)));
+    fs.writeFileSync(rel(dst), JSON.stringify(translateFile(JSON.parse(read(f)), tm)));
+  }
+  if (exists('data/news/index.json')) {
+    writeJson(`${out}/news/index.json`, translateObj(JSON.parse(read('data/news/index.json')), tm));
+    for (const id of newsIds()) for (const f of newsFiles(id)) {
+      const dst = f.replace(/^data\/news\//, `${out}/news/`);
+      fs.mkdirSync(path.dirname(rel(dst)), { recursive: true });
+      fs.writeFileSync(rel(dst), JSON.stringify(translateFile(JSON.parse(read(f)), tm)));
+    }
   }
   console.log('build: ok →', out);
 }

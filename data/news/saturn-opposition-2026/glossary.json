@@ -1,0 +1,776 @@
+{
+  "version": 1,
+  "w": {
+    "als": "als",
+    "am": "an",
+    "auch": "auch",
+    "auf": "auf",
+    "auge": "Auge",
+    "aus": "aus",
+    "aussieht": "aussehen",
+    "bedeutet": "bedeuten",
+    "bei": "bei",
+    "beiden": "beide",
+    "besitzt": "besitzen",
+    "besonders": "besonders",
+    "bilder": "Bild",
+    "bis": "bis",
+    "blick": "Blick",
+    "blickten": "blicken",
+    "bloßem": "bloß",
+    "dagegen": "dagegen",
+    "dann": "dann",
+    "das": "der/die/das",
+    "dass": "dass",
+    "dem": "der/die/das",
+    "den": "der/die/das",
+    "der": "der/die/das",
+    "deshalb": "deshalb",
+    "die": "der/die/das",
+    "diesen": "dieser",
+    "dort": "dort",
+    "ein": "ein/eine",
+    "einem": "ein/eine",
+    "einen": "ein/eine",
+    "einer": "ein/eine",
+    "eisigen": "eisig",
+    "er": "er",
+    "erde": "Erde",
+    "erkennen": "erkennen",
+    "etwa": "etwa",
+    "etwas": "etwas",
+    "fast": "fast",
+    "finden": "finden",
+    "fischen": "Fische",
+    "folgt": "folgen",
+    "fotografiert": "fotografieren",
+    "ganze": "ganz",
+    "ganzen": "ganz",
+    "gegen": "gegen",
+    "geht": "gehen",
+    "genau": "genau",
+    "geneigt": "neigen",
+    "geöffnet": "öffnen",
+    "grad": "Grad",
+    "grenze": "Grenze",
+    "großen": "groß",
+    "größte": "groß",
+    "hell": "hell",
+    "helligkeit": "Helligkeit",
+    "hellster": "hell",
+    "hubble": "Hubble",
+    "höchsten": "hoch",
+    "ihm": "er",
+    "ihn": "er",
+    "ihre": "ihr (её, их)",
+    "im": "in",
+    "in": "in",
+    "infrarot": "Infrarot",
+    "ist": "sein",
+    "jahr": "Jahr",
+    "james-webb-teleskop": "James-Webb-Teleskop",
+    "jetzt": "jetzt",
+    "kante": "Kante",
+    "kilometer": "Kilometer",
+    "kleinen": "klein",
+    "kleines": "klein",
+    "leicht": "leicht",
+    "leuchten": "leuchten",
+    "leuchtet": "leuchten",
+    "licht": "Licht",
+    "lichtpunkt": "Lichtpunkt",
+    "magnituden": "Magnitude",
+    "milliarden": "Milliarde",
+    "minuten": "Minute",
+    "mit": "mit",
+    "mitte": "Mitte",
+    "mitternacht": "Mitternacht",
+    "nacht": "Nacht",
+    "nah": "nah",
+    "nahe": "nahe",
+    "neben": "neben",
+    "nicht": "nicht",
+    "noch": "noch",
+    "nächste": "nächste",
+    "nähe": "Nähe",
+    "oktober": "Oktober",
+    "opposition": "Opposition",
+    "planeten": "Planet",
+    "punkt": "Punkt",
+    "ringe": "Ring",
+    "ringplaneten": "Ringplanet",
+    "rund": "rund",
+    "saturn": "Saturn",
+    "saturnmond": "Saturnmond",
+    "sehen": "sehen",
+    "sich": "sich",
+    "sichtbaren": "sichtbar",
+    "sie": "sie",
+    "sieben": "sieben",
+    "sind": "sein",
+    "so": "so",
+    "sollte": "sollen",
+    "sonne": "Sonne",
+    "sonnenaufgang": "Sonnenaufgang",
+    "sonnenuntergang": "Sonnenuntergang",
+    "sonst": "sonst",
+    "stand": "stehen",
+    "steht": "stehen",
+    "sternbild": "Sternbild",
+    "südhorizont": "Südhorizont",
+    "tagen": "Tag",
+    "teleskop": "Teleskop",
+    "titan": "Titan",
+    "trennen": "trennen",
+    "trotzdem": "trotzdem",
+    "um": "um",
+    "unbedingt": "unbedingt",
+    "und": "und",
+    "uns": "wir",
+    "unsichtbar": "unsichtbar",
+    "unter": "unter",
+    "unterwegs": "unterwegs",
+    "von": "von",
+    "walfisch": "Walfisch",
+    "waren": "sein",
+    "weiter": "weit",
+    "weltraumteleskope": "Weltraumteleskop",
+    "wer": "wer",
+    "werfen": "werfen",
+    "wie": "wie",
+    "wieder": "wieder",
+    "wir": "wir",
+    "zeigen": "zeigen",
+    "zu": "zu",
+    "zur": "zu",
+    "zurückwirft": "zurückwerfen",
+    "zwischen": "zwischen",
+    "öffnen": "öffnen",
+    "über": "über"
+  },
+  "l": {
+    "als": {
+      "ru": "когда; как; чем",
+      "pos": "союз"
+    },
+    "an": {
+      "ru": "у, к, на",
+      "pos": "предл.",
+      "note": "am = an dem. Тж. отделяемая приставка: anfangen «начинать», annehmen, ansehen, anzünden"
+    },
+    "auch": {
+      "ru": "тоже, также; даже",
+      "pos": "частица"
+    },
+    "auf": {
+      "ru": "на, в",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: aufspringen «вскочить», sich aufmachen"
+    },
+    "Auge": {
+      "ru": "глаз",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Augen"
+    },
+    "aus": {
+      "ru": "из",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: auslöschen «погасить»"
+    },
+    "aussehen": {
+      "ru": "выглядеть",
+      "pos": "гл.",
+      "forms": "sah aus · hat ausgesehen"
+    },
+    "bedeuten": {
+      "ru": "означать",
+      "pos": "гл.",
+      "forms": "bedeutete · hat bedeutet"
+    },
+    "bei": {
+      "ru": "у, при, возле",
+      "pos": "предл."
+    },
+    "beide": {
+      "ru": "оба",
+      "pos": "мест."
+    },
+    "besitzen": {
+      "ru": "владеть, иметь",
+      "pos": "гл.",
+      "forms": "besaß · hat besessen"
+    },
+    "besonders": {
+      "ru": "особенно",
+      "pos": "нареч."
+    },
+    "Bild": {
+      "ru": "картина, снимок",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Bilder"
+    },
+    "bis": {
+      "ru": "до; пока не",
+      "pos": "союз"
+    },
+    "Blick": {
+      "ru": "взгляд",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Blicke"
+    },
+    "blicken": {
+      "ru": "смотреть, виднеться",
+      "pos": "гл.",
+      "forms": "blickte · hat geblickt"
+    },
+    "bloß": {
+      "ru": "голый; простой",
+      "pos": "прил.",
+      "note": "mit bloßem Auge — невооружённым глазом"
+    },
+    "dagegen": {
+      "ru": "напротив, зато",
+      "pos": "нареч."
+    },
+    "dann": {
+      "ru": "потом, затем",
+      "pos": "нареч."
+    },
+    "dass": {
+      "ru": "что; чтобы",
+      "pos": "союз"
+    },
+    "der/die/das": {
+      "ru": "определённый артикль",
+      "pos": "артикль",
+      "note": "Тж. относительное местоимение «который»"
+    },
+    "deshalb": {
+      "ru": "поэтому",
+      "pos": "нареч."
+    },
+    "dieser": {
+      "ru": "этот, эта, это",
+      "pos": "мест."
+    },
+    "dort": {
+      "ru": "там",
+      "pos": "нареч."
+    },
+    "ein/eine": {
+      "ru": "неопределённый артикль",
+      "pos": "артикль",
+      "note": "einer — «один, некто»"
+    },
+    "eisig": {
+      "ru": "ледяной",
+      "pos": "прил."
+    },
+    "er": {
+      "ru": "он",
+      "pos": "мест.",
+      "note": "ihn — его, ihm — ему"
+    },
+    "Erde": {
+      "ru": "Земля (планета); земля, почва",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "erkennen": {
+      "ru": "узнавать; распознавать",
+      "pos": "гл.",
+      "forms": "erkannte · hat erkannt",
+      "note": "sich zu erkennen geben — открыться, назвать себя"
+    },
+    "etwa": {
+      "ru": "примерно, около",
+      "pos": "нареч."
+    },
+    "etwas": {
+      "ru": "что-то, нечто; немного",
+      "pos": "мест."
+    },
+    "fast": {
+      "ru": "почти",
+      "pos": "нареч."
+    },
+    "finden": {
+      "ru": "находить",
+      "pos": "гл.",
+      "forms": "fand · hat gefunden"
+    },
+    "Fische": {
+      "ru": "Рыбы (созвездие)",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null,
+      "note": "мн. ч. от der Fisch «рыба»"
+    },
+    "folgen": {
+      "ru": "следовать; слушаться",
+      "pos": "гл.",
+      "forms": "folgte · ist gefolgt"
+    },
+    "fotografieren": {
+      "ru": "фотографировать",
+      "pos": "гл.",
+      "forms": "fotografierte · hat fotografiert"
+    },
+    "ganz": {
+      "ru": "весь, целый; совсем",
+      "pos": "прил."
+    },
+    "gegen": {
+      "ru": "против; около (о времени)",
+      "pos": "предл.",
+      "note": "gegen Mitternacht — около полуночи"
+    },
+    "gehen": {
+      "ru": "идти, ходить",
+      "pos": "гл.",
+      "forms": "ging · ist gegangen"
+    },
+    "genau": {
+      "ru": "точный; genauer — пристальнее",
+      "pos": "прил."
+    },
+    "Grad": {
+      "ru": "градус",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Grade",
+      "note": "после числа мн. ч. не ставится: 20 Grad"
+    },
+    "Grenze": {
+      "ru": "граница",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Grenzen"
+    },
+    "groß": {
+      "ru": "большой",
+      "pos": "прил.",
+      "forms": "groß · größer · am größten"
+    },
+    "hell": {
+      "ru": "светлый, яркий",
+      "pos": "прил.",
+      "forms": "hell · heller · am hellsten"
+    },
+    "Helligkeit": {
+      "ru": "яркость, блеск",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Helligkeiten"
+    },
+    "hoch": {
+      "ru": "высокий",
+      "pos": "прил.",
+      "forms": "hoch · höher · am höchsten"
+    },
+    "Hubble": {
+      "ru": "«Хаббл» (космический телескоп)",
+      "pos": "имя собств."
+    },
+    "ihr (её, их)": {
+      "ru": "её; их",
+      "pos": "мест."
+    },
+    "in": {
+      "ru": "в (im = in dem, ins = in das)",
+      "pos": "предл."
+    },
+    "Infrarot": {
+      "ru": "инфракрасный свет",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null,
+      "note": "im Infrarot — в инфракрасном диапазоне"
+    },
+    "Jahr": {
+      "ru": "год",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Jahre"
+    },
+    "James-Webb-Teleskop": {
+      "ru": "телескоп «Джеймс Уэбб»",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "jetzt": {
+      "ru": "сейчас, теперь",
+      "pos": "нареч."
+    },
+    "Kante": {
+      "ru": "край, ребро",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Kanten"
+    },
+    "Kilometer": {
+      "ru": "километр",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Kilometer"
+    },
+    "klein": {
+      "ru": "маленький",
+      "pos": "прил."
+    },
+    "leicht": {
+      "ru": "лёгкий, легко",
+      "pos": "прил."
+    },
+    "leuchten": {
+      "ru": "светить, сиять",
+      "pos": "гл.",
+      "forms": "leuchtete · hat geleuchtet"
+    },
+    "Licht": {
+      "ru": "свет; огонёк",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Lichter"
+    },
+    "Lichtpunkt": {
+      "ru": "светлая точка",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Lichtpunkte"
+    },
+    "Magnitude": {
+      "ru": "звёздная величина",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Magnituden"
+    },
+    "Milliarde": {
+      "ru": "миллиард",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Milliarden"
+    },
+    "Minute": {
+      "ru": "минута",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Minuten"
+    },
+    "mit": {
+      "ru": "с",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: mitgehen «пойти вместе»"
+    },
+    "Mitte": {
+      "art": "die",
+      "pl": null,
+      "pos": "сущ.",
+      "ru": "середина"
+    },
+    "Mitternacht": {
+      "ru": "полночь",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Mitternächte"
+    },
+    "Nacht": {
+      "art": "die",
+      "pl": "die Nächte",
+      "pos": "сущ.",
+      "ru": "ночь"
+    },
+    "nah": {
+      "ru": "близкий",
+      "pos": "прил.",
+      "forms": "nah · näher · am nächsten"
+    },
+    "nahe": {
+      "ru": "вблизи, около",
+      "pos": "предл."
+    },
+    "neben": {
+      "pos": "предл.",
+      "ru": "рядом с, возле"
+    },
+    "neigen": {
+      "ru": "наклонять(ся)",
+      "pos": "гл.",
+      "forms": "neigte · hat geneigt",
+      "note": "geneigt sein — быть наклонённым"
+    },
+    "nicht": {
+      "ru": "не",
+      "pos": "частица"
+    },
+    "noch": {
+      "ru": "ещё",
+      "pos": "нареч."
+    },
+    "nächste": {
+      "ru": "следующий; ближайший",
+      "pos": "прил."
+    },
+    "Nähe": {
+      "art": "die",
+      "note": "in dessen Nähe — поблизости от которого",
+      "pl": null,
+      "pos": "сущ.",
+      "ru": "близость, окрестность"
+    },
+    "Oktober": {
+      "ru": "октябрь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Oktober"
+    },
+    "Opposition": {
+      "ru": "противостояние (в астрономии); оппозиция",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Oppositionen"
+    },
+    "Planet": {
+      "ru": "планета",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Planeten",
+      "note": "слабое склонение: den/dem/des Planeten"
+    },
+    "Punkt": {
+      "ru": "точка",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Punkte"
+    },
+    "Ring": {
+      "ru": "кольцо",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Ringe"
+    },
+    "Ringplanet": {
+      "ru": "планета с кольцами",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Ringplaneten"
+    },
+    "rund": {
+      "ru": "кругом; круглый",
+      "pos": "нареч."
+    },
+    "Saturn": {
+      "ru": "Сатурн",
+      "pos": "имя собств."
+    },
+    "Saturnmond": {
+      "ru": "спутник Сатурна",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Saturnmonde"
+    },
+    "sehen": {
+      "ru": "видеть",
+      "pos": "гл.",
+      "forms": "sah · hat gesehen"
+    },
+    "sein": {
+      "ru": "быть; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "war · ist gewesen"
+    },
+    "sich": {
+      "ru": "себя, себе",
+      "pos": "мест.",
+      "note": "Возвратное местоимение, часть возвратного глагола: sich auf den Weg machen, sich setzen, sich legen, sich nähern, sich gefallen lassen, sich getrauen, sich umsehen"
+    },
+    "sichtbar": {
+      "ru": "видимый",
+      "pos": "прил."
+    },
+    "sie": {
+      "ru": "она; они; Вы",
+      "pos": "мест."
+    },
+    "sieben": {
+      "ru": "семь",
+      "pos": "числ."
+    },
+    "so": {
+      "ru": "так; такой; то (в главном предложении)",
+      "pos": "нареч."
+    },
+    "sollen": {
+      "ru": "быть должным, следует",
+      "pos": "гл.",
+      "forms": "sollte · hat gesollt"
+    },
+    "Sonne": {
+      "art": "die",
+      "pl": "die Sonnen",
+      "pos": "сущ.",
+      "ru": "солнце"
+    },
+    "Sonnenaufgang": {
+      "ru": "восход солнца",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Sonnenaufgänge"
+    },
+    "Sonnenuntergang": {
+      "ru": "закат",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Sonnenuntergänge"
+    },
+    "sonst": {
+      "pos": "нареч.",
+      "ru": "иначе; помимо этого"
+    },
+    "stehen": {
+      "ru": "стоять",
+      "pos": "гл.",
+      "forms": "stand · hat gestanden"
+    },
+    "Sternbild": {
+      "ru": "созвездие",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Sternbilder"
+    },
+    "Südhorizont": {
+      "ru": "южный горизонт",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "Tag": {
+      "ru": "день",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Tage"
+    },
+    "Teleskop": {
+      "ru": "телескоп",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Teleskope"
+    },
+    "Titan": {
+      "ru": "Титан (спутник Сатурна)",
+      "pos": "имя собств."
+    },
+    "trennen": {
+      "ru": "разделять",
+      "pos": "гл.",
+      "forms": "trennte · hat getrennt"
+    },
+    "trotzdem": {
+      "ru": "тем не менее, всё же",
+      "pos": "нареч."
+    },
+    "um": {
+      "ru": "вокруг, в (о времени)",
+      "pos": "предл.",
+      "note": "um … zu — чтобы. Тж. отделяемая приставка: sich umsehen «оглядеться»"
+    },
+    "unbedingt": {
+      "ru": "непременно, обязательно",
+      "pos": "нареч."
+    },
+    "und": {
+      "ru": "и, а",
+      "pos": "союз"
+    },
+    "unsichtbar": {
+      "ru": "невидимый",
+      "pos": "прил."
+    },
+    "unter": {
+      "ru": "под, среди",
+      "pos": "предл."
+    },
+    "unterwegs": {
+      "ru": "в пути",
+      "pos": "нареч."
+    },
+    "von": {
+      "ru": "от, из, о (vom = von dem)",
+      "pos": "предл."
+    },
+    "Walfisch": {
+      "ru": "кит; созвездие Кита",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Walfische"
+    },
+    "weit": {
+      "ru": "далёкий, далеко",
+      "pos": "прил.",
+      "forms": "weit · weiter · am weitesten",
+      "note": "weiter — дальше, далее; von weitem — издали"
+    },
+    "Weltraumteleskop": {
+      "ru": "космический телескоп",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Weltraumteleskope"
+    },
+    "wer": {
+      "ru": "кто",
+      "pos": "мест."
+    },
+    "werfen": {
+      "ru": "бросать",
+      "pos": "гл.",
+      "forms": "warf · hat geworfen"
+    },
+    "wie": {
+      "ru": "как; какой",
+      "pos": "союз"
+    },
+    "wieder": {
+      "ru": "снова",
+      "pos": "нареч."
+    },
+    "wir": {
+      "ru": "мы",
+      "pos": "мест.",
+      "note": "uns — нас, нам"
+    },
+    "zeigen": {
+      "ru": "показывать; sich zeigen — появиться",
+      "pos": "гл.",
+      "forms": "zeigte · hat gezeigt"
+    },
+    "zu": {
+      "ru": "к, в; слишком",
+      "pos": "предл.",
+      "note": "zur = zu der, zum = zu dem"
+    },
+    "zurückwerfen": {
+      "ru": "отражать, отбрасывать",
+      "pos": "гл.",
+      "forms": "warf zurück · hat zurückgeworfen"
+    },
+    "zwischen": {
+      "pos": "предл.",
+      "ru": "между"
+    },
+    "öffnen": {
+      "ru": "открывать",
+      "pos": "гл.",
+      "forms": "öffnete · hat geöffnet",
+      "note": "sich öffnen — открываться, раскрываться"
+    },
+    "über": {
+      "ru": "над, через, о",
+      "pos": "предл."
+    }
+  }
+}

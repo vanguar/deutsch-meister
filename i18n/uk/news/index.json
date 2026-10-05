@@ -1,0 +1,56 @@
+{
+ "version": 1,
+ "items": [
+  {
+   "id": "saturn-opposition-2026",
+   "title": "Saturn in Opposition: Der Ringplanet zeigt sich die ganze Nacht",
+   "titleRu": "Сатурн у протистоянні: планету з кільцями видно всю ніч",
+   "blurb": "4 жовтня Земля опинилася точно між Сонцем і Сатурном. Планету видно всю ніч, а її кільця після «невидимого» 2025 року знову розкриваються.",
+   "rubric": "astronomy",
+   "level": "B1–B2",
+   "published": "2026-10-04",
+   "added": "2026-10-05",
+   "source": "Astronomy Magazine",
+   "sourceUrl": "https://www.astronomy.com/observing/the-sky-today-sunday-october-4-2026/",
+   "cover": "data/news/saturn-opposition-2026/img/cover.jpg",
+   "words": 216,
+   "minutes": 2,
+   "photos": 3,
+   "chapters": 1
+  },
+  {
+   "id": "crew-13-iss-2026",
+   "title": "Rekordflug zur ISS: Vier Raumfahrer starten zu einer sechsmonatigen Mission",
+   "titleRu": "Рекордний політ до МКС: четверо космонавтів вирушили в піврічну місію",
+   "blurb": "Четверо космонавтів зі США, Росії та Канади долетіли до МКС лише за вісім годин — рекорд для екіпажів NASA. Попереду пів року роботи на орбіті.",
+   "rubric": "astronomy",
+   "level": "B2",
+   "published": "2026-10-01",
+   "added": "2026-10-05",
+   "source": "Spaceflight Now · NASA",
+   "sourceUrl": "https://spaceflightnow.com/2026/10/01/fresh-crew-takes-off-for-six-month-stay-aboard-space-station/",
+   "cover": "data/news/crew-13-iss-2026/img/cover.jpg",
+   "words": 200,
+   "minutes": 2,
+   "photos": 3,
+   "chapters": 1
+  },
+  {
+   "id": "juice-erde-2026",
+   "title": "Mit Schwung zum Jupiter: Juice fliegt knapp an der Erde vorbei",
+   "titleRu": "З розгону до Юпітера: зонд Juice пролетів зовсім поруч із Землею",
+   "blurb": "Зонд ЄКА Juice пройшов за 8640 км над Індійським океаном, розігнався на 3,5 км/с і взяв курс на Юпітер. Дорогою він сфотографував Африку, Мадагаскар і Місяць.",
+   "rubric": "astronomy",
+   "level": "B2–C1",
+   "published": "2026-09-28",
+   "added": "2026-10-05",
+   "source": "ESA — Європейське космічне агентство",
+   "sourceUrl": "https://www.esa.int/Science_Exploration/Space_Science/Juice/Successful_Earth_flyby_improves_Juice_s_course_to_Jupiter",
+   "cover": "data/news/juice-erde-2026/img/cover.jpg",
+   "words": 226,
+   "minutes": 2,
+   "photos": 4,
+   "chapters": 1
+  }
+ ]
+}

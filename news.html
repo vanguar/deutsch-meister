@@ -2,130 +2,261 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#7c6af7">
   <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="Deutsch Meister">
+  <link rel="apple-touch-icon" href="/deutsch-meister/icons/icon.svg">
   <link rel="icon" type="image/svg+xml" href="/deutsch-meister/icons/icon.svg">
   <title>Новости на немецком | Deutsch Meister</title>
   <!-- язык интерфейса: первым, до данных и стилей -->
-  <script src="js/i18n.js?v=95"></script>
-  <link rel="stylesheet" href="css/base.css?v=95">
-  <style>
-    /* Раздел «Новости на немецком» — пока витрина: рубрики есть, статей нет */
-    .news-page { max-width: 760px; margin: 0 auto; padding: 18px 16px 48px; }
-    .news-head { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-bottom: 18px; }
-    .news-head .news-back { flex-basis: 100%; }
-    .news-back { color: var(--text-muted); text-decoration: none; font-size: 14px; white-space: nowrap; }
-    .news-back:hover { color: var(--accent); }
-    .news-titles { flex: 1; min-width: 0; }
-    .news-h1 { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 900; color: var(--text-strong); line-height: 1.15; }
-    .news-sub { font-size: 13px; color: var(--text-muted); margin-top: 2px; }
-    .news-btn {
-      display: inline-grid; place-items: center; min-width: 36px; height: 36px; padding: 0 10px;
-      border-radius: 999px; background: var(--surface2); border: 1px solid var(--border);
-      color: var(--text); font-size: 13px; font-weight: 700; cursor: pointer;
-    }
-    .news-soon {
-      display: flex; gap: 12px; align-items: flex-start;
-      padding: 14px 16px; margin-bottom: 18px; border-radius: 14px;
-      background: color-mix(in srgb, var(--accent) 12%, var(--surface));
-      border: 1px solid color-mix(in srgb, var(--accent) 40%, var(--border));
-      color: var(--text); font-size: 14px; line-height: 1.5;
-    }
-    .news-soon b { color: var(--text-strong); }
-    .news-soon-ico { font-size: 22px; line-height: 1; }
-    .news-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 12px; }
-    .news-tile {
-      position: relative; text-align: left; padding: 18px 16px 16px; border-radius: 16px;
-      background: var(--surface2); border: 1px solid var(--border); color: var(--text);
-      font: inherit; cursor: pointer; transition: transform var(--t-fast), border-color var(--t-fast);
-    }
-    .news-tile:hover { transform: translateY(-2px); border-color: var(--accent2); }
-    .news-tile-ico { font-size: 34px; line-height: 1; }
-    .news-tile-title { margin-top: 12px; font-size: 18px; font-weight: 800; color: var(--text-strong); }
-    .news-tile-text { margin-top: 6px; font-size: 13px; color: var(--text-muted); line-height: 1.45; }
-    .news-tile-badge {
-      position: absolute; top: 12px; right: 12px; padding: 3px 9px; border-radius: 999px;
-      font-size: 11px; font-weight: 700; letter-spacing: .3px;
-      background: color-mix(in srgb, var(--accent2) 16%, transparent); color: var(--accent2);
-    }
-    .news-note { margin-top: 18px; font-size: 13px; color: var(--text-dim); line-height: 1.5; }
-    .news-toast {
-      position: fixed; left: 50%; bottom: 24px; transform: translate(-50%, 20px); opacity: 0;
-      padding: 10px 16px; border-radius: 12px; background: var(--surface3); color: var(--text-strong);
-      border: 1px solid var(--border); font-size: 14px; transition: all .25s ease; pointer-events: none;
-      white-space: nowrap;
-    }
-    .news-toast.show { opacity: 1; transform: translate(-50%, 0); }
-  </style>
+  <script src="js/i18n.js?v=96"></script>
+  <link rel="stylesheet" href="css/base.css?v=96">
+  <!-- Ридер статей — тот же, что у книг: lesson.css (.word-tip),
+       exercises.css (переворот карточки), reader.css -->
+  <link rel="stylesheet" href="css/lesson.css?v=96">
+  <link rel="stylesheet" href="css/exercises.css?v=96">
+  <link rel="stylesheet" href="css/reader.css?v=96">
+  <link rel="stylesheet" href="css/news.css?v=96">
 </head>
-<body>
-  <div class="news-page">
-    <header class="news-head">
-      <a class="news-back" href="index.html">← Главная</a>
-      <div class="news-titles">
-        <h1 class="news-h1">Новости на немецком</h1>
-        <div class="news-sub">Свежие тексты на современном языке</div>
-      </div>
-      <button class="news-btn" data-lang-toggle onclick="I18N.toggle()" title="Язык · Мова">RU</button>
-      <button class="news-btn" id="themeToggle" onclick="toggleTheme()" title="Сменить тему">🌙</button>
-    </header>
+<body data-reader-dir="data/news/">
 
-    <div class="news-soon" role="status">
-      <span class="news-soon-ico">🚧</span>
-      <span><b>Раздел в разработке.</b> Скоро здесь появятся актуальные новости на живом современном немецком — с переводом, подсказками над словами и озвучкой, как в книгах.</span>
+<div class="bg-mesh"></div>
+
+<!-- ── ЛЕНТА (js/news.js). id="libView": ридер прячет/показывает этот вид ── -->
+<div class="news-page" id="libView">
+  <header class="news-head">
+    <a class="news-back" href="index.html">← Главная</a>
+    <div class="news-titles">
+      <h1 class="news-h1">Новости на немецком</h1>
+      <div class="news-sub">Свежие тексты на современном языке</div>
     </div>
+    <button class="news-btn" data-lang-toggle onclick="I18N.toggle()" title="Язык · Мова" aria-label="Язык · Мова">RU</button>
+    <button class="news-btn" id="themeToggle" onclick="toggleTheme()" title="Сменить тему" aria-label="Сменить тему">🌙</button>
+  </header>
 
-    <div class="news-grid">
-      <button class="news-tile" type="button" aria-disabled="true" onclick="newsSoon()">
-        <span class="news-tile-badge">Скоро</span>
-        <div class="news-tile-ico">💹</div>
-        <div class="news-tile-title">Экономика</div>
-        <div class="news-tile-text">Рынки, цены, работа и деньги</div>
-      </button>
-      <button class="news-tile" type="button" aria-disabled="true" onclick="newsSoon()">
-        <span class="news-tile-badge">Скоро</span>
-        <div class="news-tile-ico">🌍</div>
-        <div class="news-tile-title">События</div>
-        <div class="news-tile-text">Главное в Германии и мире</div>
-      </button>
-      <button class="news-tile" type="button" aria-disabled="true" onclick="newsSoon()">
-        <span class="news-tile-badge">Скоро</span>
-        <div class="news-tile-ico">🔭</div>
-        <div class="news-tile-title">Астрономия</div>
-        <div class="news-tile-text">Космос, открытия и миссии</div>
-      </button>
+  <p class="news-intro">Короткие статьи о том, что происходит прямо сейчас, — с подсказками над словами,
+    переводом, озвучкой и карточками, как в книгах. У каждой статьи указан уровень языка.</p>
+
+  <!-- Рубрики: где статьи есть — счётчик и «Свежее», где нет — «Скоро» -->
+  <section class="news-grid" id="newsRubrics" aria-label="Рубрики"></section>
+
+  <div class="news-feed-head" id="newsFeedHead">
+    <h2 class="news-feed-title" id="newsFeedTitle">Лента новостей</h2>
+    <button class="news-chip" type="button" id="newsFilterReset" hidden>Все рубрики ✕</button>
+  </div>
+  <p class="news-legend">
+    <span class="news-legend-item"><span class="nc-badge fresh">🔥 <span>Свежее</span></span> <span>— новости не старше трёх дней</span></span>
+    <span class="news-legend-item"><span class="nc-badge unread"><i aria-hidden="true"></i><span>Новое</span></span> <span>— вы её ещё не открывали</span></span>
+  </p>
+  <main class="news-feed" id="newsFeed" aria-live="polite" aria-busy="true"></main>
+
+  <p class="news-note">Тексты — пересказ новостей из открытых источников: источник и дата публикации указаны
+    у каждой статьи. Фото — космических агентств, с указанием авторов и лицензий.</p>
+</div>
+
+<!-- ── РИДЕР (вид переключается без перезагрузки, js/reader.js) ── -->
+<section class="rd-view" id="rdView" hidden>
+
+  <header class="rd-top">
+    <button class="rd-icon-btn" id="rdBack" title="К новостям" aria-label="К новостям">←</button>
+    <div class="rd-top-titles">
+      <div class="rd-chapter-title" id="rdChapterTitle"></div>
+      <div class="rd-chapter-sub" id="rdChapterSub"></div>
     </div>
+    <div class="rd-pages" id="rdPages" aria-live="polite"></div>
+    <button class="rd-icon-btn" id="rdDictBtn" title="Словарь статьи"
+      aria-label="Словарь статьи">📗</button>
+  </header>
 
-    <p class="news-note">В отличие от книг, здесь будет язык сегодняшнего дня: короткие статьи уровня B1–B2, которые обновляются регулярно.</p>
+  <div class="rd-viewport" id="rdViewport">
+    <div class="rd-content" id="rdContent" lang="de"></div>
+    <div class="rd-state" id="rdState" hidden></div>
   </div>
 
-  <div class="news-toast" id="newsToast">🚧 Этот раздел пока в разработке</div>
+  <footer class="rd-bottom">
+    <div class="rd-bar"><span class="rd-bar-fill" id="rdBarFill"></span></div>
+    <div class="rd-controls">
+      <button class="rd-nav-btn" id="rdPrev">‹ Назад</button>
+      <div class="rd-slot" id="rdSlot">
+        <button class="rd-slot-btn" id="rdPrefsBtn" title="Настройки чтения"
+          aria-label="Настройки чтения">Aa</button>
+        <button class="rd-slot-btn" id="rdSpeakBtn" title="Читать дальше вслух"
+          aria-label="Читать дальше вслух" aria-pressed="false">🔊<span
+          class="rd-btn-label">дальше</span></button>
+        <button class="rd-slot-btn" id="rdCardsBtn" title="Карточки этой статьи"
+          aria-label="Карточки этой статьи" disabled>🃏<span
+          class="rd-btn-label">карточки</span> <span id="rdCardsN">(0)</span></button>
+        <button class="rd-slot-btn" id="rdInterlinearBtn" title="Показать перевод над словами"
+          aria-label="Показать перевод над словами" aria-pressed="false"><span
+          class="rd-btn-icon" aria-hidden="true">🔤</span><span class="rd-btn-label">слова</span></button>
+        <button class="rd-slot-btn" id="rdFullTranslationBtn" title="Показать художественный перевод"
+          aria-label="Показать художественный перевод" aria-pressed="false"><span
+          class="rd-btn-icon" aria-hidden="true">🇷🇺</span><span class="rd-btn-label">перевод</span></button>
+        <!-- Только у книги с рифмованным переводом (meta.rhymed). Скрыта
+             атрибутом hidden, показывает её js/reader.js при открытии книги. -->
+        <button class="rd-slot-btn" id="rdRhymeBtn" title="Показать перевод в рифму"
+          aria-label="Показать перевод в рифму" aria-pressed="false" hidden>рифма</button>
+      </div>
+      <button class="rd-nav-btn" id="rdNext">Вперёд ›</button>
+    </div>
+  </footer>
 
-  <script>
-    function newsSoon() {
-      const t = document.getElementById('newsToast');
-      t.classList.add('show');
-      clearTimeout(newsSoon.timer);
-      newsSoon.timer = setTimeout(() => t.classList.remove('show'), 2200);
-    }
-    function initTheme() {
-      const saved = localStorage.getItem('dm_theme') || 'dark';
-      document.documentElement.setAttribute('data-theme', saved);
-      document.getElementById('themeToggle').textContent = saved === 'dark' ? '☀️' : '🌙';
-    }
-    function toggleTheme() {
-      const next = (document.documentElement.getAttribute('data-theme') || 'dark') === 'dark' ? 'light' : 'dark';
-      document.documentElement.setAttribute('data-theme', next);
-      localStorage.setItem('dm_theme', next);
-      document.getElementById('themeToggle').textContent = next === 'dark' ? '☀️' : '🌙';
-    }
-    initTheme();
-  </script>
-  <script src="js/sw-register.js?v=95"></script>
-  <script src="js/telegram.js?v=95"></script>
+  <!-- ── НАСТРОЙКИ ЧТЕНИЯ: подложка + шторка, ряды строит js/reader.js ── -->
+  <div class="rd-sheet-back" id="rdSheetBack"></div>
+  <aside class="rd-sheet" id="rdSheet" role="dialog" aria-modal="true"
+    aria-label="Настройки чтения">
+    <div class="rd-sheet-grip"></div>
+    <div class="rd-sheet-head">
+      <div class="rd-sheet-title">Как читать</div>
+      <button class="rd-sheet-close" id="rdSheetClose" aria-label="Закрыть">✕</button>
+    </div>
+    <div id="rdSheetBody"></div>
+  </aside>
+
+</section>
+
+<!-- ── КАРТОЧКИ КНИГИ: оверлей поверх ридера, js/reader-cards.js.
+     Лежит на уровне body и несёт .rd-scope, потому что открывается и из
+     ридера, и из словаря; ридер при этом не размонтируется. ── -->
+<section class="rd-cards rd-scope" id="rdCards" hidden
+  role="dialog" aria-modal="true" aria-label="Карточки статьи">
+
+  <header class="rd-top">
+    <button class="rd-icon-btn" id="rdCardsBack" title="Закрыть карточки"
+      aria-label="Закрыть карточки">←</button>
+    <div class="rd-top-titles">
+      <div class="rd-chapter-title">Карточки</div>
+      <div class="rd-chapter-sub" id="rdCardsSub"></div>
+    </div>
+    <div class="rd-pages" id="rdCardsCounter" aria-live="polite"></div>
+  </header>
+
+  <div class="rd-cards-body">
+    <div class="flashcard-dots" id="rdCardsDots"></div>
+
+    <div class="flashcard-viewport">
+      <div class="flashcard" id="rdCard">
+        <div class="card-face front">
+          <div class="card-de" id="rdCardDE">…</div>
+          <button type="button" class="fc-say" id="rdCardSayFront"
+            aria-label="Озвучить слово">🔊</button>
+          <div class="card-hint">Нажмите, чтобы увидеть перевод</div>
+        </div>
+        <div class="card-face back">
+          <div class="card-ru" id="rdCardRU">…</div>
+          <div class="fc-meta" id="rdCardMeta"></div>
+          <div class="fc-old" id="rdCardOld" hidden></div>
+          <div class="card-ipa" id="rdCardIPA"></div>
+          <button type="button" class="fc-say" id="rdCardSayBack"
+            aria-label="Озвучить слово">🔊</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-actions" id="rdCardActions" style="display:none">
+      <button class="card-btn again" id="rdCardAgain">↻ Повторить</button>
+      <button class="card-btn good"  id="rdCardGood">✓ Знаю</button>
+    </div>
+
+    <div class="fc-done" id="rdCardsDone" hidden>
+      <div class="fc-done-emoji">🃏</div>
+      <div class="fc-done-title" id="rdCardsDoneTitle"></div>
+      <button class="btn btn-primary" id="rdCardsBackToRead">Продолжить чтение →</button>
+    </div>
+  </div>
+</section>
+
+<!-- ── СЛОВАРЬ СТАТЬИ: js/reader-dict.js ── -->
+<section class="rd-dict rd-scope" id="rdDict" hidden
+  role="dialog" aria-modal="true" aria-label="Словарь статьи">
+
+  <header class="rd-top">
+    <button class="rd-icon-btn" id="rdDictBack" title="Закрыть словарь"
+      aria-label="Закрыть словарь">←</button>
+    <div class="rd-top-titles">
+      <div class="rd-chapter-title">Словарь статьи</div>
+      <div class="rd-chapter-sub" id="rdDictSub"></div>
+    </div>
+  </header>
+
+  <div class="rd-dict-tools">
+    <input type="search" class="rd-dict-search" id="rdDictSearch"
+      placeholder="Поиск по слову или переводу" aria-label="Поиск по словарю">
+    <!-- «Все» — это все полнозначные. Служебные (артикли, предлоги, союзы)
+         показывает только их собственный фильтр: число в подписи ставит
+         js/reader-dict.js -->
+    <div class="rd-seg rd-seg--grid rd-dict-filter" role="group" aria-label="Фильтр">
+      <button type="button" data-filter="all"   aria-pressed="true">Все</button>
+      <button type="button" data-filter="new"   aria-pressed="false">Новые</button>
+      <button type="button" data-filter="known" aria-pressed="false">Знаю</button>
+      <button type="button" data-filter="fn"    aria-pressed="false">Служебные</button>
+    </div>
+    <!-- Главное действие экрана: подпись целиком ставит js/reader-dict.js,
+         она называет, что именно уйдёт в карточки (весь словарь или то,
+         что отобрано поиском и фильтром) -->
+    <div class="rd-dict-actions">
+      <button class="rd-dict-go" id="rdDictCards">▶ Учить</button>
+      <button class="rd-slot-btn rd-dict-export" id="rdDictExport">⬇ Экспорт</button>
+    </div>
+  </div>
+
+  <div class="rd-dict-list" id="rdDictList"></div>
+
+  <!-- Экспорт: текст в поле, откуда его можно скопировать где угодно,
+       включая Telegram WebView, где скачивание файла не работает -->
+  <div class="rd-export" id="rdExport" hidden>
+    <div class="rd-export-box">
+      <div class="rd-export-head">
+        <span class="rd-sheet-title">Экспорт словаря</span>
+        <button class="rd-sheet-close" id="rdExportClose" aria-label="Закрыть">✕</button>
+      </div>
+      <textarea class="rd-export-text" id="rdExportText" readonly rows="10"></textarea>
+      <button class="btn btn-primary" id="rdExportCopy">Скопировать</button>
+    </div>
+  </div>
+</section>
+
+<div class="news-toast" id="newsToast">🚧 Этот раздел пока в разработке</div>
+
+<script src="js/sw-register.js?v=96"></script>
+<script src="js/tts.js?v=96"></script>
+<script src="js/reader-words.js?v=96"></script>
+<script src="js/reader-speak.js?v=96"></script>
+<script src="js/reader-tip.js?v=96"></script>
+<script src="js/reader-gloss.js?v=96"></script>
+<script src="js/reader-cards.js?v=96"></script>
+<script src="js/reader-dict.js?v=96"></script>
+<script src="js/flashcards.js?v=96"></script>
+<script src="js/reader.js?v=96"></script>
+<script src="js/news.js?v=96"></script>
+<script src="js/telegram.js?v=96"></script>
+<script>
+  function newsSoon() {
+    const t = document.getElementById('newsToast');
+    t.classList.add('show');
+    clearTimeout(newsSoon.timer);
+    newsSoon.timer = setTimeout(() => t.classList.remove('show'), 2200);
+  }
+  function initTheme() {
+    let saved = 'dark';
+    try { saved = localStorage.getItem('dm_theme') || 'dark'; } catch (e) {}
+    document.documentElement.setAttribute('data-theme', saved);
+    const btn = document.getElementById('themeToggle');
+    if (btn) btn.textContent = saved === 'dark' ? '☀️' : '🌙';
+  }
+  function toggleTheme() {
+    const next = (document.documentElement.getAttribute('data-theme') || 'dark') === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    try { localStorage.setItem('dm_theme', next); } catch (e) {}
+    const btn = document.getElementById('themeToggle');
+    if (btn) btn.textContent = next === 'dark' ? '☀️' : '🌙';
+  }
+  initTheme();
+</script>
+
 </body>
 </html>

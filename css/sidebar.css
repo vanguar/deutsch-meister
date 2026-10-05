@@ -281,3 +281,19 @@
   .sidebar-mobile-toggle { display: flex; }
   .sidebar-overlay.show  { display: block; }
 }
+
+/* Пункт «Новости»: метка, что в разделе уже есть статьи (не заглушка) */
+.side-action .sa-new {
+  display: inline-block;
+  margin-left: 4px;
+  padding: 1px 7px;
+  border-radius: 9999px;
+  background: #ff8a3d;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .3px;
+  line-height: 1.5;
+  vertical-align: 1px;
+  white-space: nowrap;
+}

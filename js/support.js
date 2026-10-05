@@ -254,7 +254,8 @@ function dmFixBooksItem() {
 }
 
 /* ── Пункт «Новости на немецком» ─────────────────────────────────
-   Раздел пока в разработке (news.html — витрина рубрик). Пункт
+   news.html — лента статей; рубрика «Астрономия» уже наполнена,
+   остальные пока заглушки. Пункт
    добавляется сразу после «Книг» во всех меню, где они есть: так не
    нужно править 68 оболочек уроков и главную по отдельности.        */
 function dmNewsUrl() { return dmBasePath() + 'news.html'; }
@@ -276,8 +277,8 @@ function dmAddNewsItem() {
       btn.innerHTML =
         '<span class="sa-ico">📰</span>' +
         '<span class="sa-txt">' +
-          '<span class="sa-title">Новости на немецком</span>' +
-          '<span class="sa-sub">Экономика, события, астрономия · скоро</span>' +
+          '<span class="sa-title">Новости на немецком <span class="sa-new">Есть статьи</span></span>' +
+          '<span class="sa-sub">🔭 Астрономия — свежие статьи · экономика и события скоро</span>' +
         '</span>';
       books.insertAdjacentElement('afterend', btn);
     });

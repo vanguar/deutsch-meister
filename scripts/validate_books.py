@@ -4,6 +4,8 @@ validate_books.py — проверка целостности книг чита�
 
 Запуск:  python scripts/validate_books.py            # все книги из index.json
          python scripts/validate_books.py bremer     # только одну
+         python scripts/validate_books.py --news     # статьи data/news (формат тот же,
+                                                     # плюс абзацы-фото {"fig": …})
 Код возврата: 0 — ок, 1 — есть ошибки.
 
 Проверки (ошибки дают код возврата 1; предупреждения печатаются,
@@ -56,6 +58,11 @@ TOKEN_RE = re.compile(r"[^\W\d_]+(?:[-'’][^\W\d_]+)*", re.UNICODE)
 
 INDEX_FIELDS = ('id', 'title', 'titleRu', 'author', 'level', 'year',
                 'chapters', 'words', 'minutes', 'cover', 'source', 'license')
+NEWS_INDEX_FIELDS = ('id', 'title', 'titleRu', 'blurb', 'rubric', 'level',
+                     'published', 'added', 'source', 'sourceUrl', 'cover',
+                     'words', 'minutes', 'photos')
+DATE_RE = re.compile(r'^\d{4}-\d{2}-\d{2}$')
+FIG_FIELDS = ('src', 'w', 'h', 'cap', 'credit')
 
 NOUN_POS = 'сущ.'
 VERB_POS = 'гл.'
@@ -169,6 +176,18 @@ def check_book(book_id, index_entry=None):
             continue
 
         for pi, par in enumerate(paragraphs):
+            # Абзац-фото (статьи новостей): файл должен существовать, а размеры
+            # быть числами — ридер ставит их в <img width height>.
+            if isinstance(par, dict) and 'fig' in par:
+                fig = par['fig'] or {}
+                missing = [f for f in FIG_FIELDS if not fig.get(f)]
+                if missing:
+                    err('%s: фото в абзаце %d без полей: %s' % (label, pi, ', '.join(missing)))
+                elif not os.path.isfile(os.path.join(BASE, fig['src'])):
+                    err('%s: фото %s не найдено' % (label, fig['src']))
+                elif not all(isinstance(fig[k], int) and fig[k] > 0 for k in ('w', 'h')):
+                    err('%s: у фото %s w/h должны быть положительными числами' % (label, fig['src']))
+                continue
             sentences = (par or {}).get('s')
             if not isinstance(sentences, list) or not sentences:
                 err('%s: абзац %d без предложений' % (label, pi))
@@ -321,22 +340,35 @@ def check_book(book_id, index_entry=None):
 # ══════════════════════════════════════════════════════
 
 def main():
+    global BOOKS_DIR
     ap = argparse.ArgumentParser(description='Проверить книги читалки')
     ap.add_argument('book_id', nargs='?', help='проверить только одну книгу')
+    ap.add_argument('--news', action='store_true', help='проверить статьи data/news')
     args = ap.parse_args()
+
+    list_key, fields = 'books', INDEX_FIELDS
+    if args.news:
+        BOOKS_DIR = os.path.join(BASE, 'data', 'news')
+        list_key, fields = 'items', NEWS_INDEX_FIELDS
 
     index, ok = load_json(os.path.join(BOOKS_DIR, 'index.json'), 'books/index.json')
     entries = {}
     if ok:
-        books = index.get('books')
+        books = index.get(list_key)
         if not isinstance(books, list) or not books:
-            err('books/index.json: пустой или отсутствующий массив books')
+            err('index.json: пустой или отсутствующий массив %s' % list_key)
             books = []
         for i, b in enumerate(books):
             if not isinstance(b, dict):
                 err('books/index.json: элемент %d не объект' % i)
                 continue
-            missing = [f for f in INDEX_FIELDS if f not in b]
+            missing = [f for f in fields if f not in b]
+            if args.news:
+                for f in ('published', 'added'):
+                    if not DATE_RE.match(str(b.get(f, ''))):
+                        err('news/index.json: у "%s" %s не в формате ГГГГ-ММ-ДД' % (b.get('id', '?'), f))
+                if b.get('cover') and not os.path.isfile(os.path.join(BASE, b['cover'])):
+                    err('news/index.json: у "%s" нет файла обложки %s' % (b.get('id', '?'), b['cover']))
             if missing:
                 err('books/index.json: у "%s" нет полей: %s'
                     % (b.get('id', '?'), ', '.join(missing)))

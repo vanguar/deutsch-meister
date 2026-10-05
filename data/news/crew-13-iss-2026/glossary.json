@@ -1,0 +1,808 @@
+{
+  "version": 1,
+  "w": {
+    "ab": "ab",
+    "absolvieren": "absolvieren",
+    "acht": "acht",
+    "all": "All",
+    "also": "also",
+    "am": "an",
+    "an": "an",
+    "anbau": "Anbau",
+    "andere": "ander",
+    "auch": "auch",
+    "auf": "auf",
+    "aus": "aus",
+    "außeneinsätze": "Außeneinsatz",
+    "außerdem": "außerdem",
+    "behandlung": "Behandlung",
+    "bei": "bei",
+    "bereits": "bereits",
+    "besatzung": "Besatzung",
+    "beschäftigen": "sich beschäftigen",
+    "besonderes": "Besondere",
+    "bisherige": "bisherig",
+    "bleiben": "bleiben",
+    "bord": "Bord",
+    "canaveral": "Cape Canaveral",
+    "cape": "Cape Canaveral",
+    "crew": "Crew",
+    "das": "der/die/das",
+    "delaney": "Delaney",
+    "dem": "der/die/das",
+    "den": "der/die/das",
+    "denn": "denn",
+    "der": "der/die/das",
+    "die": "der/die/das",
+    "dragon": "Dragon",
+    "drei": "drei",
+    "dritte": "dritt",
+    "ein": "ein/eine",
+    "eine": "ein/eine",
+    "einigen": "einige",
+    "empfang": "Empfang",
+    "er": "er",
+    "erfolgte": "erfolgen",
+    "erste": "erste",
+    "erwartet": "erwarten",
+    "es": "es",
+    "etwa": "etwa",
+    "etwas": "etwas",
+    "experimente": "Experiment",
+    "falcon": "Falcon",
+    "fliegt": "fliegen",
+    "flog": "fliegen",
+    "florida": "Florida",
+    "frachtschiffe": "Frachtschiff",
+    "frau": "Frau",
+    "frühestens": "frühestens",
+    "für": "für",
+    "geburt": "Geburt",
+    "geologin": "Geologin",
+    "gestartet": "starten",
+    "grace": "Grace",
+    "harmony": "Harmony",
+    "helfen": "helfen",
+    "herzkrankheiten": "Herzkrankheit",
+    "hob": "abheben",
+    "im": "in",
+    "in": "in",
+    "ins": "in",
+    "internationalen": "international",
+    "ist": "sein",
+    "jessica": "Jessica",
+    "joshua": "Joshua",
+    "kanadier": "Kanadier",
+    "kapsel": "Kapsel",
+    "kind": "Kind",
+    "kommandantin": "Kommandantin",
+    "kopplung": "Kopplung",
+    "kosmonauten": "Kosmonaut",
+    "kutryk": "Kutryk",
+    "könnten": "können",
+    "legte": "anlegen",
+    "luke": "Luke",
+    "ländern": "Land",
+    "mal": "Mal",
+    "mehrere": "mehrere",
+    "mission": "Mission",
+    "mit": "mit",
+    "miterleben": "miterleben",
+    "modul": "Modul",
+    "monate": "Monat",
+    "nach": "nach",
+    "nasa": "NASA",
+    "nasa-astronautin": "Astronautin",
+    "nehmen": "nehmen",
+    "nordostpazifik": "Nordostpazifik",
+    "oktober": "Oktober",
+    "ortszeit": "Ortszeit",
+    "parkinson": "Parkinson",
+    "pflanzen": "Pflanze",
+    "pilot": "Pilot",
+    "privat": "privat",
+    "programm": "Programm",
+    "rakete": "Rakete",
+    "raumfahrer": "Raumfahrer",
+    "raumflug": "Raumflug",
+    "raumstation": "Raumstation",
+    "rekord": "Rekord",
+    "russischen": "russisch",
+    "saßen": "sitzen",
+    "schon": "schon",
+    "sechs": "sechs",
+    "seine": "sein (его, свой)",
+    "sergei": "Sergei",
+    "sich": "sich",
+    "sie": "sie",
+    "soll": "sollen",
+    "sollen": "sollen",
+    "spacex": "SpaceX",
+    "stammzellen": "Stammzelle",
+    "start": "Start",
+    "station": "Station",
+    "stehen": "stehen",
+    "stunden": "Stunde",
+    "teterjatnikow": "Teterjatnikow",
+    "uhr": "Uhr",
+    "um": "um",
+    "und": "und",
+    "verlassen": "verlassen",
+    "versuche": "Versuch",
+    "vier": "vier",
+    "vom": "von",
+    "von": "von",
+    "warten": "warten (обслуживать)",
+    "watkins": "Watkins",
+    "weltraum": "Weltraum",
+    "weltraumbahnhof": "Weltraumbahnhof",
+    "wird": "werden",
+    "wochen": "Woche",
+    "während": "während",
+    "zahlreiche": "zahlreich",
+    "zum": "zu",
+    "zweiten": "zweite",
+    "über": "über"
+  },
+  "l": {
+    "ab": {
+      "note": "Тж. отделяемая приставка: absteigen «слезать», abnehmen",
+      "pos": "предл.",
+      "ru": "от, с; прочь"
+    },
+    "abheben": {
+      "ru": "взлетать, отрываться от земли",
+      "pos": "гл.",
+      "forms": "hob ab · ist abgehoben"
+    },
+    "absolvieren": {
+      "ru": "выполнять, проходить",
+      "pos": "гл.",
+      "forms": "absolvierte · hat absolviert"
+    },
+    "acht": {
+      "ru": "восемь",
+      "pos": "числ."
+    },
+    "All": {
+      "ru": "космос, вселенная",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null,
+      "note": "ins All fliegen — лететь в космос; im All — в космосе"
+    },
+    "also": {
+      "ru": "итак, стало быть",
+      "pos": "нареч."
+    },
+    "an": {
+      "ru": "у, к, на",
+      "pos": "предл.",
+      "note": "am = an dem. Тж. отделяемая приставка: anfangen «начинать», annehmen, ansehen, anzünden"
+    },
+    "Anbau": {
+      "ru": "выращивание",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "ander": {
+      "pos": "прил.",
+      "ru": "другой, иной"
+    },
+    "anlegen": {
+      "ru": "причаливать, пристыковываться",
+      "pos": "гл.",
+      "forms": "legte an · hat angelegt",
+      "note": "legen + отделяемая приставка an: die Kapsel legte an der Station an"
+    },
+    "Astronautin": {
+      "ru": "астронавт (о женщине)",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Astronautinnen"
+    },
+    "auch": {
+      "ru": "тоже, также; даже",
+      "pos": "частица"
+    },
+    "auf": {
+      "ru": "на, в",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: aufspringen «вскочить», sich aufmachen"
+    },
+    "aus": {
+      "ru": "из",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: auslöschen «погасить»"
+    },
+    "Außeneinsatz": {
+      "ru": "выход в открытый космос",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Außeneinsätze"
+    },
+    "außerdem": {
+      "ru": "кроме того",
+      "pos": "нареч."
+    },
+    "Behandlung": {
+      "ru": "лечение",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Behandlungen"
+    },
+    "bei": {
+      "ru": "у, при, возле",
+      "pos": "предл."
+    },
+    "bereits": {
+      "pos": "нареч.",
+      "ru": "уже"
+    },
+    "Besatzung": {
+      "ru": "экипаж",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Besatzungen"
+    },
+    "Besondere": {
+      "ru": "особенное",
+      "pos": "субст. прил.",
+      "decl": "das Besondere / etwas Besonderes",
+      "note": "etwas Besonderes — нечто особенное"
+    },
+    "bisherig": {
+      "ru": "прежний, нынешний (до сих пор)",
+      "pos": "прил."
+    },
+    "bleiben": {
+      "ru": "оставаться",
+      "pos": "гл.",
+      "forms": "blieb · ist geblieben"
+    },
+    "Bord": {
+      "ru": "борт",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null,
+      "note": "an Bord — на борту"
+    },
+    "Cape Canaveral": {
+      "ru": "мыс Канаверал (Флорида)",
+      "pos": "геогр."
+    },
+    "Crew": {
+      "ru": "экипаж (англицизм)",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Crews"
+    },
+    "Delaney": {
+      "ru": "Делейни (фамилия)",
+      "pos": "имя собств."
+    },
+    "denn": {
+      "ru": "ведь, так как",
+      "pos": "союз"
+    },
+    "der/die/das": {
+      "ru": "определённый артикль",
+      "pos": "артикль",
+      "note": "Тж. относительное местоимение «который»"
+    },
+    "Dragon": {
+      "ru": "Dragon (корабль SpaceX)",
+      "pos": "имя собств."
+    },
+    "drei": {
+      "ru": "три",
+      "pos": "числ."
+    },
+    "dritt": {
+      "ru": "третий",
+      "pos": "числ."
+    },
+    "ein/eine": {
+      "ru": "неопределённый артикль",
+      "pos": "артикль",
+      "note": "einer — «один, некто»"
+    },
+    "einige": {
+      "ru": "несколько, некоторые",
+      "pos": "мест."
+    },
+    "Empfang": {
+      "ru": "приём",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Empfänge",
+      "note": "in Empfang nehmen — принимать"
+    },
+    "er": {
+      "ru": "он",
+      "pos": "мест.",
+      "note": "ihn — его, ihm — ему"
+    },
+    "erfolgen": {
+      "ru": "происходить, состояться",
+      "pos": "гл.",
+      "forms": "erfolgte · ist erfolgt"
+    },
+    "erste": {
+      "ru": "первый",
+      "pos": "числ."
+    },
+    "erwarten": {
+      "ru": "ожидать, поджидать",
+      "pos": "гл.",
+      "forms": "erwartete · hat erwartet"
+    },
+    "es": {
+      "ru": "оно; это",
+      "pos": "мест."
+    },
+    "etwa": {
+      "ru": "примерно, около",
+      "pos": "нареч."
+    },
+    "etwas": {
+      "ru": "что-то, нечто; немного",
+      "pos": "мест."
+    },
+    "Experiment": {
+      "ru": "эксперимент",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Experimente"
+    },
+    "Falcon": {
+      "ru": "Falcon (ракета SpaceX)",
+      "pos": "имя собств."
+    },
+    "fliegen": {
+      "ru": "летать, лететь",
+      "pos": "гл.",
+      "forms": "flog · ist geflogen"
+    },
+    "Florida": {
+      "ru": "Флорида",
+      "pos": "геогр."
+    },
+    "Frachtschiff": {
+      "ru": "грузовой корабль",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Frachtschiffe"
+    },
+    "Frau": {
+      "ru": "жена; женщина",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Frauen"
+    },
+    "frühestens": {
+      "ru": "не раньше, самое раннее",
+      "pos": "нареч."
+    },
+    "für": {
+      "ru": "для, за",
+      "pos": "предл."
+    },
+    "Geburt": {
+      "ru": "рождение, роды",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Geburten"
+    },
+    "Geologin": {
+      "ru": "геолог (о женщине)",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Geologinnen"
+    },
+    "Grace": {
+      "ru": "Grace (имя капсулы)",
+      "pos": "имя собств."
+    },
+    "Harmony": {
+      "ru": "Harmony (модуль МКС)",
+      "pos": "имя собств."
+    },
+    "helfen": {
+      "ru": "помогать",
+      "pos": "гл.",
+      "forms": "half · hat geholfen"
+    },
+    "Herzkrankheit": {
+      "ru": "болезнь сердца",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Herzkrankheiten"
+    },
+    "in": {
+      "ru": "в (im = in dem, ins = in das)",
+      "pos": "предл."
+    },
+    "international": {
+      "ru": "международный",
+      "pos": "прил."
+    },
+    "Jessica": {
+      "ru": "Джессика (имя)",
+      "pos": "имя собств."
+    },
+    "Joshua": {
+      "ru": "Джошуа (имя)",
+      "pos": "имя собств."
+    },
+    "Kanadier": {
+      "ru": "канадец",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Kanadier"
+    },
+    "Kapsel": {
+      "ru": "капсула",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Kapseln"
+    },
+    "Kind": {
+      "ru": "ребёнок",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Kinder"
+    },
+    "Kommandantin": {
+      "ru": "командир (о женщине)",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Kommandantinnen"
+    },
+    "Kopplung": {
+      "ru": "стыковка",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Kopplungen"
+    },
+    "Kosmonaut": {
+      "ru": "космонавт",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Kosmonauten",
+      "note": "слабое склонение: den Kosmonauten"
+    },
+    "Kutryk": {
+      "ru": "Кутрик (фамилия)",
+      "pos": "имя собств."
+    },
+    "können": {
+      "ru": "мочь, уметь",
+      "pos": "гл.",
+      "forms": "konnte · hat gekonnt"
+    },
+    "Land": {
+      "ru": "страна; суша; деревня",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Länder"
+    },
+    "Luke": {
+      "ru": "Люк (имя)",
+      "pos": "имя собств."
+    },
+    "Mal": {
+      "ru": "раз",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Male",
+      "note": "zu wiederholten Malen — неоднократно"
+    },
+    "mehrere": {
+      "pos": "мест.",
+      "ru": "несколько"
+    },
+    "Mission": {
+      "ru": "миссия",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Missionen"
+    },
+    "mit": {
+      "ru": "с",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: mitgehen «пойти вместе»"
+    },
+    "miterleben": {
+      "ru": "пережить вместе, стать свидетелем",
+      "pos": "гл.",
+      "forms": "erlebte mit · hat miterlebt"
+    },
+    "Modul": {
+      "ru": "модуль",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Module"
+    },
+    "Monat": {
+      "ru": "месяц",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Monate"
+    },
+    "nach": {
+      "ru": "в, на, после, по",
+      "pos": "предл."
+    },
+    "NASA": {
+      "ru": "НАСА, космическое агентство США",
+      "pos": "сокр."
+    },
+    "nehmen": {
+      "ru": "брать",
+      "pos": "гл.",
+      "forms": "nahm · hat genommen"
+    },
+    "Nordostpazifik": {
+      "ru": "северо-восток Тихого океана",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "Oktober": {
+      "ru": "октябрь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Oktober"
+    },
+    "Ortszeit": {
+      "ru": "местное время",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "Parkinson": {
+      "ru": "болезнь Паркинсона",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "Pflanze": {
+      "ru": "растение",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Pflanzen"
+    },
+    "Pilot": {
+      "ru": "пилот",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Piloten"
+    },
+    "privat": {
+      "ru": "частный, личный",
+      "pos": "прил."
+    },
+    "Programm": {
+      "ru": "программа",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Programme"
+    },
+    "Rakete": {
+      "ru": "ракета",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Raketen"
+    },
+    "Raumfahrer": {
+      "ru": "космонавт",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Raumfahrer"
+    },
+    "Raumflug": {
+      "ru": "космический полёт",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Raumflüge"
+    },
+    "Raumstation": {
+      "ru": "космическая станция",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Raumstationen"
+    },
+    "Rekord": {
+      "ru": "рекорд",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Rekorde"
+    },
+    "russisch": {
+      "ru": "русский; российский",
+      "pos": "прил."
+    },
+    "schon": {
+      "ru": "уже",
+      "pos": "нареч."
+    },
+    "sechs": {
+      "ru": "шесть",
+      "pos": "числ."
+    },
+    "sein": {
+      "ru": "быть; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "war · ist gewesen"
+    },
+    "sein (его, свой)": {
+      "ru": "его, свой",
+      "pos": "мест."
+    },
+    "Sergei": {
+      "ru": "Сергей (имя)",
+      "pos": "имя собств."
+    },
+    "sich": {
+      "ru": "себя, себе",
+      "pos": "мест.",
+      "note": "Возвратное местоимение, часть возвратного глагола: sich auf den Weg machen, sich setzen, sich legen, sich nähern, sich gefallen lassen, sich getrauen, sich umsehen"
+    },
+    "sich beschäftigen": {
+      "ru": "заниматься",
+      "pos": "гл.",
+      "forms": "beschäftigte sich · hat sich beschäftigt",
+      "note": "sich mit etwas beschäftigen — заниматься чем-то"
+    },
+    "sie": {
+      "ru": "она; они; Вы",
+      "pos": "мест."
+    },
+    "sitzen": {
+      "ru": "сидеть",
+      "pos": "гл.",
+      "forms": "saß · hat gesessen"
+    },
+    "sollen": {
+      "ru": "быть должным, следует",
+      "pos": "гл.",
+      "forms": "sollte · hat gesollt"
+    },
+    "SpaceX": {
+      "ru": "SpaceX (компания)",
+      "pos": "имя собств."
+    },
+    "Stammzelle": {
+      "ru": "стволовая клетка",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Stammzellen"
+    },
+    "Start": {
+      "ru": "старт, запуск",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Starts"
+    },
+    "starten": {
+      "ru": "стартовать, запускать",
+      "pos": "гл.",
+      "forms": "startete · ist/hat gestartet"
+    },
+    "Station": {
+      "ru": "станция",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Stationen"
+    },
+    "stehen": {
+      "ru": "стоять",
+      "pos": "гл.",
+      "forms": "stand · hat gestanden"
+    },
+    "Stunde": {
+      "art": "die",
+      "note": "eine halbe Stunde — тж. о расстоянии: полчаса ходу",
+      "pl": "die Stunden",
+      "pos": "сущ.",
+      "ru": "час"
+    },
+    "Teterjatnikow": {
+      "ru": "Тетерятников (фамилия)",
+      "pos": "имя собств."
+    },
+    "Uhr": {
+      "ru": "час (на часах); часы",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Uhren",
+      "note": "um 5 Uhr — в пять часов"
+    },
+    "um": {
+      "ru": "вокруг, в (о времени)",
+      "pos": "предл.",
+      "note": "um … zu — чтобы. Тж. отделяемая приставка: sich umsehen «оглядеться»"
+    },
+    "und": {
+      "ru": "и, а",
+      "pos": "союз"
+    },
+    "verlassen": {
+      "ru": "покидать",
+      "pos": "гл.",
+      "forms": "verließ · hat verlassen"
+    },
+    "Versuch": {
+      "ru": "опыт, эксперимент; попытка",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Versuche"
+    },
+    "vier": {
+      "ru": "четыре",
+      "pos": "числ."
+    },
+    "von": {
+      "ru": "от, из, о (vom = von dem)",
+      "pos": "предл."
+    },
+    "warten (обслуживать)": {
+      "ru": "обслуживать, проводить техобслуживание",
+      "pos": "гл.",
+      "forms": "wartete · hat gewartet",
+      "note": "омоним: warten auf — «ждать»; здесь — обслуживать технику"
+    },
+    "Watkins": {
+      "ru": "Уоткинс (фамилия)",
+      "pos": "имя собств."
+    },
+    "Weltraum": {
+      "ru": "космос",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "Weltraumbahnhof": {
+      "ru": "космодром",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Weltraumbahnhöfe"
+    },
+    "werden": {
+      "ru": "становиться",
+      "pos": "гл.",
+      "forms": "wurde · ist geworden",
+      "note": "Вспомогательный глагол будущего времени и пассива"
+    },
+    "Woche": {
+      "ru": "неделя",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Wochen"
+    },
+    "während": {
+      "pos": "предлог",
+      "ru": "в течение, во время"
+    },
+    "zahlreich": {
+      "ru": "многочисленный",
+      "pos": "прил."
+    },
+    "zu": {
+      "ru": "к, в; слишком",
+      "pos": "предл.",
+      "note": "zur = zu der, zum = zu dem"
+    },
+    "zweite": {
+      "ru": "второй",
+      "pos": "числ.",
+      "note": "zum zweiten Mal — во второй раз"
+    },
+    "über": {
+      "ru": "над, через, о",
+      "pos": "предл."
+    }
+  }
+}
