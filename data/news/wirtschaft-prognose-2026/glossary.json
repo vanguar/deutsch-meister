@@ -1,0 +1,763 @@
+{
+  "version": 1,
+  "w": {
+    "aber": "aber",
+    "allem": "alle/alles",
+    "als": "als",
+    "am": "an",
+    "an": "an",
+    "angehoben": "anheben",
+    "auch": "auch",
+    "auf": "auf",
+    "aufschwung": "Aufschwung",
+    "aus": "aus",
+    "außerdem": "außerdem",
+    "bauwirtschaft": "Bauwirtschaft",
+    "bei": "bei",
+    "benzin": "Benzin",
+    "bleibt": "bleiben",
+    "brücken": "Brücke",
+    "bund": "Bund",
+    "bundesbank": "Bundesbank",
+    "bundesregierung": "Bundesregierung",
+    "bundeswehr": "Bundeswehr",
+    "dabei": "dabei",
+    "das": "der/die/das",
+    "davon": "davon",
+    "den": "der/die/das",
+    "der": "der/die/das",
+    "des": "der/die/das",
+    "deshalb": "deshalb",
+    "deutlich": "deutlich",
+    "deutsche": "deutsch",
+    "die": "der/die/das",
+    "diesel": "Diesel",
+    "diesem": "dieser",
+    "drei": "drei",
+    "ein": "ein/eine",
+    "einem": "ein/eine",
+    "er": "er",
+    "erwartet": "erwarten",
+    "etwa": "etwa",
+    "exporten": "Export",
+    "finanziert": "finanzieren",
+    "frühjahr": "Frühjahr",
+    "für": "für",
+    "geld": "Geld",
+    "gemacht": "machen",
+    "geworden": "werden",
+    "gibt": "geben",
+    "grund": "Grund",
+    "hat": "haben",
+    "hatte": "haben",
+    "ihr": "ihr",
+    "im": "in",
+    "in": "in",
+    "industrie": "Industrie",
+    "inflation": "Inflation",
+    "informationen": "Information",
+    "investitionen": "Investition",
+    "ist": "sein",
+    "jahr": "Jahr",
+    "jahren": "Jahr",
+    "jetzt": "jetzt",
+    "joachim": "Joachim",
+    "kaufen": "kaufen",
+    "kleines": "klein",
+    "konflikt": "Konflikt",
+    "konsum": "Konsum",
+    "kosten": "kosten",
+    "könne": "können",
+    "lage": "Lage",
+    "liegen": "liegen",
+    "mehr": "mehr",
+    "menschen": "Mensch",
+    "mit": "mit",
+    "nach": "nach",
+    "nachrichtenagentur": "Nachrichtenagentur",
+    "nagel": "Nagel",
+    "nahen": "nah",
+    "neuen": "neu",
+    "noch": "noch",
+    "nur": "nur",
+    "offiziell": "offiziell",
+    "ohne": "ohne",
+    "oktober": "Oktober",
+    "optimistischer": "optimistisch",
+    "osten": "Osten",
+    "plus": "Plus",
+    "preisen": "Preis",
+    "private": "privat",
+    "profitieren": "profitieren",
+    "prognose": "Prognose",
+    "prozent": "Prozent",
+    "präsident": "Präsident",
+    "rechnet": "rechnen",
+    "regierung": "Regierung",
+    "reuters": "Reuters",
+    "sagte": "sagen",
+    "schienen": "Schiene",
+    "schulden": "Schulden",
+    "schwierig": "schwierig",
+    "sie": "sie",
+    "signal": "Signal",
+    "sind": "sein",
+    "sogar": "sogar",
+    "soll": "sollen",
+    "spüren": "spüren",
+    "staates": "Staat",
+    "steigen": "steigen (о ценах)",
+    "straßen": "Straße",
+    "teurer": "teuer",
+    "um": "um",
+    "und": "und",
+    "unternehmen": "Unternehmen",
+    "usa": "USA",
+    "verbraucher": "Verbraucher",
+    "verunsichern": "verunsichern",
+    "viele": "viel",
+    "von": "von",
+    "vor": "vor",
+    "voraussichtlich": "voraussichtlich",
+    "vorsichtig": "vorsichtig",
+    "vorstellen": "vorstellen",
+    "wachsen": "wachsen",
+    "wachstum": "Wachstum",
+    "wichtiges": "wichtig",
+    "wichtigste": "wichtig",
+    "will": "wollen",
+    "wirtschaft": "Wirtschaft",
+    "wurde": "werden",
+    "wächst": "wachsen",
+    "wäre": "sein",
+    "zahlen": "Zahl",
+    "zuversichtlicher": "zuversichtlich",
+    "zölle": "Zoll",
+    "öl": "Öl"
+  },
+  "l": {
+    "aber": {
+      "ru": "но, однако",
+      "pos": "союз"
+    },
+    "alle/alles": {
+      "ru": "все; всё",
+      "pos": "мест."
+    },
+    "als": {
+      "ru": "когда; как; чем",
+      "pos": "союз"
+    },
+    "an": {
+      "ru": "у, к, на",
+      "pos": "предл.",
+      "note": "am = an dem. Тж. отделяемая приставка: anfangen «начинать», annehmen, ansehen, anzünden"
+    },
+    "anheben": {
+      "ru": "поднимать, повышать",
+      "pos": "гл.",
+      "forms": "hob an · hat angehoben",
+      "note": "die Prognose wurde angehoben — прогноз повысили (пассив)"
+    },
+    "auch": {
+      "ru": "тоже, также; даже",
+      "pos": "частица"
+    },
+    "auf": {
+      "ru": "на, в",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: aufspringen «вскочить», sich aufmachen"
+    },
+    "Aufschwung": {
+      "ru": "подъём (экономики)",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Aufschwünge"
+    },
+    "aus": {
+      "ru": "из",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: auslöschen «погасить»"
+    },
+    "außerdem": {
+      "ru": "кроме того",
+      "pos": "нареч."
+    },
+    "Bauwirtschaft": {
+      "ru": "строительная отрасль",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "bei": {
+      "ru": "у, при, возле",
+      "pos": "предл."
+    },
+    "Benzin": {
+      "ru": "бензин",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "bleiben": {
+      "ru": "оставаться",
+      "pos": "гл.",
+      "forms": "blieb · ist geblieben"
+    },
+    "Brücke": {
+      "ru": "мост, мостки",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Brücken"
+    },
+    "Bund": {
+      "ru": "федерация (федеральный уровень власти); союз",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Bünde",
+      "note": "der Bund — федеральное государство в отличие от земель (Länder)"
+    },
+    "Bundesbank": {
+      "ru": "Бундесбанк, центральный банк Германии",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "Bundesregierung": {
+      "ru": "федеральное правительство",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Bundesregierungen"
+    },
+    "Bundeswehr": {
+      "ru": "бундесвер, вооружённые силы ФРГ",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "dabei": {
+      "ru": "при этом, при том",
+      "pos": "нареч."
+    },
+    "davon": {
+      "ru": "от этого, об этом",
+      "pos": "нареч."
+    },
+    "der/die/das": {
+      "ru": "определённый артикль",
+      "pos": "артикль",
+      "note": "Тж. относительное местоимение «который»"
+    },
+    "deshalb": {
+      "ru": "поэтому",
+      "pos": "нареч."
+    },
+    "deutlich": {
+      "ru": "отчётливый, внятный",
+      "pos": "прил."
+    },
+    "deutsch": {
+      "ru": "немецкий",
+      "pos": "прил."
+    },
+    "Diesel": {
+      "ru": "дизельное топливо",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "dieser": {
+      "ru": "этот, эта, это",
+      "pos": "мест."
+    },
+    "drei": {
+      "ru": "три",
+      "pos": "числ."
+    },
+    "ein/eine": {
+      "ru": "неопределённый артикль",
+      "pos": "артикль",
+      "note": "einer — «один, некто»"
+    },
+    "er": {
+      "ru": "он",
+      "pos": "мест.",
+      "note": "ihn — его, ihm — ему"
+    },
+    "erwarten": {
+      "ru": "ожидать, поджидать",
+      "pos": "гл.",
+      "forms": "erwartete · hat erwartet"
+    },
+    "etwa": {
+      "ru": "примерно, около",
+      "pos": "нареч."
+    },
+    "Export": {
+      "ru": "экспорт",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Exporte"
+    },
+    "finanzieren": {
+      "ru": "финансировать",
+      "pos": "гл.",
+      "forms": "finanzierte · hat finanziert"
+    },
+    "Frühjahr": {
+      "ru": "весна",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Frühjahre",
+      "note": "синоним: der Frühling"
+    },
+    "für": {
+      "ru": "для, за",
+      "pos": "предл."
+    },
+    "geben": {
+      "ru": "давать",
+      "pos": "гл.",
+      "forms": "gab · hat gegeben"
+    },
+    "Geld": {
+      "art": "das",
+      "pl": "die Gelder",
+      "pos": "сущ.",
+      "ru": "деньги"
+    },
+    "Grund": {
+      "ru": "основание, дно; причина",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Gründe",
+      "note": "der Sache auf den Grund kommen — дойти до сути дела"
+    },
+    "haben": {
+      "ru": "иметь; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "hatte · hat gehabt"
+    },
+    "ihr": {
+      "ru": "вы",
+      "pos": "мест.",
+      "note": "Ihr с большой буквы — старое вежливое обращение к одному; сегодня Sie"
+    },
+    "in": {
+      "ru": "в (im = in dem, ins = in das)",
+      "pos": "предл."
+    },
+    "Industrie": {
+      "ru": "промышленность",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Industrien"
+    },
+    "Inflation": {
+      "ru": "инфляция",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Inflationen"
+    },
+    "Information": {
+      "ru": "информация, сведения",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Informationen",
+      "note": "nach Informationen (G) — по данным (кого-то)"
+    },
+    "Investition": {
+      "ru": "инвестиция, вложение",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Investitionen"
+    },
+    "Jahr": {
+      "ru": "год",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Jahre"
+    },
+    "jetzt": {
+      "ru": "сейчас, теперь",
+      "pos": "нареч."
+    },
+    "Joachim": {
+      "ru": "Йоахим (имя)",
+      "pos": "имя собств."
+    },
+    "kaufen": {
+      "ru": "покупать",
+      "pos": "гл.",
+      "forms": "kaufte · hat gekauft"
+    },
+    "klein": {
+      "ru": "маленький",
+      "pos": "прил."
+    },
+    "Konflikt": {
+      "ru": "конфликт",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Konflikte"
+    },
+    "Konsum": {
+      "ru": "потребление",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "kosten": {
+      "ru": "стоить",
+      "pos": "гл.",
+      "forms": "kostete · hat gekostet",
+      "note": "es koste, was es wolle — чего бы это ни стоило"
+    },
+    "können": {
+      "ru": "мочь, уметь",
+      "pos": "гл.",
+      "forms": "konnte · hat gekonnt"
+    },
+    "Lage": {
+      "art": "die",
+      "note": "seiner schönen Lage wegen — из-за красивого расположения",
+      "pl": "die Lagen",
+      "pos": "сущ.",
+      "ru": "расположение; положение"
+    },
+    "liegen": {
+      "ru": "лежать",
+      "pos": "гл.",
+      "forms": "lag · hat gelegen"
+    },
+    "machen": {
+      "ru": "делать",
+      "pos": "гл.",
+      "forms": "machte · hat gemacht",
+      "note": "sich auf den Weg machen — отправиться в путь"
+    },
+    "mehr": {
+      "ru": "больше",
+      "pos": "нареч.",
+      "note": "В nicht/kein … mehr — больше не. Формально компаратив от viel"
+    },
+    "Mensch": {
+      "ru": "человек",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Menschen",
+      "decl": "n-Deklination: des Menschen · dem/den Menschen"
+    },
+    "mit": {
+      "ru": "с",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: mitgehen «пойти вместе»"
+    },
+    "nach": {
+      "ru": "в, на, после, по",
+      "pos": "предл."
+    },
+    "Nachrichtenagentur": {
+      "ru": "информационное агентство",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Nachrichtenagenturen"
+    },
+    "Nagel": {
+      "ru": "Нагель (фамилия; президент Бундесбанка)",
+      "pos": "имя собств.",
+      "note": "как слово: der Nagel — гвоздь, ноготь"
+    },
+    "nah": {
+      "ru": "близкий",
+      "pos": "прил.",
+      "forms": "nah · näher · am nächsten"
+    },
+    "neu": {
+      "ru": "новый",
+      "pos": "прил."
+    },
+    "noch": {
+      "ru": "ещё",
+      "pos": "нареч."
+    },
+    "nur": {
+      "ru": "только, лишь",
+      "pos": "частица"
+    },
+    "offiziell": {
+      "ru": "официальный",
+      "pos": "прил."
+    },
+    "ohne": {
+      "ru": "без",
+      "pos": "предл."
+    },
+    "Oktober": {
+      "ru": "октябрь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Oktober"
+    },
+    "optimistisch": {
+      "ru": "оптимистичный",
+      "pos": "прил.",
+      "forms": "optimistisch · optimistischer · am optimistischsten"
+    },
+    "Osten": {
+      "ru": "восток",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null,
+      "note": "gen Osten — на восток (в сторону Мекки)"
+    },
+    "Plus": {
+      "ru": "плюс; прирост",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null,
+      "note": "ein Plus von 0,6 Prozent — рост на 0,6 %"
+    },
+    "Preis": {
+      "ru": "цена",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Preise",
+      "note": "um geringen Preis — за малую цену"
+    },
+    "privat": {
+      "ru": "частный, личный",
+      "pos": "прил."
+    },
+    "profitieren": {
+      "ru": "извлекать выгоду",
+      "pos": "гл.",
+      "forms": "profitierte · hat profitiert",
+      "note": "von etwas profitieren — выигрывать от чего-то"
+    },
+    "Prognose": {
+      "ru": "прогноз",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Prognosen"
+    },
+    "Prozent": {
+      "ru": "процент",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Prozente",
+      "note": "после числа не изменяется: 1,3 Prozent"
+    },
+    "Präsident": {
+      "ru": "президент",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Präsidenten",
+      "note": "слабое склонение: den Präsidenten"
+    },
+    "rechnen": {
+      "ru": "считать; рассчитывать",
+      "pos": "гл.",
+      "forms": "rechnete · hat gerechnet",
+      "note": "mit etwas rechnen — рассчитывать на что-то, ожидать чего-то"
+    },
+    "Regierung": {
+      "ru": "правительство",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Regierungen"
+    },
+    "Reuters": {
+      "ru": "Reuters (информагентство)",
+      "pos": "имя собств."
+    },
+    "sagen": {
+      "ru": "говорить, сказать",
+      "pos": "гл.",
+      "forms": "sagte · hat gesagt"
+    },
+    "Schiene": {
+      "ru": "рельс",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Schienen",
+      "note": "мн. ч. часто — железная дорога вообще"
+    },
+    "Schulden": {
+      "ru": "долги",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null,
+      "note": "только мн. ч.; Schulden machen — влезать в долги"
+    },
+    "schwierig": {
+      "ru": "трудный, сложный",
+      "pos": "прил."
+    },
+    "sein": {
+      "ru": "быть; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "war · ist gewesen"
+    },
+    "sie": {
+      "ru": "она; они; Вы",
+      "pos": "мест."
+    },
+    "Signal": {
+      "ru": "сигнал",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Signale"
+    },
+    "sogar": {
+      "ru": "даже",
+      "pos": "частица"
+    },
+    "sollen": {
+      "ru": "быть должным, следует",
+      "pos": "гл.",
+      "forms": "sollte · hat gesollt"
+    },
+    "spüren": {
+      "ru": "чувствовать, ощущать",
+      "pos": "гл.",
+      "forms": "spürte · hat gespürt",
+      "note": "etwas an etwas (D) spüren — ощущать что-то по чему-то"
+    },
+    "Staat": {
+      "ru": "государство",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Staaten"
+    },
+    "steigen (о ценах)": {
+      "ru": "расти, повышаться",
+      "pos": "гл.",
+      "forms": "stieg · ist gestiegen",
+      "note": "auf 3 Prozent steigen — вырасти до 3 %"
+    },
+    "Straße": {
+      "art": "die",
+      "pl": "die Straßen",
+      "pos": "сущ.",
+      "ru": "улица, дорога"
+    },
+    "teuer": {
+      "ru": "дорогой",
+      "pos": "прил.",
+      "forms": "teuer · teurer · am teuersten"
+    },
+    "um": {
+      "ru": "вокруг, в (о времени)",
+      "pos": "предл.",
+      "note": "um … zu — чтобы. Тж. отделяемая приставка: sich umsehen «оглядеться»"
+    },
+    "und": {
+      "ru": "и, а",
+      "pos": "союз"
+    },
+    "Unternehmen": {
+      "ru": "предприятие, компания",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Unternehmen"
+    },
+    "USA": {
+      "ru": "США",
+      "pos": "геогр.",
+      "note": "die USA — во мн. ч.: der USA (род. п.)"
+    },
+    "Verbraucher": {
+      "ru": "потребитель",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Verbraucher"
+    },
+    "verunsichern": {
+      "ru": "вызывать неуверенность, тревожить",
+      "pos": "гл.",
+      "forms": "verunsicherte · hat verunsichert"
+    },
+    "viel": {
+      "ru": "много, многое",
+      "pos": "мест."
+    },
+    "von": {
+      "ru": "от, из, о (vom = von dem)",
+      "pos": "предл."
+    },
+    "vor": {
+      "ru": "перед, до; от (страха)",
+      "pos": "предл."
+    },
+    "voraussichtlich": {
+      "ru": "предположительно, по прогнозу",
+      "pos": "нареч."
+    },
+    "vorsichtig": {
+      "ru": "осторожный",
+      "pos": "прил."
+    },
+    "vorstellen": {
+      "ru": "представлять",
+      "pos": "гл.",
+      "forms": "stellte vor · hat vorgestellt"
+    },
+    "wachsen": {
+      "ru": "расти",
+      "pos": "гл.",
+      "forms": "wuchs · ist gewachsen",
+      "note": "er wächst — с умлаутом в 2-м и 3-м л."
+    },
+    "Wachstum": {
+      "ru": "рост",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null,
+      "note": "das Wirtschaftswachstum — экономический рост"
+    },
+    "werden": {
+      "ru": "становиться",
+      "pos": "гл.",
+      "forms": "wurde · ist geworden",
+      "note": "Вспомогательный глагол будущего времени и пассива"
+    },
+    "wichtig": {
+      "ru": "важный",
+      "pos": "прил."
+    },
+    "Wirtschaft": {
+      "ru": "экономика, хозяйство",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Wirtschaften"
+    },
+    "wollen": {
+      "ru": "хотеть",
+      "pos": "гл.",
+      "forms": "wollte · hat gewollt"
+    },
+    "Zahl": {
+      "ru": "число, цифра",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Zahlen"
+    },
+    "Zoll": {
+      "ru": "пошлина; таможня",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Zölle"
+    },
+    "zuversichtlich": {
+      "ru": "уверенный, полный надежд",
+      "pos": "прил."
+    },
+    "Öl": {
+      "ru": "нефть; масло",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Öle"
+    }
+  }
+}

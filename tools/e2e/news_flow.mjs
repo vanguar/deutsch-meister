@@ -73,28 +73,36 @@ await c.go(`${B}/news.html`, 1500);
 await waitFor(`document.querySelectorAll('.news-card').length > 0`);
 const feed = JSON.parse(await c.ev(`JSON.stringify({
   cards: [...document.querySelectorAll('.news-card')].map(a => ({
-    title: a.querySelector('.nc-title').textContent, fresh: a.classList.contains('is-fresh'),
+    id: a.dataset.id || (a.getAttribute('href') || ''), title: a.querySelector('.nc-title').textContent, fresh: a.classList.contains('is-fresh'),
     lead: a.classList.contains('is-lead'), unread: a.classList.contains('is-unread'),
     level: a.querySelector('.nc-level').textContent, dates: a.querySelector('.nc-dates').textContent.replace(/\\s+/g,' ') })),
   live: [...document.querySelectorAll('.news-tile.is-live')].map(t => t.querySelector('.news-tile-title').textContent),
   soon: [...document.querySelectorAll('.news-tile.is-soon')].map(t => t.querySelector('.news-tile-title').textContent),
   scrollX: document.documentElement.scrollWidth > innerWidth
 })`));
-ok(feed.cards.length === 3, `лента: ${feed.cards.length} статьи`);
-ok(feed.cards[0].lead, `первая — главная: ${feed.cards[0].title}`);
+const idx = JSON.parse(await c.ev(`fetch('data/news/index.json').then(r => r.text())`)).items;
+const newest = [...idx].sort((a, b) => (b.published + b.added).localeCompare(a.published + a.added))[0];
+ok(feed.cards.length === idx.length && idx.length === 5, `лента: ${feed.cards.length} статей`);
+ok(feed.cards[0].lead && feed.cards[0].title === newest.title, `первая — самая свежая и главная: ${feed.cards[0].title}`);
+ok(feed.cards.filter(x => x.lead).length === 1, 'выделена только одна главная карточка');
+ok(feed.cards.every((x, i) => x.title === idx[i].title) && idx.every((it, i) => !i || idx[i - 1].published >= it.published),
+  'остальные идут ниже — от новых к старым');
 ok(feed.cards.every(x => x.level), 'у каждой статьи уровень: ' + feed.cards.map(x => x.level).join(', '));
 ok(feed.cards.every(x => /Опубликовано/.test(x.dates) && /В приложении/.test(x.dates)), 'у каждой обе даты');
 ok(feed.cards.some(x => x.fresh), 'свежие подсвечены: ' + feed.cards.filter(x => x.fresh).map(x => x.title.slice(0, 20)).join(' | '));
-ok(feed.live.length === 1 && feed.soon.length === 2, `рубрики: есть статьи — ${feed.live}, скоро — ${feed.soon}`);
+ok(feed.live.length === 3 && feed.soon.length === 0, `рубрики: есть статьи — ${feed.live}, скоро — ${feed.soon}`);
 ok(!feed.scrollX, 'нет горизонтальной прокрутки на 390px');
 await c.shot('news_feed_390.png');
 console.log('ошибки JS:', c.errors());
 
-for (const id of ['saturn-opposition-2026', 'crew-13-iss-2026', 'juice-erde-2026']) {
+for (const id of ['einheitsfeier-bremen-2026', 'wirtschaft-prognose-2026', 'saturn-opposition-2026',
+                  'crew-13-iss-2026', 'juice-erde-2026']) {
   await checkArticle(id, 390, 844);
 }
 await checkArticle('juice-erde-2026', 1280, 800);
 await checkArticle('saturn-opposition-2026', 360, 640);
+await checkArticle('einheitsfeier-bremen-2026', 360, 640);
+await checkArticle('wirtschaft-prognose-2026', 1280, 800);
 
 // отметка «Новое» снялась после открытия
 await c.send('Emulation.setDeviceMetricsOverride', { width: 1280, height: 900, deviceScaleFactor: 1, mobile: false });
@@ -115,6 +123,14 @@ const uk = JSON.parse(await c.ev(`JSON.stringify({ ru: document.querySelector('.
 ok(/[іїєґ]/i.test(uk.ru), 'uk: заголовок статьи переведён: ' + uk.ru);
 ok(/Стрічка/.test(uk.feed) && /Опубліковано/.test(uk.dates), 'uk: интерфейс ленты: ' + uk.feed + ' / ' + uk.dates);
 await c.shot('news_feed_uk.png');
+for (const id of ['einheitsfeier-bremen-2026', 'wirtschaft-prognose-2026']) {
+  await c.ev(`NewsFeed.open('${id}')`);
+  await waitFor(`document.querySelector('#rdContent .rd-news-opening')`);
+  await c.wait(1000);
+  const t = await c.ev(`document.querySelector('#rdContent .rd-chapter-translation').textContent + ' | ' + document.querySelector('.rd-fig figcaption').textContent.slice(0, 60)`);
+  ok(/[іїєґ]/i.test(t), `uk ${id}: ` + t.slice(0, 120));
+  await c.ev('Reader.close()'); await c.wait(400);
+}
 await c.ev(`NewsFeed.open('juice-erde-2026')`);
 await waitFor(`document.querySelector('#rdContent .rd-news-opening')`);
 await c.wait(1200);

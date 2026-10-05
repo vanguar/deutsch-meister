@@ -7,9 +7,11 @@ w/h фото — реальные размеры файла: ридер став
 чтобы страница не прыгала при загрузке картинки.
 """
 
-ORDER = ['saturn-opposition-2026', 'crew-13-iss-2026', 'juice-erde-2026']
+ORDER = ['einheitsfeier-bremen-2026', 'saturn-opposition-2026', 'crew-13-iss-2026',
+         'wirtschaft-prognose-2026', 'juice-erde-2026']
 
 ESA_LIC = 'CC BY-SA 3.0 IGO'
+SA4 = 'CC BY-SA 4.0 · Wikimedia Commons'
 
 META = {
     'juice-erde-2026': {
@@ -105,6 +107,73 @@ META = {
             'sunset': {'w': 1200, 'h': 826,
                        'cap': 'Ракета на стартовом комплексе 40 на закате, накануне запуска.',
                        'credit': 'NASA/Joel Kowsky'},
+        },
+    },
+    'wirtschaft-prognose-2026': {
+        'title': 'Mehr Wachstum erwartet: Die Bundesregierung hebt ihre Prognose an',
+        'titleRu': 'Ждут большего роста: правительство Германии повысило свой прогноз',
+        'rubric': 'economy',
+        'level': 'B1–B2',
+        'levelNote': 'Экономическая лексика (Wachstum, Prognose, Inflation, Konsum), пассив '
+                     '(wurde … angehoben), плюсквамперфект (hatte … erwartet), отделяемые '
+                     'глаголы (gibt … aus, kaufen … ein), Konjunktiv I в косвенной речи (könne) '
+                     'и Konjunktiv II (wäre).',
+        'published': '2026-10-01',
+        'added': '2026-10-06',
+        'source': 'Reuters · Bloomberg',
+        'sourceUrl': 'https://finance.yahoo.com/economy/articles/exclusive-german-government-raises-forecasts-155357353.html',
+        'blurb': 'Правительство ФРГ ждёт в 2026 году роста экономики на 1,3 % вместо 0,5 %. '
+                 'Тянут вверх госинвестиции в дороги, мосты и бундесвер, а вот цены на топливо '
+                 'и пошлины США сдерживают потребление.',
+        'license': 'Текст — пересказ новостей Reuters и Bloomberg; фото — Wikimedia Commons, CC BY-SA 4.0',
+        'figs': {
+            'hafen': {'w': 1200, 'h': 726,
+                      'cap': 'Контейнерный терминал Буркхардкай в порту Гамбурга. Экспорт, по прогнозу '
+                             'правительства, вырастет в 2026 году на 3,7 %.',
+                      'credit': 'Tobiasi0 · ' + SA4},
+            'bruecke': {'w': 1200, 'h': 675,
+                        'cap': 'Стройка нового автобанного моста через Рейн у Леверкузена. Деньги на '
+                               'дороги, мосты и железные дороги — главный двигатель подъёма.',
+                        'credit': 'Raimond Spekking · ' + SA4},
+            'bundesbank': {'w': 1200, 'h': 675,
+                           'cap': 'Штаб-квартира Бундесбанка во Франкфурте-на-Майне (справа) и '
+                                  'телебашня Europaturm.',
+                           'credit': 'Dr. Thomas Liptak · ' + SA4},
+        },
+    },
+    'einheitsfeier-bremen-2026': {
+        'title': '550.000 Gäste: Bremen feiert den Tag der Deutschen Einheit',
+        'titleRu': '550 000 гостей: Бремен отпраздновал День немецкого единства',
+        'rubric': 'events',
+        'level': 'B1–B2',
+        'levelNote': 'Претеритум в рассказе о событии (kamen, begann, hielt), отделяемые глаголы '
+                     '(findet … statt, stellten sich … vor), относительное придаточное (das gerade …), '
+                     'косвенная речь с Konjunktiv I (gefährde) и устойчивые обороты '
+                     '(eine Rede halten, an der Reihe sein).',
+        'published': '2026-10-05',
+        'added': '2026-10-06',
+        'source': 'Weser-Kurier · buten un binnen · Bundespräsident',
+        'sourceUrl': 'https://www.weser-kurier.de/bremen/tag-der-deutschen-einheit-550-000-gaeste-in-bremen-doc87watrykkdw1ikzk4d5w',
+        'blurb': 'Три дня Бремен праздновал 36-ю годовщину объединения Германии: 550 000 гостей, '
+                 'больше 600 концертов и спектаклей и речь президента Штайнмайера о единстве и демократии.',
+        'license': 'Текст — пересказ новостей Weser-Kurier, buten un binnen и речи федерального '
+                   'президента; фото — Wikimedia Commons, CC BY-SA 4.0',
+        'figs': {
+            'markt': {'w': 1200, 'h': 800,
+                      'cap': 'Рыночная площадь Бремена в «синий час»: ратуша, статуя Роланда и собор, '
+                             'где 3 октября прошло праздничное богослужение.',
+                      'credit': 'Matthias Süßen · ' + SA4},
+            'glocke': {'w': 1200, 'h': 675,
+                       'cap': 'Концертный зал «Die Glocke» («Колокол») — здесь проходило торжественное '
+                              'собрание с речью федерального президента.',
+                       'credit': 'Matthias Süßen · ' + SA4},
+            'musikanten': {'w': 1200, 'h': 800,
+                           'cap': 'Бременские музыканты у ратуши — символ города, мимо которого всё '
+                                  'праздничное воскресенье шли гости.',
+                           'credit': 'Dietmar Rabich · ' + SA4},
+            'schlachte': {'w': 1200, 'h': 797,
+                          'cap': 'Набережная Шлахте на Везере — часть праздничной зоны в центре города.',
+                          'credit': 'Jaimrsilva · ' + SA4},
         },
     },
 }

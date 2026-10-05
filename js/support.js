@@ -247,6 +247,7 @@ function dmFixBooksItem() {
       if (((btn.getAttribute('onclick') || '').indexOf('openBooksModal') < 0)) return;
       const title = btn.querySelector('.sa-title');
       const sub   = btn.querySelector('.sa-sub');
+      btn.classList.add('books');
       if (title) title.textContent = 'Книги на немецком';
       if (sub)   sub.textContent   = 'Чтение с переводом и озвучкой';
     });
@@ -254,8 +255,8 @@ function dmFixBooksItem() {
 }
 
 /* ── Пункт «Новости на немецком» ─────────────────────────────────
-   news.html — лента статей; рубрика «Астрономия» уже наполнена,
-   остальные пока заглушки. Пункт
+   news.html — лента статей по рубрикам «Астрономия», «Экономика» и
+   «События». Пункт
    добавляется сразу после «Книг» во всех меню, где они есть: так не
    нужно править 68 оболочек уроков и главную по отдельности.        */
 function dmNewsUrl() { return dmBasePath() + 'news.html'; }
@@ -278,9 +279,45 @@ function dmAddNewsItem() {
         '<span class="sa-ico">📰</span>' +
         '<span class="sa-txt">' +
           '<span class="sa-title">Новости на немецком <span class="sa-new">Есть статьи</span></span>' +
-          '<span class="sa-sub">🔭 Астрономия — свежие статьи · экономика и события скоро</span>' +
+          '<span class="sa-sub">Свежие статьи с переводом и озвучкой</span>' +
         '</span>';
       books.insertAdjacentElement('afterend', btn);
+    });
+  } catch (e) {}
+}
+
+/* ── Пункт «Связь с автором» ─────────────────────────────────────
+   Замечания и предложения — в личные сообщения Telegram. Внутри
+   мини-аппа ссылку открывает сам Telegram (иначе WebView уйдёт со
+   страницы), в браузере — новая вкладка. Добавляется последним в тот
+   же блок, что «Книги» и «Новости», — во всех меню сразу.            */
+const DM_CONTACT = { username: 'ObiVan1978' };
+
+function dmContactUrl() { return 'https://t.me/' + DM_CONTACT.username; }
+
+function openContactAuthor() {
+  dmHaptic('light');
+  const url = dmContactUrl();
+  const TG = dmTG();
+  if (TG && typeof TG.openTelegramLink === 'function') TG.openTelegramLink(url);
+  else window.open(url, '_blank', 'noopener');
+}
+
+function dmAddContactItem() {
+  try {
+    document.querySelectorAll('.sidebar-extra').forEach(box => {
+      if (box.querySelector('.side-action.contact')) return;
+      const btn = document.createElement('button');
+      btn.className = 'side-action contact';
+      btn.type = 'button';
+      btn.setAttribute('onclick', 'openContactAuthor()');
+      btn.innerHTML =
+        '<span class="sa-ico">💬</span>' +
+        '<span class="sa-txt">' +
+          '<span class="sa-title">Связь с автором</span>' +
+          '<span class="sa-sub">Замечания и предложения <span class="sa-tg">@' + DM_CONTACT.username + '</span></span>' +
+        '</span>';
+      box.appendChild(btn);
     });
   } catch (e) {}
 }
@@ -288,6 +325,7 @@ function dmAddNewsItem() {
 function dmSidebarExtras() {
   dmFixBooksItem();
   dmAddNewsItem();
+  dmAddContactItem();
 }
 
 if (document.readyState === 'loading') {
@@ -297,6 +335,7 @@ if (document.readyState === 'loading') {
 }
 
 Object.assign(window, {
+  openContactAuthor,
   dmClose,
   openDonateModal,
   donateStars,

@@ -1,0 +1,865 @@
+{
+  "version": 1,
+  "w": {
+    "alle": "alle/alles",
+    "am": "an",
+    "an": "an",
+    "anderem": "ander",
+    "andreas": "Andreas",
+    "auch": "auch",
+    "auf": "auf",
+    "bahnen": "Bahn",
+    "begann": "beginnen",
+    "bei": "bei",
+    "besucher": "Besucher",
+    "bis": "bis",
+    "bleibt": "bleiben",
+    "blieb": "bleiben",
+    "bovenschulte": "Bovenschulte",
+    "bremen": "Bremen",
+    "bremer": "Bremer",
+    "bundesland": "Bundesland",
+    "bundesländer": "Bundesland",
+    "bundespräsident": "Bundespräsident",
+    "bundesrat": "Bundesrat",
+    "busse": "Bus",
+    "bühnen": "Bühne",
+    "bürgerfest": "Bürgerfest",
+    "bürgermeister": "Bürgermeister",
+    "dafür": "dafür",
+    "danach": "danach",
+    "das": "der/die/das",
+    "dass": "dass",
+    "dem": "der/die/das",
+    "demagogie": "Demagogie",
+    "demokratie": "Demokratie",
+    "demonstration": "Demonstration",
+    "den": "der/die/das",
+    "der": "der/die/das",
+    "deutschen": "deutsch",
+    "deutschland": "Deutschland",
+    "die": "der/die/das",
+    "diesem": "dieser",
+    "dom": "Dom",
+    "dort": "dort",
+    "drei": "drei",
+    "dritten": "dritte",
+    "düsseldorf": "Düsseldorf",
+    "ein": "ein/eine",
+    "eine": "ein/eine",
+    "einem": "ein/eine",
+    "einer": "ein/eine",
+    "einheit": "Einheit",
+    "einzelne": "einzeln",
+    "ende": "Ende",
+    "er": "er",
+    "erinnerte": "erinnern",
+    "erwartet": "erwarten",
+    "es": "es",
+    "etwa": "etwa",
+    "extremismus": "Extremismus",
+    "extremistischer": "extremistisch",
+    "fand": "stattfinden",
+    "fantastischen": "Die Fantastischen Vier",
+    "feier": "Feier",
+    "festakt": "Festakt",
+    "findet": "stattfinden",
+    "folgte": "folgen",
+    "frank-walter": "Frank-Walter",
+    "freiheit": "Freiheit",
+    "friedlich": "friedlich",
+    "friedliche": "friedlich",
+    "für": "für",
+    "gab": "geben",
+    "ganzen": "ganz",
+    "gefeiert": "feiern",
+    "gefährde": "gefährden",
+    "gerade": "gerade",
+    "gleichzeitig": "gleichzeitig",
+    "glocke": "Glocke",
+    "glück": "Glück",
+    "gottesdienst": "Gottesdienst",
+    "großes": "groß",
+    "gutes": "gut",
+    "gäste": "Gast",
+    "hat": "haben",
+    "hatte": "haben",
+    "hielt": "halten (eine Rede)",
+    "im": "in",
+    "in": "in",
+    "innenstadt": "Innenstadt",
+    "ist": "sein",
+    "jahr": "Jahr",
+    "jedes": "jeder",
+    "kamen": "kommen",
+    "konzerte": "Konzert",
+    "konzerthaus": "Konzerthaus",
+    "kostenlos": "kostenlos",
+    "kräfte": "Kraft",
+    "land": "Land",
+    "lang": "lang",
+    "lautete": "lauten",
+    "lesungen": "Lesung",
+    "ländermeile": "Ländermeile",
+    "mal": "Mal",
+    "man": "man",
+    "mehreren": "mehrere",
+    "mit": "mit",
+    "motto": "Motto",
+    "nach": "nach",
+    "nicht": "nicht",
+    "nur": "nur",
+    "nächsten": "nächste",
+    "offizielle": "offiziell",
+    "oktober": "Oktober",
+    "osterdeich": "Osterdeich",
+    "polizisten": "Polizist",
+    "polizistinnen": "Polizistin",
+    "rede": "Rede",
+    "region": "Region",
+    "reihe": "Reihe",
+    "revolution": "Revolution",
+    "rief": "rufen",
+    "rund": "rund",
+    "schon": "schon",
+    "sich": "sich",
+    "sicherheit": "Sicherheit",
+    "so": "so",
+    "sondern": "sondern",
+    "sorgen": "sorgen",
+    "sorgten": "sorgen",
+    "spaltung": "Spaltung",
+    "sprach": "sprechen",
+    "stadt": "Stadt",
+    "statt": "stattfinden",
+    "steinmeier": "Steinmeier",
+    "stellten": "sich vorstellen",
+    "stärken": "Stärke",
+    "tag": "Tag",
+    "tage": {
+      "l": "Tag",
+      "old": "в обороте in einem Tage — старый дательный с -e; сегодня an einem Tag. В «drei Tage Regenwetter» это обычное мн. ч."
+    },
+    "tagen": "Tag",
+    "teil": "Teil",
+    "theater": "Theater",
+    "und": "und",
+    "unser": "unser",
+    "unter": "unter",
+    "viele": "viel",
+    "vier": "vier",
+    "vom": "von",
+    "von": "von",
+    "vor": "vor",
+    "vorsitz": "Vorsitz",
+    "war": "sein",
+    "waren": "sein",
+    "warnte": "warnen",
+    "weser": "Weser",
+    "wiedervereinigung": "Wiedervereinigung",
+    "wir": "wir",
+    "wunderbaren": "wunderbar",
+    "zentrale": "zentral",
+    "zum": "zu",
+    "zusammenstöße": "Zusammenstoß"
+  },
+  "l": {
+    "alle/alles": {
+      "ru": "все; всё",
+      "pos": "мест."
+    },
+    "an": {
+      "ru": "у, к, на",
+      "pos": "предл.",
+      "note": "am = an dem. Тж. отделяемая приставка: anfangen «начинать», annehmen, ansehen, anzünden"
+    },
+    "ander": {
+      "pos": "прил.",
+      "ru": "другой, иной"
+    },
+    "Andreas": {
+      "ru": "Андреас (имя)",
+      "pos": "имя собств."
+    },
+    "auch": {
+      "ru": "тоже, также; даже",
+      "pos": "частица"
+    },
+    "auf": {
+      "ru": "на, в",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: aufspringen «вскочить», sich aufmachen"
+    },
+    "Bahn": {
+      "ru": "железная дорога; поезд, трамвай",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Bahnen"
+    },
+    "beginnen": {
+      "ru": "начинать, начинаться",
+      "pos": "гл.",
+      "forms": "begann · hat begonnen"
+    },
+    "bei": {
+      "ru": "у, при, возле",
+      "pos": "предл."
+    },
+    "Besucher": {
+      "ru": "посетитель, гость",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Besucher"
+    },
+    "bis": {
+      "ru": "до; пока не",
+      "pos": "союз"
+    },
+    "bleiben": {
+      "ru": "оставаться",
+      "pos": "гл.",
+      "forms": "blieb · ist geblieben"
+    },
+    "Bovenschulte": {
+      "ru": "Бовеншульте (фамилия; бургомистр Бремена)",
+      "pos": "имя собств."
+    },
+    "Bremen": {
+      "ru": "Бремен (город на севере Германии)",
+      "pos": "геогр."
+    },
+    "Bremer": {
+      "ru": "бременский",
+      "pos": "прил."
+    },
+    "Bundesland": {
+      "ru": "федеральная земля",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Bundesländer"
+    },
+    "Bundespräsident": {
+      "ru": "федеральный президент",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Bundespräsidenten",
+      "note": "слабое склонение"
+    },
+    "Bundesrat": {
+      "ru": "бундесрат (палата земель)",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "Bus": {
+      "ru": "автобус",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Busse"
+    },
+    "Bühne": {
+      "ru": "сцена",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Bühnen"
+    },
+    "Bürgerfest": {
+      "ru": "народный праздник",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Bürgerfeste"
+    },
+    "Bürgermeister": {
+      "ru": "бургомистр, мэр",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Bürgermeister"
+    },
+    "dafür": {
+      "ru": "за это, для этого",
+      "pos": "нареч.",
+      "note": "dafür sorgen, dass … — позаботиться, чтобы …"
+    },
+    "danach": {
+      "ru": "затем, после этого",
+      "pos": "нареч."
+    },
+    "dass": {
+      "ru": "что; чтобы",
+      "pos": "союз"
+    },
+    "Demagogie": {
+      "ru": "демагогия",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "Demokratie": {
+      "ru": "демократия",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Demokratien"
+    },
+    "Demonstration": {
+      "ru": "демонстрация",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Demonstrationen"
+    },
+    "der/die/das": {
+      "ru": "определённый артикль",
+      "pos": "артикль",
+      "note": "Тж. относительное местоимение «который»"
+    },
+    "deutsch": {
+      "ru": "немецкий",
+      "pos": "прил."
+    },
+    "Deutschland": {
+      "ru": "Германия",
+      "pos": "геогр."
+    },
+    "Die Fantastischen Vier": {
+      "ru": "Die Fantastischen Vier (немецкая хип-хоп-группа)",
+      "pos": "имя собств."
+    },
+    "dieser": {
+      "ru": "этот, эта, это",
+      "pos": "мест."
+    },
+    "Dom": {
+      "ru": "собор",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Dome"
+    },
+    "dort": {
+      "ru": "там",
+      "pos": "нареч."
+    },
+    "drei": {
+      "ru": "три",
+      "pos": "числ."
+    },
+    "dritte": {
+      "ru": "третий",
+      "pos": "числ."
+    },
+    "Düsseldorf": {
+      "ru": "Дюссельдорф",
+      "pos": "геогр."
+    },
+    "ein/eine": {
+      "ru": "неопределённый артикль",
+      "pos": "артикль",
+      "note": "einer — «один, некто»"
+    },
+    "Einheit": {
+      "ru": "единство",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Einheiten",
+      "note": "der Tag der Deutschen Einheit — День немецкого единства, 3 октября"
+    },
+    "einzeln": {
+      "ru": "отдельный, одиночный",
+      "pos": "прил."
+    },
+    "Ende": {
+      "ru": "конец",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Enden"
+    },
+    "er": {
+      "ru": "он",
+      "pos": "мест.",
+      "note": "ihn — его, ihm — ему"
+    },
+    "erinnern": {
+      "ru": "напоминать",
+      "pos": "гл.",
+      "forms": "erinnerte · hat erinnert"
+    },
+    "erwarten": {
+      "ru": "ожидать, поджидать",
+      "pos": "гл.",
+      "forms": "erwartete · hat erwartet"
+    },
+    "es": {
+      "ru": "оно; это",
+      "pos": "мест."
+    },
+    "etwa": {
+      "ru": "примерно, около",
+      "pos": "нареч."
+    },
+    "Extremismus": {
+      "ru": "экстремизм",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "extremistisch": {
+      "ru": "экстремистский",
+      "pos": "прил."
+    },
+    "Feier": {
+      "ru": "праздник, торжество",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Feiern"
+    },
+    "feiern": {
+      "ru": "праздновать",
+      "pos": "гл.",
+      "forms": "feierte · hat gefeiert"
+    },
+    "Festakt": {
+      "ru": "торжественное мероприятие",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Festakte"
+    },
+    "folgen": {
+      "ru": "следовать; слушаться",
+      "pos": "гл.",
+      "forms": "folgte · ist gefolgt"
+    },
+    "Frank-Walter": {
+      "ru": "Франк-Вальтер (имя)",
+      "pos": "имя собств."
+    },
+    "Freiheit": {
+      "ru": "свобода",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Freiheiten"
+    },
+    "friedlich": {
+      "ru": "мирный",
+      "pos": "прил."
+    },
+    "für": {
+      "ru": "для, за",
+      "pos": "предл."
+    },
+    "ganz": {
+      "ru": "весь, целый; совсем",
+      "pos": "прил."
+    },
+    "Gast": {
+      "ru": "гость",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Gäste"
+    },
+    "geben": {
+      "ru": "давать",
+      "pos": "гл.",
+      "forms": "gab · hat gegeben"
+    },
+    "gefährden": {
+      "ru": "подвергать опасности, угрожать",
+      "pos": "гл.",
+      "forms": "gefährdete · hat gefährdet",
+      "note": "gefährde — Konjunktiv I: передаёт чужие слова"
+    },
+    "gerade": {
+      "ru": "как раз, именно",
+      "pos": "нареч."
+    },
+    "gleichzeitig": {
+      "ru": "одновременно",
+      "pos": "нареч."
+    },
+    "Glocke": {
+      "ru": "колокол",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Glocken",
+      "note": "Die Glocke — концертный зал в Бремене"
+    },
+    "Glück": {
+      "art": "das",
+      "note": "ein großes Glück bringen — принести большое счастье",
+      "pl": null,
+      "pos": "сущ.",
+      "ru": "счастье, удача"
+    },
+    "Gottesdienst": {
+      "ru": "богослужение",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Gottesdienste"
+    },
+    "groß": {
+      "ru": "большой",
+      "pos": "прил.",
+      "forms": "groß · größer · am größten"
+    },
+    "gut": {
+      "ru": "хороший, добрый",
+      "pos": "прил.",
+      "forms": "gut · besser · am besten",
+      "note": "besser — лучше"
+    },
+    "haben": {
+      "ru": "иметь; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "hatte · hat gehabt"
+    },
+    "halten (eine Rede)": {
+      "ru": "произносить (речь); держать",
+      "pos": "гл.",
+      "forms": "hielt · hat gehalten",
+      "note": "eine Rede halten — выступить с речью"
+    },
+    "in": {
+      "ru": "в (im = in dem, ins = in das)",
+      "pos": "предл."
+    },
+    "Innenstadt": {
+      "ru": "центр города",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Innenstädte"
+    },
+    "Jahr": {
+      "ru": "год",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Jahre"
+    },
+    "jeder": {
+      "ru": "каждый",
+      "pos": "мест."
+    },
+    "kommen": {
+      "ru": "приходить, приезжать",
+      "pos": "гл.",
+      "forms": "kam · ist gekommen"
+    },
+    "Konzert": {
+      "ru": "концерт",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Konzerte"
+    },
+    "Konzerthaus": {
+      "ru": "концертный зал",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Konzerthäuser"
+    },
+    "kostenlos": {
+      "ru": "бесплатный",
+      "pos": "прил."
+    },
+    "Kraft": {
+      "ru": "сила",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Kräfte"
+    },
+    "Land": {
+      "ru": "страна; суша; деревня",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Länder"
+    },
+    "lang": {
+      "ru": "длинный, долгий",
+      "pos": "прил.",
+      "forms": "lang · länger · am längsten"
+    },
+    "lauten": {
+      "ru": "гласить",
+      "pos": "гл.",
+      "forms": "lautete · hat gelautet"
+    },
+    "Lesung": {
+      "ru": "чтение (публичное)",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Lesungen"
+    },
+    "Ländermeile": {
+      "ru": "«миля земель» (выставка павильонов земель)",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "Mal": {
+      "ru": "раз",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Male",
+      "note": "zu wiederholten Malen — неоднократно"
+    },
+    "man": {
+      "ru": "неопределённое «кто-то, люди, мы»",
+      "pos": "мест."
+    },
+    "mehrere": {
+      "pos": "мест.",
+      "ru": "несколько"
+    },
+    "mit": {
+      "ru": "с",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: mitgehen «пойти вместе»"
+    },
+    "Motto": {
+      "ru": "девиз",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Mottos"
+    },
+    "nach": {
+      "ru": "в, на, после, по",
+      "pos": "предл."
+    },
+    "nicht": {
+      "ru": "не",
+      "pos": "частица"
+    },
+    "nur": {
+      "ru": "только, лишь",
+      "pos": "частица"
+    },
+    "nächste": {
+      "ru": "следующий; ближайший",
+      "pos": "прил."
+    },
+    "offiziell": {
+      "ru": "официальный",
+      "pos": "прил."
+    },
+    "Oktober": {
+      "ru": "октябрь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Oktober"
+    },
+    "Osterdeich": {
+      "ru": "Остердайх (дамба на Везере в Бремене)",
+      "pos": "геогр."
+    },
+    "Polizist": {
+      "ru": "полицейский",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Polizisten"
+    },
+    "Polizistin": {
+      "ru": "полицейская (женщина)",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Polizistinnen"
+    },
+    "Rede": {
+      "ru": "речь",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Reden"
+    },
+    "Region": {
+      "ru": "регион",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Regionen"
+    },
+    "Reihe": {
+      "ru": "ряд; очередь",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Reihen",
+      "note": "an der Reihe sein — чья-то очередь"
+    },
+    "Revolution": {
+      "ru": "революция",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Revolutionen",
+      "note": "die Friedliche Revolution — Мирная революция в ГДР 1989 года"
+    },
+    "rufen": {
+      "ru": "звать, кричать",
+      "pos": "гл.",
+      "forms": "rief · hat gerufen"
+    },
+    "rund": {
+      "ru": "около, примерно; круглый",
+      "pos": "нареч./прил.",
+      "note": "rund 550.000 — около 550 000"
+    },
+    "schon": {
+      "ru": "уже",
+      "pos": "нареч."
+    },
+    "sein": {
+      "ru": "быть; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "war · ist gewesen"
+    },
+    "sich": {
+      "ru": "себя, себе",
+      "pos": "мест.",
+      "note": "Возвратное местоимение, часть возвратного глагола: sich auf den Weg machen, sich setzen, sich legen, sich nähern, sich gefallen lassen, sich getrauen, sich umsehen"
+    },
+    "sich vorstellen": {
+      "ru": "представиться, представлять себя",
+      "pos": "гл.",
+      "forms": "stellte sich vor · hat sich vorgestellt"
+    },
+    "Sicherheit": {
+      "ru": "безопасность",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "so": {
+      "ru": "так; такой; то (в главном предложении)",
+      "pos": "нареч."
+    },
+    "sondern": {
+      "ru": "а, но (после отрицания)",
+      "pos": "союз"
+    },
+    "sorgen": {
+      "ru": "заботиться",
+      "pos": "гл.",
+      "forms": "sorgte · hat gesorgt",
+      "note": "für etwas sorgen — обеспечивать что-то; dafür sorgen, dass … — позаботиться о том, чтобы …"
+    },
+    "Spaltung": {
+      "ru": "раскол",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Spaltungen"
+    },
+    "sprechen": {
+      "ru": "говорить, сказать",
+      "pos": "гл.",
+      "forms": "sprach · hat gesprochen",
+      "old": "здесь sprach в значении «сказал» — книжно и устарело; в совр. речи sagte"
+    },
+    "Stadt": {
+      "ru": "город",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Städte"
+    },
+    "stattfinden": {
+      "ru": "иметь место, быть",
+      "pos": "гл.",
+      "forms": "fand statt · hat stattgefunden",
+      "note": "ein Zusammenhang findet statt — связь существует"
+    },
+    "Steinmeier": {
+      "ru": "Штайнмайер (фамилия; федеральный президент)",
+      "pos": "имя собств."
+    },
+    "Stärke": {
+      "ru": "сила, сильная сторона",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Stärken"
+    },
+    "Tag": {
+      "ru": "день",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Tage"
+    },
+    "Teil": {
+      "ru": "часть; доля",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Teile",
+      "note": "sein Teil haben — получить своё"
+    },
+    "Theater": {
+      "ru": "театр; спектакль",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Theater"
+    },
+    "und": {
+      "ru": "и, а",
+      "pos": "союз"
+    },
+    "unser": {
+      "ru": "наш",
+      "pos": "мест."
+    },
+    "unter": {
+      "ru": "под, среди",
+      "pos": "предл."
+    },
+    "viel": {
+      "ru": "много, многое",
+      "pos": "мест."
+    },
+    "vier": {
+      "ru": "четыре",
+      "pos": "числ."
+    },
+    "von": {
+      "ru": "от, из, о (vom = von dem)",
+      "pos": "предл."
+    },
+    "vor": {
+      "ru": "перед, до; от (страха)",
+      "pos": "предл."
+    },
+    "Vorsitz": {
+      "ru": "председательство",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Vorsitze",
+      "note": "den Vorsitz haben — председательствовать"
+    },
+    "warnen": {
+      "ru": "предостерегать",
+      "pos": "гл.",
+      "forms": "warnte · hat gewarnt"
+    },
+    "Weser": {
+      "ru": "Везер (река)",
+      "pos": "геогр.",
+      "note": "die Weser"
+    },
+    "Wiedervereinigung": {
+      "ru": "воссоединение",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "wir": {
+      "ru": "мы",
+      "pos": "мест.",
+      "note": "uns — нас, нам"
+    },
+    "wunderbar": {
+      "ru": "чудесный, замечательный",
+      "pos": "прил."
+    },
+    "zentral": {
+      "ru": "центральный, главный",
+      "pos": "прил."
+    },
+    "zu": {
+      "ru": "к, в; слишком",
+      "pos": "предл.",
+      "note": "zur = zu der, zum = zu dem"
+    },
+    "Zusammenstoß": {
+      "ru": "столкновение, стычка",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Zusammenstöße"
+    }
+  }
+}
