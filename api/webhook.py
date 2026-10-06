@@ -16,6 +16,11 @@ ENV (Vercel → Project → Settings → Environment Variables):
   APP_URL                   — URL мини-аппа (по умолчанию GitHub Pages)
   UPSTASH_REDIS_REST_URL    — для /api/progress (интеграция Upstash)
   UPSTASH_REDIS_REST_TOKEN  — для /api/progress
+  ADMIN_IDS                 — ID владельцев через запятую (команды /stats и др.)
+  ADMIN_USERNAMES           — их @username через запятую (по умолчанию ObiVan1978)
+
+База пользователей бота (Upstash): см. раздел «База пользователей» ниже.
+Команды владельца: /stats, /users N, /export, /notify on|off, /import.
 """
 
 import os
@@ -309,6 +314,428 @@ def send_invoice(chat_id, stars, lang="ru"):
     })
 
 
+# ══════════════════════════════════════════════════════
+#  База пользователей (Upstash Redis)
+#
+#  Кто хоть раз написал боту, нажал в нём кнопку или открыл мини-апп
+#  внутри Telegram, попадает сюда сразу:
+#    dm:users           SET  — все ID
+#    dm:users:joined    ZSET — ID → первый визит (мс): «новые за сутки/неделю»
+#    dm:users:seen      ZSET — ID → последний визит (мс): «активные»
+#    dm:users:blocked   SET  — заблокировали бота (апдейт my_chat_member)
+#    dm:user:<ID>       HASH — id, first_name, last_name, username, tg_lang,
+#                              first_seen, last_seen, via, last_via, source, status
+#    dm:admins          SET  — чаты админов: им приходит «🆕 новый пользователь»
+#    dm:admin:mute      SET  — админы, выключившие уведомления (/notify off)
+#
+#  Админ — ID из ADMIN_IDS или @username из ADMIN_USERNAMES (env). Username
+#  в апдейте подставляет сам Telegram, подделать его нельзя; ID надёжнее —
+#  его бот показывает в /stats, чтобы можно было вписать в ADMIN_IDS.
+# ══════════════════════════════════════════════════════
+
+ADMIN_IDS = {s.strip() for s in os.environ.get("ADMIN_IDS", "").split(",") if s.strip()}
+ADMIN_USERNAMES = {s.strip().lstrip("@").lower()
+                   for s in os.environ.get("ADMIN_USERNAMES", "ObiVan1978").split(",") if s.strip()}
+DAY_MS = 24 * 60 * 60 * 1000
+USER_FIELDS = ("first_name", "last_name", "username")
+
+
+def _now_ms():
+    return int(time.time() * 1000)
+
+
+def is_admin(user):
+    if not user or not user.get("id"):
+        return False
+    if str(user["id"]) in ADMIN_IDS:
+        return True
+    return str(user.get("username") or "").lower() in ADMIN_USERNAMES
+
+
+def _upstash_pipe(commands):
+    """Несколько команд Redis одним запросом. Список {"result": …} или None."""
+    if not UPSTASH_URL or not UPSTASH_TOK or not commands:
+        return None
+    req = urllib.request.Request(
+        UPSTASH_URL + "/pipeline",
+        data=json.dumps(commands).encode("utf-8"),
+        headers={"Authorization": f"Bearer {UPSTASH_TOK}",
+                 "Content-Type": "application/json"},
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=8) as r:
+            res = json.loads(r.read().decode("utf-8"))
+            return res if isinstance(res, list) else None
+    except Exception:  # noqa: BLE001
+        return None
+
+
+def _results(res, n):
+    """Результаты конвейера по порядку; при сбое — None на каждом месте."""
+    if not res:
+        return [None] * n
+    return [(r or {}).get("result") if isinstance(r, dict) else None for r in res] + [None] * (n - len(res))
+
+
+def _hash(flat):
+    """HGETALL → dict (Upstash отдаёт плоский список [k, v, k, v, …])."""
+    if isinstance(flat, dict):
+        return flat
+    if not isinstance(flat, list):
+        return {}
+    return {flat[i]: flat[i + 1] for i in range(0, len(flat) - 1, 2)}
+
+
+def track_user(user, via, source=""):
+    """Записать визит. via: "bot" | "app". True — если человек новый."""
+    if not user or not user.get("id") or user.get("is_bot"):
+        return False
+    uid = str(user["id"])
+    now = str(_now_ms())
+    key = f"dm:user:{uid}"
+    fields = ["id", uid, "tg_lang", str(user.get("language_code") or ""),
+              "last_seen", now, "last_via", via, "status", "active"]
+    for f in USER_FIELDS:
+        fields += [f, str(user.get(f) or "")]
+    cmds = [
+        ["SADD", "dm:users", uid],
+        ["HSET", key] + fields,
+        ["HSETNX", key, "first_seen", now],
+        ["HSETNX", key, "via", via],
+        ["ZADD", "dm:users:joined", "NX", now, uid],
+        ["ZADD", "dm:users:seen", now, uid],
+        ["SREM", "dm:users:blocked", uid],
+    ]
+    if source:
+        cmds.append(["HSETNX", key, "source", source[:64]])
+    is_new = _results(_upstash_pipe(cmds), 1)[0] == 1
+    if is_new:
+        notify_admins_new(user, via, source)
+    return is_new
+
+
+def mark_blocked(user, blocked):
+    """my_chat_member: человек заблокировал бота (kicked) или вернулся."""
+    if not user or not user.get("id"):
+        return
+    uid = str(user["id"])
+    if blocked:
+        _upstash_pipe([["SADD", "dm:users:blocked", uid],
+                       ["HSET", f"dm:user:{uid}", "status", "blocked", "blocked_at", str(_now_ms())]])
+    else:
+        track_user(user, "bot")
+
+
+def _html(s):
+    return str(s or "").replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+
+
+def _tz():
+    try:
+        from zoneinfo import ZoneInfo
+        return ZoneInfo("Europe/Berlin")
+    except Exception:  # noqa: BLE001 — нет tzdata в рантайме
+        return None
+
+
+def _fmt_ts(ms, with_year=False):
+    import datetime
+    try:
+        ms = int(float(ms))
+    except (TypeError, ValueError):
+        return "—"
+    tz = _tz()
+    dt = datetime.datetime.fromtimestamp(ms / 1000, tz or datetime.timezone.utc)
+    s = dt.strftime("%d.%m.%Y %H:%M" if with_year else "%d.%m %H:%M")
+    return s if tz else s + " UTC"
+
+
+VIA_RU = {"bot": "бот", "app": "мини-апп", "import": "перенесён"}
+
+
+def user_line(u, lang=None, full=False):
+    """Одна строка о пользователе для /stats и уведомлений (HTML)."""
+    name = " ".join(x for x in (u.get("first_name"), u.get("last_name")) if x) or "без имени"
+    parts = [f"<b>{_html(name)}</b>"]
+    if u.get("username"):
+        parts.append("@" + _html(u["username"]))
+    parts.append(f"<code>{_html(u.get('id'))}</code>")
+    tail = []
+    if lang:
+        tail.append(lang)
+    elif u.get("tg_lang"):
+        tail.append(_html(u["tg_lang"]))
+    tail.append(VIA_RU.get(u.get("via"), _html(u.get("via") or "")))
+    if u.get("source") and u.get("source") not in ("app", "import"):
+        tail.append("/start " + _html(u["source"]))
+    if u.get("status") == "blocked":
+        tail.append("🚫 заблокировал бота")
+    line = " · ".join(parts) + "\n    " + " · ".join(t for t in tail if t)
+    if full:
+        line = _fmt_ts(u.get("first_seen")) + " — " + line
+    return line
+
+
+def notify_admins_new(user, via, source=""):
+    admins, muted, total = _results(_upstash_pipe([
+        ["SMEMBERS", "dm:admins"], ["SMEMBERS", "dm:admin:mute"], ["SCARD", "dm:users"]]), 3)
+    targets = [a for a in (admins or []) if a not in set(muted or [])]
+    if not targets:
+        return
+    u = {"id": user.get("id"), "via": via, "source": source,
+         "tg_lang": user.get("language_code") or ""}
+    for f in USER_FIELDS:
+        u[f] = user.get(f) or ""
+    text = f"🆕 <b>Новый пользователь</b> (№{total or '?'})\n" + user_line(u)
+    for chat in targets:
+        chat = int(chat) if str(chat).lstrip("-").isdigit() else chat
+        tg("sendMessage", {"chat_id": chat, "text": text, "parse_mode": "HTML",
+                           "disable_notification": False})
+
+
+def _users_by_ids(ids):
+    """HGETALL для списка ID одним запросом."""
+    if not ids:
+        return []
+    res = _results(_upstash_pipe([["HGETALL", f"dm:user:{i}"] for i in ids]), len(ids))
+    out = []
+    for i, flat in zip(ids, res):
+        u = _hash(flat)
+        u.setdefault("id", i)
+        out.append(u)
+    return out
+
+
+def _app_langs(ids):
+    """Язык интерфейса, выбранный в боте/приложении (dm:lang:<ID>)."""
+    if not ids:
+        return {}
+    res = _results(_upstash_pipe([["GET", f"dm:lang:{i}"] for i in ids]), len(ids))
+    out = {}
+    for i, raw in zip(ids, res):
+        try:
+            rec = json.loads(raw) if raw else None
+            if isinstance(rec, dict) and rec.get("lang"):
+                out[i] = rec["lang"]
+        except (TypeError, ValueError):
+            pass
+    return out
+
+
+def send_stats(chat_id, user, limit=10):
+    now = _now_ms()
+    total, d1, d7, d30, act1, act7, blocked, recent = _results(_upstash_pipe([
+        ["SADD", "dm:admins", str(chat_id)],   # кто смотрит /stats — получает уведомления
+        ["SCARD", "dm:users"],
+        ["ZCOUNT", "dm:users:joined", str(now - DAY_MS), "+inf"],
+        ["ZCOUNT", "dm:users:joined", str(now - 7 * DAY_MS), "+inf"],
+        ["ZCOUNT", "dm:users:joined", str(now - 30 * DAY_MS), "+inf"],
+        ["ZCOUNT", "dm:users:seen", str(now - DAY_MS), "+inf"],
+        ["ZCOUNT", "dm:users:seen", str(now - 7 * DAY_MS), "+inf"],
+        ["SCARD", "dm:users:blocked"],
+        ["ZREVRANGE", "dm:users:joined", "0", str(limit - 1)],
+    ]), 9)[1:]
+    if total is None:
+        tg("sendMessage", {"chat_id": chat_id,
+                           "text": "⚠️ База недоступна: проверьте UPSTASH_REDIS_REST_URL/TOKEN в Vercel."})
+        return
+    ids = [str(i) for i in (recent or [])]
+    users = _users_by_ids(ids)
+    langs = _app_langs(ids)
+    lines = [
+        "📊 <b>Пользователи бота</b>",
+        f"Всего: <b>{total}</b>" + (f" · заблокировали бота: {blocked}" if blocked else ""),
+        f"Новых: за сутки <b>{d1}</b> · за 7 дней <b>{d7}</b> · за 30 дней <b>{d30}</b>",
+        f"Заходили: за сутки <b>{act1}</b> · за 7 дней <b>{act7}</b>",
+        "",
+        f"<b>Последние {len(users)} новых</b> (время — Германия):" if users else "Пока никого нет.",
+    ]
+    lines += [user_line(u, langs.get(str(u.get("id"))), full=True) for u in users]
+    lines += ["", "Ещё: /users 50 — список · /export — CSV-файл · "
+              "/notify off|on — уведомления о новых · /import — перенести старых",
+              f"Ваш ID: <code>{_html(user.get('id'))}</code>"]
+    _send_long(chat_id, "\n".join(lines))
+
+
+def _send_long(chat_id, text):
+    """Telegram режет сообщения на 4096 символах — шлём кусками по строкам."""
+    chunk = ""
+    for line in text.split("\n"):
+        if len(chunk) + len(line) + 1 > 3900:
+            tg("sendMessage", {"chat_id": chat_id, "text": chunk, "parse_mode": "HTML",
+                               "disable_web_page_preview": True})
+            chunk = ""
+        chunk += line + "\n"
+    if chunk.strip():
+        tg("sendMessage", {"chat_id": chat_id, "text": chunk, "parse_mode": "HTML",
+                           "disable_web_page_preview": True})
+
+
+def send_users(chat_id, limit):
+    ids = _results(_upstash_pipe([["ZREVRANGE", "dm:users:joined", "0", str(limit - 1)]]), 1)[0] or []
+    ids = [str(i) for i in ids]
+    users = _users_by_ids(ids)
+    langs = _app_langs(ids)
+    head = f"👥 <b>Последние {len(users)} новых пользователей</b> (время — Германия):"
+    _send_long(chat_id, "\n".join([head] + [user_line(u, langs.get(str(u.get("id"))), full=True)
+                                            for u in users]))
+
+
+def tg_upload(method, fields, file_field, filename, content, ctype="text/csv"):
+    """multipart/form-data для sendDocument (только stdlib)."""
+    if not BOT_TOKEN:
+        return {"ok": False}
+    boundary = "dm" + hashlib.sha1(str(time.time()).encode()).hexdigest()
+    body = b""
+    for k, v in fields.items():
+        body += (f"--{boundary}\r\nContent-Disposition: form-data; name=\"{k}\"\r\n\r\n{v}\r\n").encode("utf-8")
+    body += (f"--{boundary}\r\nContent-Disposition: form-data; name=\"{file_field}\"; "
+             f"filename=\"{filename}\"\r\nContent-Type: {ctype}\r\n\r\n").encode("utf-8")
+    body += content + f"\r\n--{boundary}--\r\n".encode("utf-8")
+    req = urllib.request.Request(API.format(BOT_TOKEN, method), data=body,
+                                 headers={"Content-Type": f"multipart/form-data; boundary={boundary}"})
+    try:
+        with urllib.request.urlopen(req, timeout=20) as r:
+            return json.loads(r.read().decode("utf-8"))
+    except Exception as e:  # noqa: BLE001
+        return {"ok": False, "error": str(e)}
+
+
+def users_csv():
+    import csv
+    import io
+    ids = _results(_upstash_pipe([["ZRANGE", "dm:users:joined", "0", "-1"]]), 1)[0] or []
+    ids = [str(i) for i in ids]
+    users, langs = [], {}
+    for k in range(0, len(ids), 200):
+        part = ids[k:k + 200]
+        users += _users_by_ids(part)
+        langs.update(_app_langs(part))
+    buf = io.StringIO()
+    w = csv.writer(buf, delimiter=";")
+    w.writerow(["id", "username", "first_name", "last_name", "tg_lang", "app_lang",
+                "first_seen", "last_seen", "via", "source", "status"])
+    for u in users:
+        uid = str(u.get("id"))
+        w.writerow([uid, u.get("username", ""), u.get("first_name", ""), u.get("last_name", ""),
+                    u.get("tg_lang", ""), langs.get(uid, ""),
+                    _fmt_ts(u.get("first_seen"), True), _fmt_ts(u.get("last_seen"), True),
+                    u.get("via", ""), u.get("source", ""), u.get("status", "")])
+    # BOM — чтобы Excel открыл кириллицу правильно
+    return ("﻿" + buf.getvalue()).encode("utf-8"), len(users)
+
+
+def send_export(chat_id):
+    data, n = users_csv()
+    stamp = time.strftime("%Y-%m-%d")
+    res = tg_upload("sendDocument", {"chat_id": str(chat_id), "caption": f"Пользователи бота: {n}"},
+                    "document", f"deutsch-meister-users-{stamp}.csv", data)
+    if not res.get("ok"):
+        tg("sendMessage", {"chat_id": chat_id, "text": "⚠️ Не удалось отправить файл: "
+                           + str(res.get("description") or res.get("error") or "")})
+
+
+def _scan_ids(pattern):
+    """Все ID из ключей вида dm:lang:<ID> (SCAN, без KEYS)."""
+    ids, cursor = set(), "0"
+    for _ in range(1000):
+        res = _upstash(["SCAN", cursor, "MATCH", pattern, "COUNT", "500"])
+        if not res or not isinstance(res.get("result"), list):
+            break
+        cursor, keys = res["result"][0], res["result"][1]
+        for k in keys:
+            tail = str(k).rsplit(":", 1)[-1]
+            if tail.isdigit():
+                ids.add(tail)
+        if str(cursor) == "0":
+            break
+    return ids
+
+
+def import_old_users(chat_id):
+    """Одноразовый перенос: всех, кто уже оставил след в базе (язык, прогресс),
+    добавить в dm:users. Имена и username — через getChat (личный чат с ботом)."""
+    started = time.time()
+    known = set(str(i) for i in (_results(_upstash_pipe([["SMEMBERS", "dm:users"]]), 1)[0] or []))
+    lang_ids = _scan_ids("dm:lang:*")
+    found = (lang_ids | _scan_ids("dm:progress:*")) - known
+    langs = _app_langs(sorted(lang_ids & found))
+    added, unnamed, left = 0, 0, 0
+    for uid in sorted(found):
+        if time.time() - started > 240:   # запас до лимита функции Vercel
+            left += 1
+            continue
+        info = tg("getChat", {"chat_id": int(uid)})
+        chat = (info.get("result") or {}) if info.get("ok") else {}
+        if not chat:
+            unnamed += 1
+        ts = None
+        raw = _results(_upstash_pipe([["GET", f"dm:lang:{uid}"]]), 1)[0] if uid in langs else None
+        try:
+            ts = int(json.loads(raw).get("ts") or 0) if raw else None
+        except (TypeError, ValueError, AttributeError):
+            ts = None
+        first = str(ts or _now_ms())
+        fields = ["id", uid, "first_seen", first, "last_seen", first, "via", "import",
+                  "last_via", "import", "source", "import", "status", "active"]
+        for f in USER_FIELDS:
+            fields += [f, str(chat.get(f) or "")]
+        _upstash_pipe([["SADD", "dm:users", uid], ["HSET", f"dm:user:{uid}"] + fields,
+                       ["ZADD", "dm:users:joined", "NX", first, uid],
+                       ["ZADD", "dm:users:seen", "NX", first, uid]])
+        added += 1
+    hook = enable_member_updates()
+    text = (f"📥 Перенос завершён: добавлено <b>{added}</b>"
+            + (f" (без имени: {unnamed} — заблокировали бота или скрыли профиль)" if unnamed else "")
+            + (f"\n⏳ Не успел: {left} — запустите /import ещё раз" if left else "")
+            + f"\nУже были в базе: {len(known)}"
+            + ("\n🔔 Бот теперь узнаёт, кто его заблокировал." if hook else ""))
+    tg("sendMessage", {"chat_id": chat_id, "text": text, "parse_mode": "HTML"})
+
+
+def enable_member_updates():
+    """Добавить my_chat_member в allowed_updates вебхука (URL и секрет — прежние)."""
+    info = tg("getWebhookInfo", {})
+    r = (info.get("result") or {}) if info.get("ok") else {}
+    url = r.get("url")
+    if not url:
+        return False
+    want = ["message", "callback_query", "pre_checkout_query", "my_chat_member"]
+    if set(want) <= set(r.get("allowed_updates") or []):
+        return True
+    payload = {"url": url, "allowed_updates": want}
+    if WEBHOOK_SECRET:
+        payload["secret_token"] = WEBHOOK_SECRET
+    return bool(tg("setWebhook", payload).get("ok"))
+
+
+def handle_admin(cmd, text, chat_id, user):
+    """Команды владельца. True — команда обработана."""
+    if cmd == "/stats":
+        send_stats(chat_id, user)
+    elif cmd == "/users":
+        try:
+            n = int((text.split() + ["50"])[1])
+        except ValueError:
+            n = 50
+        send_users(chat_id, max(1, min(n, 300)))
+    elif cmd == "/export":
+        send_export(chat_id)
+    elif cmd == "/notify":
+        arg = (text.split() + [""])[1].lower()
+        off = arg in ("off", "0", "нет", "выкл")
+        _upstash_pipe([["SADD", "dm:admins", str(chat_id)],
+                       ["SADD" if off else "SREM", "dm:admin:mute", str(chat_id)]])
+        tg("sendMessage", {"chat_id": chat_id, "text": "🔕 Уведомления о новых пользователях выключены."
+                           if off else "🔔 Уведомления о новых пользователях включены."})
+    elif cmd == "/import":
+        tg("sendMessage", {"chat_id": chat_id, "text": "📥 Переношу пользователей из старых записей…"})
+        import_old_users(chat_id)
+    else:
+        return False
+    return True
+
+
 def handle_update(update):
     # Платёжный путь — строго первым: Telegram даёт на pre_checkout_query
     # 10 секунд, иначе платёж отменяется. Никакой код не должен стоять раньше.
@@ -328,6 +755,14 @@ def handle_update(update):
         })
         return
 
+    # Заблокировал бота или вернулся (нужен my_chat_member в allowed_updates)
+    if "my_chat_member" in update:
+        mcm = update["my_chat_member"]
+        if (mcm.get("chat") or {}).get("type") == "private":
+            status = (mcm.get("new_chat_member") or {}).get("status")
+            mark_blocked(mcm.get("from") or {}, status in ("kicked", "left"))
+        return
+
     if "message" in update:
         msg = update["message"]
         text = (msg.get("text") or "").strip()
@@ -335,6 +770,12 @@ def handle_update(update):
         user = msg.get("from") or {}
         first_name = user.get("first_name", "")
         cmd = text.split()[0].split("@")[0] if text else ""
+        if (msg.get("chat") or {}).get("type") == "private":
+            # source — откуда пришёл: параметр /start (t.me/бот?start=…) или просто «start»
+            src = (text[len("/start"):].strip() or "start") if text.startswith("/start") else ""
+            track_user(user, "bot", src)
+        if is_admin(user) and handle_admin(cmd, text, chat_id, user):
+            return
         if text.startswith("/start"):
             arg = text[len("/start"):].strip()
             rec = read_lang(user.get("id")) if user.get("id") else None
@@ -356,6 +797,7 @@ def handle_update(update):
         data = cq.get("data", "")
         user = cq.get("from") or {}
         chat_id = cq["message"]["chat"]["id"]
+        track_user(user, "bot")
 
         if data.startswith("lang:") and data[5:] in LANG_SOON:
             tg("answerCallbackQuery", {"callback_query_id": cq["id"],
@@ -744,6 +1186,8 @@ class handler(BaseHTTPRequestHandler):
                 ok = write_progress(uid, body["data"])
                 self._json({"ok": ok, "saved": ok, "data": body["data"]})
             else:
+                # чтение = открытие мини-аппа в Telegram: отмечаем визит
+                track_user(user, "app", "app")
                 self._json({"ok": True, "data": read_progress(uid)})
             return
 
@@ -764,6 +1208,7 @@ class handler(BaseHTTPRequestHandler):
             uid = user["id"]
             lang = body.get("lang")
             if lang is None:
+                track_user(user, "app", "app")
                 rec = read_lang(uid)
                 self._json({"ok": True, "lang": rec and rec["lang"],
                             "ts": rec["ts"] if rec else 0})

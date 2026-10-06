@@ -87,7 +87,7 @@ vercel --prod --yes >/dev/null 2>&1 \
 
 RES="$(curl -s "https://api.telegram.org/bot${TOKEN}/setWebhook" \
   -H 'Content-Type: application/json' \
-  -d "{\"url\":\"${HOOK_URL}\",\"secret_token\":\"${SECRET}\",\"drop_pending_updates\":true,\"allowed_updates\":[\"message\",\"callback_query\",\"pre_checkout_query\"]}")"
+  -d "{\"url\":\"${HOOK_URL}\",\"secret_token\":\"${SECRET}\",\"drop_pending_updates\":true,\"allowed_updates\":[\"message\",\"callback_query\",\"pre_checkout_query\",\"my_chat_member\"]}")"
 case "$RES" in
   *'"ok":true'*) echo "   Вебхук зарегистрирован." ;;
   *) echo "   setWebhook не прошёл: $RES"; exit 1 ;;

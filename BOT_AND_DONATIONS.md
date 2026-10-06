@@ -155,7 +155,7 @@ curl "https://api.telegram.org/bot<TOKEN>/setWebhook" \
   -H "Content-Type: application/json" \
   -d '{"url":"https://deutsch-meister-puce.vercel.app/api/webhook",
        "secret_token":"<WEBHOOK_SECRET>",
-       "allowed_updates":["message","callback_query","pre_checkout_query"]}'
+       "allowed_updates":["message","callback_query","pre_checkout_query","my_chat_member"]}'
 ```
 
 **Проверить состояние webhook:**
@@ -202,3 +202,26 @@ done
 | `api/webhook.py`    | **боевой** бот на Vercel (webhook)               |
 | `pyproject.toml`    | точка входа Python-функции для Vercel             |
 | `bot/bot.py`        | локальный бот на polling (только для теста)        |
+
+
+## База пользователей бота
+
+Каждый, кто пишет боту, нажимает в нём кнопку или открывает мини-апп внутри
+Telegram, сразу записывается в Upstash Redis (та же база, что у прогресса):
+ID, имя, фамилия, @username, язык Telegram, язык приложения, дата первого и
+последнего визита, откуда пришёл (параметр `/start`, мини-апп), заблокировал
+ли бота. Ключи описаны в `api/webhook.py`, раздел «База пользователей».
+
+Команды владельца (ID из `ADMIN_IDS` или @username из `ADMIN_USERNAMES`,
+по умолчанию `ObiVan1978`):
+
+| Команда | Что делает |
+|---|---|
+| `/stats` | всего, новые за сутки/7/30 дней, активные, последние 10 новых; включает уведомления |
+| `/users 50` | последние N новых пользователей |
+| `/export` | CSV со всеми пользователями (открывается в Excel) |
+| `/notify off` / `/notify on` | выключить/включить сообщение «🆕 Новый пользователь» |
+| `/import` | одноразово перенести тех, кто был до появления базы (из `dm:lang:*`, `dm:progress:*`) и включить `my_chat_member` |
+
+Это персональные данные: базу не выгружать в репозиторий (он публичный).
+Тест без сети: `python scripts/test_bot_users.py`.

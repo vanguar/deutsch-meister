@@ -41,6 +41,7 @@ def fake_upstash(cmd):
 
 W.tg = fake_tg
 W._upstash = fake_upstash
+W._upstash_pipe = lambda cmds: None   # база пользователей — в test_bot_users.py
 
 FAILS = []
 
