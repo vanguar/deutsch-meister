@@ -20,7 +20,7 @@ ENV (Vercel → Project → Settings → Environment Variables):
   ADMIN_USERNAMES           — их @username через запятую (по умолчанию ObiVan1978)
 
 База пользователей бота (Upstash): см. раздел «База пользователей» ниже.
-Команды владельца: /stats, /users N, /export, /notify on|off, /import.
+Команда владельца: /stats — сводка и кнопки (список, CSV, уведомления, перенос).
 """
 
 import os
@@ -264,14 +264,17 @@ def set_menu_button(chat_id, lang, ts):
     })
 
 
-def set_commands(chat_id, lang):
-    """Меню команд «/» этого чата — на выбранном языке."""
+def set_commands(chat_id, lang, admin=False):
+    """Меню команд «/» этого чата — на выбранном языке; владельцу — ещё /stats."""
+    commands = [
+        {"command": "start", "description": tr(lang, "cmd_start")},
+        {"command": "language", "description": tr(lang, "cmd_language")},
+        {"command": "donate", "description": tr(lang, "cmd_donate")},
+    ]
+    if admin:
+        commands.append({"command": "stats", "description": "Пользователи бота (только для вас)"})
     return tg("setMyCommands", {
-        "commands": [
-            {"command": "start", "description": tr(lang, "cmd_start")},
-            {"command": "language", "description": tr(lang, "cmd_language")},
-            {"command": "donate", "description": tr(lang, "cmd_donate")},
-        ],
+        "commands": commands,
         "scope": {"type": "chat", "chat_id": chat_id},
     })
 
@@ -326,7 +329,7 @@ def send_invoice(chat_id, stars, lang="ru"):
 #    dm:user:<ID>       HASH — id, first_name, last_name, username, tg_lang,
 #                              first_seen, last_seen, via, last_via, source, status
 #    dm:admins          SET  — чаты админов: им приходит «🆕 новый пользователь»
-#    dm:admin:mute      SET  — админы, выключившие уведомления (/notify off)
+#    dm:admin:mute      SET  — админы, выключившие уведомления (кнопка 🔔 под /stats)
 #
 #  Админ — ID из ADMIN_IDS или @username из ADMIN_USERNAMES (env). Username
 #  в апдейте подставляет сам Telegram, подделать его нельзя; ID надёжнее —
@@ -522,9 +525,35 @@ def _app_langs(ids):
     return out
 
 
-def send_stats(chat_id, user, limit=10):
+STATS_HELP = (
+    "<b>Кнопки:</b>\n"
+    "👥 — новые пользователи по дате прихода: имя, @username, язык, откуда пришёл\n"
+    "📄 — все пользователи одним файлом для Excel\n"
+    "🔔/🔕 — присылать ли мне сообщение о каждом новом пользователе\n"
+    "📥 — один раз: добавить тех, кто пользовался ботом до появления базы"
+)
+
+
+def stats_kb(muted):
+    """Инлайн-кнопки под /stats: вместо отдельных команд."""
+    return {"inline_keyboard": [
+        [{"text": "👥 Последние 20", "callback_data": "adm:users:20"},
+         {"text": "👥 Последние 100", "callback_data": "adm:users:100"}],
+        [{"text": "📄 Скачать всех (CSV)", "callback_data": "adm:export"}],
+        [{"text": "🔔 Включить уведомления" if muted else "🔕 Выключить уведомления",
+          "callback_data": "adm:notify:on" if muted else "adm:notify:off"}],
+        [{"text": "📥 Перенести старых пользователей", "callback_data": "adm:import"}],
+        [{"text": "🔄 Обновить", "callback_data": "adm:stats"}],
+    ]}
+
+
+BACK_KB = {"inline_keyboard": [[{"text": "⬅️ К статистике", "callback_data": "adm:stats"}]]}
+
+
+def send_stats(chat_id, user, message_id=None, limit=10):
+    """Сводка + кнопки. message_id — обновить это сообщение, а не слать новое."""
     now = _now_ms()
-    total, d1, d7, d30, act1, act7, blocked, recent = _results(_upstash_pipe([
+    total, d1, d7, d30, act1, act7, blocked, recent, muted = _results(_upstash_pipe([
         ["SADD", "dm:admins", str(chat_id)],   # кто смотрит /stats — получает уведомления
         ["SCARD", "dm:users"],
         ["ZCOUNT", "dm:users:joined", str(now - DAY_MS), "+inf"],
@@ -534,7 +563,8 @@ def send_stats(chat_id, user, limit=10):
         ["ZCOUNT", "dm:users:seen", str(now - 7 * DAY_MS), "+inf"],
         ["SCARD", "dm:users:blocked"],
         ["ZREVRANGE", "dm:users:joined", "0", str(limit - 1)],
-    ]), 9)[1:]
+        ["SISMEMBER", "dm:admin:mute", str(chat_id)],
+    ]), 10)[1:]
     if total is None:
         tg("sendMessage", {"chat_id": chat_id,
                            "text": "⚠️ База недоступна: проверьте UPSTASH_REDIS_REST_URL/TOKEN в Vercel."})
@@ -547,28 +577,42 @@ def send_stats(chat_id, user, limit=10):
         f"Всего: <b>{total}</b>" + (f" · заблокировали бота: {blocked}" if blocked else ""),
         f"Новых: за сутки <b>{d1}</b> · за 7 дней <b>{d7}</b> · за 30 дней <b>{d30}</b>",
         f"Заходили: за сутки <b>{act1}</b> · за 7 дней <b>{act7}</b>",
+        "Уведомления о новых: " + ("🔕 выключены" if muted else "🔔 включены"),
         "",
         f"<b>Последние {len(users)} новых</b> (время — Германия):" if users else "Пока никого нет.",
     ]
     lines += [user_line(u, langs.get(str(u.get("id"))), full=True) for u in users]
-    lines += ["", "Ещё: /users 50 — список · /export — CSV-файл · "
-              "/notify off|on — уведомления о новых · /import — перенести старых",
-              f"Ваш ID: <code>{_html(user.get('id'))}</code>"]
-    _send_long(chat_id, "\n".join(lines))
+    lines += ["", STATS_HELP, "", f"Ваш ID: <code>{_html(user.get('id'))}</code>"]
+    text = "\n".join(lines)[:4000]
+    kb = stats_kb(bool(muted))
+    if message_id:
+        res = tg("editMessageText", {"chat_id": chat_id, "message_id": message_id, "text": text,
+                                     "parse_mode": "HTML", "disable_web_page_preview": True,
+                                     "reply_markup": kb})
+        # «message is not modified» — данные не изменились, это не ошибка
+        if res.get("ok") or "not modified" in str(res.get("description", "")):
+            return
+    tg("sendMessage", {"chat_id": chat_id, "text": text, "parse_mode": "HTML",
+                       "disable_web_page_preview": True, "reply_markup": kb})
 
 
-def _send_long(chat_id, text):
-    """Telegram режет сообщения на 4096 символах — шлём кусками по строкам."""
-    chunk = ""
+def _send_long(chat_id, text, reply_markup=None):
+    """Telegram режет сообщения на 4096 символах — шлём кусками по строкам,
+    кнопки — под последним куском."""
+    chunks, chunk = [], ""
     for line in text.split("\n"):
         if len(chunk) + len(line) + 1 > 3900:
-            tg("sendMessage", {"chat_id": chat_id, "text": chunk, "parse_mode": "HTML",
-                               "disable_web_page_preview": True})
+            chunks.append(chunk)
             chunk = ""
         chunk += line + "\n"
     if chunk.strip():
-        tg("sendMessage", {"chat_id": chat_id, "text": chunk, "parse_mode": "HTML",
-                           "disable_web_page_preview": True})
+        chunks.append(chunk)
+    for i, c in enumerate(chunks):
+        payload = {"chat_id": chat_id, "text": c, "parse_mode": "HTML",
+                   "disable_web_page_preview": True}
+        if reply_markup and i == len(chunks) - 1:
+            payload["reply_markup"] = reply_markup
+        tg("sendMessage", payload)
 
 
 def send_users(chat_id, limit):
@@ -576,9 +620,10 @@ def send_users(chat_id, limit):
     ids = [str(i) for i in ids]
     users = _users_by_ids(ids)
     langs = _app_langs(ids)
-    head = f"👥 <b>Последние {len(users)} новых пользователей</b> (время — Германия):"
+    head = (f"👥 <b>Последние {len(users)} новых пользователей</b> (время — Германия):"
+            if users else "👥 Пока никого нет.")
     _send_long(chat_id, "\n".join([head] + [user_line(u, langs.get(str(u.get("id"))), full=True)
-                                            for u in users]))
+                                             for u in users]), BACK_KB)
 
 
 def tg_upload(method, fields, file_field, filename, content, ctype="text/csv"):
@@ -687,7 +732,7 @@ def import_old_users(chat_id):
     hook = enable_member_updates()
     text = (f"📥 Перенос завершён: добавлено <b>{added}</b>"
             + (f" (без имени: {unnamed} — заблокировали бота или скрыли профиль)" if unnamed else "")
-            + (f"\n⏳ Не успел: {left} — запустите /import ещё раз" if left else "")
+            + (f"\n⏳ Не успел: {left} — нажмите «📥 Перенести» ещё раз" if left else "")
             + f"\nУже были в базе: {len(known)}"
             + ("\n🔔 Бот теперь узнаёт, кто его заблокировал." if hook else ""))
     tg("sendMessage", {"chat_id": chat_id, "text": text, "parse_mode": "HTML"})
@@ -710,30 +755,45 @@ def enable_member_updates():
 
 
 def handle_admin(cmd, text, chat_id, user):
-    """Команды владельца. True — команда обработана."""
-    if cmd == "/stats":
-        send_stats(chat_id, user)
-    elif cmd == "/users":
+    """Команда владельца — одна: /stats. Остальное — кнопками под ней."""
+    if cmd != "/stats":
+        return False
+    set_commands(chat_id, user_lang(user)[0], admin=True)
+    send_stats(chat_id, user)
+    return True
+
+
+def handle_admin_callback(cq, user):
+    """Кнопки под /stats (callback_data «adm:…»)."""
+    data = cq.get("data", "")
+    chat_id = cq["message"]["chat"]["id"]
+    message_id = cq["message"].get("message_id")
+    if not is_admin(user):
+        tg("answerCallbackQuery", {"callback_query_id": cq["id"],
+                                   "text": "Эта кнопка только для владельца бота.", "show_alert": True})
+        return
+    parts = data.split(":")
+    action = parts[1] if len(parts) > 1 else ""
+    hint = {"users": "Собираю список…", "export": "Готовлю файл…",
+            "import": "Переношу старых пользователей…"}.get(action, "")
+    tg("answerCallbackQuery", {"callback_query_id": cq["id"], "text": hint})
+    if action == "stats":
+        send_stats(chat_id, user, message_id)
+    elif action == "users":
         try:
-            n = int((text.split() + ["50"])[1])
-        except ValueError:
-            n = 50
+            n = int(parts[2])
+        except (IndexError, ValueError):
+            n = 20
         send_users(chat_id, max(1, min(n, 300)))
-    elif cmd == "/export":
+    elif action == "export":
         send_export(chat_id)
-    elif cmd == "/notify":
-        arg = (text.split() + [""])[1].lower()
-        off = arg in ("off", "0", "нет", "выкл")
+    elif action == "notify":
+        off = len(parts) > 2 and parts[2] == "off"
         _upstash_pipe([["SADD", "dm:admins", str(chat_id)],
                        ["SADD" if off else "SREM", "dm:admin:mute", str(chat_id)]])
-        tg("sendMessage", {"chat_id": chat_id, "text": "🔕 Уведомления о новых пользователях выключены."
-                           if off else "🔔 Уведомления о новых пользователях включены."})
-    elif cmd == "/import":
-        tg("sendMessage", {"chat_id": chat_id, "text": "📥 Переношу пользователей из старых записей…"})
+        send_stats(chat_id, user, message_id)   # кнопка сама покажет новое состояние
+    elif action == "import":
         import_old_users(chat_id)
-    else:
-        return False
-    return True
 
 
 def handle_update(update):
@@ -799,6 +859,10 @@ def handle_update(update):
         chat_id = cq["message"]["chat"]["id"]
         track_user(user, "bot")
 
+        if data.startswith("adm:"):
+            handle_admin_callback(cq, user)
+            return
+
         if data.startswith("lang:") and data[5:] in LANG_SOON:
             tg("answerCallbackQuery", {"callback_query_id": cq["id"],
                                        "text": AR_SOON_ALERT, "show_alert": True})
@@ -813,7 +877,7 @@ def handle_update(update):
             tg("answerCallbackQuery", {"callback_query_id": cq["id"],
                                        "text": tr(lang, "lang_set")})
             set_menu_button(chat_id, lang, ts)
-            set_commands(chat_id, lang)
+            set_commands(chat_id, lang, admin=is_admin(user))
             send_welcome(chat_id, user.get("first_name", ""), lang, ts)
             return
 

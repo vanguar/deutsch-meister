@@ -46,6 +46,8 @@ def redis(cmd):
         return n
     if op == "SMEMBERS":
         return sorted(SETS.get(args[0], set()))
+    if op == "SISMEMBER":
+        return int(args[1] in SETS.get(args[0], set()))
     if op == "SCARD":
         return len(SETS.get(args[0], set()))
     if op == "HSET":
@@ -200,22 +202,53 @@ W.handle_update({"my_chat_member": {"chat": {"id": 42, "type": "private"},
                                     "new_chat_member": {"status": "member"}}})
 check("снова active", "42" not in SETS["dm:users:blocked"] and HASHES["dm:user:42"]["status"] == "active")
 
-print("7. /notify off — уведомления не приходят")
-W.handle_update(msg("/notify off", ADMIN, "ObiVan1978", "Иван"))
+def press(data, uid=ADMIN, username="ObiVan1978"):
+    """Нажатие инлайн-кнопки под сообщением /stats."""
+    W.handle_update({"callback_query": {"id": "cq", "data": data,
+                                        "from": {"id": uid, "first_name": "Иван", "username": username},
+                                        "message": {"chat": {"id": uid}, "message_id": 500}}})
+
+
+def buttons(payload):
+    return [b["callback_data"] for row in payload["reply_markup"]["inline_keyboard"] for b in row]
+
+
+print("7. Под /stats — кнопки вместо команд; меню «/» владельца с /stats")
+CALLS.clear()
+W.handle_update(msg("/stats", ADMIN, "ObiVan1978", "Иван"))
+st = sent(ADMIN)[-1]
+check("кнопки: список, CSV, уведомления, перенос, обновить",
+      set(buttons(st)) >= {"adm:users:20", "adm:users:100", "adm:export", "adm:notify:off", "adm:import",
+                           "adm:stats"}, buttons(st))
+check("под кнопками есть пояснения", "Кнопки:" in st["text"] and "Excel" in st["text"])
+cmds = [p for m, p in CALLS if m == "setMyCommands"]
+check("в меню «/» владельца есть /stats",
+      cmds and any(c["command"] == "stats" for c in cmds[-1]["commands"]), cmds)
+for old in ("/users 3", "/export", "/import", "/notify off"):
+    CALLS.clear()
+    W.handle_update(msg(old, ADMIN, "ObiVan1978", "Иван"))
+    check(f"старой команды {old.split()[0]} больше нет", not sent(ADMIN) and not UPLOADS)
+
+print("8. Кнопка уведомлений: выключить → сообщение обновилось, новых не шлём")
+CALLS.clear()
+press("adm:notify:off")
+ed = [p for m, p in CALLS if m == "editMessageText"]
+check("сводка обновлена на месте", ed and ed[-1]["message_id"] == 500)
+check("кнопка теперь «включить»", ed and "adm:notify:on" in buttons(ed[-1]), ed and buttons(ed[-1]))
 CALLS.clear()
 W.handle_update(msg("/start", 60, "", "Без ника"))
 check("нет уведомления", not [p for p in sent(ADMIN) if "Новый" in p["text"]])
-W.handle_update(msg("/notify on", ADMIN, "ObiVan1978", "Иван"))
+press("adm:notify:on")
 CALLS.clear()
 W.handle_update(msg("/start", 61, "", "Ещё один"))
-check("снова есть", len([p for p in sent(ADMIN) if "Новый" in p["text"]]) == 1)
+check("после включения — снова есть", len([p for p in sent(ADMIN) if "Новый" in p["text"]]) == 1)
 
-print("8. /import — перенос старых из dm:lang:* и dm:progress:*")
+print("9. Кнопка «Перенести старых» — из dm:lang:* и dm:progress:*")
 KV["dm:lang:777"] = json.dumps({"lang": "ru", "ts": 1700000000000})
 KV["dm:progress:888"] = "{}"
 KV["dm:progress:42"] = "{}"   # уже в базе — не трогаем
 CALLS.clear()
-W.handle_update(msg("/import", ADMIN, "ObiVan1978", "Иван"))
+press("adm:import")
 check("777 перенесён с именем", HASHES.get("dm:user:777", {}).get("username") == "old_user")
 check("first_seen 777 — из даты выбора языка", HASHES["dm:user:777"]["first_seen"] == "1700000000000")
 check("888 перенесён без имени", "888" in SETS["dm:users"] and HASHES["dm:user:888"]["via"] == "import")
@@ -225,22 +258,30 @@ check("вебхук: добавлен my_chat_member",
 rep = sent(ADMIN)[-1]["text"]
 check("отчёт: добавлено 2", "добавлено <b>2</b>" in rep, rep)
 
-print("9. /users и /export")
+print("10. Кнопки «Последние 20» и «Скачать CSV»")
 CALLS.clear()
-W.handle_update(msg("/users 3", ADMIN, "ObiVan1978", "Иван"))
-lst = sent(ADMIN)[-1]["text"]
-check("/users: 3 последних", lst.count("<code>") == 3, lst)
-W.handle_update(msg("/export", ADMIN, "ObiVan1978", "Иван"))
+press("adm:users:20")
+lst = sent(ADMIN)[-1]
+check("список: все пользователи (их меньше 20)", lst["text"].count("<code>") == len(SETS["dm:users"]), lst["text"])
+check("под списком — «К статистике»", buttons(lst) == ["adm:stats"])
+press("adm:export")
 check("CSV отправлен", len(UPLOADS) == 1)
 csv_text = UPLOADS[0][3].decode("utf-8")
-check("CSV: заголовок и все пользователи", csv_text.startswith("﻿id;username;first_name")
+check("CSV: заголовок и все пользователи", csv_text.startswith("\ufeffid;username;first_name")
       and csv_text.count("\n") == len(SETS["dm:users"]) + 1, csv_text[:200])
 check("CSV: язык приложения из dm:lang", ";ru;" in csv_text)
 
-print("10. /stats после всего")
+print("11. Чужой человек нажал админскую кнопку — отказ")
 CALLS.clear()
-W.handle_update(msg("/stats", ADMIN, "ObiVan1978", "Иван"))
-st = sent(ADMIN)[-1]["text"]
+UPLOADS.clear()
+press("adm:export", uid=43, username="hacker")
+ans = [p for m, p in CALLS if m == "answerCallbackQuery"]
+check("отказ и ничего не отправлено", ans and ans[-1].get("show_alert") and not UPLOADS and not sent(43))
+
+print("12. «Обновить» после всего")
+CALLS.clear()
+press("adm:stats")
+st = [p for m, p in CALLS if m == "editMessageText"][-1]["text"]
 total = len(SETS["dm:users"])
 check(f"всего {total}", f"Всего: <b>{total}</b>" in st, st)
 check("в списке есть username", "@olya_new" in st)
