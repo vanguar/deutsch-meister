@@ -1,5 +1,5 @@
 {
- "ui": 473,
+ "ui": 475,
  "lexicon": 1789,
  "lessons/a1-01": 149,
  "lessons/a1-02": 112,
@@ -77,12 +77,15 @@
  "books/storm": 842,
  "books/kleist": 2272,
  "books/hauff": 2533,
- "news-index": 18,
+ "news-index": 24,
  "news/nobelpreis-physik-2026": 355,
+ "news/telekom-ki-2026": 263,
  "news/plastiksteuer-2027": 336,
  "news/einheitsfeier-bremen-2026": 303,
  "news/oktoberfest-rekord-2026": 281,
  "news/saturn-opposition-2026": 287,
+ "news/draconiden-2026": 283,
+ "news/homo-erectus-drimolen-2026": 279,
  "news/wirtschaft-prognose-2026": 281,
  "news/crew-13-iss-2026": 274,
  "news/juice-erde-2026": 318

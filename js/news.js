@@ -29,6 +29,7 @@ const NewsFeed = (() => {
   const RUBRICS = [
     { id: 'astronomy', ico: '🔭', title: 'Астрономия', text: 'Космос, открытия и миссии' },
     { id: 'science',   ico: '🔬', title: 'Наука',      text: 'Исследования, открытия и премии' },
+    { id: 'tech',      ico: '💻', title: 'Технологии', text: 'ИИ, интернет и гаджеты' },
     { id: 'economy',   ico: '💹', title: 'Экономика',  text: 'Рынки, цены, работа и деньги' },
     { id: 'events',    ico: '🌍', title: 'События',    text: 'Главное в Германии и мире' }
   ];

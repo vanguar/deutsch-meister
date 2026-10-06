@@ -7,7 +7,7 @@
 import { start, SP } from './cdp.mjs';
 
 const B = 'http://127.0.0.1:8765';
-const RUBRICS = ['astronomy', 'science', 'economy', 'events'];
+const RUBRICS = ['astronomy', 'science', 'tech', 'economy', 'events'];
 const READY = `document.querySelectorAll('.news-tile.is-live').length > 0`;
 const CARDS = `document.querySelectorAll('.news-card').length > 0`;
 const c = await start();
@@ -85,7 +85,7 @@ const hub = JSON.parse(await c.ev(`JSON.stringify({
   rubricHidden: document.getElementById('newsRubric').hidden,
   scrollX: document.documentElement.scrollWidth > innerWidth
 })`));
-ok(idx.length === 8, `статей в индексе: ${idx.length}`);
+ok(idx.length === 11, `статей в индексе: ${idx.length}`);
 ok(hub.tiles.map(t => t.id).join() === RUBRICS.join(), 'рубрики: ' + hub.tiles.map(t => t.id).join(', '));
 ok(hub.tiles.every(t => t.live), 'во всех рубриках есть статьи');
 ok(hub.cards === 0 && hub.rubricHidden, 'на витрине нет «простыни» статей — только рубрики');
@@ -136,7 +136,7 @@ await c.go(`${B}/news.html#r=science`, 1200);
 await waitFor(CARDS);
 ok(await c.ev(`document.getElementById('newsFeedTitle').textContent === 'Наука'`), 'прямая ссылка #r=science открывает рубрику');
 await c.ev(`document.getElementById('newsToHub').click()`);
-ok(await waitFor(`!document.getElementById('newsHub').hidden && document.querySelectorAll('.news-tile').length === 4`), '«← Все рубрики» ведёт на витрину');
+ok(await waitFor(`!document.getElementById('newsHub').hidden && document.querySelectorAll('.news-tile').length === ${RUBRICS.length}`), '«← Все рубрики» ведёт на витрину');
 // прямая ссылка на статью: под ней её рубрика
 await c.go(`${B}/news.html#news=plastiksteuer-2027`, 1500);
 ok(await waitFor(`!document.getElementById('rdView').hidden`), 'ссылка #news=… открывает статью');

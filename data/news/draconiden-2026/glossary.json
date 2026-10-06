@@ -1,0 +1,782 @@
+{
+  "version": 1,
+  "w": {
+    "abend": "Abend",
+    "aber": "aber",
+    "aktiv": "aktiv",
+    "als": "als",
+    "also": "also",
+    "am": "an",
+    "andere": "ander",
+    "anders": "anders",
+    "atmosphäre": "Atmosphäre",
+    "auf": "auf",
+    "augen": "Auge",
+    "aus": "aus",
+    "bald": "bald",
+    "bedingungen": "Bedingung",
+    "beobachten": "beobachten",
+    "beobachter": "Beobachter",
+    "besonders": "besonders",
+    "besten": "am besten",
+    "bis": "bis",
+    "blick": "Blick",
+    "braucht": "brauchen",
+    "chance": "Chance",
+    "daher": "daher",
+    "das": "der/die/das",
+    "dem": "der/die/das",
+    "den": "der/die/das",
+    "der": "der/die/das",
+    "des": "der/die/das",
+    "deshalb": "deshalb",
+    "deutschland": "Deutschland",
+    "die": "der/die/das",
+    "diesem": "dieser",
+    "diesen": "dieser",
+    "diesmal": "diesmal",
+    "drache": "Drache",
+    "draconiden": "Draconiden",
+    "dunklen": "dunkel",
+    "durch": "durch",
+    "durchaus": "durchaus",
+    "echten": "echt",
+    "ein": "ein/eine",
+    "eine": "ein/eine",
+    "einem": "ein/eine",
+    "einen": "ein/eine",
+    "entstehen": "entstehen",
+    "er": "er",
+    "erde": "Erde",
+    "erreichen": "erreichen",
+    "erreicht": "erreichen",
+    "erwarten": "erwarten",
+    "es": "es",
+    "etwa": "etwa",
+    "fernrohr": "Fernrohr",
+    "fliegt": "fliegen",
+    "frühen": "früh",
+    "fünf": "fünf",
+    "ganze": "ganz",
+    "giacobini-zinner": "Giacobini-Zinner",
+    "gibt": "geben",
+    "gut": "gut",
+    "hat": "haben",
+    "himmel": "Himmel",
+    "hoch": "hoch",
+    "horizont": "Horizont",
+    "ihr": "ihr (её, их)",
+    "im": "in",
+    "in": "in",
+    "ist": "sein",
+    "jahr": "Jahr",
+    "jahren": "Jahr",
+    "jedes": "jeder",
+    "kann": "können",
+    "kein": "kein",
+    "kilometern": "Kilometer",
+    "kometen": "Komet",
+    "kommen": "kommen",
+    "können": "können",
+    "langsam": "langsam",
+    "lohnt": "lohnen",
+    "man": "man",
+    "manchmal": "manchmal",
+    "maximum": "Maximum",
+    "meteoren": "Meteor",
+    "meteorsturm": "Meteorsturm",
+    "minuten": "Minute",
+    "mit": "mit",
+    "mondlicht": "Mondlicht",
+    "nacht": "Nacht",
+    "name": "Name",
+    "neue": "neu",
+    "neumond": "Neumond",
+    "nicht": "nicht",
+    "nichts": "nichts",
+    "nur": "nur",
+    "ohne": "ohne",
+    "oktober": "Oktober",
+    "orioniden": "Orioniden",
+    "ort": "Ort",
+    "pro": "pro",
+    "sahen": "sehen",
+    "scheinen": "scheinen",
+    "schon": "schon",
+    "sein": "sein",
+    "seine": "sein (его, свой)",
+    "sekunde": "Sekunde",
+    "sich": "sich",
+    "sie": "sie",
+    "sieht": "sehen",
+    "sind": "sein",
+    "sogar": "sogar",
+    "sollte": "sollen",
+    "staub": "Staub",
+    "staubspur": "Staubspur",
+    "steht": "stehen",
+    "sternbild": "Sternbild",
+    "sternschnuppen": "Sternschnuppe",
+    "straßenlampen": "Straßenlampe",
+    "strom": "Strom",
+    "ströme": "Strom",
+    "stunde": "Stunde",
+    "stört": "stören",
+    "sucht": "suchen",
+    "tagen": "Tag",
+    "tausende": "Tausend",
+    "teilchen": "Teilchen",
+    "trotzdem": "trotzdem",
+    "und": "und",
+    "ungewöhnlich": "ungewöhnlich",
+    "unter": "unter",
+    "vergehen": "vergehen",
+    "verglühen": "verglühen",
+    "viele": "viel",
+    "vom": "von",
+    "von": "von",
+    "wahrscheinlich": "wahrscheinlich",
+    "wenn": "wenn",
+    "wer": "wer",
+    "wiederkehrt": "wiederkehren",
+    "winzigen": "winzig",
+    "zehn": "zehn",
+    "zeit": "Zeit",
+    "zu": "zu",
+    "zum": "zu",
+    "zwei": "zwei",
+    "zwischen": "zwischen",
+    "über": "über",
+    "überraschen": "überraschen"
+  },
+  "l": {
+    "Abend": {
+      "ru": "вечер",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Abende"
+    },
+    "aber": {
+      "ru": "но, однако",
+      "pos": "союз"
+    },
+    "aktiv": {
+      "ru": "активный",
+      "pos": "прил."
+    },
+    "als": {
+      "ru": "когда; как; чем",
+      "pos": "союз"
+    },
+    "also": {
+      "ru": "итак, стало быть",
+      "pos": "нареч."
+    },
+    "am besten": {
+      "ru": "лучше всего",
+      "pos": "нареч."
+    },
+    "an": {
+      "ru": "у, к, на",
+      "pos": "предл.",
+      "note": "am = an dem. Тж. отделяемая приставка: anfangen «начинать», annehmen, ansehen, anzünden"
+    },
+    "ander": {
+      "pos": "прил.",
+      "ru": "другой, иной"
+    },
+    "anders": {
+      "ru": "иначе, по-другому",
+      "pos": "нареч."
+    },
+    "Atmosphäre": {
+      "ru": "атмосфера",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Atmosphären"
+    },
+    "auf": {
+      "ru": "на, в",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: aufspringen «вскочить», sich aufmachen"
+    },
+    "Auge": {
+      "ru": "глаз",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Augen"
+    },
+    "aus": {
+      "ru": "из",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: auslöschen «погасить»"
+    },
+    "bald": {
+      "ru": "скоро",
+      "pos": "нареч."
+    },
+    "Bedingung": {
+      "ru": "условие",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Bedingungen"
+    },
+    "beobachten": {
+      "ru": "наблюдать",
+      "pos": "гл.",
+      "forms": "beobachtete · hat beobachtet"
+    },
+    "Beobachter": {
+      "ru": "наблюдатель",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Beobachter"
+    },
+    "besonders": {
+      "ru": "особенно",
+      "pos": "нареч."
+    },
+    "bis": {
+      "ru": "до; пока не",
+      "pos": "союз"
+    },
+    "Blick": {
+      "ru": "взгляд",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Blicke"
+    },
+    "brauchen": {
+      "ru": "нуждаться; годиться",
+      "pos": "гл.",
+      "forms": "brauchte · hat gebraucht",
+      "note": "nicht zu brauchen — никуда не годится"
+    },
+    "Chance": {
+      "ru": "шанс",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Chancen"
+    },
+    "daher": {
+      "pos": "нареч.",
+      "ru": "поэтому; оттуда"
+    },
+    "der/die/das": {
+      "ru": "определённый артикль",
+      "pos": "артикль",
+      "note": "Тж. относительное местоимение «который»"
+    },
+    "deshalb": {
+      "ru": "поэтому",
+      "pos": "нареч."
+    },
+    "Deutschland": {
+      "ru": "Германия",
+      "pos": "геогр."
+    },
+    "dieser": {
+      "ru": "этот, эта, это",
+      "pos": "мест."
+    },
+    "diesmal": {
+      "ru": "в этот раз",
+      "pos": "нареч."
+    },
+    "Drache": {
+      "ru": "дракон; Дракон (созвездие)",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Drachen"
+    },
+    "Draconiden": {
+      "ru": "Дракониды (метеорный поток)",
+      "pos": "имя собств."
+    },
+    "dunkel": {
+      "ru": "тёмный",
+      "pos": "прил."
+    },
+    "durch": {
+      "ru": "через, сквозь, из-за",
+      "pos": "предл."
+    },
+    "durchaus": {
+      "ru": "вполне, совершенно",
+      "pos": "нареч."
+    },
+    "echt": {
+      "ru": "настоящий, подлинный",
+      "pos": "прил."
+    },
+    "ein/eine": {
+      "ru": "неопределённый артикль",
+      "pos": "артикль",
+      "note": "einer — «один, некто»"
+    },
+    "entstehen": {
+      "ru": "возникать",
+      "pos": "гл.",
+      "forms": "entstand · ist entstanden"
+    },
+    "er": {
+      "ru": "он",
+      "pos": "мест.",
+      "note": "ihn — его, ihm — ему"
+    },
+    "Erde": {
+      "ru": "Земля (планета); земля, почва",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "erreichen": {
+      "ru": "достигать",
+      "pos": "гл.",
+      "forms": "erreichte · hat erreicht"
+    },
+    "erwarten": {
+      "ru": "ожидать",
+      "pos": "гл.",
+      "forms": "erwartete · hat erwartet"
+    },
+    "es": {
+      "ru": "оно; это",
+      "pos": "мест."
+    },
+    "etwa": {
+      "ru": "примерно, около",
+      "pos": "нареч."
+    },
+    "Fernrohr": {
+      "ru": "подзорная труба, телескоп",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Fernrohre"
+    },
+    "fliegen": {
+      "ru": "летать, лететь",
+      "pos": "гл.",
+      "forms": "flog · ist geflogen"
+    },
+    "früh": {
+      "ru": "ранний; рано",
+      "pos": "прил."
+    },
+    "fünf": {
+      "ru": "пять",
+      "pos": "числ."
+    },
+    "ganz": {
+      "ru": "весь, целый; совсем",
+      "pos": "прил."
+    },
+    "geben": {
+      "ru": "давать",
+      "pos": "гл.",
+      "forms": "gab · hat gegeben"
+    },
+    "Giacobini-Zinner": {
+      "ru": "Джакобини — Циннера (комета)",
+      "pos": "имя собств."
+    },
+    "gut": {
+      "ru": "хороший, добрый",
+      "pos": "прил.",
+      "forms": "gut · besser · am besten",
+      "note": "besser — лучше"
+    },
+    "haben": {
+      "ru": "иметь; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "hatte · hat gehabt"
+    },
+    "Himmel": {
+      "art": "der",
+      "pl": "die Himmel",
+      "pos": "сущ.",
+      "ru": "небо"
+    },
+    "hoch": {
+      "ru": "высокий",
+      "pos": "прил.",
+      "forms": "hoch · höher · am höchsten"
+    },
+    "Horizont": {
+      "ru": "горизонт",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Horizonte"
+    },
+    "ihr (её, их)": {
+      "ru": "её; их",
+      "pos": "мест."
+    },
+    "in": {
+      "ru": "в (im = in dem, ins = in das)",
+      "pos": "предл."
+    },
+    "Jahr": {
+      "ru": "год",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Jahre"
+    },
+    "jeder": {
+      "ru": "каждый",
+      "pos": "мест."
+    },
+    "kein": {
+      "ru": "никакой, ни один",
+      "pos": "мест."
+    },
+    "Kilometer": {
+      "ru": "километр",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Kilometer"
+    },
+    "Komet": {
+      "ru": "комета",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Kometen"
+    },
+    "kommen": {
+      "ru": "приходить, приезжать",
+      "pos": "гл.",
+      "forms": "kam · ist gekommen"
+    },
+    "können": {
+      "ru": "мочь, уметь",
+      "pos": "гл.",
+      "forms": "konnte · hat gekonnt"
+    },
+    "langsam": {
+      "pos": "прил.",
+      "ru": "медленный; медленно"
+    },
+    "lohnen": {
+      "ru": "окупаться, стоить того",
+      "pos": "гл.",
+      "forms": "lohnte · hat gelohnt",
+      "note": "es lohnt sich — стоит, имеет смысл"
+    },
+    "man": {
+      "ru": "неопределённое «кто-то, люди, мы»",
+      "pos": "мест."
+    },
+    "manchmal": {
+      "ru": "иногда",
+      "pos": "нареч."
+    },
+    "Maximum": {
+      "ru": "максимум",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Maxima"
+    },
+    "Meteor": {
+      "ru": "метеор",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Meteore"
+    },
+    "Meteorsturm": {
+      "ru": "метеорный шторм (поток в тысячи метеоров в час)",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Meteorstürme"
+    },
+    "Minute": {
+      "ru": "минута",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Minuten"
+    },
+    "mit": {
+      "ru": "с",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: mitgehen «пойти вместе»"
+    },
+    "Mondlicht": {
+      "ru": "лунный свет",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "Nacht": {
+      "art": "die",
+      "pl": "die Nächte",
+      "pos": "сущ.",
+      "ru": "ночь"
+    },
+    "Name": {
+      "ru": "имя",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Namen",
+      "decl": "des Namens · dem/den Namen (особое склонение)"
+    },
+    "neu": {
+      "ru": "новый",
+      "pos": "прил."
+    },
+    "Neumond": {
+      "ru": "новолуние",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "nicht": {
+      "ru": "не",
+      "pos": "частица"
+    },
+    "nichts": {
+      "pos": "мест.",
+      "ru": "ничто, ничего"
+    },
+    "nur": {
+      "ru": "только, лишь",
+      "pos": "частица"
+    },
+    "ohne": {
+      "ru": "без",
+      "pos": "предл."
+    },
+    "Oktober": {
+      "ru": "октябрь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Oktober"
+    },
+    "Orioniden": {
+      "ru": "Ориониды (метеорный поток)",
+      "pos": "имя собств."
+    },
+    "Ort": {
+      "ru": "место; селение",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Orte"
+    },
+    "pro": {
+      "ru": "в, за (на единицу)",
+      "pos": "предл.",
+      "note": "3,5 Kilometer pro Sekunde — 3,5 км в секунду"
+    },
+    "scheinen": {
+      "ru": "казаться; светить",
+      "pos": "гл.",
+      "forms": "schien · hat geschienen",
+      "note": "zu … scheinen — казаться"
+    },
+    "schon": {
+      "ru": "уже",
+      "pos": "нареч."
+    },
+    "sehen": {
+      "ru": "видеть",
+      "pos": "гл.",
+      "forms": "sah · hat gesehen"
+    },
+    "sein": {
+      "ru": "быть; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "war · ist gewesen"
+    },
+    "sein (его, свой)": {
+      "ru": "его, свой",
+      "pos": "мест."
+    },
+    "Sekunde": {
+      "ru": "секунда",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Sekunden"
+    },
+    "sich": {
+      "ru": "себя, себе",
+      "pos": "мест.",
+      "note": "Возвратное местоимение, часть возвратного глагола: sich auf den Weg machen, sich setzen, sich legen, sich nähern, sich gefallen lassen, sich getrauen, sich umsehen"
+    },
+    "sie": {
+      "ru": "она; они; Вы",
+      "pos": "мест."
+    },
+    "sogar": {
+      "ru": "даже",
+      "pos": "частица"
+    },
+    "sollen": {
+      "ru": "быть должным, следует",
+      "pos": "гл.",
+      "forms": "sollte · hat gesollt"
+    },
+    "Staub": {
+      "ru": "пыль",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "Staubspur": {
+      "ru": "пылевой след",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Staubspuren"
+    },
+    "stehen": {
+      "ru": "стоять",
+      "pos": "гл.",
+      "forms": "stand · hat gestanden"
+    },
+    "Sternbild": {
+      "ru": "созвездие",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Sternbilder"
+    },
+    "Sternschnuppe": {
+      "ru": "падающая звезда, метеор",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Sternschnuppen"
+    },
+    "Straßenlampe": {
+      "ru": "уличный фонарь",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Straßenlampen"
+    },
+    "Strom": {
+      "ru": "поток; течение; ток",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Ströme"
+    },
+    "Stunde": {
+      "art": "die",
+      "note": "eine halbe Stunde — тж. о расстоянии: полчаса ходу",
+      "pl": "die Stunden",
+      "pos": "сущ.",
+      "ru": "час"
+    },
+    "stören": {
+      "ru": "мешать",
+      "pos": "гл.",
+      "forms": "störte · hat gestört"
+    },
+    "suchen": {
+      "ru": "искать",
+      "pos": "гл.",
+      "forms": "suchte · hat gesucht",
+      "note": "sich etwas suchen — подыскать себе"
+    },
+    "Tag": {
+      "ru": "день",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Tage"
+    },
+    "Tausend": {
+      "ru": "тысяча",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Tausende",
+      "note": "Tausende von … — тысячи …"
+    },
+    "Teilchen": {
+      "ru": "частица",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Teilchen"
+    },
+    "trotzdem": {
+      "ru": "тем не менее, всё же",
+      "pos": "нареч."
+    },
+    "und": {
+      "ru": "и, а",
+      "pos": "союз"
+    },
+    "ungewöhnlich": {
+      "ru": "необычный; необычно",
+      "pos": "прил."
+    },
+    "unter": {
+      "ru": "под, среди",
+      "pos": "предл."
+    },
+    "vergehen": {
+      "ru": "проходить (о времени)",
+      "pos": "гл.",
+      "forms": "verging · ist vergangen"
+    },
+    "verglühen": {
+      "ru": "сгорать (раскаляясь)",
+      "pos": "гл.",
+      "forms": "verglühte · ist verglüht"
+    },
+    "viel": {
+      "ru": "много, многое",
+      "pos": "мест."
+    },
+    "von": {
+      "ru": "от, из, о (vom = von dem)",
+      "pos": "предл."
+    },
+    "wahrscheinlich": {
+      "pos": "прил.",
+      "ru": "вероятный, скорее всего"
+    },
+    "wenn": {
+      "ru": "если; когда",
+      "pos": "союз"
+    },
+    "wer": {
+      "ru": "кто",
+      "pos": "мест."
+    },
+    "wiederkehren": {
+      "ru": "возвращаться, повторяться",
+      "pos": "гл.",
+      "forms": "kehrte wieder · ist wiedergekehrt"
+    },
+    "winzig": {
+      "ru": "крошечный",
+      "pos": "прил."
+    },
+    "zehn": {
+      "ru": "десять",
+      "pos": "числ."
+    },
+    "Zeit": {
+      "ru": "время",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Zeiten"
+    },
+    "zu": {
+      "ru": "к, в; слишком",
+      "pos": "предл.",
+      "note": "zur = zu der, zum = zu dem"
+    },
+    "zwei": {
+      "ru": "два",
+      "pos": "числ."
+    },
+    "zwischen": {
+      "pos": "предл.",
+      "ru": "между"
+    },
+    "über": {
+      "ru": "над, через, о",
+      "pos": "предл."
+    },
+    "überraschen": {
+      "ru": "удивлять, заставать врасплох",
+      "pos": "гл.",
+      "forms": "überraschte · hat überrascht"
+    }
+  }
+}

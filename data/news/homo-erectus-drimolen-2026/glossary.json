@@ -1,0 +1,732 @@
+{
+  "version": 1,
+  "w": {
+    "aber": "aber",
+    "als": "als",
+    "alt": "alt",
+    "anderen": "ander",
+    "art": "Art",
+    "auch": "auch",
+    "aus": "aus",
+    "australien": "Australien",
+    "außenseiter": "Außenseiter",
+    "backenzähne": "Backenzahn",
+    "bei": "bei",
+    "bekannte": "bekannt",
+    "beschrieben": "beschreiben",
+    "bis": "bis",
+    "bisher": "bisher",
+    "dagegen": "dagegen",
+    "damals": "damals",
+    "das": "der/die/das",
+    "dass": "dass",
+    "den": "der/die/das",
+    "der": "der/die/das",
+    "des": "der/die/das",
+    "die": "der/die/das",
+    "dieser": "dieser",
+    "direkten": "direkt",
+    "doch": "doch",
+    "drimolen": "Drimolen",
+    "eigenen": "eigen",
+    "ein": "ein/eine",
+    "einem": "ein/eine",
+    "einer": "ein/eine",
+    "eines": "ein/eine",
+    "einig": "einig",
+    "ende": "Ende",
+    "er": "er",
+    "erectus": "Homo erectus",
+    "erschienen": "erscheinen",
+    "ersten": "erste",
+    "erwachsenen": "erwachsen",
+    "etwa": "etwa",
+    "fachleute": "Fachleute",
+    "fachzeitschrift": "Fachzeitschrift",
+    "forscher": "Forscher",
+    "fossil": "Fossil",
+    "fossilien": "Fossil",
+    "früher": "früher",
+    "fund": "Fund",
+    "fundstellen": "Fundstelle",
+    "gattung": "Gattung",
+    "gefunden": "finden",
+    "gehirn": "Gehirn",
+    "gehört": "gehören",
+    "gehörten": "gehören",
+    "georgien": "Georgien",
+    "geringen": "gering",
+    "gilt": "gelten",
+    "größer": "groß",
+    "haben": "haben",
+    "hatte": "haben",
+    "heute": "heute",
+    "homo": "Homo",
+    "häufig": "häufig",
+    "höhle": "Höhle",
+    "in": "in",
+    "ist": "sein",
+    "jahre": "Jahr",
+    "jesse": "Jesse",
+    "johannesburg": "Johannesburg",
+    "kamen": "kommen",
+    "kaum": "kaum",
+    "kaumuskeln": "Kaumuskel",
+    "kindes": "Kind",
+    "la-trobe-universität": "La-Trobe-Universität",
+    "lebte": "leben",
+    "liegt": "liegen",
+    "man": "man",
+    "martin": "Martin",
+    "mehr": "mehr",
+    "menschheit": "Menschheit",
+    "millionen": "Million",
+    "mit": "mit",
+    "neben": "neben",
+    "neue": "neu",
+    "nicht": "nicht",
+    "nur": "nur",
+    "paranthropus": "Paranthropus",
+    "region": "Region",
+    "riesige": "riesig",
+    "robustus": "Paranthropus robustus",
+    "sagt": "sagen",
+    "schimpansen": "Schimpanse",
+    "schon": "schon",
+    "schädel": "Schädel",
+    "schädels": "Schädel",
+    "september": "September",
+    "sich": "sich",
+    "sie": "sie",
+    "sind": "sein",
+    "so": "so",
+    "spannend": "spannend",
+    "später": "später",
+    "stammt": "stammen",
+    "starb": "aussterben",
+    "starke": "stark",
+    "studie": "Studie",
+    "studienleiter": "Studienleiter",
+    "südafrika": "Südafrika",
+    "teile": "Teil",
+    "und": "und",
+    "unesco": "UNESCO",
+    "unsere": "unser",
+    "unseren": "unser",
+    "unserer": "unser",
+    "untersuchten": "untersuchen",
+    "vertreter": "Vertreter",
+    "verwandte": "Verwandte",
+    "vielen": "viel",
+    "vier": "vier",
+    "von": "von",
+    "vorfahren": "Vorfahr",
+    "wahrscheinlich": "wahrscheinlich",
+    "war": "sein",
+    "weit": "weit",
+    "weitgehend": "weitgehend",
+    "welterbe": "Welterbe",
+    "wer": "wer",
+    "wie": "wie",
+    "wiege": "Wiege",
+    "wirkten": "wirken",
+    "wurden": "werden",
+    "während": "während",
+    "zehnmal": "zehnmal",
+    "zu": "zu",
+    "zum": "zu",
+    "zwei": "zwei",
+    "älteste": "alt",
+    "ältesten": "alt",
+    "überlebenschancen": "Überlebenschance",
+    "überlebte": "überleben"
+  },
+  "l": {
+    "aber": {
+      "ru": "но, однако",
+      "pos": "союз"
+    },
+    "als": {
+      "ru": "когда; как; чем",
+      "pos": "союз"
+    },
+    "alt": {
+      "ru": "старый",
+      "pos": "прил.",
+      "forms": "alt · älter · am ältesten"
+    },
+    "ander": {
+      "pos": "прил.",
+      "ru": "другой, иной"
+    },
+    "Art": {
+      "ru": "вид, способ",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Arten",
+      "note": "eine Art haben — выйти складно"
+    },
+    "auch": {
+      "ru": "тоже, также; даже",
+      "pos": "частица"
+    },
+    "aus": {
+      "ru": "из",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: auslöschen «погасить»"
+    },
+    "aussterben": {
+      "ru": "вымирать",
+      "pos": "гл.",
+      "forms": "starb aus · ist ausgestorben"
+    },
+    "Australien": {
+      "ru": "Австралия",
+      "pos": "геогр."
+    },
+    "Außenseiter": {
+      "ru": "аутсайдер, посторонний",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Außenseiter"
+    },
+    "Backenzahn": {
+      "ru": "коренной зуб",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Backenzähne"
+    },
+    "bei": {
+      "ru": "у, при, возле",
+      "pos": "предл."
+    },
+    "bekannt": {
+      "ru": "известный, знакомый",
+      "pos": "прил."
+    },
+    "beschreiben": {
+      "ru": "описывать",
+      "pos": "гл.",
+      "forms": "beschrieb · hat beschrieben"
+    },
+    "bis": {
+      "ru": "до; пока не",
+      "pos": "союз"
+    },
+    "bisher": {
+      "ru": "до сих пор, до этого",
+      "pos": "нареч."
+    },
+    "dagegen": {
+      "ru": "напротив, зато",
+      "pos": "нареч."
+    },
+    "damals": {
+      "ru": "тогда, в то время",
+      "pos": "нареч."
+    },
+    "dass": {
+      "ru": "что; чтобы",
+      "pos": "союз"
+    },
+    "der/die/das": {
+      "ru": "определённый артикль",
+      "pos": "артикль",
+      "note": "Тж. относительное местоимение «который»"
+    },
+    "dieser": {
+      "ru": "этот, эта, это",
+      "pos": "мест."
+    },
+    "direkt": {
+      "ru": "прямой, непосредственный",
+      "pos": "прил."
+    },
+    "doch": {
+      "ru": "всё же, всё-таки; ведь",
+      "pos": "частица"
+    },
+    "Drimolen": {
+      "ru": "Дримолен (пещера с находками в ЮАР)",
+      "pos": "геогр."
+    },
+    "eigen": {
+      "ru": "собственный",
+      "pos": "прил."
+    },
+    "ein/eine": {
+      "ru": "неопределённый артикль",
+      "pos": "артикль",
+      "note": "einer — «один, некто»"
+    },
+    "einig": {
+      "ru": "согласный, единодушный",
+      "pos": "прил.",
+      "note": "sich einig sein — быть согласными"
+    },
+    "Ende": {
+      "ru": "конец",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Enden"
+    },
+    "er": {
+      "ru": "он",
+      "pos": "мест.",
+      "note": "ihn — его, ihm — ему"
+    },
+    "erscheinen": {
+      "ru": "появляться; выходить (о публикации)",
+      "pos": "гл.",
+      "forms": "erschien · ist erschienen"
+    },
+    "erste": {
+      "ru": "первый",
+      "pos": "числ."
+    },
+    "erwachsen": {
+      "ru": "взрослый",
+      "pos": "прил.",
+      "note": "der/die Erwachsene — взрослый человек"
+    },
+    "etwa": {
+      "ru": "примерно, около",
+      "pos": "нареч."
+    },
+    "Fachleute": {
+      "ru": "специалисты",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null,
+      "note": "мн. ч. от der Fachmann"
+    },
+    "Fachzeitschrift": {
+      "ru": "научный (специальный) журнал",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Fachzeitschriften"
+    },
+    "finden": {
+      "ru": "находить",
+      "pos": "гл.",
+      "forms": "fand · hat gefunden"
+    },
+    "Forscher": {
+      "ru": "исследователь, учёный",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Forscher"
+    },
+    "Fossil": {
+      "ru": "ископаемое, окаменелость",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Fossilien"
+    },
+    "früher": {
+      "ru": "раньше, прежде",
+      "pos": "нареч."
+    },
+    "Fund": {
+      "ru": "находка",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Funde"
+    },
+    "Fundstelle": {
+      "ru": "место находки",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Fundstellen"
+    },
+    "Gattung": {
+      "ru": "род (в биологии)",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Gattungen"
+    },
+    "Gehirn": {
+      "ru": "мозг",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Gehirne"
+    },
+    "gehören": {
+      "ru": "принадлежать, относиться",
+      "pos": "гл.",
+      "forms": "gehörte · hat gehört",
+      "note": "zu etwas gehören — относиться к чему-то, входить в"
+    },
+    "gelten": {
+      "ru": "считаться; быть действительным",
+      "pos": "гл.",
+      "forms": "galt · hat gegolten",
+      "note": "als … gelten — считаться кем-то"
+    },
+    "Georgien": {
+      "ru": "Грузия",
+      "pos": "геогр."
+    },
+    "gering": {
+      "ru": "малый, незначительный",
+      "pos": "прил.",
+      "note": "um geringen Preis — за малую цену"
+    },
+    "groß": {
+      "ru": "большой",
+      "pos": "прил.",
+      "forms": "groß · größer · am größten"
+    },
+    "haben": {
+      "ru": "иметь; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "hatte · hat gehabt"
+    },
+    "heute": {
+      "ru": "сегодня",
+      "pos": "нареч."
+    },
+    "Homo": {
+      "ru": "Homo — род «человек»",
+      "pos": "имя собств."
+    },
+    "Homo erectus": {
+      "ru": "Homo erectus — человек прямоходящий",
+      "pos": "имя собств."
+    },
+    "häufig": {
+      "ru": "частый; часто",
+      "pos": "прил."
+    },
+    "Höhle": {
+      "ru": "пещера",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Höhlen"
+    },
+    "in": {
+      "ru": "в (im = in dem, ins = in das)",
+      "pos": "предл."
+    },
+    "Jahr": {
+      "ru": "год",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Jahre"
+    },
+    "Jesse": {
+      "ru": "Джесси (имя)",
+      "pos": "имя собств."
+    },
+    "Johannesburg": {
+      "ru": "Йоханнесбург",
+      "pos": "геогр."
+    },
+    "kaum": {
+      "ru": "едва, едва ли",
+      "pos": "нареч."
+    },
+    "Kaumuskel": {
+      "ru": "жевательная мышца",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Kaumuskeln"
+    },
+    "Kind": {
+      "ru": "ребёнок",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Kinder"
+    },
+    "kommen": {
+      "ru": "приходить, приезжать",
+      "pos": "гл.",
+      "forms": "kam · ist gekommen"
+    },
+    "La-Trobe-Universität": {
+      "ru": "Университет Ла Троба (Мельбурн, Австралия)",
+      "pos": "имя собств."
+    },
+    "leben": {
+      "ru": "жить",
+      "pos": "гл.",
+      "forms": "lebte · hat gelebt"
+    },
+    "liegen": {
+      "ru": "лежать",
+      "pos": "гл.",
+      "forms": "lag · hat gelegen"
+    },
+    "man": {
+      "ru": "неопределённое «кто-то, люди, мы»",
+      "pos": "мест."
+    },
+    "Martin": {
+      "ru": "Мартин (фамилия)",
+      "pos": "имя собств."
+    },
+    "mehr": {
+      "ru": "больше",
+      "pos": "нареч.",
+      "note": "В nicht/kein … mehr — больше не. Формально компаратив от viel"
+    },
+    "Menschheit": {
+      "ru": "человечество",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "Million": {
+      "ru": "миллион",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Millionen"
+    },
+    "mit": {
+      "ru": "с",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: mitgehen «пойти вместе»"
+    },
+    "neben": {
+      "pos": "предл.",
+      "ru": "рядом с, возле"
+    },
+    "neu": {
+      "ru": "новый",
+      "pos": "прил."
+    },
+    "nicht": {
+      "ru": "не",
+      "pos": "частица"
+    },
+    "nur": {
+      "ru": "только, лишь",
+      "pos": "частица"
+    },
+    "Paranthropus": {
+      "ru": "Paranthropus — парантроп",
+      "pos": "имя собств."
+    },
+    "Paranthropus robustus": {
+      "ru": "Paranthropus robustus — массивный парантроп",
+      "pos": "имя собств."
+    },
+    "Region": {
+      "ru": "регион",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Regionen"
+    },
+    "riesig": {
+      "ru": "огромный",
+      "pos": "прил."
+    },
+    "sagen": {
+      "ru": "говорить, сказать",
+      "pos": "гл.",
+      "forms": "sagte · hat gesagt"
+    },
+    "Schimpanse": {
+      "ru": "шимпанзе",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Schimpansen"
+    },
+    "schon": {
+      "ru": "уже",
+      "pos": "нареч."
+    },
+    "Schädel": {
+      "ru": "череп",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Schädel"
+    },
+    "sein": {
+      "ru": "быть; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "war · ist gewesen"
+    },
+    "September": {
+      "ru": "сентябрь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die September"
+    },
+    "sich": {
+      "ru": "себя, себе",
+      "pos": "мест.",
+      "note": "Возвратное местоимение, часть возвратного глагола: sich auf den Weg machen, sich setzen, sich legen, sich nähern, sich gefallen lassen, sich getrauen, sich umsehen"
+    },
+    "sie": {
+      "ru": "она; они; Вы",
+      "pos": "мест."
+    },
+    "so": {
+      "ru": "так; такой; то (в главном предложении)",
+      "pos": "нареч."
+    },
+    "spannend": {
+      "ru": "захватывающий, интересный",
+      "pos": "прил."
+    },
+    "später": {
+      "ru": "позже, потом",
+      "pos": "нареч."
+    },
+    "stammen": {
+      "ru": "происходить, быть родом",
+      "pos": "гл.",
+      "forms": "stammte · hat gestammt",
+      "note": "aus etwas stammen — быть родом из, относиться к"
+    },
+    "stark": {
+      "ru": "сильный, крепкий",
+      "pos": "прил."
+    },
+    "Studie": {
+      "ru": "исследование",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Studien"
+    },
+    "Studienleiter": {
+      "ru": "руководитель исследования",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Studienleiter"
+    },
+    "Südafrika": {
+      "ru": "Южная Африка, ЮАР",
+      "pos": "геогр."
+    },
+    "Teil": {
+      "ru": "часть; доля",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Teile",
+      "note": "sein Teil haben — получить своё"
+    },
+    "und": {
+      "ru": "и, а",
+      "pos": "союз"
+    },
+    "UNESCO": {
+      "ru": "ЮНЕСКО",
+      "pos": "имя собств."
+    },
+    "unser": {
+      "ru": "наш",
+      "pos": "мест."
+    },
+    "untersuchen": {
+      "ru": "исследовать, изучать",
+      "pos": "гл.",
+      "forms": "untersuchte · hat untersucht"
+    },
+    "Vertreter": {
+      "ru": "представитель",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Vertreter"
+    },
+    "Verwandte": {
+      "ru": "родственник",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Verwandten"
+    },
+    "viel": {
+      "ru": "много, многое",
+      "pos": "мест."
+    },
+    "vier": {
+      "ru": "четыре",
+      "pos": "числ."
+    },
+    "von": {
+      "ru": "от, из, о (vom = von dem)",
+      "pos": "предл."
+    },
+    "Vorfahr": {
+      "ru": "предок",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Vorfahren"
+    },
+    "wahrscheinlich": {
+      "pos": "прил.",
+      "ru": "вероятный, скорее всего"
+    },
+    "weit": {
+      "ru": "далёкий, далеко",
+      "pos": "прил.",
+      "forms": "weit · weiter · am weitesten",
+      "note": "weiter — дальше, далее; von weitem — издали"
+    },
+    "weitgehend": {
+      "ru": "в значительной мере, в основном",
+      "pos": "нареч."
+    },
+    "Welterbe": {
+      "ru": "всемирное наследие",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "wer": {
+      "ru": "кто",
+      "pos": "мест."
+    },
+    "werden": {
+      "ru": "становиться",
+      "pos": "гл.",
+      "forms": "wurde · ist geworden",
+      "note": "Вспомогательный глагол будущего времени и пассива"
+    },
+    "wie": {
+      "ru": "как; какой",
+      "pos": "союз"
+    },
+    "Wiege": {
+      "ru": "колыбель",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Wiegen",
+      "note": "die Wiege der Menschheit — Колыбель человечества"
+    },
+    "wirken": {
+      "ru": "действовать; казаться, производить впечатление",
+      "pos": "гл.",
+      "forms": "wirkte · hat gewirkt"
+    },
+    "während": {
+      "pos": "предлог",
+      "ru": "в течение, во время"
+    },
+    "zehnmal": {
+      "ru": "в десять раз; десять раз",
+      "pos": "нареч."
+    },
+    "zu": {
+      "ru": "к, в; слишком",
+      "pos": "предл.",
+      "note": "zur = zu der, zum = zu dem"
+    },
+    "zwei": {
+      "ru": "два",
+      "pos": "числ."
+    },
+    "überleben": {
+      "ru": "выживать, пережить",
+      "pos": "гл.",
+      "forms": "überlebte · hat überlebt"
+    },
+    "Überlebenschance": {
+      "ru": "шанс выжить",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Überlebenschancen"
+    }
+  }
+}

@@ -7,7 +7,8 @@ w/h фото — реальные размеры файла: ридер став
 чтобы страница не прыгала при загрузке картинки.
 """
 
-ORDER = ['nobelpreis-physik-2026', 'plastiksteuer-2027', 'oktoberfest-rekord-2026',
+ORDER = ['telekom-ki-2026', 'draconiden-2026', 'homo-erectus-drimolen-2026',
+         'nobelpreis-physik-2026','plastiksteuer-2027', 'oktoberfest-rekord-2026',
          'einheitsfeier-bremen-2026', 'saturn-opposition-2026', 'crew-13-iss-2026',
          'wirtschaft-prognose-2026', 'juice-erde-2026']
 
@@ -275,6 +276,106 @@ META = {
             'karussell': {'w': 1200, 'h': 853,
                           'cap': 'Карусель на Октоберфесте вечером.',
                           'credit': 'Martin Falbisoner · ' + SA4},
+        },
+    },
+    'homo-erectus-drimolen-2026': {
+        'title': 'Zwei Millionen Jahre alt: Forscher finden den ältesten erwachsenen Homo erectus',
+        'titleRu': 'Два миллиона лет: учёные нашли древнейшего взрослого Homo erectus',
+        'rubric': 'science',
+        'level': 'B1–B2',
+        'levelNote': 'Превосходная степень (älteste, ältesten), пассив в претеритуме (gefunden wurden), '
+                     'плюсквамперфект (hatte … gefunden), придаточные с dass, das, während, '
+                     'отделяемые глаголы (starb … aus), сравнение (mehr als, zehnmal so häufig wie).',
+        'published': '2026-10-01',
+        'added': '2026-10-06',
+        'source': 'scinexx · Archaeology Magazine',
+        'sourceUrl': 'https://www.scinexx.de/news/archaeologie/aeltestes-erwachsenenfossil-von-homo-erectus-entdeckt/',
+        'blurb': 'В пещере Дримолен в ЮАР нашли фрагменты черепа взрослого Homo erectus возрастом '
+                 'около 2 млн лет — это древнейшая такая находка. А рядом жил его родственник, '
+                 'которого было в десять раз больше.',
+        'license': 'Текст — пересказ новостей scinexx и Archaeology Magazine; фото — Wikimedia Commons',
+        'figs': {
+            'drimolen': {'w': 1200, 'h': 800,
+                         'cap': 'Раскопки в Дримолене (ЮАР). Здесь нашли и череп ребёнка, и новый '
+                                'фрагмент черепа взрослого Homo erectus.',
+                         'credit': 'Andy Herries · ' + SA4},
+            'erectus': {'w': 482, 'h': 640,
+                        'cap': 'Так мог выглядеть Homo erectus — художественная реконструкция.',
+                        'credit': 'Tales from the Workshop · CC0 · Wikimedia Commons'},
+            'paranthropus': {'w': 1200, 'h': 900,
+                             'cap': 'Череп Paranthropus robustus (Музей природы, Фрайбург). Сильные '
+                                    'челюсти и огромные коренные зубы, но маленький мозг.',
+                             'credit': 'Daderot · CC0 · Wikimedia Commons'},
+            'wiege': {'w': 1200, 'h': 618,
+                      'cap': '«Колыбель человечества» — район к северо-западу от Йоханнесбурга с '
+                             'десятками мест находок древних людей.',
+                      'credit': 'Olof Somell (Nobel Museum) · ' + SA4},
+        },
+    },
+    'draconiden-2026': {
+        'title': 'Sternschnuppen am Abendhimmel: Die Draconiden fallen in eine mondlose Nacht',
+        'titleRu': 'Падающие звёзды в вечернем небе: Дракониды придутся на безлунную ночь',
+        'rubric': 'astronomy',
+        'level': 'B1',
+        'levelNote': 'Настоящее время и модальные глаголы (kann man, sollte man, können), '
+                     'конструкция scheinen … zu, придаточные с wenn и der, '
+                     'устойчивые обороты (es lohnt sich, am besten, Tausende von).',
+        'published': '2026-10-03',
+        'added': '2026-10-06',
+        'source': 'Hersfelder Zeitung · VOL.AT · Royal Observatory Greenwich',
+        'sourceUrl': 'https://www.hersfelder-zeitung.de/panorama/draconiden-2026-wann-und-wo-sie-die-sternschnuppen-sehen-zr-94522820.html',
+        'blurb': 'С 6 по 10 октября активны Дракониды, пик — в ночь с 8 на 9 октября. Луна не '
+                 'помешает: 10 октября новолуние. Смотреть лучше уже ранним вечером.',
+        'license': 'Текст — пересказ новостей Hersfelder Zeitung, VOL.AT и Royal Observatory Greenwich; '
+                   'фото — Wikimedia Commons',
+        'figs': {
+            'komet': {'w': 1200, 'h': 845,
+                      'cap': 'Комета Джакобини — Циннера в сентябре 2018 года. Из её пыли и '
+                             'рождаются Дракониды.',
+                      'credit': 'Alexander Vasenin · ' + SA4},
+            'drache': {'w': 760, 'h': 760,
+                       'cap': 'Карта созвездия Дракона. Метеоры словно вылетают из его «головы» — '
+                              'ромба из четырёх звёзд.',
+                       'credit': 'IAU and Sky & Telescope · CC BY 4.0 · Wikimedia Commons'},
+            'sturm1933': {'w': 1200, 'h': 904,
+                          'cap': 'Метеорный шторм Драконид 9 октября 1933 года на снимке '
+                                 'Фердинанда Кениссе: десятки следов на одной фотопластинке.',
+                          'credit': 'Ferdinand Quénisset · общественное достояние'},
+        },
+    },
+    'telekom-ki-2026': {
+        'title': 'Chatbots statt Callcenter: Die Telekom will mit KI Milliarden sparen',
+        'titleRu': 'Чат-боты вместо колл-центров: Telekom хочет сэкономить миллиарды с помощью ИИ',
+        'rubric': 'tech',
+        'level': 'B1–B2',
+        'levelNote': 'Технологическая лексика (KI, Chatbot, Automatisierung), модальные глаголы '
+                     '(sollen, will), отделяемые глаголы (stellte … vor), перфект (haben … übernommen), '
+                     'союзы nicht nur … sondern auch, устойчивые обороты (im Einsatz sein, '
+                     'auf etwas setzen, von Grund auf).',
+        'published': '2026-10-05',
+        'added': '2026-10-06',
+        'source': 'dpa · inFranken.de · Handelsblatt',
+        'sourceUrl': 'https://www.infranken.de/ueberregional/newsticker-national/netzwelt/deutsche-telekom-will-durch-ki-einsatz-milliarden-sparen-art-6400841',
+        'blurb': 'К 2030 году ИИ и автоматизация должны экономить Deutsche Telekom около 2,5 млрд евро '
+                 'в год. Чат-боты уже приняли 2,6 млн звонков, а в США ИИ-агенты ведут 40 % обращений клиентов.',
+        'license': 'Текст — пересказ новостей dpa, inFranken.de и Handelsblatt; фото — Wikimedia Commons',
+        'figs': {
+            'rechenzentrum': {'w': 1200, 'h': 797,
+                              'cap': 'Серверы в дата-центре. Для ИИ телеком-компаниям нужны '
+                                     'огромные вычислительные мощности.',
+                              'credit': 'BalticServers.com · ' + SA3},
+            'shop': {'w': 1200, 'h': 827,
+                     'cap': 'Магазин Telekom во Фрайбурге. Часть вопросов клиентов уже решают '
+                            'чат-боты, а не люди.',
+                     'credit': 'Andreas Schwarzkopf · ' + SA4},
+            'netz': {'w': 1200, 'h': 799,
+                     'cap': 'Инженеры у серверных стоек. Работу сетей Telekom тоже хочет '
+                            'частично автоматизировать.',
+                     'credit': 'Daoducquan · ' + SA4},
+            'berlin': {'w': 1200, 'h': 905,
+                       'cap': 'Представительство Deutsche Telekom в Берлине. Штаб-квартира концерна '
+                              'находится в Бонне.',
+                       'credit': 'Ricostorch · ' + SA3},
         },
     },
 }

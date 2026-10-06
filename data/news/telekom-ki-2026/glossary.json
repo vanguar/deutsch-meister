@@ -1,0 +1,719 @@
+{
+  "version": 1,
+  "w": {
+    "aber": "aber",
+    "allem": "alle/alles",
+    "aller": "alle/alles",
+    "als": "als",
+    "am": "an",
+    "anderen": "ander",
+    "angeboten": "Angebot",
+    "anrufe": "Anruf",
+    "arbeit": "Arbeit",
+    "auch": "auch",
+    "auf": "auf",
+    "aufgaben": "Aufgabe",
+    "aus": "aus",
+    "automatisierung": "Automatisierung",
+    "außerhalb": "außerhalb",
+    "bearbeiten": "bearbeiten",
+    "bedeutet": "bedeuten",
+    "bei": "bei",
+    "beim": "bei",
+    "bereits": "bereits",
+    "betrieb": "Betrieb",
+    "bis": "bis",
+    "bisher": "bisher",
+    "bleibt": "bleiben",
+    "bonn": "Bonn",
+    "chatbots": "Chatbot",
+    "das": "der/die/das",
+    "den": "der/die/das",
+    "der": "der/die/das",
+    "des": "der/die/das",
+    "deutsche": "deutsch",
+    "die": "der/die/das",
+    "diese": "dieser",
+    "dort": "dort",
+    "eine": "ein/eine",
+    "einem": "ein/eine",
+    "einsatz": "Einsatz",
+    "erledigt": "erledigen",
+    "ersten": "erste",
+    "es": "es",
+    "etwa": "etwa",
+    "euro": "Euro",
+    "firmen": "Firma",
+    "firmenkunden": "Firmenkunde",
+    "frage": "Frage",
+    "früher": "früher",
+    "für": "für",
+    "geld": "Geld",
+    "geplant": "planen",
+    "großem": "groß",
+    "großen": "groß",
+    "grund": "Grund",
+    "haben": "haben",
+    "heute": "heute",
+    "hälfte": "Hälfte",
+    "höttges": "Höttges",
+    "im": "in",
+    "immer": "immer",
+    "in": "in",
+    "indirekten": "indirekt",
+    "intelligenz": "Intelligenz",
+    "investoren": "Investor",
+    "inzwischen": "inzwischen",
+    "ist": "sein",
+    "jahr": "Jahr",
+    "jahres": "Jahr",
+    "ki": "KI",
+    "ki-agenten": "KI-Agent",
+    "klar": "klar",
+    "konzern": "Konzern",
+    "konzernchef": "Konzernchef",
+    "kosten": "kosten",
+    "kundenkontakte": "Kundenkontakt",
+    "kundenservice": "Kundenservice",
+    "künstliche": "künstlich",
+    "machen": "machen",
+    "macht": "machen",
+    "mehr": "mehr",
+    "menschen": "Mensch",
+    "milliarden": "Milliarde",
+    "millionen": "Million",
+    "mit": "mit",
+    "netze": "Netz",
+    "nicht": "nicht",
+    "nur": "nur",
+    "offen": "offen",
+    "oktober": "Oktober",
+    "pläne": "Plan",
+    "pro": "pro",
+    "prozent": "Prozent",
+    "rund": "rund",
+    "sagte": "sagen",
+    "schon": "schon",
+    "sein": "sein",
+    "seine": "sein (его, свой)",
+    "senken": "senken",
+    "setzt": "setzen",
+    "sich": "sich",
+    "sie": "sie",
+    "softwareentwicklung": "Softwareentwicklung",
+    "sollen": "sollen",
+    "sondern": "sondern",
+    "sparen": "sparen",
+    "stellte": "vorstellen",
+    "stil": "Stil",
+    "telekom": "Telekom",
+    "tim": "Tim",
+    "treffen": "Treffen",
+    "um": "um",
+    "umsatz": "Umsatz",
+    "und": "und",
+    "usa": "USA",
+    "verdienen": "verdienen",
+    "vergleich": "Vergleich",
+    "verwaltung": "Verwaltung",
+    "verändert": "verändern",
+    "viele": "viel",
+    "von": "von",
+    "vor": "vor",
+    "was": "was",
+    "werden": "werden",
+    "wichtige": "wichtig",
+    "wiederholen": "wiederholen",
+    "will": "wollen",
+    "wo": "wo",
+    "zum": "zu",
+    "übernehmen": "übernehmen",
+    "übernommen": "übernehmen"
+  },
+  "l": {
+    "aber": {
+      "ru": "но, однако",
+      "pos": "союз"
+    },
+    "alle/alles": {
+      "ru": "все; всё",
+      "pos": "мест."
+    },
+    "als": {
+      "ru": "когда; как; чем",
+      "pos": "союз"
+    },
+    "an": {
+      "ru": "у, к, на",
+      "pos": "предл.",
+      "note": "am = an dem. Тж. отделяемая приставка: anfangen «начинать», annehmen, ansehen, anzünden"
+    },
+    "ander": {
+      "pos": "прил.",
+      "ru": "другой, иной"
+    },
+    "Angebot": {
+      "ru": "предложение",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Angebote"
+    },
+    "Anruf": {
+      "ru": "звонок",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Anrufe"
+    },
+    "Arbeit": {
+      "ru": "работа",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Arbeiten"
+    },
+    "auch": {
+      "ru": "тоже, также; даже",
+      "pos": "частица"
+    },
+    "auf": {
+      "ru": "на, в",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: aufspringen «вскочить», sich aufmachen"
+    },
+    "Aufgabe": {
+      "ru": "задача, задание",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Aufgaben"
+    },
+    "aus": {
+      "ru": "из",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: auslöschen «погасить»"
+    },
+    "Automatisierung": {
+      "ru": "автоматизация",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "außerhalb": {
+      "ru": "вне, за пределами",
+      "pos": "предл."
+    },
+    "bearbeiten": {
+      "ru": "обрабатывать",
+      "pos": "гл.",
+      "forms": "bearbeitete · hat bearbeitet"
+    },
+    "bedeuten": {
+      "ru": "означать",
+      "pos": "гл.",
+      "forms": "bedeutete · hat bedeutet"
+    },
+    "bei": {
+      "ru": "у, при, возле",
+      "pos": "предл."
+    },
+    "bereits": {
+      "pos": "нареч.",
+      "ru": "уже"
+    },
+    "Betrieb": {
+      "ru": "работа, эксплуатация",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Betriebe",
+      "note": "также «предприятие»"
+    },
+    "bis": {
+      "ru": "до; пока не",
+      "pos": "союз"
+    },
+    "bisher": {
+      "ru": "до сих пор, до этого",
+      "pos": "нареч."
+    },
+    "bleiben": {
+      "ru": "оставаться",
+      "pos": "гл.",
+      "forms": "blieb · ist geblieben"
+    },
+    "Bonn": {
+      "ru": "Бонн",
+      "pos": "геогр."
+    },
+    "Chatbot": {
+      "ru": "чат-бот",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Chatbots"
+    },
+    "der/die/das": {
+      "ru": "определённый артикль",
+      "pos": "артикль",
+      "note": "Тж. относительное местоимение «который»"
+    },
+    "deutsch": {
+      "ru": "немецкий",
+      "pos": "прил."
+    },
+    "dieser": {
+      "ru": "этот, эта, это",
+      "pos": "мест."
+    },
+    "dort": {
+      "ru": "там",
+      "pos": "нареч."
+    },
+    "ein/eine": {
+      "ru": "неопределённый артикль",
+      "pos": "артикль",
+      "note": "einer — «один, некто»"
+    },
+    "Einsatz": {
+      "ru": "применение, использование",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Einsätze",
+      "note": "im Einsatz sein — использоваться"
+    },
+    "erledigen": {
+      "ru": "выполнять, улаживать",
+      "pos": "гл.",
+      "forms": "erledigte · hat erledigt"
+    },
+    "erste": {
+      "ru": "первый",
+      "pos": "числ."
+    },
+    "es": {
+      "ru": "оно; это",
+      "pos": "мест."
+    },
+    "etwa": {
+      "ru": "примерно, около",
+      "pos": "нареч."
+    },
+    "Euro": {
+      "ru": "евро",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Euro"
+    },
+    "Firma": {
+      "ru": "фирма",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Firmen"
+    },
+    "Firmenkunde": {
+      "ru": "корпоративный клиент",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Firmenkunden"
+    },
+    "Frage": {
+      "ru": "вопрос",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Fragen"
+    },
+    "früher": {
+      "ru": "раньше, прежде",
+      "pos": "нареч."
+    },
+    "für": {
+      "ru": "для, за",
+      "pos": "предл."
+    },
+    "Geld": {
+      "art": "das",
+      "pl": "die Gelder",
+      "pos": "сущ.",
+      "ru": "деньги"
+    },
+    "groß": {
+      "ru": "большой",
+      "pos": "прил.",
+      "forms": "groß · größer · am größten"
+    },
+    "Grund": {
+      "ru": "основание, дно; причина",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Gründe",
+      "note": "der Sache auf den Grund kommen — дойти до сути дела"
+    },
+    "haben": {
+      "ru": "иметь; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "hatte · hat gehabt"
+    },
+    "heute": {
+      "ru": "сегодня",
+      "pos": "нареч."
+    },
+    "Hälfte": {
+      "ru": "половина",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Hälften"
+    },
+    "Höttges": {
+      "ru": "Хёттгес (фамилия; глава Deutsche Telekom)",
+      "pos": "имя собств."
+    },
+    "immer": {
+      "ru": "всегда, всё",
+      "pos": "нареч.",
+      "note": "immer größer — всё больше"
+    },
+    "in": {
+      "ru": "в (im = in dem, ins = in das)",
+      "pos": "предл."
+    },
+    "indirekt": {
+      "ru": "косвенный",
+      "pos": "прил."
+    },
+    "Intelligenz": {
+      "ru": "интеллект, ум",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "Investor": {
+      "ru": "инвестор",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Investoren"
+    },
+    "inzwischen": {
+      "ru": "тем временем; теперь уже",
+      "pos": "нареч."
+    },
+    "Jahr": {
+      "ru": "год",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Jahre"
+    },
+    "KI": {
+      "ru": "ИИ (künstliche Intelligenz)",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "KI-Agent": {
+      "ru": "ИИ-агент",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die KI-Agenten"
+    },
+    "klar": {
+      "ru": "ясный, понятный",
+      "pos": "прил."
+    },
+    "Konzern": {
+      "ru": "концерн",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Konzerne"
+    },
+    "Konzernchef": {
+      "ru": "глава концерна",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Konzernchefs"
+    },
+    "kosten": {
+      "ru": "стоить",
+      "pos": "гл.",
+      "forms": "kostete · hat gekostet",
+      "note": "es koste, was es wolle — чего бы это ни стоило"
+    },
+    "Kundenkontakt": {
+      "ru": "обращение клиента, контакт с клиентом",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Kundenkontakte"
+    },
+    "Kundenservice": {
+      "ru": "обслуживание клиентов",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "künstlich": {
+      "ru": "искусственный",
+      "pos": "прил.",
+      "note": "künstliche Intelligenz — искусственный интеллект"
+    },
+    "machen": {
+      "ru": "делать",
+      "pos": "гл.",
+      "forms": "machte · hat gemacht",
+      "note": "sich auf den Weg machen — отправиться в путь"
+    },
+    "mehr": {
+      "ru": "больше",
+      "pos": "нареч.",
+      "note": "В nicht/kein … mehr — больше не. Формально компаратив от viel"
+    },
+    "Mensch": {
+      "ru": "человек",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Menschen",
+      "decl": "n-Deklination: des Menschen · dem/den Menschen"
+    },
+    "Milliarde": {
+      "ru": "миллиард",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Milliarden"
+    },
+    "Million": {
+      "ru": "миллион",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Millionen"
+    },
+    "mit": {
+      "ru": "с",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: mitgehen «пойти вместе»"
+    },
+    "Netz": {
+      "ru": "сеть",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Netze"
+    },
+    "nicht": {
+      "ru": "не",
+      "pos": "частица"
+    },
+    "nur": {
+      "ru": "только, лишь",
+      "pos": "частица"
+    },
+    "offen": {
+      "ru": "открытый",
+      "pos": "прил."
+    },
+    "Oktober": {
+      "ru": "октябрь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Oktober"
+    },
+    "Plan": {
+      "ru": "план",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Pläne"
+    },
+    "planen": {
+      "ru": "планировать",
+      "pos": "гл.",
+      "forms": "plante · hat geplant"
+    },
+    "pro": {
+      "ru": "в, за (на единицу)",
+      "pos": "предл.",
+      "note": "3,5 Kilometer pro Sekunde — 3,5 км в секунду"
+    },
+    "Prozent": {
+      "ru": "процент",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Prozente",
+      "note": "после числа не изменяется: 1,3 Prozent"
+    },
+    "rund": {
+      "ru": "около, примерно; круглый",
+      "pos": "нареч./прил.",
+      "note": "rund 550.000 — около 550 000"
+    },
+    "sagen": {
+      "ru": "говорить, сказать",
+      "pos": "гл.",
+      "forms": "sagte · hat gesagt"
+    },
+    "schon": {
+      "ru": "уже",
+      "pos": "нареч."
+    },
+    "sein": {
+      "ru": "быть; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "war · ist gewesen"
+    },
+    "sein (его, свой)": {
+      "ru": "его, свой",
+      "pos": "мест."
+    },
+    "senken": {
+      "ru": "снижать",
+      "pos": "гл.",
+      "forms": "senkte · hat gesenkt"
+    },
+    "setzen": {
+      "ru": "сажать, ставить",
+      "pos": "гл.",
+      "forms": "setzte · hat gesetzt",
+      "note": "auf etwas setzen — делать ставку на что-то"
+    },
+    "sich": {
+      "ru": "себя, себе",
+      "pos": "мест.",
+      "note": "Возвратное местоимение, часть возвратного глагола: sich auf den Weg machen, sich setzen, sich legen, sich nähern, sich gefallen lassen, sich getrauen, sich umsehen"
+    },
+    "sie": {
+      "ru": "она; они; Вы",
+      "pos": "мест."
+    },
+    "Softwareentwicklung": {
+      "ru": "разработка программного обеспечения",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "sollen": {
+      "ru": "быть должным, следует",
+      "pos": "гл.",
+      "forms": "sollte · hat gesollt"
+    },
+    "sondern": {
+      "ru": "а, но (после отрицания)",
+      "pos": "союз"
+    },
+    "sparen": {
+      "ru": "экономить, копить",
+      "pos": "гл.",
+      "forms": "sparte · hat gespart"
+    },
+    "Stil": {
+      "ru": "стиль",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Stile",
+      "note": "in großem Stil — с размахом"
+    },
+    "Telekom": {
+      "ru": "Telekom (Deutsche Telekom, немецкий телеком-концерн)",
+      "pos": "имя собств."
+    },
+    "Tim": {
+      "ru": "Тим (имя)",
+      "pos": "имя собств."
+    },
+    "Treffen": {
+      "ru": "встреча",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Treffen"
+    },
+    "um": {
+      "ru": "вокруг, в (о времени)",
+      "pos": "предл.",
+      "note": "um … zu — чтобы. Тж. отделяемая приставка: sich umsehen «оглядеться»"
+    },
+    "Umsatz": {
+      "ru": "оборот, выручка",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Umsätze",
+      "note": "Umsatz machen — получать выручку"
+    },
+    "und": {
+      "ru": "и, а",
+      "pos": "союз"
+    },
+    "USA": {
+      "ru": "США",
+      "pos": "геогр.",
+      "note": "die USA — во мн. ч.: der USA (род. п.)"
+    },
+    "verdienen": {
+      "ru": "зарабатывать; заслуживать",
+      "pos": "гл.",
+      "forms": "verdiente · hat verdient"
+    },
+    "Vergleich": {
+      "ru": "сравнение",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Vergleiche",
+      "note": "im Vergleich zu — по сравнению с"
+    },
+    "Verwaltung": {
+      "ru": "администрация, управление",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Verwaltungen"
+    },
+    "verändern": {
+      "ru": "изменять(ся)",
+      "pos": "гл.",
+      "forms": "veränderte · hat verändert"
+    },
+    "viel": {
+      "ru": "много, многое",
+      "pos": "мест."
+    },
+    "von": {
+      "ru": "от, из, о (vom = von dem)",
+      "pos": "предл."
+    },
+    "vor": {
+      "ru": "перед, до; от (страха)",
+      "pos": "предл."
+    },
+    "vorstellen": {
+      "ru": "представлять",
+      "pos": "гл.",
+      "forms": "stellte vor · hat vorgestellt"
+    },
+    "was": {
+      "ru": "что; что-нибудь",
+      "pos": "мест."
+    },
+    "werden": {
+      "ru": "становиться",
+      "pos": "гл.",
+      "forms": "wurde · ist geworden",
+      "note": "Вспомогательный глагол будущего времени и пассива"
+    },
+    "wichtig": {
+      "ru": "важный",
+      "pos": "прил."
+    },
+    "wiederholen": {
+      "ru": "повторять",
+      "pos": "гл.",
+      "forms": "wiederholte · hat wiederholt",
+      "note": "sich wiederholen — повторяться"
+    },
+    "wo": {
+      "ru": "где; куда; когда (в придаточном)",
+      "pos": "нареч."
+    },
+    "wollen": {
+      "ru": "хотеть",
+      "pos": "гл.",
+      "forms": "wollte · hat gewollt"
+    },
+    "zu": {
+      "ru": "к, в; слишком",
+      "pos": "предл.",
+      "note": "zur = zu der, zum = zu dem"
+    },
+    "übernehmen": {
+      "ru": "брать на себя, перенимать",
+      "pos": "гл.",
+      "forms": "übernahm · hat übernommen"
+    }
+  }
+}

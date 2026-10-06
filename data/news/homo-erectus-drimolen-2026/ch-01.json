@@ -1,0 +1,292 @@
+{
+  "id": "ch-01",
+  "title": "Zwei Millionen Jahre alt: Forscher finden den ältesten erwachsenen Homo erectus",
+  "titleRu": "Два миллиона лет: учёные нашли древнейшего взрослого Homo erectus",
+  "paragraphs": [
+    {
+      "fig": {
+        "w": 1200,
+        "h": 800,
+        "cap": "Раскопки в Дримолене (ЮАР). Здесь нашли и череп ребёнка, и новый фрагмент черепа взрослого Homo erectus.",
+        "credit": "Andy Herries · CC BY-SA 4.0 · Wikimedia Commons",
+        "src": "data/news/homo-erectus-drimolen-2026/img/drimolen.jpg"
+      }
+    },
+    {
+      "s": [
+        {
+          "de": "In Südafrika haben Forscher das älteste bekannte Fossil eines erwachsenen Homo erectus beschrieben.",
+          "ru": "В Южной Африке исследователи описали древнейшее известное ископаемое взрослого Homo erectus.",
+          "g": {
+            "0-1": "в Южной Африке",
+            "2+12": "описали",
+            "3": "исследователи",
+            "5": "древнейшее",
+            "6": "известное",
+            "7": "ископаемое",
+            "8": "",
+            "9": "взрослого"
+          }
+        },
+        {
+          "de": "Die Teile des Schädels sind etwa zwei Millionen Jahre alt.",
+          "ru": "Фрагментам черепа около двух миллионов лет.",
+          "g": {
+            "1": "части",
+            "2-3": "черепа",
+            "4+9": "им … лет",
+            "5": "около",
+            "6-8": "два миллиона лет"
+          }
+        },
+        {
+          "de": "Gefunden wurden sie in der Höhle Drimolen, nicht weit von Johannesburg.",
+          "ru": "Нашли их в пещере Дримолен, недалеко от Йоханнесбурга.",
+          "g": {
+            "0-1": "были найдены",
+            "2": "они",
+            "3-5": "в пещере",
+            "7-9": "недалеко от"
+          }
+        },
+        {
+          "de": "Die Studie ist Ende September in einer Fachzeitschrift erschienen.",
+          "ru": "Исследование вышло в конце сентября в научном журнале.",
+          "g": {
+            "1": "исследование",
+            "2+8": "вышло",
+            "3-4": "в конце сентября",
+            "5-7": "в научном журнале"
+          }
+        }
+      ]
+    },
+    {
+      "s": [
+        {
+          "de": "Homo erectus gilt als einer der ersten Vertreter unserer eigenen Gattung Homo.",
+          "ru": "Homo erectus считается одним из первых представителей нашего собственного рода Homo.",
+          "g": {
+            "2-3": "считается",
+            "4": "одним",
+            "5-6": "из первых",
+            "7": "представителей",
+            "8": "нашего",
+            "9": "собственного",
+            "10": "рода"
+          }
+        },
+        {
+          "de": "„Bei dieser Art sind sich die Fachleute weitgehend einig, dass sie zu unserer Gattung gehört“, sagt der Studienleiter Jesse Martin von der La-Trobe-Universität in Australien.",
+          "ru": "«Насчёт этого вида специалисты в целом согласны, что он относится к нашему роду», — говорит руководитель исследования Джесси Мартин из Университета Ла Троба в Австралии.",
+          "g": {
+            "0-2": "насчёт этого вида",
+            "3+8": "согласны",
+            "4": "",
+            "6": "специалисты",
+            "7": "в основном",
+            "9": "что",
+            "10": "он (вид)",
+            "11-13": "к нашему роду",
+            "14": "относится",
+            "15": "говорит",
+            "17": "руководитель исследования",
+            "22": "Университет Ла Троба",
+            "23-24": "в Австралии"
+          }
+        },
+        {
+          "de": "Wahrscheinlich gehört er zu unseren direkten Vorfahren.",
+          "ru": "Вероятно, он относится к нашим прямым предкам.",
+          "g": {
+            "0": "вероятно",
+            "1+3": "относится к",
+            "2": "он",
+            "4": "нашим",
+            "5": "прямым",
+            "6": "предкам"
+          }
+        }
+      ]
+    },
+    {
+      "fig": {
+        "w": 482,
+        "h": 640,
+        "cap": "Так мог выглядеть Homo erectus — художественная реконструкция.",
+        "credit": "Tales from the Workshop · CC0 · Wikimedia Commons",
+        "src": "data/news/homo-erectus-drimolen-2026/img/erectus.jpg"
+      }
+    },
+    {
+      "s": [
+        {
+          "de": "In Drimolen hatte man schon früher den Schädel eines Kindes gefunden, das zwei bis vier Jahre alt war.",
+          "ru": "В Дримолене ещё раньше нашли череп ребёнка, которому было от двух до четырёх лет.",
+          "g": {
+            "2+10": "нашли",
+            "3": "",
+            "4-5": "уже раньше",
+            "7": "череп",
+            "8-9": "ребёнка",
+            "11": "которому",
+            "12-15": "от двух до четырёх лет",
+            "16-17": "было (о возрасте)"
+          }
+        },
+        {
+          "de": "Der neue Fund stammt dagegen von einem Erwachsenen.",
+          "ru": "А новая находка принадлежит взрослому.",
+          "g": {
+            "1": "новая",
+            "2": "находка",
+            "3+5": "происходит от",
+            "4": "напротив",
+            "6-7": "взрослому"
+          }
+        },
+        {
+          "de": "Die bisher ältesten Fossilien von erwachsenen Homo erectus kamen aus Georgien und sind nur etwa 1,8 Millionen Jahre alt.",
+          "ru": "Прежние древнейшие ископаемые взрослых Homo erectus были из Грузии, и им лишь около 1,8 миллиона лет.",
+          "g": {
+            "1": "до сих пор",
+            "2": "древнейшие",
+            "3": "ископаемые",
+            "4": "",
+            "5": "взрослых",
+            "8": "происходили",
+            "9-10": "из Грузии",
+            "11": "и",
+            "12+17": "им … лет",
+            "13": "лишь",
+            "14": "около",
+            "15-16": "миллиона лет"
+          }
+        }
+      ]
+    },
+    {
+      "fig": {
+        "w": 1200,
+        "h": 900,
+        "cap": "Череп Paranthropus robustus (Музей природы, Фрайбург). Сильные челюсти и огромные коренные зубы, но маленький мозг.",
+        "credit": "Daderot · CC0 · Wikimedia Commons",
+        "src": "data/news/homo-erectus-drimolen-2026/img/paranthropus.jpg"
+      }
+    },
+    {
+      "s": [
+        {
+          "de": "Spannend ist auch, wer damals neben Homo erectus lebte.",
+          "ru": "Интересно и то, кто жил тогда рядом с Homo erectus.",
+          "g": {
+            "0": "интересно",
+            "1": "",
+            "2": "и",
+            "3": "кто",
+            "4": "тогда",
+            "5": "рядом с",
+            "8": "жил"
+          }
+        },
+        {
+          "de": "Von 18 untersuchten Fossilien gehörten 14 zu einer anderen Art: Paranthropus robustus.",
+          "ru": "Из 18 изученных ископаемых 14 принадлежали другому виду — Paranthropus robustus.",
+          "g": {
+            "0": "из",
+            "1": "изученных",
+            "2": "ископаемых",
+            "3+4": "принадлежали",
+            "5-7": "другому виду"
+          }
+        },
+        {
+          "de": "Dieser Verwandte hatte riesige Backenzähne und starke Kaumuskeln, aber ein Gehirn, das kaum größer war als das eines Schimpansen.",
+          "ru": "У этого родственника были огромные коренные зубы и сильные жевательные мышцы, но мозг едва ли больше, чем у шимпанзе.",
+          "g": {
+            "0": "этот",
+            "1": "родственник",
+            "2": "имел",
+            "3": "огромные",
+            "4": "коренные зубы",
+            "6": "сильные",
+            "7": "жевательные мышцы",
+            "8": "но",
+            "10": "мозг",
+            "11": "который",
+            "12": "едва ли",
+            "13": "больше",
+            "14": "был",
+            "15": "чем",
+            "17-18": "у шимпанзе"
+          }
+        },
+        {
+          "de": "In Drimolen war er mehr als zehnmal so häufig wie Homo erectus.",
+          "ru": "В Дримолене он встречался более чем в десять раз чаще, чем Homo erectus.",
+          "g": {
+            "2": "был",
+            "3": "он",
+            "4-5": "более чем",
+            "6": "в десять раз",
+            "7-9": "так же часто, как"
+          }
+        }
+      ]
+    },
+    {
+      "fig": {
+        "w": 1200,
+        "h": 618,
+        "cap": "«Колыбель человечества» — район к северо-западу от Йоханнесбурга с десятками мест находок древних людей.",
+        "credit": "Olof Somell (Nobel Museum) · CC BY-SA 4.0 · Wikimedia Commons",
+        "src": "data/news/homo-erectus-drimolen-2026/img/wiege.jpg"
+      }
+    },
+    {
+      "s": [
+        {
+          "de": "„Damals wirkten unsere Vorfahren wie Außenseiter mit geringen Überlebenschancen“, sagt Martin.",
+          "ru": "«Тогда наши предки казались аутсайдерами с небольшими шансами выжить», — говорит Мартин.",
+          "g": {
+            "0": "тогда",
+            "1": "казались",
+            "2": "наши",
+            "3": "предки",
+            "4-5": "аутсайдерами",
+            "6-8": "с малыми шансами выжить",
+            "9": "говорит"
+          }
+        },
+        {
+          "de": "Doch Paranthropus starb später aus, während die Gattung Homo überlebte – bis heute.",
+          "ru": "Но Paranthropus позже вымер, а род Homo выжил — до сегодняшнего дня.",
+          "g": {
+            "0": "но",
+            "2+4": "вымер",
+            "3": "позже",
+            "5": "тогда как",
+            "7": "род",
+            "9": "выжил",
+            "10-11": "до сегодняшнего дня"
+          }
+        },
+        {
+          "de": "Drimolen liegt in der „Wiege der Menschheit“, einer Region mit vielen Fundstellen, die zum Welterbe der UNESCO gehört.",
+          "ru": "Дримолен находится в «Колыбели человечества» — районе с множеством мест находок, который входит в список Всемирного наследия ЮНЕСКО.",
+          "g": {
+            "1": "находится",
+            "2-3": "в",
+            "4": "колыбели",
+            "5-6": "человечества",
+            "7-8": "районе",
+            "9-11": "со множеством мест находок",
+            "12": "который",
+            "13-14": "к Всемирному наследию",
+            "17": "относится"
+          }
+        }
+      ]
+    }
+  ]
+}
