@@ -7,11 +7,13 @@ w/h фото — реальные размеры файла: ридер став
 чтобы страница не прыгала при загрузке картинки.
 """
 
-ORDER = ['einheitsfeier-bremen-2026', 'saturn-opposition-2026', 'crew-13-iss-2026',
+ORDER = ['nobelpreis-physik-2026', 'plastiksteuer-2027', 'oktoberfest-rekord-2026',
+         'einheitsfeier-bremen-2026', 'saturn-opposition-2026', 'crew-13-iss-2026',
          'wirtschaft-prognose-2026', 'juice-erde-2026']
 
 ESA_LIC = 'CC BY-SA 3.0 IGO'
 SA4 = 'CC BY-SA 4.0 · Wikimedia Commons'
+SA3 = 'CC BY-SA 3.0 · Wikimedia Commons'
 
 META = {
     'juice-erde-2026': {
@@ -174,6 +176,105 @@ META = {
             'schlachte': {'w': 1200, 'h': 797,
                           'cap': 'Набережная Шлахте на Везере — часть праздничной зоны в центре города.',
                           'credit': 'Jaimrsilva · ' + SA4},
+        },
+    },
+    'plastiksteuer-2027': {
+        'title': 'Neue Steuer auf Plastik: Verpackungen könnten ab 2027 teurer werden',
+        'titleRu': 'Новый налог на пластик: упаковка с 2027 года может подорожать',
+        'rubric': 'economy',
+        'level': 'B1–B2',
+        'levelNote': 'Модальные глаголы (soll, sollen, müssen, dürfen), пассив состояния и '
+                     'процесса (betroffen sind, recycelt wird), отделяемые глаголы (liegt … vor, '
+                     'plant … ein), Konjunktiv II (könnten), конструкция sich … lassen.',
+        'published': '2026-10-05',
+        'added': '2026-10-06',
+        'source': 'Handelsblatt · Tagesspiegel',
+        'sourceUrl': 'https://www.handelsblatt.com/politik/deutschland/steuern-plastiksteuer-bringt-14-milliarden-euro-und-mehr-buerokratie/100259802.html',
+        'blurb': 'С 1 июля 2027 года фирмы будут платить 550 евро за тонну пластиковой упаковки. '
+                 'Бюджет получит до 1,4 млрд евро в год, а йогурт и колбаса в пластике могут '
+                 'немного подорожать.',
+        'license': 'Текст — пересказ новостей Handelsblatt и Tagesspiegel; фото — Wikimedia Commons',
+        'figs': {
+            'regal': {'w': 1200, 'h': 900,
+                      'cap': 'Мясо в пластиковых лотках на полке супермаркета. Налог коснётся любой '
+                             'упаковки, где пластика больше пяти процентов.',
+                      'credit': 'Mattes · ' + SA4},
+            'tomaten': {'w': 1200, 'h': 800,
+                        'cap': 'Помидоры в прозрачных пластиковых коробочках — привычная упаковка, '
+                               'за которую с 2027 года придётся платить налог.',
+                        'credit': 'Marek Ślusarczyk (Tupungato) · CC BY 3.0 · Wikimedia Commons'},
+            'gelbersack': {'w': 1200, 'h': 683,
+                           'cap': '«Жёлтые мешки» для упаковки в Германии. За пластик, который не '
+                                  'перерабатывается, страна платит в бюджет ЕС.',
+                           'credit': 'Tiia Monto · ' + SA3},
+            'ministerium': {'w': 1200, 'h': 800,
+                            'cap': 'Здание Федерального министерства финансов в Берлине '
+                                   '(Detlev-Rohwedder-Haus) — здесь подготовили законопроект.',
+                            'credit': 'Perituss · CC0 · Wikimedia Commons'},
+        },
+    },
+    'nobelpreis-physik-2026': {
+        'title': 'Nobelpreis für Physik: Geisterteilchen aus dem All im Eis des Südpols',
+        'titleRu': 'Нобелевская премия по физике: частицы-призраки из космоса во льду Южного полюса',
+        'rubric': 'science',
+        'level': 'B1–B2',
+        'levelNote': 'Придаточные с weil, wenn, ohne dass и относительные (die fast keine Masse '
+                     'haben), инфинитив с um … zu, перфект и плюсквамперфект, пассив '
+                     '(wird überreicht), отделяемые глаголы (gab … bekannt).',
+        'published': '2026-10-06',
+        'added': '2026-10-06',
+        'source': 'Нобелевский комитет · taz · France 24',
+        'sourceUrl': 'https://taz.de/Nobelpreis-fuer-Physik-2026/!6219312/',
+        'blurb': 'Нобелевскую премию по физике получил Франсис Халзен — за обсерваторию IceCube: '
+                 'в кубическом километре антарктического льда она ловит нейтрино из далёкого космоса.',
+        'license': 'Текст — пересказ новостей taz и France 24; фото — Wikimedia Commons',
+        'figs': {
+            'icecube': {'w': 1200, 'h': 900,
+                        'cap': 'Лаборатория IceCube на Южном полюсе. Сами датчики спрятаны глубоко '
+                               'подо льдом — на глубине от 1,5 до 2,5 километра.',
+                        'credit': 'Christopher Michel · ' + SA4},
+            'halzen': {'w': 487, 'h': 640,
+                       'cap': 'Франсис Халзен, профессор физики Висконсинского университета в Мэдисоне.',
+                       'credit': 'User120011 · CC0 · Wikimedia Commons'},
+            'dom': {'w': 640, 'h': 633,
+                    'cap': 'Оптический модуль IceCube — стеклянный шар с датчиком света. '
+                           'Таких модулей во льду больше пяти тысяч.',
+                    'credit': 'Amble · ' + SA3},
+            'nacht': {'w': 1200, 'h': 802,
+                      'cap': 'Лаборатория IceCube полярной ночью: над ней — Млечный Путь '
+                             'и южное полярное сияние.',
+                      'credit': 'John Hardin · CC BY 4.0 · Wikimedia Commons'},
+        },
+    },
+    'oktoberfest-rekord-2026': {
+        'title': '7,4 Millionen Gäste: Das Oktoberfest stellt einen neuen Rekord auf',
+        'titleRu': '7,4 миллиона гостей: Октоберфест установил новый рекорд',
+        'rubric': 'events',
+        'level': 'B1',
+        'levelNote': 'Претеритум в рассказе (kamen, war, zählte), сравнение (mehr als, lieber), '
+                     'пассив в претеритуме (getrunken wurden, getrübt wurde), плюсквамперфект '
+                     '(hatte … gebeten), отделяемые глаголы (sammelten … ein, spielte … mit) '
+                     'и устойчивые обороты (einen Rekord aufstellen, Bilanz ziehen).',
+        'published': '2026-10-04',
+        'added': '2026-10-06',
+        'source': 'muenchen.de · ZDFheute',
+        'sourceUrl': 'https://www.muenchen.de/veranstaltungen/oktoberfest/aktuell/oktoberfest-bilanz-2026',
+        'blurb': '7,4 миллиона гостей за 16 дней — рекорд за всю историю Октоберфеста. '
+                 'Выпито 6,7 миллиона кружек пива, а в бюро находок оказались даже аккордеон '
+                 'и вставная челюсть.',
+        'license': 'Текст — пересказ итогов города Мюнхена и ZDFheute; фото — Wikimedia Commons',
+        'figs': {
+            'umzug': {'w': 1200, 'h': 668,
+                      'cap': 'Шествие в национальных костюмах и стрелков — традиционное открытие '
+                             'Октоберфеста (снимок 2024 года).',
+                      'credit': 'Jan Czeczotka · ' + SA4},
+            'oidewiesn': {'w': 1200, 'h': 800,
+                          'cap': 'Вход на «Ойде Визн» — историческую часть праздника со старинными '
+                                 'каруселями и духовым оркестром.',
+                          'credit': 'Wiesnlinkscom · ' + SA3},
+            'karussell': {'w': 1200, 'h': 853,
+                          'cap': 'Карусель на Октоберфесте вечером.',
+                          'credit': 'Martin Falbisoner · ' + SA4},
         },
     },
 }

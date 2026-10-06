@@ -1,0 +1,928 @@
+{
+  "version": 1,
+  "w": {
+    "ab": "ab",
+    "aber": "aber",
+    "abgabe": "Abgabe",
+    "als": "als",
+    "also": "also",
+    "am": "an",
+    "an": "an",
+    "andere": "ander",
+    "angaben": "Angabe",
+    "anteil": "Anteil",
+    "auch": "auch",
+    "auf": "auf",
+    "aufbringen": "aufbringen",
+    "aus": "aus",
+    "außerdem": "außerdem",
+    "berichteten": "berichten",
+    "betroffen": "betroffen",
+    "bevor": "bevor",
+    "bis": "bis",
+    "bisher": "bisher",
+    "bringen": "bringen",
+    "bruch": "Bruch",
+    "brüssel": "Brüssel",
+    "bund": "Bund",
+    "bundeshaushalt": "Bundeshaushalt",
+    "bundesregierung": "Bundesregierung",
+    "bundestag": "Bundestag",
+    "cent": "Cent",
+    "dafür": "dafür",
+    "dann": "dann",
+    "darunter": "darunter",
+    "darüber": "darüber",
+    "das": "der/die/das",
+    "dass": "dass",
+    "dem": "der/die/das",
+    "den": "der/die/das",
+    "der": "der/die/das",
+    "des": "der/die/das",
+    "deshalb": "deshalb",
+    "deutschland": "Deutschland",
+    "die": "der/die/das",
+    "dieses": "dieser",
+    "dürfen": "dürfen",
+    "ein": "ein/eine",
+    "eine": "ein/eine",
+    "einem": "ein/eine",
+    "einführen": "einführen",
+    "einnahmen": "Einnahme",
+    "ende": "Ende",
+    "entwurf": "Entwurf",
+    "es": "es",
+    "etwas": "etwas",
+    "eu": "EU",
+    "euro": "Euro",
+    "europäischen": "europäisch",
+    "finanzminister": "Finanzminister",
+    "finanzministeriums": "Finanzministerium",
+    "firmen": "Firma",
+    "folien": "Folie",
+    "fünf": "fünf",
+    "für": "für",
+    "geld": "Geld",
+    "gesetzentwurf": "Gesetzentwurf",
+    "getränke": "Getränk",
+    "handelsblatt": "Handelsblatt",
+    "handelsverband": "Handelsverband",
+    "hde": "HDE",
+    "helfen": "helfen",
+    "hersteller": "Hersteller",
+    "hintergrund": "Hintergrund",
+    "höher": "hoch",
+    "ihnen": "sie",
+    "ihr": "ihr (её, их)",
+    "ihre": "ihr (её, их)",
+    "importieren": "importieren",
+    "in": "in",
+    "ist": "sein",
+    "jahr": "Jahr",
+    "jedes": "jeder",
+    "joghurt": "Joghurt",
+    "juli": "Juli",
+    "kann": "können",
+    "kilogramm": "Kilogramm",
+    "klingbeil": "Klingbeil",
+    "koalitionsvertrags": "Koalitionsvertrag",
+    "kommt": "kommen",
+    "kosten": "kosten",
+    "kostet": "kosten",
+    "kunden": "Kunde",
+    "kunststoff": "Kunststoff",
+    "kunststoffindustrie": "Kunststoffindustrie",
+    "könnten": "können",
+    "künftig": "künftig",
+    "land": "Land",
+    "lars": "Lars",
+    "lassen": "lassen",
+    "liegt": "liegen",
+    "materialien": "Material",
+    "mehrere": "mehrere",
+    "milliarden": "Milliarde",
+    "millionen": "Million",
+    "ministeriums": "Ministerium",
+    "mit": "mit",
+    "muss": "müssen",
+    "müssen": "müssen",
+    "nach": "nach",
+    "nehmen": "nehmen",
+    "neue": "neu",
+    "nicht": "nicht",
+    "noch": "noch",
+    "nur": "nur",
+    "nötige": "nötig",
+    "oder": "oder",
+    "oktober": "Oktober",
+    "plant": "einplanen",
+    "plastik": "Plastik",
+    "plastikflaschen": "Plastikflasche",
+    "plastikmüll": "Plastikmüll",
+    "pro": "pro",
+    "prozent": "Prozent",
+    "rechnet": "rechnen",
+    "recyceln": "recyceln",
+    "recycelt": "recyceln",
+    "rund": "rund",
+    "schlechter": "schlecht",
+    "sein": "sein",
+    "seit": "seit",
+    "selbst": "selbst",
+    "sich": "sich",
+    "sie": "sie",
+    "sind": "sein",
+    "soll": "sollen",
+    "sollen": "sollen",
+    "spricht": "sprechen",
+    "starten": "starten",
+    "steuer": "Steuer",
+    "tagesspiegel": "Tagesspiegel",
+    "technik": "Technik",
+    "teurer": "teuer",
+    "tonne": "Tonne",
+    "und": "und",
+    "union": "Union",
+    "unternehmen": "Unternehmen",
+    "unzufrieden": "unzufrieden",
+    "verbrauchen": "verbrauchen",
+    "verbundverpackungen": "Verbundverpackung",
+    "verpackungen": "Verpackung",
+    "von": "von",
+    "vor": "vor",
+    "warnt": "warnen",
+    "weitergeben": "weitergeben",
+    "weniger": "wenig",
+    "wenn": "wenn",
+    "werden": "werden",
+    "will": "wollen",
+    "wird": "werden",
+    "wirtschaft": "Wirtschaft",
+    "wohl": "wohl",
+    "wurst": "Wurst",
+    "zahlen": "zahlen",
+    "zahlt": "zahlen",
+    "zeitungen": "Zeitung",
+    "zoll": "Zoll",
+    "zu": "zu",
+    "zustimmen": "zustimmen",
+    "öfter": "oft",
+    "überweisen": "überweisen"
+  },
+  "l": {
+    "ab": {
+      "note": "Тж. отделяемая приставка: absteigen «слезать», abnehmen",
+      "pos": "предл.",
+      "ru": "от, с; прочь"
+    },
+    "aber": {
+      "ru": "но, однако",
+      "pos": "союз"
+    },
+    "Abgabe": {
+      "ru": "сбор, взнос",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Abgaben"
+    },
+    "als": {
+      "ru": "когда; как; чем",
+      "pos": "союз"
+    },
+    "also": {
+      "ru": "итак, стало быть",
+      "pos": "нареч."
+    },
+    "an": {
+      "ru": "у, к, на",
+      "pos": "предл.",
+      "note": "am = an dem. Тж. отделяемая приставка: anfangen «начинать», annehmen, ansehen, anzünden"
+    },
+    "ander": {
+      "pos": "прил.",
+      "ru": "другой, иной"
+    },
+    "Angabe": {
+      "ru": "данные, сведения",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Angaben",
+      "note": "nach Angaben — по данным"
+    },
+    "Anteil": {
+      "ru": "доля, часть",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Anteile",
+      "note": "der Anteil an etwas — доля чего-то"
+    },
+    "auch": {
+      "ru": "тоже, также; даже",
+      "pos": "частица"
+    },
+    "auf": {
+      "ru": "на, в",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: aufspringen «вскочить», sich aufmachen"
+    },
+    "aufbringen": {
+      "ru": "изыскать, собрать (деньги)",
+      "pos": "гл.",
+      "forms": "brachte auf · hat aufgebracht"
+    },
+    "aus": {
+      "ru": "из",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: auslöschen «погасить»"
+    },
+    "außerdem": {
+      "ru": "кроме того",
+      "pos": "нареч."
+    },
+    "berichten": {
+      "ru": "сообщать, рассказывать",
+      "pos": "гл.",
+      "forms": "berichtete · hat berichtet",
+      "note": "über etwas berichten — сообщать о чём-то"
+    },
+    "betroffen": {
+      "ru": "затронутый, касающийся; пострадавший",
+      "pos": "прил.",
+      "note": "betroffen sein — быть затронутым"
+    },
+    "bevor": {
+      "ru": "прежде чем",
+      "pos": "союз"
+    },
+    "bis": {
+      "ru": "до; пока не",
+      "pos": "союз"
+    },
+    "bisher": {
+      "ru": "до сих пор, до этого",
+      "pos": "нареч."
+    },
+    "bringen": {
+      "ru": "приносить, приводить",
+      "pos": "гл.",
+      "forms": "brachte · hat gebracht"
+    },
+    "Bruch": {
+      "ru": "нарушение; перелом, разрыв",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Brüche"
+    },
+    "Brüssel": {
+      "ru": "Брюссель",
+      "pos": "геогр."
+    },
+    "Bund": {
+      "ru": "федерация (федеральный уровень власти); союз",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Bünde",
+      "note": "der Bund — федеральное государство в отличие от земель (Länder)"
+    },
+    "Bundeshaushalt": {
+      "ru": "федеральный бюджет",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Bundeshaushalte"
+    },
+    "Bundesregierung": {
+      "ru": "федеральное правительство",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Bundesregierungen"
+    },
+    "Bundestag": {
+      "ru": "бундестаг (парламент ФРГ)",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "Cent": {
+      "ru": "цент",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Cent"
+    },
+    "dafür": {
+      "ru": "за это, для этого",
+      "pos": "нареч.",
+      "note": "dafür sorgen, dass … — позаботиться, чтобы …"
+    },
+    "dann": {
+      "ru": "потом, затем",
+      "pos": "нареч."
+    },
+    "darunter": {
+      "ru": "среди них; под этим",
+      "pos": "нареч."
+    },
+    "darüber": {
+      "ru": "над этим; об этом",
+      "pos": "нареч."
+    },
+    "dass": {
+      "ru": "что; чтобы",
+      "pos": "союз"
+    },
+    "der/die/das": {
+      "ru": "определённый артикль",
+      "pos": "артикль",
+      "note": "Тж. относительное местоимение «который»"
+    },
+    "deshalb": {
+      "ru": "поэтому",
+      "pos": "нареч."
+    },
+    "Deutschland": {
+      "ru": "Германия",
+      "pos": "геогр."
+    },
+    "dieser": {
+      "ru": "этот, эта, это",
+      "pos": "мест."
+    },
+    "dürfen": {
+      "ru": "сметь, иметь право",
+      "pos": "гл.",
+      "forms": "durfte · hat gedurft"
+    },
+    "ein/eine": {
+      "ru": "неопределённый артикль",
+      "pos": "артикль",
+      "note": "einer — «один, некто»"
+    },
+    "einführen": {
+      "ru": "вводить (налог, правило)",
+      "pos": "гл.",
+      "forms": "führte ein · hat eingeführt"
+    },
+    "Einnahme": {
+      "ru": "доход, поступление",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Einnahmen"
+    },
+    "einplanen": {
+      "ru": "закладывать (в план, бюджет)",
+      "pos": "гл.",
+      "forms": "plante ein · hat eingeplant"
+    },
+    "Ende": {
+      "ru": "конец",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Enden"
+    },
+    "Entwurf": {
+      "ru": "проект, набросок",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Entwürfe"
+    },
+    "es": {
+      "ru": "оно; это",
+      "pos": "мест."
+    },
+    "etwas": {
+      "ru": "что-то, нечто; немного",
+      "pos": "мест."
+    },
+    "EU": {
+      "ru": "ЕС (Европейский союз)",
+      "pos": "имя собств."
+    },
+    "Euro": {
+      "ru": "евро",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Euro"
+    },
+    "europäisch": {
+      "ru": "европейский",
+      "pos": "прил."
+    },
+    "Finanzminister": {
+      "ru": "министр финансов",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Finanzminister"
+    },
+    "Finanzministerium": {
+      "ru": "министерство финансов",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Finanzministerien"
+    },
+    "Firma": {
+      "ru": "фирма",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Firmen"
+    },
+    "Folie": {
+      "ru": "плёнка",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Folien"
+    },
+    "fünf": {
+      "ru": "пять",
+      "pos": "числ."
+    },
+    "für": {
+      "ru": "для, за",
+      "pos": "предл."
+    },
+    "Geld": {
+      "art": "das",
+      "pl": "die Gelder",
+      "pos": "сущ.",
+      "ru": "деньги"
+    },
+    "Gesetzentwurf": {
+      "ru": "законопроект",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Gesetzentwürfe"
+    },
+    "Getränk": {
+      "ru": "напиток",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Getränke"
+    },
+    "Handelsblatt": {
+      "ru": "Handelsblatt (деловая газета)",
+      "pos": "имя собств."
+    },
+    "Handelsverband": {
+      "ru": "союз торговли",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Handelsverbände"
+    },
+    "HDE": {
+      "ru": "HDE (Германский союз торговли)",
+      "pos": "имя собств."
+    },
+    "helfen": {
+      "ru": "помогать",
+      "pos": "гл.",
+      "forms": "half · hat geholfen"
+    },
+    "Hersteller": {
+      "ru": "производитель",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Hersteller"
+    },
+    "Hintergrund": {
+      "ru": "фон; предыстория",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Hintergründe"
+    },
+    "hoch": {
+      "ru": "высокий",
+      "pos": "прил.",
+      "forms": "hoch · höher · am höchsten"
+    },
+    "ihr (её, их)": {
+      "ru": "её; их",
+      "pos": "мест."
+    },
+    "importieren": {
+      "ru": "импортировать, ввозить",
+      "pos": "гл.",
+      "forms": "importierte · hat importiert"
+    },
+    "in": {
+      "ru": "в (im = in dem, ins = in das)",
+      "pos": "предл."
+    },
+    "Jahr": {
+      "ru": "год",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Jahre"
+    },
+    "jeder": {
+      "ru": "каждый",
+      "pos": "мест."
+    },
+    "Joghurt": {
+      "ru": "йогурт",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Joghurts"
+    },
+    "Juli": {
+      "ru": "июль",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Julis"
+    },
+    "Kilogramm": {
+      "ru": "килограмм",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Kilogramm"
+    },
+    "Klingbeil": {
+      "ru": "Клингбайль (фамилия; министр финансов ФРГ)",
+      "pos": "имя собств."
+    },
+    "Koalitionsvertrag": {
+      "ru": "коалиционный договор",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Koalitionsverträge"
+    },
+    "kommen": {
+      "ru": "приходить, приезжать",
+      "pos": "гл.",
+      "forms": "kam · ist gekommen"
+    },
+    "kosten": {
+      "ru": "стоить",
+      "pos": "гл.",
+      "forms": "kostete · hat gekostet",
+      "note": "es koste, was es wolle — чего бы это ни стоило"
+    },
+    "Kunde": {
+      "ru": "покупатель, клиент",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Kunden"
+    },
+    "Kunststoff": {
+      "ru": "пластмасса, пластик",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Kunststoffe"
+    },
+    "Kunststoffindustrie": {
+      "ru": "индустрия пластмасс",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "können": {
+      "ru": "мочь, уметь",
+      "pos": "гл.",
+      "forms": "konnte · hat gekonnt"
+    },
+    "künftig": {
+      "ru": "в будущем, впредь",
+      "pos": "нареч."
+    },
+    "Land": {
+      "ru": "страна; суша; деревня",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Länder"
+    },
+    "Lars": {
+      "ru": "Ларс (имя)",
+      "pos": "имя собств."
+    },
+    "lassen": {
+      "ru": "позволять, велеть; оставлять",
+      "pos": "гл.",
+      "forms": "ließ · hat gelassen"
+    },
+    "liegen": {
+      "ru": "лежать",
+      "pos": "гл.",
+      "forms": "lag · hat gelegen"
+    },
+    "Material": {
+      "ru": "материал",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Materialien"
+    },
+    "mehrere": {
+      "pos": "мест.",
+      "ru": "несколько"
+    },
+    "Milliarde": {
+      "ru": "миллиард",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Milliarden"
+    },
+    "Million": {
+      "ru": "миллион",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Millionen"
+    },
+    "Ministerium": {
+      "ru": "министерство",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Ministerien"
+    },
+    "mit": {
+      "ru": "с",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: mitgehen «пойти вместе»"
+    },
+    "müssen": {
+      "ru": "быть вынужденным, должен",
+      "pos": "гл.",
+      "forms": "musste · hat gemusst"
+    },
+    "nach": {
+      "ru": "в, на, после, по",
+      "pos": "предл."
+    },
+    "nehmen": {
+      "ru": "брать",
+      "pos": "гл.",
+      "forms": "nahm · hat genommen"
+    },
+    "neu": {
+      "ru": "новый",
+      "pos": "прил."
+    },
+    "nicht": {
+      "ru": "не",
+      "pos": "частица"
+    },
+    "noch": {
+      "ru": "ещё",
+      "pos": "нареч."
+    },
+    "nur": {
+      "ru": "только, лишь",
+      "pos": "частица"
+    },
+    "nötig": {
+      "ru": "нужный, необходимый",
+      "pos": "прил."
+    },
+    "oder": {
+      "ru": "или",
+      "pos": "союз"
+    },
+    "oft": {
+      "ru": "часто",
+      "pos": "нареч."
+    },
+    "Oktober": {
+      "ru": "октябрь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Oktober"
+    },
+    "Plastik": {
+      "ru": "пластик",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "Plastikflasche": {
+      "ru": "пластиковая бутылка",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Plastikflaschen"
+    },
+    "Plastikmüll": {
+      "ru": "пластиковый мусор",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "pro": {
+      "ru": "в, за (на единицу)",
+      "pos": "предл.",
+      "note": "3,5 Kilometer pro Sekunde — 3,5 км в секунду"
+    },
+    "Prozent": {
+      "ru": "процент",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Prozente",
+      "note": "после числа не изменяется: 1,3 Prozent"
+    },
+    "rechnen": {
+      "ru": "считать; рассчитывать",
+      "pos": "гл.",
+      "forms": "rechnete · hat gerechnet",
+      "note": "mit etwas rechnen — рассчитывать на что-то, ожидать чего-то"
+    },
+    "recyceln": {
+      "ru": "перерабатывать (отходы)",
+      "pos": "гл.",
+      "forms": "recycelte · hat recycelt"
+    },
+    "rund": {
+      "ru": "около, примерно; круглый",
+      "pos": "нареч./прил.",
+      "note": "rund 550.000 — около 550 000"
+    },
+    "schlecht": {
+      "ru": "плохой",
+      "pos": "прил.",
+      "forms": "schlecht · schlechter · am schlechtesten"
+    },
+    "sein": {
+      "ru": "быть; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "war · ist gewesen"
+    },
+    "seit": {
+      "ru": "с (какого-то времени)",
+      "pos": "предл."
+    },
+    "selbst": {
+      "ru": "сам; даже",
+      "pos": "мест."
+    },
+    "sich": {
+      "ru": "себя, себе",
+      "pos": "мест.",
+      "note": "Возвратное местоимение, часть возвратного глагола: sich auf den Weg machen, sich setzen, sich legen, sich nähern, sich gefallen lassen, sich getrauen, sich umsehen"
+    },
+    "sie": {
+      "ru": "она; они; Вы",
+      "pos": "мест."
+    },
+    "sollen": {
+      "ru": "быть должным, следует",
+      "pos": "гл.",
+      "forms": "sollte · hat gesollt"
+    },
+    "sprechen": {
+      "ru": "говорить, сказать",
+      "pos": "гл.",
+      "forms": "sprach · hat gesprochen",
+      "old": "здесь sprach в значении «сказал» — книжно и устарело; в совр. речи sagte"
+    },
+    "starten": {
+      "ru": "стартовать, запускать",
+      "pos": "гл.",
+      "forms": "startete · ist/hat gestartet"
+    },
+    "Steuer": {
+      "ru": "налог",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Steuern"
+    },
+    "Tagesspiegel": {
+      "ru": "Tagesspiegel (берлинская газета)",
+      "pos": "имя собств."
+    },
+    "Technik": {
+      "ru": "техника, технология",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Techniken"
+    },
+    "teuer": {
+      "ru": "дорогой",
+      "pos": "прил.",
+      "forms": "teuer · teurer · am teuersten"
+    },
+    "Tonne": {
+      "ru": "тонна; бак, бочка",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Tonnen"
+    },
+    "und": {
+      "ru": "и, а",
+      "pos": "союз"
+    },
+    "Union": {
+      "ru": "союз",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Unionen",
+      "note": "die Europäische Union — Европейский союз"
+    },
+    "Unternehmen": {
+      "ru": "предприятие, компания",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Unternehmen"
+    },
+    "unzufrieden": {
+      "ru": "недовольный",
+      "pos": "прил."
+    },
+    "verbrauchen": {
+      "ru": "расходовать, потреблять",
+      "pos": "гл.",
+      "forms": "verbrauchte · hat verbraucht"
+    },
+    "Verbundverpackung": {
+      "ru": "комбинированная упаковка (из нескольких материалов)",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Verbundverpackungen"
+    },
+    "Verpackung": {
+      "ru": "упаковка",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Verpackungen"
+    },
+    "von": {
+      "ru": "от, из, о (vom = von dem)",
+      "pos": "предл."
+    },
+    "vor": {
+      "ru": "перед, до; от (страха)",
+      "pos": "предл."
+    },
+    "warnen": {
+      "ru": "предупреждать",
+      "pos": "гл.",
+      "forms": "warnte · hat gewarnt",
+      "note": "vor etwas warnen — предостерегать от чего-то"
+    },
+    "weitergeben": {
+      "ru": "передавать дальше",
+      "pos": "гл.",
+      "forms": "gab weiter · hat weitergegeben",
+      "note": "Kosten an Kunden weitergeben — перекладывать расходы на покупателей"
+    },
+    "wenig": {
+      "ru": "мало; немного",
+      "pos": "мест.",
+      "note": "ein wenig — немножко; etwas Weniges — самую малость"
+    },
+    "wenn": {
+      "ru": "если; когда",
+      "pos": "союз"
+    },
+    "werden": {
+      "ru": "становиться",
+      "pos": "гл.",
+      "forms": "wurde · ist geworden",
+      "note": "Вспомогательный глагол будущего времени и пассива"
+    },
+    "Wirtschaft": {
+      "ru": "экономика, хозяйство",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Wirtschaften"
+    },
+    "wohl": {
+      "ru": "хорошо; пожалуй, вероятно",
+      "pos": "нареч."
+    },
+    "wollen": {
+      "ru": "хотеть",
+      "pos": "гл.",
+      "forms": "wollte · hat gewollt"
+    },
+    "Wurst": {
+      "ru": "колбаса",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Würste"
+    },
+    "zahlen": {
+      "ru": "платить",
+      "pos": "гл.",
+      "forms": "zahlte · hat gezahlt"
+    },
+    "Zeitung": {
+      "ru": "газета",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Zeitungen"
+    },
+    "Zoll": {
+      "ru": "таможня; пошлина",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Zölle"
+    },
+    "zu": {
+      "ru": "к, в; слишком",
+      "pos": "предл.",
+      "note": "zur = zu der, zum = zu dem"
+    },
+    "zustimmen": {
+      "ru": "соглашаться, одобрять",
+      "pos": "гл.",
+      "forms": "stimmte zu · hat zugestimmt"
+    },
+    "überweisen": {
+      "ru": "перечислять, переводить (деньги)",
+      "pos": "гл.",
+      "forms": "überwies · hat überwiesen"
+    }
+  }
+}

@@ -1,0 +1,776 @@
+{
+  "version": 1,
+  "w": {
+    "aber": "aber",
+    "akkordeon": "Akkordeon",
+    "alkoholfreies": "alkoholfrei",
+    "als": "als",
+    "alte": "alt",
+    "alten": "alt",
+    "an": "an",
+    "andenken": "Andenken",
+    "auch": "auch",
+    "auf": "auf",
+    "aufgestellt": "aufstellen",
+    "aus": "aus",
+    "beliebt": "beliebt",
+    "besonders": "besonders",
+    "besucher": "Besucher",
+    "bier": "Bier",
+    "bilanz": "Bilanz",
+    "bilderbuch-wiesn": "Bilderbuch-Wiesn",
+    "bis": "bis",
+    "blasmusik": "Blasmusik",
+    "damals": "damals",
+    "darunter": "darunter",
+    "das": "der/die/das",
+    "dem": "der/die/das",
+    "der": "der/die/das",
+    "des": "der/die/das",
+    "deutlich": "deutlich",
+    "die": "der/die/das",
+    "dominik": "Dominik",
+    "donnerstag": "Donnerstag",
+    "dort": "dort",
+    "durch": "durch",
+    "ein": "ein/eine",
+    "eine": "ein/eine",
+    "einem": "ein/eine",
+    "einen": "ein/eine",
+    "einer": "ein/eine",
+    "elf": "elf",
+    "entspannt": "entspannt",
+    "ersten": "erste",
+    "es": "es",
+    "etwa": "etwa",
+    "fahrgeschäft": "Fahrgeschäft",
+    "fast": "fast",
+    "fest": "Fest",
+    "festes": "Fest",
+    "friedlich": "friedlich",
+    "fundbüro": "Fundbüro",
+    "funktioniert": "funktionieren",
+    "für": "für",
+    "gebeten": "bitten",
+    "gebiss": "Gebiss",
+    "gelaunt": "gelaunt",
+    "geldbeutel": "Geldbeutel",
+    "getrunken": "trinken",
+    "getrübt": "trüben",
+    "gleichzeitig": "gleichzeitig",
+    "gut": "gut",
+    "gäste": "Gast",
+    "handys": "Handy",
+    "hat": "haben",
+    "hatte": "haben",
+    "historische": "historisch",
+    "im": "in",
+    "in": "in",
+    "insgesamt": "insgesamt",
+    "jahr": "Jahr",
+    "jemand": "jemand",
+    "kamen": "kommen",
+    "kampagne": "Kampagne",
+    "karussells": "Karussell",
+    "kommen": "kommen",
+    "krause": "Krause",
+    "krücke": "Krücke",
+    "krüge": "Krug",
+    "landeten": "landen",
+    "lieber": "gern",
+    "man": "man",
+    "maß": "Maß (кружка)",
+    "maßkrug": "Maßkrug",
+    "mehr": "mehr",
+    "meist": "meist",
+    "menschen": "Mensch",
+    "millionen": "Million",
+    "mit": "mit",
+    "mitnehmen": "mitnehmen",
+    "montag": "Montag",
+    "münchen": "München",
+    "nach": "nach",
+    "neuen": "neu",
+    "oberbürgermeister": "Oberbürgermeister",
+    "offenbar": "offenbar",
+    "oide": "oid",
+    "oktoberfest": "Oktoberfest",
+    "ordner": "Ordner",
+    "plus": "Plus",
+    "positive": "positiv",
+    "prozent": "Prozent",
+    "rekord": "Rekord",
+    "rund": "rund",
+    "sachen": "Sache",
+    "sammelten": "einsammeln",
+    "schätzungen": "Schätzung",
+    "sehr": "sehr",
+    "sind": "sein",
+    "spielte": "mitspielen",
+    "spätsommerlich": "spätsommerlich",
+    "stadt": "Stadt",
+    "stammte": "stammen",
+    "tagen": "Tag",
+    "teil": "Teil",
+    "theresienwiese": "Theresienwiese",
+    "tödlichen": "tödlich",
+    "und": "und",
+    "unfall": "Unfall",
+    "vergangenen": "vergangen",
+    "vergessen": "vergessen",
+    "verkauften": "verkaufen",
+    "viele": "viel",
+    "viertel": "Viertel",
+    "von": "von",
+    "vorjahr": "Vorjahr",
+    "war": "sein",
+    "waren": "sein",
+    "warm": "warm",
+    "was": "was",
+    "werktagen": "Werktag",
+    "wetter": "Wetter",
+    "wieder": "wieder",
+    "wiesn": "Wiesn",
+    "wirte": "Wirt",
+    "woche": "Woche",
+    "wollten": "wollen",
+    "wurde": "werden",
+    "wurden": "werden",
+    "zog": "ziehen",
+    "zu": "zu",
+    "zweiten": "zweite",
+    "zählte": "zählen"
+  },
+  "l": {
+    "aber": {
+      "ru": "но, однако",
+      "pos": "союз"
+    },
+    "Akkordeon": {
+      "ru": "аккордеон",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Akkordeons"
+    },
+    "alkoholfrei": {
+      "ru": "безалкогольный",
+      "pos": "прил."
+    },
+    "als": {
+      "ru": "когда; как; чем",
+      "pos": "союз"
+    },
+    "alt": {
+      "ru": "старый",
+      "pos": "прил.",
+      "forms": "alt · älter · am ältesten"
+    },
+    "an": {
+      "ru": "у, к, на",
+      "pos": "предл.",
+      "note": "am = an dem. Тж. отделяемая приставка: anfangen «начинать», annehmen, ansehen, anzünden"
+    },
+    "Andenken": {
+      "ru": "сувенир, память",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Andenken",
+      "note": "als Andenken — на память"
+    },
+    "auch": {
+      "ru": "тоже, также; даже",
+      "pos": "частица"
+    },
+    "auf": {
+      "ru": "на, в",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: aufspringen «вскочить», sich aufmachen"
+    },
+    "aufstellen": {
+      "ru": "ставить, устанавливать",
+      "pos": "гл.",
+      "forms": "stellte auf · hat aufgestellt",
+      "note": "einen Rekord aufstellen — установить рекорд"
+    },
+    "aus": {
+      "ru": "из",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: auslöschen «погасить»"
+    },
+    "beliebt": {
+      "ru": "популярный, любимый",
+      "pos": "прил."
+    },
+    "besonders": {
+      "ru": "особенно",
+      "pos": "нареч."
+    },
+    "Besucher": {
+      "ru": "посетитель, гость",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Besucher"
+    },
+    "Bier": {
+      "ru": "пиво",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Biere"
+    },
+    "Bilanz": {
+      "ru": "итог, баланс",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Bilanzen",
+      "note": "Bilanz ziehen — подводить итог"
+    },
+    "Bilderbuch-Wiesn": {
+      "ru": "образцовая Визн, «как с картинки»",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "bis": {
+      "ru": "до; пока не",
+      "pos": "союз"
+    },
+    "bitten": {
+      "forms": "bat · hat gebeten",
+      "note": "um etw. bitten — просить о чём-л.",
+      "pos": "гл.",
+      "ru": "просить"
+    },
+    "Blasmusik": {
+      "ru": "духовая музыка",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "damals": {
+      "ru": "тогда, в то время",
+      "pos": "нареч."
+    },
+    "darunter": {
+      "ru": "среди них; под этим",
+      "pos": "нареч."
+    },
+    "der/die/das": {
+      "ru": "определённый артикль",
+      "pos": "артикль",
+      "note": "Тж. относительное местоимение «который»"
+    },
+    "deutlich": {
+      "ru": "отчётливый, внятный",
+      "pos": "прил."
+    },
+    "Dominik": {
+      "ru": "Доминик (имя)",
+      "pos": "имя собств."
+    },
+    "Donnerstag": {
+      "ru": "четверг",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Donnerstage"
+    },
+    "dort": {
+      "ru": "там",
+      "pos": "нареч."
+    },
+    "durch": {
+      "ru": "через, сквозь, из-за",
+      "pos": "предл."
+    },
+    "ein/eine": {
+      "ru": "неопределённый артикль",
+      "pos": "артикль",
+      "note": "einer — «один, некто»"
+    },
+    "einsammeln": {
+      "ru": "собирать",
+      "pos": "гл.",
+      "forms": "sammelte ein · hat eingesammelt"
+    },
+    "elf": {
+      "ru": "одиннадцать",
+      "pos": "числ."
+    },
+    "entspannt": {
+      "ru": "расслабленный, спокойный",
+      "pos": "прил."
+    },
+    "erste": {
+      "ru": "первый",
+      "pos": "числ."
+    },
+    "es": {
+      "ru": "оно; это",
+      "pos": "мест."
+    },
+    "etwa": {
+      "ru": "примерно, около",
+      "pos": "нареч."
+    },
+    "Fahrgeschäft": {
+      "ru": "аттракцион (на ярмарке)",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Fahrgeschäfte"
+    },
+    "fast": {
+      "ru": "почти",
+      "pos": "нареч."
+    },
+    "Fest": {
+      "ru": "праздник",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Feste"
+    },
+    "friedlich": {
+      "ru": "мирный",
+      "pos": "прил."
+    },
+    "Fundbüro": {
+      "ru": "бюро находок",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Fundbüros"
+    },
+    "funktionieren": {
+      "ru": "работать, действовать",
+      "pos": "гл.",
+      "forms": "funktionierte · hat funktioniert"
+    },
+    "für": {
+      "ru": "для, за",
+      "pos": "предл."
+    },
+    "Gast": {
+      "ru": "гость",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Gäste"
+    },
+    "Gebiss": {
+      "ru": "челюсть; зубной протез",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Gebisse"
+    },
+    "gelaunt": {
+      "ru": "настроенный",
+      "pos": "прил.",
+      "note": "gut gelaunt — в хорошем настроении"
+    },
+    "Geldbeutel": {
+      "ru": "кошель",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Geldbeutel"
+    },
+    "gern": {
+      "ru": "охотно",
+      "pos": "нареч.",
+      "forms": "gern · lieber · am liebsten",
+      "note": "lieber — охотнее, лучше"
+    },
+    "gleichzeitig": {
+      "ru": "одновременно",
+      "pos": "нареч."
+    },
+    "gut": {
+      "ru": "хороший, добрый",
+      "pos": "прил.",
+      "forms": "gut · besser · am besten",
+      "note": "besser — лучше"
+    },
+    "haben": {
+      "ru": "иметь; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "hatte · hat gehabt"
+    },
+    "Handy": {
+      "ru": "мобильный телефон",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Handys"
+    },
+    "historisch": {
+      "ru": "исторический",
+      "pos": "прил."
+    },
+    "in": {
+      "ru": "в (im = in dem, ins = in das)",
+      "pos": "предл."
+    },
+    "insgesamt": {
+      "ru": "все вместе, в общей сложности",
+      "pos": "нареч."
+    },
+    "Jahr": {
+      "ru": "год",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Jahre"
+    },
+    "jemand": {
+      "ru": "кто-то, некто",
+      "pos": "мест."
+    },
+    "Kampagne": {
+      "ru": "кампания",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Kampagnen"
+    },
+    "Karussell": {
+      "ru": "карусель",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Karussells"
+    },
+    "kommen": {
+      "ru": "приходить, приезжать",
+      "pos": "гл.",
+      "forms": "kam · ist gekommen"
+    },
+    "Krause": {
+      "ru": "Краузе (фамилия; обербургомистр Мюнхена)",
+      "pos": "имя собств."
+    },
+    "Krug": {
+      "ru": "кружка, кувшин",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Krüge"
+    },
+    "Krücke": {
+      "ru": "клюка, костыль",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Krücken"
+    },
+    "landen": {
+      "ru": "приземляться; оказаться, попасть",
+      "pos": "гл.",
+      "forms": "landete · ist gelandet"
+    },
+    "man": {
+      "ru": "неопределённое «кто-то, люди, мы»",
+      "pos": "мест."
+    },
+    "Maß (кружка)": {
+      "ru": "литровая кружка пива (бав.)",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Maß"
+    },
+    "Maßkrug": {
+      "ru": "литровая пивная кружка",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Maßkrüge"
+    },
+    "mehr": {
+      "ru": "больше",
+      "pos": "нареч.",
+      "note": "В nicht/kein … mehr — больше не. Формально компаратив от viel"
+    },
+    "meist": {
+      "ru": "большей частью, обычно",
+      "pos": "нареч."
+    },
+    "Mensch": {
+      "ru": "человек",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Menschen",
+      "decl": "n-Deklination: des Menschen · dem/den Menschen"
+    },
+    "Million": {
+      "ru": "миллион",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Millionen"
+    },
+    "mit": {
+      "ru": "с",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: mitgehen «пойти вместе»"
+    },
+    "mitnehmen": {
+      "ru": "брать с собой",
+      "pos": "гл.",
+      "forms": "nahm mit · hat mitgenommen"
+    },
+    "mitspielen": {
+      "ru": "участвовать в игре; подыгрывать",
+      "pos": "гл.",
+      "forms": "spielte mit · hat mitgespielt",
+      "note": "das Wetter spielt mit — погода не подводит"
+    },
+    "Montag": {
+      "ru": "понедельник",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Montage"
+    },
+    "München": {
+      "ru": "Мюнхен",
+      "pos": "геогр."
+    },
+    "nach": {
+      "ru": "в, на, после, по",
+      "pos": "предл."
+    },
+    "neu": {
+      "ru": "новый",
+      "pos": "прил."
+    },
+    "Oberbürgermeister": {
+      "ru": "обербургомистр, мэр крупного города",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Oberbürgermeister"
+    },
+    "offenbar": {
+      "ru": "очевидно, по-видимому",
+      "pos": "нареч."
+    },
+    "oid": {
+      "ru": "старый (по-баварски, = alt)",
+      "pos": "прил.",
+      "note": "die Oide Wiesn — «старая Визн», историческая часть Октоберфеста"
+    },
+    "Oktoberfest": {
+      "ru": "Октоберфест (народный праздник в Мюнхене)",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Oktoberfeste"
+    },
+    "Ordner": {
+      "ru": "распорядитель; папка",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Ordner"
+    },
+    "Plus": {
+      "ru": "плюс; прирост",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null,
+      "note": "ein Plus von 0,6 Prozent — рост на 0,6 %"
+    },
+    "positiv": {
+      "ru": "позитивный, положительный",
+      "pos": "прил."
+    },
+    "Prozent": {
+      "ru": "процент",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Prozente",
+      "note": "после числа не изменяется: 1,3 Prozent"
+    },
+    "Rekord": {
+      "ru": "рекорд",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Rekorde"
+    },
+    "rund": {
+      "ru": "около, примерно; круглый",
+      "pos": "нареч./прил.",
+      "note": "rund 550.000 — около 550 000"
+    },
+    "Sache": {
+      "ru": "дело, вещь",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Sachen"
+    },
+    "Schätzung": {
+      "ru": "оценка (приблизительная)",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Schätzungen"
+    },
+    "sehr": {
+      "pos": "нареч.",
+      "ru": "очень"
+    },
+    "sein": {
+      "ru": "быть; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "war · ist gewesen"
+    },
+    "spätsommerlich": {
+      "ru": "позднелетний",
+      "pos": "прил."
+    },
+    "Stadt": {
+      "ru": "город",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Städte"
+    },
+    "stammen": {
+      "ru": "происходить, быть родом",
+      "pos": "гл.",
+      "forms": "stammte · hat gestammt",
+      "note": "aus etwas stammen — быть родом из, относиться к"
+    },
+    "Tag": {
+      "ru": "день",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Tage"
+    },
+    "Teil": {
+      "ru": "часть; доля",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Teile",
+      "note": "sein Teil haben — получить своё"
+    },
+    "Theresienwiese": {
+      "ru": "Терезинвизе (луг в Мюнхене, где проходит Октоберфест)",
+      "pos": "геогр."
+    },
+    "trinken": {
+      "ru": "пить",
+      "pos": "гл.",
+      "forms": "trank · hat getrunken",
+      "note": "das Trinken — питьё"
+    },
+    "trüben": {
+      "ru": "омрачать, мутить",
+      "pos": "гл.",
+      "forms": "trübte · hat getrübt"
+    },
+    "tödlich": {
+      "ru": "смертельный",
+      "pos": "прил."
+    },
+    "und": {
+      "ru": "и, а",
+      "pos": "союз"
+    },
+    "Unfall": {
+      "ru": "несчастный случай, авария",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Unfälle"
+    },
+    "vergangen": {
+      "ru": "прошлый, прошедший",
+      "pos": "прил.",
+      "note": "im vergangenen Jahr — в прошлом году"
+    },
+    "vergessen": {
+      "ru": "забывать",
+      "pos": "гл.",
+      "forms": "vergaß · hat vergessen"
+    },
+    "verkaufen": {
+      "ru": "продавать",
+      "pos": "гл.",
+      "forms": "verkaufte · hat verkauft"
+    },
+    "viel": {
+      "ru": "много, многое",
+      "pos": "мест."
+    },
+    "Viertel": {
+      "ru": "четверть; квартал",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Viertel"
+    },
+    "von": {
+      "ru": "от, из, о (vom = von dem)",
+      "pos": "предл."
+    },
+    "Vorjahr": {
+      "ru": "предыдущий год",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Vorjahre"
+    },
+    "warm": {
+      "ru": "тёплый",
+      "pos": "прил.",
+      "forms": "warm · wärmer · am wärmsten"
+    },
+    "was": {
+      "ru": "что; что-нибудь",
+      "pos": "мест."
+    },
+    "werden": {
+      "ru": "становиться",
+      "pos": "гл.",
+      "forms": "wurde · ist geworden",
+      "note": "Вспомогательный глагол будущего времени и пассива"
+    },
+    "Werktag": {
+      "ru": "рабочий (будний) день",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Werktage"
+    },
+    "Wetter": {
+      "ru": "погода",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "wieder": {
+      "ru": "снова",
+      "pos": "нареч."
+    },
+    "Wiesn": {
+      "ru": "Визн (баварское название Октоберфеста)",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "Wirt": {
+      "ru": "хозяин (ресторана, пивного шатра)",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Wirte"
+    },
+    "Woche": {
+      "ru": "неделя",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Wochen"
+    },
+    "wollen": {
+      "ru": "хотеть",
+      "pos": "гл.",
+      "forms": "wollte · hat gewollt"
+    },
+    "ziehen": {
+      "ru": "двигаться, отправляться; тянуть",
+      "pos": "гл.",
+      "forms": "zog · ist gezogen (двигаться) / hat gezogen (тянуть)"
+    },
+    "zu": {
+      "ru": "к, в; слишком",
+      "pos": "предл.",
+      "note": "zur = zu der, zum = zu dem"
+    },
+    "zweite": {
+      "ru": "второй",
+      "pos": "числ.",
+      "note": "zum zweiten Mal — во второй раз"
+    },
+    "zählen": {
+      "ru": "считать, пересчитывать",
+      "pos": "гл.",
+      "forms": "zählte · hat gezählt"
+    }
+  }
+}

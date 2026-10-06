@@ -822,9 +822,10 @@
       "note": "den Vorsitz haben — председательствовать"
     },
     "warnen": {
-      "ru": "предостерегать",
+      "ru": "предупреждать",
       "pos": "гл.",
-      "forms": "warnte · hat gewarnt"
+      "forms": "warnte · hat gewarnt",
+      "note": "vor etwas warnen — предостерегать от чего-то"
     },
     "Weser": {
       "ru": "Везер (река)",

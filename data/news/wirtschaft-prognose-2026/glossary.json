@@ -519,11 +519,10 @@
       "note": "ein Plus von 0,6 Prozent — рост на 0,6 %"
     },
     "Preis": {
-      "ru": "цена",
+      "ru": "цена; премия, приз",
       "pos": "сущ.",
       "art": "der",
-      "pl": "die Preise",
-      "note": "um geringen Preis — за малую цену"
+      "pl": "die Preise"
     },
     "privat": {
       "ru": "частный, личный",
@@ -744,7 +743,7 @@
       "pl": "die Zahlen"
     },
     "Zoll": {
-      "ru": "пошлина; таможня",
+      "ru": "таможня; пошлина",
       "pos": "сущ.",
       "art": "der",
       "pl": "die Zölle"

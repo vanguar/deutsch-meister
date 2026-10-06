@@ -1,9 +1,13 @@
 /* ═══════════════════════════════════════════════
-   news.js — лента раздела «Новости на немецком» (news.html)
-   Читает data/news/index.json и рисует:
-     • рубрики: где статьи уже есть — счётчик и «свежее», где нет — «скоро»;
-     • ленту: самые свежие сверху, у каждой статьи уровень, дата публикации
-       в источнике и дата появления у нас.
+   news.js — раздел «Новости на немецком» (news.html)
+   Читает data/news/index.json. Два вида на одной странице:
+     • витрина рубрик (news.html) — плитка на рубрику: сколько статей,
+       есть ли свежие и какая последняя;
+     • страница рубрики (news.html#r=<рубрика>) — статьи только этой
+       рубрики, самые свежие сверху; у каждой уровень, дата публикации в
+       источнике и дата появления у нас.
+   Переход в рубрику — запись в history: «назад» в браузере, в Telegram
+   и кнопка «← Все рубрики» возвращают на витрину.
    Статью открывает тот же ридер, что и книги (js/reader.js), — с
    подсказками, подстрочником, переводом, озвучкой и карточками.
 
@@ -24,13 +28,16 @@ const NewsFeed = (() => {
   // Рубрики в порядке плиток. Пустые рубрики остаются заглушками «скоро».
   const RUBRICS = [
     { id: 'astronomy', ico: '🔭', title: 'Астрономия', text: 'Космос, открытия и миссии' },
+    { id: 'science',   ico: '🔬', title: 'Наука',      text: 'Исследования, открытия и премии' },
     { id: 'economy',   ico: '💹', title: 'Экономика',  text: 'Рынки, цены, работа и деньги' },
     { id: 'events',    ico: '🌍', title: 'События',    text: 'Главное в Германии и мире' }
   ];
+  const RUBRIC = Object.fromEntries(RUBRICS.map(r => [r.id, r]));
 
-  let elRubrics, elFeed, elFeedTitle, elFilterReset;
-  let items  = [];
-  let filter = null;   // id рубрики или null — все
+  let elHub, elRubrics, elPage, elFeed, elTitle, elIco, elSub;
+  let items   = [];
+  let current = null;     // id открытой рубрики или null — витрина
+  let loaded  = false;
 
   /* ── Утилиты ── */
 
@@ -89,8 +96,13 @@ const NewsFeed = (() => {
     return `<span>${days}</span> <span>${plural(days, ['день назад', 'дня назад', 'дней назад'])}</span>`;
   }
 
+  function countHtml(n) {
+    return `<b>${n}</b> <span>${plural(n, ['статья', 'статьи', 'статей'])}</span>`;
+  }
+
   function isFresh(it) { return ageDays(it.published) <= FRESH_DAYS; }
   function isSeen(it)  { return readStore(SEEN_KEY + it.id) !== null; }
+  function inRubric(id) { return items.filter(it => it.rubric === id); }
 
   function percentOf(it) {
     try {
@@ -99,35 +111,56 @@ const NewsFeed = (() => {
     } catch (e) { return 0; }
   }
 
-  /* ── Рубрики ── */
+  /* ── Витрина рубрик ── */
 
-  function renderRubrics() {
-    elRubrics.innerHTML = RUBRICS.map(r => {
-      const list  = items.filter(it => it.rubric === r.id);
-      const fresh = list.filter(isFresh).length;
-      if (!list.length) {
-        return `<button class="news-tile is-soon" type="button" data-rubric="${r.id}" aria-disabled="true">
-          <span class="news-tile-badge soon">Скоро</span>
+  function tileHtml(r) {
+    const list = inRubric(r.id);
+    if (!list.length) {
+      return `<a class="news-tile is-soon" href="#r=${r.id}" data-rubric="${r.id}" aria-disabled="true">
+        <span class="news-tile-badge soon">Скоро</span>
+        <div class="news-tile-top">
           <div class="news-tile-ico">${r.ico}</div>
+          <div class="news-tile-head">
+            <div class="news-tile-title">${esc(r.title)}</div>
+            <div class="news-tile-text">${esc(r.text)}</div>
+          </div>
+        </div>
+        <div class="news-tile-foot"><span class="news-tile-count muted"><span>Раздел в разработке</span></span></div>
+      </a>`;
+    }
+    const fresh  = list.filter(isFresh).length;
+    const unread = list.filter(it => !isSeen(it)).length;
+    const last   = list[0];   // items уже отсортированы: свежие первыми
+    return `<a class="news-tile is-live${fresh ? ' is-fresh' : ''}" href="#r=${r.id}" data-rubric="${r.id}">
+      ${fresh ? '<span class="news-tile-badge fresh">🔥 <span>Свежее</span></span>' : ''}
+      <div class="news-tile-top">
+        <div class="news-tile-ico">${r.ico}</div>
+        <div class="news-tile-head">
           <div class="news-tile-title">${esc(r.title)}</div>
           <div class="news-tile-text">${esc(r.text)}</div>
-          <div class="news-tile-count muted"><span>Раздел в разработке</span></div>
-        </button>`;
-      }
-      const on = filter === r.id;
-      return `<button class="news-tile is-live${on ? ' is-on' : ''}" type="button" data-rubric="${r.id}" aria-pressed="${on}">
-        ${fresh ? '<span class="news-tile-badge fresh">🔥 <span>Свежее</span></span>' : '<span class="news-tile-badge live">Есть статьи</span>'}
-        <div class="news-tile-ico">${r.ico}</div>
-        <div class="news-tile-title">${esc(r.title)}</div>
-        <div class="news-tile-text">${esc(r.text)}</div>
-        <div class="news-tile-count"><b>${list.length}</b> <span>${plural(list.length, ['статья', 'статьи', 'статей'])}</span></div>
-      </button>`;
-    }).join('');
+        </div>
+      </div>
+      <div class="news-tile-last">
+        <img src="${esc(last.cover)}" alt="" width="640" height="360" loading="lazy" decoding="async">
+        <div class="ntl-body">
+          <div class="ntl-label"><span>Последняя</span> · ${agoHtml(ageDays(last.published))}</div>
+          <div class="ntl-title" lang="de">${esc(last.title)}</div>
+        </div>
+      </div>
+      <div class="news-tile-foot">
+        <span class="news-tile-count">${countHtml(list.length)}</span>
+        ${unread ? `<span class="news-tile-unread"><i aria-hidden="true"></i><span>${unread}</span> <span>${plural(unread, ['новая', 'новые', 'новых'])}</span></span>` : ''}
+        <span class="news-tile-go">Открыть →</span>
+      </div>
+    </a>`;
   }
 
-  /* ── Лента ── */
+  function renderHub() {
+    elRubrics.setAttribute('aria-busy', 'false');
+    elRubrics.innerHTML = RUBRICS.map(tileHtml).join('');
+  }
 
-  const RUBRIC_TITLE = { astronomy: 'Астрономия', economy: 'Экономика', events: 'События' };
+  /* ── Страница рубрики ── */
 
   function cardHtml(it, i) {
     const fresh = isFresh(it);
@@ -140,7 +173,7 @@ const NewsFeed = (() => {
       fresh ? `<span class="nc-badge fresh">🔥 <span>${lead ? 'Самое свежее' : 'Свежее'}</span></span>` : '',
       seen ? '' : '<span class="nc-badge unread"><i aria-hidden="true"></i><span>Новое</span></span>'
     ].join('');
-    return `<article class="${cls}">
+    return `<article class="${cls}" data-id="${esc(it.id)}">
       <a class="nc-link" href="#news=${encodeURIComponent(it.id)}" data-news="${esc(it.id)}">
         <div class="nc-media">
           <img src="${esc(it.cover)}" alt="" width="640" height="360" loading="${i < 2 ? 'eager' : 'lazy'}" decoding="async">
@@ -149,7 +182,6 @@ const NewsFeed = (() => {
         </div>
         <div class="nc-body">
           <div class="nc-kicker">
-            <span class="nc-rubric">${esc(RUBRIC_TITLE[it.rubric] || 'Новости')}</span>
             <span class="nc-ago">${agoHtml(ageDays(it.published))}</span>
           </div>
           <h2 class="nc-title" lang="de">${esc(it.title)}</h2>
@@ -171,31 +203,101 @@ const NewsFeed = (() => {
     </article>`;
   }
 
-  function renderFeed() {
-    const list = filter ? items.filter(it => it.rubric === filter) : items;
-    elFeedTitle.textContent = filter ? (RUBRIC_TITLE[filter] || 'Новости') : 'Лента новостей';
-    elFilterReset.hidden = !filter;
+  function renderRubric() {
+    const r    = RUBRIC[current];
+    const list = inRubric(current);
+    elIco.textContent   = r.ico;
+    elTitle.textContent = r.title;
+    elSub.innerHTML     = list.length ? countHtml(list.length) : '';
     elFeed.setAttribute('aria-busy', 'false');
-    if (!list.length) {
-      elFeed.innerHTML = '<p class="news-empty">В этой рубрике статей пока нет.</p>';
-      return;
-    }
-    elFeed.innerHTML = list.map(cardHtml).join('');
+    elFeed.innerHTML = list.length
+      ? list.map(cardHtml).join('')
+      : '<p class="news-empty">В этой рубрике статей пока нет.</p>';
   }
 
+  /* ── Вид: витрина или рубрика ── */
+
   function render() {
-    renderRubrics();
-    renderFeed();
+    elHub.hidden  = !!current;
+    elPage.hidden = !current;
+    syncTgBack();
+    if (!loaded) return;
+    if (current) renderRubric(); else renderHub();
+  }
+
+  function rubricFromHash() {
+    const m = /^#r=([\w-]+)/.exec(location.hash || '');
+    return m && RUBRIC[m[1]] ? m[1] : null;
+  }
+
+  // Своя запись в history: «назад» из рубрики ведёт на витрину
+  function openRubric(id) {
+    if (!RUBRIC[id] || id === current) return;
+    try { history.pushState({ view: 'rubric', rubric: id }, '', '#r=' + id); } catch (e) { /* старый WebView */ }
+    current = id;
+    render();
+    window.scrollTo(0, 0);
+  }
+
+  function toHub() {
+    if (!current) return;
+    if (history.state && history.state.view === 'rubric') {
+      history.back();          // popstate вернёт витрину
+      return;
+    }
+    // В рубрику пришли по прямой ссылке — записи «до» нет, заменяем адрес
+    try { history.replaceState(null, '', location.pathname + location.search); } catch (e) { /* старый WebView */ }
+    current = null;
+    render();
+    window.scrollTo(0, 0);
+  }
+
+  function onPopState() {
+    if (/^#news=/.test(location.hash || '')) {
+      // запись ридера; если ридер закрыт — ссылку на статью открыли на
+      // уже загруженной странице (сменился только хэш)
+      if (loaded && !(typeof Reader !== 'undefined' && Reader.state && Reader.state.open)) openFromHash();
+      return;
+    }
+    const next = rubricFromHash();
+    if (next === current) { render(); return; }        // закрыли статью — та же рубрика
+    current = next;
+    render();
+    window.scrollTo(0, 0);
+  }
+
+  // Кнопка «назад» Telegram: в рубрике и в статье ведёт на шаг назад,
+  // на витрине прячется — тогда Telegram показывает «Закрыть».
+  function onTgBack() {
+    if (typeof Reader !== 'undefined' && Reader.state && Reader.state.open) Reader.close();
+    else toHub();
+  }
+
+  function syncTgBack() {
+    const tg = window.Telegram && window.Telegram.WebApp;
+    if (!tg || !tg.BackButton || !tg.initData || !tg.isVersionAtLeast || !tg.isVersionAtLeast('6.1')) return;
+    tg.BackButton.offClick(onTgBack);
+    if (current) {
+      tg.BackButton.onClick(onTgBack);
+      tg.BackButton.show();
+    } else {
+      tg.BackButton.hide();
+    }
+  }
+
+  function showStatus(html) {
+    const el = current ? elFeed : elRubrics;
+    el.setAttribute('aria-busy', 'false');
+    el.innerHTML = html;
   }
 
   function showError(message) {
-    elFeed.setAttribute('aria-busy', 'false');
-    elFeed.innerHTML = `<div class="news-error">
+    showStatus(`<div class="news-error">
       <b>Не удалось загрузить новости.</b>
       <span>Проверьте соединение и попробуйте снова.</span>
       <button class="news-btn" type="button" id="newsRetry">Повторить</button>
       <small>${esc(message)}</small>
-    </div>`;
+    </div>`);
     document.getElementById('newsRetry')?.addEventListener('click', load);
   }
 
@@ -216,28 +318,33 @@ const NewsFeed = (() => {
     }
     const tile = e.target.closest('[data-rubric]');
     if (!tile) return;
+    e.preventDefault();
     if (tile.classList.contains('is-soon')) {
       if (typeof window.newsSoon === 'function') window.newsSoon();
       return;
     }
-    filter = filter === tile.dataset.rubric ? null : tile.dataset.rubric;
-    render();
-    document.getElementById('newsFeedHead')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    openRubric(tile.dataset.rubric);
   }
 
   // Ссылка вида news.html#news=<id> открывает статью сразу (её можно
-  // переслать). Хэш убираем: ридер положит свою запись в history сам.
+  // переслать). Под статьёй — её рубрика, ридер положит свою запись в history.
   function openFromHash() {
     const m = /^#news=([^&]+)/.exec(location.hash || '');
     if (!m) return;
     const id = decodeURIComponent(m[1]);
-    try { history.replaceState(null, '', location.pathname + location.search); } catch (e) { /* старый WebView */ }
+    const it = items.find(x => x.id === id);
+    const rubric = it && RUBRIC[it.rubric] ? it.rubric : null;
+    try {
+      history.replaceState(rubric ? { view: 'rubric', rubric } : null, '',
+        location.pathname + location.search + (rubric ? '#r=' + rubric : ''));
+    } catch (e) { /* старый WebView */ }
+    current = rubric;
+    render();
     open(id);
   }
 
   function load() {
-    elFeed.setAttribute('aria-busy', 'true');
-    elFeed.innerHTML = '<div class="news-loading"><span class="rd-spinner"></span><span>Загружаем новости</span></div>';
+    showStatus('<div class="news-loading"><span class="rd-spinner"></span><span>Загружаем новости</span></div>');
     return fetch(INDEX_URL, { cache: 'no-cache' })
       .then(res => {
         if (!res.ok) throw new Error(`${INDEX_URL}: HTTP ${res.status}`);
@@ -248,6 +355,7 @@ const NewsFeed = (() => {
         items = list.filter(it => it && it.id && it.title)
           .sort((a, b) => String(b.published).localeCompare(String(a.published))
                        || String(b.added).localeCompare(String(a.added)));
+        loaded = true;
         render();
         openFromHash();
       })
@@ -258,23 +366,29 @@ const NewsFeed = (() => {
   }
 
   function init() {
-    elRubrics     = document.getElementById('newsRubrics');
-    elFeed        = document.getElementById('newsFeed');
-    elFeedTitle   = document.getElementById('newsFeedTitle');
-    elFilterReset = document.getElementById('newsFilterReset');
-    if (!elRubrics || !elFeed) return;
+    elHub     = document.getElementById('newsHub');
+    elRubrics = document.getElementById('newsRubrics');
+    elPage    = document.getElementById('newsRubric');
+    elFeed    = document.getElementById('newsFeed');
+    elTitle   = document.getElementById('newsFeedTitle');
+    elIco     = document.getElementById('newsRubricIco');
+    elSub     = document.getElementById('newsRubricSub');
+    if (!elHub || !elRubrics || !elPage || !elFeed) return;
     elRubrics.addEventListener('click', onClick);
     elFeed.addEventListener('click', onClick);
-    elFilterReset?.addEventListener('click', () => { filter = null; render(); });
+    document.getElementById('newsToHub')?.addEventListener('click', toHub);
+    window.addEventListener('popstate', onPopState);
+    current = rubricFromHash();
+    render();
     load();
   }
 
   // После закрытия ридера: отметка «Новое» и процент прочтения
   function refresh() {
-    if (items.length) render();
+    if (loaded) render();
   }
 
-  return { init, refresh, open };
+  return { init, refresh, open, openRubric, toHub, rubrics: RUBRICS, get current() { return current; } };
 })();
 
 document.addEventListener('DOMContentLoaded', () => NewsFeed.init());

@@ -1,0 +1,1006 @@
+{
+  "version": 1,
+  "w": {
+    "aber": "aber",
+    "achtziger": "achtziger",
+    "akademie": "Akademie",
+    "alfred": "Alfred",
+    "all": "All",
+    "alt": "alt",
+    "am": "an",
+    "an": "an",
+    "anderer": "ander",
+    "antarktis": "Antarktis",
+    "arbeit": "Arbeit",
+    "arbeitet": "arbeiten",
+    "art": "Art",
+    "astronomie": "Astronomie",
+    "atomkern": "Atomkern",
+    "auch": "auch",
+    "aus": "aus",
+    "bekannt": "bekannt",
+    "bekommt": "bekommen",
+    "belgien": "Belgien",
+    "berechnen": "berechnen",
+    "bis": "bis",
+    "blauer": "blau",
+    "bote": "Bote",
+    "braucht": "brauchen",
+    "dafür": "dafür",
+    "damit": "damit",
+    "das": "der/die/das",
+    "dass": "dass",
+    "dem": "der/die/das",
+    "den": "der/die/das",
+    "der": "der/die/das",
+    "des": "der/die/das",
+    "detektor": "Detektor",
+    "dezember": "Dezember",
+    "die": "der/die/das",
+    "diesem": "dieser",
+    "dieses": "dieser",
+    "doch": "doch",
+    "dotiert": "dotieren",
+    "durch": "durch",
+    "ein": "ein/eine",
+    "eine": "ein/eine",
+    "einem": "ein/eine",
+    "einen": "ein/eine",
+    "einer": "ein/eine",
+    "einmal": "einmal",
+    "eis": "Eis",
+    "ellen": "Ellen",
+    "ende": "Ende",
+    "energie": "Energie",
+    "entsteht": "entstehen",
+    "er": "er",
+    "erst": "erst",
+    "ersten": "erste",
+    "etwa": "etwa",
+    "etwas": "etwas",
+    "euro": "Euro",
+    "fangen": "fangen",
+    "fast": "fast",
+    "fernen": "fern",
+    "fertig": "fertig",
+    "fliegen": "fliegen",
+    "forscher": "Forscher",
+    "francis": "Francis",
+    "frau": "Frau",
+    "für": "für",
+    "gab": "geben",
+    "geht": "gehen",
+    "geisterhafter": "geisterhaft",
+    "geisterteilchen": "Geisterteilchen",
+    "geschichte": "Geschichte",
+    "geöffnet": "öffnen",
+    "gut": "gut",
+    "haben": "haben",
+    "halzen": "Halzen",
+    "halzens": "Halzen",
+    "hat": "haben",
+    "hatte": "haben",
+    "hoher": "hoch",
+    "hängen": "hängen",
+    "icecube": "IceCube",
+    "idee": "Idee",
+    "ihnen": "sie",
+    "im": "in",
+    "in": "in",
+    "instrument": "Instrument",
+    "ist": "sein",
+    "jahr": "Jahr",
+    "jahre": "Jahr",
+    "jahren": "Jahr",
+    "jede": "jeder",
+    "kam": "kommen",
+    "keine": "kein",
+    "kilometern": "Kilometer",
+    "kronen": "Krone",
+    "kubikkilometer": "Kubikkilometer",
+    "königlich": "königlich",
+    "können": "können",
+    "körper": "Körper",
+    "licht": "Licht",
+    "lichtblitz": "Lichtblitz",
+    "lichtsensoren": "Lichtsensor",
+    "mal": "Mal",
+    "man": "man",
+    "mark": "Mark (имя)",
+    "masse": "Masse",
+    "materie": "Materie",
+    "meldete": "melden",
+    "merken": "merken",
+    "messen": "messen",
+    "milliarden": "Milliarde",
+    "million": "Million",
+    "millionen": "Million",
+    "mit": "mit",
+    "moons": "Moons",
+    "nach": "nach",
+    "nachgewiesen": "nachweisen",
+    "nennt": "nennen",
+    "neue": "neu",
+    "neutrino": "Neutrino",
+    "neutrino-observatorium": "Neutrino-Observatorium",
+    "neutrinos": "Neutrino",
+    "nie": "nie",
+    "nobel": "Nobel",
+    "nobelkomitees": "Nobelkomitee",
+    "nobelpreis": "Nobelpreis",
+    "nutzen": "nutzen",
+    "ohne": "ohne",
+    "oktober": "Oktober",
+    "pearce": "Pearce",
+    "physik": "Physik",
+    "physik-preis": "Physik-Preis",
+    "physikerin": "Physikerin",
+    "preis": "Preis",
+    "richtung": "Richtung",
+    "riesigen": "riesig",
+    "sagte": "sagen",
+    "schon": "schon",
+    "schwacher": "schwach",
+    "schwedische": "schwedisch",
+    "schwedischen": "schwedisch",
+    "sehr": "sehr",
+    "seine": "sein (его, свой)",
+    "seit": "seit",
+    "sekunde": "Sekunde",
+    "sensoren": "Sensor",
+    "sie": "sie",
+    "sind": "sein",
+    "solche": "solch",
+    "stammt": "stammen",
+    "stockholm": "Stockholm",
+    "südpol": "Südpol",
+    "team": "Team",
+    "teilchen": "Teilchen",
+    "tiefe": "Tiefe",
+    "todestag": "Todestag",
+    "um": "um",
+    "und": "und",
+    "universität": "Universität",
+    "unseren": "unser",
+    "us-bundesstaat": "US-Bundesstaat",
+    "verkündet": "verkünden",
+    "vielen": "viel",
+    "von": "von",
+    "vorsitzende": "Vorsitzende",
+    "war": "sein",
+    "weg": "Weg",
+    "weil": "weil",
+    "welcher": "welcher",
+    "weltall": "Weltall",
+    "wenn": "wenn",
+    "winzige": "winzig",
+    "wir": "wir",
+    "wird": "werden",
+    "wisconsin": "Wisconsin",
+    "wissenschaften": "Wissenschaft",
+    "worten": "Wort",
+    "zu": "zu",
+    "zum": "zu",
+    "zusammenstoßen": "zusammenstoßen",
+    "zusammenstößt": "zusammenstoßen",
+    "zwölf": "zwölf",
+    "über": "über",
+    "überreicht": "überreichen",
+    "übrigens": "übrigens"
+  },
+  "l": {
+    "aber": {
+      "ru": "но, однако",
+      "pos": "союз"
+    },
+    "achtziger": {
+      "ru": "восьмидесятые (о годах)",
+      "pos": "прил.",
+      "note": "die achtziger Jahre — восьмидесятые годы"
+    },
+    "Akademie": {
+      "ru": "академия",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Akademien"
+    },
+    "Alfred": {
+      "ru": "Альфред (имя)",
+      "pos": "имя собств."
+    },
+    "All": {
+      "ru": "космос, вселенная",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null,
+      "note": "ins All fliegen — лететь в космос; im All — в космосе"
+    },
+    "alt": {
+      "ru": "старый",
+      "pos": "прил.",
+      "forms": "alt · älter · am ältesten"
+    },
+    "an": {
+      "ru": "у, к, на",
+      "pos": "предл.",
+      "note": "am = an dem. Тж. отделяемая приставка: anfangen «начинать», annehmen, ansehen, anzünden"
+    },
+    "ander": {
+      "pos": "прил.",
+      "ru": "другой, иной"
+    },
+    "Antarktis": {
+      "ru": "Антарктида, Антарктика",
+      "pos": "геогр."
+    },
+    "Arbeit": {
+      "ru": "работа",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Arbeiten"
+    },
+    "arbeiten": {
+      "ru": "работать",
+      "pos": "гл.",
+      "forms": "arbeitete · hat gearbeitet",
+      "note": "daran arbeiten, etwas zu tun — добиваться чего-л."
+    },
+    "Art": {
+      "ru": "вид, способ",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Arten",
+      "note": "eine Art haben — выйти складно"
+    },
+    "Astronomie": {
+      "ru": "астрономия",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "Atomkern": {
+      "ru": "атомное ядро",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Atomkerne"
+    },
+    "auch": {
+      "ru": "тоже, также; даже",
+      "pos": "частица"
+    },
+    "aus": {
+      "ru": "из",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: auslöschen «погасить»"
+    },
+    "bekannt": {
+      "ru": "известный, знакомый",
+      "pos": "прил."
+    },
+    "bekommen": {
+      "ru": "получать",
+      "pos": "гл.",
+      "forms": "bekam · hat bekommen"
+    },
+    "Belgien": {
+      "ru": "Бельгия",
+      "pos": "геогр."
+    },
+    "berechnen": {
+      "ru": "рассчитывать, вычислять",
+      "pos": "гл.",
+      "forms": "berechnete · hat berechnet"
+    },
+    "bis": {
+      "ru": "до; пока не",
+      "pos": "союз"
+    },
+    "blau": {
+      "ru": "синий, голубой",
+      "pos": "прил."
+    },
+    "Bote": {
+      "ru": "посланник, вестник",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Boten"
+    },
+    "brauchen": {
+      "ru": "нуждаться; годиться",
+      "pos": "гл.",
+      "forms": "brauchte · hat gebraucht",
+      "note": "nicht zu brauchen — никуда не годится"
+    },
+    "dafür": {
+      "ru": "за это, для этого",
+      "pos": "нареч.",
+      "note": "dafür sorgen, dass … — позаботиться, чтобы …"
+    },
+    "damit": {
+      "ru": "чтобы; тем самым",
+      "pos": "союз"
+    },
+    "dass": {
+      "ru": "что; чтобы",
+      "pos": "союз"
+    },
+    "der/die/das": {
+      "ru": "определённый артикль",
+      "pos": "артикль",
+      "note": "Тж. относительное местоимение «который»"
+    },
+    "Detektor": {
+      "ru": "детектор",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Detektoren"
+    },
+    "Dezember": {
+      "ru": "декабрь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "dieser": {
+      "ru": "этот, эта, это",
+      "pos": "мест."
+    },
+    "doch": {
+      "ru": "всё же, всё-таки; ведь",
+      "pos": "частица"
+    },
+    "dotieren": {
+      "ru": "вознаграждать (о премии)",
+      "pos": "гл.",
+      "forms": "dotierte · hat dotiert",
+      "note": "mit … dotiert sein — составлять (о денежной премии)"
+    },
+    "durch": {
+      "ru": "через, сквозь, из-за",
+      "pos": "предл."
+    },
+    "ein/eine": {
+      "ru": "неопределённый артикль",
+      "pos": "артикль",
+      "note": "einer — «один, некто»"
+    },
+    "einmal": {
+      "ru": "однажды; раз",
+      "pos": "нареч."
+    },
+    "Eis": {
+      "ru": "лёд; мороженое",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "Ellen": {
+      "ru": "Эллен (имя)",
+      "pos": "имя собств."
+    },
+    "Ende": {
+      "ru": "конец",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Enden"
+    },
+    "Energie": {
+      "ru": "энергия",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Energien"
+    },
+    "entstehen": {
+      "ru": "возникать",
+      "pos": "гл.",
+      "forms": "entstand · ist entstanden"
+    },
+    "er": {
+      "ru": "он",
+      "pos": "мест.",
+      "note": "ihn — его, ihm — ему"
+    },
+    "erst": {
+      "ru": "лишь, только; сначала",
+      "pos": "нареч.",
+      "note": "erst 2010 — лишь в 2010 году"
+    },
+    "erste": {
+      "ru": "первый",
+      "pos": "числ."
+    },
+    "etwa": {
+      "ru": "примерно, около",
+      "pos": "нареч."
+    },
+    "etwas": {
+      "ru": "что-то, нечто; немного",
+      "pos": "мест."
+    },
+    "Euro": {
+      "ru": "евро",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Euro"
+    },
+    "fangen": {
+      "ru": "ловить",
+      "pos": "гл.",
+      "forms": "fing · hat gefangen",
+      "note": "Feuer fangen — загореться"
+    },
+    "fast": {
+      "ru": "почти",
+      "pos": "нареч."
+    },
+    "fern": {
+      "ru": "далёкий, дальний",
+      "pos": "прил."
+    },
+    "fertig": {
+      "ru": "готовый",
+      "pos": "прил."
+    },
+    "fliegen": {
+      "ru": "летать, лететь",
+      "pos": "гл.",
+      "forms": "flog · ist geflogen"
+    },
+    "Forscher": {
+      "ru": "исследователь, учёный",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Forscher"
+    },
+    "Francis": {
+      "ru": "Франсис (имя)",
+      "pos": "имя собств."
+    },
+    "Frau": {
+      "ru": "жена; женщина",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Frauen"
+    },
+    "für": {
+      "ru": "для, за",
+      "pos": "предл."
+    },
+    "geben": {
+      "ru": "давать",
+      "pos": "гл.",
+      "forms": "gab · hat gegeben"
+    },
+    "gehen": {
+      "ru": "идти, ходить",
+      "pos": "гл.",
+      "forms": "ging · ist gegangen"
+    },
+    "geisterhaft": {
+      "ru": "призрачный",
+      "pos": "прил."
+    },
+    "Geisterteilchen": {
+      "ru": "частица-призрак",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Geisterteilchen"
+    },
+    "Geschichte": {
+      "ru": "история",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Geschichten"
+    },
+    "gut": {
+      "ru": "хороший, добрый",
+      "pos": "прил.",
+      "forms": "gut · besser · am besten",
+      "note": "besser — лучше"
+    },
+    "haben": {
+      "ru": "иметь; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "hatte · hat gehabt"
+    },
+    "Halzen": {
+      "ru": "Халзен (фамилия; нобелевский лауреат 2026 года)",
+      "pos": "имя собств."
+    },
+    "hoch": {
+      "ru": "высокий",
+      "pos": "прил.",
+      "forms": "hoch · höher · am höchsten"
+    },
+    "hängen": {
+      "ru": "висеть",
+      "pos": "гл.",
+      "forms": "hing · hat gehangen",
+      "note": "переходное hängen «вешать» слабое: hängte · hat gehängt"
+    },
+    "IceCube": {
+      "ru": "IceCube (нейтринная обсерватория на Южном полюсе)",
+      "pos": "имя собств."
+    },
+    "Idee": {
+      "ru": "идея",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Ideen"
+    },
+    "in": {
+      "ru": "в (im = in dem, ins = in das)",
+      "pos": "предл."
+    },
+    "Instrument": {
+      "ru": "прибор, инструмент",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Instrumente"
+    },
+    "Jahr": {
+      "ru": "год",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Jahre"
+    },
+    "jeder": {
+      "ru": "каждый",
+      "pos": "мест."
+    },
+    "kein": {
+      "ru": "никакой, ни один",
+      "pos": "мест."
+    },
+    "Kilometer": {
+      "ru": "километр",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Kilometer"
+    },
+    "kommen": {
+      "ru": "приходить, приезжать",
+      "pos": "гл.",
+      "forms": "kam · ist gekommen"
+    },
+    "Krone": {
+      "ru": "крона (валюта); корона",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Kronen"
+    },
+    "Kubikkilometer": {
+      "ru": "кубический километр",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Kubikkilometer"
+    },
+    "königlich": {
+      "ru": "королевский",
+      "pos": "прил."
+    },
+    "können": {
+      "ru": "мочь, уметь",
+      "pos": "гл.",
+      "forms": "konnte · hat gekonnt"
+    },
+    "Körper": {
+      "art": "der",
+      "pl": "die Körper",
+      "pos": "сущ.",
+      "ru": "тело"
+    },
+    "Licht": {
+      "ru": "свет; огонёк",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Lichter"
+    },
+    "Lichtblitz": {
+      "ru": "вспышка света",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Lichtblitze"
+    },
+    "Lichtsensor": {
+      "ru": "датчик света",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Lichtsensoren"
+    },
+    "Mal": {
+      "ru": "раз",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Male",
+      "note": "zu wiederholten Malen — неоднократно"
+    },
+    "man": {
+      "ru": "неопределённое «кто-то, люди, мы»",
+      "pos": "мест."
+    },
+    "Mark (имя)": {
+      "ru": "Марк (имя)",
+      "pos": "имя собств."
+    },
+    "Masse": {
+      "ru": "масса",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Massen"
+    },
+    "Materie": {
+      "ru": "материя, вещество",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "melden": {
+      "ru": "сообщать, докладывать",
+      "pos": "гл.",
+      "forms": "meldete · hat gemeldet"
+    },
+    "merken": {
+      "ru": "замечать, чуять",
+      "pos": "гл.",
+      "forms": "merkte · hat gemerkt"
+    },
+    "messen": {
+      "ru": "измерять",
+      "pos": "гл.",
+      "forms": "maß · hat gemessen"
+    },
+    "Milliarde": {
+      "ru": "миллиард",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Milliarden"
+    },
+    "Million": {
+      "ru": "миллион",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Millionen"
+    },
+    "mit": {
+      "ru": "с",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: mitgehen «пойти вместе»"
+    },
+    "Moons": {
+      "ru": "Мунс (фамилия; бельгийский физик)",
+      "pos": "имя собств."
+    },
+    "nach": {
+      "ru": "в, на, после, по",
+      "pos": "предл."
+    },
+    "nachweisen": {
+      "ru": "доказывать; обнаруживать, регистрировать",
+      "pos": "гл.",
+      "forms": "wies nach · hat nachgewiesen"
+    },
+    "nennen": {
+      "ru": "называть",
+      "pos": "гл.",
+      "forms": "nannte · hat genannt"
+    },
+    "neu": {
+      "ru": "новый",
+      "pos": "прил."
+    },
+    "Neutrino": {
+      "ru": "нейтрино",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Neutrinos"
+    },
+    "Neutrino-Observatorium": {
+      "ru": "нейтринная обсерватория",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Neutrino-Observatorien"
+    },
+    "nie": {
+      "ru": "никогда",
+      "pos": "нареч."
+    },
+    "Nobel": {
+      "ru": "Нобель (фамилия; учредитель Нобелевской премии)",
+      "pos": "имя собств."
+    },
+    "Nobelkomitee": {
+      "ru": "Нобелевский комитет",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Nobelkomitees"
+    },
+    "Nobelpreis": {
+      "ru": "Нобелевская премия",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Nobelpreise"
+    },
+    "nutzen": {
+      "ru": "использовать",
+      "pos": "гл.",
+      "forms": "nutzte · hat genutzt"
+    },
+    "ohne": {
+      "ru": "без",
+      "pos": "предл."
+    },
+    "Oktober": {
+      "ru": "октябрь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Oktober"
+    },
+    "Pearce": {
+      "ru": "Пирс (фамилия; председатель Нобелевского комитета по физике)",
+      "pos": "имя собств."
+    },
+    "Physik": {
+      "ru": "физика",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "Physik-Preis": {
+      "ru": "премия по физике",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Physik-Preise"
+    },
+    "Physikerin": {
+      "ru": "физик (женщина)",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Physikerinnen"
+    },
+    "Preis": {
+      "ru": "цена; премия, приз",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Preise"
+    },
+    "Richtung": {
+      "ru": "направление",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Richtungen"
+    },
+    "riesig": {
+      "ru": "огромный",
+      "pos": "прил."
+    },
+    "sagen": {
+      "ru": "говорить, сказать",
+      "pos": "гл.",
+      "forms": "sagte · hat gesagt"
+    },
+    "schon": {
+      "ru": "уже",
+      "pos": "нареч."
+    },
+    "schwach": {
+      "ru": "слабый",
+      "pos": "прил.",
+      "forms": "schwach · schwächer · am schwächsten"
+    },
+    "schwedisch": {
+      "ru": "шведский",
+      "pos": "прил."
+    },
+    "sehr": {
+      "pos": "нареч.",
+      "ru": "очень"
+    },
+    "sein": {
+      "ru": "быть; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "war · ist gewesen"
+    },
+    "sein (его, свой)": {
+      "ru": "его, свой",
+      "pos": "мест."
+    },
+    "seit": {
+      "ru": "с (какого-то времени)",
+      "pos": "предл."
+    },
+    "Sekunde": {
+      "ru": "секунда",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Sekunden"
+    },
+    "Sensor": {
+      "ru": "датчик, сенсор",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Sensoren"
+    },
+    "sie": {
+      "ru": "она; они; Вы",
+      "pos": "мест."
+    },
+    "solch": {
+      "ru": "такой",
+      "pos": "мест.",
+      "note": "ein solcher Vorbeiflug — такой пролёт"
+    },
+    "stammen": {
+      "ru": "происходить, быть родом",
+      "pos": "гл.",
+      "forms": "stammte · hat gestammt",
+      "note": "aus etwas stammen — быть родом из, относиться к"
+    },
+    "Stockholm": {
+      "ru": "Стокгольм",
+      "pos": "геогр."
+    },
+    "Südpol": {
+      "ru": "Южный полюс",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "Team": {
+      "ru": "команда",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Teams"
+    },
+    "Teilchen": {
+      "ru": "частица",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Teilchen"
+    },
+    "Tiefe": {
+      "ru": "глубина",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Tiefen"
+    },
+    "Todestag": {
+      "ru": "день смерти, годовщина смерти",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Todestage"
+    },
+    "um": {
+      "ru": "вокруг, в (о времени)",
+      "pos": "предл.",
+      "note": "um … zu — чтобы. Тж. отделяемая приставка: sich umsehen «оглядеться»"
+    },
+    "und": {
+      "ru": "и, а",
+      "pos": "союз"
+    },
+    "Universität": {
+      "ru": "университет",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Universitäten"
+    },
+    "unser": {
+      "ru": "наш",
+      "pos": "мест."
+    },
+    "US-Bundesstaat": {
+      "ru": "штат США",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die US-Bundesstaaten"
+    },
+    "verkünden": {
+      "ru": "объявлять, оглашать",
+      "pos": "гл.",
+      "forms": "verkündete · hat verkündet"
+    },
+    "viel": {
+      "ru": "много, многое",
+      "pos": "мест."
+    },
+    "von": {
+      "ru": "от, из, о (vom = von dem)",
+      "pos": "предл."
+    },
+    "Vorsitzende": {
+      "ru": "председатель",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Vorsitzenden"
+    },
+    "Weg": {
+      "ru": "путь, дорога",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Wege"
+    },
+    "weil": {
+      "ru": "потому что",
+      "pos": "союз"
+    },
+    "welcher": {
+      "ru": "который; какой",
+      "pos": "мест."
+    },
+    "Weltall": {
+      "ru": "космос, вселенная",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "wenn": {
+      "ru": "если; когда",
+      "pos": "союз"
+    },
+    "werden": {
+      "ru": "становиться",
+      "pos": "гл.",
+      "forms": "wurde · ist geworden",
+      "note": "Вспомогательный глагол будущего времени и пассива"
+    },
+    "winzig": {
+      "ru": "крошечный",
+      "pos": "прил."
+    },
+    "wir": {
+      "ru": "мы",
+      "pos": "мест.",
+      "note": "uns — нас, нам"
+    },
+    "Wisconsin": {
+      "ru": "Висконсин (штат США)",
+      "pos": "геогр."
+    },
+    "Wissenschaft": {
+      "ru": "наука",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Wissenschaften"
+    },
+    "Wort": {
+      "ru": "слово",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Worte (связная речь) / die Wörter (отдельные слова)"
+    },
+    "zu": {
+      "ru": "к, в; слишком",
+      "pos": "предл.",
+      "note": "zur = zu der, zum = zu dem"
+    },
+    "zusammenstoßen": {
+      "ru": "сталкиваться",
+      "pos": "гл.",
+      "forms": "stieß zusammen · ist zusammengestoßen"
+    },
+    "zwölf": {
+      "ru": "двенадцать",
+      "pos": "числ."
+    },
+    "öffnen": {
+      "ru": "открывать",
+      "pos": "гл.",
+      "forms": "öffnete · hat geöffnet",
+      "note": "sich öffnen — открываться, раскрываться"
+    },
+    "über": {
+      "ru": "над, через, о",
+      "pos": "предл."
+    },
+    "überreichen": {
+      "ru": "вручать",
+      "pos": "гл.",
+      "forms": "überreichte · hat überreicht"
+    },
+    "übrigens": {
+      "ru": "впрочем",
+      "pos": "нареч."
+    }
+  }
+}

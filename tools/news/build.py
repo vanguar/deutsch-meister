@@ -25,7 +25,7 @@ BASE = os.path.dirname(os.path.dirname(HERE))
 sys.path.insert(0, HERE)
 
 from articles import ARTICLES            # noqa: E402
-from glossary import W as NEWS_W, L as NEWS_L   # noqa: E402
+from glossary import W as NEWS_W, L as NEWS_L, W_ART   # noqa: E402
 from meta import META, ORDER             # noqa: E402
 
 # Та же регулярка, что WORD_RE в js/reader.js и TOKEN_RE в scripts/validate_books.py
@@ -121,6 +121,7 @@ def build_article(aid, book_w, book_l):
     forms = {}
     words = 0
     figs = 0
+    own_w = W_ART.get(aid, {})   # омонимы, которые в этой статье значат другое
     for pi, para in enumerate(ARTICLES[aid]):
         if isinstance(para, tuple):
             _, fid = para
@@ -136,7 +137,9 @@ def build_article(aid, book_w, book_l):
             for tok in TOKEN_RE.findall(de):
                 words += 1
                 k = tok.lower()
-                if k in NEWS_W:
+                if k in own_w:
+                    forms[k] = own_w[k]
+                elif k in NEWS_W:
                     forms[k] = NEWS_W[k]
                 elif k in book_w:
                     forms[k] = book_w[k]
