@@ -14,8 +14,8 @@ ENV (Vercel → Project → Settings → Environment Variables):
   BOT_TOKEN                 — токен бота от @BotFather
   WEBHOOK_SECRET            — секрет вебхука (опционально)
   APP_URL                   — URL мини-аппа (по умолчанию GitHub Pages)
-  UPSTASH_REDIS_REST_URL    — для /api/progress (интеграция Upstash)
-  UPSTASH_REDIS_REST_TOKEN  — для /api/progress
+  UPSTASH_REDIS_REST_URL    — база Upstash Redis (или KV_REST_API_URL —
+  UPSTASH_REDIS_REST_TOKEN    так их называет интеграция Vercel Marketplace)
   ADMIN_IDS                 — ID владельцев через запятую (команды /stats и др.)
   ADMIN_USERNAMES           — их @username через запятую (по умолчанию ObiVan1978)
 
@@ -34,8 +34,12 @@ import urllib.request
 BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
 WEBHOOK_SECRET = os.environ.get("WEBHOOK_SECRET", "")
 APP_URL = os.environ.get("APP_URL", "https://vanguar.github.io/deutsch-meister/")
-UPSTASH_URL = os.environ.get("UPSTASH_REDIS_REST_URL", "").rstrip("/")
-UPSTASH_TOK = os.environ.get("UPSTASH_REDIS_REST_TOKEN", "")
+# Интеграция «Upstash for Redis» из Vercel Marketplace создаёт KV_REST_API_*,
+# ручная настройка — UPSTASH_REDIS_REST_*. Берём то, что есть.
+UPSTASH_URL = (os.environ.get("UPSTASH_REDIS_REST_URL")
+               or os.environ.get("KV_REST_API_URL") or "").rstrip("/")
+UPSTASH_TOK = (os.environ.get("UPSTASH_REDIS_REST_TOKEN")
+               or os.environ.get("KV_REST_API_TOKEN") or "")
 
 DONATE_TIERS = [50, 100, 250, 500]
 API = "https://api.telegram.org/bot{}/{}"
@@ -567,7 +571,8 @@ def send_stats(chat_id, user, message_id=None, limit=10):
     ]), 10)[1:]
     if total is None:
         tg("sendMessage", {"chat_id": chat_id,
-                           "text": "⚠️ База недоступна: проверьте UPSTASH_REDIS_REST_URL/TOKEN в Vercel."})
+                           "text": "⚠️ База недоступна: в Vercel не подключён Upstash Redis "
+                                   "(нет KV_REST_API_URL/TOKEN или UPSTASH_REDIS_REST_URL/TOKEN)."})
         return
     ids = [str(i) for i in (recent or [])]
     users = _users_by_ids(ids)
@@ -1189,6 +1194,7 @@ class handler(BaseHTTPRequestHandler):
             "seen_path": self.path,
             "route": route,
             "env": {
+                "redis": bool(UPSTASH_URL and UPSTASH_TOK),
                 "bot_token": bool(BOT_TOKEN),
                 "webhook_secret": bool(WEBHOOK_SECRET),
                 "app_url": bool(os.environ.get("APP_URL")),
