@@ -73,7 +73,7 @@ function openDonateModal() {
     <div class="dm-emoji">❤️</div>
     <h2 class="dm-title">Поддержать проект</h2>
     <p class="dm-text">
-      Deutsch Meister — бесплатный проект. Ваша поддержка помогает
+      German Morning — бесплатный проект. Ваша поддержка помогает
       добавлять новые уроки, озвучку и книги. Спасибо! 🙏
     </p>
     <button class="dm-choice" onclick="donateStars()">

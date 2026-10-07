@@ -1025,7 +1025,7 @@ const Reader = (() => {
       ? dmAppVersionLabel() : 'версия неизвестна';
     return `
       <div class="rd-row rd-row--app">
-        <div class="rd-app-ver" id="rdAppVer">Deutsch Meister · ${esc(label)}</div>
+        <div class="rd-app-ver" id="rdAppVer">German Morning · ${esc(label)}</div>
         <button type="button" class="rd-app-reset" id="rdAppReset">
           ⟳ Обновить приложение</button>
         <div class="rd-app-note">Снимет service worker и очистит кеш,

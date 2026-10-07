@@ -36,8 +36,8 @@ def build_welcome(first_name: str) -> str:
     return (
         f"👋 <b>Привет, {first_name}!</b>\n\n"
         f"Рад видеть тебя здесь — ты только что сделал отличный выбор! 🎉\n\n"
-        f"<b>🇩🇪 Deutsch Meister</b> — это интерактивный курс немецкого языка "
-        f"от нуля до уровня B2, прямо здесь в Telegram.\n\n"
+        f"<b>🇩🇪 German Morning</b> — интерактивный курс немецкого от A1 до B2 "
+        f"прямо здесь, в Telegram.\n\n"
         f"<b>Что умеет этот бот:</b>\n"
         f"📚 68 уроков — A1 — 20, A2 — 20, B1 — 14, B2 — 14\n"
         f"🔊 Озвучка всех фраз и слов\n"
@@ -59,7 +59,7 @@ async def cmd_start(message: Message):
 
 async def cmd_donate(message: Message):
     await message.answer(
-        "❤️ <b>Поддержать Deutsch Meister</b>\n\n"
+        "❤️ <b>Поддержать German Morning</b>\n\n"
         "Проект бесплатный и развивается на энтузиазме. "
         "Ваша поддержка звёздами помогает добавлять новые уроки, "
         "озвучку и книги на немецком. Спасибо! 🙏\n\n"
@@ -75,7 +75,7 @@ async def send_stars_invoice(bot: Bot, chat_id: int, stars: int):
     # Для Telegram Stars: currency="XTR", provider_token="" (пустой)
     await bot.send_invoice(
         chat_id=chat_id,
-        title="Поддержка Deutsch Meister",
+        title="Поддержка German Morning",
         description=f"Спасибо за поддержку проекта на {stars} ⭐!",
         payload=f"donate_{stars}",
         provider_token="",
@@ -97,7 +97,7 @@ async def on_successful_payment(message: Message):
     await message.answer(
         f"🎉 <b>Спасибо за поддержку!</b>\n\n"
         f"Вы поддержали проект на {amount} ⭐. "
-        f"Это очень помогает развитию Deutsch Meister! ❤️"
+        f"Это очень помогает развитию German Morning! ❤️"
     )
 
 async def main():

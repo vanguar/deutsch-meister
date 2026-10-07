@@ -120,11 +120,11 @@ check("приветствие uk, а не выбор", wel and "Привіт" in
 print("5. Донат по-украински")
 CALLS.clear()
 W.handle_update(cb("donate"))
-check("текст доната uk", "Підтримати Deutsch Meister" in calls("sendMessage")[0]["text"])
+check("текст доната uk", "Підтримати German Morning" in calls("sendMessage")[0]["text"])
 CALLS.clear()
 W.handle_update(cb("donate:100"))
 inv = calls("sendInvoice")
-check("инвойс uk", inv and inv[0]["title"] == "Підтримка Deutsch Meister" and inv[0]["prices"][0]["amount"] == 100)
+check("инвойс uk", inv and inv[0]["title"] == "Підтримка German Morning" and inv[0]["prices"][0]["amount"] == 100)
 CALLS.clear()
 W.handle_update({"message": {"chat": {"id": 42}, "from": {"id": 42},
                              "successful_payment": {"total_amount": 100}}})

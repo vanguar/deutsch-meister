@@ -55,7 +55,7 @@
         '<h2 style="font-family:\'Playfair Display\',serif;font-size:22px;margin:0 0 6px;' +
         'text-align:center;color:var(--text-strong,#fff)">Установить приложение</h2>' +
         '<p style="font-size:14px;color:var(--text-muted,#9a9);line-height:1.5;text-align:center;margin:0 0 16px">' +
-          'Если в Telegram нет звука — установи Deutsch Meister на телефон и запускай ' +
+          'Если в Telegram нет звука — установи German Morning на телефон и запускай ' +
           'с иконки. Там озвучка работает, плюс офлайн-доступ. 🔊' +
         '</p>' +
         (inTelegram()
