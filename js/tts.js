@@ -411,9 +411,35 @@ const TTS = (() => {
       .catch(e => { diag('WebAudio не смог: ' + (e && e.message) + ' → <audio>'); playAudioEl(text, spans, ses); });
   }
 
+  /* Выбор самого «живого» немецкого голоса из тех, что есть в системе.
+     Раньше брали первый попавшийся de-DE — чаще всего это старый
+     синтезатор (Microsoft Hedda, eSpeak), отсюда «механический» звук.
+     Бесплатные нейроголоса уже есть у многих: Edge — «Microsoft Katja/
+     Conrad/Amala Online (Natural)», Chrome — «Google Deutsch»,
+     iOS/macOS — «Anna (Erweitert/Premium)», Android — сетевые голоса. */
+  function voiceScore(v) {
+    const name = (v.name || '') + ' ' + (v.voiceURI || '');
+    let sc = 0;
+    if (/natural|neural/i.test(name)) sc += 100;
+    else if (/online/i.test(name)) sc += 70;
+    if (/premium/i.test(name)) sc += 90;
+    else if (/enhanced|erweitert|siri/i.test(name)) sc += 75;
+    if (/^Google\b/i.test(v.name || '')) sc += 50;
+    if (/network/i.test(name)) sc += 40;
+    if (/espeak|compact|hedda|stefan/i.test(name)) sc -= 40;
+    if (v.lang === 'de-DE' || v.lang === 'de_DE') sc += 10;
+    return sc;
+  }
+
   function pickBestVoice() {
-    const v = window.speechSynthesis?.getVoices() || [];
-    return v.find(x => x.lang === 'de-DE') || v.find(x => x.lang.startsWith('de')) || null;
+    const v = (window.speechSynthesis?.getVoices() || [])
+      .filter(x => /^de([-_]|$)/i.test(x.lang || ''));
+    if (!v.length) return null;
+    // Сетевые нейроголоса без интернета молчат — офлайн берём только
+    // локальные, чтобы не терять работавшую раньше офлайн-озвучку.
+    const offline = (typeof navigator !== 'undefined' && navigator.onLine === false);
+    const pool = offline && v.some(x => x.localService) ? v.filter(x => x.localService) : v;
+    return pool.slice().sort((a, b) => voiceScore(b) - voiceScore(a))[0];
   }
 
   function speak(text, { rate = 0.85, pitch = 1, fallbackDelay = null, spans = null, onEnd = null } = {}) {
@@ -450,7 +476,10 @@ const TTS = (() => {
       u.lang  = 'de-DE';
       u.rate  = rate;
       u.pitch = pitch;
-      u.voice = preferredVoice || bestVoice;
+      u.voice = pickBestVoice() || preferredVoice || bestVoice;
+      // Сетевому голосу (Edge «Online (Natural)», «Google Deutsch») нужно
+      // время на первый ответ сервера — не уходим на фолбэк раньше срока.
+      const waitStart = (u.voice && u.voice.localService === false) ? delay + 800 : delay;
       let settled = false;
       let abandoned = false;   // ушли на аудио-путь: onend этой фразы не наш
       const fb = () => {
@@ -479,7 +508,7 @@ const TTS = (() => {
       };
       activeUtterance = u;   // держим ссылку, пока говорит (см. выше)
       window.speechSynthesis.speak(u);
-      setTimeout(fb, delay);
+      setTimeout(fb, waitStart);
     } else {
       speakAudio(text, spans, ses);
     }

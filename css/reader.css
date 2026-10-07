@@ -1259,33 +1259,53 @@ body.rd-open { overflow: hidden; }
   color: var(--accent);
 }
 
-/* Подсветка раскрытого предложения: только цвет и фон, без метрик —
-   иначе поехала бы разбивка на страницы (как и у .bw--seen в 3B). */
+/* Подсветка раскрытого предложения: только цвет, фон и тень, без метрик —
+   иначе поехала бы разбивка на страницы (как и у .bw--seen в 3B).
+   Мягкие края: к фону того же оттенка добавлена размытая внешняя тень
+   (box-shadow на метрики строки не влияет), а box-decoration-break: clone
+   скругляет и растушёвывает каждый перенос строки по отдельности. */
+.bs, .bs .bw {
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  border-radius: 6px;
+  transition: background-color .45s ease, box-shadow .45s ease, color .45s ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  .bs, .bs .bw { transition: none; }
+}
 .bs--active {
-  background: color-mix(in srgb, var(--rd-accent) 15%, transparent);
-  border-radius: 3px;
+  --bs-glow: color-mix(in srgb, var(--rd-accent) 11%, transparent);
+  background: var(--bs-glow);
+  box-shadow: 0 0 6px 2px var(--bs-glow);
   color: var(--rd-strong);
 }
 
 /* ══ 20. РИДЕР: ОЗВУЧКА ══ */
 
 /* Подсветка читаемого предложения — как .bs--active и .bw--seen:
-   только цвет и фон, никаких метрик, иначе поедет пагинация. */
+   только цвет, фон и тень, никаких метрик, иначе поедет пагинация.
+   Края мягкие за счёт размытой тени того же цвета (см. .bs выше). */
 .bs--playing {
-  background: color-mix(in srgb, var(--rd-accent) 22%, transparent);
-  border-radius: 3px;
+  --bs-glow: color-mix(in srgb, var(--rd-accent) 14%, transparent);
+  background: var(--bs-glow);
+  box-shadow: 0 0 8px 3px var(--bs-glow);
   color: var(--rd-strong);
 }
 
+/* На тёмном фоне тот же процент почти не виден — делаем плотнее. */
+[data-theme="dark"] .bs--active  { --bs-glow: color-mix(in srgb, var(--rd-accent) 18%, transparent); }
+[data-theme="dark"] .bs--playing { --bs-glow: color-mix(in srgb, var(--rd-accent) 24%, transparent); }
+[data-theme="dark"] .bs--playing .bw--speaking { --bs-glow: color-mix(in srgb, var(--rd-accent) 36%, transparent); }
+
 /* Читаемая ЧАСТЬ разорванного предложения. .bs--playing красит его целиком,
    но при чтении по границе страниц звучит только та часть, что на этой
-   странице, — её и отмечаем сильнее. Ставится лишь когда частей больше
-   одной (js/reader.js: setPlayingPart). Опять только цвет и фон: метрики
-   строки не меняются, поэтому пагинация поехать не может. */
+   странице, — её и отмечаем чуть плотнее. Ставится лишь когда частей больше
+   одной (js/reader.js: setPlayingPart). Опять только цвет, фон и тень:
+   метрики строки не меняются, поэтому пагинация поехать не может. */
 .bs--playing .bw--speaking {
-  background: color-mix(in srgb, var(--rd-accent) 40%, transparent);
-  border-radius: 3px;
-  color: var(--rd-strong);
+  --bs-glow: color-mix(in srgb, var(--rd-accent) 24%, transparent);
+  background: var(--bs-glow);
+  box-shadow: 0 0 6px 2px var(--bs-glow);
 }
 
 /* 🔊 в тултипе: рядом с «Предложением» и у раскрытого перевода */
