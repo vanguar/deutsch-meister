@@ -111,8 +111,8 @@
     patterns.sort(function (a, b) { return b.weight - a.weight; });
   }
 
-  /* Замены без кириллицы — целые текстовые узлы вроде флага 🇷🇺 на кнопке
-     перевода в читалке. */
+  /* Замены без кириллицы — целые текстовые узлы вроде
+     значков-эмодзи. */
   var swaps = Object.create(null);
 
   function add(map) {

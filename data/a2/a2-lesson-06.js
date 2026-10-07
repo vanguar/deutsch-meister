@@ -39,7 +39,7 @@ const LESSON_DATA = {
     { de: 'Die Miete kostet 800 Euro.',            ru: 'Аренда стоит 800 евро.',                    note: 'die Miete — арендная плата', audio: 'Die Miete kostet achthundert Euro' },
     { de: 'Ich suche eine neue Wohnung.',          ru: 'Я ищу новую квартиру.',                     note: 'suchen + Akk. — искать', audio: 'Ich suche eine neue Wohnung' },
     { de: 'Wo wohnst du?',                         ru: 'Где ты живёшь?',                            note: 'wo = где (без движения)', audio: 'Wo wohnst du' },
-    { de: 'Im ersten Stock.',                      ru: 'На первом этаже.',                          note: '⚠️ ersten Stock у нас = 2-й этаж РФ!', audio: 'Im ersten Stock' },
+    { de: 'Im ersten Stock.',                      ru: 'На первом этаже.',                          note: '⚠️ der erste Stock в Германии = 2-й этаж по украинской нумерации!', audio: 'Im ersten Stock' },
     { de: 'Ich setze mich auf das Sofa.',          ru: 'Я сажусь на диван.',                        note: 'sich setzen + Akk. (направление)', audio: 'Ich setze mich auf das Sofa' },
     { de: 'Er sitzt auf dem Sofa.',                ru: 'Он сидит на диване.',                       note: 'sitzen + Dat. (где?)', audio: 'Er sitzt auf dem Sofa' },
     { de: 'Vor dem Haus gibt es einen Garten.',    ru: 'Перед домом есть сад.',                     note: 'vor + Dat. (где?). es gibt + Akk.', audio: 'Vor dem Haus gibt es einen Garten' },

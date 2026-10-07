@@ -72,7 +72,7 @@ const Reader = (() => {
     system: "'DM Sans', sans-serif",
     serif:  "Georgia, 'Iowan Old Style', 'Times New Roman', serif"
   };
-  // Какой русский показывать по кнопке 🇷🇺. 'plain' — дословный построчный,
+  // Какой русский показывать по кнопке 🌐 («перевод»). 'plain' — дословный построчный,
   // он есть у всех книг и остаётся основным: по нему видно, какое немецкое
   // слово что значит. 'rhymed' — рифмованный, он есть только у стихов и
   // только там, где мы его написали (поле rv у предложения).
@@ -939,7 +939,7 @@ const Reader = (() => {
       elFullTranslationBtn.setAttribute('aria-label', elFullTranslationBtn.title);
       const icon = elFullTranslationBtn.querySelector('.rd-btn-icon');
       const label = elFullTranslationBtn.querySelector('.rd-btn-label');
-      if (icon) icon.textContent = st.fullTranslation ? '🇩🇪' : '🇷🇺';
+      if (icon) icon.textContent = st.fullTranslation ? '🇩🇪' : '🌐';
       if (label) label.textContent = st.fullTranslation ? 'немецкий' : 'перевод';
     }
 
@@ -956,7 +956,7 @@ const Reader = (() => {
       // Надпись не меняем: «рифма» — это ИМЯ кнопки, а не команда. Значок
       // эмодзи тут не годится вовсе — рифму не нарисовать так, чтобы
       // читатель понял без подписи, а на телефоне подписи скрыты.
-      // Включено или нет, видно по нажатому состоянию, как у 🔤 и 🇷🇺.
+      // Включено или нет, видно по нажатому состоянию, как у 🔤 и 🌐.
     }
 
     if (elSpeakBtn) {
@@ -997,7 +997,7 @@ const Reader = (() => {
   // русский. Если читатель был на немецком, одной смены стиля мало — он бы
   // не увидел ничего, поэтому заодно включаем полный перевод. Повторное
   // нажатие возвращает дословный, не выкидывая из русского: выйти на
-  // немецкий — это 🇷🇺, и у каждой кнопки остаётся своё дело.
+  // немецкий — это 🌐, и у каждой кнопки остаётся своё дело.
   function toggleRhyme() {
     if (!st.chapter || !hasRhymed()) return;
     const anchor = copyAnchor();

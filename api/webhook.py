@@ -236,7 +236,7 @@ def app_url(lang, ts):
 
 def lang_kb():
     return {"inline_keyboard": [
-        [{"text": "🇷🇺 Русский", "callback_data": "lang:ru"}],
+        [{"text": "Русский", "callback_data": "lang:ru"}],
         [{"text": "🇺🇦 Українська", "callback_data": "lang:uk"}],
         [{"text": "🇸🇦 العربية · 🚧 в разработке", "callback_data": "lang:ar"}],
     ]}

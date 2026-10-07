@@ -12,3 +12,5 @@ jobs:
           python-version: '3.12'
       - name: Validate lesson data, shells and cache versions
         run: python scripts/validate_lessons.py
+      - name: Audience wording (Russian UI is not Russia)
+        run: python scripts/test_audience_wording.py

@@ -1,7 +1,7 @@
 # Deutsch Meister — команды деплоя (см. ДЕПЛОЙ-инструкция.md)
 # Windows: запускать из Git Bash. Без make — прямые команды указаны в целях.
 
-.PHONY: bump validate check-tips deploy-web deploy-api check-api i18n-check i18n-build test-i18n news
+.PHONY: bump validate check-tips check-audience deploy-web deploy-api check-api i18n-check i18n-build test-i18n news
 
 # Поднять ?v=N во всех HTML + CACHE в service-worker.js (обязательно перед
 # пушем любых правок JS/CSS)
@@ -16,6 +16,11 @@ validate:
 # содержать русский перевод (кириллицу). Падает, если нет.
 check-tips:
 	node tools/check_tips.js
+
+# Регресс аудитории: русский интерфейс ≠ Россия. Падает на «РФ», «у нас в
+# России», рублях, флаге 🇷🇺 и т.п. в пользовательском контенте.
+check-audience:
+	python scripts/test_audience_wording.py
 
 # Новости: собрать data/news из tools/news/*.py и проверить (покрытие словаря,
 # фото, даты). Потом — i18n-check / i18n-build и bump.
