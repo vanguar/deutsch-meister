@@ -42,6 +42,14 @@ UPSTASH_TOK = (os.environ.get("UPSTASH_REDIS_REST_TOKEN")
                or os.environ.get("KV_REST_API_TOKEN") or "")
 
 DONATE_TIERS = [50, 100, 250, 500]
+# Крипто-кошельки — копия из js/support.js (DONATE.wallets), только
+# подтверждённые. USDT TRC-20 не показываем, пока адрес не подтверждён.
+# Совпадение адресов с js/support.js проверяет scripts/test_bot_lang.py.
+CRYPTO_WALLETS = [
+    ("💎", "USDT", "ERC-20 (Ethereum)", "0xf0e70cb55f38ad3Ca7ABCDD276A997092ecb7346"),
+    ("💧", "TON", "The Open Network", "UQB0W1KEAR7RFQ03AIA872jw-2G2ntydiXlyhfTN8rAb2KN5"),
+    ("🟡", "Bitcoin", "BTC", "bc1qq0rs5j43yh09tyvdynregg56c68d2yaz6ek8dx"),
+]
 API = "https://api.telegram.org/bot{}/{}"
 
 # ══════════════════════════════════════════════════════
@@ -119,6 +127,14 @@ T = {
             "звёздами помогает добавлять новые уроки, озвучку и книги. Спасибо! 🙏\n\n"
             "Выберите количество звёзд:"
         ),
+        "crypto_btn": "💎 Криптовалюта",
+        "crypto": (
+            "💎 <b>Поддержать криптовалютой</b>\n\n"
+            "Нажмите на адрес, чтобы скопировать его. Отправляйте только "
+            "в указанной сети — перевод в другой сети может потеряться.\n\n"
+            "{wallets}\n\n"
+            "Спасибо за поддержку! 🙏"
+        ),
         "invoice_title": "Поддержка German Morning",
         "invoice_desc": "Спасибо за поддержку проекта на {stars} ⭐!",
         "thanks": (
@@ -153,6 +169,14 @@ T = {
             "Проєкт безкоштовний і розвивається на ентузіазмі. Ваша підтримка "
             "зірками допомагає додавати нові уроки, озвучення та книжки. Дякуємо! 🙏\n\n"
             "Оберіть кількість зірок:"
+        ),
+        "crypto_btn": "💎 Криптовалюта",
+        "crypto": (
+            "💎 <b>Підтримати криптовалютою</b>\n\n"
+            "Натисніть на адресу, щоб скопіювати її. Надсилайте тільки "
+            "в зазначеній мережі — переказ в іншій мережі може загубитися.\n\n"
+            "{wallets}\n\n"
+            "Дякуємо за підтримку! 🙏"
         ),
         "invoice_title": "Підтримка German Morning",
         "invoice_desc": "Дякуємо за підтримку проєкту на {stars} ⭐!",
@@ -250,10 +274,10 @@ def welcome_kb(lang, ts):
     ]}
 
 
-def donate_kb():
-    return {"inline_keyboard": [
-        [{"text": f"⭐ {n}", "callback_data": f"donate:{n}"}] for n in DONATE_TIERS
-    ]}
+def donate_kb(lang="ru"):
+    rows = [[{"text": f"⭐ {n}", "callback_data": f"donate:{n}"}] for n in DONATE_TIERS]
+    rows.append([{"text": tr(lang, "crypto_btn"), "callback_data": "donate_crypto"}])
+    return {"inline_keyboard": rows}
 
 
 def set_menu_button(chat_id, lang, ts):
@@ -306,7 +330,23 @@ def send_donate(chat_id, lang="ru"):
         "chat_id": chat_id,
         "text": tr(lang, "donate"),
         "parse_mode": "HTML",
-        "reply_markup": donate_kb(),
+        "reply_markup": donate_kb(lang),
+    })
+
+
+def crypto_text(lang="ru"):
+    wallets = "\n\n".join(
+        f"{icon} <b>{name}</b> · {net}\n<code>{addr}</code>"
+        for icon, name, net, addr in CRYPTO_WALLETS
+    )
+    return tr(lang, "crypto", wallets=wallets)
+
+
+def send_crypto(chat_id, lang="ru"):
+    tg("sendMessage", {
+        "chat_id": chat_id,
+        "text": crypto_text(lang),
+        "parse_mode": "HTML",
     })
 
 
@@ -892,6 +932,8 @@ def handle_update(update):
             send_lang_choice(chat_id)
         elif data == "donate":
             send_donate(chat_id, lang)
+        elif data == "donate_crypto":
+            send_crypto(chat_id, lang)
         elif data.startswith("donate:"):
             try:
                 send_invoice(chat_id, int(data.split(":", 1)[1]), lang)

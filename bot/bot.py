@@ -18,6 +18,13 @@ APP_URL   = os.getenv("APP_URL", "https://vanguar.github.io/deutsch-meister/")
 
 # Варианты поддержки звёздами (Telegram Stars, валюта XTR)
 DONATE_TIERS = [50, 100, 250, 500]
+# Крипто-кошельки — как в api/webhook.py (копия из js/support.js).
+# USDT TRC-20 не показываем, пока адрес не подтверждён.
+CRYPTO_WALLETS = [
+    ("💎", "USDT", "ERC-20 (Ethereum)", "0xf0e70cb55f38ad3Ca7ABCDD276A997092ecb7346"),
+    ("💧", "TON", "The Open Network", "UQB0W1KEAR7RFQ03AIA872jw-2G2ntydiXlyhfTN8rAb2KN5"),
+    ("🟡", "Bitcoin", "BTC", "bc1qq0rs5j43yh09tyvdynregg56c68d2yaz6ek8dx"),
+]
 
 logging.basicConfig(level=logging.INFO)
 
@@ -30,7 +37,21 @@ def welcome_keyboard():
 def donate_keyboard():
     rows = [[InlineKeyboardButton(text=f"⭐ {n}", callback_data=f"donate:{n}")]
             for n in DONATE_TIERS]
+    rows.append([InlineKeyboardButton(text="💎 Криптовалюта", callback_data="donate_crypto")])
     return InlineKeyboardMarkup(inline_keyboard=rows)
+
+def build_crypto() -> str:
+    wallets = "\n\n".join(
+        f"{icon} <b>{name}</b> · {net}\n<code>{addr}</code>"
+        for icon, name, net, addr in CRYPTO_WALLETS
+    )
+    return (
+        "💎 <b>Поддержать криптовалютой</b>\n\n"
+        "Нажмите на адрес, чтобы скопировать его. Отправляйте только "
+        "в указанной сети — перевод в другой сети может потеряться.\n\n"
+        f"{wallets}\n\n"
+        "Спасибо за поддержку! 🙏"
+    )
 
 def build_welcome(first_name: str) -> str:
     return (
@@ -70,6 +91,10 @@ async def cmd_donate(message: Message):
 async def on_donate_menu(callback: CallbackQuery):
     await callback.answer()
     await cmd_donate(callback.message)
+
+async def on_donate_crypto(callback: CallbackQuery):
+    await callback.answer()
+    await callback.message.answer(build_crypto())
 
 async def send_stars_invoice(bot: Bot, chat_id: int, stars: int):
     # Для Telegram Stars: currency="XTR", provider_token="" (пустой)
@@ -111,6 +136,7 @@ async def main():
     dp.message.register(cmd_start, CommandStart())
     dp.message.register(cmd_donate, Command("donate"))
     dp.callback_query.register(on_donate_menu, F.data == "donate")
+    dp.callback_query.register(on_donate_crypto, F.data == "donate_crypto")
     dp.callback_query.register(on_donate_amount, F.data.startswith("donate:"))
     dp.pre_checkout_query.register(on_pre_checkout)
     dp.message.register(on_successful_payment, F.successful_payment)
