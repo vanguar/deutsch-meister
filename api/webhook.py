@@ -455,9 +455,13 @@ def track_user(user, via, source=""):
     ]
     if source:
         cmds.append(["HSETNX", key, "source", source[:64]])
-    is_new = _results(_upstash_pipe(cmds), 1)[0] == 1
+    # SCARD — в том же конвейере, что и SADD: отдельный запрос на чтение Upstash
+    # может отдать с реплики, ещё не видевшей запись, — и номер повторялся.
+    cmds.append(["SCARD", "dm:users"])
+    res = _results(_upstash_pipe(cmds), len(cmds))
+    is_new = res[0] == 1
     if is_new:
-        notify_admins_new(user, via, source)
+        notify_admins_new(user, via, source, res[-1])
     return is_new
 
 
@@ -503,7 +507,10 @@ VIA_RU = {"bot": "бот", "app": "мини-апп", "import": "перенесё
 def user_line(u, lang=None, full=False):
     """Одна строка о пользователе для /stats и уведомлений (HTML)."""
     name = " ".join(x for x in (u.get("first_name"), u.get("last_name")) if x) or "без имени"
-    parts = [f"<b>{_html(name)}</b>"]
+    uid = str(u.get("id") or "")
+    # Ссылка на профиль: открывается в Telegram и без @username
+    parts = [f'<a href="tg://user?id={uid}"><b>{_html(name)}</b></a>' if uid.isdigit()
+             else f"<b>{_html(name)}</b>"]
     if u.get("username"):
         parts.append("@" + _html(u["username"]))
     parts.append(f"<code>{_html(u.get('id'))}</code>")
@@ -523,9 +530,9 @@ def user_line(u, lang=None, full=False):
     return line
 
 
-def notify_admins_new(user, via, source=""):
-    admins, muted, total = _results(_upstash_pipe([
-        ["SMEMBERS", "dm:admins"], ["SMEMBERS", "dm:admin:mute"], ["SCARD", "dm:users"]]), 3)
+def notify_admins_new(user, via, source="", total=None):
+    admins, muted = _results(_upstash_pipe([
+        ["SMEMBERS", "dm:admins"], ["SMEMBERS", "dm:admin:mute"]]), 2)
     targets = [a for a in (admins or []) if a not in set(muted or [])]
     if not targets:
         return
