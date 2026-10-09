@@ -9,11 +9,13 @@
   --fresh:       #ff8a3d;
   --fresh-soft:  rgba(255, 138, 61, .14);
   --fresh-glow:  rgba(255, 138, 61, .35);
+  --fresh-ink:   #2a1200;   /* текст на ярко-оранжевом: белый там 2.3:1 */
 }
 [data-theme="light"] {
   --fresh:       #d4541a;
   --fresh-soft:  rgba(212, 84, 26, .1);
   --fresh-glow:  rgba(212, 84, 26, .25);
+  --fresh-ink:   #fff;
 }
 
 .news-page { position: relative; max-width: 760px; margin: 0 auto; padding: 18px 16px 48px; }
@@ -61,7 +63,7 @@
   font-size: 11px; font-weight: 800; letter-spacing: .3px; line-height: 1.5; white-space: nowrap;
 }
 .news-tile-badge.soon { background: var(--tint); border: 1px solid var(--border); color: var(--text-dim); }
-.news-tile-badge.fresh { background: var(--fresh); color: #fff; box-shadow: 0 2px 10px var(--fresh-glow); }
+.news-tile-badge.fresh { background: var(--fresh); color: var(--fresh-ink); box-shadow: 0 2px 10px var(--fresh-glow); }
 
 /* Последняя статья рубрики — превью с обложкой */
 .news-tile-last {
@@ -156,7 +158,7 @@
   display: inline-flex; align-items: center; gap: 5px; padding: 3px 9px; border-radius: var(--r-full);
   font-size: 11px; font-weight: 800; letter-spacing: .3px; line-height: 1.5; white-space: nowrap;
 }
-.nc-badge.fresh { background: var(--fresh); color: #fff; box-shadow: 0 2px 10px var(--fresh-glow); }
+.nc-badge.fresh { background: var(--fresh); color: var(--fresh-ink); box-shadow: 0 2px 10px var(--fresh-glow); }
 .nc-badge.unread { background: rgba(10, 10, 20, .78); color: #fff; }
 .news-legend .nc-badge.unread { background: var(--surface3); color: var(--text-strong); }
 .nc-badge.unread i {

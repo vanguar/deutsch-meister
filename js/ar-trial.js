@@ -9,8 +9,8 @@
        и не открываются (тост вместо перехода), книги и новости — тоже;
      • если страницу без перевода всё же открыли (закладка, старая
        ссылка), сверху объясняем, что её ещё нет на арабском.
-   Раскладка страниц остаётся LTR (иначе перевернутся flex-ряды и
-   таблицы). Направление текста — по месту (fixDir): блок с арабским
+   Интерфейс зеркальный: js/i18n.js ставит <html dir="rtl">, физические
+   left/right правит css/rtl.css. Направление текста — по месту (fixDir): блок с арабским
    текстом получает dir="rtl", немецкие вставки в нём (<strong>du</strong>,
    <em>Wie heißt du?</em>) — dir="ltr", то есть изолируются, и тире,
    кавычки и скобки на стыке языков встают на свои места. Остальное —
@@ -59,7 +59,9 @@
     'background:var(--surface2,#232136);color:var(--text,#e8e6f0);border:1px solid var(--border-light,#3d3960);',
     'box-shadow:0 8px 30px rgba(0,0,0,.35);transition:opacity .25s}'
   ].join('');
+  var ver = me ? (me.getAttribute('src').match(/\?v=\d+/) || [''])[0] : '';
   document.write(
+    '<link rel="stylesheet" href="' + base + 'css/rtl.css' + ver + '">' +
     '<link rel="preconnect" href="https://fonts.googleapis.com">' +
     '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;700;800&display=swap">' +
     '<style id="ar-trial-css">' + css + '</style>'
@@ -256,10 +258,11 @@
   function banners() {
     if (document.querySelector('.ar-trial')) return;
     if (isTrialLesson) {
+      // внутри колонки контента — та же ширина, что у разделов урока
       var header = document.querySelector('.lesson-header');
       var content = document.querySelector('.lesson-content');
-      if (header) insertAfter(el(LESSON_TOP), header);
-      else if (content) content.insertBefore(el(LESSON_TOP), content.firstChild);
+      if (content) content.insertBefore(el(LESSON_TOP), content.firstChild);
+      else if (header) insertAfter(el(LESSON_TOP), header);
       if (content) content.appendChild(el(LESSON_BOTTOM));
     } else if (isHome) {
       var hero = document.querySelector('.hero');

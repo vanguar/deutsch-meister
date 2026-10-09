@@ -22,7 +22,7 @@
 
   --text:         #e8e6f0;
   --text-muted:   #8b87a8;
-  --text-dim:     #5c5878;
+  --text-dim:     #827ea8;   /* ≥4:1 на surface2 — подписи, IPA, заметки */
   --text-strong:  #ffffff;
   --text-on-btn:  #ffffff;
 
@@ -42,7 +42,7 @@
   --border:       #d5d1f5;
   --border-light: #bfbaea;
 
-  --accent:       #b8920a;
+  --accent:       #856800;   /* золото потемнее: текстом читается (≥4.3:1) */
   --accent2:      #5b48e8;
   --accent3:      #d94f4f;
   --green:        #1f9e5e;
@@ -50,7 +50,7 @@
 
   --text:         #1a1733;
   --text-muted:   #5c5585;
-  --text-dim:     #8883aa;
+  --text-dim:     #6b6690;   /* ≥4.4:1 на светлых поверхностях */
   --text-strong:  #0d0c1a;
   --text-on-btn:  #ffffff;
 
@@ -476,7 +476,8 @@ h1, h2, h3 {
 /* Homepage stat cards and lesson cards */
 [data-theme="light"] .stat-card  { background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,.07); }
 [data-theme="light"] .lesson-card { background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,.06); }
-[data-theme="light"] .lc-title { color: var(--text-strong); }
+[data-theme="light"] .lc-title,
+[data-theme="light"] .lesson-card.available .lc-title { color: var(--text-strong); }
 [data-theme="light"] .lc-num   { color: var(--text-muted); }
 [data-theme="light"] .hero-sub  { color: var(--text-muted); }
 [data-theme="light"] .levels-title { color: var(--text-strong); }

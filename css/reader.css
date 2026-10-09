@@ -60,6 +60,7 @@
 
 .lib-theme-btn {
   flex-shrink: 0;
+  color: var(--text);
   background: var(--surface3);
   border: 1px solid var(--border);
   border-radius: var(--r-full);

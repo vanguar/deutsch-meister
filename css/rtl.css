@@ -1,0 +1,66 @@
+/* ═══════════════════════════════════════════════
+   rtl.css — зеркальный интерфейс для арабского (html[dir="rtl"])
+
+   Подключается только при lang = ar (js/ar-trial.js). Flex/grid и
+   таблицы при dir="rtl" отражаются сами; здесь — то, что в остальных
+   стилях задано «физически»: left/right, text-align: left, повороты
+   стрелок и выезд бокового меню.
+   Немецкий текст остаётся LTR: предложения с пропусками, поля ввода,
+   кошельки — им направление возвращается явно.
+   ═══════════════════════════════════════════════ */
+
+/* ── Меню: справа, выезжает справа ── */
+html[dir="rtl"] .sidebar {
+  border-right: 0;
+  border-left: 1px solid var(--border);
+}
+html[dir="rtl"] .lesson-item.active::before {
+  left: auto;
+  right: 0;
+  border-radius: 2px 0 0 2px;
+}
+/* шеврон «→» плашек меню смотрит влево */
+html[dir="rtl"] .side-action::after {
+  border-right: 0;
+  border-left: 2px solid currentColor;
+  transform: rotate(-45deg);
+  margin-left: 0;
+  margin-right: 2px;
+}
+@media (hover: hover) {
+  html[dir="rtl"] .side-action:hover::after { transform: translateX(-2px) rotate(-45deg); }
+}
+html[dir="rtl"] .side-action .sa-new { right: auto; left: 12px; }
+html[dir="rtl"] .sidebar-mobile-toggle { right: auto; left: 20px; }
+
+@media (max-width: 860px) {
+  html[dir="rtl"] .sidebar {
+    left: auto;
+    right: 0;
+    transform: translateX(100%);
+  }
+  html[dir="rtl"] .sidebar.open { transform: translateX(0); }
+}
+
+/* ── Выравнивание текста ── */
+/* немецкие заголовки («Hallo! Wie heißt du?») — LTR, но у правого края */
+html[dir="rtl"] :is(h1, h2, h3, .hero-sub, .hero-eyebrow, .phrase-de) { text-align: right; }
+html[dir="rtl"] .tgw-features,
+html[dir="rtl"] .dm-choice,
+html[dir="rtl"] .vocab-table th,
+html[dir="rtl"] .mc-option,
+html[dir="rtl"] .word-tip { text-align: right; }
+
+/* ── Модалки ── */
+html[dir="rtl"] .dm-close { right: auto; left: 14px; }
+html[dir="rtl"] .dm-wallet { direction: ltr; text-align: left; }   /* адреса кошельков */
+
+/* ── Урок ── */
+html[dir="rtl"] .phrase-card::before { left: auto; right: 0; }
+html[dir="rtl"] .vocab-article { margin-right: 0; margin-left: 4px; }
+
+/* Немецкое предложение с пропуском читается слева направо */
+html[dir="rtl"] .blank-sentence { direction: ltr; justify-content: flex-end; }
+html[dir="rtl"] .blank-input,
+html[dir="rtl"] .dictation-input,
+html[dir="rtl"] input[type="text"] { direction: ltr; }

@@ -35,7 +35,8 @@
 }
 .ex-tab.active {
   background: var(--accent2);
-  color: var(--text-strong);
+  /* белый в обеих темах: --text-strong в светлой почти чёрный на фиолетовом */
+  color: var(--text-on-btn);
   box-shadow: var(--shadow-accent);
 }
 

@@ -196,6 +196,12 @@
 .side-action.news    { --sa-c: #ff8a3d; order: 2; }
 .side-action.donate  { --sa-c: #e8b931; order: 3; }
 .side-action.contact { --sa-c: #2aabee; order: 4; }
+/* В светлой теме цвет плашки идёт и в текст — берём оттенки потемнее */
+[data-theme="light"] .side-action#installMenuBtn { --sa-c: #1f8a55; }
+[data-theme="light"] .side-action.books   { --sa-c: #5b48e8; }
+[data-theme="light"] .side-action.news    { --sa-c: #c2500e; }
+[data-theme="light"] .side-action.donate  { --sa-c: #856800; }
+[data-theme="light"] .side-action.contact { --sa-c: #1572a8; }
 
 .side-action .sa-ico {
   width: 36px;
@@ -362,7 +368,7 @@
   padding: 1px 8px;
   border-radius: 9999px;
   background: #ff8a3d;
-  color: #fff;
+  color: #2a1200;   /* белый на оранжевом — 2.3:1, тёмный — ≥7:1 */
   font-size: 10px;
   font-weight: 800;
   letter-spacing: .3px;

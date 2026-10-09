@@ -368,6 +368,8 @@
   };
 
   document.documentElement.setAttribute('lang', lang);
+  // арабский — зеркальный интерфейс (правила в css/rtl.css, грузит js/ar-trial.js)
+  if (lang === 'ar') document.documentElement.setAttribute('dir', 'rtl');
 
   if (lang !== 'ru') {
     // Словари грузим синхронно (document.write) — до данных урока и до

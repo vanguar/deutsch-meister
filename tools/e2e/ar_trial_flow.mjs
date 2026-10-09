@@ -32,12 +32,27 @@ await c.shot('ar-lesson-top.png');
 await c.ev(`document.querySelectorAll('.ar-trial')[1].scrollIntoView({block:'center'})`); await c.wait(500);
 await c.shot('ar-lesson-bottom.png');
 
+// зеркальный интерфейс: меню справа, немецкий текст не перевёрнут
+const FLIPPED = `(()=>{const bad=[];const w=document.createTreeWalker(document.body,4);let n;
+ while(n=w.nextNode()){const t=n.nodeValue,s=t.trim();if(s.length<2||/[\u0600-\u06FF]/.test(s)||!/[A-Za-zÄÖÜäöüß]/.test(s)||!/[.!?…:]$/.test(s))continue;
+  const el=n.parentElement;if(!el||!el.getClientRects().length)continue;
+  const i0=t.indexOf(s[0]),i1=t.lastIndexOf(s[s.length-1]),r=document.createRange();
+  r.setStart(n,i0);r.setEnd(n,i0+1);const a=r.getBoundingClientRect();r.setStart(n,i1);r.setEnd(n,i1+1);const b=r.getBoundingClientRect();
+  if(a.width&&b.width&&Math.abs(a.top-b.top)<=4&&b.left<a.left)bad.push(s.slice(0,30))}
+ return bad})()`;
+check('<html dir="rtl">', await c.ev(`document.documentElement.dir`) === 'rtl');
+let flipped = [];
+for (let i = 0; i <= 4; i++) { if (i) { await c.ev(`document.querySelectorAll('.ex-tab')[${i-1}].click()`); await c.wait(300); } flipped.push(...await c.ev(FLIPPED)); }
+check('немецкая пунктуация не перевёрнута (все упражнения)', flipped.length === 0, flipped);
+await c.ev(`openSidebar()`); await c.wait(500);
+check('меню выезжает справа', await c.ev(`(()=>{const r=document.querySelector('.sidebar').getBoundingClientRect();return Math.round(r.right)===innerWidth})()`));
+
 await c.go(B + '/lessons/a1/lesson-02/index.html', 2500);
 check('непереведённый урок: плашка «ещё нет»', await c.ev(`(document.querySelector('.ar-trial')||{}).textContent?.includes('غير متوفرة') || false`));
 await c.shot('ar-lesson2.png');
 
 await c.go(B + '/index.html?lang=uk&lts=' + Date.now(), 2000);
-check('uk без плашек', await c.ev(`I18N.lang==='uk' && !document.querySelector('.ar-trial')`));
+check('uk без плашек и без RTL', await c.ev(`I18N.lang==='uk' && !document.querySelector('.ar-trial') && document.documentElement.dir!=='rtl'`));
 check('ошибок JS нет', c.errors().length === 0, c.errors());
 c.close();
 console.log(fails ? `ПРОВАЛЕНО: ${fails}` : 'ВСЕ ПРОВЕРКИ ПРОЙДЕНЫ');
