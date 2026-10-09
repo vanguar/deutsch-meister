@@ -105,6 +105,21 @@
       "cover": "🦉",
       "source": "W. Hauffs Werke, Bd. II, Leipzig und Wien 1891-1909 (de.wikisource.org)",
       "license": "public domain"
+    },
+    {
+      "id": "poe",
+      "title": "Das schwatzende Herz und Das ovale Porträt",
+      "titleRu": "Сердце-обличитель и Овальный портрет",
+      "blurb": "Два самых страшных коротких рассказа По в немецком переводе Гизелы Этцель. Убийца доказывает читателю, что он не безумен, — и сам выдаёт себя стуку сердца под половицами. Раненый путник ночью в заброшенном замке находит портрет девушки, которая кажется живой, и узнаёт, чего стоила эта живость. Первая книга ридера — перевод.",
+      "author": "Edgar Allan Poe",
+      "level": "B2",
+      "year": 1843,
+      "chapters": 7,
+      "words": 3849,
+      "minutes": 29,
+      "cover": "👁️",
+      "source": "Werke, Propyläen-Verlag, Berlin 1922 (projekt-gutenberg.org)",
+      "license": "public domain"
     }
   ]
 }

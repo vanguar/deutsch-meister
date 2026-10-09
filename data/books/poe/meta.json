@@ -1,0 +1,31 @@
+{
+  "id": "poe",
+  "title": "Das schwatzende Herz und Das ovale Porträt",
+  "titleRu": "Сердце-обличитель и Овальный портрет",
+  "author": "Edgar Allan Poe",
+  "level": "B2",
+  "year": 1843,
+  "chapters": 7,
+  "words": 3849,
+  "minutes": 29,
+  "cover": "👁️",
+  "source": "Edgar Allan Poe, Werke, Propyläen-Verlag, Berlin 1922, перевод Gisela Etzel, орфография приведена к современной норме",
+  "sourceUrl": "https://projekt-gutenberg.org/authors/edgar-allan-poe/books/das-schwatzende-herz",
+  "compared": "Текст взят с projekt-gutenberg.org. «Das ovale Porträt» — Propyläen-Verlag, Berlin, переводчица Gisela Etzel указана на странице источника. «Das schwatzende Herz» — Propyläen, 1922; на странице источника переводчик не назван, но это то же собрание сочинений По издательства Propyläen, прозу для которого переводила Гизела Этцель. Сканы печатного издания с источником не сверялись: Projekt Gutenberg-DE даёт только набранный текст. Правки орфографии внесены скриптом по списку ниже, всё остальное — как в источнике.",
+  "license": "public domain",
+  "translator": "Gisela Etzel",
+  "yearNote": "1843 — год первой публикации «The Tell-Tale Heart» (журнал The Pioneer, Бостон); «The Oval Portrait» вышел в 1842 г. под заглавием «Life in Death». По писал по-английски; в читалке — немецкий перевод Гизелы Этцель (1880-1918) из собрания сочинений издательства Propyläen. Этцель умерла в 1918 г., По — в 1849-м: и оригинал, и перевод в общественном достоянии.",
+  "levelNote": "B2, как Кафка и Клейст. Первая книга читалки — перевод, а не немецкий оригинал, и первая в жанре психологического ужаса. Язык ровнее, чем у Клейста: переводчица 1920-х пишет почти современным немецким. Выше B1 поднимают длинные периоды с цепочками придаточных и вставками через тире, Konjunktiv I косвенной речи (dass ich wahnsinnig sei, der alte Mann sei abwesend, ein Beweis sei), Konjunktiv II (ihr hättet sehen sollen, wäre ein Wahnsinniger wohl so weise vorgegangen?) и книжная лексика: Antlitz, Pein, Weib, wahrlich, sich eines Päckchens erinnern. Во втором рассказе густо идёт лексика живописи (Leinwand, Pinselstrich, Glanzlicht, Rahmen, Schnitzwerk) — покрыта глоссарием.",
+  "normalizedNote": "Правки сделаны скриптом по списку слов, с подсчётом каждой замены; список полный.",
+  "normalized": [
+    "ß по современной норме: daß → dass (29), wußte → wusste (5), mußte → musste (3), Schloß → Schloss (2), müßt → müsst, Haß → Hass, haßte → hasste, wußten → wussten, mußten → mussten, muß → muss, gewiß → gewiss, faßte → fasste, gefaßt → gefasst, riß → riss, beschloß → beschloss, schloß → schloss, Schloßturmes → Schlossturmes, Bewußtsein → Bewusstsein, Blechverschluß → Blechverschluss, Schlußfolgerung → Schlussfolgerung",
+    "раздельное и слитное написание по правилам 1996-2006 гг.: wieviel → wie viel (4), allzuviel → allzu viel, ebensowenig → ebenso wenig, irgend etwas → irgendetwas (2), zum erstenmal → zum ersten Mal, übrigblieb → übrig blieb, zuleid → zuleide",
+    "Appenninen → Apenninen (опечатка источника), Huhkapfeife → Hukapfeife (форма Этцель от англ. hookah приведена к словарной; помечена old)",
+    "многоточие ... → …",
+    "абзацы: три абзаца крупнее 250 слов (315, 267 и 290) разбиты по смене действия — у Этцель это сплошные стены текста, на экране телефона их не прочесть",
+    "кавычки: вставной рассказ из книжки о картинах в «Das ovale Porträt» в источнике открыт » и не закрыт; по немецкой норме каждый его абзац начинается с », в конце поставлена закрывающая «",
+    "снят эпиграф к «Das ovale Porträt» — итальянская строка «Egli è vivo e parlerebbe se non osservasse la rigola del silentio» с подписью: это не немецкий текст, и подсказки к нему не дать",
+    "деление на главы наше: у По рассказы без частей. «Das schwatzende Herz» — 4 главы (глаз, восьмая ночь, сердце, гости), «Das ovale Porträt» — 3 главы (опиум, портрет в нише, история портрета)"
+  ],
+  "notNormalized": "Лексика и грамматика Этцель не тронуты. Оставлены и помечены old в glossary.l книжные и устаревшие слова: Antlitz (лицо), Pein (мука), Weib (жена), Knecht (слуга), Sammet (бархат), wahrlich, zuweilen, liebreizend, nahen, ersuchen, argwöhnen, hinsiechen, hinschwinden, toll в значении «безумный», aufgeräumt в значении «весёлый», brünstig в значении «пылкий». Оставлены стяжённые andre и düstrer, старые дательные с -e (in seinem Bette, im Hause, zum Weibe, in vollstem Lichte, von seinem Werke), книжный родительный при sich erinnern (erinnerte ich mich eines Päckchens), старое мн. ч. die Fensterladen и написание Phantasie."
+}
