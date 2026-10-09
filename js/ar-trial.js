@@ -9,8 +9,12 @@
        и не открываются (тост вместо перехода), книги и новости — тоже;
      • если страницу без перевода всё же открыли (закладка, старая
        ссылка), сверху объясняем, что её ещё нет на арабском.
-   Раскладка страниц остаётся LTR: арабские абзацы сами выбирают
-   направление (unicode-bidi: plaintext), немецкий текст не ломается.
+   Раскладка страниц остаётся LTR (иначе перевернутся flex-ряды и
+   таблицы). Направление текста — по месту (fixDir): блок с арабским
+   текстом получает dir="rtl", немецкие вставки в нём (<strong>du</strong>,
+   <em>Wie heißt du?</em>) — dir="ltr", то есть изолируются, и тире,
+   кавычки и скобки на стыке языков встают на свои места. Остальное —
+   unicode-bidi: plaintext (направление по первой букве абзаца).
    ═══════════════════════════════════════════════ */
 (function () {
   'use strict';
@@ -31,6 +35,9 @@
   var css = [
     'html[lang="ar"] body{font-family:"Noto Sans Arabic","Segoe UI",Tahoma,system-ui,sans-serif}',
     'html[lang="ar"] :where(p,li,td,th,h1,h2,h3,h4,label,button,a,div,span){unicode-bidi:plaintext}',
+    // явный dir сильнее эвристики plaintext
+    'html[lang="ar"] [dir]{unicode-bidi:isolate}',
+    'html[lang="ar"] [dir="rtl"][data-ar-dir]{text-align:right}',
     '.ar-trial{direction:rtl;text-align:right;unicode-bidi:isolate;margin:14px 0;padding:16px 18px;',
     'border:1px solid var(--accent2,#7c6af7);border-radius:14px;',
     'background:linear-gradient(135deg,rgba(124,106,247,.14),rgba(232,197,71,.08));color:var(--text,#e8e6f0);',
@@ -157,11 +164,14 @@
     var links = document.querySelectorAll('a[href]');
     for (var i = 0; i < links.length; i++) {
       var a = links[i];
-      if (!lockedHref(a.getAttribute('href')) || a.classList.contains('ar-soon')) continue;
-      a.classList.add('ar-soon');
-      a.setAttribute('aria-disabled', 'true');
+      if (!lockedHref(a.getAttribute('href'))) continue;
+      if (!a.classList.contains('ar-soon')) {
+        a.classList.add('ar-soon');
+        a.setAttribute('aria-disabled', 'true');
+      }
+      // progress.js перерисовывает статусы после нас — сверяем каждый раз
       var st = a.querySelector('.lc-status');
-      if (st) { st.textContent = SOON_LABEL; st.className = 'lc-status'; }
+      if (st && st.textContent !== SOON_LABEL) { st.textContent = SOON_LABEL; st.className = 'lc-status'; }
     }
     // «Продолжить» на главной ведёт к следующему уроку — в пробной версии к первому
     var cont = document.getElementById('continueBtn');
@@ -183,6 +193,62 @@
     });
     var acts = document.querySelectorAll('.side-action.news, .side-action[onclick*="openBooksModal"]');
     for (var i = 0; i < acts.length; i++) acts[i].classList.add('ar-soon');
+  }
+
+  /* ── направление текста ── */
+  var AR = /[؀-ۿ]/;
+  var LATIN = /[A-Za-zÄäÖöÜüß]/;
+  var INLINE = { STRONG: 1, EM: 1, B: 1, I: 1, SPAN: 1, CODE: 1, A: 1, SMALL: 1, MARK: 1 };
+  var FLOW = { block: 1, 'list-item': 1, 'table-cell': 1, 'inline-block': 1 };
+
+  // ближайший блок, внутри которого нет flex/grid — dir на нём не
+  // переворачивает раскладку
+  function textBlock(node) {
+    var el = node.parentElement;
+    while (el && el !== document.body) {
+      var d = getComputedStyle(el).display;
+      if (/flex|grid/.test(d)) return null;
+      if (FLOW[d]) return el;
+      el = el.parentElement;
+    }
+    return null;
+  }
+
+  function hasLayoutKids(el) {
+    var kids = el.querySelectorAll('*');
+    for (var i = 0; i < kids.length; i++) {
+      if (/flex|grid|table/.test(getComputedStyle(kids[i]).display)) return true;
+    }
+    return false;
+  }
+
+  function fixDir(root) {
+    var w = document.createTreeWalker(root || document.body, 4 /* TEXT */, null);
+    var blocks = [], n;
+    while ((n = w.nextNode())) {
+      if (!AR.test(n.nodeValue)) continue;
+      var b = textBlock(n);
+      if (b && blocks.indexOf(b) < 0) blocks.push(b);
+    }
+    blocks.forEach(function (b) {
+      if (b.closest('.ar-trial') || b.hasAttribute('data-ar-dir') || hasLayoutKids(b)) return;
+      b.setAttribute('dir', 'rtl');
+      b.setAttribute('data-ar-dir', '');
+      // немецкие вставки — отдельным LTR-островом
+      var inl = b.querySelectorAll('*');
+      for (var i = 0; i < inl.length; i++) {
+        var e = inl[i];
+        if (!INLINE[e.nodeName] || e.hasAttribute('dir')) continue;
+        var t = e.textContent;
+        if (LATIN.test(t) && !AR.test(t)) e.setAttribute('dir', 'ltr');
+      }
+    });
+  }
+
+  var dirTimer;
+  function scheduleDir() {
+    clearTimeout(dirTimer);
+    dirTimer = setTimeout(function () { fixDir(); }, 60);
   }
 
   function insertAfter(node, ref) { ref.parentNode.insertBefore(node, ref.nextSibling); }
@@ -213,8 +279,9 @@
     banners();
     markLocked();
     lockFunctions();
-    // меню и кнопки дорисовываются скриптами (progress.js, support.js)
-    new MutationObserver(function () { markLocked(); lockFunctions(); })
+    fixDir();
+    // меню, карточки и упражнения дорисовываются скриптами
+    new MutationObserver(function () { markLocked(); lockFunctions(); scheduleDir(); })
       .observe(document.body, { childList: true, subtree: true });
   }
 

@@ -10,7 +10,7 @@ const CYR = "/[А-Яа-яЁё]/";
 
 await c.go(B + '/index.html?lang=ar&lts=' + Date.now(), 2500);
 let s = JSON.parse(await c.ev(`JSON.stringify({lang:I18N.lang, btn:document.querySelector('[data-lang-toggle]').textContent,
-  banner:!!document.querySelector('.ar-trial'), soon:document.querySelectorAll('.lesson-card.ar-soon').length,
+  banner:!!document.querySelector('.ar-trial'), soon:[...document.querySelectorAll('.lesson-card.ar-soon .lc-status')].filter(e=>e.textContent==='🔒 قريبًا').length,
   open:document.querySelectorAll('.lesson-card:not(.ar-soon)').length,
   cyr:[...document.querySelectorAll('.home-main *')].filter(e=>!e.children.length && ${CYR}.test(e.textContent)).map(e=>e.textContent.trim()).slice(0,10)})`));
 check('главная на ar, кнопка AR', s.lang === 'ar' && s.btn === 'AR', s);
