@@ -335,8 +335,23 @@ function dictJs(keys, tm, title) {
   return `/* ${title} — сгенерировано tools/i18n.js build, руками не править */\nI18N.add(${JSON.stringify(d)});\n`;
 }
 
+/* Пробные языки: переведены только интерфейс и часть уроков.
+   Для них собираем и проверяем лишь эти группы — книг и новостей нет,
+   остальные уроки js/ar-trial.js показывает как «скоро». */
+const TRIAL = {
+  ar: { lessons: ['a1-01'] }
+};
+
+function trialGroups(groups, lang) {
+  const t = TRIAL[lang];
+  if (!t) return groups;
+  const keep = ['ui', ...t.lessons.map(id => 'lessons/' + id)];
+  return Object.fromEntries(keep.map(g => [g, groups[g]]));
+}
+
 function cmdBuild(lang = 'uk') {
   const { groups } = extract();
+  const trial = TRIAL[lang];
   const { tm, files } = loadTM(lang);
   const out = `i18n/${lang}`;
   // UI: интерфейс + ручные шаблоны из src/ui.json (ключи с {n} и т.п.)
@@ -345,8 +360,10 @@ function cmdBuild(lang = 'uk') {
   fs.writeFileSync(rel(out + '/ui.js'), dictJs(uiKeys, tm, 'Интерфейс'));
   fs.writeFileSync(rel(out + '/lexicon.js'), dictJs(groups.lexicon, tm, 'Подсказки над словами'));
   for (const id of lessonIds()) {
+    if (trial && !trial.lessons.includes(id)) continue;
     fs.writeFileSync(rel(`${out}/lessons/${id}.js`), dictJs(groups['lessons/' + id], tm, 'Урок ' + id));
   }
+  if (trial) { console.log('build: ok (пробная версия) →', out); return; }
   writeJson(`${out}/books/index.json`, translateObj(JSON.parse(read('data/books/index.json')), tm));
   for (const id of bookIds()) for (const f of bookFiles(id)) {
     const dst = f.replace(/^data\/books\//, `${out}/books/`);
@@ -366,7 +383,7 @@ function cmdBuild(lang = 'uk') {
 }
 
 function cmdCheck(lang = 'uk') {
-  const { groups } = extract();
+  const groups = trialGroups(extract().groups, lang);
   const { tm } = loadTM(lang);
   let missing = 0;
   for (const [g, keys] of Object.entries(groups)) {

@@ -53,7 +53,8 @@ const tgHash = code => '#tgWebAppData=' + encodeURIComponent('user=' + encodeURI
 console.log('1. Выбор языка');
 check('по умолчанию ru', boot().I.lang === 'ru');
 check('Telegram uk → uk (первый запуск)', boot({ hash: tgHash('uk') }).I.lang === 'uk');
-check('Telegram ar → ru (арабский неактивен)', boot({ hash: tgHash('ar') }).I.lang === 'ru');
+check('Telegram ar → ar (пробная версия)', boot({ hash: tgHash('ar') }).I.lang === 'ar');
+check('Telegram en → ru', boot({ hash: tgHash('en') }).I.lang === 'ru');
 let r = boot({ search: '?lang=uk&lts=100' });
 check('URL ?lang=uk', r.I.lang === 'uk');
 check('URL сохранён на устройстве', JSON.parse(r.store.dm_lang).ts === 100, r.store.dm_lang);
@@ -68,7 +69,9 @@ check('выбор на устройстве важнее языка Telegram', r
 r = boot({ store: { dm_lang: '{битый' } });
 check('битая запись → ru без падения', r.I.lang === 'ru');
 r = boot({ search: '?lang=ar&lts=5' });
-check('?lang=ar игнорируется', r.I.lang === 'ru');
+check('?lang=ar', r.I.lang === 'ar');
+r = boot({ search: '?lang=xx&lts=5' });
+check('неизвестный ?lang игнорируется', r.I.lang === 'ru');
 
 console.log('2. Подключение словарей');
 r = boot({ search: '?lang=uk&lts=1' });
@@ -77,6 +80,12 @@ r = boot({ search: '?lang=uk&lts=1', path: '/deutsch-meister/lessons/b2/lesson-0
 check('на уроке — ui + lexicon + урок', r.written.length === 3 && /lessons\/b2-04\.js/.test(r.written[2]), r.written);
 r = boot();
 check('ru — ничего не подключает', r.written.length === 0);
+r = boot({ search: '?lang=ar&lts=1' });
+check('ar на главной — ui + ar-trial.js', r.written.length === 2 && /i18n\/ar\/ui\.js/.test(r.written[0]) && /js\/ar-trial\.js/.test(r.written[1]), r.written);
+r = boot({ search: '?lang=ar&lts=1', path: '/deutsch-meister/lessons/a1/lesson-01/index.html' });
+check('ar на уроке A1-01 — ui + lexicon + урок + ar-trial', r.written.length === 4 && /ar\/lessons\/a1-01\.js/.test(r.written[2]), r.written);
+r = boot({ search: '?lang=ar&lts=1', path: '/deutsch-meister/lessons/a1/lesson-02/index.html' });
+check('ar на непереведённом уроке — без словаря урока', r.written.length === 2 && !r.written.some(w => /lessons\/a1-02/.test(w)), r.written);
 
 console.log('3. Перевод');
 r = boot({ search: '?lang=uk&lts=1' });

@@ -1,5 +1,6 @@
 /* ═══════════════════════════════════════════════
-   js/i18n.js — язык интерфейса (ru — исходный, uk — перевод)
+   js/i18n.js — язык интерфейса (ru — исходный, uk — перевод,
+   ar — пробная версия: меню и урок A1-01, см. js/ar-trial.js)
 
    Грузится ПЕРВЫМ скриптом в <head> каждой страницы.
 
@@ -9,7 +10,7 @@
      • сервер /api/lang (по подписанному initData Telegram) — выбор в боте.
    Старые кнопки бота несут старый lts и потому не перебивают более
    свежий выбор: именно из-за этого раньше язык «не доезжал» до приложения.
-   Если ничего не выбрано — язык Telegram (uk → uk), иначе ru.
+   Если ничего не выбрано — язык Telegram (uk → uk, ar → ar), иначе ru.
 
    Перевод:
      • словари {русская строка: перевод} регистрируются через I18N.add();
@@ -24,7 +25,8 @@
 (function () {
   'use strict';
 
-  var LANGS = ['ru', 'uk'];
+  var LANGS = ['ru', 'uk', 'ar'];
+  var LABELS = { ru: 'RU', uk: 'UA', ar: 'AR' };
   var KEY = 'dm_lang';
   var API = 'https://deutsch-meister-puce.vercel.app/api/lang';
   var CYR = /[А-Яа-яЁёІіЇїЄєҐґ]/;
@@ -87,7 +89,7 @@
     }
     if (local) return local.lang;
     var tg = norm(tgLanguageCode());
-    return tg === 'uk' ? 'uk' : 'ru';
+    return tg || 'ru';
   }
 
   var lang = resolve();
@@ -347,7 +349,7 @@
   /* Кнопки-переключатели [data-lang-toggle] показывают текущий язык */
   function paintToggles() {
     var els = document.querySelectorAll('[data-lang-toggle]');
-    for (var i = 0; i < els.length; i++) els[i].textContent = lang === 'uk' ? 'UA' : 'RU';
+    for (var i = 0; i < els.length; i++) els[i].textContent = LABELS[lang];
   }
 
   /* ── публичный API ── */
@@ -358,7 +360,8 @@
     t: t,
     data: data,
     setLang: setLang,
-    toggle: function () { return setLang(lang === 'uk' ? 'ru' : 'uk'); },
+    // по кругу: ru → uk → ar → ru
+    toggle: function () { return setLang(LANGS[(LANGS.indexOf(lang) + 1) % LANGS.length]); },
     has: function (s) { return lookup(s) !== undefined; },
     isValue: function (s) { return values[s] === 1; },
     _resolve: resolve
@@ -376,10 +379,13 @@
     var q = ver ? '?v=' + ver : '';
     var files = ['i18n/' + lang + '/ui.js'];
     var page = location.pathname.match(/lessons\/(a1|a2|b1|b2)\/lesson-(\d+)\//);
-    if (page) {
+    // арабский — пробная версия: переведён только урок A1-01
+    var trial = lang === 'ar';
+    if (page && (!trial || page[1] + '-' + page[2] === 'a1-01')) {
       files.push('i18n/' + lang + '/lexicon.js');
       files.push('i18n/' + lang + '/lessons/' + page[1] + '-' + page[2] + '.js');
     }
+    if (trial) files.push('js/ar-trial.js');
     for (var i = 0; i < files.length; i++) {
       document.write('<script src="' + base + files[i] + q + '"><\/script>');
     }
