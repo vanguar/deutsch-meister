@@ -1,0 +1,685 @@
+{
+  "version": 1,
+  "w": {
+    "ab": "ab",
+    "abgaben": "Abgabe",
+    "alien": "Alien",
+    "aliexpress": "AliExpress",
+    "als": "als",
+    "am": "an",
+    "an": "an",
+    "anteil": "Anteil",
+    "asien": "Asien",
+    "auch": "auch",
+    "auf": "auf",
+    "aus": "aus",
+    "bearbeitungsgebühr": "Bearbeitungsgebühr",
+    "bevh": "bevh",
+    "bevh-hauptgeschäftsführerin": "Hauptgeschäftsführerin",
+    "billig-plattformen": "Billig-Plattform",
+    "billige": "billig",
+    "bis": "bis",
+    "bundesverband": "Bundesverband",
+    "dagegen": "dagegen",
+    "das": "der/die/das",
+    "dazu": "dazu",
+    "der": "der/die/das",
+    "des": "der/die/das",
+    "deutlich": "deutlich",
+    "deutschen": "deutsch",
+    "deutschland": "Deutschland",
+    "die": "der/die/das",
+    "diese": "dieser",
+    "drei": "drei",
+    "dritten": "dritte",
+    "drogerieartikeln": "Drogerieartikel",
+    "e-commerce": "E-Commerce",
+    "ein": "ein/eine",
+    "eine": "ein/eine",
+    "einem": "ein/eine",
+    "elektronik": "Elektronik",
+    "es": "es",
+    "eu": "EU",
+    "euro": "Euro",
+    "für": "für",
+    "geraten": "geraten",
+    "gesamte": "gesamt",
+    "geschrumpft": "schrumpfen",
+    "gewinnen": "Gewinn",
+    "gibt": "geben",
+    "gleichen": "gleich",
+    "grenze": "Grenze",
+    "großes": "groß",
+    "gut": "gut",
+    "hauptgrund": "Hauptgrund",
+    "hier": "hier",
+    "höheren": "hoch",
+    "ihr": "ihr (её, их)",
+    "im": "in",
+    "in": "in",
+    "ins": "in",
+    "internet": "Internet",
+    "ist": "sein",
+    "jahr": "Jahr",
+    "jede": "jeder",
+    "jetzt": "jetzt",
+    "juli": "Juli",
+    "kaufen": "kaufen",
+    "kleine": "klein",
+    "kleinen": "klein",
+    "kommt": "dazukommen",
+    "kostet": "kosten",
+    "lebensmitteln": "Lebensmittel",
+    "leicht": "leicht",
+    "läuft": "laufen",
+    "machten": "machen",
+    "medikamenten": "Medikament",
+    "mehr": "mehr",
+    "meldet": "melden",
+    "milliarden": "Milliarde",
+    "millionen": "Million",
+    "mit": "mit",
+    "mulyk": "Mulyk",
+    "möbel": "Möbel",
+    "neue": "neu",
+    "nicht": "nicht",
+    "nicht-eu-ländern": "Nicht-EU-Land",
+    "noch": "noch",
+    "november": "November",
+    "onlinehandel": "Onlinehandel",
+    "pakete": "Paket",
+    "pro": "pro",
+    "problem": "Problem",
+    "prozent": "Prozent",
+    "quartal": "Quartal",
+    "rasante": "rasant",
+    "sagt": "sagen",
+    "seltener": "selten",
+    "sendung": "Sendung",
+    "shein": "Shein",
+    "sind": "sein",
+    "stocken": "ins Stocken geraten",
+    "temu": "Temu",
+    "um": "um",
+    "umsatz": "Umsatz",
+    "und": "und",
+    "verlieren": "verlieren",
+    "versandhandel": "Versandhandel",
+    "von": "von",
+    "vor": "vor",
+    "vorjahres": "Vorjahr",
+    "wachstum": "Wachstum",
+    "waren": "sein",
+    "warenart": "Warenart",
+    "weniger": "wenig",
+    "wert": "Wert",
+    "wuchs": "wachsen",
+    "zeitraum": "Zeitraum",
+    "zoll": "Zoll",
+    "zollfrei": "zollfrei",
+    "zollregeln": "Zollregel",
+    "zu": "zu",
+    "zusammen": "zusammen",
+    "zwei": "zwei",
+    "zweiten": "zweite"
+  },
+  "l": {
+    "ab": {
+      "note": "Тж. отделяемая приставка: absteigen «слезать», abnehmen",
+      "pos": "предл.",
+      "ru": "от, с; прочь"
+    },
+    "Abgabe": {
+      "ru": "сбор, взнос",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Abgaben"
+    },
+    "Alien": {
+      "ru": "Алиен (имя)",
+      "pos": "имя собств."
+    },
+    "AliExpress": {
+      "ru": "AliExpress (китайская онлайн-площадка)",
+      "pos": "имя собств."
+    },
+    "als": {
+      "ru": "когда; как; чем",
+      "pos": "союз"
+    },
+    "an": {
+      "ru": "у, к, на",
+      "pos": "предл.",
+      "note": "am = an dem. Тж. отделяемая приставка: anfangen «начинать», annehmen, ansehen, anzünden"
+    },
+    "Anteil": {
+      "ru": "доля, часть",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Anteile",
+      "note": "der Anteil an etwas — доля чего-то"
+    },
+    "Asien": {
+      "ru": "Азия",
+      "pos": "геогр."
+    },
+    "auch": {
+      "ru": "тоже, также; даже",
+      "pos": "частица"
+    },
+    "auf": {
+      "ru": "на, в",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: aufspringen «вскочить», sich aufmachen"
+    },
+    "aus": {
+      "ru": "из",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: auslöschen «погасить»"
+    },
+    "Bearbeitungsgebühr": {
+      "ru": "сбор за обработку",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Bearbeitungsgebühren"
+    },
+    "bevh": {
+      "ru": "bevh (немецкий союз онлайн-торговли)",
+      "pos": "имя собств.",
+      "note": "Bundesverband E-Commerce und Versandhandel Deutschland"
+    },
+    "billig": {
+      "ru": "дешёвый",
+      "pos": "прил."
+    },
+    "Billig-Plattform": {
+      "ru": "платформа-дискаунтер, дешёвая торговая площадка",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Billig-Plattformen"
+    },
+    "bis": {
+      "ru": "до; пока не",
+      "pos": "союз"
+    },
+    "Bundesverband": {
+      "ru": "федеральный союз",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Bundesverbände"
+    },
+    "dagegen": {
+      "ru": "напротив, зато",
+      "pos": "нареч."
+    },
+    "dazu": {
+      "ru": "к этому, туда же",
+      "pos": "нареч."
+    },
+    "dazukommen": {
+      "ru": "добавляться, присоединяться",
+      "pos": "гл.",
+      "forms": "kam dazu · ist dazugekommen"
+    },
+    "der/die/das": {
+      "ru": "определённый артикль",
+      "pos": "артикль",
+      "note": "Тж. относительное местоимение «который»"
+    },
+    "deutlich": {
+      "ru": "отчётливый, внятный",
+      "pos": "прил."
+    },
+    "deutsch": {
+      "ru": "немецкий",
+      "pos": "прил."
+    },
+    "Deutschland": {
+      "ru": "Германия",
+      "pos": "геогр."
+    },
+    "dieser": {
+      "ru": "этот, эта, это",
+      "pos": "мест."
+    },
+    "drei": {
+      "ru": "три",
+      "pos": "числ."
+    },
+    "dritte": {
+      "ru": "третий",
+      "pos": "числ."
+    },
+    "Drogerieartikel": {
+      "ru": "товары из дрогери (косметика, бытовая химия, гигиена)",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Drogerieartikel"
+    },
+    "E-Commerce": {
+      "ru": "электронная торговля",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "ein/eine": {
+      "ru": "неопределённый артикль",
+      "pos": "артикль",
+      "note": "einer — «один, некто»"
+    },
+    "Elektronik": {
+      "ru": "электроника",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "es": {
+      "ru": "оно; это",
+      "pos": "мест."
+    },
+    "EU": {
+      "ru": "ЕС (Европейский союз)",
+      "pos": "имя собств."
+    },
+    "Euro": {
+      "ru": "евро",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Euro"
+    },
+    "für": {
+      "ru": "для, за",
+      "pos": "предл."
+    },
+    "geben": {
+      "ru": "давать",
+      "pos": "гл.",
+      "forms": "gab · hat gegeben"
+    },
+    "geraten": {
+      "ru": "попадать, оказываться",
+      "pos": "гл.",
+      "forms": "geriet · ist geraten",
+      "note": "in Vermögensumstände geraten — впасть в расстройство дел"
+    },
+    "gesamt": {
+      "ru": "весь, общий, совокупный",
+      "pos": "прил."
+    },
+    "Gewinn": {
+      "ru": "прибыль; выигрыш",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Gewinne"
+    },
+    "gleich": {
+      "ru": "одинаковый, тот же; сразу",
+      "pos": "прил."
+    },
+    "Grenze": {
+      "ru": "граница",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Grenzen"
+    },
+    "groß": {
+      "ru": "большой",
+      "pos": "прил.",
+      "forms": "groß · größer · am größten"
+    },
+    "gut": {
+      "ru": "хороший, добрый",
+      "pos": "прил.",
+      "forms": "gut · besser · am besten",
+      "note": "besser — лучше"
+    },
+    "Hauptgeschäftsführerin": {
+      "ru": "исполнительный директор (женщина)",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Hauptgeschäftsführerinnen"
+    },
+    "Hauptgrund": {
+      "ru": "главная причина",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Hauptgründe"
+    },
+    "hier": {
+      "ru": "здесь",
+      "pos": "нареч."
+    },
+    "hoch": {
+      "ru": "высокий",
+      "pos": "прил.",
+      "forms": "hoch · höher · am höchsten"
+    },
+    "ihr (её, их)": {
+      "ru": "её; их",
+      "pos": "мест."
+    },
+    "in": {
+      "ru": "в (im = in dem, ins = in das)",
+      "pos": "предл."
+    },
+    "ins Stocken geraten": {
+      "ru": "застопориться",
+      "pos": "гл.",
+      "forms": "geriet ins Stocken · ist ins Stocken geraten"
+    },
+    "Internet": {
+      "ru": "интернет",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "Jahr": {
+      "ru": "год",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Jahre"
+    },
+    "jeder": {
+      "ru": "каждый",
+      "pos": "мест."
+    },
+    "jetzt": {
+      "ru": "сейчас, теперь",
+      "pos": "нареч."
+    },
+    "Juli": {
+      "ru": "июль",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Julis"
+    },
+    "kaufen": {
+      "ru": "покупать",
+      "pos": "гл.",
+      "forms": "kaufte · hat gekauft"
+    },
+    "klein": {
+      "ru": "маленький",
+      "pos": "прил."
+    },
+    "kosten": {
+      "ru": "стоить",
+      "pos": "гл.",
+      "forms": "kostete · hat gekostet",
+      "note": "es koste, was es wolle — чего бы это ни стоило"
+    },
+    "laufen": {
+      "ru": "бежать, бегать",
+      "pos": "гл.",
+      "forms": "lief · ist gelaufen"
+    },
+    "Lebensmittel": {
+      "ru": "продукт питания",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Lebensmittel"
+    },
+    "leicht": {
+      "ru": "лёгкий, легко",
+      "pos": "прил."
+    },
+    "machen": {
+      "ru": "делать",
+      "pos": "гл.",
+      "forms": "machte · hat gemacht",
+      "note": "sich auf den Weg machen — отправиться в путь"
+    },
+    "Medikament": {
+      "ru": "лекарство",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Medikamente"
+    },
+    "mehr": {
+      "ru": "больше",
+      "pos": "нареч.",
+      "note": "В nicht/kein … mehr — больше не. Формально компаратив от viel"
+    },
+    "melden": {
+      "ru": "сообщать, докладывать",
+      "pos": "гл.",
+      "forms": "meldete · hat gemeldet"
+    },
+    "Milliarde": {
+      "ru": "миллиард",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Milliarden"
+    },
+    "Million": {
+      "ru": "миллион",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Millionen"
+    },
+    "mit": {
+      "ru": "с",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: mitgehen «пойти вместе»"
+    },
+    "Mulyk": {
+      "ru": "Мулик (фамилия; глава bevh)",
+      "pos": "имя собств."
+    },
+    "Möbel": {
+      "ru": "мебель",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Möbel",
+      "note": "обычно во мн. ч.: die Möbel"
+    },
+    "neu": {
+      "ru": "новый",
+      "pos": "прил."
+    },
+    "nicht": {
+      "ru": "не",
+      "pos": "частица"
+    },
+    "Nicht-EU-Land": {
+      "ru": "страна вне ЕС",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Nicht-EU-Länder"
+    },
+    "noch": {
+      "ru": "ещё",
+      "pos": "нареч."
+    },
+    "November": {
+      "ru": "ноябрь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "Onlinehandel": {
+      "ru": "онлайн-торговля",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "Paket": {
+      "ru": "посылка, пакет",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Pakete"
+    },
+    "pro": {
+      "ru": "в, за (на единицу)",
+      "pos": "предл.",
+      "note": "3,5 Kilometer pro Sekunde — 3,5 км в секунду"
+    },
+    "Problem": {
+      "ru": "проблема",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Probleme"
+    },
+    "Prozent": {
+      "ru": "процент",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Prozente",
+      "note": "после числа не изменяется: 1,3 Prozent"
+    },
+    "Quartal": {
+      "ru": "квартал (четверть года)",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Quartale"
+    },
+    "rasant": {
+      "ru": "стремительный",
+      "pos": "прил."
+    },
+    "sagen": {
+      "ru": "говорить, сказать",
+      "pos": "гл.",
+      "forms": "sagte · hat gesagt"
+    },
+    "schrumpfen": {
+      "ru": "сокращаться, уменьшаться",
+      "pos": "гл.",
+      "forms": "schrumpfte · ist geschrumpft"
+    },
+    "sein": {
+      "ru": "быть; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "war · ist gewesen"
+    },
+    "selten": {
+      "ru": "редкий",
+      "pos": "прил."
+    },
+    "Sendung": {
+      "ru": "отправление, посылка; передача",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Sendungen"
+    },
+    "Shein": {
+      "ru": "Shein (онлайн-магазин одежды из Китая)",
+      "pos": "имя собств."
+    },
+    "Temu": {
+      "ru": "Temu (китайская онлайн-площадка)",
+      "pos": "имя собств."
+    },
+    "um": {
+      "ru": "вокруг, в (о времени)",
+      "pos": "предл.",
+      "note": "um … zu — чтобы. Тж. отделяемая приставка: sich umsehen «оглядеться»"
+    },
+    "Umsatz": {
+      "ru": "оборот, выручка",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Umsätze",
+      "note": "Umsatz machen — получать выручку"
+    },
+    "und": {
+      "ru": "и, а",
+      "pos": "союз"
+    },
+    "verlieren": {
+      "forms": "verlor · hat verloren",
+      "pos": "гл.",
+      "ru": "терять"
+    },
+    "Versandhandel": {
+      "ru": "посылочная торговля, торговля по почте",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "von": {
+      "ru": "от, из, о (vom = von dem)",
+      "pos": "предл."
+    },
+    "vor": {
+      "ru": "перед, до; от (страха)",
+      "pos": "предл."
+    },
+    "Vorjahr": {
+      "ru": "предыдущий год",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Vorjahre"
+    },
+    "wachsen": {
+      "ru": "расти",
+      "pos": "гл.",
+      "forms": "wuchs · ist gewachsen",
+      "note": "er wächst — с умлаутом в 2-м и 3-м л."
+    },
+    "Wachstum": {
+      "ru": "рост",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null,
+      "note": "das Wirtschaftswachstum — экономический рост"
+    },
+    "Warenart": {
+      "ru": "вид (группа) товара",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Warenarten"
+    },
+    "wenig": {
+      "ru": "мало; немного",
+      "pos": "мест.",
+      "note": "ein wenig — немножко; etwas Weniges — самую малость"
+    },
+    "Wert": {
+      "ru": "стоимость, ценность",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Werte"
+    },
+    "Zeitraum": {
+      "ru": "период, промежуток времени",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Zeiträume"
+    },
+    "Zoll": {
+      "ru": "таможня; пошлина",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Zölle"
+    },
+    "zollfrei": {
+      "ru": "беспошлинный",
+      "pos": "прил."
+    },
+    "Zollregel": {
+      "ru": "таможенное правило",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Zollregeln"
+    },
+    "zu": {
+      "ru": "к, в; слишком",
+      "pos": "предл.",
+      "note": "zur = zu der, zum = zu dem"
+    },
+    "zusammen": {
+      "ru": "вместе",
+      "pos": "нареч."
+    },
+    "zwei": {
+      "ru": "два",
+      "pos": "числ."
+    },
+    "zweite": {
+      "ru": "второй",
+      "pos": "числ.",
+      "note": "zum zweiten Mal — во второй раз"
+    }
+  }
+}

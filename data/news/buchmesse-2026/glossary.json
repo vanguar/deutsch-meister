@@ -1,0 +1,785 @@
+{
+  "version": 1,
+  "w": {
+    "ab": "ab",
+    "abschluss": "Abschluss",
+    "acht": "acht",
+    "alle": "alle/alles",
+    "als": "als",
+    "am": "an",
+    "amerikanische": "amerikanisch",
+    "an": "an",
+    "applaus": "Applaus",
+    "auch": "auch",
+    "auf": "auf",
+    "autoren": "Autor",
+    "autorinnen": "Autorin",
+    "begonnen": "beginnen",
+    "bei": "bei",
+    "beispiel": "Beispiel",
+    "bekam": "bekommen",
+    "besucher": "Besucher",
+    "biermann": "Biermann",
+    "bis": "bis",
+    "bleibt": "bleiben",
+    "buchbranche": "Buchbranche",
+    "buchhandels": "Buchhandel",
+    "buchmesse": "Buchmesse",
+    "böhmen": "Böhmen",
+    "bühnen": "Bühne",
+    "colson": "Colson",
+    "dafür": "dafür",
+    "das": "der/die/das",
+    "dem": "der/die/das",
+    "den": "der/die/das",
+    "denemarková": "Denemarková",
+    "der": "der/die/das",
+    "des": "der/die/das",
+    "deutschen": "deutsch",
+    "die": "der/die/das",
+    "diesem": "dieser",
+    "diskutiert": "diskutieren",
+    "dort": "dort",
+    "dürfen": "dürfen",
+    "ehrengast": "Ehrengast",
+    "ein": "ein/eine",
+    "er": "er",
+    "erhält": "erhalten",
+    "erinnert": "erinnern",
+    "ersten": "erste",
+    "erwarten": "erwarten",
+    "eröffnung": "Eröffnung",
+    "es": "es",
+    "euro": "Euro",
+    "fachpublikum": "Fachpublikum",
+    "frankfurt": "Frankfurt",
+    "frankfurter": "Frankfurter",
+    "freitag": "Freitag",
+    "friedenspreis": "Friedenspreis",
+    "für": "für",
+    "gar": "gar",
+    "gehören": "gehören",
+    "gereist": "reisen",
+    "ging": "zurückgehen",
+    "größte": "groß",
+    "gästen": "Gast",
+    "hat": "haben",
+    "im": "in",
+    "in": "in",
+    "intelligenz": "Intelligenz",
+    "ist": "sein",
+    "jahr": "Jahr",
+    "jurist": "Jurist",
+    "keine": "kein",
+    "kommen": "kommen",
+    "kraft": "Kraft",
+    "künstliche": "künstlich",
+    "küste": "Küste",
+    "land": "Land",
+    "leichten": "leicht",
+    "leser": "Leser",
+    "leserinnen": "Leserin",
+    "liedermacher": "Liedermacher",
+    "liegt": "liegen",
+    "literatur": "Literatur",
+    "main": "Frankfurt am Main",
+    "meer": "Meer",
+    "mehr": "mehr",
+    "messe": "Messe",
+    "milliarden": "Milliarde",
+    "mit": "mit",
+    "monaten": "Monat",
+    "motto": "Motto",
+    "nach": "nach",
+    "obwohl": "obwohl",
+    "oktober": "Oktober",
+    "paulskirche": "Paulskirche",
+    "philippe": "Philippe",
+    "prozent": "Prozent",
+    "radka": "Radka",
+    "redner": "Redner",
+    "rednerinnen": "Rednerin",
+    "reserviert": "reservieren",
+    "rund": "rund",
+    "sagte": "sagen",
+    "sands": "Sands",
+    "sank": "sinken",
+    "schriftsteller": "Schriftsteller",
+    "schriftstellerin": "Schriftstellerin",
+    "shakespeares": "Shakespeare",
+    "sie": "sie",
+    "sind": "sein",
+    "sonntag": "Sonntag",
+    "sprach": "sprechen",
+    "tage": {
+      "l": "Tag",
+      "old": "в обороте in einem Tage — старый дательный с -e; сегодня an einem Tag. В «drei Tage Regenwetter» это обычное мн. ч."
+    },
+    "tausend": "tausend",
+    "treten": "auftreten",
+    "tschechien": "Tschechien",
+    "tschechische": "tschechisch",
+    "um": "um",
+    "umsatz": "Umsatz",
+    "und": "und",
+    "veranstalter": "Veranstalter",
+    "viel": "viel",
+    "von": "von",
+    "weiter": "weit",
+    "welt": "Welt",
+    "whitehead": "Whitehead",
+    "wintermärchen": "Wintermärchen",
+    "wird": "werden",
+    "wirklichkeit": "Wirklichkeit",
+    "wolf": "Wolf",
+    "zehn": "zehn",
+    "zeiten": "Zeit",
+    "zu": "zu",
+    "zum": "zu",
+    "zurück": "zurück",
+    "über": "über"
+  },
+  "l": {
+    "ab": {
+      "note": "Тж. отделяемая приставка: absteigen «слезать», abnehmen",
+      "pos": "предл.",
+      "ru": "от, с; прочь"
+    },
+    "Abschluss": {
+      "ru": "завершение, окончание",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Abschlüsse",
+      "note": "zum Abschluss — в завершение"
+    },
+    "acht": {
+      "ru": "восемь",
+      "pos": "числ."
+    },
+    "alle/alles": {
+      "ru": "все; всё",
+      "pos": "мест."
+    },
+    "als": {
+      "ru": "когда; как; чем",
+      "pos": "союз"
+    },
+    "amerikanisch": {
+      "ru": "американский",
+      "pos": "прил."
+    },
+    "an": {
+      "ru": "у, к, на",
+      "pos": "предл.",
+      "note": "am = an dem. Тж. отделяемая приставка: anfangen «начинать», annehmen, ansehen, anzünden"
+    },
+    "Applaus": {
+      "ru": "аплодисменты",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "auch": {
+      "ru": "тоже, также; даже",
+      "pos": "частица"
+    },
+    "auf": {
+      "ru": "на, в",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: aufspringen «вскочить», sich aufmachen"
+    },
+    "auftreten": {
+      "ru": "выступать (на сцене)",
+      "pos": "гл.",
+      "forms": "trat auf · ist aufgetreten"
+    },
+    "Autor": {
+      "ru": "автор",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Autoren"
+    },
+    "Autorin": {
+      "ru": "автор (женщина)",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Autorinnen"
+    },
+    "beginnen": {
+      "ru": "начинать, начинаться",
+      "pos": "гл.",
+      "forms": "begann · hat begonnen"
+    },
+    "bei": {
+      "ru": "у, при, возле",
+      "pos": "предл."
+    },
+    "Beispiel": {
+      "ru": "пример",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Beispiele",
+      "note": "zum Beispiel — например"
+    },
+    "bekommen": {
+      "ru": "получать",
+      "pos": "гл.",
+      "forms": "bekam · hat bekommen"
+    },
+    "Besucher": {
+      "ru": "посетитель, гость",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Besucher"
+    },
+    "Biermann": {
+      "ru": "Бирман (Вольф Бирман, немецкий бард и поэт)",
+      "pos": "имя собств."
+    },
+    "bis": {
+      "ru": "до; пока не",
+      "pos": "союз"
+    },
+    "bleiben": {
+      "ru": "оставаться",
+      "pos": "гл.",
+      "forms": "blieb · ist geblieben"
+    },
+    "Buchbranche": {
+      "ru": "книжная отрасль",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "Buchhandel": {
+      "ru": "книжная торговля",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "Buchmesse": {
+      "ru": "книжная ярмарка",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Buchmessen"
+    },
+    "Böhmen": {
+      "ru": "Богемия (Чехия)",
+      "pos": "геогр."
+    },
+    "Bühne": {
+      "ru": "сцена",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Bühnen"
+    },
+    "Colson": {
+      "ru": "Колсон (имя)",
+      "pos": "имя собств."
+    },
+    "dafür": {
+      "ru": "за это, для этого",
+      "pos": "нареч.",
+      "note": "dafür sorgen, dass … — позаботиться, чтобы …"
+    },
+    "Denemarková": {
+      "ru": "Денемаркова (Радка Денемаркова, чешская писательница)",
+      "pos": "имя собств."
+    },
+    "der/die/das": {
+      "ru": "определённый артикль",
+      "pos": "артикль",
+      "note": "Тж. относительное местоимение «который»"
+    },
+    "deutsch": {
+      "ru": "немецкий",
+      "pos": "прил."
+    },
+    "dieser": {
+      "ru": "этот, эта, это",
+      "pos": "мест."
+    },
+    "diskutieren": {
+      "ru": "обсуждать, дискутировать",
+      "pos": "гл.",
+      "forms": "diskutierte · hat diskutiert"
+    },
+    "dort": {
+      "ru": "там",
+      "pos": "нареч."
+    },
+    "dürfen": {
+      "ru": "сметь, иметь право",
+      "pos": "гл.",
+      "forms": "durfte · hat gedurft"
+    },
+    "Ehrengast": {
+      "ru": "почётный гость",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Ehrengäste"
+    },
+    "ein/eine": {
+      "ru": "неопределённый артикль",
+      "pos": "артикль",
+      "note": "einer — «один, некто»"
+    },
+    "er": {
+      "ru": "он",
+      "pos": "мест.",
+      "note": "ihn — его, ihm — ему"
+    },
+    "erhalten": {
+      "ru": "получать",
+      "pos": "гл.",
+      "forms": "erhielt · hat erhalten"
+    },
+    "erinnern": {
+      "ru": "напоминать",
+      "pos": "гл.",
+      "forms": "erinnerte · hat erinnert"
+    },
+    "erste": {
+      "ru": "первый",
+      "pos": "числ."
+    },
+    "erwarten": {
+      "ru": "ожидать",
+      "pos": "гл.",
+      "forms": "erwartete · hat erwartet"
+    },
+    "Eröffnung": {
+      "ru": "открытие",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Eröffnungen"
+    },
+    "es": {
+      "ru": "оно; это",
+      "pos": "мест."
+    },
+    "Euro": {
+      "ru": "евро",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Euro"
+    },
+    "Fachpublikum": {
+      "ru": "профессиональная публика, специалисты",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "Frankfurt": {
+      "ru": "Франкфурт",
+      "pos": "геогр."
+    },
+    "Frankfurt am Main": {
+      "ru": "Франкфурт-на-Майне",
+      "pos": "геогр."
+    },
+    "Frankfurter": {
+      "ru": "франкфуртский (не склоняется)",
+      "pos": "прил."
+    },
+    "Freitag": {
+      "ru": "пятница",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Freitage"
+    },
+    "Friedenspreis": {
+      "ru": "премия мира",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Friedenspreise",
+      "note": "der Friedenspreis des Deutschen Buchhandels — Премия мира немецкой книготорговли"
+    },
+    "für": {
+      "ru": "для, за",
+      "pos": "предл."
+    },
+    "gar": {
+      "ru": "вовсе, совсем",
+      "pos": "нареч."
+    },
+    "Gast": {
+      "ru": "гость",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Gäste"
+    },
+    "gehören": {
+      "ru": "принадлежать, относиться",
+      "pos": "гл.",
+      "forms": "gehörte · hat gehört",
+      "note": "zu etwas gehören — относиться к чему-то, входить в"
+    },
+    "groß": {
+      "ru": "большой",
+      "pos": "прил.",
+      "forms": "groß · größer · am größten"
+    },
+    "haben": {
+      "ru": "иметь; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "hatte · hat gehabt"
+    },
+    "in": {
+      "ru": "в (im = in dem, ins = in das)",
+      "pos": "предл."
+    },
+    "Intelligenz": {
+      "ru": "интеллект, ум",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "Jahr": {
+      "ru": "год",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Jahre"
+    },
+    "Jurist": {
+      "ru": "юрист",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Juristen"
+    },
+    "kein": {
+      "ru": "никакой, ни один",
+      "pos": "мест."
+    },
+    "kommen": {
+      "ru": "приходить, приезжать",
+      "pos": "гл.",
+      "forms": "kam · ist gekommen"
+    },
+    "Kraft": {
+      "ru": "сила",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Kräfte"
+    },
+    "künstlich": {
+      "ru": "искусственный",
+      "pos": "прил.",
+      "note": "künstliche Intelligenz — искусственный интеллект"
+    },
+    "Küste": {
+      "ru": "побережье, берег",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Küsten"
+    },
+    "Land": {
+      "ru": "страна; суша; деревня",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Länder"
+    },
+    "leicht": {
+      "ru": "лёгкий, легко",
+      "pos": "прил."
+    },
+    "Leser": {
+      "ru": "читатель",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Leser"
+    },
+    "Leserin": {
+      "ru": "читательница",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Leserinnen"
+    },
+    "Liedermacher": {
+      "ru": "автор-исполнитель, бард",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Liedermacher"
+    },
+    "liegen": {
+      "ru": "лежать",
+      "pos": "гл.",
+      "forms": "lag · hat gelegen"
+    },
+    "Literatur": {
+      "ru": "литература",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "Meer": {
+      "ru": "море",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Meere"
+    },
+    "mehr": {
+      "ru": "больше",
+      "pos": "нареч.",
+      "note": "В nicht/kein … mehr — больше не. Формально компаратив от viel"
+    },
+    "Messe": {
+      "ru": "ярмарка, выставка",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Messen"
+    },
+    "Milliarde": {
+      "ru": "миллиард",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Milliarden"
+    },
+    "mit": {
+      "ru": "с",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: mitgehen «пойти вместе»"
+    },
+    "Monat": {
+      "ru": "месяц",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Monate"
+    },
+    "Motto": {
+      "ru": "девиз",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Mottos"
+    },
+    "nach": {
+      "ru": "в, на, после, по",
+      "pos": "предл."
+    },
+    "obwohl": {
+      "ru": "хотя",
+      "pos": "союз"
+    },
+    "Oktober": {
+      "ru": "октябрь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Oktober"
+    },
+    "Paulskirche": {
+      "ru": "церковь Святого Павла во Франкфурте",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "Philippe": {
+      "ru": "Филипп (имя)",
+      "pos": "имя собств."
+    },
+    "Prozent": {
+      "ru": "процент",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Prozente",
+      "note": "после числа не изменяется: 1,3 Prozent"
+    },
+    "Radka": {
+      "ru": "Радка (имя)",
+      "pos": "имя собств."
+    },
+    "Redner": {
+      "ru": "оратор, докладчик",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Redner"
+    },
+    "Rednerin": {
+      "ru": "выступающая, докладчица",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Rednerinnen"
+    },
+    "reisen": {
+      "ru": "ездить, путешествовать",
+      "pos": "гл.",
+      "forms": "reiste · ist gereist"
+    },
+    "reservieren": {
+      "ru": "резервировать, бронировать",
+      "pos": "гл.",
+      "forms": "reservierte · hat reserviert"
+    },
+    "rund": {
+      "ru": "около, примерно; круглый",
+      "pos": "нареч./прил.",
+      "note": "rund 550.000 — около 550 000"
+    },
+    "sagen": {
+      "ru": "говорить, сказать",
+      "pos": "гл.",
+      "forms": "sagte · hat gesagt"
+    },
+    "Sands": {
+      "ru": "Сэндс (Филипп Сэндс, юрист и писатель)",
+      "pos": "имя собств."
+    },
+    "Schriftsteller": {
+      "ru": "писатель",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Schriftsteller"
+    },
+    "Schriftstellerin": {
+      "ru": "писательница",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Schriftstellerinnen"
+    },
+    "sein": {
+      "ru": "быть; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "war · ist gewesen"
+    },
+    "Shakespeare": {
+      "ru": "Шекспир (Shakespeares — Шекспира)",
+      "pos": "имя собств."
+    },
+    "sie": {
+      "ru": "она; они; Вы",
+      "pos": "мест."
+    },
+    "sinken": {
+      "ru": "опускаться",
+      "pos": "гл.",
+      "forms": "sank · ist gesunken"
+    },
+    "Sonntag": {
+      "ru": "воскресенье",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Sonntage"
+    },
+    "sprechen": {
+      "ru": "говорить, сказать",
+      "pos": "гл.",
+      "forms": "sprach · hat gesprochen",
+      "old": "здесь sprach в значении «сказал» — книжно и устарело; в совр. речи sagte"
+    },
+    "Tag": {
+      "ru": "день",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Tage"
+    },
+    "tausend": {
+      "ru": "тысяча",
+      "pos": "числ."
+    },
+    "Tschechien": {
+      "ru": "Чехия",
+      "pos": "геогр."
+    },
+    "tschechisch": {
+      "ru": "чешский",
+      "pos": "прил."
+    },
+    "um": {
+      "ru": "вокруг, в (о времени)",
+      "pos": "предл.",
+      "note": "um … zu — чтобы. Тж. отделяемая приставка: sich umsehen «оглядеться»"
+    },
+    "Umsatz": {
+      "ru": "оборот, выручка",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Umsätze",
+      "note": "Umsatz machen — получать выручку"
+    },
+    "und": {
+      "ru": "и, а",
+      "pos": "союз"
+    },
+    "Veranstalter": {
+      "ru": "организатор",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Veranstalter"
+    },
+    "viel": {
+      "ru": "много, многое",
+      "pos": "мест."
+    },
+    "von": {
+      "ru": "от, из, о (vom = von dem)",
+      "pos": "предл."
+    },
+    "weit": {
+      "ru": "далёкий, далеко",
+      "pos": "прил.",
+      "forms": "weit · weiter · am weitesten",
+      "note": "weiter — дальше, далее; von weitem — издали"
+    },
+    "Welt": {
+      "art": "die",
+      "pl": "die Welten",
+      "pos": "сущ.",
+      "ru": "мир, свет"
+    },
+    "werden": {
+      "ru": "становиться",
+      "pos": "гл.",
+      "forms": "wurde · ist geworden",
+      "note": "Вспомогательный глагол будущего времени и пассива"
+    },
+    "Whitehead": {
+      "ru": "Уайтхед (Колсон Уайтхед, американский писатель)",
+      "pos": "имя собств."
+    },
+    "Wintermärchen": {
+      "ru": "зимняя сказка; «Зимняя сказка» (пьеса Шекспира)",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "Wirklichkeit": {
+      "ru": "действительность",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null,
+      "note": "in Wirklichkeit — на самом деле"
+    },
+    "Wolf": {
+      "ru": "Вольф (имя)",
+      "pos": "имя собств."
+    },
+    "zehn": {
+      "ru": "десять",
+      "pos": "числ."
+    },
+    "Zeit": {
+      "ru": "время",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Zeiten"
+    },
+    "zu": {
+      "ru": "к, в; слишком",
+      "pos": "предл.",
+      "note": "zur = zu der, zum = zu dem"
+    },
+    "zurück": {
+      "ru": "назад",
+      "pos": "нареч.",
+      "note": "Тж. отделяемая приставка: zurücklaufen «побежать назад»"
+    },
+    "zurückgehen": {
+      "ru": "снижаться; возвращаться",
+      "pos": "гл.",
+      "forms": "ging zurück · ist zurückgegangen"
+    },
+    "über": {
+      "ru": "над, через, о",
+      "pos": "предл."
+    }
+  }
+}

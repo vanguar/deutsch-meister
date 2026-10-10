@@ -1,0 +1,684 @@
+{
+  "version": 1,
+  "w": {
+    "aber": "aber",
+    "achten": "achten",
+    "allerdings": "allerdings",
+    "als": "als",
+    "anderen": "ander",
+    "angaben": "Angabe",
+    "anmelden": "anmelden",
+    "apple": "Apple",
+    "auch": "auch",
+    "audiodatei": "Audiodatei",
+    "auf": "auf",
+    "automatisch": "automatisch",
+    "bald": "bald",
+    "bauen": "einbauen",
+    "bei": "bei",
+    "beim": "bei",
+    "bereits": "bereits",
+    "bild": "Bild",
+    "bilder": "Bild",
+    "bildern": "Bild",
+    "bisher": "bisher",
+    "bleibt": "bleiben",
+    "das": "der/die/das",
+    "dass": "dass",
+    "datei": "Datei",
+    "dem": "der/die/das",
+    "der": "der/die/das",
+    "deshalb": "deshalb",
+    "detector": "Detector",
+    "die": "der/die/das",
+    "diese": "dieser",
+    "dieser": "dieser",
+    "dieses": "dieser",
+    "echt": "echt",
+    "eigenen": "eigen",
+    "ein": "ein/eine",
+    "eine": "ein/eine",
+    "einem": "ein/eine",
+    "einer": "ein/eine",
+    "englisch": "Englisch",
+    "er": "er",
+    "erhalten": "erhalten bleiben",
+    "erkennt": "erkennen",
+    "erstellen": "erstellen",
+    "erstellt": "erstellen",
+    "erzeugt": "erzeugen",
+    "es": "es",
+    "fachleute": "Fachleute",
+    "findet": "stattfinden",
+    "folgen": "folgen",
+    "foto": "Foto",
+    "frage": "Frage",
+    "fälschungen": "Fälschung",
+    "gegen": "gegen",
+    "gibt": "geben",
+    "google": "Google",
+    "hat": "haben",
+    "heißt": "heißen",
+    "hoch": "hoch",
+    "hören": "hören",
+    "immer": "immer",
+    "in": "in",
+    "inhalte": "Inhalt",
+    "ist": "sein",
+    "jetzt": "jetzt",
+    "kakao": "Kakao",
+    "kann": "können",
+    "keins": "keiner",
+    "ki": "KI",
+    "ki-programme": "KI-Programm",
+    "komprimiert": "komprimieren",
+    "konto": "Konto",
+    "koreanische": "koreanisch",
+    "kostenlosen": "kostenlos",
+    "können": "können",
+    "lädt": "hochladen",
+    "macht": "mitmachen",
+    "man": "man",
+    "markiert": "markieren",
+    "mehr": "mehr",
+    "menschen": "Mensch",
+    "milliarden": "Milliarde",
+    "mit": "mit",
+    "nach": "nach",
+    "nicht": "nicht",
+    "noch": "noch",
+    "nur": "nur",
+    "nutzen": "nutzen",
+    "nvidia": "Nvidia",
+    "oder": "oder",
+    "openai": "OpenAI",
+    "passenden": "passend",
+    "programm": "Programm",
+    "prüfen": "prüfen",
+    "quelle": "Quelle",
+    "raten": "raten",
+    "schon": "schon",
+    "sehen": "sehen",
+    "sein": "sein",
+    "seit": "seit",
+    "seite": "Seite",
+    "sich": "sich",
+    "sind": "sein",
+    "so": "so",
+    "soll": "sollen",
+    "sucht": "suchen",
+    "synthid": "SynthID",
+    "technik": "Technik",
+    "und": "und",
+    "unsichtbaren": "unsichtbar",
+    "unternehmen": "Unternehmen",
+    "verdächtigen": "verdächtig",
+    "verfügbar": "verfügbar",
+    "verkleinert": "verkleinern",
+    "video": "Video",
+    "videos": "Video",
+    "von": "von",
+    "wasserzeichen": "Wasserzeichen",
+    "website": "Website",
+    "weder": "weder",
+    "weltweit": "weltweit",
+    "wenn": "wenn",
+    "werkzeug": "Werkzeug",
+    "woche": "Woche",
+    "worden": "werden",
+    "wundermittel": "Wundermittel",
+    "zu": "zu"
+  },
+  "l": {
+    "aber": {
+      "ru": "но, однако",
+      "pos": "союз"
+    },
+    "achten": {
+      "ru": "обращать внимание; уважать",
+      "pos": "гл.",
+      "forms": "achtete · hat geachtet",
+      "note": "auf etwas achten — следить за чем-то"
+    },
+    "allerdings": {
+      "ru": "впрочем, правда",
+      "pos": "нареч."
+    },
+    "als": {
+      "ru": "когда; как; чем",
+      "pos": "союз"
+    },
+    "ander": {
+      "pos": "прил.",
+      "ru": "другой, иной"
+    },
+    "Angabe": {
+      "ru": "данные, сведения",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Angaben",
+      "note": "nach Angaben — по данным"
+    },
+    "anmelden": {
+      "ru": "регистрировать",
+      "pos": "гл.",
+      "forms": "meldete an · hat angemeldet",
+      "note": "sich anmelden — войти, зарегистрироваться"
+    },
+    "Apple": {
+      "ru": "Apple (американская компания)",
+      "pos": "имя собств."
+    },
+    "auch": {
+      "ru": "тоже, также; даже",
+      "pos": "частица"
+    },
+    "Audiodatei": {
+      "ru": "аудиофайл",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Audiodateien"
+    },
+    "auf": {
+      "ru": "на, в",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: aufspringen «вскочить», sich aufmachen"
+    },
+    "automatisch": {
+      "ru": "автоматический; автоматически",
+      "pos": "прил."
+    },
+    "bald": {
+      "ru": "скоро",
+      "pos": "нареч."
+    },
+    "bei": {
+      "ru": "у, при, возле",
+      "pos": "предл."
+    },
+    "bereits": {
+      "pos": "нареч.",
+      "ru": "уже"
+    },
+    "Bild": {
+      "ru": "картина, снимок",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Bilder"
+    },
+    "bisher": {
+      "ru": "до сих пор, до этого",
+      "pos": "нареч."
+    },
+    "bleiben": {
+      "ru": "оставаться",
+      "pos": "гл.",
+      "forms": "blieb · ist geblieben"
+    },
+    "dass": {
+      "ru": "что; чтобы",
+      "pos": "союз"
+    },
+    "Datei": {
+      "ru": "файл",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Dateien"
+    },
+    "der/die/das": {
+      "ru": "определённый артикль",
+      "pos": "артикль",
+      "note": "Тж. относительное местоимение «который»"
+    },
+    "deshalb": {
+      "ru": "поэтому",
+      "pos": "нареч."
+    },
+    "Detector": {
+      "ru": "детектор (англ.; по-немецки der Detektor)",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Detectors"
+    },
+    "dieser": {
+      "ru": "этот, эта, это",
+      "pos": "мест."
+    },
+    "echt": {
+      "ru": "настоящий, подлинный",
+      "pos": "прил."
+    },
+    "eigen": {
+      "ru": "собственный",
+      "pos": "прил."
+    },
+    "ein/eine": {
+      "ru": "неопределённый артикль",
+      "pos": "артикль",
+      "note": "einer — «один, некто»"
+    },
+    "einbauen": {
+      "ru": "встраивать",
+      "pos": "гл.",
+      "forms": "baute ein · hat eingebaut"
+    },
+    "Englisch": {
+      "ru": "английский язык",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null,
+      "note": "im Englischen, auf Englisch — по-английски"
+    },
+    "er": {
+      "ru": "он",
+      "pos": "мест.",
+      "note": "ihn — его, ihm — ему"
+    },
+    "erhalten bleiben": {
+      "ru": "сохраняться",
+      "pos": "гл.",
+      "forms": "blieb erhalten · ist erhalten geblieben"
+    },
+    "erkennen": {
+      "ru": "узнавать; распознавать",
+      "pos": "гл.",
+      "forms": "erkannte · hat erkannt",
+      "note": "sich zu erkennen geben — открыться, назвать себя"
+    },
+    "erstellen": {
+      "ru": "создавать, составлять",
+      "pos": "гл.",
+      "forms": "erstellte · hat erstellt"
+    },
+    "erzeugen": {
+      "ru": "создавать, производить",
+      "pos": "гл.",
+      "forms": "erzeugte · hat erzeugt"
+    },
+    "es": {
+      "ru": "оно; это",
+      "pos": "мест."
+    },
+    "Fachleute": {
+      "ru": "специалисты",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null,
+      "note": "мн. ч. от der Fachmann"
+    },
+    "folgen": {
+      "ru": "следовать; слушаться",
+      "pos": "гл.",
+      "forms": "folgte · ist gefolgt"
+    },
+    "Foto": {
+      "ru": "фото",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Fotos",
+      "note": "ein Foto machen — сфотографировать"
+    },
+    "Frage": {
+      "ru": "вопрос",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Fragen"
+    },
+    "Fälschung": {
+      "ru": "подделка",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Fälschungen"
+    },
+    "geben": {
+      "ru": "давать",
+      "pos": "гл.",
+      "forms": "gab · hat gegeben"
+    },
+    "gegen": {
+      "ru": "против; около (о времени)",
+      "pos": "предл.",
+      "note": "gegen Mitternacht — около полуночи"
+    },
+    "Google": {
+      "ru": "Google (американская ИТ-компания)",
+      "pos": "имя собств."
+    },
+    "haben": {
+      "ru": "иметь; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "hatte · hat gehabt"
+    },
+    "heißen": {
+      "ru": "называться; велеть",
+      "pos": "гл.",
+      "forms": "hieß · hat geheißen"
+    },
+    "hoch": {
+      "ru": "высокий",
+      "pos": "прил.",
+      "forms": "hoch · höher · am höchsten"
+    },
+    "hochladen": {
+      "ru": "загружать (в сеть)",
+      "pos": "гл.",
+      "forms": "lud hoch · hat hochgeladen"
+    },
+    "hören": {
+      "ru": "слышать",
+      "pos": "гл.",
+      "forms": "hörte · hat gehört"
+    },
+    "immer": {
+      "ru": "всегда, всё",
+      "pos": "нареч.",
+      "note": "immer größer — всё больше"
+    },
+    "in": {
+      "ru": "в (im = in dem, ins = in das)",
+      "pos": "предл."
+    },
+    "Inhalt": {
+      "ru": "содержание; материал, контент",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Inhalte"
+    },
+    "jetzt": {
+      "ru": "сейчас, теперь",
+      "pos": "нареч."
+    },
+    "Kakao": {
+      "ru": "Kakao (южнокорейская интернет-компания)",
+      "pos": "имя собств."
+    },
+    "keiner": {
+      "ru": "никто, ни один",
+      "pos": "мест.",
+      "note": "keins — ни одного (ср. р.)"
+    },
+    "KI": {
+      "ru": "ИИ (künstliche Intelligenz)",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "KI-Programm": {
+      "ru": "ИИ-программа",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die KI-Programme"
+    },
+    "komprimieren": {
+      "ru": "сжимать",
+      "pos": "гл.",
+      "forms": "komprimierte · hat komprimiert"
+    },
+    "Konto": {
+      "ru": "счёт; аккаунт",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Konten"
+    },
+    "koreanisch": {
+      "ru": "корейский",
+      "pos": "прил."
+    },
+    "kostenlos": {
+      "ru": "бесплатный",
+      "pos": "прил."
+    },
+    "können": {
+      "ru": "мочь, уметь",
+      "pos": "гл.",
+      "forms": "konnte · hat gekonnt"
+    },
+    "man": {
+      "ru": "неопределённое «кто-то, люди, мы»",
+      "pos": "мест."
+    },
+    "markieren": {
+      "ru": "отмечать, помечать",
+      "pos": "гл.",
+      "forms": "markierte · hat markiert"
+    },
+    "mehr": {
+      "ru": "больше",
+      "pos": "нареч.",
+      "note": "В nicht/kein … mehr — больше не. Формально компаратив от viel"
+    },
+    "Mensch": {
+      "ru": "человек",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Menschen",
+      "decl": "n-Deklination: des Menschen · dem/den Menschen"
+    },
+    "Milliarde": {
+      "ru": "миллиард",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Milliarden"
+    },
+    "mit": {
+      "ru": "с",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: mitgehen «пойти вместе»"
+    },
+    "mitmachen": {
+      "ru": "участвовать",
+      "pos": "гл.",
+      "forms": "machte mit · hat mitgemacht"
+    },
+    "nach": {
+      "ru": "в, на, после, по",
+      "pos": "предл."
+    },
+    "nicht": {
+      "ru": "не",
+      "pos": "частица"
+    },
+    "noch": {
+      "ru": "ещё",
+      "pos": "нареч."
+    },
+    "nur": {
+      "ru": "только, лишь",
+      "pos": "частица"
+    },
+    "nutzen": {
+      "ru": "использовать",
+      "pos": "гл.",
+      "forms": "nutzte · hat genutzt"
+    },
+    "Nvidia": {
+      "ru": "Nvidia (американский производитель чипов)",
+      "pos": "имя собств."
+    },
+    "oder": {
+      "ru": "или",
+      "pos": "союз"
+    },
+    "OpenAI": {
+      "ru": "OpenAI (американская ИИ-компания)",
+      "pos": "имя собств."
+    },
+    "passend": {
+      "ru": "подходящий",
+      "pos": "прил."
+    },
+    "Programm": {
+      "ru": "программа",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Programme"
+    },
+    "prüfen": {
+      "ru": "проверять",
+      "pos": "гл.",
+      "forms": "prüfte · hat geprüft"
+    },
+    "Quelle": {
+      "ru": "источник",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Quellen"
+    },
+    "raten": {
+      "ru": "советовать; угадывать",
+      "pos": "гл.",
+      "forms": "riet · hat geraten"
+    },
+    "schon": {
+      "ru": "уже",
+      "pos": "нареч."
+    },
+    "sehen": {
+      "ru": "видеть",
+      "pos": "гл.",
+      "forms": "sah · hat gesehen"
+    },
+    "sein": {
+      "ru": "быть; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "war · ist gewesen"
+    },
+    "seit": {
+      "ru": "с (какого-то времени)",
+      "pos": "предл."
+    },
+    "Seite": {
+      "ru": "сторона; страница, сайт",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Seiten"
+    },
+    "sich": {
+      "ru": "себя, себе",
+      "pos": "мест.",
+      "note": "Возвратное местоимение, часть возвратного глагола: sich auf den Weg machen, sich setzen, sich legen, sich nähern, sich gefallen lassen, sich getrauen, sich umsehen"
+    },
+    "so": {
+      "ru": "так; такой; то (в главном предложении)",
+      "pos": "нареч."
+    },
+    "sollen": {
+      "ru": "быть должным, следует",
+      "pos": "гл.",
+      "forms": "sollte · hat gesollt"
+    },
+    "stattfinden": {
+      "ru": "иметь место, быть",
+      "pos": "гл.",
+      "forms": "fand statt · hat stattgefunden",
+      "note": "ein Zusammenhang findet statt — связь существует"
+    },
+    "suchen": {
+      "ru": "искать",
+      "pos": "гл.",
+      "forms": "suchte · hat gesucht",
+      "note": "sich etwas suchen — подыскать себе"
+    },
+    "SynthID": {
+      "ru": "SynthID — технология водяных знаков Google DeepMind",
+      "pos": "имя собств."
+    },
+    "Technik": {
+      "ru": "техника, технология",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Techniken"
+    },
+    "und": {
+      "ru": "и, а",
+      "pos": "союз"
+    },
+    "unsichtbar": {
+      "ru": "невидимый",
+      "pos": "прил."
+    },
+    "Unternehmen": {
+      "ru": "предприятие, компания",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Unternehmen"
+    },
+    "verdächtig": {
+      "ru": "подозрительный",
+      "pos": "прил."
+    },
+    "verfügbar": {
+      "ru": "доступный",
+      "pos": "прил."
+    },
+    "verkleinern": {
+      "ru": "уменьшать",
+      "pos": "гл.",
+      "forms": "verkleinerte · hat verkleinert"
+    },
+    "Video": {
+      "ru": "видео",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Videos"
+    },
+    "von": {
+      "ru": "от, из, о (vom = von dem)",
+      "pos": "предл."
+    },
+    "Wasserzeichen": {
+      "ru": "водяной знак",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Wasserzeichen"
+    },
+    "Website": {
+      "ru": "сайт",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Websites"
+    },
+    "weder": {
+      "note": "weder … noch — ни … ни",
+      "pos": "союз",
+      "ru": "ни"
+    },
+    "weltweit": {
+      "ru": "по всему миру",
+      "pos": "нареч."
+    },
+    "wenn": {
+      "ru": "если; когда",
+      "pos": "союз"
+    },
+    "werden": {
+      "ru": "становиться",
+      "pos": "гл.",
+      "forms": "wurde · ist geworden",
+      "note": "Вспомогательный глагол будущего времени и пассива"
+    },
+    "Werkzeug": {
+      "ru": "инструмент",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Werkzeuge"
+    },
+    "Woche": {
+      "ru": "неделя",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Wochen"
+    },
+    "Wundermittel": {
+      "ru": "чудо-средство",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Wundermittel"
+    },
+    "zu": {
+      "ru": "к, в; слишком",
+      "pos": "предл.",
+      "note": "zur = zu der, zum = zu dem"
+    }
+  }
+}

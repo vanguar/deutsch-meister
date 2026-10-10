@@ -1,0 +1,799 @@
+{
+  "version": 1,
+  "w": {
+    "aber": "aber",
+    "abstrich": "Abstrich",
+    "advances": "Science Advances",
+    "als": "als",
+    "also": "also",
+    "alt": "alt",
+    "alte": "alt",
+    "altern": "Altern",
+    "anderen": "ander",
+    "arbeiten": "arbeiten",
+    "art": "Art",
+    "auch": "auch",
+    "auf": "auf",
+    "aufspürt": "aufspüren",
+    "außerdem": "außerdem",
+    "beim": "bei",
+    "beseitigt": "beseitigen",
+    "besitzt": "besitzen",
+    "besonders": "besonders",
+    "besser": "gut",
+    "bis": "bis",
+    "blind": "blind",
+    "blutprobe": "Blutprobe",
+    "charles": "Charles",
+    "dann": "dann",
+    "darwin": "Darwin",
+    "das": "der/die/das",
+    "dass": "dass",
+    "davon": "davon",
+    "der": "der/die/das",
+    "des": "der/die/das",
+    "deshalb": "deshalb",
+    "die": "der/die/das",
+    "dna": "DNA",
+    "durften": "dürfen",
+    "ein": "ein/eine",
+    "eine": "ein/eine",
+    "einen": "ein/eine",
+    "eines": "ein/eine",
+    "einmal": "einmal",
+    "er": "er",
+    "ergebnisse": "Ergebnis",
+    "erkennen": "erkennen",
+    "erschienen": "erscheinen",
+    "etwa": "etwa",
+    "fachzeitschrift": "Fachzeitschrift",
+    "fand": "stattfinden",
+    "fast": "fast",
+    "forscher": "Forscher",
+    "forschungsteam": "Forschungsteam",
+    "futter": "Futter",
+    "garten": "Garten",
+    "gefüttert": "füttern",
+    "gens": "Gen",
+    "genug": "genug",
+    "genvarianten": "Genvariante",
+    "geschlüpft": "schlüpfen",
+    "gouverneurs": "Gouverneur",
+    "grönlandwal": "Grönlandwal",
+    "hand": "Hand",
+    "hat": "haben",
+    "helena": "St. Helena",
+    "helfen": "helfen",
+    "hoffen": "hoffen",
+    "hundert": "hundert",
+    "ihn": "er",
+    "im": "in",
+    "in": "in",
+    "innenseite": "Innenseite",
+    "insel": "Insel",
+    "internationales": "international",
+    "inzwischen": "inzwischen",
+    "ist": "sein",
+    "jahr": "Jahr",
+    "jahre": "Jahr",
+    "jonathan": "Jonathan",
+    "junger": "jung",
+    "kann": "können",
+    "kennt": "kennen",
+    "kopien": "Kopie",
+    "kraftwerke": "Kraftwerk",
+    "kranke": "krank",
+    "landtier": "Landtier",
+    "leben": "leben",
+    "lebt": "leben",
+    "lockten": "locken",
+    "länger": "lang",
+    "man": "man",
+    "mann": "Mann",
+    "maul": "Maul",
+    "mehr": "mehr",
+    "menschen": "Mensch",
+    "mit": "mit",
+    "mitochondrien": "Mitochondrium",
+    "muster": "Muster",
+    "nahmen": "nehmen",
+    "nehmen": "nehmen",
+    "nicht": "nicht",
+    "normalerweise": "normalerweise",
+    "nur": "nur",
+    "pro": "pro",
+    "reparieren": "reparieren",
+    "riesenschildkröte": "Riesenschildkröte",
+    "riesenschildkröten": "Riesenschildkröte",
+    "schildkröten": "Schildkröte",
+    "schnell": "schnell",
+    "schutz": "Schutz",
+    "schäden": "Schaden",
+    "science": "Science Advances",
+    "seinem": "sein (его, свой)",
+    "seiner": "sein (его, свой)",
+    "seit": "seit",
+    "selbst": "selbst",
+    "sie": "sie",
+    "sind": "sein",
+    "so": "so",
+    "st": "St.",
+    "südatlantik": "Südatlantik",
+    "tages": "Tag",
+    "team": "Team",
+    "um": "um",
+    "und": "und",
+    "untersuchten": "untersuchen",
+    "verstehen": "verstehen",
+    "viel": "viel",
+    "viele": "viel",
+    "vielleicht": "vielleicht",
+    "vom": "von",
+    "von": "von",
+    "wahrscheinlich": "wahrscheinlich",
+    "wange": "Wange",
+    "war": "sein",
+    "warum": "warum",
+    "weit": "weit",
+    "welt": "Welt",
+    "werden": "werden",
+    "wird": "werden",
+    "wissen": "wissen",
+    "woche": "Woche",
+    "wollte": "wollen",
+    "zehn": "zehn",
+    "zeit": "Zeit",
+    "zellen": "Zelle",
+    "zu": "zu",
+    "zuverlässig": "zuverlässig",
+    "ähnliche": "ähnlich",
+    "älteste": "alt",
+    "öffnete": "öffnen",
+    "über": "über"
+  },
+  "l": {
+    "aber": {
+      "ru": "но, однако",
+      "pos": "союз"
+    },
+    "Abstrich": {
+      "ru": "мазок (медицинская проба)",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Abstriche"
+    },
+    "als": {
+      "ru": "когда; как; чем",
+      "pos": "союз"
+    },
+    "also": {
+      "ru": "итак, стало быть",
+      "pos": "нареч."
+    },
+    "alt": {
+      "ru": "старый",
+      "pos": "прил.",
+      "forms": "alt · älter · am ältesten"
+    },
+    "Altern": {
+      "ru": "старение",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "ander": {
+      "pos": "прил.",
+      "ru": "другой, иной"
+    },
+    "arbeiten": {
+      "ru": "работать",
+      "pos": "гл.",
+      "forms": "arbeitete · hat gearbeitet",
+      "note": "daran arbeiten, etwas zu tun — добиваться чего-л."
+    },
+    "Art": {
+      "ru": "вид, способ",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Arten",
+      "note": "eine Art haben — выйти складно"
+    },
+    "auch": {
+      "ru": "тоже, также; даже",
+      "pos": "частица"
+    },
+    "auf": {
+      "ru": "на, в",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: aufspringen «вскочить», sich aufmachen"
+    },
+    "aufspüren": {
+      "ru": "выслеживать, обнаруживать",
+      "pos": "гл.",
+      "forms": "spürte auf · hat aufgespürt"
+    },
+    "außerdem": {
+      "ru": "кроме того",
+      "pos": "нареч."
+    },
+    "bei": {
+      "ru": "у, при, возле",
+      "pos": "предл."
+    },
+    "beseitigen": {
+      "ru": "устранять, уничтожать",
+      "pos": "гл.",
+      "forms": "beseitigte · hat beseitigt"
+    },
+    "besitzen": {
+      "ru": "владеть, иметь",
+      "pos": "гл.",
+      "forms": "besaß · hat besessen"
+    },
+    "besonders": {
+      "ru": "особенно",
+      "pos": "нареч."
+    },
+    "bis": {
+      "ru": "до; пока не",
+      "pos": "союз"
+    },
+    "blind": {
+      "ru": "слепой",
+      "pos": "прил."
+    },
+    "Blutprobe": {
+      "ru": "проба крови",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Blutproben"
+    },
+    "Charles": {
+      "ru": "Чарльз (имя)",
+      "pos": "имя собств."
+    },
+    "dann": {
+      "ru": "потом, затем",
+      "pos": "нареч."
+    },
+    "Darwin": {
+      "ru": "Дарвин (Чарльз Дарвин, 1809–1882, натуралист)",
+      "pos": "имя собств."
+    },
+    "dass": {
+      "ru": "что; чтобы",
+      "pos": "союз"
+    },
+    "davon": {
+      "ru": "от этого, об этом",
+      "pos": "нареч."
+    },
+    "der/die/das": {
+      "ru": "определённый артикль",
+      "pos": "артикль",
+      "note": "Тж. относительное местоимение «который»"
+    },
+    "deshalb": {
+      "ru": "поэтому",
+      "pos": "нареч."
+    },
+    "DNA": {
+      "ru": "ДНК",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "dürfen": {
+      "ru": "сметь, иметь право",
+      "pos": "гл.",
+      "forms": "durfte · hat gedurft"
+    },
+    "ein/eine": {
+      "ru": "неопределённый артикль",
+      "pos": "артикль",
+      "note": "einer — «один, некто»"
+    },
+    "einmal": {
+      "ru": "однажды; раз",
+      "pos": "нареч."
+    },
+    "er": {
+      "ru": "он",
+      "pos": "мест.",
+      "note": "ihn — его, ihm — ему"
+    },
+    "Ergebnis": {
+      "ru": "результат",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Ergebnisse"
+    },
+    "erkennen": {
+      "ru": "узнавать; распознавать",
+      "pos": "гл.",
+      "forms": "erkannte · hat erkannt",
+      "note": "sich zu erkennen geben — открыться, назвать себя"
+    },
+    "erscheinen": {
+      "ru": "появляться; выходить (о публикации)",
+      "pos": "гл.",
+      "forms": "erschien · ist erschienen"
+    },
+    "etwa": {
+      "ru": "примерно, около",
+      "pos": "нареч."
+    },
+    "Fachzeitschrift": {
+      "ru": "научный (специальный) журнал",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Fachzeitschriften"
+    },
+    "fast": {
+      "ru": "почти",
+      "pos": "нареч."
+    },
+    "Forscher": {
+      "ru": "исследователь, учёный",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Forscher"
+    },
+    "Forschungsteam": {
+      "ru": "исследовательская группа",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Forschungsteams"
+    },
+    "Futter": {
+      "ru": "корм",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "füttern": {
+      "ru": "кормить",
+      "pos": "гл.",
+      "forms": "fütterte · hat gefüttert"
+    },
+    "Garten": {
+      "ru": "сад",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Gärten"
+    },
+    "Gen": {
+      "ru": "ген",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Gene"
+    },
+    "genug": {
+      "ru": "достаточно, довольно",
+      "pos": "нареч."
+    },
+    "Genvariante": {
+      "ru": "вариант гена",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Genvarianten"
+    },
+    "Gouverneur": {
+      "ru": "губернатор",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Gouverneure"
+    },
+    "Grönlandwal": {
+      "ru": "гренландский кит",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Grönlandwale"
+    },
+    "gut": {
+      "ru": "хороший, добрый",
+      "pos": "прил.",
+      "forms": "gut · besser · am besten",
+      "note": "besser — лучше"
+    },
+    "haben": {
+      "ru": "иметь; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "hatte · hat gehabt"
+    },
+    "Hand": {
+      "ru": "рука, кисть",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Hände"
+    },
+    "helfen": {
+      "ru": "помогать",
+      "pos": "гл.",
+      "forms": "half · hat geholfen"
+    },
+    "hoffen": {
+      "ru": "надеяться",
+      "pos": "гл.",
+      "forms": "hoffte · hat gehofft",
+      "note": "субстантивированный инфинитив: all mein Hoffen — все мои надежды"
+    },
+    "hundert": {
+      "ru": "сто",
+      "pos": "числ."
+    },
+    "in": {
+      "ru": "в (im = in dem, ins = in das)",
+      "pos": "предл."
+    },
+    "Innenseite": {
+      "ru": "внутренняя сторона",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Innenseiten"
+    },
+    "Insel": {
+      "ru": "остров",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Inseln"
+    },
+    "international": {
+      "ru": "международный",
+      "pos": "прил."
+    },
+    "inzwischen": {
+      "ru": "тем временем; теперь уже",
+      "pos": "нареч."
+    },
+    "Jahr": {
+      "ru": "год",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Jahre"
+    },
+    "Jonathan": {
+      "ru": "Джонатан (имя; гигантская черепаха с острова Святой Елены)",
+      "pos": "имя собств."
+    },
+    "jung": {
+      "ru": "молодой",
+      "pos": "прил.",
+      "forms": "jung · jünger · am jüngsten"
+    },
+    "kennen": {
+      "ru": "знать, быть знакомым",
+      "pos": "гл.",
+      "forms": "kannte · hat gekannt"
+    },
+    "Kopie": {
+      "ru": "копия",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Kopien"
+    },
+    "Kraftwerk": {
+      "ru": "электростанция",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Kraftwerke"
+    },
+    "krank": {
+      "ru": "больной",
+      "pos": "прил."
+    },
+    "können": {
+      "ru": "мочь, уметь",
+      "pos": "гл.",
+      "forms": "konnte · hat gekonnt"
+    },
+    "Landtier": {
+      "ru": "сухопутное животное",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Landtiere"
+    },
+    "lang": {
+      "ru": "длинный, долгий",
+      "pos": "прил.",
+      "forms": "lang · länger · am längsten"
+    },
+    "leben": {
+      "ru": "жить",
+      "pos": "гл.",
+      "forms": "lebte · hat gelebt"
+    },
+    "locken": {
+      "ru": "манить, приманивать",
+      "pos": "гл.",
+      "forms": "lockte · hat gelockt"
+    },
+    "man": {
+      "ru": "неопределённое «кто-то, люди, мы»",
+      "pos": "мест."
+    },
+    "Mann": {
+      "ru": "мужчина, человек",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Männer"
+    },
+    "Maul": {
+      "ru": "пасть; рот (грубо)",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Mäuler",
+      "note": "die Pfeife im Maul — трубка в зубах"
+    },
+    "mehr": {
+      "ru": "больше",
+      "pos": "нареч.",
+      "note": "В nicht/kein … mehr — больше не. Формально компаратив от viel"
+    },
+    "Mensch": {
+      "ru": "человек",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Menschen",
+      "decl": "n-Deklination: des Menschen · dem/den Menschen"
+    },
+    "mit": {
+      "ru": "с",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: mitgehen «пойти вместе»"
+    },
+    "Mitochondrium": {
+      "ru": "митохондрия",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Mitochondrien"
+    },
+    "Muster": {
+      "ru": "образец, узор; закономерность",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Muster"
+    },
+    "nehmen": {
+      "ru": "брать",
+      "pos": "гл.",
+      "forms": "nahm · hat genommen"
+    },
+    "nicht": {
+      "ru": "не",
+      "pos": "частица"
+    },
+    "normalerweise": {
+      "ru": "обычно",
+      "pos": "нареч."
+    },
+    "nur": {
+      "ru": "только, лишь",
+      "pos": "частица"
+    },
+    "pro": {
+      "ru": "в, за (на единицу)",
+      "pos": "предл.",
+      "note": "3,5 Kilometer pro Sekunde — 3,5 км в секунду"
+    },
+    "reparieren": {
+      "ru": "ремонтировать, чинить",
+      "pos": "гл.",
+      "forms": "reparierte · hat repariert"
+    },
+    "Riesenschildkröte": {
+      "ru": "гигантская черепаха",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Riesenschildkröten"
+    },
+    "Schaden": {
+      "ru": "вред, повреждение",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Schäden"
+    },
+    "Schildkröte": {
+      "ru": "черепаха",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Schildkröten"
+    },
+    "schlüpfen": {
+      "ru": "вылупляться; проскальзывать",
+      "pos": "гл.",
+      "forms": "schlüpfte · ist geschlüpft"
+    },
+    "schnell": {
+      "ru": "быстрый",
+      "pos": "прил.",
+      "forms": "schnell · schneller · am schnellsten"
+    },
+    "Schutz": {
+      "ru": "защита",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null,
+      "note": "zu seinem Schutz — ради его защиты"
+    },
+    "Science Advances": {
+      "ru": "Science Advances (научный журнал)",
+      "pos": "имя собств."
+    },
+    "sein": {
+      "ru": "быть; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "war · ist gewesen"
+    },
+    "sein (его, свой)": {
+      "ru": "его, свой",
+      "pos": "мест."
+    },
+    "seit": {
+      "ru": "с (какого-то времени)",
+      "pos": "предл."
+    },
+    "selbst": {
+      "ru": "сам; даже",
+      "pos": "мест."
+    },
+    "sie": {
+      "ru": "она; они; Вы",
+      "pos": "мест."
+    },
+    "so": {
+      "ru": "так; такой; то (в главном предложении)",
+      "pos": "нареч."
+    },
+    "St.": {
+      "ru": "святой (в названиях)",
+      "pos": "сокр.",
+      "note": "сокращение от Sankt: der St. Gotthard — Сен-Готард"
+    },
+    "St. Helena": {
+      "ru": "остров Святой Елены (Южная Атлантика)",
+      "pos": "геогр."
+    },
+    "stattfinden": {
+      "ru": "иметь место, быть",
+      "pos": "гл.",
+      "forms": "fand statt · hat stattgefunden",
+      "note": "ein Zusammenhang findet statt — связь существует"
+    },
+    "Südatlantik": {
+      "ru": "Южная Атлантика",
+      "pos": "геогр."
+    },
+    "Tag": {
+      "ru": "день",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Tage"
+    },
+    "Team": {
+      "ru": "команда",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Teams"
+    },
+    "um": {
+      "ru": "вокруг, в (о времени)",
+      "pos": "предл.",
+      "note": "um … zu — чтобы. Тж. отделяемая приставка: sich umsehen «оглядеться»"
+    },
+    "und": {
+      "ru": "и, а",
+      "pos": "союз"
+    },
+    "untersuchen": {
+      "ru": "исследовать, изучать",
+      "pos": "гл.",
+      "forms": "untersuchte · hat untersucht"
+    },
+    "verstehen": {
+      "ru": "понимать",
+      "pos": "гл.",
+      "forms": "verstand · hat verstanden",
+      "note": "sich verstehen auf — знать толк в чём-л."
+    },
+    "viel": {
+      "ru": "много, многое",
+      "pos": "мест."
+    },
+    "vielleicht": {
+      "pos": "нареч.",
+      "ru": "может быть, пожалуй"
+    },
+    "von": {
+      "ru": "от, из, о (vom = von dem)",
+      "pos": "предл."
+    },
+    "wahrscheinlich": {
+      "pos": "прил.",
+      "ru": "вероятный, скорее всего"
+    },
+    "Wange": {
+      "ru": "щека",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Wangen"
+    },
+    "warum": {
+      "ru": "почему",
+      "pos": "нареч."
+    },
+    "weit": {
+      "ru": "далёкий, далеко",
+      "pos": "прил.",
+      "forms": "weit · weiter · am weitesten",
+      "note": "weiter — дальше, далее; von weitem — издали"
+    },
+    "Welt": {
+      "art": "die",
+      "pl": "die Welten",
+      "pos": "сущ.",
+      "ru": "мир, свет"
+    },
+    "werden": {
+      "ru": "становиться",
+      "pos": "гл.",
+      "forms": "wurde · ist geworden",
+      "note": "Вспомогательный глагол будущего времени и пассива"
+    },
+    "wissen": {
+      "ru": "знать",
+      "pos": "гл.",
+      "forms": "wusste · hat gewusst"
+    },
+    "Woche": {
+      "ru": "неделя",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Wochen"
+    },
+    "wollen": {
+      "ru": "хотеть",
+      "pos": "гл.",
+      "forms": "wollte · hat gewollt"
+    },
+    "zehn": {
+      "ru": "десять",
+      "pos": "числ."
+    },
+    "Zeit": {
+      "ru": "время",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Zeiten"
+    },
+    "Zelle": {
+      "ru": "клетка",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Zellen"
+    },
+    "zu": {
+      "ru": "к, в; слишком",
+      "pos": "предл.",
+      "note": "zur = zu der, zum = zu dem"
+    },
+    "zuverlässig": {
+      "ru": "надёжный; надёжно",
+      "pos": "прил."
+    },
+    "ähnlich": {
+      "ru": "похожий",
+      "pos": "прил."
+    },
+    "öffnen": {
+      "ru": "открывать",
+      "pos": "гл.",
+      "forms": "öffnete · hat geöffnet",
+      "note": "sich öffnen — открываться, раскрываться"
+    },
+    "über": {
+      "ru": "над, через, о",
+      "pos": "предл."
+    }
+  }
+}

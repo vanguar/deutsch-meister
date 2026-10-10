@@ -379,3 +379,166 @@ META = {
         },
     },
 }
+
+META.update({
+    'mars-krippe-2026': {
+        'title': 'Der Rote Planet in der Krippe: Mars wandert durch einen Sternhaufen',
+        'titleRu': 'Красная планета в Яслях: Марс проходит через звёздное скопление',
+        'rubric': 'astronomy',
+        'level': 'B1',
+        'levelNote': 'Настоящее время и безличное man (sieht man, kann man), конструкция '
+                     'sein + zu + Infinitiv (ist leicht zu finden), инфинитив с zu (lohnt es sich, '
+                     'früh aufzustehen), сравнение (heller als, mehr als), придаточные с weil, wo, wer.',
+        'published': '2026-10-10',
+        'added': '2026-10-10',
+        'source': 'Spektrum der Wissenschaft · IT BOLTWISE',
+        'sourceUrl': 'https://www.spektrum.de/news/aktuelles-am-himmel-der-rote-planet-in-der-krippe/2348171',
+        'blurb': 'С 10 по 12 октября перед рассветом Марс проходит сквозь звёздное скопление Ясли '
+                 '(M44) в созвездии Рака. Новолуние не помешает, а в бинокль видно больше дюжины звёзд.',
+        'license': 'Текст — пересказ новостей Spektrum der Wissenschaft и IT BOLTWISE; фото — Wikimedia Commons',
+        'figs': {
+            'krippe': {'w': 1200, 'h': 900,
+                       'cap': 'Звёздное скопление Ясли (M44, Praesepe) в созвездии Рака. Самые яркие '
+                              'его звёзды хорошо видны в обычный бинокль.',
+                       'credit': 'Giuseppe Donatiello · CC0 · Wikimedia Commons'},
+            'krebs': {'w': 960, 'h': 960,
+                      'cap': 'Карта созвездия Рака. Ясли (M44) — в самом его центре, между '
+                             'звёздами Асселус Бореалис и Асселус Аустралис.',
+                      'credit': 'IAU and Sky & Telescope · CC BY 4.0 · Wikimedia Commons'},
+            'mars': {'w': 1200, 'h': 808,
+                     'cap': 'Марс в телескоп «Хаббл». Невооружённым глазом он виден как яркая '
+                            'красноватая звёздочка.',
+                     'credit': 'NASA, J. Bell, S. Lee, M. Wolff · общественное достояние'},
+        },
+    },
+    'schildkroete-jonathan-2026': {
+        'title': '194 Jahre alt: Was die Schildkröte Jonathan über das Altern verrät',
+        'titleRu': '194 года: что черепаха Джонатан рассказывает о старении',
+        'rubric': 'science',
+        'level': 'B1–B2',
+        'levelNote': 'Превосходная степень (das älteste Landtier), перфект с sein (ist geschlüpft, '
+                     'sind erschienen), модальные глаголы в претеритуме (wollte, durften), '
+                     'относительные придаточные (die nur Jonathan hat, das … aufspürt), '
+                     'инфинитив с zu (helfen, … zu erkennen), пассив (wird gefüttert).',
+        'published': '2026-10-08',
+        'added': '2026-10-10',
+        'source': 'science.ORF.at · dpa · forschung-und-wissen.de',
+        'sourceUrl': 'https://science.orf.at/stories/3237652/',
+        'blurb': 'Гигантской черепахе Джонатану с острова Святой Елены около 194 лет. В его генах '
+                 'учёные нашли 287 особых вариантов — они помогают чинить ДНК и избавляться от старых клеток.',
+        'license': 'Текст — пересказ новостей science.ORF.at, dpa и forschung-und-wissen.de; '
+                   'фото — Wikimedia Commons',
+        'figs': {
+            'jonathan': {'w': 1200, 'h': 900,
+                         'cap': 'Джонатан на лужайке перед Плантейшн-хаус — резиденцией губернатора '
+                                'острова Святой Елены.',
+                         'credit': 'Kevin Gepford · ' + SA4},
+            'aldabra': {'w': 1200, 'h': 889,
+                        'cap': 'Альдабрская гигантская черепаха на Сейшельских островах. Джонатан — '
+                               'того же вида; обычно такие черепахи живут около 80 лет.',
+                        'credit': 'Norbert Nagel · ' + SA4},
+            'plantation': {'w': 1200, 'h': 800,
+                           'cap': 'Плантейшн-хаус на острове Святой Елены. В его саду Джонатан '
+                                  'живёт с 1882 года.',
+                           'credit': 'Luke McKernan · CC BY-SA 2.0 · Wikimedia Commons'},
+            'jonathan1900': {'w': 430, 'h': 430,
+                             'cap': 'Одна из самых старых фотографий Джонатана — около 1900 года. '
+                                    'Ему тогда было уже почти 70 лет.',
+                             'credit': 'Автор неизвестен · общественное достояние'},
+        },
+    },
+    'synthid-ki-erkennung-2026': {
+        'title': 'Echt oder KI? Ein Werkzeug von Google findet unsichtbare Wasserzeichen',
+        'titleRu': 'Настоящее или ИИ? Инструмент Google находит невидимые водяные знаки',
+        'rubric': 'tech',
+        'level': 'B1–B2',
+        'levelNote': 'Технологическая лексика (Wasserzeichen, Datei, Konto), отделяемые глаголы '
+                     '(lädt … hoch, bauen … ein, macht … mit), пассив (sind … markiert, '
+                     'erstellt worden sein), союзы weder … noch, auch wenn, инфинитив с zu (raten, … zu achten).',
+        'published': '2026-10-08',
+        'added': '2026-10-10',
+        'source': 'Kurier Verlag · appgefahren.de · onlinemarketing.de',
+        'sourceUrl': 'https://www.kurierverlag.de/ratgeber/verbraucher/google-ki-erkennung-synthid-prueft-jetzt-bilder-videos-und-audio-zr-94531327.html',
+        'blurb': 'Google открыл для всех бесплатный SynthID Detector: он ищет в фото, видео и аудио '
+                 'невидимый водяной знак ИИ. Но если знака нет, это ещё не доказывает, что файл настоящий.',
+        'license': 'Текст — пересказ новостей Kurier Verlag, appgefahren.de и onlinemarketing.de; '
+                   'фото — Wikimedia Commons',
+        'figs': {
+            'smartphone': {'w': 1200, 'h': 900,
+                           'cap': 'Посетители музея фотографируют картины на смартфон. Отличить '
+                                  'настоящий снимок от созданного ИИ на глаз всё труднее.',
+                           'credit': 'TANNMY NAISZE Wanguo · CC0 · Wikimedia Commons'},
+            'googleplex': {'w': 1200, 'h': 878,
+                           'cap': 'Штаб-квартира Google в Маунтин-Вью (Калифорния). Технологию '
+                                  'SynthID разработало подразделение Google DeepMind.',
+                           'credit': 'Asoundd · ' + SA4},
+            'schild': {'w': 1200, 'h': 800,
+                       'cap': 'Табличка у офисов Google в Маунтин-Вью. Детектор пока работает '
+                              'только на английском.',
+                       'credit': 'Dietmar Rabich · ' + SA4},
+        },
+    },
+    'temu-shein-zoll-2026': {
+        'title': 'Weniger Pakete aus Asien: Der Umsatz von Temu und Shein bricht ein',
+        'titleRu': 'Меньше посылок из Азии: выручка Temu и Shein обвалилась',
+        'rubric': 'economy',
+        'level': 'B1–B2',
+        'levelNote': 'Экономическая лексика (Umsatz, Anteil, Quartal, Zoll), сравнение (weniger als, '
+                     'seltener als, höheren), перфект с sein (ist geschrumpft), отделяемые глаголы '
+                     '(kommt … dazu), устойчивые обороты (an Umsatz verlieren, ins Stocken geraten).',
+        'published': '2026-10-09',
+        'added': '2026-10-10',
+        'source': 'bevh · dpa · VerkehrsRundschau',
+        'sourceUrl': 'https://www.verkehrsrundschau.de/nachrichten/transport-logistik/temu-und-shein-verlieren-deutlich-an-umsatz-in-deutschland-3915131',
+        'blurb': 'В третьем квартале выручка Temu, Shein и AliExpress в Германии упала на 35,5 % — '
+                 'до 566 млн евро. Причина — новые правила ЕС: беспошлинного порога в 150 евро больше нет.',
+        'license': 'Текст — пересказ новостей dpa и VerkehrsRundschau по данным bevh; фото — Wikimedia Commons',
+        'figs': {
+            'laden': {'w': 1200, 'h': 900,
+                      'cap': 'Магазин Shein в торговом центре в Варшаве. В Германии платформа '
+                             'продаёт в основном через интернет.',
+                      'credit': 'DMCGN · CC BY 4.0 · Wikimedia Commons'},
+            'paketzentrum': {'w': 1200, 'h': 675,
+                             'cap': 'Посылочный центр DHL в Нойвиде с высоты. Через такие центры '
+                                    'проходят и посылки из Азии.',
+                             'credit': 'Wolkenkratzer · ' + SA4},
+            'schlange': {'w': 1200, 'h': 900,
+                         'cap': 'Очередь к открытию магазина Shein в Варшаве. Бум дешёвых '
+                                'платформ в Европе пока замедлился.',
+                         'credit': 'DMCGN · CC BY 4.0 · Wikimedia Commons'},
+        },
+    },
+    'buchmesse-2026': {
+        'title': 'Bücher, Gäste und ein Land am Meer: Die Frankfurter Buchmesse hat begonnen',
+        'titleRu': 'Книги, гости и страна у моря: открылась Франкфуртская книжная ярмарка',
+        'rubric': 'events',
+        'level': 'B1–B2',
+        'levelNote': 'Перфект (hat begonnen, sind gereist), отделяемые глаголы (treten … auf, '
+                     'ging … zurück), пассив состояния (sind reserviert), безличный пассив '
+                     '(diskutiert wird), придаточное с obwohl, превосходная степень (die größte).',
+        'published': '2026-10-07',
+        'added': '2026-10-10',
+        'source': 't-online · hessenschau · ZDFheute',
+        'sourceUrl': 'https://frankfurt.t-online.de/region/frankfurt-am-main/id_101467824/frankfurter-buchmesse-startet-250000-besucher-erwartet.html',
+        'blurb': 'До 11 октября во Франкфурте идёт 78-я книжная ярмарка: больше 250 000 гостей, '
+                 'тысяча спикеров и почётная гостья Чехия с девизом «Страна на побережье».',
+        'license': 'Текст — пересказ новостей t-online, hessenschau и ZDFheute; фото — Wikimedia Commons',
+        'figs': {
+            'halle': {'w': 1200, 'h': 800,
+                      'cap': 'Павильон 3 Франкфуртской книжной ярмарки — стенды немецких '
+                             'издательств и газет (снимок 2025 года).',
+                      'credit': 'Dr. Thomas Liptak · ' + SA4},
+            'forum': {'w': 1200, 'h': 800,
+                      'cap': 'Площадь перед зданием «Форум» на территории выставки во Франкфурте '
+                             '(снимок 2025 года).',
+                      'credit': 'Dr. Thomas Liptak · ' + SA4},
+            'prag': {'w': 1200, 'h': 799,
+                     'cap': 'Карлов мост через Влтаву в Праге. Моря в Чехии нет — зато есть '
+                            'шекспировская «Богемия у моря».',
+                     'credit': 'Scotch Mist · ' + SA4},
+        },
+    },
+})
+
+ORDER = ['mars-krippe-2026', 'schildkroete-jonathan-2026', 'synthid-ki-erkennung-2026',
+         'temu-shein-zoll-2026', 'buchmesse-2026'] + ORDER
