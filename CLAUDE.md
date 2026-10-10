@@ -1,4 +1,14 @@
-# Deutsch Meister — правила для генерации контента
+# Deutsch Meister
+
+## Адреса проекта
+
+- Лендинг бота: https://vanguar.github.io/german-morning/
+  (отдельный репо `vanguar/german-morning`, версии `/uk/`, `/ru/`, `/de/`)
+- Бот: https://t.me/GermanMorningBot
+- Мини-апп (этот репо, GitHub Pages): https://vanguar.github.io/deutsch-meister/
+- Бэкенд бота (Vercel): https://deutsch-meister-puce.vercel.app
+
+# Правила для генерации контента
 
 Касается всех уроков, карточек, заметок (`note`), подсказок, глоссариев,
 новостей, книг, переводов (`i18n/uk`), текстов бота и генераторов
