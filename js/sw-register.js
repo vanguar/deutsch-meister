@@ -23,19 +23,14 @@
 
    Поэтому здесь: одна общая регистрация на все страницы,
    updateViaCache: 'none', проверка обновления при каждом возврате на
-   вкладку, немедленная активация нового воркера и одна перезагрузка
-   по controllerchange (со счётчиком против цикла). Плюс dmAppVersion()
+   вкладку и немедленная активация нового воркера — без перезагрузки
+   страницы (она выбивала из-под пальца главную). Плюс dmAppVersion()
    для видимой строки версии и dmHardReset() — аварийный сброс.
 
    Zero dependencies.
    ═══════════════════════════════════════════════ */
 
 (function () {
-  // Счётчик перезагрузок держим в сессии: если новый воркер почему-то
-  // меняется по кругу, страница не должна перезагружаться бесконечно.
-  const RELOAD_KEY = 'dm_sw_reload';
-  const RELOAD_MAX = 2;
-
   /* ── Версия приложения ── */
 
   // Номер берём из ?v= у собственного тега: bump_version.py правит его
@@ -77,7 +72,6 @@
     const reload = () => {
       if (reloaded) return;
       reloaded = true;
-      try { sessionStorage.removeItem(RELOAD_KEY); } catch (e) {}
       location.reload();
     };
 
@@ -113,27 +107,18 @@
   const swBase = location.pathname.startsWith('/deutsch-meister/')
     ? '/deutsch-meister/' : '/';
 
-  let refreshing = false;
-
-  function reloadOnce() {
-    if (refreshing) return;
-    let n = 0;
-    try { n = Number(sessionStorage.getItem(RELOAD_KEY)) || 0; } catch (e) {}
-    if (n >= RELOAD_MAX) {
-      console.warn('[SW] перезагрузка после смены воркера зациклилась — остановлено');
-      return;
-    }
-    refreshing = true;
-    try { sessionStorage.setItem(RELOAD_KEY, String(n + 1)); } catch (e) {}
-    location.reload();
-  }
-
-  // Страница прожила больше десяти секунд — значит цикла нет, счётчик
-  // можно обнулить, иначе следующее честное обновление в этой же сессии
-  // упёрлось бы в лимит.
-  setTimeout(() => { try { sessionStorage.removeItem(RELOAD_KEY); } catch (e) {} }, 10000);
-
-  navigator.serviceWorker.addEventListener('controllerchange', reloadOnce);
+  // Смена воркера страницу НЕ перезагружает. Раньше здесь висел
+  // location.reload() по controllerchange, и он срабатывал почти при
+  // каждом открытии приложения: (1) при первой установке — clients.claim()
+  // тоже шлёт controllerchange, хотя обновлять нечего; (2) после каждого
+  // деплоя — новый воркер ставился через секунду-две после загрузки, и
+  // главная перерисовывалась прямо под пальцем, когда уже жмёшь на урок.
+  // Перезагрузка и не нужна: HTML, JS и CSS воркер отдаёт network-first,
+  // так что в сети открытая страница уже свежая, а новый воркер просто
+  // подхватит следующие запросы. Залипшую старую версию лечит dmHardReset().
+  navigator.serviceWorker.addEventListener('controllerchange', () => {
+    console.info('[SW] активирован новый воркер — без перезагрузки страницы');
+  });
 
   function activate(worker) {
     if (!worker) return;

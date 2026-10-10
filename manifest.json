@@ -8,13 +8,33 @@
   "background_color": "#0d0d1a",
   "theme_color": "#7c6af7",
   "lang": "ru",
-  "categories": ["education"],
+  "categories": [
+    "education"
+  ],
   "icons": [
     {
-      "src": "/deutsch-meister/icons/icon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
-      "purpose": "any maskable"
+      "src": "/deutsch-meister/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/deutsch-meister/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/deutsch-meister/icons/icon-maskable-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/deutsch-meister/icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ],
   "shortcuts": [
@@ -22,13 +42,25 @@
       "name": "Урок A1",
       "short_name": "A1",
       "url": "/deutsch-meister/lessons/a1/lesson-01/index.html",
-      "icons": [{ "src": "/deutsch-meister/icons/icon.svg", "sizes": "any" }]
+      "icons": [
+        {
+          "src": "/deutsch-meister/icons/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
     },
     {
       "name": "Урок A2",
       "short_name": "A2",
       "url": "/deutsch-meister/lessons/a2/lesson-01/index.html",
-      "icons": [{ "src": "/deutsch-meister/icons/icon.svg", "sizes": "any" }]
+      "icons": [
+        {
+          "src": "/deutsch-meister/icons/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
     }
   ]
 }
