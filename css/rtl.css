@@ -47,9 +47,11 @@ html[dir="rtl"] .sidebar-mobile-toggle { right: auto; left: 20px; }
 html[dir="rtl"] :is(h1, h2, h3, .hero-sub, .hero-eyebrow, .phrase-de) { text-align: right; }
 html[dir="rtl"] .tgw-features,
 html[dir="rtl"] .dm-choice,
-html[dir="rtl"] .vocab-table th,
 html[dir="rtl"] .mc-option,
 html[dir="rtl"] .word-tip { text-align: right; }
+/* словарь: немецкое слово с артиклем — LTR, у правого края */
+html[dir="rtl"] .vocab-main { direction: ltr; text-align: right; }
+html[dir="rtl"] .vocab-term { justify-content: flex-end; }
 
 /* ── Модалки ── */
 html[dir="rtl"] .dm-close { right: auto; left: 14px; }

@@ -332,9 +332,14 @@
   cursor: pointer;
   align-items: center;
   justify-content: center;
-  transition: transform var(--t-normal);
+  transition: transform var(--t-normal), opacity var(--t-normal);
 }
 .sidebar-mobile-toggle:hover { transform: scale(1.08); }
+.sidebar-mobile-toggle.fab-hidden {
+  transform: translateY(calc(100% + 32px));
+  opacity: 0;
+  pointer-events: none;
+}
 
 /* Mobile overlay */
 .sidebar-overlay {

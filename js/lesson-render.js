@@ -2199,24 +2199,42 @@ Kraft|сила|Существительное|in Kraft treten — вступат
     });
   }
 
-  /* ── Vocab table ── */
+  /* ── Vocab list ──
+     В данных артикль часто записан дважды: в `de` («der Montag») и в
+     `article`. Показываем его один раз, отдельной цветной меткой
+     (der / die / das различаются цветом и самим словом). */
+  const ARTICLE_RE = /^(der|die|das)\s+(?=[A-ZÄÖÜ])/;
+
+  function splitArticle(w) {
+    const de = String(w.de || '');
+    const m = de.match(ARTICLE_RE);
+    const article = w.article || (m ? m[1] : '');
+    const word = m && m[1] === article ? de.slice(m[0].length) : de;
+    return { article, word };
+  }
+
   function renderVocab() {
-    const tbody = document.getElementById('vocabTableBody');
-    if (!tbody || !LESSON_DATA?.vocabulary) return;
+    const list = document.getElementById('vocabTableBody');
+    if (!list || !LESSON_DATA?.vocabulary) return;
+    list.innerHTML = '';
 
     LESSON_DATA.vocabulary.forEach(w => {
-      const tr = document.createElement('tr');
-      tr.innerHTML = `
-        <td class="vocab-de">
-          ${w.article ? `<span class="vocab-article">${esc(w.article)}</span>` : ''}
-          <span class="word-speak" onclick="speak('${esc(w.de)}')">
-            ${esc(w.de)}<span class="wi" style="opacity:1;font-size:11px">🔊</span>
-          </span>
-        </td>
-        <td class="vocab-ipa">${esc(w.ipa || '')}</td>
-        <td>${esc(w.ru)}</td>
+      const { article, word } = splitArticle(w);
+      const li = document.createElement('li');
+      li.className = 'vocab-item';
+      li.innerHTML = `
+        <div class="vocab-main">
+          <div class="vocab-term">
+            ${article ? `<span class="vocab-article art-${esc(article)}">${esc(article)}</span>` : ''}
+            <span class="vocab-word" lang="de">${esc(word)}</span>
+          </div>
+          ${w.ipa ? `<div class="vocab-ipa">${esc(w.ipa)}</div>` : ''}
+        </div>
+        <div class="vocab-ru">${esc(w.ru)}</div>
+        <button class="vocab-speak" type="button" title="Озвучить" aria-label="Озвучить"
+          onclick="speak('${jsStr(w.de)}')">🔊</button>
       `;
-      tbody.appendChild(tr);
+      list.appendChild(li);
     });
   }
 
@@ -2314,7 +2332,7 @@ Kraft|сила|Существительное|in Kraft treten — вступат
     renderFillBlanks();
   }
 
-  return { init, wordHtml: renderWord, initWordTips, renderNav };
+  return { init, wordHtml: renderWord, initWordTips, renderNav, renderVocab };
 })();
 
 /* ── Global helpers called from inline HTML ── */
@@ -2351,3 +2369,27 @@ function toggleSidebar() {
   open ? closeSidebar() : openSidebar();
 }
 function toggleLevel(id) { document.getElementById(id)?.classList.toggle('collapsed'); }
+
+/* ── Плавающая кнопка меню прячется при прокрутке вниз ──
+   Иначе она закрывает динамики и строки под собой. Возвращается при
+   прокрутке вверх и у конца страницы (там её место освобождает
+   нижний отступ .lesson-content). */
+(function initFabAutoHide() {
+  const fab = document.querySelector('.sidebar-mobile-toggle');
+  if (!fab) return;
+  let lastY = window.scrollY;
+  let ticking = false;
+  function update() {
+    ticking = false;
+    const y = window.scrollY;
+    const dy = y - lastY;
+    if (Math.abs(dy) < 6) return;
+    const nearEnd = window.innerHeight + y >= document.documentElement.scrollHeight - 80;
+    const sidebarOpen = document.getElementById('sidebar')?.classList.contains('open');
+    fab.classList.toggle('fab-hidden', dy > 0 && y > 120 && !nearEnd && !sidebarOpen);
+    lastY = y;
+  }
+  window.addEventListener('scroll', () => {
+    if (!ticking) { ticking = true; requestAnimationFrame(update); }
+  }, { passive: true });
+})();

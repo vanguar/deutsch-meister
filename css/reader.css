@@ -697,20 +697,16 @@ body.rd-open { overflow: hidden; }
 }
 .rd-gl-stem.rd-gl--link { border-left-color: var(--rd-accent); opacity: .7; }
 
-/* Скобка над сочетанием, переведённым целиком (setzte sich → «сел») */
+/* Линия над сочетанием, переведённым целиком (setzte sich → «сел»).
+   Раньше это была скобка с уголками — на плотной странице их десятки,
+   и они шумели. Тонкой линии хватает, чтобы показать границы группы;
+   у части, разорванной концом строки, линия просто доходит до края. */
 .rd-gl-bracket {
   position: absolute;
-  height: 3px;
-  border: 1px solid var(--rd-muted);
-  border-bottom: 0;
-  border-radius: 2px 2px 0 0;
-  opacity: .3;
+  height: 0;
+  border-top: 1px solid var(--rd-muted);
+  opacity: .28;
 }
-
-/* Сочетание, разорванное концом строки: у части без начала или конца
-   нет «уголка» — скобка уходит за край, как продолжение */
-.rd-gl-bracket.rd-gl-bracket--open-l { border-left: 0; border-top-left-radius: 0; }
-.rd-gl-bracket.rd-gl-bracket--open-r { border-right: 0; border-top-right-radius: 0; }
 
 /* Пунктирная дуга под частями отделяемого глагола на одной строке */
 .rd-gl-arc {
@@ -838,9 +834,48 @@ body.rd-open { overflow: hidden; }
   .rd-nav-btn { width: 100%; }
 }
 
+/* На узком экране подписи не прячем, а ставим под значком: без них
+   «Aa», «🔤» и «🃏 (0)» не угадать. Кнопки делят строку поровну. */
 @media (max-width: 560px) {
-  .rd-btn-label { display: none; }
-  .rd-slot-btn { padding: 8px 10px; }
+  .rd-slot { gap: 6px; }
+  .rd-slot-btn {
+    position: relative;
+    flex: 1 1 0;
+    min-width: 0;
+    min-height: 48px;
+    padding: 6px 4px 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+  }
+  .rd-slot-btn[hidden] { display: none; }
+  .rd-slot-btn .rd-btn-icon { width: auto; font-size: 17px; line-height: 1.1; }
+  .rd-slot-btn .rd-btn-aa { font-size: 15px; }
+  .rd-slot-btn .rd-btn-label {
+    display: block;
+    margin: 0;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 1.1;
+    color: var(--rd-muted);
+  }
+  /* число карточек — бейджем в углу, а не «(0)» в строке; ноль не показываем */
+  .rd-btn-count::before,
+  .rd-btn-count::after { content: none; }
+  .rd-btn-count[data-n="0"] { display: none; }
+  .rd-btn-count {
+    position: absolute;
+    top: 3px;
+    right: 5px;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 1;
+  }
 }
 
 /* ══ 13. РИДЕР: СКРЫТИЕ ПАНЕЛЕЙ ══ */
@@ -1115,7 +1150,6 @@ body.rd-open { overflow: hidden; }
 @media (max-width: 420px) {
   .rd-controls { padding: 9px 12px; }
   .rd-nav-btn  { padding: 9px 12px; font-size: 12px; }
-  .rd-slot-btn { padding: 8px 12px; }
   .rd-top      { padding: 9px 12px; gap: 10px; }
 }
 
@@ -1334,6 +1368,8 @@ body.rd-open { overflow: hidden; }
 
 /* Кнопка «🔊 страница» в нижней панели */
 .rd-btn-label { margin-left: 6px; font-size: 12px; font-weight: 600; }
+.rd-btn-count::before { content: '('; }
+.rd-btn-count::after  { content: ')'; }
 .rd-slot-btn.is-playing {
   background: var(--rd-accent-soft);
   border-color: var(--rd-accent);
@@ -1346,10 +1382,6 @@ body.rd-open { overflow: hidden; }
   50%      { opacity: .55; }
 }
 
-@media (max-width: 420px) {
-  /* на узком экране оставляем только значок */
-  .rd-btn-label { display: none; }
-}
 
 /* ══ 21. РИДЕР: КАРТОЧКИ КНИГИ ══ */
 

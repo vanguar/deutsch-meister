@@ -97,6 +97,26 @@
   box-shadow: 0 4px 14px color-mix(in srgb, var(--accent2) 30%, transparent);
 }
 .meta-chip-level .ico { color: rgba(255,255,255,.85); }
+
+/* Уровень, время и число слов — просто информация: без рамки и заливки,
+   чтобы не выглядеть кнопками (A1 в фиолетовой плашке казалась нажатой).
+   Плашкой остаётся только кликабельный прогресс секций. */
+.lesson-meta { column-gap: 14px; }
+.meta-chip:not(.section-progress-badge) {
+  height: auto;
+  padding: 0;
+  background: none;
+  border: none;
+  box-shadow: none;
+  gap: 5px;
+}
+.meta-chip.meta-chip-level { color: var(--accent2); letter-spacing: .4px; }
+.meta-chip.meta-chip-level .ico { color: var(--accent2); }
+@media (max-width: 420px) {
+  .lesson-meta { column-gap: 12px; }
+  /* «0/5» с кольцом и так понятно; слово «секций» переносило плашку */
+  .section-progress-badge small { display: none; }
+}
 .section-progress-badge { cursor: pointer; }
 .section-progress-badge .ico { color: var(--text-dim); }
 .section-progress-badge.is-progress .ico { color: var(--green); }
@@ -374,48 +394,70 @@
   border-top: 1px solid var(--tint-border);
 }
 
-/* ── Vocabulary Table ── */
-.vocab-table {
-  width: 100%;
-  border-collapse: collapse;
+/* ── Vocabulary List ── */
+.vocab-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   background: var(--surface2);
   border: 1px solid var(--border);
   border-radius: var(--r-lg);
   overflow: hidden;
 }
-.vocab-table th {
-  text-align: left;
-  padding: 11px 16px;
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  color: var(--text-dim);
-  font-weight: 600;
-  background: var(--tint);
-  border-bottom: 1px solid var(--border);
+.vocab-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr) 44px;
+  align-items: center;
+  gap: 4px 14px;
+  padding: 10px 6px 10px 16px;
+  border-bottom: 1px solid var(--tint-border);
 }
-.vocab-table td {
-  padding: 11px 16px;
-  font-size: 14px;
-  border-bottom: 1px solid var(--tint);
-  vertical-align: middle;
+.vocab-item:last-child { border-bottom: none; }
+.vocab-main { min-width: 0; }
+.vocab-term {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0 6px;
 }
-.vocab-table tr:last-child td { border-bottom: none; }
-.vocab-table tbody tr:hover td { background: var(--tint); }
-
-.vocab-de { font-weight: 600; color: var(--text-strong); }
 .vocab-article {
-  color: var(--accent);
-  font-size: 11px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-dim);
+}
+.vocab-article.art-der { color: var(--art-der); }
+.vocab-article.art-die { color: var(--art-die); }
+.vocab-article.art-das { color: var(--art-das); }
+.vocab-word {
+  font-size: 16px;
   font-weight: 600;
-  margin-right: 4px;
-  font-family: 'DM Mono', monospace;
+  color: var(--text-strong);
+  overflow-wrap: anywhere;
 }
 .vocab-ipa {
-  font-family: 'DM Mono', monospace;
+  margin-top: 2px;
   font-size: 12px;
   color: var(--text-dim);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
+.vocab-ru {
+  font-size: 14px;
+  color: var(--text);
+  overflow-wrap: anywhere;
+}
+.vocab-speak {
+  width: 44px;
+  height: 44px;
+  border: none;
+  background: none;
+  border-radius: var(--r-sm);
+  font-size: 16px;
+  cursor: pointer;
+  opacity: .85;
+}
+.vocab-speak:hover { background: var(--tint); opacity: 1; }
 
 /* ── Grammar Box ── */
 .grammar-box {
@@ -542,9 +584,9 @@
   }
   .lesson-title { font-size: 26px; }
   .phrase-grid  { grid-template-columns: 1fr; }
-  .vocab-table th { padding: 8px 10px; font-size: 10px; letter-spacing: 1px; }
-  .vocab-table td { padding: 9px 10px; font-size: 13px; }
-  .vocab-ipa      { font-size: 11px; word-break: break-word; }
+  .vocab-item     { padding: 9px 2px 9px 14px; gap: 2px 10px; }
+  .vocab-word     { font-size: 15px; }
+  .vocab-ru       { font-size: 13px; }
   .grammar-box    { padding: 18px 16px; }
   .pattern-table  { table-layout: fixed; }
   .pattern-table td {

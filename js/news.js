@@ -14,6 +14,7 @@
    «Свежесть» — две разные отметки, чтобы было понятно с первого взгляда:
      🔥 Свежее — новости не больше FRESH_DAYS дней (по дате в источнике);
      • НОВОЕ   — статью ещё не открывали на этом устройстве (dm_news_seen:<id>).
+   На витрине рубрика подсвечена, только пока в ней есть непрочитанное свежее.
    Zero dependencies.
    ═══════════════════════════════════════════════ */
 
@@ -129,7 +130,9 @@ const NewsFeed = (() => {
         <div class="news-tile-foot"><span class="news-tile-count muted"><span>Раздел в разработке</span></span></div>
       </a>`;
     }
-    const fresh  = list.filter(isFresh).length;
+    // Рамка и «Свежее» — только если свежее ещё не прочитано: когда
+    // подсвечены все рубрики сразу, не выделена ни одна.
+    const fresh  = list.filter(it => isFresh(it) && !isSeen(it)).length;
     const unread = list.filter(it => !isSeen(it)).length;
     const last   = list[0];   // items уже отсортированы: свежие первыми
     return `<a class="news-tile is-live${fresh ? ' is-fresh' : ''}" href="#r=${r.id}" data-rubric="${r.id}">

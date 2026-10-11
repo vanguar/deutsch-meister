@@ -368,7 +368,8 @@ const Reader = (() => {
       ? (ch.titleRu || ch.title || '')
       : (ch.title || ch.titleRu || '');
     const subtitle = russian ? '' : (ch.titleRu || '');
-    const icon = (st.meta && st.meta.cover) || '✦';
+    // у главы может быть свой значок (ch.icon), иначе — обложка книги
+    const icon = ch.icon || (st.meta && st.meta.cover) || '✦';
     return `<header class="rd-chapter-opening">
       <div class="rd-chapter-kicker"><span aria-hidden="true">✦</span><span>${esc(label)}</span><span aria-hidden="true">✦</span></div>
       <div class="rd-chapter-icon" aria-hidden="true">${esc(icon)}</div>
@@ -632,7 +633,14 @@ const Reader = (() => {
   function paint() {
     const total   = st.bookPages || st.pages;
     const current = st.bookPages ? bookPage() : st.page + 1;
-    elPages.textContent = `стр. ${current} / ${total}`;
+    // Число страниц зависит от режима (над словами текста на странице
+    // меньше): «стр. 1/17» → «1/12» сбивало ориентир. Глава и процент
+    // от режима не зависят; номер страницы остаётся в подсказке.
+    const pct = total > 1 ? Math.round(((current - 1) / (total - 1)) * 100) : 100;
+    elPages.textContent = st.chTotal > 1
+      ? `гл. ${st.chIndex + 1} / ${st.chTotal} · ${pct}%`
+      : `${pct}%`;
+    elPages.title = `стр. ${current} / ${total}`;
 
     // Полоса тоже по всей книге — иначе она спорила бы со счётчиком
     const done = total > 1 ? ((current - 1) / (total - 1)) * 100 : 100;
@@ -1286,7 +1294,7 @@ const Reader = (() => {
     const label = btn.querySelector('.rd-btn-label');
     btn.classList.toggle('is-playing', playing);
     btn.setAttribute('aria-pressed', playing ? 'true' : 'false');
-    if (label) label.textContent = playing ? 'стоп' : 'дальше';
+    if (label) label.textContent = playing ? 'стоп' : 'слушать';
     const title = st.fullTranslation
       ? 'Озвучка недоступна в режиме полного перевода'
       : (playing ? 'Остановить озвучку' : 'Читать дальше вслух');
@@ -1525,7 +1533,10 @@ const Reader = (() => {
   function refreshCards() {
     if (!elCardsBtn) return;
     const n = chapterLemmas().length;
-    if (elCardsN) elCardsN.textContent = '(' + n + ')';
+    if (elCardsN) {
+      elCardsN.textContent = n;          // скобки рисует CSS на широком экране
+      elCardsN.dataset.n = n;
+    }
     elCardsBtn.disabled = n === 0;
   }
 

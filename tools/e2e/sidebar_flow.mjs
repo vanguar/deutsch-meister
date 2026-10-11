@@ -113,7 +113,7 @@ await c.go(B + '/lessons/a2/lesson-05/index.html', 1800);
 await waitFor(`document.querySelectorAll('.side-action.news').length > 0`);
 await c.ev(`document.querySelector('.side-action.news').click()`);
 ok(await waitFor(`location.pathname.endsWith('/news.html')`), '«Новости» из урока ведут на news.html');
-ok(await waitFor(`document.querySelectorAll('.news-card').length === 5`), 'на news.html — 5 статей');
+ok(await waitFor(`document.querySelectorAll('.news-tile.is-live').length > 0`), 'на news.html — витрина рубрик со статьями');
 
 // ── Светлая тема ──
 await c.ev(`localStorage.setItem('dm_theme', 'light')`);

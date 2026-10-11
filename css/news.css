@@ -91,7 +91,8 @@
 .news-tile-go { margin-left: auto; color: var(--accent2); font-weight: 800; }
 
 /* Есть свежее — тёплая рамка; «скоро» — приглушённая заглушка */
-.news-tile.is-fresh { border-color: var(--fresh); box-shadow: 0 0 0 1px var(--fresh) inset, 0 6px 22px var(--fresh-glow); }
+/* без свечения: рамка и бейдж и так выделяют, а у новичка свежее во всех рубриках */
+.news-tile.is-fresh { border-color: color-mix(in srgb, var(--fresh) 70%, var(--border)); }
 .news-tile.is-soon { opacity: .62; border-style: dashed; }
 .news-tile.is-soon:hover { transform: none; border-color: var(--border); }
 .news-tile.is-soon .news-tile-ico { filter: grayscale(.7); }

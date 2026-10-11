@@ -522,3 +522,32 @@
 }
 .step-next-btn:hover  { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(124,106,247,.55); }
 .step-next-btn:active { transform: translateY(0);    box-shadow: 0 2px 10px rgba(124,106,247,.35); }
+.step-next-btn:disabled {
+  opacity: .45;
+  cursor: default;
+  transform: none;
+  box-shadow: none;
+}
+.step-skip-btn {
+  display: block;
+  margin: 10px auto 0;
+  padding: 10px 16px;
+  min-height: 44px;
+  background: none;
+  border: none;
+  color: var(--text-dim);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+.step-skip-btn:hover { color: var(--text); }
+.dict-answer {
+  margin-top: 10px;
+  font-size: 14px;
+  color: var(--text-dim);
+}
+.dict-answer b { color: var(--correct); font-size: 16px; }
+.step-mode .dictation-num,
+.step-mode .dictation-num + br { display: none; }

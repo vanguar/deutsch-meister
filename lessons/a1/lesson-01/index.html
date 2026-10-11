@@ -16,14 +16,14 @@
   <!-- CSS -->
 
   <!-- язык интерфейса: первым, до данных и стилей -->
-  <script src="../../../js/i18n.js?v=110"></script>
-  <link rel="stylesheet" href="../../../css/base.css?v=110">
-  <link rel="stylesheet" href="../../../css/sidebar.css?v=110">
-  <link rel="stylesheet" href="../../../css/lesson.css?v=110">
-  <link rel="stylesheet" href="../../../css/exercises.css?v=110">
+  <script src="../../../js/i18n.js?v=112"></script>
+  <link rel="stylesheet" href="../../../css/base.css?v=112">
+  <link rel="stylesheet" href="../../../css/sidebar.css?v=112">
+  <link rel="stylesheet" href="../../../css/lesson.css?v=112">
+  <link rel="stylesheet" href="../../../css/exercises.css?v=112">
 
   <!-- Lesson data (must come before engine scripts) -->
-  <script src="../../../data/a1/a1-lesson-01.js?v=110"></script>
+  <script src="../../../data/a1/a1-lesson-01.js?v=112"></script>
 </head>
 <body>
 
@@ -133,18 +133,7 @@
         <div class="section-label">📖 Словарь урока</div>
         <h2 class="section-title">Ключевые слова</h2>
 
-        <table class="vocab-table">
-          <thead>
-            <tr>
-              <th>Немецкий</th>
-              <th>МФА</th>
-              <th>Русский</th>
-            </tr>
-          </thead>
-          <tbody id="vocabTableBody">
-            <!-- Rendered by JS -->
-          </tbody>
-        </table>
+        <ul class="vocab-list" id="vocabTableBody"></ul>
       </section>
 
       <!-- ══ SECTION 3: GRAMMAR ══ -->
@@ -285,12 +274,12 @@
 <button class="sidebar-mobile-toggle" id="sidebarToggle" onclick="toggleSidebar()">☰</button>
 
 <!-- ── SCRIPTS ── -->
-<script src="../../../js/tts.js?v=110"></script>
-<script src="../../../js/progress.js?v=110"></script>
-<script src="../../../js/exercises.js?v=110"></script>
-<script src="../../../js/flashcards.js?v=110"></script>
-<script src="../../../js/lesson-render.js?v=110"></script>
-<script src="../../../js/support.js?v=110"></script>
+<script src="../../../js/tts.js?v=112"></script>
+<script src="../../../js/progress.js?v=112"></script>
+<script src="../../../js/exercises.js?v=112"></script>
+<script src="../../../js/flashcards.js?v=112"></script>
+<script src="../../../js/lesson-render.js?v=112"></script>
+<script src="../../../js/support.js?v=112"></script>
 
 
 <script>
@@ -353,29 +342,9 @@ function renderPhrases() {
   });
 }
 
-/* ══════════════════════════════════════
-   FIX 3: Vocab table — no speaker next to Russian
-   ══════════════════════════════════════ */
+/* Словарь урока — общий рендер (js/lesson-render.js) */
 function renderVocab() {
-  const tbody = document.getElementById('vocabTableBody');
-  if (!tbody || !LESSON_DATA?.vocabulary) return;
-
-  LESSON_DATA.vocabulary.forEach(w => {
-    const safe = w.de.replace(/'/g, "\\'");
-    const tr = document.createElement('tr');
-    tr.innerHTML = `
-      <td class="vocab-de">
-        ${w.article ? `<span class="vocab-article">${w.article}</span>` : ''}
-        <span class="word-speak" onclick="speak('${safe}')">
-          ${w.de}<span class="wi" style="opacity:1;font-size:11px">🔊</span>
-        </span>
-      </td>
-      <td class="vocab-ipa">${w.ipa}</td>
-      <td>${w.ru}</td>
-    `;
-    // ↑ Removed the 4th column with speak-btn next to Russian
-    tbody.appendChild(tr);
-  });
+  LessonRender.renderVocab();
 }
 
 /* ══════════════════════════════════════
@@ -455,8 +424,8 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
 
   <script>if('serviceWorker' in navigator){const swBase=location.pathname.startsWith('/deutsch-meister/')?'/deutsch-meister/':'/';navigator.serviceWorker.register(swBase+'service-worker.js').catch(()=>{});}</script>
-  <script src="../../../js/telegram.js?v=110"></script>
-<script src="../../../js/cloud-sync.js?v=110"></script>
-<script src="../../../js/install-app.js?v=110"></script>
+  <script src="../../../js/telegram.js?v=112"></script>
+<script src="../../../js/cloud-sync.js?v=112"></script>
+<script src="../../../js/install-app.js?v=112"></script>
 </body>
 </html>

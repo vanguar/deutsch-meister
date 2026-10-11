@@ -491,6 +491,79 @@ const Exercises = (() => {
     return b;
   }
 
+  /**
+   * Шаг с полем ввода: «Проверить» (неактивна, пока поле пустое) →
+   * при верном ответе сам переходит дальше, при неверном кнопка
+   * становится «Далее →» / «Завершить ✓». Так кнопка всегда говорит,
+   * что сделает: проверит или пропустит.
+   * @param {object} o
+   *   host, inp, isLast — карточка, поле, последний ли шаг
+   *   evaluate()        — проверить поле (ставит input-correct / input-wrong)
+   *   onWrong()         — что показать при ошибке (необязательно)
+   *   retry             — можно ли исправить ответ после ошибки
+   *   onDone(correct)   — перейти к следующему шагу
+   */
+  function _wireCheckStep(o) {
+    const { host, inp, isLast } = o;
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'step-next-btn';
+    host.appendChild(btn);
+
+    let checked = false;
+    let done = false;
+    const isChecked = () => inp.classList.contains('input-correct') || inp.classList.contains('input-wrong');
+
+    function reset() {
+      checked = false;
+      btn.textContent = 'Проверить';
+      btn.disabled = !inp.value.trim();
+    }
+    function finish() {
+      if (done) return;
+      done = true;
+      o.onDone(inp.classList.contains('input-correct'));
+    }
+    function check() {
+      if (!inp.value.trim()) return;
+      // Enter уже мог проверить поле обработчиком упражнения — не дублируем
+      if (!isChecked()) o.evaluate();
+      checked = true;
+      if (inp.classList.contains('input-correct')) {
+        btn.disabled = true;
+        setTimeout(finish, 600);   // короткая пауза, чтобы увидеть зелёный
+      } else {
+        wrong();
+      }
+    }
+    function wrong() {
+      checked = true;
+      inp.classList.remove('input-correct');
+      inp.classList.add('input-wrong');
+      o.onWrong?.();
+      btn.textContent = isLast ? 'Завершить ✓' : 'Далее →';
+      btn.disabled = false;
+    }
+
+    btn.addEventListener('click', () => (checked ? finish() : check()));
+    inp.addEventListener('input', () => {
+      if (checked && o.retry && !done) {
+        inp.classList.remove('input-correct', 'input-wrong');
+        reset();
+      } else if (!checked) {
+        btn.disabled = !inp.value.trim();
+      }
+    });
+    inp.addEventListener('keydown', e => {
+      if (e.key !== 'Enter') return;
+      e.preventDefault();
+      if (!checked) check();
+      else finish();
+    });
+    reset();
+    return { btn, giveUp: wrong };
+  }
+
   /* ── Fill step ── */
   function applyFillStep() {
     if (!_isMobile()) return;
@@ -524,31 +597,10 @@ const Exercises = (() => {
     qs.forEach((q, qi) => {
       const inp = q.querySelector('.blank-input');
       if (!inp) return;
-
-      const btn = _mkNextBtn(qi === total - 1);
-      q.appendChild(btn);
-
-      btn.addEventListener('click', () => {
-        const wasCorrect = inp.classList.contains('input-correct');
-        const wasWrong   = inp.classList.contains('input-wrong');
-
-        if (!wasCorrect && !wasWrong) {
-          // Not yet checked — evaluate first, show result
-          if (inp._evaluate) inp._evaluate();
-
-          if (inp.classList.contains('input-correct')) {
-            ok++;
-            setTimeout(advance, 600); // brief pause to see green
-          } else {
-            // Wrong or empty — show red, change button to "Пропустить →"
-            btn.textContent = 'Пропустить →';
-          }
-          return;
-        }
-
-        // Already checked — advance
-        if (wasCorrect) ok++;
-        advance();
+      _wireCheckStep({
+        host: q, inp, isLast: qi === total - 1, retry: true,
+        evaluate: () => inp._evaluate?.(),
+        onDone: correct => { if (correct) ok++; advance(); }
       });
     });
   }
@@ -605,6 +657,8 @@ const Exercises = (() => {
 
     const checkDictBtn = document.getElementById('checkDictBtn');
     if (checkDictBtn) checkDictBtn.style.display = 'none';
+    // Прогресс уже показывает полоса шагов — «Слово 1 из 8» в карточке лишнее
+    cnt.classList.add('step-mode');
 
     function advance() {
       cards[idx].style.display = 'none';
@@ -622,32 +676,33 @@ const Exercises = (() => {
     cards.forEach((card, ci) => {
       const inp = card.querySelector('.dictation-input');
       if (!inp) return;
+      const word = dictData[ci]?.word || '';
 
-      const btn = _mkNextBtn(ci === total - 1);
-      card.appendChild(btn);
+      function reveal() {
+        inp.readOnly = true;
+        reveal.btn?.remove();
+        if (card.querySelector('.dict-answer')) return;
+        const ans = document.createElement('div');
+        ans.className = 'dict-answer';
+        ans.innerHTML = `<span>Правильный ответ:</span> <b lang="de">${escapeHtml(word)}</b>`;
+        inp.insertAdjacentElement('afterend', ans);
+      }
 
-      btn.addEventListener('click', () => {
-        const wasCorrect = inp.classList.contains('input-correct');
-        const wasWrong   = inp.classList.contains('input-wrong');
-
-        if (!wasCorrect && !wasWrong) {
-          // Not yet checked — evaluate first, show result
-          const word = dictData[ci]?.word || '';
-          if (inp.value.trim()) checkSingleDict(ci, word);
-
-          if (inp.classList.contains('input-correct')) {
-            ok++;
-            setTimeout(advance, 600);
-          } else {
-            btn.textContent = 'Пропустить →';
-          }
-          return;
-        }
-
-        // Already checked — advance
-        if (wasCorrect) ok++;
-        advance();
+      const step = _wireCheckStep({
+        host: card, inp, isLast: ci === total - 1,
+        evaluate: () => checkSingleDict(ci, word),
+        onWrong: reveal,
+        onDone: correct => { if (correct) ok++; advance(); }
       });
+
+      // «Не знаю» — показать ответ без попытки, дальше как при ошибке
+      const giveUp = document.createElement('button');
+      giveUp.type = 'button';
+      giveUp.className = 'step-skip-btn';
+      giveUp.textContent = 'Показать ответ';
+      giveUp.addEventListener('click', () => step.giveUp());
+      reveal.btn = giveUp;
+      card.appendChild(giveUp);
     });
   }
 

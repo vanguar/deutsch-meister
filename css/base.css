@@ -31,6 +31,11 @@
 
   --correct:      #56d899;
   --wrong:        #f06b6b;
+
+  /* Род существительного: der / die / das (≥4.5:1 на surface2) */
+  --art-der:      #7fb2ff;
+  --art-die:      #ff8597;
+  --art-das:      #5fd39a;
 }
 
 /* ── Light Theme ── */
@@ -59,6 +64,10 @@
 
   --correct:      #1f9e5e;
   --wrong:        #d94f4f;
+
+  --art-der:      #1d5bc4;
+  --art-die:      #b8263f;
+  --art-das:      #17733f;
 }
 
 /* ── Spacing, Radius, Shadows, Transitions (theme-independent) ── */
@@ -280,6 +289,13 @@ h1, h2, h3 {
   font-size: 16px;
   transition: all var(--t-fast);
   flex-shrink: 0;
+  position: relative;
+}
+/* Значок 32 px, а зона нажатия — 44 px (рекомендация для пальца) */
+.speak-btn::after {
+  content: '';
+  position: absolute;
+  inset: -6px;
 }
 .speak-btn:hover {
   background: rgba(124,106,247,.18);
@@ -412,7 +428,7 @@ h1, h2, h3 {
 }
 
 /* Shadows for depth on light surfaces */
-[data-theme="light"] .vocab-table th,
+[data-theme="light"] .vocab-list,
 [data-theme="light"] .phrase-card,
 [data-theme="light"] .blank-question,
 [data-theme="light"] .mc-option,
@@ -427,11 +443,9 @@ h1, h2, h3 {
 [data-theme="light"] .phrase-de { color: var(--text-strong); }
 [data-theme="light"] .phrase-de:hover { color: var(--accent2); }
 
-/* Vocab table */
-[data-theme="light"] .vocab-de  { color: var(--text-strong); }
-[data-theme="light"] .vocab-table td { color: var(--text); }
-[data-theme="light"] .vocab-table th { background: rgba(0,0,0,.03); }
-[data-theme="light"] .vocab-table tbody tr:hover td { background: rgba(91,72,232,.05); }
+/* Vocab list */
+[data-theme="light"] .vocab-word { color: var(--text-strong); }
+[data-theme="light"] .vocab-ru   { color: var(--text); }
 
 /* Grammar boxes */
 [data-theme="light"] .grammar-box { background: rgba(91,72,232,.05); border-color: rgba(91,72,232,.18); }
