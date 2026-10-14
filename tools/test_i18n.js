@@ -81,11 +81,16 @@ check('на уроке — ui + lexicon + урок', r.written.length === 3 && /
 r = boot();
 check('ru — ничего не подключает', r.written.length === 0);
 r = boot({ search: '?lang=ar&lts=1' });
-check('ar на главной — ui + ar-trial.js', r.written.length === 2 && /i18n\/ar\/ui\.js/.test(r.written[0]) && /js\/ar-trial\.js/.test(r.written[1]), r.written);
+check('ar на главной — ui + ready + ar-trial.js', r.written.length === 3 && /i18n\/ar\/ui\.js/.test(r.written[0]) && /i18n\/ar\/ready\.js/.test(r.written[1]) && /js\/ar-trial\.js/.test(r.written[2]), r.written);
 r = boot({ search: '?lang=ar&lts=1', path: '/deutsch-meister/lessons/a1/lesson-01/index.html' });
-check('ar на уроке A1-01 — ui + lexicon + урок + ar-trial', r.written.length === 4 && /ar\/lessons\/a1-01\.js/.test(r.written[2]), r.written);
-r = boot({ search: '?lang=ar&lts=1', path: '/deutsch-meister/lessons/a1/lesson-02/index.html' });
-check('ar на непереведённом уроке — без словаря урока', r.written.length === 2 && !r.written.some(w => /lessons\/a1-02/.test(w)), r.written);
+check('ar на уроке A1-01 — ui + lexicon + урок + ready + ar-trial', r.written.length === 5 && /ar\/lessons\/a1-01\.js/.test(r.written[2]) && /ar\/ready\.js/.test(r.written[3]), r.written);
+// готовые уроки: каждый из ready.js собран, остальные не собраны
+const readyCtx = { window: {} };
+vm.createContext(readyCtx);
+vm.runInContext(fs.readFileSync(path.join(ROOT, 'i18n/ar/ready.js'), 'utf8'), readyCtx);
+const ready = readyCtx.window.I18N_READY || [];
+const built = fs.readdirSync(path.join(ROOT, 'i18n/ar/lessons')).map(f => f.replace(/\.js$/, '')).sort();
+check('ar: ready.js содержит A1-01 и совпадает со списком собранных уроков', ready.includes('a1-01') && JSON.stringify([...ready].sort()) === JSON.stringify(built), { ready, built });
 
 console.log('3. Перевод');
 r = boot({ search: '?lang=uk&lts=1' });

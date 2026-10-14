@@ -2,10 +2,12 @@
    js/ar-trial.js — арабская пробная версия
 
    Подключается из js/i18n.js только при lang = ar.
-   Переведены интерфейс (меню) и урок A1-01, поэтому:
-     • в уроке A1-01 вверху и внизу — плашка «пробный урок» с просьбой
+   Переведены интерфейс (меню) и уроки из списка готовых —
+   window.I18N_READY (i18n/ar/ready.js, генерирует tools/i18n.js build;
+   уроки переводятся по одному), поэтому:
+     • в готовом уроке вверху и внизу — плашка «пробная версия» с просьбой
        об обратной связи и ссылкой на Telegram автора;
-     • на главной — такая же плашка, остальные уроки помечены «قريبًا»
+     • на главной — такая же плашка, непереведённые уроки помечены «قريبًا»
        и не открываются (тост вместо перехода), книги и новости — тоже;
      • если страницу без перевода всё же открыли (закладка, старая
        ссылка), сверху объясняем, что её ещё нет на арабском.
@@ -20,12 +22,22 @@
   'use strict';
 
   var CONTACT = 'ObiVan1978';
-  var TRIAL_LESSON = /lessons\/a1\/lesson-01\//;
   var ANY_LESSON = /lessons\/(a1|a2|b1|b2)\/lesson-(\d+)\//;
+  var READY = window.I18N_READY || ['a1-01'];
+  // «a1-01» по ссылке/пути, null — не урок
+  function lessonId(href) {
+    var m = String(href || '').match(ANY_LESSON);
+    return m ? m[1] + '-' + m[2] : null;
+  }
+  function isReady(id) { return READY.indexOf(id) >= 0; }
+  function lessonUrl(id) {
+    var p = id.split('-');
+    return base + 'lessons/' + p[0] + '/lesson-' + p[1] + '/index.html';
+  }
 
   var path = location.pathname;
   var isLesson = ANY_LESSON.test(path);
-  var isTrialLesson = TRIAL_LESSON.test(path);
+  var isTrialLesson = isLesson && isReady(lessonId(path));
   var isHome = !isLesson && !/(books|news)\.html$/.test(path);
 
   var me = document.currentScript;
@@ -91,41 +103,41 @@
   var FEEDBACK_BTN = '<button type="button" class="ar-trial-btn" data-ar-contact>💬 أرسل رأيك في Telegram</button>';
 
   var LESSON_TOP =
-    '<div class="ar-trial-title">🧪 درس تجريبي بالعربية</div>' +
-    '<p>هذا <b>درس تجريبي</b> من النسخة العربية لدورة German Morning. ' +
-    'نعمل الآن على الترجمة، ومع الوقت ستظهر <b>جميع الدروس</b> و<b>النسخة الكاملة</b> من الدورة بالعربية.</p>' +
+    '<div class="ar-trial-title">🧪 النسخة العربية التجريبية</div>' +
+    '<p>هذا الدرس من <b>النسخة العربية التجريبية</b> لدورة German Morning. ' +
+    'نترجم الدروس واحدًا تلو الآخر، وقريبًا ستكون <b>الدورة كاملة</b> بالعربية.</p>' +
     '<p>رأيك مهم جدًا لنا: ما الذي أعجبك؟ وما الذي يحتاج إلى تحسين؟ اكتب لنا في Telegram: ' + TG_LINK + '</p>' +
     '<div class="ar-trial-actions">' + FEEDBACK_BTN + '</div>';
 
   var LESSON_BOTTOM =
-    '<div class="ar-trial-title">🙏 شكرًا لأنك جرّبت الدرس الأول!</div>' +
-    '<p>هذه <b>نسخة تجريبية</b>: باقي الدروس قيد الترجمة، وستظهر تدريجيًا حتى تكتمل الدورة بالعربية.</p>' +
+    '<div class="ar-trial-title">🙏 شكرًا لأنك أكملت الدرس!</div>' +
+    '<p>هذه <b>نسخة تجريبية</b>: الدروس تُترجم تدريجيًا حتى تكتمل الدورة بالعربية.</p>' +
     '<p>نرجو أن تشاركنا انطباعك عن الدرس والترجمة — ملاحظاتك تساعدنا على إعداد النسخة الكاملة أسرع وأفضل. ' +
     'راسلنا في Telegram: ' + TG_LINK + '</p>' +
     '<div class="ar-trial-actions">' + FEEDBACK_BTN + '</div>';
 
   var HOME =
     '<div class="ar-trial-title">🧪 النسخة العربية التجريبية</div>' +
-    '<p>المتاح الآن بالعربية: <b>القائمة</b> و<b>الدرس الأول (<bdi dir="ltr">A1 · 01</bdi>)</b>. ' +
-    'باقي الدروس قيد الترجمة، وستظهر مع الوقت جميع الدروس والنسخة الكاملة.</p>' +
-    '<p>جرّب الدرس الأول وأخبرنا برأيك في Telegram: ' + TG_LINK + '</p>' +
+    '<p>المتاح الآن بالعربية: <b>القائمة</b> و<b>الدروس المترجمة (<bdi dir="ltr">' + READY.length + '</bdi>)</b>. ' +
+    'باقي الدروس قيد الترجمة، والدروس غير المتاحة بعد معلَّمة بـ «🔒 قريبًا».</p>' +
+    '<p>جرّب الدروس وأخبرنا برأيك في Telegram: ' + TG_LINK + '</p>' +
     '<div class="ar-trial-actions">' +
-      '<a class="ar-trial-btn" href="' + base + 'lessons/a1/lesson-01/index.html">🚀 ابدأ الدرس الأول</a>' +
+      '<a class="ar-trial-btn" href="' + lessonUrl(READY[0]) + '">🚀 ابدأ الدرس الأول</a>' +
       FEEDBACK_BTN.replace('ar-trial-btn', 'ar-trial-btn ghost') +
     '</div>';
 
   var NOT_YET =
     '<div class="ar-trial-title">🚧 هذه الصفحة غير متوفرة بالعربية بعد</div>' +
-    '<p>النسخة العربية تجريبية حاليًا: المتاح هو القائمة والدرس الأول فقط. ' +
-    'ستظهر بقية الدروس والنسخة الكاملة مع الوقت.</p>' +
+    '<p>النسخة العربية تجريبية حاليًا: الدروس تُترجم واحدًا تلو الآخر، ' +
+    'وهذه الصفحة لم تُترجم بعد. ستظهر قريبًا.</p>' +
     '<p>لديك اقتراح أو ملاحظة؟ اكتب لنا في Telegram: ' + TG_LINK + '</p>' +
     '<div class="ar-trial-actions">' +
-      '<a class="ar-trial-btn" href="' + base + 'lessons/a1/lesson-01/index.html">🚀 الدرس الأول</a>' +
+      '<a class="ar-trial-btn" href="' + lessonUrl(READY[0]) + '">🚀 الدرس الأول</a>' +
       '<a class="ar-trial-btn ghost" href="' + base + 'index.html">🏠 الرئيسية</a>' +
       FEEDBACK_BTN.replace('ar-trial-btn', 'ar-trial-btn ghost') +
     '</div>';
 
-  var SOON_TOAST = '🔒 سيصبح هذا متاحًا بالعربية قريبًا. جرّب الآن الدرس الأول!';
+  var SOON_TOAST = '🔒 سيصبح هذا متاحًا بالعربية قريبًا. جرّب الدروس المتاحة الآن!';
   var SOON_LABEL = '🔒 قريبًا';
 
   /* ── тост ── */
@@ -148,7 +160,8 @@
   /* ── что ещё не переведено ── */
   function lockedHref(href) {
     if (!href) return false;
-    if (ANY_LESSON.test(href)) return !TRIAL_LESSON.test(href);
+    var id = lessonId(href);
+    if (id) return !isReady(id);
     return /(^|\/)(books|news)\.html(\?|#|$)/.test(href);
   }
 
@@ -175,13 +188,15 @@
       var st = a.querySelector('.lc-status');
       if (st && st.textContent !== SOON_LABEL) { st.textContent = SOON_LABEL; st.className = 'lc-status'; }
     }
-    // «Продолжить» на главной ведёт к следующему уроку — в пробной версии к первому
+    // «Продолжить» на главной ведёт к следующему уроку — если он ещё
+    // не переведён, к последнему готовому
     var cont = document.getElementById('continueBtn');
     if (cont && lockedHref(cont.getAttribute('href'))) {
+      var last = READY[READY.length - 1];
       cont.classList.remove('ar-soon');
       cont.removeAttribute('aria-disabled');
-      cont.setAttribute('href', base + 'lessons/a1/lesson-01/index.html');
-      cont.textContent = '🚀 الدرس الأول';
+      cont.setAttribute('href', lessonUrl(last));
+      cont.textContent = READY.length > 1 ? '🚀 آخر درس متاح' : '🚀 الدرس الأول';
     }
   }
 

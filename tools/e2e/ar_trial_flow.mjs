@@ -1,4 +1,5 @@
-// E2E: арабская пробная версия (меню + урок A1-01, остальное «скоро»).
+// E2E: арабская пробная версия (меню + готовые уроки из i18n/ar/ready.js,
+// остальное «скоро»). Каждый готовый урок проверяется на остатки кириллицы.
 //   python -m http.server 8765   (из корня репо)
 //   node --experimental-websocket tools/e2e/ar_trial_flow.mjs
 import { start } from './cdp.mjs';
@@ -7,6 +8,11 @@ const B = 'http://127.0.0.1:8765';
 let fails = 0;
 const check = (n, ok, x) => { console.log((ok ? '  ok   ' : '  FAIL ') + n + (ok ? '' : '  → ' + JSON.stringify(x))); if (!ok) fails++; };
 const CYR = "/[А-Яа-яЁё]/";
+import { readFileSync } from 'fs';
+const READY = JSON.parse(readFileSync(new URL('../../i18n/ar/ready.js', import.meta.url), 'utf8').match(/=\s*(\[.*?\])/)[1]);
+const ALL = [['a1', 20], ['a2', 20], ['b1', 14], ['b2', 14]].flatMap(([lv, n]) => Array.from({ length: n }, (_, i) => lv + '-' + String(i + 1).padStart(2, '0')));
+const LOCKED = ALL.filter(id => !READY.includes(id));
+const url = id => B + '/lessons/' + id.replace('-', '/lesson-') + '/index.html';
 
 await c.go(B + '/index.html?lang=ar&lts=' + Date.now(), 2500);
 let s = JSON.parse(await c.ev(`JSON.stringify({lang:I18N.lang, btn:document.querySelector('[data-lang-toggle]').textContent,
@@ -15,12 +21,22 @@ let s = JSON.parse(await c.ev(`JSON.stringify({lang:I18N.lang, btn:document.quer
   cyr:[...document.querySelectorAll('.home-main *')].filter(e=>!e.children.length && ${CYR}.test(e.textContent)).map(e=>e.textContent.trim()).slice(0,10)})`));
 check('главная на ar, кнопка AR', s.lang === 'ar' && s.btn === 'AR', s);
 check('плашка пробной версии', s.banner);
-check('67 уроков «скоро», открыт 1', s.soon === 67 && s.open === 1, s);
+check(`${LOCKED.length} уроков «скоро», открыто ${READY.length}`, s.soon === LOCKED.length && s.open === READY.length, s);
 check('в основной части нет кириллицы', s.cyr.length === 0, s.cyr);
 await c.shot('ar-home.png');
-await c.ev(`document.querySelector('a[href*="a2/lesson-01"]').click()`); await c.wait(400);
-check('клик по закрытому уроку не уводит', await c.ev('location.pathname') === '/index.html');
-check('тост «скоро»', await c.ev(`!!document.querySelector('.ar-toast')`));
+if (LOCKED.length) {
+  await c.ev(`document.querySelector('a[href*="${LOCKED[0].replace('-', '/lesson-')}/"]').click()`); await c.wait(400);
+  check('клик по закрытому уроку не уводит', await c.ev('location.pathname') === '/index.html');
+  check('тост «скоро»', await c.ev(`!!document.querySelector('.ar-toast')`));
+}
+
+// все готовые уроки: обе плашки и ни строчки кириллицы
+for (const id of READY.filter(id => id !== 'a1-01')) {
+  await c.go(url(id), 2500);
+  const r = JSON.parse(await c.ev(`JSON.stringify({n:document.querySelectorAll('.ar-trial').length,
+    cyr:[...document.querySelectorAll('.lesson-content *, .lesson-header *')].filter(e=>!e.children.length && ${CYR}.test(e.textContent)).map(e=>e.textContent.trim()).slice(0,15)})`));
+  check(`урок ${id}: плашки и нет кириллицы`, r.n === 2 && r.cyr.length === 0, r);
+}
 
 await c.go(B + '/lessons/a1/lesson-01/index.html', 3000);
 s = JSON.parse(await c.ev(`JSON.stringify({n:document.querySelectorAll('.ar-trial').length,
@@ -47,9 +63,11 @@ check('немецкая пунктуация не перевёрнута (все
 await c.ev(`openSidebar()`); await c.wait(500);
 check('меню выезжает справа', await c.ev(`(()=>{const r=document.querySelector('.sidebar').getBoundingClientRect();return Math.round(r.right)===innerWidth})()`));
 
-await c.go(B + '/lessons/a1/lesson-02/index.html', 2500);
-check('непереведённый урок: плашка «ещё нет»', await c.ev(`(document.querySelector('.ar-trial')||{}).textContent?.includes('غير متوفرة') || false`));
-await c.shot('ar-lesson2.png');
+if (LOCKED.length) {
+  await c.go(url(LOCKED[0]), 2500);
+  check('непереведённый урок: плашка «ещё нет»', await c.ev(`(document.querySelector('.ar-trial')||{}).textContent?.includes('غير متوفرة') || false`));
+  await c.shot('ar-locked.png');
+}
 
 await c.go(B + '/index.html?lang=uk&lts=' + Date.now(), 2000);
 check('uk без плашек и без RTL', await c.ev(`I18N.lang==='uk' && !document.querySelector('.ar-trial') && document.documentElement.dir!=='rtl'`));

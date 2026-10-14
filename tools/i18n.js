@@ -335,17 +335,23 @@ function dictJs(keys, tm, title) {
   return `/* ${title} — сгенерировано tools/i18n.js build, руками не править */\nI18N.add(${JSON.stringify(d)});\n`;
 }
 
-/* Пробные языки: переведены только интерфейс и часть уроков.
-   Для них собираем и проверяем лишь эти группы — книг и новостей нет,
-   остальные уроки js/ar-trial.js показывает как «скоро». */
+/* Пробные языки: переведены интерфейс и часть уроков (перевод идёт урок
+   за уроком). Готовым считается урок, все строки которого переведены, —
+   только такие собираются, проверяются и открываются: список уходит в
+   i18n/<lang>/ready.js, остальные уроки js/ar-trial.js показывает как
+   «скоро». Книг и новостей пока нет. */
 const TRIAL = {
-  ar: { lessons: ['a1-01'] }
+  ar: { auto: true }
 };
 
-function trialGroups(groups, lang) {
+function readyLessons(groups, tm) {
+  return lessonIds().filter(id => groups['lessons/' + id].every(k => tm[k] !== undefined));
+}
+
+function trialGroups(groups, lang, tm) {
   const t = TRIAL[lang];
   if (!t) return groups;
-  const keep = ['ui', ...t.lessons.map(id => 'lessons/' + id)];
+  const keep = ['ui', ...readyLessons(groups, tm).map(id => 'lessons/' + id)];
   return Object.fromEntries(keep.map(g => [g, groups[g]]));
 }
 
@@ -359,11 +365,17 @@ function cmdBuild(lang = 'uk') {
   fs.mkdirSync(rel(out + '/lessons'), { recursive: true });
   fs.writeFileSync(rel(out + '/ui.js'), dictJs(uiKeys, tm, 'Интерфейс'));
   fs.writeFileSync(rel(out + '/lexicon.js'), dictJs(groups.lexicon, tm, 'Подсказки над словами'));
-  for (const id of lessonIds()) {
-    if (trial && !trial.lessons.includes(id)) continue;
+  const ready = trial ? readyLessons(groups, tm) : lessonIds();
+  for (const id of ready) {
     fs.writeFileSync(rel(`${out}/lessons/${id}.js`), dictJs(groups['lessons/' + id], tm, 'Урок ' + id));
   }
-  if (trial) { console.log('build: ok (пробная версия) →', out); return; }
+  if (trial) {
+    fs.writeFileSync(rel(`${out}/ready.js`), `/* Готовые уроки — сгенерировано tools/i18n.js build, руками не править */
+window.I18N_READY = ${JSON.stringify(ready)};
+`);
+    console.log(`build: ok (пробная версия, уроков ${ready.length}/${lessonIds().length}) →`, out);
+    return;
+  }
   writeJson(`${out}/books/index.json`, translateObj(JSON.parse(read('data/books/index.json')), tm));
   for (const id of bookIds()) for (const f of bookFiles(id)) {
     const dst = f.replace(/^data\/books\//, `${out}/books/`);
@@ -383,8 +395,8 @@ function cmdBuild(lang = 'uk') {
 }
 
 function cmdCheck(lang = 'uk') {
-  const groups = trialGroups(extract().groups, lang);
   const { tm } = loadTM(lang);
+  const groups = trialGroups(extract().groups, lang, tm);
   let missing = 0;
   for (const [g, keys] of Object.entries(groups)) {
     const m = keys.filter(k => tm[k] === undefined);

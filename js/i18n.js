@@ -1,6 +1,6 @@
 /* ═══════════════════════════════════════════════
    js/i18n.js — язык интерфейса (ru — исходный, uk — перевод,
-   ar — пробная версия: меню и урок A1-01, см. js/ar-trial.js)
+   ar — пробная версия: меню и готовые уроки, см. js/ar-trial.js)
 
    Грузится ПЕРВЫМ скриптом в <head> каждой страницы.
 
@@ -381,13 +381,15 @@
     var q = ver ? '?v=' + ver : '';
     var files = ['i18n/' + lang + '/ui.js'];
     var page = location.pathname.match(/lessons\/(a1|a2|b1|b2)\/lesson-(\d+)\//);
-    // арабский — пробная версия: переведён только урок A1-01
+    // арабский — пробная версия: уроки переводятся по одному, список
+    // готовых — i18n/ar/ready.js (у неготового урока словаря нет, 404 безвреден,
+    // а ar-trial.js покажет, что урок ещё не переведён)
     var trial = lang === 'ar';
-    if (page && (!trial || page[1] + '-' + page[2] === 'a1-01')) {
+    if (page) {
       files.push('i18n/' + lang + '/lexicon.js');
       files.push('i18n/' + lang + '/lessons/' + page[1] + '-' + page[2] + '.js');
     }
-    if (trial) files.push('js/ar-trial.js');
+    if (trial) files.push('i18n/' + lang + '/ready.js', 'js/ar-trial.js');
     for (var i = 0; i < files.length; i++) {
       document.write('<script src="' + base + files[i] + q + '"><\/script>');
     }
