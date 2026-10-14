@@ -1880,10 +1880,14 @@ Kraft|сила|Существительное|in Kraft treten — вступат
     if (!info) return '';
 
     const title = info?.word || word;
-    // Показываем именно русский перевод: берём первую строку с кириллицей,
-    // чтобы немецкие формы/подсказки (напр. «Sport treiben») не подменяли перевод.
-    const allTranslations = info?.translations || [];
-    const translation = allTranslations.find(t => /[А-Яа-яЁё]/.test(t)) || '';
+    // Данные урока уже переведены, общий словарь ещё может быть на русском.
+    // Предпочитаем текущий язык; немецкие формы не считаем переводом.
+    const translations = (info?.translations || []).map(value =>
+      window.I18N ? I18N.t(value) : value);
+    const cyrillic = /[А-Яа-яЁёІіЇїЄєҐґ]/;
+    const alphabet = window.I18N?.lang === 'ar' ? /[\u0600-\u06ff]/ : cyrillic;
+    const translation = translations.find(value => alphabet.test(value))
+      || translations.find(value => cyrillic.test(value)) || '';
     const kind = info?.kind || 'Слово';
     const details = (info?.details || []).filter(Boolean).slice(0, 2);
     const conjugations = (info?.conjugations || []).slice(0, 3);

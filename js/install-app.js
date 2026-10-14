@@ -55,8 +55,8 @@
         '<h2 style="font-family:\'Playfair Display\',serif;font-size:22px;margin:0 0 6px;' +
         'text-align:center;color:var(--text-strong,#fff)">Установить приложение</h2>' +
         '<p style="font-size:14px;color:var(--text-muted,#9a9);line-height:1.5;text-align:center;margin:0 0 16px">' +
-          'Если в Telegram нет звука — установи German Morning на телефон и запускай ' +
-          'с иконки. Там озвучка работает, плюс офлайн-доступ. 🔊' +
+          '<span>Если в Telegram нет звука — установи German Morning на телефон и запускай</span> ' +
+          '<span>с иконки. Там озвучка работает, плюс офлайн-доступ. 🔊</span>' +
         '</p>' +
         (inTelegram()
           ? '<button id="installOpenBrowser" style="width:100%;border:0;border-radius:12px;' +
@@ -92,8 +92,14 @@
     const ob = document.getElementById('installOpenBrowser');
     if (ob) ob.addEventListener('click', () => {
       const wa = tg();
-      if (wa && typeof wa.openLink === 'function') wa.openLink(APP_URL);
-      else window.open(APP_URL, '_blank');
+      const url = new URL(APP_URL);
+      if (window.I18N) {
+        // Открытие из приложения — свежий выбор для отдельного хранилища браузера.
+        url.searchParams.set('lang', I18N.lang);
+        url.searchParams.set('lts', String(Date.now()));
+      }
+      if (wa && typeof wa.openLink === 'function') wa.openLink(url.href);
+      else window.open(url.href, '_blank');
     });
   }
 

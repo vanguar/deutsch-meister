@@ -233,7 +233,7 @@
       if (b && blocks.indexOf(b) < 0) blocks.push(b);
     }
     blocks.forEach(function (b) {
-      if (b.closest('.ar-trial') || b.hasAttribute('data-ar-dir') || hasLayoutKids(b)) return;
+      if (b.closest('.ar-trial') || b.hasAttribute('dir') || hasLayoutKids(b)) return;
       b.setAttribute('dir', 'rtl');
       b.setAttribute('data-ar-dir', '');
       // немецкие вставки — отдельным LTR-островом
