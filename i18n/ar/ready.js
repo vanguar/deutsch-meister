@@ -1,2 +1,2 @@
 /* Готовые уроки — сгенерировано tools/i18n.js build, руками не править */
-window.I18N_READY = ["a1-01"];
+window.I18N_READY = ["a1-01","a1-02"];
