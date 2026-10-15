@@ -1,0 +1,101 @@
+{
+ "id": "a2-03",
+ "level": "a2",
+ "n": 3,
+ "emoji": "🍽️",
+ "title": "Im Restaurant",
+ "titleTr": "في المطعم",
+ "situation": "يطلب دافيد الغداء، لكن النادل يحضر طبقًا آخر. يشتكي بأدب ثم يدفع الحساب.",
+ "speakers": {
+  "A": {
+   "name": "Kellner",
+   "g": "m"
+  },
+  "B": {
+   "name": "David",
+   "g": "m"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Guten Tag! Haben Sie schon gewählt?",
+   "tr": "مرحبًا! هل اخترت؟"
+  },
+  {
+   "s": "B",
+   "de": "Ja. Ich hätte gern das Schnitzel mit Kartoffelsalat.",
+   "tr": "نعم. أريد شنيتزل مع سلطة البطاطس من فضلك."
+  },
+  {
+   "s": "A",
+   "de": "Gern. Und was möchten Sie trinken?",
+   "tr": "بكل سرور. وماذا تحب أن تشرب؟"
+  },
+  {
+   "s": "B",
+   "de": "Ein Mineralwasser, bitte. Ohne Kohlensäure.",
+   "tr": "ماء معدنيًا من فضلك. بدون غاز."
+  },
+  {
+   "s": "A",
+   "de": "So, bitte schön. Einmal Fisch mit Reis.",
+   "tr": "تفضّل. سمك مع أرز."
+  },
+  {
+   "s": "B",
+   "de": "Entschuldigung, aber das habe ich nicht bestellt. Ich hatte ein Schnitzel.",
+   "tr": "عفوًا، لكني لم أطلب هذا. طلبت شنيتزل."
+  },
+  {
+   "s": "A",
+   "de": "Oh, das tut mir leid! Da haben wir etwas verwechselt. Ich bringe Ihnen sofort das Richtige.",
+   "tr": "آه، أنا آسف! لقد خلطنا بين الطلبات. سأحضر لك الطلب الصحيح فورًا."
+  },
+  {
+   "s": "B",
+   "de": "Kein Problem. Wie lange dauert es ungefähr?",
+   "tr": "لا مشكلة. كم من الوقت سيستغرق تقريبًا؟"
+  },
+  {
+   "s": "A",
+   "de": "Höchstens zehn Minuten. Als Entschuldigung bekommen Sie einen Kaffee gratis.",
+   "tr": "عشر دقائق على الأكثر. وكاعتذار ستحصل على قهوة مجانًا."
+  },
+  {
+   "s": "B",
+   "de": "Das ist sehr nett, danke.",
+   "tr": "هذا لطف كبير، شكرًا."
+  },
+  {
+   "s": "A",
+   "de": "Hat es Ihnen geschmeckt?",
+   "tr": "هل أعجبك الطعام؟"
+  },
+  {
+   "s": "B",
+   "de": "Ja, das Schnitzel war ausgezeichnet. Ich möchte bitte bezahlen.",
+   "tr": "نعم، كان الشنيتزل ممتازًا. أريد أن أدفع من فضلك."
+  },
+  {
+   "s": "A",
+   "de": "Das macht siebzehn Euro neunzig. Zahlen Sie bar oder mit Karte?",
+   "tr": "المبلغ سبعة عشر يورو وتسعون سنتًا. هل تدفع نقدًا أم بالبطاقة؟"
+  },
+  {
+   "s": "B",
+   "de": "Bar. Machen Sie zwanzig. Schönen Tag noch!",
+   "tr": "نقدًا. اجعلها عشرين. يومًا سعيدًا!"
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/a2-03.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "quinn.anya",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+  "source": "https://www.flickr.com/photos/53326337@N00/4589002786",
+  "site": "Flickr"
+ }
+}

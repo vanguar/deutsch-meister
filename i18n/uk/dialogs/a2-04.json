@@ -1,0 +1,101 @@
+{
+ "id": "a2-04",
+ "level": "a2",
+ "n": 4,
+ "emoji": "📦",
+ "title": "In der Postfiliale",
+ "titleTr": "На пошті",
+ "situation": "Наталія відправляє посилку в Україну й забирає лист, який не застав її вдома.",
+ "speakers": {
+  "A": {
+   "name": "Postangestellter",
+   "g": "m"
+  },
+  "B": {
+   "name": "Natalija",
+   "g": "f"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Der Nächste, bitte! Was kann ich für Sie tun?",
+   "tr": "Наступний, будь ласка! Чим можу допомогти?"
+  },
+  {
+   "s": "B",
+   "de": "Ich möchte dieses Paket in die Ukraine schicken.",
+   "tr": "Я хочу надіслати цю посилку в Україну."
+  },
+  {
+   "s": "A",
+   "de": "Gern. Stellen Sie es bitte auf die Waage. Es wiegt vier Kilo.",
+   "tr": "Добре. Поставте її, будь ласка, на ваги. Вона важить чотири кілограми."
+  },
+  {
+   "s": "B",
+   "de": "Was kostet das?",
+   "tr": "Скільки це коштує?"
+  },
+  {
+   "s": "A",
+   "de": "Das kostet vierundzwanzig Euro neunundneunzig. Sie müssen noch diese Zollerklärung ausfüllen.",
+   "tr": "Це коштує двадцять чотири євро дев'яносто дев'ять. Вам треба ще заповнити цю митну декларацію."
+  },
+  {
+   "s": "B",
+   "de": "Was muss ich da eintragen?",
+   "tr": "Що мені туди вписати?"
+  },
+  {
+   "s": "A",
+   "de": "Was im Paket ist und wie viel es wert ist.",
+   "tr": "Що в посилці та скільки це коштує."
+  },
+  {
+   "s": "B",
+   "de": "Da sind Kleidung und Bücher für meine Eltern drin. Ungefähr fünfzig Euro.",
+   "tr": "Там одяг і книжки для моїх батьків. Приблизно на п'ятдесят євро."
+  },
+  {
+   "s": "A",
+   "de": "Gut. Wie lange es dauert, kann ich leider nicht genau sagen. Meistens ein bis zwei Wochen.",
+   "tr": "Добре. Скільки вона йтиме, точно сказати, на жаль, не можу. Зазвичай один-два тижні."
+  },
+  {
+   "s": "B",
+   "de": "Okay. Und ich habe noch diese Benachrichtigung. Ein Einschreiben ist für mich da.",
+   "tr": "Гаразд. І в мене ще ось це повідомлення. Для мене є рекомендований лист."
+  },
+  {
+   "s": "A",
+   "de": "Haben Sie Ihren Ausweis dabei?",
+   "tr": "У вас із собою посвідчення особи?"
+  },
+  {
+   "s": "B",
+   "de": "Ja, hier ist mein Aufenthaltstitel.",
+   "tr": "Так, ось мій дозвіл на проживання."
+  },
+  {
+   "s": "A",
+   "de": "Danke. Bitte unterschreiben Sie hier. So, hier ist Ihr Brief.",
+   "tr": "Дякую. Будь ласка, розпишіться тут. Ось ваш лист."
+  },
+  {
+   "s": "B",
+   "de": "Vielen Dank und einen schönen Tag!",
+   "tr": "Щиро дякую, гарного дня!"
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/a2-04.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "dierk schaefer",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "source": "https://www.flickr.com/photos/26480501@N06/2746050959",
+  "site": "Flickr"
+ }
+}

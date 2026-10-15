@@ -1,0 +1,101 @@
+{
+ "id": "a2-03",
+ "level": "a2",
+ "n": 3,
+ "emoji": "🍽️",
+ "title": "Im Restaurant",
+ "titleTr": "В ресторане",
+ "situation": "Давид заказывает обед, но приносят не то блюдо. Он вежливо жалуется и потом платит.",
+ "speakers": {
+  "A": {
+   "name": "Kellner",
+   "g": "m"
+  },
+  "B": {
+   "name": "David",
+   "g": "m"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Guten Tag! Haben Sie schon gewählt?",
+   "tr": "Добрый день! Вы уже выбрали?"
+  },
+  {
+   "s": "B",
+   "de": "Ja. Ich hätte gern das Schnitzel mit Kartoffelsalat.",
+   "tr": "Да. Мне, пожалуйста, шницель с картофельным салатом."
+  },
+  {
+   "s": "A",
+   "de": "Gern. Und was möchten Sie trinken?",
+   "tr": "Хорошо. А что будете пить?"
+  },
+  {
+   "s": "B",
+   "de": "Ein Mineralwasser, bitte. Ohne Kohlensäure.",
+   "tr": "Минеральную воду, пожалуйста. Без газа."
+  },
+  {
+   "s": "A",
+   "de": "So, bitte schön. Einmal Fisch mit Reis.",
+   "tr": "Вот, пожалуйста. Рыба с рисом."
+  },
+  {
+   "s": "B",
+   "de": "Entschuldigung, aber das habe ich nicht bestellt. Ich hatte ein Schnitzel.",
+   "tr": "Извините, но я этого не заказывал. Я заказывал шницель."
+  },
+  {
+   "s": "A",
+   "de": "Oh, das tut mir leid! Da haben wir etwas verwechselt. Ich bringe Ihnen sofort das Richtige.",
+   "tr": "Ой, простите! Мы что-то перепутали. Я сейчас же принесу вам правильное блюдо."
+  },
+  {
+   "s": "B",
+   "de": "Kein Problem. Wie lange dauert es ungefähr?",
+   "tr": "Ничего страшного. Примерно сколько ждать?"
+  },
+  {
+   "s": "A",
+   "de": "Höchstens zehn Minuten. Als Entschuldigung bekommen Sie einen Kaffee gratis.",
+   "tr": "Не больше десяти минут. В качестве извинения вы получите кофе бесплатно."
+  },
+  {
+   "s": "B",
+   "de": "Das ist sehr nett, danke.",
+   "tr": "Это очень любезно, спасибо."
+  },
+  {
+   "s": "A",
+   "de": "Hat es Ihnen geschmeckt?",
+   "tr": "Вам понравилось?"
+  },
+  {
+   "s": "B",
+   "de": "Ja, das Schnitzel war ausgezeichnet. Ich möchte bitte bezahlen.",
+   "tr": "Да, шницель был отличный. Я хотел бы расплатиться."
+  },
+  {
+   "s": "A",
+   "de": "Das macht siebzehn Euro neunzig. Zahlen Sie bar oder mit Karte?",
+   "tr": "С вас семнадцать евро девяносто. Наличными или картой?"
+  },
+  {
+   "s": "B",
+   "de": "Bar. Machen Sie zwanzig. Schönen Tag noch!",
+   "tr": "Наличными. Возьмите двадцать. Хорошего дня!"
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/a2-03.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "quinn.anya",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+  "source": "https://www.flickr.com/photos/53326337@N00/4589002786",
+  "site": "Flickr"
+ }
+}

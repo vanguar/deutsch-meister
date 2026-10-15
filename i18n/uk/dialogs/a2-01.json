@@ -1,0 +1,101 @@
+{
+ "id": "a2-01",
+ "level": "a2",
+ "n": 1,
+ "emoji": "🤒",
+ "title": "Beim Hausarzt",
+ "titleTr": "У сімейного лікаря",
+ "situation": "У Моніки вже кілька днів болять горло й голова. Лікар розпитує про симптоми й виписує лікарняний.",
+ "speakers": {
+  "A": {
+   "name": "Dr. Krause",
+   "g": "m"
+  },
+  "B": {
+   "name": "Monika",
+   "g": "f"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Guten Tag, Frau Weber. Was fehlt Ihnen denn?",
+   "tr": "Добрий день, пані Вебер. Що вас турбує?"
+  },
+  {
+   "s": "B",
+   "de": "Ich fühle mich seit drei Tagen nicht gut. Ich habe Halsschmerzen und Kopfschmerzen.",
+   "tr": "Я вже три дні погано почуваюся. У мене болять горло й голова."
+  },
+  {
+   "s": "A",
+   "de": "Haben Sie auch Fieber?",
+   "tr": "Температура у вас теж є?"
+  },
+  {
+   "s": "B",
+   "de": "Ja, gestern Abend hatte ich achtunddreißig Komma fünf.",
+   "tr": "Так, учора ввечері було тридцять вісім і п'ять."
+  },
+  {
+   "s": "A",
+   "de": "Husten Sie auch?",
+   "tr": "Кашель теж є?"
+  },
+  {
+   "s": "B",
+   "de": "Ein bisschen, vor allem in der Nacht. Deshalb schlafe ich sehr schlecht.",
+   "tr": "Трохи, особливо вночі. Тому я дуже погано сплю."
+  },
+  {
+   "s": "A",
+   "de": "Machen Sie bitte den Mund auf und sagen Sie „Aaa“. Hm, der Hals ist ziemlich rot.",
+   "tr": "Відкрийте, будь ласка, рота й скажіть «А-а-а». Хм, горло досить червоне."
+  },
+  {
+   "s": "B",
+   "de": "Ist das schlimm?",
+   "tr": "Це серйозно?"
+  },
+  {
+   "s": "A",
+   "de": "Nein, keine Sorge. Das ist eine Erkältung, aber Sie brauchen Ruhe.",
+   "tr": "Ні, не хвилюйтеся. Це застуда, але вам потрібен спокій."
+  },
+  {
+   "s": "B",
+   "de": "Ich muss morgen eigentlich arbeiten. Können Sie mich krankschreiben?",
+   "tr": "Узагалі-то завтра мені на роботу. Ви можете виписати мені лікарняний?"
+  },
+  {
+   "s": "A",
+   "de": "Ja, ich schreibe Sie bis Freitag krank. Ihr Arbeitgeber bekommt die Krankmeldung elektronisch.",
+   "tr": "Так, я випишу лікарняний до п'ятниці. Ваш роботодавець отримає його в електронному вигляді."
+  },
+  {
+   "s": "B",
+   "de": "Gut. Brauche ich Medikamente?",
+   "tr": "Добре. Мені потрібні ліки?"
+  },
+  {
+   "s": "A",
+   "de": "Ich gebe Ihnen ein Rezept für Lutschtabletten. Trinken Sie viel Tee und bleiben Sie im Bett.",
+   "tr": "Я дам вам рецепт на таблетки для розсмоктування. Пийте багато чаю й залишайтеся в ліжку."
+  },
+  {
+   "s": "B",
+   "de": "Vielen Dank, Herr Doktor. Auf Wiedersehen!",
+   "tr": "Щиро дякую, лікарю. До побачення!"
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/a2-01.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "Direct Media",
+  "license": "CC0",
+  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "source": "https://stocksnap.io/photo/doctor-patient-N9YCBA2UBU",
+  "site": "stocksnap"
+ }
+}

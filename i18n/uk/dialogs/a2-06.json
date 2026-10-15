@@ -1,0 +1,101 @@
+{
+ "id": "a2-06",
+ "level": "a2",
+ "n": 6,
+ "emoji": "💇",
+ "title": "Beim Friseur",
+ "titleTr": "У перукарні",
+ "situation": "Максим хоче підстригтися. Перукарка уточнює довжину, пропонує помити голову й називає ціну.",
+ "speakers": {
+  "A": {
+   "name": "Friseurin",
+   "g": "f"
+  },
+  "B": {
+   "name": "Maksym",
+   "g": "m"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Hallo! Haben Sie einen Termin?",
+   "tr": "Вітаю! Ви записані?"
+  },
+  {
+   "s": "B",
+   "de": "Nein, leider nicht. Haben Sie jetzt Zeit?",
+   "tr": "Ні, на жаль. У вас зараз є час?"
+  },
+  {
+   "s": "A",
+   "de": "Sie haben Glück, gerade ist ein Platz frei. Bitte setzen Sie sich.",
+   "tr": "Вам пощастило, якраз звільнилося місце. Сідайте, будь ласка."
+  },
+  {
+   "s": "B",
+   "de": "Danke. Ich möchte die Haare kürzer haben.",
+   "tr": "Дякую. Я хочу коротше волосся."
+  },
+  {
+   "s": "A",
+   "de": "Wie kurz denn? Nur ein bisschen oder viel?",
+   "tr": "Наскільки коротко? Трішки чи сильно?"
+  },
+  {
+   "s": "B",
+   "de": "An den Seiten ziemlich kurz, oben nur zwei Zentimeter weniger.",
+   "tr": "З боків досить коротко, а згори лише на два сантиметри коротше."
+  },
+  {
+   "s": "A",
+   "de": "Alles klar. Soll ich Ihnen vorher die Haare waschen?",
+   "tr": "Зрозуміло. Помити вам спочатку голову?"
+  },
+  {
+   "s": "B",
+   "de": "Was kostet das mit Waschen?",
+   "tr": "Скільки це коштує з миттям?"
+  },
+  {
+   "s": "A",
+   "de": "Waschen, Schneiden und Föhnen kosten zusammen sechsundzwanzig Euro.",
+   "tr": "Миття, стрижка й укладання феном разом коштують двадцять шість євро."
+  },
+  {
+   "s": "B",
+   "de": "Gut, dann bitte mit Waschen.",
+   "tr": "Добре, тоді з миттям, будь ласка."
+  },
+  {
+   "s": "A",
+   "de": "So, fertig. Schauen Sie mal in den Spiegel. Gefällt es Ihnen?",
+   "tr": "Ось, готово. Подивіться в дзеркало. Вам подобається?"
+  },
+  {
+   "s": "B",
+   "de": "Ja, sehr gut! Genau so wollte ich es.",
+   "tr": "Так, дуже добре! Саме так я й хотів."
+  },
+  {
+   "s": "A",
+   "de": "Das freut mich. Möchten Sie gleich einen Termin für das nächste Mal machen?",
+   "tr": "Я рада. Хочете одразу записатися на наступний раз?"
+  },
+  {
+   "s": "B",
+   "de": "Ja, gern. In vier Wochen, am Samstagvormittag.",
+   "tr": "Так, залюбки. За чотири тижні, у суботу до обіду."
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/a2-06.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "whatleydude",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "source": "https://www.flickr.com/photos/85318305@N00/2832838129",
+  "site": "Flickr"
+ }
+}

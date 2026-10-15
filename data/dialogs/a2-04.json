@@ -1,0 +1,101 @@
+{
+ "id": "a2-04",
+ "level": "a2",
+ "n": 4,
+ "emoji": "📦",
+ "title": "In der Postfiliale",
+ "titleTr": "На почте",
+ "situation": "Наталия отправляет посылку в Украину и забирает письмо, которое не застало её дома.",
+ "speakers": {
+  "A": {
+   "name": "Postangestellter",
+   "g": "m"
+  },
+  "B": {
+   "name": "Natalija",
+   "g": "f"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Der Nächste, bitte! Was kann ich für Sie tun?",
+   "tr": "Следующий, пожалуйста! Чем могу помочь?"
+  },
+  {
+   "s": "B",
+   "de": "Ich möchte dieses Paket in die Ukraine schicken.",
+   "tr": "Я хочу отправить эту посылку в Украину."
+  },
+  {
+   "s": "A",
+   "de": "Gern. Stellen Sie es bitte auf die Waage. Es wiegt vier Kilo.",
+   "tr": "Хорошо. Поставьте её, пожалуйста, на весы. Она весит четыре килограмма."
+  },
+  {
+   "s": "B",
+   "de": "Was kostet das?",
+   "tr": "Сколько это стоит?"
+  },
+  {
+   "s": "A",
+   "de": "Das kostet vierundzwanzig Euro neunundneunzig. Sie müssen noch diese Zollerklärung ausfüllen.",
+   "tr": "Это стоит двадцать четыре евро девяносто девять. Вам нужно ещё заполнить эту таможенную декларацию."
+  },
+  {
+   "s": "B",
+   "de": "Was muss ich da eintragen?",
+   "tr": "Что мне туда вписать?"
+  },
+  {
+   "s": "A",
+   "de": "Was im Paket ist und wie viel es wert ist.",
+   "tr": "Что в посылке и сколько это стоит."
+  },
+  {
+   "s": "B",
+   "de": "Da sind Kleidung und Bücher für meine Eltern drin. Ungefähr fünfzig Euro.",
+   "tr": "Там одежда и книги для моих родителей. Примерно на пятьдесят евро."
+  },
+  {
+   "s": "A",
+   "de": "Gut. Wie lange es dauert, kann ich leider nicht genau sagen. Meistens ein bis zwei Wochen.",
+   "tr": "Хорошо. Сколько она будет идти, точно сказать, к сожалению, не могу. Обычно одну-две недели."
+  },
+  {
+   "s": "B",
+   "de": "Okay. Und ich habe noch diese Benachrichtigung. Ein Einschreiben ist für mich da.",
+   "tr": "Хорошо. И у меня ещё вот это извещение. Для меня есть заказное письмо."
+  },
+  {
+   "s": "A",
+   "de": "Haben Sie Ihren Ausweis dabei?",
+   "tr": "У вас с собой удостоверение личности?"
+  },
+  {
+   "s": "B",
+   "de": "Ja, hier ist mein Aufenthaltstitel.",
+   "tr": "Да, вот мой вид на жительство."
+  },
+  {
+   "s": "A",
+   "de": "Danke. Bitte unterschreiben Sie hier. So, hier ist Ihr Brief.",
+   "tr": "Спасибо. Пожалуйста, распишитесь здесь. Вот ваше письмо."
+  },
+  {
+   "s": "B",
+   "de": "Vielen Dank und einen schönen Tag!",
+   "tr": "Большое спасибо, хорошего дня!"
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/a2-04.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "dierk schaefer",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "source": "https://www.flickr.com/photos/26480501@N06/2746050959",
+  "site": "Flickr"
+ }
+}

@@ -1,0 +1,101 @@
+{
+ "id": "a2-08",
+ "level": "a2",
+ "n": 8,
+ "emoji": "🎂",
+ "title": "Eine Einladung zur Party",
+ "titleTr": "Приглашение на вечеринку",
+ "situation": "Коллега Ларс приглашает Софию на свой день рождения. Они договариваются о времени, подарке и дороге.",
+ "speakers": {
+  "A": {
+   "name": "Lars",
+   "g": "m"
+  },
+  "B": {
+   "name": "Sofija",
+   "g": "f"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Sofija, hast du am Samstag schon etwas vor?",
+   "tr": "София, у тебя на субботу уже есть планы?"
+  },
+  {
+   "s": "B",
+   "de": "Nein, noch nicht. Warum?",
+   "tr": "Нет, пока нет. А что?"
+  },
+  {
+   "s": "A",
+   "de": "Ich werde dreißig und mache eine Party im Garten. Ich möchte dich gern einladen.",
+   "tr": "Мне исполняется тридцать, и я устраиваю вечеринку в саду. Я хотел бы тебя пригласить."
+  },
+  {
+   "s": "B",
+   "de": "Oh, wie schön! Danke, ich komme gern. Wann fängt die Party an?",
+   "tr": "Ой, как здорово! Спасибо, с удовольствием приду. Во сколько начинается вечеринка?"
+  },
+  {
+   "s": "A",
+   "de": "Um sieben Uhr abends. Wir grillen, und später gibt es Musik.",
+   "tr": "В семь вечера. Будем жарить на гриле, а потом будет музыка."
+  },
+  {
+   "s": "B",
+   "de": "Klingt super! Soll ich etwas mitbringen?",
+   "tr": "Звучит отлично! Мне что-нибудь принести?"
+  },
+  {
+   "s": "A",
+   "de": "Wenn du möchtest, kannst du einen Salat mitbringen. Getränke haben wir genug.",
+   "tr": "Если хочешь, можешь принести салат. Напитков у нас достаточно."
+  },
+  {
+   "s": "B",
+   "de": "Gern. Ich mache einen ukrainischen Salat mit Roter Bete.",
+   "tr": "С удовольствием. Я сделаю украинский салат со свёклой."
+  },
+  {
+   "s": "A",
+   "de": "Lecker! Ich wohne in der Gartenstraße zwölf. Kennst du den Weg?",
+   "tr": "Вкусно! Я живу на Гартенштрассе, двенадцать. Ты знаешь дорогу?"
+  },
+  {
+   "s": "B",
+   "de": "Nein. Kann ich mit der Straßenbahn kommen?",
+   "tr": "Нет. Можно доехать на трамвае?"
+  },
+  {
+   "s": "A",
+   "de": "Ja, mit der Linie drei bis zur Haltestelle Parkweg. Von dort sind es nur fünf Minuten zu Fuß.",
+   "tr": "Да, на третьем трамвае до остановки Parkweg. Оттуда всего пять минут пешком."
+  },
+  {
+   "s": "B",
+   "de": "Perfekt. Darf ich meinen Freund mitbringen?",
+   "tr": "Отлично. Можно мне прийти с моим парнем?"
+  },
+  {
+   "s": "A",
+   "de": "Natürlich, er ist herzlich willkommen!",
+   "tr": "Конечно, мы будем ему очень рады!"
+  },
+  {
+   "s": "B",
+   "de": "Danke für die Einladung! Bis Samstag!",
+   "tr": "Спасибо за приглашение! До субботы!"
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/a2-08.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "Cia de Foto",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "source": "https://www.flickr.com/photos/26611570@N04/3392782398",
+  "site": "Flickr"
+ }
+}

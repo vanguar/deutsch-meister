@@ -1,6 +1,7 @@
 {
  "levels": [
-  "a1"
+  "a1",
+  "a2"
  ],
  "items": [
   {
@@ -149,6 +150,156 @@
    "speakers": "Herr Schulz · Iryna",
    "img": {
     "thumb": "data/dialogs/img/a1-10-t.jpg",
+    "tw": 320,
+    "th": 180
+   }
+  },
+  {
+   "id": "a2-01",
+   "level": "a2",
+   "n": 1,
+   "emoji": "🤒",
+   "title": "Beim Hausarzt",
+   "titleTr": "عند طبيب العائلة",
+   "lines": 14,
+   "speakers": "Dr. Krause · Monika",
+   "img": {
+    "thumb": "data/dialogs/img/a2-01-t.jpg",
+    "tw": 320,
+    "th": 180
+   }
+  },
+  {
+   "id": "a2-02",
+   "level": "a2",
+   "n": 2,
+   "emoji": "💊",
+   "title": "In der Apotheke",
+   "titleTr": "في الصيدلية",
+   "lines": 14,
+   "speakers": "Apothekerin · Jurij",
+   "img": {
+    "thumb": "data/dialogs/img/a2-02-t.jpg",
+    "tw": 320,
+    "th": 180
+   }
+  },
+  {
+   "id": "a2-03",
+   "level": "a2",
+   "n": 3,
+   "emoji": "🍽️",
+   "title": "Im Restaurant",
+   "titleTr": "في المطعم",
+   "lines": 14,
+   "speakers": "Kellner · David",
+   "img": {
+    "thumb": "data/dialogs/img/a2-03-t.jpg",
+    "tw": 320,
+    "th": 180
+   }
+  },
+  {
+   "id": "a2-04",
+   "level": "a2",
+   "n": 4,
+   "emoji": "📦",
+   "title": "In der Postfiliale",
+   "titleTr": "في مكتب البريد",
+   "lines": 14,
+   "speakers": "Postangestellter · Natalija",
+   "img": {
+    "thumb": "data/dialogs/img/a2-04-t.jpg",
+    "tw": 320,
+    "th": 180
+   }
+  },
+  {
+   "id": "a2-05",
+   "level": "a2",
+   "n": 5,
+   "emoji": "🚉",
+   "title": "Der Zug hat Verspätung",
+   "titleTr": "القطار متأخر",
+   "lines": 14,
+   "speakers": "Olga · Bahnmitarbeiter",
+   "img": {
+    "thumb": "data/dialogs/img/a2-05-t.jpg",
+    "tw": 320,
+    "th": 180
+   }
+  },
+  {
+   "id": "a2-06",
+   "level": "a2",
+   "n": 6,
+   "emoji": "💇",
+   "title": "Beim Friseur",
+   "titleTr": "عند الحلّاق",
+   "lines": 14,
+   "speakers": "Friseurin · Maksym",
+   "img": {
+    "thumb": "data/dialogs/img/a2-06-t.jpg",
+    "tw": 320,
+    "th": 180
+   }
+  },
+  {
+   "id": "a2-07",
+   "level": "a2",
+   "n": 7,
+   "emoji": "🏦",
+   "title": "Ein Konto eröffnen",
+   "titleTr": "فتح حساب مصرفي",
+   "lines": 14,
+   "speakers": "Bankberater · Amal",
+   "img": {
+    "thumb": "data/dialogs/img/a2-07-t.jpg",
+    "tw": 320,
+    "th": 180
+   }
+  },
+  {
+   "id": "a2-08",
+   "level": "a2",
+   "n": 8,
+   "emoji": "🎂",
+   "title": "Eine Einladung zur Party",
+   "titleTr": "دعوة إلى حفلة",
+   "lines": 14,
+   "speakers": "Lars · Sofija",
+   "img": {
+    "thumb": "data/dialogs/img/a2-08-t.jpg",
+    "tw": 320,
+    "th": 180
+   }
+  },
+  {
+   "id": "a2-09",
+   "level": "a2",
+   "n": 9,
+   "emoji": "🏋️",
+   "title": "Im Fitnessstudio",
+   "titleTr": "في النادي الرياضي",
+   "lines": 14,
+   "speakers": "Trainerin · Kevin",
+   "img": {
+    "thumb": "data/dialogs/img/a2-09-t.jpg",
+    "tw": 320,
+    "th": 180
+   }
+  },
+  {
+   "id": "a2-10",
+   "level": "a2",
+   "n": 10,
+   "emoji": "📱",
+   "title": "Eine SIM-Karte kaufen",
+   "titleTr": "شراء شريحة هاتف",
+   "lines": 14,
+   "speakers": "Verkäufer · Khalid",
+   "img": {
+    "thumb": "data/dialogs/img/a2-10-t.jpg",
     "tw": 320,
     "th": 180
    }

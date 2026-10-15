@@ -1,0 +1,101 @@
+{
+ "id": "a2-08",
+ "level": "a2",
+ "n": 8,
+ "emoji": "🎂",
+ "title": "Eine Einladung zur Party",
+ "titleTr": "دعوة إلى حفلة",
+ "situation": "يدعو الزميل لارس صوفيا إلى عيد ميلاده. يتفقان على الموعد والهدية والطريق.",
+ "speakers": {
+  "A": {
+   "name": "Lars",
+   "g": "m"
+  },
+  "B": {
+   "name": "Sofija",
+   "g": "f"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Sofija, hast du am Samstag schon etwas vor?",
+   "tr": "صوفيا، هل لديك خطط يوم السبت؟"
+  },
+  {
+   "s": "B",
+   "de": "Nein, noch nicht. Warum?",
+   "tr": "لا، ليس بعد. لماذا؟"
+  },
+  {
+   "s": "A",
+   "de": "Ich werde dreißig und mache eine Party im Garten. Ich möchte dich gern einladen.",
+   "tr": "سأبلغ الثلاثين وسأقيم حفلة في الحديقة. أودّ أن أدعوك."
+  },
+  {
+   "s": "B",
+   "de": "Oh, wie schön! Danke, ich komme gern. Wann fängt die Party an?",
+   "tr": "ما أجمل هذا! شكرًا، سآتي بكل سرور. متى تبدأ الحفلة؟"
+  },
+  {
+   "s": "A",
+   "de": "Um sieben Uhr abends. Wir grillen, und später gibt es Musik.",
+   "tr": "في السابعة مساءً. سنشوي الطعام، ثم ستكون هناك موسيقى."
+  },
+  {
+   "s": "B",
+   "de": "Klingt super! Soll ich etwas mitbringen?",
+   "tr": "يبدو رائعًا! هل أحضر شيئًا معي؟"
+  },
+  {
+   "s": "A",
+   "de": "Wenn du möchtest, kannst du einen Salat mitbringen. Getränke haben wir genug.",
+   "tr": "إذا أردت، يمكنك أن تحضري سلطة. لدينا ما يكفي من المشروبات."
+  },
+  {
+   "s": "B",
+   "de": "Gern. Ich mache einen ukrainischen Salat mit Roter Bete.",
+   "tr": "بكل سرور. سأعدّ سلطة أوكرانية بالشمندر."
+  },
+  {
+   "s": "A",
+   "de": "Lecker! Ich wohne in der Gartenstraße zwölf. Kennst du den Weg?",
+   "tr": "لذيذ! أسكن في شارع غارتن شتراسه رقم اثني عشر. هل تعرفين الطريق؟"
+  },
+  {
+   "s": "B",
+   "de": "Nein. Kann ich mit der Straßenbahn kommen?",
+   "tr": "لا. هل يمكنني أن آتي بالترام؟"
+  },
+  {
+   "s": "A",
+   "de": "Ja, mit der Linie drei bis zur Haltestelle Parkweg. Von dort sind es nur fünf Minuten zu Fuß.",
+   "tr": "نعم، بالخط رقم ثلاثة حتى موقف Parkweg. ومن هناك خمس دقائق فقط مشيًا."
+  },
+  {
+   "s": "B",
+   "de": "Perfekt. Darf ich meinen Freund mitbringen?",
+   "tr": "ممتاز. هل يمكنني أن أحضر صديقي معي؟"
+  },
+  {
+   "s": "A",
+   "de": "Natürlich, er ist herzlich willkommen!",
+   "tr": "بالطبع، أهلًا وسهلًا به!"
+  },
+  {
+   "s": "B",
+   "de": "Danke für die Einladung! Bis Samstag!",
+   "tr": "شكرًا على الدعوة! إلى اللقاء يوم السبت!"
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/a2-08.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "Cia de Foto",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "source": "https://www.flickr.com/photos/26611570@N04/3392782398",
+  "site": "Flickr"
+ }
+}

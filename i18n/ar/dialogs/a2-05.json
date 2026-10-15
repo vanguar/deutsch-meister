@@ -1,0 +1,101 @@
+{
+ "id": "a2-05",
+ "level": "a2",
+ "n": 5,
+ "emoji": "🚉",
+ "title": "Der Zug hat Verspätung",
+ "titleTr": "القطار متأخر",
+ "situation": "قطار أولغا إلى هامبورغ متأخر ساعة. تسأل في مكتب الاستعلامات عن الحلول المتاحة لرحلتها وعن حقوقها.",
+ "speakers": {
+  "A": {
+   "name": "Olga",
+   "g": "f"
+  },
+  "B": {
+   "name": "Bahnmitarbeiter",
+   "g": "m"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Entschuldigung, der ICE nach Hamburg hat sechzig Minuten Verspätung. Was soll ich jetzt machen?",
+   "tr": "عفوًا، قطار ICE إلى هامبورغ متأخر ستين دقيقة. ماذا أفعل الآن؟"
+  },
+  {
+   "s": "B",
+   "de": "Das tut mir leid. Es gibt eine Störung an einem Stellwerk. Wohin möchten Sie genau?",
+   "tr": "يؤسفني ذلك. هناك عطل في مركز الإشارات. إلى أين تريدين بالضبط؟"
+  },
+  {
+   "s": "A",
+   "de": "Nach Lübeck. In Hamburg muss ich umsteigen.",
+   "tr": "إلى لوبيك. يجب أن أبدّل القطار في هامبورغ."
+  },
+  {
+   "s": "B",
+   "de": "Dann bekommen Sie Ihren Anschluss leider nicht. Aber Sie können den nächsten Regionalzug nehmen.",
+   "tr": "إذن للأسف لن تلحقي بالقطار التالي. لكن يمكنك أن تأخذي القطار الإقليمي التالي."
+  },
+  {
+   "s": "A",
+   "de": "Gilt mein Ticket auch für den Regionalzug?",
+   "tr": "هل تصلح تذكرتي للقطار الإقليمي أيضًا؟"
+  },
+  {
+   "s": "B",
+   "de": "Ja, bei so einer Verspätung dürfen Sie einen anderen Zug nehmen.",
+   "tr": "نعم، مع تأخير كهذا يحق لك ركوب قطار آخر."
+  },
+  {
+   "s": "A",
+   "de": "Und wann fährt der Zug von Hamburg nach Lübeck?",
+   "tr": "ومتى يغادر القطار من هامبورغ إلى لوبيك؟"
+  },
+  {
+   "s": "B",
+   "de": "Jede Stunde, immer um zwölf nach. Sie sind dann etwa um einundzwanzig Uhr in Lübeck.",
+   "tr": "كل ساعة، دائمًا بعد الساعة باثنتي عشرة دقيقة. ستصلين إلى لوبيك حوالي الساعة التاسعة مساءً."
+  },
+  {
+   "s": "A",
+   "de": "Das ist sehr spät. Bekomme ich Geld zurück?",
+   "tr": "هذا متأخر جدًا. هل سأسترد شيئًا من المال؟"
+  },
+  {
+   "s": "B",
+   "de": "Ja. Ab sechzig Minuten Verspätung am Ziel bekommen Sie fünfundzwanzig Prozent des Fahrpreises zurück.",
+   "tr": "نعم. إذا وصلت متأخرة ستين دقيقة أو أكثر، تستردين خمسة وعشرين بالمئة من ثمن التذكرة."
+  },
+  {
+   "s": "A",
+   "de": "Wie mache ich das?",
+   "tr": "كيف أفعل ذلك؟"
+  },
+  {
+   "s": "B",
+   "de": "Am einfachsten online oder in der App. Sie können auch das Formular hier am Schalter nehmen.",
+   "tr": "الأسهل عبر الإنترنت أو في التطبيق. ويمكنك أيضًا أخذ الاستمارة من هنا عند الشبّاك."
+  },
+  {
+   "s": "A",
+   "de": "Dann nehme ich das Formular. Danke für Ihre Hilfe!",
+   "tr": "إذن سآخذ الاستمارة. شكرًا على مساعدتك!"
+  },
+  {
+   "s": "B",
+   "de": "Gern geschehen. Gute Weiterfahrt!",
+   "tr": "عفوًا. أتمنى لك بقية رحلة موفقة!"
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/a2-05.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "andreasdantz",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "source": "https://www.flickr.com/photos/29481208@N08/8900168804",
+  "site": "Flickr"
+ }
+}

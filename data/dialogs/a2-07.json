@@ -1,0 +1,101 @@
+{
+ "id": "a2-07",
+ "level": "a2",
+ "n": 7,
+ "emoji": "🏦",
+ "title": "Ein Konto eröffnen",
+ "titleTr": "Открываем счёт в банке",
+ "situation": "Амаль недавно в Германии и хочет открыть текущий счёт. Сотрудник банка объясняет, какие нужны документы и сколько это стоит.",
+ "speakers": {
+  "A": {
+   "name": "Bankberater",
+   "g": "m"
+  },
+  "B": {
+   "name": "Amal",
+   "g": "f"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Guten Tag! Was kann ich für Sie tun?",
+   "tr": "Добрый день! Чем могу помочь?"
+  },
+  {
+   "s": "B",
+   "de": "Guten Tag! Ich möchte ein Girokonto eröffnen.",
+   "tr": "Добрый день! Я хочу открыть текущий счёт."
+  },
+  {
+   "s": "A",
+   "de": "Gern. Haben Sie einen Pass oder einen Ausweis dabei?",
+   "tr": "Хорошо. У вас с собой паспорт или удостоверение личности?"
+  },
+  {
+   "s": "B",
+   "de": "Ja, hier ist mein Pass. Und das ist meine Meldebescheinigung.",
+   "tr": "Да, вот мой паспорт. А это моя справка о регистрации по месту жительства."
+  },
+  {
+   "s": "A",
+   "de": "Sehr gut. Arbeiten Sie schon in Deutschland?",
+   "tr": "Очень хорошо. Вы уже работаете в Германии?"
+  },
+  {
+   "s": "B",
+   "de": "Ja, seit einem Monat. Mein Arbeitgeber braucht eine Kontonummer für mein Gehalt.",
+   "tr": "Да, уже месяц. Моему работодателю нужен номер счёта для зарплаты."
+  },
+  {
+   "s": "A",
+   "de": "Verstehe. Unser Konto kostet vier Euro fünfzig im Monat. Sie bekommen auch eine Girocard.",
+   "tr": "Понятно. Наш счёт стоит четыре евро пятьдесят в месяц. Вы также получите дебетовую карту."
+  },
+  {
+   "s": "B",
+   "de": "Gibt es auch ein kostenloses Konto?",
+   "tr": "А бесплатный счёт есть?"
+  },
+  {
+   "s": "A",
+   "de": "Ja, das Online-Konto ist kostenlos. Dann machen Sie fast alles mit der App.",
+   "tr": "Да, онлайн-счёт бесплатный. Тогда почти всё вы делаете через приложение."
+  },
+  {
+   "s": "B",
+   "de": "Das ist gut. Kann ich mit der Karte überall Geld abheben?",
+   "tr": "Это хорошо. С этой картой можно снимать деньги везде?"
+  },
+  {
+   "s": "A",
+   "de": "An unseren Geldautomaten ist es kostenlos. An anderen Automaten zahlen Sie eine Gebühr.",
+   "tr": "В наших банкоматах бесплатно. В других банкоматах вы платите комиссию."
+  },
+  {
+   "s": "B",
+   "de": "Alles klar. Dann nehme ich das Online-Konto.",
+   "tr": "Всё понятно. Тогда я возьму онлайн-счёт."
+  },
+  {
+   "s": "A",
+   "de": "Gut. Bitte unterschreiben Sie hier. Die Karte und die PIN kommen in ein paar Tagen per Post.",
+   "tr": "Хорошо. Пожалуйста, подпишите здесь. Карта и ПИН-код придут по почте через несколько дней."
+  },
+  {
+   "s": "B",
+   "de": "Super, vielen Dank für Ihre Hilfe!",
+   "tr": "Отлично, большое спасибо за помощь!"
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/a2-07.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "FuFuWolf",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "source": "https://www.flickr.com/photos/71651999@N05/6888979066",
+  "site": "Flickr"
+ }
+}

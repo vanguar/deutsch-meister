@@ -1,0 +1,101 @@
+{
+ "id": "a2-02",
+ "level": "a2",
+ "n": 2,
+ "emoji": "💊",
+ "title": "In der Apotheke",
+ "titleTr": "В аптеці",
+ "situation": "Юрій приносить в аптеку рецепт і питає, як приймати ліки та що робити з алергією.",
+ "speakers": {
+  "A": {
+   "name": "Apothekerin",
+   "g": "f"
+  },
+  "B": {
+   "name": "Jurij",
+   "g": "m"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Guten Morgen! Wie kann ich Ihnen helfen?",
+   "tr": "Доброго ранку! Чим можу вам допомогти?"
+  },
+  {
+   "s": "B",
+   "de": "Guten Morgen! Ich habe hier ein Rezept von meinem Arzt.",
+   "tr": "Доброго ранку! У мене рецепт від мого лікаря."
+  },
+  {
+   "s": "A",
+   "de": "Danke. Das ist ein Antibiotikum. Einen Moment, ich hole es.",
+   "tr": "Дякую. Це антибіотик. Хвилинку, я зараз принесу."
+  },
+  {
+   "s": "B",
+   "de": "Wie oft muss ich die Tabletten nehmen?",
+   "tr": "Як часто мені треба приймати таблетки?"
+  },
+  {
+   "s": "A",
+   "de": "Dreimal täglich eine Tablette, immer nach dem Essen.",
+   "tr": "Тричі на день по одній таблетці, завжди після їжі."
+  },
+  {
+   "s": "B",
+   "de": "Und wie lange?",
+   "tr": "А як довго?"
+  },
+  {
+   "s": "A",
+   "de": "Sieben Tage. Bitte nehmen Sie alle Tabletten, auch wenn es Ihnen schon besser geht.",
+   "tr": "Сім днів. Будь ласка, випийте всі таблетки, навіть якщо вам уже стане краще."
+  },
+  {
+   "s": "B",
+   "de": "Verstanden. Muss ich etwas bezahlen?",
+   "tr": "Зрозуміло. Мені треба щось доплатити?"
+  },
+  {
+   "s": "A",
+   "de": "Ja, die Zuzahlung beträgt fünf Euro.",
+   "tr": "Так, доплата становить п'ять євро."
+  },
+  {
+   "s": "B",
+   "de": "Ich habe noch eine Frage. Ich habe eine Pollenallergie. Haben Sie etwas dagegen?",
+   "tr": "У мене ще питання. У мене алергія на пилок. У вас є щось від неї?"
+  },
+  {
+   "s": "A",
+   "de": "Ja, diese Tabletten hier helfen gut. Dafür brauchen Sie kein Rezept.",
+   "tr": "Так, ось ці таблетки добре допомагають. Рецепт на них не потрібен."
+  },
+  {
+   "s": "B",
+   "de": "Machen die Tabletten müde?",
+   "tr": "Від цих таблеток не хилить на сон?"
+  },
+  {
+   "s": "A",
+   "de": "Nein, normalerweise nicht. Aber nehmen Sie sie nicht zusammen mit Alkohol.",
+   "tr": "Ні, зазвичай ні. Але не приймайте їх разом з алкоголем."
+  },
+  {
+   "s": "B",
+   "de": "Gut, dann nehme ich eine Packung. Vielen Dank für die Beratung!",
+   "tr": "Добре, тоді я візьму одну упаковку. Щиро дякую за консультацію!"
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/a2-02.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "aslakr",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "source": "https://www.flickr.com/photos/38839434@N00/6333874755",
+  "site": "Flickr"
+ }
+}

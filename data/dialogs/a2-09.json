@@ -1,0 +1,101 @@
+{
+ "id": "a2-09",
+ "level": "a2",
+ "n": 9,
+ "emoji": "🏋️",
+ "title": "Im Fitnessstudio",
+ "titleTr": "В фитнес-клубе",
+ "situation": "Кевин хочет записаться в фитнес-клуб. Тренер рассказывает о договоре, ценах и пробной тренировке.",
+ "speakers": {
+  "A": {
+   "name": "Trainerin",
+   "g": "f"
+  },
+  "B": {
+   "name": "Kevin",
+   "g": "m"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Hallo! Kann ich dir helfen?",
+   "tr": "Привет! Тебе помочь?"
+  },
+  {
+   "s": "B",
+   "de": "Hallo! Ich interessiere mich für eine Mitgliedschaft. Was kostet das?",
+   "tr": "Привет! Меня интересует абонемент. Сколько он стоит?"
+  },
+  {
+   "s": "A",
+   "de": "Es gibt zwei Angebote. Mit einem Vertrag für ein Jahr kostet es neunundzwanzig Euro im Monat.",
+   "tr": "Есть два варианта. С договором на год — двадцать девять евро в месяц."
+  },
+  {
+   "s": "B",
+   "de": "Und das zweite Angebot?",
+   "tr": "А второй вариант?"
+  },
+  {
+   "s": "A",
+   "de": "Ohne lange Laufzeit kostet es neununddreißig Euro. Dann kannst du jeden Monat kündigen.",
+   "tr": "Без долгого срока — тридцать девять евро. Тогда ты можешь расторгнуть договор в любой месяц."
+  },
+  {
+   "s": "B",
+   "de": "Hm, ich weiß noch nicht, ob ich lange in dieser Stadt bleibe. Ich glaube, ich nehme das flexible Angebot.",
+   "tr": "Хм, я ещё не знаю, долго ли пробуду в этом городе. Думаю, я возьму гибкий вариант."
+  },
+  {
+   "s": "A",
+   "de": "Das ist eine gute Idee. Möchtest du vorher ein kostenloses Probetraining machen?",
+   "tr": "Хорошая идея. Хочешь сначала сходить на бесплатную пробную тренировку?"
+  },
+  {
+   "s": "B",
+   "de": "Ja, gern! Wann geht das?",
+   "tr": "Да, с удовольствием! Когда можно?"
+  },
+  {
+   "s": "A",
+   "de": "Morgen um achtzehn Uhr hätte ich Zeit. Dann zeige ich dir alle Geräte.",
+   "tr": "Завтра в шесть вечера у меня есть время. Тогда я покажу тебе все тренажёры."
+  },
+  {
+   "s": "B",
+   "de": "Perfekt. Was muss ich mitbringen?",
+   "tr": "Отлично. Что мне взять с собой?"
+  },
+  {
+   "s": "A",
+   "de": "Sportkleidung, saubere Schuhe und ein Handtuch. Duschen kannst du hier.",
+   "tr": "Спортивную одежду, чистую обувь и полотенце. Принять душ можно здесь."
+  },
+  {
+   "s": "B",
+   "de": "Ist das Studio am Wochenende auch geöffnet?",
+   "tr": "Клуб в выходные тоже открыт?"
+  },
+  {
+   "s": "A",
+   "de": "Ja, samstags und sonntags von acht bis zwanzig Uhr.",
+   "tr": "Да, по субботам и воскресеньям с восьми до двадцати."
+  },
+  {
+   "s": "B",
+   "de": "Super. Dann bis morgen!",
+   "tr": "Супер. Тогда до завтра!"
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/a2-09.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "yugenro",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+  "source": "https://www.flickr.com/photos/22651740@N00/5830300141",
+  "site": "Flickr"
+ }
+}

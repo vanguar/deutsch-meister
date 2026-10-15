@@ -1,0 +1,101 @@
+{
+ "id": "a2-07",
+ "level": "a2",
+ "n": 7,
+ "emoji": "🏦",
+ "title": "Ein Konto eröffnen",
+ "titleTr": "Відкриваємо рахунок у банку",
+ "situation": "Амаль нещодавно в Німеччині й хоче відкрити поточний рахунок. Працівник банку пояснює, які потрібні документи та скільки це коштує.",
+ "speakers": {
+  "A": {
+   "name": "Bankberater",
+   "g": "m"
+  },
+  "B": {
+   "name": "Amal",
+   "g": "f"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Guten Tag! Was kann ich für Sie tun?",
+   "tr": "Добрий день! Чим можу допомогти?"
+  },
+  {
+   "s": "B",
+   "de": "Guten Tag! Ich möchte ein Girokonto eröffnen.",
+   "tr": "Добрий день! Я хочу відкрити поточний рахунок."
+  },
+  {
+   "s": "A",
+   "de": "Gern. Haben Sie einen Pass oder einen Ausweis dabei?",
+   "tr": "Добре. У вас із собою паспорт або посвідчення особи?"
+  },
+  {
+   "s": "B",
+   "de": "Ja, hier ist mein Pass. Und das ist meine Meldebescheinigung.",
+   "tr": "Так, ось мій паспорт. А це моя довідка про реєстрацію місця проживання."
+  },
+  {
+   "s": "A",
+   "de": "Sehr gut. Arbeiten Sie schon in Deutschland?",
+   "tr": "Дуже добре. Ви вже працюєте в Німеччині?"
+  },
+  {
+   "s": "B",
+   "de": "Ja, seit einem Monat. Mein Arbeitgeber braucht eine Kontonummer für mein Gehalt.",
+   "tr": "Так, уже місяць. Моєму роботодавцю потрібен номер рахунку для зарплати."
+  },
+  {
+   "s": "A",
+   "de": "Verstehe. Unser Konto kostet vier Euro fünfzig im Monat. Sie bekommen auch eine Girocard.",
+   "tr": "Зрозуміло. Наш рахунок коштує чотири євро п'ятдесят на місяць. Ви також отримаєте дебетову картку."
+  },
+  {
+   "s": "B",
+   "de": "Gibt es auch ein kostenloses Konto?",
+   "tr": "А безплатний рахунок є?"
+  },
+  {
+   "s": "A",
+   "de": "Ja, das Online-Konto ist kostenlos. Dann machen Sie fast alles mit der App.",
+   "tr": "Так, онлайн-рахунок безплатний. Тоді майже все ви робите через застосунок."
+  },
+  {
+   "s": "B",
+   "de": "Das ist gut. Kann ich mit der Karte überall Geld abheben?",
+   "tr": "Це добре. З цією карткою можна знімати гроші будь-де?"
+  },
+  {
+   "s": "A",
+   "de": "An unseren Geldautomaten ist es kostenlos. An anderen Automaten zahlen Sie eine Gebühr.",
+   "tr": "У наших банкоматах безплатно. В інших банкоматах ви платите комісію."
+  },
+  {
+   "s": "B",
+   "de": "Alles klar. Dann nehme ich das Online-Konto.",
+   "tr": "Усе зрозуміло. Тоді я візьму онлайн-рахунок."
+  },
+  {
+   "s": "A",
+   "de": "Gut. Bitte unterschreiben Sie hier. Die Karte und die PIN kommen in ein paar Tagen per Post.",
+   "tr": "Добре. Будь ласка, підпишіть тут. Картка й ПІН-код прийдуть поштою за кілька днів."
+  },
+  {
+   "s": "B",
+   "de": "Super, vielen Dank für Ihre Hilfe!",
+   "tr": "Чудово, щиро дякую за допомогу!"
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/a2-07.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "FuFuWolf",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "source": "https://www.flickr.com/photos/71651999@N05/6888979066",
+  "site": "Flickr"
+ }
+}

@@ -1,0 +1,101 @@
+{
+ "id": "a2-06",
+ "level": "a2",
+ "n": 6,
+ "emoji": "💇",
+ "title": "Beim Friseur",
+ "titleTr": "В парикмахерской",
+ "situation": "Максим хочет постричься. Парикмахер уточняет длину, предлагает помыть голову и называет цену.",
+ "speakers": {
+  "A": {
+   "name": "Friseurin",
+   "g": "f"
+  },
+  "B": {
+   "name": "Maksym",
+   "g": "m"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Hallo! Haben Sie einen Termin?",
+   "tr": "Здравствуйте! Вы записаны?"
+  },
+  {
+   "s": "B",
+   "de": "Nein, leider nicht. Haben Sie jetzt Zeit?",
+   "tr": "Нет, к сожалению. У вас сейчас есть время?"
+  },
+  {
+   "s": "A",
+   "de": "Sie haben Glück, gerade ist ein Platz frei. Bitte setzen Sie sich.",
+   "tr": "Вам повезло, как раз освободилось место. Присаживайтесь, пожалуйста."
+  },
+  {
+   "s": "B",
+   "de": "Danke. Ich möchte die Haare kürzer haben.",
+   "tr": "Спасибо. Я хочу волосы покороче."
+  },
+  {
+   "s": "A",
+   "de": "Wie kurz denn? Nur ein bisschen oder viel?",
+   "tr": "Насколько коротко? Чуть-чуть или сильно?"
+  },
+  {
+   "s": "B",
+   "de": "An den Seiten ziemlich kurz, oben nur zwei Zentimeter weniger.",
+   "tr": "По бокам довольно коротко, а сверху только на два сантиметра короче."
+  },
+  {
+   "s": "A",
+   "de": "Alles klar. Soll ich Ihnen vorher die Haare waschen?",
+   "tr": "Понятно. Помыть вам сначала голову?"
+  },
+  {
+   "s": "B",
+   "de": "Was kostet das mit Waschen?",
+   "tr": "Сколько это стоит с мытьём?"
+  },
+  {
+   "s": "A",
+   "de": "Waschen, Schneiden und Föhnen kosten zusammen sechsundzwanzig Euro.",
+   "tr": "Мытьё, стрижка и укладка феном вместе стоят двадцать шесть евро."
+  },
+  {
+   "s": "B",
+   "de": "Gut, dann bitte mit Waschen.",
+   "tr": "Хорошо, тогда с мытьём, пожалуйста."
+  },
+  {
+   "s": "A",
+   "de": "So, fertig. Schauen Sie mal in den Spiegel. Gefällt es Ihnen?",
+   "tr": "Вот, готово. Посмотрите в зеркало. Вам нравится?"
+  },
+  {
+   "s": "B",
+   "de": "Ja, sehr gut! Genau so wollte ich es.",
+   "tr": "Да, очень хорошо! Именно так я и хотел."
+  },
+  {
+   "s": "A",
+   "de": "Das freut mich. Möchten Sie gleich einen Termin für das nächste Mal machen?",
+   "tr": "Я рада. Хотите сразу записаться на следующий раз?"
+  },
+  {
+   "s": "B",
+   "de": "Ja, gern. In vier Wochen, am Samstagvormittag.",
+   "tr": "Да, с удовольствием. Через четыре недели, в субботу до обеда."
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/a2-06.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "whatleydude",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "source": "https://www.flickr.com/photos/85318305@N00/2832838129",
+  "site": "Flickr"
+ }
+}

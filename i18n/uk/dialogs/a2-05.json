@@ -1,0 +1,101 @@
+{
+ "id": "a2-05",
+ "level": "a2",
+ "n": 5,
+ "emoji": "🚉",
+ "title": "Der Zug hat Verspätung",
+ "titleTr": "Поїзд запізнюється",
+ "situation": "Потяг Ольги до Гамбурга запізнюється на годину. У довідковій вона дізнається, як встигнути на пересадку і що їй належить.",
+ "speakers": {
+  "A": {
+   "name": "Olga",
+   "g": "f"
+  },
+  "B": {
+   "name": "Bahnmitarbeiter",
+   "g": "m"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Entschuldigung, der ICE nach Hamburg hat sechzig Minuten Verspätung. Was soll ich jetzt machen?",
+   "tr": "Перепрошую, ICE до Гамбурга запізнюється на шістдесят хвилин. Що мені тепер робити?"
+  },
+  {
+   "s": "B",
+   "de": "Das tut mir leid. Es gibt eine Störung an einem Stellwerk. Wohin möchten Sie genau?",
+   "tr": "Мені дуже шкода. Несправність на централізаційному посту. Куди саме вам треба?"
+  },
+  {
+   "s": "A",
+   "de": "Nach Lübeck. In Hamburg muss ich umsteigen.",
+   "tr": "До Любека. У Гамбурзі мені треба пересісти."
+  },
+  {
+   "s": "B",
+   "de": "Dann bekommen Sie Ihren Anschluss leider nicht. Aber Sie können den nächsten Regionalzug nehmen.",
+   "tr": "Тоді на пересадку ви, на жаль, не встигнете. Але ви можете сісти на наступну електричку."
+  },
+  {
+   "s": "A",
+   "de": "Gilt mein Ticket auch für den Regionalzug?",
+   "tr": "Мій квиток дійсний і на електричку?"
+  },
+  {
+   "s": "B",
+   "de": "Ja, bei so einer Verspätung dürfen Sie einen anderen Zug nehmen.",
+   "tr": "Так, за такого запізнення ви можете їхати іншим потягом."
+  },
+  {
+   "s": "A",
+   "de": "Und wann fährt der Zug von Hamburg nach Lübeck?",
+   "tr": "А коли їде потяг з Гамбурга до Любека?"
+  },
+  {
+   "s": "B",
+   "de": "Jede Stunde, immer um zwölf nach. Sie sind dann etwa um einundzwanzig Uhr in Lübeck.",
+   "tr": "Щогодини, о дванадцятій хвилині. Тоді ви будете в Любеку приблизно о дев'ятій вечора."
+  },
+  {
+   "s": "A",
+   "de": "Das ist sehr spät. Bekomme ich Geld zurück?",
+   "tr": "Це дуже пізно. Мені повернуть гроші?"
+  },
+  {
+   "s": "B",
+   "de": "Ja. Ab sechzig Minuten Verspätung am Ziel bekommen Sie fünfundzwanzig Prozent des Fahrpreises zurück.",
+   "tr": "Так. За запізнення від шістдесяти хвилин у пункті призначення вам повернуть двадцять п'ять відсотків вартості квитка."
+  },
+  {
+   "s": "A",
+   "de": "Wie mache ich das?",
+   "tr": "Як це зробити?"
+  },
+  {
+   "s": "B",
+   "de": "Am einfachsten online oder in der App. Sie können auch das Formular hier am Schalter nehmen.",
+   "tr": "Найпростіше онлайн або в застосунку. Можна також узяти бланк тут, у касі."
+  },
+  {
+   "s": "A",
+   "de": "Dann nehme ich das Formular. Danke für Ihre Hilfe!",
+   "tr": "Тоді я візьму бланк. Дякую за допомогу!"
+  },
+  {
+   "s": "B",
+   "de": "Gern geschehen. Gute Weiterfahrt!",
+   "tr": "Нема за що. Щасливої подальшої дороги!"
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/a2-05.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "andreasdantz",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "source": "https://www.flickr.com/photos/29481208@N08/8900168804",
+  "site": "Flickr"
+ }
+}

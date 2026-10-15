@@ -1,0 +1,101 @@
+{
+ "id": "a2-08",
+ "level": "a2",
+ "n": 8,
+ "emoji": "🎂",
+ "title": "Eine Einladung zur Party",
+ "titleTr": "Запрошення на вечірку",
+ "situation": "Колега Ларс запрошує Софію на свій день народження. Вони домовляються про час, подарунок і дорогу.",
+ "speakers": {
+  "A": {
+   "name": "Lars",
+   "g": "m"
+  },
+  "B": {
+   "name": "Sofija",
+   "g": "f"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Sofija, hast du am Samstag schon etwas vor?",
+   "tr": "Софіє, у тебе на суботу вже є плани?"
+  },
+  {
+   "s": "B",
+   "de": "Nein, noch nicht. Warum?",
+   "tr": "Ні, ще немає. А що?"
+  },
+  {
+   "s": "A",
+   "de": "Ich werde dreißig und mache eine Party im Garten. Ich möchte dich gern einladen.",
+   "tr": "Мені виповнюється тридцять, і я влаштовую вечірку в саду. Я хотів би тебе запросити."
+  },
+  {
+   "s": "B",
+   "de": "Oh, wie schön! Danke, ich komme gern. Wann fängt die Party an?",
+   "tr": "Ой, як чудово! Дякую, залюбки прийду. О котрій починається вечірка?"
+  },
+  {
+   "s": "A",
+   "de": "Um sieben Uhr abends. Wir grillen, und später gibt es Musik.",
+   "tr": "О сьомій вечора. Смажитимемо на грилі, а потім буде музика."
+  },
+  {
+   "s": "B",
+   "de": "Klingt super! Soll ich etwas mitbringen?",
+   "tr": "Звучить чудово! Мені щось принести?"
+  },
+  {
+   "s": "A",
+   "de": "Wenn du möchtest, kannst du einen Salat mitbringen. Getränke haben wir genug.",
+   "tr": "Якщо хочеш, можеш принести салат. Напоїв у нас досить."
+  },
+  {
+   "s": "B",
+   "de": "Gern. Ich mache einen ukrainischen Salat mit Roter Bete.",
+   "tr": "Залюбки. Я зроблю український салат із буряком."
+  },
+  {
+   "s": "A",
+   "de": "Lecker! Ich wohne in der Gartenstraße zwölf. Kennst du den Weg?",
+   "tr": "Смачно! Я живу на Гартенштрассе, дванадцять. Ти знаєш дорогу?"
+  },
+  {
+   "s": "B",
+   "de": "Nein. Kann ich mit der Straßenbahn kommen?",
+   "tr": "Ні. Можна доїхати трамваєм?"
+  },
+  {
+   "s": "A",
+   "de": "Ja, mit der Linie drei bis zur Haltestelle Parkweg. Von dort sind es nur fünf Minuten zu Fuß.",
+   "tr": "Так, третім трамваєм до зупинки Parkweg. Звідти лише п'ять хвилин пішки."
+  },
+  {
+   "s": "B",
+   "de": "Perfekt. Darf ich meinen Freund mitbringen?",
+   "tr": "Чудово. Можна мені прийти з моїм хлопцем?"
+  },
+  {
+   "s": "A",
+   "de": "Natürlich, er ist herzlich willkommen!",
+   "tr": "Звісно, ми будемо йому дуже раді!"
+  },
+  {
+   "s": "B",
+   "de": "Danke für die Einladung! Bis Samstag!",
+   "tr": "Дякую за запрошення! До суботи!"
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/a2-08.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "Cia de Foto",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "source": "https://www.flickr.com/photos/26611570@N04/3392782398",
+  "site": "Flickr"
+ }
+}

@@ -1,0 +1,101 @@
+{
+ "id": "a2-10",
+ "level": "a2",
+ "n": 10,
+ "emoji": "📱",
+ "title": "Eine SIM-Karte kaufen",
+ "titleTr": "Купуємо SIM-картку",
+ "situation": "Халід хоче німецький номер телефону. Продавець порівнює передплачений тариф і договір.",
+ "speakers": {
+  "A": {
+   "name": "Verkäufer",
+   "g": "m"
+  },
+  "B": {
+   "name": "Khalid",
+   "g": "m"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Guten Tag! Suchen Sie etwas Bestimmtes?",
+   "tr": "Добрий день! Ви шукаєте щось конкретне?"
+  },
+  {
+   "s": "B",
+   "de": "Ja, ich brauche eine deutsche Handynummer.",
+   "tr": "Так, мені потрібен німецький номер мобільного."
+  },
+  {
+   "s": "A",
+   "de": "Möchten Sie eine Prepaid-Karte oder einen Vertrag?",
+   "tr": "Вам потрібна передплачена картка чи договір?"
+  },
+  {
+   "s": "B",
+   "de": "Was ist der Unterschied?",
+   "tr": "А в чому різниця?"
+  },
+  {
+   "s": "A",
+   "de": "Bei Prepaid laden Sie Guthaben auf und zahlen nur, was Sie nutzen. Ein Vertrag läuft meistens zwei Jahre.",
+   "tr": "З передплатою ви поповнюєте баланс і платите лише за те, чим користуєтеся. Договір зазвичай укладається на два роки."
+  },
+  {
+   "s": "B",
+   "de": "Dann lieber Prepaid. Ich telefoniere viel mit meiner Familie im Ausland.",
+   "tr": "Тоді краще передплату. Я багато телефоную родині за кордон."
+  },
+  {
+   "s": "A",
+   "de": "Dann empfehle ich Ihnen diesen Tarif. Zehn Gigabyte Internet für fünfzehn Euro im Monat.",
+   "tr": "Тоді рекомендую вам цей тариф. Десять гігабайтів інтернету за п'ятнадцять євро на місяць."
+  },
+  {
+   "s": "B",
+   "de": "Sind Anrufe ins Ausland auch dabei?",
+   "tr": "Дзвінки за кордон теж входять?"
+  },
+  {
+   "s": "A",
+   "de": "Nein, aber über WhatsApp oder andere Apps telefonieren Sie mit dem Internet kostenlos.",
+   "tr": "Ні, але через WhatsApp або інші застосунки ви дзвоните через інтернет безплатно."
+  },
+  {
+   "s": "B",
+   "de": "Ah, stimmt. Was brauchen Sie von mir?",
+   "tr": "А, точно. Що вам від мене потрібно?"
+  },
+  {
+   "s": "A",
+   "de": "Ihren Ausweis. In Deutschland muss man jede SIM-Karte auf seinen Namen registrieren.",
+   "tr": "Ваше посвідчення особи. У Німеччині кожну SIM-картку треба реєструвати на своє ім'я."
+  },
+  {
+   "s": "B",
+   "de": "Hier ist mein Pass. Funktioniert die Karte sofort?",
+   "tr": "Ось мій паспорт. Картка одразу запрацює?"
+  },
+  {
+   "s": "A",
+   "de": "Ja, in etwa einer Stunde ist sie aktiv. Die Karte kostet zehn Euro mit fünf Euro Startguthaben.",
+   "tr": "Так, приблизно за годину вона буде активна. Картка коштує десять євро, на ній п'ять євро стартового балансу."
+  },
+  {
+   "s": "B",
+   "de": "Gut, die nehme ich. Vielen Dank!",
+   "tr": "Добре, беру її. Щиро дякую!"
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/a2-10.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "Oxfam East Africa",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "source": "https://www.flickr.com/photos/46434833@N05/7550611126",
+  "site": "Flickr"
+ }
+}

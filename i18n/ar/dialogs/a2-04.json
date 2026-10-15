@@ -1,0 +1,101 @@
+{
+ "id": "a2-04",
+ "level": "a2",
+ "n": 4,
+ "emoji": "📦",
+ "title": "In der Postfiliale",
+ "titleTr": "في مكتب البريد",
+ "situation": "ترسل ناتاليا طردًا إلى أوكرانيا، وتستلم رسالة لم تجدها في البيت.",
+ "speakers": {
+  "A": {
+   "name": "Postangestellter",
+   "g": "m"
+  },
+  "B": {
+   "name": "Natalija",
+   "g": "f"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Der Nächste, bitte! Was kann ich für Sie tun?",
+   "tr": "التالي من فضلك! كيف يمكنني مساعدتك؟"
+  },
+  {
+   "s": "B",
+   "de": "Ich möchte dieses Paket in die Ukraine schicken.",
+   "tr": "أريد أن أرسل هذا الطرد إلى أوكرانيا."
+  },
+  {
+   "s": "A",
+   "de": "Gern. Stellen Sie es bitte auf die Waage. Es wiegt vier Kilo.",
+   "tr": "بكل سرور. ضعيه على الميزان من فضلك. وزنه أربعة كيلوغرامات."
+  },
+  {
+   "s": "B",
+   "de": "Was kostet das?",
+   "tr": "كم سعر هذا؟"
+  },
+  {
+   "s": "A",
+   "de": "Das kostet vierundzwanzig Euro neunundneunzig. Sie müssen noch diese Zollerklärung ausfüllen.",
+   "tr": "يكلّف أربعة وعشرين يورو وتسعة وتسعين سنتًا. ويجب أن تملئي أيضًا هذا التصريح الجمركي."
+  },
+  {
+   "s": "B",
+   "de": "Was muss ich da eintragen?",
+   "tr": "ماذا يجب أن أكتب فيه؟"
+  },
+  {
+   "s": "A",
+   "de": "Was im Paket ist und wie viel es wert ist.",
+   "tr": "ما الموجود في الطرد وكم قيمته."
+  },
+  {
+   "s": "B",
+   "de": "Da sind Kleidung und Bücher für meine Eltern drin. Ungefähr fünfzig Euro.",
+   "tr": "فيه ملابس وكتب لوالديّ. قيمتها حوالي خمسين يورو."
+  },
+  {
+   "s": "A",
+   "de": "Gut. Wie lange es dauert, kann ich leider nicht genau sagen. Meistens ein bis zwei Wochen.",
+   "tr": "حسنًا. للأسف لا أستطيع أن أقول بدقة كم سيستغرق. غالبًا من أسبوع إلى أسبوعين."
+  },
+  {
+   "s": "B",
+   "de": "Okay. Und ich habe noch diese Benachrichtigung. Ein Einschreiben ist für mich da.",
+   "tr": "حسنًا. ومعي أيضًا هذا الإشعار. هناك رسالة مسجّلة باسمي."
+  },
+  {
+   "s": "A",
+   "de": "Haben Sie Ihren Ausweis dabei?",
+   "tr": "هل معك بطاقة الهوية؟"
+  },
+  {
+   "s": "B",
+   "de": "Ja, hier ist mein Aufenthaltstitel.",
+   "tr": "نعم، هذه بطاقة إقامتي."
+  },
+  {
+   "s": "A",
+   "de": "Danke. Bitte unterschreiben Sie hier. So, hier ist Ihr Brief.",
+   "tr": "شكرًا. وقّعي هنا من فضلك. تفضّلي، هذه رسالتك."
+  },
+  {
+   "s": "B",
+   "de": "Vielen Dank und einen schönen Tag!",
+   "tr": "شكرًا جزيلًا، ويومًا سعيدًا!"
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/a2-04.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "dierk schaefer",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "source": "https://www.flickr.com/photos/26480501@N06/2746050959",
+  "site": "Flickr"
+ }
+}

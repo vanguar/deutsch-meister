@@ -1,0 +1,101 @@
+{
+ "id": "a2-06",
+ "level": "a2",
+ "n": 6,
+ "emoji": "💇",
+ "title": "Beim Friseur",
+ "titleTr": "عند الحلّاق",
+ "situation": "يريد مكسيم قصّ شعره. تسأله مصففة الشعر عن الطول المطلوب، وتعرض غسل الشعر، وتخبره بالسعر.",
+ "speakers": {
+  "A": {
+   "name": "Friseurin",
+   "g": "f"
+  },
+  "B": {
+   "name": "Maksym",
+   "g": "m"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Hallo! Haben Sie einen Termin?",
+   "tr": "مرحبًا! هل لديك موعد؟"
+  },
+  {
+   "s": "B",
+   "de": "Nein, leider nicht. Haben Sie jetzt Zeit?",
+   "tr": "لا، للأسف. هل عندك وقت الآن؟"
+  },
+  {
+   "s": "A",
+   "de": "Sie haben Glück, gerade ist ein Platz frei. Bitte setzen Sie sich.",
+   "tr": "أنت محظوظ، هناك مكان شاغر الآن. تفضّل بالجلوس."
+  },
+  {
+   "s": "B",
+   "de": "Danke. Ich möchte die Haare kürzer haben.",
+   "tr": "شكرًا. أريد شعري أقصر."
+  },
+  {
+   "s": "A",
+   "de": "Wie kurz denn? Nur ein bisschen oder viel?",
+   "tr": "إلى أي حد؟ قليلًا أم كثيرًا؟"
+  },
+  {
+   "s": "B",
+   "de": "An den Seiten ziemlich kurz, oben nur zwei Zentimeter weniger.",
+   "tr": "قصير إلى حد ما على الجانبين، ومن الأعلى سنتيمتران فقط."
+  },
+  {
+   "s": "A",
+   "de": "Alles klar. Soll ich Ihnen vorher die Haare waschen?",
+   "tr": "مفهوم. هل أغسل لك شعرك أولًا؟"
+  },
+  {
+   "s": "B",
+   "de": "Was kostet das mit Waschen?",
+   "tr": "كم السعر مع الغسل؟"
+  },
+  {
+   "s": "A",
+   "de": "Waschen, Schneiden und Föhnen kosten zusammen sechsundzwanzig Euro.",
+   "tr": "الغسل والقص والتجفيف بالمجفف معًا بستة وعشرين يورو."
+  },
+  {
+   "s": "B",
+   "de": "Gut, dann bitte mit Waschen.",
+   "tr": "حسنًا، إذن مع الغسل من فضلك."
+  },
+  {
+   "s": "A",
+   "de": "So, fertig. Schauen Sie mal in den Spiegel. Gefällt es Ihnen?",
+   "tr": "انتهينا. انظر في المرآة. هل يعجبك؟"
+  },
+  {
+   "s": "B",
+   "de": "Ja, sehr gut! Genau so wollte ich es.",
+   "tr": "نعم، جيد جدًا! هكذا تمامًا أردته."
+  },
+  {
+   "s": "A",
+   "de": "Das freut mich. Möchten Sie gleich einen Termin für das nächste Mal machen?",
+   "tr": "يسعدني ذلك. هل تريد أن تحجز موعدًا للمرة القادمة الآن؟"
+  },
+  {
+   "s": "B",
+   "de": "Ja, gern. In vier Wochen, am Samstagvormittag.",
+   "tr": "نعم، بكل سرور. بعد أربعة أسابيع، يوم السبت قبل الظهر."
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/a2-06.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "whatleydude",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "source": "https://www.flickr.com/photos/85318305@N00/2832838129",
+  "site": "Flickr"
+ }
+}

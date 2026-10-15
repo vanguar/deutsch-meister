@@ -1,0 +1,101 @@
+{
+ "id": "a2-01",
+ "level": "a2",
+ "n": 1,
+ "emoji": "🤒",
+ "title": "Beim Hausarzt",
+ "titleTr": "عند طبيب العائلة",
+ "situation": "تعاني مونيكا منذ أيام من ألم في الحلق والرأس. يسألها الطبيب عن الأعراض ويكتب لها إجازة مرضية.",
+ "speakers": {
+  "A": {
+   "name": "Dr. Krause",
+   "g": "m"
+  },
+  "B": {
+   "name": "Monika",
+   "g": "f"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Guten Tag, Frau Weber. Was fehlt Ihnen denn?",
+   "tr": "مرحبًا يا سيدة فيبر. مِمَّ تشكين؟"
+  },
+  {
+   "s": "B",
+   "de": "Ich fühle mich seit drei Tagen nicht gut. Ich habe Halsschmerzen und Kopfschmerzen.",
+   "tr": "لا أشعر بأنني بخير منذ ثلاثة أيام. عندي ألم في الحلق وصداع."
+  },
+  {
+   "s": "A",
+   "de": "Haben Sie auch Fieber?",
+   "tr": "هل عندك حمّى أيضًا؟"
+  },
+  {
+   "s": "B",
+   "de": "Ja, gestern Abend hatte ich achtunddreißig Komma fünf.",
+   "tr": "نعم، مساء أمس كانت حرارتي ثمانيًا وثلاثين ونصفًا."
+  },
+  {
+   "s": "A",
+   "de": "Husten Sie auch?",
+   "tr": "هل تسعلين أيضًا؟"
+  },
+  {
+   "s": "B",
+   "de": "Ein bisschen, vor allem in der Nacht. Deshalb schlafe ich sehr schlecht.",
+   "tr": "قليلًا، خاصة في الليل. ولهذا أنام بشكل سيئ جدًا."
+  },
+  {
+   "s": "A",
+   "de": "Machen Sie bitte den Mund auf und sagen Sie „Aaa“. Hm, der Hals ist ziemlich rot.",
+   "tr": "افتحي فمك من فضلك وقولي «آآآ». همم، الحلق أحمر إلى حد ما."
+  },
+  {
+   "s": "B",
+   "de": "Ist das schlimm?",
+   "tr": "هل هذا خطير؟"
+  },
+  {
+   "s": "A",
+   "de": "Nein, keine Sorge. Das ist eine Erkältung, aber Sie brauchen Ruhe.",
+   "tr": "لا، لا تقلقي. إنها نزلة برد، لكنك تحتاجين إلى الراحة."
+  },
+  {
+   "s": "B",
+   "de": "Ich muss morgen eigentlich arbeiten. Können Sie mich krankschreiben?",
+   "tr": "في الحقيقة يجب أن أعمل غدًا. هل يمكنك أن تعطيني إجازة مرضية؟"
+  },
+  {
+   "s": "A",
+   "de": "Ja, ich schreibe Sie bis Freitag krank. Ihr Arbeitgeber bekommt die Krankmeldung elektronisch.",
+   "tr": "نعم، سأعطيك إجازة مرضية حتى يوم الجمعة. سيحصل صاحب العمل على الشهادة المرضية إلكترونيًا."
+  },
+  {
+   "s": "B",
+   "de": "Gut. Brauche ich Medikamente?",
+   "tr": "حسنًا. هل أحتاج إلى أدوية؟"
+  },
+  {
+   "s": "A",
+   "de": "Ich gebe Ihnen ein Rezept für Lutschtabletten. Trinken Sie viel Tee und bleiben Sie im Bett.",
+   "tr": "سأكتب لك وصفة لأقراص استحلاب. اشربي كثيرًا من الشاي وابقي في السرير."
+  },
+  {
+   "s": "B",
+   "de": "Vielen Dank, Herr Doktor. Auf Wiedersehen!",
+   "tr": "شكرًا جزيلًا يا دكتور. مع السلامة!"
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/a2-01.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "Direct Media",
+  "license": "CC0",
+  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "source": "https://stocksnap.io/photo/doctor-patient-N9YCBA2UBU",
+  "site": "stocksnap"
+ }
+}

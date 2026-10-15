@@ -1,0 +1,101 @@
+{
+ "id": "a2-02",
+ "level": "a2",
+ "n": 2,
+ "emoji": "💊",
+ "title": "In der Apotheke",
+ "titleTr": "في الصيدلية",
+ "situation": "يحضر يوري إلى الصيدلية وصفة طبية، ويسأل كيف يتناول الدواء وماذا يفعل بالحساسية.",
+ "speakers": {
+  "A": {
+   "name": "Apothekerin",
+   "g": "f"
+  },
+  "B": {
+   "name": "Jurij",
+   "g": "m"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Guten Morgen! Wie kann ich Ihnen helfen?",
+   "tr": "صباح الخير! كيف يمكنني مساعدتك؟"
+  },
+  {
+   "s": "B",
+   "de": "Guten Morgen! Ich habe hier ein Rezept von meinem Arzt.",
+   "tr": "صباح الخير! معي وصفة من طبيبي."
+  },
+  {
+   "s": "A",
+   "de": "Danke. Das ist ein Antibiotikum. Einen Moment, ich hole es.",
+   "tr": "شكرًا. هذا مضاد حيوي. لحظة من فضلك، سأحضره."
+  },
+  {
+   "s": "B",
+   "de": "Wie oft muss ich die Tabletten nehmen?",
+   "tr": "كم مرة يجب أن آخذ الأقراص؟"
+  },
+  {
+   "s": "A",
+   "de": "Dreimal täglich eine Tablette, immer nach dem Essen.",
+   "tr": "قرص واحد ثلاث مرات يوميًا، دائمًا بعد الأكل."
+  },
+  {
+   "s": "B",
+   "de": "Und wie lange?",
+   "tr": "ولمدة كم؟"
+  },
+  {
+   "s": "A",
+   "de": "Sieben Tage. Bitte nehmen Sie alle Tabletten, auch wenn es Ihnen schon besser geht.",
+   "tr": "سبعة أيام. من فضلك خذ كل الأقراص، حتى لو تحسّنت حالتك."
+  },
+  {
+   "s": "B",
+   "de": "Verstanden. Muss ich etwas bezahlen?",
+   "tr": "فهمت. هل يجب أن أدفع شيئًا؟"
+  },
+  {
+   "s": "A",
+   "de": "Ja, die Zuzahlung beträgt fünf Euro.",
+   "tr": "نعم، المساهمة المطلوبة خمسة يوروهات."
+  },
+  {
+   "s": "B",
+   "de": "Ich habe noch eine Frage. Ich habe eine Pollenallergie. Haben Sie etwas dagegen?",
+   "tr": "عندي سؤال آخر. عندي حساسية من حبوب اللقاح. هل عندكم شيء لها؟"
+  },
+  {
+   "s": "A",
+   "de": "Ja, diese Tabletten hier helfen gut. Dafür brauchen Sie kein Rezept.",
+   "tr": "نعم، هذه الأقراص مفيدة جدًا. ولا تحتاج إلى وصفة لها."
+  },
+  {
+   "s": "B",
+   "de": "Machen die Tabletten müde?",
+   "tr": "هل تسبّب هذه الأقراص النعاس؟"
+  },
+  {
+   "s": "A",
+   "de": "Nein, normalerweise nicht. Aber nehmen Sie sie nicht zusammen mit Alkohol.",
+   "tr": "لا، عادةً لا. لكن لا تتناولها مع الكحول."
+  },
+  {
+   "s": "B",
+   "de": "Gut, dann nehme ich eine Packung. Vielen Dank für die Beratung!",
+   "tr": "حسنًا، سآخذ علبة واحدة إذن. شكرًا جزيلًا على النصيحة!"
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/a2-02.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "aslakr",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "source": "https://www.flickr.com/photos/38839434@N00/6333874755",
+  "site": "Flickr"
+ }
+}

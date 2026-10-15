@@ -1,0 +1,101 @@
+{
+ "id": "a2-05",
+ "level": "a2",
+ "n": 5,
+ "emoji": "🚉",
+ "title": "Der Zug hat Verspätung",
+ "titleTr": "Поезд опаздывает",
+ "situation": "Поезд Ольги в Гамбург опаздывает на час. В справочной она узнаёт, как успеть на пересадку и что ей положено.",
+ "speakers": {
+  "A": {
+   "name": "Olga",
+   "g": "f"
+  },
+  "B": {
+   "name": "Bahnmitarbeiter",
+   "g": "m"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Entschuldigung, der ICE nach Hamburg hat sechzig Minuten Verspätung. Was soll ich jetzt machen?",
+   "tr": "Извините, у ICE до Гамбурга опоздание шестьдесят минут. Что мне теперь делать?"
+  },
+  {
+   "s": "B",
+   "de": "Das tut mir leid. Es gibt eine Störung an einem Stellwerk. Wohin möchten Sie genau?",
+   "tr": "Мне очень жаль. Неисправность на сигнальном посту. Куда именно вам нужно?"
+  },
+  {
+   "s": "A",
+   "de": "Nach Lübeck. In Hamburg muss ich umsteigen.",
+   "tr": "В Любек. В Гамбурге мне нужно пересесть."
+  },
+  {
+   "s": "B",
+   "de": "Dann bekommen Sie Ihren Anschluss leider nicht. Aber Sie können den nächsten Regionalzug nehmen.",
+   "tr": "Тогда на пересадку вы, к сожалению, не успеете. Но вы можете сесть на следующую электричку."
+  },
+  {
+   "s": "A",
+   "de": "Gilt mein Ticket auch für den Regionalzug?",
+   "tr": "Мой билет действует и на электричку?"
+  },
+  {
+   "s": "B",
+   "de": "Ja, bei so einer Verspätung dürfen Sie einen anderen Zug nehmen.",
+   "tr": "Да, при таком опоздании вы можете ехать другим поездом."
+  },
+  {
+   "s": "A",
+   "de": "Und wann fährt der Zug von Hamburg nach Lübeck?",
+   "tr": "А когда идёт поезд из Гамбурга в Любек?"
+  },
+  {
+   "s": "B",
+   "de": "Jede Stunde, immer um zwölf nach. Sie sind dann etwa um einundzwanzig Uhr in Lübeck.",
+   "tr": "Каждый час, в двенадцать минут. Тогда вы будете в Любеке примерно в девять вечера."
+  },
+  {
+   "s": "A",
+   "de": "Das ist sehr spät. Bekomme ich Geld zurück?",
+   "tr": "Это очень поздно. Мне вернут деньги?"
+  },
+  {
+   "s": "B",
+   "de": "Ja. Ab sechzig Minuten Verspätung am Ziel bekommen Sie fünfundzwanzig Prozent des Fahrpreises zurück.",
+   "tr": "Да. При опоздании от шестидесяти минут в пункте назначения вам вернут двадцать пять процентов стоимости билета."
+  },
+  {
+   "s": "A",
+   "de": "Wie mache ich das?",
+   "tr": "Как это сделать?"
+  },
+  {
+   "s": "B",
+   "de": "Am einfachsten online oder in der App. Sie können auch das Formular hier am Schalter nehmen.",
+   "tr": "Проще всего онлайн или в приложении. Можно также взять бланк здесь, в кассе."
+  },
+  {
+   "s": "A",
+   "de": "Dann nehme ich das Formular. Danke für Ihre Hilfe!",
+   "tr": "Тогда я возьму бланк. Спасибо за помощь!"
+  },
+  {
+   "s": "B",
+   "de": "Gern geschehen. Gute Weiterfahrt!",
+   "tr": "Не за что. Хорошей дальнейшей поездки!"
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/a2-05.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "andreasdantz",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "source": "https://www.flickr.com/photos/29481208@N08/8900168804",
+  "site": "Flickr"
+ }
+}
