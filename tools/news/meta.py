@@ -542,3 +542,160 @@ META.update({
 
 ORDER = ['mars-krippe-2026', 'schildkroete-jonathan-2026', 'synthid-ki-erkennung-2026',
          'temu-shein-zoll-2026', 'buchmesse-2026'] + ORDER
+
+META.update({
+    'weisse-zwerge-2026': {
+        'title': 'Schwerer als erlaubt? Magnetfelder könnten Weiße Zwerge wachsen lassen',
+        'titleRu': 'Тяжелее положенного? Магнитные поля могут дать белым карликам вырасти',
+        'rubric': 'astronomy',
+        'level': 'B2',
+        'levelNote': 'Конъюнктив II (könnten anheben, könnten erklären), придаточные с wenn, dass, ob, als, '
+                     'перфект (ist erschienen, haben berechnet), инфинитив с zu (hilft, … standzuhalten), '
+                     'сравнение (schwerer, immer stärker), научная лексика.',
+        'published': '2026-10-10',
+        'added': '2026-10-15',
+        'source': 'scinexx · Indian Institute of Science',
+        'sourceUrl': 'https://www.scinexx.de/news/kosmos/weisse-zwerge-koennen-dank-starker-magnetfelder-die-chandrasekhar-grenze-knacken/',
+        'blurb': 'Считалось, что белый карлик не может быть тяжелее 1,4 массы Солнца. Модели индийских '
+                 'астрофизиков показывают: сильное магнитное поле может поднять предел до 2,4.',
+        'license': 'Текст — пересказ новости scinexx по данным IISc и The Astrophysical Journal Letters; '
+                   'иллюстрации — NASA/ESA, общественное достояние',
+        'figs': {
+            'zwergnova': {'w': 1200, 'h': 675,
+                          'cap': 'Так художник представляет белого карлика (слева), который забирает '
+                                 'вещество у соседней звезды. Вокруг карлика образуется светящийся диск.',
+                          'credit': 'NASA, L. Hustak (STScI) · общественное достояние'},
+            'sirius': {'w': 1200, 'h': 900,
+                       'cap': 'Сириус A и его спутник — белый карлик Сириус B (маленькая голубая точка '
+                              'справа). Рисунок художника.',
+                       'credit': 'NASA, ESA, G. Bacon (STScI) · общественное достояние'},
+            'supernova': {'w': 652, 'h': 652,
+                          'cap': 'Сверхновая типа Ia SN 1994D (яркая точка внизу слева) на окраине '
+                                 'галактики NGC 4526. Снимок телескопа «Хаббл».',
+                          'credit': 'NASA/ESA, The Hubble Key Project Team, The High-Z Supernova Search Team · '
+                                    'общественное достояние'},
+        },
+    },
+    'schiffswrack-kekova-2026': {
+        'title': 'Aus der Zeit der Pyramiden: Archäologen finden das wohl älteste Schiffswrack der Welt',
+        'titleRu': 'Ровесник пирамид: археологи нашли, вероятно, древнейшее затонувшее судно в мире',
+        'rubric': 'science',
+        'level': 'B1–B2',
+        'levelNote': 'Перфект и претерит (haben entdeckt, sank, fanden, verglichen), пассив в прошедшем '
+                     '(gebaut wurden), конструкция sein + zu + Infinitiv (sind zu sehen), относительные '
+                     'придаточные (das …, deren Alter …), превосходная степень (das älteste).',
+        'published': '2026-10-15',
+        'added': '2026-10-15',
+        'source': 'watson · dpa · GMX',
+        'sourceUrl': 'https://www.watson.ch/international/tuerkei/418393649-mutmasslich-aeltestes-schiffswrack-der-welt-entdeckt',
+        'blurb': 'У турецкого острова Кекова на глубине 30 метров нашли груз торгового судна, затонувшего '
+                 '4400–4700 лет назад: три каменных якоря и больше 30 амфор из долины Иордана.',
+        'license': 'Текст — пересказ новостей watson и GMX по данным dpa; фото — Wikimedia Commons',
+        'figs': {
+            'kekova': {'w': 1200, 'h': 800,
+                       'cap': 'Остров Кекова и деревня Калекёй на юге Турции. Где-то у этих берегов '
+                              'на дне лежит древний корабль.',
+                       'credit': 'Bjørn Christian Tørrissen · ' + SA4},
+            'ruinen': {'w': 900, 'h': 1200,
+                       'cap': 'Прозрачная вода у острова Кекова. Здесь под водой лежат и руины '
+                              'античного города, затонувшего после землетрясения.',
+                       'credit': 'Josep Renalias · CC BY 4.0 · Wikimedia Commons'},
+            'pyramiden': {'w': 1200, 'h': 798,
+                          'cap': 'Пирамиды Гизы в Египте. Корабль у Кековы затонул примерно тогда, '
+                                 'когда их строили.',
+                          'credit': 'Ricardo Liberato · CC BY-SA 2.0 · Wikimedia Commons'},
+        },
+    },
+    'd-you-wallet-2026': {
+        'title': 'Der Ausweis im Handy: Die digitale Brieftasche „d-you“ kommt im Januar',
+        'titleRu': 'Документы в телефоне: цифровой кошелёк d-you появится в январе',
+        'rubric': 'tech',
+        'level': 'B1–B2',
+        'levelNote': 'Модальные глаголы (soll starten, darf man nutzen, möchten), возвратные и отделяемые '
+                     'глаголы (sich ausweisen, sich ausgeben, dazukommen), перфект (hat gebilligt, '
+                     'haben versprochen), инфинитив с zu, конъюнктив II (könnten), лексика документов.',
+        'published': '2026-10-14',
+        'added': '2026-10-15',
+        'source': 'beck-aktuell · teltarif.de · t3n',
+        'sourceUrl': 'https://www.beck-aktuell.de/heute-im-recht/rechtspolitik-gesetzgebung/gesetzentwurf-digitale-identitaet-eudi-wallet-d-you-datenschutz-eu-2026-10-14',
+        'blurb': 'С 2 января 2027 года в Германии заработает приложение d-you: удостоверение личности, '
+                 'возраст, банковский счёт — со смартфона. Для настройки подойдёт и электронный ВНЖ.',
+        'license': 'Текст — пересказ новостей beck-aktuell, teltarif.de и t3n; фото — Wikimedia Commons',
+        'figs': {
+            'ausweis': {'w': 1000, 'h': 631,
+                        'cap': 'Образец немецкого удостоверения личности (Personalausweis). Его данные '
+                               'можно будет перенести в приложение d-you.',
+                        'credit': 'Bundesministerium des Innern · общественное достояние'},
+            'smartphone': {'w': 1200, 'h': 800,
+                           'cap': 'Приложение d-you будет бесплатным и работать на обычном смартфоне. '
+                                  'Пользоваться им — по желанию.',
+                           'credit': 'Dennis Cortés · CC0 · Wikimedia Commons'},
+            'reichstag': {'w': 1200, 'h': 707,
+                          'cap': 'Здание Рейхстага в Берлине — здесь заседает бундестаг. Закон о '
+                                 'цифровой идентичности одобрил его комитет по цифровым делам.',
+                          'credit': 'Jörg Braukmann · ' + SA4},
+        },
+    },
+    'inflation-september-2026': {
+        'title': 'Teures Tanken: Die Inflation steigt auf 3,3 Prozent',
+        'titleRu': 'Дорогой бензин: инфляция выросла до 3,3 процента',
+        'rubric': 'economy',
+        'level': 'B1',
+        'levelNote': 'Сравнительная степень (teurer, billiger, höher als, mehr als), werden + прилагательное '
+                     '(wurden teurer), плюсквамперфект (hatte … gelegen), проценты и числа, '
+                     'экономическая лексика (Verbraucherpreise, Inflationsrate, Dienstleistungen).',
+        'published': '2026-10-13',
+        'added': '2026-10-15',
+        'source': 'Statistisches Bundesamt (Destatis)',
+        'sourceUrl': 'https://www.destatis.de/DE/Presse/Pressemitteilungen/2026/10/PD26_364_611.html',
+        'blurb': 'В сентябре цены в Германии выросли на 3,3 % — больше всего с декабря 2023 года. '
+                 'Бензин подорожал на 37 %, печное топливо — на 75 %, а масло подешевело почти на треть.',
+        'license': 'Текст — пересказ пресс-релиза Destatis; фото — Wikimedia Commons',
+        'figs': {
+            'markt': {'w': 1200, 'h': 800,
+                      'cap': 'Брюссельская капуста на рынке в Мюнстере. Свежие овощи за год '
+                             'подорожали на 12 процентов.',
+                      'credit': 'Dietmar Rabich · ' + SA4},
+            'tankstelle': {'w': 1200, 'h': 800,
+                           'cap': 'Заправка в Лейпциге. Бензин и дизель за год подорожали больше '
+                                  'чем на треть.',
+                           'credit': 'Frank Eritt · ' + SA4},
+            'eier': {'w': 1200, 'h': 972,
+                     'cap': 'Упаковка из десяти яиц. Яйца в сентябре стоили на 15 процентов '
+                            'больше, чем год назад.',
+                     'credit': 'Frank C. Müller · ' + SA4},
+        },
+    },
+    'zwiebelmarkt-weimar-2026': {
+        'title': 'Zwiebeln, Zöpfe und Goethe: Weimar feiert seinen 373. Zwiebelmarkt',
+        'titleRu': 'Лук, косы и Гёте: Веймар отпраздновал 373-й Луковый рынок',
+        'rubric': 'events',
+        'level': 'B1',
+        'levelNote': 'Претерит (drehte sich, fand … statt, verkauften, schmückte), пассив (werden '
+                     'geflochten, wurde erwähnt), отделяемые глаголы (fand … statt, bauten … auf), '
+                     'плюсквамперфект (hatte gerechnet), sollen в значении «говорят» (soll gewesen sein).',
+        'published': '2026-10-11',
+        'added': '2026-10-15',
+        'source': 'Stadt Weimar · weimar-kennenlernen.de · Polizei Weimar',
+        'sourceUrl': 'https://www.weimar.de/kultur/veranstaltungen/maerkte-und-feste/zwiebelmarkt/',
+        'blurb': 'С 9 по 11 октября Веймар отмечал 373-й Луковый рынок: 450 торговцев, девять сцен, '
+                 'луковый пирог и знаменитые луковые косы из Хельдрунгена — их любил даже Гёте.',
+        'license': 'Текст — пересказ материалов города Веймар, weimar-kennenlernen.de и полиции Веймара; '
+                   'фото — Wikimedia Commons',
+        'figs': {
+            'zwiebeln': {'w': 1200, 'h': 709,
+                         'cap': 'Луковые косы с сухими цветами — главный товар Лукового рынка в Веймаре.',
+                         'credit': 'Kora27 · ' + SA4},
+            'markt': {'w': 1200, 'h': 746,
+                      'cap': 'Сувениры на Луковом рынке: человечки из луковиц в платочках.',
+                      'credit': 'Kora27 · ' + SA4},
+            'gartenhaus': {'w': 1200, 'h': 803,
+                           'cap': 'Садовый домик Гёте в парке на Ильме в Веймаре. Поэт прожил в '
+                                  'Веймаре больше пятидесяти лет.',
+                           'credit': 'Rolf Kranz · ' + SA4},
+        },
+    },
+})
+
+ORDER = ['weisse-zwerge-2026', 'schiffswrack-kekova-2026', 'd-you-wallet-2026',
+         'inflation-september-2026', 'zwiebelmarkt-weimar-2026'] + ORDER

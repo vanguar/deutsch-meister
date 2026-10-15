@@ -1,0 +1,807 @@
+{
+  "version": 1,
+  "w": {
+    "aber": "aber",
+    "akdeniz-universität": "Akdeniz-Universität",
+    "als": "als",
+    "also": "also",
+    "alt": "alt",
+    "alter": "Alter",
+    "amphore": "Amphore",
+    "amphoren": "Amphore",
+    "an": "an",
+    "anderen": "ander",
+    "antalya": "Antalya",
+    "archäologen": "Archäologe",
+    "auch": "auch",
+    "auf": "auf",
+    "aus": "aus",
+    "baumharz": "Baumharz",
+    "bekannt": "bekannt",
+    "bekannte": "bekannt",
+    "bis": "bis",
+    "bisher": "bisher",
+    "bord": "Bord",
+    "butter": "Butter",
+    "damals": "damals",
+    "das": "der/die/das",
+    "dem": "der/die/das",
+    "der": "der/die/das",
+    "deren": "der/die/das",
+    "die": "der/die/das",
+    "diente": "dienen",
+    "dokos": "Dokos",
+    "drei": "drei",
+    "ein": "ein/eine",
+    "eine": "ein/eine",
+    "einigen": "einige",
+    "entdeckt": "entdecken",
+    "erhalten": "erhalten bleiben",
+    "es": "es",
+    "etwa": "etwa",
+    "expeditionsleiter": "Expeditionsleiter",
+    "fanden": "finden",
+    "form": "Form",
+    "forscher": "Forscher",
+    "funden": "Fund",
+    "gebaut": "bauen",
+    "geblieben": "bleiben",
+    "gefunden": "finden",
+    "gefäße": "Gefäß",
+    "gefäßen": "Gefäß",
+    "gizeh": "Gizeh",
+    "griechischen": "griechisch",
+    "große": "groß",
+    "haben": "haben",
+    "hakan": "Hakan",
+    "handel": "Handel",
+    "handelsschiff": "Handelsschiff",
+    "hat": "haben",
+    "hatten": "haben",
+    "herstellung": "Herstellung",
+    "holz": "Holz",
+    "in": "in",
+    "insel": "Insel",
+    "ist": "sein",
+    "jahre": "Jahr",
+    "jahren": "Jahr",
+    "jordantal": "Jordantal",
+    "kein": "kein",
+    "kekova": "Kekova",
+    "keramik": "Keramik",
+    "konnten": "können",
+    "kreta": "Kreta",
+    "käse": "Käse",
+    "ladung": "Ladung",
+    "lang": "lang",
+    "liegt": "liegen",
+    "längst": "längst",
+    "löchern": "Loch",
+    "man": "man",
+    "markierungen": "Markierung",
+    "meeresgrund": "Meeresgrund",
+    "mehr": "mehr",
+    "meter": "Meter",
+    "metern": "Meter",
+    "mit": "mit",
+    "möglicherweise": "möglicherweise",
+    "neun": "neun",
+    "nicht": "nicht",
+    "nichts": "nichts",
+    "noch": "noch",
+    "nutzen": "nutzen",
+    "nähe": "Nähe",
+    "oder": "oder",
+    "olivenöl": "Olivenöl",
+    "provinz": "Provinz",
+    "pyramiden": "Pyramide",
+    "radiokarbonmethode": "Radiokarbonmethode",
+    "reichte": "reichen (простираться)",
+    "reste": "Rest",
+    "sagt": "sagen",
+    "sank": "sinken",
+    "schiff": "Schiff",
+    "schiffswrack": "Schiffswrack",
+    "schon": "schon",
+    "seeleute": "Seemann",
+    "sehen": "sehen",
+    "selbst": "selbst",
+    "sie": "sie",
+    "sind": "sein",
+    "sogar": "sogar",
+    "spannend": "spannend",
+    "stammt": "stammen",
+    "stattdessen": "stattdessen",
+    "steinanker": "Steinanker",
+    "südküste": "Südküste",
+    "taucher": "Taucher",
+    "tiefe": "Tiefe",
+    "ton": "Ton",
+    "troja": "Troja",
+    "türkei": "Türkei",
+    "und": "und",
+    "ungefähr": "ungefähr",
+    "verglichen": "vergleichen",
+    "verschwunden": "verschwinden",
+    "vielleicht": "vielleicht",
+    "vom": "von",
+    "von": "von",
+    "vor": "vor",
+    "wahrscheinlich": "wahrscheinlich",
+    "war": "sein",
+    "weil": "weil",
+    "wein": "Wein",
+    "weit": "weit",
+    "welt": "Welt",
+    "wie": "wie",
+    "wrack": "Wrack",
+    "wurden": "werden",
+    "zehn": "zehn",
+    "zeigt": "zeigen",
+    "zeit": "Zeit",
+    "zeitkapsel": "Zeitkapsel",
+    "ziegen": "Ziege",
+    "zu": "zu",
+    "zur": "zu",
+    "zwei": "zwei",
+    "ägypten": "Ägypten",
+    "ähnliche": "ähnlich",
+    "älteste": "alt",
+    "öniz": "Öniz",
+    "übrig": "übrig"
+  },
+  "l": {
+    "aber": {
+      "ru": "но, однако",
+      "pos": "союз"
+    },
+    "Akdeniz-Universität": {
+      "ru": "университет Акдениз (Анталья)",
+      "pos": "имя собств."
+    },
+    "als": {
+      "ru": "когда; как; чем",
+      "pos": "союз"
+    },
+    "also": {
+      "ru": "итак, стало быть",
+      "pos": "нареч."
+    },
+    "alt": {
+      "ru": "старый",
+      "pos": "прил.",
+      "forms": "alt · älter · am ältesten"
+    },
+    "Alter": {
+      "ru": "возраст",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null,
+      "note": "alt — старый; das Alter — возраст"
+    },
+    "Amphore": {
+      "ru": "амфора (глиняный сосуд)",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Amphoren"
+    },
+    "an": {
+      "ru": "у, к, на",
+      "pos": "предл.",
+      "note": "am = an dem. Тж. отделяемая приставка: anfangen «начинать», annehmen, ansehen, anzünden"
+    },
+    "ander": {
+      "pos": "прил.",
+      "ru": "другой, иной"
+    },
+    "Antalya": {
+      "ru": "Анталья (город и провинция в Турции)",
+      "pos": "геогр."
+    },
+    "Archäologe": {
+      "ru": "археолог",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Archäologen"
+    },
+    "auch": {
+      "ru": "тоже, также; даже",
+      "pos": "частица"
+    },
+    "auf": {
+      "ru": "на, в",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: aufspringen «вскочить», sich aufmachen"
+    },
+    "aus": {
+      "ru": "из",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: auslöschen «погасить»"
+    },
+    "bauen": {
+      "ru": "строить",
+      "pos": "гл.",
+      "forms": "baute · hat gebaut"
+    },
+    "Baumharz": {
+      "ru": "древесная смола",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "bekannt": {
+      "ru": "известный, знакомый",
+      "pos": "прил."
+    },
+    "bis": {
+      "ru": "до; пока не",
+      "pos": "союз"
+    },
+    "bisher": {
+      "ru": "до сих пор, до этого",
+      "pos": "нареч."
+    },
+    "bleiben": {
+      "ru": "оставаться",
+      "pos": "гл.",
+      "forms": "blieb · ist geblieben"
+    },
+    "Bord": {
+      "ru": "борт",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null,
+      "note": "an Bord — на борту"
+    },
+    "Butter": {
+      "ru": "сливочное масло",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "damals": {
+      "ru": "тогда, в то время",
+      "pos": "нареч."
+    },
+    "der/die/das": {
+      "ru": "определённый артикль",
+      "pos": "артикль",
+      "note": "Тж. относительное местоимение «который»"
+    },
+    "dienen": {
+      "ru": "служить",
+      "pos": "гл.",
+      "forms": "diente · hat gedient"
+    },
+    "Dokos": {
+      "ru": "Докос (греческий остров)",
+      "pos": "геогр."
+    },
+    "drei": {
+      "ru": "три",
+      "pos": "числ."
+    },
+    "ein/eine": {
+      "ru": "неопределённый артикль",
+      "pos": "артикль",
+      "note": "einer — «один, некто»"
+    },
+    "einige": {
+      "ru": "несколько, некоторые",
+      "pos": "мест."
+    },
+    "entdecken": {
+      "ru": "обнаруживать",
+      "pos": "гл.",
+      "forms": "entdeckte · hat entdeckt"
+    },
+    "erhalten bleiben": {
+      "ru": "сохраняться",
+      "pos": "гл.",
+      "forms": "blieb erhalten · ist erhalten geblieben"
+    },
+    "es": {
+      "ru": "оно; это",
+      "pos": "мест."
+    },
+    "etwa": {
+      "ru": "примерно, около",
+      "pos": "нареч."
+    },
+    "Expeditionsleiter": {
+      "ru": "руководитель экспедиции",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Expeditionsleiter"
+    },
+    "finden": {
+      "ru": "находить",
+      "pos": "гл.",
+      "forms": "fand · hat gefunden"
+    },
+    "Form": {
+      "ru": "форма",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Formen"
+    },
+    "Forscher": {
+      "ru": "исследователь, учёный",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Forscher"
+    },
+    "Fund": {
+      "ru": "находка",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Funde"
+    },
+    "Gefäß": {
+      "ru": "сосуд",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Gefäße"
+    },
+    "Gizeh": {
+      "ru": "Гиза (город у Каира, где стоят пирамиды)",
+      "pos": "геогр."
+    },
+    "griechisch": {
+      "ru": "греческий",
+      "pos": "прил."
+    },
+    "groß": {
+      "ru": "большой",
+      "pos": "прил.",
+      "forms": "groß · größer · am größten"
+    },
+    "haben": {
+      "ru": "иметь; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "hatte · hat gehabt"
+    },
+    "Hakan": {
+      "ru": "Хакан (имя)",
+      "pos": "имя собств."
+    },
+    "Handel": {
+      "art": "der",
+      "note": "an dem Handel war ihm viel gelegen — сделка была ему очень нужна",
+      "pl": null,
+      "pos": "сущ.",
+      "ru": "сделка; торговля"
+    },
+    "Handelsschiff": {
+      "ru": "торговое судно",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Handelsschiffe"
+    },
+    "Herstellung": {
+      "ru": "изготовление, производство",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "Holz": {
+      "ru": "дерево (материал), дрова",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Hölzer"
+    },
+    "in": {
+      "ru": "в (im = in dem, ins = in das)",
+      "pos": "предл."
+    },
+    "Insel": {
+      "ru": "остров",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Inseln"
+    },
+    "Jahr": {
+      "ru": "год",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Jahre"
+    },
+    "Jordantal": {
+      "ru": "долина реки Иордан",
+      "pos": "геогр."
+    },
+    "kein": {
+      "ru": "никакой, ни один",
+      "pos": "мест."
+    },
+    "Kekova": {
+      "ru": "Кекова (остров у южного побережья Турции)",
+      "pos": "геогр."
+    },
+    "Keramik": {
+      "ru": "керамика",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Keramiken"
+    },
+    "Kreta": {
+      "ru": "Крит (греческий остров)",
+      "pos": "геогр.",
+      "note": "auf Kreta — на Крите"
+    },
+    "Käse": {
+      "ru": "сыр",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Käse"
+    },
+    "können": {
+      "ru": "мочь, уметь",
+      "pos": "гл.",
+      "forms": "konnte · hat gekonnt"
+    },
+    "Ladung": {
+      "ru": "груз",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Ladungen"
+    },
+    "lang": {
+      "ru": "длинный, долгий",
+      "pos": "прил.",
+      "forms": "lang · länger · am längsten"
+    },
+    "liegen": {
+      "ru": "лежать",
+      "pos": "гл.",
+      "forms": "lag · hat gelegen"
+    },
+    "Loch": {
+      "ru": "дыра",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Löcher"
+    },
+    "längst": {
+      "ru": "давно, уже давно",
+      "pos": "нареч."
+    },
+    "man": {
+      "ru": "неопределённое «кто-то, люди, мы»",
+      "pos": "мест."
+    },
+    "Markierung": {
+      "ru": "отметка, метка",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Markierungen"
+    },
+    "Meeresgrund": {
+      "ru": "морское дно",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "mehr": {
+      "ru": "больше",
+      "pos": "нареч.",
+      "note": "В nicht/kein … mehr — больше не. Формально компаратив от viel"
+    },
+    "Meter": {
+      "ru": "метр",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Meter",
+      "note": "in 30 Metern Tiefe — на глубине 30 метров"
+    },
+    "mit": {
+      "ru": "с",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: mitgehen «пойти вместе»"
+    },
+    "möglicherweise": {
+      "ru": "возможно, вероятно",
+      "pos": "нареч."
+    },
+    "neun": {
+      "ru": "девять",
+      "pos": "числ."
+    },
+    "nicht": {
+      "ru": "не",
+      "pos": "частица"
+    },
+    "nichts": {
+      "pos": "мест.",
+      "ru": "ничто, ничего"
+    },
+    "noch": {
+      "ru": "ещё",
+      "pos": "нареч."
+    },
+    "nutzen": {
+      "ru": "использовать",
+      "pos": "гл.",
+      "forms": "nutzte · hat genutzt"
+    },
+    "Nähe": {
+      "art": "die",
+      "note": "in dessen Nähe — поблизости от которого",
+      "pl": null,
+      "pos": "сущ.",
+      "ru": "близость, окрестность"
+    },
+    "oder": {
+      "ru": "или",
+      "pos": "союз"
+    },
+    "Olivenöl": {
+      "ru": "оливковое масло",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "Provinz": {
+      "ru": "провинция",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Provinzen"
+    },
+    "Pyramide": {
+      "ru": "пирамида",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Pyramiden"
+    },
+    "Radiokarbonmethode": {
+      "ru": "радиоуглеродный метод (датировка по углероду-14)",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "reichen (простираться)": {
+      "ru": "простираться, доходить; хватать",
+      "pos": "гл.",
+      "forms": "reichte · hat gereicht",
+      "note": "Das reicht! — Хватит!"
+    },
+    "Rest": {
+      "ru": "остаток",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Reste"
+    },
+    "sagen": {
+      "ru": "говорить, сказать",
+      "pos": "гл.",
+      "forms": "sagte · hat gesagt"
+    },
+    "Schiff": {
+      "ru": "корабль",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Schiffe"
+    },
+    "Schiffswrack": {
+      "ru": "обломки корабля, затонувшее судно",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Schiffswracks"
+    },
+    "schon": {
+      "ru": "уже",
+      "pos": "нареч."
+    },
+    "Seemann": {
+      "ru": "моряк",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Seeleute"
+    },
+    "sehen": {
+      "ru": "видеть",
+      "pos": "гл.",
+      "forms": "sah · hat gesehen"
+    },
+    "sein": {
+      "ru": "быть; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "war · ist gewesen"
+    },
+    "selbst": {
+      "ru": "сам; даже",
+      "pos": "мест."
+    },
+    "sie": {
+      "ru": "она; они; Вы",
+      "pos": "мест."
+    },
+    "sinken": {
+      "ru": "опускаться",
+      "pos": "гл.",
+      "forms": "sank · ist gesunken"
+    },
+    "sogar": {
+      "ru": "даже",
+      "pos": "частица"
+    },
+    "spannend": {
+      "ru": "захватывающий, интересный",
+      "pos": "прил."
+    },
+    "stammen": {
+      "ru": "происходить, быть родом",
+      "pos": "гл.",
+      "forms": "stammte · hat gestammt",
+      "note": "aus etwas stammen — быть родом из, относиться к"
+    },
+    "stattdessen": {
+      "ru": "вместо этого",
+      "pos": "нареч."
+    },
+    "Steinanker": {
+      "ru": "каменный якорь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Steinanker"
+    },
+    "Südküste": {
+      "ru": "южное побережье",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Südküsten"
+    },
+    "Taucher": {
+      "ru": "водолаз, дайвер",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Taucher"
+    },
+    "Tiefe": {
+      "ru": "глубина",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Tiefen"
+    },
+    "Ton": {
+      "ru": "глина; звук, тон",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Tone / die Töne",
+      "note": "der Ton (глина) — мн. die Tone; der Ton (звук) — мн. die Töne"
+    },
+    "Troja": {
+      "ru": "Троя (древний город)",
+      "pos": "геогр."
+    },
+    "Türkei": {
+      "ru": "Турция",
+      "pos": "геогр.",
+      "note": "die Türkei — всегда с артиклем: in der Türkei"
+    },
+    "und": {
+      "ru": "и, а",
+      "pos": "союз"
+    },
+    "ungefähr": {
+      "ru": "примерно",
+      "pos": "нареч."
+    },
+    "vergleichen": {
+      "ru": "сравнивать",
+      "pos": "гл.",
+      "forms": "verglich · hat verglichen"
+    },
+    "verschwinden": {
+      "ru": "исчезать",
+      "pos": "гл.",
+      "forms": "verschwand · ist verschwunden"
+    },
+    "vielleicht": {
+      "pos": "нареч.",
+      "ru": "может быть, пожалуй"
+    },
+    "von": {
+      "ru": "от, из, о (vom = von dem)",
+      "pos": "предл."
+    },
+    "vor": {
+      "ru": "перед, до; от (страха)",
+      "pos": "предл."
+    },
+    "wahrscheinlich": {
+      "pos": "прил.",
+      "ru": "вероятный, скорее всего"
+    },
+    "weil": {
+      "ru": "потому что",
+      "pos": "союз"
+    },
+    "Wein": {
+      "ru": "вино",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Weine"
+    },
+    "weit": {
+      "ru": "далёкий, далеко",
+      "pos": "прил.",
+      "forms": "weit · weiter · am weitesten",
+      "note": "weiter — дальше, далее; von weitem — издали"
+    },
+    "Welt": {
+      "art": "die",
+      "pl": "die Welten",
+      "pos": "сущ.",
+      "ru": "мир, свет"
+    },
+    "werden": {
+      "ru": "становиться",
+      "pos": "гл.",
+      "forms": "wurde · ist geworden",
+      "note": "Вспомогательный глагол будущего времени и пассива"
+    },
+    "wie": {
+      "ru": "как; какой",
+      "pos": "союз"
+    },
+    "Wrack": {
+      "ru": "обломки (корабля, машины), остов",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Wracks"
+    },
+    "zehn": {
+      "ru": "десять",
+      "pos": "числ."
+    },
+    "zeigen": {
+      "ru": "показывать; sich zeigen — появиться",
+      "pos": "гл.",
+      "forms": "zeigte · hat gezeigt"
+    },
+    "Zeit": {
+      "ru": "время",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Zeiten"
+    },
+    "Zeitkapsel": {
+      "ru": "капсула времени",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Zeitkapseln"
+    },
+    "Ziege": {
+      "ru": "коза",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Ziegen"
+    },
+    "zu": {
+      "ru": "к, в; слишком",
+      "pos": "предл.",
+      "note": "zur = zu der, zum = zu dem"
+    },
+    "zwei": {
+      "ru": "два",
+      "pos": "числ."
+    },
+    "Ägypten": {
+      "ru": "Египет",
+      "pos": "геогр."
+    },
+    "ähnlich": {
+      "ru": "похожий",
+      "pos": "прил."
+    },
+    "Öniz": {
+      "ru": "Ёниз (Хакан Ёниз, турецкий подводный археолог)",
+      "pos": "имя собств."
+    },
+    "übrig": {
+      "ru": "оставшийся",
+      "pos": "прил."
+    }
+  }
+}

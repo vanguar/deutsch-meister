@@ -1,0 +1,633 @@
+{
+  "version": 1,
+  "w": {
+    "aber": "aber",
+    "alles": "alle/alles",
+    "als": "als",
+    "altstadt": "Altstadt",
+    "am": "an",
+    "angeblich": "angeblich",
+    "anschnitt": "Anschnitt",
+    "auch": "auch",
+    "auf": "auf",
+    "aus": "aus",
+    "außerdem": "außerdem",
+    "bauten": "aufbauen",
+    "beginnt": "beginnen",
+    "berühmten": "berühmt",
+    "bilanz": "Bilanz",
+    "bis": "bis",
+    "bühnen": "Bühne",
+    "damals": "damals",
+    "das": "der/die/das",
+    "dem": "der/die/das",
+    "der": "der/die/das",
+    "des": "der/die/das",
+    "die": "der/die/das",
+    "diese": "dieser",
+    "drehte": "sich drehen",
+    "drei": "drei",
+    "ein": "ein/eine",
+    "eine": "ein/eine",
+    "eines": "ein/eine",
+    "ende": "Ende",
+    "entspannt": "entspannt",
+    "er": "er",
+    "ersten": "erste",
+    "erwähnt": "erwähnen",
+    "es": "es",
+    "etwa": "etwa",
+    "fan": "Fan",
+    "fand": "stattfinden",
+    "fest": "Fest",
+    "friedlich": "friedlich",
+    "frische": "frisch",
+    "gab": "geben",
+    "geflochten": "flechten",
+    "gehört": "gehören",
+    "gemüse": "Gemüse",
+    "gerechnet": "rechnen",
+    "geschichte": "Geschichte",
+    "gewesen": "sein",
+    "gewickelt": "wickeln",
+    "goethe": "Goethe",
+    "gästen": "Gast",
+    "hat": "haben",
+    "hatte": "haben",
+    "heldrungen": "Heldrungen",
+    "herz": "Herz",
+    "händler": "Händler",
+    "ihnen": "sie",
+    "ihre": "ihr (её, их)",
+    "in": "in",
+    "klassiker": "Klassiker",
+    "knoblauch": "Knoblauch",
+    "kräuter": "Kraut",
+    "lang": "lang",
+    "lange": "lang",
+    "mal": "Mal",
+    "markt": "Markt",
+    "marktes": "Markt",
+    "mit": "mit",
+    "musik": "Musik",
+    "neun": "neun",
+    "nicht": "nicht",
+    "obst": "Obst",
+    "oktober": "Oktober",
+    "polizei": "Polizei",
+    "positive": "positiv",
+    "programm": "Programm",
+    "rund": "rund",
+    "schillerstraße": "Schillerstraße",
+    "schmückte": "schmücken",
+    "schreibtisch": "Schreibtisch",
+    "sein": "sein",
+    "seinen": "sein (его, свой)",
+    "sich": "sich",
+    "sind": "sein",
+    "soll": "sollen",
+    "sondern": "sondern",
+    "stadt": "Stadt",
+    "statt": "stattfinden",
+    "stimmung": "Stimmung",
+    "stände": "Stand",
+    "tage": {
+      "l": "Tag",
+      "old": "в обороте in einem Tage — старый дательный с -e; сегодня an einem Tag. В «drei Tage Regenwetter» это обычное мн. ч."
+    },
+    "thüringen": "Thüringen",
+    "traditionell": "traditionell",
+    "um": "um",
+    "und": "und",
+    "verkauften": "verkaufen",
+    "vieh": "Vieh",
+    "volksfeste": "Volksfest",
+    "vom": "von",
+    "von": "von",
+    "war": "sein",
+    "weimar": "Weimar",
+    "werden": "werden",
+    "wurde": "werden",
+    "zog": "ziehen",
+    "zum": "zu",
+    "zwiebel": "Zwiebel",
+    "zwiebelbauern": "Zwiebelbauer",
+    "zwiebelkuchen": "Zwiebelkuchen",
+    "zwiebelkuchens": "Zwiebelkuchen",
+    "zwiebelmarkt": "Zwiebelmarkt",
+    "zwiebelzöpfe": "Zwiebelzopf",
+    "zwiebelzöpfen": "Zwiebelzopf",
+    "zöpfe": "Zopf",
+    "ältesten": "alt",
+    "übrigens": "übrigens"
+  },
+  "l": {
+    "aber": {
+      "ru": "но, однако",
+      "pos": "союз"
+    },
+    "alle/alles": {
+      "ru": "все; всё",
+      "pos": "мест."
+    },
+    "als": {
+      "ru": "когда; как; чем",
+      "pos": "союз"
+    },
+    "alt": {
+      "ru": "старый",
+      "pos": "прил.",
+      "forms": "alt · älter · am ältesten"
+    },
+    "Altstadt": {
+      "ru": "старый город, исторический центр",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Altstädte"
+    },
+    "an": {
+      "ru": "у, к, на",
+      "pos": "предл.",
+      "note": "am = an dem. Тж. отделяемая приставка: anfangen «начинать», annehmen, ansehen, anzünden"
+    },
+    "angeblich": {
+      "ru": "якобы, будто бы",
+      "pos": "нареч."
+    },
+    "Anschnitt": {
+      "ru": "разрезание (первого куска)",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Anschnitte"
+    },
+    "auch": {
+      "ru": "тоже, также; даже",
+      "pos": "частица"
+    },
+    "auf": {
+      "ru": "на, в",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: aufspringen «вскочить», sich aufmachen"
+    },
+    "aufbauen": {
+      "ru": "строить, устанавливать",
+      "pos": "гл.",
+      "forms": "baute auf · hat aufgebaut"
+    },
+    "aus": {
+      "ru": "из",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: auslöschen «погасить»"
+    },
+    "außerdem": {
+      "ru": "кроме того",
+      "pos": "нареч."
+    },
+    "beginnen": {
+      "ru": "начинать, начинаться",
+      "pos": "гл.",
+      "forms": "begann · hat begonnen"
+    },
+    "berühmt": {
+      "ru": "знаменитый",
+      "pos": "прил."
+    },
+    "Bilanz": {
+      "ru": "итог, баланс",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Bilanzen",
+      "note": "Bilanz ziehen — подводить итог"
+    },
+    "bis": {
+      "ru": "до; пока не",
+      "pos": "союз"
+    },
+    "Bühne": {
+      "ru": "сцена",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Bühnen"
+    },
+    "damals": {
+      "ru": "тогда, в то время",
+      "pos": "нареч."
+    },
+    "der/die/das": {
+      "ru": "определённый артикль",
+      "pos": "артикль",
+      "note": "Тж. относительное местоимение «который»"
+    },
+    "dieser": {
+      "ru": "этот, эта, это",
+      "pos": "мест."
+    },
+    "drei": {
+      "ru": "три",
+      "pos": "числ."
+    },
+    "ein/eine": {
+      "ru": "неопределённый артикль",
+      "pos": "артикль",
+      "note": "einer — «один, некто»"
+    },
+    "Ende": {
+      "ru": "конец",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Enden"
+    },
+    "entspannt": {
+      "ru": "расслабленный, спокойный",
+      "pos": "прил."
+    },
+    "er": {
+      "ru": "он",
+      "pos": "мест.",
+      "note": "ihn — его, ihm — ему"
+    },
+    "erste": {
+      "ru": "первый",
+      "pos": "числ."
+    },
+    "erwähnen": {
+      "ru": "упоминать",
+      "pos": "гл.",
+      "forms": "erwähnte · hat erwähnt"
+    },
+    "es": {
+      "ru": "оно; это",
+      "pos": "мест."
+    },
+    "etwa": {
+      "ru": "примерно, около",
+      "pos": "нареч."
+    },
+    "Fan": {
+      "ru": "фанат, поклонник",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Fans"
+    },
+    "Fest": {
+      "ru": "праздник",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Feste"
+    },
+    "flechten": {
+      "ru": "плести, заплетать",
+      "pos": "гл.",
+      "forms": "flocht · hat geflochten"
+    },
+    "friedlich": {
+      "ru": "мирный",
+      "pos": "прил."
+    },
+    "frisch": {
+      "ru": "свежий",
+      "pos": "прил."
+    },
+    "Gast": {
+      "ru": "гость",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Gäste"
+    },
+    "geben": {
+      "ru": "давать",
+      "pos": "гл.",
+      "forms": "gab · hat gegeben"
+    },
+    "gehören": {
+      "ru": "принадлежать, относиться",
+      "pos": "гл.",
+      "forms": "gehörte · hat gehört",
+      "note": "zu etwas gehören — относиться к чему-то, входить в"
+    },
+    "Gemüse": {
+      "ru": "овощи",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "Geschichte": {
+      "ru": "история",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Geschichten"
+    },
+    "Goethe": {
+      "ru": "Гёте (Иоганн Вольфганг фон Гёте, 1749–1832, жил в Веймаре)",
+      "pos": "имя собств."
+    },
+    "haben": {
+      "ru": "иметь; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "hatte · hat gehabt"
+    },
+    "Heldrungen": {
+      "ru": "Хельдрунген (городок в Тюрингии, известный луком)",
+      "pos": "геогр."
+    },
+    "Herz": {
+      "ru": "сердце",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Herzen",
+      "decl": "des Herzens · dem Herzen (особое склонение)",
+      "note": "schwer ums Herz — тяжело на сердце; leichten Herzens — с лёгким сердцем"
+    },
+    "Händler": {
+      "ru": "торговец",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Händler"
+    },
+    "ihr (её, их)": {
+      "ru": "её; их",
+      "pos": "мест."
+    },
+    "in": {
+      "ru": "в (im = in dem, ins = in das)",
+      "pos": "предл."
+    },
+    "Klassiker": {
+      "ru": "классика, классический пример",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Klassiker"
+    },
+    "Knoblauch": {
+      "ru": "чеснок",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "Kraut": {
+      "ru": "трава, зелень",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Kräuter",
+      "note": "frische Kräuter — свежая зелень"
+    },
+    "lang": {
+      "ru": "длинный, долгий",
+      "pos": "прил.",
+      "forms": "lang · länger · am längsten"
+    },
+    "Mal": {
+      "ru": "раз",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Male",
+      "note": "zu wiederholten Malen — неоднократно"
+    },
+    "Markt": {
+      "ru": "рынок",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Märkte"
+    },
+    "mit": {
+      "ru": "с",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: mitgehen «пойти вместе»"
+    },
+    "Musik": {
+      "ru": "музыка",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "neun": {
+      "ru": "девять",
+      "pos": "числ."
+    },
+    "nicht": {
+      "ru": "не",
+      "pos": "частица"
+    },
+    "Obst": {
+      "ru": "фрукты",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "Oktober": {
+      "ru": "октябрь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Oktober"
+    },
+    "Polizei": {
+      "ru": "полиция",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "positiv": {
+      "ru": "позитивный, положительный",
+      "pos": "прил."
+    },
+    "Programm": {
+      "ru": "программа",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Programme"
+    },
+    "rechnen": {
+      "ru": "считать; рассчитывать",
+      "pos": "гл.",
+      "forms": "rechnete · hat gerechnet",
+      "note": "mit etwas rechnen — рассчитывать на что-то, ожидать чего-то"
+    },
+    "rund": {
+      "ru": "около, примерно; круглый",
+      "pos": "нареч./прил.",
+      "note": "rund 550.000 — около 550 000"
+    },
+    "Schillerstraße": {
+      "ru": "Шиллерштрассе (улица в Веймаре)",
+      "pos": "геогр."
+    },
+    "schmücken": {
+      "ru": "украшать",
+      "pos": "гл.",
+      "forms": "schmückte · hat geschmückt"
+    },
+    "Schreibtisch": {
+      "ru": "письменный стол",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Schreibtische"
+    },
+    "sein": {
+      "ru": "быть; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "war · ist gewesen"
+    },
+    "sein (его, свой)": {
+      "ru": "его, свой",
+      "pos": "мест."
+    },
+    "sich": {
+      "ru": "себя, себе",
+      "pos": "мест.",
+      "note": "Возвратное местоимение, часть возвратного глагола: sich auf den Weg machen, sich setzen, sich legen, sich nähern, sich gefallen lassen, sich getrauen, sich umsehen"
+    },
+    "sich drehen": {
+      "ru": "вращаться",
+      "pos": "гл.",
+      "forms": "drehte sich · hat sich gedreht",
+      "note": "sich um etwas drehen — вращаться вокруг чего-то, быть посвящённым чему-то"
+    },
+    "sie": {
+      "ru": "она; они; Вы",
+      "pos": "мест."
+    },
+    "sollen": {
+      "ru": "быть должным, следует",
+      "pos": "гл.",
+      "forms": "sollte · hat gesollt"
+    },
+    "sondern": {
+      "ru": "а, но (после отрицания)",
+      "pos": "союз"
+    },
+    "Stadt": {
+      "ru": "город",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Städte"
+    },
+    "Stand": {
+      "ru": "прилавок, стенд, палатка",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Stände"
+    },
+    "stattfinden": {
+      "ru": "иметь место, быть",
+      "pos": "гл.",
+      "forms": "fand statt · hat stattgefunden",
+      "note": "ein Zusammenhang findet statt — связь существует"
+    },
+    "Stimmung": {
+      "ru": "настроение, атмосфера",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Stimmungen"
+    },
+    "Tag": {
+      "ru": "день",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Tage"
+    },
+    "Thüringen": {
+      "ru": "Тюрингия (федеральная земля Германии)",
+      "pos": "геогр."
+    },
+    "traditionell": {
+      "ru": "по традиции, традиционно",
+      "pos": "нареч."
+    },
+    "um": {
+      "ru": "вокруг, в (о времени)",
+      "pos": "предл.",
+      "note": "um … zu — чтобы. Тж. отделяемая приставка: sich umsehen «оглядеться»"
+    },
+    "und": {
+      "ru": "и, а",
+      "pos": "союз"
+    },
+    "verkaufen": {
+      "ru": "продавать",
+      "pos": "гл.",
+      "forms": "verkaufte · hat verkauft"
+    },
+    "Vieh": {
+      "ru": "скот",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null,
+      "note": "Vieh- und Zwiebelmarkt = Viehmarkt und Zwiebelmarkt"
+    },
+    "Volksfest": {
+      "ru": "народный праздник, гуляние",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Volksfeste"
+    },
+    "von": {
+      "ru": "от, из, о (vom = von dem)",
+      "pos": "предл."
+    },
+    "Weimar": {
+      "ru": "Веймар (город в Тюрингии)",
+      "pos": "геогр."
+    },
+    "werden": {
+      "ru": "становиться",
+      "pos": "гл.",
+      "forms": "wurde · ist geworden",
+      "note": "Вспомогательный глагол будущего времени и пассива"
+    },
+    "wickeln": {
+      "ru": "наматывать, обматывать",
+      "pos": "гл.",
+      "forms": "wickelte · hat gewickelt"
+    },
+    "ziehen": {
+      "ru": "двигаться, отправляться; тянуть",
+      "pos": "гл.",
+      "forms": "zog · ist gezogen (двигаться) / hat gezogen (тянуть)"
+    },
+    "Zopf": {
+      "ru": "коса (из волос, лука)",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Zöpfe"
+    },
+    "zu": {
+      "ru": "к, в; слишком",
+      "pos": "предл.",
+      "note": "zur = zu der, zum = zu dem"
+    },
+    "Zwiebel": {
+      "ru": "лук, луковица",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Zwiebeln"
+    },
+    "Zwiebelbauer": {
+      "ru": "фермер, выращивающий лук",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Zwiebelbauern"
+    },
+    "Zwiebelkuchen": {
+      "ru": "луковый пирог",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Zwiebelkuchen"
+    },
+    "Zwiebelmarkt": {
+      "ru": "Луковый рынок (праздник в Веймаре)",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Zwiebelmärkte"
+    },
+    "Zwiebelzopf": {
+      "ru": "луковая коса (связка лука)",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Zwiebelzöpfe"
+    },
+    "übrigens": {
+      "ru": "впрочем",
+      "pos": "нареч."
+    }
+  }
+}

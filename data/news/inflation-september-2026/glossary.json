@@ -1,0 +1,539 @@
+{
+  "version": 1,
+  "w": {
+    "als": "als",
+    "am": "an",
+    "auch": "auch",
+    "auf": "auf",
+    "august": "August",
+    "aus": "aus",
+    "bei": "bei",
+    "benzin": "Benzin",
+    "billiger": "billig",
+    "bundesamt": "Statistisches Bundesamt",
+    "butter": "Butter",
+    "dagegen": "dagegen",
+    "das": "der/die/das",
+    "dem": "der/die/das",
+    "den": "der/die/das",
+    "der": "der/die/das",
+    "deutschland": "Deutschland",
+    "dezember": "Dezember",
+    "die": "der/die/das",
+    "dienstleistungen": "Dienstleistung",
+    "diesel": "Diesel",
+    "drittel": "Drittel",
+    "durchschnitt": "Durchschnitt",
+    "eier": "Ei",
+    "ein": "ein/eine",
+    "einen": "ein/eine",
+    "energie": "Energie",
+    "es": "es",
+    "etwas": "etwas",
+    "fachleute": "Fachleute",
+    "fast": "fast",
+    "frisches": "frisch",
+    "friseurbesuch": "Friseurbesuch",
+    "für": "für",
+    "gas": "Gas",
+    "gelegen": "liegen",
+    "gemischt": "gemischt",
+    "gemüse": "Gemüse",
+    "gestiegenen": "steigen",
+    "grund": "Grund",
+    "hat": "haben",
+    "hatte": "haben",
+    "heizöl": "Heizöl",
+    "hoch": "hoch",
+    "höher": "hoch",
+    "ihre": "ihr (её, их)",
+    "im": "in",
+    "in": "in",
+    "inflation": "Inflation",
+    "inflationsrate": "Inflationsrate",
+    "insgesamt": "insgesamt",
+    "ist": "sein",
+    "jahr": "Jahr",
+    "jetzt": "jetzt",
+    "kerninflation": "Kerninflation",
+    "kostete": "kosten",
+    "kosteten": "kosten",
+    "lag": "liegen",
+    "lagen": "liegen",
+    "leben": "Leben",
+    "lebensmittel": "Lebensmittel",
+    "lebensmitteln": "Lebensmittel",
+    "leichtes": "leicht",
+    "man": "man",
+    "mehr": "mehr",
+    "mieten": "Miete",
+    "minus": "minus",
+    "mitgeteilt": "mitteilen",
+    "nennen": "nennen",
+    "nicht": "nicht",
+    "noch": "noch",
+    "nur": "nur",
+    "ohne": "ohne",
+    "oktober": "Oktober",
+    "preise": "Preis",
+    "prozent": "Prozent",
+    "seit": "seit",
+    "september": "September",
+    "sie": "sie",
+    "sieht": "sehen",
+    "sind": "sein",
+    "so": "so",
+    "sogar": "sogar",
+    "spürbar": "spürbar",
+    "stark": "stark",
+    "statistische": "Statistisches Bundesamt",
+    "stiegen": "steigen",
+    "strom": "Strom",
+    "teurer": "teuer",
+    "um": "um",
+    "und": "und",
+    "verbraucherpreise": "Verbraucherpreis",
+    "vorjahr": "Vorjahr",
+    "wichtigste": "wichtig",
+    "wie": "wie",
+    "wieder": "wieder",
+    "wird": "werden",
+    "wurde": "werden",
+    "wurden": "werden",
+    "zahlte": "zahlen",
+    "zuvor": "zuvor",
+    "ölmarkt": "Ölmarkt"
+  },
+  "l": {
+    "als": {
+      "ru": "когда; как; чем",
+      "pos": "союз"
+    },
+    "an": {
+      "ru": "у, к, на",
+      "pos": "предл.",
+      "note": "am = an dem. Тж. отделяемая приставка: anfangen «начинать», annehmen, ansehen, anzünden"
+    },
+    "auch": {
+      "ru": "тоже, также; даже",
+      "pos": "частица"
+    },
+    "auf": {
+      "ru": "на, в",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: aufspringen «вскочить», sich aufmachen"
+    },
+    "August": {
+      "ru": "август",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "aus": {
+      "ru": "из",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: auslöschen «погасить»"
+    },
+    "bei": {
+      "ru": "у, при, возле",
+      "pos": "предл."
+    },
+    "Benzin": {
+      "ru": "бензин",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "billig": {
+      "ru": "дешёвый",
+      "pos": "прил."
+    },
+    "Butter": {
+      "ru": "сливочное масло",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "dagegen": {
+      "ru": "напротив, зато",
+      "pos": "нареч."
+    },
+    "der/die/das": {
+      "ru": "определённый артикль",
+      "pos": "артикль",
+      "note": "Тж. относительное местоимение «который»"
+    },
+    "Deutschland": {
+      "ru": "Германия",
+      "pos": "геогр."
+    },
+    "Dezember": {
+      "ru": "декабрь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "Dienstleistung": {
+      "ru": "услуга",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Dienstleistungen"
+    },
+    "Diesel": {
+      "ru": "дизельное топливо",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "Drittel": {
+      "ru": "треть",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Drittel"
+    },
+    "Durchschnitt": {
+      "ru": "среднее (значение)",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Durchschnitte",
+      "note": "im Durchschnitt — в среднем"
+    },
+    "Ei": {
+      "ru": "яйцо",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Eier"
+    },
+    "ein/eine": {
+      "ru": "неопределённый артикль",
+      "pos": "артикль",
+      "note": "einer — «один, некто»"
+    },
+    "Energie": {
+      "ru": "энергия",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Energien"
+    },
+    "es": {
+      "ru": "оно; это",
+      "pos": "мест."
+    },
+    "etwas": {
+      "ru": "что-то, нечто; немного",
+      "pos": "мест."
+    },
+    "Fachleute": {
+      "ru": "специалисты",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null,
+      "note": "мн. ч. от der Fachmann"
+    },
+    "fast": {
+      "ru": "почти",
+      "pos": "нареч."
+    },
+    "frisch": {
+      "ru": "свежий",
+      "pos": "прил."
+    },
+    "Friseurbesuch": {
+      "ru": "поход к парикмахеру",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Friseurbesuche"
+    },
+    "für": {
+      "ru": "для, за",
+      "pos": "предл."
+    },
+    "Gas": {
+      "ru": "газ",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Gase"
+    },
+    "gemischt": {
+      "ru": "смешанный, неоднозначный",
+      "pos": "прил.",
+      "note": "es sieht gemischt aus — картина неоднозначная"
+    },
+    "Gemüse": {
+      "ru": "овощи",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "Grund": {
+      "ru": "основание, дно; причина",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Gründe",
+      "note": "der Sache auf den Grund kommen — дойти до сути дела"
+    },
+    "haben": {
+      "ru": "иметь; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "hatte · hat gehabt"
+    },
+    "Heizöl": {
+      "ru": "печное топливо, мазут для отопления",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "hoch": {
+      "ru": "высокий",
+      "pos": "прил.",
+      "forms": "hoch · höher · am höchsten"
+    },
+    "ihr (её, их)": {
+      "ru": "её; их",
+      "pos": "мест."
+    },
+    "in": {
+      "ru": "в (im = in dem, ins = in das)",
+      "pos": "предл."
+    },
+    "Inflation": {
+      "ru": "инфляция",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Inflationen"
+    },
+    "Inflationsrate": {
+      "ru": "уровень инфляции",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Inflationsraten"
+    },
+    "insgesamt": {
+      "ru": "все вместе, в общей сложности",
+      "pos": "нареч."
+    },
+    "Jahr": {
+      "ru": "год",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Jahre"
+    },
+    "jetzt": {
+      "ru": "сейчас, теперь",
+      "pos": "нареч."
+    },
+    "Kerninflation": {
+      "ru": "базовая инфляция (без энергии и продуктов)",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "kosten": {
+      "ru": "стоить",
+      "pos": "гл.",
+      "forms": "kostete · hat gekostet",
+      "note": "es koste, was es wolle — чего бы это ни стоило"
+    },
+    "Leben": {
+      "ru": "жизнь",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Leben"
+    },
+    "Lebensmittel": {
+      "ru": "продукт питания",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Lebensmittel"
+    },
+    "leicht": {
+      "ru": "лёгкий, легко",
+      "pos": "прил."
+    },
+    "liegen": {
+      "ru": "лежать",
+      "pos": "гл.",
+      "forms": "lag · hat gelegen"
+    },
+    "man": {
+      "ru": "неопределённое «кто-то, люди, мы»",
+      "pos": "мест."
+    },
+    "mehr": {
+      "ru": "больше",
+      "pos": "нареч.",
+      "note": "В nicht/kein … mehr — больше не. Формально компаратив от viel"
+    },
+    "Miete": {
+      "ru": "арендная плата, квартплата",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Mieten"
+    },
+    "minus": {
+      "ru": "минус",
+      "pos": "нареч."
+    },
+    "mitteilen": {
+      "ru": "сообщать",
+      "pos": "гл.",
+      "forms": "teilte mit · hat mitgeteilt"
+    },
+    "nennen": {
+      "ru": "называть",
+      "pos": "гл.",
+      "forms": "nannte · hat genannt"
+    },
+    "nicht": {
+      "ru": "не",
+      "pos": "частица"
+    },
+    "noch": {
+      "ru": "ещё",
+      "pos": "нареч."
+    },
+    "nur": {
+      "ru": "только, лишь",
+      "pos": "частица"
+    },
+    "ohne": {
+      "ru": "без",
+      "pos": "предл."
+    },
+    "Oktober": {
+      "ru": "октябрь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Oktober"
+    },
+    "Preis": {
+      "ru": "цена; премия, приз",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Preise"
+    },
+    "Prozent": {
+      "ru": "процент",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Prozente",
+      "note": "после числа не изменяется: 1,3 Prozent"
+    },
+    "sehen": {
+      "ru": "видеть",
+      "pos": "гл.",
+      "forms": "sah · hat gesehen"
+    },
+    "sein": {
+      "ru": "быть; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "war · ist gewesen"
+    },
+    "seit": {
+      "ru": "с (какого-то времени)",
+      "pos": "предл."
+    },
+    "September": {
+      "ru": "сентябрь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die September"
+    },
+    "sie": {
+      "ru": "она; они; Вы",
+      "pos": "мест."
+    },
+    "so": {
+      "ru": "так; такой; то (в главном предложении)",
+      "pos": "нареч."
+    },
+    "sogar": {
+      "ru": "даже",
+      "pos": "частица"
+    },
+    "spürbar": {
+      "ru": "ощутимый, заметный",
+      "pos": "прил."
+    },
+    "stark": {
+      "ru": "сильный, крепкий",
+      "pos": "прил."
+    },
+    "Statistisches Bundesamt": {
+      "ru": "Федеральное статистическое ведомство (Destatis, Висбаден)",
+      "pos": "имя собств."
+    },
+    "steigen": {
+      "forms": "stieg · ist gestiegen",
+      "note": "im Zimmer auf und ab steigen — шагать по комнате взад-вперёд",
+      "pos": "гл.",
+      "ru": "подниматься; слезать"
+    },
+    "Strom": {
+      "ru": "поток; течение; ток",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Ströme"
+    },
+    "teuer": {
+      "ru": "дорогой",
+      "pos": "прил.",
+      "forms": "teuer · teurer · am teuersten"
+    },
+    "um": {
+      "ru": "вокруг, в (о времени)",
+      "pos": "предл.",
+      "note": "um … zu — чтобы. Тж. отделяемая приставка: sich umsehen «оглядеться»"
+    },
+    "und": {
+      "ru": "и, а",
+      "pos": "союз"
+    },
+    "Verbraucherpreis": {
+      "ru": "потребительская цена",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Verbraucherpreise"
+    },
+    "Vorjahr": {
+      "ru": "предыдущий год",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Vorjahre"
+    },
+    "werden": {
+      "ru": "становиться",
+      "pos": "гл.",
+      "forms": "wurde · ist geworden",
+      "note": "Вспомогательный глагол будущего времени и пассива"
+    },
+    "wichtig": {
+      "ru": "важный",
+      "pos": "прил."
+    },
+    "wie": {
+      "ru": "как; какой",
+      "pos": "союз"
+    },
+    "wieder": {
+      "ru": "снова",
+      "pos": "нареч."
+    },
+    "zahlen": {
+      "ru": "платить",
+      "pos": "гл.",
+      "forms": "zahlte · hat gezahlt"
+    },
+    "zuvor": {
+      "ru": "до того, раньше",
+      "pos": "нареч.",
+      "note": "ein Jahr zuvor — годом раньше"
+    },
+    "Ölmarkt": {
+      "ru": "нефтяной рынок",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Ölmärkte"
+    }
+  }
+}

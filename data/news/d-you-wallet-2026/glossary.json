@@ -1,0 +1,747 @@
+{
+  "version": 1,
+  "w": {
+    "ab": "ab",
+    "aber": "aber",
+    "abschließen": "abschließen",
+    "akzeptieren": "akzeptieren",
+    "aller": "alle/alles",
+    "als": "als",
+    "alter": "Alter",
+    "am": "an",
+    "andere": "ander",
+    "android-handys": "Android-Handy",
+    "app": "App",
+    "auch": "auch",
+    "auf": "auf",
+    "aufenthaltstitel": "Aufenthaltstitel",
+    "ausgeben": "ausgeben",
+    "ausweisen": "sich ausweisen",
+    "außerdem": "außerdem",
+    "bald": "bald",
+    "bankkonto": "Bankkonto",
+    "beantragen": "beantragen",
+    "beispiel": "Beispiel",
+    "bekommt": "bekommen",
+    "betrüger": "Betrüger",
+    "bitkom": "Bitkom",
+    "bleibt": "bleiben",
+    "braucht": "brauchen",
+    "brieftasche": "Brieftasche",
+    "bundestages": "Bundestag",
+    "d-you": "d-you",
+    "dafür": "dafür",
+    "dagegen": "dagegen",
+    "darf": "dürfen",
+    "das": "der/die/das",
+    "dass": "dass",
+    "datenschutz": "Datenschutz",
+    "davon": "davon",
+    "dazukommen": "dazukommen",
+    "dem": "der/die/das",
+    "der": "der/die/das",
+    "des": "der/die/das",
+    "deutsche": "deutsch",
+    "deutschland": "Deutschland",
+    "die": "der/die/das",
+    "digitalausschuss": "Digitalausschuss",
+    "digitalen": "digital",
+    "digitalverbands": "Digitalverband",
+    "doch": "doch",
+    "dokumente": "Dokument",
+    "ein": "ein/eine",
+    "eine": "ein/eine",
+    "einem": "ein/eine",
+    "einen": "ein/eine",
+    "einer": "ein/eine",
+    "einrichtung": "Einrichtung",
+    "elektronischen": "elektronisch",
+    "erwachsenen": "erwachsen",
+    "eröffnen": "eröffnen",
+    "es": "es",
+    "eudi-wallet": "EUDI-Wallet",
+    "europäischen": "europäisch",
+    "fachleute": "Fachleute",
+    "fordern": "fordern",
+    "freiwillig": "freiwillig",
+    "führerschein": "Führerschein",
+    "für": "für",
+    "gebilligt": "billigen",
+    "gehört": "gehören",
+    "gerät": "Gerät",
+    "gesetz": "Gesetz",
+    "gibt": "geben",
+    "haben": "haben",
+    "hat": "haben",
+    "hälfte": "Hälfte",
+    "ihre": "ihr (её, их)",
+    "in": "in",
+    "infizierten": "infiziert",
+    "ist": "sein",
+    "jahren": "Jahr",
+    "januar": "Januar",
+    "kann": "können",
+    "keine": "kein",
+    "kostenlos": "kostenlos",
+    "kredit": "Kredit",
+    "kritik": "Kritik",
+    "können": "können",
+    "könnten": "können",
+    "laut": "laut (согласно)",
+    "man": "man",
+    "mehr": "mehr",
+    "mit": "mit",
+    "möchten": "möchten",
+    "nachweisen": "nachweisen",
+    "nie": "nie",
+    "noch": "noch",
+    "nutzen": "nutzen",
+    "nutzung": "Nutzung",
+    "oder": "oder",
+    "oktober": "Oktober",
+    "online-ausweisfunktion": "Online-Ausweisfunktion",
+    "online-funktion": "Online-Funktion",
+    "opposition": "Opposition",
+    "person": "Person",
+    "personalausweis": "Personalausweis",
+    "prozent": "Prozent",
+    "pseudonym": "Pseudonym",
+    "schon": "schon",
+    "sein": "sein (его, свой)",
+    "sich": "sich",
+    "sicherheitsupdates": "Sicherheitsupdate",
+    "smartphone": "Smartphone",
+    "soll": "sollen",
+    "sollen": "sollen",
+    "spd": "SPD",
+    "später": "später",
+    "staatliche": "staatlich",
+    "starten": "starten",
+    "stimmten": "stimmen",
+    "umfrage": "Umfrage",
+    "und": "und",
+    "union": "Union",
+    "unter": "unter",
+    "unternehmen": "Unternehmen",
+    "verbraucherschützer": "Verbraucherschützer",
+    "version": "Version",
+    "versprochen": "versprechen",
+    "verträge": "Vertrag",
+    "wallet": "Wallet",
+    "warnen": "warnen",
+    "weltweit": "weltweit",
+    "zu": "zu",
+    "zum": "zu"
+  },
+  "l": {
+    "ab": {
+      "note": "Тж. отделяемая приставка: absteigen «слезать», abnehmen",
+      "pos": "предл.",
+      "ru": "от, с; прочь"
+    },
+    "aber": {
+      "ru": "но, однако",
+      "pos": "союз"
+    },
+    "abschließen": {
+      "ru": "заключать (договор); запирать",
+      "pos": "гл.",
+      "forms": "schloss ab · hat abgeschlossen"
+    },
+    "akzeptieren": {
+      "ru": "принимать, признавать",
+      "pos": "гл.",
+      "forms": "akzeptierte · hat akzeptiert"
+    },
+    "alle/alles": {
+      "ru": "все; всё",
+      "pos": "мест."
+    },
+    "als": {
+      "ru": "когда; как; чем",
+      "pos": "союз"
+    },
+    "Alter": {
+      "ru": "возраст",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null,
+      "note": "alt — старый; das Alter — возраст"
+    },
+    "an": {
+      "ru": "у, к, на",
+      "pos": "предл.",
+      "note": "am = an dem. Тж. отделяемая приставка: anfangen «начинать», annehmen, ansehen, anzünden"
+    },
+    "ander": {
+      "pos": "прил.",
+      "ru": "другой, иной"
+    },
+    "Android-Handy": {
+      "ru": "телефон на Android",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Android-Handys"
+    },
+    "App": {
+      "ru": "приложение (для телефона)",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Apps"
+    },
+    "auch": {
+      "ru": "тоже, также; даже",
+      "pos": "частица"
+    },
+    "auf": {
+      "ru": "на, в",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: aufspringen «вскочить», sich aufmachen"
+    },
+    "Aufenthaltstitel": {
+      "ru": "вид на жительство",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Aufenthaltstitel",
+      "note": "der elektronische Aufenthaltstitel (eAT) — карта вида на жительство"
+    },
+    "ausgeben": {
+      "ru": "выдавать (за кого-л.)",
+      "pos": "гл.",
+      "forms": "gab aus · hat ausgegeben",
+      "note": "für tot ausgeben — объявить умершим"
+    },
+    "außerdem": {
+      "ru": "кроме того",
+      "pos": "нареч."
+    },
+    "bald": {
+      "ru": "скоро",
+      "pos": "нареч."
+    },
+    "Bankkonto": {
+      "ru": "банковский счёт",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Bankkonten"
+    },
+    "beantragen": {
+      "ru": "подавать заявление, ходатайствовать",
+      "pos": "гл.",
+      "forms": "beantragte · hat beantragt"
+    },
+    "Beispiel": {
+      "ru": "пример",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Beispiele",
+      "note": "zum Beispiel — например"
+    },
+    "bekommen": {
+      "ru": "получать",
+      "pos": "гл.",
+      "forms": "bekam · hat bekommen"
+    },
+    "Betrüger": {
+      "ru": "обманщик, самозванец",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Betrüger"
+    },
+    "billigen": {
+      "ru": "одобрять",
+      "pos": "гл.",
+      "forms": "billigte · hat gebilligt"
+    },
+    "Bitkom": {
+      "ru": "Bitkom — отраслевая ассоциация цифровой экономики Германии",
+      "pos": "имя собств."
+    },
+    "bleiben": {
+      "ru": "оставаться",
+      "pos": "гл.",
+      "forms": "blieb · ist geblieben"
+    },
+    "brauchen": {
+      "ru": "нуждаться; годиться",
+      "pos": "гл.",
+      "forms": "brauchte · hat gebraucht",
+      "note": "nicht zu brauchen — никуда не годится"
+    },
+    "Brieftasche": {
+      "ru": "бумажник, кошелёк",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Brieftaschen",
+      "note": "die digitale Brieftasche — цифровой кошелёк для документов"
+    },
+    "Bundestag": {
+      "ru": "бундестаг (парламент ФРГ)",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "d-you": {
+      "ru": "d-you — немецкое приложение для документов",
+      "pos": "имя собств.",
+      "note": "работает с 2027 года"
+    },
+    "dafür": {
+      "ru": "за это, для этого",
+      "pos": "нареч.",
+      "note": "dafür sorgen, dass … — позаботиться, чтобы …"
+    },
+    "dagegen": {
+      "ru": "напротив, зато",
+      "pos": "нареч."
+    },
+    "dass": {
+      "ru": "что; чтобы",
+      "pos": "союз"
+    },
+    "Datenschutz": {
+      "ru": "защита (персональных) данных",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "davon": {
+      "ru": "от этого, об этом",
+      "pos": "нареч."
+    },
+    "dazukommen": {
+      "ru": "добавляться, присоединяться",
+      "pos": "гл.",
+      "forms": "kam dazu · ist dazugekommen"
+    },
+    "der/die/das": {
+      "ru": "определённый артикль",
+      "pos": "артикль",
+      "note": "Тж. относительное местоимение «который»"
+    },
+    "deutsch": {
+      "ru": "немецкий",
+      "pos": "прил."
+    },
+    "Deutschland": {
+      "ru": "Германия",
+      "pos": "геогр."
+    },
+    "digital": {
+      "ru": "цифровой",
+      "pos": "прил."
+    },
+    "Digitalausschuss": {
+      "ru": "комитет по цифровым делам (в бундестаге)",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Digitalausschüsse"
+    },
+    "Digitalverband": {
+      "ru": "цифровая (отраслевая) ассоциация",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Digitalverbände"
+    },
+    "doch": {
+      "ru": "всё же, всё-таки; ведь",
+      "pos": "частица"
+    },
+    "Dokument": {
+      "ru": "документ",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Dokumente"
+    },
+    "dürfen": {
+      "ru": "сметь, иметь право",
+      "pos": "гл.",
+      "forms": "durfte · hat gedurft"
+    },
+    "ein/eine": {
+      "ru": "неопределённый артикль",
+      "pos": "артикль",
+      "note": "einer — «один, некто»"
+    },
+    "Einrichtung": {
+      "ru": "настройка; учреждение; обстановка",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Einrichtungen"
+    },
+    "elektronisch": {
+      "ru": "электронный",
+      "pos": "прил."
+    },
+    "erwachsen": {
+      "ru": "взрослый",
+      "pos": "прил.",
+      "note": "der/die Erwachsene — взрослый человек"
+    },
+    "eröffnen": {
+      "ru": "открывать (счёт, магазин)",
+      "pos": "гл.",
+      "forms": "eröffnete · hat eröffnet"
+    },
+    "es": {
+      "ru": "оно; это",
+      "pos": "мест."
+    },
+    "EUDI-Wallet": {
+      "ru": "EUDI-Wallet — европейский цифровой кошелёк для документов",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "europäisch": {
+      "ru": "европейский",
+      "pos": "прил."
+    },
+    "Fachleute": {
+      "ru": "специалисты",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null,
+      "note": "мн. ч. от der Fachmann"
+    },
+    "fordern": {
+      "forms": "forderte · hat gefordert",
+      "note": "jemanden auffordern, etwas zu tun — предлагать, требовать от кого-л.",
+      "pos": "гл.",
+      "ru": "требовать; призывать"
+    },
+    "freiwillig": {
+      "ru": "добровольный",
+      "pos": "прил."
+    },
+    "Führerschein": {
+      "ru": "водительские права",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Führerscheine"
+    },
+    "für": {
+      "ru": "для, за",
+      "pos": "предл."
+    },
+    "geben": {
+      "ru": "давать",
+      "pos": "гл.",
+      "forms": "gab · hat gegeben"
+    },
+    "gehören": {
+      "ru": "принадлежать, относиться",
+      "pos": "гл.",
+      "forms": "gehörte · hat gehört",
+      "note": "zu etwas gehören — относиться к чему-то, входить в"
+    },
+    "Gerät": {
+      "ru": "устройство, прибор",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Geräte"
+    },
+    "Gesetz": {
+      "ru": "закон",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Gesetze"
+    },
+    "haben": {
+      "ru": "иметь; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "hatte · hat gehabt"
+    },
+    "Hälfte": {
+      "ru": "половина",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Hälften"
+    },
+    "ihr (её, их)": {
+      "ru": "её; их",
+      "pos": "мест."
+    },
+    "in": {
+      "ru": "в (im = in dem, ins = in das)",
+      "pos": "предл."
+    },
+    "infiziert": {
+      "ru": "заражённый",
+      "pos": "прил."
+    },
+    "Jahr": {
+      "ru": "год",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Jahre"
+    },
+    "Januar": {
+      "ru": "январь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Januare"
+    },
+    "kein": {
+      "ru": "никакой, ни один",
+      "pos": "мест."
+    },
+    "kostenlos": {
+      "ru": "бесплатный",
+      "pos": "прил."
+    },
+    "Kredit": {
+      "ru": "кредит",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Kredite"
+    },
+    "Kritik": {
+      "ru": "критика",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "können": {
+      "ru": "мочь, уметь",
+      "pos": "гл.",
+      "forms": "konnte · hat gekonnt"
+    },
+    "laut (согласно)": {
+      "ru": "согласно, по данным",
+      "pos": "предлог",
+      "note": "laut einer Umfrage — согласно опросу; laut — также «громко»"
+    },
+    "man": {
+      "ru": "неопределённое «кто-то, люди, мы»",
+      "pos": "мест."
+    },
+    "mehr": {
+      "ru": "больше",
+      "pos": "нареч.",
+      "note": "В nicht/kein … mehr — больше не. Формально компаратив от viel"
+    },
+    "mit": {
+      "ru": "с",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: mitgehen «пойти вместе»"
+    },
+    "möchten": {
+      "ru": "хотеть (вежливо), хотелось бы",
+      "pos": "гл.",
+      "forms": "wollte · hat gewollt",
+      "note": "ich möchte — я хотел бы"
+    },
+    "nachweisen": {
+      "ru": "доказывать; обнаруживать, регистрировать",
+      "pos": "гл.",
+      "forms": "wies nach · hat nachgewiesen"
+    },
+    "nie": {
+      "ru": "никогда",
+      "pos": "нареч."
+    },
+    "noch": {
+      "ru": "ещё",
+      "pos": "нареч."
+    },
+    "nutzen": {
+      "ru": "использовать",
+      "pos": "гл.",
+      "forms": "nutzte · hat genutzt"
+    },
+    "Nutzung": {
+      "ru": "использование",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "oder": {
+      "ru": "или",
+      "pos": "союз"
+    },
+    "Oktober": {
+      "ru": "октябрь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Oktober"
+    },
+    "Online-Ausweisfunktion": {
+      "ru": "функция онлайн-удостоверения личности",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "Online-Funktion": {
+      "ru": "онлайн-функция (электронное удостоверение личности)",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Online-Funktionen"
+    },
+    "Opposition": {
+      "ru": "противостояние (в астрономии); оппозиция",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Oppositionen"
+    },
+    "Person": {
+      "ru": "человек, лицо",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Personen"
+    },
+    "Personalausweis": {
+      "ru": "удостоверение личности (ID-карта гражданина Германии)",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Personalausweise"
+    },
+    "Prozent": {
+      "ru": "процент",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Prozente",
+      "note": "после числа не изменяется: 1,3 Prozent"
+    },
+    "Pseudonym": {
+      "ru": "псевдоним",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Pseudonyme"
+    },
+    "schon": {
+      "ru": "уже",
+      "pos": "нареч."
+    },
+    "sein": {
+      "ru": "быть; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "war · ist gewesen"
+    },
+    "sein (его, свой)": {
+      "ru": "его, свой",
+      "pos": "мест."
+    },
+    "sich": {
+      "ru": "себя, себе",
+      "pos": "мест.",
+      "note": "Возвратное местоимение, часть возвратного глагола: sich auf den Weg machen, sich setzen, sich legen, sich nähern, sich gefallen lassen, sich getrauen, sich umsehen"
+    },
+    "sich ausweisen": {
+      "ru": "удостоверять личность, предъявлять документ",
+      "pos": "гл.",
+      "forms": "wies sich aus · hat sich ausgewiesen"
+    },
+    "Sicherheitsupdate": {
+      "ru": "обновление безопасности",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Sicherheitsupdates"
+    },
+    "Smartphone": {
+      "ru": "смартфон",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Smartphones"
+    },
+    "sollen": {
+      "ru": "быть должным, следует",
+      "pos": "гл.",
+      "forms": "sollte · hat gesollt"
+    },
+    "SPD": {
+      "ru": "СДПГ — Социал-демократическая партия Германии",
+      "pos": "имя собств."
+    },
+    "später": {
+      "ru": "позже, потом",
+      "pos": "нареч."
+    },
+    "staatlich": {
+      "ru": "государственный",
+      "pos": "прил."
+    },
+    "starten": {
+      "ru": "стартовать, запускать",
+      "pos": "гл.",
+      "forms": "startete · ist/hat gestartet"
+    },
+    "stimmen": {
+      "ru": "голосовать; быть верным",
+      "pos": "гл.",
+      "forms": "stimmte · hat gestimmt",
+      "note": "für etwas stimmen / dafür stimmen — голосовать за; das stimmt — это верно"
+    },
+    "Umfrage": {
+      "ru": "опрос",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Umfragen"
+    },
+    "und": {
+      "ru": "и, а",
+      "pos": "союз"
+    },
+    "Union": {
+      "ru": "союз",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Unionen",
+      "note": "die Europäische Union — Европейский союз"
+    },
+    "unter": {
+      "ru": "под, среди",
+      "pos": "предл."
+    },
+    "Unternehmen": {
+      "ru": "предприятие, компания",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Unternehmen"
+    },
+    "Verbraucherschützer": {
+      "ru": "защитник прав потребителей",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Verbraucherschützer"
+    },
+    "Version": {
+      "ru": "версия",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Versionen"
+    },
+    "versprechen": {
+      "ru": "обещать",
+      "pos": "гл.",
+      "forms": "versprach · hat versprochen"
+    },
+    "Vertrag": {
+      "ru": "договор, контракт",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Verträge"
+    },
+    "Wallet": {
+      "ru": "кошелёк (приложение для документов или денег)",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Wallets"
+    },
+    "warnen": {
+      "ru": "предупреждать",
+      "pos": "гл.",
+      "forms": "warnte · hat gewarnt",
+      "note": "vor etwas warnen — предостерегать от чего-то"
+    },
+    "weltweit": {
+      "ru": "по всему миру",
+      "pos": "нареч."
+    },
+    "zu": {
+      "ru": "к, в; слишком",
+      "pos": "предл.",
+      "note": "zur = zu der, zum = zu dem"
+    }
+  }
+}

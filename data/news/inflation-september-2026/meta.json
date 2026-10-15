@@ -1,0 +1,20 @@
+{
+  "id": "inflation-september-2026",
+  "kind": "news",
+  "title": "Teures Tanken: Die Inflation steigt auf 3,3 Prozent",
+  "titleRu": "Дорогой бензин: инфляция выросла до 3,3 процента",
+  "rubric": "economy",
+  "level": "B1",
+  "levelNote": "Сравнительная степень (teurer, billiger, höher als, mehr als), werden + прилагательное (wurden teurer), плюсквамперфект (hatte … gelegen), проценты и числа, экономическая лексика (Verbraucherpreise, Inflationsrate, Dienstleistungen).",
+  "published": "2026-10-13",
+  "added": "2026-10-15",
+  "source": "Statistisches Bundesamt (Destatis)",
+  "sourceUrl": "https://www.destatis.de/DE/Presse/Pressemitteilungen/2026/10/PD26_364_611.html",
+  "blurb": "В сентябре цены в Германии выросли на 3,3 % — больше всего с декабря 2023 года. Бензин подорожал на 37 %, печное топливо — на 75 %, а масло подешевело почти на треть.",
+  "cover": "data/news/inflation-september-2026/img/cover.jpg",
+  "chapters": 1,
+  "words": 155,
+  "minutes": 1,
+  "photos": 3,
+  "license": "Текст — пересказ пресс-релиза Destatis; фото — Wikimedia Commons"
+}

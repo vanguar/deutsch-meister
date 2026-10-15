@@ -1,0 +1,775 @@
+{
+  "version": 1,
+  "w": {
+    "aber": "aber",
+    "als": "als",
+    "am": "an",
+    "anheben": "anheben",
+    "astronomen": "Astronom",
+    "astrophysical": "The Astrophysical Journal Letters",
+    "aufnimmt": "aufnehmen",
+    "außen": "außen",
+    "banibrata": "Banibrata",
+    "bei": "bei",
+    "bengaluru": "Bengaluru",
+    "beobachtet": "beobachten",
+    "berechnet": "berechnen",
+    "berechnungen": "Berechnung",
+    "besonders": "besonders",
+    "beweis": "Beweis",
+    "bisher": "bisher",
+    "chandrasekhar-grenze": "Chandrasekhar-Grenze",
+    "computersimulationen": "Computersimulation",
+    "dabei": "dabei",
+    "das": "der/die/das",
+    "dass": "dass",
+    "dem": "der/die/das",
+    "der": "der/die/das",
+    "des": "der/die/das",
+    "deutlich": "deutlich",
+    "dicht": "dicht",
+    "die": "der/die/das",
+    "diese": "dieser",
+    "drückt": "drücken",
+    "eigenen": "eigen",
+    "ein": "ein/eine",
+    "einem": "ein/eine",
+    "einen": "ein/eine",
+    "entfernungen": "Entfernung",
+    "entstand": "entstehen",
+    "er": "er",
+    "erde": "Erde",
+    "ergebnisse": "Ergebnis",
+    "erklären": "erklären",
+    "erreichte": "erreichen",
+    "erschienen": "erscheinen",
+    "erzählt": "erzählen",
+    "es": "es",
+    "etwa": "etwa",
+    "explosionen": "Explosion",
+    "extrem": "extrem",
+    "fachzeitschrift": "Fachzeitschrift",
+    "forscher": "Forscher",
+    "funktioniert": "funktionieren",
+    "fünfzehn": "fünfzehn",
+    "galt": "gelten",
+    "gezeigt": "zeigen",
+    "gibt": "geben",
+    "grenze": "Grenze",
+    "groß": "groß",
+    "haben": "haben",
+    "hat": "haben",
+    "heißt": "heißen",
+    "helle": "hell",
+    "hilft": "helfen",
+    "himmel": "Himmel",
+    "höchstens": "höchstens",
+    "hüllen": "Hülle",
+    "ia": "Ia",
+    "idee": "Idee",
+    "ihre": "ihr (её, их)",
+    "ihren": "ihr (её, их)",
+    "im": "in",
+    "immer": "immer",
+    "in": "in",
+    "indian": "Indian Institute of Science",
+    "inneren": "Innere",
+    "institute": "Indian Institute of Science",
+    "ist": "sein",
+    "jahre": "Jahr",
+    "journal": "The Astrophysical Journal Letters",
+    "kam": "kommen",
+    "kann": "können",
+    "könnten": "können",
+    "lag": "liegen",
+    "letters": "The Astrophysical Journal Letters",
+    "liegen": "liegen",
+    "magnetfeld": "Magnetfeld",
+    "magnetfelder": "Magnetfeld",
+    "materie": "Materie",
+    "messen": "messen",
+    "mir": "ich",
+    "mit": "mit",
+    "modell": "Modell",
+    "modelle": "Modell",
+    "mukhopadhyay": "Mukhopadhyay",
+    "nach": "nach",
+    "nachbarstern": "Nachbarstern",
+    "nicht": "nicht",
+    "niemand": "niemand",
+    "noch": "noch",
+    "nun": "nun",
+    "ob": "ob",
+    "obergrenze": "Obergrenze",
+    "of": "Indian Institute of Science",
+    "ohne": "ohne",
+    "professor": "Professor",
+    "prüfen": "prüfen",
+    "reste": "Rest",
+    "rotation": "Rotation",
+    "rund": "rund",
+    "schrumpft": "schrumpfen",
+    "schwer": "schwer",
+    "schweren": "schwer",
+    "schwerer": "schwer",
+    "schwerkraft": "Schwerkraft",
+    "science": "Indian Institute of Science",
+    "sein": "sein",
+    "sie": "sie",
+    "sind": "sein",
+    "so": "so",
+    "sogenannte": "sogenannt",
+    "solchen": "solch",
+    "sollte": "sollen",
+    "sommerstudent": "Sommerstudent",
+    "sonnenmassen": "Sonnenmasse",
+    "später": "später",
+    "standzuhalten": "standhalten",
+    "starke": "stark",
+    "stern": "Stern",
+    "sternen": "Stern",
+    "sternexplosionen": "Sternexplosion",
+    "studie": "Studie",
+    "stärker": "stark",
+    "supernovae": "Supernova",
+    "the": "The Astrophysical Journal Letters",
+    "typ": "Typ",
+    "und": "und",
+    "ungefähr": "ungefähr",
+    "vereinfachte": "vereinfacht",
+    "verloren": "verlieren",
+    "verschieben": "verschieben",
+    "vom": "von",
+    "von": "von",
+    "vor": "vor",
+    "weiße": "weiß",
+    "weißen": "weiß",
+    "weißer": "weiß",
+    "weltall": "Weltall",
+    "wenn": "wenn",
+    "wie": "wie",
+    "wieder": "wieder",
+    "wird": "werden",
+    "zu": "zu",
+    "zwerg": "Weißer Zwerg",
+    "zwerge": "Weißer Zwerg",
+    "äußeren": "äußere"
+  },
+  "l": {
+    "aber": {
+      "ru": "но, однако",
+      "pos": "союз"
+    },
+    "als": {
+      "ru": "когда; как; чем",
+      "pos": "союз"
+    },
+    "an": {
+      "ru": "у, к, на",
+      "pos": "предл.",
+      "note": "am = an dem. Тж. отделяемая приставка: anfangen «начинать», annehmen, ansehen, anzünden"
+    },
+    "anheben": {
+      "ru": "поднимать, повышать",
+      "pos": "гл.",
+      "forms": "hob an · hat angehoben",
+      "note": "die Prognose wurde angehoben — прогноз повысили (пассив)"
+    },
+    "Astronom": {
+      "ru": "астроном",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Astronomen"
+    },
+    "aufnehmen": {
+      "ru": "снимать (на камеру); принимать",
+      "pos": "гл.",
+      "forms": "nahm auf · hat aufgenommen"
+    },
+    "außen": {
+      "ru": "снаружи",
+      "pos": "нареч.",
+      "note": "nach außen — наружу"
+    },
+    "Banibrata": {
+      "ru": "Банибрата (имя)",
+      "pos": "имя собств."
+    },
+    "bei": {
+      "ru": "у, при, возле",
+      "pos": "предл."
+    },
+    "Bengaluru": {
+      "ru": "Бенгалуру (Бангалор), город в Индии",
+      "pos": "геогр."
+    },
+    "beobachten": {
+      "ru": "наблюдать",
+      "pos": "гл.",
+      "forms": "beobachtete · hat beobachtet"
+    },
+    "berechnen": {
+      "ru": "рассчитывать, вычислять",
+      "pos": "гл.",
+      "forms": "berechnete · hat berechnet"
+    },
+    "Berechnung": {
+      "ru": "расчёт, вычисление",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Berechnungen"
+    },
+    "besonders": {
+      "ru": "особенно",
+      "pos": "нареч."
+    },
+    "Beweis": {
+      "ru": "доказательство",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Beweise"
+    },
+    "bisher": {
+      "ru": "до сих пор, до этого",
+      "pos": "нареч."
+    },
+    "Chandrasekhar-Grenze": {
+      "ru": "предел Чандрасекара (≈ 1,4 массы Солнца)",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "Computersimulation": {
+      "ru": "компьютерное моделирование",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Computersimulationen"
+    },
+    "dabei": {
+      "ru": "при этом, при том",
+      "pos": "нареч."
+    },
+    "dass": {
+      "ru": "что; чтобы",
+      "pos": "союз"
+    },
+    "der/die/das": {
+      "ru": "определённый артикль",
+      "pos": "артикль",
+      "note": "Тж. относительное местоимение «который»"
+    },
+    "deutlich": {
+      "ru": "отчётливый, внятный",
+      "pos": "прил."
+    },
+    "dicht": {
+      "ru": "плотно; совсем близко",
+      "pos": "нареч.",
+      "note": "dicht vor dem Dorf — прямо перед деревней"
+    },
+    "dieser": {
+      "ru": "этот, эта, это",
+      "pos": "мест."
+    },
+    "drücken": {
+      "ru": "давить, жать",
+      "pos": "гл.",
+      "forms": "drückte · hat gedrückt"
+    },
+    "eigen": {
+      "ru": "собственный",
+      "pos": "прил."
+    },
+    "ein/eine": {
+      "ru": "неопределённый артикль",
+      "pos": "артикль",
+      "note": "einer — «один, некто»"
+    },
+    "Entfernung": {
+      "ru": "расстояние",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Entfernungen"
+    },
+    "entstehen": {
+      "ru": "возникать",
+      "pos": "гл.",
+      "forms": "entstand · ist entstanden"
+    },
+    "er": {
+      "ru": "он",
+      "pos": "мест.",
+      "note": "ihn — его, ihm — ему"
+    },
+    "Erde": {
+      "ru": "Земля (планета); земля, почва",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "Ergebnis": {
+      "ru": "результат",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Ergebnisse"
+    },
+    "erklären": {
+      "ru": "объявлять; объяснять",
+      "pos": "гл.",
+      "forms": "erklärte · hat erklärt"
+    },
+    "erreichen": {
+      "ru": "достигать",
+      "pos": "гл.",
+      "forms": "erreichte · hat erreicht"
+    },
+    "erscheinen": {
+      "ru": "появляться; выходить (о публикации)",
+      "pos": "гл.",
+      "forms": "erschien · ist erschienen"
+    },
+    "erzählen": {
+      "ru": "рассказывать",
+      "pos": "гл.",
+      "forms": "erzählte · hat erzählt"
+    },
+    "es": {
+      "ru": "оно; это",
+      "pos": "мест."
+    },
+    "etwa": {
+      "ru": "примерно, около",
+      "pos": "нареч."
+    },
+    "Explosion": {
+      "ru": "взрыв",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Explosionen"
+    },
+    "extrem": {
+      "ru": "чрезвычайно, крайне",
+      "pos": "нареч."
+    },
+    "Fachzeitschrift": {
+      "ru": "научный (специальный) журнал",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Fachzeitschriften"
+    },
+    "Forscher": {
+      "ru": "исследователь, учёный",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Forscher"
+    },
+    "funktionieren": {
+      "ru": "работать, действовать",
+      "pos": "гл.",
+      "forms": "funktionierte · hat funktioniert"
+    },
+    "fünfzehn": {
+      "ru": "пятнадцать",
+      "pos": "числ."
+    },
+    "geben": {
+      "ru": "давать",
+      "pos": "гл.",
+      "forms": "gab · hat gegeben"
+    },
+    "gelten": {
+      "ru": "считаться; быть действительным",
+      "pos": "гл.",
+      "forms": "galt · hat gegolten",
+      "note": "als … gelten — считаться кем-то"
+    },
+    "Grenze": {
+      "ru": "граница",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Grenzen"
+    },
+    "groß": {
+      "ru": "большой",
+      "pos": "прил.",
+      "forms": "groß · größer · am größten"
+    },
+    "haben": {
+      "ru": "иметь; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "hatte · hat gehabt"
+    },
+    "heißen": {
+      "ru": "называться; велеть",
+      "pos": "гл.",
+      "forms": "hieß · hat geheißen"
+    },
+    "helfen": {
+      "ru": "помогать",
+      "pos": "гл.",
+      "forms": "half · hat geholfen"
+    },
+    "hell": {
+      "ru": "светлый, яркий",
+      "pos": "прил.",
+      "forms": "hell · heller · am hellsten"
+    },
+    "Himmel": {
+      "art": "der",
+      "pl": "die Himmel",
+      "pos": "сущ.",
+      "ru": "небо"
+    },
+    "höchstens": {
+      "ru": "самое большее, не более",
+      "pos": "нареч."
+    },
+    "Hülle": {
+      "ru": "оболочка; чехол",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Hüllen"
+    },
+    "Ia": {
+      "ru": "Ia (читается «один а») — тип сверхновых",
+      "pos": "имя собств."
+    },
+    "ich": {
+      "ru": "я",
+      "pos": "мест.",
+      "note": "mich — меня, mir — мне"
+    },
+    "Idee": {
+      "ru": "идея",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Ideen"
+    },
+    "ihr (её, их)": {
+      "ru": "её; их",
+      "pos": "мест."
+    },
+    "immer": {
+      "ru": "всегда, всё",
+      "pos": "нареч.",
+      "note": "immer größer — всё больше"
+    },
+    "in": {
+      "ru": "в (im = in dem, ins = in das)",
+      "pos": "предл."
+    },
+    "Indian Institute of Science": {
+      "ru": "Индийский институт науки (Бенгалуру)",
+      "pos": "имя собств."
+    },
+    "Innere": {
+      "ru": "внутренность, нутро",
+      "pos": "субст. прил.",
+      "decl": "das Innere / ein Inneres / im Innern"
+    },
+    "Jahr": {
+      "ru": "год",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Jahre"
+    },
+    "kommen": {
+      "ru": "приходить, приезжать",
+      "pos": "гл.",
+      "forms": "kam · ist gekommen"
+    },
+    "können": {
+      "ru": "мочь, уметь",
+      "pos": "гл.",
+      "forms": "konnte · hat gekonnt"
+    },
+    "liegen": {
+      "ru": "лежать",
+      "pos": "гл.",
+      "forms": "lag · hat gelegen"
+    },
+    "Magnetfeld": {
+      "ru": "магнитное поле",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Magnetfelder"
+    },
+    "Materie": {
+      "ru": "материя, вещество",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "messen": {
+      "ru": "измерять",
+      "pos": "гл.",
+      "forms": "maß · hat gemessen"
+    },
+    "mit": {
+      "ru": "с",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: mitgehen «пойти вместе»"
+    },
+    "Modell": {
+      "ru": "модель",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Modelle"
+    },
+    "Mukhopadhyay": {
+      "ru": "Мукхопадхьяй (Банибрата Мукхопадхьяй, индийский астрофизик)",
+      "pos": "имя собств."
+    },
+    "nach": {
+      "ru": "в, на, после, по",
+      "pos": "предл."
+    },
+    "Nachbarstern": {
+      "ru": "соседняя звезда",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Nachbarsterne"
+    },
+    "nicht": {
+      "ru": "не",
+      "pos": "частица"
+    },
+    "niemand": {
+      "pos": "мест.",
+      "ru": "никто"
+    },
+    "noch": {
+      "ru": "ещё",
+      "pos": "нареч."
+    },
+    "nun": {
+      "ru": "теперь; ну",
+      "pos": "нареч."
+    },
+    "ob": {
+      "ru": "ли (в косвенном вопросе)",
+      "pos": "союз"
+    },
+    "Obergrenze": {
+      "ru": "верхний предел, верхняя граница",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Obergrenzen"
+    },
+    "ohne": {
+      "ru": "без",
+      "pos": "предл."
+    },
+    "Professor": {
+      "ru": "профессор",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Professoren"
+    },
+    "prüfen": {
+      "ru": "проверять",
+      "pos": "гл.",
+      "forms": "prüfte · hat geprüft"
+    },
+    "Rest": {
+      "ru": "остаток",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Reste"
+    },
+    "Rotation": {
+      "ru": "вращение",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Rotationen"
+    },
+    "rund": {
+      "ru": "около, примерно; круглый",
+      "pos": "нареч./прил.",
+      "note": "rund 550.000 — около 550 000"
+    },
+    "schrumpfen": {
+      "ru": "сокращаться, уменьшаться",
+      "pos": "гл.",
+      "forms": "schrumpfte · ist geschrumpft"
+    },
+    "schwer": {
+      "ru": "тяжёлый, трудный",
+      "pos": "прил.",
+      "note": "schwerfallen — даваться с трудом; schwer ums Herz — тяжело на сердце"
+    },
+    "Schwerkraft": {
+      "ru": "сила тяжести, притяжение",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "sein": {
+      "ru": "быть; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "war · ist gewesen"
+    },
+    "sie": {
+      "ru": "она; они; Вы",
+      "pos": "мест."
+    },
+    "so": {
+      "ru": "так; такой; то (в главном предложении)",
+      "pos": "нареч."
+    },
+    "sogenannt": {
+      "ru": "так называемый",
+      "pos": "прил."
+    },
+    "solch": {
+      "ru": "такой",
+      "pos": "мест.",
+      "note": "ein solcher Vorbeiflug — такой пролёт"
+    },
+    "sollen": {
+      "ru": "быть должным, следует",
+      "pos": "гл.",
+      "forms": "sollte · hat gesollt"
+    },
+    "Sommerstudent": {
+      "ru": "студент на летней практике",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Sommerstudenten"
+    },
+    "Sonnenmasse": {
+      "ru": "масса Солнца (единица в астрономии)",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Sonnenmassen"
+    },
+    "später": {
+      "ru": "позже, потом",
+      "pos": "нареч."
+    },
+    "standhalten": {
+      "ru": "выдерживать, устоять",
+      "pos": "гл.",
+      "forms": "hielt stand · hat standgehalten",
+      "note": "etwas (D) standhalten — выдержать что-то"
+    },
+    "stark": {
+      "ru": "сильный, крепкий",
+      "pos": "прил."
+    },
+    "Stern": {
+      "ru": "звезда",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Sterne"
+    },
+    "Sternexplosion": {
+      "ru": "взрыв звезды",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Sternexplosionen"
+    },
+    "Studie": {
+      "ru": "исследование",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Studien"
+    },
+    "Supernova": {
+      "ru": "сверхновая (звезда)",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Supernovae"
+    },
+    "The Astrophysical Journal Letters": {
+      "ru": "научный журнал по астрофизике",
+      "pos": "имя собств."
+    },
+    "Typ": {
+      "ru": "тип",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Typen"
+    },
+    "und": {
+      "ru": "и, а",
+      "pos": "союз"
+    },
+    "ungefähr": {
+      "ru": "примерно",
+      "pos": "нареч."
+    },
+    "vereinfacht": {
+      "ru": "упрощённый",
+      "pos": "прил."
+    },
+    "verlieren": {
+      "forms": "verlor · hat verloren",
+      "pos": "гл.",
+      "ru": "терять"
+    },
+    "verschieben": {
+      "ru": "сдвигать; переносить (на другое время)",
+      "pos": "гл.",
+      "forms": "verschob · hat verschoben"
+    },
+    "von": {
+      "ru": "от, из, о (vom = von dem)",
+      "pos": "предл."
+    },
+    "vor": {
+      "ru": "перед, до; от (страха)",
+      "pos": "предл."
+    },
+    "weiß": {
+      "ru": "белый",
+      "pos": "прил."
+    },
+    "Weißer Zwerg": {
+      "ru": "белый карлик (звезда)",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Weißen Zwerge",
+      "note": "ein Weißer Zwerg, die Weißen Zwerge — прилагательное склоняется"
+    },
+    "Weltall": {
+      "ru": "космос, вселенная",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "wenn": {
+      "ru": "если; когда",
+      "pos": "союз"
+    },
+    "werden": {
+      "ru": "становиться",
+      "pos": "гл.",
+      "forms": "wurde · ist geworden",
+      "note": "Вспомогательный глагол будущего времени и пассива"
+    },
+    "wie": {
+      "ru": "как; какой",
+      "pos": "союз"
+    },
+    "wieder": {
+      "ru": "снова",
+      "pos": "нареч."
+    },
+    "zeigen": {
+      "ru": "показывать; sich zeigen — появиться",
+      "pos": "гл.",
+      "forms": "zeigte · hat gezeigt"
+    },
+    "zu": {
+      "ru": "к, в; слишком",
+      "pos": "предл.",
+      "note": "zur = zu der, zum = zu dem"
+    },
+    "äußere": {
+      "ru": "внешний",
+      "pos": "прил.",
+      "note": "die äußere Hülle — внешняя оболочка"
+    }
+  }
+}
