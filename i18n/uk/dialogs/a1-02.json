@@ -1,0 +1,86 @@
+{
+ "id": "a1-02",
+ "level": "a1",
+ "n": 2,
+ "emoji": "👋",
+ "title": "Der neue Nachbar",
+ "titleTr": "Новий сусід",
+ "situation": "Тарас нещодавно переїхав до будинку в Кельні й знайомиться із сусідом. Зверніть увагу: zweiter Stock — це третій поверх за українською нумерацією, перший поверх називається Erdgeschoss.",
+ "speakers": {
+  "A": {
+   "name": "Herr Wagner",
+   "g": "m"
+  },
+  "B": {
+   "name": "Taras",
+   "g": "m"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Guten Tag! Sind Sie neu hier im Haus?",
+   "tr": "Добрий день! Ви новенький у нашому будинку?"
+  },
+  {
+   "s": "B",
+   "de": "Ja, ich wohne seit Montag hier. Ich heiße Taras Kovalenko.",
+   "tr": "Так, я живу тут від понеділка. Мене звати Тарас Коваленко."
+  },
+  {
+   "s": "A",
+   "de": "Freut mich! Ich bin Klaus Wagner. Ich wohne im zweiten Stock.",
+   "tr": "Дуже приємно! Я Клаус Ваґнер. Я живу на третьому поверсі."
+  },
+  {
+   "s": "B",
+   "de": "Freut mich auch. Ich wohne im dritten Stock, links.",
+   "tr": "Мені теж дуже приємно. Я живу на четвертому поверсі, ліворуч."
+  },
+  {
+   "s": "A",
+   "de": "Woher kommen Sie, Herr Kovalenko?",
+   "tr": "Звідки ви, пане Коваленко?"
+  },
+  {
+   "s": "B",
+   "de": "Ich komme aus der Ukraine, aus Lwiw. Und Sie?",
+   "tr": "Я з України, зі Львова. А ви?"
+  },
+  {
+   "s": "A",
+   "de": "Ich komme aus Hamburg, aber ich wohne schon zwanzig Jahre hier in Köln.",
+   "tr": "Я з Гамбурга, але живу тут, у Кельні, вже двадцять років."
+  },
+  {
+   "s": "B",
+   "de": "Mein Deutsch ist noch nicht so gut. Ich lerne jeden Tag.",
+   "tr": "Моя німецька поки не дуже добра. Я вчу її щодня."
+  },
+  {
+   "s": "A",
+   "de": "Sie sprechen schon sehr gut! Wenn Sie Hilfe brauchen, klingeln Sie einfach bei mir.",
+   "tr": "Ви вже дуже добре говорите! Якщо знадобиться допомога, просто подзвоніть мені у двері."
+  },
+  {
+   "s": "B",
+   "de": "Vielen Dank, das ist sehr nett. Auf Wiedersehen!",
+   "tr": "Щиро дякую, це дуже люб'язно. До побачення!"
+  },
+  {
+   "s": "A",
+   "de": "Auf Wiedersehen und willkommen im Haus!",
+   "tr": "До побачення і ласкаво просимо до нашого будинку!"
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/a1-02.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "Philip N. Cohen",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+  "source": "https://www.flickr.com/photos/55386431@N05/53896375096",
+  "site": "Flickr"
+ }
+}

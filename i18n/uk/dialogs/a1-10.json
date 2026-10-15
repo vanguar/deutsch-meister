@@ -1,0 +1,91 @@
+{
+ "id": "a1-10",
+ "level": "a1",
+ "n": 10,
+ "emoji": "📚",
+ "title": "Der erste Tag im Deutschkurs",
+ "titleTr": "Перший день на курсах німецької",
+ "situation": "Ірина прийшла на курс німецької. Викладач знайомиться з нею й розповідає про заняття.",
+ "speakers": {
+  "A": {
+   "name": "Herr Schulz",
+   "g": "m"
+  },
+  "B": {
+   "name": "Iryna",
+   "g": "f"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Guten Morgen! Herzlich willkommen im Deutschkurs. Wie heißen Sie?",
+   "tr": "Доброго ранку! Ласкаво просимо на курс німецької. Як вас звати?"
+  },
+  {
+   "s": "B",
+   "de": "Guten Morgen! Ich heiße Iryna Bondar.",
+   "tr": "Доброго ранку! Мене звати Ірина Бондар."
+  },
+  {
+   "s": "A",
+   "de": "Woher kommen Sie, Frau Bondar?",
+   "tr": "Звідки ви, пані Бондар?"
+  },
+  {
+   "s": "B",
+   "de": "Ich komme aus der Ukraine, aus Charkiw.",
+   "tr": "Я з України, з Харкова."
+  },
+  {
+   "s": "A",
+   "de": "Und was sind Sie von Beruf?",
+   "tr": "А хто ви за фахом?"
+  },
+  {
+   "s": "B",
+   "de": "Ich bin Krankenschwester. Ich möchte hier auch in einem Krankenhaus arbeiten.",
+   "tr": "Я медсестра. Я хочу і тут працювати в лікарні."
+  },
+  {
+   "s": "A",
+   "de": "Toll! Welche Sprachen sprechen Sie?",
+   "tr": "Чудово! Якими мовами ви розмовляєте?"
+  },
+  {
+   "s": "B",
+   "de": "Ich spreche Ukrainisch und ein bisschen Englisch.",
+   "tr": "Я розмовляю українською і трохи англійською."
+  },
+  {
+   "s": "A",
+   "de": "Sehr gut. Haben Sie schon ein Buch für den Kurs?",
+   "tr": "Дуже добре. У вас уже є підручник для курсу?"
+  },
+  {
+   "s": "B",
+   "de": "Nein, noch nicht. Wo kann ich das Buch kaufen?",
+   "tr": "Ні, ще немає. Де можна купити підручник?"
+  },
+  {
+   "s": "A",
+   "de": "Hier im Sekretariat. Der Unterricht ist von Montag bis Freitag, von neun bis zwölf Uhr.",
+   "tr": "Тут, у секретаріаті. Заняття з понеділка до п'ятниці, з дев'ятої до дванадцятої."
+  },
+  {
+   "s": "B",
+   "de": "Alles klar. Vielen Dank!",
+   "tr": "Усе зрозуміло. Щиро дякую!"
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/a1-10.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "Jirka Matousek",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "source": "https://www.flickr.com/photos/28415633@N00/8481220337",
+  "site": "Flickr"
+ }
+}

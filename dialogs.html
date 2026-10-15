@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#7c6af7">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="German Morning">
+  <link rel="apple-touch-icon" sizes="180x180" href="/deutsch-meister/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/deutsch-meister/icons/favicon-32.png">
+  <title>Диалоги на немецком | German Morning</title>
+  <meta name="description" content="Диалоги на немецком для уровней A1–B2: жизненные ситуации в Германии с озвучкой, подсветкой реплик и переводом.">
+  <link rel="canonical" href="https://vanguar.github.io/deutsch-meister/dialogs.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="German Morning">
+  <meta property="og:title" content="Диалоги на немецком с озвучкой — German Morning">
+  <meta property="og:description" content="Диалоги на немецком для уровней A1–B2: жизненные ситуации в Германии с озвучкой, подсветкой реплик и переводом.">
+  <meta property="og:url" content="https://vanguar.github.io/deutsch-meister/dialogs.html">
+  <meta property="og:image" content="https://vanguar.github.io/german-morning/assets/img/og-image.png">
+  <!-- язык интерфейса: первым, до данных и стилей -->
+  <script src="js/i18n.js?v=114"></script>
+  <link rel="stylesheet" href="css/base.css?v=114">
+  <!-- шапка, плитки и кнопки — общие с новостями -->
+  <link rel="stylesheet" href="css/news.css?v=114">
+  <link rel="stylesheet" href="css/dialogs.css?v=114">
+</head>
+<body>
+
+<div class="bg-mesh"></div>
+
+<div class="news-page dlg-page" id="dlgApp">
+  <header class="news-head">
+    <a class="news-back" href="index.html">← Главная</a>
+    <div class="news-titles">
+      <h1 class="news-h1">Диалоги</h1>
+      <div class="news-sub">Живые разговоры на немецком A1–B2</div>
+    </div>
+    <button class="news-btn" data-lang-toggle onclick="I18N.toggle()" title="Язык · Мова" aria-label="Язык · Мова">RU</button>
+    <button class="news-btn" id="themeToggle" onclick="toggleTheme()" title="Сменить тему" aria-label="Сменить тему">🌙</button>
+  </header>
+
+  <!-- ── УРОВНИ (dialogs.html) ── -->
+  <section class="dlg-hub" id="dlgHub">
+    <p class="news-intro">Разговоры из жизни в Германии: магазин, врач, транспорт, квартира, работа.
+      Слушайте диалог целиком, следите за подсвеченной репликой и открывайте перевод, когда нужно. Выберите уровень.</p>
+    <div class="news-grid dlg-levels" id="dlgLevels" aria-label="Уровни" aria-live="polite" aria-busy="true"></div>
+  </section>
+
+  <!-- ── СПИСОК ДИАЛОГОВ УРОВНЯ (dialogs.html#l=a1) ── -->
+  <section class="dlg-level" id="dlgLevel" hidden>
+    <div class="news-feed-head">
+      <button class="news-chip news-crumb" type="button" id="dlgToHub">← Все уровни</button>
+      <div class="news-rubric-titles">
+        <span class="news-rubric-ico dlg-lv-badge" id="dlgLevelBadge" aria-hidden="true"></span>
+        <h2 class="news-feed-title" id="dlgLevelTitle">Диалоги</h2>
+        <span class="news-rubric-sub" id="dlgLevelSub"></span>
+      </div>
+    </div>
+    <ol class="dlg-list" id="dlgList" aria-live="polite"></ol>
+  </section>
+
+  <!-- ── ДИАЛОГ (dialogs.html#d=a1-01) ── -->
+  <section class="dlg-view" id="dlgView" hidden>
+    <div class="dlg-view-top">
+      <button class="news-chip news-crumb" type="button" id="dlgToLevel">← К списку</button>
+      <span class="dlg-counter" id="dlgCounter"></span>
+    </div>
+
+    <figure class="dlg-figure" id="dlgFigure"></figure>
+
+    <div class="dlg-heading">
+      <span class="dlg-level-chip" id="dlgLevelChip"></span>
+      <h2 class="dlg-title" id="dlgTitle" lang="de" dir="ltr"></h2>
+      <div class="dlg-title-tr" id="dlgTitleTr"></div>
+      <p class="dlg-situation" id="dlgSituation"></p>
+    </div>
+
+    <div class="dlg-controls">
+      <button class="dlg-play" type="button" id="dlgPlay" aria-pressed="false">
+        <span class="dlg-play-ico" aria-hidden="true">▶</span> <span class="dlg-play-label">Слушать диалог</span>
+      </button>
+      <button class="news-chip dlg-tr-toggle" type="button" id="dlgTrToggle" aria-pressed="false">🌐 <span>Перевод</span></button>
+      <button class="news-chip dlg-tone" type="button" id="dlgTone" aria-pressed="true" hidden>🎭 <span>Разный тон</span></button>
+    </div>
+    <p class="dlg-voice-note" id="dlgVoiceNote"></p>
+
+    <ol class="dlg-lines" id="dlgLines"></ol>
+
+    <nav class="dlg-pager" aria-label="Другие диалоги">
+      <button class="news-chip" type="button" id="dlgPrev">‹ <span>Предыдущий</span></button>
+      <button class="news-chip" type="button" id="dlgNext"><span>Следующий</span> ›</button>
+    </nav>
+  </section>
+
+  <p class="news-note" id="dlgNote">Диалоги составлены для курса German Morning. Фото — Flickr и Wikimedia Commons
+    по свободным лицензиям, автор и лицензия указаны под каждым снимком.</p>
+</div>
+
+<script src="js/sw-register.js?v=114"></script>
+<script src="js/tts.js?v=114"></script>
+<script src="js/reader-speak.js?v=114"></script>
+<script src="js/dialogs.js?v=114"></script>
+<script src="js/telegram.js?v=114"></script>
+<script>
+  function initTheme() {
+    let saved = 'dark';
+    try { saved = localStorage.getItem('dm_theme') || 'dark'; } catch (e) {}
+    document.documentElement.setAttribute('data-theme', saved);
+    const btn = document.getElementById('themeToggle');
+    if (btn) btn.textContent = saved === 'dark' ? '☀️' : '🌙';
+  }
+  function toggleTheme() {
+    const next = (document.documentElement.getAttribute('data-theme') || 'dark') === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    try { localStorage.setItem('dm_theme', next); } catch (e) {}
+    const btn = document.getElementById('themeToggle');
+    if (btn) btn.textContent = next === 'dark' ? '☀️' : '🌙';
+  }
+  initTheme();
+</script>
+
+</body>
+</html>

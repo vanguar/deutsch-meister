@@ -1,0 +1,86 @@
+{
+ "id": "a1-06",
+ "level": "a1",
+ "n": 6,
+ "emoji": "🗺️",
+ "title": "Nach dem Weg fragen",
+ "titleTr": "Как пройти к вокзалу?",
+ "situation": "Сара впервые в городе и спрашивает прохожего, как дойти до вокзала.",
+ "speakers": {
+  "A": {
+   "name": "Sara",
+   "g": "f"
+  },
+  "B": {
+   "name": "Passant",
+   "g": "m"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Entschuldigung, wo ist der Bahnhof?",
+   "tr": "Извините, где вокзал?"
+  },
+  {
+   "s": "B",
+   "de": "Der Bahnhof? Gehen Sie hier geradeaus bis zur Ampel.",
+   "tr": "Вокзал? Идите здесь прямо до светофора."
+  },
+  {
+   "s": "A",
+   "de": "Bis zur Ampel. Und dann?",
+   "tr": "До светофора. А потом?"
+  },
+  {
+   "s": "B",
+   "de": "Dann gehen Sie nach links. Der Bahnhof ist auf der rechten Seite.",
+   "tr": "Потом поверните налево. Вокзал будет по правой стороне."
+  },
+  {
+   "s": "A",
+   "de": "Ist das weit?",
+   "tr": "Это далеко?"
+  },
+  {
+   "s": "B",
+   "de": "Nein, nicht so weit. Zu Fuß sind das ungefähr zehn Minuten.",
+   "tr": "Нет, не очень. Пешком примерно десять минут."
+  },
+  {
+   "s": "A",
+   "de": "Gibt es hier auch einen Bus?",
+   "tr": "А автобус здесь тоже есть?"
+  },
+  {
+   "s": "B",
+   "de": "Ja, die Linie fünf fährt zum Bahnhof. Die Haltestelle ist dort drüben.",
+   "tr": "Да, до вокзала идёт пятый маршрут. Остановка вон там."
+  },
+  {
+   "s": "A",
+   "de": "Danke! Ich gehe lieber zu Fuß. Das Wetter ist so schön.",
+   "tr": "Спасибо! Лучше я пройдусь пешком. Погода такая хорошая."
+  },
+  {
+   "s": "B",
+   "de": "Gute Idee! Viel Spaß in der Stadt!",
+   "tr": "Хорошая идея! Приятно провести время в городе!"
+  },
+  {
+   "s": "A",
+   "de": "Danke schön! Tschüss!",
+   "tr": "Большое спасибо! Пока!"
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/a1-06.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "H Sanchez",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "source": "https://www.flickr.com/photos/65975278@N00/2645625546",
+  "site": "Flickr"
+ }
+}

@@ -1,0 +1,91 @@
+{
+ "id": "a1-04",
+ "level": "a1",
+ "n": 4,
+ "emoji": "🚆",
+ "title": "Am Fahrkartenautomaten",
+ "titleTr": "عند آلة بيع التذاكر",
+ "situation": "لا تفهم آنا آلة التذاكر في محطة القطار، فتطلب المساعدة من أحد المارّة.",
+ "speakers": {
+  "A": {
+   "name": "Anna",
+   "g": "f"
+  },
+  "B": {
+   "name": "Herr Becker",
+   "g": "m"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Entschuldigung, können Sie mir bitte helfen?",
+   "tr": "عفوًا، هل يمكنك مساعدتي من فضلك؟"
+  },
+  {
+   "s": "B",
+   "de": "Ja, gern. Wohin möchten Sie fahren?",
+   "tr": "نعم، بكل سرور. إلى أين تريدين السفر؟"
+  },
+  {
+   "s": "A",
+   "de": "Nach Mainz. Ich verstehe den Automaten nicht.",
+   "tr": "إلى ماينتس. لا أفهم هذه الآلة."
+  },
+  {
+   "s": "B",
+   "de": "Kein Problem. Hier tippen Sie Mainz ein. Möchten Sie eine einfache Fahrt?",
+   "tr": "لا مشكلة. اكتبي هنا كلمة Mainz. هل تريدين تذكرة ذهاب فقط؟"
+  },
+  {
+   "s": "A",
+   "de": "Nein, hin und zurück, bitte.",
+   "tr": "لا، ذهابًا وإيابًا من فضلك."
+  },
+  {
+   "s": "B",
+   "de": "Fahren Sie heute zurück? Dann nehmen Sie das Tagesticket. Es kostet achtzehn Euro.",
+   "tr": "هل ستعودين اليوم؟ إذن خذي التذكرة اليومية. سعرها ثمانية عشر يورو."
+  },
+  {
+   "s": "A",
+   "de": "Gut. Kann ich hier mit Karte zahlen?",
+   "tr": "حسنًا. هل يمكنني الدفع هنا بالبطاقة؟"
+  },
+  {
+   "s": "B",
+   "de": "Ja, die Karte kommt hier rein. So, hier ist Ihre Fahrkarte.",
+   "tr": "نعم، أدخلي البطاقة هنا. تفضّلي، هذه تذكرتك."
+  },
+  {
+   "s": "A",
+   "de": "Danke! Und von welchem Gleis fährt der Zug?",
+   "tr": "شكرًا! ومن أي رصيف يغادر القطار؟"
+  },
+  {
+   "s": "B",
+   "de": "Von Gleis vier. Der Zug kommt in zehn Minuten.",
+   "tr": "من الرصيف رقم أربعة. سيصل القطار بعد عشر دقائق."
+  },
+  {
+   "s": "A",
+   "de": "Vielen Dank, Sie sind sehr nett!",
+   "tr": "شكرًا جزيلًا، أنت لطيف جدًا!"
+  },
+  {
+   "s": "B",
+   "de": "Gern geschehen. Gute Fahrt!",
+   "tr": "عفوًا. رحلة سعيدة!"
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/a1-04.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "Jon Worth from Germany",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "source": "https://commons.wikimedia.org/w/index.php?curid=155729223",
+  "site": "Wikimedia Commons"
+ }
+}

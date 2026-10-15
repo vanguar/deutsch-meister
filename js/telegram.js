@@ -46,6 +46,10 @@ loadTelegramSdk().then(TG => {
     }
   }
 
+  // SDK грузится асинхронно: разделы со своей навигацией (dialogs.html)
+  // ставят BackButton по этому событию — уже после hide() выше
+  try { document.dispatchEvent(new CustomEvent('dm:tg-ready')); } catch (e) {}
+
   // Аппаратная кнопка "назад" на Android приходит как событие backButtonClicked —
   // Telegram уже вызывает наш onClick выше. На всякий случай гарантируем закрытие
   // приложения с главной по системной кнопке через closingBehavior по умолчанию.

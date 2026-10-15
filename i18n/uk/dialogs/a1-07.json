@@ -1,0 +1,91 @@
+{
+ "id": "a1-07",
+ "level": "a1",
+ "n": 7,
+ "emoji": "🩺",
+ "title": "In der Arztpraxis",
+ "titleTr": "У реєстратурі в лікаря",
+ "situation": "У маленького сина Петра температура. Петро приходить без запису й говорить із працівницею реєстратури.",
+ "speakers": {
+  "A": {
+   "name": "Arzthelferin",
+   "g": "f"
+  },
+  "B": {
+   "name": "Petro",
+   "g": "m"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Guten Morgen! Was kann ich für Sie tun?",
+   "tr": "Доброго ранку! Чим можу допомогти?"
+  },
+  {
+   "s": "B",
+   "de": "Guten Morgen! Mein Sohn ist krank. Er hat Fieber und Husten.",
+   "tr": "Доброго ранку! Мій син захворів. У нього температура й кашель."
+  },
+  {
+   "s": "A",
+   "de": "Oh, der Arme. Haben Sie einen Termin?",
+   "tr": "Ой, бідолаха. Ви записані?"
+  },
+  {
+   "s": "B",
+   "de": "Nein, leider nicht. Geht es heute trotzdem?",
+   "tr": "Ні, на жаль. Чи можна все одно сьогодні?"
+  },
+  {
+   "s": "A",
+   "de": "Ja, aber Sie müssen ein bisschen warten. Haben Sie die Versichertenkarte von Ihrem Sohn?",
+   "tr": "Так, але вам доведеться трохи почекати. У вас є страхова картка сина?"
+  },
+  {
+   "s": "B",
+   "de": "Ja, hier ist die Karte.",
+   "tr": "Так, ось картка."
+  },
+  {
+   "s": "A",
+   "de": "Danke. Wie alt ist Ihr Sohn?",
+   "tr": "Дякую. Скільки років вашому синові?"
+  },
+  {
+   "s": "B",
+   "de": "Er ist acht Monate alt.",
+   "tr": "Йому вісім місяців."
+  },
+  {
+   "s": "A",
+   "de": "Gut. Bitte nehmen Sie im Wartezimmer Platz. Die Ärztin ruft Sie dann auf.",
+   "tr": "Добре. Будь ласка, сідайте в залі очікування. Лікарка вас потім покличе."
+  },
+  {
+   "s": "B",
+   "de": "Wie lange dauert es ungefähr?",
+   "tr": "Приблизно скільки чекати?"
+  },
+  {
+   "s": "A",
+   "de": "Ungefähr zwanzig Minuten.",
+   "tr": "Приблизно двадцять хвилин."
+  },
+  {
+   "s": "B",
+   "de": "Okay, vielen Dank.",
+   "tr": "Гаразд, щиро дякую."
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/a1-07.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "Greater Louisville Medical Society",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "source": "https://www.flickr.com/photos/31662861@N02/6153080866",
+  "site": "Flickr"
+ }
+}

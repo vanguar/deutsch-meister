@@ -1,0 +1,91 @@
+{
+ "id": "a1-04",
+ "level": "a1",
+ "n": 4,
+ "emoji": "🚆",
+ "title": "Am Fahrkartenautomaten",
+ "titleTr": "Біля квиткового автомата",
+ "situation": "Анна не розуміє квитковий автомат на вокзалі й просить допомоги в перехожого.",
+ "speakers": {
+  "A": {
+   "name": "Anna",
+   "g": "f"
+  },
+  "B": {
+   "name": "Herr Becker",
+   "g": "m"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Entschuldigung, können Sie mir bitte helfen?",
+   "tr": "Перепрошую, чи не могли б ви мені допомогти?"
+  },
+  {
+   "s": "B",
+   "de": "Ja, gern. Wohin möchten Sie fahren?",
+   "tr": "Так, звісно. Куди ви хочете поїхати?"
+  },
+  {
+   "s": "A",
+   "de": "Nach Mainz. Ich verstehe den Automaten nicht.",
+   "tr": "До Майнца. Я не розумію цей автомат."
+  },
+  {
+   "s": "B",
+   "de": "Kein Problem. Hier tippen Sie Mainz ein. Möchten Sie eine einfache Fahrt?",
+   "tr": "Не проблема. Ось тут наберіть Mainz. Вам квиток в один бік?"
+  },
+  {
+   "s": "A",
+   "de": "Nein, hin und zurück, bitte.",
+   "tr": "Ні, туди й назад, будь ласка."
+  },
+  {
+   "s": "B",
+   "de": "Fahren Sie heute zurück? Dann nehmen Sie das Tagesticket. Es kostet achtzehn Euro.",
+   "tr": "Ви повертаєтеся сьогодні? Тоді беріть квиток на день. Він коштує вісімнадцять євро."
+  },
+  {
+   "s": "A",
+   "de": "Gut. Kann ich hier mit Karte zahlen?",
+   "tr": "Добре. Тут можна заплатити карткою?"
+  },
+  {
+   "s": "B",
+   "de": "Ja, die Karte kommt hier rein. So, hier ist Ihre Fahrkarte.",
+   "tr": "Так, картку вставляйте ось сюди. Ось ваш квиток."
+  },
+  {
+   "s": "A",
+   "de": "Danke! Und von welchem Gleis fährt der Zug?",
+   "tr": "Дякую! А з якої колії відходить потяг?"
+  },
+  {
+   "s": "B",
+   "de": "Von Gleis vier. Der Zug kommt in zehn Minuten.",
+   "tr": "З четвертої колії. Потяг прийде за десять хвилин."
+  },
+  {
+   "s": "A",
+   "de": "Vielen Dank, Sie sind sehr nett!",
+   "tr": "Щиро дякую, ви дуже люб'язні!"
+  },
+  {
+   "s": "B",
+   "de": "Gern geschehen. Gute Fahrt!",
+   "tr": "Нема за що. Щасливої дороги!"
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/a1-04.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "Jon Worth from Germany",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "source": "https://commons.wikimedia.org/w/index.php?curid=155729223",
+  "site": "Wikimedia Commons"
+ }
+}

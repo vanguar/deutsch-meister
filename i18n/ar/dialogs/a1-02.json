@@ -1,0 +1,86 @@
+{
+ "id": "a1-02",
+ "level": "a1",
+ "n": 2,
+ "emoji": "👋",
+ "title": "Der neue Nachbar",
+ "titleTr": "الجار الجديد",
+ "situation": "انتقل تاراس قبل أيام إلى عمارة في كولونيا ويتعرّف على جاره. لاحظ: الطابق على مستوى الشارع اسمه Erdgeschoss، و zweiter Stock هو الطابق الثاني فوقه.",
+ "speakers": {
+  "A": {
+   "name": "Herr Wagner",
+   "g": "m"
+  },
+  "B": {
+   "name": "Taras",
+   "g": "m"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Guten Tag! Sind Sie neu hier im Haus?",
+   "tr": "مرحبًا! هل أنت جديد في هذه العمارة؟"
+  },
+  {
+   "s": "B",
+   "de": "Ja, ich wohne seit Montag hier. Ich heiße Taras Kovalenko.",
+   "tr": "نعم، أسكن هنا منذ يوم الاثنين. اسمي تاراس كوفالينكو."
+  },
+  {
+   "s": "A",
+   "de": "Freut mich! Ich bin Klaus Wagner. Ich wohne im zweiten Stock.",
+   "tr": "تشرفت بمعرفتك! أنا كلاوس فاغنر. أسكن في الطابق الثاني."
+  },
+  {
+   "s": "B",
+   "de": "Freut mich auch. Ich wohne im dritten Stock, links.",
+   "tr": "وأنا أيضًا تشرفت. أسكن في الطابق الثالث، على اليسار."
+  },
+  {
+   "s": "A",
+   "de": "Woher kommen Sie, Herr Kovalenko?",
+   "tr": "من أين أنت يا سيد كوفالينكو؟"
+  },
+  {
+   "s": "B",
+   "de": "Ich komme aus der Ukraine, aus Lwiw. Und Sie?",
+   "tr": "أنا من أوكرانيا، من مدينة لفيف. وأنت؟"
+  },
+  {
+   "s": "A",
+   "de": "Ich komme aus Hamburg, aber ich wohne schon zwanzig Jahre hier in Köln.",
+   "tr": "أنا من هامبورغ، لكني أعيش هنا في كولونيا منذ عشرين عامًا."
+  },
+  {
+   "s": "B",
+   "de": "Mein Deutsch ist noch nicht so gut. Ich lerne jeden Tag.",
+   "tr": "لغتي الألمانية ليست جيدة بعد. أتعلمها كل يوم."
+  },
+  {
+   "s": "A",
+   "de": "Sie sprechen schon sehr gut! Wenn Sie Hilfe brauchen, klingeln Sie einfach bei mir.",
+   "tr": "أنت تتكلم جيدًا جدًا! إذا احتجت إلى مساعدة، فقط اضغط على جرس بابي."
+  },
+  {
+   "s": "B",
+   "de": "Vielen Dank, das ist sehr nett. Auf Wiedersehen!",
+   "tr": "شكرًا جزيلًا، هذا لطف كبير منك. مع السلامة!"
+  },
+  {
+   "s": "A",
+   "de": "Auf Wiedersehen und willkommen im Haus!",
+   "tr": "مع السلامة، وأهلًا بك في العمارة!"
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/a1-02.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "Philip N. Cohen",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+  "source": "https://www.flickr.com/photos/55386431@N05/53896375096",
+  "site": "Flickr"
+ }
+}

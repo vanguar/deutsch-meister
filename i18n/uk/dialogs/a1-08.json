@@ -1,0 +1,91 @@
+{
+ "id": "a1-08",
+ "level": "a1",
+ "n": 8,
+ "emoji": "🍎",
+ "title": "Auf dem Wochenmarkt",
+ "titleTr": "На ринку",
+ "situation": "Суботній ринок: Гельга купує яблука, помідори й перець у продавця овочів.",
+ "speakers": {
+  "A": {
+   "name": "Marktverkäufer",
+   "g": "m"
+  },
+  "B": {
+   "name": "Helga",
+   "g": "f"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Guten Tag! Was darf's sein?",
+   "tr": "Добрий день! Що бажаєте?"
+  },
+  {
+   "s": "B",
+   "de": "Guten Tag! Ein Kilo Äpfel, bitte.",
+   "tr": "Добрий день! Кілограм яблук, будь ласка."
+  },
+  {
+   "s": "A",
+   "de": "Rote oder grüne?",
+   "tr": "Червоних чи зелених?"
+  },
+  {
+   "s": "B",
+   "de": "Grüne, bitte. Was kosten die Tomaten?",
+   "tr": "Зелених, будь ласка. Скільки коштують помідори?"
+  },
+  {
+   "s": "A",
+   "de": "Ein Kilo kostet drei Euro fünfzig. Sie sind ganz frisch.",
+   "tr": "Кілограм коштує три євро п'ятдесят. Вони зовсім свіжі."
+  },
+  {
+   "s": "B",
+   "de": "Dann nehme ich ein halbes Kilo Tomaten.",
+   "tr": "Тоді я візьму пів кілограма помідорів."
+  },
+  {
+   "s": "A",
+   "de": "Gern. Sonst noch etwas? Die Paprika ist heute im Angebot.",
+   "tr": "Будь ласка. Ще щось? Перець сьогодні за акцією."
+  },
+  {
+   "s": "B",
+   "de": "Ja, zwei Paprika, eine rote und eine gelbe.",
+   "tr": "Так, два перці: один червоний і один жовтий."
+  },
+  {
+   "s": "A",
+   "de": "So, das macht zusammen sechs Euro.",
+   "tr": "Отже, разом шість євро."
+  },
+  {
+   "s": "B",
+   "de": "Hier, bitte. Haben Sie eine Tüte für mich?",
+   "tr": "Ось, будь ласка. У вас не знайдеться для мене пакета?"
+  },
+  {
+   "s": "A",
+   "de": "Ja, hier. Schönes Wochenende!",
+   "tr": "Так, ось. Гарних вихідних!"
+  },
+  {
+   "s": "B",
+   "de": "Danke, Ihnen auch!",
+   "tr": "Дякую, вам також!"
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/a1-08.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "hydro-xy",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+  "source": "https://www.flickr.com/photos/10436005@N03/2852988324",
+  "site": "Flickr"
+ }
+}

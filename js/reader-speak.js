@@ -105,7 +105,7 @@ const ReaderSpeak = (() => {
   // gen растёт на каждом старте и остановке: висящие onEnd от прерванной
   // озвучки сравнивают свой token с gen и молча выходят.
   let gen   = 0;
-  let state = null;   // { kind, token, q, k, rate, onItem, onDone }
+  let state = null;   // { kind, token, q, k, rate, gap, preload, onItem, onDone }
 
   function isPlaying(kind) {
     if (!state) return false;
@@ -142,8 +142,16 @@ const ReaderSpeak = (() => {
       catch (e) { console.warn('[ReaderSpeak] onItem бросил исключение', e); }
     }
 
-    TTS.speak(cur.chunk, {
-      rate: state.rate,
+    // Следующий кусок качаем, пока звучит этот (только аудио-путь, см.
+    // TTS.preload) — без паузы на сеть между репликами
+    const next = state.q[state.k];
+    if (state.preload && next && typeof TTS.preload === 'function') {
+      try { TTS.preload(next.chunk); } catch (e) { /* не критично */ }
+    }
+
+    // opts.tts элемента (голос, высота, сдвиг тона) — поверх общей скорости
+    const ttsOpts = Object.assign({ rate: state.rate }, cur.item.tts || {});
+    TTS.speak(cur.chunk, Object.assign(ttsOpts, {
       onEnd: res => {
         if (!state || state.token !== token || token !== gen) return;   // прервали
         if (res.reason === 'interrupted') return;                       // остановлены
@@ -154,12 +162,21 @@ const ReaderSpeak = (() => {
           finish(false, res.reason);
           return;
         }
+        // Пауза между элементами (реплики диалога), не между кусками одной
+        const nx = state.q[state.k];
+        if (state.gap > 0 && nx && nx.first) {
+          setTimeout(() => { if (state && state.token === token && token === gen) step(); }, state.gap);
+          return;
+        }
         step();
       }
-    });
+    }));
   }
 
-  // items: [{ text, el }] — для предложения один элемент, для страницы много
+  // items: [{ text, el, tts? }] — для предложения один элемент, для страницы
+  // много. tts — опции TTS.speak для этого элемента (voiceName, pitch,
+  // detune): так у реплик диалога разные голоса. opts.gap — пауза (мс)
+  // между элементами, opts.preload — качать следующий кусок заранее.
   function run(items, opts) {
     const o = opts || {};
     stop();                             // новый запрос прерывает прежний
@@ -181,6 +198,8 @@ const ReaderSpeak = (() => {
       q:      q,
       k:      0,
       rate:   typeof o.rate === 'number' ? o.rate : 0.9,
+      gap:    typeof o.gap === 'number' ? o.gap : 0,
+      preload: !!o.preload,
       onItem: o.onItem || null,
       onDone: o.onDone || null
     };

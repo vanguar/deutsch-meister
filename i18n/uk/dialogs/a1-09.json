@@ -1,0 +1,91 @@
+{
+ "id": "a1-09",
+ "level": "a1",
+ "n": 9,
+ "emoji": "👕",
+ "title": "Im Kleidungsgeschäft",
+ "titleTr": "У магазині одягу",
+ "situation": "Йонас шукає сорочку, приміряє її та просить більший розмір.",
+ "speakers": {
+  "A": {
+   "name": "Verkäuferin",
+   "g": "f"
+  },
+  "B": {
+   "name": "Jonas",
+   "g": "m"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Hallo! Kann ich Ihnen helfen?",
+   "tr": "Вітаю! Вам допомогти?"
+  },
+  {
+   "s": "B",
+   "de": "Ja, bitte. Ich suche ein Hemd.",
+   "tr": "Так, будь ласка. Я шукаю сорочку."
+  },
+  {
+   "s": "A",
+   "de": "Welche Größe haben Sie?",
+   "tr": "Який у вас розмір?"
+  },
+  {
+   "s": "B",
+   "de": "Ich habe Größe M.",
+   "tr": "У мене розмір M."
+  },
+  {
+   "s": "A",
+   "de": "Und welche Farbe möchten Sie?",
+   "tr": "А який колір ви хочете?"
+  },
+  {
+   "s": "B",
+   "de": "Blau oder weiß.",
+   "tr": "Синій або білий."
+  },
+  {
+   "s": "A",
+   "de": "Hier ist ein blaues Hemd in M. Möchten Sie es anprobieren?",
+   "tr": "Ось синя сорочка розміру M. Хочете приміряти?"
+  },
+  {
+   "s": "B",
+   "de": "Ja, gern. Wo ist die Umkleidekabine?",
+   "tr": "Так, залюбки. Де примірочна?"
+  },
+  {
+   "s": "A",
+   "de": "Dort hinten rechts.",
+   "tr": "Он там, у глибині праворуч."
+  },
+  {
+   "s": "B",
+   "de": "Hm, das Hemd ist zu klein. Haben Sie es auch in L?",
+   "tr": "Хм, сорочка замала. А розмір L у вас є?"
+  },
+  {
+   "s": "A",
+   "de": "Ja, natürlich. Hier, bitte. Passt es jetzt?",
+   "tr": "Так, звісно. Ось, будь ласка. Тепер підходить?"
+  },
+  {
+   "s": "B",
+   "de": "Ja, es passt perfekt. Ich nehme es!",
+   "tr": "Так, сидить ідеально. Беру!"
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/a1-09.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "Artem Beliaikin",
+  "license": "CC0",
+  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "source": "https://www.flickr.com/photos/157635012@N07/49174902563",
+  "site": "Flickr"
+ }
+}

@@ -38,7 +38,9 @@
   var path = location.pathname;
   var isLesson = ANY_LESSON.test(path);
   var isTrialLesson = isLesson && isReady(lessonId(path));
-  var isHome = !isLesson && !/(books|news)\.html$/.test(path);
+  // Диалоги (dialogs.html) переведены целиком — раздел открыт и без плашек
+  var isDialogs = /dialogs\.html$/.test(path);
+  var isHome = !isLesson && !isDialogs && !/(books|news)\.html$/.test(path);
 
   var me = document.currentScript;
   var base = me ? me.getAttribute('src').replace(/js\/ar-trial\.js.*$/, '') : '';
@@ -118,7 +120,7 @@
 
   var HOME =
     '<div class="ar-trial-title">🧪 النسخة العربية التجريبية</div>' +
-    '<p>المتاح الآن بالعربية: <b>القائمة</b> و<b>دروس الدورة (<bdi dir="ltr">' + READY.length + '</bdi>)</b>. ' +
+    '<p>المتاح الآن بالعربية: <b>القائمة</b> و<b>دروس الدورة (<bdi dir="ltr">' + READY.length + '</bdi>)</b> و<b>الحوارات</b>. ' +
     'الكتب والأخبار قيد الترجمة، وما لم يُترجم بعد معلَّم بـ «🔒 قريبًا».</p>' +
     '<p>جرّب الدروس وأخبرنا برأيك في Telegram: ' + TG_LINK + '</p>' +
     '<div class="ar-trial-actions">' +
@@ -278,6 +280,8 @@
       if (content) content.insertBefore(el(LESSON_TOP), content.firstChild);
       else if (header) insertAfter(el(LESSON_TOP), header);
       if (content) content.appendChild(el(LESSON_BOTTOM));
+    } else if (isDialogs) {
+      return;
     } else if (isHome) {
       var hero = document.querySelector('.hero');
       if (hero) insertAfter(el(HOME), hero);

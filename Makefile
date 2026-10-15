@@ -1,7 +1,7 @@
 # Deutsch Meister — команды деплоя (см. ДЕПЛОЙ-инструкция.md)
 # Windows: запускать из Git Bash. Без make — прямые команды указаны в целях.
 
-.PHONY: bump validate check-tips check-audience deploy-web deploy-api check-api i18n-check i18n-build test-i18n news
+.PHONY: bump validate check-tips check-audience deploy-web deploy-api check-api i18n-check i18n-build test-i18n news dialogs test-dialogs
 
 # Поднять ?v=N во всех HTML + CACHE в service-worker.js (обязательно перед
 # пушем любых правок JS/CSS)
@@ -11,6 +11,7 @@ bump:
 # Проверить целостность уроков (данные <-> оболочки, версии, подсказки)
 validate:
 	python scripts/validate_lessons.py
+	python scripts/validate_dialogs.py
 
 # Регресс подсказок: у каждого слова фраз всех уроков подсказка обязана
 # содержать русский перевод (кириллицу). Падает, если нет.
@@ -27,6 +28,18 @@ check-audience:
 news:
 	python tools/news/build.py
 	python scripts/validate_books.py --news
+
+# Диалоги: собрать data/dialogs и память переводов из tools/dialogs/src/*.json,
+# затем рантайм-копии i18n/uk|ar/dialogs и проверка. Потом — bump.
+dialogs:
+	python tools/dialogs/build.py
+	node tools/i18n.js build
+	node tools/i18n.js build ar
+	python scripts/validate_dialogs.py
+
+# Юнит-тесты озвучки диалогов (TTS + ReaderSpeak, vm с моками)
+test-dialogs:
+	node tools/test_dialogs_tts.js
 
 # Фронтенд: GitHub Pages деплоит сам при пуше в main
 deploy-web:

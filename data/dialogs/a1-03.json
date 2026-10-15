@@ -1,0 +1,91 @@
+{
+ "id": "a1-03",
+ "level": "a1",
+ "n": 3,
+ "emoji": "🛒",
+ "title": "Im Supermarkt",
+ "titleTr": "В супермаркете",
+ "situation": "Лина не может найти в супермаркете молоко, рис и яйца и спрашивает сотрудника.",
+ "speakers": {
+  "A": {
+   "name": "Lina",
+   "g": "f"
+  },
+  "B": {
+   "name": "Mitarbeiter",
+   "g": "m"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Entschuldigung, wo finde ich die Milch?",
+   "tr": "Извините, где мне найти молоко?"
+  },
+  {
+   "s": "B",
+   "de": "Die Milch ist im Kühlregal, ganz hinten links.",
+   "tr": "Молоко в холодильной витрине, в самом конце слева."
+  },
+  {
+   "s": "A",
+   "de": "Danke. Und wo ist der Reis?",
+   "tr": "Спасибо. А где рис?"
+  },
+  {
+   "s": "B",
+   "de": "Der Reis ist in Gang drei, neben den Nudeln.",
+   "tr": "Рис в третьем ряду, рядом с макаронами."
+  },
+  {
+   "s": "A",
+   "de": "Haben Sie auch laktosefreie Milch?",
+   "tr": "А безлактозное молоко у вас есть?"
+  },
+  {
+   "s": "B",
+   "de": "Ja, die steht direkt neben der normalen Milch.",
+   "tr": "Да, оно стоит прямо рядом с обычным молоком."
+  },
+  {
+   "s": "A",
+   "de": "Super. Und wo sind die Eier?",
+   "tr": "Отлично. А где яйца?"
+  },
+  {
+   "s": "B",
+   "de": "Die Eier sind gleich hier, beim Brot.",
+   "tr": "Яйца вот здесь, рядом с хлебом."
+  },
+  {
+   "s": "A",
+   "de": "Prima. Und wo ist die Kasse?",
+   "tr": "Прекрасно. А где касса?"
+  },
+  {
+   "s": "B",
+   "de": "Die Kasse ist vorne am Eingang. Sie können auch an der Selbstbedienungskasse bezahlen.",
+   "tr": "Касса впереди, у входа. Можно также оплатить на кассе самообслуживания."
+  },
+  {
+   "s": "A",
+   "de": "Vielen Dank für Ihre Hilfe!",
+   "tr": "Большое спасибо за помощь!"
+  },
+  {
+   "s": "B",
+   "de": "Gern geschehen!",
+   "tr": "Не за что!"
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/a1-03.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "storebukkebruse",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "source": "https://www.flickr.com/photos/8536261@N07/5556689186",
+  "site": "Flickr"
+ }
+}

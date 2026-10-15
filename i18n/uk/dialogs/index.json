@@ -1,0 +1,157 @@
+{
+ "levels": [
+  "a1"
+ ],
+ "items": [
+  {
+   "id": "a1-01",
+   "level": "a1",
+   "n": 1,
+   "emoji": "🥨",
+   "title": "Beim Bäcker",
+   "titleTr": "У пекарні",
+   "lines": 12,
+   "speakers": "Verkäuferin · Marko",
+   "img": {
+    "thumb": "data/dialogs/img/a1-01-t.jpg",
+    "tw": 320,
+    "th": 180
+   }
+  },
+  {
+   "id": "a1-02",
+   "level": "a1",
+   "n": 2,
+   "emoji": "👋",
+   "title": "Der neue Nachbar",
+   "titleTr": "Новий сусід",
+   "lines": 11,
+   "speakers": "Herr Wagner · Taras",
+   "img": {
+    "thumb": "data/dialogs/img/a1-02-t.jpg",
+    "tw": 320,
+    "th": 180
+   }
+  },
+  {
+   "id": "a1-03",
+   "level": "a1",
+   "n": 3,
+   "emoji": "🛒",
+   "title": "Im Supermarkt",
+   "titleTr": "У супермаркеті",
+   "lines": 12,
+   "speakers": "Lina · Mitarbeiter",
+   "img": {
+    "thumb": "data/dialogs/img/a1-03-t.jpg",
+    "tw": 320,
+    "th": 180
+   }
+  },
+  {
+   "id": "a1-04",
+   "level": "a1",
+   "n": 4,
+   "emoji": "🚆",
+   "title": "Am Fahrkartenautomaten",
+   "titleTr": "Біля квиткового автомата",
+   "lines": 12,
+   "speakers": "Anna · Herr Becker",
+   "img": {
+    "thumb": "data/dialogs/img/a1-04-t.jpg",
+    "tw": 320,
+    "th": 180
+   }
+  },
+  {
+   "id": "a1-05",
+   "level": "a1",
+   "n": 5,
+   "emoji": "☕",
+   "title": "Im Café",
+   "titleTr": "У кафе",
+   "lines": 11,
+   "speakers": "Kellnerin · Daniel",
+   "img": {
+    "thumb": "data/dialogs/img/a1-05-t.jpg",
+    "tw": 320,
+    "th": 180
+   }
+  },
+  {
+   "id": "a1-06",
+   "level": "a1",
+   "n": 6,
+   "emoji": "🗺️",
+   "title": "Nach dem Weg fragen",
+   "titleTr": "Як пройти до вокзалу?",
+   "lines": 11,
+   "speakers": "Sara · Passant",
+   "img": {
+    "thumb": "data/dialogs/img/a1-06-t.jpg",
+    "tw": 320,
+    "th": 180
+   }
+  },
+  {
+   "id": "a1-07",
+   "level": "a1",
+   "n": 7,
+   "emoji": "🩺",
+   "title": "In der Arztpraxis",
+   "titleTr": "У реєстратурі в лікаря",
+   "lines": 12,
+   "speakers": "Arzthelferin · Petro",
+   "img": {
+    "thumb": "data/dialogs/img/a1-07-t.jpg",
+    "tw": 320,
+    "th": 180
+   }
+  },
+  {
+   "id": "a1-08",
+   "level": "a1",
+   "n": 8,
+   "emoji": "🍎",
+   "title": "Auf dem Wochenmarkt",
+   "titleTr": "На ринку",
+   "lines": 12,
+   "speakers": "Marktverkäufer · Helga",
+   "img": {
+    "thumb": "data/dialogs/img/a1-08-t.jpg",
+    "tw": 320,
+    "th": 180
+   }
+  },
+  {
+   "id": "a1-09",
+   "level": "a1",
+   "n": 9,
+   "emoji": "👕",
+   "title": "Im Kleidungsgeschäft",
+   "titleTr": "У магазині одягу",
+   "lines": 12,
+   "speakers": "Verkäuferin · Jonas",
+   "img": {
+    "thumb": "data/dialogs/img/a1-09-t.jpg",
+    "tw": 320,
+    "th": 180
+   }
+  },
+  {
+   "id": "a1-10",
+   "level": "a1",
+   "n": 10,
+   "emoji": "📚",
+   "title": "Der erste Tag im Deutschkurs",
+   "titleTr": "Перший день на курсах німецької",
+   "lines": 12,
+   "speakers": "Herr Schulz · Iryna",
+   "img": {
+    "thumb": "data/dialogs/img/a1-10-t.jpg",
+    "tw": 320,
+    "th": 180
+   }
+  }
+ ]
+}

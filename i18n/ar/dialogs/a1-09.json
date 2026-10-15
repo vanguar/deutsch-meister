@@ -1,0 +1,91 @@
+{
+ "id": "a1-09",
+ "level": "a1",
+ "n": 9,
+ "emoji": "👕",
+ "title": "Im Kleidungsgeschäft",
+ "titleTr": "في متجر الملابس",
+ "situation": "يبحث يوناس عن قميص، فيجرّبه ويطلب مقاسًا أكبر.",
+ "speakers": {
+  "A": {
+   "name": "Verkäuferin",
+   "g": "f"
+  },
+  "B": {
+   "name": "Jonas",
+   "g": "m"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Hallo! Kann ich Ihnen helfen?",
+   "tr": "مرحبًا! هل يمكنني مساعدتك؟"
+  },
+  {
+   "s": "B",
+   "de": "Ja, bitte. Ich suche ein Hemd.",
+   "tr": "نعم، من فضلك. أبحث عن قميص."
+  },
+  {
+   "s": "A",
+   "de": "Welche Größe haben Sie?",
+   "tr": "ما مقاسك؟"
+  },
+  {
+   "s": "B",
+   "de": "Ich habe Größe M.",
+   "tr": "مقاسي M."
+  },
+  {
+   "s": "A",
+   "de": "Und welche Farbe möchten Sie?",
+   "tr": "وأي لون تريد؟"
+  },
+  {
+   "s": "B",
+   "de": "Blau oder weiß.",
+   "tr": "أزرق أو أبيض."
+  },
+  {
+   "s": "A",
+   "de": "Hier ist ein blaues Hemd in M. Möchten Sie es anprobieren?",
+   "tr": "هذا قميص أزرق مقاس M. هل تريد أن تجرّبه؟"
+  },
+  {
+   "s": "B",
+   "de": "Ja, gern. Wo ist die Umkleidekabine?",
+   "tr": "نعم، بكل سرور. أين غرفة القياس؟"
+  },
+  {
+   "s": "A",
+   "de": "Dort hinten rechts.",
+   "tr": "هناك في الخلف على اليمين."
+  },
+  {
+   "s": "B",
+   "de": "Hm, das Hemd ist zu klein. Haben Sie es auch in L?",
+   "tr": "همم، القميص صغير جدًا. هل عندكم مقاس L؟"
+  },
+  {
+   "s": "A",
+   "de": "Ja, natürlich. Hier, bitte. Passt es jetzt?",
+   "tr": "نعم، بالطبع. تفضّل. هل هو مناسب الآن؟"
+  },
+  {
+   "s": "B",
+   "de": "Ja, es passt perfekt. Ich nehme es!",
+   "tr": "نعم، إنه مناسب تمامًا. سآخذه!"
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/a1-09.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "Artem Beliaikin",
+  "license": "CC0",
+  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "source": "https://www.flickr.com/photos/157635012@N07/49174902563",
+  "site": "Flickr"
+ }
+}

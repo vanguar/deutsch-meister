@@ -1,0 +1,91 @@
+{
+ "id": "a1-03",
+ "level": "a1",
+ "n": 3,
+ "emoji": "🛒",
+ "title": "Im Supermarkt",
+ "titleTr": "في السوبرماركت",
+ "situation": "لا تجد لينا الحليب والأرز والبيض في السوبرماركت، فتسأل أحد الموظفين.",
+ "speakers": {
+  "A": {
+   "name": "Lina",
+   "g": "f"
+  },
+  "B": {
+   "name": "Mitarbeiter",
+   "g": "m"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Entschuldigung, wo finde ich die Milch?",
+   "tr": "عفوًا، أين أجد الحليب؟"
+  },
+  {
+   "s": "B",
+   "de": "Die Milch ist im Kühlregal, ganz hinten links.",
+   "tr": "الحليب في الثلاجة، في آخر المتجر على اليسار."
+  },
+  {
+   "s": "A",
+   "de": "Danke. Und wo ist der Reis?",
+   "tr": "شكرًا. وأين الأرز؟"
+  },
+  {
+   "s": "B",
+   "de": "Der Reis ist in Gang drei, neben den Nudeln.",
+   "tr": "الأرز في الممر الثالث، بجانب المعكرونة."
+  },
+  {
+   "s": "A",
+   "de": "Haben Sie auch laktosefreie Milch?",
+   "tr": "هل عندكم أيضًا حليب خالٍ من اللاكتوز؟"
+  },
+  {
+   "s": "B",
+   "de": "Ja, die steht direkt neben der normalen Milch.",
+   "tr": "نعم، إنه بجانب الحليب العادي مباشرة."
+  },
+  {
+   "s": "A",
+   "de": "Super. Und wo sind die Eier?",
+   "tr": "رائع. وأين البيض؟"
+  },
+  {
+   "s": "B",
+   "de": "Die Eier sind gleich hier, beim Brot.",
+   "tr": "البيض هنا تمامًا، عند الخبز."
+  },
+  {
+   "s": "A",
+   "de": "Prima. Und wo ist die Kasse?",
+   "tr": "ممتاز. وأين الصندوق؟"
+  },
+  {
+   "s": "B",
+   "de": "Die Kasse ist vorne am Eingang. Sie können auch an der Selbstbedienungskasse bezahlen.",
+   "tr": "الصندوق في الأمام عند المدخل. ويمكنك أيضًا الدفع في صندوق الخدمة الذاتية."
+  },
+  {
+   "s": "A",
+   "de": "Vielen Dank für Ihre Hilfe!",
+   "tr": "شكرًا جزيلًا على المساعدة!"
+  },
+  {
+   "s": "B",
+   "de": "Gern geschehen!",
+   "tr": "عفوًا!"
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/a1-03.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "storebukkebruse",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "source": "https://www.flickr.com/photos/8536261@N07/5556689186",
+  "site": "Flickr"
+ }
+}

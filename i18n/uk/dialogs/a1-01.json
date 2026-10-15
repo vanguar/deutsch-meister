@@ -1,0 +1,91 @@
+{
+ "id": "a1-01",
+ "level": "a1",
+ "n": 1,
+ "emoji": "🥨",
+ "title": "Beim Bäcker",
+ "titleTr": "У пекарні",
+ "situation": "Марко купує в пекарні булочки, брецель і шматок пирога та платить карткою.",
+ "speakers": {
+  "A": {
+   "name": "Verkäuferin",
+   "g": "f"
+  },
+  "B": {
+   "name": "Marko",
+   "g": "m"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Guten Morgen! Was darf es sein?",
+   "tr": "Доброго ранку! Що для вас?"
+  },
+  {
+   "s": "B",
+   "de": "Guten Morgen! Ich hätte gern vier Brötchen, bitte.",
+   "tr": "Доброго ранку! Мені, будь ласка, чотири булочки."
+  },
+  {
+   "s": "A",
+   "de": "Gern. Normale Brötchen oder Vollkornbrötchen?",
+   "tr": "Звісно. Звичайні булочки чи цільнозернові?"
+  },
+  {
+   "s": "B",
+   "de": "Zwei normale und zwei Vollkornbrötchen, bitte.",
+   "tr": "Дві звичайні й дві цільнозернові, будь ласка."
+  },
+  {
+   "s": "A",
+   "de": "Sonst noch etwas?",
+   "tr": "Щось іще?"
+  },
+  {
+   "s": "B",
+   "de": "Ja, eine Brezel. Was kostet die Brezel?",
+   "tr": "Так, один брецель. Скільки коштує брецель?"
+  },
+  {
+   "s": "A",
+   "de": "Die Brezel kostet einen Euro zwanzig.",
+   "tr": "Брецель коштує один євро двадцять."
+  },
+  {
+   "s": "B",
+   "de": "Gut. Und ein Stück Apfelkuchen, bitte.",
+   "tr": "Добре. І шматок яблучного пирога, будь ласка."
+  },
+  {
+   "s": "A",
+   "de": "Das macht zusammen sechs Euro dreißig. Brauchen Sie eine Tüte?",
+   "tr": "Разом шість євро тридцять. Вам потрібен пакет?"
+  },
+  {
+   "s": "B",
+   "de": "Nein, danke. Ich habe eine Tasche. Kann ich mit Karte zahlen?",
+   "tr": "Ні, дякую. У мене є сумка. Можна заплатити карткою?"
+  },
+  {
+   "s": "A",
+   "de": "Ja, natürlich. Vielen Dank und einen schönen Tag!",
+   "tr": "Так, звісно. Щиро дякую і гарного дня!"
+  },
+  {
+   "s": "B",
+   "de": "Danke, Ihnen auch! Tschüss!",
+   "tr": "Дякую, і вам також! Бувайте!"
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/a1-01.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "LenaRaisch",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "source": "https://commons.wikimedia.org/w/index.php?curid=137173609",
+  "site": "Wikimedia Commons"
+ }
+}

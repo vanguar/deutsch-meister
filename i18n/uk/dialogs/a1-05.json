@@ -1,0 +1,86 @@
+{
+ "id": "a1-05",
+ "level": "a1",
+ "n": 5,
+ "emoji": "☕",
+ "title": "Im Café",
+ "titleTr": "У кафе",
+ "situation": "Даніель замовляє в кафе капучино та шматок чизкейка й залишає чайові.",
+ "speakers": {
+  "A": {
+   "name": "Kellnerin",
+   "g": "f"
+  },
+  "B": {
+   "name": "Daniel",
+   "g": "m"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Hallo! Was möchten Sie trinken?",
+   "tr": "Вітаю! Що будете пити?"
+  },
+  {
+   "s": "B",
+   "de": "Einen Cappuccino, bitte.",
+   "tr": "Капучино, будь ласка."
+  },
+  {
+   "s": "A",
+   "de": "Groß oder klein?",
+   "tr": "Великий чи маленький?"
+  },
+  {
+   "s": "B",
+   "de": "Groß, bitte. Haben Sie auch Hafermilch?",
+   "tr": "Великий, будь ласка. А вівсяне молоко у вас є?"
+  },
+  {
+   "s": "A",
+   "de": "Ja, haben wir. Möchten Sie auch etwas essen?",
+   "tr": "Так, є. Бажаєте щось поїсти?"
+  },
+  {
+   "s": "B",
+   "de": "Ja, ein Stück Käsekuchen, bitte.",
+   "tr": "Так, шматок чизкейка, будь ласка."
+  },
+  {
+   "s": "A",
+   "de": "Für hier oder zum Mitnehmen?",
+   "tr": "Тут чи з собою?"
+  },
+  {
+   "s": "B",
+   "de": "Für hier, bitte. Ich sitze dort am Fenster.",
+   "tr": "Тут, будь ласка. Я сиджу ось там, біля вікна."
+  },
+  {
+   "s": "A",
+   "de": "Alles klar. Das macht sieben Euro achtzig.",
+   "tr": "Зрозуміло. З вас сім євро вісімдесят."
+  },
+  {
+   "s": "B",
+   "de": "Hier sind neun Euro. Stimmt so.",
+   "tr": "Ось дев'ять євро. Решти не треба."
+  },
+  {
+   "s": "A",
+   "de": "Vielen Dank! Ich bringe Ihnen alles gleich.",
+   "tr": "Щиро дякую! Я зараз усе принесу."
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/a1-05.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "Image Catalog",
+  "license": "CC0",
+  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "source": "https://www.flickr.com/photos/132795455@N08/18281357909",
+  "site": "Flickr"
+ }
+}

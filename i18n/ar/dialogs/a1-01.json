@@ -1,0 +1,91 @@
+{
+ "id": "a1-01",
+ "level": "a1",
+ "n": 1,
+ "emoji": "🥨",
+ "title": "Beim Bäcker",
+ "titleTr": "في المخبز",
+ "situation": "يشتري ماركو من المخبز خبزًا صغيرًا وبريتزل وقطعة كعك، ويدفع بالبطاقة.",
+ "speakers": {
+  "A": {
+   "name": "Verkäuferin",
+   "g": "f"
+  },
+  "B": {
+   "name": "Marko",
+   "g": "m"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Guten Morgen! Was darf es sein?",
+   "tr": "صباح الخير! ماذا تريد؟"
+  },
+  {
+   "s": "B",
+   "de": "Guten Morgen! Ich hätte gern vier Brötchen, bitte.",
+   "tr": "صباح الخير! أريد أربعة أرغفة صغيرة من فضلك."
+  },
+  {
+   "s": "A",
+   "de": "Gern. Normale Brötchen oder Vollkornbrötchen?",
+   "tr": "بكل سرور. خبز عادي أم من القمح الكامل؟"
+  },
+  {
+   "s": "B",
+   "de": "Zwei normale und zwei Vollkornbrötchen, bitte.",
+   "tr": "اثنان عاديان واثنان من القمح الكامل، من فضلك."
+  },
+  {
+   "s": "A",
+   "de": "Sonst noch etwas?",
+   "tr": "هل من شيء آخر؟"
+  },
+  {
+   "s": "B",
+   "de": "Ja, eine Brezel. Was kostet die Brezel?",
+   "tr": "نعم، بريتزل واحدة. كم سعر البريتزل؟"
+  },
+  {
+   "s": "A",
+   "de": "Die Brezel kostet einen Euro zwanzig.",
+   "tr": "سعر البريتزل يورو واحد وعشرون سنتًا."
+  },
+  {
+   "s": "B",
+   "de": "Gut. Und ein Stück Apfelkuchen, bitte.",
+   "tr": "حسنًا. وقطعة من كعكة التفاح من فضلك."
+  },
+  {
+   "s": "A",
+   "de": "Das macht zusammen sechs Euro dreißig. Brauchen Sie eine Tüte?",
+   "tr": "المجموع ستة يوروهات وثلاثون سنتًا. هل تحتاج إلى كيس؟"
+  },
+  {
+   "s": "B",
+   "de": "Nein, danke. Ich habe eine Tasche. Kann ich mit Karte zahlen?",
+   "tr": "لا، شكرًا. معي حقيبة. هل يمكنني الدفع بالبطاقة؟"
+  },
+  {
+   "s": "A",
+   "de": "Ja, natürlich. Vielen Dank und einen schönen Tag!",
+   "tr": "نعم، بالطبع. شكرًا جزيلًا ويومًا سعيدًا!"
+  },
+  {
+   "s": "B",
+   "de": "Danke, Ihnen auch! Tschüss!",
+   "tr": "شكرًا، ولك أيضًا! إلى اللقاء!"
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/a1-01.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "LenaRaisch",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "source": "https://commons.wikimedia.org/w/index.php?curid=137173609",
+  "site": "Wikimedia Commons"
+ }
+}

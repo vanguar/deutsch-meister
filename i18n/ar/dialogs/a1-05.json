@@ -1,0 +1,86 @@
+{
+ "id": "a1-05",
+ "level": "a1",
+ "n": 5,
+ "emoji": "☕",
+ "title": "Im Café",
+ "titleTr": "في المقهى",
+ "situation": "يطلب دانيال في المقهى كابتشينو وقطعة من كعكة الجبن، ويترك إكرامية.",
+ "speakers": {
+  "A": {
+   "name": "Kellnerin",
+   "g": "f"
+  },
+  "B": {
+   "name": "Daniel",
+   "g": "m"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Hallo! Was möchten Sie trinken?",
+   "tr": "مرحبًا! ماذا تحب أن تشرب؟"
+  },
+  {
+   "s": "B",
+   "de": "Einen Cappuccino, bitte.",
+   "tr": "كابتشينو من فضلك."
+  },
+  {
+   "s": "A",
+   "de": "Groß oder klein?",
+   "tr": "كبير أم صغير؟"
+  },
+  {
+   "s": "B",
+   "de": "Groß, bitte. Haben Sie auch Hafermilch?",
+   "tr": "كبير من فضلك. هل عندكم حليب الشوفان؟"
+  },
+  {
+   "s": "A",
+   "de": "Ja, haben wir. Möchten Sie auch etwas essen?",
+   "tr": "نعم، عندنا. هل تريد أن تأكل شيئًا أيضًا؟"
+  },
+  {
+   "s": "B",
+   "de": "Ja, ein Stück Käsekuchen, bitte.",
+   "tr": "نعم، قطعة من كعكة الجبن من فضلك."
+  },
+  {
+   "s": "A",
+   "de": "Für hier oder zum Mitnehmen?",
+   "tr": "هنا أم للأخذ معك؟"
+  },
+  {
+   "s": "B",
+   "de": "Für hier, bitte. Ich sitze dort am Fenster.",
+   "tr": "هنا من فضلك. أنا أجلس هناك بجانب النافذة."
+  },
+  {
+   "s": "A",
+   "de": "Alles klar. Das macht sieben Euro achtzig.",
+   "tr": "حسنًا. المبلغ سبعة يوروهات وثمانون سنتًا."
+  },
+  {
+   "s": "B",
+   "de": "Hier sind neun Euro. Stimmt so.",
+   "tr": "تفضّلي تسعة يوروهات. احتفظي بالباقي."
+  },
+  {
+   "s": "A",
+   "de": "Vielen Dank! Ich bringe Ihnen alles gleich.",
+   "tr": "شكرًا جزيلًا! سأحضر لك كل شيء حالًا."
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/a1-05.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "Image Catalog",
+  "license": "CC0",
+  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "source": "https://www.flickr.com/photos/132795455@N08/18281357909",
+  "site": "Flickr"
+ }
+}

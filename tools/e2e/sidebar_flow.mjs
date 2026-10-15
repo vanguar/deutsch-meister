@@ -1,8 +1,8 @@
-// E2E: плашки бокового меню (Книги, Новости, Поддержать, Связь с автором).
+// E2E: плашки бокового меню (Книги, Новости, Диалоги, Поддержать, Связь с автором).
 // Нужны Chrome и статический сервер:
 //   python -m http.server 8765   (из корня репо)
 //   node --experimental-websocket tools/e2e/sidebar_flow.mjs
-// Проверяет на главной и в уроке: все четыре плашки на месте и в нужном
+// Проверяет на главной и в уроке: все пять плашек на месте и в нужном
 // порядке, ничего не обрезано и не вылезает, плашки не перекрыты (клик
 // попадает в саму плашку), каждая ведёт куда надо, «Связь» открывает
 // Telegram @ObiVan1978, тёмная и светлая темы, язык uk, маленький экран.
@@ -60,10 +60,10 @@ async function checkPage(p, width, height, label) {
   ok(!s.none, `${tag}: блок плашек есть`);
   if (s.none) return;
   // «Установить на телефон» (js/install-app.js) — необязательная, всегда сверху
-  const kinds = s.items.map(i => ['books', 'news', 'donate', 'contact'].find(k => i.cls.split(' ').includes(k)) || 'install');
+  const kinds = s.items.map(i => ['books', 'news', 'dialogs', 'donate', 'contact'].find(k => i.cls.split(' ').includes(k)) || 'install');
   if (kinds[0] === 'install') { kinds.shift(); s.items.shift(); }
-  ok(kinds.join(',') === 'books,news,donate,contact', `${tag}: порядок — ${kinds.join(', ')}`);
-  ok(s.items.length === 4, `${tag}: плашек ${s.items.length} (+ «Установить»), по одной каждой`);
+  ok(kinds.join(',') === 'books,news,dialogs,donate,contact', `${tag}: порядок — ${kinds.join(', ')}`);
+  ok(s.items.length === 5, `${tag}: плашек ${s.items.length} (+ «Установить»), по одной каждой`);
   ok(s.items.every(i => i.h <= 72), `${tag}: плашки компактные, не больше 72px (${s.items.map(i => i.h).join('/')})`);
   ok(s.items.every(i => i.h >= 48), `${tag}: высота плашек ≥ 48px (${s.items.map(i => i.h).join('/')})`);
   ok(s.items.every(i => i.hit), `${tag}: ничто не перекрывает плашки (клик попадает в них)`);
@@ -71,7 +71,7 @@ async function checkPage(p, width, height, label) {
   ok(s.items.every(i => i.icoBg !== 'rgba(0, 0, 0, 0)' && i.chevron !== 'none'), `${tag}: иконка в плитке и шеврон`);
   const badge = s.items[1].badge;
   ok(badge && badge.inside && badge.hit, `${tag}: бейдж «Есть статьи» виден целиком`);
-  const contact = s.items[3];
+  const contact = s.items[4];
   ok(/@ObiVan1978/.test(contact.sub), `${tag}: в «Связи» указан @ObiVan1978 — «${contact.title} / ${contact.sub}»`);
   return s;
 }
@@ -114,6 +114,11 @@ await waitFor(`document.querySelectorAll('.side-action.news').length > 0`);
 await c.ev(`document.querySelector('.side-action.news').click()`);
 ok(await waitFor(`location.pathname.endsWith('/news.html')`), '«Новости» из урока ведут на news.html');
 ok(await waitFor(`document.querySelectorAll('.news-tile.is-live').length > 0`), 'на news.html — витрина рубрик со статьями');
+await c.go(B + '/lessons/b1/lesson-03/index.html', 1800);
+await waitFor(`document.querySelectorAll('.side-action.dialogs').length > 0`);
+await c.ev(`document.querySelector('.side-action.dialogs').click()`);
+ok(await waitFor(`location.pathname.endsWith('/dialogs.html')`), '«Диалоги» из урока ведут на dialogs.html');
+ok(await waitFor(`document.querySelectorAll('.dlg-tile.is-live').length > 0`), 'на dialogs.html — уровни с диалогами');
 
 // ── Светлая тема ──
 await c.ev(`localStorage.setItem('dm_theme', 'light')`);
@@ -121,7 +126,7 @@ const light = await checkPage(PAGES[0], 390, 844, 'светлая');
 await c.shot('sidebar_index_light.png');
 const light2 = await checkPage(PAGES[1], 390, 844, 'светлая');
 await c.shot('sidebar_lesson_light.png');
-ok(light && light2 && light.items[0].icoBg !== light.items[3].icoBg, 'у плашек разные цвета плиток');
+ok(light && light2 && light.items[0].icoBg !== light.items[4].icoBg && light.items[1].icoBg !== light.items[2].icoBg, 'у плашек разные цвета плиток');
 
 // ── Украинский ──
 await c.ev(`localStorage.setItem('dm_theme', 'dark'); localStorage.setItem('dm_lang', JSON.stringify({lang:'uk', ts: Date.now()}))`);

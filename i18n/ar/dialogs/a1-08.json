@@ -1,0 +1,91 @@
+{
+ "id": "a1-08",
+ "level": "a1",
+ "n": 8,
+ "emoji": "🍎",
+ "title": "Auf dem Wochenmarkt",
+ "titleTr": "في السوق الأسبوعي",
+ "situation": "في سوق يوم السبت تشتري هيلغا التفاح والطماطم والفلفل من بائع الخضار.",
+ "speakers": {
+  "A": {
+   "name": "Marktverkäufer",
+   "g": "m"
+  },
+  "B": {
+   "name": "Helga",
+   "g": "f"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Guten Tag! Was darf's sein?",
+   "tr": "مرحبًا! ماذا تريدين؟"
+  },
+  {
+   "s": "B",
+   "de": "Guten Tag! Ein Kilo Äpfel, bitte.",
+   "tr": "مرحبًا! كيلو تفاح من فضلك."
+  },
+  {
+   "s": "A",
+   "de": "Rote oder grüne?",
+   "tr": "أحمر أم أخضر؟"
+  },
+  {
+   "s": "B",
+   "de": "Grüne, bitte. Was kosten die Tomaten?",
+   "tr": "أخضر من فضلك. كم سعر الطماطم؟"
+  },
+  {
+   "s": "A",
+   "de": "Ein Kilo kostet drei Euro fünfzig. Sie sind ganz frisch.",
+   "tr": "الكيلو بثلاثة يوروهات ونصف. إنها طازجة تمامًا."
+  },
+  {
+   "s": "B",
+   "de": "Dann nehme ich ein halbes Kilo Tomaten.",
+   "tr": "إذن سآخذ نصف كيلو من الطماطم."
+  },
+  {
+   "s": "A",
+   "de": "Gern. Sonst noch etwas? Die Paprika ist heute im Angebot.",
+   "tr": "بكل سرور. شيء آخر؟ الفلفل عليه عرض اليوم."
+  },
+  {
+   "s": "B",
+   "de": "Ja, zwei Paprika, eine rote und eine gelbe.",
+   "tr": "نعم، حبتان من الفلفل: واحدة حمراء وواحدة صفراء."
+  },
+  {
+   "s": "A",
+   "de": "So, das macht zusammen sechs Euro.",
+   "tr": "حسنًا، المجموع ستة يوروهات."
+  },
+  {
+   "s": "B",
+   "de": "Hier, bitte. Haben Sie eine Tüte für mich?",
+   "tr": "تفضّل. هل عندك كيس لي؟"
+  },
+  {
+   "s": "A",
+   "de": "Ja, hier. Schönes Wochenende!",
+   "tr": "نعم، تفضّلي. عطلة نهاية أسبوع سعيدة!"
+  },
+  {
+   "s": "B",
+   "de": "Danke, Ihnen auch!",
+   "tr": "شكرًا، ولك أيضًا!"
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/a1-08.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "hydro-xy",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+  "source": "https://www.flickr.com/photos/10436005@N03/2852988324",
+  "site": "Flickr"
+ }
+}

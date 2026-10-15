@@ -1,0 +1,177 @@
+/* ═══════════════════════════════════════════════
+   dialogs.css — раздел «Диалоги» (dialogs.html)
+   Шапка, плитки уровней и кнопки-чипы — общие с новостями (css/news.css),
+   здесь — список диалогов, картинка сцены и реплики-«пузыри».
+   Направления пишем логическими свойствами (inline-start/end): в арабском
+   интерфейсе (html[dir="rtl"]) раскладка зеркалится сама, а немецкие
+   реплики остаются LTR (dir="ltr" в разметке).
+   ═══════════════════════════════════════════════ */
+
+:root {
+  --dlg-a:      #7c6af7;   /* персонаж A */
+  --dlg-b:      #20b2a6;   /* персонаж B */
+  --dlg-a-soft: rgba(124, 106, 247, .13);
+  --dlg-b-soft: rgba(32, 178, 166, .13);
+  --dlg-speak:  #e8c547;
+}
+[data-theme="light"] {
+  --dlg-a:      #5b48e8;
+  --dlg-b:      #0d7d74;
+  --dlg-a-soft: rgba(91, 72, 232, .08);
+  --dlg-b-soft: rgba(13, 125, 116, .08);
+  --dlg-speak:  #b38900;
+}
+
+.dlg-hub[hidden], .dlg-level[hidden], .dlg-view[hidden] { display: none; }
+
+/* ── Значок уровня ── */
+.dlg-lv-badge {
+  font-family: 'DM Sans', system-ui, sans-serif; font-size: 18px !important; font-weight: 900;
+  color: var(--text-on-btn); letter-spacing: .5px;
+}
+.dlg-lv-badge.lv-a1 { background: #1f9e5e; }
+.dlg-lv-badge.lv-a2 { background: #2878c4; }
+.dlg-lv-badge.lv-b1 { background: #6a55e8; }
+.dlg-lv-badge.lv-b2 { background: #c2410c; }
+
+/* ── Плитка уровня: превью сцен ── */
+.dlg-tile .news-tile-top { padding-right: 0; padding-inline-end: 70px; }
+.dlg-tile.is-live .news-tile-top { padding-inline-end: 0; }
+.dlg-tile-thumbs { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; }
+.dlg-tile-thumb { display: block; aspect-ratio: 16 / 10; border-radius: var(--r-sm); overflow: hidden; }
+.dlg-tile-first {
+  min-width: 0; flex: 1 1 120px; color: var(--text-muted); font-size: 12px;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.dlg-tile .news-tile-go { margin-left: 0; margin-inline-start: auto; }
+
+/* Картинка и её заглушка: градиент с эмодзи сцены (без сети / нет файла) */
+.dlg-ph {
+  position: relative; display: block; overflow: hidden;
+  background: linear-gradient(135deg, var(--surface3), var(--surface2));
+}
+.dlg-ph img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.dlg-ph.is-fallback::after {
+  content: attr(data-emoji); position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center; font-size: 28px;
+}
+
+/* ── Список диалогов уровня ── */
+.dlg-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.dlg-item {
+  display: flex; align-items: center; gap: 12px; padding: 10px;
+  border-radius: var(--r-lg); background: var(--surface); border: 1px solid var(--border);
+  color: inherit; text-decoration: none; -webkit-tap-highlight-color: transparent;
+  transition: transform var(--t-fast), border-color var(--t-fast);
+}
+.dlg-item:hover { transform: translateY(-1px); border-color: var(--accent2); }
+.dlg-item:active { transform: scale(.99); }
+.dlg-item:focus-visible { outline: 2px solid var(--accent2); outline-offset: 2px; }
+.dlg-item-thumb { flex: none; width: 104px; height: 66px; border-radius: var(--r-md); }
+.dlg-item-body { flex: 1; min-width: 0; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 2px 8px; align-items: baseline; }
+.dlg-item-n {
+  grid-row: span 3; align-self: start; min-width: 24px; height: 24px; padding: 0 6px; border-radius: var(--r-full);
+  display: inline-flex; align-items: center; justify-content: center;
+  background: var(--tint); border: 1px solid var(--border); color: var(--text-muted); font-size: 12px; font-weight: 800;
+}
+.dlg-item-title {
+  font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 800; color: var(--text-strong);
+  line-height: 1.25; overflow-wrap: anywhere; text-align: start;
+}
+.dlg-item-tr { font-size: 13px; color: var(--text-muted); line-height: 1.35; }
+.dlg-item-meta { font-size: 12px; color: var(--text-dim); }
+.dlg-item-go { flex: none; color: var(--accent2); font-size: 22px; font-weight: 800; }
+html[dir="rtl"] .dlg-item-go { transform: scaleX(-1); }
+
+/* ── Диалог ── */
+.dlg-view-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin: 4px 0 12px; }
+.dlg-counter { font-size: 13px; font-weight: 700; color: var(--text-muted); direction: ltr; unicode-bidi: isolate; }
+
+.dlg-figure { margin: 0 0 12px; }
+.dlg-hero {
+  width: 100%; aspect-ratio: 16 / 9; max-height: 320px; border-radius: var(--r-lg);
+  border: 1px solid var(--border);
+}
+.dlg-hero.is-fallback::after { font-size: 64px; }
+.dlg-credit { margin-top: 6px; font-size: 11px; line-height: 1.45; color: var(--text-dim); overflow-wrap: anywhere; }
+.dlg-credit a { color: var(--text-muted); }
+
+.dlg-heading { margin-bottom: 12px; }
+.dlg-level-chip {
+  display: inline-block; padding: 2px 9px; border-radius: var(--r-sm); font-size: 12px; font-weight: 900;
+  letter-spacing: .4px; color: #fff; background: var(--accent2);
+}
+.dlg-level-chip.lv-a1 { background: #1f9e5e; }
+.dlg-level-chip.lv-a2 { background: #2878c4; }
+.dlg-level-chip.lv-b1 { background: #6a55e8; }
+.dlg-level-chip.lv-b2 { background: #c2410c; }
+.dlg-title {
+  margin: 8px 0 0; font-family: 'Playfair Display', serif; font-size: 25px; font-weight: 900;
+  color: var(--text-strong); line-height: 1.2; overflow-wrap: anywhere; text-align: start;
+}
+.dlg-title-tr { margin-top: 3px; font-size: 14px; color: var(--text-muted); }
+.dlg-situation { margin: 8px 0 0; font-size: 14px; line-height: 1.55; color: var(--text); }
+
+/* Управление: главная кнопка и чипы; на узком экране кнопка — во всю ширину */
+.dlg-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.dlg-play {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px;
+  padding: 10px 20px; border: 0; border-radius: var(--r-full); cursor: pointer;
+  background: var(--accent2); color: var(--text-on-btn); font: inherit; font-size: 15px; font-weight: 800;
+  box-shadow: 0 4px 16px rgba(124, 106, 247, .3); -webkit-tap-highlight-color: transparent;
+}
+.dlg-play:active { transform: scale(.98); }
+.dlg-play:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.dlg-play.is-on { background: var(--accent3); box-shadow: 0 4px 16px rgba(240, 107, 107, .3); }
+.dlg-play-ico { font-size: 13px; }
+.news-chip[aria-pressed="true"] { border-color: var(--accent2); background: var(--dlg-a-soft); color: var(--text-strong); }
+.dlg-tone[hidden] { display: none; }
+@media (max-width: 480px) {
+  .dlg-play { flex: 1 1 100%; }
+  .dlg-controls .news-chip { flex: 1 1 0; justify-content: center; }
+}
+.dlg-voice-note { margin: 8px 0 0; font-size: 12px; line-height: 1.5; color: var(--text-dim); }
+.dlg-voice-note:empty { display: none; }
+
+/* ── Реплики ── */
+.dlg-lines { list-style: none; margin: 16px 0 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.dlg-line { display: flex; align-items: flex-end; gap: 6px; max-width: 92%; }
+.dlg-line.side-a { align-self: flex-start; }
+.dlg-line.side-b { align-self: flex-end; flex-direction: row-reverse; }
+.dlg-bubble {
+  min-width: 0; padding: 9px 13px 10px; border-radius: 16px; cursor: pointer;
+  border: 1px solid var(--border); transition: box-shadow .25s ease, border-color .25s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+.side-a .dlg-bubble { background: var(--dlg-a-soft); border-end-start-radius: 4px; }
+.side-b .dlg-bubble { background: var(--dlg-b-soft); border-end-end-radius: 4px; }
+.dlg-who { font-size: 12px; font-weight: 800; letter-spacing: .2px; text-align: start; }
+.side-a .dlg-who { color: var(--dlg-a); }
+.side-b .dlg-who { color: var(--dlg-b); }
+.dlg-de { margin-top: 2px; font-size: 16px; line-height: 1.5; color: var(--text-strong); text-align: start; overflow-wrap: anywhere; }
+.dlg-tr { display: none; margin-top: 5px; padding-top: 5px; border-top: 1px dashed var(--border); font-size: 14px; line-height: 1.45; color: var(--text-muted); }
+.show-tr .dlg-tr, .dlg-line.tr-open .dlg-tr { display: block; }
+html[dir="rtl"] .dlg-tr { text-align: right; }
+
+.dlg-say {
+  flex: none; width: 34px; height: 34px; border-radius: 50%; cursor: pointer;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: var(--surface2); border: 1px solid var(--border); font-size: 15px; line-height: 1;
+  -webkit-tap-highlight-color: transparent;
+}
+.dlg-say.is-on { border-color: var(--dlg-speak); box-shadow: 0 0 0 2px var(--dlg-speak) inset; }
+
+/* Активная реплика при прослушивании */
+.dlg-line.is-speaking .dlg-bubble {
+  border-color: var(--dlg-speak);
+  box-shadow: 0 0 0 1px var(--dlg-speak) inset, 0 4px 18px rgba(232, 197, 71, .25);
+}
+
+/* ── Соседние диалоги ── */
+.dlg-pager { display: flex; justify-content: space-between; gap: 10px; margin-top: 20px; }
+.dlg-pager .news-chip:disabled { opacity: .4; cursor: default; }
+html[dir="rtl"] .dlg-pager { direction: rtl; }
+
+@media (prefers-reduced-motion: reduce) {
+  .dlg-item, .dlg-bubble { transition: none; }
+}

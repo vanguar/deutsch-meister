@@ -4,9 +4,9 @@ import fs from 'fs';
 import os from 'os';
 export const SP = process.env.SP || os.tmpdir();
 const CHROME = process.env.CHROME || 'C:/Program Files/Google/Chrome/Application/chrome.exe';
-export async function start(port = 9333) {
+export async function start(port = 9333, extra = []) {
   const chrome = spawn(CHROME,
-    ['--headless=new', `--remote-debugging-port=${port}`, `--user-data-dir=${SP}\chr${Date.now()}`, '--window-size=390,844', 'about:blank'], { stdio: 'ignore' });
+    ['--headless=new', `--remote-debugging-port=${port}`, `--user-data-dir=${SP}\chr${Date.now()}`, '--window-size=390,844', ...extra, 'about:blank'], { stdio: 'ignore' });
   let list;
   for (let i = 0; i < 50; i++) { try { list = await (await fetch(`http://127.0.0.1:${port}/json`)).json(); if (list.find(t => t.type === 'page')) break; } catch {} await new Promise(r => setTimeout(r, 200)); }
   const ws = new WebSocket(list.find(t => t.type === 'page').webSocketDebuggerUrl);

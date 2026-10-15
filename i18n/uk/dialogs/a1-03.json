@@ -1,0 +1,91 @@
+{
+ "id": "a1-03",
+ "level": "a1",
+ "n": 3,
+ "emoji": "🛒",
+ "title": "Im Supermarkt",
+ "titleTr": "У супермаркеті",
+ "situation": "Ліна не може знайти в супермаркеті молоко, рис і яйця та питає працівника.",
+ "speakers": {
+  "A": {
+   "name": "Lina",
+   "g": "f"
+  },
+  "B": {
+   "name": "Mitarbeiter",
+   "g": "m"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Entschuldigung, wo finde ich die Milch?",
+   "tr": "Перепрошую, де мені знайти молоко?"
+  },
+  {
+   "s": "B",
+   "de": "Die Milch ist im Kühlregal, ganz hinten links.",
+   "tr": "Молоко в холодильній вітрині, у самому кінці ліворуч."
+  },
+  {
+   "s": "A",
+   "de": "Danke. Und wo ist der Reis?",
+   "tr": "Дякую. А де рис?"
+  },
+  {
+   "s": "B",
+   "de": "Der Reis ist in Gang drei, neben den Nudeln.",
+   "tr": "Рис у третьому ряду, поруч із макаронами."
+  },
+  {
+   "s": "A",
+   "de": "Haben Sie auch laktosefreie Milch?",
+   "tr": "А безлактозне молоко у вас є?"
+  },
+  {
+   "s": "B",
+   "de": "Ja, die steht direkt neben der normalen Milch.",
+   "tr": "Так, воно стоїть просто поруч зі звичайним молоком."
+  },
+  {
+   "s": "A",
+   "de": "Super. Und wo sind die Eier?",
+   "tr": "Чудово. А де яйця?"
+  },
+  {
+   "s": "B",
+   "de": "Die Eier sind gleich hier, beim Brot.",
+   "tr": "Яйця ось тут, біля хліба."
+  },
+  {
+   "s": "A",
+   "de": "Prima. Und wo ist die Kasse?",
+   "tr": "Чудово. А де каса?"
+  },
+  {
+   "s": "B",
+   "de": "Die Kasse ist vorne am Eingang. Sie können auch an der Selbstbedienungskasse bezahlen.",
+   "tr": "Каса попереду, біля входу. Можна також оплатити на касі самообслуговування."
+  },
+  {
+   "s": "A",
+   "de": "Vielen Dank für Ihre Hilfe!",
+   "tr": "Щиро дякую за допомогу!"
+  },
+  {
+   "s": "B",
+   "de": "Gern geschehen!",
+   "tr": "Нема за що!"
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/a1-03.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "storebukkebruse",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "source": "https://www.flickr.com/photos/8536261@N07/5556689186",
+  "site": "Flickr"
+ }
+}

@@ -1,0 +1,91 @@
+{
+ "id": "a1-07",
+ "level": "a1",
+ "n": 7,
+ "emoji": "🩺",
+ "title": "In der Arztpraxis",
+ "titleTr": "في عيادة الطبيب",
+ "situation": "ابن بيترو الصغير مصاب بالحمّى. يأتي بيترو إلى العيادة دون موعد ويتحدث مع موظفة الاستقبال.",
+ "speakers": {
+  "A": {
+   "name": "Arzthelferin",
+   "g": "f"
+  },
+  "B": {
+   "name": "Petro",
+   "g": "m"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Guten Morgen! Was kann ich für Sie tun?",
+   "tr": "صباح الخير! كيف يمكنني مساعدتك؟"
+  },
+  {
+   "s": "B",
+   "de": "Guten Morgen! Mein Sohn ist krank. Er hat Fieber und Husten.",
+   "tr": "صباح الخير! ابني مريض. عنده حمّى وسعال."
+  },
+  {
+   "s": "A",
+   "de": "Oh, der Arme. Haben Sie einen Termin?",
+   "tr": "يا للمسكين. هل لديك موعد؟"
+  },
+  {
+   "s": "B",
+   "de": "Nein, leider nicht. Geht es heute trotzdem?",
+   "tr": "لا، للأسف. هل يمكن رغم ذلك اليوم؟"
+  },
+  {
+   "s": "A",
+   "de": "Ja, aber Sie müssen ein bisschen warten. Haben Sie die Versichertenkarte von Ihrem Sohn?",
+   "tr": "نعم، لكن عليك أن تنتظر قليلًا. هل معك بطاقة التأمين الصحي لابنك؟"
+  },
+  {
+   "s": "B",
+   "de": "Ja, hier ist die Karte.",
+   "tr": "نعم، تفضّلي البطاقة."
+  },
+  {
+   "s": "A",
+   "de": "Danke. Wie alt ist Ihr Sohn?",
+   "tr": "شكرًا. كم عمر ابنك؟"
+  },
+  {
+   "s": "B",
+   "de": "Er ist acht Monate alt.",
+   "tr": "عمره ثمانية أشهر."
+  },
+  {
+   "s": "A",
+   "de": "Gut. Bitte nehmen Sie im Wartezimmer Platz. Die Ärztin ruft Sie dann auf.",
+   "tr": "حسنًا. تفضّل بالجلوس في غرفة الانتظار. ستناديك الطبيبة بعد قليل."
+  },
+  {
+   "s": "B",
+   "de": "Wie lange dauert es ungefähr?",
+   "tr": "كم من الوقت تقريبًا؟"
+  },
+  {
+   "s": "A",
+   "de": "Ungefähr zwanzig Minuten.",
+   "tr": "حوالي عشرين دقيقة."
+  },
+  {
+   "s": "B",
+   "de": "Okay, vielen Dank.",
+   "tr": "حسنًا، شكرًا جزيلًا."
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/a1-07.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "Greater Louisville Medical Society",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "source": "https://www.flickr.com/photos/31662861@N02/6153080866",
+  "site": "Flickr"
+ }
+}

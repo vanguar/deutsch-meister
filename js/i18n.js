@@ -329,14 +329,15 @@
     });
   }
 
-  /* Книги и новости: переведённые копии JSON лежат в i18n/<lang>/books/
-     и i18n/<lang>/news/ с той же структурой. Нет копии (сеть, новая книга) — берём исходный файл. */
+  /* Книги, новости и диалоги: переведённые копии JSON лежат в
+     i18n/<lang>/books/, …/news/ и …/dialogs/ с той же структурой. Нет копии
+     (сеть, новая книга) — берём исходный файл. */
   function wrapFetch() {
     var orig = window.fetch;
     if (typeof orig !== 'function') return;
     window.fetch = function (input, init) {
       var url = typeof input === 'string' ? input : (input && input.url) || '';
-      var m = url.match(/^(.*?)data\/(books|news)\/(.+\.json)(\?.*)?$/);
+      var m = url.match(/^(.*?)data\/(books|news|dialogs)\/(.+\.json)(\?.*)?$/);
       if (!m) return orig.apply(this, arguments);
       var alt = m[1] + 'i18n/' + lang + '/' + m[2] + '/' + m[3] + (m[4] || '');
       var self = this, args = arguments;

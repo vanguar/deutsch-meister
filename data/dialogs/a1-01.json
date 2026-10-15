@@ -1,0 +1,91 @@
+{
+ "id": "a1-01",
+ "level": "a1",
+ "n": 1,
+ "emoji": "🥨",
+ "title": "Beim Bäcker",
+ "titleTr": "В пекарне",
+ "situation": "Марко покупает в пекарне булочки, брецель и кусок пирога и платит картой.",
+ "speakers": {
+  "A": {
+   "name": "Verkäuferin",
+   "g": "f"
+  },
+  "B": {
+   "name": "Marko",
+   "g": "m"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Guten Morgen! Was darf es sein?",
+   "tr": "Доброе утро! Что для вас?"
+  },
+  {
+   "s": "B",
+   "de": "Guten Morgen! Ich hätte gern vier Brötchen, bitte.",
+   "tr": "Доброе утро! Мне, пожалуйста, четыре булочки."
+  },
+  {
+   "s": "A",
+   "de": "Gern. Normale Brötchen oder Vollkornbrötchen?",
+   "tr": "Конечно. Обычные булочки или цельнозерновые?"
+  },
+  {
+   "s": "B",
+   "de": "Zwei normale und zwei Vollkornbrötchen, bitte.",
+   "tr": "Две обычные и две цельнозерновые, пожалуйста."
+  },
+  {
+   "s": "A",
+   "de": "Sonst noch etwas?",
+   "tr": "Что-нибудь ещё?"
+  },
+  {
+   "s": "B",
+   "de": "Ja, eine Brezel. Was kostet die Brezel?",
+   "tr": "Да, один брецель. Сколько стоит брецель?"
+  },
+  {
+   "s": "A",
+   "de": "Die Brezel kostet einen Euro zwanzig.",
+   "tr": "Брецель стоит один евро двадцать."
+  },
+  {
+   "s": "B",
+   "de": "Gut. Und ein Stück Apfelkuchen, bitte.",
+   "tr": "Хорошо. И кусок яблочного пирога, пожалуйста."
+  },
+  {
+   "s": "A",
+   "de": "Das macht zusammen sechs Euro dreißig. Brauchen Sie eine Tüte?",
+   "tr": "С вас всего шесть евро тридцать. Вам нужен пакет?"
+  },
+  {
+   "s": "B",
+   "de": "Nein, danke. Ich habe eine Tasche. Kann ich mit Karte zahlen?",
+   "tr": "Нет, спасибо. У меня есть сумка. Можно оплатить картой?"
+  },
+  {
+   "s": "A",
+   "de": "Ja, natürlich. Vielen Dank und einen schönen Tag!",
+   "tr": "Да, конечно. Большое спасибо и хорошего дня!"
+  },
+  {
+   "s": "B",
+   "de": "Danke, Ihnen auch! Tschüss!",
+   "tr": "Спасибо, и вам тоже! Пока!"
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/a1-01.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "LenaRaisch",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "source": "https://commons.wikimedia.org/w/index.php?curid=137173609",
+  "site": "Wikimedia Commons"
+ }
+}

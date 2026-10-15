@@ -194,12 +194,14 @@
 .side-action#installMenuBtn { --sa-c: #34c47c; }
 .side-action.books   { --sa-c: #7c6af7; order: 1; }
 .side-action.news    { --sa-c: #ff8a3d; order: 2; }
+.side-action.dialogs { --sa-c: #20b2a6; order: 2; }   /* после «Новостей»: тот же order, DOM-порядок */
 .side-action.donate  { --sa-c: #e8b931; order: 3; }
 .side-action.contact { --sa-c: #2aabee; order: 4; }
 /* В светлой теме цвет плашки идёт и в текст — берём оттенки потемнее */
 [data-theme="light"] .side-action#installMenuBtn { --sa-c: #1f8a55; }
 [data-theme="light"] .side-action.books   { --sa-c: #5b48e8; }
 [data-theme="light"] .side-action.news    { --sa-c: #c2500e; }
+[data-theme="light"] .side-action.dialogs { --sa-c: #0d7d74; }
 [data-theme="light"] .side-action.donate  { --sa-c: #856800; }
 [data-theme="light"] .side-action.contact { --sa-c: #1572a8; }
 

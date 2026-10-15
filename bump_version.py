@@ -4,7 +4,8 @@ bump_version.py — единая накрутка версий кэша (?v=N) �
 
 Зачем: у сайта Service Worker с cache-first для ассетов. Чтобы правки
 JS/CSS доехали до пользователей, нужно поднять ?v=N во ссылках всех
-HTML-файлов (index.html, 404.html, books.html, lessons/**/index.html),
+HTML-файлов (index.html, 404.html, books.html, news.html, dialogs.html,
+lessons/**/index.html),
 в списке STATIC
 внутри service-worker.js, и увеличить номер CACHE там же.
 Раньше это делалось руками по ~69 файлам — теперь одной командой.
@@ -52,7 +53,8 @@ def html_files():
     files = [os.path.join(BASE, 'index.html'),
              os.path.join(BASE, '404.html'),
              os.path.join(BASE, 'books.html'),
-             os.path.join(BASE, 'news.html')]
+             os.path.join(BASE, 'news.html'),
+             os.path.join(BASE, 'dialogs.html')]
     files += glob.glob(os.path.join(BASE, 'lessons', '*', '*', 'index.html'))
     return [f for f in files if os.path.isfile(f)]
 

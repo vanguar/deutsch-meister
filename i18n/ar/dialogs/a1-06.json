@@ -1,0 +1,86 @@
+{
+ "id": "a1-06",
+ "level": "a1",
+ "n": 6,
+ "emoji": "🗺️",
+ "title": "Nach dem Weg fragen",
+ "titleTr": "كيف أصل إلى محطة القطار؟",
+ "situation": "سارة في المدينة لأول مرة، وتسأل أحد المارّة عن الطريق إلى محطة القطار.",
+ "speakers": {
+  "A": {
+   "name": "Sara",
+   "g": "f"
+  },
+  "B": {
+   "name": "Passant",
+   "g": "m"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Entschuldigung, wo ist der Bahnhof?",
+   "tr": "عفوًا، أين محطة القطار؟"
+  },
+  {
+   "s": "B",
+   "de": "Der Bahnhof? Gehen Sie hier geradeaus bis zur Ampel.",
+   "tr": "المحطة؟ امشي من هنا إلى الأمام حتى إشارة المرور."
+  },
+  {
+   "s": "A",
+   "de": "Bis zur Ampel. Und dann?",
+   "tr": "حتى إشارة المرور. ثم ماذا؟"
+  },
+  {
+   "s": "B",
+   "de": "Dann gehen Sie nach links. Der Bahnhof ist auf der rechten Seite.",
+   "tr": "ثم اتجهي يسارًا. المحطة على الجهة اليمنى."
+  },
+  {
+   "s": "A",
+   "de": "Ist das weit?",
+   "tr": "هل هي بعيدة؟"
+  },
+  {
+   "s": "B",
+   "de": "Nein, nicht so weit. Zu Fuß sind das ungefähr zehn Minuten.",
+   "tr": "لا، ليست بعيدة جدًا. حوالي عشر دقائق مشيًا."
+  },
+  {
+   "s": "A",
+   "de": "Gibt es hier auch einen Bus?",
+   "tr": "هل يوجد هنا حافلة أيضًا؟"
+  },
+  {
+   "s": "B",
+   "de": "Ja, die Linie fünf fährt zum Bahnhof. Die Haltestelle ist dort drüben.",
+   "tr": "نعم، الخط رقم خمسة يذهب إلى المحطة. الموقف هناك في الجهة المقابلة."
+  },
+  {
+   "s": "A",
+   "de": "Danke! Ich gehe lieber zu Fuß. Das Wetter ist so schön.",
+   "tr": "شكرًا! أفضّل أن أمشي. الطقس جميل جدًا."
+  },
+  {
+   "s": "B",
+   "de": "Gute Idee! Viel Spaß in der Stadt!",
+   "tr": "فكرة جيدة! استمتعي بوقتك في المدينة!"
+  },
+  {
+   "s": "A",
+   "de": "Danke schön! Tschüss!",
+   "tr": "شكرًا جزيلًا! إلى اللقاء!"
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/a1-06.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "H Sanchez",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "source": "https://www.flickr.com/photos/65975278@N00/2645625546",
+  "site": "Flickr"
+ }
+}

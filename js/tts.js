@@ -1,5 +1,5 @@
 const TTS = (() => {
-  const VERSION = 'v22';
+  const VERSION = 'v23';
   const PROXY = 'https://deutsch-meister-puce.vercel.app/api/tts';
 
   // Сколько ждём САМ звук до его начала: загрузку mp3 с прокси. Длина текста
@@ -14,6 +14,7 @@ const TTS = (() => {
   let currentSource = null;
   let unlocked = false;
   const bufCache = {};
+  const bufPending = {};   // текст → промис загрузки (предзагрузка и игра не качают дважды)
 
   // Короткий "тихий" WAV (data URI, тот же origin) — разблокировка аудиоканала.
   const SILENT = 'data:audio/wav;base64,UklGRqQCAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YYACAACAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8A';
@@ -197,6 +198,7 @@ const TTS = (() => {
   function newSession(text, onEnd) {
     const ses = {
       onEnd: (typeof onEnd === 'function') ? onEnd : null,
+      detune: 0,     // центы; только аудио-путь (см. speak, opts.detune)
       // Базовая страховка из длины текста; ветки уточняют её по реальной
       // длительности, когда та известна (буфер Web Audio, <audio>.duration).
       //
@@ -309,18 +311,36 @@ const TTS = (() => {
     return PROXY + '?tl=de&text=' + encodeURIComponent(String(text).slice(0, 200));
   }
 
+  // Сдвиг тона в центах → скорость проигрывания. Это ресемплинг: вместе с
+  // тоном меняется и темп (−150 центов ≈ на 8% ниже и медленнее), поэтому
+  // сдвиг держим небольшим и ограничиваем ±400.
+  function detuneRate(cents) {
+    const c = Math.max(-400, Math.min(400, Number(cents) || 0));
+    return Math.pow(2, c / 1200);
+  }
+
+  // mp3 с прокси → AudioBuffer. Кэш по тексту; параллельный запрос той же
+  // фразы (предзагрузка + игра) ждёт уже идущую загрузку.
+  function loadBuffer(text) {
+    const c = getCtx();
+    if (!c) return Promise.reject(new Error('no AudioContext'));
+    const key = text;
+    if (bufCache[key]) return Promise.resolve(bufCache[key]);
+    if (bufPending[key]) return bufPending[key];
+    const p = fetch(proxyUrl(text))
+      .then(r => { if (!r.ok) throw new Error('proxy HTTP ' + r.status); return r.arrayBuffer(); })
+      .then(ab => new Promise((res, rej) => { c.decodeAudioData(ab, res, rej); }))
+      .then(buf => { bufCache[key] = buf; delete bufPending[key]; return buf; },
+            err => { delete bufPending[key]; throw err; });
+    bufPending[key] = p;
+    return p;
+  }
+
   /* ── Путь 1: Web Audio (надёжнее в WebView) ── */
   function playWebAudio(text, spans, ses) {
     const c = getCtx();
     if (!c) return Promise.reject(new Error('no AudioContext'));
-    const key = text;
-    const get = bufCache[key]
-      ? Promise.resolve(bufCache[key])
-      : fetch(proxyUrl(text))
-          .then(r => { if (!r.ok) throw new Error('proxy HTTP ' + r.status); return r.arrayBuffer(); })
-          .then(ab => new Promise((res, rej) => { c.decodeAudioData(ab, res, rej); }))
-          .then(buf => { bufCache[key] = buf; return buf; });
-    return get.then(buf => {
+    return loadBuffer(text).then(buf => {
       // Сессию уже закрыли (stop(), новый speak() или страховка), пока mp3
       // ехал с прокси. Играть его теперь нельзя: звук лёг бы ПОВЕРХ уже
       // начавшегося следующего куска, а ближайший stopCurrent() оборвал бы
@@ -331,14 +351,17 @@ const TTS = (() => {
       const s = c.createBufferSource();
       currentSource = s;
       s.buffer = buf;
+      const pr = ses && ses.detune ? detuneRate(ses.detune) : 1;
+      if (pr !== 1) { try { s.playbackRate.value = pr; } catch (e) {} }
       s.connect(c.destination);
       s.onended = () => {
         if (currentSource === s) currentSource = null;
         if (ses) ses.finish(true, 'end');
       };
       s.start(0);
-      hlByDuration(spans, buf.duration);   // точная длительность из буфера
-      if (ses) ses.arm(buf.duration * 1000 * 1.6 + 500);
+      const dur = buf.duration / pr;
+      hlByDuration(spans, dur);   // точная длительность из буфера
+      if (ses) ses.arm(dur * 1000 * 1.6 + 500);
     });
   }
 
@@ -357,6 +380,21 @@ const TTS = (() => {
     const el = getAudio();
     try { el.pause(); el.currentTime = 0; } catch (e) {}
     el.muted = false;
+    // Сдвиг тона для <audio> — только если браузер умеет НЕ сохранять
+    // высоту при смене скорости, иначе вышло бы просто замедление речи.
+    // Без opts.detune скорость и высота сбрасываются к обычным.
+    const canDetune = 'preservesPitch' in el || 'webkitPreservesPitch' in el || 'mozPreservesPitch' in el;
+    const pr = (ses && ses.detune && canDetune) ? detuneRate(ses.detune) : 1;
+    const applyRate = () => {
+      try {
+        const keep = pr === 1;
+        if ('preservesPitch' in el) el.preservesPitch = keep;
+        if ('webkitPreservesPitch' in el) el.webkitPreservesPitch = keep;
+        if ('mozPreservesPitch' in el) el.mozPreservesPitch = keep;
+        el.defaultPlaybackRate = pr;
+        el.playbackRate = pr;
+      } catch (e) {}
+    };
     attachEnded(ses);
     let i = 0;
     let attempt = 0;
@@ -381,15 +419,16 @@ const TTS = (() => {
       el.onplaying = () => {
         if (stale(my)) return;
         diag('▶ PLAYING (audio) #' + my);
-        hlByDuration(spans, el.duration);
+        hlByDuration(spans, el.duration / pr);
         // Переармируем ВСЕГДА: в WebView el.duration к старту часто ещё NaN,
         // и без этого страховка продолжала тикать с момента запроса, вместе с
         // загрузкой, — звук обрывался в конце. Без длительности берём базовую
         // оценку, но уже от начала звука.
-        if (ses) ses.arm(isFinite(el.duration) ? el.duration * 1000 * 1.6 + 500 : 0);
+        if (ses) ses.arm(isFinite(el.duration) ? el.duration / pr * 1000 * 1.6 + 500 : 0);
       };
       el.src = url;
       el.load();
+      applyRate();   // load() сбрасывает playbackRate к defaultPlaybackRate
       const p = el.play();
       if (p && typeof p.then === 'function') {
         p.then(() => diag('play() ok (audio) #' + my)).catch(e => {
@@ -431,18 +470,62 @@ const TTS = (() => {
     return sc;
   }
 
-  function pickBestVoice() {
+  // Немецкие голоса системы, лучшие первыми
+  function germanVoices() {
     const v = (window.speechSynthesis?.getVoices() || [])
       .filter(x => /^de([-_]|$)/i.test(x.lang || ''));
-    if (!v.length) return null;
+    if (!v.length) return [];
     // Сетевые нейроголоса без интернета молчат — офлайн берём только
     // локальные, чтобы не терять работавшую раньше офлайн-озвучку.
     const offline = (typeof navigator !== 'undefined' && navigator.onLine === false);
     const pool = offline && v.some(x => x.localService) ? v.filter(x => x.localService) : v;
-    return pool.slice().sort((a, b) => voiceScore(b) - voiceScore(a))[0];
+    return pool.slice().sort((a, b) => voiceScore(b) - voiceScore(a));
   }
 
-  function speak(text, { rate = 0.85, pitch = 1, fallbackDelay = null, spans = null, onEnd = null } = {}) {
+  function pickBestVoice() {
+    return germanVoices()[0] || null;
+  }
+
+  // Голос по имени (opts.voiceName) — только из немецких
+  function findVoice(name) {
+    if (!name) return null;
+    return germanVoices().find(v => v.name === name || v.voiceURI === name) || null;
+  }
+
+  /* Пол голоса по имени — эвристика для диалогов (два персонажа):
+     'f' / 'm' / '' (неизвестно). Имена — голоса Windows/Edge, Chrome,
+     macOS/iOS и Android. */
+  const VOICE_F = /\b(katja|amala|seraphina|louisa|tanja|elke|gisela|klarissa|maja|ingrid|anna|hedda|helena|petra|marlene|vicki|sabine|yara|anke|helga|lena|sarah|eva|female|weiblich)\b/i;
+  const VOICE_M = /\b(conrad|killian|florian|kasper|bernd|christoph|ralf|klaus|jonas|stefan|markus|yannick|hans|viktor|martin|male|männlich)\b/i;
+  function voiceGender(v) {
+    const name = ((v && v.name) || '') + ' ' + ((v && v.voiceURI) || '');
+    if (VOICE_F.test(name)) return 'f';
+    if (VOICE_M.test(name)) return 'm';
+    if (/^Google Deutsch$/i.test((v && v.name) || '')) return 'f';
+    return '';
+  }
+
+  // Каким путём озвучка пойдёт на этом устройстве: 'speech' — системный
+  // голос, 'audio' — mp3 Google TTS (Telegram или нет немецкого голоса).
+  function mode() {
+    if (inTelegram()) return 'audio';
+    return hasSpeech() && pickBestVoice() ? 'speech' : 'audio';
+  }
+
+  // Заранее скачать и декодировать фразу (только аудио-путь): следующая
+  // реплика очереди стартует без паузы на сеть. Ошибки молча глотаем —
+  // при игре фраза загрузится обычным путём.
+  function preload(text) {
+    text = cleanText(text);
+    if (!text || mode() !== 'audio' || !getCtx()) return;
+    loadBuffer(text).catch(() => {});
+  }
+
+  /* opts.voiceName — имя системного голоса (speechSynthesis), opts.detune —
+     сдвиг тона в центах для аудио-пути (mp3 Google TTS). Оба необязательны:
+     без них поведение прежнее. */
+  function speak(text, { rate = 0.85, pitch = 1, fallbackDelay = null, spans = null, onEnd = null,
+                         voiceName = null, detune = 0 } = {}) {
     text = cleanText(text);
     if (!text) {
       // Озвучивать нечего, но ждущий onEnd не должен зависнуть
@@ -455,6 +538,7 @@ const TTS = (() => {
     stopCurrent();   // прерывает предыдущую озвучку и отдаёт её onEnd
 
     const ses = newSession(text, onEnd);
+    ses.detune = Number(detune) || 0;
     activeSession = ses;
     // До старта звука ждём загрузку, а не «длину текста»: иначе медленный
     // ответ прокси съедал страховку ещё до первого звука. Настоящий отказ
@@ -476,7 +560,7 @@ const TTS = (() => {
       u.lang  = 'de-DE';
       u.rate  = rate;
       u.pitch = pitch;
-      u.voice = pickBestVoice() || preferredVoice || bestVoice;
+      u.voice = findVoice(voiceName) || pickBestVoice() || preferredVoice || bestVoice;
       // Сетевому голосу (Edge «Online (Natural)», «Google Deutsch») нужно
       // время на первый ответ сервера — не уходим на фолбэк раньше срока.
       const waitStart = (u.voice && u.voice.localService === false) ? delay + 800 : delay;
@@ -537,7 +621,7 @@ const TTS = (() => {
     }
   }
 
-  return { init, speak, speakPhrase, speakSlow, stop };
+  return { init, speak, speakPhrase, speakSlow, stop, preload, mode, germanVoices, voiceGender, inTelegram };
 })();
 
 TTS.init();

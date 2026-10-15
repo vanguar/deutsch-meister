@@ -1,0 +1,91 @@
+{
+ "id": "a1-04",
+ "level": "a1",
+ "n": 4,
+ "emoji": "🚆",
+ "title": "Am Fahrkartenautomaten",
+ "titleTr": "У билетного автомата",
+ "situation": "Анна не понимает билетный автомат на вокзале и просит помощи у прохожего.",
+ "speakers": {
+  "A": {
+   "name": "Anna",
+   "g": "f"
+  },
+  "B": {
+   "name": "Herr Becker",
+   "g": "m"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Entschuldigung, können Sie mir bitte helfen?",
+   "tr": "Извините, вы не могли бы мне помочь?"
+  },
+  {
+   "s": "B",
+   "de": "Ja, gern. Wohin möchten Sie fahren?",
+   "tr": "Да, конечно. Куда вы хотите поехать?"
+  },
+  {
+   "s": "A",
+   "de": "Nach Mainz. Ich verstehe den Automaten nicht.",
+   "tr": "В Майнц. Я не понимаю этот автомат."
+  },
+  {
+   "s": "B",
+   "de": "Kein Problem. Hier tippen Sie Mainz ein. Möchten Sie eine einfache Fahrt?",
+   "tr": "Не проблема. Вот здесь наберите Mainz. Вам билет в одну сторону?"
+  },
+  {
+   "s": "A",
+   "de": "Nein, hin und zurück, bitte.",
+   "tr": "Нет, туда и обратно, пожалуйста."
+  },
+  {
+   "s": "B",
+   "de": "Fahren Sie heute zurück? Dann nehmen Sie das Tagesticket. Es kostet achtzehn Euro.",
+   "tr": "Вы возвращаетесь сегодня? Тогда берите билет на день. Он стоит восемнадцать евро."
+  },
+  {
+   "s": "A",
+   "de": "Gut. Kann ich hier mit Karte zahlen?",
+   "tr": "Хорошо. Здесь можно оплатить картой?"
+  },
+  {
+   "s": "B",
+   "de": "Ja, die Karte kommt hier rein. So, hier ist Ihre Fahrkarte.",
+   "tr": "Да, карту вставляйте вот сюда. Вот, ваш билет."
+  },
+  {
+   "s": "A",
+   "de": "Danke! Und von welchem Gleis fährt der Zug?",
+   "tr": "Спасибо! А с какого пути отходит поезд?"
+  },
+  {
+   "s": "B",
+   "de": "Von Gleis vier. Der Zug kommt in zehn Minuten.",
+   "tr": "С четвёртого пути. Поезд придёт через десять минут."
+  },
+  {
+   "s": "A",
+   "de": "Vielen Dank, Sie sind sehr nett!",
+   "tr": "Большое спасибо, вы очень любезны!"
+  },
+  {
+   "s": "B",
+   "de": "Gern geschehen. Gute Fahrt!",
+   "tr": "Не за что. Счастливого пути!"
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/a1-04.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "Jon Worth from Germany",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "source": "https://commons.wikimedia.org/w/index.php?curid=155729223",
+  "site": "Wikimedia Commons"
+ }
+}

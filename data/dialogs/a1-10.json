@@ -1,0 +1,91 @@
+{
+ "id": "a1-10",
+ "level": "a1",
+ "n": 10,
+ "emoji": "📚",
+ "title": "Der erste Tag im Deutschkurs",
+ "titleTr": "Первый день на курсах немецкого",
+ "situation": "Ирина пришла на курс немецкого. Преподаватель знакомится с ней и рассказывает о занятиях.",
+ "speakers": {
+  "A": {
+   "name": "Herr Schulz",
+   "g": "m"
+  },
+  "B": {
+   "name": "Iryna",
+   "g": "f"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Guten Morgen! Herzlich willkommen im Deutschkurs. Wie heißen Sie?",
+   "tr": "Доброе утро! Добро пожаловать на курс немецкого. Как вас зовут?"
+  },
+  {
+   "s": "B",
+   "de": "Guten Morgen! Ich heiße Iryna Bondar.",
+   "tr": "Доброе утро! Меня зовут Ирина Бондарь."
+  },
+  {
+   "s": "A",
+   "de": "Woher kommen Sie, Frau Bondar?",
+   "tr": "Откуда вы, госпожа Бондарь?"
+  },
+  {
+   "s": "B",
+   "de": "Ich komme aus der Ukraine, aus Charkiw.",
+   "tr": "Я из Украины, из Харькова."
+  },
+  {
+   "s": "A",
+   "de": "Und was sind Sie von Beruf?",
+   "tr": "А кто вы по профессии?"
+  },
+  {
+   "s": "B",
+   "de": "Ich bin Krankenschwester. Ich möchte hier auch in einem Krankenhaus arbeiten.",
+   "tr": "Я медсестра. Я хочу и здесь работать в больнице."
+  },
+  {
+   "s": "A",
+   "de": "Toll! Welche Sprachen sprechen Sie?",
+   "tr": "Здорово! На каких языках вы говорите?"
+  },
+  {
+   "s": "B",
+   "de": "Ich spreche Ukrainisch und ein bisschen Englisch.",
+   "tr": "Я говорю по-украински и немного по-английски."
+  },
+  {
+   "s": "A",
+   "de": "Sehr gut. Haben Sie schon ein Buch für den Kurs?",
+   "tr": "Очень хорошо. У вас уже есть учебник для курса?"
+  },
+  {
+   "s": "B",
+   "de": "Nein, noch nicht. Wo kann ich das Buch kaufen?",
+   "tr": "Нет, пока нет. Где можно купить учебник?"
+  },
+  {
+   "s": "A",
+   "de": "Hier im Sekretariat. Der Unterricht ist von Montag bis Freitag, von neun bis zwölf Uhr.",
+   "tr": "Здесь, в секретариате. Занятия с понедельника по пятницу, с девяти до двенадцати."
+  },
+  {
+   "s": "B",
+   "de": "Alles klar. Vielen Dank!",
+   "tr": "Всё понятно. Большое спасибо!"
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/a1-10.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "Jirka Matousek",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "source": "https://www.flickr.com/photos/28415633@N00/8481220337",
+  "site": "Flickr"
+ }
+}

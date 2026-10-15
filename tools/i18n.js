@@ -4,7 +4,7 @@
 
    Исходник переводов: i18n/<lang>/src/<группа>.json — {русская строка: перевод}.
    Группы: ui (интерфейс), lexicon (подсказки над словами), lessons/<a1-01>,
-   books/<id>, books-index, news/<id>, news-index.
+   books/<id>, books-index, news/<id>, news-index, dialogs/<id>, dialogs-index.
    Поиск перевода идёт по ВСЕМ группам (общая память переводов), так что
    одинаковая строка переводится один раз.
 
@@ -197,7 +197,7 @@ function uiStrings() {
   for (const [file, src] of Object.entries(sources)) {
     for (const s of jsStrings(src)) for (const f of fragments(s.text)) { out.push(f); if (f.includes('{n}')) tplKeys.push(file + ': ' + f); }
   }
-  for (const f of ['index.html', 'books.html', 'news.html']) htmlStrings(read(f)).forEach(s => out.push(s));
+  for (const f of ['index.html', 'books.html', 'news.html', 'dialogs.html']) htmlStrings(read(f)).forEach(s => out.push(s));
   return { out, tplKeys };
 }
 
@@ -214,6 +214,11 @@ function newsIds() {
 }
 function newsFiles(id) {
   return fs.readdirSync(rel('data/news/' + id)).filter(f => f.endsWith('.json')).sort().map(f => `data/news/${id}/${f}`);
+}
+
+// Диалоги: data/dialogs/index.json + data/dialogs/<id>.json (tools/dialogs/build.py)
+function dialogIds() {
+  return exists('data/dialogs/index.json') ? JSON.parse(read('data/dialogs/index.json')).items.map(it => it.id) : [];
 }
 
 function uniq(a) { return [...new Set(a)]; }
@@ -247,6 +252,12 @@ function extract() {
     groups['news-index'] = uniq(walkStrings(JSON.parse(read('data/news/index.json')), []));
     for (const id of newsIds()) {
       groups['news/' + id] = uniq(newsFiles(id).flatMap(f => walkStrings(JSON.parse(read(f)), [])));
+    }
+  }
+  if (exists('data/dialogs/index.json')) {
+    groups['dialogs-index'] = uniq(walkStrings(JSON.parse(read('data/dialogs/index.json')), []));
+    for (const id of dialogIds()) {
+      groups['dialogs/' + id] = uniq(walkStrings(JSON.parse(read(`data/dialogs/${id}.json`)), []));
     }
   }
   return { groups, tplKeys };
@@ -339,7 +350,8 @@ function dictJs(keys, tm, title) {
    за уроком). Готовым считается урок, все строки которого переведены, —
    только такие собираются, проверяются и открываются: список уходит в
    i18n/<lang>/ready.js, остальные уроки js/ar-trial.js показывает как
-   «скоро». Книг и новостей пока нет. */
+   «скоро». Книг и новостей пока нет; диалоги переведены целиком и
+   собираются и проверяются, как у полного языка. */
 const TRIAL = {
   ar: { auto: true }
 };
@@ -351,7 +363,8 @@ function readyLessons(groups, tm) {
 function trialGroups(groups, lang, tm) {
   const t = TRIAL[lang];
   if (!t) return groups;
-  const keep = ['ui', ...readyLessons(groups, tm).map(id => 'lessons/' + id)];
+  const keep = ['ui', ...readyLessons(groups, tm).map(id => 'lessons/' + id),
+    ...Object.keys(groups).filter(g => g === 'dialogs-index' || g.startsWith('dialogs/'))];
   return Object.fromEntries(keep.map(g => [g, groups[g]]));
 }
 
@@ -369,6 +382,7 @@ function cmdBuild(lang = 'uk') {
   for (const id of ready) {
     fs.writeFileSync(rel(`${out}/lessons/${id}.js`), dictJs(groups['lessons/' + id], tm, 'Урок ' + id));
   }
+  buildDialogs(out, tm);
   if (trial) {
     fs.writeFileSync(rel(`${out}/ready.js`), `/* Готовые уроки — сгенерировано tools/i18n.js build, руками не править */
 window.I18N_READY = ${JSON.stringify(ready)};
@@ -392,6 +406,16 @@ window.I18N_READY = ${JSON.stringify(ready)};
     }
   }
   console.log('build: ok →', out);
+}
+
+// Переведённые копии диалогов: i18n/<lang>/dialogs/ — их подставляет
+// js/i18n.js вместо data/dialogs/ (немецкие реплики не меняются)
+function buildDialogs(out, tm) {
+  if (!exists('data/dialogs/index.json')) return;
+  writeJson(`${out}/dialogs/index.json`, translateObj(JSON.parse(read('data/dialogs/index.json')), tm));
+  for (const id of dialogIds()) {
+    writeJson(`${out}/dialogs/${id}.json`, translateObj(JSON.parse(read(`data/dialogs/${id}.json`)), tm));
+  }
 }
 
 function cmdCheck(lang = 'uk') {

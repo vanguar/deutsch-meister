@@ -318,6 +318,39 @@ function dmNewsBadgeLive() {
     .catch(() => {});
 }
 
+/* ── Пункт «Диалоги» ─────────────────────────────────────────────
+   dialogs.html — живые разговоры A1–B2 с озвучкой и переводом.
+   Добавляется сразу после «Новостей» во всех меню, где есть «Книги»:
+   68 оболочек уроков и главную по отдельности править не нужно.     */
+function dmDialogsUrl() { return dmBasePath() + 'dialogs.html'; }
+
+function openDialogsPage() {
+  dmHaptic('light');
+  window.location.href = dmDialogsUrl();
+}
+
+function dmAddDialogsItem() {
+  try {
+    document.querySelectorAll('.side-action').forEach(books => {
+      if (((books.getAttribute('onclick') || '').indexOf('openBooksModal') < 0)) return;
+      const parent = books.parentNode;
+      if (!parent || parent.querySelector('.side-action.dialogs')) return;
+      const btn = document.createElement('button');
+      btn.className = 'side-action dialogs';
+      btn.type = 'button';
+      btn.setAttribute('onclick', 'openDialogsPage()');
+      btn.innerHTML =
+        '<span class="sa-ico">💬</span>' +
+        '<span class="sa-txt">' +
+          '<span class="sa-title">Диалоги</span>' +
+          '<span class="sa-sub">Разговоры A1–B2 с озвучкой и переводом</span>' +
+        '</span>';
+      const after = parent.querySelector('.side-action.news') || books;
+      after.insertAdjacentElement('afterend', btn);
+    });
+  } catch (e) {}
+}
+
 /* ── Пункт «Связь с автором» ─────────────────────────────────────
    Замечания и предложения — в личные сообщения Telegram. Внутри
    мини-аппа ссылку открывает сам Telegram (иначе WebView уйдёт со
@@ -357,6 +390,7 @@ function dmAddContactItem() {
 function dmSidebarExtras() {
   dmFixBooksItem();
   dmAddNewsItem();
+  dmAddDialogsItem();
   dmAddContactItem();
 }
 
@@ -378,7 +412,9 @@ Object.assign(window, {
   openBooksModal,
   dmBooksUrl,
   openNewsPage,
-  dmNewsUrl
+  dmNewsUrl,
+  openDialogsPage,
+  dmDialogsUrl
 });
 
 /* Закрытие по Esc */
