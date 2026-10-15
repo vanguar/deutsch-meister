@@ -621,7 +621,7 @@ const TTS = (() => {
     }
   }
 
-  return { init, speak, speakPhrase, speakSlow, stop, preload, mode, germanVoices, voiceGender, inTelegram };
+  return { init, speak, speakPhrase, speakSlow, stop, preload, mode, germanVoices, voiceGender, voiceScore, inTelegram };
 })();
 
 TTS.init();

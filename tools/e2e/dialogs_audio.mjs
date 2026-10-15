@@ -4,7 +4,7 @@
 // Chrome притворяется Telegram WebView (User-Agent с «Telegram»), поэтому
 // TTS идёт аудио-путём: mp3 Google TTS через прокси /api/tts → Web Audio.
 // Нужен интернет. Проверяет: каждая реплика скачана и сыграна по порядку,
-// второму персонажу — сдвиг тона (playbackRate), «🎭» его выключает,
+// по умолчанию без сдвига тона (как в книгах), «🎭» включает его,
 // паузы между репликами короткие (следующая реплика качается заранее),
 // стоп посередине глушит звук. Сам звук не слушаем — в headless его нет.
 import { start } from './cdp.mjs';
@@ -53,16 +53,19 @@ const proxy = await c.ev(`window.__proxy`);
 ok(src.length === n, `сыграно реплик: ${src.length} из ${n}`);
 ok(proxy === n, `запросов к прокси: ${proxy} — по одному на реплику (предзагрузка не дублирует)`);
 const wantRate = sp.map(s => Math.pow(2, ((s === 'A' ? plan.A.detune : plan.B.detune) || 0) / 1200));
-ok(src.every((s, i) => Math.abs(s.rate - wantRate[i]) < 1e-6), `тон по персонажам: ${[...new Set(src.map(s => s.rate.toFixed(3)))].join(' / ')}`);
+ok(src.every((s, i) => Math.abs(s.rate - wantRate[i]) < 1e-6) && src.every(s => s.rate === 1), `по умолчанию обычный тон, как в книгах: ${[...new Set(src.map(s => s.rate.toFixed(3)))].join(' / ')}`);
 ok(src.every(s => s.dur > 0.3 && s.end > 0), 'каждая реплика — настоящий звук и доиграна до конца');
 const pauses = src.slice(1).map((s, i) => Math.round(s.t - src[i].end));
 ok(Math.max(...pauses) < 1200, `паузы между репликами ${Math.min(...pauses)}–${Math.max(...pauses)} мс (с предзагрузкой)`);
 
-// «🎭» выключает сдвиг тона — все реплики с обычной скоростью (из кэша, без сети)
+// «🎭» включает сдвиг тона у одного из персонажей (реплика из кэша, без сети)
 await c.ev(`document.getElementById('dlgTone').click(); window.__src = []; window.__proxy = 0`);
-await c.ev(`document.querySelectorAll('.dlg-say')[1].click()`);
+const tp = JSON.parse(await c.ev(`JSON.stringify(Dialogs.voicePlan())`));
+const low = tp.A.detune < tp.B.detune ? 'A' : 'B';
+const li = sp.indexOf(low);
+await c.ev(`document.querySelectorAll('.dlg-say')[${li}].click()`);
 await waitFor(`Dialogs.playing === null && window.__src.length === 1`, 20000);
-ok(await c.ev(`window.__src[0].rate === 1 && window.__proxy === 0`), '«🎭» выкл: обычный тон, реплика из кэша без запроса');
+ok(await c.ev(`window.__src[0].rate < 1 && window.__proxy === 0`), '«🎭» вкл: у персонажа тон ниже, реплика из кэша без запроса');
 await c.ev(`document.getElementById('dlgTone').click()`);
 
 // стоп посередине: текущий источник останавливается, новых нет

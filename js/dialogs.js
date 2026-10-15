@@ -36,7 +36,7 @@ const Dialogs = (() => {
   const INDEX_URL = 'data/dialogs/index.json';
   const DATA_DIR  = 'data/dialogs/';
   const TR_KEY    = 'dm_dlg_tr';     // показывать перевод: '1' / '0'
-  const TONE_KEY  = 'dm_dlg_tone';   // сдвиг тона в аудио-режиме: '1' / '0'
+  const TONE_KEY  = 'dm_dlg_tone';   // сдвиг тона в аудио-режиме: '1' — вкл (по умолчанию выкл)
   const HOME_URL  = 'index.html';
   const GAP_MS    = 380;             // пауза между репликами
 
@@ -49,7 +49,9 @@ const Dialogs = (() => {
   const LEVEL = Object.fromEntries(LEVELS.map(l => [l.id, l]));
   // Скорость системного голоса: на A1 медленнее, на B2 почти обычная.
   // На mp3 Google TTS не влияет — там скорость своя.
-  const RATE = { a1: 0.8, a2: 0.85, b1: 0.9, b2: 0.95 };
+  // Медленнее 0.85 системные голоса звучат «механически» — держим скорость
+  // уроков (0.85) и книг (0.9).
+  const RATE = { a1: 0.85, a2: 0.9, b1: 0.9, b2: 0.9 };
 
   let el = {};
   let items  = [];          // оглавление (index.json)
@@ -377,7 +379,9 @@ const Dialogs = (() => {
 
   /* ── Голоса персонажей ── */
 
-  function toneOn() { return readStore(TONE_KEY) !== '0'; }
+  // Сдвиг тона — ресемплинг, звук становится менее естественным, поэтому
+  // по умолчанию выключен: звучит так же, как в уроках и книгах.
+  function toneOn() { return readStore(TONE_KEY) === '1'; }
 
   // Сдвиг тона (центы) для аудио-пути: мужской персонаж ниже, при
   // одинаковом поле второй отличается от первого. Небольшой: это
@@ -389,26 +393,26 @@ const Dialogs = (() => {
     return ga === 'm' ? { A: -150, B: -60 } : { A: 0, B: -100 };
   }
 
-  // Системные голоса: разные персонажи — разные голоса, по полу, если
-  // его видно по имени. Голос один — разная высота тона (opts.pitch).
+  // Системные голоса: два РАЗНЫХ голоса — только если оба «живые»
+  // (нейронные Natural/Online, Premium, Google: voiceScore ≥ 50). Старые
+  // синтезаторы (Hedda, Stefan, eSpeak) звучат механически и не делают
+  // вопросительной интонации — тогда, как в уроках и книгах, оба персонажа
+  // говорят одним лучшим голосом, без искажения высоты.
   function speechPlan(sp) {
     const voices = (TTS.germanVoices && TTS.germanVoices()) || [];
+    const score = v => (TTS.voiceScore ? TTS.voiceScore(v) : 0);
     const gender = v => (TTS.voiceGender ? TTS.voiceGender(v) : '');
-    const pick = (g, used) =>
-      voices.find(v => used.indexOf(v) < 0 && gender(v) === g) ||
-      voices.find(v => used.indexOf(v) < 0) || voices[0] || null;
+    const best = voices[0] || null;
+    const good = voices.filter(v => score(v) >= 50);
     const ga = (sp.A && sp.A.g) || 'f';
     const gb = (sp.B && sp.B.g) || 'm';
-    const va = pick(ga, []);
-    const vb = pick(gb, va ? [va] : []);
-    if (va && vb && va !== vb) {
+    const va = good.find(v => gender(v) === ga);
+    const vb = good.find(v => v !== va && gender(v) === gb);
+    if (ga !== gb && va && vb) {
       return { two: true, names: [va.name, vb.name], A: { voiceName: va.name }, B: { voiceName: vb.name } };
     }
-    const name = va ? va.name : null;
-    const p = g => (g === 'm' ? 0.82 : 1.1);
-    const pa = ga === gb ? 1 : p(ga);
-    const pb = ga === gb ? (gb === 'm' ? 0.85 : 0.88) : p(gb);
-    return { two: false, names: name ? [name] : [], A: { voiceName: name, pitch: pa }, B: { voiceName: name, pitch: pb } };
+    const name = best ? best.name : null;
+    return { two: false, names: name ? [name] : [], A: { voiceName: name }, B: { voiceName: name } };
   }
 
   function voicePlan() {
@@ -427,7 +431,7 @@ const Dialogs = (() => {
     if (plan.mode === 'speech' && plan.two) {
       el.voiceNote.innerHTML = `<span>Два системных голоса</span>: <bdi dir="ltr">${esc(plan.names[0])}</bdi> · <bdi dir="ltr">${esc(plan.names[1])}</bdi>`;
     } else if (plan.mode === 'speech') {
-      el.voiceNote.innerHTML = '<span>На устройстве один немецкий голос: персонажи различаются высотой тона.</span>';
+      el.voiceNote.innerHTML = '<span>Один голос для обоих персонажей — как в уроках и книгах.</span>';
     } else if (toneOn()) {
       const lower = plan.A.detune < plan.B.detune ? sp.A : sp.B;
       el.voiceNote.innerHTML = `<span>Озвучка Google — один голос. Чтобы различать персонажей, у одного из них тон немного ниже</span>: <bdi dir="ltr" lang="de">${esc((lower && lower.name) || '')}</bdi>.`;

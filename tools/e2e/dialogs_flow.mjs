@@ -114,7 +114,8 @@ const perSpeaker = JSON.parse(await c.ev(`JSON.stringify(Dialogs.dialog.lines.ma
 const distinct = said.every((s, i) => JSON.stringify([s.voiceName, s.pitch, s.detune]) ===
   JSON.stringify(perSpeaker[i] === 'A' ? [plan.A.voiceName || null, plan.A.pitch, plan.A.detune || 0] : [plan.B.voiceName || null, plan.B.pitch, plan.B.detune || 0]));
 ok(distinct, `у персонажей свои параметры голоса (режим ${plan.mode}: A=${JSON.stringify(plan.A)} B=${JSON.stringify(plan.B)})`);
-ok(JSON.stringify(plan.A) !== JSON.stringify(plan.B), 'голоса персонажей различаются');
+ok(plan.two ? JSON.stringify(plan.A) !== JSON.stringify(plan.B) : JSON.stringify(plan.A) === JSON.stringify(plan.B) && !plan.A.pitch && !plan.A.detune,
+  plan.two ? 'два «живых» голоса у разных персонажей' : 'один лучший голос без искажения тона — как в уроках и книгах');
 ok(await c.ev(`document.querySelector('.dlg-line.is-speaking') === null && document.getElementById('dlgPlay').getAttribute('aria-pressed') === 'false'`), 'после конца — подсветка снята, кнопка «Слушать»');
 ok((await c.ev(`document.getElementById('dlgVoiceNote').textContent`)).length > 10, 'подпись о голосах: ' + await c.ev(`document.getElementById('dlgVoiceNote').textContent`));
 // стоп посередине и повтор
