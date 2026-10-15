@@ -120,6 +120,21 @@
       "cover": "👁️",
       "source": "Werke, Propyläen-Verlag, Berlin 1922 (projekt-gutenberg.org)",
       "license": "public domain"
+    },
+    {
+      "id": "sterntaler",
+      "title": "Die Sterntaler und andere kleine Märchen",
+      "titleRu": "Звёздные талеры и другие маленькие сказки",
+      "blurb": "Четыре коротких сказки братьев Гримм. Сирота раздаёт всё до последней рубашки — и с неба падают звёзды-талеры. Волшебный горшочек варит кашу, пока она не заливает весь город. Ночью сапожнику шьют башмаки голые человечки. Внук мастерит корытце для родителей — и те понимают, как обходились с дедом. Самая короткая книга ридера.",
+      "author": "Brüder Grimm",
+      "level": "A2–B1",
+      "year": 1857,
+      "chapters": 4,
+      "words": 1336,
+      "minutes": 10,
+      "cover": "⭐",
+      "source": "Kinder- und Haus-Märchen, 7. Auflage, Göttingen 1857 (de.wikisource.org)",
+      "license": "public domain"
     }
   ]
 }

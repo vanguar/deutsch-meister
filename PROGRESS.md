@@ -2558,3 +2558,42 @@ Macht`), `liebe` — на `lieb`, `wagen` — на `der Wagen`; заметки `
 `test_i18n.js`, `test_bot_lang.py`, `check_tips.js`,
 `test_audience_wording.py` — 0 ошибок. Headless Chrome: карточка и ридер
 на ru и uk, 0 исключений.
+
+---
+
+## Девятая книга — «Die Sterntaler und andere kleine Märchen» (Brüder Grimm)
+
+Вторая книга уровня **A2–B1** (до неё на этой ступеньке был только Storm):
+четыре коротких сказки Гриммов — «Die Sterntaler» (KHM 153), «Der süße
+Brei» (KHM 103), первая из трёх «Die Wichtelmänner» (KHM 39, про сапожника)
+и «Der alte Großvater und der Enkel» (KHM 78). Каждая сказка — глава.
+4 главы, 19 абзацев, 50 предложений, 1336 слов — самая короткая книга ридера.
+
+**Источник.** Вычитанные тексты de.wikisource (статус «fertig») по 7-му
+изданию «Kinder- und Haus-Märchen», Dieterich, Göttingen 1857 (Ausgabe
+letzter Hand). Исходник — `tools/sources/sterntaler.txt`, главы собраны
+`scripts/build_book.py`. Орфография приведена к норме (daß → dass, Thaler →
+Taler, gieng → ging, wärs → wär's, weg geben → weggeben …), прямая речь
+взята в »…«; лексика и грамматика не тронуты — ward, sollt, Linnen, Lebtag,
+alsofort, irden, bezeigen, уменьшительные на -lein, дательные с -e помечены
+`old`. Полный список правок — `meta.normalized`.
+
+**Глоссарий** 504 словоформы / 386 лемм, покрытие 100 %; засеяно из восьми
+книг 349 словоформ. Засев вычищен по контексту: `schenk` вёл на
+`einschenken`, `lauter` — на «громко», `junge` — на `der Junge`, `heller` —
+на `hell`, `statt` — на `stattfinden`, `mach` — на `aufmachen`, `morgen` —
+на «завтра», `erst` — на «первый», `paar` — на `ein paar` (здесь `das Paar`
+Schuhe), `klopfen`/`weinen` — на существительные; глаголы с оторванной
+приставкой переведены на свои леммы (`tat … ab`, `zog … ab`, `trat … ein`,
+`blieben … aus`, `steckte … an`, `sahen sich … an`). Пометы `note` из чужих
+книг («В тексте …», примеры у Клейста и Хауфа) сняты.
+
+**uk.** Полный перевод. Общая память снова подменяла подписи: «пока» →
+«бувай», «чем» → «ніж», «прошла» → «минула», «поднимается» → «підводиться»,
+«случилось» → «сталася» — заменены однозначными подписями.
+
+**После**: `python bump_version.py` → CACHE v134 → v135.
+`validate_books.py` (9 книг и 21 статья), `validate_lessons.py`,
+`test_i18n.js`, `check_tips.js`, `test_audience_wording.py` — 0 ошибок.
+Headless Chrome: карточка и ридер на ru и uk, подсказки у всех слов,
+0 исключений.

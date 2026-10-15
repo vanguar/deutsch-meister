@@ -1,0 +1,32 @@
+{
+  "id": "sterntaler",
+  "title": "Die Sterntaler und andere kleine Märchen",
+  "titleRu": "Звёздные талеры и другие маленькие сказки",
+  "author": "Brüder Grimm",
+  "level": "A2–B1",
+  "year": 1857,
+  "chapters": 4,
+  "words": 1336,
+  "minutes": 10,
+  "cover": "⭐",
+  "source": "Kinder- und Haus-Märchen, 7. Auflage, Dieterich, Göttingen 1857, орфография приведена к современной норме",
+  "sourceUrl": "https://de.wikisource.org/wiki/Die_Sternthaler_(1857)",
+  "compared": "de.wikisource.org, вычитанные тексты «Ausgabe letzter Hand» (статус «fertig»): Die Sternthaler (1857, KHM 153), Der süße Brei (1857, KHM 103), Die Wichtelmänner (1857, KHM 39 — первая из трёх сказок), Der alte Großvater und der Enkel (1857, KHM 78)",
+  "license": "public domain",
+  "yearNote": "1857 — седьмое издание «Детских и семейных сказок», последнее при жизни братьев (Ausgabe letzter Hand). Вильгельм Гримм умер в 1859 году, Якоб — в 1863-м: текст в общественном достоянии.",
+  "levelNote": "A2–B1: четыре короткие сказки с простым сюжетом и повторами («Töpfchen, koche» / «Töpfchen, steh», «gab es ihm», «Paar Schuhe»). Почти сплошной Präteritum, в «Сладкой каше» — переход в настоящее время прямо посреди рассказа (da kocht es, und sie isst sich satt). Выше A2 тянут длинные предложения на und и da, Konjunktiv II (wir müssten uns … bezeigen, wie wär's, wenn wir … aufblieben), опущенный вспомогательный глагол (ob es gleich sein Hemdlein weggegeben) и десяток устаревших слов, помеченных old.",
+  "normalizedNote": "Правок немного: язык издания 1857 года близок к современному, правились в основном написание и кавычки.",
+  "normalized": [
+    "ß и ss по современной норме: daß → dass, wußte → wusste, mußte → musste, müßten → müssten, ißt → isst, naß → nass, floß → floss",
+    "th → t и старые написания: Thaler → Taler, that → tat, Thüre → Türe, Muth → Mut, Armuth → Armut, Noth → Not, gieng → ging, fiengen → fingen",
+    "hungerig → hungrig, behend → behänd",
+    "слитное написание: weg geben → weggeben, weg gegeben → weggegeben, fest halten → festhalten, mit essen → mitessen",
+    "апостроф стяжения по современной норме: dirs → dir's, wollts → wollt's, giengs → ging's, wärs → wär's, wars → war's",
+    "строчная буква у наречий: Abends → abends, früh Morgens → früh morgens (в начале предложения Morgens осталось)",
+    "прямая речь взята в »…«, как в остальных книгах ридера, перед ней поставлено двоеточие, реплика начинается с заглавной; добавлены запятые перед относительными придаточными (ein Kind, das jammerte), между однородными прилагательными (armes, frommes; kleine, niedliche, nackte; harte, blanke) и в «niemand, du kannst»",
+    "абзацы: «Звёздные талеры» и «Сладкая каша» у Гриммов идут одним абзацем — разбиты по сменам сцены; стихотворная песенка человечков записана в строку",
+    "из «Die Wichtelmänner» взята только первая из трёх сказок — про сапожника; две другие (о служанке на крестинах и о подменыше) заметно сложнее и в книгу не вошли",
+    "название книги и деление на главы наши: каждая глава — отдельная сказка"
+  ],
+  "notNormalized": "Лексика и грамматика Гриммов не тронуты: старые дательные с -e (an meinem Kopfe, bei Tische, auf dem Tische), ward вместо wurde, sollt вместо sollte, Linnen, Lebtag, alsofort, irden, bezeigen, sich verwundern, сказочные уменьшительные на -lein (Hemdlein, Röcklein, Höslein, Schühlein, Brettlein, Tröglein), Hirsenbrei, zitterig, «dem war Vater und Mutter gestorben» с глаголом в единственном числе. Устаревшее помечено полем old в glossary.l."
+}

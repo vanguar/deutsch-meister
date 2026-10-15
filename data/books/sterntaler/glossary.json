@@ -1,0 +1,2528 @@
+{
+  "version": 1,
+  "w": {
+    "ab": "ab",
+    "abend": "Abend",
+    "abends": "abends",
+    "aber": "aber",
+    "abwenden": "abwenden",
+    "ach": "ach",
+    "acht": "Acht",
+    "alle": "alle/alles",
+    "allein": "allein",
+    "aller": "alle/alles",
+    "allerfeinsten": "allerfeinst",
+    "alles": "alle/alles",
+    "als": "als",
+    "also": "also",
+    "alsofort": "alsofort",
+    "alte": "alt",
+    "alten": "alt",
+    "am": "an",
+    "an": "an",
+    "andern": "ander",
+    "anstellen": "sich anstellen",
+    "antwortete": "antworten",
+    "anzusehen": "ansehen",
+    "arbeit": "Arbeit",
+    "arm": "arm",
+    "armer": "arm",
+    "armes": "arm",
+    "armut": "Armut",
+    "auch": "auch",
+    "auf": "auf",
+    "aufblieben": "aufbleiben",
+    "aufgehängt": "aufhängen",
+    "aufhören": "aufhören",
+    "aufstand": "aufstehen",
+    "augen": "Auge",
+    "aus": "aus",
+    "ausgegangen": "ausgehen",
+    "auskommen": "Auskommen",
+    "aßen": "essen",
+    "bald": "bald",
+    "bat": "bitten",
+    "bedecken": "bedecken",
+    "befahl": "befehlen",
+    "begegnete": "begegnen",
+    "behänd": "behänd",
+    "bei": "bei",
+    "beiden": "beide",
+    "betrachten": "betrachten",
+    "betrübt": "betrübt",
+    "bett": "Bett",
+    "bettchen": "Bettchen",
+    "bezahlte": "bezahlen",
+    "bezeigen": "bezeigen",
+    "bezeigten": "bezeigen",
+    "bin": "sein",
+    "bis": "bis",
+    "blanke": "blank",
+    "blieb": "bleiben",
+    "blieben": "ausbleiben",
+    "brachte": "bringen",
+    "brauchte": "brauchen",
+    "brei": "Brei",
+    "brettlein": "Brettlein",
+    "brot": "Brot",
+    "bänke": "Bank",
+    "da": "da",
+    "dachte": "denken",
+    "dafür": "dafür",
+    "dankbar": "dankbar",
+    "dann": "dann",
+    "daran": "daran",
+    "darauf": "darauf",
+    "daraus": "daraus",
+    "darin": "darin",
+    "das": "der/die/das",
+    "dass": "dass",
+    "davor": "davor",
+    "dazu": "dazu",
+    "dein": "dein",
+    "dem": "der/die/das",
+    "den": "der/die/das",
+    "denn": "denn",
+    "der": "der/die/das",
+    "des": "der/die/das",
+    "dessen": "dessen",
+    "deswegen": "deswegen",
+    "dich": "du",
+    "die": "der/die/das",
+    "diese": "dieser",
+    "dir's": "dir's",
+    "doch": "doch",
+    "du": "du",
+    "dunkel": "dunkel",
+    "dunkle": "dunkel",
+    "durchessen": "sich durchessen",
+    "ecke": "Ecke",
+    "ehrliches": "ehrlich",
+    "ein": "ein/eine",
+    "eine": "ein/eine",
+    "einem": "ein/eine",
+    "einen": "ein/eine",
+    "eines": "ein/eine",
+    "einkaufen": "einkaufen",
+    "einmal": "einmal",
+    "eins": "eins",
+    "einzigen": "einzig",
+    "einziges": "einzig",
+    "ekelten": "sich ekeln",
+    "ende": "Ende",
+    "endlich": "endlich",
+    "enkel": "Enkel",
+    "er": "er",
+    "erde": "Erde",
+    "erhandeln": "erhandeln",
+    "erst": "erst (сначала)",
+    "es": "es",
+    "essen": "essen",
+    "etwas": "etwas",
+    "falsch": "falsch",
+    "fand": "finden",
+    "fanden": "finden",
+    "fein": "fein (нарядный)",
+    "feld": "Feld",
+    "fertig": "fertig (готовый)",
+    "festhalten": "festhalten",
+    "fiel": "fallen",
+    "fielen": "fallen",
+    "fingen": "anfangen",
+    "fingerlein": "Fingerlein",
+    "floss": "fließen",
+    "fort": "fort",
+    "fragte": "fragen",
+    "frau": "Frau",
+    "freude": "Freude",
+    "frieren": "frieren",
+    "friert": "frieren",
+    "frischem": "frisch",
+    "fromm": "fromm",
+    "fromme": "fromm",
+    "frommes": "fromm",
+    "fror": "frieren",
+    "früh": "früh",
+    "für": "für",
+    "gab": "geben",
+    "gaben": "geben",
+    "ganz": "ganz",
+    "ganze": "ganz",
+    "gar": "gar",
+    "gearbeitet": "arbeiten",
+    "gebet": "Gebet",
+    "gebracht": "bringen",
+    "gefielen": "gefallen",
+    "gegangen": "gehen",
+    "gehen": "gehen",
+    "gelangte": "gelangen",
+    "geld": "Geld",
+    "gemacht": "machen",
+    "gerade": "gerade",
+    "geschah": "geschehen",
+    "geschenke": "Geschenk",
+    "geschenkt": "schenken",
+    "geschwindigkeit": "Geschwindigkeit",
+    "gestorben": "sterben",
+    "gewaltige": "gewaltig",
+    "gewissen": "Gewissen",
+    "geworden": "werden",
+    "gewöhnlich": "gewöhnlich",
+    "gib": "geben",
+    "ging": "gehen",
+    "ging's": "ging's",
+    "glatt": "glatt",
+    "gleich": "gleich (тотчас; хотя)",
+    "glückte": "glücken",
+    "gott": "Gott",
+    "groß": "groß",
+    "großvater": "Großvater",
+    "größte": "groß",
+    "größten": "groß",
+    "gut": "gut",
+    "guten": "gut",
+    "gutes": "gut",
+    "haben": "haben",
+    "halten": "halten",
+    "hand": "Hand",
+    "harte": "hart",
+    "hatte": "haben",
+    "hatten": "haben",
+    "haus": "Haus",
+    "heim": "heim",
+    "helfen": "helfen",
+    "heller": "Heller",
+    "hemd": "Hemd",
+    "hemdlein": "Hemdlein",
+    "herangesprungen": "herangesprungen kommen",
+    "herum": "herum",
+    "herz": "Herz",
+    "hilfreiche": "hilfreich",
+    "himmel": "Himmel",
+    "hin": "hin",
+    "hinaus": "hinaus",
+    "hinein": "hinein",
+    "hinter": "hinter",
+    "hirsenbrei": "Hirsenbrei",
+    "holten": "holen",
+    "hungers": "Hunger",
+    "hungrig": "hungrig",
+    "hände": "Hand",
+    "hölzernes": "hölzern",
+    "hört": "aufhören",
+    "hörte": "aufhören",
+    "höslein": "Höslein",
+    "hüpften": "hüpfen",
+    "ich": "ich",
+    "ihm": "er",
+    "ihn": "er",
+    "ihren": "ihr (её, их)",
+    "ihrer": "ihr (их, её)",
+    "ihres": "ihr (её, их)",
+    "im": "in",
+    "immer": "immer",
+    "in": "in",
+    "ins": "in",
+    "irdenes": "irden",
+    "isst": "essen",
+    "ist": "sein",
+    "jahren": "Jahr",
+    "jammer": "Jammer",
+    "jammerte": "jammern",
+    "jedem": "jeder",
+    "junge": "jung",
+    "kam": "kommen",
+    "kamen": "kommen",
+    "kann": "können",
+    "kannst": "können",
+    "kaufte": "kaufen",
+    "kaum": "kaum",
+    "kein": "kein",
+    "kind": "Kind",
+    "kleider": "Kleid",
+    "kleidern": "Kleid",
+    "kleidungsstücke": "Kleidungsstück",
+    "kleine": "klein",
+    "kleinen": "klein",
+    "kleines": "klein",
+    "klopfen": "klopfen",
+    "knaben": "Knabe",
+    "knie": "Knie",
+    "koche": "kochen",
+    "kochen": "kochen",
+    "kocht": "kochen",
+    "kochte": "kochen",
+    "kommt": "kommen",
+    "konnte": "können",
+    "konnten": "können",
+    "kopfe": {
+      "l": "Kopf",
+      "old": "старый дательный с -e (in seinem Kopfe); сегодня in seinem Kopf"
+    },
+    "kämmerchen": "Kämmerchen",
+    "käufer": "Käufer",
+    "küche": "Küche",
+    "lang": "lang",
+    "lange": "lang",
+    "laufen": "laufen",
+    "lauter": "lauter (сплошь)",
+    "lebtag": "Lebtag",
+    "lebte": "leben",
+    "leder": "Leder",
+    "ledig": "ledig",
+    "legte": "legen",
+    "legten": "legen",
+    "leib": "Leib",
+    "leibchen": "Leibchen",
+    "leistet": "leisten",
+    "licht": "Licht",
+    "lieben": "lieb",
+    "ließen": "lassen",
+    "linnen": "Linnen",
+    "länger": "lang",
+    "löffel": "Löffel",
+    "mach": "machen",
+    "mache": "machen",
+    "machen": "machen",
+    "machst": "machen",
+    "mann": "Mann",
+    "mehr": "mehr",
+    "meinem": "mein",
+    "meisterstück": "Meisterstück",
+    "mensch": "Mensch",
+    "mich": "ich",
+    "mir": "ich",
+    "mit": "mit",
+    "mitessen": "mitessen",
+    "mitleidiges": "mitleidig",
+    "mitternacht": "Mitternacht",
+    "morgen": "Morgen",
+    "morgens": "morgens",
+    "mund": "Mund",
+    "musste": "müssen",
+    "mut": "Mut",
+    "mutter": "Mutter",
+    "mädchen": "Mädchen",
+    "männer": "Mann",
+    "männlein": "Männlein",
+    "müssen": "müssen",
+    "müssten": "müssen",
+    "mütze": "Mütze",
+    "nach": "nach",
+    "nachdem": "nachdem",
+    "nacht": "Nacht",
+    "nackte": "nackt",
+    "nahm": "nehmen",
+    "nahmen": "nehmen",
+    "nass": "nass",
+    "nehmen": "nehmen",
+    "neues": "neu",
+    "nicht": "nicht",
+    "nichts": "nichts",
+    "niedersetzen": "sich niedersetzen",
+    "niedliche": "niedlich",
+    "niedlichen": "niedlich",
+    "niemand": "niemand",
+    "noch": "noch",
+    "not": "Not",
+    "nun": "nun",
+    "nur": "nur",
+    "nächsten": "nächste",
+    "nähen": "nähen",
+    "näher": "nah",
+    "ob": "ob",
+    "ofen": "Ofen",
+    "oft": "oft",
+    "ohne": "ohne",
+    "ohren": "Ohr",
+    "paar": "Paar",
+    "rand": "Rand",
+    "reich": "reich",
+    "reichte": "reichen",
+    "rock": "Rock",
+    "ruhig": "ruhig",
+    "röcklein": "Röcklein",
+    "sagen": "sagen",
+    "sagte": "sagen",
+    "sagten": "sagen",
+    "sah": "sehen",
+    "sahen": "sich ansehen",
+    "sammelte": "sammeln",
+    "sangen": "singen",
+    "satt": "satt",
+    "sauber": "sauber",
+    "saß": "sitzen",
+    "schalt": "schelten",
+    "schenk": "schenken",
+    "schenkte": "schenken",
+    "schlafen": "schlafen",
+    "schlafengehen": "Schlafengehen",
+    "schlief": "schlafen",
+    "schnell": "schnell",
+    "schnitt": "zuschneiden",
+    "schon": "schon",
+    "schuhe": "Schuh",
+    "schuhen": "Schuh",
+    "schuld": "Schuld",
+    "schuster": "Schuster",
+    "schusters": "Schuster",
+    "schönen": "schön",
+    "schühlein": "Schühlein",
+    "schüsselchen": "Schüsselchen",
+    "schüttete": "schütten",
+    "segne": "segnen",
+    "sehen": "sehen",
+    "sein": "sein",
+    "seine": "sein (его, свой)",
+    "seinem": "sein (его, свой)",
+    "seinen": "sein (его, свой)",
+    "seiner": "sein (его, свой)",
+    "seins": "seins",
+    "setzen": "setzen",
+    "setzten": "setzen",
+    "seufzte": "seufzen",
+    "sich": "sich",
+    "sie": "sie",
+    "sieht": "sehen",
+    "sind": "sein",
+    "sitzen": "sitzen",
+    "so": "so",
+    "sohn": "Sohn",
+    "solche": "solch",
+    "soll": "sollen",
+    "sollen": "sollen",
+    "sollt": {
+      "l": "sollen",
+      "old": "апокопа sollte"
+    },
+    "sollte": "sollen",
+    "sondern": "sondern",
+    "sprach": "sprechen",
+    "sprangen": "springen",
+    "spricht": "sprechen",
+    "stadt": "Stadt",
+    "stand": "stehen",
+    "standen": "stehen",
+    "statt": "statt",
+    "stechen": "stechen",
+    "steckte": "anstecken",
+    "steh": "stehen",
+    "steht": "stehen",
+    "steigt": "steigen",
+    "steinalter": "steinalt",
+    "sterne": "Stern",
+    "stich": "Stich",
+    "straße": "Straße",
+    "strichen": "streichen",
+    "stricken": "stricken",
+    "strümpfe": "Strumpf",
+    "stubenecken": "Stubenecke",
+    "stückchen": "Stückchen",
+    "stühle": "Stuhl",
+    "suppe": "Suppe",
+    "süßen": "süß",
+    "taler": "Taler",
+    "tanzten": "tanzen",
+    "tat": "abtun",
+    "taub": "taub",
+    "tisch": "Tisch",
+    "tische": {
+      "l": "Tisch",
+      "old": "старый дательный с -e: auf dem Tische, bei Tische"
+    },
+    "tischtuch": "Tischtuch",
+    "topf": "Topf",
+    "trat": "eintreten",
+    "trägt": "tragen",
+    "tröglein": "Tröglein",
+    "trüb": "trüb",
+    "töpfchen": "Töpfchen",
+    "türe": "Tür",
+    "um": "um",
+    "und": "und",
+    "uns": "wir",
+    "unternahm": "unternehmen",
+    "vater": "Vater",
+    "verarbeitet": "verarbeiten",
+    "verbargen": "sich verbergen",
+    "verlassen": "verlassen",
+    "verrichtet": "verrichten",
+    "verschüttete": "verschütten",
+    "versteckten": "sich verstecken",
+    "vertrauen": "Vertrauen",
+    "verwunderte": "sich verwundern",
+    "verwunderten": "sich verwundern",
+    "verwunderung": "Verwunderung",
+    "viel": "viel",
+    "vier": "vier",
+    "voll": "voll",
+    "vom": "von",
+    "von": "von",
+    "vor": "vor",
+    "wald": "Wald",
+    "wams": "Wams",
+    "war": "sein",
+    "war's": "sein",
+    "ward": {
+      "l": "werden",
+      "old": "устаревшая форма Präteritum от werden; сегодня wurde"
+    },
+    "waren": "sein",
+    "was": "was",
+    "weggeben": "weggeben",
+    "weggegeben": "weggeben",
+    "weihnachten": "Weihnachten",
+    "weil": "weil",
+    "weile": "Weile",
+    "weinen": "weinen",
+    "weiter": "weit",
+    "weiß": "wissen",
+    "weißt": "wissen",
+    "welt": "Welt",
+    "wenig": "wenig",
+    "wenn": "wenn",
+    "wer": "wer",
+    "wie": "wie",
+    "wieder": "wieder",
+    "will": "wollen",
+    "wir": "wir",
+    "wohl": "wohl",
+    "wohlhabender": "wohlhabend",
+    "wohnen": "wohnen",
+    "wollt's": "wollt's",
+    "wollte": "wollen",
+    "wollten": "wollen",
+    "womit": "womit",
+    "wort": "Wort",
+    "wurden": "werden",
+    "wusste": "wissen",
+    "wär's": "wär's",
+    "würden": "werden",
+    "zeit": "Zeit",
+    "zerbrach": "zerbrechen",
+    "zitterigen": "zitterig",
+    "zitterten": "zittern",
+    "zog": "abziehen",
+    "zogen": "sich anziehen",
+    "zu": "zu",
+    "zufrieden": "zufrieden",
+    "zugeschnitten": "zuschneiden",
+    "zugeschnittene": "zuschneiden",
+    "zugeschnittenen": "zuschneiden",
+    "zugeschnittenes": "zuschneiden",
+    "zur": "zu",
+    "zusammen": "zusammen",
+    "zuschnitt": "zuschneiden",
+    "zwei": "zwei",
+    "zweite": "zweit",
+    "über": "über",
+    "übrig": "übrig"
+  },
+  "l": {
+    "ab": {
+      "note": "Тж. отделяемая приставка: absteigen «слезать», abnehmen",
+      "pos": "предл.",
+      "ru": "от, с; прочь"
+    },
+    "Abend": {
+      "ru": "вечер",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Abende"
+    },
+    "abends": {
+      "ru": "вечером, по вечерам",
+      "pos": "нареч."
+    },
+    "aber": {
+      "ru": "но, однако",
+      "pos": "союз"
+    },
+    "abtun": {
+      "ru": "снимать (одежду, шапку)",
+      "pos": "гл.",
+      "forms": "tat ab · hat abgetan",
+      "note": "die Mütze abtun — снять шапку",
+      "old": "в этом значении устар.; сейчас abnehmen"
+    },
+    "abwenden": {
+      "ru": "отводить, отворачивать",
+      "pos": "гл.",
+      "forms": "wandte ab · hat abgewandt",
+      "note": "die Augen abwenden — отвести глаза"
+    },
+    "abziehen": {
+      "ru": "снимать, стаскивать",
+      "pos": "гл.",
+      "forms": "zog ab · hat abgezogen",
+      "note": "das Hemd abziehen — снять рубашку"
+    },
+    "ach": {
+      "ru": "ах",
+      "pos": "межд."
+    },
+    "Acht": {
+      "ru": "внимание",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null,
+      "note": "Acht geben auf etw. — обращать внимание на что-л."
+    },
+    "alle/alles": {
+      "ru": "все; всё",
+      "pos": "мест."
+    },
+    "allein": {
+      "ru": "один, в одиночку; только",
+      "pos": "нареч."
+    },
+    "allerfeinst": {
+      "ru": "самый-самый тонкий, тончайший",
+      "pos": "прил.",
+      "note": "aller- усиливает превосходную степень"
+    },
+    "als": {
+      "ru": "когда; как; чем",
+      "pos": "союз"
+    },
+    "also": {
+      "ru": "итак, стало быть",
+      "pos": "нареч."
+    },
+    "alsofort": {
+      "ru": "тотчас, сразу же",
+      "pos": "нареч.",
+      "old": "устар.; сейчас sofort"
+    },
+    "alt": {
+      "ru": "старый",
+      "pos": "прил.",
+      "forms": "alt · älter · am ältesten"
+    },
+    "an": {
+      "ru": "у, к, на",
+      "pos": "предл.",
+      "note": "am = an dem. Тж. отделяемая приставка: anfangen «начинать», annehmen, ansehen, anzünden"
+    },
+    "ander": {
+      "pos": "прил.",
+      "ru": "другой, иной"
+    },
+    "anfangen": {
+      "ru": "начинать, браться за дело",
+      "pos": "гл.",
+      "forms": "fing an · hat angefangen",
+      "note": "В тексте приставка оторвана: fingen … an — anfangen"
+    },
+    "ansehen": {
+      "ru": "принимать за кого-л.; рассматривать",
+      "pos": "гл.",
+      "forms": "sah an · hat angesehen"
+    },
+    "anstecken": {
+      "ru": "поджигать",
+      "pos": "гл.",
+      "forms": "steckte an · hat angesteckt"
+    },
+    "antworten": {
+      "ru": "отвечать",
+      "pos": "гл.",
+      "forms": "antwortete · hat geantwortet"
+    },
+    "Arbeit": {
+      "ru": "работа",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Arbeiten"
+    },
+    "arbeiten": {
+      "ru": "работать",
+      "pos": "гл.",
+      "forms": "arbeitete · hat gearbeitet"
+    },
+    "arm": {
+      "ru": "бедный",
+      "pos": "прил.",
+      "forms": "arm · ärmer · am ärmsten"
+    },
+    "Armut": {
+      "ru": "бедность",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "auch": {
+      "ru": "тоже, также; даже",
+      "pos": "частица"
+    },
+    "auf": {
+      "ru": "на, в",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: aufspringen «вскочить», sich aufmachen"
+    },
+    "aufbleiben": {
+      "ru": "не ложиться спать",
+      "pos": "гл.",
+      "forms": "blieb auf · ist aufgeblieben"
+    },
+    "aufhängen": {
+      "ru": "вешать (в т. ч. казнить)",
+      "pos": "гл.",
+      "forms": "hängte auf · hat aufgehängt"
+    },
+    "aufhören": {
+      "ru": "переставать, прекращаться",
+      "pos": "гл.",
+      "forms": "hörte auf · hat aufgehört",
+      "note": "aufhören zu kochen — перестать варить"
+    },
+    "aufstehen": {
+      "ru": "вставать",
+      "pos": "гл.",
+      "forms": "stand auf · ist aufgestanden"
+    },
+    "Auge": {
+      "ru": "глаз",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Augen"
+    },
+    "aus": {
+      "ru": "из",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: auslöschen «погасить»"
+    },
+    "ausbleiben": {
+      "ru": "не приходить, не наступать",
+      "pos": "гл.",
+      "forms": "blieb aus · ist ausgeblieben",
+      "note": "die Käufer blieben nicht aus — покупатели не переводились"
+    },
+    "ausgehen": {
+      "ru": "выходить (из дому)",
+      "pos": "гл.",
+      "forms": "ging aus · ist ausgegangen"
+    },
+    "Auskommen": {
+      "ru": "достаток, средства к жизни",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null,
+      "note": "sein Auskommen haben — иметь на что жить"
+    },
+    "bald": {
+      "ru": "скоро",
+      "pos": "нареч."
+    },
+    "Bank": {
+      "ru": "скамья, скамейка",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Bänke",
+      "note": "в значении «банк» мн. ч. die Banken"
+    },
+    "bedecken": {
+      "ru": "покрывать",
+      "pos": "гл.",
+      "forms": "bedeckte · hat bedeckt"
+    },
+    "befehlen": {
+      "ru": "приказывать, велеть",
+      "pos": "гл.",
+      "forms": "befahl · hat befohlen",
+      "note": "sich Gott befehlen — поручить себя Богу"
+    },
+    "begegnen": {
+      "ru": "встречать (случайно)",
+      "pos": "гл.",
+      "forms": "begegnete · ist begegnet",
+      "note": "jemandem begegnen — встретить кого-то (дательный)"
+    },
+    "behänd": {
+      "ru": "проворный, ловкий",
+      "pos": "прил."
+    },
+    "bei": {
+      "ru": "у, при, возле",
+      "pos": "предл."
+    },
+    "beide": {
+      "ru": "оба",
+      "pos": "мест."
+    },
+    "betrachten": {
+      "forms": "betrachtete · hat betrachtet",
+      "pos": "гл.",
+      "ru": "рассматривать, созерцать"
+    },
+    "betrübt": {
+      "ru": "опечаленный",
+      "pos": "прил."
+    },
+    "Bett": {
+      "ru": "постель, кровать",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Betten"
+    },
+    "Bettchen": {
+      "ru": "кроватка",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Bettchen",
+      "note": "уменьшительное от das Bett"
+    },
+    "bezahlen": {
+      "ru": "платить",
+      "pos": "гл.",
+      "forms": "bezahlte · hat bezahlt"
+    },
+    "bezeigen": {
+      "ru": "выказывать, проявлять",
+      "pos": "гл.",
+      "forms": "bezeigte · hat bezeigt",
+      "note": "sich dankbar bezeigen — отблагодарить",
+      "old": "устар.; сейчас bezeugen, zeigen"
+    },
+    "bis": {
+      "ru": "до; пока не",
+      "pos": "союз"
+    },
+    "bitten": {
+      "forms": "bat · hat gebeten",
+      "note": "um etw. bitten — просить о чём-л.",
+      "pos": "гл.",
+      "ru": "просить"
+    },
+    "blank": {
+      "ru": "блестящий, начищенный",
+      "pos": "прил."
+    },
+    "bleiben": {
+      "ru": "оставаться",
+      "pos": "гл.",
+      "forms": "blieb · ist geblieben"
+    },
+    "brauchen": {
+      "ru": "нуждаться; годиться",
+      "pos": "гл.",
+      "forms": "brauchte · hat gebraucht",
+      "note": "nicht zu brauchen — никуда не годится"
+    },
+    "Brei": {
+      "ru": "каша; жидкое тесто",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Breie"
+    },
+    "Brettlein": {
+      "ru": "дощечка",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Brettlein",
+      "note": "уменьшительное от das Brett",
+      "old": "уменьшительное на -lein сейчас звучит сказочно; обычно Brettchen"
+    },
+    "bringen": {
+      "ru": "приносить, приводить",
+      "pos": "гл.",
+      "forms": "brachte · hat gebracht"
+    },
+    "Brot": {
+      "ru": "хлеб",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Brote"
+    },
+    "da": {
+      "ru": "тут, там; тогда",
+      "pos": "нареч."
+    },
+    "dafür": {
+      "ru": "для этого",
+      "pos": "нареч."
+    },
+    "dankbar": {
+      "ru": "благодарный",
+      "pos": "прил."
+    },
+    "dann": {
+      "ru": "потом, затем",
+      "pos": "нареч."
+    },
+    "daran": {
+      "ru": "на этом, об этом",
+      "pos": "нареч.",
+      "note": "dran — разговорная форма"
+    },
+    "darauf": {
+      "ru": "затем, после этого; на этом",
+      "pos": "нареч."
+    },
+    "daraus": {
+      "ru": "из этого",
+      "pos": "нареч."
+    },
+    "darin": {
+      "ru": "в этом, внутри",
+      "pos": "нареч."
+    },
+    "dass": {
+      "ru": "что; чтобы",
+      "pos": "союз"
+    },
+    "davor": {
+      "ru": "перед этим; этого (бояться, брезговать)",
+      "pos": "нареч.",
+      "note": "sich davor ekeln — брезговать этим"
+    },
+    "dazu": {
+      "ru": "к этому, туда же",
+      "pos": "нареч."
+    },
+    "dein": {
+      "pos": "мест.",
+      "ru": "твой"
+    },
+    "denken": {
+      "ru": "думать",
+      "pos": "гл.",
+      "forms": "dachte · hat gedacht"
+    },
+    "denn": {
+      "ru": "ведь, так как",
+      "pos": "союз"
+    },
+    "der/die/das": {
+      "ru": "определённый артикль",
+      "pos": "артикль",
+      "note": "Тж. относительное местоимение «который»"
+    },
+    "dessen": {
+      "ru": "чей, которого (род. п. от der/das)",
+      "pos": "мест."
+    },
+    "deswegen": {
+      "pos": "нареч.",
+      "ru": "поэтому, из-за этого"
+    },
+    "dieser": {
+      "ru": "этот, эта, это",
+      "pos": "мест."
+    },
+    "dir's": {
+      "ru": "тебе это (= dir es)",
+      "pos": "мест.",
+      "note": "Gott segne dir's — благослови тебя Бог"
+    },
+    "doch": {
+      "ru": "всё же, всё-таки; ведь",
+      "pos": "частица"
+    },
+    "du": {
+      "ru": "ты",
+      "pos": "мест.",
+      "note": "dich — тебя, dir — тебе"
+    },
+    "dunkel": {
+      "ru": "тёмный",
+      "pos": "прил."
+    },
+    "Ecke": {
+      "ru": "угол",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Ecken"
+    },
+    "ehrlich": {
+      "ru": "честный",
+      "pos": "прил."
+    },
+    "ein/eine": {
+      "ru": "неопределённый артикль",
+      "pos": "артикль",
+      "note": "einer — «один, некто»"
+    },
+    "einkaufen": {
+      "ru": "закупать",
+      "pos": "гл.",
+      "forms": "kaufte ein · hat eingekauft"
+    },
+    "einmal": {
+      "ru": "однажды; раз",
+      "pos": "нареч."
+    },
+    "eins": {
+      "ru": "один; раз",
+      "pos": "числ."
+    },
+    "eintreten": {
+      "ru": "входить, вступать",
+      "pos": "гл.",
+      "forms": "trat ein · ist eingetreten"
+    },
+    "einzig": {
+      "ru": "единственный",
+      "pos": "прил."
+    },
+    "Ende": {
+      "ru": "конец",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Enden"
+    },
+    "endlich": {
+      "ru": "наконец",
+      "pos": "нареч."
+    },
+    "Enkel": {
+      "ru": "внук",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Enkel"
+    },
+    "er": {
+      "ru": "он",
+      "pos": "мест.",
+      "note": "ihn — его, ihm — ему"
+    },
+    "Erde": {
+      "art": "die",
+      "pl": null,
+      "pos": "сущ.",
+      "ru": "земля"
+    },
+    "erhandeln": {
+      "ru": "выторговать, купить",
+      "pos": "гл.",
+      "forms": "erhandelte · hat erhandelt"
+    },
+    "erst (сначала)": {
+      "ru": "сначала; только",
+      "pos": "нареч.",
+      "note": "erst …, dann … — сначала …, потом …"
+    },
+    "es": {
+      "ru": "оно; это",
+      "pos": "мест."
+    },
+    "essen": {
+      "ru": "есть, кушать",
+      "pos": "гл.",
+      "forms": "aß · hat gegessen",
+      "note": "das Essen — еда"
+    },
+    "etwas": {
+      "ru": "что-то, нечто; немного",
+      "pos": "мест."
+    },
+    "fallen": {
+      "ru": "падать",
+      "pos": "гл.",
+      "forms": "fiel · ist gefallen",
+      "note": "in die Augen fallen — броситься в глаза; schwerfallen — даваться с трудом"
+    },
+    "falsch": {
+      "ru": "ложный, неверный",
+      "pos": "прил."
+    },
+    "fein (нарядный)": {
+      "ru": "нарядный, изящный; тонкий",
+      "pos": "прил."
+    },
+    "Feld": {
+      "ru": "поле",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Felder"
+    },
+    "fertig (готовый)": {
+      "ru": "готовый, законченный",
+      "pos": "прил.",
+      "note": "etwas fertig haben — закончить что-то"
+    },
+    "festhalten": {
+      "ru": "крепко держать, удерживать",
+      "pos": "гл.",
+      "forms": "hielt fest · hat festgehalten"
+    },
+    "finden": {
+      "ru": "находить",
+      "pos": "гл.",
+      "forms": "fand · hat gefunden"
+    },
+    "Fingerlein": {
+      "ru": "пальчик",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Fingerlein",
+      "note": "уменьшительное от der Finger"
+    },
+    "fließen": {
+      "ru": "течь",
+      "pos": "гл.",
+      "forms": "floss · ist geflossen"
+    },
+    "fort": {
+      "ru": "прочь, дальше",
+      "pos": "нареч.",
+      "note": "Тж. отделяемая приставка: fortlaufen, fortgehen, fortziehen, fortkönnen"
+    },
+    "fragen": {
+      "ru": "спрашивать",
+      "pos": "гл.",
+      "forms": "fragte · hat gefragt"
+    },
+    "Frau": {
+      "ru": "женщина; хозяйка; госпожа",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Frauen"
+    },
+    "Freude": {
+      "ru": "радость",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Freuden"
+    },
+    "frieren": {
+      "ru": "мёрзнуть",
+      "pos": "гл.",
+      "forms": "fror · hat gefroren",
+      "note": "es friert mich — мне холодно"
+    },
+    "frisch": {
+      "ru": "свежий",
+      "pos": "прил.",
+      "note": "mit frischem Mut — с новыми силами"
+    },
+    "fromm": {
+      "ru": "благочестивый",
+      "pos": "прил."
+    },
+    "früh": {
+      "ru": "ранний, рано",
+      "pos": "прил."
+    },
+    "für": {
+      "ru": "для, за",
+      "pos": "предл."
+    },
+    "ganz": {
+      "ru": "весь, целый; совсем",
+      "pos": "прил."
+    },
+    "gar": {
+      "ru": "вовсе, совсем",
+      "pos": "нареч."
+    },
+    "geben": {
+      "ru": "давать",
+      "pos": "гл.",
+      "forms": "gab · hat gegeben"
+    },
+    "Gebet": {
+      "ru": "молитва",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Gebete",
+      "note": "sein Gebet verrichten — помолиться"
+    },
+    "gefallen": {
+      "ru": "нравиться",
+      "pos": "гл.",
+      "forms": "gefiel · hat gefallen",
+      "note": "sich gefallen lassen — согласиться на что-л."
+    },
+    "gehen": {
+      "ru": "идти, ходить",
+      "pos": "гл.",
+      "forms": "ging · ist gegangen"
+    },
+    "gelangen": {
+      "ru": "добираться, попадать",
+      "pos": "гл.",
+      "forms": "gelangte · ist gelangt"
+    },
+    "Geld": {
+      "art": "das",
+      "pl": "die Gelder",
+      "pos": "сущ.",
+      "ru": "деньги"
+    },
+    "gerade": {
+      "ru": "как раз, именно",
+      "pos": "нареч."
+    },
+    "geschehen": {
+      "ru": "происходить, случаться",
+      "pos": "гл.",
+      "forms": "geschah · ist geschehen"
+    },
+    "Geschenk": {
+      "ru": "подарок",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Geschenke"
+    },
+    "Geschwindigkeit": {
+      "ru": "скорость, быстрота",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Geschwindigkeiten"
+    },
+    "gewaltig": {
+      "ru": "страшно, сильно; огромный",
+      "pos": "прил.",
+      "forms": "gewaltig · gewaltiger · am gewaltigsten"
+    },
+    "Gewissen": {
+      "ru": "совесть",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "gewöhnlich": {
+      "ru": "обычный",
+      "pos": "прил.",
+      "note": "für gewöhnlich — обычно"
+    },
+    "ging's": {
+      "ru": "шло (= ging es)",
+      "pos": "гл.",
+      "forms": "ging · ist gegangen",
+      "note": "so ging's immer fort — так и пошло дальше"
+    },
+    "glatt": {
+      "ru": "гладкий, скользкий",
+      "pos": "прил."
+    },
+    "gleich (тотчас; хотя)": {
+      "ru": "тотчас, сразу; ob … gleich — хотя",
+      "pos": "нареч.",
+      "note": "ob es gleich … — хотя оно …"
+    },
+    "glücken": {
+      "ru": "удаваться",
+      "pos": "гл.",
+      "forms": "glückte · ist geglückt",
+      "note": "es glückte ihm alles — ему всё удавалось"
+    },
+    "Gott": {
+      "ru": "Бог",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Götter"
+    },
+    "groß": {
+      "ru": "большой, рослый",
+      "pos": "прил.",
+      "forms": "groß · größer · am größten"
+    },
+    "Großvater": {
+      "ru": "дедушка",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Großväter"
+    },
+    "gut": {
+      "ru": "хороший, добрый",
+      "pos": "прил.",
+      "forms": "gut · besser · am besten",
+      "note": "besser — лучше"
+    },
+    "haben": {
+      "ru": "иметь; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "hatte · hat gehabt"
+    },
+    "halten": {
+      "ru": "держать",
+      "pos": "гл.",
+      "forms": "hielt · hat gehalten",
+      "note": "halten für — считать кем/чем-л."
+    },
+    "Hand": {
+      "ru": "рука, кисть",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Hände"
+    },
+    "hart": {
+      "ru": "твёрдый, жёсткий",
+      "pos": "прил."
+    },
+    "Haus": {
+      "ru": "дом",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Häuser"
+    },
+    "heim": {
+      "ru": "домой",
+      "pos": "нареч.",
+      "note": "Тж. отделяемая приставка: heimtragen «нести домой»"
+    },
+    "helfen": {
+      "ru": "помогать",
+      "pos": "гл.",
+      "forms": "half · hat geholfen"
+    },
+    "Heller": {
+      "ru": "геллер (мелкая монета), грош",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Heller",
+      "note": "für ein paar Heller — за гроши"
+    },
+    "Hemd": {
+      "ru": "рубашка",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Hemden"
+    },
+    "Hemdlein": {
+      "ru": "рубашечка",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Hemdlein",
+      "note": "уменьшительное от das Hemd"
+    },
+    "herangesprungen kommen": {
+      "ru": "прибежать вприпрыжку",
+      "pos": "гл.",
+      "forms": "kam herangesprungen · ist herangesprungen gekommen"
+    },
+    "herum": {
+      "ru": "вокруг, кругом",
+      "pos": "нареч."
+    },
+    "Herz": {
+      "ru": "сердце",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Herzen",
+      "decl": "des Herzens · dem Herzen (особое склонение)",
+      "note": "schwer ums Herz — тяжело на сердце; leichten Herzens — с лёгким сердцем"
+    },
+    "hilfreich": {
+      "ru": "помогающий, услужливый",
+      "pos": "прил.",
+      "note": "eine hilfreiche Hand leisten — помогать"
+    },
+    "Himmel": {
+      "art": "der",
+      "pl": "die Himmel",
+      "pos": "сущ.",
+      "ru": "небо"
+    },
+    "hin": {
+      "ru": "туда",
+      "pos": "нареч."
+    },
+    "hinaus": {
+      "ru": "наружу (туда)",
+      "pos": "нареч.",
+      "note": "Тж. отделяемая приставка: hinauswollen, hinausjagen"
+    },
+    "hinein": {
+      "ru": "внутрь (туда)",
+      "pos": "нареч.",
+      "note": "Тж. отделяемая приставка: hineinstürzen «ринуться внутрь»"
+    },
+    "hinter": {
+      "ru": "за, позади",
+      "pos": "предл."
+    },
+    "Hirsenbrei": {
+      "ru": "пшённая каша",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null,
+      "note": "сейчас обычно Hirsebrei; die Hirse — просо"
+    },
+    "holen": {
+      "ru": "принести, достать",
+      "pos": "гл.",
+      "forms": "holte · hat geholt"
+    },
+    "Hunger": {
+      "ru": "голод",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null,
+      "note": "Hunger haben — быть голодным"
+    },
+    "hungrig": {
+      "ru": "голодный",
+      "pos": "прил."
+    },
+    "hölzern": {
+      "ru": "деревянный",
+      "pos": "прил."
+    },
+    "Höslein": {
+      "ru": "штанишки",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Höslein",
+      "note": "уменьшительное от die Hose",
+      "old": "сказочное уменьшительное; сейчас Höschen"
+    },
+    "hüpfen": {
+      "ru": "прыгать, скакать",
+      "pos": "гл.",
+      "forms": "hüpfte · ist gehüpft"
+    },
+    "ich": {
+      "ru": "я",
+      "pos": "мест.",
+      "note": "mich — меня, mir — мне"
+    },
+    "ihr (её, их)": {
+      "ru": "её; их",
+      "pos": "мест."
+    },
+    "ihr (их, её)": {
+      "ru": "их; её",
+      "pos": "мест."
+    },
+    "immer": {
+      "ru": "всегда, всё",
+      "pos": "нареч.",
+      "note": "immer größer — всё больше"
+    },
+    "in": {
+      "ru": "в (im = in dem, ins = in das)",
+      "pos": "предл."
+    },
+    "irden": {
+      "ru": "глиняный",
+      "pos": "прил.",
+      "old": "устар."
+    },
+    "Jahr": {
+      "ru": "год",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Jahre"
+    },
+    "Jammer": {
+      "ru": "горе; причитания",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "jammern": {
+      "ru": "причитать, жалобно плакать",
+      "pos": "гл.",
+      "forms": "jammerte · hat gejammert"
+    },
+    "jeder": {
+      "ru": "каждый",
+      "pos": "мест."
+    },
+    "jung": {
+      "ru": "молодой",
+      "pos": "прил.",
+      "forms": "jung · jünger · am jüngsten"
+    },
+    "kaufen": {
+      "ru": "покупать",
+      "pos": "гл.",
+      "forms": "kaufte · hat gekauft"
+    },
+    "kaum": {
+      "ru": "едва, едва ли",
+      "pos": "нареч."
+    },
+    "kein": {
+      "ru": "никакой, ни один",
+      "pos": "мест."
+    },
+    "Kind": {
+      "ru": "ребёнок",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Kinder"
+    },
+    "Kleid": {
+      "ru": "платье, одежда",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Kleider"
+    },
+    "Kleidungsstück": {
+      "ru": "предмет одежды",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Kleidungsstücke"
+    },
+    "klein": {
+      "ru": "маленький",
+      "pos": "прил."
+    },
+    "klopfen": {
+      "ru": "стучать, биться",
+      "pos": "гл.",
+      "forms": "klopfte · hat geklopft"
+    },
+    "Knabe": {
+      "ru": "мальчик",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Knaben",
+      "decl": "n-Deklination: der Knabe / des Knaben / dem Knaben / den Knaben",
+      "old": "устар. и книжное; сегодня Junge"
+    },
+    "Knie": {
+      "ru": "колено",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Knie"
+    },
+    "kochen": {
+      "ru": "варить; вариться",
+      "pos": "гл.",
+      "forms": "kochte · hat gekocht"
+    },
+    "kommen": {
+      "ru": "приходить, приезжать",
+      "pos": "гл.",
+      "forms": "kam · ist gekommen"
+    },
+    "Kopf": {
+      "ru": "голова",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Köpfe"
+    },
+    "Kämmerchen": {
+      "ru": "каморка, комнатка",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Kämmerchen",
+      "note": "уменьшительное от die Kammer"
+    },
+    "Käufer": {
+      "ru": "покупатель",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Käufer"
+    },
+    "können": {
+      "ru": "мочь, уметь",
+      "pos": "гл.",
+      "forms": "konnte · hat gekonnt"
+    },
+    "Küche": {
+      "ru": "кухня",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Küchen"
+    },
+    "lang": {
+      "ru": "длинный, долгий",
+      "pos": "прил.",
+      "forms": "lang · länger · am längsten"
+    },
+    "lassen": {
+      "ru": "позволять, велеть; оставлять",
+      "pos": "гл.",
+      "forms": "ließ · hat gelassen"
+    },
+    "laufen": {
+      "ru": "бежать, бегать",
+      "pos": "гл.",
+      "forms": "lief · ist gelaufen"
+    },
+    "lauter (сплошь)": {
+      "ru": "сплошь, одни только",
+      "pos": "нареч.",
+      "note": "lauter Taler — одни талеры"
+    },
+    "leben": {
+      "ru": "жить",
+      "pos": "гл.",
+      "forms": "lebte · hat gelebt"
+    },
+    "Lebtag": {
+      "ru": "век, вся жизнь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null,
+      "note": "für sein Lebtag — на всю жизнь, до конца дней",
+      "old": "устар. и разг."
+    },
+    "Leder": {
+      "ru": "кожа (материал)",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Leder"
+    },
+    "ledig": {
+      "ru": "свободный от; холостой",
+      "pos": "прил.",
+      "note": "einer Sache ledig sein — избавиться от чего-то (родит.)",
+      "old": "в значении «избавленный» устар."
+    },
+    "legen": {
+      "ru": "класть",
+      "pos": "гл.",
+      "forms": "legte · hat gelegt",
+      "note": "sich legen — ложиться"
+    },
+    "Leib": {
+      "ru": "тело; живот",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Leiber"
+    },
+    "Leibchen": {
+      "ru": "безрукавка, лифчик (детская одежда)",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Leibchen",
+      "old": "устар. название детской нательной одежды"
+    },
+    "leisten": {
+      "ru": "оказывать, совершать",
+      "pos": "гл.",
+      "forms": "leistete · hat geleistet",
+      "note": "Hilfe leisten — оказывать помощь"
+    },
+    "Licht": {
+      "ru": "свет; огонёк",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Lichter"
+    },
+    "lieb": {
+      "ru": "милый, дорогой",
+      "pos": "прил.",
+      "forms": "lieb · lieber · am liebsten"
+    },
+    "Linnen": {
+      "ru": "льняное полотно, лён",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null,
+      "old": "устар. и поэт.; сейчас das Leinen"
+    },
+    "Löffel": {
+      "ru": "ложка",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Löffel"
+    },
+    "machen": {
+      "ru": "делать",
+      "pos": "гл.",
+      "forms": "machte · hat gemacht",
+      "note": "sich auf den Weg machen — отправиться в путь"
+    },
+    "Mann": {
+      "ru": "мужчина, человек",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Männer"
+    },
+    "mehr": {
+      "ru": "больше",
+      "pos": "нареч.",
+      "note": "В nicht/kein … mehr — больше не. Формально компаратив от viel"
+    },
+    "mein": {
+      "ru": "мой, моя",
+      "pos": "мест."
+    },
+    "Meisterstück": {
+      "ru": "шедевр, образцовая работа мастера",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Meisterstücke"
+    },
+    "Mensch": {
+      "ru": "человек",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Menschen",
+      "decl": "n-Deklination: des Menschen · dem/den Menschen"
+    },
+    "mit": {
+      "ru": "с",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: mitgehen «пойти вместе»"
+    },
+    "mitessen": {
+      "ru": "есть вместе со всеми",
+      "pos": "гл.",
+      "forms": "aß mit · hat mitgegessen"
+    },
+    "mitleidig": {
+      "ru": "сострадательный, жалостливый",
+      "pos": "прил."
+    },
+    "Mitternacht": {
+      "ru": "полночь",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Mitternächte"
+    },
+    "Morgen": {
+      "ru": "утро",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Morgen",
+      "note": "jeden Morgen — каждое утро"
+    },
+    "morgens": {
+      "ru": "по утрам",
+      "pos": "нареч."
+    },
+    "Mund": {
+      "ru": "рот",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Münder"
+    },
+    "Mut": {
+      "ru": "мужество; расположение духа",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null,
+      "note": "mit frischem Mut — с новыми силами"
+    },
+    "Mutter": {
+      "ru": "мать",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Mütter"
+    },
+    "Mädchen": {
+      "ru": "девушка, девочка",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Mädchen"
+    },
+    "Männlein": {
+      "ru": "человечек",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Männlein",
+      "note": "уменьшительное от der Mann"
+    },
+    "müssen": {
+      "ru": "быть вынужденным, должен",
+      "pos": "гл.",
+      "forms": "musste · hat gemusst"
+    },
+    "Mütze": {
+      "ru": "шапка, колпак",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Mützen"
+    },
+    "nach": {
+      "ru": "в, на, после, по",
+      "pos": "предл."
+    },
+    "nachdem": {
+      "pos": "союз",
+      "ru": "после того как"
+    },
+    "Nacht": {
+      "art": "die",
+      "pl": "die Nächte",
+      "pos": "сущ.",
+      "ru": "ночь"
+    },
+    "nackt": {
+      "ru": "голый",
+      "pos": "прил."
+    },
+    "nah": {
+      "ru": "близкий",
+      "pos": "прил.",
+      "note": "näher rücken — приближаться",
+      "forms": "nah · näher · am nächsten"
+    },
+    "nass": {
+      "ru": "мокрый",
+      "pos": "прил."
+    },
+    "nehmen": {
+      "ru": "брать",
+      "pos": "гл.",
+      "forms": "nahm · hat genommen"
+    },
+    "neu": {
+      "ru": "новый",
+      "pos": "прил."
+    },
+    "nicht": {
+      "ru": "не",
+      "pos": "частица"
+    },
+    "nichts": {
+      "pos": "мест.",
+      "ru": "ничто, ничего"
+    },
+    "niedlich": {
+      "ru": "миленький, хорошенький",
+      "pos": "прил."
+    },
+    "niemand": {
+      "pos": "мест.",
+      "ru": "никто"
+    },
+    "noch": {
+      "ru": "ещё",
+      "pos": "нареч."
+    },
+    "Not": {
+      "ru": "нужда, беда",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Nöte"
+    },
+    "nun": {
+      "ru": "теперь; ну",
+      "pos": "нареч."
+    },
+    "nur": {
+      "ru": "только, лишь",
+      "pos": "частица"
+    },
+    "nächste": {
+      "pos": "прил.",
+      "ru": "следующий; ближайший"
+    },
+    "nähen": {
+      "ru": "шить",
+      "pos": "гл.",
+      "forms": "nähte · hat genäht"
+    },
+    "ob": {
+      "ru": "ли (в косвенном вопросе)",
+      "pos": "союз"
+    },
+    "Ofen": {
+      "ru": "печь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Öfen"
+    },
+    "oft": {
+      "ru": "часто",
+      "pos": "нареч."
+    },
+    "ohne": {
+      "ru": "без",
+      "pos": "предл."
+    },
+    "Ohr": {
+      "ru": "ухо",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Ohren"
+    },
+    "Paar": {
+      "ru": "пара",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Paare",
+      "note": "ein Paar Schuhe — пара башмаков; ein paar (со строчной) — несколько"
+    },
+    "Rand": {
+      "ru": "край, кромка",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Ränder",
+      "note": "am Rande — на краю"
+    },
+    "reich": {
+      "ru": "богатый",
+      "pos": "прил."
+    },
+    "reichen": {
+      "ru": "подавать, протягивать",
+      "pos": "гл.",
+      "forms": "reichte · hat gereicht",
+      "note": "die Hand reichen — подать руку"
+    },
+    "Rock": {
+      "ru": "сюртук, курточка",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Röcke",
+      "note": "сегодня der Rock — обычно «юбка»"
+    },
+    "ruhig": {
+      "ru": "спокойный, тихий",
+      "pos": "прил.",
+      "forms": "ruhig · ruhiger · am ruhigsten"
+    },
+    "Röcklein": {
+      "ru": "юбочка",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Röcklein",
+      "note": "уменьшительное от der Rock"
+    },
+    "sagen": {
+      "ru": "говорить, сказать",
+      "pos": "гл.",
+      "forms": "sagte · hat gesagt"
+    },
+    "sammeln": {
+      "ru": "собирать",
+      "pos": "гл.",
+      "forms": "sammelte · hat gesammelt"
+    },
+    "satt": {
+      "ru": "сытый",
+      "pos": "прил.",
+      "note": "sich satt essen — наесться досыта; satt machen — накормить"
+    },
+    "sauber": {
+      "ru": "чистый; аккуратный",
+      "pos": "прил."
+    },
+    "schelten": {
+      "ru": "бранить, ругать",
+      "pos": "гл.",
+      "forms": "schalt · hat gescholten"
+    },
+    "schenken": {
+      "ru": "дарить",
+      "pos": "гл.",
+      "forms": "schenkte · hat geschenkt"
+    },
+    "schlafen": {
+      "ru": "спать",
+      "pos": "гл.",
+      "forms": "schlief · hat geschlafen"
+    },
+    "Schlafengehen": {
+      "ru": "отход ко сну",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null,
+      "note": "vor dem Schlafengehen — перед сном"
+    },
+    "schnell": {
+      "ru": "быстрый, быстро",
+      "pos": "прил."
+    },
+    "schon": {
+      "ru": "уже",
+      "pos": "нареч."
+    },
+    "Schuh": {
+      "ru": "башмак, туфля",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Schuhe"
+    },
+    "Schuld": {
+      "ru": "вина; долг",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Schulden",
+      "note": "ohne seine Schuld — не по своей вине"
+    },
+    "Schuster": {
+      "ru": "сапожник",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Schuster"
+    },
+    "schön": {
+      "ru": "красивый; прекрасный",
+      "pos": "прил.",
+      "forms": "schön · schöner · am schönsten"
+    },
+    "Schühlein": {
+      "ru": "башмачок",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Schühlein",
+      "note": "уменьшительное от der Schuh",
+      "old": "сказочное уменьшительное; сейчас Schühchen"
+    },
+    "Schüsselchen": {
+      "ru": "мисочка",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Schüsselchen",
+      "note": "уменьшительное от die Schüssel"
+    },
+    "schütten": {
+      "ru": "проливать, сыпать",
+      "pos": "гл.",
+      "forms": "schüttete · hat geschüttet"
+    },
+    "segnen": {
+      "ru": "благословлять",
+      "pos": "гл.",
+      "forms": "segnete · hat gesegnet"
+    },
+    "sehen": {
+      "ru": "видеть",
+      "pos": "гл.",
+      "forms": "sah · hat gesehen"
+    },
+    "sein": {
+      "ru": "быть; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "war · ist gewesen"
+    },
+    "sein (его, свой)": {
+      "ru": "его, свой",
+      "pos": "мест."
+    },
+    "seins": {
+      "ru": "своё, его (самостоятельно)",
+      "pos": "мест.",
+      "note": "da gab es ihm seins — тогда она отдала ему своё"
+    },
+    "setzen": {
+      "ru": "сажать",
+      "pos": "гл.",
+      "forms": "setzte · hat gesetzt",
+      "note": "sich setzen — садиться"
+    },
+    "seufzen": {
+      "ru": "вздыхать",
+      "pos": "гл.",
+      "forms": "seufzte · hat geseufzt"
+    },
+    "sich": {
+      "ru": "себя, себе",
+      "pos": "мест.",
+      "note": "Возвратное местоимение, часть возвратного глагола: sich auf den Weg machen, sich setzen, sich legen, sich nähern, sich gefallen lassen, sich getrauen, sich umsehen"
+    },
+    "sich ansehen": {
+      "ru": "посмотреть друг на друга; рассматривать",
+      "pos": "гл.",
+      "forms": "sah sich an · hat sich angesehen"
+    },
+    "sich anstellen": {
+      "ru": "вести себя, браться (за дело)",
+      "pos": "гл.",
+      "forms": "stellte sich an · hat sich angestellt"
+    },
+    "sich anziehen": {
+      "ru": "одеваться",
+      "pos": "гл.",
+      "forms": "zog sich an · hat sich angezogen"
+    },
+    "sich durchessen": {
+      "ru": "проесть себе путь",
+      "pos": "гл.",
+      "forms": "aß sich durch · hat sich durchgegessen"
+    },
+    "sich ekeln": {
+      "ru": "брезговать, испытывать отвращение",
+      "pos": "гл.",
+      "forms": "ekelte sich · hat sich geekelt",
+      "note": "sich vor etwas ekeln — брезговать чем-то"
+    },
+    "sich niedersetzen": {
+      "ru": "садиться, усаживаться",
+      "pos": "гл.",
+      "forms": "setzte sich nieder · hat sich niedergesetzt"
+    },
+    "sich verbergen": {
+      "ru": "прятаться",
+      "pos": "гл.",
+      "forms": "verbarg sich · hat sich verborgen"
+    },
+    "sich verstecken": {
+      "ru": "прятаться",
+      "pos": "гл.",
+      "forms": "versteckte sich · hat sich versteckt"
+    },
+    "sich verwundern": {
+      "ru": "удивляться",
+      "pos": "гл.",
+      "forms": "verwunderte sich · hat sich verwundert",
+      "old": "книжн.; сейчас sich wundern"
+    },
+    "sie": {
+      "ru": "она; они; Вы",
+      "pos": "мест."
+    },
+    "singen": {
+      "ru": "петь",
+      "pos": "гл.",
+      "forms": "sang · hat gesungen"
+    },
+    "sitzen": {
+      "ru": "сидеть",
+      "pos": "гл.",
+      "forms": "saß · hat gesessen"
+    },
+    "so": {
+      "ru": "так; такой; то (в главном предложении)",
+      "pos": "нареч."
+    },
+    "Sohn": {
+      "art": "der",
+      "pl": "die Söhne",
+      "pos": "сущ.",
+      "ru": "сын"
+    },
+    "solch": {
+      "ru": "такой",
+      "pos": "мест."
+    },
+    "sollen": {
+      "ru": "быть должным, следует",
+      "pos": "гл.",
+      "forms": "sollte · hat gesollt"
+    },
+    "sondern": {
+      "ru": "а, но (после отрицания)",
+      "pos": "союз"
+    },
+    "sprechen": {
+      "ru": "говорить, сказать",
+      "pos": "гл.",
+      "forms": "sprach · hat gesprochen",
+      "old": "здесь sprach в значении «сказал» — книжно и устарело; в совр. речи sagte"
+    },
+    "springen": {
+      "ru": "прыгать, вскакивать",
+      "pos": "гл.",
+      "forms": "sprang · ist gesprungen"
+    },
+    "Stadt": {
+      "ru": "город",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Städte"
+    },
+    "statt": {
+      "ru": "вместо",
+      "pos": "предлог",
+      "note": "statt der Arbeit — вместо работы (родит.)"
+    },
+    "stechen": {
+      "ru": "колоть, пырнуть",
+      "pos": "гл.",
+      "forms": "stach · hat gestochen"
+    },
+    "stehen": {
+      "ru": "стоять",
+      "pos": "гл.",
+      "forms": "stand · hat gestanden"
+    },
+    "steigen": {
+      "forms": "stieg · ist gestiegen",
+      "pos": "гл.",
+      "ru": "подниматься; слезать"
+    },
+    "steinalt": {
+      "ru": "очень старый, дряхлый",
+      "pos": "прил."
+    },
+    "sterben": {
+      "ru": "умирать",
+      "pos": "гл.",
+      "forms": "starb · ist gestorben"
+    },
+    "Stern": {
+      "ru": "звезда",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Sterne"
+    },
+    "Stich": {
+      "ru": "стежок; укол",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Stiche"
+    },
+    "Straße": {
+      "art": "die",
+      "pl": "die Straßen",
+      "pos": "сущ.",
+      "ru": "улица, дорога"
+    },
+    "streichen": {
+      "ru": "поглаживать",
+      "pos": "гл.",
+      "forms": "strich · hat gestrichen"
+    },
+    "stricken": {
+      "ru": "вязать (спицами)",
+      "pos": "гл.",
+      "forms": "strickte · hat gestrickt"
+    },
+    "Strumpf": {
+      "ru": "чулок",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Strümpfe"
+    },
+    "Stubenecke": {
+      "ru": "угол комнаты",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Stubenecken",
+      "note": "die Stube — комната (устар.)"
+    },
+    "Stuhl": {
+      "ru": "стул",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Stühle"
+    },
+    "Stückchen": {
+      "ru": "кусочек",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Stückchen"
+    },
+    "Suppe": {
+      "ru": "суп",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Suppen"
+    },
+    "süß": {
+      "ru": "сладкий",
+      "pos": "прил."
+    },
+    "Taler": {
+      "ru": "талер (старая монета)",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Taler"
+    },
+    "tanzen": {
+      "ru": "танцевать",
+      "pos": "гл.",
+      "forms": "tanzte · hat getanzt"
+    },
+    "taub": {
+      "ru": "глухой",
+      "pos": "прил."
+    },
+    "Tisch": {
+      "ru": "стол",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Tische"
+    },
+    "Tischtuch": {
+      "ru": "скатерть",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Tischtücher"
+    },
+    "Topf": {
+      "ru": "горшок, кастрюля",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Töpfe"
+    },
+    "tragen": {
+      "ru": "носить, нести",
+      "pos": "гл.",
+      "forms": "trug · hat getragen"
+    },
+    "Tröglein": {
+      "ru": "корытце",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Tröglein",
+      "note": "уменьшительное от der Trog",
+      "old": "сказочное уменьшительное"
+    },
+    "trüb": {
+      "ru": "мутный, тусклый",
+      "pos": "прил."
+    },
+    "Töpfchen": {
+      "ru": "горшочек",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Töpfchen",
+      "note": "уменьшительное от der Topf"
+    },
+    "Tür": {
+      "ru": "дверь",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Türen"
+    },
+    "um": {
+      "ru": "вокруг, в (о времени)",
+      "pos": "предл.",
+      "note": "um … zu — чтобы. Тж. отделяемая приставка: sich umsehen «оглядеться»"
+    },
+    "und": {
+      "ru": "и, а",
+      "pos": "союз"
+    },
+    "unternehmen": {
+      "ru": "предпринимать",
+      "pos": "гл.",
+      "forms": "unternahm · hat unternommen"
+    },
+    "Vater": {
+      "art": "der",
+      "pl": "die Väter",
+      "pos": "сущ.",
+      "ru": "отец"
+    },
+    "verarbeiten": {
+      "ru": "обрабатывать, изготавливать",
+      "pos": "гл.",
+      "forms": "verarbeitete · hat verarbeitet"
+    },
+    "verlassen": {
+      "ru": "покидать",
+      "pos": "гл.",
+      "forms": "verließ · hat verlassen"
+    },
+    "verrichten": {
+      "ru": "совершать, выполнять",
+      "pos": "гл.",
+      "forms": "verrichtete · hat verrichtet",
+      "note": "sein Gebet verrichten — помолиться"
+    },
+    "verschütten": {
+      "ru": "проливать, расплёскивать",
+      "pos": "гл.",
+      "forms": "verschüttete · hat verschüttet"
+    },
+    "Vertrauen": {
+      "ru": "доверие",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null,
+      "note": "im Vertrauen auf … — уповая на …"
+    },
+    "Verwunderung": {
+      "ru": "изумление",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "viel": {
+      "ru": "много, многое",
+      "pos": "мест."
+    },
+    "vier": {
+      "ru": "четыре",
+      "pos": "числ."
+    },
+    "voll": {
+      "ru": "полный",
+      "pos": "прил.",
+      "forms": "voll · voller · am vollsten"
+    },
+    "von": {
+      "ru": "от, из, о (vom = von dem)",
+      "pos": "предл."
+    },
+    "vor": {
+      "ru": "перед, до; от (страха)",
+      "pos": "предл."
+    },
+    "Wald": {
+      "ru": "лес",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Wälder"
+    },
+    "Wams": {
+      "ru": "камзол (короткая куртка)",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Wämser",
+      "old": "устар."
+    },
+    "was": {
+      "ru": "что; что-нибудь",
+      "pos": "мест."
+    },
+    "weggeben": {
+      "ru": "отдавать",
+      "pos": "гл.",
+      "forms": "gab weg · hat weggegeben"
+    },
+    "Weihnachten": {
+      "ru": "Рождество",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null,
+      "note": "vor Weihnachten — перед Рождеством"
+    },
+    "weil": {
+      "ru": "потому что",
+      "pos": "союз"
+    },
+    "Weile": {
+      "ru": "некоторое время",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null,
+      "note": "eine Weile — какое-то время"
+    },
+    "weinen": {
+      "ru": "плакать",
+      "pos": "гл.",
+      "forms": "weinte · hat geweint"
+    },
+    "weit": {
+      "ru": "далёкий, далеко",
+      "pos": "прил.",
+      "forms": "weit · weiter · am weitesten",
+      "note": "weiter — дальше, далее; von weitem — издали"
+    },
+    "Welt": {
+      "art": "die",
+      "pl": "die Welten",
+      "pos": "сущ.",
+      "ru": "мир, свет"
+    },
+    "wenig": {
+      "ru": "мало; немного",
+      "pos": "мест.",
+      "note": "ein wenig — немножко; etwas Weniges — самую малость"
+    },
+    "wenn": {
+      "ru": "если; когда",
+      "pos": "союз"
+    },
+    "wer": {
+      "ru": "кто",
+      "pos": "мест."
+    },
+    "werden": {
+      "ru": "становиться",
+      "pos": "гл.",
+      "forms": "wurde · ist geworden",
+      "note": "Вспомогательный глагол будущего времени и пассива"
+    },
+    "wie": {
+      "ru": "как; какой",
+      "pos": "союз"
+    },
+    "wieder": {
+      "ru": "снова",
+      "pos": "нареч."
+    },
+    "wir": {
+      "ru": "мы",
+      "pos": "мест.",
+      "note": "uns — нас, нам"
+    },
+    "wissen": {
+      "ru": "знать",
+      "pos": "гл.",
+      "forms": "wusste · hat gewusst"
+    },
+    "wohl": {
+      "ru": "хорошо; пожалуй, вероятно",
+      "pos": "нареч."
+    },
+    "wohlhabend": {
+      "ru": "зажиточный, состоятельный",
+      "pos": "прил."
+    },
+    "wohnen": {
+      "ru": "жить, проживать",
+      "pos": "гл.",
+      "forms": "wohnte · hat gewohnt"
+    },
+    "wollen": {
+      "ru": "хотеть",
+      "pos": "гл.",
+      "forms": "wollte · hat gewollt"
+    },
+    "wollt's": {
+      "ru": "хотел(о) бы (= wollte es)",
+      "pos": "гл.",
+      "forms": "wollte · hat gewollt",
+      "note": "als wollt's … — будто хотело …"
+    },
+    "womit": {
+      "ru": "чем, с помощью чего",
+      "pos": "нареч."
+    },
+    "Wort": {
+      "ru": "слово",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Worte (связная речь) / die Wörter (отдельные слова)"
+    },
+    "wär's": {
+      "ru": "было бы (= wäre es)",
+      "pos": "гл.",
+      "forms": "war · ist gewesen",
+      "note": "Wie wär's, wenn …? — А что, если …?"
+    },
+    "Zeit": {
+      "ru": "время",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Zeiten"
+    },
+    "zerbrechen": {
+      "ru": "разбиваться, ломаться",
+      "pos": "гл.",
+      "forms": "zerbrach · ist zerbrochen"
+    },
+    "zitterig": {
+      "ru": "дрожащий",
+      "pos": "прил.",
+      "note": "сейчас чаще zittrig"
+    },
+    "zittern": {
+      "ru": "дрожать",
+      "pos": "гл.",
+      "forms": "zitterte · hat gezittert"
+    },
+    "zu": {
+      "ru": "к, в; слишком",
+      "pos": "предл.",
+      "note": "zur = zu der, zum = zu dem"
+    },
+    "zufrieden": {
+      "ru": "довольный",
+      "pos": "прил.",
+      "forms": "zufrieden · zufriedener · am zufriedensten"
+    },
+    "zusammen": {
+      "ru": "вместе",
+      "pos": "нареч."
+    },
+    "zuschneiden": {
+      "ru": "кроить, раскраивать",
+      "pos": "гл.",
+      "forms": "schnitt zu · hat zugeschnitten"
+    },
+    "zwei": {
+      "ru": "два",
+      "pos": "числ."
+    },
+    "zweit": {
+      "ru": "второй",
+      "pos": "числ."
+    },
+    "über": {
+      "ru": "над, через, о",
+      "pos": "предл."
+    },
+    "übrig": {
+      "ru": "оставшийся",
+      "pos": "прил."
+    }
+  }
+}
