@@ -1,0 +1,126 @@
+{
+ "id": "b1-04",
+ "level": "b1",
+ "n": 4,
+ "emoji": "🏛️",
+ "title": "Im Bürgeramt",
+ "titleTr": "У бюргерамті: реєстрація місця проживання",
+ "situation": "Карім переїхав у нову квартиру й реєструє місце проживання. Працівниця перевіряє документи й пояснює строки.",
+ "speakers": {
+  "A": {
+   "name": "Sachbearbeiterin",
+   "g": "f"
+  },
+  "B": {
+   "name": "Karim",
+   "g": "m"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Guten Tag! Was kann ich für Sie tun?",
+   "tr": "Добрий день! Чим можу вам допомогти?"
+  },
+  {
+   "s": "B",
+   "de": "Guten Tag! Ich bin umgezogen und möchte meine neue Adresse anmelden.",
+   "tr": "Добрий день! Я переїхав і хочу зареєструвати нову адресу."
+  },
+  {
+   "s": "A",
+   "de": "Haben Sie einen Termin?",
+   "tr": "Ви записані на прийом?"
+  },
+  {
+   "s": "B",
+   "de": "Ja, um zehn Uhr fünfzehn. Hier ist meine Terminbestätigung.",
+   "tr": "Так, на десяту п'ятнадцять. Ось підтвердження запису."
+  },
+  {
+   "s": "A",
+   "de": "Danke. Wann sind Sie eingezogen?",
+   "tr": "Дякую. Коли ви в'їхали?"
+  },
+  {
+   "s": "B",
+   "de": "Am ersten Oktober, also vor zehn Tagen.",
+   "tr": "Першого жовтня, тобто десять днів тому."
+  },
+  {
+   "s": "A",
+   "de": "Gut, dann sind Sie noch in der Frist. Man muss sich innerhalb von zwei Wochen anmelden.",
+   "tr": "Добре, отже, ви ще вкладаєтеся в строк. Зареєструватися треба протягом двох тижнів."
+  },
+  {
+   "s": "B",
+   "de": "Das wusste ich. Hier sind mein Pass und das Anmeldeformular.",
+   "tr": "Я це знав. Ось мій паспорт і бланк реєстрації."
+  },
+  {
+   "s": "A",
+   "de": "Ich brauche auch die Wohnungsgeberbestätigung von Ihrem Vermieter.",
+   "tr": "Мені потрібне ще підтвердження від вашого орендодавця."
+  },
+  {
+   "s": "B",
+   "de": "Oh, die habe ich leider vergessen. Kann ich sie nachreichen?",
+   "tr": "Ой, його я, на жаль, забув. Можна донести пізніше?"
+  },
+  {
+   "s": "A",
+   "de": "Ohne die Bestätigung kann ich Sie leider nicht anmelden. Haben Sie sie vielleicht als Foto auf dem Handy?",
+   "tr": "Без підтвердження я, на жаль, не можу вас зареєструвати. Можливо, у вас є його фото в телефоні?"
+  },
+  {
+   "s": "B",
+   "de": "Ja, warten Sie… Hier, der Vermieter hat sie mir per E-Mail geschickt.",
+   "tr": "Так, зачекайте… Ось, орендодавець надіслав мені його електронною поштою."
+  },
+  {
+   "s": "A",
+   "de": "Wunderbar, das reicht. Können Sie sie an diese Adresse weiterleiten? Dann drucke ich sie aus.",
+   "tr": "Чудово, цього досить. Можете переслати на цю адресу? Тоді я її роздрукую."
+  },
+  {
+   "s": "B",
+   "de": "Klar, ist schon unterwegs.",
+   "tr": "Звісно, вже надсилаю."
+  },
+  {
+   "s": "A",
+   "de": "Danke. Ziehen noch weitere Personen mit Ihnen in die Wohnung ein?",
+   "tr": "Дякую. З вами у квартиру в'їжджає ще хтось?"
+  },
+  {
+   "s": "B",
+   "de": "Nein, ich wohne allein.",
+   "tr": "Ні, я живу сам."
+  },
+  {
+   "s": "A",
+   "de": "So, hier ist Ihre Meldebescheinigung. Die neue Adresse klebe ich auch gleich auf Ihren Aufenthaltstitel.",
+   "tr": "Ось ваша довідка про реєстрацію. Нову адресу я одразу наклею й на ваш дозвіл на проживання."
+  },
+  {
+   "s": "B",
+   "de": "Muss ich die neue Adresse noch woanders melden?",
+   "tr": "Чи треба мені ще десь повідомити нову адресу?"
+  },
+  {
+   "s": "A",
+   "de": "Ja, bei Ihrer Krankenkasse, Ihrer Bank und Ihrem Arbeitgeber. Das Finanzamt bekommt die Daten automatisch.",
+   "tr": "Так, у лікарняній касі, банку та в роботодавця. Податкова отримає дані автоматично."
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/b1-04.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "GillyBerlin",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "source": "https://www.flickr.com/photos/92748110@N00/2535437179",
+  "site": "Flickr"
+ }
+}

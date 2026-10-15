@@ -1,0 +1,121 @@
+{
+ "id": "b1-08",
+ "level": "b1",
+ "n": 8,
+ "emoji": "🧸",
+ "title": "Ein Platz in der Kita",
+ "titleTr": "Место в детском саду",
+ "situation": "Ахмад хочет устроить двухлетнюю дочь в детский сад. Заведующая рассказывает о листе ожидания, адаптации и стоимости.",
+ "speakers": {
+  "A": {
+   "name": "Kita-Leiterin",
+   "g": "f"
+  },
+  "B": {
+   "name": "Ahmad",
+   "g": "m"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Hallo, Sie müssen Herr Rahimi sein. Schön, dass Sie da sind. Kommen Sie, ich zeige Ihnen die Kita.",
+   "tr": "Здравствуйте, вы, наверное, господин Рахими. Рада, что вы пришли. Проходите, я покажу вам детский сад."
+  },
+  {
+   "s": "B",
+   "de": "Danke. Meine Tochter Lina ist jetzt zwei Jahre alt, und ich suche dringend einen Platz.",
+   "tr": "Спасибо. Моей дочери Лине сейчас два года, и я срочно ищу место."
+  },
+  {
+   "s": "A",
+   "de": "Ich verstehe. Leider haben wir im Moment eine Warteliste. Ab wann bräuchten Sie den Platz?",
+   "tr": "Понимаю. К сожалению, сейчас у нас лист ожидания. С какого времени вам нужно место?"
+  },
+  {
+   "s": "B",
+   "de": "Ab Januar. Dann beginnt meine Frau einen Integrationskurs.",
+   "tr": "С января. Тогда моя жена начинает интеграционный курс."
+  },
+  {
+   "s": "A",
+   "de": "Im Januar werden bei uns drei Plätze frei. Haben Sie Lina schon im Online-Portal der Stadt angemeldet?",
+   "tr": "В январе у нас освобождаются три места. Вы уже зарегистрировали Лину на онлайн-портале города?"
+  },
+  {
+   "s": "B",
+   "de": "Nein, davon wusste ich nichts. Ist das Pflicht?",
+   "tr": "Нет, я об этом не знал. Это обязательно?"
+  },
+  {
+   "s": "A",
+   "de": "Ja, in unserer Stadt laufen alle Anmeldungen über das Portal. Machen Sie das bitte noch diese Woche.",
+   "tr": "Да, в нашем городе все заявки подаются через портал. Сделайте это, пожалуйста, ещё на этой неделе."
+  },
+  {
+   "s": "B",
+   "de": "Mache ich. Ich habe gelesen, dass jedes Kind ab einem Jahr ein Recht auf einen Platz hat. Stimmt das?",
+   "tr": "Сделаю. Я читал, что у каждого ребёнка с года есть право на место. Это так?"
+  },
+  {
+   "s": "A",
+   "de": "Ja, das stimmt. Wenn wir keinen Platz haben, muss die Stadt Ihnen einen anderen anbieten, zum Beispiel bei einer Tagesmutter.",
+   "tr": "Да, это так. Если у нас не будет места, город должен предложить вам другое, например у дневной няни."
+  },
+  {
+   "s": "B",
+   "de": "Gut zu wissen. Wie lange sind die Kinder hier pro Tag?",
+   "tr": "Полезно знать. Сколько времени дети проводят здесь в день?"
+  },
+  {
+   "s": "A",
+   "de": "Wir haben von sieben bis siebzehn Uhr geöffnet. Sie können sieben oder neun Stunden buchen.",
+   "tr": "Мы открыты с семи до семнадцати. Можно выбрать семь или девять часов."
+  },
+  {
+   "s": "B",
+   "de": "Und was kostet das?",
+   "tr": "А сколько это стоит?"
+  },
+  {
+   "s": "A",
+   "de": "Das hängt vom Einkommen ab. Mit niedrigem Einkommen oder Bürgergeld zahlen Sie keine Gebühren, nur das Essen.",
+   "tr": "Это зависит от дохода. При низком доходе или гражданском пособии вы не платите взносы, только за питание."
+  },
+  {
+   "s": "B",
+   "de": "Lina spricht noch kaum Deutsch. Ist das ein Problem?",
+   "tr": "Лина пока почти не говорит по-немецки. Это проблема?"
+  },
+  {
+   "s": "A",
+   "de": "Überhaupt nicht. Kinder in dem Alter lernen sehr schnell. Bei uns sprechen viele Kinder zu Hause eine andere Sprache.",
+   "tr": "Совсем нет. Дети в этом возрасте учатся очень быстро. У нас многие дети дома говорят на другом языке."
+  },
+  {
+   "s": "B",
+   "de": "Das beruhigt mich. Wie läuft der erste Tag ab?",
+   "tr": "Это меня успокаивает. Как проходит первый день?"
+  },
+  {
+   "s": "A",
+   "de": "Wir machen eine Eingewöhnung. In den ersten zwei Wochen bleibt ein Elternteil die ersten Stunden mit in der Gruppe.",
+   "tr": "У нас есть период адаптации. Первые две недели один из родителей первые часы остаётся с ребёнком в группе."
+  },
+  {
+   "s": "B",
+   "de": "Sehr gut. Dann melde ich Lina heute Abend im Portal an. Vielen Dank für die Führung!",
+   "tr": "Очень хорошо. Тогда я сегодня вечером зарегистрирую Лину на портале. Большое спасибо за экскурсию!"
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/b1-08.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "Kgbo",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "source": "https://commons.wikimedia.org/w/index.php?curid=117429161",
+  "site": "Wikimedia Commons"
+ }
+}

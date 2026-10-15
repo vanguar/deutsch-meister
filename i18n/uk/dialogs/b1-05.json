@@ -1,0 +1,116 @@
+{
+ "id": "b1-05",
+ "level": "b1",
+ "n": 5,
+ "emoji": "🔥",
+ "title": "Die Heizung ist kaputt",
+ "titleTr": "Зламалося опалення",
+ "situation": "Листопад, а в квартирі Дар'ї вже три дні холодно. Вона телефонує орендодавцю й домовляється про ремонт.",
+ "speakers": {
+  "A": {
+   "name": "Darja",
+   "g": "f"
+  },
+  "B": {
+   "name": "Herr Hoffmann",
+   "g": "m"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Guten Tag, Herr Hoffmann, hier ist Darja Petrenko aus der Lindenstraße acht.",
+   "tr": "Добрий день, пане Гофмане, це Дар'я Петренко з Лінденштрассе, вісім."
+  },
+  {
+   "s": "B",
+   "de": "Ah, Frau Petrenko, guten Tag. Was gibt es?",
+   "tr": "А, пані Петренко, добрий день. Що сталося?"
+  },
+  {
+   "s": "A",
+   "de": "Leider funktioniert meine Heizung seit drei Tagen nicht mehr. In der Wohnung sind es nur noch fünfzehn Grad.",
+   "tr": "На жаль, моє опалення вже три дні не працює. У квартирі лише п'ятнадцять градусів."
+  },
+  {
+   "s": "B",
+   "de": "Oh, das ist unangenehm. Sind alle Heizkörper kalt oder nur einer?",
+   "tr": "Ох, це неприємно. Усі батареї холодні чи лише одна?"
+  },
+  {
+   "s": "A",
+   "de": "Alle. Ich habe die Thermostate schon auf fünf gedreht, aber es passiert nichts.",
+   "tr": "Усі. Я вже повернула термостати на п'ятірку, але нічого не відбувається."
+  },
+  {
+   "s": "B",
+   "de": "Haben Sie die Heizkörper vielleicht schon entlüftet?",
+   "tr": "Можливо, ви вже спускали повітря з батарей?"
+  },
+  {
+   "s": "A",
+   "de": "Ja, das hat mein Nachbar mir gezeigt. Aber es kam kein Wasser, nur ein bisschen Luft.",
+   "tr": "Так, мені сусід показав, як це робити. Але вода не пішла, лише трохи повітря."
+  },
+  {
+   "s": "B",
+   "de": "Dann liegt es wahrscheinlich am Druck in der Anlage. Ich rufe sofort den Heizungsinstallateur an.",
+   "tr": "Тоді, мабуть, справа в тиску в системі. Я зараз же зателефоную майстрові з опалення."
+  },
+  {
+   "s": "A",
+   "de": "Danke. Wann könnte er kommen? Mein Sohn ist schon etwas erkältet.",
+   "tr": "Дякую. Коли він міг би прийти? Мій син уже трохи застуджений."
+  },
+  {
+   "s": "B",
+   "de": "Ich versuche, dass er heute noch vorbeikommt, spätestens morgen Vormittag. Sind Sie dann zu Hause?",
+   "tr": "Постараюся, щоб він прийшов ще сьогодні, найпізніше завтра вранці. Ви будете вдома?"
+  },
+  {
+   "s": "A",
+   "de": "Morgen bis zwölf bin ich da. Sonst kann meine Nachbarin aus dem Erdgeschoss aufmachen, sie hat einen Schlüssel.",
+   "tr": "Завтра до дванадцятої я вдома. Інакше може відчинити сусідка з першого поверху, у неї є ключ."
+  },
+  {
+   "s": "B",
+   "de": "Gut, ich gebe dem Installateur Ihre Handynummer. Er meldet sich direkt bei Ihnen.",
+   "tr": "Добре, я дам майстрові ваш номер мобільного. Він зв'яжеться з вами безпосередньо."
+  },
+  {
+   "s": "A",
+   "de": "Und falls es länger dauert? Mit einem Kind ist es wirklich zu kalt.",
+   "tr": "А якщо це затягнеться? З дитиною справді надто холодно."
+  },
+  {
+   "s": "B",
+   "de": "Dann bringe ich Ihnen einen elektrischen Heizlüfter vorbei. Den Strom dafür ziehe ich von der nächsten Abrechnung ab.",
+   "tr": "Тоді я завезу вам електричний обігрівач. Вартість електрики за нього я відрахую з наступного розрахунку."
+  },
+  {
+   "s": "A",
+   "de": "Das ist fair, vielen Dank. Und bitte geben Sie mir Bescheid, wenn Sie etwas Neues wissen.",
+   "tr": "Це чесно, щиро дякую. І, будь ласка, повідомте мені, якщо щось дізнаєтеся."
+  },
+  {
+   "s": "B",
+   "de": "Mache ich. Entschuldigen Sie die Unannehmlichkeiten!",
+   "tr": "Обов'язково. Вибачте за незручності!"
+  },
+  {
+   "s": "A",
+   "de": "Kein Problem, so etwas kann passieren. Bis dann!",
+   "tr": "Нічого страшного, таке буває. До зв'язку!"
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/b1-05.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "CA-TV",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "source": "https://www.flickr.com/photos/112389381@N02/13920194440",
+  "site": "Flickr"
+ }
+}

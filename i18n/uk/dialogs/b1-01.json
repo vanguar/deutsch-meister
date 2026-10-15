@@ -1,0 +1,131 @@
+{
+ "id": "b1-01",
+ "level": "b1",
+ "n": 1,
+ "emoji": "🏠",
+ "title": "Die Wohnungsbesichtigung",
+ "titleTr": "Огляд квартири",
+ "situation": "Андрій оглядає двокімнатну квартиру й розпитує орендодавицю про оренду, комунальні платежі, заставу та документи.",
+ "speakers": {
+  "A": {
+   "name": "Frau Lehmann",
+   "g": "f"
+  },
+  "B": {
+   "name": "Andrij",
+   "g": "m"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Guten Tag, Herr Melnyk! Kommen Sie herein. Das ist die Wohnung.",
+   "tr": "Добрий день, пане Мельник! Проходьте. Ось квартира."
+  },
+  {
+   "s": "B",
+   "de": "Guten Tag! Oh, die ist ja schön hell. Wie groß ist sie genau?",
+   "tr": "Добрий день! О, яка світла. Яка в неї точна площа?"
+  },
+  {
+   "s": "A",
+   "de": "Zweiundsechzig Quadratmeter: zwei Zimmer, Küche, Bad und ein Balkon nach Süden.",
+   "tr": "Шістдесят два квадратні метри: дві кімнати, кухня, ванна й балкон на південь."
+  },
+  {
+   "s": "B",
+   "de": "Wie hoch ist die Miete?",
+   "tr": "Яка орендна плата?"
+  },
+  {
+   "s": "A",
+   "de": "Die Kaltmiete beträgt sechshundertachtzig Euro. Dazu kommen hundertvierzig Euro Nebenkosten.",
+   "tr": "Оренда без комунальних — шістсот вісімдесят євро. До цього додається сто сорок євро комунальних платежів."
+  },
+  {
+   "s": "B",
+   "de": "Sind die Heizkosten in den Nebenkosten schon enthalten?",
+   "tr": "Опалення вже входить у комунальні платежі?"
+  },
+  {
+   "s": "A",
+   "de": "Ja, Heizung und Wasser sind dabei. Strom und Internet zahlen Sie selbst.",
+   "tr": "Так, опалення й вода включені. За електрику й інтернет ви платите самі."
+  },
+  {
+   "s": "B",
+   "de": "Verstehe. Muss ich auch eine Kaution zahlen?",
+   "tr": "Зрозуміло. Мені треба буде внести заставу?"
+  },
+  {
+   "s": "A",
+   "de": "Ja, drei Kaltmieten. Sie können die Kaution aber in drei Raten zahlen.",
+   "tr": "Так, три місячні орендні плати без комунальних. Але заставу можна внести трьома частинами."
+  },
+  {
+   "s": "B",
+   "de": "Das ist gut. Ist die Küche mit Herd und Kühlschrank?",
+   "tr": "Це добре. Кухня з плитою й холодильником?"
+  },
+  {
+   "s": "A",
+   "de": "Eine Einbauküche ist vorhanden. Die Geräte sind erst zwei Jahre alt.",
+   "tr": "Є вбудована кухня. Техніці лише два роки."
+  },
+  {
+   "s": "B",
+   "de": "Und wie ist es mit der Lautstärke? Die Straße unten sieht ziemlich belebt aus.",
+   "tr": "А як із шумом? Вулиця внизу виглядає досить жвавою."
+  },
+  {
+   "s": "A",
+   "de": "Die Fenster sind neu und gut isoliert. Das Schlafzimmer liegt außerdem zum Hof.",
+   "tr": "Вікна нові й добре ізольовані. До того ж спальня виходить у двір."
+  },
+  {
+   "s": "B",
+   "de": "Die Wohnung gefällt mir wirklich. Welche Unterlagen brauchen Sie von mir?",
+   "tr": "Квартира мені справді подобається. Які документи вам від мене потрібні?"
+  },
+  {
+   "s": "A",
+   "de": "Eine Kopie Ihres Ausweises, Ihre letzten drei Gehaltsabrechnungen und eine Schufa-Auskunft.",
+   "tr": "Копію вашого посвідчення особи, три останні розрахункові листи й довідку зі Schufa."
+  },
+  {
+   "s": "B",
+   "de": "Was ist eine Schufa-Auskunft?",
+   "tr": "Що таке довідка зі Schufa?"
+  },
+  {
+   "s": "A",
+   "de": "Darin steht, ob Sie Schulden haben. Sie können sie online bestellen, eine Version ist kostenlos.",
+   "tr": "У ній зазначено, чи маєте ви борги. Її можна замовити онлайн, один варіант безплатний."
+  },
+  {
+   "s": "B",
+   "de": "Gut, ich schicke Ihnen alles bis Freitag per E-Mail. Wann könnten Sie sich entscheiden?",
+   "tr": "Добре, я надішлю вам усе електронною поштою до п'ятниці. Коли ви зможете ухвалити рішення?"
+  },
+  {
+   "s": "A",
+   "de": "Nächste Woche. Es gibt noch drei andere Interessenten, aber Ihre Unterlagen schaue ich mir gern an.",
+   "tr": "Наступного тижня. Є ще троє інших охочих, але ваші документи я залюбки перегляну."
+  },
+  {
+   "s": "B",
+   "de": "Vielen Dank für die Besichtigung. Ich würde mich sehr freuen!",
+   "tr": "Щиро дякую за показ. Я був би дуже радий!"
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/b1-01.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "Allerina & Glen MacLarty",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "source": "https://www.flickr.com/photos/97451431@N00/6277696221",
+  "site": "Flickr"
+ }
+}

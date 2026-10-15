@@ -1,0 +1,121 @@
+{
+ "id": "b1-06",
+ "level": "b1",
+ "n": 6,
+ "emoji": "🔊",
+ "title": "Ärger mit dem Nachbarn",
+ "titleTr": "Конфлікт із сусідом",
+ "situation": "Сусід Світлани скаржиться на шум пізно ввечері. Вони спокійно обговорюють проблему й знаходять компроміс.",
+ "speakers": {
+  "A": {
+   "name": "Herr Brandt",
+   "g": "m"
+  },
+  "B": {
+   "name": "Switlana",
+   "g": "f"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Guten Abend. Entschuldigen Sie die Störung. Ich wohne direkt unter Ihnen.",
+   "tr": "Добрий вечір. Перепрошую, що турбую. Я живу просто під вами."
+  },
+  {
+   "s": "B",
+   "de": "Guten Abend, Herr Brandt. Ist etwas passiert?",
+   "tr": "Добрий вечір, пане Брандте. Щось сталося?"
+  },
+  {
+   "s": "A",
+   "de": "Na ja… Ich muss morgen um fünf Uhr aufstehen, und bei Ihnen ist es seit Stunden sehr laut.",
+   "tr": "Ну… Мені завтра вставати о п'ятій ранку, а у вас уже кілька годин дуже гучно."
+  },
+  {
+   "s": "B",
+   "de": "Oh, das tut mir leid. Wir feiern den Geburtstag meiner Tochter. Ich wusste nicht, dass man das so gut hört.",
+   "tr": "Ой, вибачте. Ми святкуємо день народження моєї доньки. Я не знала, що так добре чути."
+  },
+  {
+   "s": "A",
+   "de": "Leider hört man alles: die Musik und das Springen. Und es ist schon nach zehn.",
+   "tr": "На жаль, чути все: музику й стрибки. І вже одинадцята година."
+  },
+  {
+   "s": "B",
+   "de": "Sie haben recht. Ab zweiundzwanzig Uhr ist ja Nachtruhe.",
+   "tr": "Ви маєте рацію. З двадцять другої години ж нічна тиша."
+  },
+  {
+   "s": "A",
+   "de": "Ich verstehe ja, dass Kinder feiern wollen. Ich war auch mal jung.",
+   "tr": "Я ж розумію, що дітям хочеться святкувати. Я теж колись був молодим."
+  },
+  {
+   "s": "B",
+   "de": "Danke für Ihr Verständnis. Die Eltern holen die Kinder in einer halben Stunde ab.",
+   "tr": "Дякую за розуміння. Батьки заберуть дітей за пів години."
+  },
+  {
+   "s": "A",
+   "de": "Könnten Sie die Musik bis dahin wenigstens leiser machen?",
+   "tr": "Чи не могли б ви до того часу хоча б зробити музику тихішою?"
+  },
+  {
+   "s": "B",
+   "de": "Natürlich, ich mache sie sofort leiser. Und ich sage den Kindern, dass sie nicht mehr springen sollen.",
+   "tr": "Звісно, зараз же зроблю тихіше. І скажу дітям, щоб більше не стрибали."
+  },
+  {
+   "s": "A",
+   "de": "Das wäre sehr nett. Ehrlich gesagt war es letzten Samstag auch schon ziemlich laut.",
+   "tr": "Це було б дуже люб'язно. Чесно кажучи, минулої суботи теж було досить гучно."
+  },
+  {
+   "s": "B",
+   "de": "Letzten Samstag? Ach so, da hat mein Mann die Möbel aufgebaut. Das hat leider länger gedauert.",
+   "tr": "Минулої суботи? А, це чоловік збирав меблі. На жаль, це затягнулося."
+  },
+  {
+   "s": "A",
+   "de": "Verstehe. Vielleicht könnten Sie mir beim nächsten Mal vorher Bescheid sagen?",
+   "tr": "Зрозуміло. Можливо, наступного разу ви могли б попередити мене заздалегідь?"
+  },
+  {
+   "s": "B",
+   "de": "Gute Idee. Bei einer Feier hänge ich einen Zettel ins Treppenhaus, dann wissen alle Bescheid.",
+   "tr": "Гарна ідея. Перед святом я повішу записку на сходовій клітці, тоді всі знатимуть."
+  },
+  {
+   "s": "A",
+   "de": "Das finde ich prima. Dann kann ich mir rechtzeitig Ohrstöpsel besorgen.",
+   "tr": "Чудово. Тоді я зможу заздалегідь купити беруші."
+  },
+  {
+   "s": "B",
+   "de": "Und bei Problemen klingeln Sie einfach wieder. Ich möchte keinen Streit unter Nachbarn.",
+   "tr": "А якщо будуть проблеми, просто дзвоніть знову. Я не хочу сварок між сусідами."
+  },
+  {
+   "s": "A",
+   "de": "Ich auch nicht. Danke für das Gespräch und gute Nacht!",
+   "tr": "Я теж. Дякую за розмову і на добраніч!"
+  },
+  {
+   "s": "B",
+   "de": "Gute Nacht, Herr Brandt. Und nochmals Entschuldigung!",
+   "tr": "На добраніч, пане Брандте. І ще раз вибачте!"
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/b1-06.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "August Geyler",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "source": "https://commons.wikimedia.org/w/index.php?curid=130063133",
+  "site": "Wikimedia Commons"
+ }
+}

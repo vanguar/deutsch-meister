@@ -1,0 +1,126 @@
+{
+ "id": "b1-04",
+ "level": "b1",
+ "n": 4,
+ "emoji": "🏛️",
+ "title": "Im Bürgeramt",
+ "titleTr": "В бюргерамте: регистрация по месту жительства",
+ "situation": "Карим переехал в новую квартиру и регистрирует место жительства. Сотрудница проверяет документы и объясняет сроки.",
+ "speakers": {
+  "A": {
+   "name": "Sachbearbeiterin",
+   "g": "f"
+  },
+  "B": {
+   "name": "Karim",
+   "g": "m"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Guten Tag! Was kann ich für Sie tun?",
+   "tr": "Добрый день! Чем могу вам помочь?"
+  },
+  {
+   "s": "B",
+   "de": "Guten Tag! Ich bin umgezogen und möchte meine neue Adresse anmelden.",
+   "tr": "Добрый день! Я переехал и хочу зарегистрировать новый адрес."
+  },
+  {
+   "s": "A",
+   "de": "Haben Sie einen Termin?",
+   "tr": "Вы записаны на приём?"
+  },
+  {
+   "s": "B",
+   "de": "Ja, um zehn Uhr fünfzehn. Hier ist meine Terminbestätigung.",
+   "tr": "Да, на десять пятнадцать. Вот подтверждение записи."
+  },
+  {
+   "s": "A",
+   "de": "Danke. Wann sind Sie eingezogen?",
+   "tr": "Спасибо. Когда вы въехали?"
+  },
+  {
+   "s": "B",
+   "de": "Am ersten Oktober, also vor zehn Tagen.",
+   "tr": "Первого октября, то есть десять дней назад."
+  },
+  {
+   "s": "A",
+   "de": "Gut, dann sind Sie noch in der Frist. Man muss sich innerhalb von zwei Wochen anmelden.",
+   "tr": "Хорошо, значит, вы ещё укладываетесь в срок. Зарегистрироваться нужно в течение двух недель."
+  },
+  {
+   "s": "B",
+   "de": "Das wusste ich. Hier sind mein Pass und das Anmeldeformular.",
+   "tr": "Я это знал. Вот мой паспорт и бланк регистрации."
+  },
+  {
+   "s": "A",
+   "de": "Ich brauche auch die Wohnungsgeberbestätigung von Ihrem Vermieter.",
+   "tr": "Мне нужно ещё подтверждение от вашего арендодателя."
+  },
+  {
+   "s": "B",
+   "de": "Oh, die habe ich leider vergessen. Kann ich sie nachreichen?",
+   "tr": "Ой, его я, к сожалению, забыл. Можно донести позже?"
+  },
+  {
+   "s": "A",
+   "de": "Ohne die Bestätigung kann ich Sie leider nicht anmelden. Haben Sie sie vielleicht als Foto auf dem Handy?",
+   "tr": "Без подтверждения я, к сожалению, не могу вас зарегистрировать. Может быть, у вас есть его фото в телефоне?"
+  },
+  {
+   "s": "B",
+   "de": "Ja, warten Sie… Hier, der Vermieter hat sie mir per E-Mail geschickt.",
+   "tr": "Да, подождите… Вот, арендодатель прислал мне его по электронной почте."
+  },
+  {
+   "s": "A",
+   "de": "Wunderbar, das reicht. Können Sie sie an diese Adresse weiterleiten? Dann drucke ich sie aus.",
+   "tr": "Замечательно, этого достаточно. Можете переслать на этот адрес? Тогда я её распечатаю."
+  },
+  {
+   "s": "B",
+   "de": "Klar, ist schon unterwegs.",
+   "tr": "Конечно, уже отправляю."
+  },
+  {
+   "s": "A",
+   "de": "Danke. Ziehen noch weitere Personen mit Ihnen in die Wohnung ein?",
+   "tr": "Спасибо. С вами в квартиру въезжает ещё кто-нибудь?"
+  },
+  {
+   "s": "B",
+   "de": "Nein, ich wohne allein.",
+   "tr": "Нет, я живу один."
+  },
+  {
+   "s": "A",
+   "de": "So, hier ist Ihre Meldebescheinigung. Die neue Adresse klebe ich auch gleich auf Ihren Aufenthaltstitel.",
+   "tr": "Вот ваша справка о регистрации. Новый адрес я сразу наклею и на ваш вид на жительство."
+  },
+  {
+   "s": "B",
+   "de": "Muss ich die neue Adresse noch woanders melden?",
+   "tr": "Нужно ли мне ещё где-то сообщить новый адрес?"
+  },
+  {
+   "s": "A",
+   "de": "Ja, bei Ihrer Krankenkasse, Ihrer Bank und Ihrem Arbeitgeber. Das Finanzamt bekommt die Daten automatisch.",
+   "tr": "Да, в больничной кассе, банке и у работодателя. Налоговая получит данные автоматически."
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/b1-04.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "GillyBerlin",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "source": "https://www.flickr.com/photos/92748110@N00/2535437179",
+  "site": "Flickr"
+ }
+}

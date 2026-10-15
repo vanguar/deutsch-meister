@@ -1,7 +1,8 @@
 {
  "levels": [
   "a1",
-  "a2"
+  "a2",
+  "b1"
  ],
  "items": [
   {
@@ -300,6 +301,156 @@
    "speakers": "Verkäufer · Khalid",
    "img": {
     "thumb": "data/dialogs/img/a2-10-t.jpg",
+    "tw": 320,
+    "th": 180
+   }
+  },
+  {
+   "id": "b1-01",
+   "level": "b1",
+   "n": 1,
+   "emoji": "🏠",
+   "title": "Die Wohnungsbesichtigung",
+   "titleTr": "Огляд квартири",
+   "lines": 20,
+   "speakers": "Frau Lehmann · Andrij",
+   "img": {
+    "thumb": "data/dialogs/img/b1-01-t.jpg",
+    "tw": 320,
+    "th": 180
+   }
+  },
+  {
+   "id": "b1-02",
+   "level": "b1",
+   "n": 2,
+   "emoji": "💼",
+   "title": "Das Vorstellungsgespräch",
+   "titleTr": "Співбесіда",
+   "lines": 20,
+   "speakers": "Frau Schröder · Oleksandr",
+   "img": {
+    "thumb": "data/dialogs/img/b1-02-t.jpg",
+    "tw": 320,
+    "th": 180
+   }
+  },
+  {
+   "id": "b1-03",
+   "level": "b1",
+   "n": 3,
+   "emoji": "🏢",
+   "title": "Termin im Jobcenter",
+   "titleTr": "Прийом у джобцентрі",
+   "lines": 18,
+   "speakers": "Herr Neumann · Halyna",
+   "img": {
+    "thumb": "data/dialogs/img/b1-03-t.jpg",
+    "tw": 320,
+    "th": 180
+   }
+  },
+  {
+   "id": "b1-04",
+   "level": "b1",
+   "n": 4,
+   "emoji": "🏛️",
+   "title": "Im Bürgeramt",
+   "titleTr": "У бюргерамті: реєстрація місця проживання",
+   "lines": 19,
+   "speakers": "Sachbearbeiterin · Karim",
+   "img": {
+    "thumb": "data/dialogs/img/b1-04-t.jpg",
+    "tw": 320,
+    "th": 180
+   }
+  },
+  {
+   "id": "b1-05",
+   "level": "b1",
+   "n": 5,
+   "emoji": "🔥",
+   "title": "Die Heizung ist kaputt",
+   "titleTr": "Зламалося опалення",
+   "lines": 17,
+   "speakers": "Darja · Herr Hoffmann",
+   "img": {
+    "thumb": "data/dialogs/img/b1-05-t.jpg",
+    "tw": 320,
+    "th": 180
+   }
+  },
+  {
+   "id": "b1-06",
+   "level": "b1",
+   "n": 6,
+   "emoji": "🔊",
+   "title": "Ärger mit dem Nachbarn",
+   "titleTr": "Конфлікт із сусідом",
+   "lines": 18,
+   "speakers": "Herr Brandt · Switlana",
+   "img": {
+    "thumb": "data/dialogs/img/b1-06-t.jpg",
+    "tw": 320,
+    "th": 180
+   }
+  },
+  {
+   "id": "b1-07",
+   "level": "b1",
+   "n": 7,
+   "emoji": "🤧",
+   "title": "Krankmeldung bei der Arbeit",
+   "titleTr": "Повідомляємо на роботу про хворобу",
+   "lines": 17,
+   "speakers": "Frau König · Bohdan",
+   "img": {
+    "thumb": "data/dialogs/img/b1-07-t.jpg",
+    "tw": 320,
+    "th": 180
+   }
+  },
+  {
+   "id": "b1-08",
+   "level": "b1",
+   "n": 8,
+   "emoji": "🧸",
+   "title": "Ein Platz in der Kita",
+   "titleTr": "Місце в дитсадку",
+   "lines": 18,
+   "speakers": "Kita-Leiterin · Ahmad",
+   "img": {
+    "thumb": "data/dialogs/img/b1-08-t.jpg",
+    "tw": 320,
+    "th": 180
+   }
+  },
+  {
+   "id": "b1-09",
+   "level": "b1",
+   "n": 9,
+   "emoji": "🔧",
+   "title": "In der Autowerkstatt",
+   "titleTr": "В автосервісі",
+   "lines": 17,
+   "speakers": "Mechaniker · Iryna",
+   "img": {
+    "thumb": "data/dialogs/img/b1-09-t.jpg",
+    "tw": 320,
+    "th": 180
+   }
+  },
+  {
+   "id": "b1-10",
+   "level": "b1",
+   "n": 10,
+   "emoji": "📵",
+   "title": "Eine Reklamation",
+   "titleTr": "Повернення несправного товару",
+   "lines": 17,
+   "speakers": "Mila · Verkäufer",
+   "img": {
+    "thumb": "data/dialogs/img/b1-10-t.jpg",
     "tw": 320,
     "th": 180
    }

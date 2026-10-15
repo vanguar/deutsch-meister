@@ -1,0 +1,121 @@
+{
+ "id": "b1-08",
+ "level": "b1",
+ "n": 8,
+ "emoji": "🧸",
+ "title": "Ein Platz in der Kita",
+ "titleTr": "مكان في الحضانة",
+ "situation": "يريد أحمد تسجيل ابنته ذات العامين في الحضانة. تشرح له المديرة قائمة الانتظار وفترة التأقلم والتكاليف.",
+ "speakers": {
+  "A": {
+   "name": "Kita-Leiterin",
+   "g": "f"
+  },
+  "B": {
+   "name": "Ahmad",
+   "g": "m"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Hallo, Sie müssen Herr Rahimi sein. Schön, dass Sie da sind. Kommen Sie, ich zeige Ihnen die Kita.",
+   "tr": "مرحبًا، لا بد أنك السيد رحيمي. يسعدني حضورك. تفضّل، سأريك الحضانة."
+  },
+  {
+   "s": "B",
+   "de": "Danke. Meine Tochter Lina ist jetzt zwei Jahre alt, und ich suche dringend einen Platz.",
+   "tr": "شكرًا. ابنتي لينا عمرها الآن سنتان، وأبحث عن مكان لها بشكل عاجل."
+  },
+  {
+   "s": "A",
+   "de": "Ich verstehe. Leider haben wir im Moment eine Warteliste. Ab wann bräuchten Sie den Platz?",
+   "tr": "أفهم ذلك. للأسف لدينا الآن قائمة انتظار. من متى تحتاج إلى المكان؟"
+  },
+  {
+   "s": "B",
+   "de": "Ab Januar. Dann beginnt meine Frau einen Integrationskurs.",
+   "tr": "من يناير. حينها تبدأ زوجتي دورة الاندماج."
+  },
+  {
+   "s": "A",
+   "de": "Im Januar werden bei uns drei Plätze frei. Haben Sie Lina schon im Online-Portal der Stadt angemeldet?",
+   "tr": "في يناير ستتوفر عندنا ثلاثة أماكن. هل سجّلت لينا في البوابة الإلكترونية للمدينة؟"
+  },
+  {
+   "s": "B",
+   "de": "Nein, davon wusste ich nichts. Ist das Pflicht?",
+   "tr": "لا، لم أكن أعرف ذلك. هل هذا إلزامي؟"
+  },
+  {
+   "s": "A",
+   "de": "Ja, in unserer Stadt laufen alle Anmeldungen über das Portal. Machen Sie das bitte noch diese Woche.",
+   "tr": "نعم، في مدينتنا تتم كل التسجيلات عبر البوابة. افعل ذلك هذا الأسبوع من فضلك."
+  },
+  {
+   "s": "B",
+   "de": "Mache ich. Ich habe gelesen, dass jedes Kind ab einem Jahr ein Recht auf einen Platz hat. Stimmt das?",
+   "tr": "سأفعل. قرأت أن لكل طفل ابتداءً من عمر سنة الحق في مكان. هل هذا صحيح؟"
+  },
+  {
+   "s": "A",
+   "de": "Ja, das stimmt. Wenn wir keinen Platz haben, muss die Stadt Ihnen einen anderen anbieten, zum Beispiel bei einer Tagesmutter.",
+   "tr": "نعم، هذا صحيح. إذا لم يكن لدينا مكان، فعلى المدينة أن تعرض عليك مكانًا آخر، مثلًا عند مربية نهارية."
+  },
+  {
+   "s": "B",
+   "de": "Gut zu wissen. Wie lange sind die Kinder hier pro Tag?",
+   "tr": "من الجيد معرفة ذلك. كم ساعة يبقى الأطفال هنا يوميًا؟"
+  },
+  {
+   "s": "A",
+   "de": "Wir haben von sieben bis siebzehn Uhr geöffnet. Sie können sieben oder neun Stunden buchen.",
+   "tr": "نفتح من السابعة صباحًا حتى الخامسة مساءً. يمكنك أن تحجز سبع ساعات أو تسعًا."
+  },
+  {
+   "s": "B",
+   "de": "Und was kostet das?",
+   "tr": "وكم يكلّف ذلك؟"
+  },
+  {
+   "s": "A",
+   "de": "Das hängt vom Einkommen ab. Mit niedrigem Einkommen oder Bürgergeld zahlen Sie keine Gebühren, nur das Essen.",
+   "tr": "يعتمد ذلك على الدخل. مع دخل منخفض أو مع إعانة Bürgergeld لا تدفع رسومًا، بل ثمن الطعام فقط."
+  },
+  {
+   "s": "B",
+   "de": "Lina spricht noch kaum Deutsch. Ist das ein Problem?",
+   "tr": "لينا لا تتكلم الألمانية تقريبًا بعد. هل هذه مشكلة؟"
+  },
+  {
+   "s": "A",
+   "de": "Überhaupt nicht. Kinder in dem Alter lernen sehr schnell. Bei uns sprechen viele Kinder zu Hause eine andere Sprache.",
+   "tr": "على الإطلاق. الأطفال في هذا العمر يتعلّمون بسرعة كبيرة. كثير من أطفالنا يتكلمون لغة أخرى في البيت."
+  },
+  {
+   "s": "B",
+   "de": "Das beruhigt mich. Wie läuft der erste Tag ab?",
+   "tr": "هذا يطمئنني. كيف يكون اليوم الأول؟"
+  },
+  {
+   "s": "A",
+   "de": "Wir machen eine Eingewöhnung. In den ersten zwei Wochen bleibt ein Elternteil die ersten Stunden mit in der Gruppe.",
+   "tr": "لدينا فترة تأقلم. في الأسبوعين الأولين يبقى أحد الوالدين في الساعات الأولى مع الطفل في المجموعة."
+  },
+  {
+   "s": "B",
+   "de": "Sehr gut. Dann melde ich Lina heute Abend im Portal an. Vielen Dank für die Führung!",
+   "tr": "ممتاز. إذن سأسجّل لينا في البوابة الليلة. شكرًا جزيلًا على الجولة!"
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/b1-08.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "Kgbo",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "source": "https://commons.wikimedia.org/w/index.php?curid=117429161",
+  "site": "Wikimedia Commons"
+ }
+}

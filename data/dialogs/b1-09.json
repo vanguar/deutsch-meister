@@ -1,0 +1,116 @@
+{
+ "id": "b1-09",
+ "level": "b1",
+ "n": 9,
+ "emoji": "🔧",
+ "title": "In der Autowerkstatt",
+ "titleTr": "В автосервисе",
+ "situation": "Ирина приводит машину на техосмотр, и механик находит проблему с тормозами. Они обсуждают цену и сроки.",
+ "speakers": {
+  "A": {
+   "name": "Mechaniker",
+   "g": "m"
+  },
+  "B": {
+   "name": "Iryna",
+   "g": "f"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Frau Savchenko? Ihr Auto ist fertig angeschaut. Ich habe leider keine ganz guten Nachrichten.",
+   "tr": "Госпожа Савченко? Мы осмотрели вашу машину. К сожалению, новости не совсем хорошие."
+  },
+  {
+   "s": "B",
+   "de": "Oh nein. Was ist denn los?",
+   "tr": "О нет. А что случилось?"
+  },
+  {
+   "s": "A",
+   "de": "Für die Hauptuntersuchung müssen die vorderen Bremsscheiben und Bremsbeläge neu gemacht werden.",
+   "tr": "Для техосмотра нужно заменить передние тормозные диски и колодки."
+  },
+  {
+   "s": "B",
+   "de": "Ist das gefährlich? Ich fahre jeden Tag mit den Kindern zur Schule.",
+   "tr": "Это опасно? Я каждый день вожу детей в школу."
+  },
+  {
+   "s": "A",
+   "de": "Noch nicht akut, aber die Beläge sind fast ganz abgefahren. Ohne Reparatur bekommen Sie keine TÜV-Plakette.",
+   "tr": "Пока не критично, но колодки почти полностью стёрты. Без ремонта наклейку техосмотра вы не получите."
+  },
+  {
+   "s": "B",
+   "de": "Was würde das kosten?",
+   "tr": "Сколько это будет стоить?"
+  },
+  {
+   "s": "A",
+   "de": "Mit Material und Arbeitszeit etwa dreihundertzwanzig Euro. Ich kann Ihnen einen schriftlichen Kostenvoranschlag geben.",
+   "tr": "С материалами и работой примерно триста двадцать евро. Могу дать вам письменную смету."
+  },
+  {
+   "s": "B",
+   "de": "Das ist viel Geld. Gibt es eine günstigere Möglichkeit?",
+   "tr": "Это большие деньги. Есть вариант подешевле?"
+  },
+  {
+   "s": "A",
+   "de": "Wir könnten Teile von einem anderen Hersteller nehmen. Die sind genauso sicher und etwa sechzig Euro billiger.",
+   "tr": "Мы могли бы поставить детали другого производителя. Они такие же надёжные и примерно на шестьдесят евро дешевле."
+  },
+  {
+   "s": "B",
+   "de": "Dann nehmen wir diese. Wann wäre das Auto fertig?",
+   "tr": "Тогда давайте их. Когда машина будет готова?"
+  },
+  {
+   "s": "A",
+   "de": "Die Teile kommen morgen früh. Wenn alles klappt, können Sie das Auto morgen um sechzehn Uhr abholen.",
+   "tr": "Детали придут завтра утром. Если всё получится, вы сможете забрать машину завтра в шестнадцать часов."
+  },
+  {
+   "s": "B",
+   "de": "Und die Hauptuntersuchung? Muss ich dafür noch einmal kommen?",
+   "tr": "А техосмотр? Мне нужно будет приезжать ещё раз?"
+  },
+  {
+   "s": "A",
+   "de": "Nein, der Prüfer ist morgen Nachmittag sowieso bei uns. Das erledigen wir gleich mit.",
+   "tr": "Нет, эксперт и так будет у нас завтра после обеда. Мы сделаем это заодно."
+  },
+  {
+   "s": "B",
+   "de": "Perfekt. Brauche ich morgen ein Ersatzauto?",
+   "tr": "Отлично. Мне завтра понадобится подменная машина?"
+  },
+  {
+   "s": "A",
+   "de": "Wir haben ein kleines Leihauto für fünfzehn Euro pro Tag, wenn Sie möchten.",
+   "tr": "У нас есть маленькая машина напрокат за пятнадцать евро в день, если хотите."
+  },
+  {
+   "s": "B",
+   "de": "Nein danke, morgen fahre ich mit dem Bus. Rufen Sie mich bitte an, wenn das Auto fertig ist?",
+   "tr": "Нет, спасибо, завтра я поеду на автобусе. Позвоните мне, пожалуйста, когда машина будет готова?"
+  },
+  {
+   "s": "A",
+   "de": "Machen wir. Bitte unterschreiben Sie hier noch den Auftrag.",
+   "tr": "Сделаем. Пожалуйста, подпишите ещё здесь заказ."
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/b1-09.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "wbaiv",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+  "source": "https://www.flickr.com/photos/9998127@N06/4684156777",
+  "site": "Flickr"
+ }
+}

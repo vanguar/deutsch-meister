@@ -1,0 +1,116 @@
+{
+ "id": "b1-09",
+ "level": "b1",
+ "n": 9,
+ "emoji": "🔧",
+ "title": "In der Autowerkstatt",
+ "titleTr": "في ورشة السيارات",
+ "situation": "تأتي إيرينا بسيارتها للفحص الفني، فيجد الميكانيكي مشكلة في المكابح. يتحدثان عن السعر والموعد.",
+ "speakers": {
+  "A": {
+   "name": "Mechaniker",
+   "g": "m"
+  },
+  "B": {
+   "name": "Iryna",
+   "g": "f"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Frau Savchenko? Ihr Auto ist fertig angeschaut. Ich habe leider keine ganz guten Nachrichten.",
+   "tr": "سيدة سافتشينكو؟ انتهينا من فحص سيارتك. للأسف الأخبار ليست جيدة تمامًا."
+  },
+  {
+   "s": "B",
+   "de": "Oh nein. Was ist denn los?",
+   "tr": "يا إلهي. ما الأمر؟"
+  },
+  {
+   "s": "A",
+   "de": "Für die Hauptuntersuchung müssen die vorderen Bremsscheiben und Bremsbeläge neu gemacht werden.",
+   "tr": "من أجل الفحص الفني يجب تغيير أقراص المكابح الأمامية وفحماتها."
+  },
+  {
+   "s": "B",
+   "de": "Ist das gefährlich? Ich fahre jeden Tag mit den Kindern zur Schule.",
+   "tr": "هل هذا خطير؟ أوصل الأطفال إلى المدرسة بالسيارة كل يوم."
+  },
+  {
+   "s": "A",
+   "de": "Noch nicht akut, aber die Beläge sind fast ganz abgefahren. Ohne Reparatur bekommen Sie keine TÜV-Plakette.",
+   "tr": "ليس خطيرًا بعد، لكن الفحمات تآكلت تقريبًا بالكامل. بدون إصلاح لن تحصلي على ملصق الفحص الفني."
+  },
+  {
+   "s": "B",
+   "de": "Was würde das kosten?",
+   "tr": "كم سيكلّف ذلك؟"
+  },
+  {
+   "s": "A",
+   "de": "Mit Material und Arbeitszeit etwa dreihundertzwanzig Euro. Ich kann Ihnen einen schriftlichen Kostenvoranschlag geben.",
+   "tr": "مع القطع وأجرة العمل حوالي ثلاثمئة وعشرين يورو. يمكنني أن أعطيك تقديرًا مكتوبًا للتكاليف."
+  },
+  {
+   "s": "B",
+   "de": "Das ist viel Geld. Gibt es eine günstigere Möglichkeit?",
+   "tr": "هذا مبلغ كبير. هل هناك خيار أرخص؟"
+  },
+  {
+   "s": "A",
+   "de": "Wir könnten Teile von einem anderen Hersteller nehmen. Die sind genauso sicher und etwa sechzig Euro billiger.",
+   "tr": "يمكننا استخدام قطع من شركة مصنّعة أخرى. إنها آمنة بالقدر نفسه وأرخص بحوالي ستين يورو."
+  },
+  {
+   "s": "B",
+   "de": "Dann nehmen wir diese. Wann wäre das Auto fertig?",
+   "tr": "إذن لنأخذها. متى ستكون السيارة جاهزة؟"
+  },
+  {
+   "s": "A",
+   "de": "Die Teile kommen morgen früh. Wenn alles klappt, können Sie das Auto morgen um sechzehn Uhr abholen.",
+   "tr": "ستصل القطع صباح الغد. إذا سار كل شيء على ما يرام، يمكنك استلام السيارة غدًا في الرابعة عصرًا."
+  },
+  {
+   "s": "B",
+   "de": "Und die Hauptuntersuchung? Muss ich dafür noch einmal kommen?",
+   "tr": "والفحص الفني؟ هل يجب أن آتي مرة أخرى من أجله؟"
+  },
+  {
+   "s": "A",
+   "de": "Nein, der Prüfer ist morgen Nachmittag sowieso bei uns. Das erledigen wir gleich mit.",
+   "tr": "لا، فالمفتّش سيكون عندنا غدًا بعد الظهر على أي حال. سننجز ذلك في الوقت نفسه."
+  },
+  {
+   "s": "B",
+   "de": "Perfekt. Brauche ich morgen ein Ersatzauto?",
+   "tr": "ممتاز. هل سأحتاج غدًا إلى سيارة بديلة؟"
+  },
+  {
+   "s": "A",
+   "de": "Wir haben ein kleines Leihauto für fünfzehn Euro pro Tag, wenn Sie möchten.",
+   "tr": "لدينا سيارة صغيرة للإعارة بخمسة عشر يورو في اليوم، إذا أردتِ."
+  },
+  {
+   "s": "B",
+   "de": "Nein danke, morgen fahre ich mit dem Bus. Rufen Sie mich bitte an, wenn das Auto fertig ist?",
+   "tr": "لا، شكرًا، سأذهب غدًا بالحافلة. هل تتصل بي من فضلك عندما تصبح السيارة جاهزة؟"
+  },
+  {
+   "s": "A",
+   "de": "Machen wir. Bitte unterschreiben Sie hier noch den Auftrag.",
+   "tr": "سنفعل. من فضلك وقّعي هنا على أمر العمل."
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/b1-09.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "wbaiv",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+  "source": "https://www.flickr.com/photos/9998127@N06/4684156777",
+  "site": "Flickr"
+ }
+}

@@ -1,0 +1,116 @@
+{
+ "id": "b1-05",
+ "level": "b1",
+ "n": 5,
+ "emoji": "🔥",
+ "title": "Die Heizung ist kaputt",
+ "titleTr": "Сломалось отопление",
+ "situation": "Ноябрь, а в квартире Дарьи уже три дня холодно. Она звонит арендодателю и договаривается о ремонте.",
+ "speakers": {
+  "A": {
+   "name": "Darja",
+   "g": "f"
+  },
+  "B": {
+   "name": "Herr Hoffmann",
+   "g": "m"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Guten Tag, Herr Hoffmann, hier ist Darja Petrenko aus der Lindenstraße acht.",
+   "tr": "Добрый день, господин Хофман, это Дарья Петренко с Линденштрассе, восемь."
+  },
+  {
+   "s": "B",
+   "de": "Ah, Frau Petrenko, guten Tag. Was gibt es?",
+   "tr": "А, госпожа Петренко, добрый день. Что случилось?"
+  },
+  {
+   "s": "A",
+   "de": "Leider funktioniert meine Heizung seit drei Tagen nicht mehr. In der Wohnung sind es nur noch fünfzehn Grad.",
+   "tr": "К сожалению, моё отопление уже три дня не работает. В квартире всего пятнадцать градусов."
+  },
+  {
+   "s": "B",
+   "de": "Oh, das ist unangenehm. Sind alle Heizkörper kalt oder nur einer?",
+   "tr": "Ох, это неприятно. Все батареи холодные или только одна?"
+  },
+  {
+   "s": "A",
+   "de": "Alle. Ich habe die Thermostate schon auf fünf gedreht, aber es passiert nichts.",
+   "tr": "Все. Я уже повернула термостаты на пятёрку, но ничего не происходит."
+  },
+  {
+   "s": "B",
+   "de": "Haben Sie die Heizkörper vielleicht schon entlüftet?",
+   "tr": "Может быть, вы уже спускали воздух из батарей?"
+  },
+  {
+   "s": "A",
+   "de": "Ja, das hat mein Nachbar mir gezeigt. Aber es kam kein Wasser, nur ein bisschen Luft.",
+   "tr": "Да, мне сосед показал, как это делать. Но вода не пошла, только немного воздуха."
+  },
+  {
+   "s": "B",
+   "de": "Dann liegt es wahrscheinlich am Druck in der Anlage. Ich rufe sofort den Heizungsinstallateur an.",
+   "tr": "Тогда, наверное, дело в давлении в системе. Я сейчас же позвоню мастеру по отоплению."
+  },
+  {
+   "s": "A",
+   "de": "Danke. Wann könnte er kommen? Mein Sohn ist schon etwas erkältet.",
+   "tr": "Спасибо. Когда он мог бы прийти? Мой сын уже немного простужен."
+  },
+  {
+   "s": "B",
+   "de": "Ich versuche, dass er heute noch vorbeikommt, spätestens morgen Vormittag. Sind Sie dann zu Hause?",
+   "tr": "Постараюсь, чтобы он пришёл ещё сегодня, самое позднее завтра утром. Вы будете дома?"
+  },
+  {
+   "s": "A",
+   "de": "Morgen bis zwölf bin ich da. Sonst kann meine Nachbarin aus dem Erdgeschoss aufmachen, sie hat einen Schlüssel.",
+   "tr": "Завтра до двенадцати я дома. Иначе может открыть соседка с первого этажа, у неё есть ключ."
+  },
+  {
+   "s": "B",
+   "de": "Gut, ich gebe dem Installateur Ihre Handynummer. Er meldet sich direkt bei Ihnen.",
+   "tr": "Хорошо, я дам мастеру ваш номер мобильного. Он свяжется с вами напрямую."
+  },
+  {
+   "s": "A",
+   "de": "Und falls es länger dauert? Mit einem Kind ist es wirklich zu kalt.",
+   "tr": "А если это затянется? С ребёнком действительно слишком холодно."
+  },
+  {
+   "s": "B",
+   "de": "Dann bringe ich Ihnen einen elektrischen Heizlüfter vorbei. Den Strom dafür ziehe ich von der nächsten Abrechnung ab.",
+   "tr": "Тогда я завезу вам электрический обогреватель. Стоимость электричества за него я вычту из следующего расчёта."
+  },
+  {
+   "s": "A",
+   "de": "Das ist fair, vielen Dank. Und bitte geben Sie mir Bescheid, wenn Sie etwas Neues wissen.",
+   "tr": "Это честно, большое спасибо. И, пожалуйста, сообщите мне, если что-то узнаете."
+  },
+  {
+   "s": "B",
+   "de": "Mache ich. Entschuldigen Sie die Unannehmlichkeiten!",
+   "tr": "Обязательно. Извините за неудобства!"
+  },
+  {
+   "s": "A",
+   "de": "Kein Problem, so etwas kann passieren. Bis dann!",
+   "tr": "Ничего страшного, такое бывает. До связи!"
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/b1-05.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "CA-TV",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "source": "https://www.flickr.com/photos/112389381@N02/13920194440",
+  "site": "Flickr"
+ }
+}

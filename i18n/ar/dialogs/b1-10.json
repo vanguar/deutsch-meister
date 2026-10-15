@@ -1,0 +1,116 @@
+{
+ "id": "b1-10",
+ "level": "b1",
+ "n": 10,
+ "emoji": "📵",
+ "title": "Eine Reklamation",
+ "titleTr": "إرجاع منتج معيب",
+ "situation": "توقف هاتف ميلا الذكي عن الشحن بعد أربعة أشهر من شرائه. تطالب في المتجر بإصلاحه أو استبداله.",
+ "speakers": {
+  "A": {
+   "name": "Mila",
+   "g": "f"
+  },
+  "B": {
+   "name": "Verkäufer",
+   "g": "m"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Guten Tag. Ich habe hier vor vier Monaten dieses Handy gekauft, und jetzt lädt es nicht mehr.",
+   "tr": "مرحبًا. اشتريت هذا الهاتف من هنا قبل أربعة أشهر، والآن لم يعد يشحن."
+  },
+  {
+   "s": "B",
+   "de": "Das tut mir leid. Haben Sie es schon mit einem anderen Kabel probiert?",
+   "tr": "يؤسفني ذلك. هل جرّبتِ كابلًا آخر؟"
+  },
+  {
+   "s": "A",
+   "de": "Ja, mit drei verschiedenen Kabeln und Ladegeräten. Es passiert einfach nichts.",
+   "tr": "نعم، جرّبت ثلاثة كابلات وشواحن مختلفة. لا يحدث شيء ببساطة."
+  },
+  {
+   "s": "B",
+   "de": "Ist das Handy vielleicht heruntergefallen oder nass geworden?",
+   "tr": "هل سقط الهاتف ربما أو تعرّض للماء؟"
+  },
+  {
+   "s": "A",
+   "de": "Nein, ich hatte es immer in einer Schutzhülle. Das Display hat nur einen kleinen Kratzer.",
+   "tr": "لا، كان دائمًا داخل غطاء واقٍ. وعلى الشاشة خدش صغير فقط."
+  },
+  {
+   "s": "B",
+   "de": "Haben Sie den Kassenbon dabei?",
+   "tr": "هل معك إيصال الشراء؟"
+  },
+  {
+   "s": "A",
+   "de": "Ja, hier ist der Bon. Ich möchte gern ein neues Gerät.",
+   "tr": "نعم، هذا هو الإيصال. أودّ الحصول على جهاز جديد."
+  },
+  {
+   "s": "B",
+   "de": "Normalerweise schicken wir das Gerät zuerst an den Hersteller zur Reparatur. Das dauert zwei bis drei Wochen.",
+   "tr": "عادةً نرسل الجهاز أولًا إلى الشركة المصنّعة لإصلاحه. ويستغرق ذلك من أسبوعين إلى ثلاثة."
+  },
+  {
+   "s": "A",
+   "de": "Drei Wochen ohne Handy? Das geht nicht. Ich brauche es für die Arbeit.",
+   "tr": "ثلاثة أسابيع بدون هاتف؟ هذا غير ممكن. أحتاجه للعمل."
+  },
+  {
+   "s": "B",
+   "de": "Ich verstehe. Wir können Ihnen für die Zeit ein Leihgerät geben.",
+   "tr": "أفهم ذلك. يمكننا أن نعطيك جهازًا بديلًا خلال هذه الفترة."
+  },
+  {
+   "s": "A",
+   "de": "Das ist schon besser. Aber was passiert, wenn das Handy danach wieder kaputtgeht?",
+   "tr": "هذا أفضل. لكن ماذا يحدث إذا تعطّل الهاتف مجددًا بعد ذلك؟"
+  },
+  {
+   "s": "B",
+   "de": "Wenn die Reparatur nicht klappt, bekommen Sie ein neues Gerät oder Ihr Geld zurück. Das ist Ihr Recht bei der Gewährleistung.",
+   "tr": "إذا لم ينجح الإصلاح، تحصلين على جهاز جديد أو تستردين مالك. هذا حقك بموجب ضمان البائع."
+  },
+  {
+   "s": "A",
+   "de": "Gut. Und meine Daten? Da sind alle Fotos von meinen Kindern drauf.",
+   "tr": "حسنًا. وماذا عن بياناتي؟ عليه كل صور أطفالي."
+  },
+  {
+   "s": "B",
+   "de": "Bei der Reparatur wird das Gerät oft zurückgesetzt. Haben Sie eine Sicherung in der Cloud?",
+   "tr": "أثناء الإصلاح غالبًا ما يُعاد ضبط الجهاز. هل لديك نسخة احتياطية في السحابة؟"
+  },
+  {
+   "s": "A",
+   "de": "Ich glaube, ja. Aber ich bin nicht sicher, ob sie aktuell ist.",
+   "tr": "أظن ذلك. لكني لست متأكدة هل هي حديثة."
+  },
+  {
+   "s": "B",
+   "de": "Wir können das zusammen überprüfen, bevor wir das Handy einschicken. Es kann ja noch per Kabel am Computer laufen.",
+   "tr": "يمكننا التحقق من ذلك معًا قبل أن نرسل الهاتف. فربما ما زال يعمل موصولًا بالحاسوب بالكابل."
+  },
+  {
+   "s": "A",
+   "de": "Das wäre super. Vielen Dank, dass Sie sich so viel Zeit nehmen!",
+   "tr": "سيكون هذا رائعًا. شكرًا جزيلًا لأنك تمنحني كل هذا الوقت!"
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/b1-10.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "robertnelson",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "source": "https://www.flickr.com/photos/67122552@N00/4749907103",
+  "site": "Flickr"
+ }
+}

@@ -1,0 +1,121 @@
+{
+ "id": "b1-06",
+ "level": "b1",
+ "n": 6,
+ "emoji": "🔊",
+ "title": "Ärger mit dem Nachbarn",
+ "titleTr": "خلاف مع الجار",
+ "situation": "يشتكي جار سفيتلانا من الضجيج في وقت متأخر من المساء. يناقشان المشكلة بهدوء ويتوصلان إلى حل وسط.",
+ "speakers": {
+  "A": {
+   "name": "Herr Brandt",
+   "g": "m"
+  },
+  "B": {
+   "name": "Switlana",
+   "g": "f"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Guten Abend. Entschuldigen Sie die Störung. Ich wohne direkt unter Ihnen.",
+   "tr": "مساء الخير. أعتذر عن الإزعاج. أنا أسكن تحتك مباشرة."
+  },
+  {
+   "s": "B",
+   "de": "Guten Abend, Herr Brandt. Ist etwas passiert?",
+   "tr": "مساء الخير يا سيد برانت. هل حدث شيء؟"
+  },
+  {
+   "s": "A",
+   "de": "Na ja… Ich muss morgen um fünf Uhr aufstehen, und bei Ihnen ist es seit Stunden sehr laut.",
+   "tr": "حسنًا… يجب أن أستيقظ غدًا في الخامسة صباحًا، وعندكم ضجيج شديد منذ ساعات."
+  },
+  {
+   "s": "B",
+   "de": "Oh, das tut mir leid. Wir feiern den Geburtstag meiner Tochter. Ich wusste nicht, dass man das so gut hört.",
+   "tr": "آه، أنا آسفة. نحتفل بعيد ميلاد ابنتي. لم أكن أعرف أن الصوت مسموع إلى هذا الحد."
+  },
+  {
+   "s": "A",
+   "de": "Leider hört man alles: die Musik und das Springen. Und es ist schon nach zehn.",
+   "tr": "للأسف كل شيء مسموع: الموسيقى والقفز. والساعة تجاوزت العاشرة."
+  },
+  {
+   "s": "B",
+   "de": "Sie haben recht. Ab zweiundzwanzig Uhr ist ja Nachtruhe.",
+   "tr": "معك حق. فبعد العاشرة مساءً تبدأ ساعات الهدوء الليلي."
+  },
+  {
+   "s": "A",
+   "de": "Ich verstehe ja, dass Kinder feiern wollen. Ich war auch mal jung.",
+   "tr": "أنا أفهم أن الأطفال يريدون الاحتفال. كنت شابًا أنا أيضًا."
+  },
+  {
+   "s": "B",
+   "de": "Danke für Ihr Verständnis. Die Eltern holen die Kinder in einer halben Stunde ab.",
+   "tr": "شكرًا على تفهّمك. سيأتي الأهل لأخذ الأطفال بعد نصف ساعة."
+  },
+  {
+   "s": "A",
+   "de": "Könnten Sie die Musik bis dahin wenigstens leiser machen?",
+   "tr": "هل يمكنك على الأقل أن تخفضي صوت الموسيقى حتى ذلك الحين؟"
+  },
+  {
+   "s": "B",
+   "de": "Natürlich, ich mache sie sofort leiser. Und ich sage den Kindern, dass sie nicht mehr springen sollen.",
+   "tr": "بالطبع، سأخفض الصوت فورًا. وسأقول للأطفال ألّا يقفزوا بعد الآن."
+  },
+  {
+   "s": "A",
+   "de": "Das wäre sehr nett. Ehrlich gesagt war es letzten Samstag auch schon ziemlich laut.",
+   "tr": "سيكون هذا لطفًا كبيرًا. بصراحة، كان الضجيج كبيرًا يوم السبت الماضي أيضًا."
+  },
+  {
+   "s": "B",
+   "de": "Letzten Samstag? Ach so, da hat mein Mann die Möbel aufgebaut. Das hat leider länger gedauert.",
+   "tr": "السبت الماضي؟ آه، كان زوجي يركّب الأثاث. وللأسف استغرق ذلك وقتًا أطول."
+  },
+  {
+   "s": "A",
+   "de": "Verstehe. Vielleicht könnten Sie mir beim nächsten Mal vorher Bescheid sagen?",
+   "tr": "فهمت. ربما تستطيعين في المرة القادمة أن تخبريني مسبقًا؟"
+  },
+  {
+   "s": "B",
+   "de": "Gute Idee. Bei einer Feier hänge ich einen Zettel ins Treppenhaus, dann wissen alle Bescheid.",
+   "tr": "فكرة جيدة. عندما يكون عندنا احتفال، سأعلّق ورقة في بيت الدرج ليعرف الجميع."
+  },
+  {
+   "s": "A",
+   "de": "Das finde ich prima. Dann kann ich mir rechtzeitig Ohrstöpsel besorgen.",
+   "tr": "هذا ممتاز. عندها أستطيع أن أشتري سدّادات الأذن في الوقت المناسب."
+  },
+  {
+   "s": "B",
+   "de": "Und bei Problemen klingeln Sie einfach wieder. Ich möchte keinen Streit unter Nachbarn.",
+   "tr": "وإذا كانت هناك مشكلة، فقط اضغط على الجرس مجددًا. لا أريد خلافات بين الجيران."
+  },
+  {
+   "s": "A",
+   "de": "Ich auch nicht. Danke für das Gespräch und gute Nacht!",
+   "tr": "ولا أنا. شكرًا على الحديث، وتصبحين على خير!"
+  },
+  {
+   "s": "B",
+   "de": "Gute Nacht, Herr Brandt. Und nochmals Entschuldigung!",
+   "tr": "تصبح على خير يا سيد برانت. وأعتذر مرة أخرى!"
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/b1-06.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "August Geyler",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "source": "https://commons.wikimedia.org/w/index.php?curid=130063133",
+  "site": "Wikimedia Commons"
+ }
+}

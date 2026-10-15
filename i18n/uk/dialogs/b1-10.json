@@ -1,0 +1,116 @@
+{
+ "id": "b1-10",
+ "level": "b1",
+ "n": 10,
+ "emoji": "📵",
+ "title": "Eine Reklamation",
+ "titleTr": "Повернення несправного товару",
+ "situation": "У Міли через чотири місяці після покупки перестав заряджатися смартфон. У магазині вона вимагає ремонту або заміни.",
+ "speakers": {
+  "A": {
+   "name": "Mila",
+   "g": "f"
+  },
+  "B": {
+   "name": "Verkäufer",
+   "g": "m"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Guten Tag. Ich habe hier vor vier Monaten dieses Handy gekauft, und jetzt lädt es nicht mehr.",
+   "tr": "Добрий день. Я купила у вас цей телефон чотири місяці тому, а тепер він більше не заряджається."
+  },
+  {
+   "s": "B",
+   "de": "Das tut mir leid. Haben Sie es schon mit einem anderen Kabel probiert?",
+   "tr": "Мені шкода. Ви вже пробували інший кабель?"
+  },
+  {
+   "s": "A",
+   "de": "Ja, mit drei verschiedenen Kabeln und Ladegeräten. Es passiert einfach nichts.",
+   "tr": "Так, із трьома різними кабелями й зарядками. Просто нічого не відбувається."
+  },
+  {
+   "s": "B",
+   "de": "Ist das Handy vielleicht heruntergefallen oder nass geworden?",
+   "tr": "Можливо, телефон падав або намокав?"
+  },
+  {
+   "s": "A",
+   "de": "Nein, ich hatte es immer in einer Schutzhülle. Das Display hat nur einen kleinen Kratzer.",
+   "tr": "Ні, він завжди був у чохлі. На екрані лише маленька подряпина."
+  },
+  {
+   "s": "B",
+   "de": "Haben Sie den Kassenbon dabei?",
+   "tr": "У вас із собою чек?"
+  },
+  {
+   "s": "A",
+   "de": "Ja, hier ist der Bon. Ich möchte gern ein neues Gerät.",
+   "tr": "Так, ось чек. Я б хотіла новий апарат."
+  },
+  {
+   "s": "B",
+   "de": "Normalerweise schicken wir das Gerät zuerst an den Hersteller zur Reparatur. Das dauert zwei bis drei Wochen.",
+   "tr": "Зазвичай ми спершу відправляємо апарат виробникові на ремонт. Це триває два-три тижні."
+  },
+  {
+   "s": "A",
+   "de": "Drei Wochen ohne Handy? Das geht nicht. Ich brauche es für die Arbeit.",
+   "tr": "Три тижні без телефону? Так не можна. Він потрібен мені для роботи."
+  },
+  {
+   "s": "B",
+   "de": "Ich verstehe. Wir können Ihnen für die Zeit ein Leihgerät geben.",
+   "tr": "Розумію. На цей час ми можемо дати вам підмінний апарат."
+  },
+  {
+   "s": "A",
+   "de": "Das ist schon besser. Aber was passiert, wenn das Handy danach wieder kaputtgeht?",
+   "tr": "Це вже краще. Але що буде, якщо потім телефон знову зламається?"
+  },
+  {
+   "s": "B",
+   "de": "Wenn die Reparatur nicht klappt, bekommen Sie ein neues Gerät oder Ihr Geld zurück. Das ist Ihr Recht bei der Gewährleistung.",
+   "tr": "Якщо ремонт не допоможе, ви отримаєте новий апарат або гроші назад. Це ваше право за гарантійними зобов'язаннями продавця."
+  },
+  {
+   "s": "A",
+   "de": "Gut. Und meine Daten? Da sind alle Fotos von meinen Kindern drauf.",
+   "tr": "Добре. А мої дані? Там усі фотографії моїх дітей."
+  },
+  {
+   "s": "B",
+   "de": "Bei der Reparatur wird das Gerät oft zurückgesetzt. Haben Sie eine Sicherung in der Cloud?",
+   "tr": "Під час ремонту апарат часто скидають до заводських налаштувань. У вас є резервна копія в хмарі?"
+  },
+  {
+   "s": "A",
+   "de": "Ich glaube, ja. Aber ich bin nicht sicher, ob sie aktuell ist.",
+   "tr": "Думаю, так. Але я не впевнена, що вона актуальна."
+  },
+  {
+   "s": "B",
+   "de": "Wir können das zusammen überprüfen, bevor wir das Handy einschicken. Es kann ja noch per Kabel am Computer laufen.",
+   "tr": "Ми можемо перевірити це разом, перш ніж відправимо телефон. Він же ще може працювати від комп'ютера через кабель."
+  },
+  {
+   "s": "A",
+   "de": "Das wäre super. Vielen Dank, dass Sie sich so viel Zeit nehmen!",
+   "tr": "Це було б чудово. Щиро дякую, що приділяєте мені стільки часу!"
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/b1-10.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "robertnelson",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "source": "https://www.flickr.com/photos/67122552@N00/4749907103",
+  "site": "Flickr"
+ }
+}

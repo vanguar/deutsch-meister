@@ -1,0 +1,126 @@
+{
+ "id": "b1-04",
+ "level": "b1",
+ "n": 4,
+ "emoji": "🏛️",
+ "title": "Im Bürgeramt",
+ "titleTr": "في مكتب شؤون المواطنين: تسجيل السكن",
+ "situation": "انتقل كريم إلى شقة جديدة ويسجّل عنوان سكنه. تفحص الموظفة وثائقه وتشرح له المواعيد المطلوبة.",
+ "speakers": {
+  "A": {
+   "name": "Sachbearbeiterin",
+   "g": "f"
+  },
+  "B": {
+   "name": "Karim",
+   "g": "m"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Guten Tag! Was kann ich für Sie tun?",
+   "tr": "مرحبًا! كيف يمكنني مساعدتك؟"
+  },
+  {
+   "s": "B",
+   "de": "Guten Tag! Ich bin umgezogen und möchte meine neue Adresse anmelden.",
+   "tr": "مرحبًا! انتقلت إلى سكن جديد وأريد تسجيل عنواني الجديد."
+  },
+  {
+   "s": "A",
+   "de": "Haben Sie einen Termin?",
+   "tr": "هل لديك موعد؟"
+  },
+  {
+   "s": "B",
+   "de": "Ja, um zehn Uhr fünfzehn. Hier ist meine Terminbestätigung.",
+   "tr": "نعم، في العاشرة والربع. هذا تأكيد الموعد."
+  },
+  {
+   "s": "A",
+   "de": "Danke. Wann sind Sie eingezogen?",
+   "tr": "شكرًا. متى انتقلت إلى السكن؟"
+  },
+  {
+   "s": "B",
+   "de": "Am ersten Oktober, also vor zehn Tagen.",
+   "tr": "في الأول من أكتوبر، أي قبل عشرة أيام."
+  },
+  {
+   "s": "A",
+   "de": "Gut, dann sind Sie noch in der Frist. Man muss sich innerhalb von zwei Wochen anmelden.",
+   "tr": "جيد، إذن أنت ما زلت ضمن المهلة. يجب التسجيل خلال أسبوعين."
+  },
+  {
+   "s": "B",
+   "de": "Das wusste ich. Hier sind mein Pass und das Anmeldeformular.",
+   "tr": "كنت أعرف ذلك. هذا جواز سفري واستمارة التسجيل."
+  },
+  {
+   "s": "A",
+   "de": "Ich brauche auch die Wohnungsgeberbestätigung von Ihrem Vermieter.",
+   "tr": "أحتاج أيضًا إلى شهادة من المؤجِّر تؤكد سكنك."
+  },
+  {
+   "s": "B",
+   "de": "Oh, die habe ich leider vergessen. Kann ich sie nachreichen?",
+   "tr": "آه، للأسف نسيتها. هل يمكنني تقديمها لاحقًا؟"
+  },
+  {
+   "s": "A",
+   "de": "Ohne die Bestätigung kann ich Sie leider nicht anmelden. Haben Sie sie vielleicht als Foto auf dem Handy?",
+   "tr": "للأسف لا أستطيع تسجيلك بدون هذه الشهادة. هل لديك صورة منها على هاتفك ربما؟"
+  },
+  {
+   "s": "B",
+   "de": "Ja, warten Sie… Hier, der Vermieter hat sie mir per E-Mail geschickt.",
+   "tr": "نعم، انتظري… ها هي، أرسلها لي المؤجِّر بالبريد الإلكتروني."
+  },
+  {
+   "s": "A",
+   "de": "Wunderbar, das reicht. Können Sie sie an diese Adresse weiterleiten? Dann drucke ich sie aus.",
+   "tr": "رائع، هذا يكفي. هل يمكنك أن تعيد إرسالها إلى هذا العنوان؟ وسأطبعها."
+  },
+  {
+   "s": "B",
+   "de": "Klar, ist schon unterwegs.",
+   "tr": "طبعًا، أرسلتها الآن."
+  },
+  {
+   "s": "A",
+   "de": "Danke. Ziehen noch weitere Personen mit Ihnen in die Wohnung ein?",
+   "tr": "شكرًا. هل ينتقل معك أشخاص آخرون إلى الشقة؟"
+  },
+  {
+   "s": "B",
+   "de": "Nein, ich wohne allein.",
+   "tr": "لا، أسكن وحدي."
+  },
+  {
+   "s": "A",
+   "de": "So, hier ist Ihre Meldebescheinigung. Die neue Adresse klebe ich auch gleich auf Ihren Aufenthaltstitel.",
+   "tr": "تفضّل، هذه شهادة تسجيل السكن. وسألصق العنوان الجديد على بطاقة إقامتك أيضًا الآن."
+  },
+  {
+   "s": "B",
+   "de": "Muss ich die neue Adresse noch woanders melden?",
+   "tr": "هل يجب أن أبلّغ عن العنوان الجديد في مكان آخر؟"
+  },
+  {
+   "s": "A",
+   "de": "Ja, bei Ihrer Krankenkasse, Ihrer Bank und Ihrem Arbeitgeber. Das Finanzamt bekommt die Daten automatisch.",
+   "tr": "نعم، لشركة التأمين الصحي والبنك وصاحب العمل. أما مكتب الضرائب فيتلقى البيانات تلقائيًا."
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/b1-04.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "GillyBerlin",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "source": "https://www.flickr.com/photos/92748110@N00/2535437179",
+  "site": "Flickr"
+ }
+}

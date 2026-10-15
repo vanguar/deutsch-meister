@@ -1,0 +1,121 @@
+{
+ "id": "b1-06",
+ "level": "b1",
+ "n": 6,
+ "emoji": "🔊",
+ "title": "Ärger mit dem Nachbarn",
+ "titleTr": "Конфликт с соседом",
+ "situation": "Сосед Светланы жалуется на шум поздно вечером. Они спокойно обсуждают проблему и находят компромисс.",
+ "speakers": {
+  "A": {
+   "name": "Herr Brandt",
+   "g": "m"
+  },
+  "B": {
+   "name": "Switlana",
+   "g": "f"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Guten Abend. Entschuldigen Sie die Störung. Ich wohne direkt unter Ihnen.",
+   "tr": "Добрый вечер. Извините, что беспокою. Я живу прямо под вами."
+  },
+  {
+   "s": "B",
+   "de": "Guten Abend, Herr Brandt. Ist etwas passiert?",
+   "tr": "Добрый вечер, господин Брандт. Что-то случилось?"
+  },
+  {
+   "s": "A",
+   "de": "Na ja… Ich muss morgen um fünf Uhr aufstehen, und bei Ihnen ist es seit Stunden sehr laut.",
+   "tr": "Ну… Мне завтра вставать в пять утра, а у вас уже несколько часов очень шумно."
+  },
+  {
+   "s": "B",
+   "de": "Oh, das tut mir leid. Wir feiern den Geburtstag meiner Tochter. Ich wusste nicht, dass man das so gut hört.",
+   "tr": "Ой, простите. Мы празднуем день рождения моей дочери. Я не знала, что так хорошо слышно."
+  },
+  {
+   "s": "A",
+   "de": "Leider hört man alles: die Musik und das Springen. Und es ist schon nach zehn.",
+   "tr": "К сожалению, слышно всё: музыку и прыжки. И уже одиннадцатый час."
+  },
+  {
+   "s": "B",
+   "de": "Sie haben recht. Ab zweiundzwanzig Uhr ist ja Nachtruhe.",
+   "tr": "Вы правы. С двадцати двух часов ведь ночной покой."
+  },
+  {
+   "s": "A",
+   "de": "Ich verstehe ja, dass Kinder feiern wollen. Ich war auch mal jung.",
+   "tr": "Я ведь понимаю, что детям хочется праздновать. Я тоже когда-то был молодым."
+  },
+  {
+   "s": "B",
+   "de": "Danke für Ihr Verständnis. Die Eltern holen die Kinder in einer halben Stunde ab.",
+   "tr": "Спасибо за понимание. Родители заберут детей через полчаса."
+  },
+  {
+   "s": "A",
+   "de": "Könnten Sie die Musik bis dahin wenigstens leiser machen?",
+   "tr": "Не могли бы вы до тех пор хотя бы сделать музыку потише?"
+  },
+  {
+   "s": "B",
+   "de": "Natürlich, ich mache sie sofort leiser. Und ich sage den Kindern, dass sie nicht mehr springen sollen.",
+   "tr": "Конечно, сейчас же сделаю тише. И скажу детям, чтобы больше не прыгали."
+  },
+  {
+   "s": "A",
+   "de": "Das wäre sehr nett. Ehrlich gesagt war es letzten Samstag auch schon ziemlich laut.",
+   "tr": "Это было бы очень любезно. Честно говоря, в прошлую субботу тоже было довольно шумно."
+  },
+  {
+   "s": "B",
+   "de": "Letzten Samstag? Ach so, da hat mein Mann die Möbel aufgebaut. Das hat leider länger gedauert.",
+   "tr": "В прошлую субботу? А, это муж собирал мебель. К сожалению, это затянулось."
+  },
+  {
+   "s": "A",
+   "de": "Verstehe. Vielleicht könnten Sie mir beim nächsten Mal vorher Bescheid sagen?",
+   "tr": "Понятно. Может быть, в следующий раз вы могли бы предупредить меня заранее?"
+  },
+  {
+   "s": "B",
+   "de": "Gute Idee. Bei einer Feier hänge ich einen Zettel ins Treppenhaus, dann wissen alle Bescheid.",
+   "tr": "Хорошая идея. Перед праздником я повешу записку на лестничной клетке, тогда все будут в курсе."
+  },
+  {
+   "s": "A",
+   "de": "Das finde ich prima. Dann kann ich mir rechtzeitig Ohrstöpsel besorgen.",
+   "tr": "Отлично. Тогда я смогу заранее купить беруши."
+  },
+  {
+   "s": "B",
+   "de": "Und bei Problemen klingeln Sie einfach wieder. Ich möchte keinen Streit unter Nachbarn.",
+   "tr": "А если будут проблемы, просто звоните снова. Я не хочу ссор между соседями."
+  },
+  {
+   "s": "A",
+   "de": "Ich auch nicht. Danke für das Gespräch und gute Nacht!",
+   "tr": "Я тоже. Спасибо за разговор и спокойной ночи!"
+  },
+  {
+   "s": "B",
+   "de": "Gute Nacht, Herr Brandt. Und nochmals Entschuldigung!",
+   "tr": "Спокойной ночи, господин Брандт. И ещё раз извините!"
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/b1-06.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "August Geyler",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "source": "https://commons.wikimedia.org/w/index.php?curid=130063133",
+  "site": "Wikimedia Commons"
+ }
+}

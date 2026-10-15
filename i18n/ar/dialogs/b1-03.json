@@ -1,0 +1,121 @@
+{
+ "id": "b1-03",
+ "level": "b1",
+ "n": 3,
+ "emoji": "🏢",
+ "title": "Termin im Jobcenter",
+ "titleTr": "موعد في مركز العمل",
+ "situation": "جاءت هالينا إلى موعدها مع مستشارها في مركز العمل (Jobcenter). يتحدثان عن دورة اللغة والبحث عن عمل وتمديد المساعدة المالية.",
+ "speakers": {
+  "A": {
+   "name": "Herr Neumann",
+   "g": "m"
+  },
+  "B": {
+   "name": "Halyna",
+   "g": "f"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Guten Morgen, Frau Kravets. Wie geht es Ihnen? Wie läuft der Sprachkurs?",
+   "tr": "صباح الخير يا سيدة كرافيتس. كيف حالك؟ كيف تسير دورة اللغة؟"
+  },
+  {
+   "s": "B",
+   "de": "Guten Morgen! Gut, danke. Ich habe letzte Woche die B1-Prüfung gemacht und bestanden.",
+   "tr": "صباح الخير! بخير، شكرًا. اجتزت امتحان B1 الأسبوع الماضي."
+  },
+  {
+   "s": "A",
+   "de": "Herzlichen Glückwunsch! Haben Sie das Zertifikat schon?",
+   "tr": "مبارك! هل حصلت على الشهادة؟"
+  },
+  {
+   "s": "B",
+   "de": "Ja, hier ist eine Kopie. Jetzt möchte ich so schnell wie möglich arbeiten.",
+   "tr": "نعم، هذه نسخة منها. والآن أريد أن أبدأ العمل بأسرع ما يمكن."
+  },
+  {
+   "s": "A",
+   "de": "Sehr gut. Sie waren in der Ukraine Buchhalterin, richtig?",
+   "tr": "ممتاز. كنتِ محاسبة في أوكرانيا، أليس كذلك؟"
+  },
+  {
+   "s": "B",
+   "de": "Ja, zwölf Jahre lang. Aber mein Diplom ist hier noch nicht anerkannt.",
+   "tr": "نعم، طوال اثني عشر عامًا. لكن شهادتي لم يُعترف بها هنا بعد."
+  },
+  {
+   "s": "A",
+   "de": "Für Buchhaltung brauchen Sie nicht unbedingt eine Anerkennung. Aber eine Weiterbildung zum deutschen Steuerrecht wäre sinnvoll.",
+   "tr": "في المحاسبة لا تحتاجين بالضرورة إلى الاعتراف بالشهادة. لكن دورة تأهيلية في قانون الضرائب الألماني ستكون مفيدة."
+  },
+  {
+   "s": "B",
+   "de": "Würde das Jobcenter so eine Weiterbildung bezahlen?",
+   "tr": "هل سيدفع مركز العمل تكاليف دورة كهذه؟"
+  },
+  {
+   "s": "A",
+   "de": "Ja, mit einem Bildungsgutschein. Ich kann Ihnen heute zwei passende Kurse zeigen.",
+   "tr": "نعم، عبر قسيمة التعليم. يمكنني اليوم أن أريك دورتين مناسبتين."
+  },
+  {
+   "s": "B",
+   "de": "Das wäre toll. Wie lange dauern die Kurse?",
+   "tr": "سيكون هذا رائعًا. كم تستغرق الدورات؟"
+  },
+  {
+   "s": "A",
+   "de": "Der erste dauert vier Monate in Vollzeit, der zweite sechs Monate in Teilzeit mit einem Praktikum.",
+   "tr": "الأولى أربعة أشهر بدوام كامل، والثانية ستة أشهر بدوام جزئي مع تدريب عملي."
+  },
+  {
+   "s": "B",
+   "de": "Mit Praktikum finde ich besser. So lerne ich eine Firma von innen kennen.",
+   "tr": "أفضّل الدورة مع التدريب العملي. هكذا أتعرّف على شركة من الداخل."
+  },
+  {
+   "s": "A",
+   "de": "Einverstanden. Das schreiben wir in Ihren Kooperationsplan. Sollen Sie sich parallel trotzdem bewerben?",
+   "tr": "موافق. سنكتب هذا في خطة التعاون الخاصة بك. وهل عليك أن تتقدمي لوظائف في الوقت نفسه؟"
+  },
+  {
+   "s": "B",
+   "de": "Ich würde es gern versuchen. Wie viele Bewerbungen soll ich schreiben?",
+   "tr": "أودّ أن أحاول. كم طلب توظيف يجب أن أرسل؟"
+  },
+  {
+   "s": "A",
+   "de": "Fünf pro Monat wären gut. Bitte bringen Sie beim nächsten Termin eine Liste mit.",
+   "tr": "خمسة في الشهر سيكون جيدًا. أحضري معك قائمة بها في الموعد القادم من فضلك."
+  },
+  {
+   "s": "B",
+   "de": "Mache ich. Und noch eine Frage: Mein Bewilligungszeitraum endet im Dezember.",
+   "tr": "سأفعل. وسؤال آخر: تنتهي فترة استحقاق المساعدة في ديسمبر."
+  },
+  {
+   "s": "A",
+   "de": "Dann stellen Sie bitte rechtzeitig einen Weiterbewilligungsantrag. Das geht auch online über jobcenter.digital.",
+   "tr": "إذن قدّمي طلب التمديد في الوقت المناسب من فضلك. يمكن فعل ذلك أيضًا عبر الإنترنت على jobcenter.digital."
+  },
+  {
+   "s": "B",
+   "de": "Gut, das mache ich im November. Vielen Dank für Ihre Unterstützung!",
+   "tr": "حسنًا، سأفعل ذلك في نوفمبر. شكرًا جزيلًا على دعمك!"
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/b1-03.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "baynado1978",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "source": "https://www.flickr.com/photos/11162074@N00/7266212782",
+  "site": "Flickr"
+ }
+}

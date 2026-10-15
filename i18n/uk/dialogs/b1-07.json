@@ -1,0 +1,116 @@
+{
+ "id": "b1-07",
+ "level": "b1",
+ "n": 7,
+ "emoji": "🤧",
+ "title": "Krankmeldung bei der Arbeit",
+ "titleTr": "Повідомляємо на роботу про хворобу",
+ "situation": "Богдан захворів і вранці телефонує керівниці. Вони обговорюють лікарняний і термінову роботу, яку треба передати колезі.",
+ "speakers": {
+  "A": {
+   "name": "Frau König",
+   "g": "f"
+  },
+  "B": {
+   "name": "Bohdan",
+   "g": "m"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "König, guten Morgen.",
+   "tr": "Кеніг, доброго ранку."
+  },
+  {
+   "s": "B",
+   "de": "Guten Morgen, Frau König, hier ist Bohdan Lysenko. Ich kann heute leider nicht zur Arbeit kommen.",
+   "tr": "Доброго ранку, пані Кеніг, це Богдан Лисенко. На жаль, сьогодні я не зможу прийти на роботу."
+  },
+  {
+   "s": "A",
+   "de": "Oh, was ist los? Sie klingen gar nicht gut.",
+   "tr": "Ой, що сталося? У вас зовсім нездоровий голос."
+  },
+  {
+   "s": "B",
+   "de": "Ich habe seit gestern Abend hohes Fieber und Gliederschmerzen. Wahrscheinlich eine Grippe.",
+   "tr": "Від учорашнього вечора в мене висока температура й ломота в тілі. Мабуть, грип."
+  },
+  {
+   "s": "A",
+   "de": "Das tut mir leid. Gehen Sie heute zum Arzt?",
+   "tr": "Співчуваю. Ви сьогодні підете до лікаря?"
+  },
+  {
+   "s": "B",
+   "de": "Ja, ich habe um zehn einen Termin. Dann bekommen Sie die Krankmeldung.",
+   "tr": "Так, у мене прийом о десятій. Тоді ви отримаєте лікарняний."
+  },
+  {
+   "s": "A",
+   "de": "Gut. Die kommt ja inzwischen elektronisch, Sie müssen uns nur sagen, wie lange Sie krankgeschrieben sind.",
+   "tr": "Добре. Він же тепер надходить в електронному вигляді, вам треба лише сказати нам, на який строк вас звільнили від роботи."
+  },
+  {
+   "s": "B",
+   "de": "Mache ich, sobald ich vom Arzt zurück bin.",
+   "tr": "Зроблю, щойно повернуся від лікаря."
+  },
+  {
+   "s": "A",
+   "de": "Danke. Was ist mit der Lieferung für die Firma Schulte? Die sollte doch heute raus.",
+   "tr": "Дякую. А що з поставкою для фірми Шульте? Її ж треба було відправити сьогодні."
+  },
+  {
+   "s": "B",
+   "de": "Ja, genau. Die Ware ist schon gepackt und steht in Halle zwei, Regal B.",
+   "tr": "Так, точно. Товар уже запакований і стоїть у другому цеху, на стелажі B."
+  },
+  {
+   "s": "A",
+   "de": "Und die Lieferpapiere?",
+   "tr": "А накладні?"
+  },
+  {
+   "s": "B",
+   "de": "Die liegen in der blauen Mappe auf meinem Schreibtisch. Herr Yilmaz kennt den Kunden, er kann das übernehmen.",
+   "tr": "Вони лежать у синій теці на моєму столі. Пан Їлмаз знає цього клієнта, він може взяти це на себе."
+  },
+  {
+   "s": "A",
+   "de": "Gut, ich spreche gleich mit ihm. Gibt es sonst noch etwas Dringendes?",
+   "tr": "Добре, я зараз із ним поговорю. Є ще щось термінове?"
+  },
+  {
+   "s": "B",
+   "de": "Am Donnerstag habe ich eine Schulung. Wenn ich bis dahin noch krank bin, muss man sie absagen.",
+   "tr": "У четвер у мене навчання. Якщо я до того часу ще хворітиму, його треба скасувати."
+  },
+  {
+   "s": "A",
+   "de": "Das kann ich organisieren. Jetzt werden Sie erst mal gesund, das ist das Wichtigste.",
+   "tr": "Це я можу організувати. А зараз спершу одужуйте, це найголовніше."
+  },
+  {
+   "s": "B",
+   "de": "Danke für Ihr Verständnis. Ich melde mich nach dem Arztbesuch.",
+   "tr": "Дякую за розуміння. Я зателефоную після лікаря."
+  },
+  {
+   "s": "A",
+   "de": "Alles klar. Gute Besserung, Herr Lysenko!",
+   "tr": "Гаразд. Одужуйте, пане Лисенку!"
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/b1-07.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "erix!",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "source": "https://www.flickr.com/photos/68387408@N00/300547929",
+  "site": "Flickr"
+ }
+}

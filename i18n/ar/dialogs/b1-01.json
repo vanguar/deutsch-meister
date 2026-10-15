@@ -1,0 +1,131 @@
+{
+ "id": "b1-01",
+ "level": "b1",
+ "n": 1,
+ "emoji": "🏠",
+ "title": "Die Wohnungsbesichtigung",
+ "titleTr": "معاينة الشقة",
+ "situation": "يعاين أندريه شقة من غرفتين، ويسأل المؤجِّرة عن الإيجار والتكاليف الإضافية والتأمين والوثائق المطلوبة.",
+ "speakers": {
+  "A": {
+   "name": "Frau Lehmann",
+   "g": "f"
+  },
+  "B": {
+   "name": "Andrij",
+   "g": "m"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Guten Tag, Herr Melnyk! Kommen Sie herein. Das ist die Wohnung.",
+   "tr": "مرحبًا يا سيد ميلنيك! تفضّل بالدخول. هذه هي الشقة."
+  },
+  {
+   "s": "B",
+   "de": "Guten Tag! Oh, die ist ja schön hell. Wie groß ist sie genau?",
+   "tr": "مرحبًا! آه، إنها مضيئة جدًا. ما مساحتها بالضبط؟"
+  },
+  {
+   "s": "A",
+   "de": "Zweiundsechzig Quadratmeter: zwei Zimmer, Küche, Bad und ein Balkon nach Süden.",
+   "tr": "اثنان وستون مترًا مربعًا: غرفتان ومطبخ وحمّام وشرفة باتجاه الجنوب."
+  },
+  {
+   "s": "B",
+   "de": "Wie hoch ist die Miete?",
+   "tr": "كم الإيجار؟"
+  },
+  {
+   "s": "A",
+   "de": "Die Kaltmiete beträgt sechshundertachtzig Euro. Dazu kommen hundertvierzig Euro Nebenkosten.",
+   "tr": "الإيجار الأساسي ستمئة وثمانون يورو. ويضاف إليه مئة وأربعون يورو للتكاليف الإضافية."
+  },
+  {
+   "s": "B",
+   "de": "Sind die Heizkosten in den Nebenkosten schon enthalten?",
+   "tr": "هل تكاليف التدفئة مشمولة في التكاليف الإضافية؟"
+  },
+  {
+   "s": "A",
+   "de": "Ja, Heizung und Wasser sind dabei. Strom und Internet zahlen Sie selbst.",
+   "tr": "نعم، التدفئة والماء مشمولان. أما الكهرباء والإنترنت فتدفعهما بنفسك."
+  },
+  {
+   "s": "B",
+   "de": "Verstehe. Muss ich auch eine Kaution zahlen?",
+   "tr": "فهمت. هل يجب أن أدفع تأمينًا أيضًا؟"
+  },
+  {
+   "s": "A",
+   "de": "Ja, drei Kaltmieten. Sie können die Kaution aber in drei Raten zahlen.",
+   "tr": "نعم، ما يعادل ثلاثة أشهر من الإيجار الأساسي. لكن يمكنك دفعه على ثلاث دفعات."
+  },
+  {
+   "s": "B",
+   "de": "Das ist gut. Ist die Küche mit Herd und Kühlschrank?",
+   "tr": "هذا جيد. هل المطبخ مجهّز بموقد وثلاجة؟"
+  },
+  {
+   "s": "A",
+   "de": "Eine Einbauküche ist vorhanden. Die Geräte sind erst zwei Jahre alt.",
+   "tr": "يوجد مطبخ مدمج. وعمر الأجهزة سنتان فقط."
+  },
+  {
+   "s": "B",
+   "de": "Und wie ist es mit der Lautstärke? Die Straße unten sieht ziemlich belebt aus.",
+   "tr": "وماذا عن الضجيج؟ يبدو الشارع في الأسفل مزدحمًا إلى حد ما."
+  },
+  {
+   "s": "A",
+   "de": "Die Fenster sind neu und gut isoliert. Das Schlafzimmer liegt außerdem zum Hof.",
+   "tr": "النوافذ جديدة وعازلة جيدًا. كما أن غرفة النوم تطل على الفناء."
+  },
+  {
+   "s": "B",
+   "de": "Die Wohnung gefällt mir wirklich. Welche Unterlagen brauchen Sie von mir?",
+   "tr": "أعجبتني الشقة حقًا. ما الوثائق التي تحتاجينها مني؟"
+  },
+  {
+   "s": "A",
+   "de": "Eine Kopie Ihres Ausweises, Ihre letzten drei Gehaltsabrechnungen und eine Schufa-Auskunft.",
+   "tr": "نسخة من بطاقة هويتك، وآخر ثلاث قسائم راتب، وتقرير الجدارة الائتمانية من Schufa."
+  },
+  {
+   "s": "B",
+   "de": "Was ist eine Schufa-Auskunft?",
+   "tr": "ما هو تقرير Schufa؟"
+  },
+  {
+   "s": "A",
+   "de": "Darin steht, ob Sie Schulden haben. Sie können sie online bestellen, eine Version ist kostenlos.",
+   "tr": "يُذكر فيه هل عليك ديون. يمكنك طلبه عبر الإنترنت، وتوجد نسخة مجانية."
+  },
+  {
+   "s": "B",
+   "de": "Gut, ich schicke Ihnen alles bis Freitag per E-Mail. Wann könnten Sie sich entscheiden?",
+   "tr": "حسنًا، سأرسل لك كل شيء بالبريد الإلكتروني قبل يوم الجمعة. متى يمكنك أن تقرّري؟"
+  },
+  {
+   "s": "A",
+   "de": "Nächste Woche. Es gibt noch drei andere Interessenten, aber Ihre Unterlagen schaue ich mir gern an.",
+   "tr": "الأسبوع القادم. هناك ثلاثة مهتمين آخرين، لكني سأطّلع على وثائقك بكل سرور."
+  },
+  {
+   "s": "B",
+   "de": "Vielen Dank für die Besichtigung. Ich würde mich sehr freuen!",
+   "tr": "شكرًا جزيلًا على المعاينة. سأكون سعيدًا جدًا بذلك!"
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/b1-01.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "Allerina & Glen MacLarty",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "source": "https://www.flickr.com/photos/97451431@N00/6277696221",
+  "site": "Flickr"
+ }
+}

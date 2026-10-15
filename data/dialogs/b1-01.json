@@ -1,0 +1,131 @@
+{
+ "id": "b1-01",
+ "level": "b1",
+ "n": 1,
+ "emoji": "🏠",
+ "title": "Die Wohnungsbesichtigung",
+ "titleTr": "Осмотр квартиры",
+ "situation": "Андрей смотрит двухкомнатную квартиру и расспрашивает арендодательницу об аренде, коммунальных платежах, залоге и документах.",
+ "speakers": {
+  "A": {
+   "name": "Frau Lehmann",
+   "g": "f"
+  },
+  "B": {
+   "name": "Andrij",
+   "g": "m"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Guten Tag, Herr Melnyk! Kommen Sie herein. Das ist die Wohnung.",
+   "tr": "Добрый день, господин Мельник! Проходите. Вот квартира."
+  },
+  {
+   "s": "B",
+   "de": "Guten Tag! Oh, die ist ja schön hell. Wie groß ist sie genau?",
+   "tr": "Добрый день! О, какая светлая. Какая у неё точная площадь?"
+  },
+  {
+   "s": "A",
+   "de": "Zweiundsechzig Quadratmeter: zwei Zimmer, Küche, Bad und ein Balkon nach Süden.",
+   "tr": "Шестьдесят два квадратных метра: две комнаты, кухня, ванная и балкон на южную сторону."
+  },
+  {
+   "s": "B",
+   "de": "Wie hoch ist die Miete?",
+   "tr": "Какая арендная плата?"
+  },
+  {
+   "s": "A",
+   "de": "Die Kaltmiete beträgt sechshundertachtzig Euro. Dazu kommen hundertvierzig Euro Nebenkosten.",
+   "tr": "Аренда без коммунальных — шестьсот восемьдесят евро. К этому добавляется сто сорок евро коммунальных платежей."
+  },
+  {
+   "s": "B",
+   "de": "Sind die Heizkosten in den Nebenkosten schon enthalten?",
+   "tr": "Отопление уже входит в коммунальные платежи?"
+  },
+  {
+   "s": "A",
+   "de": "Ja, Heizung und Wasser sind dabei. Strom und Internet zahlen Sie selbst.",
+   "tr": "Да, отопление и вода включены. За электричество и интернет вы платите сами."
+  },
+  {
+   "s": "B",
+   "de": "Verstehe. Muss ich auch eine Kaution zahlen?",
+   "tr": "Понятно. Мне нужно будет внести залог?"
+  },
+  {
+   "s": "A",
+   "de": "Ja, drei Kaltmieten. Sie können die Kaution aber in drei Raten zahlen.",
+   "tr": "Да, три месячные арендные платы без коммунальных. Но залог можно внести тремя частями."
+  },
+  {
+   "s": "B",
+   "de": "Das ist gut. Ist die Küche mit Herd und Kühlschrank?",
+   "tr": "Это хорошо. Кухня с плитой и холодильником?"
+  },
+  {
+   "s": "A",
+   "de": "Eine Einbauküche ist vorhanden. Die Geräte sind erst zwei Jahre alt.",
+   "tr": "Есть встроенная кухня. Технике всего два года."
+  },
+  {
+   "s": "B",
+   "de": "Und wie ist es mit der Lautstärke? Die Straße unten sieht ziemlich belebt aus.",
+   "tr": "А как с шумом? Улица внизу выглядит довольно оживлённой."
+  },
+  {
+   "s": "A",
+   "de": "Die Fenster sind neu und gut isoliert. Das Schlafzimmer liegt außerdem zum Hof.",
+   "tr": "Окна новые и хорошо изолированы. К тому же спальня выходит во двор."
+  },
+  {
+   "s": "B",
+   "de": "Die Wohnung gefällt mir wirklich. Welche Unterlagen brauchen Sie von mir?",
+   "tr": "Квартира мне правда нравится. Какие документы вам от меня нужны?"
+  },
+  {
+   "s": "A",
+   "de": "Eine Kopie Ihres Ausweises, Ihre letzten drei Gehaltsabrechnungen und eine Schufa-Auskunft.",
+   "tr": "Копию вашего удостоверения личности, три последних расчётных листа и справку из Schufa."
+  },
+  {
+   "s": "B",
+   "de": "Was ist eine Schufa-Auskunft?",
+   "tr": "Что такое справка из Schufa?"
+  },
+  {
+   "s": "A",
+   "de": "Darin steht, ob Sie Schulden haben. Sie können sie online bestellen, eine Version ist kostenlos.",
+   "tr": "В ней указано, есть ли у вас долги. Её можно заказать онлайн, один вариант бесплатный."
+  },
+  {
+   "s": "B",
+   "de": "Gut, ich schicke Ihnen alles bis Freitag per E-Mail. Wann könnten Sie sich entscheiden?",
+   "tr": "Хорошо, я пришлю вам всё по электронной почте до пятницы. Когда вы сможете принять решение?"
+  },
+  {
+   "s": "A",
+   "de": "Nächste Woche. Es gibt noch drei andere Interessenten, aber Ihre Unterlagen schaue ich mir gern an.",
+   "tr": "На следующей неделе. Есть ещё три других желающих, но ваши документы я с удовольствием посмотрю."
+  },
+  {
+   "s": "B",
+   "de": "Vielen Dank für die Besichtigung. Ich würde mich sehr freuen!",
+   "tr": "Большое спасибо за показ. Я был бы очень рад!"
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/b1-01.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "Allerina & Glen MacLarty",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "source": "https://www.flickr.com/photos/97451431@N00/6277696221",
+  "site": "Flickr"
+ }
+}

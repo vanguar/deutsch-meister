@@ -1,0 +1,116 @@
+{
+ "id": "b1-09",
+ "level": "b1",
+ "n": 9,
+ "emoji": "🔧",
+ "title": "In der Autowerkstatt",
+ "titleTr": "В автосервісі",
+ "situation": "Ірина приганяє машину на техогляд, і механік знаходить проблему з гальмами. Вони обговорюють ціну та строки.",
+ "speakers": {
+  "A": {
+   "name": "Mechaniker",
+   "g": "m"
+  },
+  "B": {
+   "name": "Iryna",
+   "g": "f"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Frau Savchenko? Ihr Auto ist fertig angeschaut. Ich habe leider keine ganz guten Nachrichten.",
+   "tr": "Пані Савченко? Ми оглянули вашу машину. На жаль, новини не зовсім добрі."
+  },
+  {
+   "s": "B",
+   "de": "Oh nein. Was ist denn los?",
+   "tr": "О ні. А що сталося?"
+  },
+  {
+   "s": "A",
+   "de": "Für die Hauptuntersuchung müssen die vorderen Bremsscheiben und Bremsbeläge neu gemacht werden.",
+   "tr": "Для техогляду треба замінити передні гальмівні диски й колодки."
+  },
+  {
+   "s": "B",
+   "de": "Ist das gefährlich? Ich fahre jeden Tag mit den Kindern zur Schule.",
+   "tr": "Це небезпечно? Я щодня вожу дітей до школи."
+  },
+  {
+   "s": "A",
+   "de": "Noch nicht akut, aber die Beläge sind fast ganz abgefahren. Ohne Reparatur bekommen Sie keine TÜV-Plakette.",
+   "tr": "Поки не критично, але колодки майже повністю стерті. Без ремонту наліпку техогляду ви не отримаєте."
+  },
+  {
+   "s": "B",
+   "de": "Was würde das kosten?",
+   "tr": "Скільки це коштуватиме?"
+  },
+  {
+   "s": "A",
+   "de": "Mit Material und Arbeitszeit etwa dreihundertzwanzig Euro. Ich kann Ihnen einen schriftlichen Kostenvoranschlag geben.",
+   "tr": "З матеріалами й роботою приблизно триста двадцять євро. Можу дати вам письмовий кошторис."
+  },
+  {
+   "s": "B",
+   "de": "Das ist viel Geld. Gibt es eine günstigere Möglichkeit?",
+   "tr": "Це великі гроші. Є дешевший варіант?"
+  },
+  {
+   "s": "A",
+   "de": "Wir könnten Teile von einem anderen Hersteller nehmen. Die sind genauso sicher und etwa sechzig Euro billiger.",
+   "tr": "Ми могли б поставити деталі іншого виробника. Вони такі ж надійні й приблизно на шістдесят євро дешевші."
+  },
+  {
+   "s": "B",
+   "de": "Dann nehmen wir diese. Wann wäre das Auto fertig?",
+   "tr": "Тоді давайте їх. Коли машина буде готова?"
+  },
+  {
+   "s": "A",
+   "de": "Die Teile kommen morgen früh. Wenn alles klappt, können Sie das Auto morgen um sechzehn Uhr abholen.",
+   "tr": "Деталі прийдуть завтра вранці. Якщо все вийде, ви зможете забрати машину завтра о шістнадцятій."
+  },
+  {
+   "s": "B",
+   "de": "Und die Hauptuntersuchung? Muss ich dafür noch einmal kommen?",
+   "tr": "А техогляд? Мені треба буде приїжджати ще раз?"
+  },
+  {
+   "s": "A",
+   "de": "Nein, der Prüfer ist morgen Nachmittag sowieso bei uns. Das erledigen wir gleich mit.",
+   "tr": "Ні, експерт і так буде в нас завтра після обіду. Ми зробимо це заразом."
+  },
+  {
+   "s": "B",
+   "de": "Perfekt. Brauche ich morgen ein Ersatzauto?",
+   "tr": "Чудово. Мені завтра знадобиться підмінна машина?"
+  },
+  {
+   "s": "A",
+   "de": "Wir haben ein kleines Leihauto für fünfzehn Euro pro Tag, wenn Sie möchten.",
+   "tr": "У нас є маленька машина напрокат за п'ятнадцять євро на день, якщо хочете."
+  },
+  {
+   "s": "B",
+   "de": "Nein danke, morgen fahre ich mit dem Bus. Rufen Sie mich bitte an, wenn das Auto fertig ist?",
+   "tr": "Ні, дякую, завтра я поїду автобусом. Зателефонуйте мені, будь ласка, коли машина буде готова?"
+  },
+  {
+   "s": "A",
+   "de": "Machen wir. Bitte unterschreiben Sie hier noch den Auftrag.",
+   "tr": "Зробимо. Будь ласка, підпишіть ще тут замовлення."
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/b1-09.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "wbaiv",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+  "source": "https://www.flickr.com/photos/9998127@N06/4684156777",
+  "site": "Flickr"
+ }
+}

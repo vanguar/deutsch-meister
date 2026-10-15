@@ -1,0 +1,131 @@
+{
+ "id": "b1-02",
+ "level": "b1",
+ "n": 2,
+ "emoji": "💼",
+ "title": "Das Vorstellungsgespräch",
+ "titleTr": "Співбесіда",
+ "situation": "Олександр прийшов на співбесіду на посаду працівника складу. Керівниця відділу кадрів питає про досвід, мову та графік.",
+ "speakers": {
+  "A": {
+   "name": "Frau Schröder",
+   "g": "f"
+  },
+  "B": {
+   "name": "Oleksandr",
+   "g": "m"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Herzlich willkommen, Herr Bondarenko. Bitte nehmen Sie Platz. Haben Sie uns gut gefunden?",
+   "tr": "Ласкаво просимо, пане Бондаренку. Сідайте, будь ласка. Ви легко нас знайшли?"
+  },
+  {
+   "s": "B",
+   "de": "Ja, danke. Ich bin mit dem Bus gekommen, die Haltestelle ist direkt vor der Tür.",
+   "tr": "Так, дякую. Я приїхав автобусом, зупинка просто біля входу."
+  },
+  {
+   "s": "A",
+   "de": "Schön. Erzählen Sie doch bitte kurz etwas über sich.",
+   "tr": "Добре. Розкажіть, будь ласка, коротко про себе."
+  },
+  {
+   "s": "B",
+   "de": "Ich bin vierunddreißig Jahre alt und komme aus Dnipro. Dort habe ich acht Jahre in der Logistik gearbeitet.",
+   "tr": "Мені тридцять чотири роки, я з Дніпра. Там я вісім років працював у логістиці."
+  },
+  {
+   "s": "A",
+   "de": "Was waren Ihre Aufgaben?",
+   "tr": "Які у вас були обов'язки?"
+  },
+  {
+   "s": "B",
+   "de": "Ich habe Waren angenommen, kontrolliert und Bestellungen für den Versand vorbereitet. Am Ende war ich Schichtleiter.",
+   "tr": "Я приймав і перевіряв товари та готував замовлення до відправлення. Наприкінці я був начальником зміни."
+  },
+  {
+   "s": "A",
+   "de": "Das klingt gut. Haben Sie einen Staplerschein?",
+   "tr": "Звучить добре. У вас є посвідчення водія навантажувача?"
+  },
+  {
+   "s": "B",
+   "de": "In der Ukraine hatte ich einen. Hier in Deutschland habe ich den Kurs letzten Monat noch einmal gemacht.",
+   "tr": "В Україні було. Тут, у Німеччині, я минулого місяця ще раз пройшов курс."
+  },
+  {
+   "s": "A",
+   "de": "Sehr gut. Bei uns arbeitet man im Schichtdienst, auch samstags. Ist das ein Problem für Sie?",
+   "tr": "Дуже добре. У нас змінний графік, зокрема й по суботах. Для вас це проблема?"
+  },
+  {
+   "s": "B",
+   "de": "Nein, das ist kein Problem. Meine Frau arbeitet vormittags, deshalb wäre die Spätschicht sogar besser.",
+   "tr": "Ні, жодних проблем. Моя дружина працює до обіду, тому вечірня зміна була б навіть кращою."
+  },
+  {
+   "s": "A",
+   "de": "Wie schätzen Sie Ihr Deutsch ein?",
+   "tr": "Як ви оцінюєте свою німецьку?"
+  },
+  {
+   "s": "B",
+   "de": "Ich habe das B1-Zertifikat. Im Alltag komme ich gut zurecht, aber Fachwörter lerne ich noch.",
+   "tr": "У мене сертифікат B1. У повсякденному житті я добре даю раду, але фахові слова ще вчу."
+  },
+  {
+   "s": "A",
+   "de": "Das ist völlig normal. Haben Sie Fragen an uns?",
+   "tr": "Це цілком нормально. У вас є до нас запитання?"
+  },
+  {
+   "s": "B",
+   "de": "Ja. Wie lange dauert die Einarbeitung, und ist der Vertrag befristet?",
+   "tr": "Так. Скільки триває введення в посаду і чи договір строковий?"
+  },
+  {
+   "s": "A",
+   "de": "Die Einarbeitung dauert zwei Wochen. Der Vertrag ist zuerst auf ein Jahr befristet, mit sechs Monaten Probezeit.",
+   "tr": "Введення в посаду триває два тижні. Договір спершу на рік, з випробувальним терміном шість місяців."
+  },
+  {
+   "s": "B",
+   "de": "Und wie hoch wäre der Stundenlohn?",
+   "tr": "А якою була б погодинна оплата?"
+  },
+  {
+   "s": "A",
+   "de": "Wir zahlen sechzehn Euro fünfzig pro Stunde, plus Zuschläge für Spät- und Samstagsschichten.",
+   "tr": "Ми платимо шістнадцять євро п'ятдесят за годину, плюс надбавки за вечірні й суботні зміни."
+  },
+  {
+   "s": "B",
+   "de": "Das passt für mich. Wann kann ich mit einer Antwort rechnen?",
+   "tr": "Мене це влаштовує. Коли мені чекати на відповідь?"
+  },
+  {
+   "s": "A",
+   "de": "Spätestens Ende nächster Woche. Vielen Dank, dass Sie gekommen sind!",
+   "tr": "Не пізніше кінця наступного тижня. Щиро дякуємо, що прийшли!"
+  },
+  {
+   "s": "B",
+   "de": "Ich danke Ihnen für das Gespräch. Auf Wiedersehen!",
+   "tr": "Дякую вам за розмову. До побачення!"
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/b1-02.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "amtec_photos",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+  "source": "https://www.flickr.com/photos/141761303@N08/24835247668",
+  "site": "Flickr"
+ }
+}

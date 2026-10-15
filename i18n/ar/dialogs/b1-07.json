@@ -1,0 +1,116 @@
+{
+ "id": "b1-07",
+ "level": "b1",
+ "n": 7,
+ "emoji": "🤧",
+ "title": "Krankmeldung bei der Arbeit",
+ "titleTr": "إبلاغ العمل بالمرض",
+ "situation": "مرض بوهدان، فيتصل صباحًا بمديرته. يتحدثان عن الإجازة المرضية وعن عمل عاجل يجب تسليمه لزميل.",
+ "speakers": {
+  "A": {
+   "name": "Frau König",
+   "g": "f"
+  },
+  "B": {
+   "name": "Bohdan",
+   "g": "m"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "König, guten Morgen.",
+   "tr": "كونيغ، صباح الخير."
+  },
+  {
+   "s": "B",
+   "de": "Guten Morgen, Frau König, hier ist Bohdan Lysenko. Ich kann heute leider nicht zur Arbeit kommen.",
+   "tr": "صباح الخير يا سيدة كونيغ، أنا بوهدان ليسينكو. للأسف لا أستطيع المجيء إلى العمل اليوم."
+  },
+  {
+   "s": "A",
+   "de": "Oh, was ist los? Sie klingen gar nicht gut.",
+   "tr": "ما الأمر؟ صوتك لا يبدو بخير على الإطلاق."
+  },
+  {
+   "s": "B",
+   "de": "Ich habe seit gestern Abend hohes Fieber und Gliederschmerzen. Wahrscheinlich eine Grippe.",
+   "tr": "عندي حمّى شديدة وآلام في الجسم منذ مساء أمس. على الأرجح إنفلونزا."
+  },
+  {
+   "s": "A",
+   "de": "Das tut mir leid. Gehen Sie heute zum Arzt?",
+   "tr": "سلامتك. هل ستذهب إلى الطبيب اليوم؟"
+  },
+  {
+   "s": "B",
+   "de": "Ja, ich habe um zehn einen Termin. Dann bekommen Sie die Krankmeldung.",
+   "tr": "نعم، لدي موعد في العاشرة. وبعدها ستصلكم الشهادة المرضية."
+  },
+  {
+   "s": "A",
+   "de": "Gut. Die kommt ja inzwischen elektronisch, Sie müssen uns nur sagen, wie lange Sie krankgeschrieben sind.",
+   "tr": "حسنًا. فهي تصل الآن إلكترونيًا، وعليك فقط أن تخبرنا بمدة الإجازة المرضية."
+  },
+  {
+   "s": "B",
+   "de": "Mache ich, sobald ich vom Arzt zurück bin.",
+   "tr": "سأفعل حالما أعود من الطبيب."
+  },
+  {
+   "s": "A",
+   "de": "Danke. Was ist mit der Lieferung für die Firma Schulte? Die sollte doch heute raus.",
+   "tr": "شكرًا. وماذا عن شحنة شركة شولته؟ كان يجب أن تُرسل اليوم."
+  },
+  {
+   "s": "B",
+   "de": "Ja, genau. Die Ware ist schon gepackt und steht in Halle zwei, Regal B.",
+   "tr": "نعم، بالضبط. البضاعة مغلّفة وموجودة في القاعة الثانية، الرف B."
+  },
+  {
+   "s": "A",
+   "de": "Und die Lieferpapiere?",
+   "tr": "ووثائق الشحن؟"
+  },
+  {
+   "s": "B",
+   "de": "Die liegen in der blauen Mappe auf meinem Schreibtisch. Herr Yilmaz kennt den Kunden, er kann das übernehmen.",
+   "tr": "إنها في الملف الأزرق على مكتبي. السيد يلماز يعرف هذا الزبون، ويمكنه أن يتولى الأمر."
+  },
+  {
+   "s": "A",
+   "de": "Gut, ich spreche gleich mit ihm. Gibt es sonst noch etwas Dringendes?",
+   "tr": "حسنًا، سأتحدث معه فورًا. هل هناك شيء عاجل آخر؟"
+  },
+  {
+   "s": "B",
+   "de": "Am Donnerstag habe ich eine Schulung. Wenn ich bis dahin noch krank bin, muss man sie absagen.",
+   "tr": "عندي دورة تدريبية يوم الخميس. إذا بقيت مريضًا حتى ذلك الوقت، يجب إلغاؤها."
+  },
+  {
+   "s": "A",
+   "de": "Das kann ich organisieren. Jetzt werden Sie erst mal gesund, das ist das Wichtigste.",
+   "tr": "أستطيع ترتيب ذلك. والآن المهم أن تتعافى أولًا، هذا هو الأهم."
+  },
+  {
+   "s": "B",
+   "de": "Danke für Ihr Verständnis. Ich melde mich nach dem Arztbesuch.",
+   "tr": "شكرًا على تفهّمك. سأتصل بعد زيارة الطبيب."
+  },
+  {
+   "s": "A",
+   "de": "Alles klar. Gute Besserung, Herr Lysenko!",
+   "tr": "حسنًا. أتمنى لك الشفاء العاجل يا سيد ليسينكو!"
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/b1-07.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "erix!",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "source": "https://www.flickr.com/photos/68387408@N00/300547929",
+  "site": "Flickr"
+ }
+}

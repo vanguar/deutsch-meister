@@ -1,0 +1,121 @@
+{
+ "id": "b1-03",
+ "level": "b1",
+ "n": 3,
+ "emoji": "🏢",
+ "title": "Termin im Jobcenter",
+ "titleTr": "Прийом у джобцентрі",
+ "situation": "Галина прийшла на прийом до свого консультанта в джобцентрі. Вони обговорюють курс німецької, пошук роботи й продовження допомоги.",
+ "speakers": {
+  "A": {
+   "name": "Herr Neumann",
+   "g": "m"
+  },
+  "B": {
+   "name": "Halyna",
+   "g": "f"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Guten Morgen, Frau Kravets. Wie geht es Ihnen? Wie läuft der Sprachkurs?",
+   "tr": "Доброго ранку, пані Кравець. Як ви? Як ідуть мовні курси?"
+  },
+  {
+   "s": "B",
+   "de": "Guten Morgen! Gut, danke. Ich habe letzte Woche die B1-Prüfung gemacht und bestanden.",
+   "tr": "Доброго ранку! Добре, дякую. Минулого тижня я склала іспит B1."
+  },
+  {
+   "s": "A",
+   "de": "Herzlichen Glückwunsch! Haben Sie das Zertifikat schon?",
+   "tr": "Вітаю! Сертифікат у вас уже є?"
+  },
+  {
+   "s": "B",
+   "de": "Ja, hier ist eine Kopie. Jetzt möchte ich so schnell wie möglich arbeiten.",
+   "tr": "Так, ось копія. Тепер я хочу якомога швидше почати працювати."
+  },
+  {
+   "s": "A",
+   "de": "Sehr gut. Sie waren in der Ukraine Buchhalterin, richtig?",
+   "tr": "Дуже добре. В Україні ви були бухгалтеркою, так?"
+  },
+  {
+   "s": "B",
+   "de": "Ja, zwölf Jahre lang. Aber mein Diplom ist hier noch nicht anerkannt.",
+   "tr": "Так, дванадцять років. Але мій диплом тут ще не визнаний."
+  },
+  {
+   "s": "A",
+   "de": "Für Buchhaltung brauchen Sie nicht unbedingt eine Anerkennung. Aber eine Weiterbildung zum deutschen Steuerrecht wäre sinnvoll.",
+   "tr": "Для бухгалтерії визнання не обов'язкове. Але було б доцільно пройти курс підвищення кваліфікації з німецького податкового права."
+  },
+  {
+   "s": "B",
+   "de": "Würde das Jobcenter so eine Weiterbildung bezahlen?",
+   "tr": "Джобцентр оплатив би такий курс?"
+  },
+  {
+   "s": "A",
+   "de": "Ja, mit einem Bildungsgutschein. Ich kann Ihnen heute zwei passende Kurse zeigen.",
+   "tr": "Так, за освітнім ваучером. Сьогодні я можу показати вам два відповідні курси."
+  },
+  {
+   "s": "B",
+   "de": "Das wäre toll. Wie lange dauern die Kurse?",
+   "tr": "Це було б чудово. Скільки тривають курси?"
+  },
+  {
+   "s": "A",
+   "de": "Der erste dauert vier Monate in Vollzeit, der zweite sechs Monate in Teilzeit mit einem Praktikum.",
+   "tr": "Перший триває чотири місяці на повний день, другий — шість місяців із неповною зайнятістю та практикою."
+  },
+  {
+   "s": "B",
+   "de": "Mit Praktikum finde ich besser. So lerne ich eine Firma von innen kennen.",
+   "tr": "З практикою мені здається краще. Так я пізнаю фірму зсередини."
+  },
+  {
+   "s": "A",
+   "de": "Einverstanden. Das schreiben wir in Ihren Kooperationsplan. Sollen Sie sich parallel trotzdem bewerben?",
+   "tr": "Погоджуюся. Запишемо це у ваш план співпраці. А паралельно вам усе ж треба надсилати резюме?"
+  },
+  {
+   "s": "B",
+   "de": "Ich würde es gern versuchen. Wie viele Bewerbungen soll ich schreiben?",
+   "tr": "Я б залюбки спробувала. Скільки заявок мені треба надіслати?"
+  },
+  {
+   "s": "A",
+   "de": "Fünf pro Monat wären gut. Bitte bringen Sie beim nächsten Termin eine Liste mit.",
+   "tr": "П'ять на місяць було б добре. Будь ласка, принесіть на наступний прийом список."
+  },
+  {
+   "s": "B",
+   "de": "Mache ich. Und noch eine Frage: Mein Bewilligungszeitraum endet im Dezember.",
+   "tr": "Гаразд. І ще питання: термін призначення моєї допомоги закінчується в грудні."
+  },
+  {
+   "s": "A",
+   "de": "Dann stellen Sie bitte rechtzeitig einen Weiterbewilligungsantrag. Das geht auch online über jobcenter.digital.",
+   "tr": "Тоді, будь ласка, вчасно подайте заяву про продовження. Це можна зробити й онлайн через jobcenter.digital."
+  },
+  {
+   "s": "B",
+   "de": "Gut, das mache ich im November. Vielen Dank für Ihre Unterstützung!",
+   "tr": "Добре, я зроблю це в листопаді. Щиро дякую за вашу підтримку!"
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/b1-03.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "baynado1978",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "source": "https://www.flickr.com/photos/11162074@N00/7266212782",
+  "site": "Flickr"
+ }
+}

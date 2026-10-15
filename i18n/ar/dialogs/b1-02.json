@@ -1,0 +1,131 @@
+{
+ "id": "b1-02",
+ "level": "b1",
+ "n": 2,
+ "emoji": "💼",
+ "title": "Das Vorstellungsgespräch",
+ "titleTr": "مقابلة العمل",
+ "situation": "جاء أولكسندر إلى مقابلة لوظيفة عامل مستودع. تسأله مديرة شؤون الموظفين عن خبرته ولغته ومواعيد العمل.",
+ "speakers": {
+  "A": {
+   "name": "Frau Schröder",
+   "g": "f"
+  },
+  "B": {
+   "name": "Oleksandr",
+   "g": "m"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Herzlich willkommen, Herr Bondarenko. Bitte nehmen Sie Platz. Haben Sie uns gut gefunden?",
+   "tr": "أهلًا بك يا سيد بوندارينكو. تفضّل بالجلوس. هل وجدت مكاننا بسهولة؟"
+  },
+  {
+   "s": "B",
+   "de": "Ja, danke. Ich bin mit dem Bus gekommen, die Haltestelle ist direkt vor der Tür.",
+   "tr": "نعم، شكرًا. جئت بالحافلة، والموقف أمام الباب مباشرة."
+  },
+  {
+   "s": "A",
+   "de": "Schön. Erzählen Sie doch bitte kurz etwas über sich.",
+   "tr": "جميل. حدّثنا من فضلك قليلًا عن نفسك."
+  },
+  {
+   "s": "B",
+   "de": "Ich bin vierunddreißig Jahre alt und komme aus Dnipro. Dort habe ich acht Jahre in der Logistik gearbeitet.",
+   "tr": "عمري أربعة وثلاثون عامًا، وأنا من مدينة دنيبرو. عملت هناك ثماني سنوات في مجال الخدمات اللوجستية."
+  },
+  {
+   "s": "A",
+   "de": "Was waren Ihre Aufgaben?",
+   "tr": "ما كانت مهامك؟"
+  },
+  {
+   "s": "B",
+   "de": "Ich habe Waren angenommen, kontrolliert und Bestellungen für den Versand vorbereitet. Am Ende war ich Schichtleiter.",
+   "tr": "كنت أستلم البضائع وأفحصها وأجهّز الطلبات للشحن. وفي النهاية أصبحت رئيس وردية."
+  },
+  {
+   "s": "A",
+   "de": "Das klingt gut. Haben Sie einen Staplerschein?",
+   "tr": "يبدو هذا جيدًا. هل لديك رخصة قيادة الرافعة الشوكية؟"
+  },
+  {
+   "s": "B",
+   "de": "In der Ukraine hatte ich einen. Hier in Deutschland habe ich den Kurs letzten Monat noch einmal gemacht.",
+   "tr": "كانت لدي في أوكرانيا. وهنا في ألمانيا أعدت الدورة الشهر الماضي."
+  },
+  {
+   "s": "A",
+   "de": "Sehr gut. Bei uns arbeitet man im Schichtdienst, auch samstags. Ist das ein Problem für Sie?",
+   "tr": "ممتاز. العمل عندنا بنظام الورديات، ويوم السبت أيضًا. هل هذه مشكلة بالنسبة لك؟"
+  },
+  {
+   "s": "B",
+   "de": "Nein, das ist kein Problem. Meine Frau arbeitet vormittags, deshalb wäre die Spätschicht sogar besser.",
+   "tr": "لا، ليست مشكلة. زوجتي تعمل في الفترة الصباحية، لذلك ستكون الوردية المسائية أفضل حتى."
+  },
+  {
+   "s": "A",
+   "de": "Wie schätzen Sie Ihr Deutsch ein?",
+   "tr": "كيف تقيّم مستوى لغتك الألمانية؟"
+  },
+  {
+   "s": "B",
+   "de": "Ich habe das B1-Zertifikat. Im Alltag komme ich gut zurecht, aber Fachwörter lerne ich noch.",
+   "tr": "لدي شهادة B1. أتدبر أموري جيدًا في الحياة اليومية، لكني ما زلت أتعلم المصطلحات المهنية."
+  },
+  {
+   "s": "A",
+   "de": "Das ist völlig normal. Haben Sie Fragen an uns?",
+   "tr": "هذا طبيعي تمامًا. هل لديك أسئلة لنا؟"
+  },
+  {
+   "s": "B",
+   "de": "Ja. Wie lange dauert die Einarbeitung, und ist der Vertrag befristet?",
+   "tr": "نعم. كم تستغرق فترة التدريب في البداية، وهل العقد محدد المدة؟"
+  },
+  {
+   "s": "A",
+   "de": "Die Einarbeitung dauert zwei Wochen. Der Vertrag ist zuerst auf ein Jahr befristet, mit sechs Monaten Probezeit.",
+   "tr": "تستغرق فترة التدريب أسبوعين. والعقد في البداية لمدة سنة، مع فترة تجربة ستة أشهر."
+  },
+  {
+   "s": "B",
+   "de": "Und wie hoch wäre der Stundenlohn?",
+   "tr": "وكم سيكون الأجر في الساعة؟"
+  },
+  {
+   "s": "A",
+   "de": "Wir zahlen sechzehn Euro fünfzig pro Stunde, plus Zuschläge für Spät- und Samstagsschichten.",
+   "tr": "ندفع ستة عشر يورو ونصفًا في الساعة، إضافة إلى علاوات للورديات المسائية وورديات السبت."
+  },
+  {
+   "s": "B",
+   "de": "Das passt für mich. Wann kann ich mit einer Antwort rechnen?",
+   "tr": "هذا يناسبني. متى يمكنني أن أتوقع ردًّا؟"
+  },
+  {
+   "s": "A",
+   "de": "Spätestens Ende nächster Woche. Vielen Dank, dass Sie gekommen sind!",
+   "tr": "في موعد أقصاه نهاية الأسبوع القادم. شكرًا جزيلًا على حضورك!"
+  },
+  {
+   "s": "B",
+   "de": "Ich danke Ihnen für das Gespräch. Auf Wiedersehen!",
+   "tr": "أشكرك على هذه المقابلة. مع السلامة!"
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/b1-02.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "amtec_photos",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+  "source": "https://www.flickr.com/photos/141761303@N08/24835247668",
+  "site": "Flickr"
+ }
+}
