@@ -1,0 +1,131 @@
+{
+ "id": "b2-07",
+ "level": "b2",
+ "n": 7,
+ "emoji": "🧭",
+ "title": "Eine Ausbildung mit 38?",
+ "titleTr": "تعلّم مهنة في سن الثامنة والثلاثين؟",
+ "situation": "تعمل ناتاليا مساعدة رعاية، وتفكر في تدريب مهني كامل لتصبح متخصصة. يوازن معها مستشار التوجيه المهني بين الإيجابيات والسلبيات.",
+ "speakers": {
+  "A": {
+   "name": "Berufsberater",
+   "g": "m"
+  },
+  "B": {
+   "name": "Natalija",
+   "g": "f"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Frau Hrytsenko, Sie überlegen, eine Ausbildung zur Pflegefachfrau zu machen. Was hat Sie auf die Idee gebracht?",
+   "tr": "سيدة هريتسينكو، تفكّرين في تدريب مهني لتصبحي ممرضة متخصصة. ما الذي أوحى لك بهذه الفكرة؟"
+  },
+  {
+   "s": "B",
+   "de": "Ich arbeite seit zwei Jahren als Pflegehelferin. Die Arbeit gefällt mir, aber ich darf viele Dinge nicht selbst machen und verdiene wenig.",
+   "tr": "أعمل منذ سنتين مساعدة رعاية. يعجبني العمل، لكن لا يُسمح لي بفعل أشياء كثيرة بنفسي، ودخلي قليل."
+  },
+  {
+   "s": "A",
+   "de": "Das ist ein häufiger Grund. Mit einer abgeschlossenen Ausbildung hätten Sie deutlich mehr Verantwortung und ein höheres Gehalt.",
+   "tr": "هذا سبب شائع. مع تدريب مهني مكتمل ستكون لديك مسؤوليات أكبر بكثير وراتب أعلى."
+  },
+  {
+   "s": "B",
+   "de": "Aber ich bin achtunddreißig. Ist das nicht zu spät für eine Ausbildung?",
+   "tr": "لكن عمري ثمانية وثلاثون عامًا. أليس الوقت متأخرًا على التدريب المهني؟"
+  },
+  {
+   "s": "A",
+   "de": "Überhaupt nicht. In der Pflege sind viele Auszubildende über dreißig. Ihre Lebenserfahrung ist dort sogar ein Vorteil.",
+   "tr": "على الإطلاق. كثير من المتدربين في مجال الرعاية تجاوزوا الثلاثين. بل إن خبرتك الحياتية ميزة هناك."
+  },
+  {
+   "s": "B",
+   "de": "Meine größte Sorge ist das Geld. Ich bin alleinerziehend und habe zwei Kinder.",
+   "tr": "أكثر ما يقلقني هو المال. أربّي طفلين وحدي."
+  },
+  {
+   "s": "A",
+   "de": "Das verstehe ich. In der Pflege bekommen Sie eine Ausbildungsvergütung, im ersten Jahr rund tausenddreihundert Euro brutto.",
+   "tr": "أفهم ذلك. في مجال الرعاية تحصلين على أجر خلال التدريب، يبلغ في السنة الأولى نحو ألف وثلاثمئة يورو قبل الاقتطاعات."
+  },
+  {
+   "s": "B",
+   "de": "Das ist weniger, als ich jetzt verdiene. Wie soll ich davon mit zwei Kindern leben?",
+   "tr": "هذا أقل مما أكسبه الآن. كيف سأعيش به مع طفلين؟"
+  },
+  {
+   "s": "A",
+   "de": "Sie hätten Anspruch auf Kindergeld, eventuell Wohngeld und Kinderzuschlag. Rechnen wir das einmal gemeinsam durch.",
+   "tr": "سيحق لك الحصول على إعانة الأطفال، وربما على إعانة السكن والعلاوة الإضافية للأطفال. لنحسب ذلك معًا."
+  },
+  {
+   "s": "B",
+   "de": "Gut. Und wie lange dauert die Ausbildung?",
+   "tr": "حسنًا. وكم يستغرق التدريب؟"
+  },
+  {
+   "s": "A",
+   "de": "Normalerweise drei Jahre. Wegen Ihrer Berufserfahrung könnte man sie aber eventuell verkürzen.",
+   "tr": "عادةً ثلاث سنوات. لكن بسبب خبرتك المهنية قد يمكن تقصيرها."
+  },
+  {
+   "s": "B",
+   "de": "Und die Schichtarbeit? Mit den Kindern kann ich keine Nachtdienste machen.",
+   "tr": "وماذا عن العمل بالورديات؟ لا أستطيع العمل في نوبات ليلية مع الأطفال."
+  },
+  {
+   "s": "A",
+   "de": "Es gibt die Möglichkeit einer Teilzeitausbildung. Sie dauert länger, aber die Arbeitszeiten sind familienfreundlicher.",
+   "tr": "هناك إمكانية التدريب بدوام جزئي. يستغرق وقتًا أطول، لكن مواعيده أنسب للعائلة."
+  },
+  {
+   "s": "B",
+   "de": "Das wusste ich nicht. Ehrlich gesagt habe ich auch Angst vor der Berufsschule und den Prüfungen auf Deutsch.",
+   "tr": "لم أكن أعرف ذلك. وبصراحة أخاف أيضًا من المدرسة المهنية ومن الامتحانات بالألمانية."
+  },
+  {
+   "s": "A",
+   "de": "Viele Schulen bieten berufsbezogenen Deutschunterricht an. Und es gibt kostenlose Nachhilfe für Auszubildende.",
+   "tr": "كثير من المدارس تقدّم دروس ألمانية مرتبطة بالمهنة. وهناك دروس تقوية مجانية للمتدربين."
+  },
+  {
+   "s": "B",
+   "de": "Das beruhigt mich. Lohnt sich das am Ende wirklich?",
+   "tr": "هذا يطمئنني. لكن هل يستحق الأمر العناء في النهاية حقًا؟"
+  },
+  {
+   "s": "A",
+   "de": "Langfristig auf jeden Fall. Pflegefachkräfte werden überall gesucht, und nach der Ausbildung verdienen Sie deutlich mehr als jetzt.",
+   "tr": "على المدى البعيد بالتأكيد. هناك طلب على المتخصصين في الرعاية في كل مكان، وبعد التدريب ستكسبين أكثر بكثير مما تكسبين الآن."
+  },
+  {
+   "s": "B",
+   "de": "Mein jetziger Arbeitgeber hat mir sogar angeboten, die Ausbildung bei ihm zu machen.",
+   "tr": "بل إن صاحب العمل الحالي عرض عليّ أن أتدرّب عنده."
+  },
+  {
+   "s": "A",
+   "de": "Das ist ideal: Sie kennen das Team, und er kennt Sie. Sprechen Sie dort am besten direkt die Teilzeitvariante an.",
+   "tr": "هذا مثالي: أنتِ تعرفين الفريق، وهو يعرفك. الأفضل أن تطرحي عليه مباشرة خيار الدوام الجزئي."
+  },
+  {
+   "s": "B",
+   "de": "Das mache ich. Danke, ich sehe das Ganze jetzt viel klarer.",
+   "tr": "سأفعل ذلك. شكرًا، صرت أرى الأمر كله بوضوح أكبر الآن."
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/b2-07.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "phoenix_raye_photography",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "source": "https://www.flickr.com/photos/201760013@N04/54119878890",
+  "site": "Flickr"
+ }
+}

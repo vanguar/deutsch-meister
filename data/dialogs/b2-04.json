@@ -1,0 +1,131 @@
+{
+ "id": "b2-04",
+ "level": "b2",
+ "n": 4,
+ "emoji": "🎓",
+ "title": "Die Anerkennung des Abschlusses",
+ "titleTr": "Признание диплома",
+ "situation": "Инженеру-электрику Сергею признали диплом лишь частично. Консультантка объясняет решение и помогает выбрать между возражением и курсом адаптационной квалификации.",
+ "speakers": {
+  "A": {
+   "name": "Beraterin",
+   "g": "f"
+  },
+  "B": {
+   "name": "Serhij",
+   "g": "m"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Herr Tkachenko, Sie haben den Bescheid über die Anerkennung mitgebracht. Was steht darin?",
+   "tr": "Господин Ткаченко, вы принесли решение о признании. Что там написано?"
+  },
+  {
+   "s": "B",
+   "de": "Mein Abschluss ist nur teilweise gleichwertig. Ehrlich gesagt bin ich enttäuscht, ich habe fünfzehn Jahre als Elektroingenieur gearbeitet.",
+   "tr": "Мой диплом признан равноценным лишь частично. Честно говоря, я разочарован: я пятнадцать лет работал инженером-электриком."
+  },
+  {
+   "s": "A",
+   "de": "Das verstehe ich. Lassen Sie uns genau ansehen, welche Unterschiede festgestellt wurden.",
+   "tr": "Я это понимаю. Давайте внимательно посмотрим, какие различия были установлены."
+  },
+  {
+   "s": "B",
+   "de": "Hier steht, dass mir Kenntnisse in deutschen Normen und im Arbeitsschutz fehlen.",
+   "tr": "Здесь написано, что мне не хватает знаний немецких норм и охраны труда."
+  },
+  {
+   "s": "A",
+   "de": "Das ist typisch und eigentlich eine gute Nachricht. Ihre Fachkenntnisse werden also nicht grundsätzlich infrage gestellt.",
+   "tr": "Это типично и, по сути, хорошая новость. Ваши профессиональные знания, значит, принципиально не ставятся под сомнение."
+  },
+  {
+   "s": "B",
+   "de": "Trotzdem überlege ich, Widerspruch einzulegen. Ich habe in der Ukraine sehr wohl mit internationalen Normen gearbeitet.",
+   "tr": "И всё же я думаю подать возражение. Я в Украине вполне себе работал с международными нормами."
+  },
+  {
+   "s": "A",
+   "de": "Das ist Ihr gutes Recht, die Frist beträgt einen Monat. Haben Sie Nachweise dafür, zum Beispiel Arbeitszeugnisse oder Zertifikate?",
+   "tr": "Это ваше законное право, срок — один месяц. У вас есть подтверждения, например рекомендации с работы или сертификаты?"
+  },
+  {
+   "s": "B",
+   "de": "Einige, aber nicht alle sind übersetzt. Und die Firma, für die ich gearbeitet habe, existiert nicht mehr.",
+   "tr": "Кое-что есть, но не всё переведено. А фирма, в которой я работал, больше не существует."
+  },
+  {
+   "s": "A",
+   "de": "Dann wäre ein Widerspruch eher riskant. Die Alternative ist eine Anpassungsqualifizierung, mit der Sie die Unterschiede ausgleichen.",
+   "tr": "Тогда возражение было бы скорее рискованным. Альтернатива — курс адаптационной квалификации, который восполнит эти различия."
+  },
+  {
+   "s": "B",
+   "de": "Wie lange würde das dauern? Ich habe eine Familie und kann es mir nicht leisten, lange ohne Einkommen zu sein.",
+   "tr": "Сколько это займёт? У меня семья, и я не могу позволить себе долго оставаться без дохода."
+  },
+  {
+   "s": "A",
+   "de": "In Ihrem Fall etwa sechs Monate, teilweise berufsbegleitend. Und die Kosten können von der Agentur für Arbeit übernommen werden.",
+   "tr": "В вашем случае примерно шесть месяцев, частично без отрыва от работы. А расходы может взять на себя агентство по труду."
+  },
+  {
+   "s": "B",
+   "de": "Berufsbegleitend? Heißt das, ich könnte schon vorher als Ingenieur arbeiten?",
+   "tr": "Без отрыва от работы? Это значит, что я уже до этого мог бы работать инженером?"
+  },
+  {
+   "s": "A",
+   "de": "Nicht mit voller Verantwortung, aber zum Beispiel als technischer Mitarbeiter in einem Planungsbüro. Viele Firmen suchen dringend Fachkräfte.",
+   "tr": "Не с полной ответственностью, но, например, техническим сотрудником в проектном бюро. Многие фирмы срочно ищут специалистов."
+  },
+  {
+   "s": "B",
+   "de": "Das klingt deutlich besser als das, was ich befürchtet hatte. Was wäre der nächste Schritt?",
+   "tr": "Это звучит гораздо лучше, чем я опасался. Каким был бы следующий шаг?"
+  },
+  {
+   "s": "A",
+   "de": "Ich gebe Ihnen eine Liste mit Bildungsträgern in der Region. Gleichzeitig sollten Sie mit Ihrem Berater bei der Agentur über die Finanzierung sprechen.",
+   "tr": "Я дам вам список образовательных учреждений в регионе. Одновременно вам стоит поговорить о финансировании со своим консультантом в агентстве."
+  },
+  {
+   "s": "B",
+   "de": "Und wenn ich die Qualifizierung abgeschlossen habe?",
+   "tr": "А когда я пройду этот курс?"
+  },
+  {
+   "s": "A",
+   "de": "Dann stellen Sie einen Folgeantrag, und Ihr Abschluss wird voll anerkannt. Damit dürfen Sie sich auch Ingenieur nennen.",
+   "tr": "Тогда вы подаёте повторное заявление, и ваш диплом признают полностью. После этого вы сможете называть себя инженером."
+  },
+  {
+   "s": "B",
+   "de": "Gut. Ich glaube, der Weg über die Qualifizierung ist realistischer als ein Widerspruch.",
+   "tr": "Хорошо. Думаю, путь через курс реалистичнее, чем возражение."
+  },
+  {
+   "s": "A",
+   "de": "Das sehe ich auch so. Übrigens können Sie beides kombinieren, falls doch noch Dokumente auftauchen.",
+   "tr": "Я тоже так считаю. Кстати, можно совместить и то и другое, если документы всё-таки найдутся."
+  },
+  {
+   "s": "B",
+   "de": "Vielen Dank. Nach diesem Gespräch sehe ich wieder eine Perspektive.",
+   "tr": "Большое спасибо. После этого разговора я снова вижу перспективу."
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/b2-04.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "Rex Roof",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "source": "https://www.flickr.com/photos/18199354@N00/3230692054",
+  "site": "Flickr"
+ }
+}

@@ -1,0 +1,136 @@
+{
+ "id": "b2-06",
+ "level": "b2",
+ "n": 6,
+ "emoji": "🚗",
+ "title": "Ein Schaden für die Versicherung",
+ "titleTr": "Страховий випадок",
+ "situation": "Уранці Оксана виявила, що в її припаркованої машини зламане дзеркало, а винуватець поїхав. Вона телефонує до страхової компанії.",
+ "speakers": {
+  "A": {
+   "name": "Versicherungsberater",
+   "g": "m"
+  },
+  "B": {
+   "name": "Oksana",
+   "g": "f"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Kundenservice, mein Name ist Fischer. Wie kann ich Ihnen helfen?",
+   "tr": "Служба підтримки клієнтів, мене звати Фішер. Чим можу допомогти?"
+  },
+  {
+   "s": "B",
+   "de": "Guten Morgen. Ich möchte einen Schaden an meinem Auto melden. Jemand hat in der Nacht meinen Außenspiegel abgefahren.",
+   "tr": "Доброго ранку. Я хочу повідомити про пошкодження машини. Уночі хтось збив мені бічне дзеркало."
+  },
+  {
+   "s": "A",
+   "de": "Das ist ärgerlich. Hat der Verursacher einen Zettel mit seinen Daten hinterlassen?",
+   "tr": "Це прикро. Винуватець залишив записку зі своїми даними?"
+  },
+  {
+   "s": "B",
+   "de": "Nein, leider nicht. Ich habe nur das kaputte Spiegelglas auf der Straße gefunden.",
+   "tr": "Ні, на жаль. Я знайшла на вулиці лише розбите скло від дзеркала."
+  },
+  {
+   "s": "A",
+   "de": "Dann handelt es sich um Unfallflucht. Haben Sie schon die Polizei informiert?",
+   "tr": "Тоді йдеться про залишення місця ДТП. Ви вже повідомили поліцію?"
+  },
+  {
+   "s": "B",
+   "de": "Nein. Ist das wirklich nötig? Es ist ja nur ein Spiegel.",
+   "tr": "Ні. Це справді потрібно? Це ж лише дзеркало."
+  },
+  {
+   "s": "A",
+   "de": "Unbedingt. Ohne Anzeige können wir den Schaden in den meisten Fällen nicht regulieren. Die Polizei gibt Ihnen ein Aktenzeichen.",
+   "tr": "Обов'язково. Без заяви ми в більшості випадків не зможемо врегулювати збиток. Поліція видасть вам номер справи."
+  },
+  {
+   "s": "B",
+   "de": "Verstehe. Wer bezahlt denn jetzt die Reparatur, wenn man den Fahrer nicht findet?",
+   "tr": "Зрозуміло. А хто тоді оплатить ремонт, якщо водія не знайдуть?"
+  },
+  {
+   "s": "A",
+   "de": "Das hängt von Ihrem Vertrag ab. Einen Moment… Sie haben eine Teilkasko- und keine Vollkaskoversicherung.",
+   "tr": "Це залежить від вашого договору. Хвилинку… У вас часткове каско, а не повне."
+  },
+  {
+   "s": "B",
+   "de": "Und das bedeutet?",
+   "tr": "І що це означає?"
+  },
+  {
+   "s": "A",
+   "de": "Leider deckt die Teilkasko Schäden durch Unfallflucht nicht ab. Das wäre nur bei einer Vollkasko der Fall.",
+   "tr": "На жаль, часткове каско не покриває збитки, якщо винуватець утік. Це було б лише за повного каско."
+  },
+  {
+   "s": "B",
+   "de": "Das heißt, ich muss alles selbst bezahlen? Ich bin seit Jahren unfallfrei gefahren!",
+   "tr": "Тобто я маю платити за все сама? Я роками їздила без аварій!"
+  },
+  {
+   "s": "A",
+   "de": "Ich verstehe Ihren Frust. Es gibt aber zwei Möglichkeiten: Wird der Verursacher gefunden, zahlt seine Haftpflichtversicherung.",
+   "tr": "Я розумію ваше роздратування. Але є два варіанти. Якщо винуватця знайдуть, заплатить його страховка цивільної відповідальності."
+  },
+  {
+   "s": "B",
+   "de": "Und die zweite Möglichkeit?",
+   "tr": "А друга можливість?"
+  },
+  {
+   "s": "A",
+   "de": "Fragen Sie in der Nachbarschaft, ob jemand etwas gesehen hat oder eine Kamera hatte. Zeugen sind in solchen Fällen sehr hilfreich.",
+   "tr": "Порозпитуйте сусідів, чи хтось щось бачив і чи не було в когось камери. Свідки в таких випадках дуже допомагають."
+  },
+  {
+   "s": "B",
+   "de": "Gute Idee. Mein Nachbar hat tatsächlich eine Kamera über der Garage.",
+   "tr": "Гарна ідея. У мого сусіда якраз є камера над гаражем."
+  },
+  {
+   "s": "A",
+   "de": "Dann geben Sie das der Polizei an. Und für die Zukunft könnten Sie überlegen, auf Vollkasko umzusteigen.",
+   "tr": "Тоді повідомте про це поліцію. А на майбутнє можна подумати про перехід на повне каско."
+  },
+  {
+   "s": "B",
+   "de": "Wie viel teurer wäre das ungefähr?",
+   "tr": "Наскільки це приблизно дорожче?"
+  },
+  {
+   "s": "A",
+   "de": "Bei Ihrem Fahrzeug etwa zwölf Euro im Monat, mit dreihundert Euro Selbstbeteiligung. Ich schicke Ihnen gern ein Angebot.",
+   "tr": "Для вашої машини приблизно на дванадцять євро на місяць, із власною участю в триста євро. Я залюбки надішлю вам пропозицію."
+  },
+  {
+   "s": "B",
+   "de": "Ja, bitte. Ich gehe jetzt erst einmal zur Polizei und melde mich dann mit dem Aktenzeichen.",
+   "tr": "Так, будь ласка. Я зараз спершу піду до поліції, а потім зв'яжуся з вами й повідомлю номер справи."
+  },
+  {
+   "s": "A",
+   "de": "So machen wir es. Ich habe den Fall schon angelegt, Ihre Schadennummer kommt per E-Mail.",
+   "tr": "Так і зробимо. Я вже відкрив справу, номер страхового випадку надійде вам електронною поштою."
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/b2-06.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "dave_7",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "source": "https://www.flickr.com/photos/21612624@N00/6138666188",
+  "site": "Flickr"
+ }
+}

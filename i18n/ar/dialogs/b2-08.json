@@ -1,0 +1,136 @@
+{
+ "id": "b2-08",
+ "level": "b2",
+ "n": 8,
+ "emoji": "🏫",
+ "title": "Das Elterngespräch",
+ "titleTr": "لقاء الأهل مع المعلّمة",
+ "situation": "ابن إيفان على وشك إنهاء المرحلة الابتدائية. تنصح معلّمة الصف بالمدرسة الإعدادية العملية (Realschule)، بينما يريد الأب الثانوية الأكاديمية (Gymnasium). يناقشان الحجج.",
+ "speakers": {
+  "A": {
+   "name": "Frau Weiß",
+   "g": "f"
+  },
+  "B": {
+   "name": "Iwan",
+   "g": "m"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Herr Marchenko, danke, dass Sie gekommen sind. Es geht um die Empfehlung für die weiterführende Schule.",
+   "tr": "سيد مارتشينكو، شكرًا على حضورك. الموضوع هو التوصية بخصوص المدرسة التالية."
+  },
+  {
+   "s": "B",
+   "de": "Ja, ich habe den Brief bekommen. Ehrlich gesagt war ich überrascht, dass Sie die Realschule empfehlen.",
+   "tr": "نعم، وصلتني الرسالة. بصراحة فوجئت بأنك توصين بالمدرسة الإعدادية العملية."
+  },
+  {
+   "s": "A",
+   "de": "Ich verstehe das. Lassen Sie mich erklären, wie ich zu der Einschätzung gekommen bin.",
+   "tr": "أفهم ذلك. اسمح لي أن أشرح كيف توصّلت إلى هذا التقييم."
+  },
+  {
+   "s": "B",
+   "de": "Bitte. In Mathe hat Maxim doch eine Eins.",
+   "tr": "تفضّلي. فمكسيم حاصل على أعلى علامة في الرياضيات."
+  },
+  {
+   "s": "A",
+   "de": "Das stimmt, in Mathematik ist er wirklich hervorragend. Die Schwierigkeiten liegen vor allem in Deutsch, beim Lesen und Schreiben längerer Texte.",
+   "tr": "هذا صحيح، فهو متفوّق حقًا في الرياضيات. أما الصعوبات فتكمن أساسًا في اللغة الألمانية، في قراءة النصوص الطويلة وكتابتها."
+  },
+  {
+   "s": "B",
+   "de": "Aber er ist erst seit zweieinhalb Jahren in Deutschland. Dafür spricht er schon sehr gut.",
+   "tr": "لكنه في ألمانيا منذ عامين ونصف فقط. وبالنسبة لهذه المدة يتكلم جيدًا جدًا."
+  },
+  {
+   "s": "A",
+   "de": "Absolut, seine Fortschritte sind beeindruckend. Am Gymnasium ist der Leistungsdruck aber hoch, und in allen Fächern wird viel gelesen und geschrieben.",
+   "tr": "بالتأكيد، تقدّمه مثير للإعجاب. لكن الضغط الدراسي في الثانوية الأكاديمية مرتفع، وفي كل المواد قراءة وكتابة كثيرة."
+  },
+  {
+   "s": "B",
+   "de": "Ich habe Angst, dass ihm die Realschule Türen verschließt. Er möchte später studieren, vielleicht Informatik.",
+   "tr": "أخشى أن تغلق المدرسة الإعدادية العملية الأبواب أمامه. فهو يريد أن يدرس في الجامعة لاحقًا، ربما علوم الحاسوب."
+  },
+  {
+   "s": "A",
+   "de": "Diese Sorge haben viele Eltern, aber das deutsche Schulsystem ist durchlässiger, als man denkt.",
+   "tr": "كثير من الآباء لديهم هذا القلق، لكن النظام المدرسي الألماني أكثر مرونة مما يُظن."
+  },
+  {
+   "s": "B",
+   "de": "Was meinen Sie damit?",
+   "tr": "ماذا تقصدين بذلك؟"
+  },
+  {
+   "s": "A",
+   "de": "Mit einem guten Realschulabschluss kann er auf ein berufliches Gymnasium wechseln und dort Abitur machen. Damit kann er ganz normal studieren.",
+   "tr": "بشهادة جيدة من المدرسة الإعدادية العملية يمكنه الانتقال إلى ثانوية مهنية والحصول فيها على الأبيتور، وبها يستطيع الالتحاق بالجامعة بشكل طبيعي تمامًا."
+  },
+  {
+   "s": "B",
+   "de": "Das wusste ich nicht. In der Ukraine gibt es so etwas nicht.",
+   "tr": "لم أكن أعرف ذلك. لا يوجد شيء كهذا في أوكرانيا."
+  },
+  {
+   "s": "A",
+   "de": "Trotzdem ist die Empfehlung in unserem Bundesland nicht verbindlich. Sie als Eltern haben das letzte Wort.",
+   "tr": "ومع ذلك فالتوصية في ولايتنا غير ملزمة. والكلمة الأخيرة لكم أنتم الأهل."
+  },
+  {
+   "s": "B",
+   "de": "Was würden Sie an meiner Stelle tun?",
+   "tr": "ماذا كنتِ ستفعلين لو كنتِ مكاني؟"
+  },
+  {
+   "s": "A",
+   "de": "Ich würde Maxim fragen, was er selbst möchte. Wenn er sehr motiviert ist, kann das Gymnasium klappen, aber er bräuchte Unterstützung in Deutsch.",
+   "tr": "كنت سأسأل مكسيم عمّا يريده هو. إذا كان متحمسًا جدًا فقد ينجح في الثانوية الأكاديمية، لكنه سيحتاج إلى دعم في اللغة الألمانية."
+  },
+  {
+   "s": "B",
+   "de": "Welche Unterstützung meinen Sie?",
+   "tr": "أي دعم تقصدين؟"
+  },
+  {
+   "s": "A",
+   "de": "Zum Beispiel Förderunterricht oder eine Lernpatenschaft. Viele Gymnasien bieten so etwas speziell für Kinder an, die Deutsch als Zweitsprache lernen.",
+   "tr": "مثلًا دروس تقوية أو مرافقة تعليمية من متطوع. كثير من الثانويات الأكاديمية تقدّم ذلك خصيصًا للأطفال الذين يتعلمون الألمانية لغةً ثانية."
+  },
+  {
+   "s": "B",
+   "de": "Und wenn es am Gymnasium nicht klappt?",
+   "tr": "وإذا لم ينجح في الثانوية الأكاديمية؟"
+  },
+  {
+   "s": "A",
+   "de": "Dann kann er auch später noch auf die Realschule wechseln. Wichtig ist nur, dass er dabei nicht die Freude am Lernen verliert.",
+   "tr": "عندها يمكنه الانتقال لاحقًا إلى المدرسة الإعدادية العملية. المهم فقط ألا يفقد متعة التعلّم."
+  },
+  {
+   "s": "B",
+   "de": "Danke, das hilft mir sehr. Ich spreche heute Abend mit Maxim und mit meiner Frau.",
+   "tr": "شكرًا، هذا يساعدني كثيرًا. سأتحدث الليلة مع مكسيم ومع زوجتي."
+  },
+  {
+   "s": "A",
+   "de": "Sehr gern. Und egal, wie Sie sich entscheiden: Maxim hat großes Potenzial.",
+   "tr": "على الرحب والسعة. ومهما كان قراركم، فلدى مكسيم إمكانات كبيرة."
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/b2-08.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "EaglebrookSchool",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "source": "https://www.flickr.com/photos/45532942@N08/15398157379",
+  "site": "Flickr"
+ }
+}

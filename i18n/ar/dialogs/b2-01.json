@@ -1,0 +1,136 @@
+{
+ "id": "b2-01",
+ "level": "b2",
+ "n": 1,
+ "emoji": "💶",
+ "title": "Die Gehaltsverhandlung",
+ "titleTr": "التفاوض على الراتب",
+ "situation": "يعمل أوليكسي منذ عامين في قسم تقنية المعلومات وتولّى مهام جديدة. في المقابلة السنوية يطلب من مديره زيادة في الراتب.",
+ "speakers": {
+  "A": {
+   "name": "Herr Vogel",
+   "g": "m"
+  },
+  "B": {
+   "name": "Oleksij",
+   "g": "m"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Schön, dass wir uns heute Zeit für das Jahresgespräch nehmen. Wie zufrieden sind Sie mit dem letzten Jahr?",
+   "tr": "يسعدني أننا خصّصنا اليوم وقتًا للمقابلة السنوية. ما مدى رضاك عن العام الماضي؟"
+  },
+  {
+   "s": "B",
+   "de": "Insgesamt sehr zufrieden. Seit dem Frühjahr betreue ich ja zusätzlich die Umstellung auf das neue Ticketsystem.",
+   "tr": "راضٍ جدًا بشكل عام. فمنذ الربيع أتولّى إضافةً إلى عملي الانتقال إلى نظام التذاكر الجديد."
+  },
+  {
+   "s": "A",
+   "de": "Stimmt, und das läuft hervorragend. Die Bearbeitungszeit ist um fast ein Drittel gesunken.",
+   "tr": "صحيح، ويسير ذلك على نحو ممتاز. فقد انخفض وقت المعالجة بنحو الثلث."
+  },
+  {
+   "s": "B",
+   "de": "Genau darüber wollte ich heute auch sprechen. Meine Aufgaben haben sich deutlich erweitert, mein Gehalt aber nicht.",
+   "tr": "وهذا بالضبط ما أردت الحديث عنه اليوم. توسّعت مهامي بشكل واضح، أما راتبي فلا."
+  },
+  {
+   "s": "A",
+   "de": "Verstehe. Woran haben Sie gedacht?",
+   "tr": "أفهم. ما الذي تفكّر فيه؟"
+  },
+  {
+   "s": "B",
+   "de": "Ich habe mich informiert: Für vergleichbare Stellen in unserer Region liegt das Gehalt zwischen vierundfünfzig- und sechzigtausend Euro im Jahr.",
+   "tr": "بحثت في الأمر: في الوظائف المماثلة في منطقتنا يتراوح الراتب بين أربعة وخمسين وستين ألف يورو سنويًا."
+  },
+  {
+   "s": "A",
+   "de": "Und Sie liegen momentan bei achtundvierzigtausend.",
+   "tr": "وراتبك حاليًا ثمانية وأربعون ألفًا."
+  },
+  {
+   "s": "B",
+   "de": "Richtig. Deshalb halte ich eine Erhöhung auf siebenundfünfzigtausend für angemessen.",
+   "tr": "صحيح. ولهذا أرى أن زيادته إلى سبعة وخمسين ألفًا أمر مناسب."
+  },
+  {
+   "s": "A",
+   "de": "Das wären fast zwanzig Prozent. Ehrlich gesagt ist das mehr, als unser Budget dieses Jahr hergibt.",
+   "tr": "هذا يعني زيادة بنحو عشرين بالمئة. بصراحة، هذا أكثر مما تسمح به ميزانيتنا هذا العام."
+  },
+  {
+   "s": "B",
+   "de": "Das kann ich nachvollziehen. Aber bedenken Sie bitte, dass ich die Arbeit von zwei Stellen mache, seit Frau Peters gegangen ist.",
+   "tr": "أتفهّم ذلك. لكن أرجو أن تأخذ في الاعتبار أنني أقوم بعمل وظيفتين منذ أن غادرت السيدة بيترز."
+  },
+  {
+   "s": "A",
+   "de": "Das ist ein berechtigter Punkt. Ich könnte Ihnen zum ersten Januar eine Erhöhung auf zweiundfünfzigtausend anbieten.",
+   "tr": "هذه نقطة وجيهة. يمكنني أن أعرض عليك زيادة إلى اثنين وخمسين ألفًا ابتداءً من الأول من يناير."
+  },
+  {
+   "s": "B",
+   "de": "Das ist ein Anfang, aber noch deutlich unter dem Marktniveau. Gäbe es eine Möglichkeit, das mit anderen Leistungen auszugleichen?",
+   "tr": "هذه بداية، لكنها ما زالت أقل بكثير من مستوى السوق. هل يمكن تعويض الفرق بمزايا أخرى؟"
+  },
+  {
+   "s": "A",
+   "de": "Woran denken Sie konkret?",
+   "tr": "بماذا تفكّر تحديدًا؟"
+  },
+  {
+   "s": "B",
+   "de": "Zum Beispiel an eine Weiterbildung zum Cloud-Architekten, die die Firma bezahlt, und einen zusätzlichen Homeoffice-Tag.",
+   "tr": "مثلًا دورة تدريبية لأصبح مهندس حوسبة سحابية تدفع الشركة تكاليفها، ويوم إضافي للعمل من المنزل."
+  },
+  {
+   "s": "A",
+   "de": "Die Weiterbildung liegt auch in unserem Interesse, das lässt sich machen. Beim Homeoffice muss ich mit dem Team sprechen.",
+   "tr": "التدريب في مصلحتنا أيضًا، ويمكن تحقيقه. أما العمل من المنزل فعليّ أن أتحدث فيه مع الفريق."
+  },
+  {
+   "s": "B",
+   "de": "Einverstanden. Und könnten wir festhalten, dass wir in sechs Monaten noch einmal über das Gehalt sprechen?",
+   "tr": "موافق. وهل يمكننا أن نتفق على أن نتحدث عن الراتب مرة أخرى بعد ستة أشهر؟"
+  },
+  {
+   "s": "A",
+   "de": "Ja. Wenn das neue System bis dahin vollständig läuft, sehe ich gute Chancen für einen weiteren Schritt.",
+   "tr": "نعم. إذا كان النظام الجديد يعمل بالكامل بحلول ذلك الوقت، فأرى فرصًا جيدة لخطوة أخرى."
+  },
+  {
+   "s": "B",
+   "de": "Das klingt fair. Könnten Sie mir die Vereinbarung schriftlich bestätigen?",
+   "tr": "هذا يبدو عادلًا. هل يمكنك أن تؤكد الاتفاق كتابيًا؟"
+  },
+  {
+   "s": "A",
+   "de": "Selbstverständlich. Ich schicke Ihnen bis Freitag eine Zusammenfassung, und die Personalabteilung bereitet die Vertragsänderung vor.",
+   "tr": "بالتأكيد. سأرسل لك ملخصًا حتى يوم الجمعة، وسيُعدّ قسم شؤون الموظفين تعديل العقد."
+  },
+  {
+   "s": "B",
+   "de": "Vielen Dank für das offene Gespräch.",
+   "tr": "شكرًا جزيلًا على هذا الحديث الصريح."
+  },
+  {
+   "s": "A",
+   "de": "Ich danke Ihnen. Ihr Einsatz wird hier wirklich geschätzt.",
+   "tr": "بل أنا من يشكرك. جهودك هنا محلّ تقدير حقًا."
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/b2-01.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "jeferonix",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+  "source": "https://www.flickr.com/photos/35034346917@N01/276373742",
+  "site": "Flickr"
+ }
+}

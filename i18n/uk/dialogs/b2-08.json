@@ -1,0 +1,136 @@
+{
+ "id": "b2-08",
+ "level": "b2",
+ "n": 8,
+ "emoji": "🏫",
+ "title": "Das Elterngespräch",
+ "titleTr": "Розмова з учителькою",
+ "situation": "Син Івана закінчує початкову школу. Класна керівниця радить реальну школу, а батько хоче гімназію. Вони обговорюють аргументи.",
+ "speakers": {
+  "A": {
+   "name": "Frau Weiß",
+   "g": "f"
+  },
+  "B": {
+   "name": "Iwan",
+   "g": "m"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Herr Marchenko, danke, dass Sie gekommen sind. Es geht um die Empfehlung für die weiterführende Schule.",
+   "tr": "Пане Марченку, дякую, що прийшли. Ідеться про рекомендацію щодо середньої школи."
+  },
+  {
+   "s": "B",
+   "de": "Ja, ich habe den Brief bekommen. Ehrlich gesagt war ich überrascht, dass Sie die Realschule empfehlen.",
+   "tr": "Так, я отримав листа. Чесно кажучи, я був здивований, що ви рекомендуєте реальну школу."
+  },
+  {
+   "s": "A",
+   "de": "Ich verstehe das. Lassen Sie mich erklären, wie ich zu der Einschätzung gekommen bin.",
+   "tr": "Я розумію. Дозвольте пояснити, як я дійшла такої оцінки."
+  },
+  {
+   "s": "B",
+   "de": "Bitte. In Mathe hat Maxim doch eine Eins.",
+   "tr": "Будь ласка. З математики в Максима ж найвища оцінка."
+  },
+  {
+   "s": "A",
+   "de": "Das stimmt, in Mathematik ist er wirklich hervorragend. Die Schwierigkeiten liegen vor allem in Deutsch, beim Lesen und Schreiben längerer Texte.",
+   "tr": "Це так, з математики він справді чудовий. Труднощі переважно з німецькою: читання й письмо довших текстів."
+  },
+  {
+   "s": "B",
+   "de": "Aber er ist erst seit zweieinhalb Jahren in Deutschland. Dafür spricht er schon sehr gut.",
+   "tr": "Але він лише два з половиною роки в Німеччині. Як на такий строк, він уже дуже добре говорить."
+  },
+  {
+   "s": "A",
+   "de": "Absolut, seine Fortschritte sind beeindruckend. Am Gymnasium ist der Leistungsdruck aber hoch, und in allen Fächern wird viel gelesen und geschrieben.",
+   "tr": "Безумовно, його успіхи вражають. Але в гімназії високе навантаження, і з усіх предметів доводиться багато читати й писати."
+  },
+  {
+   "s": "B",
+   "de": "Ich habe Angst, dass ihm die Realschule Türen verschließt. Er möchte später studieren, vielleicht Informatik.",
+   "tr": "Я боюся, що реальна школа закриє йому двері. Він потім хоче вчитися в університеті, можливо, на інформатиці."
+  },
+  {
+   "s": "A",
+   "de": "Diese Sorge haben viele Eltern, aber das deutsche Schulsystem ist durchlässiger, als man denkt.",
+   "tr": "Це побоювання мають багато батьків, але німецька шкільна система гнучкіша, ніж здається."
+  },
+  {
+   "s": "B",
+   "de": "Was meinen Sie damit?",
+   "tr": "Що ви маєте на увазі?"
+  },
+  {
+   "s": "A",
+   "de": "Mit einem guten Realschulabschluss kann er auf ein berufliches Gymnasium wechseln und dort Abitur machen. Damit kann er ganz normal studieren.",
+   "tr": "Із добрим атестатом реальної школи він може перейти до професійної гімназії й там скласти абітур. З ним він зможе цілком нормально вступити до університету."
+  },
+  {
+   "s": "B",
+   "de": "Das wusste ich nicht. In der Ukraine gibt es so etwas nicht.",
+   "tr": "Я цього не знав. В Україні такого немає."
+  },
+  {
+   "s": "A",
+   "de": "Trotzdem ist die Empfehlung in unserem Bundesland nicht verbindlich. Sie als Eltern haben das letzte Wort.",
+   "tr": "Проте рекомендація в нашій федеральній землі не обов'язкова. Останнє слово за вами, батьками."
+  },
+  {
+   "s": "B",
+   "de": "Was würden Sie an meiner Stelle tun?",
+   "tr": "Що б ви зробили на моєму місці?"
+  },
+  {
+   "s": "A",
+   "de": "Ich würde Maxim fragen, was er selbst möchte. Wenn er sehr motiviert ist, kann das Gymnasium klappen, aber er bräuchte Unterstützung in Deutsch.",
+   "tr": "Я б запитала Максима, чого хоче він сам. Якщо він дуже вмотивований, гімназія може вийти, але йому знадобиться підтримка з німецької."
+  },
+  {
+   "s": "B",
+   "de": "Welche Unterstützung meinen Sie?",
+   "tr": "Яку підтримку ви маєте на увазі?"
+  },
+  {
+   "s": "A",
+   "de": "Zum Beispiel Förderunterricht oder eine Lernpatenschaft. Viele Gymnasien bieten so etwas speziell für Kinder an, die Deutsch als Zweitsprache lernen.",
+   "tr": "Наприклад, додаткові заняття або наставництво в навчанні. Багато гімназій пропонують таке спеціально для дітей, які вчать німецьку як другу мову."
+  },
+  {
+   "s": "B",
+   "de": "Und wenn es am Gymnasium nicht klappt?",
+   "tr": "А якщо в гімназії не вийде?"
+  },
+  {
+   "s": "A",
+   "de": "Dann kann er auch später noch auf die Realschule wechseln. Wichtig ist nur, dass er dabei nicht die Freude am Lernen verliert.",
+   "tr": "Тоді він може й пізніше перейти до реальної школи. Важливо лише, щоб при цьому він не втратив радості від навчання."
+  },
+  {
+   "s": "B",
+   "de": "Danke, das hilft mir sehr. Ich spreche heute Abend mit Maxim und mit meiner Frau.",
+   "tr": "Дякую, це мені дуже допомагає. Сьогодні ввечері я поговорю з Максимом і з дружиною."
+  },
+  {
+   "s": "A",
+   "de": "Sehr gern. Und egal, wie Sie sich entscheiden: Maxim hat großes Potenzial.",
+   "tr": "Будь ласка. І хоч би як ви вирішили, у Максима великий потенціал."
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/b2-08.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "EaglebrookSchool",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "source": "https://www.flickr.com/photos/45532942@N08/15398157379",
+  "site": "Flickr"
+ }
+}

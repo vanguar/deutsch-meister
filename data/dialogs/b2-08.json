@@ -1,0 +1,136 @@
+{
+ "id": "b2-08",
+ "level": "b2",
+ "n": 8,
+ "emoji": "🏫",
+ "title": "Das Elterngespräch",
+ "titleTr": "Беседа с учительницей",
+ "situation": "Сын Ивана заканчивает начальную школу. Классная руководительница советует реальную школу, а отец хочет гимназию. Они обсуждают аргументы.",
+ "speakers": {
+  "A": {
+   "name": "Frau Weiß",
+   "g": "f"
+  },
+  "B": {
+   "name": "Iwan",
+   "g": "m"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Herr Marchenko, danke, dass Sie gekommen sind. Es geht um die Empfehlung für die weiterführende Schule.",
+   "tr": "Господин Марченко, спасибо, что пришли. Речь о рекомендации для средней школы."
+  },
+  {
+   "s": "B",
+   "de": "Ja, ich habe den Brief bekommen. Ehrlich gesagt war ich überrascht, dass Sie die Realschule empfehlen.",
+   "tr": "Да, я получил письмо. Честно говоря, я был удивлён, что вы рекомендуете реальную школу."
+  },
+  {
+   "s": "A",
+   "de": "Ich verstehe das. Lassen Sie mich erklären, wie ich zu der Einschätzung gekommen bin.",
+   "tr": "Я понимаю. Позвольте объяснить, как я пришла к такой оценке."
+  },
+  {
+   "s": "B",
+   "de": "Bitte. In Mathe hat Maxim doch eine Eins.",
+   "tr": "Пожалуйста. По математике у Максима ведь высшая оценка."
+  },
+  {
+   "s": "A",
+   "de": "Das stimmt, in Mathematik ist er wirklich hervorragend. Die Schwierigkeiten liegen vor allem in Deutsch, beim Lesen und Schreiben längerer Texte.",
+   "tr": "Это так, по математике он действительно превосходен. Трудности в основном с немецким: чтение и написание длинных текстов."
+  },
+  {
+   "s": "B",
+   "de": "Aber er ist erst seit zweieinhalb Jahren in Deutschland. Dafür spricht er schon sehr gut.",
+   "tr": "Но он всего два с половиной года в Германии. Для такого срока он уже очень хорошо говорит."
+  },
+  {
+   "s": "A",
+   "de": "Absolut, seine Fortschritte sind beeindruckend. Am Gymnasium ist der Leistungsdruck aber hoch, und in allen Fächern wird viel gelesen und geschrieben.",
+   "tr": "Безусловно, его успехи впечатляют. Но в гимназии высокая нагрузка, и по всем предметам приходится много читать и писать."
+  },
+  {
+   "s": "B",
+   "de": "Ich habe Angst, dass ihm die Realschule Türen verschließt. Er möchte später studieren, vielleicht Informatik.",
+   "tr": "Я боюсь, что реальная школа закроет ему двери. Он потом хочет учиться в университете, может быть, на информатике."
+  },
+  {
+   "s": "A",
+   "de": "Diese Sorge haben viele Eltern, aber das deutsche Schulsystem ist durchlässiger, als man denkt.",
+   "tr": "Это опасение есть у многих родителей, но немецкая школьная система гибче, чем кажется."
+  },
+  {
+   "s": "B",
+   "de": "Was meinen Sie damit?",
+   "tr": "Что вы имеете в виду?"
+  },
+  {
+   "s": "A",
+   "de": "Mit einem guten Realschulabschluss kann er auf ein berufliches Gymnasium wechseln und dort Abitur machen. Damit kann er ganz normal studieren.",
+   "tr": "С хорошим аттестатом реальной школы он может перейти в профессиональную гимназию и там сдать абитур. С ним он сможет совершенно нормально поступить в университет."
+  },
+  {
+   "s": "B",
+   "de": "Das wusste ich nicht. In der Ukraine gibt es so etwas nicht.",
+   "tr": "Я этого не знал. В Украине такого нет."
+  },
+  {
+   "s": "A",
+   "de": "Trotzdem ist die Empfehlung in unserem Bundesland nicht verbindlich. Sie als Eltern haben das letzte Wort.",
+   "tr": "Тем не менее рекомендация в нашей федеральной земле не обязательна. Последнее слово за вами, родителями."
+  },
+  {
+   "s": "B",
+   "de": "Was würden Sie an meiner Stelle tun?",
+   "tr": "Что бы вы сделали на моём месте?"
+  },
+  {
+   "s": "A",
+   "de": "Ich würde Maxim fragen, was er selbst möchte. Wenn er sehr motiviert ist, kann das Gymnasium klappen, aber er bräuchte Unterstützung in Deutsch.",
+   "tr": "Я бы спросила Максима, чего хочет он сам. Если он очень мотивирован, гимназия может получиться, но ему понадобится поддержка по немецкому."
+  },
+  {
+   "s": "B",
+   "de": "Welche Unterstützung meinen Sie?",
+   "tr": "Какую поддержку вы имеете в виду?"
+  },
+  {
+   "s": "A",
+   "de": "Zum Beispiel Förderunterricht oder eine Lernpatenschaft. Viele Gymnasien bieten so etwas speziell für Kinder an, die Deutsch als Zweitsprache lernen.",
+   "tr": "Например, дополнительные занятия или наставничество в учёбе. Многие гимназии предлагают такое специально для детей, которые учат немецкий как второй язык."
+  },
+  {
+   "s": "B",
+   "de": "Und wenn es am Gymnasium nicht klappt?",
+   "tr": "А если в гимназии не получится?"
+  },
+  {
+   "s": "A",
+   "de": "Dann kann er auch später noch auf die Realschule wechseln. Wichtig ist nur, dass er dabei nicht die Freude am Lernen verliert.",
+   "tr": "Тогда он может и позже перейти в реальную школу. Важно только, чтобы при этом он не потерял радость от учёбы."
+  },
+  {
+   "s": "B",
+   "de": "Danke, das hilft mir sehr. Ich spreche heute Abend mit Maxim und mit meiner Frau.",
+   "tr": "Спасибо, это мне очень помогает. Сегодня вечером я поговорю с Максимом и с женой."
+  },
+  {
+   "s": "A",
+   "de": "Sehr gern. Und egal, wie Sie sich entscheiden: Maxim hat großes Potenzial.",
+   "tr": "Пожалуйста. И как бы вы ни решили, у Максима большой потенциал."
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/b2-08.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "EaglebrookSchool",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "source": "https://www.flickr.com/photos/45532942@N08/15398157379",
+  "site": "Flickr"
+ }
+}

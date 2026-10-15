@@ -1,0 +1,141 @@
+{
+ "id": "b2-10",
+ "level": "b2",
+ "n": 10,
+ "emoji": "🏨",
+ "title": "Reklamation im Hotel",
+ "titleTr": "Жалоба в отеле",
+ "situation": "Господин Шмидт забронировал тихий номер, но под окном идёт стройка, а кондиционер не работает. На ресепшене он вежливо, но настойчиво требует решения.",
+ "speakers": {
+  "A": {
+   "name": "Rezeptionistin",
+   "g": "f"
+  },
+  "B": {
+   "name": "Herr Schmidt",
+   "g": "m"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Guten Morgen! Wie war Ihre erste Nacht bei uns?",
+   "tr": "Доброе утро! Как прошла ваша первая ночь у нас?"
+  },
+  {
+   "s": "B",
+   "de": "Ehrlich gesagt ziemlich schlecht. Deshalb möchte ich mich beschweren.",
+   "tr": "Честно говоря, довольно плохо. Поэтому я хотел бы пожаловаться."
+  },
+  {
+   "s": "A",
+   "de": "Oh, das tut mir leid. Was war denn das Problem?",
+   "tr": "Ой, мне очень жаль. В чём была проблема?"
+  },
+  {
+   "s": "B",
+   "de": "Ich habe ausdrücklich ein ruhiges Zimmer gebucht. Mein Zimmer liegt aber direkt über einer Baustelle, und die Arbeiten beginnen um sieben Uhr.",
+   "tr": "Я специально бронировал тихий номер. А мой номер находится прямо над стройкой, и работы начинаются в семь утра."
+  },
+  {
+   "s": "A",
+   "de": "Die Baustelle gehört leider zur Stadt, darauf haben wir keinen Einfluss.",
+   "tr": "Стройка, к сожалению, городская, на неё мы не можем повлиять."
+  },
+  {
+   "s": "B",
+   "de": "Das mag sein, aber davon stand nichts auf Ihrer Website. Wenn ich das gewusst hätte, hätte ich woanders gebucht.",
+   "tr": "Возможно, но на вашем сайте об этом ничего не было сказано. Если бы я знал, то забронировал бы в другом месте."
+  },
+  {
+   "s": "A",
+   "de": "Da haben Sie natürlich recht. Wir hätten die Gäste darauf hinweisen müssen.",
+   "tr": "Тут вы, конечно, правы. Нам следовало предупредить гостей."
+  },
+  {
+   "s": "B",
+   "de": "Außerdem funktioniert die Klimaanlage nicht. Bei dreißig Grad konnte ich die Fenster wegen des Lärms aber auch nicht öffnen.",
+   "tr": "Кроме того, не работает кондиционер. А при тридцати градусах я не мог открыть окна из-за шума."
+  },
+  {
+   "s": "A",
+   "de": "Das ist wirklich unangenehm. Ich kann Ihnen sofort ein Zimmer zum Innenhof anbieten.",
+   "tr": "Это действительно неприятно. Я могу сразу предложить вам номер с окнами во внутренний двор."
+  },
+  {
+   "s": "B",
+   "de": "Ist es genauso groß? Ich habe ein Zimmer mit Arbeitsbereich gebucht, weil ich hier geschäftlich bin.",
+   "tr": "Он такой же большой? Я бронировал номер с рабочей зоной, потому что я здесь по делам."
+  },
+  {
+   "s": "A",
+   "de": "Es ist sogar etwas größer, eine Junior-Suite. Für Sie ohne Aufpreis, natürlich.",
+   "tr": "Он даже немного больше — это полулюкс. Для вас, конечно, без доплаты."
+  },
+  {
+   "s": "B",
+   "de": "Das ist ein guter Anfang. Funktioniert dort die Klimaanlage?",
+   "tr": "Это хорошее начало. А кондиционер там работает?"
+  },
+  {
+   "s": "A",
+   "de": "Ja, ich lasse es zur Sicherheit vorher vom Haustechniker prüfen.",
+   "tr": "Да, для надёжности я попрошу техника заранее его проверить."
+  },
+  {
+   "s": "B",
+   "de": "Gut. Für die erste Nacht erwarte ich trotzdem eine Entschädigung. Ich musste heute müde in eine wichtige Besprechung.",
+   "tr": "Хорошо. Но за первую ночь я всё же жду компенсации. Сегодня мне пришлось идти на важное совещание невыспавшимся."
+  },
+  {
+   "s": "A",
+   "de": "Das verstehe ich. Ich kann Ihnen die erste Nacht um fünfzig Prozent reduzieren.",
+   "tr": "Я понимаю. Я могу снизить вам стоимость первой ночи на пятьдесят процентов."
+  },
+  {
+   "s": "B",
+   "de": "Hm. Ganz ehrlich, die Nacht war praktisch nicht nutzbar. Ich halte eine vollständige Erstattung für angemessen.",
+   "tr": "Хм. Честно говоря, ночь была практически потеряна. Я считаю, что справедливо вернуть полную стоимость."
+  },
+  {
+   "s": "A",
+   "de": "Dafür müsste ich kurz mit der Geschäftsführung sprechen. Einen Moment, bitte.",
+   "tr": "Для этого мне нужно коротко переговорить с руководством. Минутку, пожалуйста."
+  },
+  {
+   "s": "B",
+   "de": "Natürlich, ich warte.",
+   "tr": "Конечно, я подожду."
+  },
+  {
+   "s": "A",
+   "de": "Herr Schmidt, die Geschäftsführung ist einverstanden: Die erste Nacht wird Ihnen vollständig erstattet, und das Frühstück ist für Ihren ganzen Aufenthalt inklusive.",
+   "tr": "Господин Шмидт, руководство согласно: стоимость первой ночи вам вернут полностью, а завтрак будет включён на всё время проживания."
+  },
+  {
+   "s": "B",
+   "de": "Das ist ein faires Angebot. Vielen Dank, dass Sie sich so bemüht haben.",
+   "tr": "Это честное предложение. Большое спасибо за ваши старания."
+  },
+  {
+   "s": "A",
+   "de": "Sehr gern. Ihr neues Zimmer ist ab zwölf Uhr bereit, Ihr Gepäck bringen wir hinauf.",
+   "tr": "Не за что. Ваш новый номер будет готов с двенадцати часов, багаж мы поднимем."
+  },
+  {
+   "s": "B",
+   "de": "Perfekt. Dann wünsche ich Ihnen einen schönen Tag.",
+   "tr": "Отлично. Тогда хорошего вам дня."
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/b2-10.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "Unique Hotels Group",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+  "source": "https://www.flickr.com/photos/62485988@N05/5690657120",
+  "site": "Flickr"
+ }
+}

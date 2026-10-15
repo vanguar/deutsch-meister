@@ -1,0 +1,131 @@
+{
+ "id": "b2-04",
+ "level": "b2",
+ "n": 4,
+ "emoji": "🎓",
+ "title": "Die Anerkennung des Abschlusses",
+ "titleTr": "الاعتراف بالشهادة",
+ "situation": "اعتُرف بشهادة مهندس الكهرباء سيرهي اعترافًا جزئيًا فقط. تشرح له المستشارة القرار وتساعده على الاختيار بين الاعتراض ودورة تأهيل تكميلية.",
+ "speakers": {
+  "A": {
+   "name": "Beraterin",
+   "g": "f"
+  },
+  "B": {
+   "name": "Serhij",
+   "g": "m"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Herr Tkachenko, Sie haben den Bescheid über die Anerkennung mitgebracht. Was steht darin?",
+   "tr": "سيد تكاتشينكو، أحضرتَ قرار الاعتراف بالشهادة. ماذا ورد فيه؟"
+  },
+  {
+   "s": "B",
+   "de": "Mein Abschluss ist nur teilweise gleichwertig. Ehrlich gesagt bin ich enttäuscht, ich habe fünfzehn Jahre als Elektroingenieur gearbeitet.",
+   "tr": "شهادتي معادلة جزئيًا فقط. بصراحة أنا خائب الأمل، فقد عملت خمسة عشر عامًا مهندسًا كهربائيًا."
+  },
+  {
+   "s": "A",
+   "de": "Das verstehe ich. Lassen Sie uns genau ansehen, welche Unterschiede festgestellt wurden.",
+   "tr": "أفهم ذلك. لننظر بدقة في الفروق التي جرى تحديدها."
+  },
+  {
+   "s": "B",
+   "de": "Hier steht, dass mir Kenntnisse in deutschen Normen und im Arbeitsschutz fehlen.",
+   "tr": "مكتوب هنا أنني أفتقر إلى المعرفة بالمعايير الألمانية وبالسلامة المهنية."
+  },
+  {
+   "s": "A",
+   "de": "Das ist typisch und eigentlich eine gute Nachricht. Ihre Fachkenntnisse werden also nicht grundsätzlich infrage gestellt.",
+   "tr": "هذا أمر شائع، وهو في الحقيقة خبر جيد. فمعارفك المهنية لا يُشكَّك فيها من حيث المبدأ."
+  },
+  {
+   "s": "B",
+   "de": "Trotzdem überlege ich, Widerspruch einzulegen. Ich habe in der Ukraine sehr wohl mit internationalen Normen gearbeitet.",
+   "tr": "ومع ذلك أفكر في تقديم اعتراض. فقد عملت في أوكرانيا بالفعل وفق معايير دولية."
+  },
+  {
+   "s": "A",
+   "de": "Das ist Ihr gutes Recht, die Frist beträgt einen Monat. Haben Sie Nachweise dafür, zum Beispiel Arbeitszeugnisse oder Zertifikate?",
+   "tr": "هذا حقك المشروع، والمهلة شهر واحد. هل لديك ما يثبت ذلك، مثل شهادات خبرة أو شهادات تدريب؟"
+  },
+  {
+   "s": "B",
+   "de": "Einige, aber nicht alle sind übersetzt. Und die Firma, für die ich gearbeitet habe, existiert nicht mehr.",
+   "tr": "لدي بعضها، لكنها ليست كلها مترجمة. والشركة التي عملت فيها لم تعد موجودة."
+  },
+  {
+   "s": "A",
+   "de": "Dann wäre ein Widerspruch eher riskant. Die Alternative ist eine Anpassungsqualifizierung, mit der Sie die Unterschiede ausgleichen.",
+   "tr": "إذن سيكون الاعتراض محفوفًا بالمخاطر. والبديل هو دورة تأهيل تكميلية تسد بها هذه الفروق."
+  },
+  {
+   "s": "B",
+   "de": "Wie lange würde das dauern? Ich habe eine Familie und kann es mir nicht leisten, lange ohne Einkommen zu sein.",
+   "tr": "كم ستستغرق؟ لدي عائلة، ولا أستطيع أن أبقى طويلًا بدون دخل."
+  },
+  {
+   "s": "A",
+   "de": "In Ihrem Fall etwa sechs Monate, teilweise berufsbegleitend. Und die Kosten können von der Agentur für Arbeit übernommen werden.",
+   "tr": "في حالتك حوالي ستة أشهر، جزء منها بالتوازي مع العمل. ويمكن لوكالة العمل أن تتحمّل التكاليف."
+  },
+  {
+   "s": "B",
+   "de": "Berufsbegleitend? Heißt das, ich könnte schon vorher als Ingenieur arbeiten?",
+   "tr": "بالتوازي مع العمل؟ هل يعني ذلك أنني أستطيع العمل مهندسًا قبل انتهائها؟"
+  },
+  {
+   "s": "A",
+   "de": "Nicht mit voller Verantwortung, aber zum Beispiel als technischer Mitarbeiter in einem Planungsbüro. Viele Firmen suchen dringend Fachkräfte.",
+   "tr": "ليس بكامل المسؤولية، لكن مثلًا موظفًا فنيًا في مكتب تصميم. كثير من الشركات تبحث بشكل عاجل عن كوادر متخصصة."
+  },
+  {
+   "s": "B",
+   "de": "Das klingt deutlich besser als das, was ich befürchtet hatte. Was wäre der nächste Schritt?",
+   "tr": "هذا أفضل بكثير مما كنت أخشاه. ما الخطوة التالية؟"
+  },
+  {
+   "s": "A",
+   "de": "Ich gebe Ihnen eine Liste mit Bildungsträgern in der Region. Gleichzeitig sollten Sie mit Ihrem Berater bei der Agentur über die Finanzierung sprechen.",
+   "tr": "سأعطيك قائمة بمؤسسات التدريب في المنطقة. وفي الوقت نفسه ينبغي أن تتحدث مع مستشارك في الوكالة عن التمويل."
+  },
+  {
+   "s": "B",
+   "de": "Und wenn ich die Qualifizierung abgeschlossen habe?",
+   "tr": "وبعد أن أنهي دورة التأهيل؟"
+  },
+  {
+   "s": "A",
+   "de": "Dann stellen Sie einen Folgeantrag, und Ihr Abschluss wird voll anerkannt. Damit dürfen Sie sich auch Ingenieur nennen.",
+   "tr": "عندها تقدّم طلبًا لاحقًا، ويُعترف بشهادتك اعترافًا كاملًا. وبذلك يحق لك أن تحمل لقب مهندس."
+  },
+  {
+   "s": "B",
+   "de": "Gut. Ich glaube, der Weg über die Qualifizierung ist realistischer als ein Widerspruch.",
+   "tr": "حسنًا. أظن أن طريق التأهيل أكثر واقعية من الاعتراض."
+  },
+  {
+   "s": "A",
+   "de": "Das sehe ich auch so. Übrigens können Sie beides kombinieren, falls doch noch Dokumente auftauchen.",
+   "tr": "وأنا أرى ذلك أيضًا. بالمناسبة، يمكنك الجمع بين الأمرين إذا ظهرت مستندات أخرى."
+  },
+  {
+   "s": "B",
+   "de": "Vielen Dank. Nach diesem Gespräch sehe ich wieder eine Perspektive.",
+   "tr": "شكرًا جزيلًا. بعد هذا الحديث صرت أرى أفقًا من جديد."
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/b2-04.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "Rex Roof",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "source": "https://www.flickr.com/photos/18199354@N00/3230692054",
+  "site": "Flickr"
+ }
+}

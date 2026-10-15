@@ -1,0 +1,131 @@
+{
+ "id": "b2-03",
+ "level": "b2",
+ "n": 3,
+ "emoji": "🤝",
+ "title": "Ein Konflikt im Team",
+ "titleTr": "Конфлікт у команді",
+ "situation": "Яна вважає, що колега постійно перекладає на неї свою роботу. Вона обговорює проблему з керівником, і разом вони шукають справедливе рішення.",
+ "speakers": {
+  "A": {
+   "name": "Herr Albrecht",
+   "g": "m"
+  },
+  "B": {
+   "name": "Jana",
+   "g": "f"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Frau Novak, Sie wollten mich unter vier Augen sprechen. Worum geht es?",
+   "tr": "Пані Новак, ви хотіли поговорити зі мною віч-на-віч. Про що йдеться?"
+  },
+  {
+   "s": "B",
+   "de": "Es fällt mir nicht leicht, aber es geht um die Zusammenarbeit mit Herrn Krüger.",
+   "tr": "Мені нелегко про це говорити, але йдеться про співпрацю з паном Крюґером."
+  },
+  {
+   "s": "A",
+   "de": "Was ist passiert?",
+   "tr": "Що сталося?"
+  },
+  {
+   "s": "B",
+   "de": "In den letzten Wochen sind mehrere seiner Aufgaben bei mir gelandet. Er sagt kurz vor der Deadline, dass er es nicht schafft.",
+   "tr": "Останніми тижнями кілька його завдань опинилися на мені. Він просто перед дедлайном каже, що не встигає."
+  },
+  {
+   "s": "A",
+   "de": "Können Sie ein konkretes Beispiel nennen?",
+   "tr": "Можете навести конкретний приклад?"
+  },
+  {
+   "s": "B",
+   "de": "Der Bericht für den Kunden Hartmann. Er hat ihn mir am Donnerstagabend geschickt, abgeben mussten wir ihn Freitag früh.",
+   "tr": "Звіт для клієнта Гартмана. Він надіслав його мені в четвер увечері, а здати ми мали в п'ятницю вранці."
+  },
+  {
+   "s": "A",
+   "de": "Davon wusste ich nichts. Ich dachte, der Bericht kam von ihm.",
+   "tr": "Я про це не знав. Я думав, звіт був від нього."
+  },
+  {
+   "s": "B",
+   "de": "Genau das ist das Problem. Ich mache die Arbeit, aber nach außen sieht man das nicht. Und meine eigenen Projekte bleiben liegen.",
+   "tr": "Саме в цьому й проблема. Я роблю роботу, але збоку цього не видно. А мої власні проєкти стоять."
+  },
+  {
+   "s": "A",
+   "de": "Haben Sie schon direkt mit ihm darüber gesprochen?",
+   "tr": "Ви вже говорили з ним про це безпосередньо?"
+  },
+  {
+   "s": "B",
+   "de": "Einmal, aber er meinte nur, im Team helfe man sich eben. Grundsätzlich stimmt das ja, aber es darf keine Einbahnstraße sein.",
+   "tr": "Один раз, але він лише сказав, що в команді прийнято допомагати одне одному. У принципі це так, але це не має бути вулицею з одностороннім рухом."
+  },
+  {
+   "s": "A",
+   "de": "Da haben Sie völlig recht. Vielleicht ist er auch einfach überlastet. Er hat seit Kurzem zwei neue Kunden.",
+   "tr": "Тут ви цілком маєте рацію. Можливо, він просто перевантажений. Нещодавно в нього з'явилися два нові клієнти."
+  },
+  {
+   "s": "B",
+   "de": "Das kann sein. Dann sollte er das aber rechtzeitig sagen, damit wir gemeinsam planen können.",
+   "tr": "Може бути. Але тоді йому треба казати про це вчасно, щоб ми могли планувати разом."
+  },
+  {
+   "s": "A",
+   "de": "Ich schlage Folgendes vor: Wir führen eine wöchentliche Planungsrunde ein, in der jeder seine Aufgaben und Fristen offenlegt.",
+   "tr": "Я пропоную таке: запровадимо щотижневу планірку, на якій кожен відкрито розповість про свої завдання й терміни."
+  },
+  {
+   "s": "B",
+   "de": "Das finde ich gut. Dann wird sichtbar, wer woran arbeitet.",
+   "tr": "Як на мене, це добре. Тоді буде видно, хто над чим працює."
+  },
+  {
+   "s": "A",
+   "de": "Außerdem gilt ab sofort: Wenn jemand eine Aufgabe abgeben muss, läuft das über mich, nicht direkt zwischen Ihnen.",
+   "tr": "Крім того, відтепер діє правило: якщо комусь треба передати завдання, це йде через мене, а не безпосередньо між вами."
+  },
+  {
+   "s": "B",
+   "de": "Das würde mich wirklich entlasten. Sprechen Sie auch mit Herrn Krüger?",
+   "tr": "Це справді зняло б із мене навантаження. Ви поговорите й із паном Крюґером?"
+  },
+  {
+   "s": "A",
+   "de": "Ja, heute Nachmittag. Ich werde es sachlich ansprechen, ohne Schuldzuweisungen. Wäre es für Sie in Ordnung, wenn wir danach zu dritt reden?",
+   "tr": "Так, сьогодні після обіду. Я обговорю це по-діловому, без звинувачень. Ви не проти, якщо потім ми поговоримо втрьох?"
+  },
+  {
+   "s": "B",
+   "de": "Ja, das ist mir sogar lieber. Ich möchte ja keinen Streit, sondern eine faire Lösung.",
+   "tr": "Так, мені так навіть краще. Я ж не хочу сварки, а хочу справедливого рішення."
+  },
+  {
+   "s": "A",
+   "de": "Das sehe ich genauso. Und danke, dass Sie das offen angesprochen haben. Den Bericht für Hartmann rechne ich Ihnen natürlich an.",
+   "tr": "Я вважаю так само. І дякую, що сказали про це відкрито. Звіт для Гартмана я, звісно, зарахую вам."
+  },
+  {
+   "s": "B",
+   "de": "Danke, das bedeutet mir viel.",
+   "tr": "Дякую, це багато для мене означає."
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/b2-03.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "jurvetson",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "source": "https://www.flickr.com/photos/44124348109@N01/14371888987",
+  "site": "Flickr"
+ }
+}

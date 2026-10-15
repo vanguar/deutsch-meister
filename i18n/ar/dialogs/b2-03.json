@@ -1,0 +1,131 @@
+{
+ "id": "b2-03",
+ "level": "b2",
+ "n": 3,
+ "emoji": "🤝",
+ "title": "Ein Konflikt im Team",
+ "titleTr": "خلاف داخل الفريق",
+ "situation": "ترى يانا أن زميلها يحمّلها عمله باستمرار. تناقش المشكلة مع مديرها، ويبحثان معًا عن حل عادل.",
+ "speakers": {
+  "A": {
+   "name": "Herr Albrecht",
+   "g": "m"
+  },
+  "B": {
+   "name": "Jana",
+   "g": "f"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Frau Novak, Sie wollten mich unter vier Augen sprechen. Worum geht es?",
+   "tr": "سيدة نوفاك، أردتِ التحدث معي على انفراد. ما الموضوع؟"
+  },
+  {
+   "s": "B",
+   "de": "Es fällt mir nicht leicht, aber es geht um die Zusammenarbeit mit Herrn Krüger.",
+   "tr": "ليس الأمر سهلًا عليّ، لكنه يتعلق بالتعاون مع السيد كروغر."
+  },
+  {
+   "s": "A",
+   "de": "Was ist passiert?",
+   "tr": "ماذا حدث؟"
+  },
+  {
+   "s": "B",
+   "de": "In den letzten Wochen sind mehrere seiner Aufgaben bei mir gelandet. Er sagt kurz vor der Deadline, dass er es nicht schafft.",
+   "tr": "في الأسابيع الأخيرة انتقلت إليّ عدة مهام من مهامه. يقول قبل الموعد النهائي بقليل إنه لن يتمكن من إنجازها."
+  },
+  {
+   "s": "A",
+   "de": "Können Sie ein konkretes Beispiel nennen?",
+   "tr": "هل يمكنك أن تذكري مثالًا محددًا؟"
+  },
+  {
+   "s": "B",
+   "de": "Der Bericht für den Kunden Hartmann. Er hat ihn mir am Donnerstagabend geschickt, abgeben mussten wir ihn Freitag früh.",
+   "tr": "تقرير الزبون هارتمان. أرسله إليّ مساء الخميس، وكان علينا تسليمه صباح الجمعة."
+  },
+  {
+   "s": "A",
+   "de": "Davon wusste ich nichts. Ich dachte, der Bericht kam von ihm.",
+   "tr": "لم أكن أعلم بذلك. ظننت أن التقرير من إعداده."
+  },
+  {
+   "s": "B",
+   "de": "Genau das ist das Problem. Ich mache die Arbeit, aber nach außen sieht man das nicht. Und meine eigenen Projekte bleiben liegen.",
+   "tr": "هذه هي المشكلة بالضبط. أنا أقوم بالعمل، لكن هذا لا يظهر للآخرين. ومشاريعي الخاصة تتأخر."
+  },
+  {
+   "s": "A",
+   "de": "Haben Sie schon direkt mit ihm darüber gesprochen?",
+   "tr": "هل تحدثتِ معه في الأمر مباشرة؟"
+  },
+  {
+   "s": "B",
+   "de": "Einmal, aber er meinte nur, im Team helfe man sich eben. Grundsätzlich stimmt das ja, aber es darf keine Einbahnstraße sein.",
+   "tr": "مرة واحدة، لكنه قال فقط إن أعضاء الفريق يساعد بعضهم بعضًا. هذا صحيح من حيث المبدأ، لكن لا يجوز أن يكون طريقًا باتجاه واحد."
+  },
+  {
+   "s": "A",
+   "de": "Da haben Sie völlig recht. Vielleicht ist er auch einfach überlastet. Er hat seit Kurzem zwei neue Kunden.",
+   "tr": "أنتِ محقة تمامًا. ربما هو ببساطة مثقل بالعمل. فقد صار لديه مؤخرًا زبونان جديدان."
+  },
+  {
+   "s": "B",
+   "de": "Das kann sein. Dann sollte er das aber rechtzeitig sagen, damit wir gemeinsam planen können.",
+   "tr": "قد يكون ذلك. لكن عليه حينها أن يقول ذلك في الوقت المناسب حتى نخطط معًا."
+  },
+  {
+   "s": "A",
+   "de": "Ich schlage Folgendes vor: Wir führen eine wöchentliche Planungsrunde ein, in der jeder seine Aufgaben und Fristen offenlegt.",
+   "tr": "أقترح ما يلي: نبدأ اجتماعًا أسبوعيًا للتخطيط يعرض فيه كل واحد مهامه ومواعيدها النهائية."
+  },
+  {
+   "s": "B",
+   "de": "Das finde ich gut. Dann wird sichtbar, wer woran arbeitet.",
+   "tr": "أرى ذلك جيدًا. عندها سيتضح من يعمل على ماذا."
+  },
+  {
+   "s": "A",
+   "de": "Außerdem gilt ab sofort: Wenn jemand eine Aufgabe abgeben muss, läuft das über mich, nicht direkt zwischen Ihnen.",
+   "tr": "إضافة إلى ذلك، يسري من الآن: إذا اضطر أحد إلى التخلي عن مهمة، فذلك يتم عن طريقي وليس بينكما مباشرة."
+  },
+  {
+   "s": "B",
+   "de": "Das würde mich wirklich entlasten. Sprechen Sie auch mit Herrn Krüger?",
+   "tr": "سيخفف هذا عني كثيرًا حقًا. هل ستتحدث مع السيد كروغر أيضًا؟"
+  },
+  {
+   "s": "A",
+   "de": "Ja, heute Nachmittag. Ich werde es sachlich ansprechen, ohne Schuldzuweisungen. Wäre es für Sie in Ordnung, wenn wir danach zu dritt reden?",
+   "tr": "نعم، بعد ظهر اليوم. سأطرح الأمر بموضوعية ودون توجيه اتهامات. هل يناسبك أن نتحدث بعد ذلك نحن الثلاثة؟"
+  },
+  {
+   "s": "B",
+   "de": "Ja, das ist mir sogar lieber. Ich möchte ja keinen Streit, sondern eine faire Lösung.",
+   "tr": "نعم، بل أفضّل ذلك. فأنا لا أريد خلافًا، بل حلًا عادلًا."
+  },
+  {
+   "s": "A",
+   "de": "Das sehe ich genauso. Und danke, dass Sie das offen angesprochen haben. Den Bericht für Hartmann rechne ich Ihnen natürlich an.",
+   "tr": "أرى الأمر كذلك. وشكرًا لأنك طرحتِ الموضوع بصراحة. وسأحتسب تقرير هارتمان لك بالطبع."
+  },
+  {
+   "s": "B",
+   "de": "Danke, das bedeutet mir viel.",
+   "tr": "شكرًا، هذا يعني لي الكثير."
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/b2-03.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "jurvetson",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "source": "https://www.flickr.com/photos/44124348109@N01/14371888987",
+  "site": "Flickr"
+ }
+}

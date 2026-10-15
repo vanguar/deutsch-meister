@@ -2,7 +2,8 @@
  "levels": [
   "a1",
   "a2",
-  "b1"
+  "b1",
+  "b2"
  ],
  "items": [
   {
@@ -451,6 +452,156 @@
    "speakers": "Mila · Verkäufer",
    "img": {
     "thumb": "data/dialogs/img/b1-10-t.jpg",
+    "tw": 320,
+    "th": 180
+   }
+  },
+  {
+   "id": "b2-01",
+   "level": "b2",
+   "n": 1,
+   "emoji": "💶",
+   "title": "Die Gehaltsverhandlung",
+   "titleTr": "التفاوض على الراتب",
+   "lines": 21,
+   "speakers": "Herr Vogel · Oleksij",
+   "img": {
+    "thumb": "data/dialogs/img/b2-01-t.jpg",
+    "tw": 320,
+    "th": 180
+   }
+  },
+  {
+   "id": "b2-02",
+   "level": "b2",
+   "n": 2,
+   "emoji": "🧾",
+   "title": "Die Nebenkostenabrechnung",
+   "titleTr": "كشف التكاليف الإضافية للسكن",
+   "lines": 20,
+   "speakers": "Kateryna · Hausverwalter",
+   "img": {
+    "thumb": "data/dialogs/img/b2-02-t.jpg",
+    "tw": 320,
+    "th": 180
+   }
+  },
+  {
+   "id": "b2-03",
+   "level": "b2",
+   "n": 3,
+   "emoji": "🤝",
+   "title": "Ein Konflikt im Team",
+   "titleTr": "خلاف داخل الفريق",
+   "lines": 20,
+   "speakers": "Herr Albrecht · Jana",
+   "img": {
+    "thumb": "data/dialogs/img/b2-03-t.jpg",
+    "tw": 320,
+    "th": 180
+   }
+  },
+  {
+   "id": "b2-04",
+   "level": "b2",
+   "n": 4,
+   "emoji": "🎓",
+   "title": "Die Anerkennung des Abschlusses",
+   "titleTr": "الاعتراف بالشهادة",
+   "lines": 20,
+   "speakers": "Beraterin · Serhij",
+   "img": {
+    "thumb": "data/dialogs/img/b2-04-t.jpg",
+    "tw": 320,
+    "th": 180
+   }
+  },
+  {
+   "id": "b2-05",
+   "level": "b2",
+   "n": 5,
+   "emoji": "🏡",
+   "title": "Homeoffice verhandeln",
+   "titleTr": "التفاوض على العمل من المنزل",
+   "lines": 20,
+   "speakers": "Frau Berger · Mykola",
+   "img": {
+    "thumb": "data/dialogs/img/b2-05-t.jpg",
+    "tw": 320,
+    "th": 180
+   }
+  },
+  {
+   "id": "b2-06",
+   "level": "b2",
+   "n": 6,
+   "emoji": "🚗",
+   "title": "Ein Schaden für die Versicherung",
+   "titleTr": "بلاغ عن ضرر لشركة التأمين",
+   "lines": 21,
+   "speakers": "Versicherungsberater · Oksana",
+   "img": {
+    "thumb": "data/dialogs/img/b2-06-t.jpg",
+    "tw": 320,
+    "th": 180
+   }
+  },
+  {
+   "id": "b2-07",
+   "level": "b2",
+   "n": 7,
+   "emoji": "🧭",
+   "title": "Eine Ausbildung mit 38?",
+   "titleTr": "تعلّم مهنة في سن الثامنة والثلاثين؟",
+   "lines": 20,
+   "speakers": "Berufsberater · Natalija",
+   "img": {
+    "thumb": "data/dialogs/img/b2-07-t.jpg",
+    "tw": 320,
+    "th": 180
+   }
+  },
+  {
+   "id": "b2-08",
+   "level": "b2",
+   "n": 8,
+   "emoji": "🏫",
+   "title": "Das Elterngespräch",
+   "titleTr": "لقاء الأهل مع المعلّمة",
+   "lines": 21,
+   "speakers": "Frau Weiß · Iwan",
+   "img": {
+    "thumb": "data/dialogs/img/b2-08-t.jpg",
+    "tw": 320,
+    "th": 180
+   }
+  },
+  {
+   "id": "b2-09",
+   "level": "b2",
+   "n": 9,
+   "emoji": "🚲",
+   "title": "Auto oder Fahrrad?",
+   "titleTr": "السيارة أم الدراجة؟",
+   "lines": 21,
+   "speakers": "Paul · Lea",
+   "img": {
+    "thumb": "data/dialogs/img/b2-09-t.jpg",
+    "tw": 320,
+    "th": 180
+   }
+  },
+  {
+   "id": "b2-10",
+   "level": "b2",
+   "n": 10,
+   "emoji": "🏨",
+   "title": "Reklamation im Hotel",
+   "titleTr": "شكوى في الفندق",
+   "lines": 22,
+   "speakers": "Rezeptionistin · Herr Schmidt",
+   "img": {
+    "thumb": "data/dialogs/img/b2-10-t.jpg",
     "tw": 320,
     "th": 180
    }

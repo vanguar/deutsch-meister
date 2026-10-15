@@ -1,0 +1,136 @@
+{
+ "id": "b2-09",
+ "level": "b2",
+ "n": 9,
+ "emoji": "🚲",
+ "title": "Auto oder Fahrrad?",
+ "titleTr": "السيارة أم الدراجة؟",
+ "situation": "يتجادل الصديقان باول وليا حول الحاجة إلى سيارة خاصة في المدينة. يعرض كل منهما حججه، ويصلان في النهاية إلى أرضية مشتركة.",
+ "speakers": {
+  "A": {
+   "name": "Paul",
+   "g": "m"
+  },
+  "B": {
+   "name": "Lea",
+   "g": "f"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Stell dir vor, ich überlege, mir ein Auto zu kaufen.",
+   "tr": "تخيّلي، أفكّر في شراء سيارة."
+  },
+  {
+   "s": "B",
+   "de": "Echt jetzt? Du wohnst doch mitten in der Stadt. Wozu brauchst du ein Auto?",
+   "tr": "حقًا؟ أنت تسكن في وسط المدينة. لماذا تحتاج إلى سيارة؟"
+  },
+  {
+   "s": "A",
+   "de": "Für den Einkauf, für Ausflüge am Wochenende und vor allem für die Besuche bei meinen Eltern auf dem Land.",
+   "tr": "للتسوّق، وللرحلات في عطلة نهاية الأسبوع، وقبل كل شيء لزيارة والديّ في الريف."
+  },
+  {
+   "s": "B",
+   "de": "Für den Einkauf reicht doch ein Lastenrad. Und zu deinen Eltern fährt ein Regionalzug.",
+   "tr": "للتسوّق تكفي دراجة شحن. وإلى والديك يذهب قطار إقليمي."
+  },
+  {
+   "s": "A",
+   "de": "Der fährt nur alle zwei Stunden, und vom Bahnhof sind es noch zwölf Kilometer. Ohne Auto bin ich da aufgeschmissen.",
+   "tr": "يمر كل ساعتين فقط، ومن المحطة يبقى اثنا عشر كيلومترًا. بدون سيارة أكون عاجزًا هناك."
+  },
+  {
+   "s": "B",
+   "de": "Okay, auf dem Land ist das ein echtes Argument. Aber wie oft fährst du denn zu deinen Eltern?",
+   "tr": "حسنًا، في الريف هذه حجة حقيقية. لكن كم مرة تزور والديك؟"
+  },
+  {
+   "s": "A",
+   "de": "Etwa zweimal im Monat.",
+   "tr": "حوالي مرتين في الشهر."
+  },
+  {
+   "s": "B",
+   "de": "Dann rechne mal nach: Versicherung, Steuer, Reparaturen, Benzin, Parkplatz. Das sind locker dreihundert Euro im Monat.",
+   "tr": "إذن احسب: التأمين والضريبة والإصلاحات والوقود والموقف. هذا يعادل بسهولة ثلاثمئة يورو في الشهر."
+  },
+  {
+   "s": "A",
+   "de": "So viel? Ich hatte mit vielleicht hundertfünfzig gerechnet.",
+   "tr": "بهذا القدر؟ كنت أحسب نحو مئة وخمسين."
+  },
+  {
+   "s": "B",
+   "de": "Das unterschätzen fast alle. Dazu kommt der Wertverlust. Für das Geld könntest du dir oft ein Carsharing-Auto leihen.",
+   "tr": "يستهين بذلك الجميع تقريبًا. ويضاف إليه انخفاض قيمة السيارة. بهذا المال يمكنك استئجار سيارة مشتركة مرات كثيرة."
+  },
+  {
+   "s": "A",
+   "de": "Carsharing ist am Wochenende oft ausgebucht. Und ich will spontan sein.",
+   "tr": "السيارات المشتركة غالبًا ما تكون محجوزة بالكامل في عطلة نهاية الأسبوع. وأنا أريد أن أتنقّل متى شئت."
+  },
+  {
+   "s": "B",
+   "de": "Das verstehe ich. Trotzdem: In der Stadt stehst du mit dem Auto im Stau und suchst ewig einen Parkplatz.",
+   "tr": "أفهم ذلك. ومع ذلك، ستقف بالسيارة في المدينة في الزحام وتبحث عن موقف إلى ما لا نهاية."
+  },
+  {
+   "s": "A",
+   "de": "Da hast du recht. Zur Arbeit würde ich auch weiterhin mit dem Rad fahren.",
+   "tr": "معك حق في ذلك. إلى العمل سأستمر في الذهاب بالدراجة."
+  },
+  {
+   "s": "B",
+   "de": "Und was ist mit der Umwelt? Wenn jeder so denkt, wird die Stadt nie sauberer.",
+   "tr": "وماذا عن البيئة؟ إذا فكّر الجميع هكذا فلن تصبح المدينة أنظف أبدًا."
+  },
+  {
+   "s": "A",
+   "de": "Das stimmt schon. Aber es ist auch eine Frage der Infrastruktur. Auf dem Land fehlen einfach Alternativen.",
+   "tr": "هذا صحيح. لكنها أيضًا مسألة بنية تحتية. فالبدائل غير موجودة في الريف ببساطة."
+  },
+  {
+   "s": "B",
+   "de": "Da stimme ich dir zu. Die Politik müsste den Nahverkehr dort viel stärker ausbauen.",
+   "tr": "أوافقك على ذلك. على السياسيين أن يطوّروا النقل العام هناك بقوة أكبر بكثير."
+  },
+  {
+   "s": "A",
+   "de": "Was hältst du von einem Kompromiss: Ich kaufe kein eigenes Auto, sondern teile eins mit meinem Bruder?",
+   "tr": "ما رأيك في حل وسط: لا أشتري سيارة خاصة بي، بل أتشارك سيارة مع أخي؟"
+  },
+  {
+   "s": "B",
+   "de": "Das klingt vernünftig. Er wohnt doch sowieso in der Nähe deiner Eltern, oder?",
+   "tr": "يبدو هذا معقولًا. فهو يسكن على أي حال قرب والديك، أليس كذلك؟"
+  },
+  {
+   "s": "A",
+   "de": "Genau. Dann nehme ich den Zug bis zu ihm und fahre von dort mit dem Auto weiter.",
+   "tr": "بالضبط. عندها أركب القطار حتى بيته، ومن هناك أكمل الطريق بالسيارة."
+  },
+  {
+   "s": "B",
+   "de": "Siehst du, so sparst du Geld und musst trotzdem nicht auf Flexibilität verzichten.",
+   "tr": "أرأيت؟ هكذا توفّر المال ولا تتخلى مع ذلك عن المرونة."
+  },
+  {
+   "s": "A",
+   "de": "Na gut, du hast mich überzeugt. Zumindest fast.",
+   "tr": "حسنًا، لقد أقنعتني. على الأقل تقريبًا."
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/b2-09.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "FaceMePLS",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "source": "https://www.flickr.com/photos/38891071@N00/14511736635",
+  "site": "Flickr"
+ }
+}

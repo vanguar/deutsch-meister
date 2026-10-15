@@ -1,0 +1,131 @@
+{
+ "id": "b2-02",
+ "level": "b2",
+ "n": 2,
+ "emoji": "🧾",
+ "title": "Die Nebenkostenabrechnung",
+ "titleTr": "كشف التكاليف الإضافية للسكن",
+ "situation": "تلقّت كاتيرينا كشف التكاليف الإضافية السنوي وعليها دفع 640 يورو إضافية. تتصل بشركة إدارة العقار، وتشكك في الحساب، وتتفق على حل.",
+ "speakers": {
+  "A": {
+   "name": "Kateryna",
+   "g": "f"
+  },
+  "B": {
+   "name": "Hausverwalter",
+   "g": "m"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Guten Tag, Kateryna Shevchuk hier, Mieterin in der Bergstraße zwanzig. Es geht um meine Nebenkostenabrechnung.",
+   "tr": "مرحبًا، معك كاتيرينا شيفتشوك، مستأجرة في شارع بيرغ شتراسه رقم عشرين. أتصل بخصوص كشف التكاليف الإضافية."
+  },
+  {
+   "s": "B",
+   "de": "Guten Tag, Frau Shevchuk. Was kann ich für Sie tun?",
+   "tr": "مرحبًا يا سيدة شيفتشوك. كيف يمكنني مساعدتك؟"
+  },
+  {
+   "s": "A",
+   "de": "Ich soll sechshundertvierzig Euro nachzahlen. Das finde ich sehr viel, vor allem weil wir nur zu zweit in einer kleinen Wohnung wohnen.",
+   "tr": "مطلوب مني دفع ستمئة وأربعين يورو إضافية. أرى أن هذا كثير جدًا، خاصة أننا شخصان فقط في شقة صغيرة."
+  },
+  {
+   "s": "B",
+   "de": "Ich verstehe Ihren Ärger. Die Heizkosten sind im letzten Jahr leider für alle Mieter stark gestiegen.",
+   "tr": "أتفهّم انزعاجك. للأسف ارتفعت تكاليف التدفئة كثيرًا العام الماضي على جميع المستأجرين."
+  },
+  {
+   "s": "A",
+   "de": "Das ist mir klar. Aber mir ist aufgefallen, dass auch die Kosten für die Gartenpflege fast doppelt so hoch sind wie im Vorjahr.",
+   "tr": "هذا واضح لي. لكني لاحظت أن تكاليف العناية بالحديقة أيضًا تقارب ضعف ما كانت عليه في العام السابق."
+  },
+  {
+   "s": "B",
+   "de": "Moment, ich schaue nach… Ja, da wurden zwei alte Bäume gefällt.",
+   "tr": "لحظة، سأتحقق… نعم، قُطعت هناك شجرتان قديمتان."
+  },
+  {
+   "s": "A",
+   "de": "Soweit ich weiß, darf man solche einmaligen Kosten aber nicht auf die Mieter umlegen.",
+   "tr": "على حد علمي، لا يجوز تحميل المستأجرين مثل هذه التكاليف التي تحدث مرة واحدة."
+  },
+  {
+   "s": "B",
+   "de": "Das hängt vom Einzelfall ab. Wenn ein Baum krank war und weg musste, gilt das oft als laufende Gartenpflege.",
+   "tr": "هذا يعتمد على كل حالة. إذا كانت الشجرة مريضة وكان لا بد من إزالتها، فغالبًا ما يُعدّ ذلك من العناية الدورية بالحديقة."
+  },
+  {
+   "s": "A",
+   "de": "Dann möchte ich gern die Belege einsehen. Dazu habe ich als Mieterin doch das Recht, oder?",
+   "tr": "إذن أودّ الاطلاع على الفواتير والمستندات. لي الحق في ذلك بصفتي مستأجرة، أليس كذلك؟"
+  },
+  {
+   "s": "B",
+   "de": "Natürlich. Sie können einen Termin in unserem Büro machen oder ich schicke Ihnen Kopien per E-Mail.",
+   "tr": "بالطبع. يمكنك حجز موعد في مكتبنا، أو أرسل لك نسخًا بالبريد الإلكتروني."
+  },
+  {
+   "s": "A",
+   "de": "Per E-Mail wäre mir lieber. Muss ich die Nachzahlung trotzdem schon bis Ende des Monats überweisen?",
+   "tr": "أفضّل البريد الإلكتروني. هل ما زال عليّ تحويل المبلغ الإضافي قبل نهاية الشهر رغم ذلك؟"
+  },
+  {
+   "s": "B",
+   "de": "Solange Sie die Belege prüfen, können Sie mit der Zahlung warten. Für den unstrittigen Teil wäre eine Zahlung aber fair.",
+   "tr": "يمكنك تأجيل الدفع ما دمت تراجعين المستندات. لكن من العدل دفع الجزء غير المتنازع عليه."
+  },
+  {
+   "s": "A",
+   "de": "Das ist in Ordnung. Ehrlich gesagt kann ich so eine Summe aber nicht auf einmal bezahlen.",
+   "tr": "لا بأس. لكن بصراحة لا أستطيع دفع مبلغ كهذا دفعة واحدة."
+  },
+  {
+   "s": "B",
+   "de": "Wir können eine Ratenzahlung vereinbaren, zum Beispiel über vier Monate.",
+   "tr": "يمكننا الاتفاق على التقسيط، مثلًا على أربعة أشهر."
+  },
+  {
+   "s": "A",
+   "de": "Das würde mir sehr helfen. Und damit das nächstes Jahr nicht wieder passiert: Kann man die monatliche Vorauszahlung erhöhen?",
+   "tr": "سيساعدني ذلك كثيرًا. وحتى لا يتكرر هذا العام القادم: هل يمكن رفع الدفعة الشهرية المسبقة؟"
+  },
+  {
+   "s": "B",
+   "de": "Das passen wir ohnehin an. Ab Januar würden Sie fünfzig Euro mehr im Monat zahlen.",
+   "tr": "سنعدّلها على أي حال. ابتداءً من يناير ستدفعين خمسين يورو إضافية شهريًا."
+  },
+  {
+   "s": "A",
+   "de": "Gut. Gibt es irgendetwas, womit ich selbst Heizkosten sparen kann?",
+   "tr": "حسنًا. هل هناك ما يمكنني فعله بنفسي لتوفير تكاليف التدفئة؟"
+  },
+  {
+   "s": "B",
+   "de": "Kurz und kräftig lüften statt die Fenster gekippt zu lassen, und nachts die Temperatur etwas senken. Das macht schon viel aus.",
+   "tr": "التهوية القصيرة والقوية بدل ترك النوافذ مواربة، وخفض الحرارة قليلًا في الليل. هذا يُحدث فرقًا كبيرًا."
+  },
+  {
+   "s": "A",
+   "de": "Danke für den Tipp. Dann warte ich auf Ihre E-Mail mit den Belegen und dem Ratenplan.",
+   "tr": "شكرًا على النصيحة. إذن سأنتظر رسالتك مع المستندات وخطة التقسيط."
+  },
+  {
+   "s": "B",
+   "de": "Sie bekommen alles bis Mittwoch. Vielen Dank für Ihr Verständnis, Frau Shevchuk.",
+   "tr": "ستصلك جميعها قبل يوم الأربعاء. شكرًا جزيلًا على تفهّمك يا سيدة شيفتشوك."
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/b2-02.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "Dave Dugdale",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+  "source": "https://www.flickr.com/photos/37387065@N05/5099605109",
+  "site": "Flickr"
+ }
+}

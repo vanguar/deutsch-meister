@@ -47,7 +47,7 @@ ok(await c.ev(`!document.getElementById('dlgTone').hidden`), 'кнопка «�
 console.log('    подпись: ' + await c.ev(`document.getElementById('dlgVoiceNote').textContent.trim()`));
 
 await c.ev(`document.getElementById('dlgPlay').click()`);
-ok(await waitFor(`typeof Dialogs !== 'undefined' && Dialogs.playing === null && window.__src.length > 0`, 120000), 'диалог доигран');
+ok(await waitFor(`typeof Dialogs !== 'undefined' && Dialogs.playing === null && window.__src.length > 0`, 400000), 'диалог доигран');
 const src = JSON.parse(await c.ev(`JSON.stringify(window.__src)`));
 const proxy = await c.ev(`window.__proxy`);
 ok(src.length === n, `сыграно реплик: ${src.length} из ${n}`);

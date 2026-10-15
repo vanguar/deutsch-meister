@@ -1,0 +1,131 @@
+{
+ "id": "b2-03",
+ "level": "b2",
+ "n": 3,
+ "emoji": "🤝",
+ "title": "Ein Konflikt im Team",
+ "titleTr": "Конфликт в команде",
+ "situation": "Яна считает, что коллега постоянно перекладывает на неё свою работу. Она обсуждает проблему с руководителем, и вместе они ищут справедливое решение.",
+ "speakers": {
+  "A": {
+   "name": "Herr Albrecht",
+   "g": "m"
+  },
+  "B": {
+   "name": "Jana",
+   "g": "f"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Frau Novak, Sie wollten mich unter vier Augen sprechen. Worum geht es?",
+   "tr": "Госпожа Новак, вы хотели поговорить со мной с глазу на глаз. О чём речь?"
+  },
+  {
+   "s": "B",
+   "de": "Es fällt mir nicht leicht, aber es geht um die Zusammenarbeit mit Herrn Krüger.",
+   "tr": "Мне нелегко об этом говорить, но речь о сотрудничестве с господином Крюгером."
+  },
+  {
+   "s": "A",
+   "de": "Was ist passiert?",
+   "tr": "Что случилось?"
+  },
+  {
+   "s": "B",
+   "de": "In den letzten Wochen sind mehrere seiner Aufgaben bei mir gelandet. Er sagt kurz vor der Deadline, dass er es nicht schafft.",
+   "tr": "В последние недели несколько его задач оказались на мне. Он прямо перед дедлайном говорит, что не успевает."
+  },
+  {
+   "s": "A",
+   "de": "Können Sie ein konkretes Beispiel nennen?",
+   "tr": "Можете привести конкретный пример?"
+  },
+  {
+   "s": "B",
+   "de": "Der Bericht für den Kunden Hartmann. Er hat ihn mir am Donnerstagabend geschickt, abgeben mussten wir ihn Freitag früh.",
+   "tr": "Отчёт для клиента Хартмана. Он прислал его мне в четверг вечером, а сдать мы должны были в пятницу утром."
+  },
+  {
+   "s": "A",
+   "de": "Davon wusste ich nichts. Ich dachte, der Bericht kam von ihm.",
+   "tr": "Я об этом не знал. Я думал, отчёт был от него."
+  },
+  {
+   "s": "B",
+   "de": "Genau das ist das Problem. Ich mache die Arbeit, aber nach außen sieht man das nicht. Und meine eigenen Projekte bleiben liegen.",
+   "tr": "Именно в этом и проблема. Я делаю работу, но со стороны этого не видно. А мои собственные проекты стоят."
+  },
+  {
+   "s": "A",
+   "de": "Haben Sie schon direkt mit ihm darüber gesprochen?",
+   "tr": "Вы уже говорили с ним об этом напрямую?"
+  },
+  {
+   "s": "B",
+   "de": "Einmal, aber er meinte nur, im Team helfe man sich eben. Grundsätzlich stimmt das ja, aber es darf keine Einbahnstraße sein.",
+   "tr": "Один раз, но он только сказал, что в команде принято помогать друг другу. В принципе это так, но это не должно быть улицей с односторонним движением."
+  },
+  {
+   "s": "A",
+   "de": "Da haben Sie völlig recht. Vielleicht ist er auch einfach überlastet. Er hat seit Kurzem zwei neue Kunden.",
+   "tr": "Здесь вы совершенно правы. Возможно, он просто перегружен. У него недавно появились два новых клиента."
+  },
+  {
+   "s": "B",
+   "de": "Das kann sein. Dann sollte er das aber rechtzeitig sagen, damit wir gemeinsam planen können.",
+   "tr": "Может быть. Но тогда ему нужно говорить об этом вовремя, чтобы мы могли планировать вместе."
+  },
+  {
+   "s": "A",
+   "de": "Ich schlage Folgendes vor: Wir führen eine wöchentliche Planungsrunde ein, in der jeder seine Aufgaben und Fristen offenlegt.",
+   "tr": "Я предлагаю следующее: введём еженедельную планёрку, на которой каждый открыто расскажет о своих задачах и сроках."
+  },
+  {
+   "s": "B",
+   "de": "Das finde ich gut. Dann wird sichtbar, wer woran arbeitet.",
+   "tr": "По-моему, это хорошо. Тогда будет видно, кто над чем работает."
+  },
+  {
+   "s": "A",
+   "de": "Außerdem gilt ab sofort: Wenn jemand eine Aufgabe abgeben muss, läuft das über mich, nicht direkt zwischen Ihnen.",
+   "tr": "Кроме того, с этого момента действует правило: если кому-то нужно передать задачу, это идёт через меня, а не напрямую между вами."
+  },
+  {
+   "s": "B",
+   "de": "Das würde mich wirklich entlasten. Sprechen Sie auch mit Herrn Krüger?",
+   "tr": "Это бы действительно сняло с меня нагрузку. Вы поговорите и с господином Крюгером?"
+  },
+  {
+   "s": "A",
+   "de": "Ja, heute Nachmittag. Ich werde es sachlich ansprechen, ohne Schuldzuweisungen. Wäre es für Sie in Ordnung, wenn wir danach zu dritt reden?",
+   "tr": "Да, сегодня после обеда. Я обсужу это по-деловому, без обвинений. Вы не против, если потом мы поговорим втроём?"
+  },
+  {
+   "s": "B",
+   "de": "Ja, das ist mir sogar lieber. Ich möchte ja keinen Streit, sondern eine faire Lösung.",
+   "tr": "Да, мне так даже лучше. Я ведь не хочу ссоры, а хочу справедливого решения."
+  },
+  {
+   "s": "A",
+   "de": "Das sehe ich genauso. Und danke, dass Sie das offen angesprochen haben. Den Bericht für Hartmann rechne ich Ihnen natürlich an.",
+   "tr": "Я считаю так же. И спасибо, что сказали об этом открыто. Отчёт для Хартмана я, конечно, запишу на ваш счёт."
+  },
+  {
+   "s": "B",
+   "de": "Danke, das bedeutet mir viel.",
+   "tr": "Спасибо, это много для меня значит."
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/b2-03.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "jurvetson",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "source": "https://www.flickr.com/photos/44124348109@N01/14371888987",
+  "site": "Flickr"
+ }
+}

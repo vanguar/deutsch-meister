@@ -1,0 +1,131 @@
+{
+ "id": "b2-02",
+ "level": "b2",
+ "n": 2,
+ "emoji": "🧾",
+ "title": "Die Nebenkostenabrechnung",
+ "titleTr": "Расчёт коммунальных платежей",
+ "situation": "Катерина получила годовой расчёт коммунальных платежей с доплатой 640 евро. Она звонит в управляющую компанию, сомневается в расчёте и договаривается о решении.",
+ "speakers": {
+  "A": {
+   "name": "Kateryna",
+   "g": "f"
+  },
+  "B": {
+   "name": "Hausverwalter",
+   "g": "m"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Guten Tag, Kateryna Shevchuk hier, Mieterin in der Bergstraße zwanzig. Es geht um meine Nebenkostenabrechnung.",
+   "tr": "Добрый день, это Катерина Шевчук, арендатор на Бергштрассе, двадцать. Я по поводу расчёта коммунальных платежей."
+  },
+  {
+   "s": "B",
+   "de": "Guten Tag, Frau Shevchuk. Was kann ich für Sie tun?",
+   "tr": "Добрый день, госпожа Шевчук. Чем могу помочь?"
+  },
+  {
+   "s": "A",
+   "de": "Ich soll sechshundertvierzig Euro nachzahlen. Das finde ich sehr viel, vor allem weil wir nur zu zweit in einer kleinen Wohnung wohnen.",
+   "tr": "Мне нужно доплатить шестьсот сорок евро. Мне кажется, это очень много, тем более что мы живём вдвоём в маленькой квартире."
+  },
+  {
+   "s": "B",
+   "de": "Ich verstehe Ihren Ärger. Die Heizkosten sind im letzten Jahr leider für alle Mieter stark gestiegen.",
+   "tr": "Я понимаю ваше недовольство. К сожалению, расходы на отопление в прошлом году сильно выросли у всех жильцов."
+  },
+  {
+   "s": "A",
+   "de": "Das ist mir klar. Aber mir ist aufgefallen, dass auch die Kosten für die Gartenpflege fast doppelt so hoch sind wie im Vorjahr.",
+   "tr": "Это мне понятно. Но я заметила, что и расходы на уход за садом почти вдвое выше, чем в прошлом году."
+  },
+  {
+   "s": "B",
+   "de": "Moment, ich schaue nach… Ja, da wurden zwei alte Bäume gefällt.",
+   "tr": "Минутку, я посмотрю… Да, там спилили два старых дерева."
+  },
+  {
+   "s": "A",
+   "de": "Soweit ich weiß, darf man solche einmaligen Kosten aber nicht auf die Mieter umlegen.",
+   "tr": "Насколько я знаю, такие разовые расходы нельзя перекладывать на арендаторов."
+  },
+  {
+   "s": "B",
+   "de": "Das hängt vom Einzelfall ab. Wenn ein Baum krank war und weg musste, gilt das oft als laufende Gartenpflege.",
+   "tr": "Это зависит от конкретного случая. Если дерево было больным и его нужно было убрать, это часто считается текущим уходом за садом."
+  },
+  {
+   "s": "A",
+   "de": "Dann möchte ich gern die Belege einsehen. Dazu habe ich als Mieterin doch das Recht, oder?",
+   "tr": "Тогда я хотела бы посмотреть подтверждающие документы. У меня ведь как у арендатора есть на это право?"
+  },
+  {
+   "s": "B",
+   "de": "Natürlich. Sie können einen Termin in unserem Büro machen oder ich schicke Ihnen Kopien per E-Mail.",
+   "tr": "Конечно. Вы можете записаться к нам в офис, или я пришлю вам копии по электронной почте."
+  },
+  {
+   "s": "A",
+   "de": "Per E-Mail wäre mir lieber. Muss ich die Nachzahlung trotzdem schon bis Ende des Monats überweisen?",
+   "tr": "Мне удобнее по электронной почте. Мне всё равно нужно перевести доплату до конца месяца?"
+  },
+  {
+   "s": "B",
+   "de": "Solange Sie die Belege prüfen, können Sie mit der Zahlung warten. Für den unstrittigen Teil wäre eine Zahlung aber fair.",
+   "tr": "Пока вы проверяете документы, с оплатой можно подождать. Но неоспариваемую часть было бы честно оплатить."
+  },
+  {
+   "s": "A",
+   "de": "Das ist in Ordnung. Ehrlich gesagt kann ich so eine Summe aber nicht auf einmal bezahlen.",
+   "tr": "Это нормально. Но, честно говоря, я не могу заплатить такую сумму сразу."
+  },
+  {
+   "s": "B",
+   "de": "Wir können eine Ratenzahlung vereinbaren, zum Beispiel über vier Monate.",
+   "tr": "Мы можем договориться о рассрочке, например на четыре месяца."
+  },
+  {
+   "s": "A",
+   "de": "Das würde mir sehr helfen. Und damit das nächstes Jahr nicht wieder passiert: Kann man die monatliche Vorauszahlung erhöhen?",
+   "tr": "Это бы мне очень помогло. И чтобы в следующем году такое не повторилось: можно ли повысить ежемесячный аванс?"
+  },
+  {
+   "s": "B",
+   "de": "Das passen wir ohnehin an. Ab Januar würden Sie fünfzig Euro mehr im Monat zahlen.",
+   "tr": "Мы и так её скорректируем. С января вы будете платить на пятьдесят евро в месяц больше."
+  },
+  {
+   "s": "A",
+   "de": "Gut. Gibt es irgendetwas, womit ich selbst Heizkosten sparen kann?",
+   "tr": "Хорошо. Могу ли я сама что-то сделать, чтобы сэкономить на отоплении?"
+  },
+  {
+   "s": "B",
+   "de": "Kurz und kräftig lüften statt die Fenster gekippt zu lassen, und nachts die Temperatur etwas senken. Das macht schon viel aus.",
+   "tr": "Проветривать коротко и интенсивно, а не держать окна приоткрытыми, и ночью немного снижать температуру. Это уже многое даёт."
+  },
+  {
+   "s": "A",
+   "de": "Danke für den Tipp. Dann warte ich auf Ihre E-Mail mit den Belegen und dem Ratenplan.",
+   "tr": "Спасибо за совет. Тогда я жду ваше письмо с документами и графиком рассрочки."
+  },
+  {
+   "s": "B",
+   "de": "Sie bekommen alles bis Mittwoch. Vielen Dank für Ihr Verständnis, Frau Shevchuk.",
+   "tr": "Вы получите всё до среды. Большое спасибо за понимание, госпожа Шевчук."
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/b2-02.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "Dave Dugdale",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+  "source": "https://www.flickr.com/photos/37387065@N05/5099605109",
+  "site": "Flickr"
+ }
+}

@@ -1,0 +1,136 @@
+{
+ "id": "b2-09",
+ "level": "b2",
+ "n": 9,
+ "emoji": "🚲",
+ "title": "Auto oder Fahrrad?",
+ "titleTr": "Машина или велосипед?",
+ "situation": "Друзья Пауль и Леа спорят, нужна ли в городе собственная машина. Каждый приводит аргументы, и в конце они находят общий знаменатель.",
+ "speakers": {
+  "A": {
+   "name": "Paul",
+   "g": "m"
+  },
+  "B": {
+   "name": "Lea",
+   "g": "f"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Stell dir vor, ich überlege, mir ein Auto zu kaufen.",
+   "tr": "Представь, я думаю купить машину."
+  },
+  {
+   "s": "B",
+   "de": "Echt jetzt? Du wohnst doch mitten in der Stadt. Wozu brauchst du ein Auto?",
+   "tr": "Серьёзно? Ты же живёшь в центре города. Зачем тебе машина?"
+  },
+  {
+   "s": "A",
+   "de": "Für den Einkauf, für Ausflüge am Wochenende und vor allem für die Besuche bei meinen Eltern auf dem Land.",
+   "tr": "Для покупок, для поездок на выходных и прежде всего чтобы ездить к родителям за город."
+  },
+  {
+   "s": "B",
+   "de": "Für den Einkauf reicht doch ein Lastenrad. Und zu deinen Eltern fährt ein Regionalzug.",
+   "tr": "Для покупок достаточно грузового велосипеда. А к твоим родителям ходит электричка."
+  },
+  {
+   "s": "A",
+   "de": "Der fährt nur alle zwei Stunden, und vom Bahnhof sind es noch zwölf Kilometer. Ohne Auto bin ich da aufgeschmissen.",
+   "tr": "Она ходит только раз в два часа, а от станции ещё двенадцать километров. Без машины я там пропаду."
+  },
+  {
+   "s": "B",
+   "de": "Okay, auf dem Land ist das ein echtes Argument. Aber wie oft fährst du denn zu deinen Eltern?",
+   "tr": "Ладно, за городом это реальный аргумент. Но как часто ты ездишь к родителям?"
+  },
+  {
+   "s": "A",
+   "de": "Etwa zweimal im Monat.",
+   "tr": "Примерно два раза в месяц."
+  },
+  {
+   "s": "B",
+   "de": "Dann rechne mal nach: Versicherung, Steuer, Reparaturen, Benzin, Parkplatz. Das sind locker dreihundert Euro im Monat.",
+   "tr": "Тогда посчитай: страховка, налог, ремонт, бензин, парковка. Это запросто триста евро в месяц."
+  },
+  {
+   "s": "A",
+   "de": "So viel? Ich hatte mit vielleicht hundertfünfzig gerechnet.",
+   "tr": "Так много? Я рассчитывал примерно на сто пятьдесят."
+  },
+  {
+   "s": "B",
+   "de": "Das unterschätzen fast alle. Dazu kommt der Wertverlust. Für das Geld könntest du dir oft ein Carsharing-Auto leihen.",
+   "tr": "Это недооценивают почти все. Добавь сюда потерю стоимости. За эти деньги ты мог бы часто брать машину в каршеринге."
+  },
+  {
+   "s": "A",
+   "de": "Carsharing ist am Wochenende oft ausgebucht. Und ich will spontan sein.",
+   "tr": "Каршеринг на выходных часто весь занят. А я хочу быть свободным в решениях."
+  },
+  {
+   "s": "B",
+   "de": "Das verstehe ich. Trotzdem: In der Stadt stehst du mit dem Auto im Stau und suchst ewig einen Parkplatz.",
+   "tr": "Понимаю. И всё же в городе на машине ты стоишь в пробках и вечно ищешь парковку."
+  },
+  {
+   "s": "A",
+   "de": "Da hast du recht. Zur Arbeit würde ich auch weiterhin mit dem Rad fahren.",
+   "tr": "Тут ты права. На работу я бы и дальше ездил на велосипеде."
+  },
+  {
+   "s": "B",
+   "de": "Und was ist mit der Umwelt? Wenn jeder so denkt, wird die Stadt nie sauberer.",
+   "tr": "А как же экология? Если все будут так думать, город никогда не станет чище."
+  },
+  {
+   "s": "A",
+   "de": "Das stimmt schon. Aber es ist auch eine Frage der Infrastruktur. Auf dem Land fehlen einfach Alternativen.",
+   "tr": "Это, конечно, так. Но это ещё и вопрос инфраструктуры. За городом просто нет альтернатив."
+  },
+  {
+   "s": "B",
+   "de": "Da stimme ich dir zu. Die Politik müsste den Nahverkehr dort viel stärker ausbauen.",
+   "tr": "Тут я с тобой согласна. Политикам нужно гораздо активнее развивать там общественный транспорт."
+  },
+  {
+   "s": "A",
+   "de": "Was hältst du von einem Kompromiss: Ich kaufe kein eigenes Auto, sondern teile eins mit meinem Bruder?",
+   "tr": "Как тебе компромисс: я не покупаю свою машину, а делю одну с братом?"
+  },
+  {
+   "s": "B",
+   "de": "Das klingt vernünftig. Er wohnt doch sowieso in der Nähe deiner Eltern, oder?",
+   "tr": "Звучит разумно. Он ведь всё равно живёт недалеко от твоих родителей?"
+  },
+  {
+   "s": "A",
+   "de": "Genau. Dann nehme ich den Zug bis zu ihm und fahre von dort mit dem Auto weiter.",
+   "tr": "Именно. Тогда я доеду до него на поезде, а оттуда поеду дальше на машине."
+  },
+  {
+   "s": "B",
+   "de": "Siehst du, so sparst du Geld und musst trotzdem nicht auf Flexibilität verzichten.",
+   "tr": "Видишь, так ты экономишь деньги и всё равно не отказываешься от свободы передвижения."
+  },
+  {
+   "s": "A",
+   "de": "Na gut, du hast mich überzeugt. Zumindest fast.",
+   "tr": "Ну ладно, ты меня убедила. По крайней мере почти."
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/b2-09.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "FaceMePLS",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "source": "https://www.flickr.com/photos/38891071@N00/14511736635",
+  "site": "Flickr"
+ }
+}

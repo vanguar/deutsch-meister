@@ -1,0 +1,131 @@
+{
+ "id": "b2-07",
+ "level": "b2",
+ "n": 7,
+ "emoji": "🧭",
+ "title": "Eine Ausbildung mit 38?",
+ "titleTr": "Учитися професії у 38 років?",
+ "situation": "Наталя працює помічницею з догляду й думає про повноцінне навчання на фахівчиню. Консультант із профорієнтації зважує з нею всі за і проти.",
+ "speakers": {
+  "A": {
+   "name": "Berufsberater",
+   "g": "m"
+  },
+  "B": {
+   "name": "Natalija",
+   "g": "f"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Frau Hrytsenko, Sie überlegen, eine Ausbildung zur Pflegefachfrau zu machen. Was hat Sie auf die Idee gebracht?",
+   "tr": "Пані Гриценко, ви думаєте пройти навчання на медсестру з догляду. Що наштовхнуло вас на цю думку?"
+  },
+  {
+   "s": "B",
+   "de": "Ich arbeite seit zwei Jahren als Pflegehelferin. Die Arbeit gefällt mir, aber ich darf viele Dinge nicht selbst machen und verdiene wenig.",
+   "tr": "Я два роки працюю помічницею з догляду. Робота мені подобається, але багато чого мені не можна робити самій, і заробляю я мало."
+  },
+  {
+   "s": "A",
+   "de": "Das ist ein häufiger Grund. Mit einer abgeschlossenen Ausbildung hätten Sie deutlich mehr Verantwortung und ein höheres Gehalt.",
+   "tr": "Це часта причина. Із завершеною освітою у вас було б значно більше відповідальності й вища зарплата."
+  },
+  {
+   "s": "B",
+   "de": "Aber ich bin achtunddreißig. Ist das nicht zu spät für eine Ausbildung?",
+   "tr": "Але мені тридцять вісім. Чи не запізно вчитися?"
+  },
+  {
+   "s": "A",
+   "de": "Überhaupt nicht. In der Pflege sind viele Auszubildende über dreißig. Ihre Lebenserfahrung ist dort sogar ein Vorteil.",
+   "tr": "Зовсім ні. У сфері догляду багато учнів, старших за тридцять. Ваш життєвий досвід там навіть перевага."
+  },
+  {
+   "s": "B",
+   "de": "Meine größte Sorge ist das Geld. Ich bin alleinerziehend und habe zwei Kinder.",
+   "tr": "Найбільше мене турбують гроші. Я виховую двох дітей сама."
+  },
+  {
+   "s": "A",
+   "de": "Das verstehe ich. In der Pflege bekommen Sie eine Ausbildungsvergütung, im ersten Jahr rund tausenddreihundert Euro brutto.",
+   "tr": "Я розумію. У сфері догляду ви отримуєте оплату за навчання, першого року близько тисячі трьохсот євро до сплати податків."
+  },
+  {
+   "s": "B",
+   "de": "Das ist weniger, als ich jetzt verdiene. Wie soll ich davon mit zwei Kindern leben?",
+   "tr": "Це менше, ніж я заробляю зараз. Як мені на це жити з двома дітьми?"
+  },
+  {
+   "s": "A",
+   "de": "Sie hätten Anspruch auf Kindergeld, eventuell Wohngeld und Kinderzuschlag. Rechnen wir das einmal gemeinsam durch.",
+   "tr": "Ви мали б право на допомогу на дітей, можливо, на житлову субсидію й доплату на дітей. Давайте разом порахуємо."
+  },
+  {
+   "s": "B",
+   "de": "Gut. Und wie lange dauert die Ausbildung?",
+   "tr": "Добре. А скільки триває навчання?"
+  },
+  {
+   "s": "A",
+   "de": "Normalerweise drei Jahre. Wegen Ihrer Berufserfahrung könnte man sie aber eventuell verkürzen.",
+   "tr": "Зазвичай три роки. Але через ваш досвід роботи його, можливо, можна скоротити."
+  },
+  {
+   "s": "B",
+   "de": "Und die Schichtarbeit? Mit den Kindern kann ich keine Nachtdienste machen.",
+   "tr": "А змінна робота? З дітьми я не можу працювати в нічні зміни."
+  },
+  {
+   "s": "A",
+   "de": "Es gibt die Möglichkeit einer Teilzeitausbildung. Sie dauert länger, aber die Arbeitszeiten sind familienfreundlicher.",
+   "tr": "Є можливість навчання з неповним навантаженням. Воно триває довше, але графік зручніший для родини."
+  },
+  {
+   "s": "B",
+   "de": "Das wusste ich nicht. Ehrlich gesagt habe ich auch Angst vor der Berufsschule und den Prüfungen auf Deutsch.",
+   "tr": "Я цього не знала. Чесно кажучи, я ще боюся професійної школи та іспитів німецькою."
+  },
+  {
+   "s": "A",
+   "de": "Viele Schulen bieten berufsbezogenen Deutschunterricht an. Und es gibt kostenlose Nachhilfe für Auszubildende.",
+   "tr": "Багато шкіл пропонують професійно орієнтовані заняття німецькою. А для учнів є безплатне репетиторство."
+  },
+  {
+   "s": "B",
+   "de": "Das beruhigt mich. Lohnt sich das am Ende wirklich?",
+   "tr": "Це мене заспокоює. А зрештою це справді того варте?"
+  },
+  {
+   "s": "A",
+   "de": "Langfristig auf jeden Fall. Pflegefachkräfte werden überall gesucht, und nach der Ausbildung verdienen Sie deutlich mehr als jetzt.",
+   "tr": "У довгостроковій перспективі однозначно. Фахівців із догляду шукають усюди, а після навчання ви зароблятимете помітно більше, ніж зараз."
+  },
+  {
+   "s": "B",
+   "de": "Mein jetziger Arbeitgeber hat mir sogar angeboten, die Ausbildung bei ihm zu machen.",
+   "tr": "Мій теперішній роботодавець навіть запропонував мені пройти навчання в нього."
+  },
+  {
+   "s": "A",
+   "de": "Das ist ideal: Sie kennen das Team, und er kennt Sie. Sprechen Sie dort am besten direkt die Teilzeitvariante an.",
+   "tr": "Це ідеально: ви знаєте команду, а він знає вас. Найкраще одразу обговоріть там варіант із неповним навантаженням."
+  },
+  {
+   "s": "B",
+   "de": "Das mache ich. Danke, ich sehe das Ganze jetzt viel klarer.",
+   "tr": "Так і зроблю. Дякую, тепер я бачу все набагато чіткіше."
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/b2-07.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "phoenix_raye_photography",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "source": "https://www.flickr.com/photos/201760013@N04/54119878890",
+  "site": "Flickr"
+ }
+}

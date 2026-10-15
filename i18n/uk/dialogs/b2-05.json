@@ -1,0 +1,131 @@
+{
+ "id": "b2-05",
+ "level": "b2",
+ "n": 5,
+ "emoji": "🏡",
+ "title": "Homeoffice verhandeln",
+ "titleTr": "Домовляємося про віддалену роботу",
+ "situation": "Микола хоче працювати з дому три дні на тиждень. Керівниця відділу кадрів має сумніви, і вони шукають компроміс.",
+ "speakers": {
+  "A": {
+   "name": "Frau Berger",
+   "g": "f"
+  },
+  "B": {
+   "name": "Mykola",
+   "g": "m"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Herr Kovalchuk, Sie haben einen Antrag auf mehr Homeoffice gestellt. Erklären Sie mir doch bitte Ihre Gründe.",
+   "tr": "Пане Ковальчук, ви подали заяву на більшу кількість днів віддаленої роботи. Поясніть, будь ласка, ваші причини."
+  },
+  {
+   "s": "B",
+   "de": "Gern. Seit dem Umzug fahre ich jeden Tag zusammen fast drei Stunden. Diese Zeit könnte ich viel sinnvoller nutzen.",
+   "tr": "Залюбки. Після переїзду я щодня витрачаю на дорогу майже три години. Цей час я міг би використати набагато розумніше."
+  },
+  {
+   "s": "A",
+   "de": "Das ist nachvollziehbar. Allerdings legen wir großen Wert auf den persönlichen Austausch im Team.",
+   "tr": "Це зрозуміло. Однак ми надаємо великого значення особистому спілкуванню в команді."
+  },
+  {
+   "s": "B",
+   "de": "Das sehe ich genauso. Deshalb möchte ich ja auch nicht komplett zu Hause arbeiten, sondern drei von fünf Tagen.",
+   "tr": "Я з цим цілком згоден. Тому я й не хочу працювати повністю з дому, а три дні з п'яти."
+  },
+  {
+   "s": "A",
+   "de": "Drei Tage sind mehr als unsere Richtlinie vorsieht. Normalerweise erlauben wir zwei.",
+   "tr": "Три дні — це більше, ніж передбачає наше правило. Зазвичай ми дозволяємо два."
+  },
+  {
+   "s": "B",
+   "de": "Das weiß ich. Aber während der Baustellenzeit im letzten Sommer habe ich sechs Wochen fast nur von zu Hause gearbeitet, und meine Ergebnisse waren sogar besser.",
+   "tr": "Я знаю. Але під час ремонтних робіт минулого літа я шість тижнів працював майже лише з дому, і мої результати були навіть кращими."
+  },
+  {
+   "s": "A",
+   "de": "Stimmt, Ihre Teamleiterin war sehr zufrieden. Wie würden Sie sicherstellen, dass Sie für Kollegen erreichbar sind?",
+   "tr": "Правильно, ваша керівниця групи була дуже задоволена. Як ви забезпечите, щоб колеги могли з вами зв'язатися?"
+  },
+  {
+   "s": "B",
+   "de": "Ich wäre in festen Kernzeiten von neun bis fünfzehn Uhr online und jederzeit per Video erreichbar.",
+   "tr": "Я був би онлайн у фіксований основний час із дев'ятої до п'ятнадцятої години й завжди доступний відеозв'язком."
+  },
+  {
+   "s": "A",
+   "de": "Und die Teammeetings?",
+   "tr": "А наради команди?"
+  },
+  {
+   "s": "B",
+   "de": "Die finden ja dienstags und donnerstags statt. An diesen Tagen wäre ich grundsätzlich im Büro.",
+   "tr": "Вони ж відбуваються по вівторках і четвергах. У ці дні я в принципі був би в офісі."
+  },
+  {
+   "s": "A",
+   "de": "Das klingt durchdacht. Ein Problem ist allerdings die Gleichbehandlung. Wenn ich bei Ihnen eine Ausnahme mache, wollen das andere auch.",
+   "tr": "Звучить продумано. Однак є проблема рівного ставлення. Якщо я зроблю виняток для вас, інші теж цього захочуть."
+  },
+  {
+   "s": "B",
+   "de": "Das verstehe ich. Man könnte die Regel aber an objektive Kriterien knüpfen, zum Beispiel an die Länge des Arbeitswegs.",
+   "tr": "Я розумію. Але правило можна було б прив'язати до об'єктивних критеріїв, наприклад до тривалості дороги на роботу."
+  },
+  {
+   "s": "A",
+   "de": "Das ist ein interessanter Gedanke. Ich schlage vor, wir vereinbaren erst einmal eine Testphase von drei Monaten.",
+   "tr": "Цікава думка. Я пропоную спершу домовитися про тестовий період на три місяці."
+  },
+  {
+   "s": "B",
+   "de": "Damit bin ich einverstanden. Woran würden wir messen, ob es funktioniert?",
+   "tr": "Я згоден. За якими критеріями ми оцінюватимемо, чи це працює?"
+  },
+  {
+   "s": "A",
+   "de": "An Ihren Projektzielen und an der Rückmeldung aus dem Team. Nach drei Monaten setzen wir uns zusammen und entscheiden.",
+   "tr": "За вашими проєктними цілями та відгуками команди. За три місяці ми зустрінемося й ухвалимо рішення."
+  },
+  {
+   "s": "B",
+   "de": "Das ist fair. Bekomme ich für zu Hause auch die nötige Ausstattung, etwa einen zweiten Bildschirm?",
+   "tr": "Це справедливо. А чи отримаю я для дому необхідне обладнання, наприклад другий монітор?"
+  },
+  {
+   "s": "A",
+   "de": "Ja, Bildschirm und Headset stellen wir. Für den Schreibtischstuhl gibt es einen Zuschuss von hundertfünfzig Euro.",
+   "tr": "Так, монітор і гарнітуру ми надамо. На офісне крісло є доплата в сто п'ятдесят євро."
+  },
+  {
+   "s": "B",
+   "de": "Sehr gut. Und was gilt für den Datenschutz?",
+   "tr": "Дуже добре. А як бути із захистом даних?"
+  },
+  {
+   "s": "A",
+   "de": "Sie arbeiten ausschließlich über unser VPN, und vertrauliche Unterlagen bleiben im Büro. Das halten wir in einer Zusatzvereinbarung fest.",
+   "tr": "Ви працюєте лише через наш VPN, а конфіденційні документи залишаються в офісі. Ми закріпимо це в додатковій угоді."
+  },
+  {
+   "s": "B",
+   "de": "Einverstanden. Vielen Dank, dass Sie offen für diese Lösung sind.",
+   "tr": "Згоден. Щиро дякую, що ви відкриті до такого рішення."
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/b2-05.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "Ted Mielczarek",
+  "license": "CC0",
+  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "source": "https://www.flickr.com/photos/49243838@N00/49517006647",
+  "site": "Flickr"
+ }
+}

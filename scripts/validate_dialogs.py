@@ -26,7 +26,7 @@ import struct
 import sys
 
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-EXPECTED_LEVELS = ['a1', 'a2', 'b1']
+EXPECTED_LEVELS = ['a1', 'a2', 'b1', 'b2']
 PER_LEVEL = 10
 LINES = {'a1': (8, 12), 'a2': (12, 16), 'b1': (16, 20), 'b2': (20, 25)}
 FREE = re.compile(r'^(CC0|Public domain|CC BY(-SA)? \d(\.\d)?)$')

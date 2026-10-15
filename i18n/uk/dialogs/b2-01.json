@@ -1,0 +1,136 @@
+{
+ "id": "b2-01",
+ "level": "b2",
+ "n": 1,
+ "emoji": "💶",
+ "title": "Die Gehaltsverhandlung",
+ "titleTr": "Переговори про зарплату",
+ "situation": "Олексій два роки працює в IT-відділі й узяв на себе нові завдання. На щорічній розмові він просить керівника про підвищення зарплати.",
+ "speakers": {
+  "A": {
+   "name": "Herr Vogel",
+   "g": "m"
+  },
+  "B": {
+   "name": "Oleksij",
+   "g": "m"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Schön, dass wir uns heute Zeit für das Jahresgespräch nehmen. Wie zufrieden sind Sie mit dem letzten Jahr?",
+   "tr": "Добре, що ми сьогодні знайшли час для щорічної розмови. Наскільки ви задоволені минулим роком?"
+  },
+  {
+   "s": "B",
+   "de": "Insgesamt sehr zufrieden. Seit dem Frühjahr betreue ich ja zusätzlich die Umstellung auf das neue Ticketsystem.",
+   "tr": "Загалом дуже задоволений. З весни я ж додатково веду перехід на нову систему заявок."
+  },
+  {
+   "s": "A",
+   "de": "Stimmt, und das läuft hervorragend. Die Bearbeitungszeit ist um fast ein Drittel gesunken.",
+   "tr": "Правильно, і це йде чудово. Час обробки скоротився майже на третину."
+  },
+  {
+   "s": "B",
+   "de": "Genau darüber wollte ich heute auch sprechen. Meine Aufgaben haben sich deutlich erweitert, mein Gehalt aber nicht.",
+   "tr": "Саме про це я й хотів сьогодні поговорити. Мої обов'язки помітно розширилися, а зарплата — ні."
+  },
+  {
+   "s": "A",
+   "de": "Verstehe. Woran haben Sie gedacht?",
+   "tr": "Розумію. Що ви маєте на увазі?"
+  },
+  {
+   "s": "B",
+   "de": "Ich habe mich informiert: Für vergleichbare Stellen in unserer Region liegt das Gehalt zwischen vierundfünfzig- und sechzigtausend Euro im Jahr.",
+   "tr": "Я поцікавився: на порівнянних посадах у нашому регіоні зарплата становить від п'ятдесяти чотирьох до шістдесяти тисяч євро на рік."
+  },
+  {
+   "s": "A",
+   "de": "Und Sie liegen momentan bei achtundvierzigtausend.",
+   "tr": "А у вас зараз сорок вісім тисяч."
+  },
+  {
+   "s": "B",
+   "de": "Richtig. Deshalb halte ich eine Erhöhung auf siebenundfünfzigtausend für angemessen.",
+   "tr": "Так. Тому я вважаю справедливим підвищення до п'ятдесяти семи тисяч."
+  },
+  {
+   "s": "A",
+   "de": "Das wären fast zwanzig Prozent. Ehrlich gesagt ist das mehr, als unser Budget dieses Jahr hergibt.",
+   "tr": "Це майже двадцять відсотків. Чесно кажучи, це більше, ніж дозволяє наш бюджет цього року."
+  },
+  {
+   "s": "B",
+   "de": "Das kann ich nachvollziehen. Aber bedenken Sie bitte, dass ich die Arbeit von zwei Stellen mache, seit Frau Peters gegangen ist.",
+   "tr": "Я це розумію. Але, будь ласка, врахуйте, що відтоді, як пішла пані Петерс, я виконую роботу за дві ставки."
+  },
+  {
+   "s": "A",
+   "de": "Das ist ein berechtigter Punkt. Ich könnte Ihnen zum ersten Januar eine Erhöhung auf zweiundfünfzigtausend anbieten.",
+   "tr": "Це слушне зауваження. Я міг би запропонувати вам підвищення до п'ятдесяти двох тисяч з першого січня."
+  },
+  {
+   "s": "B",
+   "de": "Das ist ein Anfang, aber noch deutlich unter dem Marktniveau. Gäbe es eine Möglichkeit, das mit anderen Leistungen auszugleichen?",
+   "tr": "Це початок, але все ще помітно нижче за ринковий рівень. Чи є можливість компенсувати це іншими пільгами?"
+  },
+  {
+   "s": "A",
+   "de": "Woran denken Sie konkret?",
+   "tr": "Що конкретно ви маєте на увазі?"
+  },
+  {
+   "s": "B",
+   "de": "Zum Beispiel an eine Weiterbildung zum Cloud-Architekten, die die Firma bezahlt, und einen zusätzlichen Homeoffice-Tag.",
+   "tr": "Наприклад, про курс із хмарної архітектури за рахунок фірми та додатковий день віддаленої роботи."
+  },
+  {
+   "s": "A",
+   "de": "Die Weiterbildung liegt auch in unserem Interesse, das lässt sich machen. Beim Homeoffice muss ich mit dem Team sprechen.",
+   "tr": "Навчання і в наших інтересах, це можна зробити. Щодо віддаленої роботи мені треба поговорити з командою."
+  },
+  {
+   "s": "B",
+   "de": "Einverstanden. Und könnten wir festhalten, dass wir in sechs Monaten noch einmal über das Gehalt sprechen?",
+   "tr": "Згоден. А чи можемо ми зафіксувати, що за шість місяців знову поговоримо про зарплату?"
+  },
+  {
+   "s": "A",
+   "de": "Ja. Wenn das neue System bis dahin vollständig läuft, sehe ich gute Chancen für einen weiteren Schritt.",
+   "tr": "Так. Якщо до того часу нова система повністю працюватиме, я бачу добрі шанси на наступний крок."
+  },
+  {
+   "s": "B",
+   "de": "Das klingt fair. Könnten Sie mir die Vereinbarung schriftlich bestätigen?",
+   "tr": "Звучить справедливо. Чи не могли б ви підтвердити домовленість письмово?"
+  },
+  {
+   "s": "A",
+   "de": "Selbstverständlich. Ich schicke Ihnen bis Freitag eine Zusammenfassung, und die Personalabteilung bereitet die Vertragsänderung vor.",
+   "tr": "Звичайно. До п'ятниці я надішлю вам підсумок розмови, а відділ кадрів підготує зміну договору."
+  },
+  {
+   "s": "B",
+   "de": "Vielen Dank für das offene Gespräch.",
+   "tr": "Щиро дякую за відверту розмову."
+  },
+  {
+   "s": "A",
+   "de": "Ich danke Ihnen. Ihr Einsatz wird hier wirklich geschätzt.",
+   "tr": "Це вам дякую. Ваш внесок тут справді цінують."
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/b2-01.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "jeferonix",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+  "source": "https://www.flickr.com/photos/35034346917@N01/276373742",
+  "site": "Flickr"
+ }
+}

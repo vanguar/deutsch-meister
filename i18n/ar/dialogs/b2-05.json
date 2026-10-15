@@ -1,0 +1,131 @@
+{
+ "id": "b2-05",
+ "level": "b2",
+ "n": 5,
+ "emoji": "🏡",
+ "title": "Homeoffice verhandeln",
+ "titleTr": "التفاوض على العمل من المنزل",
+ "situation": "يريد ميكولا العمل من المنزل ثلاثة أيام في الأسبوع. لدى مديرة شؤون الموظفين تحفّظات، فيبحثان عن حل وسط.",
+ "speakers": {
+  "A": {
+   "name": "Frau Berger",
+   "g": "f"
+  },
+  "B": {
+   "name": "Mykola",
+   "g": "m"
+  }
+ },
+ "lines": [
+  {
+   "s": "A",
+   "de": "Herr Kovalchuk, Sie haben einen Antrag auf mehr Homeoffice gestellt. Erklären Sie mir doch bitte Ihre Gründe.",
+   "tr": "سيد كوفالتشوك، قدّمت طلبًا لزيادة أيام العمل من المنزل. اشرح لي أسبابك من فضلك."
+  },
+  {
+   "s": "B",
+   "de": "Gern. Seit dem Umzug fahre ich jeden Tag zusammen fast drei Stunden. Diese Zeit könnte ich viel sinnvoller nutzen.",
+   "tr": "بكل سرور. منذ انتقالي أقضي في الطريق يوميًا قرابة ثلاث ساعات. ويمكنني استغلال هذا الوقت بشكل أنفع بكثير."
+  },
+  {
+   "s": "A",
+   "de": "Das ist nachvollziehbar. Allerdings legen wir großen Wert auf den persönlichen Austausch im Team.",
+   "tr": "هذا مفهوم. لكننا نولي أهمية كبيرة للتواصل الشخصي داخل الفريق."
+  },
+  {
+   "s": "B",
+   "de": "Das sehe ich genauso. Deshalb möchte ich ja auch nicht komplett zu Hause arbeiten, sondern drei von fünf Tagen.",
+   "tr": "أنا أرى ذلك أيضًا. ولهذا لا أريد العمل من المنزل بالكامل، بل ثلاثة أيام من خمسة."
+  },
+  {
+   "s": "A",
+   "de": "Drei Tage sind mehr als unsere Richtlinie vorsieht. Normalerweise erlauben wir zwei.",
+   "tr": "ثلاثة أيام أكثر مما تنص عليه لائحتنا. عادةً نسمح بيومين."
+  },
+  {
+   "s": "B",
+   "de": "Das weiß ich. Aber während der Baustellenzeit im letzten Sommer habe ich sechs Wochen fast nur von zu Hause gearbeitet, und meine Ergebnisse waren sogar besser.",
+   "tr": "أعرف ذلك. لكن خلال فترة أعمال البناء في الصيف الماضي عملت ستة أسابيع من المنزل تقريبًا، وكانت نتائجي أفضل حتى."
+  },
+  {
+   "s": "A",
+   "de": "Stimmt, Ihre Teamleiterin war sehr zufrieden. Wie würden Sie sicherstellen, dass Sie für Kollegen erreichbar sind?",
+   "tr": "صحيح، كانت قائدة فريقك راضية جدًا. كيف ستضمن أن يتمكن الزملاء من التواصل معك؟"
+  },
+  {
+   "s": "B",
+   "de": "Ich wäre in festen Kernzeiten von neun bis fünfzehn Uhr online und jederzeit per Video erreichbar.",
+   "tr": "سأكون متصلًا في ساعات أساسية ثابتة من التاسعة حتى الثالثة عصرًا، ومتاحًا عبر الفيديو في أي وقت."
+  },
+  {
+   "s": "A",
+   "de": "Und die Teammeetings?",
+   "tr": "واجتماعات الفريق؟"
+  },
+  {
+   "s": "B",
+   "de": "Die finden ja dienstags und donnerstags statt. An diesen Tagen wäre ich grundsätzlich im Büro.",
+   "tr": "إنها تُعقد يومي الثلاثاء والخميس. وفي هذين اليومين سأكون في المكتب من حيث المبدأ."
+  },
+  {
+   "s": "A",
+   "de": "Das klingt durchdacht. Ein Problem ist allerdings die Gleichbehandlung. Wenn ich bei Ihnen eine Ausnahme mache, wollen das andere auch.",
+   "tr": "يبدو هذا مدروسًا. لكن هناك مشكلة المساواة في المعاملة. إذا استثنيتك، فسيطلب الآخرون الشيء نفسه."
+  },
+  {
+   "s": "B",
+   "de": "Das verstehe ich. Man könnte die Regel aber an objektive Kriterien knüpfen, zum Beispiel an die Länge des Arbeitswegs.",
+   "tr": "أفهم ذلك. لكن يمكن ربط القاعدة بمعايير موضوعية، مثل طول الطريق إلى العمل."
+  },
+  {
+   "s": "A",
+   "de": "Das ist ein interessanter Gedanke. Ich schlage vor, wir vereinbaren erst einmal eine Testphase von drei Monaten.",
+   "tr": "هذه فكرة مثيرة للاهتمام. أقترح أن نتفق أولًا على فترة تجريبية مدتها ثلاثة أشهر."
+  },
+  {
+   "s": "B",
+   "de": "Damit bin ich einverstanden. Woran würden wir messen, ob es funktioniert?",
+   "tr": "أوافق على ذلك. وبأي معيار سنقيس نجاح التجربة؟"
+  },
+  {
+   "s": "A",
+   "de": "An Ihren Projektzielen und an der Rückmeldung aus dem Team. Nach drei Monaten setzen wir uns zusammen und entscheiden.",
+   "tr": "بأهداف مشاريعك وبتقييم الفريق. وبعد ثلاثة أشهر نجتمع ونقرّر."
+  },
+  {
+   "s": "B",
+   "de": "Das ist fair. Bekomme ich für zu Hause auch die nötige Ausstattung, etwa einen zweiten Bildschirm?",
+   "tr": "هذا عادل. وهل سأحصل على المعدات اللازمة للمنزل، مثل شاشة ثانية؟"
+  },
+  {
+   "s": "A",
+   "de": "Ja, Bildschirm und Headset stellen wir. Für den Schreibtischstuhl gibt es einen Zuschuss von hundertfünfzig Euro.",
+   "tr": "نعم، سنوفر الشاشة والسماعة. وللكرسي المكتبي هناك دعم بقيمة مئة وخمسين يورو."
+  },
+  {
+   "s": "B",
+   "de": "Sehr gut. Und was gilt für den Datenschutz?",
+   "tr": "ممتاز. وماذا عن حماية البيانات؟"
+  },
+  {
+   "s": "A",
+   "de": "Sie arbeiten ausschließlich über unser VPN, und vertrauliche Unterlagen bleiben im Büro. Das halten wir in einer Zusatzvereinbarung fest.",
+   "tr": "تعمل حصريًا عبر شبكتنا الافتراضية الخاصة (VPN)، وتبقى الوثائق السرية في المكتب. وسنثبت ذلك في اتفاق إضافي."
+  },
+  {
+   "s": "B",
+   "de": "Einverstanden. Vielen Dank, dass Sie offen für diese Lösung sind.",
+   "tr": "موافق. شكرًا جزيلًا على انفتاحك على هذا الحل."
+  }
+ ],
+ "img": {
+  "src": "data/dialogs/img/b2-05.jpg",
+  "w": 800,
+  "h": 450,
+  "author": "Ted Mielczarek",
+  "license": "CC0",
+  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "source": "https://www.flickr.com/photos/49243838@N00/49517006647",
+  "site": "Flickr"
+ }
+}
