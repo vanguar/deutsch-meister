@@ -218,6 +218,33 @@ for (const lang of ['ru', 'uk', 'ar']) {
   check(lang + ': резервный window.open тоже передаёт язык', new URL(opened).searchParams.get('lang') === lang);
 }
 
+console.log('6. Перекрытия ридера (src/overrides) не меняют уроки и интерфейс');
+for (const lang of ['uk', 'ar']) {
+  const srcDir = path.join(ROOT, 'i18n', lang, 'src');
+  const shared = Object.create(null), overrides = {};
+  (function walk(d) {
+    for (const f of fs.readdirSync(d)) {
+      const p = path.join(d, f);
+      if (fs.statSync(p).isDirectory()) { walk(p); continue; }
+      if (!f.endsWith('.json')) continue;
+      const g = path.relative(srcDir, p).split(path.sep).join('/').replace(/\.json$/, '');
+      const o = JSON.parse(fs.readFileSync(p, 'utf8'));
+      if (g.startsWith('overrides/')) overrides[g] = o; else Object.assign(shared, o);
+    }
+  })(srcDir);
+  // перекрываемая строка должна быть и в общей памяти — иначе урок/книга с ней
+  // считались бы готовыми только благодаря перекрытию
+  const orphan = Object.values(overrides).flatMap(o => Object.keys(o)).filter(k => shared[k] === undefined);
+  check(lang + ': ключи перекрытий есть в общей памяти', orphan.length === 0, orphan.slice(0, 10));
+  const leaked = [];
+  const built = ['ui.js', 'lexicon.js', ...fs.readdirSync(path.join(ROOT, 'i18n', lang, 'lessons')).map(f => 'lessons/' + f)];
+  for (const f of built) {
+    const m = fs.readFileSync(path.join(ROOT, 'i18n', lang, f), 'utf8').match(/I18N\.add\(([\s\S]*)\);/);
+    for (const [k, v] of Object.entries(JSON.parse(m[1]))) if (shared[k] !== undefined && shared[k] !== v) leaked.push(f + ': ' + k);
+  }
+  check(lang + ': уроки, лексикон и интерфейс собраны из общей памяти', leaked.length === 0, leaked.slice(0, 10));
+}
+
 
 console.log(fails ? `\nПРОВАЛЕНО: ${fails}` : '\nВСЕ ПРОВЕРКИ ПРОЙДЕНЫ');
 process.exitCode = fails ? 1 : 0;

@@ -265,7 +265,10 @@ function extract() {
   return { groups, tplKeys };
 }
 
-/* ── память переводов ── */
+/* ── память переводов ──
+   src/overrides/** — не память, а перекрытия для ридера: в общую память
+   они не входят (иначе «месяц» из книги стал бы луной и в уроке), их
+   применяет только groupTM при сборке книг и новостей. */
 function loadTM(lang) {
   const dir = rel(`i18n/${lang}/src`);
   const tm = Object.create(null);
@@ -278,7 +281,7 @@ function loadTM(lang) {
       else if (f.endsWith('.json')) {
         const g = path.relative(dir, p).replace(/\\/g, '/').replace(/\.json$/, '');
         files[g] = JSON.parse(fs.readFileSync(p, 'utf8'));
-        Object.assign(tm, files[g]);
+        if (!g.startsWith('overrides/')) Object.assign(tm, files[g]);
       }
     }
   })(dir);
@@ -333,11 +336,12 @@ function translateFile(obj, tm) {
 
 // Память общая на все группы, но в ридере (книги, новости) короткая подпись
 // из g многозначна: «с» в уроке-алфавите — буква, «когда» в уроке — вопрос,
-// «месяц» — календарный. Поэтому слои: общая память → reader-glosses.json
-// (как такие подписи читаются над текстом в ридере; группа без своих ключей,
-// заводится руками) → перевод самой книги/статьи.
+// «месяц» — календарный. Поэтому слои: общая память → перевод самой
+// книги/статьи → overrides/reader.json (как такие подписи читаются над
+// текстом в ридере) → overrides/<группа>.json (смысл в этой книге).
+// Перекрытия заводятся руками и в общую память не попадают (см. loadTM).
 function groupTM(tm, files, group) {
-  const layers = [files['reader-glosses'], files[group]].filter(Boolean);
+  const layers = [files[group], files['overrides/reader'], files['overrides/' + group]].filter(Boolean);
   return layers.length ? Object.assign(Object.create(null), tm, ...layers) : tm;
 }
 
