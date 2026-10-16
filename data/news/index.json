@@ -19,6 +19,23 @@
       "chapters": 1
     },
     {
+      "id": "asteroiden-erdnaehe-2026",
+      "title": "Näher als der Mond: Zwei kleine Asteroiden fliegen an der Erde vorbei",
+      "titleRu": "Ближе Луны: два небольших астероида пролетели мимо Земли",
+      "blurb": "Астероиды 2026 TG9 и 2026 TP6 размером с дом с разницей в 19 часов прошли примерно на полпути между Землёй и Луной. Их открыли всего за несколько дней до этого.",
+      "rubric": "astronomy",
+      "level": "B1–B2",
+      "published": "2026-10-14",
+      "added": "2026-10-16",
+      "source": "NASA/JPL · Sky TG24",
+      "sourceUrl": "https://tg24.sky.it/scienze/2026/10/14/asteroidi-terra",
+      "cover": "data/news/asteroiden-erdnaehe-2026/img/cover.jpg",
+      "words": 261,
+      "minutes": 2,
+      "photos": 3,
+      "chapters": 1
+    },
+    {
       "id": "d-you-wallet-2026",
       "title": "Der Ausweis im Handy: Die digitale Brieftasche „d-you“ kommt im Januar",
       "titleRu": "Документы в телефоне: цифровой кошелёк d-you появится в январе",

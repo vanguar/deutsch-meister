@@ -1,0 +1,858 @@
+{
+  "version": 1,
+  "w": {
+    "ab": "absuchen",
+    "aber": "aber",
+    "als": "als",
+    "also": "also",
+    "am": "an",
+    "an": "an",
+    "anderen": "ander",
+    "arizona": "Arizona",
+    "asteroid": "Asteroid",
+    "asteroiden": "Asteroid",
+    "atmosphäre": "Atmosphäre",
+    "auf": "auf",
+    "auge": "Auge",
+    "begegnungen": "Begegnung",
+    "beide": "beide",
+    "beiden": "beide",
+    "beobachtet": "beobachten",
+    "bestand": "bestehen",
+    "bis": "bis",
+    "bleibt": "bleiben",
+    "bloßem": "bloß",
+    "brocken": "Brocken",
+    "chile": "Chile",
+    "dafür": "dafür",
+    "das": "der/die/das",
+    "daten": "Daten",
+    "den": "der/die/das",
+    "denn": "denn",
+    "der": "der/die/das",
+    "deshalb": "deshalb",
+    "desto": "je … desto",
+    "deutscher": "deutsch",
+    "die": "der/die/das",
+    "donnerstag": "Donnerstag",
+    "druckwelle": "Druckwelle",
+    "dunkel": "dunkel",
+    "durchschnitt": "Durchschnitt",
+    "dutzende": "Dutzend",
+    "ein": "ein/eine",
+    "einen": "ein/eine",
+    "einer": "ein/eine",
+    "entdecken": "entdecken",
+    "entdeckt": "entdecken",
+    "entfernt": "entfernt",
+    "entfernung": "Entfernung",
+    "er": "er",
+    "erde": "Erde",
+    "erst": "erst",
+    "erste": "erste",
+    "ersten": "erste",
+    "etwa": "etwa",
+    "explodierte": "explodieren",
+    "fensterscheiben": "Fensterscheibe",
+    "findet": "finden",
+    "flog": "vorbeifliegen",
+    "flogen": "fliegen",
+    "folgte": "folgen",
+    "früher": "früher",
+    "für": "für",
+    "gar": "gar",
+    "gefahr": "Gefahr",
+    "gefährlichen": "gefährlich",
+    "gegen": "gegen",
+    "geschwindigkeit": "Geschwindigkeit",
+    "getroffen": "treffen",
+    "groß": "groß",
+    "großer": "groß",
+    "halbem": "halb",
+    "harmlos": "harmlos",
+    "haus": "Haus",
+    "hawaii": "Hawaii",
+    "heißt": "heißen",
+    "heran": "herankommen",
+    "himmel": "Himmel",
+    "hoch": "hoch",
+    "hätten": "haben",
+    "im": "in",
+    "immer": "immer",
+    "in": "in",
+    "ist": "sein",
+    "jahr": "Jahr",
+    "je": "je … desto",
+    "jede": "jeder",
+    "jedes": "jeder",
+    "kam": "herankommen",
+    "keine": "kein",
+    "kilometer": "Kilometer",
+    "kilometern": "Kilometer",
+    "klein": "klein",
+    "kleine": "klein",
+    "konnte": "können",
+    "lagen": "liegen",
+    "mal": "Mal",
+    "man": "man",
+    "mehr": "mehr",
+    "menschen": "Mensch",
+    "meter": "Meter",
+    "mit": "mit",
+    "mittwochmorgen": "Mittwochmorgen",
+    "mond": "Mond",
+    "nach": "nach",
+    "nacht": "Nacht",
+    "nahen": "nah",
+    "nasa": "NASA",
+    "nicht": "nicht",
+    "nur": "nur",
+    "näher": "nah",
+    "observatorien": "Observatorium",
+    "oktober": "Oktober",
+    "orten": "Ort",
+    "pro": "pro",
+    "reagieren": "reagieren",
+    "rund": "rund",
+    "schon": "schon",
+    "sehen": "sehen",
+    "selten": "selten",
+    "sie": "sie",
+    "sind": "sein",
+    "so": "so",
+    "sogar": "sogar",
+    "solche": "solch",
+    "stadt": "Stadt",
+    "stunde": "Stunde",
+    "stunden": "Stunde",
+    "suchen": "absuchen",
+    "tage": {
+      "l": "Tag",
+      "old": "в обороте in einem Tage — старый дательный с -e; сегодня an einem Tag. В «drei Tage Regenwetter» это обычное мн. ч."
+    },
+    "tausende": "Tausend",
+    "teleskope": "Teleskop",
+    "teleskopen": "Teleskop",
+    "tg": "2026 TG9",
+    "tp": "2026 TP6",
+    "tscheljabinsk": "Tscheljabinsk",
+    "uhr": "Uhr",
+    "um": "um",
+    "und": "und",
+    "ungefähr": "ungefähr",
+    "uns": "wir",
+    "usa": "USA",
+    "vergleich": "Vergleich",
+    "verletzt": "verletzen",
+    "viel": "viel",
+    "von": "von",
+    "vorbei": "vorbeifliegen",
+    "vorbeifliegen": "vorbeifliegen",
+    "vorbeiflügen": "Vorbeiflug",
+    "vorbeigeflogen": "vorbeifliegen",
+    "vorher": "vorher",
+    "waren": "sein",
+    "weg": "Weg",
+    "wenige": "wenig",
+    "wie": "wie",
+    "wohl": "wohl",
+    "wurde": "werden",
+    "wurden": "werden",
+    "wären": "sein",
+    "zeit": "Zeit",
+    "zerplatzt": "zerplatzen",
+    "zerstörte": "zerstören",
+    "zu": "zu",
+    "zum": "zu",
+    "zwei": "zwei",
+    "zweite": "zweit",
+    "zwischen": "zwischen",
+    "über": "über"
+  },
+  "l": {
+    "2026 TG9": {
+      "ru": "2026 TG9 (астероид)",
+      "pos": "имя собств.",
+      "note": "обозначение: год открытия + буквенно-цифровой код"
+    },
+    "2026 TP6": {
+      "ru": "2026 TP6 (астероид)",
+      "pos": "имя собств.",
+      "note": "обозначение: год открытия + буквенно-цифровой код"
+    },
+    "aber": {
+      "ru": "но, однако",
+      "pos": "союз"
+    },
+    "absuchen": {
+      "ru": "обыскивать, прочёсывать",
+      "pos": "гл.",
+      "forms": "suchte ab · hat abgesucht",
+      "note": "den Himmel absuchen — прочёсывать небо"
+    },
+    "als": {
+      "ru": "когда; как; чем",
+      "pos": "союз"
+    },
+    "also": {
+      "ru": "итак, стало быть",
+      "pos": "нареч."
+    },
+    "an": {
+      "ru": "у, к, на",
+      "pos": "предл.",
+      "note": "am = an dem. Тж. отделяемая приставка: anfangen «начинать», annehmen, ansehen, anzünden"
+    },
+    "ander": {
+      "pos": "прил.",
+      "ru": "другой, иной"
+    },
+    "Arizona": {
+      "ru": "Аризона (штат на юго-западе США)",
+      "pos": "геогр."
+    },
+    "Asteroid": {
+      "ru": "астероид",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Asteroiden",
+      "note": "n-склонение: den/dem/des Asteroiden"
+    },
+    "Atmosphäre": {
+      "ru": "атмосфера",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Atmosphären"
+    },
+    "auf": {
+      "ru": "на, в",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: aufspringen «вскочить», sich aufmachen"
+    },
+    "Auge": {
+      "ru": "глаз",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Augen"
+    },
+    "Begegnung": {
+      "ru": "встреча",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Begegnungen"
+    },
+    "beide": {
+      "ru": "оба",
+      "pos": "мест."
+    },
+    "beobachten": {
+      "ru": "наблюдать",
+      "pos": "гл.",
+      "forms": "beobachtete · hat beobachtet"
+    },
+    "bestehen": {
+      "ru": "состоять; существовать; сдать (экзамен)",
+      "pos": "гл.",
+      "forms": "bestand · hat bestanden",
+      "note": "aus etwas bestehen — состоять из чего-то"
+    },
+    "bis": {
+      "ru": "до; пока не",
+      "pos": "союз"
+    },
+    "bleiben": {
+      "ru": "оставаться",
+      "pos": "гл.",
+      "forms": "blieb · ist geblieben"
+    },
+    "bloß": {
+      "ru": "голый; простой",
+      "pos": "прил.",
+      "note": "mit bloßem Auge — невооружённым глазом"
+    },
+    "Brocken": {
+      "ru": "глыба, кусок, обломок",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Brocken"
+    },
+    "Chile": {
+      "ru": "Чили",
+      "pos": "геогр."
+    },
+    "dafür": {
+      "ru": "за это, для этого",
+      "pos": "нареч.",
+      "note": "dafür sorgen, dass … — позаботиться, чтобы …"
+    },
+    "Daten": {
+      "ru": "данные",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null,
+      "note": "только мн. ч. в этом значении; nach Daten der NASA — по данным NASA"
+    },
+    "denn": {
+      "ru": "ведь, так как",
+      "pos": "союз"
+    },
+    "der/die/das": {
+      "ru": "определённый артикль",
+      "pos": "артикль",
+      "note": "Тж. относительное местоимение «который»"
+    },
+    "deshalb": {
+      "ru": "поэтому",
+      "pos": "нареч."
+    },
+    "deutsch": {
+      "ru": "немецкий",
+      "pos": "прил."
+    },
+    "Donnerstag": {
+      "ru": "четверг",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Donnerstage"
+    },
+    "Druckwelle": {
+      "ru": "ударная волна, взрывная волна",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Druckwellen"
+    },
+    "dunkel": {
+      "ru": "тёмный",
+      "pos": "прил."
+    },
+    "Durchschnitt": {
+      "ru": "среднее (значение)",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Durchschnitte",
+      "note": "im Durchschnitt — в среднем"
+    },
+    "Dutzend": {
+      "ru": "дюжина",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Dutzende"
+    },
+    "ein/eine": {
+      "ru": "неопределённый артикль",
+      "pos": "артикль",
+      "note": "einer — «один, некто»"
+    },
+    "entdecken": {
+      "ru": "обнаруживать",
+      "pos": "гл.",
+      "forms": "entdeckte · hat entdeckt"
+    },
+    "entfernt": {
+      "ru": "удалённый, далёкий",
+      "pos": "прил.",
+      "note": "… von uns entfernt sein — находиться на расстоянии … от нас"
+    },
+    "Entfernung": {
+      "ru": "расстояние",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Entfernungen"
+    },
+    "er": {
+      "ru": "он",
+      "pos": "мест.",
+      "note": "ihn — его, ihm — ему"
+    },
+    "Erde": {
+      "ru": "Земля (планета); земля, почва",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "erst": {
+      "ru": "лишь, только; сначала",
+      "pos": "нареч.",
+      "note": "erst 2010 — лишь в 2010 году"
+    },
+    "erste": {
+      "ru": "первый",
+      "pos": "числ."
+    },
+    "etwa": {
+      "ru": "примерно, около",
+      "pos": "нареч."
+    },
+    "explodieren": {
+      "ru": "взрываться",
+      "pos": "гл.",
+      "forms": "explodierte · ist explodiert"
+    },
+    "Fensterscheibe": {
+      "ru": "оконное стекло",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Fensterscheiben"
+    },
+    "finden": {
+      "ru": "находить",
+      "pos": "гл.",
+      "forms": "fand · hat gefunden"
+    },
+    "fliegen": {
+      "ru": "летать, лететь",
+      "pos": "гл.",
+      "forms": "flog · ist geflogen"
+    },
+    "folgen": {
+      "ru": "следовать; слушаться",
+      "pos": "гл.",
+      "forms": "folgte · ist gefolgt"
+    },
+    "früher": {
+      "ru": "раньше, прежде",
+      "pos": "нареч."
+    },
+    "für": {
+      "ru": "для, за",
+      "pos": "предл."
+    },
+    "gar": {
+      "ru": "вовсе, совсем",
+      "pos": "нареч."
+    },
+    "Gefahr": {
+      "ru": "опасность",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Gefahren"
+    },
+    "gefährlich": {
+      "ru": "опасный",
+      "pos": "прил."
+    },
+    "gegen": {
+      "ru": "против; около (о времени)",
+      "pos": "предл.",
+      "note": "gegen Mitternacht — около полуночи"
+    },
+    "Geschwindigkeit": {
+      "ru": "скорость, быстрота",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Geschwindigkeiten"
+    },
+    "groß": {
+      "ru": "большой",
+      "pos": "прил.",
+      "forms": "groß · größer · am größten"
+    },
+    "haben": {
+      "ru": "иметь; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "hatte · hat gehabt"
+    },
+    "halb": {
+      "pos": "прил.",
+      "ru": "половинный; наполовину"
+    },
+    "harmlos": {
+      "ru": "безобидный, безвредный",
+      "pos": "прил."
+    },
+    "Haus": {
+      "ru": "дом",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Häuser"
+    },
+    "Hawaii": {
+      "ru": "Гавайи",
+      "pos": "геогр."
+    },
+    "heißen": {
+      "ru": "называться; велеть",
+      "pos": "гл.",
+      "forms": "hieß · hat geheißen"
+    },
+    "herankommen": {
+      "ru": "приближаться, подходить",
+      "pos": "гл.",
+      "forms": "kam heran · ist herangekommen",
+      "note": "bis auf 219.000 Kilometer herankommen — приблизиться на 219 000 км"
+    },
+    "Himmel": {
+      "art": "der",
+      "pl": "die Himmel",
+      "pos": "сущ.",
+      "ru": "небо"
+    },
+    "hoch": {
+      "ru": "высокий",
+      "pos": "прил.",
+      "forms": "hoch · höher · am höchsten"
+    },
+    "immer": {
+      "ru": "всегда, всё",
+      "pos": "нареч.",
+      "note": "immer größer — всё больше"
+    },
+    "in": {
+      "ru": "в (im = in dem, ins = in das)",
+      "pos": "предл."
+    },
+    "Jahr": {
+      "ru": "год",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Jahre"
+    },
+    "je … desto": {
+      "ru": "чем …, тем …",
+      "pos": "союз",
+      "note": "je früher, desto mehr Zeit — чем раньше, тем больше времени"
+    },
+    "jeder": {
+      "ru": "каждый",
+      "pos": "мест."
+    },
+    "kein": {
+      "ru": "никакой, ни один",
+      "pos": "мест."
+    },
+    "Kilometer": {
+      "ru": "километр",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Kilometer"
+    },
+    "klein": {
+      "ru": "маленький",
+      "pos": "прил."
+    },
+    "können": {
+      "ru": "мочь, уметь",
+      "pos": "гл.",
+      "forms": "konnte · hat gekonnt"
+    },
+    "liegen": {
+      "ru": "лежать",
+      "pos": "гл.",
+      "forms": "lag · hat gelegen"
+    },
+    "Mal": {
+      "ru": "раз",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Male",
+      "note": "zu wiederholten Malen — неоднократно"
+    },
+    "man": {
+      "ru": "неопределённое «кто-то, люди, мы»",
+      "pos": "мест."
+    },
+    "mehr": {
+      "ru": "больше",
+      "pos": "нареч.",
+      "note": "В nicht/kein … mehr — больше не. Формально компаратив от viel"
+    },
+    "Mensch": {
+      "ru": "человек",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Menschen",
+      "decl": "n-Deklination: des Menschen · dem/den Menschen"
+    },
+    "Meter": {
+      "ru": "метр",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Meter",
+      "note": "in 30 Metern Tiefe — на глубине 30 метров"
+    },
+    "mit": {
+      "ru": "с",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: mitgehen «пойти вместе»"
+    },
+    "Mittwochmorgen": {
+      "ru": "утро среды",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null,
+      "note": "am Mittwochmorgen — в среду утром"
+    },
+    "Mond": {
+      "ru": "Луна; спутник планеты",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Monde"
+    },
+    "nach": {
+      "ru": "в, на, после, по",
+      "pos": "предл."
+    },
+    "Nacht": {
+      "art": "die",
+      "pl": "die Nächte",
+      "pos": "сущ.",
+      "ru": "ночь"
+    },
+    "nah": {
+      "ru": "близкий",
+      "pos": "прил.",
+      "forms": "nah · näher · am nächsten"
+    },
+    "NASA": {
+      "ru": "НАСА, космическое агентство США",
+      "pos": "сокр."
+    },
+    "nicht": {
+      "ru": "не",
+      "pos": "частица"
+    },
+    "nur": {
+      "ru": "только, лишь",
+      "pos": "частица"
+    },
+    "Observatorium": {
+      "ru": "обсерватория",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Observatorien"
+    },
+    "Oktober": {
+      "ru": "октябрь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Oktober"
+    },
+    "Ort": {
+      "ru": "место; селение",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Orte"
+    },
+    "pro": {
+      "ru": "в, за (на единицу)",
+      "pos": "предл.",
+      "note": "3,5 Kilometer pro Sekunde — 3,5 км в секунду"
+    },
+    "reagieren": {
+      "ru": "реагировать",
+      "pos": "гл.",
+      "forms": "reagierte · hat reagiert"
+    },
+    "rund": {
+      "ru": "около, примерно; круглый",
+      "pos": "нареч./прил.",
+      "note": "rund 550.000 — около 550 000"
+    },
+    "schon": {
+      "ru": "уже",
+      "pos": "нареч."
+    },
+    "sehen": {
+      "ru": "видеть",
+      "pos": "гл.",
+      "forms": "sah · hat gesehen"
+    },
+    "sein": {
+      "ru": "быть; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "war · ist gewesen"
+    },
+    "selten": {
+      "ru": "редкий",
+      "pos": "прил."
+    },
+    "sie": {
+      "ru": "она; они; Вы",
+      "pos": "мест."
+    },
+    "so": {
+      "ru": "так; такой; то (в главном предложении)",
+      "pos": "нареч."
+    },
+    "sogar": {
+      "ru": "даже",
+      "pos": "частица"
+    },
+    "solch": {
+      "ru": "такой",
+      "pos": "мест.",
+      "note": "ein solcher Vorbeiflug — такой пролёт"
+    },
+    "Stadt": {
+      "ru": "город",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Städte"
+    },
+    "Stunde": {
+      "art": "die",
+      "note": "eine halbe Stunde — тж. о расстоянии: полчаса ходу",
+      "pl": "die Stunden",
+      "pos": "сущ.",
+      "ru": "час"
+    },
+    "Tag": {
+      "ru": "день",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Tage"
+    },
+    "Tausend": {
+      "ru": "тысяча",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Tausende",
+      "note": "Tausende von … — тысячи …"
+    },
+    "Teleskop": {
+      "ru": "телескоп",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Teleskope"
+    },
+    "treffen": {
+      "ru": "попадать; передавать (сходство)",
+      "pos": "гл.",
+      "forms": "traf · hat getroffen",
+      "note": "gut getroffen — удачно передан (о портрете)"
+    },
+    "Tscheljabinsk": {
+      "ru": "Челябинск (город, над которым в 2013 году взорвался метеор)",
+      "pos": "геогр."
+    },
+    "Uhr": {
+      "ru": "час (на часах); часы",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Uhren",
+      "note": "um 5 Uhr — в пять часов"
+    },
+    "um": {
+      "ru": "вокруг, в (о времени)",
+      "pos": "предл.",
+      "note": "um … zu — чтобы. Тж. отделяемая приставка: sich umsehen «оглядеться»"
+    },
+    "und": {
+      "ru": "и, а",
+      "pos": "союз"
+    },
+    "ungefähr": {
+      "ru": "примерно",
+      "pos": "нареч."
+    },
+    "USA": {
+      "ru": "США",
+      "pos": "геогр.",
+      "note": "die USA — во мн. ч.: der USA (род. п.)"
+    },
+    "Vergleich": {
+      "ru": "сравнение",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Vergleiche",
+      "note": "im Vergleich zu — по сравнению с"
+    },
+    "verletzen": {
+      "ru": "ранить, повредить",
+      "pos": "гл.",
+      "forms": "verletzte · hat verletzt",
+      "note": "verletzt werden — получить ранение"
+    },
+    "viel": {
+      "ru": "много, многое",
+      "pos": "мест."
+    },
+    "von": {
+      "ru": "от, из, о (vom = von dem)",
+      "pos": "предл."
+    },
+    "vorbeifliegen": {
+      "ru": "пролетать мимо",
+      "pos": "гл.",
+      "forms": "flog vorbei · ist vorbeigeflogen",
+      "note": "an etwas (D) vorbeifliegen — пролететь мимо чего-то"
+    },
+    "Vorbeiflug": {
+      "ru": "пролёт мимо",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Vorbeiflüge"
+    },
+    "vorher": {
+      "ru": "прежде, сначала",
+      "pos": "нареч."
+    },
+    "Weg": {
+      "ru": "путь, дорога",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Wege"
+    },
+    "wenig": {
+      "ru": "мало; немного",
+      "pos": "мест.",
+      "note": "ein wenig — немножко; etwas Weniges — самую малость"
+    },
+    "werden": {
+      "ru": "становиться",
+      "pos": "гл.",
+      "forms": "wurde · ist geworden",
+      "note": "Вспомогательный глагол будущего времени и пассива"
+    },
+    "wie": {
+      "ru": "как; какой",
+      "pos": "союз"
+    },
+    "wir": {
+      "ru": "мы",
+      "pos": "мест.",
+      "note": "uns — нас, нам"
+    },
+    "wohl": {
+      "ru": "хорошо; пожалуй, вероятно",
+      "pos": "нареч."
+    },
+    "Zeit": {
+      "ru": "время",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Zeiten"
+    },
+    "zerplatzen": {
+      "ru": "лопаться, разлетаться на куски",
+      "pos": "гл.",
+      "forms": "zerplatzte · ist zerplatzt"
+    },
+    "zerstören": {
+      "ru": "разрушать, уничтожать",
+      "pos": "гл.",
+      "forms": "zerstörte · hat zerstört"
+    },
+    "zu": {
+      "ru": "к, в; слишком",
+      "pos": "предл.",
+      "note": "zur = zu der, zum = zu dem"
+    },
+    "zwei": {
+      "ru": "два",
+      "pos": "числ."
+    },
+    "zweit": {
+      "ru": "второй",
+      "pos": "числ."
+    },
+    "zwischen": {
+      "pos": "предл.",
+      "ru": "между"
+    },
+    "über": {
+      "ru": "над, через, о",
+      "pos": "предл."
+    }
+  }
+}

@@ -699,3 +699,39 @@ META.update({
 
 ORDER = ['weisse-zwerge-2026', 'schiffswrack-kekova-2026', 'd-you-wallet-2026',
          'inflation-september-2026', 'zwiebelmarkt-weimar-2026'] + ORDER
+
+META.update({
+    'asteroiden-erdnaehe-2026': {
+        'title': 'Näher als der Mond: Zwei kleine Asteroiden fliegen an der Erde vorbei',
+        'titleRu': 'Ближе Луны: два небольших астероида пролетели мимо Земли',
+        'rubric': 'astronomy',
+        'level': 'B1–B2',
+        'levelNote': 'Перфект и претерит (sind vorbeigeflogen, flog vorbei, kam heran), пассив '
+                     '(wurde beobachtet, wurden verletzt), конъюнктив II в прошедшем (Hätten sie … '
+                     'getroffen, wären sie … zerplatzt), je … desto, отделяемые приставки, числа и время.',
+        'published': '2026-10-14',
+        'added': '2026-10-16',
+        'source': 'NASA/JPL · Sky TG24',
+        'sourceUrl': 'https://tg24.sky.it/scienze/2026/10/14/asteroidi-terra',
+        'blurb': 'Астероиды 2026 TG9 и 2026 TP6 размером с дом с разницей в 19 часов прошли '
+                 'примерно на полпути между Землёй и Луной. Их открыли всего за несколько дней до этого.',
+        'license': 'Текст — пересказ по данным NASA/JPL (Close-Approach Database) и Sky TG24; '
+                   'фото — Wikimedia Commons',
+        'figs': {
+            'bennu': {'w': 1200, 'h': 675,
+                      'cap': 'Так выглядит астероид вблизи: Бенну, снятый зондом OSIRIS-REx. Он намного '
+                             'больше (около 500 метров), а 2026 TG9 и 2026 TP6 размером всего с дом.',
+                      'credit': 'NASA/Goddard/University of Arizona · общественное достояние'},
+            'catalina': {'w': 1200, 'h': 800,
+                         'cap': 'Купол одного из телескопов обзора Catalina Sky Survey в горах Аризоны. '
+                                'Такие телескопы каждую ночь ищут астероиды, сближающиеся с Землёй.',
+                         'credit': 'Daniel Oberhaus · CC BY-SA 4.0'},
+            'bok': {'w': 1200, 'h': 800,
+                    'cap': 'Национальная обсерватория Китт-Пик в Аризоне. Справа — башня телескопа Бок, '
+                           'на снимках которого впервые заметили 2026 TP6.',
+                    'credit': 'KPNO/NOIRLab/NSF/AURA/D. Wilmarth · CC BY 4.0'},
+        },
+    },
+})
+
+ORDER = ['asteroiden-erdnaehe-2026'] + ORDER

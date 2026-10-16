@@ -85,7 +85,7 @@ const hub = JSON.parse(await c.ev(`JSON.stringify({
   rubricHidden: document.getElementById('newsRubric').hidden,
   scrollX: document.documentElement.scrollWidth > innerWidth
 })`));
-ok(idx.length === 21, `статей в индексе: ${idx.length}`);
+ok(idx.length === 22, `статей в индексе: ${idx.length}`);
 ok(hub.tiles.map(t => t.id).join() === RUBRICS.join(), 'рубрики: ' + hub.tiles.map(t => t.id).join(', '));
 ok(hub.tiles.every(t => t.live), 'во всех рубриках есть статьи');
 ok(hub.cards === 0 && hub.rubricHidden, 'на витрине нет «простыни» статей — только рубрики');
@@ -183,7 +183,7 @@ ok(/Усі рубрики/.test(uk.back) && /Опубліковано/.test(uk.d
 await c.shot('news_rubric_uk.png');
 for (const id of ['nobelpreis-physik-2026', 'plastiksteuer-2027', 'oktoberfest-rekord-2026', 'juice-erde-2026',
                   'weisse-zwerge-2026', 'schiffswrack-kekova-2026', 'd-you-wallet-2026',
-                  'inflation-september-2026', 'zwiebelmarkt-weimar-2026']) {
+                  'inflation-september-2026', 'zwiebelmarkt-weimar-2026', 'asteroiden-erdnaehe-2026']) {
   await c.ev(`NewsFeed.open('${id}')`);
   await waitFor(`document.querySelector('#rdContent .rd-news-opening')`);
   await c.wait(1000);

@@ -1553,3 +1553,52 @@ L.update({
                                 note='Das reicht! — Хватит!'),
     'gemischt': a('смешанный, неоднозначный', note='es sieht gemischt aus — картина неоднозначная'),
 })
+
+W.update({
+    # Астероиды у Земли
+    'asteroiden': 'Asteroid', 'asteroid': 'Asteroid', 'vorbeiflügen': 'Vorbeiflug',
+    'tg': '2026 TG9', 'tp': '2026 TP6', 'mittwochmorgen': 'Mittwochmorgen',
+    'entfernung': 'Entfernung', 'halbem': 'halb', 'brocken': 'Brocken', 'teleskopen': 'Teleskop',
+    'teleskope': 'Teleskop', 'arizona': 'Arizona', 'daten': 'Daten', 'zerplatzt': 'zerplatzen',
+    'harmlos': 'harmlos', 'explodierte': 'explodieren', 'tscheljabinsk': 'Tscheljabinsk',
+    'druckwelle': 'Druckwelle', 'zerstörte': 'zerstören', 'verletzt': 'verletzen',
+    'begegnungen': 'Begegnung', 'dutzende': 'Dutzend', 'observatorien': 'Observatorium',
+    'chile': 'Chile', 'hawaii': 'Hawaii', 'orten': 'Ort', 'je': 'je … desto', 'desto': 'je … desto',
+    'gefährlichen': 'gefährlich', 'reagieren': 'reagieren',
+})
+
+W_ART.update({
+    'asteroiden-erdnaehe-2026': {'findet': 'finden', 'flog': 'vorbeifliegen', 'vorbei': 'vorbeifliegen',
+                                 'kam': 'herankommen', 'heran': 'herankommen',
+                                 'suchen': 'absuchen', 'ab': 'absuchen'},
+})
+
+L.update({
+    # Астероиды у Земли
+    'Asteroid': n('астероид', 'der', 'die Asteroiden', note='n-склонение: den/dem/des Asteroiden'),
+    '2026 TG9': name('2026 TG9 (астероид)', note='обозначение: год открытия + буквенно-цифровой код'),
+    '2026 TP6': name('2026 TP6 (астероид)', note='обозначение: год открытия + буквенно-цифровой код'),
+    'Mittwochmorgen': n('утро среды', 'der', None, note='am Mittwochmorgen — в среду утром'),
+    'herankommen': v('приближаться, подходить', 'kam heran · ist herangekommen',
+                     note='bis auf 219.000 Kilometer herankommen — приблизиться на 219 000 км'),
+    'Brocken': n('глыба, кусок, обломок', 'der', 'die Brocken'),
+    'Arizona': geo('Аризона (штат на юго-западе США)'),
+    'Daten': n('данные', 'die', None, note='только мн. ч. в этом значении; nach Daten der NASA — по данным NASA'),
+    'zerplatzen': v('лопаться, разлетаться на куски', 'zerplatzte · ist zerplatzt'),
+    'harmlos': a('безобидный, безвредный'),
+    'explodieren': v('взрываться', 'explodierte · ist explodiert'),
+    'Tscheljabinsk': geo('Челябинск (город, над которым в 2013 году взорвался метеор)'),
+    'Druckwelle': n('ударная волна, взрывная волна', 'die', 'die Druckwellen'),
+    'zerstören': v('разрушать, уничтожать', 'zerstörte · hat zerstört'),
+    'verletzen': v('ранить, повредить', 'verletzte · hat verletzt',
+                   note='verletzt werden — получить ранение'),
+    'Begegnung': n('встреча', 'die', 'die Begegnungen'),
+    'Observatorium': n('обсерватория', 'das', 'die Observatorien'),
+    'Chile': geo('Чили'),
+    'Hawaii': geo('Гавайи'),
+    'je … desto': dict(ru='чем …, тем …', pos='союз',
+                       note='je früher, desto mehr Zeit — чем раньше, тем больше времени'),
+    'reagieren': v('реагировать', 'reagierte · hat reagiert'),
+    'absuchen': v('обыскивать, прочёсывать', 'suchte ab · hat abgesucht',
+                  note='den Himmel absuchen — прочёсывать небо'),
+})
