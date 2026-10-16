@@ -104,6 +104,9 @@ const cases = [
   ['📗 5 слов в словаре', '📗 5 слів у словнику'],
   ['Собрано: 12 слов (10 новых, 2 знаю)', 'Зібрано: 12 слів (10 нових, 2 знаю)'],
   ['4 главы', '4 розділи'],
+  // разряды через узкий неразрывный пробел (library.js grouped())
+  ['1 182 слов', '1 182 слів'],
+  ['📗 1 005 слов в словаре', '📗 1 005 слів у словнику'],
   ['Читать →', 'Читати →'],
   ['Привет, друг!', 'Привіт, друже!'],
   ['Hallo', 'Hallo'],
@@ -111,6 +114,9 @@ const cases = [
 ];
 for (const [a, b] of cases) check(JSON.stringify(a) + ' → ' + JSON.stringify(b), t(a) === b, t(a));
 check('ru-режим не трогает строки', boot().I.t('Главная') === 'Главная');
+const arUi = boot({ search: '?lang=ar&lts=1' });
+vm.runInContext(fs.readFileSync(path.join(ROOT, 'i18n/ar/ui.js'), 'utf8'), arUi.ctx);
+check('ar: «1 182 слова» на карточке книги переведено', arUi.I.t('1 182 слова') === '1 182 كلمات', arUi.I.t('1 182 слова'));
 
 console.log('4. Перевод данных урока');
 const data = { title: 'Beim Arzt', note: 'Главная', list: ['Карточка 1 из 2', { de: 'Hallo' }] };

@@ -79,6 +79,10 @@ const Reader = (() => {
   const RU_STYLES = ['plain', 'rhymed'];
   // Язык перевода (для переносов и озвучки страницы): ru или uk из js/i18n.js
   const TR_LANG = (window.I18N && I18N.lang) || 'ru';
+  // Перевод справа налево (ar): dir ставится на абзацы, а не на
+  // .rd-content — колонки-страницы должны идти слева направо, иначе
+  // сломается пагинация по scrollLeft.
+  const TR_RTL = document.documentElement.dir === 'rtl';
 
   const DEFAULT_PREFS = {
     fs: 1, lh: 1, theme: 'system', margin: 1, font: 'system', ruStyle: 'plain'
@@ -370,7 +374,7 @@ const Reader = (() => {
     const subtitle = russian ? '' : (ch.titleRu || '');
     // у главы может быть свой значок (ch.icon), иначе — обложка книги
     const icon = ch.icon || (st.meta && st.meta.cover) || '✦';
-    return `<header class="rd-chapter-opening">
+    return `<header class="rd-chapter-opening"${russian && TR_RTL ? ' dir="rtl"' : ''}>
       <div class="rd-chapter-kicker"><span aria-hidden="true">✦</span><span>${esc(label)}</span><span aria-hidden="true">✦</span></div>
       <div class="rd-chapter-icon" aria-hidden="true">${esc(icon)}</div>
       <h1 class="rd-chapter-heading">${esc(title)}</h1>
@@ -388,6 +392,7 @@ const Reader = (() => {
     const verse = !!(st.meta && st.meta.verse);
     const glue = verse ? '<br>' : ' ';
     const cls = verse ? 'rd-p rd-p--verse' : 'rd-p';
+    const dir = st.fullTranslation && TR_RTL ? ' dir="rtl"' : '';
     const prose = paras.map((para, p) => {
       if (para && para.fig) return figureHtml(para.fig, p);
       const sents = Array.isArray(para.s) ? para.s : [];
@@ -395,7 +400,7 @@ const Reader = (() => {
         st.fullTranslation ? ruText(sent) : (sent.de || ''),
         p, s, st.fullTranslation, sent.g
       )).join(glue);
-      return `<p class="${cls}">${inner}</p>`;
+      return `<p class="${cls}"${dir}>${inner}</p>`;
     }).join('');
     return chapterOpening(ch || {}, chapterIndex) + prose;
   }

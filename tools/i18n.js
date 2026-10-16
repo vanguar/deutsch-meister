@@ -27,7 +27,9 @@ const vm = require('vm');
 const ROOT = path.resolve(__dirname, '..');
 const CYR = /[А-Яа-яЁё]/;
 const rel = p => path.join(ROOT, p);
-const read = p => fs.readFileSync(rel(p), 'utf8');
+// CRLF → LF: рабочая копия на Windows бывает с CRLF, а на сайт файлы уходят
+// с LF — ключ многострочной строки должен совпасть с тем, что видит браузер
+const read = p => fs.readFileSync(rel(p), 'utf8').replace(/\r\n/g, '\n');
 const exists = p => fs.existsSync(rel(p));
 const writeJson = (p, o) => { fs.mkdirSync(path.dirname(rel(p)), { recursive: true }); fs.writeFileSync(rel(p), JSON.stringify(o, null, 1) + '\n'); };
 
@@ -329,6 +331,13 @@ function translateFile(obj, tm) {
   return out;
 }
 
+// Память общая на все группы, но у книги/статьи свой перевод строки главнее:
+// короткая подпись из g многозначна («с», «когда», «что»), и перевод из
+// урока (алфавит, вопросы) в тексте книги может оказаться не тем.
+function groupTM(tm, files, group) {
+  return files[group] ? Object.assign(Object.create(null), tm, files[group]) : tm;
+}
+
 function translateObj(obj, tm) {
   if (typeof obj === 'string') return CYR.test(obj) && tm[obj] !== undefined ? tm[obj] : obj;
   if (Array.isArray(obj)) return obj.map(x => translateObj(x, tm));
@@ -350,8 +359,10 @@ function dictJs(keys, tm, title) {
    за уроком). Готовым считается урок, все строки которого переведены, —
    только такие собираются, проверяются и открываются: список уходит в
    i18n/<lang>/ready.js, остальные уроки js/ar-trial.js показывает как
-   «скоро». Книг и новостей пока нет; диалоги переведены целиком и
-   собираются и проверяются, как у полного языка. */
+   «скоро». Книги — так же, по одной: готовая книга (все строки
+   переведены) собирается в i18n/<lang>/books/ и попадает в
+   window.I18N_READY_BOOKS. Новостей пока нет; диалоги переведены
+   целиком и собираются и проверяются, как у полного языка. */
 const TRIAL = {
   ar: { auto: true }
 };
@@ -360,10 +371,15 @@ function readyLessons(groups, tm) {
   return lessonIds().filter(id => groups['lessons/' + id].every(k => tm[k] !== undefined));
 }
 
+function readyBooks(groups, tm) {
+  return bookIds().filter(id => groups['books/' + id].every(k => tm[k] !== undefined));
+}
+
 function trialGroups(groups, lang, tm) {
   const t = TRIAL[lang];
   if (!t) return groups;
   const keep = ['ui', ...readyLessons(groups, tm).map(id => 'lessons/' + id),
+    'books-index', ...readyBooks(groups, tm).map(id => 'books/' + id),
     ...Object.keys(groups).filter(g => g === 'dialogs-index' || g.startsWith('dialogs/'))];
   return Object.fromEntries(keep.map(g => [g, groups[g]]));
 }
@@ -383,26 +399,29 @@ function cmdBuild(lang = 'uk') {
     fs.writeFileSync(rel(`${out}/lessons/${id}.js`), dictJs(groups['lessons/' + id], tm, 'Урок ' + id));
   }
   buildDialogs(out, tm);
-  if (trial) {
-    fs.writeFileSync(rel(`${out}/ready.js`), `/* Готовые уроки — сгенерировано tools/i18n.js build, руками не править */
-window.I18N_READY = ${JSON.stringify(ready)};
-`);
-    console.log(`build: ok (пробная версия, уроков ${ready.length}/${lessonIds().length}) →`, out);
-    return;
-  }
+  const books = trial ? readyBooks(groups, tm) : bookIds();
   writeJson(`${out}/books/index.json`, translateObj(JSON.parse(read('data/books/index.json')), tm));
-  for (const id of bookIds()) for (const f of bookFiles(id)) {
+  for (const id of books) for (const f of bookFiles(id)) {
     const dst = f.replace(/^data\/books\//, `${out}/books/`);
     fs.mkdirSync(path.dirname(rel(dst)), { recursive: true });
     // компактно: книги большие
-    fs.writeFileSync(rel(dst), JSON.stringify(translateFile(JSON.parse(read(f)), tm)));
+    fs.writeFileSync(rel(dst), JSON.stringify(translateFile(JSON.parse(read(f)), groupTM(tm, files, 'books/' + id))));
+  }
+  if (trial) {
+    fs.writeFileSync(rel(`${out}/ready.js`), `/* Готовые уроки и книги — сгенерировано tools/i18n.js build, руками не править */
+window.I18N_READY = ${JSON.stringify(ready)};
+window.I18N_READY_BOOKS = ${JSON.stringify(books)};
+window.I18N_BOOKS_TOTAL = ${bookIds().length};
+`);
+    console.log(`build: ok (пробная версия, уроков ${ready.length}/${lessonIds().length}, книг ${books.length}/${bookIds().length}) →`, out);
+    return;
   }
   if (exists('data/news/index.json')) {
     writeJson(`${out}/news/index.json`, translateObj(JSON.parse(read('data/news/index.json')), tm));
     for (const id of newsIds()) for (const f of newsFiles(id)) {
       const dst = f.replace(/^data\/news\//, `${out}/news/`);
       fs.mkdirSync(path.dirname(rel(dst)), { recursive: true });
-      fs.writeFileSync(rel(dst), JSON.stringify(translateFile(JSON.parse(read(f)), tm)));
+      fs.writeFileSync(rel(dst), JSON.stringify(translateFile(JSON.parse(read(f)), groupTM(tm, files, 'news/' + id))));
     }
   }
   console.log('build: ok →', out);

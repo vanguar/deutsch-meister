@@ -9,9 +9,13 @@
 // Озвучку подменяем заглушкой TTS.speak: проверяется очередь и интерфейс,
 // а не звук (звука в headless нет).
 import { start } from './cdp.mjs';
+import { readFileSync } from 'fs';
 
 const B = 'http://127.0.0.1:8765';
-const LEVELS = (process.env.DLG_LEVELS || 'a1').split(',');
+// живые уровни — те, у которых есть диалоги в data/dialogs/index.json
+// (DLG_LEVELS=a1,a2 — проверить только часть)
+const DATA_LEVELS = [...new Set(JSON.parse(readFileSync(new URL('../../data/dialogs/index.json', import.meta.url), 'utf8')).items.map(i => i.level))];
+const LEVELS = process.env.DLG_LEVELS ? process.env.DLG_LEVELS.split(',') : DATA_LEVELS;
 const c = await start();
 let fail = 0;
 const ok = (cond, msg) => { console.log((cond ? '  ok   ' : '  FAIL ') + msg); if (!cond) fail++; };

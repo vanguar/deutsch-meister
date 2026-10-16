@@ -66,3 +66,7 @@ html[dir="rtl"] .blank-sentence { direction: ltr; justify-content: flex-end; }
 html[dir="rtl"] .blank-input,
 html[dir="rtl"] .dictation-input,
 html[dir="rtl"] input[type="text"] { direction: ltr; }
+
+/* ── Ридер: перевод на арабский ──
+   разрядка ломает связное письмо */
+html[dir="rtl"] .rd-content .rd-p[dir="rtl"] { letter-spacing: 0; }

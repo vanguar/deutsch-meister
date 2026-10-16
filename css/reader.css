@@ -615,7 +615,9 @@ body.rd-open { overflow: hidden; }
    надсловный слой намеренно исключён: там важнее геометрия слов. */
 .rd-content:not(.rd-interlinear) .rd-p + .rd-p { text-indent: 1.15em; }
 .rd-content.rd-full-translation .rd-p { letter-spacing: .006em; }
-.rd-content:not(.rd-interlinear) .rd-p:first-of-type::first-letter {
+/* Буквица — только для латиницы: арабская буква, оторванная от слова,
+   теряет связное начертание */
+.rd-content:not(.rd-interlinear) .rd-p:first-of-type:not([dir="rtl"])::first-letter {
   float: left;
   margin: .08em .12em 0 0;
   color: var(--rd-accent);

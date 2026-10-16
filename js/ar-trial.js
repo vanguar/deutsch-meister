@@ -8,7 +8,9 @@
      • в готовом уроке вверху и внизу — плашка «пробная версия» с просьбой
        об обратной связи и ссылкой на Telegram автора;
      • на главной — такая же плашка, непереведённые уроки помечены «قريبًا»
-       и не открываются (тост вместо перехода), книги и новости — тоже;
+       и не открываются (тост вместо перехода), новости — тоже;
+     • книги переводятся по одной (window.I18N_READY_BOOKS): библиотека
+       открыта, пока готова хоть одна, непереведённые книги в ней — «قريبًا»;
      • если страницу без перевода всё же открыли (закладка, старая
        ссылка), сверху объясняем, что её ещё нет на арабском.
    Интерфейс зеркальный: js/i18n.js ставит <html dir="rtl">, физические
@@ -24,6 +26,11 @@
   var CONTACT = 'ObiVan1978';
   var ANY_LESSON = /lessons\/(a1|a2|b1|b2)\/lesson-(\d+)\//;
   var READY = window.I18N_READY || ['a1-01'];
+  // Книги переводятся по одной — готовые в window.I18N_READY_BOOKS
+  var READY_BOOKS = window.I18N_READY_BOOKS || [];
+  var BOOKS_TOTAL = window.I18N_BOOKS_TOTAL || READY_BOOKS.length;
+  var allBooks = function () { return READY_BOOKS.length >= BOOKS_TOTAL; };
+  function isReadyBook(id) { return READY_BOOKS.indexOf(id) >= 0; }
   // «a1-01» по ссылке/пути, null — не урок
   function lessonId(href) {
     var m = String(href || '').match(ANY_LESSON);
@@ -40,6 +47,7 @@
   var isTrialLesson = isLesson && isReady(lessonId(path));
   // Диалоги (dialogs.html) переведены целиком — раздел открыт и без плашек
   var isDialogs = /dialogs\.html$/.test(path);
+  var isBooks = /books\.html$/.test(path);
   var isHome = !isLesson && !isDialogs && !/(books|news)\.html$/.test(path);
 
   var me = document.currentScript;
@@ -113,15 +121,17 @@
 
   var LESSON_BOTTOM =
     '<div class="ar-trial-title">🙏 شكرًا لأنك أكملت الدرس!</div>' +
-    '<p>هذه <b>نسخة تجريبية</b> من الترجمة العربية؛ الكتب والأخبار قيد الترجمة.</p>' +
+    '<p>هذه <b>نسخة تجريبية</b> من الترجمة العربية؛ ' + (READY_BOOKS.length ? 'الأخبار قيد الترجمة.' : 'الكتب والأخبار قيد الترجمة.') + '</p>' +
     '<p>نرجو أن تشاركنا انطباعك عن الدرس والترجمة — ملاحظاتك تساعدنا على إعداد النسخة الكاملة أسرع وأفضل. ' +
     'راسلنا في Telegram: ' + TG_LINK + '</p>' +
     '<div class="ar-trial-actions">' + FEEDBACK_BTN + '</div>';
 
   var HOME =
     '<div class="ar-trial-title">🧪 النسخة العربية التجريبية</div>' +
-    '<p>المتاح الآن بالعربية: <b>القائمة</b> و<b>دروس الدورة (<bdi dir="ltr">' + READY.length + '</bdi>)</b> و<b>الحوارات</b>. ' +
-    'الكتب والأخبار قيد الترجمة، وما لم يُترجم بعد معلَّم بـ «🔒 قريبًا».</p>' +
+    '<p>المتاح الآن بالعربية: <b>القائمة</b> و<b>دروس الدورة (<bdi dir="ltr">' + READY.length + '</bdi>)</b> و<b>الحوارات</b>' +
+    (READY_BOOKS.length ? ' و<b>الكتب (<bdi dir="ltr">' + READY_BOOKS.length + '</bdi>)</b>' : '') + '. ' +
+    (READY_BOOKS.length && !allBooks() ? 'بقية الكتب والأخبار قيد الترجمة' : READY_BOOKS.length ? 'الأخبار قيد الترجمة' : 'الكتب والأخبار قيد الترجمة') +
+    '، وما لم يُترجم بعد معلَّم بـ «🔒 قريبًا».</p>' +
     '<p>جرّب الدروس وأخبرنا برأيك في Telegram: ' + TG_LINK + '</p>' +
     '<div class="ar-trial-actions">' +
       '<a class="ar-trial-btn" href="' + lessonUrl(READY[0]) + '">🚀 ابدأ الدرس الأول</a>' +
@@ -137,6 +147,13 @@
       '<a class="ar-trial-btn ghost" href="' + base + 'index.html">🏠 الرئيسية</a>' +
       FEEDBACK_BTN.replace('ar-trial-btn', 'ar-trial-btn ghost') +
     '</div>';
+
+  var BOOKS_NOTE =
+    '<div class="ar-trial-title">📚 الكتب بالعربية</div>' +
+    '<p>نترجم الكتب واحدًا تلو الآخر. المتاح الآن: <b><bdi dir="ltr">' + READY_BOOKS.length + '</bdi> من <bdi dir="ltr">' + BOOKS_TOTAL + '</bdi></b>، ' +
+    'والكتب التي لم تُترجم بعد معلَّمة بـ «🔒 قريبًا».</p>' +
+    '<p>ملاحظاتك على الترجمة تهمّنا: ' + TG_LINK + '</p>' +
+    '<div class="ar-trial-actions">' + FEEDBACK_BTN + '</div>';
 
   var SOON_TOAST = '🔒 سيصبح هذا متاحًا بالعربية قريبًا. جرّب الدروس المتاحة الآن!';
   var SOON_LABEL = '🔒 قريبًا';
@@ -163,14 +180,22 @@
     if (!href) return false;
     var id = lessonId(href);
     if (id) return !isReady(id);
-    return /(^|\/)(books|news)\.html(\?|#|$)/.test(href);
+    if (/(^|\/)books\.html(\?|#|$)/.test(href)) return !READY_BOOKS.length;
+    return /(^|\/)news\.html(\?|#|$)/.test(href);
+  }
+
+  // Карточка книги в библиотеке: кнопки «Читать» и «Словарь» несут id книги
+  function lockedBook(node) {
+    var b = node && node.closest && node.closest('[data-book-id],[data-dict-id]');
+    if (!b) return false;
+    return !isReadyBook(b.getAttribute('data-book-id') || b.getAttribute('data-dict-id'));
   }
 
   // Перехват на фазе захвата: срабатывает раньше обработчиков страницы
   // и закрывает все пути — карточки, меню, «Продолжить», «Следующий урок».
   document.addEventListener('click', function (e) {
     var a = e.target && e.target.closest && e.target.closest('a[href]');
-    if (!a || !lockedHref(a.getAttribute('href'))) return;
+    if (!lockedBook(e.target) && (!a || !lockedHref(a.getAttribute('href')))) return;
     e.preventDefault();
     e.stopPropagation();
     toast(SOON_TOAST);
@@ -189,6 +214,14 @@
       var st = a.querySelector('.lc-status');
       if (st && st.textContent !== SOON_LABEL) { st.textContent = SOON_LABEL; st.className = 'lc-status'; }
     }
+    // книги без перевода в библиотеке
+    var cards = document.querySelectorAll('.lib-card');
+    for (var j = 0; j < cards.length; j++) {
+      var cta = cards[j].querySelector('[data-book-id]');
+      if (!cta || isReadyBook(cta.getAttribute('data-book-id'))) continue;
+      if (!cards[j].classList.contains('ar-soon')) cards[j].classList.add('ar-soon');
+      if (cta.textContent !== SOON_LABEL) cta.textContent = SOON_LABEL;
+    }
     // «Продолжить» на главной ведёт к следующему уроку — если он ещё
     // не переведён, к последнему готовому
     var cont = document.getElementById('continueBtn');
@@ -203,13 +236,14 @@
 
   // Книги и новости открываются функциями из support.js
   function lockFunctions() {
-    ['openBooksModal', 'openNewsPage'].forEach(function (name) {
+    (READY_BOOKS.length ? ['openNewsPage'] : ['openBooksModal', 'openNewsPage']).forEach(function (name) {
       if (typeof window[name] !== 'function' || window[name].__arLocked) return;
       var f = function () { toast(SOON_TOAST); };
       f.__arLocked = true;
       window[name] = f;
     });
-    var acts = document.querySelectorAll('.side-action.news, .side-action[onclick*="openBooksModal"]');
+    var acts = document.querySelectorAll(READY_BOOKS.length ? '.side-action.news'
+      : '.side-action.news, .side-action[onclick*="openBooksModal"]');
     for (var i = 0; i < acts.length; i++) acts[i].classList.add('ar-soon');
   }
 
@@ -282,6 +316,15 @@
       if (content) content.appendChild(el(LESSON_BOTTOM));
     } else if (isDialogs) {
       return;
+    } else if (isBooks) {
+      if (!READY_BOOKS.length) {
+        var lib = document.querySelector('main') || document.body.firstElementChild;
+        var nb = el(NOT_YET); nb.style.margin = '14px';
+        lib.parentNode.insertBefore(nb, lib);
+      } else if (!allBooks()) {
+        var root = document.getElementById('libContent') || document.querySelector('main');
+        if (root && root.parentNode) root.parentNode.insertBefore(el(BOOKS_NOTE), root);
+      }
     } else if (isHome) {
       var hero = document.querySelector('.hero');
       if (hero) insertAfter(el(HOME), hero);

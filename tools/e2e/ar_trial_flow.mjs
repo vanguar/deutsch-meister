@@ -69,6 +69,40 @@ if (LOCKED.length) {
   await c.shot('ar-locked.png');
 }
 
+// книги: готовые открыты, остальные «скоро»; в готовых (все главы, словарь,
+// мета) — ни строчки кириллицы
+const BOOKS = JSON.parse(readFileSync(new URL('../../i18n/ar/ready.js', import.meta.url), 'utf8').match(/I18N_READY_BOOKS\s*=\s*(\[.*?\])/)[1]);
+await c.go(B + '/books.html', 2500);
+s = JSON.parse(await c.ev(`JSON.stringify({cards:document.querySelectorAll('.lib-card').length,
+  locked:[...document.querySelectorAll('.lib-card.ar-soon [data-book-id]')].map(b=>b.dataset.bookId),
+  open:[...document.querySelectorAll('.lib-card:not(.ar-soon) [data-book-id]')].map(b=>b.dataset.bookId),
+  cyr:(()=>{const out=[],w=document.createTreeWalker(document.getElementById('libContent'),4);let n;while(n=w.nextNode())if(${CYR}.test(n.nodeValue))out.push(n.nodeValue.trim());return out.slice(0,10)})()})`));
+check(`библиотека: открыто ${BOOKS.length}, остальные «скоро»`, (s.open.length === BOOKS.length && s.open.every(id => BOOKS.includes(id)) && s.locked.length === s.cards - BOOKS.length), s);
+check('библиотека: нет кириллицы', s.cyr.length === 0, s.cyr);
+await c.shot('ar-books.png');
+if (s.locked.length) {
+  await c.ev(`document.querySelector('.lib-card.ar-soon [data-book-id]').click()`); await c.wait(400);
+  check('закрытая книга не открывается, тост', await c.ev(`!!document.querySelector('.ar-toast') && !document.querySelector('.rd-chapter, .rd-text')`));
+}
+for (const id of BOOKS) {
+  const r = JSON.parse(await c.ev(`(async()=>{const get=f=>fetch('data/books/${id}/'+f).then(r=>r.json());
+    const meta=await get('meta.json');const files=['meta.json','glossary.json'];for(let i=1;i<=meta.chapters;i++)files.push('ch-'+String(i).padStart(2,'0')+'.json');
+    const bad=[];for(const f of files){const d=await get(f);(function w(o,k){if(typeof o==='string'){if(${CYR}.test(o)&&k!=='w')bad.push(f+': '+o.slice(0,60))}else if(o&&typeof o==='object')for(const [kk,v] of Object.entries(o))w(v,k==='w'?'w':kk)})(d,'')}
+    return JSON.stringify({files:files.length,bad:bad.slice(0,10)})})()`, true));
+  check(`книга ${id}: ${r.files} файлов без кириллицы`, r.bad.length === 0, r.bad);
+}
+if (BOOKS.length) {
+  await c.ev(`Reader.open('${BOOKS[0]}')`); await c.wait(2500);
+  await c.shot('ar-reader.png');
+  await c.ev(`document.getElementById('rdFullTranslationBtn').click()`); await c.wait(800);
+  await c.shot('ar-reader-translation.png');
+  await c.ev(`document.getElementById('rdFullTranslationBtn').click(); document.getElementById('rdInterlinearBtn').click()`); await c.wait(800);
+  await c.shot('ar-reader-interlinear.png');
+  check('ридер: перевод и подстрочник без кириллицы', await c.ev(`(()=>{const w=document.createTreeWalker(document.getElementById('rdContent'),4);let n;while(n=w.nextNode())if(${CYR}.test(n.nodeValue))return false;return true})()`));
+  await c.ev(`document.getElementById('rdInterlinearBtn').click()`);
+  check('ридер открыл готовую книгу', await c.ev(`!document.getElementById('libView') || getComputedStyle(document.getElementById('libView')).display==='none' || document.getElementById('libView').hidden`));
+}
+
 await c.go(B + '/index.html?lang=uk&lts=' + Date.now(), 2000);
 check('uk без плашек и без RTL', await c.ev(`I18N.lang==='uk' && !document.querySelector('.ar-trial') && document.documentElement.dir!=='rtl'`));
 check('ошибок JS нет', c.errors().length === 0, c.errors());
