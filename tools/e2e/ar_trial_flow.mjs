@@ -91,8 +91,39 @@ for (const id of BOOKS) {
     return JSON.stringify({files:files.length,bad:bad.slice(0,10)})})()`, true));
   check(`книга ${id}: ${r.files} файлов без кириллицы`, r.bad.length === 0, r.bad);
 }
+// реальный клик мышью в центр элемента (ловит и перекрытые кнопки)
+async function mouse(sel) {
+  const r = JSON.parse(await c.ev(`(()=>{const e=document.querySelector(${JSON.stringify(sel)});const b=e.getBoundingClientRect();
+    const x=b.left+b.width/2,y=b.top+b.height/2,t=document.elementFromPoint(x,y);return JSON.stringify({x,y,hit:!!t&&(t===e||e.contains(t))})})()`));
+  for (const type of ['mousePressed', 'mouseReleased']) await c.send('Input.dispatchMouseEvent', { type, x: r.x, y: r.y, button: 'left', clickCount: 1 });
+  await c.wait(800);
+  return r.hit;
+}
+// первое слово, видимое в окне страницы
+const firstWord = `(()=>{const v=document.getElementById('rdViewport').getBoundingClientRect();
+  return [...document.querySelectorAll('#rdContent .bw, #rdContent .brw')].find(w=>{const b=w.getBoundingClientRect();return b.width&&b.left>=v.left-1&&b.right<=v.right+1})?.textContent||''})()`;
+// x-координаты символов текстового узла
+const glyphX = id => `(()=>{const n=document.getElementById('${id}').firstChild,r=document.createRange(),o={};
+  for(let i=0;i<n.length;i++){r.setStart(n,i);r.setEnd(n,i+1);const ch=n.data[i];if(!(ch in o))o[ch]=r.getBoundingClientRect().left}return JSON.stringify(o)})()`;
 if (BOOKS.length) {
   await c.ev(`Reader.open('${BOOKS[0]}')`); await c.wait(2500);
+  // листание: колонки-страницы идут слева направо и в арабском интерфейсе
+  const w0 = await c.ev(firstWord);
+  check('ридер: кнопка «вперёд» доступна для клика', await mouse('#rdNext'));
+  const w1 = await c.ev(firstWord);
+  check('ридер: «вперёд» показывает следующую страницу', w0 && w1 && w0 !== w1, { w0, w1 });
+  await mouse('#rdPrev');
+  check('ридер: «назад» возвращает страницу', await c.ev(firstWord) === w0);
+  let g = JSON.parse(await c.ev(glyphX('rdPrev')));
+  check('ридер: стрелка «назад» слева от слова', g['‹'] < g['ر'], g);
+  g = JSON.parse(await c.ev(glyphX('rdPages')));
+  check('ридер: счётчик «ف. 1 / N» читается справа налево, дробь слева направо', g['ف'] > g['1'] && g['1'] < g['/'], g);
+  await mouse('#rdFullTranslationBtn');
+  const t0 = await c.ev(firstWord);
+  await mouse('#rdNext');
+  const t1 = await c.ev(firstWord);
+  check('ридер: перевод тоже листается', t0 && t1 && t0 !== t1, { t0, t1 });
+  await mouse('#rdFullTranslationBtn');
   await c.shot('ar-reader.png');
   await c.ev(`document.getElementById('rdFullTranslationBtn').click()`); await c.wait(800);
   await c.shot('ar-reader-translation.png');

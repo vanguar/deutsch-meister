@@ -79,9 +79,9 @@ const Reader = (() => {
   const RU_STYLES = ['plain', 'rhymed'];
   // Язык перевода (для переносов и озвучки страницы): ru или uk из js/i18n.js
   const TR_LANG = (window.I18N && I18N.lang) || 'ru';
-  // Перевод справа налево (ar): dir ставится на абзацы, а не на
-  // .rd-content — колонки-страницы должны идти слева направо, иначе
-  // сломается пагинация по scrollLeft.
+  // Перевод справа налево (ar): dir ставится на абзацы, а .rd-content
+  // остаётся LTR (css/rtl.css) — колонки-страницы должны идти слева
+  // направо, иначе листание translateX уводит в пустоту.
   const TR_RTL = document.documentElement.dir === 'rtl';
 
   const DEFAULT_PREFS = {

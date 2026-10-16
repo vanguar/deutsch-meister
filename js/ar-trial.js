@@ -76,7 +76,9 @@
     '.ar-soon{opacity:.45;filter:grayscale(.6);cursor:not-allowed}',
     '.lesson-card.ar-soon:hover{transform:none}',
     '.lesson-card.ar-soon::after{display:none}',
-    '.ar-toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:9999;max-width:min(92vw,420px);',
+    // pointer-events:none — погасший тост остаётся в DOM прозрачным и иначе
+    // перехватывал бы нажатия на кнопки внизу экрана (листание в ридере)
+    '.ar-toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:9999;max-width:min(92vw,420px);pointer-events:none;',
     'direction:rtl;text-align:center;padding:12px 16px;border-radius:12px;font-size:15px;line-height:1.6;',
     'background:var(--surface2,#232136);color:var(--text,#e8e6f0);border:1px solid var(--border-light,#3d3960);',
     'box-shadow:0 8px 30px rgba(0,0,0,.35);transition:opacity .25s}'

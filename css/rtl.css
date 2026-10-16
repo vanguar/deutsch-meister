@@ -67,6 +67,20 @@ html[dir="rtl"] .blank-input,
 html[dir="rtl"] .dictation-input,
 html[dir="rtl"] input[type="text"] { direction: ltr; }
 
-/* ── Ридер: перевод на арабский ──
-   разрядка ломает связное письмо */
-html[dir="rtl"] .rd-content .rd-p[dir="rtl"] { letter-spacing: 0; }
+/* ── Ридер ──
+   Страницы — CSS-колонки, листание — translateX(-страница × ширина):
+   колонки обязаны идти слева направо, иначе страницы уезжают в пустоту
+   и число страниц считается неверно. Текст книги немецкий; направление
+   справа налево получают только абзацы арабского перевода (dir="rtl"
+   ставит js/reader.js). Кнопки «назад/вперёд» и полоса прогресса
+   следуют за страницами: назад слева, вперёд справа. */
+html[dir="rtl"] .rd-content,
+html[dir="rtl"] .rd-controls,
+html[dir="rtl"] .rd-bar { direction: ltr; }
+html[dir="rtl"] .rd-content .rd-p[dir="rtl"] { direction: rtl; letter-spacing: 0; }
+html[dir="rtl"] .rd-chapter-opening[dir="rtl"] { direction: rtl; }
+/* «‹ رجوع» / «التالي ›»: стрелка указывает, куда листается немецкая страница
+   («ف. 1 / 4 · 9%» в шапке держат изоляторы LRI/PDI в самом переводе) */
+html[dir="rtl"] .rd-nav-btn { direction: ltr; unicode-bidi: isolate; }
+/* «←» назад: в зеркальной шапке кнопка справа — стрелка смотрит вправо */
+html[dir="rtl"] :is(#rdBack, #rdDictBack, #rdCardsBack) { transform: scaleX(-1); }

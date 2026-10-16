@@ -331,11 +331,14 @@ function translateFile(obj, tm) {
   return out;
 }
 
-// Память общая на все группы, но у книги/статьи свой перевод строки главнее:
-// короткая подпись из g многозначна («с», «когда», «что»), и перевод из
-// урока (алфавит, вопросы) в тексте книги может оказаться не тем.
+// Память общая на все группы, но в ридере (книги, новости) короткая подпись
+// из g многозначна: «с» в уроке-алфавите — буква, «когда» в уроке — вопрос,
+// «месяц» — календарный. Поэтому слои: общая память → reader-glosses.json
+// (как такие подписи читаются над текстом в ридере; группа без своих ключей,
+// заводится руками) → перевод самой книги/статьи.
 function groupTM(tm, files, group) {
-  return files[group] ? Object.assign(Object.create(null), tm, files[group]) : tm;
+  const layers = [files['reader-glosses'], files[group]].filter(Boolean);
+  return layers.length ? Object.assign(Object.create(null), tm, ...layers) : tm;
 }
 
 function translateObj(obj, tm) {
