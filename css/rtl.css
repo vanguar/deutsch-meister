@@ -84,3 +84,9 @@ html[dir="rtl"] .rd-chapter-opening[dir="rtl"] { direction: rtl; }
 html[dir="rtl"] .rd-nav-btn { direction: ltr; unicode-bidi: isolate; }
 /* «←» назад: в зеркальной шапке кнопка справа — стрелка смотрит вправо */
 html[dir="rtl"] :is(#rdBack, #rdDictBack, #rdCardsBack) { transform: scaleX(-1); }
+/* стихи (Буш): строфа центрируется отступом от начала строки — у арабских
+   строф начало справа */
+html[dir="rtl"] .rd-content .rd-p--verse[dir="rtl"] {
+  padding-left: 0;
+  padding-right: max(0px, calc((100% - 17em) / 2));
+}
