@@ -17,6 +17,23 @@
    "minutes": 3,
    "photos": 3,
    "chapters": 1
+  },
+  {
+   "id": "korea-humanoide-fabrik-2026",
+   "title": "Ohne Schutzzaun: In Südkorea arbeiten Roboter bald direkt neben Menschen",
+   "titleRu": "بلا سياج حماية: الروبوتات في كوريا الجنوبية ستعمل إلى جانب البشر",
+   "blurb": "سمحت كوريا الجنوبية لأول مرة لروبوتات شبيهة بالبشر ومزوّدة بالذكاء الاصطناعي بالعمل في المصانع وحوض بناء السفن والمستودع بلا سياج حماية: 20 روبوتًا بساقين من شركة Robros تخضع للتجربة إلى جانب البشر. وفي مدينة تشونان ستقوم روبوتات بأربع أرجل بدوريات في الحدائق.",
+   "rubric": "tech",
+   "level": "B1",
+   "published": "2026-10-13",
+   "added": "2026-10-17",
+   "source": "Kyunghyang Shinmun · Humanoids Daily · Origin of Bots",
+   "sourceUrl": "https://www.khan.co.kr/en/article/202610131633027",
+   "cover": "data/news/korea-humanoide-fabrik-2026/img/cover.jpg",
+   "words": 270,
+   "minutes": 2,
+   "photos": 3,
+   "chapters": 1
   }
  ]
 }

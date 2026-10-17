@@ -1,0 +1,967 @@
+{
+  "version": 1,
+  "w": {
+    "aber": "aber",
+    "als": "als",
+    "am": "an",
+    "an": "an",
+    "anderes": "ander",
+    "anders": "anders",
+    "arbeiten": "arbeiten",
+    "arbeiter": "Arbeiter",
+    "arbeitern": "Arbeiter",
+    "arbeitsministerium": "Arbeitsministerium",
+    "auch": "auch",
+    "auf": "auf",
+    "aus": "aus",
+    "aussehen": "aussehen",
+    "autowerk": "Autowerk",
+    "außerdem": "außerdem",
+    "bald": "bald",
+    "bauteile": "Bauteil",
+    "befreien": "befreien",
+    "bei": "bei",
+    "beinen": "Bein",
+    "bewegt": "bewegen",
+    "bisher": "bisher",
+    "boden": "Boden",
+    "cheonan": "Cheonan",
+    "chipfabrik": "Chipfabrik",
+    "dafür": "dafür",
+    "darf": "dürfen",
+    "das": "der/die/das",
+    "daten": "Daten",
+    "dauert": "dauern",
+    "den": "der/die/das",
+    "der": "der/die/das",
+    "des": "der/die/das",
+    "die": "der/die/das",
+    "diese": "dieser",
+    "diesen": "dieser",
+    "dinge": "Ding",
+    "direkt": "direkt",
+    "dürfen": "dürfen",
+    "eigenes": "eigen",
+    "ein": "ein/eine",
+    "einem": "ein/eine",
+    "einen": "ein/eine",
+    "einer": "ein/eine",
+    "einsetzen": "einsetzen",
+    "erkennen": "erkennen",
+    "erlaubt": "erlauben",
+    "ersten": "erste",
+    "es": "es",
+    "fabriken": "Fabrik",
+    "fest": "fest",
+    "firma": "Firma",
+    "firmen": "Firma",
+    "fluss": "Fluss",
+    "fällt": "wegfallen",
+    "für": "für",
+    "ganz": "ganz",
+    "geben": "geben",
+    "gefahren": "Gefahr",
+    "geht": "gehen",
+    "gesagt": "sagen",
+    "gibt": "geben",
+    "greift": "greifen",
+    "gut": "gut",
+    "haben": "haben",
+    "hat": "haben",
+    "helfen": "helfen",
+    "herum": "herum",
+    "hinauf": "hinaufkommen",
+    "hinweise": "Hinweis",
+    "hälfte": "Hälfte",
+    "ihnen": "sie",
+    "in": "in",
+    "industrieminister": "Industrieminister",
+    "industrieministerium": "Industrieministerium",
+    "industrieroboter": "Industrieroboter",
+    "intelligenz": "Intelligenz",
+    "ist": "sein",
+    "jahres": "Jahr",
+    "jeong-kwan": "Kim Jeong-kwan",
+    "jetzt": "jetzt",
+    "kameras": "Kamera",
+    "karosserie": "Karosserie",
+    "ki-modell": "KI-Modell",
+    "kim": "Kim Jeong-kwan",
+    "klar": "klar",
+    "kleine": "klein",
+    "kommen": "hinaufkommen",
+    "kühlboxen": "Kühlbox",
+    "künstliche": "künstlich",
+    "lager": "Lager (склад)",
+    "lange": "lang",
+    "lautsprecher": "Lautsprecher",
+    "legen": "legen",
+    "lernen": "lernen",
+    "man": "man",
+    "maschinen": "Maschine",
+    "material": "Material",
+    "maßnahmen": "Maßnahme",
+    "menschen": "Mensch",
+    "ministerium": "Ministerium",
+    "mit": "mit",
+    "mussten": "müssen",
+    "müssen": "müssen",
+    "müssten": "müssen",
+    "neben": "neben",
+    "nicht": "nicht",
+    "noch": "noch",
+    "notfall": "Notfall",
+    "ob": "ob",
+    "oft": "oft",
+    "ohne": "ohne",
+    "oktober": "Oktober",
+    "parks": "Park",
+    "passiert": "passieren",
+    "patrouillieren": "patrouillieren",
+    "projekt": "Projekt",
+    "prüfen": "prüfen",
+    "regel": "Regel",
+    "regeln": "Regel",
+    "regierung": "Regierung",
+    "richtige": "richtig",
+    "roboter": "Roboter",
+    "robros": "Robros",
+    "rädern": "Rad",
+    "sagte": "sagen",
+    "sammelt": "sammeln",
+    "schiffbau": "Schiffbau",
+    "schmutz": "Schmutz",
+    "schreibt": "vorschreiben",
+    "schutz": "Schutz",
+    "schutzzaun": "Schutzzaun",
+    "selben": "derselbe",
+    "sich": "sich",
+    "sie": "sie",
+    "simulationen": "Simulation",
+    "so": "so",
+    "soll": "sollen",
+    "sollen": "sollen",
+    "stadt": "Stadt",
+    "stapeln": "stapeln",
+    "stehen": "stehen",
+    "stelle": "Stelle",
+    "stunden": "Stunde",
+    "südkorea": "Südkorea",
+    "tag": "Tag",
+    "technik": "Technik",
+    "teile": "Teil",
+    "test": "Test",
+    "tragen": "tragen",
+    "trennte": "trennen",
+    "treppen": "Treppe",
+    "um": "um",
+    "und": "und",
+    "unternehmen": "Unternehmen",
+    "verändern": "verändern",
+    "videos": "Video",
+    "vier": "vier",
+    "von": "von",
+    "vor": "vorschreiben",
+    "vorher": "vorher",
+    "vorstellen": "vorstellen",
+    "was": "was",
+    "weg": "wegfallen",
+    "welche": "welcher",
+    "werft": "Werft",
+    "wie": "wie",
+    "will": "wollen",
+    "wirklich": "wirklich",
+    "zeigen": "zeigen",
+    "zum": "zu",
+    "zusammen": "zusammen",
+    "zwei": "zwei",
+    "über": "über"
+  },
+  "l": {
+    "aber": {
+      "ru": "но, однако",
+      "pos": "союз"
+    },
+    "als": {
+      "ru": "когда; как; чем",
+      "pos": "союз"
+    },
+    "an": {
+      "ru": "у, к, на",
+      "pos": "предл.",
+      "note": "am = an dem. Тж. отделяемая приставка: anfangen «начинать», annehmen, ansehen, anzünden"
+    },
+    "ander": {
+      "pos": "прил.",
+      "ru": "другой, иной"
+    },
+    "anders": {
+      "ru": "иначе, по-другому",
+      "pos": "нареч."
+    },
+    "arbeiten": {
+      "ru": "работать",
+      "pos": "гл.",
+      "forms": "arbeitete · hat gearbeitet",
+      "note": "daran arbeiten, etwas zu tun — добиваться чего-л."
+    },
+    "Arbeiter": {
+      "ru": "рабочий",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Arbeiter"
+    },
+    "Arbeitsministerium": {
+      "ru": "министерство труда",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Arbeitsministerien"
+    },
+    "auch": {
+      "ru": "тоже, также; даже",
+      "pos": "частица"
+    },
+    "auf": {
+      "ru": "на, в",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: aufspringen «вскочить», sich aufmachen"
+    },
+    "aus": {
+      "ru": "из",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: auslöschen «погасить»"
+    },
+    "aussehen": {
+      "ru": "выглядеть",
+      "pos": "гл.",
+      "forms": "sah aus · hat ausgesehen"
+    },
+    "Autowerk": {
+      "ru": "автозавод",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Autowerke"
+    },
+    "außerdem": {
+      "ru": "кроме того",
+      "pos": "нареч."
+    },
+    "bald": {
+      "ru": "скоро",
+      "pos": "нареч."
+    },
+    "Bauteil": {
+      "ru": "деталь, компонент",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Bauteile"
+    },
+    "befreien": {
+      "ru": "освобождать",
+      "pos": "гл.",
+      "forms": "befreite · hat befreit"
+    },
+    "bei": {
+      "ru": "у, при, возле",
+      "pos": "предл."
+    },
+    "Bein": {
+      "ru": "нога; кость",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Beine"
+    },
+    "bewegen": {
+      "ru": "двигать",
+      "pos": "гл.",
+      "forms": "bewegte · hat bewegt"
+    },
+    "bisher": {
+      "ru": "до сих пор, до этого",
+      "pos": "нареч."
+    },
+    "Boden": {
+      "art": "der",
+      "pl": "die Böden",
+      "pos": "сущ.",
+      "ru": "пол; земля"
+    },
+    "Cheonan": {
+      "ru": "Чхонан (город в Южной Корее)",
+      "pos": "геогр."
+    },
+    "Chipfabrik": {
+      "ru": "завод микросхем",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Chipfabriken",
+      "note": "der Chip — микросхема, чип"
+    },
+    "dafür": {
+      "ru": "за это, для этого",
+      "pos": "нареч.",
+      "note": "dafür sorgen, dass … — позаботиться, чтобы …"
+    },
+    "Daten": {
+      "ru": "данные",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null,
+      "note": "только мн. ч. в этом значении; nach Daten der NASA — по данным NASA"
+    },
+    "dauern": {
+      "ru": "длиться, продолжаться",
+      "pos": "гл.",
+      "forms": "dauerte · hat gedauert"
+    },
+    "der/die/das": {
+      "ru": "определённый артикль",
+      "pos": "артикль",
+      "note": "Тж. относительное местоимение «который»"
+    },
+    "derselbe": {
+      "note": "склоняется по частям: desselben, derselben, dasselbe",
+      "pos": "мест.",
+      "ru": "тот же самый"
+    },
+    "dieser": {
+      "ru": "этот, эта, это",
+      "pos": "мест."
+    },
+    "Ding": {
+      "ru": "вещь",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Dinge"
+    },
+    "direkt": {
+      "ru": "прямой, непосредственный",
+      "pos": "прил."
+    },
+    "dürfen": {
+      "ru": "сметь, иметь право",
+      "pos": "гл.",
+      "forms": "durfte · hat gedurft"
+    },
+    "eigen": {
+      "ru": "собственный",
+      "pos": "прил."
+    },
+    "ein/eine": {
+      "ru": "неопределённый артикль",
+      "pos": "артикль",
+      "note": "einer — «один, некто»"
+    },
+    "einsetzen": {
+      "ru": "применять, задействовать",
+      "pos": "гл.",
+      "forms": "setzte ein · hat eingesetzt",
+      "note": "Waffen einsetzen — применять оружие"
+    },
+    "erkennen": {
+      "ru": "узнавать; распознавать",
+      "pos": "гл.",
+      "forms": "erkannte · hat erkannt",
+      "note": "sich zu erkennen geben — открыться, назвать себя"
+    },
+    "erlauben": {
+      "ru": "разрешать",
+      "pos": "гл.",
+      "forms": "erlaubte · hat erlaubt"
+    },
+    "erste": {
+      "ru": "первый",
+      "pos": "числ."
+    },
+    "es": {
+      "ru": "оно; это",
+      "pos": "мест."
+    },
+    "Fabrik": {
+      "ru": "фабрика, завод",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Fabriken"
+    },
+    "fest": {
+      "ru": "твёрдый, прочный",
+      "pos": "прил."
+    },
+    "Firma": {
+      "ru": "фирма",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Firmen"
+    },
+    "Fluss": {
+      "ru": "река",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Flüsse"
+    },
+    "für": {
+      "ru": "для, за",
+      "pos": "предл."
+    },
+    "ganz": {
+      "ru": "весь, целый; совсем",
+      "pos": "прил."
+    },
+    "geben": {
+      "ru": "давать",
+      "pos": "гл.",
+      "forms": "gab · hat gegeben"
+    },
+    "Gefahr": {
+      "ru": "опасность",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Gefahren"
+    },
+    "gehen": {
+      "ru": "идти, ходить",
+      "pos": "гл.",
+      "forms": "ging · ist gegangen"
+    },
+    "greifen": {
+      "ru": "хватать, браться",
+      "pos": "гл.",
+      "forms": "griff · hat gegriffen",
+      "note": "in den Stiefel greifen — полезть в сапог; angreifen — напасть: greift sie … an"
+    },
+    "gut": {
+      "ru": "хороший, добрый",
+      "pos": "прил.",
+      "forms": "gut · besser · am besten",
+      "note": "besser — лучше"
+    },
+    "haben": {
+      "ru": "иметь; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "hatte · hat gehabt"
+    },
+    "helfen": {
+      "ru": "помогать",
+      "pos": "гл.",
+      "forms": "half · hat geholfen"
+    },
+    "herum": {
+      "ru": "вокруг, кругом",
+      "pos": "нареч."
+    },
+    "hinaufkommen": {
+      "ru": "подниматься (наверх)",
+      "pos": "гл.",
+      "forms": "kam hinauf · ist hinaufgekommen",
+      "note": "Treppen hinaufkommen — подниматься по лестнице"
+    },
+    "Hinweis": {
+      "ru": "указание, подсказка",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Hinweise"
+    },
+    "Hälfte": {
+      "ru": "половина",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Hälften"
+    },
+    "in": {
+      "ru": "в (im = in dem, ins = in das)",
+      "pos": "предл."
+    },
+    "Industrieminister": {
+      "ru": "министр промышленности",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Industrieminister"
+    },
+    "Industrieministerium": {
+      "ru": "министерство промышленности",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Industrieministerien"
+    },
+    "Industrieroboter": {
+      "ru": "промышленный робот",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Industrieroboter"
+    },
+    "Intelligenz": {
+      "ru": "интеллект, ум",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "Jahr": {
+      "ru": "год",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Jahre"
+    },
+    "jetzt": {
+      "ru": "сейчас, теперь",
+      "pos": "нареч."
+    },
+    "Kamera": {
+      "ru": "камера",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Kameras"
+    },
+    "Karosserie": {
+      "ru": "кузов (автомобиля)",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Karosserien"
+    },
+    "KI-Modell": {
+      "ru": "ИИ-модель",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die KI-Modelle",
+      "note": "KI = künstliche Intelligenz — искусственный интеллект"
+    },
+    "Kim Jeong-kwan": {
+      "ru": "Ким Чон Гван (министр промышленности Южной Кореи)",
+      "pos": "имя собств."
+    },
+    "klar": {
+      "ru": "ясный, понятный",
+      "pos": "прил."
+    },
+    "klein": {
+      "ru": "маленький",
+      "pos": "прил."
+    },
+    "Kühlbox": {
+      "ru": "термоконтейнер, сумка-холодильник",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Kühlboxen"
+    },
+    "künstlich": {
+      "ru": "искусственный",
+      "pos": "прил.",
+      "note": "künstliche Intelligenz — искусственный интеллект"
+    },
+    "Lager (склад)": {
+      "ru": "склад",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Lager",
+      "note": "также «лагерь»"
+    },
+    "lang": {
+      "ru": "длинный, долгий",
+      "pos": "прил.",
+      "forms": "lang · länger · am längsten"
+    },
+    "Lautsprecher": {
+      "ru": "громкоговоритель, динамик",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Lautsprecher"
+    },
+    "legen": {
+      "ru": "класть",
+      "pos": "гл.",
+      "forms": "legte · hat gelegt",
+      "note": "sich legen — ложиться"
+    },
+    "lernen": {
+      "ru": "учиться",
+      "pos": "гл.",
+      "forms": "lernte · hat gelernt"
+    },
+    "man": {
+      "ru": "неопределённое «кто-то, люди, мы»",
+      "pos": "мест."
+    },
+    "Maschine": {
+      "ru": "машина, механизм",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Maschinen"
+    },
+    "Material": {
+      "ru": "материал",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Materialien"
+    },
+    "Maßnahme": {
+      "ru": "мера",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Maßnahmen",
+      "note": "Maßnahmen zum Schutz — меры защиты"
+    },
+    "Mensch": {
+      "ru": "человек",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Menschen",
+      "decl": "n-Deklination: des Menschen · dem/den Menschen"
+    },
+    "Ministerium": {
+      "ru": "министерство",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Ministerien"
+    },
+    "mit": {
+      "ru": "с",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: mitgehen «пойти вместе»"
+    },
+    "müssen": {
+      "ru": "быть вынужденным, должен",
+      "pos": "гл.",
+      "forms": "musste · hat gemusst"
+    },
+    "neben": {
+      "pos": "предл.",
+      "ru": "рядом с, возле"
+    },
+    "nicht": {
+      "ru": "не",
+      "pos": "частица"
+    },
+    "noch": {
+      "ru": "ещё",
+      "pos": "нареч."
+    },
+    "Notfall": {
+      "ru": "чрезвычайная ситуация, экстренный случай",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Notfälle"
+    },
+    "ob": {
+      "ru": "ли (в косвенном вопросе)",
+      "pos": "союз"
+    },
+    "oft": {
+      "ru": "часто",
+      "pos": "нареч."
+    },
+    "ohne": {
+      "ru": "без",
+      "pos": "предл."
+    },
+    "Oktober": {
+      "ru": "октябрь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Oktober"
+    },
+    "Park": {
+      "ru": "парк",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Parks"
+    },
+    "passieren": {
+      "ru": "происходить, случаться",
+      "pos": "гл.",
+      "forms": "passierte · ist passiert"
+    },
+    "patrouillieren": {
+      "ru": "патрулировать",
+      "pos": "гл.",
+      "forms": "patrouillierte · hat patrouilliert"
+    },
+    "Projekt": {
+      "ru": "проект",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Projekte"
+    },
+    "prüfen": {
+      "ru": "проверять",
+      "pos": "гл.",
+      "forms": "prüfte · hat geprüft"
+    },
+    "Rad": {
+      "ru": "колесо",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Räder",
+      "note": "auf Rädern — на колёсах"
+    },
+    "Regel": {
+      "ru": "правило",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Regeln"
+    },
+    "Regierung": {
+      "ru": "правительство",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Regierungen"
+    },
+    "richtig": {
+      "ru": "правильный, верный",
+      "pos": "прил."
+    },
+    "Roboter": {
+      "ru": "робот",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Roboter"
+    },
+    "Robros": {
+      "ru": "Robros (южнокорейская компания-разработчик роботов)",
+      "pos": "имя собств."
+    },
+    "sagen": {
+      "ru": "говорить, сказать",
+      "pos": "гл.",
+      "forms": "sagte · hat gesagt"
+    },
+    "sammeln": {
+      "ru": "собирать",
+      "pos": "гл.",
+      "forms": "sammelte · hat gesammelt"
+    },
+    "Schiffbau": {
+      "ru": "судостроение",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "Schmutz": {
+      "ru": "грязь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null,
+      "note": "von Schmutz befreien — очистить от грязи"
+    },
+    "Schutz": {
+      "ru": "защита",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null,
+      "note": "zu seinem Schutz — ради его защиты"
+    },
+    "Schutzzaun": {
+      "ru": "защитное ограждение",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Schutzzäune",
+      "note": "der Schutz — защита, der Zaun — забор"
+    },
+    "sein": {
+      "ru": "быть; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "war · ist gewesen"
+    },
+    "sich": {
+      "ru": "себя, себе",
+      "pos": "мест.",
+      "note": "Возвратное местоимение, часть возвратного глагола: sich auf den Weg machen, sich setzen, sich legen, sich nähern, sich gefallen lassen, sich getrauen, sich umsehen"
+    },
+    "sie": {
+      "ru": "она; они; Вы",
+      "pos": "мест."
+    },
+    "Simulation": {
+      "ru": "симуляция, моделирование",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Simulationen"
+    },
+    "so": {
+      "ru": "так; такой; то (в главном предложении)",
+      "pos": "нареч."
+    },
+    "sollen": {
+      "ru": "быть должным, следует",
+      "pos": "гл.",
+      "forms": "sollte · hat gesollt"
+    },
+    "Stadt": {
+      "ru": "город",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Städte"
+    },
+    "stapeln": {
+      "ru": "складывать штабелем",
+      "pos": "гл.",
+      "forms": "stapelte · hat gestapelt",
+      "note": "der Stapel — штабель, стопка"
+    },
+    "stehen": {
+      "ru": "стоять",
+      "pos": "гл.",
+      "forms": "stand · hat gestanden"
+    },
+    "Stelle": {
+      "ru": "место",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Stellen",
+      "note": "an Ort und Stelle — на своё место"
+    },
+    "Stunde": {
+      "art": "die",
+      "note": "eine halbe Stunde — тж. о расстоянии: полчаса ходу",
+      "pl": "die Stunden",
+      "pos": "сущ.",
+      "ru": "час"
+    },
+    "Südkorea": {
+      "ru": "Южная Корея",
+      "pos": "геогр."
+    },
+    "Tag": {
+      "ru": "день",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Tage"
+    },
+    "Technik": {
+      "ru": "техника, технология",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Techniken"
+    },
+    "Teil": {
+      "ru": "часть; доля",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Teile",
+      "note": "sein Teil haben — получить своё"
+    },
+    "Test": {
+      "ru": "испытание, тест",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Tests"
+    },
+    "tragen": {
+      "ru": "носить, нести",
+      "pos": "гл.",
+      "forms": "trug · hat getragen"
+    },
+    "trennen": {
+      "ru": "разделять",
+      "pos": "гл.",
+      "forms": "trennte · hat getrennt"
+    },
+    "Treppe": {
+      "art": "die",
+      "pl": "die Treppen",
+      "pos": "сущ.",
+      "ru": "лестница"
+    },
+    "um": {
+      "ru": "вокруг, в (о времени)",
+      "pos": "предл.",
+      "note": "um … zu — чтобы. Тж. отделяемая приставка: sich umsehen «оглядеться»"
+    },
+    "und": {
+      "ru": "и, а",
+      "pos": "союз"
+    },
+    "Unternehmen": {
+      "ru": "предприятие, компания",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Unternehmen"
+    },
+    "verändern": {
+      "ru": "изменять(ся)",
+      "pos": "гл.",
+      "forms": "veränderte · hat verändert"
+    },
+    "Video": {
+      "ru": "видео",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Videos"
+    },
+    "vier": {
+      "ru": "четыре",
+      "pos": "числ."
+    },
+    "von": {
+      "ru": "от, из, о (vom = von dem)",
+      "pos": "предл."
+    },
+    "vorher": {
+      "ru": "прежде, сначала",
+      "pos": "нареч."
+    },
+    "vorschreiben": {
+      "ru": "предписывать",
+      "pos": "гл.",
+      "forms": "schrieb vor · hat vorgeschrieben"
+    },
+    "vorstellen": {
+      "ru": "представлять",
+      "pos": "гл.",
+      "forms": "stellte vor · hat vorgestellt"
+    },
+    "was": {
+      "ru": "что; что-нибудь",
+      "pos": "мест."
+    },
+    "wegfallen": {
+      "ru": "отпадать, отменяться",
+      "pos": "гл.",
+      "forms": "fiel weg · ist weggefallen",
+      "note": "die Regel fällt weg — правило отменяется"
+    },
+    "welcher": {
+      "ru": "который; какой",
+      "pos": "мест."
+    },
+    "Werft": {
+      "ru": "верфь",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Werften"
+    },
+    "wie": {
+      "ru": "как; какой",
+      "pos": "союз"
+    },
+    "wirklich": {
+      "pos": "нареч.",
+      "ru": "действительно, вправду"
+    },
+    "wollen": {
+      "ru": "хотеть",
+      "pos": "гл.",
+      "forms": "wollte · hat gewollt"
+    },
+    "zeigen": {
+      "ru": "показывать; sich zeigen — появиться",
+      "pos": "гл.",
+      "forms": "zeigte · hat gezeigt"
+    },
+    "zu": {
+      "ru": "к, в; слишком",
+      "pos": "предл.",
+      "note": "zur = zu der, zum = zu dem"
+    },
+    "zusammen": {
+      "ru": "вместе",
+      "pos": "нареч."
+    },
+    "zwei": {
+      "ru": "два",
+      "pos": "числ."
+    },
+    "über": {
+      "ru": "над, через, о",
+      "pos": "предл."
+    }
+  }
+}

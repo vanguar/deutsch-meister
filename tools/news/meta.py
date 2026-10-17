@@ -773,3 +773,41 @@ META.update({
 })
 
 ORDER = ['trump-iran-atomwaffen-2026'] + ORDER
+
+META.update({
+    'korea-humanoide-fabrik-2026': {
+        'title': 'Ohne Schutzzaun: In Südkorea arbeiten Roboter bald direkt neben Menschen',
+        'titleRu': 'Без защитного ограждения: в Южной Корее роботы будут работать рядом с людьми',
+        'rubric': 'tech',
+        'level': 'B1',
+        'levelNote': 'Модальные глаголы (dürfen, müssen, sollen, wollen) с инфинитивом в конце, '
+                     'отделяемые глаголы (fällt … weg, schreibt … vor, kommen … hinauf), косвенные вопросы '
+                     '(welche, wie lange, ob, wie oft), косвенная речь с конъюнктивом (sagte, die Regeln müssten …), '
+                     'претерит (mussten, trennte), лексика ИИ и производства.',
+        'published': '2026-10-13',
+        'added': '2026-10-17',
+        'source': 'Kyunghyang Shinmun · Humanoids Daily · Origin of Bots',
+        'sourceUrl': 'https://www.khan.co.kr/en/article/202610131633027',
+        'blurb': 'Южная Корея впервые разрешила человекоподобным роботам с ИИ работать на заводах, верфи и '
+                 'складе без защитного ограждения: 20 двуногих роботов компании Robros проходят испытание '
+                 'рядом с людьми. А в Чхонане парки будут патрулировать роботы на четырёх ногах.',
+        'license': 'Текст — пересказ сообщений Kyunghyang Shinmun, Humanoids Daily и Origin of Bots; '
+                   'фото — Wikimedia Commons',
+        'figs': {
+            'hubo': {'w': 1200, 'h': 799,
+                     'cap': 'Человекоподобный робот HUBO из корейского института KAIST на соревновании DARPA '
+                            'в 2015 году. Южная Корея давно развивает таких роботов.',
+                     'credit': 'John Williams / U.S. Navy · общественное достояние'},
+            'fabrik': {'w': 1200, 'h': 900,
+                       'cap': 'Роботы KUKA собирают кузова на заводе Ford в Кёльне. Такие роботы закреплены '
+                              'на месте и огорожены сеткой: людям в эту зону входить нельзя.',
+                       'credit': 'GillyBerlin · CC BY 2.0 · Wikimedia Commons'},
+            'spot': {'w': 1200, 'h': 800,
+                     'cap': 'Робот на четырёх ногах на лесной тропе. Такие роботы проходят там, '
+                            'где не проедут колёсные: по ступенькам и бездорожью.',
+                     'credit': 'Jonte · ' + SA4},
+        },
+    },
+})
+
+ORDER = ['korea-humanoide-fabrik-2026'] + ORDER
