@@ -344,7 +344,8 @@ const NewsFeed = (() => {
     } catch (e) { /* старый WebView */ }
     current = rubric;
     render();
-    open(id);
+    // статьи нет в ленте (у пробного языка — ещё не переведена): не открываем
+    if (it) open(id);
   }
 
   function load() {

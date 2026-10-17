@@ -11,6 +11,9 @@
        и не открываются (тост вместо перехода), новости — тоже;
      • книги переводятся по одной (window.I18N_READY_BOOKS): библиотека
        открыта, пока готова хоть одна, непереведённые книги в ней — «قريبًا»;
+     • новости — тоже по одной (window.I18N_READY_NEWS): раздел открыт,
+       пока готова хоть одна статья; в арабской ленте только готовые
+       статьи (её собирает tools/i18n.js), сверху — плашка «остальные скоро»;
      • если страницу без перевода всё же открыли (закладка, старая
        ссылка), сверху объясняем, что её ещё нет на арабском.
    Интерфейс зеркальный: js/i18n.js ставит <html dir="rtl">, физические
@@ -31,6 +34,9 @@
   var BOOKS_TOTAL = window.I18N_BOOKS_TOTAL || READY_BOOKS.length;
   var allBooks = function () { return READY_BOOKS.length >= BOOKS_TOTAL; };
   function isReadyBook(id) { return READY_BOOKS.indexOf(id) >= 0; }
+  // Новости — тоже по одной: window.I18N_READY_NEWS
+  var READY_NEWS = window.I18N_READY_NEWS || [];
+  var NEWS_TOTAL = window.I18N_NEWS_TOTAL || READY_NEWS.length;
   // «a1-01» по ссылке/пути, null — не урок
   function lessonId(href) {
     var m = String(href || '').match(ANY_LESSON);
@@ -48,6 +54,7 @@
   // Диалоги (dialogs.html) переведены целиком — раздел открыт и без плашек
   var isDialogs = /dialogs\.html$/.test(path);
   var isBooks = /books\.html$/.test(path);
+  var isNews = /news\.html$/.test(path);
   var isHome = !isLesson && !isDialogs && !/(books|news)\.html$/.test(path);
 
   var me = document.currentScript;
@@ -121,9 +128,15 @@
     '<p>رأيك مهم جدًا لنا: ما الذي أعجبك؟ وما الذي يحتاج إلى تحسين؟ اكتب لنا في Telegram: ' + TG_LINK + '</p>' +
     '<div class="ar-trial-actions">' + FEEDBACK_BTN + '</div>';
 
+  // Что ещё переводится — для плашек урока и главной
+  var LEFT = [];
+  if (!allBooks()) LEFT.push(READY_BOOKS.length ? 'بقية الكتب' : 'الكتب');
+  if (READY_NEWS.length < NEWS_TOTAL) LEFT.push(READY_NEWS.length ? 'بقية الأخبار' : 'الأخبار');
+  var LEFT_TEXT = LEFT.length ? LEFT.join(' و') + ' قيد الترجمة' : 'كل شيء مترجم';
+
   var LESSON_BOTTOM =
     '<div class="ar-trial-title">🙏 شكرًا لأنك أكملت الدرس!</div>' +
-    '<p>هذه <b>نسخة تجريبية</b> من الترجمة العربية؛ ' + (READY_BOOKS.length ? 'الأخبار قيد الترجمة.' : 'الكتب والأخبار قيد الترجمة.') + '</p>' +
+    '<p>هذه <b>نسخة تجريبية</b> من الترجمة العربية؛ ' + LEFT_TEXT + '.</p>' +
     '<p>نرجو أن تشاركنا انطباعك عن الدرس والترجمة — ملاحظاتك تساعدنا على إعداد النسخة الكاملة أسرع وأفضل. ' +
     'راسلنا في Telegram: ' + TG_LINK + '</p>' +
     '<div class="ar-trial-actions">' + FEEDBACK_BTN + '</div>';
@@ -131,8 +144,9 @@
   var HOME =
     '<div class="ar-trial-title">🧪 النسخة العربية التجريبية</div>' +
     '<p>المتاح الآن بالعربية: <b>القائمة</b> و<b>دروس الدورة (<bdi dir="ltr">' + READY.length + '</bdi>)</b> و<b>الحوارات</b>' +
-    (READY_BOOKS.length ? ' و<b>الكتب (<bdi dir="ltr">' + READY_BOOKS.length + '</bdi>)</b>' : '') + '. ' +
-    (READY_BOOKS.length && !allBooks() ? 'بقية الكتب والأخبار قيد الترجمة' : READY_BOOKS.length ? 'الأخبار قيد الترجمة' : 'الكتب والأخبار قيد الترجمة') +
+    (READY_BOOKS.length ? ' و<b>الكتب (<bdi dir="ltr">' + READY_BOOKS.length + '</bdi>)</b>' : '') +
+    (READY_NEWS.length ? ' و<b>الأخبار (<bdi dir="ltr">' + READY_NEWS.length + '</bdi>)</b>' : '') + '. ' +
+    LEFT_TEXT +
     '، وما لم يُترجم بعد معلَّم بـ «🔒 قريبًا».</p>' +
     '<p>جرّب الدروس وأخبرنا برأيك في Telegram: ' + TG_LINK + '</p>' +
     '<div class="ar-trial-actions">' +
@@ -154,6 +168,13 @@
     '<div class="ar-trial-title">📚 الكتب بالعربية</div>' +
     '<p>نترجم الكتب واحدًا تلو الآخر. المتاح الآن: <b><bdi dir="ltr">' + READY_BOOKS.length + '</bdi> من <bdi dir="ltr">' + BOOKS_TOTAL + '</bdi></b>، ' +
     'والكتب التي لم تُترجم بعد معلَّمة بـ «🔒 قريبًا».</p>' +
+    '<p>ملاحظاتك على الترجمة تهمّنا: ' + TG_LINK + '</p>' +
+    '<div class="ar-trial-actions">' + FEEDBACK_BTN + '</div>';
+
+  var NEWS_NOTE =
+    '<div class="ar-trial-title">📰 الأخبار بالعربية</div>' +
+    '<p>نترجم الأخبار مقالًا تلو الآخر، وهنا تظهر المقالات المترجمة فقط: <b><bdi dir="ltr">' + READY_NEWS.length + '</bdi> من <bdi dir="ltr">' + NEWS_TOTAL + '</bdi></b>. ' +
+    'ستُضاف البقية قريبًا.</p>' +
     '<p>ملاحظاتك على الترجمة تهمّنا: ' + TG_LINK + '</p>' +
     '<div class="ar-trial-actions">' + FEEDBACK_BTN + '</div>';
 
@@ -183,7 +204,8 @@
     var id = lessonId(href);
     if (id) return !isReady(id);
     if (/(^|\/)books\.html(\?|#|$)/.test(href)) return !READY_BOOKS.length;
-    return /(^|\/)news\.html(\?|#|$)/.test(href);
+    if (/(^|\/)news\.html(\?|#|$)/.test(href)) return !READY_NEWS.length;
+    return false;
   }
 
   // Карточка книги в библиотеке: кнопки «Читать» и «Словарь» несут id книги
@@ -238,14 +260,19 @@
 
   // Книги и новости открываются функциями из support.js
   function lockFunctions() {
-    (READY_BOOKS.length ? ['openNewsPage'] : ['openBooksModal', 'openNewsPage']).forEach(function (name) {
+    var names = [];
+    if (!READY_BOOKS.length) names.push('openBooksModal');
+    if (!READY_NEWS.length) names.push('openNewsPage');
+    names.forEach(function (name) {
       if (typeof window[name] !== 'function' || window[name].__arLocked) return;
       var f = function () { toast(SOON_TOAST); };
       f.__arLocked = true;
       window[name] = f;
     });
-    var acts = document.querySelectorAll(READY_BOOKS.length ? '.side-action.news'
-      : '.side-action.news, .side-action[onclick*="openBooksModal"]');
+    var sel = [];
+    if (!READY_NEWS.length) sel.push('.side-action.news');
+    if (!READY_BOOKS.length) sel.push('.side-action[onclick*="openBooksModal"]');
+    var acts = sel.length ? document.querySelectorAll(sel.join(', ')) : [];
     for (var i = 0; i < acts.length; i++) acts[i].classList.add('ar-soon');
   }
 
@@ -326,6 +353,11 @@
       } else if (!allBooks()) {
         var root = document.getElementById('libContent') || document.querySelector('main');
         if (root && root.parentNode) root.parentNode.insertBefore(el(BOOKS_NOTE), root);
+      }
+    } else if (isNews && READY_NEWS.length) {
+      if (READY_NEWS.length < NEWS_TOTAL) {
+        var hub = document.getElementById('newsHub') || document.querySelector('main');
+        if (hub && hub.parentNode) hub.parentNode.insertBefore(el(NEWS_NOTE), hub);
       }
     } else if (isHome) {
       var hero = document.querySelector('.hero');

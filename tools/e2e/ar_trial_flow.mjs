@@ -134,6 +134,37 @@ if (BOOKS.length) {
   check('ридер открыл готовую книгу', await c.ev(`!document.getElementById('libView') || getComputedStyle(document.getElementById('libView')).display==='none' || document.getElementById('libView').hidden`));
 }
 
+// новости: в ленте только готовые статьи, плашка «остальные скоро»;
+// в готовых статьях (все файлы) и в ридере — ни строчки кириллицы
+const NEWS = JSON.parse(readFileSync(new URL('../../i18n/ar/ready.js', import.meta.url), 'utf8').match(/I18N_READY_NEWS\s*=\s*(\[.*?\])/)[1]);
+if (NEWS.length) {
+  await c.go(B + '/news.html', 2500);
+  s = JSON.parse(await c.ev(`JSON.stringify({note:!!document.querySelector('.ar-trial'),
+    live:[...document.querySelectorAll('.news-tile.is-live')].reduce((n,t)=>n+ +(t.querySelector('.news-tile-count b')||{}).textContent,0),
+    cyr:(()=>{const out=[],w=document.createTreeWalker(document.getElementById('newsRubrics'),4);let n;while(n=w.nextNode())if(${CYR}.test(n.nodeValue))out.push(n.nodeValue.trim());return out.slice(0,10)})()})`));
+  check(`новости: в ленте ${NEWS.length} готовых, плашка`, s.live === NEWS.length && s.note, s);
+  check('новости: витрина без кириллицы', s.cyr.length === 0, s.cyr);
+  await c.shot('ar-news.png');
+  for (const id of NEWS) {
+    const r = JSON.parse(await c.ev(`(async()=>{const bad=[];for(const f of ['meta.json','glossary.json','ch-01.json']){const d=await fetch('data/news/${id}/'+f).then(r=>r.json());
+      (function w(o,k){if(typeof o==='string'){if(${CYR}.test(o)&&k!=='w')bad.push(f+': '+o.slice(0,60))}else if(o&&typeof o==='object')for(const [kk,v] of Object.entries(o))w(v,k==='w'?'w':kk)})(d,'')}
+      return JSON.stringify({bad:bad.slice(0,10)})})()`, true));
+    check(`статья ${id}: файлы без кириллицы`, r.bad.length === 0, r.bad);
+  }
+  await c.ev(`document.querySelector('.news-tile.is-live').click()`); await c.wait(800);
+  await c.ev(`document.querySelector('.news-card [data-news]').click()`); await c.wait(2500);
+  check('новости: статья открылась в ридере', await c.ev(`!document.getElementById('rdView').hidden && !!document.querySelector('#rdContent .bw')`));
+  await c.ev(`document.getElementById('rdFullTranslationBtn').click()`); await c.wait(800);
+  check('новости: текст и перевод в ридере без кириллицы', await c.ev(`(()=>{const w=document.createTreeWalker(document.getElementById('rdContent'),4);let n;while(n=w.nextNode())if(${CYR}.test(n.nodeValue))return false;return true})()`));
+  await c.shot('ar-news-reader.png');
+  // прямая ссылка на непереведённую статью не открывает её по-русски
+  const other = JSON.parse(readFileSync(new URL('../../data/news/index.json', import.meta.url), 'utf8')).items.find(it => !NEWS.includes(it.id));
+  if (other) {
+    await c.go(B + '/news.html#news=' + other.id, 2500);
+    check('новости: непереведённая статья по ссылке не открывается', await c.ev(`document.getElementById('rdView').hidden`));
+  }
+}
+
 await c.go(B + '/index.html?lang=uk&lts=' + Date.now(), 2000);
 check('uk без плашек и без RTL', await c.ev(`I18N.lang==='uk' && !document.querySelector('.ar-trial') && document.documentElement.dir!=='rtl'`));
 check('ошибок JS нет', c.errors().length === 0, c.errors());

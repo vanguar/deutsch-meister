@@ -735,3 +735,41 @@ META.update({
 })
 
 ORDER = ['asteroiden-erdnaehe-2026'] + ORDER
+
+META.update({
+    'trump-iran-atomwaffen-2026': {
+        'title': 'Keine Atomwaffen, keine Bodentruppen: Trump spricht über den Krieg mit dem Iran',
+        'titleRu': 'Без ядерного оружия и сухопутных войск: Трамп о войне с Ираном',
+        'rubric': 'events',
+        'level': 'B1',
+        'levelNote': 'Модальные глаголы с инфинитивом в конце (will … einsetzen, können … zwingen), '
+                     'пассив (wurden angegriffen, sind getötet worden), безличный пассив (wird gekämpft), '
+                     'претерит (griffen an, brach zusammen, starben), плюсквамперфект (hatte … geäußert), '
+                     'конъюнктив II (könnte enden), придаточные с dass.',
+        'published': '2026-10-16',
+        'added': '2026-10-17',
+        'source': 'Newsmax · Reuters · wallstreet-online · Tagesspiegel',
+        'sourceUrl': 'https://www.wallstreet-online.de/nachricht/21534607-oel-105-hormus-blutet-trump-regierung-prueft-mutter-bomben-iran-droht-angriffen',
+        'blurb': 'Трамп заявил, что не применит против Ирана ядерное оружие и не пошлёт туда сухопутные '
+                 'войска. Тегеран отвечает, что бомбами его не заставить сдаться, а нефть из-за '
+                 'обстановки в Ормузском проливе подорожала до 105 долларов за баррель.',
+        'license': 'Текст — пересказ сообщений Newsmax, Reuters, wallstreet-online и Tagesspiegel; '
+                   'фото — Wikimedia Commons',
+        'figs': {
+            'trump': {'w': 1000, 'h': 800,
+                      'cap': 'Дональд Трамп на официальном портрете 2025 года. Война с Ираном идёт '
+                             'с конца февраля 2026 года.',
+                      'credit': 'Daniel Torok / The White House · общественное достояние'},
+            'moab': {'w': 1200, 'h': 900,
+                     'cap': 'GBU-43/B, «мать всех бомб», перед испытанием. Это самая мощная '
+                            'неядерная бомба в арсенале США.',
+                     'credit': 'U.S. Department of Defense · общественное достояние'},
+            'hormus': {'w': 1200, 'h': 674,
+                       'cap': 'Ормузский пролив, вид с МКС. Он соединяет Персидский залив с Оманским '
+                              'заливом — это главный морской путь для нефти из стран Залива.',
+                       'credit': 'NASA · общественное достояние'},
+        },
+    },
+})
+
+ORDER = ['trump-iran-atomwaffen-2026'] + ORDER

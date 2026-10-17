@@ -2,6 +2,23 @@
  "version": 1,
  "items": [
   {
+   "id": "trump-iran-atomwaffen-2026",
+   "title": "Keine Atomwaffen, keine Bodentruppen: Trump spricht über den Krieg mit dem Iran",
+   "titleRu": "Без ядерної зброї та сухопутних військ: Трамп про війну з Іраном",
+   "blurb": "Трамп заявив, що не застосує проти Ірану ядерну зброю і не пошле туди сухопутні війська. Тегеран відповідає, що бомбами його не змусити здатися, а нафта через ситуацію в Ормузькій протоці подорожчала до 105 доларів за барель.",
+   "rubric": "events",
+   "level": "B1",
+   "published": "2026-10-16",
+   "added": "2026-10-17",
+   "source": "Newsmax · Reuters · wallstreet-online · Tagesspiegel",
+   "sourceUrl": "https://www.wallstreet-online.de/nachricht/21534607-oel-105-hormus-blutet-trump-regierung-prueft-mutter-bomben-iran-droht-angriffen",
+   "cover": "data/news/trump-iran-atomwaffen-2026/img/cover.jpg",
+   "words": 278,
+   "minutes": 3,
+   "photos": 3,
+   "chapters": 1
+  },
+  {
    "id": "schiffswrack-kekova-2026",
    "title": "Aus der Zeit der Pyramiden: Archäologen finden das wohl älteste Schiffswrack der Welt",
    "titleRu": "Ровесник пірамід: археологи знайшли, імовірно, найдавніше затонуле судно у світі",

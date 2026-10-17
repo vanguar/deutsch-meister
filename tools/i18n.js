@@ -368,8 +368,11 @@ function dictJs(keys, tm, title) {
    i18n/<lang>/ready.js, остальные уроки js/ar-trial.js показывает как
    «скоро». Книги — так же, по одной: готовая книга (все строки
    переведены) собирается в i18n/<lang>/books/ и попадает в
-   window.I18N_READY_BOOKS. Новостей пока нет; диалоги переведены
-   целиком и собираются и проверяются, как у полного языка. */
+   window.I18N_READY_BOOKS. Новости — так же, по статье: готовая статья
+   (её строки и её карточка в ленте) собирается в i18n/<lang>/news/, а лента
+   i18n/<lang>/news/index.json содержит только готовые статьи
+   (window.I18N_READY_NEWS). Диалоги переведены целиком и собираются и
+   проверяются, как у полного языка. */
 const TRIAL = {
   ar: { auto: true }
 };
@@ -382,11 +385,23 @@ function readyBooks(groups, tm) {
   return bookIds().filter(id => groups['books/' + id].every(k => tm[k] !== undefined));
 }
 
+// Карточка статьи в ленте (заголовок, анонс) тоже должна быть переведена
+function newsIndexItems() {
+  return exists('data/news/index.json') ? JSON.parse(read('data/news/index.json')).items : [];
+}
+
+function readyNews(groups, tm) {
+  const done = k => tm[k] !== undefined;
+  return newsIndexItems().filter(it => groups['news/' + it.id].every(done) && walkStrings(it, []).every(done))
+    .map(it => it.id);
+}
+
 function trialGroups(groups, lang, tm) {
   const t = TRIAL[lang];
   if (!t) return groups;
   const keep = ['ui', ...readyLessons(groups, tm).map(id => 'lessons/' + id),
     'books-index', ...readyBooks(groups, tm).map(id => 'books/' + id),
+    ...readyNews(groups, tm).map(id => 'news/' + id),
     ...Object.keys(groups).filter(g => g === 'dialogs-index' || g.startsWith('dialogs/'))];
   return Object.fromEntries(keep.map(g => [g, groups[g]]));
 }
@@ -414,22 +429,29 @@ function cmdBuild(lang = 'uk') {
     // компактно: книги большие
     fs.writeFileSync(rel(dst), JSON.stringify(translateFile(JSON.parse(read(f)), groupTM(tm, files, 'books/' + id))));
   }
-  if (trial) {
-    fs.writeFileSync(rel(`${out}/ready.js`), `/* Готовые уроки и книги — сгенерировано tools/i18n.js build, руками не править */
-window.I18N_READY = ${JSON.stringify(ready)};
-window.I18N_READY_BOOKS = ${JSON.stringify(books)};
-window.I18N_BOOKS_TOTAL = ${bookIds().length};
-`);
-    console.log(`build: ok (пробная версия, уроков ${ready.length}/${lessonIds().length}, книг ${books.length}/${bookIds().length}) →`, out);
-    return;
-  }
+  const news = trial ? readyNews(groups, tm) : newsIds();
   if (exists('data/news/index.json')) {
-    writeJson(`${out}/news/index.json`, translateObj(JSON.parse(read('data/news/index.json')), tm));
-    for (const id of newsIds()) for (const f of newsFiles(id)) {
+    // у пробного языка в ленте только готовые статьи
+    const index = JSON.parse(read('data/news/index.json'));
+    index.items = index.items.filter(it => news.includes(it.id));
+    if (trial) fs.rmSync(rel(`${out}/news`), { recursive: true, force: true });
+    if (!trial || news.length) writeJson(`${out}/news/index.json`, translateObj(index, tm));
+    for (const id of news) for (const f of newsFiles(id)) {
       const dst = f.replace(/^data\/news\//, `${out}/news/`);
       fs.mkdirSync(path.dirname(rel(dst)), { recursive: true });
       fs.writeFileSync(rel(dst), JSON.stringify(translateFile(JSON.parse(read(f)), groupTM(tm, files, 'news/' + id))));
     }
+  }
+  if (trial) {
+    fs.writeFileSync(rel(`${out}/ready.js`), `/* Готовые уроки, книги и новости — сгенерировано tools/i18n.js build, руками не править */
+window.I18N_READY = ${JSON.stringify(ready)};
+window.I18N_READY_BOOKS = ${JSON.stringify(books)};
+window.I18N_BOOKS_TOTAL = ${bookIds().length};
+window.I18N_READY_NEWS = ${JSON.stringify(news)};
+window.I18N_NEWS_TOTAL = ${newsIds().length};
+`);
+    console.log(`build: ok (пробная версия, уроков ${ready.length}/${lessonIds().length}, книг ${books.length}/${bookIds().length}, новостей ${news.length}/${newsIds().length}) →`, out);
+    return;
   }
   console.log('build: ok →', out);
 }

@@ -1,0 +1,986 @@
+{
+  "version": 1,
+  "w": {
+    "aber": "aber",
+    "aden": "Aden",
+    "aller": "alle/alles",
+    "am": "an",
+    "an": "an",
+    "anfang": "Anfang",
+    "angegriffen": "angreifen",
+    "angespannt": "angespannt",
+    "angriffe": "Angriff",
+    "antwortete": "antworten",
+    "april": "April",
+    "atommacht": "Atommacht",
+    "atomsprengkopf": "Atomsprengkopf",
+    "atomwaffen": "Atomwaffe",
+    "auch": "auch",
+    "auf": "auf",
+    "aus": "aus",
+    "barrel": "Barrel",
+    "bauen": "bauen",
+    "befehlen": "befehlen",
+    "begonnen": "beginnen",
+    "bei": "bei",
+    "bereit": "bereit",
+    "besonders": "besonders",
+    "betonte": "betonen",
+    "bodentruppen": "Bodentruppen",
+    "bombe": "Bombe",
+    "bomben": "Bombe",
+    "brach": "zusammenbrechen",
+    "brent": "Brent",
+    "dabei": "dabei",
+    "damals": "damals",
+    "danach": "danach",
+    "das": "der/die/das",
+    "dass": "dass",
+    "dem": "der/die/das",
+    "den": "der/die/das",
+    "denke": "denken",
+    "der": "der/die/das",
+    "des": "der/die/das",
+    "deshalb": "deshalb",
+    "die": "der/die/das",
+    "diese": "dieser",
+    "diesem": "dieser",
+    "doch": "doch",
+    "dollar": "Dollar",
+    "donald": "Donald Trump",
+    "donnerstag": "Donnerstag",
+    "dort": "dort",
+    "drohnen": "Drohne",
+    "durch": "durch",
+    "ein": "ein/eine",
+    "eine": "ein/eine",
+    "einem": "ein/eine",
+    "einer": "ein/eine",
+    "einsetzen": "einsetzen",
+    "enden": "enden",
+    "er": "er",
+    "es": "es",
+    "etwa": "etwa",
+    "februar": "Februar",
+    "fernsehsender": "Fernsehsender",
+    "freitag": "Freitag",
+    "führung": "Führung",
+    "fünftel": "Fünftel",
+    "für": "für",
+    "gegangen": "gehen",
+    "gegen": "gegen",
+    "geht": "gehen",
+    "gekämpft": "kämpfen",
+    "generäle": "General",
+    "gesagt": "sagen",
+    "gesprächen": "Gespräch",
+    "getötet": "töten",
+    "geäußert": "äußern",
+    "gleichzeitig": "gleichzeitig",
+    "griff": "angreifen",
+    "griffen": "angreifen",
+    "größte": "groß",
+    "hat": "haben",
+    "hatte": "haben",
+    "hormus": "Hormus",
+    "huthi-miliz": "Huthi-Miliz",
+    "ich": "ich",
+    "im": "in",
+    "in": "in",
+    "innerhalb": "innerhalb",
+    "interview": "Interview",
+    "iran": "Iran",
+    "iranische": "iranisch",
+    "israel": "Israel",
+    "ist": "sein",
+    "jemen": "Jemen",
+    "juli": "Juli",
+    "kapitulation": "Kapitulation",
+    "keine": "kein",
+    "kostete": "kosten",
+    "krieg": "Krieg",
+    "können": "können",
+    "könnte": "können",
+    "lage": "Lage",
+    "luft": "Luft",
+    "massud": "Massud Peseschkian",
+    "medienberichten": "Medienbericht",
+    "meerenge": "Meerenge",
+    "menschen": "Mensch",
+    "mindestens": "mindestens",
+    "mit": "mit",
+    "mutter": "Mutter",
+    "müssen": "müssen",
+    "nach": "nach",
+    "nein": "nein",
+    "neue": "neu",
+    "neuen": "neu",
+    "newsmax": "Newsmax",
+    "nicht": "nicht",
+    "normalerweise": "normalerweise",
+    "november": "November",
+    "ohio": "Ohio",
+    "ohne": "ohne",
+    "pakistan": "Pakistan",
+    "peseschkian": "Massud Peseschkian",
+    "pläne": "Plan",
+    "politiker": "Politiker",
+    "präsident": "Präsident",
+    "präsidentenpalast": "Präsidentenpalast",
+    "prüft": "prüfen",
+    "raketen": "Rakete",
+    "sagte": "sagen",
+    "schicken": "schicken",
+    "schiffe": "Schiff",
+    "schnell": "schnell",
+    "sehe": "sehen",
+    "sehr": "sehr",
+    "seinen": "sein (его, свой)",
+    "sie": "sie",
+    "sind": "sein",
+    "sorte": "Sorte",
+    "stadt": "Stadt",
+    "starben": "sterben",
+    "steigt": "steigen",
+    "straße": "Straße",
+    "tanker": "Tanker",
+    "transportieren": "transportieren",
+    "trotzdem": "trotzdem",
+    "trump": "Donald Trump",
+    "um": "um",
+    "und": "und",
+    "us-kongress": "US-Kongress",
+    "us-militär": "US-Militär",
+    "us-präsident": "US-Präsident",
+    "usa": "USA",
+    "vermittelte": "vermitteln",
+    "viele": "viel",
+    "vier": "vier",
+    "volk": "Volk",
+    "von": "von",
+    "vor": "vor",
+    "waffenruhe": "Waffenruhe",
+    "wahl": "Wahl (выборы)",
+    "wahlkampfveranstaltung": "Wahlkampfveranstaltung",
+    "weit": "weit",
+    "welt": "Welt",
+    "will": "wollen",
+    "wir": "wir",
+    "wird": "werden",
+    "woche": "Woche",
+    "worden": "werden",
+    "worten": "Wort",
+    "wurden": "werden",
+    "zehn": "zehn",
+    "zu": "zu",
+    "zum": "zu",
+    "zur": "zu",
+    "zusammen": "zusammenbrechen",
+    "zweifel": "Zweifel",
+    "zwingen": "zwingen",
+    "ölpreis": "Ölpreis",
+    "öls": "Öl",
+    "über": "über"
+  },
+  "l": {
+    "aber": {
+      "ru": "но, однако",
+      "pos": "союз"
+    },
+    "Aden": {
+      "ru": "Аден (город на юге Йемена)",
+      "pos": "геогр."
+    },
+    "alle/alles": {
+      "ru": "все; всё",
+      "pos": "мест."
+    },
+    "an": {
+      "ru": "у, к, на",
+      "pos": "предл.",
+      "note": "am = an dem. Тж. отделяемая приставка: anfangen «начинать», annehmen, ansehen, anzünden"
+    },
+    "Anfang": {
+      "ru": "начало",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Anfänge",
+      "note": "Anfang der Woche — в начале недели"
+    },
+    "angespannt": {
+      "ru": "напряжённый",
+      "pos": "прил."
+    },
+    "angreifen": {
+      "ru": "браться за; нападать",
+      "pos": "гл.",
+      "forms": "griff an · hat angegriffen",
+      "note": "приставка отделяемая: griff die Sache so an"
+    },
+    "Angriff": {
+      "ru": "нападение, атака, удар",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Angriffe",
+      "note": "angreifen — нападать"
+    },
+    "antworten": {
+      "ru": "отвечать",
+      "pos": "гл.",
+      "forms": "antwortete · hat geantwortet"
+    },
+    "April": {
+      "ru": "апрель",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Aprile"
+    },
+    "Atommacht": {
+      "ru": "ядерная держава",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Atommächte"
+    },
+    "Atomsprengkopf": {
+      "ru": "ядерная боеголовка",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Atomsprengköpfe"
+    },
+    "Atomwaffe": {
+      "ru": "ядерное оружие",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Atomwaffen",
+      "note": "обычно во мн. ч.: Atomwaffen einsetzen"
+    },
+    "auch": {
+      "ru": "тоже, также; даже",
+      "pos": "частица"
+    },
+    "auf": {
+      "ru": "на, в",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: aufspringen «вскочить», sich aufmachen"
+    },
+    "aus": {
+      "ru": "из",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: auslöschen «погасить»"
+    },
+    "Barrel": {
+      "ru": "баррель (159 литров)",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Barrel"
+    },
+    "bauen": {
+      "ru": "строить",
+      "pos": "гл.",
+      "forms": "baute · hat gebaut"
+    },
+    "befehlen": {
+      "ru": "приказывать, велеть",
+      "pos": "гл.",
+      "forms": "befahl · hat befohlen",
+      "note": "Befiehl! — приказывай!"
+    },
+    "beginnen": {
+      "ru": "начинать, начинаться",
+      "pos": "гл.",
+      "forms": "begann · hat begonnen"
+    },
+    "bei": {
+      "ru": "у, при, возле",
+      "pos": "предл."
+    },
+    "bereit": {
+      "ru": "готовый",
+      "pos": "прил."
+    },
+    "besonders": {
+      "ru": "особенно",
+      "pos": "нареч."
+    },
+    "betonen": {
+      "ru": "подчёркивать",
+      "pos": "гл.",
+      "forms": "betonte · hat betont"
+    },
+    "Bodentruppen": {
+      "ru": "сухопутные войска",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null,
+      "note": "только мн. ч.; der Boden — земля, почва"
+    },
+    "Bombe": {
+      "ru": "бомба",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Bomben"
+    },
+    "Brent": {
+      "ru": "Brent (эталонная марка нефти из Северного моря)",
+      "pos": "имя собств."
+    },
+    "dabei": {
+      "ru": "при этом, при том",
+      "pos": "нареч."
+    },
+    "damals": {
+      "ru": "тогда, в то время",
+      "pos": "нареч."
+    },
+    "danach": {
+      "ru": "затем, после этого",
+      "pos": "нареч."
+    },
+    "dass": {
+      "ru": "что; чтобы",
+      "pos": "союз"
+    },
+    "denken": {
+      "ru": "думать",
+      "pos": "гл.",
+      "forms": "dachte · hat gedacht"
+    },
+    "der/die/das": {
+      "ru": "определённый артикль",
+      "pos": "артикль",
+      "note": "Тж. относительное местоимение «который»"
+    },
+    "deshalb": {
+      "ru": "поэтому",
+      "pos": "нареч."
+    },
+    "dieser": {
+      "ru": "этот, эта, это",
+      "pos": "мест."
+    },
+    "doch": {
+      "ru": "всё же, всё-таки; ведь",
+      "pos": "частица"
+    },
+    "Dollar": {
+      "ru": "доллар",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Dollar",
+      "note": "после числа без окончания: 105 Dollar"
+    },
+    "Donald Trump": {
+      "ru": "Дональд Трамп (президент США)",
+      "pos": "имя собств."
+    },
+    "Donnerstag": {
+      "ru": "четверг",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Donnerstage"
+    },
+    "dort": {
+      "ru": "там",
+      "pos": "нареч."
+    },
+    "Drohne": {
+      "ru": "дрон, беспилотник",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Drohnen"
+    },
+    "durch": {
+      "ru": "через, сквозь, из-за",
+      "pos": "предл."
+    },
+    "ein/eine": {
+      "ru": "неопределённый артикль",
+      "pos": "артикль",
+      "note": "einer — «один, некто»"
+    },
+    "einsetzen": {
+      "ru": "применять, задействовать",
+      "pos": "гл.",
+      "forms": "setzte ein · hat eingesetzt",
+      "note": "Waffen einsetzen — применять оружие"
+    },
+    "enden": {
+      "ru": "кончать(ся)",
+      "pos": "гл.",
+      "forms": "endete · hat geendet"
+    },
+    "er": {
+      "ru": "он",
+      "pos": "мест.",
+      "note": "ihn — его, ihm — ему"
+    },
+    "es": {
+      "ru": "оно; это",
+      "pos": "мест."
+    },
+    "etwa": {
+      "ru": "примерно, около",
+      "pos": "нареч."
+    },
+    "Februar": {
+      "ru": "февраль",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null,
+      "note": "am 28. Februar — 28 февраля"
+    },
+    "Fernsehsender": {
+      "ru": "телеканал",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Fernsehsender"
+    },
+    "Freitag": {
+      "ru": "пятница",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Freitage"
+    },
+    "Führung": {
+      "ru": "руководство",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Führungen"
+    },
+    "Fünftel": {
+      "ru": "пятая часть",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Fünftel",
+      "note": "ein Fünftel — одна пятая"
+    },
+    "für": {
+      "ru": "для, за",
+      "pos": "предл."
+    },
+    "gegen": {
+      "ru": "против; около (о времени)",
+      "pos": "предл.",
+      "note": "gegen Mitternacht — около полуночи"
+    },
+    "gehen": {
+      "ru": "идти, ходить",
+      "pos": "гл.",
+      "forms": "ging · ist gegangen"
+    },
+    "General": {
+      "ru": "генерал",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Generäle"
+    },
+    "Gespräch": {
+      "ru": "разговор",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Gespräche"
+    },
+    "gleichzeitig": {
+      "ru": "одновременно",
+      "pos": "нареч."
+    },
+    "groß": {
+      "ru": "большой",
+      "pos": "прил.",
+      "forms": "groß · größer · am größten"
+    },
+    "haben": {
+      "ru": "иметь; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "hatte · hat gehabt"
+    },
+    "Hormus": {
+      "ru": "Ормуз",
+      "pos": "геогр.",
+      "note": "die Straße von Hormus — Ормузский пролив"
+    },
+    "Huthi-Miliz": {
+      "ru": "ополчение хуситов",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null,
+      "note": "хуситы — вооружённое движение в Йемене"
+    },
+    "ich": {
+      "ru": "я",
+      "pos": "мест.",
+      "note": "mich — меня, mir — мне"
+    },
+    "in": {
+      "ru": "в (im = in dem, ins = in das)",
+      "pos": "предл."
+    },
+    "innerhalb": {
+      "ru": "в течение, внутри",
+      "pos": "предлог",
+      "note": "с родительным падежом: innerhalb einer Woche"
+    },
+    "Interview": {
+      "ru": "интервью",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Interviews"
+    },
+    "Iran": {
+      "ru": "Иран",
+      "pos": "геогр.",
+      "note": "с артиклем: der Iran, in den Iran, im Iran, des Iran(s)"
+    },
+    "iranisch": {
+      "ru": "иранский",
+      "pos": "прил."
+    },
+    "Israel": {
+      "ru": "Израиль",
+      "pos": "геогр."
+    },
+    "Jemen": {
+      "ru": "Йемен",
+      "pos": "геогр.",
+      "note": "с артиклем: der Jemen, im Jemen"
+    },
+    "Juli": {
+      "ru": "июль",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Julis"
+    },
+    "Kapitulation": {
+      "ru": "капитуляция",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Kapitulationen"
+    },
+    "kein": {
+      "ru": "никакой, ни один",
+      "pos": "мест."
+    },
+    "kosten": {
+      "ru": "стоить",
+      "pos": "гл.",
+      "forms": "kostete · hat gekostet",
+      "note": "es koste, was es wolle — чего бы это ни стоило"
+    },
+    "Krieg": {
+      "ru": "война",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Kriege"
+    },
+    "kämpfen": {
+      "ru": "сражаться, бороться",
+      "pos": "гл.",
+      "forms": "kämpfte · hat gekämpft",
+      "note": "es wird gekämpft — идут бои"
+    },
+    "können": {
+      "ru": "мочь, уметь",
+      "pos": "гл.",
+      "forms": "konnte · hat gekonnt"
+    },
+    "Lage": {
+      "art": "die",
+      "note": "seiner schönen Lage wegen — из-за красивого расположения",
+      "pl": "die Lagen",
+      "pos": "сущ.",
+      "ru": "расположение; положение"
+    },
+    "Luft": {
+      "art": "die",
+      "pl": "die Lüfte",
+      "pos": "сущ.",
+      "ru": "воздух"
+    },
+    "Massud Peseschkian": {
+      "ru": "Масуд Пезешкиан (президент Ирана)",
+      "pos": "имя собств."
+    },
+    "Medienbericht": {
+      "ru": "сообщение СМИ",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Medienberichte",
+      "note": "nach Medienberichten — по сообщениям СМИ"
+    },
+    "Meerenge": {
+      "ru": "пролив",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Meerengen",
+      "note": "das Meer — море, eng — узкий"
+    },
+    "Mensch": {
+      "ru": "человек",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Menschen",
+      "decl": "n-Deklination: des Menschen · dem/den Menschen"
+    },
+    "mindestens": {
+      "ru": "по меньшей мере, как минимум",
+      "pos": "нареч."
+    },
+    "mit": {
+      "ru": "с",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: mitgehen «пойти вместе»"
+    },
+    "Mutter": {
+      "ru": "мать",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Mütter"
+    },
+    "müssen": {
+      "ru": "быть вынужденным, должен",
+      "pos": "гл.",
+      "forms": "musste · hat gemusst"
+    },
+    "nach": {
+      "ru": "в, на, после, по",
+      "pos": "предл."
+    },
+    "nein": {
+      "ru": "нет",
+      "pos": "частица"
+    },
+    "neu": {
+      "ru": "новый",
+      "pos": "прил."
+    },
+    "Newsmax": {
+      "ru": "Newsmax (американский телеканал)",
+      "pos": "имя собств."
+    },
+    "nicht": {
+      "ru": "не",
+      "pos": "частица"
+    },
+    "normalerweise": {
+      "ru": "обычно",
+      "pos": "нареч."
+    },
+    "November": {
+      "ru": "ноябрь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "Ohio": {
+      "ru": "Огайо (штат США)",
+      "pos": "геогр."
+    },
+    "ohne": {
+      "ru": "без",
+      "pos": "предл."
+    },
+    "Pakistan": {
+      "ru": "Пакистан",
+      "pos": "геогр."
+    },
+    "Plan": {
+      "ru": "план",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Pläne"
+    },
+    "Politiker": {
+      "ru": "политик",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Politiker"
+    },
+    "Präsident": {
+      "ru": "президент",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Präsidenten",
+      "note": "слабое склонение: den Präsidenten"
+    },
+    "Präsidentenpalast": {
+      "ru": "президентский дворец",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Präsidentenpaläste"
+    },
+    "prüfen": {
+      "ru": "проверять",
+      "pos": "гл.",
+      "forms": "prüfte · hat geprüft"
+    },
+    "Rakete": {
+      "ru": "ракета",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Raketen"
+    },
+    "sagen": {
+      "ru": "говорить, сказать",
+      "pos": "гл.",
+      "forms": "sagte · hat gesagt"
+    },
+    "schicken": {
+      "forms": "schickte · hat geschickt",
+      "pos": "гл.",
+      "ru": "посылать"
+    },
+    "Schiff": {
+      "ru": "корабль",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Schiffe"
+    },
+    "schnell": {
+      "ru": "быстрый",
+      "pos": "прил.",
+      "forms": "schnell · schneller · am schnellsten"
+    },
+    "sehen": {
+      "ru": "видеть",
+      "pos": "гл.",
+      "forms": "sah · hat gesehen"
+    },
+    "sehr": {
+      "pos": "нареч.",
+      "ru": "очень"
+    },
+    "sein": {
+      "ru": "быть; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "war · ist gewesen"
+    },
+    "sein (его, свой)": {
+      "ru": "его, свой",
+      "pos": "мест."
+    },
+    "sie": {
+      "ru": "она; они; Вы",
+      "pos": "мест."
+    },
+    "Sorte": {
+      "ru": "сорт, марка",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Sorten"
+    },
+    "Stadt": {
+      "ru": "город",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Städte"
+    },
+    "steigen": {
+      "forms": "stieg · ist gestiegen",
+      "note": "im Zimmer auf und ab steigen — шагать по комнате взад-вперёд",
+      "pos": "гл.",
+      "ru": "подниматься; слезать"
+    },
+    "sterben": {
+      "ru": "умирать",
+      "pos": "гл.",
+      "forms": "starb · ist gestorben"
+    },
+    "Straße": {
+      "art": "die",
+      "pl": "die Straßen",
+      "pos": "сущ.",
+      "ru": "улица, дорога"
+    },
+    "Tanker": {
+      "ru": "танкер",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Tanker"
+    },
+    "transportieren": {
+      "ru": "перевозить",
+      "pos": "гл.",
+      "forms": "transportierte · hat transportiert"
+    },
+    "trotzdem": {
+      "ru": "тем не менее, всё же",
+      "pos": "нареч."
+    },
+    "töten": {
+      "ru": "убивать",
+      "pos": "гл.",
+      "forms": "tötete · hat getötet",
+      "note": "getötet werden — быть убитым"
+    },
+    "um": {
+      "ru": "вокруг, в (о времени)",
+      "pos": "предл.",
+      "note": "um … zu — чтобы. Тж. отделяемая приставка: sich umsehen «оглядеться»"
+    },
+    "und": {
+      "ru": "и, а",
+      "pos": "союз"
+    },
+    "US-Kongress": {
+      "ru": "Конгресс США",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "US-Militär": {
+      "ru": "вооружённые силы США",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "US-Präsident": {
+      "ru": "президент США",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die US-Präsidenten",
+      "note": "n-склонение: den/dem/des US-Präsidenten"
+    },
+    "USA": {
+      "ru": "США",
+      "pos": "геогр.",
+      "note": "die USA — во мн. ч.: der USA (род. п.)"
+    },
+    "vermitteln": {
+      "ru": "посредничать; добиться при посредничестве",
+      "pos": "гл.",
+      "forms": "vermittelte · hat vermittelt",
+      "note": "eine Waffenruhe vermitteln — добиться перемирия как посредник"
+    },
+    "viel": {
+      "ru": "много, многое",
+      "pos": "мест."
+    },
+    "vier": {
+      "ru": "четыре",
+      "pos": "числ."
+    },
+    "Volk": {
+      "ru": "народ",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Völker"
+    },
+    "von": {
+      "ru": "от, из, о (vom = von dem)",
+      "pos": "предл."
+    },
+    "vor": {
+      "ru": "перед, до; от (страха)",
+      "pos": "предл."
+    },
+    "Waffenruhe": {
+      "ru": "перемирие, прекращение огня",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null,
+      "note": "die Waffe — оружие, die Ruhe — покой"
+    },
+    "Wahl (выборы)": {
+      "ru": "выборы; выбор",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Wahlen",
+      "note": "die Wahl zum Kongress — выборы в Конгресс"
+    },
+    "Wahlkampfveranstaltung": {
+      "ru": "предвыборное мероприятие",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Wahlkampfveranstaltungen",
+      "note": "der Wahlkampf — предвыборная кампания"
+    },
+    "weit": {
+      "ru": "далёкий, далеко",
+      "pos": "прил.",
+      "forms": "weit · weiter · am weitesten",
+      "note": "weiter — дальше, далее; von weitem — издали"
+    },
+    "Welt": {
+      "art": "die",
+      "pl": "die Welten",
+      "pos": "сущ.",
+      "ru": "мир, свет"
+    },
+    "werden": {
+      "ru": "становиться",
+      "pos": "гл.",
+      "forms": "wurde · ist geworden",
+      "note": "Вспомогательный глагол будущего времени и пассива"
+    },
+    "wir": {
+      "ru": "мы",
+      "pos": "мест.",
+      "note": "uns — нас, нам"
+    },
+    "Woche": {
+      "ru": "неделя",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Wochen"
+    },
+    "wollen": {
+      "ru": "хотеть",
+      "pos": "гл.",
+      "forms": "wollte · hat gewollt"
+    },
+    "Wort": {
+      "ru": "слово",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Worte (связная речь) / die Wörter (отдельные слова)"
+    },
+    "zehn": {
+      "ru": "десять",
+      "pos": "числ."
+    },
+    "zu": {
+      "ru": "к, в; слишком",
+      "pos": "предл.",
+      "note": "zur = zu der, zum = zu dem"
+    },
+    "zusammenbrechen": {
+      "ru": "рушиться, рухнуть",
+      "pos": "гл.",
+      "forms": "brach zusammen · ist zusammengebrochen"
+    },
+    "Zweifel": {
+      "ru": "сомнение",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Zweifel"
+    },
+    "zwingen": {
+      "ru": "заставлять, принуждать",
+      "pos": "гл.",
+      "forms": "zwang · hat gezwungen",
+      "note": "zu etwas zwingen — заставить что-то сделать"
+    },
+    "äußern": {
+      "ru": "высказывать",
+      "pos": "гл.",
+      "forms": "äußerte · hat geäußert",
+      "note": "Zweifel äußern — высказать сомнения"
+    },
+    "Öl": {
+      "ru": "нефть; масло",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Öle"
+    },
+    "Ölpreis": {
+      "ru": "цена на нефть",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Ölpreise"
+    },
+    "über": {
+      "ru": "над, через, о",
+      "pos": "предл."
+    }
+  }
+}
