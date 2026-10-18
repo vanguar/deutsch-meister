@@ -221,7 +221,11 @@ await c.go(B + '/index.html?r=4#dict', 1500);
 await waitFor(`document.querySelectorAll('.v-item').length > 0`);
 await c.ev(`window.__said = []; TTS.speak = t => window.__said.push(t)`);
 const withX = VOC.items.filter(i => i.l.startsWith('a1-') && i.x).length;
-ok(await c.ev(`document.querySelectorAll('.v-item .v-emo').length`) === withX, `в списке A1 значок у ${withX} слов с анимацией`);
+const col = await J(`(() => { const xs = [...document.querySelectorAll('.v-item')].slice(0, 80).map(li => Math.round(li.querySelector('.v-term').getBoundingClientRect().left));
+  return { lefts: [...new Set(xs)], emo: document.querySelectorAll('.v-item .v-emo, .v-item img, .v-item svg.lottie').length,
+    pics: [...document.querySelectorAll('.v-item .v-main')].filter(b => /\\p{Extended_Pictographic}/u.test(b.textContent)).length }; })()`);
+ok(col.emo === 0 && col.pics === 0, `в списке нет эмодзи и значков (слов с анимацией в A1: ${withX})`, col);
+ok(col.lefts.length === 1, `слова в списке начинаются с одного отступа (${col.lefts})`, col);
 ok(await c.ev(`!window.lottie`), 'проигрыватель Lottie не грузится, пока не открыли карточку');
 const openWord = async de => { await c.ev(`Vocab.openCard(${JSON.stringify(VOC.items.find(i => i.de === de))})`); };
 const CARD = `({ open: !document.getElementById('vSheet').hidden, word: document.getElementById('vsWord').textContent, tr: document.getElementById('vsTr').textContent,

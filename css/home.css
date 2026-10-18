@@ -447,7 +447,6 @@ html[dir="rtl"] .v-term { text-align: right; }
 }
 .v-txt { flex: 1; min-width: 0; }
 .v-term, .v-tr { display: block; }
-.v-emo { flex: none; width: 30px; text-align: center; font-size: 24px; line-height: 1; }
 
 /* ── карточка слова (js/vocab.js) ── */
 .v-sheet-bg {

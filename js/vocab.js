@@ -20,8 +20,9 @@
                  проигрыватель js/vendor/lottie_light.min.js грузится
                  только при первой такой карточке;
        e:<эмодзи>:<walk|run|swim> — обычный эмодзи, движение — CSS.
-     В списке анимаций нет: только маленький статичный значок. Анимация
-     играет, пока открыта карточка; при «уменьшить движение» — стоит.
+     В списке ни значков, ни анимаций — только слова ровной колонкой.
+     Анимация появляется по тапу в карточке и играет, пока она открыта;
+     при «уменьшить движение» — стоит.
    ═══════════════════════════════════════════════ */
 
 const Vocab = (() => {
@@ -79,7 +80,7 @@ const Vocab = (() => {
     return `lessons/${lv}/lesson-${n}/index.html`;
   }
 
-  // «n:1f642_200d_2195_fe0f» → 🙂‍↕️ (статичный значок в списке — системный эмодзи)
+  // «n:1f642_200d_2195_fe0f» → 🙂‍↕️ (заглушка в карточке, пока грузится Lottie)
   function glyph(x) {
     if (!x) return '';
     const [kind, a] = x.split(':');
@@ -95,7 +96,6 @@ const Vocab = (() => {
     const tag = it.l.slice(0, 2).toUpperCase() + '·' + it.l.slice(3);
     return `<li class="v-item${isKnown ? ' known' : ''}" data-i="${i}">` +
       `<button type="button" class="v-main" data-act="open">` +
-        (it.x ? `<span class="v-emo" aria-hidden="true">${glyph(it.x)}</span>` : '') +
         `<span class="v-txt">` +
           `<span class="v-term" lang="de" dir="ltr">${it.a ? `<span class="v-art art-${esc(it.a)}">${esc(it.a)}</span> ` : ''}<span class="v-word">${esc(it.w)}</span></span>` +
           `<span class="v-tr">${esc(it.ru)}</span>` +
