@@ -104,6 +104,19 @@ ok(lay.hits, 'кнопки и плитки ничем не перекрыты');
 await c.ev('scrollTo(0,0)');
 await c.shot('home-progress-dark.png');
 
+// водяной знак — слово урока целиком, даже длинное «Komparativ» (A2·18)
+for (const [id, word] of [['a1-04', 'Familie'], ['a2-18', 'Komparativ'], ['b1-09', 'Deklination'], ['b2-04', 'Nominalisierung']]) {
+  await fresh({ ...PROG, dm_last_lesson: id });
+  await c.wait(500);
+  const wm = await J(`(() => { const e = document.getElementById('nowBg'), r = e.getBoundingClientRect(), k = document.getElementById('nowCard').getBoundingClientRect();
+    return { t: e.textContent, inside: r.left >= k.left - 1 && r.right <= k.right + 1, fs: parseFloat(getComputedStyle(e).fontSize) }; })()`);
+  ok(wm.t === word && wm.inside && wm.fs >= 28, `водяной знак ${id}: «${wm.t}» целиком в карточке (${wm.fs}px)`, wm);
+  const tt = await J(`(() => { const t = document.getElementById('nowTitle'); return { fits: t.scrollWidth <= t.clientWidth + 1, lines: Math.round(t.getBoundingClientRect().height / parseFloat(getComputedStyle(t).lineHeight)) }; })()`);
+  ok(tt.fits, `название урока ${id} не рвётся посреди слова`, tt);
+}
+await c.shot('home-watermark-long.png');
+await fresh(PROG);
+
 // ── 3. Вкладки ──
 console.log('3. Вкладки и уровни');
 await c.ev(`document.querySelector('[data-tab-btn="course"]').click()`); await c.wait(300);

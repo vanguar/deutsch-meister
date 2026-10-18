@@ -107,11 +107,12 @@ html[dir="rtl"] .ico.flip { transform: scaleX(-1); }
   box-shadow: var(--h-shadow);
 }
 .now-bg {
-  position: absolute; inset-inline-end: -10px; top: -6px;
+  /* слово урока целиком: кегль подгоняет js/home.js (fitBg) под ширину
+     карточки — длинное «Komparativ» не обрезается до «Komp» */
+  position: absolute; inset-inline-end: 14px; top: 2px;
   font-family: var(--h-display); font-weight: 800;
   font-size: 76px; line-height: 1; letter-spacing: -.02em;
   color: var(--h-ghost); white-space: nowrap; pointer-events: none; user-select: none;
-  max-width: 78%; overflow: hidden;
   direction: ltr;
 }
 .now-top { position: relative; display: flex; align-items: center; gap: 10px; }
@@ -127,7 +128,8 @@ html[dir="rtl"] .ico.flip { transform: scaleX(-1); }
   font-family: var(--h-display);
   font-size: 30px; font-weight: 700; line-height: 1.15;
   color: var(--h-text); margin: 18px 0 8px;
-  overflow-wrap: anywhere;
+  /* слова не рвём: длинное «Номинализация» уменьшается (js/home.js fitBg) */
+  overflow-wrap: normal;
 }
 .now-sub { position: relative; font-size: 15px; color: var(--h-hint); }
 

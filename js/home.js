@@ -79,6 +79,7 @@ const Home = (() => {
     }
     if (!keepScroll) window.scrollTo(0, 0);
     if (tab === 'course') scrollToCurrent();
+    if (tab === 'home') fitBg();
   }
 
   // Вкладка — из hash; в мини-аппе hash занят подписью Telegram, тогда
@@ -156,6 +157,7 @@ const Home = (() => {
       setText($('nowNum'), id.slice(3));
       setText($('nowTitle'), (card.querySelector('.lc-title')?.textContent || '').trim());
       setText($('nowBg'), card.dataset.de || '');
+      fitBg();
       const nowCard = $('nowCard');
       if (nowCard) nowCard.classList.toggle('is-new', !started);
       setText($('nowSub'), started
@@ -209,6 +211,25 @@ const Home = (() => {
     setText($('statStreak'), streak);
     setText($('statXp'), xp);
     setText($('statDone'), doneCount);
+  }
+
+  /* Водяной знак — слово урока целиком: уменьшаем кегль, пока оно не
+     влезет в карточку (76px — для коротких «Hallo», «Familie»). */
+  const BG_MAX = 76, BG_MIN = 28;
+  function fitBg() {
+    const el = $('nowBg'), cardEl = $('nowCard');
+    if (!el || !cardEl) return;
+    const room = cardEl.clientWidth - 28;
+    if (room <= 0) return;                 // вкладка скрыта — подгоним при показе
+    el.style.fontSize = BG_MAX + 'px';
+    const w = el.scrollWidth;
+    if (w > room && w > 0) el.style.fontSize = Math.max(BG_MIN, Math.floor(BG_MAX * room / w)) + 'px';
+    // название урока: длинное слово не рвём посередине, а уменьшаем
+    const t = $('nowTitle');
+    if (!t) return;
+    t.style.fontSize = '';
+    const full = parseFloat(getComputedStyle(t).fontSize) || 30;
+    for (let fs = full; t.scrollWidth > t.clientWidth + 1 && fs > 18; fs -= 1) t.style.fontSize = (fs - 1) + 'px';
   }
 
   /* ── «Свежее» у новостей: то же правило, что у ленты и меню ── */
@@ -287,6 +308,9 @@ const Home = (() => {
     new MutationObserver(paintSettings)
       .observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
 
+    // шрифт Unbounded догружается позже — после него ширина слова другая
+    try { document.fonts && document.fonts.ready.then(fitBg); } catch (e) {}
+    window.addEventListener('resize', fitBg);
     render();
     paintSettings();
     markLocked();
