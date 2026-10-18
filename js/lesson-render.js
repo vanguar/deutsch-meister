@@ -2374,7 +2374,7 @@ function toggleSidebar() {
 }
 function toggleLevel(id) { document.getElementById(id)?.classList.toggle('collapsed'); }
 
-/* ── Нижняя панель «Главная · Курс · Профиль» на телефоне ──
+/* ── Нижняя панель «Главная · Курс · Словарь · Профиль» на телефоне ──
    Та же навигация, что на главной (index.html, js/home.js): на узком
    экране она заменяет плавающую кнопку ☰ и выезжающее меню (их прячет
    css/sidebar.css по классу body.lesson-tabbar-on). На десктопе меню
@@ -2391,6 +2391,7 @@ function toggleLevel(id) { document.getElementById(id)?.classList.toggle('collap
   const tabs = [
     ['', 'Главная', ico('<path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V20a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V9.5"/>')],
     ['#course', 'Курс', ico('<circle cx="6" cy="19" r="2.6"/><circle cx="18" cy="5" r="2.6"/><path d="M8.6 19h8.9a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7h8.9"/>')],
+    ['#dict', 'Словарь', ico('<path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/><path d="m8.5 13 3.5-7 3.5 7"/><path d="M9.6 11h4.8"/>')],
     ['#more', 'Профиль', ico('<circle cx="5" cy="12" r="1.7"/><circle cx="12" cy="12" r="1.7"/><circle cx="19" cy="12" r="1.7"/>')]
   ];
   const nav = document.createElement('nav');

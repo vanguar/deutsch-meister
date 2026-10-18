@@ -222,7 +222,7 @@ html[dir="rtl"] .ico.flip { transform: scaleX(-1); }
   border-top: 1px solid var(--h-line);
   padding-bottom: var(--h-safe-b);
 }
-.tabbar-in { max-width: 520px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); }
+.tabbar-in { max-width: 520px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); }
 .tab-btn {
   display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px;
   height: var(--h-tab-h); border: 0; background: none; cursor: pointer;
@@ -391,3 +391,51 @@ body.home .ar-trial { margin: 0 0 14px; border-radius: 20px; }
 html[dir="rtl"] .xp-tile .tile-big { justify-content: flex-end; }
 /* немецкие слова урока в RTL — у правого края, как и название */
 html[dir="rtl"] .lc-sub { direction: rtl; text-align: right; unicode-bidi: isolate; }
+
+/* ── словарь (js/vocab.js) ── */
+.v-search {
+  display: flex; align-items: center; gap: 10px;
+  background: var(--h-card); border-radius: 14px; padding: 0 14px; min-height: 48px;
+  color: var(--h-hint); margin-bottom: 12px;
+  border: 1.5px solid transparent;
+}
+.v-search:focus-within { border-color: var(--h-accent); }
+.v-search input {
+  flex: 1; min-width: 0; border: 0; outline: 0; background: none;
+  color: var(--h-text); font: inherit; font-size: 16px;   /* 16px — iPhone не зумит поле */
+  -webkit-appearance: none; appearance: none;
+}
+.v-search input::placeholder { color: var(--h-hint); opacity: 1; }
+.v-search input::-webkit-search-cancel-button { -webkit-appearance: none; }
+[data-tab="dict"].is-search .v-levels { display: none; }
+.v-filter { margin: 4px 0 10px; display: inline-grid; background: var(--h-card); }
+.v-list { list-style: none; margin: 0; padding: 0; }
+.v-item {
+  display: flex; align-items: center; gap: 8px;
+  padding: 10px 6px 10px 14px; border-bottom: 1px solid var(--h-line);
+  content-visibility: auto; contain-intrinsic-size: auto 64px;
+}
+html[dir="rtl"] .v-item { padding: 10px 14px 10px 6px; }
+.v-main { flex: 1; min-width: 0; }
+.v-term { font-size: 17px; font-weight: 700; color: var(--h-text); text-align: start; unicode-bidi: isolate; }
+html[dir="rtl"] .v-term { text-align: right; }
+.v-art { font-weight: 700; }
+.v-art.art-der { color: var(--art-der); }
+.v-art.art-die { color: var(--art-die); }
+.v-art.art-das { color: var(--art-das); }
+.v-tr { font-size: 14px; color: var(--h-hint); margin-top: 1px; }
+.v-lesson {
+  flex: none; font-size: 12px; font-weight: 700; color: var(--h-hint);
+  padding: 4px 6px; border-radius: 8px; text-decoration: none;
+}
+.v-btn {
+  flex: none; display: inline-flex; align-items: center; justify-content: center;
+  width: 40px; height: 40px; border-radius: 12px; border: 0; cursor: pointer;
+  background: var(--h-card); color: var(--h-accent);
+}
+.v-btn:active { transform: scale(.94); }
+.v-know { color: var(--h-hint); }
+.v-item.known .v-know { background: var(--h-done); color: var(--h-done-ink); }
+.v-item.known .v-word { color: var(--h-done); }
+.v-btn:focus-visible, .v-lesson:focus-visible, .v-search input:focus-visible { outline: 2px solid var(--h-accent); outline-offset: 2px; }
+.v-empty, .v-wait { color: var(--h-hint); text-align: center; padding: 28px 12px; list-style: none; }

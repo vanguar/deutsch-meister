@@ -52,7 +52,7 @@ const nav = await c.ev(`(() => {
 const n = JSON.parse(nav);
 ok(n.bar, 'нижняя панель прижата к низу экрана');
 ok(n.fab === 'none' && n.side === 'none', `☰ и боковое меню на телефоне скрыты (${n.fab}/${n.side})`);
-ok(n.tabs.join() === 'Главная>../../../index.html,Курс>../../../index.html#course,Профиль>../../../index.html#more', 'вкладки ведут на главную, курс и профиль: ' + n.tabs.join(' | '));
+ok(n.tabs.join() === 'Главная>../../../index.html,Курс>../../../index.html#course,Словарь>../../../index.html#dict,Профиль>../../../index.html#more', 'вкладки ведут на главную, курс, словарь и профиль: ' + n.tabs.join(' | '));
 ok(n.on === 'Курс', 'в уроке подсвечен «Курс»');
 await c.ev(`scrollTo(0, document.documentElement.scrollHeight)`); await c.wait(400);
 const last = await c.ev(`(() => { const bar = document.querySelector('.lesson-tabbar').getBoundingClientRect().top;

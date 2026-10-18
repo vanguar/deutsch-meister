@@ -161,6 +161,65 @@ s = await J(SNAP);
 ok(s.tab.join() === 'course', `после «назад» снова «Курс» (${s.tab})`);
 ok(s.cur.join() === 'a1-05' && /lesson-05/.test(s.href), `последний открытый урок стал текущим: ${s.cur}`);
 
+// ── 3б. Словарь ──
+console.log('3б. Словарь');
+await fresh(PROG);
+await c.ev(`window.__said = []; TTS.speak = t => window.__said.push(t)`);
+await c.ev(`document.querySelector('[data-tab-btn="dict"]').click()`);
+ok(await waitFor(`document.querySelectorAll('.v-item').length > 0`), 'вкладка «Словарь» загрузила слова');
+const VSNAP = `({ hash: location.hash, n: document.querySelectorAll('.v-item').length, cnt: document.getElementById('vocabCount').textContent,
+  lvl: document.querySelector('[data-vlevel].on')?.dataset.vlevel, head: document.getElementById('vLvlCount').textContent,
+  first: (document.querySelector('.v-item .v-term') || {}).textContent, hscroll: document.documentElement.scrollWidth > innerWidth + 1,
+  empty: !document.getElementById('vocabEmpty').hidden })`;
+let v = await J(VSNAP);
+const VOC = JSON.parse(await c.ev(`fetch('data/vocab/index.json').then(r => r.text())`));
+const inLv = lv => VOC.items.filter(i => i.l.startsWith(lv + '-')).length;
+ok(v.hash === '#dict' && v.lvl === 'a1' && v.n === inLv('a1'), `уровень текущего урока (A1): ${v.n} слов из ${inLv('a1')}`, v);
+ok(v.cnt === `${VOC.items.length} слов` && v.head === `Знаю 0 из ${inLv('a1')}` && v.first === 'Hallo', `шапка: ${v.cnt}, ${v.head}, первое слово ${v.first}`);
+ok(!v.hscroll, 'словарь без горизонтальной прокрутки');
+await c.shot('home-dict-dark.png');
+// озвучка и «знаю»
+await c.ev(`document.querySelector('.v-item .v-say').click()`);
+ok((await J('window.__said')).join() === 'Hallo', '🔊 озвучивает слово через TTS');
+await c.ev(`document.querySelectorAll('.v-item .v-know')[1].click()`); await c.wait(150);
+v = await J(VSNAP);
+const kn = await J(`JSON.parse(localStorage.getItem('dm_vocab_known'))`);
+ok(kn['Tschüss'] === 1 && v.head === `Знаю 1 из ${inLv('a1')}`, `«знаю» сохраняется: ${Object.keys(kn)} · ${v.head}`);
+ok(await c.ev(`document.querySelectorAll('.v-item')[1].classList.contains('known') && document.querySelectorAll('.v-item .v-know')[1].getAttribute('aria-pressed') === 'true'`), 'отмеченное слово подсвечено');
+await c.ev(`document.querySelector('[data-vfilter="known"]').click()`); await c.wait(150);
+v = await J(VSNAP);
+ok(v.n === 1 && v.first === 'Tschüss', `фильтр «Знаю»: ${v.n} — ${v.first}`);
+await c.ev(`document.querySelector('[data-vfilter="learn"]').click()`); await c.wait(150);
+ok((await J(VSNAP)).n === inLv('a1') - 1, 'фильтр «Учить» — без отмеченного');
+await c.ev(`document.querySelector('[data-vfilter="all"]').click()`); await c.wait(150);
+// уровни
+await c.ev(`document.querySelector('[data-vlevel="b2"]').click()`); await c.wait(200);
+v = await J(VSNAP);
+ok(v.lvl === 'b2' && v.n === inLv('b2') && v.head === `Знаю 0 из ${inLv('b2')}`, `B2: ${v.n} слов, ${v.head}`);
+// поиск — по всем уровням, без умлаутов и по переводу
+const search = async q => { await c.ev(`(() => { const i = document.getElementById('vocabQuery'); i.value = ${JSON.stringify(q)}; i.dispatchEvent(new Event('input')); })()`); await c.wait(350);
+  return J(`[...document.querySelectorAll('.v-item')].map(r => r.querySelector('.v-term').textContent)`); };
+let found = await search('schon');
+ok(found.includes('schön'), `«schon» находит «schön» (${found.slice(0, 5)})`);
+found = await search('собака');
+ok(found.includes('der Hund'), `«собака» находит «der Hund» (${found.slice(0, 5)})`);
+ok(await c.ev(`getComputedStyle(document.querySelector('.v-levels')).display === 'none'`), 'при поиске уровни скрыты — ищем по всем');
+found = await search('qqqzzz');
+ok(found.length === 0 && (await J(VSNAP)).empty, 'ничего не найдено — пишем об этом');
+await search('');
+ok((await J(VSNAP)).n === inLv('b2'), 'пустой поиск — снова уровень B2');
+// ссылка на урок
+const href = await c.ev(`document.querySelector('.v-item .v-lesson').getAttribute('href')`);
+ok(/^lessons\/b2\/lesson-\d+\/index\.html$/.test(href), `тег урока ведёт в урок: ${href}`);
+// после перезагрузки отметка на месте
+await c.go(B + '/index.html?r=2#dict', 1500);
+await waitFor(`document.querySelectorAll('.v-item').length > 0`);
+ok(await c.ev(`document.getElementById('vLvlCount').textContent`) === `Знаю 1 из ${inLv('a1')}`, 'отметки «знаю» переживают перезагрузку');
+await c.ev(`localStorage.setItem('dm_theme', 'light')`); await c.go(B + '/index.html?r=3#dict', 1500);
+await waitFor(`document.querySelectorAll('.v-item').length > 0`); await c.wait(500);
+await c.shot('home-dict-light.png');
+await c.ev(`localStorage.setItem('dm_theme', 'dark')`);
+
 // ── 4. Облачное слияние ──
 console.log('4. Облако: cloud-sync.js → Progress.renderHomeProgress()');
 await fresh(PROG);
@@ -296,7 +355,14 @@ s = await J(SNAP);
 const ru = await J(`[...document.querySelectorAll('.home-main *, .tabbar *')].filter(e => !e.children.length && /[ыэъЫЭЪёЁ]/.test(e.textContent)).map(e => e.textContent.trim()).slice(0, 10)`);
 ok(s.lang === 'uk' && ru.length === 0, 'uk: нет русских слов (ы/э/ъ/ё)', ru);
 const ukT = await J(`[...document.querySelectorAll('.tab-btn span')].map(e => e.textContent)`);
-ok(ukT.join() === 'Головна,Курс,Профіль', `uk: вкладки ${ukT}`);
+ok(ukT.join() === 'Головна,Курс,Словник,Профіль', `uk: вкладки ${ukT}`);
+await c.ev(`document.querySelector('[data-tab-btn="dict"]').click()`);
+await waitFor(`document.querySelectorAll('.v-item').length > 0`);
+await c.ev(`(() => { const i = document.getElementById('vocabQuery'); i.value = 'собака'; i.dispatchEvent(new Event('input')); })()`); await c.wait(400);
+const ukV = await J(`({ ph: document.getElementById('vocabQuery').placeholder, rows: [...document.querySelectorAll('.v-item')].map(r => r.querySelector('.v-word').textContent + ' — ' + r.querySelector('.v-tr').textContent).slice(0, 3),
+  cnt: document.getElementById('vocabCount').textContent })`);
+ok(/українською/.test(ukV.ph) && ukV.rows.includes('Hund — собака') && /слів$/.test(ukV.cnt), `uk словник: «${ukV.ph}», ${ukV.rows.join('; ')}, ${ukV.cnt}`);
+await c.shot('home-uk-dict.png');
 ok(s.btn === 'Продовжити урок' && s.nowSub === 'Пройдено 2 з 5' && s.nowTitle === "Сім'я", `uk: ${s.btn} · ${s.nowSub} · ${s.nowTitle}`);
 ok(s.courseCount === '3 з 68 уроків' && s.streakWord === 'днів поспіль', `uk: ${s.courseCount} · ${s.streakWord}`);
 await c.shot('home-uk.png');
@@ -327,6 +393,12 @@ await c.shot('home-ar-course.png');
 await c.ev(`document.querySelector('[data-tab-btn="more"]').click()`); await c.wait(300);
 await c.shot('home-ar-profile.png');
 ok(await c.ev(`document.querySelector('[data-set-lang].on').dataset.setLang`) === 'ar', 'ar: в профиле отмечен AR');
+await c.ev(`document.querySelector('[data-tab-btn="dict"]').click()`);
+await waitFor(`document.querySelectorAll('.v-item').length > 0`); await c.wait(400);
+const arV = await J(`({ cyr: [...document.querySelectorAll('[data-tab="dict"] *')].filter(e => !e.children.length && /[А-Яа-яЁё]/.test(e.textContent)).map(e => e.textContent.trim()).slice(0, 5),
+  ph: document.getElementById('vocabQuery').placeholder, hs: document.documentElement.scrollWidth > innerWidth + 1 })`);
+ok(arV.cyr.length === 0 && !/[А-Яа-я]/.test(arV.ph) && !arV.hs, `ar: словарь по-арабски, без кириллицы («${arV.ph}»)`, arV);
+await c.shot('home-ar-dict.png');
 
 // ── 10. Маленький экран и десктоп ──
 console.log('10. 360×640 и 1280×800');

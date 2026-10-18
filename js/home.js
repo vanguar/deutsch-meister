@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════
-   js/home.js — главная: вкладки «Главная · Курс · Профиль»
+   js/home.js — главная: вкладки «Главная · Курс · Словарь · Профиль»
 
    Только отрисовка. Логика прогресса остаётся в js/progress.js:
    renderHomeProgress() по-прежнему ставит .done / .continue на
@@ -9,7 +9,7 @@
    и рисует поверх: карточку текущего урока, уровень и серию,
    путь уроков, профиль.
 
-   Вкладка хранится в hash (#course, #more) через replaceState —
+   Вкладка хранится в hash (#course, #dict, #more) через replaceState —
    новых записей в истории нет, а «назад» из урока возвращает
    на ту же вкладку.
 
@@ -24,7 +24,7 @@ const Home = (() => {
   const SECTIONS = ['flashcards', 'fill', 'choice', 'match', 'dict'];
   const SECTION_SHORT = ['Карточки', 'Пропуски', 'Выбор', 'Пары', 'Диктант'];
   const LEVEL_NAMES = { a1: 'Начинающий', a2: 'Элементарный', b1: 'Средний', b2: 'Выше среднего' };
-  const TABS = ['home', 'course', 'more'];
+  const TABS = ['home', 'course', 'dict', 'more'];
 
   let level = null;          // выбранный уровень на вкладке «Курс»
 
@@ -80,6 +80,7 @@ const Home = (() => {
     if (!keepScroll) window.scrollTo(0, 0);
     if (tab === 'course') scrollToCurrent();
     if (tab === 'home') fitBg();
+    if (tab === 'dict' && typeof Vocab !== 'undefined') Vocab.show(((($('nowLvl') || {}).textContent) || 'a1').toLowerCase());
   }
 
   // Вкладка — из hash; в мини-аппе hash занят подписью Telegram, тогда

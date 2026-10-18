@@ -1,17 +1,23 @@
 # Deutsch Meister — команды деплоя (см. ДЕПЛОЙ-инструкция.md)
 # Windows: запускать из Git Bash. Без make — прямые команды указаны в целях.
 
-.PHONY: bump validate check-tips check-audience deploy-web deploy-api check-api i18n-check i18n-build test-i18n news dialogs test-dialogs
+.PHONY: vocab bump validate check-tips check-audience deploy-web deploy-api check-api i18n-check i18n-build test-i18n news dialogs test-dialogs
 
 # Поднять ?v=N во всех HTML + CACHE в service-worker.js (обязательно перед
 # пушем любых правок JS/CSS)
 bump:
 	python bump_version.py
 
+# Словарь курса (вкладка «Словарь»): data/vocab + i18n/uk|ar/vocab из
+# слов уроков. После правки слов в уроках — make vocab (validate проверит)
+vocab:
+	node tools/vocab/build.js
+
 # Проверить целостность уроков (данные <-> оболочки, версии, подсказки)
 validate:
 	python scripts/validate_lessons.py
 	python scripts/validate_dialogs.py
+	node tools/vocab/build.js --check
 
 # Регресс подсказок: у каждого слова фраз всех уроков подсказка обязана
 # содержать русский перевод (кириллицу). Падает, если нет.

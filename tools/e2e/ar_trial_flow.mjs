@@ -61,7 +61,7 @@ check('<html dir="rtl">', await c.ev(`document.documentElement.dir`) === 'rtl');
 let flipped = [];
 for (let i = 0; i <= 4; i++) { if (i) { await c.ev(`document.querySelectorAll('.ex-tab')[${i-1}].click()`); await c.wait(300); } flipped.push(...await c.ev(FLIPPED)); }
 check('немецкая пунктуация не перевёрнута (все упражнения)', flipped.length === 0, flipped);
-check('нижняя панель урока зеркальна: «Главная» справа', await c.ev(`(()=>{const t=[...document.querySelectorAll('.lt-tab')].map(a=>a.getBoundingClientRect().left);return t.length===3&&t[0]>t[1]&&t[1]>t[2]})()`));
+check('нижняя панель урока зеркальна: «Главная» справа', await c.ev(`(()=>{const t=[...document.querySelectorAll('.lt-tab')].map(a=>a.getBoundingClientRect().left);return t.length===4&&t[0]>t[1]&&t[1]>t[2]&&t[2]>t[3]})()`));
 check('панель урока по-арабски', await c.ev(`[...document.querySelectorAll('.lt-tab span')].every(s=>/[؀-ۿ]/.test(s.textContent))`));
 
 if (LOCKED.length) {

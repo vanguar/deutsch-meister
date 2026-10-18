@@ -19,6 +19,7 @@ const J = async expr => JSON.parse(await c.ev(`JSON.stringify(${expr})`));
 const PAGES = [
   { name: 'главная', url: '/index.html', ready: `document.querySelectorAll('.lesson-card[data-state]').length > 0` },
   { name: 'курс', url: '/index.html#course', ready: `document.querySelectorAll('.lesson-card[data-state]').length > 0` },
+  { name: 'словарь', url: '/index.html#dict', ready: `document.querySelectorAll('.v-item').length > 0` },
   { name: 'профиль', url: '/index.html#more', ready: `!!document.querySelector('[data-set-lang].on')` },
   { name: 'урок', url: '/lessons/a1/lesson-05/index.html', ready: `document.querySelectorAll('.vocab-item').length > 0` },
   { name: 'книги', url: '/books.html', ready: `document.querySelectorAll('.lib-card').length > 0` },

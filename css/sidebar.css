@@ -396,7 +396,7 @@
   .side-action .sa-new.fresh { animation: none; }
 }
 
-/* ── Урок на телефоне: нижняя панель «Главная · Курс · Профиль» ──
+/* ── Урок на телефоне: нижняя панель «Главная · Курс · Словарь · Профиль» ──
    Вставляет js/lesson-render.js (initLessonTabbar) и ставит
    body.lesson-tabbar-on. Повторяет панель главной (css/home.css), но на
    токенах урока. На узком экране заменяет ☰ и выезжающее меню; на
@@ -413,7 +413,7 @@
     border-top: 1px solid var(--border);
     padding-bottom: max(env(safe-area-inset-bottom, 0px), var(--tg-safe-area-inset-bottom, 0px));
   }
-  .lesson-tabbar .lt-in { max-width: 520px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); }
+  .lesson-tabbar .lt-in { max-width: 520px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); }
   .lesson-tabbar .lt-tab {
     display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px;
     height: 64px; color: var(--text-muted); text-decoration: none;
