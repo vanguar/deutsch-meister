@@ -18,9 +18,11 @@ async function waitFor(expr, ms = 6000) {
   return false;
 }
 
+// Главная с редизайна живёт без бокового меню (вкладки, js/home.js —
+// её проверяет tools/e2e/home_flow.mjs); меню осталось в уроках.
 const PAGES = [
-  { name: 'главная', url: '/index.html' },
   { name: 'урок A1-01', url: '/lessons/a1/lesson-01/index.html' },
+  { name: 'урок A2-07', url: '/lessons/a2/lesson-07/index.html' },
   { name: 'урок B2-14', url: '/lessons/b2/lesson-14/index.html' }
 ];
 
@@ -77,20 +79,20 @@ async function checkPage(p, width, height, label) {
 }
 
 // ── Русский, тёмная тема: телефон и десктоп ──
-await c.go(B + '/index.html', 800);
+await c.go(B + '/lessons/a1/lesson-01/index.html', 800);
 await c.ev(`localStorage.clear(); localStorage.setItem('dm_theme', 'dark')`);
 for (const p of PAGES) {
   await checkPage(p, 390, 844, '390');
   await c.shot(`sidebar_${p.url.replace(/\W+/g, '_')}_390.png`);
 }
 await checkPage(PAGES[0], 1280, 800, '1280');
-await c.shot('sidebar_index_1280.png');
+await c.shot('sidebar_lesson_1280.png');
 await checkPage(PAGES[1], 360, 640, '360×640');
 await c.shot('sidebar_lesson_360.png');
 
 // ── Действия ──
 await c.send('Emulation.setDeviceMetricsOverride', { width: 390, height: 844, deviceScaleFactor: 1, mobile: true });
-await c.go(B + '/index.html', 1500);
+await c.go(B + '/lessons/a1/lesson-01/index.html', 1800);
 await waitFor(`document.querySelectorAll('.side-action.contact').length > 0`);
 // «Связь»: в браузере — новая вкладка с t.me/ObiVan1978
 const opened = await c.ev(`(() => { const log = []; window.open = (u, t) => { log.push(u + ' ' + t); return null; };
@@ -102,7 +104,8 @@ const tg = await c.ev(`(() => { const log = []; window.Telegram = { WebApp: { op
   document.querySelector('.side-action.contact').click(); return log.join(';'); })()`);
 ok(tg === 'tg https://t.me/ObiVan1978', `«Связь» в мини-аппе: ${tg}`);
 // «Поддержать» — модалка
-await c.go(B + '/index.html', 1500);
+await c.go(B + '/lessons/a1/lesson-01/index.html', 1800);
+await waitFor(`document.querySelectorAll('.side-action.donate').length > 0`);
 await c.ev(`document.querySelector('.side-action.donate').click()`);
 ok(await waitFor(`!!document.querySelector('.dm-modal, .dm-overlay.show, .dm-sheet') || /Поддержать/.test(document.body.innerText.slice(-3000))`, 3000),
   '«Поддержать» открывает окно поддержки');
@@ -123,7 +126,7 @@ ok(await waitFor(`document.querySelectorAll('.dlg-tile.is-live').length > 0`), '
 // ── Светлая тема ──
 await c.ev(`localStorage.setItem('dm_theme', 'light')`);
 const light = await checkPage(PAGES[0], 390, 844, 'светлая');
-await c.shot('sidebar_index_light.png');
+await c.shot('sidebar_lesson1_light.png');
 const light2 = await checkPage(PAGES[1], 390, 844, 'светлая');
 await c.shot('sidebar_lesson_light.png');
 ok(light && light2 && light.items[0].icoBg !== light.items[4].icoBg && light.items[1].icoBg !== light.items[2].icoBg, 'у плашек разные цвета плиток');
@@ -179,7 +182,7 @@ await c.ev(`openSidebar(); document.querySelector('.sidebar-extra').scrollIntoVi
 await c.shot('sidebar_badge_fresh.png');
 // uk
 await c.ev(`localStorage.setItem('dm_lang', JSON.stringify({lang:'uk', ts: Date.now()}))`);
-await c.go(B + '/index.html', 1800);
+await c.go(B + '/lessons/a1/lesson-01/index.html', 1800);
 await c.ev(mockFetch([{ published: daysAgo(1) }])); await c.wait(500);
 ok((await badgeState()).every(b => /🔥\s*Свіже/.test(b.text)), 'uk: «🔥 Свіже» — ' + (await badgeState()).map(b => b.text).join(', '));
 await c.ev(mockFetch([{ published: daysAgo(9) }])); await c.wait(500);
@@ -187,7 +190,7 @@ ok((await badgeState()).every(b => /Є статті/.test(b.text)), 'uk: «Є с
 
 // ── Нигде в меню нет «Астрономия … скоро» ──
 await c.ev(`localStorage.removeItem('dm_lang')`);
-await c.go(B + '/index.html', 1500);
+await c.go(B + '/lessons/a1/lesson-01/index.html', 1800);
 await waitFor(`document.querySelectorAll('.side-action.news').length > 0`);
 const newsSub = await c.ev(`document.querySelector('.side-action.news .sa-sub').textContent`);
 ok(!/Астроном|скоро/i.test(newsSub), `подпись «Новостей» без астрономии: «${newsSub}»`);

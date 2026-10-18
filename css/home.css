@@ -1,0 +1,392 @@
+/* ═══════════════════════════════════════════════
+   css/home.css — главная: вкладки «Главная · Курс · Профиль»
+
+   Свои токены --h-* (тёмная — по умолчанию, светлая — по
+   [data-theme="light"], как в base.css). Раскладка на логических
+   свойствах (inline-start/end), поэтому арабский RTL зеркалится
+   сам, без правил в rtl.css.
+   ═══════════════════════════════════════════════ */
+
+:root {
+  --h-bg:       #16202a;
+  --h-card:     #212d3a;
+  --h-card2:    #2b3948;
+  --h-line:     #2e3c4b;
+  --h-text:     #f2f5f8;
+  --h-hint:     #9aa9b8;
+  --h-accent:   #6cb2f0;
+  --h-btn:      #2f6db5;
+  --h-btn-text: #ffffff;
+  --h-streak:   #f3ab3c;
+  --h-done:     #52c47f;
+  --h-done-ink: #0d1f14;
+  --h-fresh-bg: rgba(243,171,60,.16);
+  --h-tabbar:   #1b2632;
+  --h-ghost:    rgba(255,255,255,.035);
+  --h-shadow:   0 1px 0 rgba(255,255,255,.03) inset;
+  --h-display:  'Unbounded', 'DM Sans', system-ui, sans-serif;
+  --h-body:     'Manrope', 'DM Sans', system-ui, sans-serif;
+  --h-tab-h:    64px;
+}
+
+[data-theme="light"] {
+  --h-bg:       #ffffff;
+  --h-card:     #f1f3f6;
+  --h-card2:    #e2e7ed;
+  --h-line:     #dfe4ea;
+  --h-text:     #11161c;
+  --h-hint:     #5b6672;
+  --h-accent:   #1d63ad;
+  --h-btn:      #2366ad;
+  --h-btn-text: #ffffff;
+  --h-streak:   #b0530a;
+  --h-done:     #1b8547;
+  --h-done-ink: #ffffff;
+  --h-fresh-bg: rgba(176,83,10,.12);
+  --h-tabbar:   #f6f7f9;
+  --h-ghost:    rgba(0,0,0,.035);
+  --h-shadow:   none;
+}
+
+html, body.home { background: var(--h-bg); }
+body.home {
+  color: var(--h-text);
+  font-family: var(--h-body);
+  line-height: 1.45;
+}
+html[lang="ar"] body.home { font-family: "Noto Sans Arabic", var(--h-body); }
+body.home [hidden] { display: none !important; }
+
+.home-main {
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 20px 16px calc(var(--h-tab-h) + 28px + env(safe-area-inset-bottom));
+  min-height: 100vh;
+}
+
+.ico {
+  width: 22px; height: 22px; flex: none;
+  fill: none; stroke: currentColor; stroke-width: 1.9;
+  stroke-linecap: round; stroke-linejoin: round;
+}
+.ico.sm { width: 18px; height: 18px; }
+html[dir="rtl"] .ico.flip { transform: scaleX(-1); }
+
+/* ── заголовки ── */
+.home-head { margin: 8px 2px 18px; }
+.greet-sub { font-size: 15px; color: var(--h-hint); }
+.greet {
+  font-family: var(--h-display);
+  font-size: 27px; font-weight: 700; line-height: 1.15;
+  color: var(--h-text); letter-spacing: -.01em;
+  margin-top: 2px;
+}
+.page-head {
+  display: flex; align-items: baseline; justify-content: space-between; gap: 12px;
+  margin: 8px 2px 18px;
+}
+.page-title {
+  font-family: var(--h-display);
+  font-size: 27px; font-weight: 700; line-height: 1.15; color: var(--h-text);
+}
+.page-aside { font-size: 14px; color: var(--h-hint); white-space: nowrap; }
+.sec-title {
+  font-family: var(--h-display);
+  font-size: 17px; font-weight: 700; color: var(--h-text);
+  margin: 26px 2px 12px;
+}
+.group-title {
+  font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--h-hint); margin: 24px 6px 8px;
+}
+
+/* ── карточка текущего урока ── */
+.now-card {
+  position: relative; overflow: hidden;
+  background: var(--h-card); border-radius: 24px;
+  padding: 20px 20px 20px;
+  box-shadow: var(--h-shadow);
+}
+.now-bg {
+  position: absolute; inset-inline-end: -10px; top: -6px;
+  font-family: var(--h-display); font-weight: 800;
+  font-size: 76px; line-height: 1; letter-spacing: -.02em;
+  color: var(--h-ghost); white-space: nowrap; pointer-events: none; user-select: none;
+  max-width: 78%; overflow: hidden;
+  direction: ltr;
+}
+.now-top { position: relative; display: flex; align-items: center; gap: 10px; }
+.lvl-badge {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 34px; height: 30px; padding: 0 8px; border-radius: 9px;
+  background: var(--h-btn); color: var(--h-btn-text);
+  font-weight: 800; font-size: 14px;
+}
+.now-num { font-size: 15px; font-weight: 600; color: var(--h-hint); }
+.now-title {
+  position: relative;
+  font-family: var(--h-display);
+  font-size: 30px; font-weight: 700; line-height: 1.15;
+  color: var(--h-text); margin: 18px 0 8px;
+  overflow-wrap: anywhere;
+}
+.now-sub { position: relative; font-size: 15px; color: var(--h-hint); }
+
+.steps { position: relative; display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; margin: 16px 0 4px; }
+.step { min-width: 0; }
+.step::before {
+  content: ''; display: block; height: 5px; border-radius: 3px;
+  background: var(--h-card2);
+}
+.step.on::before { background: var(--h-btn); }
+.step.next::before { background: var(--h-accent); opacity: .55; }
+.step span {
+  display: block; margin-top: 7px; text-align: center;
+  font-size: 12px; color: var(--h-hint);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.step.next span { color: var(--h-text); font-weight: 700; }
+.now-card.is-new .steps { display: none; }
+
+.now-btn {
+  position: relative;
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  margin-top: 18px; min-height: 52px; padding: 12px 18px;
+  border-radius: 16px; border: 0;
+  background: var(--h-btn); color: var(--h-btn-text);
+  font-size: 17px; font-weight: 700; text-align: center;
+  transition: filter .15s ease, transform .15s ease;
+}
+.now-btn:active { transform: scale(.985); }
+@media (hover: hover) { .now-btn:hover { filter: brightness(1.08); } }
+
+/* ── уровень и серия ── */
+.pair { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 12px; }
+.tile {
+  background: var(--h-card); border-radius: 20px; padding: 16px;
+  min-width: 0; box-shadow: var(--h-shadow);
+}
+.tile-head { display: flex; align-items: center; gap: 6px; font-size: 15px; color: var(--h-hint); }
+.tile-head .ico { width: 18px; height: 18px; }
+.tile-big {
+  display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap;
+  margin-top: 10px; line-height: 1.1;
+}
+.tile-big b {
+  font-family: var(--h-display); font-size: 26px; font-weight: 700; color: var(--h-text);
+}
+.tile-big small { font-family: var(--h-display); font-size: 14px; font-weight: 700; color: var(--h-hint); }
+.tile-big .word { font-size: 15px; color: var(--h-hint); }
+.streak-tile .ico { color: var(--h-streak); }
+.streak-tile .tile-big b { color: var(--h-streak); }
+.tile-hint { margin-top: 8px; font-size: 13px; color: var(--h-hint); }
+.bar { height: 6px; border-radius: 3px; background: var(--h-card2); margin-top: 14px; overflow: hidden; }
+.bar > i { display: block; height: 100%; width: 0; border-radius: inherit; background: var(--h-btn); transition: width .4s ease; }
+
+/* ── «Читать и слушать» ── */
+.read-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.read {
+  position: relative; display: flex; flex-direction: column; align-items: flex-start; gap: 4px;
+  background: var(--h-card); border: 0; border-radius: 20px; padding: 16px;
+  color: var(--h-text); font: inherit; text-align: start; cursor: pointer; min-width: 0;
+  box-shadow: var(--h-shadow);
+  transition: transform .15s ease, background .15s ease;
+}
+.read:active { transform: scale(.985); }
+@media (hover: hover) { .read:hover { background: var(--h-card2); } }
+.read.wide { grid-column: 1 / -1; flex-direction: row; align-items: center; gap: 14px; }
+.read .ico { color: var(--h-accent); }
+.read-ico {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 48px; height: 48px; border-radius: 14px; flex: none;
+  background: var(--h-bg); color: var(--h-accent);
+}
+.read-ico .ico { width: 24px; height: 24px; }
+.read-txt { flex: 1; min-width: 0; }
+.read-title { display: block; font-size: 17px; font-weight: 700; color: var(--h-text); margin-top: 6px; }
+.read.wide .read-title { margin-top: 0; }
+.read-sub { display: block; font-size: 14px; color: var(--h-hint); }
+.read .chev { color: var(--h-hint); }
+.fresh {
+  position: absolute; top: 12px; inset-inline-end: 12px;
+  padding: 3px 9px; border-radius: 8px;
+  background: var(--h-fresh-bg); color: var(--h-streak);
+  font-size: 13px; font-weight: 700;
+}
+
+/* ── нижняя панель ── */
+.tabbar {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 50;
+  background: var(--h-tabbar);
+  border-top: 1px solid var(--h-line);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.tabbar-in { max-width: 520px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); }
+.tab-btn {
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px;
+  height: var(--h-tab-h); border: 0; background: none; cursor: pointer;
+  color: var(--h-hint); font: inherit; font-size: 12px; font-weight: 600;
+}
+.tab-btn.on { color: var(--h-accent); }
+.tab-btn:focus-visible, .seg button:focus-visible, .read:focus-visible, .row:focus-visible,
+.now-btn:focus-visible, .lesson-card:focus-visible {
+  outline: 2px solid var(--h-accent); outline-offset: 2px;
+}
+
+/* ── сегменты (уровни, язык, тема) ── */
+.seg {
+  display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 4px;
+  background: var(--h-card); border-radius: 16px; padding: 5px;
+}
+.seg button {
+  border: 0; border-radius: 12px; background: none; cursor: pointer;
+  min-height: 42px; padding: 0 10px;
+  color: var(--h-hint); font: inherit; font-size: 16px; font-weight: 700;
+}
+.seg button.on { background: var(--h-btn); color: var(--h-btn-text); }
+.seg.small { border-radius: 12px; padding: 3px; background: var(--h-bg); }
+.seg.small button { min-height: 32px; font-size: 14px; border-radius: 9px; padding: 0 12px; }
+
+/* ── курс ── */
+.lvl-card {
+  background: var(--h-card); border-radius: 20px; padding: 16px 18px;
+  margin: 12px 0 18px; box-shadow: var(--h-shadow);
+}
+.lvl-row { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; }
+.lvl-name { font-family: var(--h-display); font-size: 17px; font-weight: 700; color: var(--h-text); }
+.lvl-count { font-size: 14px; color: var(--h-hint); white-space: nowrap; }
+
+.path { position: relative; }
+.lesson-card {
+  position: relative;
+  display: flex; align-items: center; gap: 14px;
+  padding: 10px 12px 10px 0; margin-bottom: 4px;
+  border-radius: 16px; color: inherit; text-decoration: none;
+  /* progress.js ставит текущему уроку inline outline/box-shadow старого
+     дизайна — здесь выделение своё */
+  outline: none !important; box-shadow: none !important;
+}
+html[dir="rtl"] .lesson-card { padding: 10px 0 10px 12px; }
+/* линия пути между кружками */
+.lesson-card::before {
+  content: ''; position: absolute; inset-inline-start: 23px; top: 50%; height: 100%;
+  width: 2px; background: var(--h-line);
+}
+.lesson-card:last-child::before { display: none; }
+.lesson-card[data-state="done"]::before { background: var(--h-done); }
+.lc-dot {
+  position: relative; z-index: 1; flex: none;
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 48px; height: 48px; border-radius: 50%;
+  background: var(--h-bg); border: 2px solid var(--h-line);
+  color: var(--h-hint); font-weight: 700; font-size: 15px;
+}
+.lc-dot .ico { display: none; width: 22px; height: 22px; stroke-width: 2.6; }
+.lesson-card[data-state="done"] .lc-dot { background: var(--h-done); border-color: var(--h-done); color: var(--h-done-ink); }
+.lesson-card[data-state="done"] .lc-dot .ico { display: block; }
+.lesson-card[data-state="done"] .lc-n { display: none; }
+.lesson-card[data-state="cur"] .lc-dot { background: var(--h-btn); border-color: var(--h-btn); color: var(--h-btn-text); }
+.lc-body {
+  flex: 1; min-width: 0; display: flex; align-items: center; gap: 10px;
+  padding: 10px 12px; margin-inline-start: -6px; border-radius: 16px;
+}
+.lesson-card[data-state="cur"] .lc-body { background: var(--h-card); }
+.lc-text { flex: 1; min-width: 0; }
+.lc-title { display: block; font-size: 17px; font-weight: 700; color: var(--h-text); line-height: 1.25; }
+.lc-sub { display: block; font-size: 14px; color: var(--h-hint); margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.lc-words { unicode-bidi: isolate; }
+.lc-state:empty { display: none; }
+.lesson-card[data-state="done"] .lc-state { color: var(--h-done); font-weight: 600; }
+.lesson-card[data-state="cur"] .lc-state { color: var(--h-accent); font-weight: 600; }
+.lesson-card[data-state="done"] .lc-words,
+.lesson-card[data-state="cur"] .lc-state:not(:empty) + .lc-words { display: none; }
+.lc-go {
+  display: none; flex: none;
+  padding: 8px 14px; border-radius: 12px;
+  background: var(--h-btn); color: var(--h-btn-text);
+  font-size: 14px; font-weight: 700;
+}
+.lesson-card[data-state="cur"] .lc-go { display: inline-block; }
+/* служебные узлы для progress.js и ar-trial.js: на экране их роль
+   играют кружок и подпись */
+.lc-num, .lc-status {
+  position: absolute; width: 1px; height: 1px; overflow: hidden;
+  clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap;
+}
+.lesson-card.ar-soon .lc-status {
+  position: static; width: auto; height: auto; clip: auto; clip-path: none;
+  font-size: 13px; color: var(--h-hint); flex: none;
+}
+@media (hover: hover) { .lesson-card:not(.ar-soon):hover .lc-body { background: var(--h-card); } }
+
+/* ── профиль ── */
+.stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.stat {
+  background: var(--h-card); border-radius: 18px; padding: 14px; min-width: 0;
+  box-shadow: var(--h-shadow);
+}
+.stat b { display: block; font-family: var(--h-display); font-size: 24px; font-weight: 700; line-height: 1.2; color: var(--h-text); }
+.stat b small { font-size: 14px; color: var(--h-hint); }
+.stat.streak b { color: var(--h-streak); }
+.stat.xp b { color: var(--h-accent); }
+.stat > span { display: block; font-size: 13px; color: var(--h-hint); margin-top: 2px; }
+.app-sub { font-size: 14px; color: var(--h-hint); margin: -12px 2px 18px; }
+
+.group { background: var(--h-card); border-radius: 20px; overflow: hidden; box-shadow: var(--h-shadow); }
+.row {
+  display: flex; align-items: center; gap: 14px; width: 100%;
+  padding: 13px 16px; min-height: 60px;
+  background: none; border: 0; color: var(--h-text); font: inherit; text-align: start;
+  cursor: pointer;
+}
+.row + .row { border-top: 1px solid var(--h-line); }
+button.row:active { background: var(--h-card2); }
+@media (hover: hover) { button.row:hover { background: var(--h-card2); } }
+.row-ico {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 38px; height: 38px; border-radius: 11px; flex: none;
+  background: var(--h-bg); color: var(--h-accent);
+}
+.row-ico .ico { width: 20px; height: 20px; }
+.row-ico.heart { color: #e5626f; }
+[data-theme="light"] .row-ico.heart { color: #c23744; }
+.row-txt { flex: 1; min-width: 0; }
+.row-title { display: block; font-size: 16px; font-weight: 600; }
+.row-sub { display: block; font-size: 13px; color: var(--h-hint); }
+.row-tg { direction: ltr; unicode-bidi: isolate; }
+.row .chev { color: var(--h-hint); }
+
+/* ── всплывающее поверх панели вкладок ── */
+body.home #installBanner { bottom: calc(var(--h-tab-h) + 12px + env(safe-area-inset-bottom)) !important; }
+body.home .dm-toast,
+body.home .ar-toast { bottom: calc(var(--h-tab-h) + 20px + env(safe-area-inset-bottom)) !important; }
+
+/* арабская плашка пробной версии — в ритме карточек */
+body.home .ar-trial { margin: 0 0 14px; border-radius: 20px; }
+
+@media (max-width: 360px) {
+  .greet, .page-title { font-size: 24px; }
+  .now-title { font-size: 26px; }
+  .step span { font-size: 11px; }
+  .tile { padding: 14px; }
+  .tile-big b { font-size: 23px; }
+  .xp-tile .tile-big b { font-size: 21px; }
+  .xp-tile .tile-big small { font-size: 12px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bar > i, .now-btn, .read { transition: none; }
+}
+
+.read.ar-soon { opacity: .45; filter: grayscale(.6); }
+
+/* ── правки после визуальной проверки ── */
+/* sidebar.css даёт .logo-sub капс и мелкий кегль — здесь это обычная подпись */
+.app-sub .logo-sub { all: unset; }
+/* заголовки групп — h2: шрифт base.css (Playfair) не нужен */
+.group-title { font-family: var(--h-body); }
+/* «120 / 200 XP» — дробь, в RTL читается так же слева направо */
+.xp-tile .tile-big { direction: ltr; flex-wrap: nowrap; white-space: nowrap; }
+html[dir="rtl"] .xp-tile .tile-big { justify-content: flex-end; }
+/* немецкие слова урока в RTL — у правого края, как и название */
+html[dir="rtl"] .lc-sub { direction: rtl; text-align: right; unicode-bidi: isolate; }

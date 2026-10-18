@@ -27,7 +27,7 @@ setInterval(async () => {
   }
 }, 50);
 const tg = code => '#tgWebAppData=' + encodeURIComponent('user=' + encodeURIComponent(JSON.stringify({ id: 42, language_code: code })) + '&auth_date=1&hash=x') + '&tgWebAppVersion=7.0';
-const state = async () => JSON.parse(await c.ev(`JSON.stringify({lang:I18N.lang, stored:localStorage.getItem('dm_lang'), btn:(document.querySelector('[data-lang-toggle]')||{}).textContent, title:(document.querySelector('.logo-sub')||{}).textContent})`));
+const state = async () => JSON.parse(await c.ev(`JSON.stringify({lang:I18N.lang, stored:localStorage.getItem('dm_lang'), btn:(document.querySelector('[data-set-lang].on')||{}).textContent, title:(document.querySelector('.logo-sub')||{}).textContent})`));
 let fails = 0;
 const ok = (n, cond, x) => { console.log((cond ? '  ok   ' : '  FAIL ') + n + (cond ? '' : '  → ' + JSON.stringify(x))); if (!cond) fails++; };
 const newSession = async () => { await c.ev(`sessionStorage.clear()`); };

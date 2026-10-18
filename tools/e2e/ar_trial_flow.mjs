@@ -15,7 +15,8 @@ const LOCKED = ALL.filter(id => !READY.includes(id));
 const url = id => B + '/lessons/' + id.replace('-', '/lesson-') + '/index.html';
 
 await c.go(B + '/index.html?lang=ar&lts=' + Date.now(), 2500);
-let s = JSON.parse(await c.ev(`JSON.stringify({lang:I18N.lang, btn:document.querySelector('[data-lang-toggle]').textContent,
+for (let t = 0; t < 100 && !(await c.ev(`!!document.querySelector('[data-set-lang].on')`)); t++) await c.wait(100);
+let s = JSON.parse(await c.ev(`JSON.stringify({lang:I18N.lang, btn:document.querySelector('[data-set-lang].on').textContent,
   banner:!!document.querySelector('.ar-trial'), soon:[...document.querySelectorAll('.lesson-card.ar-soon .lc-status')].filter(e=>e.textContent==='🔒 قريبًا').length,
   open:document.querySelectorAll('.lesson-card:not(.ar-soon)').length,
   cyr:[...document.querySelectorAll('.home-main *')].filter(e=>!e.children.length && ${CYR}.test(e.textContent)).map(e=>e.textContent.trim()).slice(0,10)})`));

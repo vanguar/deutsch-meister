@@ -253,11 +253,18 @@ ok(ar.hs, 'ar: нет горизонтальной прокрутки');
 ok(/[؀-ۿ]/.test(ar.play), `ar: кнопка по-арабски «${ar.play}»`);
 await c.shot('dlg_ar_dialog.png');
 await c.ev(`document.getElementById('dlgTrToggle').click()`);
-// пункт меню на главной открыт и ведёт в диалоги
+// плитка «Диалоги» на главной открыта и ведёт в диалоги (новости на
+// арабском тоже открыты — с переводом первой статьи)
 await c.go(`${B}/index.html`, 1800);
+await waitFor(`!!document.getElementById('readDialogs')`);
+ok(await c.ev(`!document.getElementById('readDialogs').classList.contains('ar-soon') && !document.getElementById('readNews').classList.contains('ar-soon')`),
+  'ar: «Диалоги» и «Новости» на главной открыты');
+await c.ev(`document.getElementById('readDialogs').click()`);
+ok(await waitFor(`location.pathname.endsWith('/dialogs.html')`), 'ar: плитка ведёт на dialogs.html');
+// пункт бокового меню урока — тоже
+await c.go(`${B}/lessons/a1/lesson-01/index.html`, 2200);
 await waitFor(`document.querySelectorAll('.side-action.dialogs').length > 0`);
-ok(await c.ev(`!document.querySelector('.side-action.dialogs').classList.contains('ar-soon') && document.querySelector('.side-action.news').classList.contains('ar-soon')`),
-  'ar: «Диалоги» в меню открыты, «Новости» по-прежнему закрыты');
+ok(await c.ev(`!document.querySelector('.side-action.dialogs').classList.contains('ar-soon')`), 'ar: «Диалоги» в меню урока открыты');
 await c.ev(`document.querySelector('.side-action.dialogs').click()`);
 ok(await waitFor(`location.pathname.endsWith('/dialogs.html')`), 'ar: пункт меню ведёт на dialogs.html');
 
