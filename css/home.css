@@ -439,3 +439,76 @@ html[dir="rtl"] .v-term { text-align: right; }
 .v-item.known .v-word { color: var(--h-done); }
 .v-btn:focus-visible, .v-lesson:focus-visible, .v-search input:focus-visible { outline: 2px solid var(--h-accent); outline-offset: 2px; }
 .v-empty, .v-wait { color: var(--h-hint); text-align: center; padding: 28px 12px; list-style: none; }
+
+/* ── словарь: строка — кнопка, открывающая карточку слова ── */
+.v-main {
+  display: flex; align-items: center; gap: 10px; text-align: start;
+  background: none; border: 0; padding: 0; margin: 0; font: inherit; color: inherit; cursor: pointer;
+}
+.v-txt { flex: 1; min-width: 0; }
+.v-term, .v-tr { display: block; }
+.v-emo { flex: none; width: 30px; text-align: center; font-size: 24px; line-height: 1; }
+
+/* ── карточка слова (js/vocab.js) ── */
+.v-sheet-bg {
+  position: fixed; inset: 0; z-index: 300;
+  background: rgba(0,0,0,.5);
+  display: flex; align-items: flex-end; justify-content: center;
+  opacity: 0; transition: opacity .2s ease;
+}
+.v-sheet-bg.show { opacity: 1; }
+.v-sheet {
+  position: relative; width: 100%; max-width: 520px;
+  background: var(--h-card); color: var(--h-text);
+  border-radius: 24px 24px 0 0;
+  padding: 18px 20px calc(20px + var(--h-safe-b));
+  text-align: center;
+  transform: translateY(24px); transition: transform .22s ease;
+}
+.v-sheet-bg.show .v-sheet { transform: none; }
+.v-sheet-x {
+  position: absolute; top: 12px; inset-inline-end: 12px;
+  width: 40px; height: 40px; border-radius: 50%; border: 0; cursor: pointer;
+  background: var(--h-card2); color: var(--h-hint); font-size: 16px;
+}
+.v-anim {
+  width: 150px; height: 150px; margin: 6px auto 8px;
+  display: flex; align-items: center; justify-content: center; overflow: hidden;
+}
+.v-anim.none { display: none; }
+.v-anim svg { width: 100% !important; height: 100% !important; }
+.v-anim.emo { font-size: 92px; line-height: 1; }
+.v-move, .v-bob { display: inline-block; }
+.v-sheet-term { font-family: var(--h-display); font-size: 28px; font-weight: 700; line-height: 1.2; margin-top: 4px; }
+.v-anim.none + .v-sheet-term { margin-top: 34px; }
+.v-sheet-ipa { font-size: 15px; color: var(--h-hint); margin-top: 4px; }
+.v-sheet-ipa:empty { display: none; }
+.v-sheet-tr { font-size: 19px; margin-top: 8px; color: var(--h-text); }
+.v-sheet-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 18px; }
+.v-sheet-btn {
+  display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 50px;
+  border: 0; border-radius: 14px; cursor: pointer; font: inherit; font-size: 16px; font-weight: 700;
+  background: var(--h-card2); color: var(--h-text);
+}
+.v-sheet-btn:first-child { background: var(--h-btn); color: var(--h-btn-text); }
+.v-sheet-btn.on { background: var(--h-done); color: var(--h-done-ink); }
+.v-sheet-lesson { display: inline-block; margin-top: 14px; color: var(--h-accent); font-size: 15px; font-weight: 600; text-decoration: none; }
+.v-sheet-credit { margin-top: 10px; font-size: 12px; color: var(--h-hint); }
+body.v-sheet-open { overflow: hidden; }
+.v-main:focus-visible, .v-sheet-btn:focus-visible, .v-sheet-x:focus-visible, .v-sheet-lesson:focus-visible { outline: 2px solid var(--h-accent); outline-offset: 2px; }
+
+/* движения для слов без анимации Noto: 🚶 шагает, 🏃 бежит, 🏊 плывёт
+   (эмодзи смотрят влево — движутся справа налево) */
+@keyframes v-cross { from { transform: translateX(70px); } to { transform: translateX(-70px); } }
+@keyframes v-step  { 0%, 100% { transform: translateY(0) rotate(0); } 50% { transform: translateY(-7px) rotate(-4deg); } }
+@keyframes v-wave  { 0%, 100% { transform: translateY(0) rotate(0); } 50% { transform: translateY(5px) rotate(6deg); } }
+.v-anim.m-walk .v-move { animation: v-cross 3.2s linear infinite; }
+.v-anim.m-walk .v-bob  { animation: v-step .4s ease-in-out infinite; }
+.v-anim.m-run  .v-move { animation: v-cross 1.5s linear infinite; }
+.v-anim.m-run  .v-bob  { animation: v-step .22s ease-in-out infinite; }
+.v-anim.m-swim .v-move { animation: v-cross 4.2s linear infinite; }
+.v-anim.m-swim .v-bob  { animation: v-wave .9s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) {
+  .v-anim .v-move, .v-anim .v-bob { animation: none !important; }
+  .v-sheet, .v-sheet-bg { transition: none; }
+}

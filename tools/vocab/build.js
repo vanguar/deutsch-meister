@@ -7,6 +7,12 @@
    русский перевод и урок, где слово встретилось впервые. Повторы
    убираются — слово остаётся в самом раннем уроке.
 
+   Анимации (A1–A2): tools/vocab/anim.json — какое слово чем показать.
+   В словаре это поле x: «n:1f985» — анимированный эмодзи Google Noto
+   (Lottie, data/vocab/anim/1f985.json, CC BY 4.0) или «e:🚶:walk» —
+   обычный эмодзи и движение CSS (walk / run / swim), если подходящей
+   анимации Noto нет. Сборка проверяет, что файл анимации есть.
+
    Переведённые копии (i18n/uk/vocab/index.json, i18n/ar/vocab/index.json)
    собираются из той же памяти переводов, что и уроки (i18n/<lang>/src):
    отдельно словарь не переводится. js/i18n.js подменяет data/vocab/ на
@@ -34,6 +40,17 @@ function lessonData(lv, file) {
   return ctx.__D;
 }
 
+const ANIM = JSON.parse(fs.readFileSync(rel('tools/vocab/anim.json'), 'utf8'));
+const MOTIONS = ['walk', 'run', 'swim'];
+
+function animOf(de) {
+  const a = ANIM[de];
+  if (!a) return null;
+  if (a.n) return 'n:' + a.n;
+  if (a.e && MOTIONS.includes(a.m)) return 'e:' + a.e + ':' + a.m;
+  throw new Error('anim.json: непонятная запись у «' + de + '»');
+}
+
 function collect() {
   const seen = new Set();
   const items = [];
@@ -50,7 +67,10 @@ function collect() {
         const m = de.match(ARTICLE_RE);
         const art = w.article || (m ? m[1] : '');
         const word = m && m[1] === art ? de.slice(m[0].length) : de;
-        items.push({ de, w: word, a: art, ipa: w.ipa || '', ru: String(w.ru || '').trim(), l: D.id });
+        const it = { de, w: word, a: art, ipa: w.ipa || '', ru: String(w.ru || '').trim(), l: D.id };
+        const x = animOf(de);
+        if (x) it.x = x;
+        items.push(it);
       }
     }
   }
@@ -92,6 +112,14 @@ function build() {
 const check = process.argv.includes('--check');
 const { out, items, missing } = build();
 let bad = 0;
+// анимации: каждое слово из anim.json есть в словаре, у каждой — файл
+const words = new Set(items.map(i => i.de));
+for (const de of Object.keys(ANIM)) {
+  if (de === '_') continue;
+  if (!words.has(de)) { console.log('✗ anim.json: слова «' + de + '» нет в уроках'); bad++; }
+  const n = ANIM[de].n;
+  if (n && !fs.existsSync(rel(`data/vocab/anim/${n}.json`))) { console.log('✗ нет файла data/vocab/anim/' + n + '.json (' + de + ')'); bad++; }
+}
 for (const [file, text] of Object.entries(out)) {
   if (check) {
     const cur = fs.existsSync(rel(file)) ? fs.readFileSync(rel(file), 'utf8').replace(/\r\n/g, '\n') : null;
@@ -105,5 +133,5 @@ for (const lang of LANGS) {
   if (missing[lang].length) { console.log(`✗ ${lang}: нет перевода у ${missing[lang].length}: ${missing[lang].slice(0, 8).join(' | ')}`); bad++; }
 }
 const by = LEVELS.map(lv => lv + ': ' + items.filter(i => i.l.startsWith(lv)).length).join(', ');
-console.log(`${check ? 'check' : 'build'}: ${items.length} слов (${by})${bad ? '' : ' — ok'}`);
+console.log(`${check ? 'check' : 'build'}: ${items.length} слов (${by}), с анимацией ${items.filter(i => i.x).length}${bad ? '' : ' — ok'}`);
 process.exitCode = bad ? 1 : 0;

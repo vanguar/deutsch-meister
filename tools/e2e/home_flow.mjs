@@ -215,6 +215,70 @@ ok(/^lessons\/b2\/lesson-\d+\/index\.html$/.test(href), `тег урока ве�
 await c.go(B + '/index.html?r=2#dict', 1500);
 await waitFor(`document.querySelectorAll('.v-item').length > 0`);
 ok(await c.ev(`document.getElementById('vLvlCount').textContent`) === `Знаю 1 из ${inLv('a1')}`, 'отметки «знаю» переживают перезагрузку');
+// ── 3в. Анимации в карточке слова ──
+console.log('3в. Анимации слов');
+await c.go(B + '/index.html?r=4#dict', 1500);
+await waitFor(`document.querySelectorAll('.v-item').length > 0`);
+await c.ev(`window.__said = []; TTS.speak = t => window.__said.push(t)`);
+const withX = VOC.items.filter(i => i.l.startsWith('a1-') && i.x).length;
+ok(await c.ev(`document.querySelectorAll('.v-item .v-emo').length`) === withX, `в списке A1 значок у ${withX} слов с анимацией`);
+ok(await c.ev(`!window.lottie`), 'проигрыватель Lottie не грузится, пока не открыли карточку');
+const openWord = async de => { await c.ev(`Vocab.openCard(${JSON.stringify(VOC.items.find(i => i.de === de))})`); };
+const CARD = `({ open: !document.getElementById('vSheet').hidden, word: document.getElementById('vsWord').textContent, tr: document.getElementById('vsTr').textContent,
+  svg: !!document.querySelector('#vsAnim svg'), cls: document.getElementById('vsAnim').className, credit: !document.getElementById('vsCredit').hidden,
+  move: (() => { const m = document.querySelector('#vsAnim .v-move'); return m ? getComputedStyle(m).animationName : ''; })(),
+  emo: (document.querySelector('#vsAnim .v-bob') || {}).textContent || '' })`;
+// Hallo — Lottie
+await c.ev(`document.querySelector('.v-item .v-main').click()`);
+ok(await waitFor(`!!document.querySelector('#vsAnim svg')`, 8000), 'карточка «Hallo»: анимация Lottie отрисована');
+let cd = await J(CARD);
+ok(cd.open && cd.word === 'Hallo' && cd.credit, `карточка открыта: «${cd.word}» — ${cd.tr}, подпись CC BY есть`);
+ok((await J('window.__said')).includes('Hallo'), 'при открытии слово озвучивается');
+await c.wait(600);
+await c.shot('home-card-hallo.png');
+// «знаю» из карточки — и в списке
+await c.ev(`document.getElementById('vsKnow').click()`); await c.wait(150);
+ok(await c.ev(`document.getElementById('vsKnow').classList.contains('on') && document.querySelector('.v-item').classList.contains('known')`), '«Знаю» в карточке отмечает слово и в списке');
+await c.ev(`document.getElementById('vsKnow').click()`); await c.wait(150);
+// закрытие
+await c.ev(`document.querySelector('.v-sheet-x').click()`); await c.wait(200);
+cd = await J(CARD);
+ok(!cd.open && !cd.svg, 'крестик закрывает карточку и останавливает анимацию');
+// gehen — CSS-движение
+await openWord('gehen'); await c.wait(400);
+cd = await J(CARD);
+ok(cd.cls.includes('m-walk') && cd.emo === '🚶' && cd.move === 'v-cross' && !cd.credit, `«gehen»: 🚶 шагает (${cd.move})`, cd);
+await c.shot('home-card-gehen.png');
+await c.ev(`document.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape' }))`); await c.wait(150);
+ok(!(await J(CARD)).open, 'Esc закрывает карточку');
+// fliegen — орёл
+await openWord('fliegen');
+ok(await waitFor(`!!document.querySelector('#vsAnim svg')`, 8000), '«fliegen»: орёл (Lottie)');
+await c.wait(700);
+await c.shot('home-card-fliegen.png');
+await c.ev('Vocab.closeCard()');
+// слово без анимации — карточка без пустого места
+await openWord('der Montag'); await c.wait(200);
+ok((await J(CARD)).cls.includes('none'), 'у слова без анимации блок анимации скрыт');
+await c.ev('Vocab.closeCard()');
+// «уменьшить движение» — анимации стоят
+await c.send('Emulation.setEmulatedMedia', { features: [{ name: 'prefers-reduced-motion', value: 'reduce' }] });
+await openWord('gehen'); await c.wait(300);
+ok((await J(CARD)).move === 'none', '«уменьшить движение»: 🚶 стоит');
+await c.ev('Vocab.closeCard()');
+await openWord('Hallo');
+await waitFor(`!!document.querySelector('#vsAnim svg')`, 8000);
+ok(await c.ev(`(() => { const a = lottie.getRegisteredAnimations ? lottie.getRegisteredAnimations() : []; return a.length > 0 && a.every(x => x.isPaused); })()`), '«уменьшить движение»: Lottie на паузе');
+await c.ev('Vocab.closeCard()');
+await c.send('Emulation.setEmulatedMedia', { features: [] });
+// все анимации из словаря открываются без ошибок
+const codes = [...new Set(VOC.items.filter(i => i.x && i.x.startsWith('n:')).map(i => i.x.slice(2)))];
+const bad = JSON.parse(await c.ev(`(async () => { const bad = []; const box = document.createElement('div'); box.style.cssText = 'position:fixed;left:-999px;width:60px;height:60px'; document.body.appendChild(box);
+  for (const n of ${JSON.stringify(codes)}) { try { const r = await fetch('data/vocab/anim/' + n + '.json'); if (!r.ok) { bad.push(n + ' HTTP ' + r.status); continue; }
+    const a = lottie.loadAnimation({ container: box, renderer: 'svg', loop: false, autoplay: false, animationData: await r.json() }); a.goToAndStop(5, true);
+    if (!box.querySelector('svg')) bad.push(n + ' без svg'); a.destroy(); } catch (e) { bad.push(n + ' ' + e.message); } }
+  box.remove(); return bad; })().then(b => JSON.stringify(b))`));
+ok(bad.length === 0, `все ${codes.length} анимаций грузятся и рисуются`, bad);
 await c.ev(`localStorage.setItem('dm_theme', 'light')`); await c.go(B + '/index.html?r=3#dict', 1500);
 await waitFor(`document.querySelectorAll('.v-item').length > 0`); await c.wait(500);
 await c.shot('home-dict-light.png');
