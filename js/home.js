@@ -283,7 +283,9 @@ const Home = (() => {
       if (e.persisted && typeof Progress !== 'undefined') Progress.renderHomeProgress();
     });
     // telegram.js может переключить тему после загрузки SDK
-    new MutationObserver(paintSettings).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+    // цвета темы Telegram ставит js/tg-theme.js (общий для всех страниц)
+    new MutationObserver(paintSettings)
+      .observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
 
     render();
     paintSettings();

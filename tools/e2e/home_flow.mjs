@@ -233,6 +233,49 @@ for (const theme of ['dark', 'light']) {
   ok(bad.length === 0, `${theme}: контраст ≥ 4.5 у ${res.length} подписей` + (bad.length ? '' : ` (мин. ${Math.min(...res.map(x => x[1]))})`), bad);
 }
 
+// ── 7б. Тема Telegram (themeParams) ──
+console.log('7б. Цвета темы Telegram: iOS и Android, светлая и тёмная');
+const PALETTES = {
+  'ios-dark':      { scheme: 'dark',  p: { bg_color: '#000000', secondary_bg_color: '#1c1c1d', section_bg_color: '#2c2c2e', text_color: '#ffffff', hint_color: '#98989e', link_color: '#3e88f7', button_color: '#3e88f7', button_text_color: '#ffffff', accent_text_color: '#3e88f7', section_separator_color: '#545458' } },
+  'ios-light':     { scheme: 'light', p: { bg_color: '#ffffff', secondary_bg_color: '#efeff4', section_bg_color: '#ffffff', text_color: '#000000', hint_color: '#8e8e93', link_color: '#007aff', button_color: '#007aff', button_text_color: '#ffffff', accent_text_color: '#007aff', section_separator_color: '#c8c7cc' } },
+  'android-dark':  { scheme: 'dark',  p: { bg_color: '#212d3b', secondary_bg_color: '#151e27', section_bg_color: '#1d2733', text_color: '#ffffff', hint_color: '#7d8b99', link_color: '#5eabe1', button_color: '#50a8eb', button_text_color: '#ffffff', accent_text_color: '#64b5ef' } },
+  'android-light': { scheme: 'light', p: { bg_color: '#ffffff', secondary_bg_color: '#f0f0f0', text_color: '#222222', hint_color: '#a8a8a8', link_color: '#2678b6', button_color: '#50a8eb', button_text_color: '#ffffff' } }
+};
+const tgStub = (scheme, p) => `window.Telegram = { WebApp: { themeParams: ${JSON.stringify(p)}, colorScheme: '${scheme}', platform: 'ios', initData: '', initDataUnsafe: {}, version: '8.0',
+  ready() {}, expand() {}, isVersionAtLeast() { return true; }, BackButton: { show() {}, hide() {}, onClick() {} },
+  onEvent(e, f) { if (e === 'themeChanged') window.__tgThemeChanged = f; }, HapticFeedback: { impactOccurred() {}, selectionChanged() {} }, openTelegramLink() {} } };
+  try { localStorage.setItem('tg_welcomed', '1'); sessionStorage.setItem('dm_install_banner_hidden', '1'); } catch (e) {}`;
+for (const [name, { scheme, p }] of Object.entries(PALETTES)) {
+  const { result } = await c.send('Page.addScriptToEvaluateOnNewDocument', { source: tgStub(scheme, p) });
+  await fresh({ ...PROG, dm_theme: scheme });
+  await c.wait(700);
+  const tg = await J(`({ theme: document.documentElement.getAttribute('data-theme'), on: document.documentElement.classList.contains('tg-theme'),
+    bg: getComputedStyle(document.body).backgroundColor, btn: getComputedStyle(document.getElementById('continueBtn')).backgroundColor })`);
+  const hex = h => 'rgb(' + [1, 3, 5].map(i => parseInt(h.slice(i, i + 2), 16)).join(', ') + ')';
+  ok(tg.theme === scheme && tg.on && tg.bg === hex(p.bg_color), `${name}: тема ${tg.theme}, фон как в Telegram (${tg.bg})`, tg);
+  await c.ev(`document.getElementById('newsFresh').hidden = false`);
+  await c.shot(`home-tg-${name}.png`);
+  await c.ev(`document.querySelectorAll('[data-tab]').forEach(e => e.hidden = false); document.querySelectorAll('.path').forEach(e => e.hidden = false)`);
+  const res = await J(CONTRAST);
+  const bad = res.filter(([, r]) => r < 4.5);
+  ok(bad.length === 0, `${name}: контраст ≥ 4.5 у ${res.length} подписей` + (bad.length ? '' : ` (мин. ${Math.min(...res.map(x => x[1]))})`), bad);
+  if (name === 'ios-dark') {
+    // выбрал в профиле другую тему — своя палитра, а не цвета Telegram
+    await c.ev(`document.querySelector('[data-set-theme="light"]').click()`); await c.wait(700);
+    const own = await J(`({ on: document.documentElement.classList.contains('tg-theme'), bg: getComputedStyle(document.body).backgroundColor })`);
+    ok(!own.on && own.bg === 'rgb(255, 255, 255)', `ios-dark + «Светлая» в профиле: своя светлая палитра (${own.bg})`);
+    await c.ev(`document.querySelector('[data-set-theme="dark"]').click()`); await c.wait(200);
+    ok(await c.ev(`document.documentElement.classList.contains('tg-theme')`), 'вернул «Тёмную» — снова цвета Telegram');
+    // пользователь сменил тему оформления Telegram на лету
+    await c.ev(`Telegram.WebApp.themeParams = ${JSON.stringify(PALETTES['android-dark'].p)}; window.__tgThemeChanged && window.__tgThemeChanged()`); await c.wait(700);
+    ok(await c.ev(`getComputedStyle(document.body).backgroundColor`) === 'rgb(33, 45, 59)', 'themeChanged — палитра обновилась на лету');
+  }
+  await c.send('Page.removeScriptToEvaluateOnNewDocument', { identifier: result.identifier });
+}
+// вне Telegram — прежняя своя палитра
+await fresh({ ...PROG, dm_theme: 'dark' });
+ok(await c.ev(`!document.documentElement.classList.contains('tg-theme') && getComputedStyle(document.body).backgroundColor === 'rgb(22, 32, 42)'`), 'в браузере — своя тёмная палитра');
+
 // ── 8. Украинский ──
 console.log('8. Украинский');
 await fresh({ ...PROG, dm_lang: { lang: 'uk', ts: Date.now() } });

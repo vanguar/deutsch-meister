@@ -124,8 +124,8 @@
   border-radius: 0 2px 2px 0;
 }
 .lesson-item.current {
-  color: var(--accent2);
-  background: rgba(124,106,247,.08);
+  color: var(--accent2-text);
+  background: rgba(47,109,181,.08);
   font-weight: 500;
 }
 .lesson-item.done .lesson-num { color: var(--green); }
@@ -192,14 +192,14 @@
               background var(--t-fast), box-shadow var(--t-fast);
 }
 .side-action#installMenuBtn { --sa-c: #34c47c; }
-.side-action.books   { --sa-c: #7c6af7; order: 1; }
+.side-action.books   { --sa-c: #2f6db5; order: 1; }
 .side-action.news    { --sa-c: #ff8a3d; order: 2; }
 .side-action.dialogs { --sa-c: #20b2a6; order: 2; }   /* после «Новостей»: тот же order, DOM-порядок */
 .side-action.donate  { --sa-c: #e8b931; order: 3; }
 .side-action.contact { --sa-c: #2aabee; order: 4; }
 /* В светлой теме цвет плашки идёт и в текст — берём оттенки потемнее */
 [data-theme="light"] .side-action#installMenuBtn { --sa-c: #1f8a55; }
-[data-theme="light"] .side-action.books   { --sa-c: #5b48e8; }
+[data-theme="light"] .side-action.books   { --sa-c: #2366ad; }
 [data-theme="light"] .side-action.news    { --sa-c: #c2500e; }
 [data-theme="light"] .side-action.dialogs { --sa-c: #0d7d74; }
 [data-theme="light"] .side-action.donate  { --sa-c: #856800; }
@@ -215,9 +215,9 @@
   flex-shrink: 0;
   font-size: 19px;
   line-height: 1;
-  background: rgba(124,106,247,.16);
+  background: rgba(47,109,181,.16);
   background: color-mix(in srgb, var(--sa-c) 17%, transparent);
-  box-shadow: inset 0 0 0 1px rgba(124,106,247,.22);
+  box-shadow: inset 0 0 0 1px rgba(47,109,181,.22);
   box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--sa-c) 28%, transparent);
 }
 .side-action .sa-txt { flex: 1; min-width: 0; }
@@ -255,7 +255,7 @@
 }
 @media (hover: hover) {
   .side-action:hover {
-    border-color: rgba(124,106,247,.55);
+    border-color: rgba(47,109,181,.55);
     border-color: color-mix(in srgb, var(--sa-c) 55%, var(--border));
     background: color-mix(in srgb, var(--sa-c) 7%, var(--surface2));
     box-shadow: 0 6px 18px -10px var(--sa-c);
@@ -322,7 +322,7 @@
   bottom: calc(20px + env(safe-area-inset-bottom, 0px));
   right: 20px;
   z-index: 200;
-  background: rgba(124,106,247,.72);
+  background: rgba(47,109,181,.72);
   background: color-mix(in srgb, var(--accent2) 72%, transparent);
   border: none;
   border-radius: var(--r-full);
@@ -394,4 +394,40 @@
 }
 @media (prefers-reduced-motion: reduce) {
   .side-action .sa-new.fresh { animation: none; }
+}
+
+/* ── Урок на телефоне: нижняя панель «Главная · Курс · Профиль» ──
+   Вставляет js/lesson-render.js (initLessonTabbar) и ставит
+   body.lesson-tabbar-on. Повторяет панель главной (css/home.css), но на
+   токенах урока. На узком экране заменяет ☰ и выезжающее меню; на
+   десктопе меню остаётся колонкой слева, а панели нет. */
+.lesson-tabbar { display: none; }
+@media (max-width: 860px) {
+  body.lesson-tabbar-on .sidebar-mobile-toggle,
+  body.lesson-tabbar-on .sidebar,
+  body.lesson-tabbar-on .sidebar-overlay { display: none !important; }
+  .lesson-tabbar {
+    display: block;
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 200;
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    padding-bottom: max(env(safe-area-inset-bottom, 0px), var(--tg-safe-area-inset-bottom, 0px));
+  }
+  .lesson-tabbar .lt-in { max-width: 520px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); }
+  .lesson-tabbar .lt-tab {
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px;
+    height: 64px; color: var(--text-muted); text-decoration: none;
+    font-size: 12px; font-weight: 600;
+    -webkit-tap-highlight-color: transparent; touch-action: manipulation;
+  }
+  .lesson-tabbar .lt-tab.on { color: var(--accent2-text); }
+  .lesson-tabbar .lt-tab:focus-visible { outline: 2px solid var(--accent2); outline-offset: -4px; border-radius: 12px; }
+  .lesson-tabbar .lt-ico {
+    width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.9;
+    stroke-linecap: round; stroke-linejoin: round;
+  }
+  /* всплывающее — над панелью, а не под ней */
+  body.lesson-tabbar-on #installBanner { bottom: calc(76px + env(safe-area-inset-bottom, 0px)) !important; }
+  body.lesson-tabbar-on .dm-toast,
+  body.lesson-tabbar-on .ar-toast { bottom: calc(84px + env(safe-area-inset-bottom, 0px)) !important; }
 }

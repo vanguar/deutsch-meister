@@ -54,8 +54,9 @@ loadTelegramSdk().then(TG => {
   // Telegram уже вызывает наш onClick выше. На всякий случай гарантируем закрытие
   // приложения с главной по системной кнопке через closingBehavior по умолчанию.
 
-  // Персональное приветствие только на главной
-  const isHome = !isLesson;
+  // Персональное приветствие только на главной (книги грузят telegram.js
+  // ради цветов темы — там приветствие не показываем)
+  const isHome = !isLesson && !/books\.html$/.test(location.pathname);
   if (isHome && !localStorage.getItem('tg_welcomed')) {
     localStorage.setItem('tg_welcomed', '1');
     const user = TG.initDataUnsafe?.user;

@@ -7,29 +7,35 @@
 
 /* ── Design Tokens — Dark (default) ── */
 :root {
-  --bg:           #0f0e17;
-  --surface:      #1a1929;
-  --surface2:     #232136;
-  --surface3:     #2a2740;
-  --border:       #2e2b4a;
-  --border-light: #3d3960;
+  --bg:           #16202a;
+  --surface:      #1b2632;
+  --surface2:     #212d3a;
+  --surface3:     #2b3948;
+  --border:       #2e3c4b;
+  --border-light: #3d4d5f;
 
   --accent:       #e8c547;
-  --accent2:      #7c6af7;
+  /* Основной акцент (синий, как у Telegram). --accent2 — заливка кнопок
+     и плашек под --text-on-btn; --accent2-text — тот же цвет для текста
+     и ссылок на фонах страницы: одним цветом обе роли с контрастом 4.5:1
+     не закрыть. Палитра общая для всех страниц; в мини-аппе её
+     перекрывают цвета темы Telegram (js/tg-theme.js). */
+  --accent2:      #2f6db5;
+  --accent2-text: #6cb2f0;
   --accent3:      #f06b6b;
-  --green:        #56d899;
+  --green:        #52c47f;
   --blue:         #5bb8f5;
 
-  --text:         #e8e6f0;
-  --text-muted:   #8b87a8;
-  --text-dim:     #827ea8;   /* ≥4:1 на surface2 — подписи, IPA, заметки */
+  --text:         #e9eef3;
+  --text-muted:   #9aa9b8;
+  --text-dim:     #93a2b1;   /* ≥4.5:1 на surface2 — подписи, IPA, заметки */
   --text-strong:  #ffffff;
   --text-on-btn:  #ffffff;
 
   --tint:         rgba(255,255,255,.04);   /* subtle highlight on dark */
   --tint-border:  rgba(255,255,255,.06);
 
-  --correct:      #56d899;
+  --correct:      #52c47f;
   --wrong:        #f06b6b;
 
   /* Род существительного: der / die / das (≥4.5:1 на surface2) */
@@ -40,30 +46,31 @@
 
 /* ── Light Theme ── */
 [data-theme="light"] {
-  --bg:           #f5f4ff;
-  --surface:      #ffffff;
-  --surface2:     #f0effe;
-  --surface3:     #e8e6fc;
-  --border:       #d5d1f5;
-  --border-light: #bfbaea;
+  --bg:           #ffffff;
+  --surface:      #f6f7f9;
+  --surface2:     #f1f3f6;
+  --surface3:     #e2e7ed;
+  --border:       #dfe4ea;
+  --border-light: #c9d1da;
 
-  --accent:       #856800;   /* золото потемнее: текстом читается (≥4.3:1) */
-  --accent2:      #5b48e8;
-  --accent3:      #d94f4f;
-  --green:        #1f9e5e;
-  --blue:         #2878c4;
+  --accent:       #7d6200;   /* золото потемнее: текстом читается (≥4.5:1) */
+  --accent2:      #2366ad;
+  --accent2-text: #1d63ad;
+  --accent3:      #c23744;
+  --green:        #187a41;
+  --blue:         #1d63ad;
 
-  --text:         #1a1733;
-  --text-muted:   #5c5585;
-  --text-dim:     #6b6690;   /* ≥4.4:1 на светлых поверхностях */
-  --text-strong:  #0d0c1a;
+  --text:         #11161c;
+  --text-muted:   #5b6672;
+  --text-dim:     #5b6672;   /* ≥4.5:1 на светлых поверхностях */
+  --text-strong:  #05080b;
   --text-on-btn:  #ffffff;
 
   --tint:         rgba(0,0,0,.03);         /* subtle on light */
   --tint-border:  rgba(0,0,0,.06);
 
-  --correct:      #1f9e5e;
-  --wrong:        #d94f4f;
+  --correct:      #187a41;
+  --wrong:        #c23744;
 
   --art-der:      #1d5bc4;
   --art-die:      #b8263f;
@@ -90,7 +97,7 @@
   --shadow-sm:  0 2px 8px rgba(0,0,0,.3);
   --shadow-md:  0 4px 20px rgba(0,0,0,.4);
   --shadow-lg:  0 8px 40px rgba(0,0,0,.5);
-  --shadow-accent: 0 4px 20px rgba(124,106,247,.35);
+  --shadow-accent: 0 4px 20px rgba(47,109,181,.35);
 
   /* Transitions */
   --t-fast:   .15s ease;
@@ -150,7 +157,7 @@ h1, h2, h3 {
   z-index: 0;
   pointer-events: none;
   background:
-    radial-gradient(ellipse 80% 60% at 20% 10%,  rgba(124,106,247,.10) 0%, transparent 60%),
+    radial-gradient(ellipse 80% 60% at 20% 10%,  rgba(47,109,181,.10) 0%, transparent 60%),
     radial-gradient(ellipse 60% 50% at 80% 80%,  rgba(232,197,71,.06)  0%, transparent 55%),
     radial-gradient(ellipse 40% 40% at 50% 50%,  rgba(86,216,153,.03)  0%, transparent 60%);
 }
@@ -228,13 +235,13 @@ h1, h2, h3 {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--accent2), #9b8aff);
+  background: linear-gradient(135deg, var(--accent2), #6cb2f0);
   color: #fff;
   box-shadow: var(--shadow-accent);
 }
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 28px rgba(124,106,247,.5);
+  box-shadow: 0 8px 28px rgba(47,109,181,.5);
 }
 .btn-primary:active { transform: translateY(0); }
 
@@ -246,7 +253,7 @@ h1, h2, h3 {
 .btn-ghost:hover {
   border-color: var(--accent2);
   color: var(--text);
-  background: rgba(124,106,247,.06);
+  background: rgba(47,109,181,.06);
 }
 
 /* ── Speak Icon (hover on word) ── */
@@ -298,8 +305,8 @@ h1, h2, h3 {
   inset: -6px;
 }
 .speak-btn:hover {
-  background: rgba(124,106,247,.18);
-  color: var(--accent2);
+  background: rgba(47,109,181,.18);
+  color: var(--accent2-text);
   transform: scale(1.1);
 }
 .speak-btn.playing {
@@ -318,9 +325,9 @@ h1, h2, h3 {
   font-weight: 500;
 }
 .badge-violet {
-  background: rgba(124,106,247,.15);
-  border: 1px solid rgba(124,106,247,.3);
-  color: var(--accent2);
+  background: rgba(47,109,181,.15);
+  border: 1px solid rgba(47,109,181,.3);
+  color: var(--accent2-text);
 }
 .badge-gold {
   background: rgba(232,197,71,.12);
@@ -379,7 +386,7 @@ h1, h2, h3 {
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 2.5px;
-  color: var(--accent2);
+  color: var(--accent2-text);
   font-weight: 600;
   margin-bottom: var(--sp-md);
 }
@@ -423,7 +430,7 @@ h1, h2, h3 {
 /* ── Light theme surface overrides ── */
 [data-theme="light"] .bg-mesh {
   background:
-    radial-gradient(ellipse 80% 60% at 20% 10%, rgba(124,106,247,.06) 0%, transparent 60%),
+    radial-gradient(ellipse 80% 60% at 20% 10%, rgba(47,109,181,.06) 0%, transparent 60%),
     radial-gradient(ellipse 60% 50% at 80% 80%, rgba(184,146,10,.04)  0%, transparent 55%);
 }
 
@@ -441,14 +448,14 @@ h1, h2, h3 {
 
 /* Phrase cards — German text must be dark on light bg */
 [data-theme="light"] .phrase-de { color: var(--text-strong); }
-[data-theme="light"] .phrase-de:hover { color: var(--accent2); }
+[data-theme="light"] .phrase-de:hover { color: var(--accent2-text); }
 
 /* Vocab list */
 [data-theme="light"] .vocab-word { color: var(--text-strong); }
 [data-theme="light"] .vocab-ru   { color: var(--text); }
 
 /* Grammar boxes */
-[data-theme="light"] .grammar-box { background: rgba(91,72,232,.05); border-color: rgba(91,72,232,.18); }
+[data-theme="light"] .grammar-box { background: rgba(35,102,173,.05); border-color: rgba(35,102,173,.18); }
 [data-theme="light"] .grammar-rule { color: var(--text); }
 [data-theme="light"] .pattern-table td:nth-child(2) strong { color: var(--text-strong); }
 [data-theme="light"] .pattern-table tr:nth-child(even) td { background: rgba(0,0,0,.03); }
@@ -463,14 +470,14 @@ h1, h2, h3 {
 [data-theme="light"] .blank-sentence { color: var(--text-strong); }
 [data-theme="light"] .mc-question-text { color: var(--text-strong); }
 [data-theme="light"] .mc-option { color: var(--text); }
-[data-theme="light"] .mc-option:hover:not(.disabled) { color: var(--text-strong); background: rgba(91,72,232,.08); }
+[data-theme="light"] .mc-option:hover:not(.disabled) { color: var(--text-strong); background: rgba(35,102,173,.08); }
 [data-theme="light"] .match-item { color: var(--text); }
 [data-theme="light"] .match-item:hover:not(.matched):not(.locked) { color: var(--text-strong); }
 [data-theme="light"] .dictation-input { background: #fff; color: var(--text-strong); }
 
 /* Flashcards */
 [data-theme="light"] .card-de  { color: var(--text-strong); }
-[data-theme="light"] .card-ru  { color: var(--accent2); }
+[data-theme="light"] .card-ru  { color: var(--accent2-text); }
 [data-theme="light"] .card-ipa { color: var(--text-muted); }
 [data-theme="light"] .card-face { background: #fff; }
 
@@ -478,14 +485,14 @@ h1, h2, h3 {
 [data-theme="light"] .sidebar { background: #fff; border-color: var(--border); }
 [data-theme="light"] .sidebar-streak { background: rgba(184,146,10,.08); border-color: rgba(184,146,10,.2); }
 [data-theme="light"] .xp-track { background: var(--border); }
-[data-theme="light"] .lesson-item.active { background: rgba(91,72,232,.08); }
+[data-theme="light"] .lesson-item.active { background: rgba(35,102,173,.08); }
 
 /* Lesson header */
 [data-theme="light"] .lesson-header { background: #fff; }
 [data-theme="light"] .lesson-breadcrumb { color: var(--text-muted); }
 
 /* Flashcard howto */
-[data-theme="light"] .fc-howto { background: rgba(91,72,232,.07); border-color: rgba(91,72,232,.2); color: var(--text); }
+[data-theme="light"] .fc-howto { background: rgba(35,102,173,.07); border-color: rgba(35,102,173,.2); color: var(--text); }
 
 /* Homepage stat cards and lesson cards */
 [data-theme="light"] .stat-card  { background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,.07); }
@@ -620,13 +627,13 @@ h1, h2, h3 {
 }
 .dm-choice:hover {
   border-color: var(--accent2);
-  background: rgba(124,106,247,.09);
+  background: rgba(47,109,181,.09);
   transform: translateY(-1px);
 }
 .dm-choice .dm-ci { font-size: 26px; flex-shrink: 0; }
 .dm-choice .dm-cname { font-size: 15px; font-weight: 700; color: var(--text-strong); }
 .dm-choice .dm-cdesc { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
-.dm-choice .dm-carrow { margin-left: auto; color: var(--accent2); font-size: 18px; }
+.dm-choice .dm-carrow { margin-left: auto; color: var(--accent2-text); font-size: 18px; }
 .dm-choice.dm-star .dm-cname { font-size: 16px; }
 
 /* Wallet block */

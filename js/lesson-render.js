@@ -2374,6 +2374,35 @@ function toggleSidebar() {
 }
 function toggleLevel(id) { document.getElementById(id)?.classList.toggle('collapsed'); }
 
+/* ── Нижняя панель «Главная · Курс · Профиль» на телефоне ──
+   Та же навигация, что на главной (index.html, js/home.js): на узком
+   экране она заменяет плавающую кнопку ☰ и выезжающее меню (их прячет
+   css/sidebar.css по классу body.lesson-tabbar-on). На десктопе меню
+   и так стоит колонкой слева — его не трогаем. Панель вставляется
+   отсюда, а не в 68 оболочках: если скрипт не отработал, остаётся ☰. */
+(function initLessonTabbar() {
+  if (!document.querySelector('.sidebar-mobile-toggle') || document.querySelector('.lesson-tabbar')) return;
+  let base = '';
+  try {
+    const href = document.querySelector('link[rel="manifest"]')?.getAttribute('href') || '';
+    if (/manifest\.json/.test(href)) base = href.replace(/manifest\.json(?:\?.*)?$/, '');
+  } catch (e) {}
+  const ico = d => '<svg class="lt-ico" viewBox="0 0 24 24" aria-hidden="true">' + d + '</svg>';
+  const tabs = [
+    ['', 'Главная', ico('<path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V20a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V9.5"/>')],
+    ['#course', 'Курс', ico('<circle cx="6" cy="19" r="2.6"/><circle cx="18" cy="5" r="2.6"/><path d="M8.6 19h8.9a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7h8.9"/>')],
+    ['#more', 'Профиль', ico('<circle cx="5" cy="12" r="1.7"/><circle cx="12" cy="12" r="1.7"/><circle cx="19" cy="12" r="1.7"/>')]
+  ];
+  const nav = document.createElement('nav');
+  nav.className = 'lesson-tabbar';
+  nav.setAttribute('aria-label', 'Разделы');
+  nav.innerHTML = '<div class="lt-in">' + tabs.map(([hash, label, svg]) =>
+    `<a class="lt-tab${hash === '#course' ? ' on' : ''}" href="${base}index.html${hash}"${hash === '#course' ? ' aria-current="page"' : ''}>${svg}<span>${label}</span></a>`
+  ).join('') + '</div>';
+  document.body.appendChild(nav);
+  document.body.classList.add('lesson-tabbar-on');
+})();
+
 /* ── Плавающая кнопка меню прячется при прокрутке вниз ──
    Иначе она закрывает динамики и строки под собой. Возвращается при
    прокрутке вверх и у конца страницы (там её место освобождает

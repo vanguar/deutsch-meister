@@ -18,6 +18,8 @@ async function waitFor(expr, ms = 6000) {
   return false;
 }
 
+// На телефоне урок навигируется нижней панелью (её проверяет
+// tools/e2e/design_review_flow.mjs), меню — на десктопе.
 // Главная с редизайна живёт без бокового меню (вкладки, js/home.js —
 // её проверяет tools/e2e/home_flow.mjs); меню осталось в уроках.
 const PAGES = [
@@ -82,13 +84,13 @@ async function checkPage(p, width, height, label) {
 await c.go(B + '/lessons/a1/lesson-01/index.html', 800);
 await c.ev(`localStorage.clear(); localStorage.setItem('dm_theme', 'dark')`);
 for (const p of PAGES) {
-  await checkPage(p, 390, 844, '390');
-  await c.shot(`sidebar_${p.url.replace(/\W+/g, '_')}_390.png`);
+  await checkPage(p, 1280, 800, '1280');
+  await c.shot(`sidebar_${p.url.replace(/\W+/g, '_')}_1280.png`);
 }
-await checkPage(PAGES[0], 1280, 800, '1280');
-await c.shot('sidebar_lesson_1280.png');
-await checkPage(PAGES[1], 360, 640, '360×640');
-await c.shot('sidebar_lesson_360.png');
+await checkPage(PAGES[0], 1920, 1080, '1920');
+await c.shot('sidebar_lesson_1920.png');
+await checkPage(PAGES[1], 900, 640, '900×640');
+await c.shot('sidebar_lesson_900.png');
 
 // ── Действия ──
 await c.send('Emulation.setDeviceMetricsOverride', { width: 390, height: 844, deviceScaleFactor: 1, mobile: true });
@@ -125,16 +127,16 @@ ok(await waitFor(`document.querySelectorAll('.dlg-tile.is-live').length > 0`), '
 
 // ── Светлая тема ──
 await c.ev(`localStorage.setItem('dm_theme', 'light')`);
-const light = await checkPage(PAGES[0], 390, 844, 'светлая');
+const light = await checkPage(PAGES[0], 1280, 800, 'светлая');
 await c.shot('sidebar_lesson1_light.png');
-const light2 = await checkPage(PAGES[1], 390, 844, 'светлая');
+const light2 = await checkPage(PAGES[1], 1280, 800, 'светлая');
 await c.shot('sidebar_lesson_light.png');
 ok(light && light2 && light.items[0].icoBg !== light.items[4].icoBg && light.items[1].icoBg !== light.items[2].icoBg, 'у плашек разные цвета плиток');
 
 // ── Украинский ──
 await c.ev(`localStorage.setItem('dm_theme', 'dark'); localStorage.setItem('dm_lang', JSON.stringify({lang:'uk', ts: Date.now()}))`);
 for (const p of PAGES.slice(0, 2)) {
-  const s = await checkPage(p, 390, 844, 'uk');
+  const s = await checkPage(p, 1280, 800, 'uk');
   await c.wait(400);
   const t = JSON.parse(await c.ev(SNAPSHOT));
   const titles = t.items.map(i => i.title + ' / ' + i.sub).join(' | ');

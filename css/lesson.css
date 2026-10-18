@@ -87,11 +87,11 @@
 }
 .meta-chip .ico {
   flex: none;
-  color: var(--accent2);
+  color: var(--accent2-text);
 }
 .meta-chip-level {
   border-color: transparent;
-  background: linear-gradient(135deg, var(--accent2), color-mix(in srgb, var(--accent2) 60%, #c56cf0));
+  background: linear-gradient(135deg, var(--accent2), color-mix(in srgb, var(--accent2) 60%, #6cb2f0));
   color: #fff;
   letter-spacing: .4px;
   box-shadow: 0 4px 14px color-mix(in srgb, var(--accent2) 30%, transparent);
@@ -110,8 +110,8 @@
   box-shadow: none;
   gap: 5px;
 }
-.meta-chip.meta-chip-level { color: var(--accent2); letter-spacing: .4px; }
-.meta-chip.meta-chip-level .ico { color: var(--accent2); }
+.meta-chip.meta-chip-level { color: var(--accent2-text); letter-spacing: .4px; }
+.meta-chip.meta-chip-level .ico { color: var(--accent2-text); }
 @media (max-width: 420px) {
   .lesson-meta { column-gap: 12px; }
   /* «0/5» с кольцом и так понятно; слово «секций» переносило плашку */
@@ -214,8 +214,8 @@
   border-radius: 0 2px 2px 0;
 }
 .phrase-card:hover {
-  border-color: rgba(124,106,247,.35);
-  background: rgba(124,106,247,.05);
+  border-color: rgba(47,109,181,.35);
+  background: rgba(47,109,181,.05);
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
   z-index: 20;
@@ -339,7 +339,7 @@
   border: none;
   border-radius: 50%;
   background: color-mix(in srgb, var(--accent2) 16%, transparent);
-  color: var(--accent2);
+  color: var(--accent2-text);
   cursor: pointer;
   transition: background var(--t-fast), transform var(--t-fast);
 }
@@ -360,7 +360,7 @@
   font-size: 10px;
   letter-spacing: 1.3px;
   text-transform: uppercase;
-  color: var(--accent2);
+  color: var(--accent2-text);
   font-weight: 700;
 }
 
@@ -461,8 +461,8 @@
 
 /* ── Grammar Box ── */
 .grammar-box {
-  background: linear-gradient(135deg, rgba(124,106,247,.09), rgba(124,106,247,.03));
-  border: 1px solid rgba(124,106,247,.22);
+  background: linear-gradient(135deg, rgba(47,109,181,.09), rgba(47,109,181,.03));
+  border: 1px solid rgba(47,109,181,.22);
   border-radius: var(--r-lg);
   padding: 22px 26px;
   margin-bottom: 16px;
@@ -472,7 +472,7 @@
 .grammar-box-title {
   font-size: 13px;
   font-weight: 600;
-  color: var(--accent2);
+  color: var(--accent2-text);
   margin-bottom: 12px;
   display: flex;
   align-items: center;
@@ -484,7 +484,7 @@
   line-height: 1.75;
 }
 .grammar-rule strong { color: var(--accent);  font-weight: 600; }
-.grammar-rule em     { color: var(--accent2); font-style: normal; }
+.grammar-rule em     { color: var(--accent2-text); font-style: normal; }
 
 /* Conjugation word with speaker icon */
 .conj-word {
@@ -497,8 +497,8 @@
   transition: background var(--t-fast), color var(--t-fast);
 }
 .conj-word:hover {
-  background: rgba(124,106,247,.12);
-  color: var(--accent2);
+  background: rgba(47,109,181,.12);
+  color: var(--accent2-text);
 }
 .conj-word .wi {
   font-size: 12px;

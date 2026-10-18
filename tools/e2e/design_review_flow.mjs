@@ -39,15 +39,36 @@ await c.ev(`document.getElementById('vocabTableBody').scrollIntoView({ behavior:
 await c.wait(400);
 await c.shot('dr-vocab-dark.png');
 
-// ── Кнопка меню ──
-const fabHidden = `document.querySelector('.sidebar-mobile-toggle').classList.contains('fab-hidden')`;
-await c.ev(`scrollTo(0, 0)`); await c.wait(300);
-for (let y = 200; y <= 1400; y += 200) { await c.ev(`scrollTo(0, ${y})`); await c.wait(80); }
-await c.wait(400);
-ok(await c.ev(fabHidden), 'кнопка меню прячется при прокрутке вниз');
-for (let y = 1300; y >= 900; y -= 100) { await c.ev(`scrollTo(0, ${y})`); await c.wait(80); }
-await c.wait(400);
-ok(!(await c.ev(fabHidden)), 'и возвращается при прокрутке вверх');
+// ── Навигация урока на телефоне ──
+// Вместо плавающей ☰ и выезжающего меню — нижняя панель, как на главной
+const nav = await c.ev(`(() => {
+  const bar = document.querySelector('.lesson-tabbar'), r = bar && bar.getBoundingClientRect();
+  return JSON.stringify({ bar: !!bar && getComputedStyle(bar).display !== 'none' && Math.round(r.bottom) === innerHeight,
+    fab: getComputedStyle(document.querySelector('.sidebar-mobile-toggle')).display,
+    side: getComputedStyle(document.getElementById('sidebar')).display,
+    tabs: [...document.querySelectorAll('.lt-tab')].map(a => a.textContent + '>' + a.getAttribute('href')),
+    on: (document.querySelector('.lt-tab.on') || {}).textContent });
+})()`);
+const n = JSON.parse(nav);
+ok(n.bar, 'нижняя панель прижата к низу экрана');
+ok(n.fab === 'none' && n.side === 'none', `☰ и боковое меню на телефоне скрыты (${n.fab}/${n.side})`);
+ok(n.tabs.join() === 'Главная>../../../index.html,Курс>../../../index.html#course,Профиль>../../../index.html#more', 'вкладки ведут на главную, курс и профиль: ' + n.tabs.join(' | '));
+ok(n.on === 'Курс', 'в уроке подсвечен «Курс»');
+await c.ev(`scrollTo(0, document.documentElement.scrollHeight)`); await c.wait(400);
+const last = await c.ev(`(() => { const bar = document.querySelector('.lesson-tabbar').getBoundingClientRect().top;
+  const els = [...document.querySelectorAll('.lesson-content > *')].filter(e => e.offsetHeight); const b = els[els.length - 1].getBoundingClientRect().bottom; return Math.round(bar - b); })()`);
+ok(last >= 0, `конец урока не уходит под панель (зазор ${last}px)`);
+await c.shot('dr-lesson-tabbar.png');
+await c.ev(`document.querySelectorAll('.lt-tab')[1].click()`);
+ok(await waitFor(`location.pathname.endsWith('/index.html') && location.hash === '#course' && document.querySelector('[data-tab="course"]')?.hidden === false`), '«Курс» из урока открывает вкладку курса');
+await c.go(B + '/lessons/a1/lesson-05/index.html?lang=ru', 2000);
+// десктоп: меню колонкой слева, панели нет
+await c.send('Emulation.setDeviceMetricsOverride', { width: 1280, height: 800, deviceScaleFactor: 1, mobile: false });
+await c.wait(300);
+const desk = JSON.parse(await c.ev(`JSON.stringify({ bar: getComputedStyle(document.querySelector('.lesson-tabbar')).display, side: document.getElementById('sidebar').getBoundingClientRect().width })`));
+ok(desk.bar === 'none' && desk.side > 200, `десктоп: меню слева (${desk.side}px), нижней панели нет`);
+await c.send('Emulation.setDeviceMetricsOverride', { width: 390, height: 844, deviceScaleFactor: 1, mobile: true });
+await c.go(B + '/lessons/a1/lesson-05/index.html?lang=ru', 2000);
 
 // ── Диктант ──
 await c.ev(`document.querySelector('.ex-tab[data-panel="dictation"]').click()`);

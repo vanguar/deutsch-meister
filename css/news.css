@@ -12,9 +12,9 @@
   --fresh-ink:   #2a1200;   /* текст на ярко-оранжевом: белый там 2.3:1 */
 }
 [data-theme="light"] {
-  --fresh:       #d4541a;
-  --fresh-soft:  rgba(212, 84, 26, .1);
-  --fresh-glow:  rgba(212, 84, 26, .25);
+  --fresh:       #b8460f;   /* белый текст на нём ≥4.5:1 */
+  --fresh-soft:  rgba(184, 70, 15, .1);
+  --fresh-glow:  rgba(184, 70, 15, .25);
   --fresh-ink:   #fff;
 }
 
@@ -88,7 +88,7 @@
 .news-tile-count.muted { color: var(--text-dim); }
 .news-tile-unread { display: inline-flex; align-items: center; gap: 6px; color: var(--green); font-weight: 700; }
 .news-tile-unread i { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--green); }
-.news-tile-go { margin-left: auto; color: var(--accent2); font-weight: 800; }
+.news-tile-go { margin-left: auto; color: var(--accent2-text); font-weight: 800; }
 
 /* Есть свежее — тёплая рамка; «скоро» — приглушённая заглушка */
 /* без свечения: рамка и бейдж и так выделяют, а у новичка свежее во всех рубриках */
@@ -116,7 +116,7 @@
   background: var(--surface2); color: var(--text); font: inherit; font-size: 13px; font-weight: 700; cursor: pointer;
   -webkit-tap-highlight-color: transparent;
 }
-.news-chip:hover { border-color: var(--accent2); color: var(--accent2); }
+.news-chip:hover { border-color: var(--accent2); color: var(--accent2-text); }
 .news-chip:focus-visible { outline: 2px solid var(--accent2); outline-offset: 2px; }
 .news-chip[hidden] { display: none; }
 
@@ -193,7 +193,7 @@
 }
 .nc-stat b { color: var(--text-strong); }
 .nc-read { color: var(--green); font-weight: 700; }
-.nc-go { margin-left: auto; color: var(--accent2); font-weight: 800; font-size: 13px; }
+.nc-go { margin-left: auto; color: var(--accent2-text); font-weight: 800; font-size: 13px; }
 
 /* Свежая — тёплая рамка и мягкое свечение */
 .news-card.is-fresh { border-color: var(--fresh); box-shadow: 0 0 0 1px var(--fresh) inset, 0 6px 26px var(--fresh-glow); }

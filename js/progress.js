@@ -426,7 +426,7 @@ const Progress = (() => {
       if (id === continueId) {
         card.classList.add('continue');
         card.style.outline   = '2px solid var(--accent2)';
-        card.style.boxShadow = '0 0 0 4px rgba(124,106,247,.18)';
+        card.style.boxShadow = '0 0 0 4px rgba(47,109,181,.18)';
         if (status) {
           status.classList.remove('done');
           status.classList.add('open');

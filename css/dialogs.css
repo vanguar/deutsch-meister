@@ -8,16 +8,16 @@
    ═══════════════════════════════════════════════ */
 
 :root {
-  --dlg-a:      #7c6af7;   /* персонаж A */
+  --dlg-a:      #2f6db5;   /* персонаж A */
   --dlg-b:      #20b2a6;   /* персонаж B */
-  --dlg-a-soft: rgba(124, 106, 247, .13);
+  --dlg-a-soft: rgba(47,109,181, .13);
   --dlg-b-soft: rgba(32, 178, 166, .13);
   --dlg-speak:  #e8c547;
 }
 [data-theme="light"] {
-  --dlg-a:      #5b48e8;
+  --dlg-a:      #2366ad;
   --dlg-b:      #0d7d74;
-  --dlg-a-soft: rgba(91, 72, 232, .08);
+  --dlg-a-soft: rgba(35,102,173, .08);
   --dlg-b-soft: rgba(13, 125, 116, .08);
   --dlg-speak:  #b38900;
 }
@@ -29,9 +29,9 @@
   font-family: 'DM Sans', system-ui, sans-serif; font-size: 18px !important; font-weight: 900;
   color: var(--text-on-btn); letter-spacing: .5px;
 }
-.dlg-lv-badge.lv-a1 { background: #1f9e5e; }
-.dlg-lv-badge.lv-a2 { background: #2878c4; }
-.dlg-lv-badge.lv-b1 { background: #6a55e8; }
+.dlg-lv-badge.lv-a1 { background: #1b8547; }
+.dlg-lv-badge.lv-a2 { background: #0e7490; }
+.dlg-lv-badge.lv-b1 { background: #2a62a6; }
 .dlg-lv-badge.lv-b2 { background: #c2410c; }
 
 /* ── Плитка уровня: превью сцен ── */
@@ -80,7 +80,7 @@
 }
 .dlg-item-tr { font-size: 13px; color: var(--text-muted); line-height: 1.35; }
 .dlg-item-meta { font-size: 12px; color: var(--text-dim); }
-.dlg-item-go { flex: none; color: var(--accent2); font-size: 22px; font-weight: 800; }
+.dlg-item-go { flex: none; color: var(--accent2-text); font-size: 22px; font-weight: 800; }
 html[dir="rtl"] .dlg-item-go { transform: scaleX(-1); }
 
 /* ── Диалог ── */
@@ -101,9 +101,9 @@ html[dir="rtl"] .dlg-item-go { transform: scaleX(-1); }
   display: inline-block; padding: 2px 9px; border-radius: var(--r-sm); font-size: 12px; font-weight: 900;
   letter-spacing: .4px; color: #fff; background: var(--accent2);
 }
-.dlg-level-chip.lv-a1 { background: #1f9e5e; }
-.dlg-level-chip.lv-a2 { background: #2878c4; }
-.dlg-level-chip.lv-b1 { background: #6a55e8; }
+.dlg-level-chip.lv-a1 { background: #1b8547; }
+.dlg-level-chip.lv-a2 { background: #0e7490; }
+.dlg-level-chip.lv-b1 { background: #2a62a6; }
 .dlg-level-chip.lv-b2 { background: #c2410c; }
 .dlg-title {
   margin: 8px 0 0; font-family: 'Playfair Display', serif; font-size: 25px; font-weight: 900;
@@ -118,7 +118,7 @@ html[dir="rtl"] .dlg-item-go { transform: scaleX(-1); }
   display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px;
   padding: 10px 20px; border: 0; border-radius: var(--r-full); cursor: pointer;
   background: var(--accent2); color: var(--text-on-btn); font: inherit; font-size: 15px; font-weight: 800;
-  box-shadow: 0 4px 16px rgba(124, 106, 247, .3); -webkit-tap-highlight-color: transparent;
+  box-shadow: 0 4px 16px rgba(47,109,181, .3); -webkit-tap-highlight-color: transparent;
 }
 .dlg-play:active { transform: scale(.98); }
 .dlg-play:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }

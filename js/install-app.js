@@ -12,9 +12,9 @@
        «Открыть в браузере» (из Telegram установка недоступна).
    Стили инлайновые с фолбэками — правок CSS не требуется. Но цвет
    обязан идти через var(--…): модалка стоит на общем фоне
-   var(--surface2), а он в светлой теме лавандовый #f0effe — жёсткий
+   var(--surface2), а он в светлой теме лавандовый #f1f3f6 — жёсткий
    #fff на заголовке давал там 1.14:1, нечитаемо. И фолбэк внутри
-   var() обязан соответствовать самой переменной: #7c6af7 стоял
+   var() обязан соответствовать самой переменной: #2f6db5 стоял
    при --accent, то есть при жёлтом, и белое по жёлтому — 1.68:1.
    ═══════════════════════════════════════════════ */
 (function () {
@@ -48,7 +48,7 @@
       'justify-content:center;background:rgba(0,0,0,.6);padding:20px';
 
     wrap.innerHTML =
-      '<div style="background:var(--surface2,#1b1b25);border:1px solid var(--border,#333);' +
+      '<div style="background:var(--surface2,#1b2632);border:1px solid var(--border,#333);' +
       'border-radius:18px;max-width:430px;width:100%;padding:24px;color:var(--text,#eee);' +
       'box-shadow:0 20px 60px rgba(0,0,0,.5);max-height:90vh;overflow:auto">' +
         '<div style="font-size:40px;text-align:center;margin-bottom:8px">📲</div>' +
@@ -60,7 +60,7 @@
         '</p>' +
         (inTelegram()
           ? '<button id="installOpenBrowser" style="width:100%;border:0;border-radius:12px;' +
-            'padding:14px;font-size:15px;font-weight:600;background:var(--accent2,#7c6af7);' +
+            'padding:14px;font-size:15px;font-weight:600;background:var(--accent2,#2f6db5);' +
             'color:var(--text-on-btn,#fff);cursor:pointer;margin-bottom:8px">🌐 Открыть в браузере</button>' +
             '<p style="font-size:12px;color:var(--text-muted,#9a9);text-align:center;margin:0 0 16px">' +
             'Установка возможна только из браузера, не из Telegram.</p>'
@@ -127,7 +127,7 @@
     bar.style.cssText =
       'position:fixed;left:12px;right:12px;bottom:12px;z-index:9998;' +
       'background:rgba(27,27,37,.72);backdrop-filter:blur(10px);' +
-      '-webkit-backdrop-filter:blur(10px);border:1px solid rgba(124,106,247,.35);' +
+      '-webkit-backdrop-filter:blur(10px);border:1px solid rgba(47,109,181,.35);' +
       'border-radius:14px;padding:10px 12px;display:flex;align-items:center;gap:9px;' +
       'box-shadow:0 8px 24px rgba(0,0,0,.28);opacity:0;transition:opacity .35s ease;' +
       'font-size:12px';
@@ -137,7 +137,7 @@
         'Нет звука в Telegram? Установи приложение на телефон.' +
       '</div>' +
       '<button id="installBannerBtn" style="border:0;border-radius:9px;padding:7px 11px;' +
-      'font-size:12.5px;font-weight:600;background:rgba(124,106,247,.85);color:#fff;' +
+      'font-size:12.5px;font-weight:600;background:rgba(47,109,181,.85);color:#fff;' +
       'cursor:pointer;white-space:nowrap">Установить</button>' +
       '<button id="installBannerClose" aria-label="Закрыть" style="border:0;background:transparent;' +
       'color:rgba(200,200,215,.7);font-size:20px;cursor:pointer;line-height:1;' +
@@ -182,8 +182,8 @@
     const box = document.createElement('div');
     box.style.cssText = 'padding:12px';
     box.innerHTML =
-      '<button id="installMenuBtn" style="width:100%;border:1px solid var(--accent,#7c6af7);' +
-      'background:rgba(124,106,247,.08);color:var(--text,#eee);border-radius:12px;padding:12px;' +
+      '<button id="installMenuBtn" style="width:100%;border:1px solid var(--accent,#2f6db5);' +
+      'background:rgba(47,109,181,.08);color:var(--text,#eee);border-radius:12px;padding:12px;' +
       'font-size:13px;font-weight:600;cursor:pointer">📲 Установить на телефон</button>';
     sb.appendChild(box);
     document.getElementById('installMenuBtn').addEventListener('click', openModal);

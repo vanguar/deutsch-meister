@@ -68,8 +68,8 @@
     'html[lang="ar"] [dir]{unicode-bidi:isolate}',
     'html[lang="ar"] [dir="rtl"][data-ar-dir]{text-align:right}',
     '.ar-trial{direction:rtl;text-align:right;unicode-bidi:isolate;margin:14px 0;padding:16px 18px;',
-    'border:1px solid var(--accent2,#7c6af7);border-radius:14px;',
-    'background:linear-gradient(135deg,rgba(124,106,247,.14),rgba(232,197,71,.08));color:var(--text,#e8e6f0);',
+    'border:1px solid var(--accent2,#2f6db5);border-radius:14px;',
+    'background:linear-gradient(135deg,rgba(47,109,181,.14),rgba(232,197,71,.08));color:var(--text,#e8e6f0);',
     'font-size:15px;line-height:1.7}',
     '.ar-trial b{color:var(--text-strong,#fff)}',
     '.ar-trial-title{font-weight:800;font-size:16px;margin-bottom:4px}',
@@ -77,8 +77,8 @@
     '.ar-trial-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}',
     '.ar-trial-btn{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:999px;',
     'border:0;cursor:pointer;font:inherit;font-weight:700;text-decoration:none;',
-    'background:var(--accent2,#7c6af7);color:var(--text-on-btn,#fff)}',
-    '.ar-trial-btn.ghost{background:var(--surface3,#2a2740);color:var(--text,#e8e6f0);border:1px solid var(--border,#2e2b4a)}',
+    'background:var(--accent2,#2f6db5);color:var(--text-on-btn,#fff)}',
+    '.ar-trial-btn.ghost{background:var(--surface3,#2a2740);color:var(--text,#e8e6f0);border:1px solid var(--border,#2e3c4b)}',
     '.ar-trial-tg{direction:ltr;unicode-bidi:isolate;font-weight:700}',
     '.ar-soon{opacity:.45;filter:grayscale(.6);cursor:not-allowed}',
     '.lesson-card.ar-soon:hover{transform:none}',
@@ -87,7 +87,7 @@
     // перехватывал бы нажатия на кнопки внизу экрана (листание в ридере)
     '.ar-toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:9999;max-width:min(92vw,420px);pointer-events:none;',
     'direction:rtl;text-align:center;padding:12px 16px;border-radius:12px;font-size:15px;line-height:1.6;',
-    'background:var(--surface2,#232136);color:var(--text,#e8e6f0);border:1px solid var(--border-light,#3d3960);',
+    'background:var(--surface2,#212d3a);color:var(--text,#e8e6f0);border:1px solid var(--border-light,#3d4d5f);',
     'box-shadow:0 8px 30px rgba(0,0,0,.35);transition:opacity .25s}'
   ].join('');
   var ver = me ? (me.getAttribute('src').match(/\?v=\d+/) || [''])[0] : '';
