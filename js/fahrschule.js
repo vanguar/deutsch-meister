@@ -75,6 +75,7 @@ const Fahrschule = (() => {
 
   let el = {};
   let units  = [];          // оглавление
+  let topics = [];          // темы: { id, emoji, title, titleTr, units: [id] }
   let loaded = false;
   let view   = { name: 'hub' };
   let unit   = null;        // открытый урок (полный JSON)
@@ -86,6 +87,8 @@ const Fahrschule = (() => {
   let anims = [];           // requestAnimationFrame машин
   let timers = [];
   const cache = {};
+  const pending = {};       // уроки в пути: открытие и фоновая загрузка не качают дважды
+  const PREFETCH_MAX = 6;
 
   /* ── Утилиты ── */
 
@@ -264,18 +267,83 @@ const Fahrschule = (() => {
     </div>`;
   }
 
+  function topicHeadHtml(t, n) {
+    return `<div class="fs-topic-head">
+      <span class="news-rubric-ico" aria-hidden="true">${esc(t.emoji)}</span>
+      <div class="fs-topic-titles">
+        <div class="fs-topic-n"><span>Тема</span> ${n}</div>
+        <h2 class="fs-topic-title" lang="de" dir="ltr">${esc(t.title)}</h2>
+        <div class="fs-topic-tr">${esc(t.titleTr)}</div>
+      </div>
+    </div>`;
+  }
+
   function renderHub() {
     el.list.setAttribute('aria-busy', 'false');
-    el.list.innerHTML = units.map(tileHtml).join('') + soonTileHtml();
+    const byId = Object.fromEntries(units.map(u => [u.id, u]));
+    el.list.innerHTML = topics.map((t, k) => topicHeadHtml(t, k + 1)
+      + t.units.filter(id => byId[id]).map(id => tileHtml(byId[id])).join('')).join('') + soonTileHtml();
+    // первые уроки тем — заранее, пока человек выбирает
+    prefetch(topics.map(t => t.units[0]));
   }
 
   /* ── Урок ── */
 
   function fetchUnit(id) {
     if (cache[id]) return Promise.resolve(cache[id]);
-    return fetch(DATA_DIR + id + '.json', { cache: 'no-cache' })
+    if (pending[id]) return pending[id];
+    const p = fetch(DATA_DIR + id + '.json', { cache: 'no-cache' })
       .then(r => { if (!r.ok) throw new Error(id + '.json: HTTP ' + r.status); return r.json(); })
       .then(d => { cache[id] = d; return d; });
+    pending[id] = p;
+    const done = () => { if (pending[id] === p) delete pending[id]; };
+    p.then(done, done);
+    return p;
+  }
+
+  /* ── Фоновая загрузка ──
+     Открытый урок грузится сразу и один. Когда он нарисован и браузер
+     свободен (requestIdleCallback), по одному подтягиваются остальные
+     уроки этой темы и следующей вместе с картинками знаков: следующий
+     урок откроется мгновенно, а service worker сохранит их и для офлайна.
+     В режиме экономии трафика и на 2G — не качаем лишнего. */
+
+  function idle(fn) {
+    if (typeof window.requestIdleCallback === 'function') window.requestIdleCallback(fn, { timeout: 3000 });
+    else setTimeout(fn, 1200);
+  }
+
+  function saveData() {
+    const c = navigator.connection;
+    return !!(c && (c.saveData || /(^|-)2g$/.test(c.effectiveType || '')));
+  }
+
+  function preloadSigns(d) {
+    Object.values((d && d.signs) || {}).forEach(s => {
+      const img = new Image();
+      img.decoding = 'async';
+      img.src = s.src;
+    });
+  }
+
+  function prefetch(ids) {
+    if (saveData()) return;
+    const list = [...new Set(ids)].filter(id => id && !cache[id] && units.some(u => u.id === id)).slice(0, PREFETCH_MAX);
+    let k = 0;
+    const next = () => {
+      if (k >= list.length) return;
+      const id = list[k++];
+      if (cache[id]) { next(); return; }
+      fetchUnit(id).then(d => { preloadSigns(d); idle(next); }, () => { /* офлайн — откроется при переходе */ });
+    };
+    idle(next);
+  }
+
+  // Соседи открытого урока: остальные уроки темы, потом следующая тема
+  function prefetchAround(id) {
+    const ti = topics.findIndex(t => t.units.includes(id));
+    if (ti < 0) return;
+    prefetch(topics[ti].units.concat((topics[ti + 1] || {}).units || []).filter(x => x !== id));
   }
 
   function openUnit(id) {
@@ -316,6 +384,7 @@ const Fahrschule = (() => {
     paintPlay();
     if (u.kind === 'theory' && u.quiz && u.quiz.length) startQuiz();
     if (u.kind === 'junction') openScene(0);
+    prefetchAround(u.id);
   }
 
   function controlsHtml(label) {
@@ -910,6 +979,9 @@ const Fahrschule = (() => {
       .then(r => { if (!r.ok) throw new Error(INDEX_URL + ': HTTP ' + r.status); return r.json(); })
       .then(data => {
         units = (data && Array.isArray(data.units) ? data.units : []).filter(u => u && u.id && KINDS[u.kind]);
+        topics = (data && Array.isArray(data.topics) ? data.topics : []).filter(t => t && Array.isArray(t.units));
+        // старое оглавление без тем — одна общая группа
+        if (!topics.length && units.length) topics = [{ id: 'all', emoji: '🚗', title: 'Fahrschule', titleTr: '', units: units.map(u => u.id) }];
         loaded = true;
         show(view);
       })
@@ -954,6 +1026,7 @@ const Fahrschule = (() => {
     init, up, go, stop: stopAll,
     get view() { return view; }, get unit() { return unit; }, get playing() { return playing; },
     get scene() { return scene; }, get quiz() { return quiz; },
+    get topics() { return topics; }, get cached() { return Object.keys(cache); },
     wordsHtml, wordKey, WORD_RE
   };
 })();

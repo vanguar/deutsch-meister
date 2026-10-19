@@ -14,6 +14,9 @@ tools/fahrschule/build.py — сборка раздела «Автошкола»
     {pos, tr: [ru, uk, ar], note?: [ru, uk, ar], art/pl у сущ., forms,
     f: [другие формы слова]}.
   tools/fahrschule/src/signs.json   — названия знаков (de + [ru, uk, ar]).
+  tools/fahrschule/src/topics.json  — темы курса по порядку: id, emoji,
+    немецкое название, [ru, uk, ar] и уроки темы (каждый урок — ровно
+    в одной теме). На странице уроки идут группами по темам.
   tools/fahrschule/signs.json       — лицензии знаков (fetch_signs.py),
     сами SVG — data/fahrschule/signs/<id>.svg.
 
@@ -244,6 +247,7 @@ def solve(cars, signs):
 
 def main():
     units = read_json(os.path.join(SRC, 'units.json'))
+    topics = read_json(os.path.join(SRC, 'topics.json'))
     lexicon = read_json(os.path.join(SRC, 'lexicon.json'))
     sign_names = read_json(os.path.join(SRC, 'signs.json'))
     sign_meta = read_json(SIGN_META) if os.path.isfile(SIGN_META) else {}
@@ -444,6 +448,31 @@ def main():
                 'id': uid, 'kind': kind, 'emoji': u.get('emoji'), 'level': u.get('level'),
                 'title': u.get('title'), 'titleTr': unit['titleTr'], 'count': count,
             })
+    # темы: каждый урок ровно в одной, порядок уроков — как в теме
+    topics_out = {lang: [] for lang in LANGS}
+    seen = {}
+    for ti, t in enumerate(topics, 1):
+        where = f'тема {t.get("id") or ti}'
+        if not re.match(r'^[a-z][a-z0-9-]*$', t.get('id') or ''):
+            err(f'{where}: id латиницей (vorfahrt, zeichen-ampeln)')
+        check_de(where, t.get('title'))
+        check_tr(where, t.get('tr'))
+        if not t.get('emoji') or not t.get('units'):
+            err(f'{where}: нужны emoji и units')
+        for uid in t.get('units') or []:
+            if uid not in ids:
+                err(f'{where}: нет урока {uid}')
+            if uid in seen:
+                err(f'{where}: урок {uid} уже в теме {seen[uid]}')
+            seen[uid] = t.get('id')
+        for i, lang in enumerate(LANGS):
+            topics_out[lang].append({'id': t.get('id'), 'emoji': t.get('emoji'), 'title': t.get('title'),
+                                     'titleTr': (t.get('tr') or [''] * 3)[i], 'units': t.get('units') or []})
+    for uid in sorted(ids - set(seen)):
+        err(f'{uid}: урок не входит ни в одну тему (tools/fahrschule/src/topics.json)')
+    if len({t.get('id') for t in topics}) != len(topics):
+        err('темы: id повторяется')
+
     unused = sorted(set(lexicon) - gloss.used)
     if unused:
         err('словарь: леммы нигде не встречаются (удалите или используйте): ' + ', '.join(unused))
@@ -465,14 +494,14 @@ def main():
             for f in os.listdir(d):
                 if f.endswith('.json') and f not in keep:
                     os.remove(os.path.join(d, f))    # урок убрали из исходника
-        write_json(os.path.join(d, 'index.json'), {'units': index[lang]})
+        write_json(os.path.join(d, 'index.json'), {'topics': topics_out[lang], 'units': index[lang]})
         for unit in built[lang]:
             write_json(os.path.join(d, unit['id'] + '.json'), unit)
 
     for w in warnings:
         print('WARNING:', w)
     kinds = {k: sum(1 for u in units if u['kind'] == k) for k in KINDS}
-    print(f'fahrschule: ok — уроков {len(units)} {kinds}, слов в словаре {len(lexicon)}, знаков {len(sign_names)}')
+    print(f'fahrschule: ok — тем {len(topics)}, уроков {len(units)} {kinds}, слов в словаре {len(lexicon)}, знаков {len(sign_names)}')
     return 0
 
 

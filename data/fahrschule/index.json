@@ -1,4 +1,17 @@
 {
+ "topics": [
+  {
+   "id": "vorfahrt",
+   "emoji": "🚦",
+   "title": "Vorfahrt und Kreuzungen",
+   "titleTr": "Приоритет и перекрёстки",
+   "units": [
+    "t-01",
+    "p-01",
+    "k-01"
+   ]
+  }
+ ],
  "units": [
   {
    "id": "t-01",

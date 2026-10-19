@@ -78,10 +78,26 @@ ok(await waitFor(`document.querySelectorAll('.fs-tile[data-unit]').length === 3`
 const hub = await c.ev(`[...document.querySelectorAll('.fs-tile[data-unit]')].map(t => t.dataset.unit).join(',')`);
 ok(hub === 't-01,p-01,k-01', `порядок: ${hub}`);
 ok(await c.ev(`document.querySelectorAll('.fs-soon').length === 1`), 'плитка «Скоро» с планами');
+const topicsN = await c.ev(`Fahrschule.topics.length`);
+ok(await c.ev(`document.querySelectorAll('.fs-topic-head').length === ${topicsN} && ${topicsN} >= 1`), `темы: ${topicsN} заголовк(а/ов) над уроками`);
+ok(await c.ev(`(() => { const head = document.querySelector('.fs-topic-head'); let el = head.nextElementSibling; const ids = [];
+  while (el && !el.classList.contains('fs-topic-head') && el.dataset.unit) { ids.push(el.dataset.unit); el = el.nextElementSibling; }
+  return ids.join() === Fahrschule.topics[0].units.join(); })()`), 'под заголовком темы — её уроки по порядку');
+// на списке первые уроки тем подгружаются в фоне
+ok(await waitFor(`Fahrschule.topics.every(t => Fahrschule.cached.includes(t.units[0]))`, 8000), 'список: первые уроки тем подгружены в фоне');
 ok(await c.ev(NO_HSCROLL), 'список: нет горизонтальной прокрутки (390)');
 await c.shot('fs_hub_390.png');
 await c.ev(`document.querySelector('.fs-tile[data-unit="t-01"]').click()`);
 ok(await waitFor(`location.hash === '#u=t-01' && Fahrschule.unit && Fahrschule.unit.id === 't-01'`), 'плитка → #u=t-01');
+// открытый урок сразу, соседи по теме — в фоне; переход к ним — без сети
+ok(await waitFor(`['p-01', 'k-01'].every(id => Fahrschule.cached.includes(id))`, 8000), 'соседние уроки темы подгружены в фоне');
+await c.send('Network.enable');
+c.events.length = 0;
+await c.ev(`Fahrschule.go({ name: 'unit', id: 'p-01' })`);
+ok(await waitFor(`Fahrschule.unit && Fahrschule.unit.id === 'p-01' && document.querySelectorAll('.fs-dialog .dlg-line').length > 0`, 1500), 'следующий урок открылся сразу');
+ok(!c.events.some(e => e.method === 'Network.requestWillBeSent' && /data\/fahrschule\/p-01\.json|fahrschule\/p-01\.json/.test(e.params.request.url)), 'при открытии подгруженного урока запроса в сеть нет');
+await c.ev(`history.back()`);
+await waitFor(`Fahrschule.unit && Fahrschule.unit.id === 't-01'`, 2000);
 await c.ev(`history.back()`);
 ok(await waitFor(`location.hash === '' && !document.getElementById('fsHub').hidden && document.getElementById('fsUnit').hidden`), '«назад» → список');
 collect();

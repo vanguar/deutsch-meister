@@ -15,6 +15,7 @@ validate_fahrschule.py — проверка раздела «Автошкола�
     лемме в gloss.l, у леммы есть перевод на языке копии;
   * знаки: SVG лежит в data/fahrschule/signs, лицензия свободная;
   * у перекрёстка порядок — перестановка машин сцены;
+  * темы одинаковы во всех копиях и покрывают каждый урок ровно один раз;
   * fahrschule.html подключает tts.js, reader-speak.js, reader-tip.js,
     fahrschule.js и стили тултипа; на главной есть плитка раздела;
     service-worker кладёт оболочку в кеш.
@@ -127,6 +128,16 @@ def main():
             err(f'{lang}: в оглавлении другие уроки')
         for u in idx[lang]['units']:
             check_tr(f'{lang} оглавление {u["id"]}', lang, u.get('titleTr'))
+    # темы: одинаковые во всех копиях, каждый урок ровно в одной
+    for lang in LANGS:
+        tops = idx[lang].get('topics') or []
+        if [(t['id'], t['units'], t['title']) for t in tops] != [(t['id'], t['units'], t['title']) for t in idx['ru'].get('topics') or []]:
+            err(f'{lang}: темы отличаются от русской копии')
+        flat = [x for t in tops for x in t['units']]
+        if sorted(flat) != sorted(ids) or len(flat) != len(set(flat)):
+            err(f'{lang}: темы должны покрывать все уроки по одному разу')
+        for t in tops:
+            check_tr(f'{lang} тема {t["id"]}', lang, t.get('titleTr'))
 
     for uid in ids:
         units = {lang: load(f'{d}/{uid}.json') for lang, d in LANGS.items()}

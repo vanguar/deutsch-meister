@@ -58,7 +58,7 @@ ok('неоднозначно' in str(build.solve([car('blue', 'S'), car('green',
 
 # ── 2. Сборка ловит ошибки и ничего не пишет ──
 SRC = build.SRC
-real = {f: json.load(open(os.path.join(SRC, f), encoding='utf-8')) for f in ('units.json', 'lexicon.json', 'signs.json')}
+real = {f: json.load(open(os.path.join(SRC, f), encoding='utf-8')) for f in ('units.json', 'lexicon.json', 'signs.json', 'topics.json')}
 
 
 def run_with(mutate):
@@ -108,6 +108,12 @@ ok(code == 1 and any('которого нет в строке' in e for e in err
 
 code, errs, written = run_with(lambda d: unit(d, 't-01')['quiz'].append({'sign': 'z102', 'wrong': ['z205', 'z205']}))
 ok(code == 1 and any('тест' in e for e in errs), 'тест: повтор неверного варианта — ошибка')
+
+code, errs, written = run_with(lambda d: d['topics.json'][0]['units'].remove('k-01'))
+ok(code == 1 and any('k-01' in e and 'ни в одну тему' in e for e in errs), 'урок без темы — ошибка')
+
+code, errs, written = run_with(lambda d: d['topics.json'].append(dict(d['topics.json'][0], id='copy')))
+ok(code == 1 and any('уже в теме' in e for e in errs), 'урок в двух темах — ошибка')
 
 print(f'\nFAIL: {fails}' if fails else '\ntest_build: всё ок')
 sys.exit(1 if fails else 0)
