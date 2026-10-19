@@ -175,6 +175,12 @@ def main():
             for ci, sc in enumerate(u.get('scenes') or [], 1):
                 if sorted(sc.get('order') or []) != sorted(c['id'] for c in sc.get('cars') or []):
                     err(f'{where} сцена {ci}: порядок — не перестановка машин')
+                if sc.get('lights'):
+                    k = sc.get('switchAt')
+                    if not isinstance(k, int) or not 0 <= k <= len(sc['order']):
+                        err(f'{where} сцена {ci}: у светофора нет верного switchAt')
+                    if sorted(sc['lights']) != ['E', 'N', 'S', 'W']:
+                        err(f'{where} сцена {ci}: светофор на всех четырёх подъездах')
             for q in u.get('quiz') or []:
                 for sid in [q['sign']] + q['wrong']:
                     if sid not in (u.get('signs') or {}):

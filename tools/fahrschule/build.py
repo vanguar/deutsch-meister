@@ -32,8 +32,9 @@ tools/fahrschule/build.py — сборка раздела «Автошкола»
   * алфавиты: немецкий без кириллицы, украинский без ы/э/ъ/ё, арабский —
     арабицей без кириллицы;
   * знаки: SVG и свободная лицензия есть;
-  * перекрёстки: порядок проезда вычисляется по правилам (знаки →
-    «правый перед левым» → поворот налево уступает встречным) и обязан
+  * перекрёстки: порядок проезда вычисляется по правилам (светофор →
+    знаки → «правый перед левым» → поворот налево уступает встречным;
+    зелёная стрелка z720 — направо на красный после зелёных) и обязан
     совпасть с ответом в исходнике; неоднозначные сцены не допускаются.
 
 Запуск: python tools/fahrschule/build.py
@@ -81,6 +82,8 @@ TURNS = ('straight', 'left', 'right')
 RIGHT = {'S': 'E', 'W': 'S', 'N': 'W', 'E': 'N'}
 OPPOSITE = {'S': 'N', 'N': 'S', 'W': 'E', 'E': 'W'}
 YIELD_SIGNS = ('z205', 'z206')
+GREEN_ARROW = 'z720'     # Grünpfeil: при красном можно направо, после остановки
+LIGHTS = ('green', 'red')
 MAIN_SIGNS = ('z301', 'z306')
 
 errors = []
@@ -245,6 +248,33 @@ def solve(cars, signs):
     return order
 
 
+def solve_lights(cars, signs, lights):
+    """Перекрёсток со светофором: (порядок, сколько машин едет до смены
+    сигнала) или строка с причиной ошибки.
+
+    Светофор главнее знаков и «правого перед левым» (§ 37 StVO): сначала
+    едут машины на зелёный (поворот налево пропускает встречных), потом
+    машины на красный с зелёной стрелкой-знаком (Zeichen 720), если
+    поворачивают направо, — после остановки и пропустив тех, у кого
+    зелёный. Затем сигнал меняется (немецкая последовательность: зелёный →
+    жёлтый → красный; красный → красный+жёлтый → зелёный), едут остальные."""
+    if set(lights) != set(APPROACH) or any(v not in LIGHTS for v in lights.values()):
+        return 'светофор: нужны сигналы green/red на всех четырёх подъездах'
+    if lights['S'] != lights['N'] or lights['W'] != lights['E'] or lights['S'] == lights['W']:
+        return 'светофор: встречные подъезды — один сигнал, поперечные — противоположный'
+    for a, s in signs.items():
+        if s == GREEN_ARROW and lights[a] != 'red':
+            return f'зелёная стрелка (z720) висит у красного сигнала, а у {a} — {lights[a]}'
+    green = [c for c in cars if lights[c['from']] == 'green']
+    arrow = [c for c in cars if lights[c['from']] == 'red' and signs.get(c['from']) == GREEN_ARROW and c['turn'] == 'right']
+    later = [c for c in cars if c not in green and c not in arrow]
+    parts = [solve(green, {}), solve(arrow, {}), solve(later, {})]
+    for p in parts:
+        if isinstance(p, str):
+            return p
+    return parts[0] + parts[1] + parts[2], len(parts[0]) + len(parts[1])
+
+
 def main():
     units = read_json(os.path.join(SRC, 'units.json'))
     topics = read_json(os.path.join(SRC, 'topics.json'))
@@ -385,6 +415,8 @@ def main():
                 w = f'{uid} сцена {ci}'
                 cars = sc.get('cars') or []
                 signs = sc.get('signs') or {}
+                lights = sc.get('lights') or None
+                switch_at = None
                 if not 2 <= len(cars) <= 4:
                     err(f'{w}: машин от 2 до 4')
                 if len({c.get('id') for c in cars}) != len(cars) or any(c.get('id') not in CARS for c in cars):
@@ -397,8 +429,12 @@ def main():
                     if a not in APPROACH or s not in sign_names:
                         err(f'{w}: знак {a}: {s}')
                     used_signs.add(s)
+                if GREEN_ARROW in signs.values() and not lights:
+                    err(f'{w}: зелёная стрелка (z720) бывает только у светофора')
                 if not errors:
-                    got = solve(cars, signs)
+                    got = solve_lights(cars, signs, lights) if lights else solve(cars, signs)
+                    if isinstance(got, tuple):
+                        got, switch_at = got
                     if isinstance(got, str):
                         err(f'{w}: {got}')
                     elif got != sc.get('order'):
@@ -408,10 +444,14 @@ def main():
                 if not expl:
                     err(f'{w}: нет пояснения')
                 for lang in LANGS:
-                    out[lang].append({
+                    scene = {
                         'situation': sit[lang], 'cars': cars, 'signs': signs,
                         'order': sc.get('order'), 'explain': [e[lang] for e in expl],
-                    })
+                    }
+                    if lights:
+                        scene['lights'] = lights         # сигналы до смены
+                        scene['switchAt'] = switch_at    # столько машин едет до смены сигнала
+                    out[lang].append(scene)
             for lang in LANGS:
                 per[lang]['scenes'] = out[lang]
             count = len(scenes)

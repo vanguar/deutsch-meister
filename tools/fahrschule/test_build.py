@@ -55,6 +55,21 @@ ok(isinstance(build.solve([car('a', 'S'), car('b', 'W'), car('c', 'N'), car('d',
 ok('неоднозначно' in str(build.solve([car('blue', 'S'), car('green', 'N')], {})),
    'две встречные прямо — неоднозначно (сцена не допускается)')
 
+L_NS = {'S': 'green', 'N': 'green', 'W': 'red', 'E': 'red'}
+L_WE = {'S': 'red', 'N': 'red', 'W': 'green', 'E': 'green'}
+ok(build.solve_lights([car('blue', 'S'), car('red', 'E')], {}, L_NS) == (['blue', 'red'], 1),
+   'светофор главнее «правого перед левым»')
+ok(build.solve_lights([car('blue', 'S'), car('green', 'N', 'left'), car('yellow', 'W')], {}, L_NS) == (['blue', 'green', 'yellow'], 2),
+   'на зелёный: налево пропускает встречного; красный ждёт смены')
+ok(build.solve_lights([car('blue', 'W'), car('red', 'S', 'right'), car('green', 'N')], {'S': 'z720'}, L_WE) == (['blue', 'red', 'green'], 2),
+   'зелёная стрелка: направо на красный после зелёных, до смены сигнала')
+ok(build.solve_lights([car('blue', 'W'), car('red', 'S', 'straight')], {'S': 'z720'}, L_WE) == (['blue', 'red'], 1),
+   'зелёная стрелка не даёт ехать прямо — только после смены')
+ok('противоположный' in str(build.solve_lights([car('a', 'S'), car('b', 'W')], {}, {'S': 'green', 'N': 'green', 'W': 'green', 'E': 'green'})),
+   'зелёный сразу всем — ошибка сцены')
+ok('красного' in str(build.solve_lights([car('a', 'S'), car('b', 'W')], {'S': 'z720'}, L_NS)),
+   'зелёная стрелка у зелёного сигнала — ошибка сцены')
+
 
 # ── 2. Сборка ловит ошибки и ничего не пишет ──
 SRC = build.SRC

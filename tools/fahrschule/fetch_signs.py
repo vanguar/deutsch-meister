@@ -36,6 +36,7 @@ SIGNS = {
     'z301': 'File:Zeichen 301 - Vorfahrt, StVO 1970.svg',
     'z306': 'File:Zeichen 306 - Vorfahrtstraße, StVO 1970.svg',
     'z307': 'File:Zeichen 307 - Ende der Vorfahrtstraße, StVO 1970.svg',
+    'z720': 'File:Zeichen 720 - Grünpfeil, StVO 1994.svg',
 }
 
 # SVG с Commons встраивается как <img>: скрипты там и так не исполняются,

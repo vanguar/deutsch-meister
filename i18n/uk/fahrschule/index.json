@@ -10,6 +10,15 @@
     "p-01",
     "k-01"
    ]
+  },
+  {
+   "id": "zeichen-ampeln",
+   "emoji": "🚥",
+   "title": "Verkehrszeichen und Ampeln",
+   "titleTr": "Знаки і світлофори",
+   "units": [
+    "k-02"
+   ]
   }
  ],
  "units": [
@@ -38,6 +47,15 @@
    "level": "A2–B1",
    "title": "Wer fährt zuerst?",
    "titleTr": "Хто їде першим?",
+   "count": 3
+  },
+  {
+   "id": "k-02",
+   "kind": "junction",
+   "emoji": "🚥",
+   "level": "A2–B1",
+   "title": "Ampel und grüner Pfeil",
+   "titleTr": "Світлофор і зелена стрілка",
    "count": 3
   }
  ]

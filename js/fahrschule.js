@@ -570,16 +570,28 @@ const Fahrschule = (() => {
 
   function sceneSvg(sc) {
     const signs = sc.signs || {};
+    const lights = sc.lights || null;
     const approach = a => {
       const s = signs[a];
-      if (!s) return '';
+      const light = lights && lights[a];
+      if (!s && !light) return '';
       const r = ROT[a];
-      const stop = s === 'z205'
-        ? '<path class="fs-wait" d="M150 186 H182" stroke-dasharray="6 4"/>'
-        : s === 'z206' ? '<path class="fs-wait" d="M150 186 H182"/>' : '';
-      // знак стоит справа от подъезда; поворачиваем только место, сам знак — прямо
-      return `<g transform="rotate(${r} 150 150)">${stop}
-        <g transform="translate(206 210) rotate(${-r})"><image href="${esc(unit.signs[s].src)}" x="-13" y="-13" width="26" height="26"/></g></g>`;
+      // у светофора — сплошная стоп-линия (Haltlinie), у знаков 205/206 —
+      // пунктирная линия ожидания и сплошная у «Стоп»
+      const stop = light || s === 'z206'
+        ? '<path class="fs-wait" d="M150 186 H182"/>'
+        : s === 'z205' ? '<path class="fs-wait" d="M150 186 H182" stroke-dasharray="6 4"/>' : '';
+      // светофор и знак стоят справа от подъезда; поворачиваем только место,
+      // сами они — прямо. Рядом со светофором знак (Grünpfeil) меньше.
+      const lightHtml = light ? `<g transform="translate(198 206) rotate(${-r})">
+          <g class="fs-light state-${light}" data-light="${a}">
+            <rect class="fs-light-box" x="-6.5" y="-16" width="13" height="32" rx="3.5"/>
+            <circle class="fs-l-red" cy="-9.5" r="3.8"/><circle class="fs-l-yellow" cy="0" r="3.8"/><circle class="fs-l-green" cy="9.5" r="3.8"/>
+          </g></g>` : '';
+      const plate = s ? (light
+        ? `<g transform="translate(219 206) rotate(${-r})"><image href="${esc(unit.signs[s].src)}" x="-9" y="-6" width="18" height="12"/></g>`
+        : `<g transform="translate(206 210) rotate(${-r})"><image href="${esc(unit.signs[s].src)}" x="-13" y="-13" width="26" height="26"/></g>`) : '';
+      return `<g transform="rotate(${r} 150 150)">${stop}${lightHtml}${plate}</g>`;
     };
     const cars = sc.cars.map(c => {
       const col = CAR[c.id];
@@ -694,7 +706,13 @@ const Fahrschule = (() => {
         renderScene();
         speakList(explainLines(), 'explain');
       };
-      drive(sc.order, after);
+      if (sc.lights) {
+        // на светофоре: сначала зелёные (и Grünpfeil), смена сигнала, потом остальные
+        const k = sc.switchAt || 0;
+        drive(sc.order.slice(0, k), () => switchLights(sc.lights, () => drive(sc.order.slice(k), after)));
+      } else {
+        drive(sc.order, after);
+      }
     }
   }
 
@@ -702,7 +720,7 @@ const Fahrschule = (() => {
   // следующая трогается, пока предыдущая ещё в пути (NEXT_MS < DRIVE_MS).
   function drive(order, done) {
     const svg = document.querySelector('#fsScene .fs-svg');
-    if (!svg) { done(); return; }
+    if (!svg || !order.length) { done(); return; }
     svg.classList.add('is-driving');
     const quick = reducedMotion() || typeof requestAnimationFrame !== 'function';
     let left = order.length;
@@ -738,6 +756,28 @@ const Fahrschule = (() => {
     const box = document.getElementById('fsJunction');
     if (!box || !box.scrollIntoView) return;
     try { box.scrollIntoView({ block: 'start', behavior: 'smooth' }); } catch (e) { box.scrollIntoView(true); }
+  }
+
+  // Смена сигнала по-немецки: зелёный → жёлтый → красный, у поперечных
+  // красный → красный+жёлтый → зелёный (Rot-Gelb: «сейчас будет зелёный»)
+  const LIGHT_STEP_MS = 900;
+  function setLight(a, state) {
+    const g = document.querySelector(`#fsScene .fs-light[data-light="${a}"]`);
+    if (g) g.setAttribute('class', 'fs-light state-' + state);
+  }
+
+  function switchLights(lights, done) {
+    const was = Object.keys(lights);
+    const greens = was.filter(a => lights[a] === 'green');
+    const reds = was.filter(a => lights[a] === 'red');
+    const steps = [
+      () => greens.forEach(a => setLight(a, 'yellow')),
+      () => { greens.forEach(a => setLight(a, 'red')); reds.forEach(a => setLight(a, 'redyellow')); },
+      () => reds.forEach(a => setLight(a, 'green'))
+    ];
+    if (reducedMotion()) { steps.forEach(f => f()); done(); return; }
+    steps.forEach((f, k) => timers.push(setTimeout(f, k * LIGHT_STEP_MS)));
+    timers.push(setTimeout(done, steps.length * LIGHT_STEP_MS));
   }
 
   function stopMotion() {

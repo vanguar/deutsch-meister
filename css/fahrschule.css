@@ -168,6 +168,12 @@ html[dir="rtl"] .fs-tr { text-align: right; }
 .fs-mark  { fill: none; stroke: #fff; stroke-opacity: .8; stroke-width: 2; stroke-dasharray: 8 7; }
 .fs-wait  { fill: none; stroke: #fff; stroke-width: 3; }
 .fs-path  { fill: none; stroke: none; }
+/* Светофор: горят только включённые секции */
+.fs-light-box { fill: #1d2228; stroke: rgba(255, 255, 255, .35); stroke-width: 1; }
+.fs-light circle { fill: #3a4048; transition: fill .2s ease; }
+.fs-light.state-red .fs-l-red, .fs-light.state-redyellow .fs-l-red { fill: #ff3b30; }
+.fs-light.state-redyellow .fs-l-yellow, .fs-light.state-yellow .fs-l-yellow { fill: #ffc400; }
+.fs-light.state-green .fs-l-green { fill: #2ee66b; }
 .fs-hint-path {
   fill: none; stroke-width: 3; stroke-linecap: round; stroke-dasharray: 4 5; opacity: .75;
   transition: opacity .3s ease;
@@ -196,5 +202,6 @@ html[dir="rtl"] .fs-tr { text-align: right; }
 
 @media (prefers-reduced-motion: reduce) {
   .fs-blink { animation: none; }
+  .fs-light circle { transition: none; }
   .fs-lines > .fs-line, .fs-car, .fs-hint-path, .fs-badge, .fs-w, .fs-opt { transition: none; }
 }

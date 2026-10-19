@@ -11,8 +11,12 @@
 // LTR, раздел не закрыт пробной версией), отсутствие ошибок в консоли.
 // Озвучку подменяем заглушкой TTS.speak: проверяется очередь, а не звук.
 import { start } from './cdp.mjs';
+import { readFileSync } from 'fs';
 
 const B = 'http://127.0.0.1:8765';
+// уроки по порядку тем — из собранного оглавления
+const IDX = JSON.parse(readFileSync(new URL('../../data/fahrschule/index.json', import.meta.url), 'utf8'));
+const ORDER = IDX.topics.flatMap(t => t.units);
 const c = await start(9335);
 let fail = 0;
 const ok = (cond, msg) => { console.log((cond ? '  ok   ' : '  FAIL ') + msg); if (!cond) fail++; };
@@ -74,9 +78,9 @@ collect();
 
 // ── Список уроков ──
 await c.go(B + '/fahrschule.html', 600);
-ok(await waitFor(`document.querySelectorAll('.fs-tile[data-unit]').length === 3`, 20000), 'три урока пилота');
+ok(await waitFor(`document.querySelectorAll('.fs-tile[data-unit]').length === ${ORDER.length}`, 20000), `все уроки на странице (${ORDER.length})`);
 const hub = await c.ev(`[...document.querySelectorAll('.fs-tile[data-unit]')].map(t => t.dataset.unit).join(',')`);
-ok(hub === 't-01,p-01,k-01', `порядок: ${hub}`);
+ok(hub === ORDER.join(), `порядок по темам: ${hub}`);
 ok(await c.ev(`document.querySelectorAll('.fs-soon').length === 1`), 'плитка «Скоро» с планами');
 const topicsN = await c.ev(`Fahrschule.topics.length`);
 ok(await c.ev(`document.querySelectorAll('.fs-topic-head').length === ${topicsN} && ${topicsN} >= 1`), `темы: ${topicsN} заголовк(а/ов) над уроками`);
@@ -279,6 +283,33 @@ await c.ev(`document.getElementById('fsToHub').click()`);
 ok(await waitFor(`Fahrschule.playing === null && !document.getElementById('fsHub').hidden`, 2000), '«← Все уроки» останавливает озвучку');
 collect();
 
+// ── Перекрёсток со светофором: сигналы, табличка Grünpfeil, смена сигнала ──
+await openUnit('k-02');
+const lsc = JSON.parse(await c.ev(`JSON.stringify(Fahrschule.unit.scenes.map(s => ({ order: s.order, lights: s.lights, k: s.switchAt, signs: s.signs })))`));
+for (let i = 0; i < lsc.length; i++) {
+  const sc = lsc[i];
+  ok(await waitFor(`Fahrschule.scene && Fahrschule.scene.i === ${i} && document.querySelectorAll('#fsScene .fs-car').length === ${sc.order.length}`, 4000), `светофор, сцена ${i + 1}: открыта`);
+  const states = JSON.parse(await c.ev(`JSON.stringify(Object.fromEntries([...document.querySelectorAll('#fsScene .fs-light')].map(g => [g.dataset.light, g.getAttribute('class').replace('fs-light state-', '')])))`));
+  ok(JSON.stringify(Object.keys(states).sort()) === '["E","N","S","W"]' && Object.entries(sc.lights).every(([a, v]) => states[a] === v), `светофор, сцена ${i + 1}: сигналы ${JSON.stringify(states)}`);
+  for (const [a, sid] of Object.entries(sc.signs)) {
+    ok(await c.ev(`[...document.querySelectorAll('#fsScene image')].some(im => /${sid}\.svg/.test(im.getAttribute('href')))`), `светофор, сцена ${i + 1}: табличка ${sid} у подъезда ${a}`);
+  }
+  const auditL = JSON.parse(await c.ev(TIP_AUDIT));
+  ok(auditL.bad.length === 0, `светофор, сцена ${i + 1}: подсказки у всех слов`);
+  const redSide = Object.keys(sc.lights).find(a => sc.lights[a] === 'red');
+  const greenSide = Object.keys(sc.lights).find(a => sc.lights[a] === 'green');
+  for (const id of sc.order) await c.ev(`document.querySelector('#fsScene .fs-car[data-car="${id}"]').dispatchEvent(new MouseEvent('click', { bubbles: true }))`);
+  // смена сигнала по-немецки: зелёный → жёлтый; красный → красный+жёлтый → зелёный
+  ok(await waitFor(`!!document.querySelector('#fsScene .fs-light[data-light="${greenSide}"].state-yellow')`, 9000), `светофор, сцена ${i + 1}: зелёный сменился на жёлтый`);
+  ok(await waitFor(`!!document.querySelector('#fsScene .fs-light[data-light="${redSide}"].state-redyellow')`, 3000), `светофор, сцена ${i + 1}: у поперечных красный+жёлтый`);
+  if (i === 2) await c.shot('fs_k02_switch.png');
+  ok(await waitFor(`!!document.querySelector('#fsScene .fs-light[data-light="${redSide}"].state-green')`, 3000), `светофор, сцена ${i + 1}: затем зелёный`);
+  ok(await waitFor(`document.querySelector('#fsStatus.is-right') && document.querySelectorAll('.fs-explain .fs-line').length > 0`, 12000), `светофор, сцена ${i + 1}: верный порядок принят, пояснение`);
+  if (i === 2) await c.shot('fs_k02_done.png');
+  if (i < lsc.length - 1) await c.ev(`ReaderSpeak.stop(); document.querySelector('[data-scene-next]').click()`);
+}
+collect();
+
 // ── Светлая тема ──
 await c.ev(`localStorage.setItem('dm_theme', 'light')`);
 await openUnit('k-01');
@@ -293,10 +324,10 @@ collect();
 for (const lang of ['uk', 'ar']) {
   await setLang(lang);
   await c.go(B + '/fahrschule.html', 600);
-  ok(await waitFor(`document.querySelectorAll('.fs-tile[data-unit]').length === 3`, 20000), `${lang}: список уроков`);
+  ok(await waitFor(`document.querySelectorAll('.fs-tile[data-unit]').length === ${ORDER.length}`, 20000), `${lang}: список уроков`);
   ok(await c.ev(`!document.querySelector('.ar-trial')`), `${lang}: раздел открыт без плашек пробной версии`);
   if (lang === 'ar') ok(await c.ev(`document.documentElement.dir === 'rtl'`), 'ar: интерфейс RTL');
-  for (const id of ['t-01', 'p-01', 'k-01']) {
+  for (const id of ORDER) {
     await openUnit(id);
     const r = JSON.parse(await c.ev(`JSON.stringify({
       tr: [...document.querySelectorAll('.fs-tr, .dlg-title-tr, .dlg-situation')].map(e => e.textContent).join(' '),
@@ -312,10 +343,10 @@ for (const lang of ['uk', 'ar']) {
     }
     ok(r.de, `${lang} ${id}: немецкий текст LTR`);
     ok(r.hs, `${lang} ${id}: нет горизонтальной прокрутки`);
-    const w = id === 'p-01' ? 'kupplung' : 'kreuzung';
+    const w = id === 'p-01' ? 'kupplung' : id === 'k-02' ? 'ampel' : 'kreuzung';
     await c.ev(`document.querySelector('.fs-w[data-t="${w}"]').click()`);
     const t = await c.ev(`(document.querySelector('.word-tip.word-tip-visible') || {}).textContent || ''`);
-    ok(lang === 'uk' ? /перехрестя|зчеплення/.test(t) : /تقاطع|القابض/.test(t), `${lang} ${id}: подсказка на своём языке`);
+    ok(lang === 'uk' ? /перехрестя|зчеплення|світлофор/.test(t) : /تقاطع|القابض|إشارة ضوئية/.test(t), `${lang} ${id}: подсказка на своём языке`);
     await c.ev(`ReaderTip.close()`);
     if (id === 'k-01') await c.shot(`fs_k01_${lang}.png`);
     if (id === 't-01') await c.shot(`fs_t01_${lang}.png`);

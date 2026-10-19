@@ -1,0 +1,508 @@
+{
+ "id": "k-02",
+ "kind": "junction",
+ "emoji": "🚥",
+ "level": "A2–B1",
+ "title": "Ampel und grüner Pfeil",
+ "titleTr": "Светофор и зелёная стрелка",
+ "intro": "Светофор главнее знаков и правила «правый перед левым». Три ситуации: зелёный против правила, поворот налево на зелёный и зелёная стрелка-табличка — немецкая особенность. Смотрите, как переключается сигнал: в Германии перед зелёным горят красный и жёлтый вместе.",
+ "scenes": [
+  {
+   "situation": {
+    "de": "An dieser Kreuzung gibt es eine Ampel.",
+    "tr": "На этом перекрёстке есть светофор.",
+    "o": {
+     "es": "es>es gibt"
+    }
+   },
+   "cars": [
+    {
+     "id": "blue",
+     "from": "S",
+     "turn": "straight"
+    },
+    {
+     "id": "red",
+     "from": "E",
+     "turn": "straight"
+    }
+   ],
+   "signs": {},
+   "order": [
+    "blue",
+    "red"
+   ],
+   "explain": [
+    {
+     "de": "Die Ampel ist wichtiger als die Regel rechts vor links.",
+     "tr": "Светофор важнее правила «правый перед левым»."
+    },
+    {
+     "de": "Das blaue Auto hat Grün und fährt zuerst.",
+     "tr": "У синей машины зелёный, она едет первой."
+    },
+    {
+     "de": "Das rote Auto kommt zwar von rechts, aber es hat Rot und muss warten.",
+     "tr": "Красная машина хоть и едет справа, но у неё красный, и она должна ждать."
+    }
+   ],
+   "lights": {
+    "S": "green",
+    "N": "green",
+    "W": "red",
+    "E": "red"
+   },
+   "switchAt": 1
+  },
+  {
+   "situation": {
+    "de": "Zwei Autos haben gleichzeitig Grün.",
+    "tr": "У двух машин одновременно зелёный."
+   },
+   "cars": [
+    {
+     "id": "blue",
+     "from": "S",
+     "turn": "straight"
+    },
+    {
+     "id": "green",
+     "from": "N",
+     "turn": "left"
+    },
+    {
+     "id": "yellow",
+     "from": "W",
+     "turn": "straight"
+    }
+   ],
+   "signs": {},
+   "order": [
+    "blue",
+    "green",
+    "yellow"
+   ],
+   "explain": [
+    {
+     "de": "Das grüne Auto biegt links ab und lässt das blaue Auto zuerst durchfahren.",
+     "tr": "Зелёная машина поворачивает налево и сначала пропускает синюю."
+    },
+    {
+     "de": "Auch bei Grün gilt: Wer links abbiegt, wartet auf den Gegenverkehr.",
+     "tr": "И на зелёный действует правило: кто поворачивает налево, ждёт встречных."
+    },
+    {
+     "de": "Das gelbe Auto hat Rot. Es fährt erst bei Grün.",
+     "tr": "У жёлтой машины красный. Она поедет только на зелёный."
+    }
+   ],
+   "lights": {
+    "S": "green",
+    "N": "green",
+    "W": "red",
+    "E": "red"
+   },
+   "switchAt": 2
+  },
+  {
+   "situation": {
+    "de": "Neben der roten Ampel hängt ein grüner Pfeil.",
+    "tr": "Рядом с красным сигналом висит табличка с зелёной стрелкой."
+   },
+   "cars": [
+    {
+     "id": "blue",
+     "from": "W",
+     "turn": "straight"
+    },
+    {
+     "id": "red",
+     "from": "S",
+     "turn": "right"
+    },
+    {
+     "id": "green",
+     "from": "N",
+     "turn": "straight"
+    }
+   ],
+   "signs": {
+    "S": "z720"
+   },
+   "order": [
+    "blue",
+    "red",
+    "green"
+   ],
+   "explain": [
+    {
+     "de": "Mit dem grünen Pfeil darf das rote Auto bei Rot rechts abbiegen.",
+     "tr": "С табличкой зелёной стрелки красная машина может на красный повернуть направо."
+    },
+    {
+     "de": "Aber zuerst muss es an der Haltlinie anhalten und das blaue Auto mit Grün durchfahren lassen.",
+     "tr": "Но сначала она должна остановиться у стоп-линии и пропустить синюю машину, у которой зелёный."
+    },
+    {
+     "de": "Das grüne Auto fährt geradeaus und wartet, bis die Ampel Grün zeigt.",
+     "tr": "Зелёная машина едет прямо и ждёт, пока светофор не покажет зелёный."
+    }
+   ],
+   "lights": {
+    "S": "red",
+    "N": "red",
+    "W": "green",
+    "E": "green"
+   },
+   "switchAt": 2
+  }
+ ],
+ "signs": {
+  "z720": {
+   "de": "Grünpfeil",
+   "tr": "Зелёная стрелка: направо на красный после остановки",
+   "src": "data/fahrschule/signs/z720.svg",
+   "n": "720",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_720_-_Gr%C3%BCnpfeil,_StVO_1994.svg"
+  }
+ },
+ "gloss": {
+  "w": {
+   "ab": "abbiegen",
+   "abbiegen": "abbiegen",
+   "abbiegt": "abbiegen",
+   "aber": "aber",
+   "als": "als",
+   "ampel": "Ampel",
+   "an": "an",
+   "anhalten": "anhalten",
+   "auch": "auch",
+   "auf": "auf",
+   "auto": "Auto",
+   "autos": "Auto",
+   "bei": "bei",
+   "biegt": "abbiegen",
+   "bis": "bis",
+   "blaue": "blau",
+   "darf": "dürfen",
+   "das": "der/die/das",
+   "dem": "der/die/das",
+   "den": "der/die/das",
+   "der": "der/die/das",
+   "die": "der/die/das",
+   "dieser": "dieser",
+   "durchfahren": "durchfahren",
+   "ein": "ein/eine",
+   "eine": "ein/eine",
+   "erst": "erst",
+   "es": "es",
+   "es>es gibt": "es gibt",
+   "fährt": "fahren",
+   "gegenverkehr": "Gegenverkehr",
+   "gelbe": "gelb",
+   "geradeaus": "geradeaus",
+   "gibt": "es gibt",
+   "gilt": "gelten",
+   "gleichzeitig": "gleichzeitig",
+   "grün": "grün",
+   "grüne": "grün",
+   "grünen": "grün",
+   "grüner": "grün",
+   "grünpfeil": "Grünpfeil",
+   "haben": "haben",
+   "haltlinie": "Haltlinie",
+   "hat": "haben",
+   "hängt": "hängen",
+   "ist": "sein",
+   "kommt": "kommen",
+   "kreuzung": "Kreuzung",
+   "lassen": "lassen",
+   "links": "links",
+   "lässt": "lassen",
+   "mit": "mit",
+   "muss": "müssen",
+   "neben": "neben",
+   "pfeil": "Pfeil",
+   "rechts": "rechts",
+   "regel": "Regel",
+   "rot": "rot",
+   "rote": "rot",
+   "roten": "rot",
+   "und": "und",
+   "von": "von",
+   "vor": "vor",
+   "warten": "warten",
+   "wartet": "warten",
+   "wer": "wer",
+   "wichtiger": "wichtig",
+   "zeigt": "zeigen",
+   "zuerst": "zuerst",
+   "zwar": "zwar",
+   "zwei": "zwei"
+  },
+  "l": {
+   "Ampel": {
+    "ru": "светофор",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Ampeln"
+   },
+   "Auto": {
+    "ru": "машина, автомобиль",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Autos"
+   },
+   "Gegenverkehr": {
+    "ru": "встречный транспорт",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": null
+   },
+   "Grünpfeil": {
+    "ru": "зелёная стрелка (табличка у светофора)",
+    "pos": "сущ.",
+    "note": "разрешает направо на красный, но только после полной остановки",
+    "art": "der",
+    "pl": "die Grünpfeile"
+   },
+   "Haltlinie": {
+    "ru": "стоп-линия",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Haltlinien"
+   },
+   "Kreuzung": {
+    "ru": "перекрёсток",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Kreuzungen"
+   },
+   "Pfeil": {
+    "ru": "стрелка",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Pfeile"
+   },
+   "Regel": {
+    "ru": "правило",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Regeln"
+   },
+   "abbiegen": {
+    "ru": "поворачивать",
+    "pos": "гл.",
+    "note": "отделяемая приставка: Sie biegen … ab",
+    "forms": "bog ab · ist abgebogen"
+   },
+   "aber": {
+    "ru": "но",
+    "pos": "союз"
+   },
+   "als": {
+    "ru": "чем (при сравнении); как",
+    "pos": "союз"
+   },
+   "an": {
+    "ru": "у, на, при",
+    "pos": "предл.",
+    "note": "am = an dem; an der Kreuzung — на перекрёстке"
+   },
+   "anhalten": {
+    "ru": "останавливаться",
+    "pos": "гл.",
+    "forms": "hielt an · hat angehalten"
+   },
+   "auch": {
+    "ru": "тоже; даже (auch wenn)",
+    "pos": "нареч."
+   },
+   "auf": {
+    "ru": "на, по",
+    "pos": "предл.",
+    "note": "auf der Straße — на дороге; achten auf — следить за"
+   },
+   "bei": {
+    "ru": "при, у; на (о сигнале)",
+    "pos": "предл.",
+    "note": "bei Rot — на красный, bei Grün — на зелёный"
+   },
+   "bis": {
+    "ru": "пока не; до",
+    "pos": "союз"
+   },
+   "blau": {
+    "ru": "синий",
+    "pos": "прил."
+   },
+   "der/die/das": {
+    "ru": "определённый артикль",
+    "pos": "артикль",
+    "note": "der — м. р., die — ж. р. и мн. ч., das — ср. р.; den — м. р. в винительном, dem — м. и ср. р. в дательном; das ещё значит «это»"
+   },
+   "dieser": {
+    "ru": "этот, эта, это",
+    "pos": "мест."
+   },
+   "durchfahren": {
+    "ru": "проезжать",
+    "pos": "гл.",
+    "forms": "fuhr durch · ist durchgefahren"
+   },
+   "dürfen": {
+    "ru": "мочь, иметь право",
+    "pos": "гл.",
+    "forms": "durfte · hat gedurft"
+   },
+   "ein/eine": {
+    "ru": "неопределённый артикль; один",
+    "pos": "артикль",
+    "note": "an einer Kreuzung — на (каком-то) перекрёстке"
+   },
+   "erst": {
+    "ru": "только (не раньше чем)",
+    "pos": "нареч."
+   },
+   "es": {
+    "ru": "оно; это",
+    "pos": "мест.",
+    "note": "здесь — о машине: das Auto"
+   },
+   "es gibt": {
+    "ru": "есть, имеется",
+    "pos": "выраж."
+   },
+   "fahren": {
+    "ru": "ехать; водить машину",
+    "pos": "гл.",
+    "forms": "fuhr · ist gefahren"
+   },
+   "gelb": {
+    "ru": "жёлтый",
+    "pos": "прил."
+   },
+   "gelten": {
+    "ru": "действовать (о правиле)",
+    "pos": "гл.",
+    "forms": "galt · hat gegolten"
+   },
+   "geradeaus": {
+    "ru": "прямо",
+    "pos": "нареч."
+   },
+   "gleichzeitig": {
+    "ru": "одновременно",
+    "pos": "нареч."
+   },
+   "grün": {
+    "ru": "зелёный",
+    "pos": "прил.",
+    "note": "Grün (с большой) — зелёный сигнал: bei Grün — на зелёный"
+   },
+   "haben": {
+    "ru": "иметь",
+    "pos": "гл.",
+    "note": "Vorfahrt haben — иметь преимущество",
+    "forms": "hatte · hat gehabt"
+   },
+   "hängen": {
+    "ru": "висеть",
+    "pos": "гл.",
+    "forms": "hing · hat gehangen"
+   },
+   "kommen": {
+    "ru": "приходить; ехать (приближаться)",
+    "pos": "гл.",
+    "note": "von rechts kommen — ехать справа",
+    "forms": "kam · ist gekommen"
+   },
+   "lassen": {
+    "ru": "позволять; пропускать; оставлять",
+    "pos": "гл.",
+    "note": "jemanden fahren lassen — пропустить кого-то вперёд",
+    "forms": "ließ · hat gelassen"
+   },
+   "links": {
+    "ru": "слева; налево",
+    "pos": "нареч."
+   },
+   "mit": {
+    "ru": "с",
+    "pos": "предл."
+   },
+   "müssen": {
+    "ru": "быть должным",
+    "pos": "гл.",
+    "forms": "musste · hat gemusst"
+   },
+   "neben": {
+    "ru": "рядом с, возле",
+    "pos": "предл."
+   },
+   "rechts": {
+    "ru": "справа; направо",
+    "pos": "нареч."
+   },
+   "rot": {
+    "ru": "красный",
+    "pos": "прил.",
+    "note": "Rot (с большой) — красный сигнал: bei Rot — на красный"
+   },
+   "sein": {
+    "ru": "быть",
+    "pos": "гл.",
+    "forms": "war · ist gewesen"
+   },
+   "und": {
+    "ru": "и",
+    "pos": "союз"
+   },
+   "von": {
+    "ru": "от, из, с",
+    "pos": "предл.",
+    "note": "vom = von dem; von rechts — справа"
+   },
+   "vor": {
+    "ru": "перед",
+    "pos": "предл.",
+    "note": "rechts vor links — правый перед левым"
+   },
+   "warten": {
+    "ru": "ждать",
+    "pos": "гл.",
+    "note": "warten auf — ждать (кого-то)",
+    "forms": "wartete · hat gewartet"
+   },
+   "wer": {
+    "ru": "кто",
+    "pos": "мест."
+   },
+   "wichtig": {
+    "ru": "важный",
+    "pos": "прил.",
+    "note": "wichtiger als — важнее, чем",
+    "forms": "wichtig · wichtiger · am wichtigsten"
+   },
+   "zeigen": {
+    "ru": "показывать",
+    "pos": "гл.",
+    "forms": "zeigte · hat gezeigt"
+   },
+   "zuerst": {
+    "ru": "сначала, первым",
+    "pos": "нареч."
+   },
+   "zwar": {
+    "ru": "хотя, правда",
+    "pos": "частица",
+    "note": "zwar …, aber — хоть и …, но"
+   },
+   "zwei": {
+    "ru": "два",
+    "pos": "числ."
+   }
+  }
+ }
+}
