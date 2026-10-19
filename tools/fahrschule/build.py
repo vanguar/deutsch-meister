@@ -74,11 +74,15 @@ PLURAL = {'uk': ('мн.:', 'мн. немає'), 'ar': ('الجمع:', 'لا جم
 
 KINDS = ('theory', 'dialog', 'junction', 'road')
 PREFIX = {'theory': 't', 'dialog': 'p', 'junction': 'k', 'road': 'r'}   # t-01, p-01, k-01, r-03
-ROAD_TYPES = ('stop', 'gap', 'side', 'overtake', 'zipper')
+ROAD_TYPES = ('stop', 'gap', 'side', 'overtake', 'zipper', 'parkspot', 'parallel')
 NUMERIC_ROAD = ('stop', 'gap', 'side')        # ответ — метры
 HAZARDS = ('ball', 'deer')
 # Боковой интервал при обгоне пешеходов и велосипедистов (§ 5 Abs. 4 StVO, с 2020)
 SIDE_GAP = {'innerorts': 1.5, 'außerorts': 2}
+# Где нельзя ставить машину, метры (§ 12 StVO): перекрёсток — 5 м (Abs. 3 Nr. 1),
+# «зебра» — 5 м, там нельзя даже остановиться (Abs. 1), остановка автобуса —
+# 15 м от знака 224 (Abs. 3 Nr. 4)
+PARK_LIMIT = {'crossing': 5, 'zebra': 5, 'bus': 15}
 CARS = ('blue', 'red', 'green', 'yellow')
 APPROACH = ('S', 'W', 'N', 'E')
 TURNS = ('straight', 'left', 'right')
@@ -285,6 +289,17 @@ def road_answer(sc):
     if t == 'zipper':
         # Reißverschluss: перестраиваться в самом конце полосы, по очереди (§ 7 Abs. 4 StVO)
         return {'answer': 'end'}
+    if t == 'parkspot':
+        if sc.get('near') not in PARK_LIMIT:
+            return 'near — ' + ', '.join(PARK_LIMIT)
+        d = sc.get('dist')
+        if not isinstance(d, (int, float)) or not 0 < d <= 30:
+            return f'dist — расстояние в метрах (0–30), а не {d!r}'
+        limit = PARK_LIMIT[sc['near']]
+        return {'answer': 'yes' if d >= limit else 'no', 'limit': limit}
+    if t == 'parallel':
+        # в узкий карман вдоль бордюра — задним ходом
+        return {'answer': 'back'}
     v = sc.get('v')
     if not isinstance(v, int) or v % 10 or not 10 <= v <= 200:
         return f'скорость v — целое кратное 10, а не {v!r}'
@@ -535,7 +550,9 @@ def main():
                     for k in ('reaction', 'brake', 'answer'):
                         if k in got and f'{got[k]:g}' not in nums:
                             err(f'{w}: в пояснении нет числа {got[k]:g} ({k})')
-                else:
+                elif 'limit' in got and not any(str(got['limit']) in re.findall(r'\d+', e.get('de', '')) for e in expl_src):
+                    err(f'{w}: в пояснении нет предельного расстояния {got["limit"]} м')
+                if sc['type'] not in NUMERIC_ROAD:
                     # варианты-фразы: {key, de, tr}; ответ — key
                     opt_keys = [o.get('key') for o in opts if isinstance(o, dict)]
                     if len(opt_keys) != len(opts) or len(set(opt_keys)) != len(opt_keys) or not 2 <= len(opt_keys) <= 3:
@@ -566,7 +583,7 @@ def main():
                     if sc['type'] == 'stop':
                         scene['hazard'] = sc['hazard']
                         scene['emergency'] = bool(sc.get('emergency'))
-                    for k in ('where', 'line', 'oncoming', 'sign'):
+                    for k in ('where', 'line', 'oncoming', 'sign', 'near', 'dist'):
                         if k in sc:
                             scene[k] = sc[k]
                     out[lang].append(scene)

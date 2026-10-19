@@ -57,6 +57,10 @@ SIGNS = {
     'z280': 'File:Zeichen 280 - Ende des Überholverbotes für Kraftfahrzeuge aller Art, StVO 1992.svg',
     'z295': 'File:Zeichen 295 - Fahrstreifenbegrenzung und Fahrbahnbegrenzung, StVO 1970.svg',
     'z2771': 'File:Zeichen 277.1 - Verbot des Überholens von einspurigen Fahrzeugen für mehrspurige Kraftfahrzeuge und Krafträdern mit Beiwagen; StVO 2020.svg',
+    'z224': 'File:Zeichen 224 - Haltestelle, StVO 2017.svg',
+    'z314': 'File:Zeichen 314 - Parken, StVO 2017.svg',
+    'z315': 'File:Zeichen 315 - Parken auf Gehwegen, StVO 1970.svg',
+    'z318': 'File:Zeichen 318 - Parkscheibe, StVO 2013.svg',
 }
 
 # SVG с Commons встраивается как <img>: скрипты там и так не исполняются,

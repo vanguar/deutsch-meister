@@ -84,6 +84,12 @@ ok(build.road_answer({'type': 'overtake', 'line': 'dashed', 'oncoming': True}) =
 ok(build.road_answer({'type': 'overtake', 'line': 'solid'}) == {'answer': 'no'}, 'обгон: сплошная линия — нельзя')
 ok(build.road_answer({'type': 'overtake', 'line': 'dashed', 'sign': 'z276'}) == {'answer': 'no'}, 'обгон: знак 276 — нельзя')
 ok(build.road_answer({'type': 'zipper'}) == {'answer': 'end'}, 'молния: перестраиваться в конце полосы')
+ok(build.road_answer({'type': 'parkspot', 'near': 'crossing', 'dist': 3}) == {'answer': 'no', 'limit': 5}, 'парковка в 3 м от перекрёстка — нельзя (5 м)')
+ok(build.road_answer({'type': 'parkspot', 'near': 'crossing', 'dist': 5}) == {'answer': 'yes', 'limit': 5}, 'ровно 5 м от перекрёстка — можно')
+ok(build.road_answer({'type': 'parkspot', 'near': 'bus', 'dist': 10}) == {'answer': 'no', 'limit': 15}, 'остановка автобуса: 10 м — нельзя (15 м)')
+ok(build.road_answer({'type': 'parkspot', 'near': 'zebra', 'dist': 4})['answer'] == 'no', '«зебра»: 4 м — нельзя')
+ok('near' in str(build.road_answer({'type': 'parkspot', 'near': 'tree', 'dist': 4})), 'неизвестный объект — ошибка сцены')
+ok(build.road_answer({'type': 'parallel'}) == {'answer': 'back'}, 'параллельная парковка — задним ходом')
 
 
 # ── 2. Сборка ловит ошибки и ничего не пишет ──

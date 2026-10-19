@@ -407,9 +407,19 @@ for (const id of IDX.units.filter(u => u.kind === 'road').map(u => u.id)) {
         }
         if (sc.oncoming) ok(await c.ev(`!!document.querySelector('#fsScene [data-actor="oncoming"]')`), `${tag}: встречная машина`);
         if (sc.line === 'solid') ok(await c.ev(`!!document.querySelector('#fsScene .fs-mark.is-solid')`), `${tag}: сплошная линия`);
+        if (sc.type === 'parallel') {
+          ok(await waitFor(`document.querySelector('#fsScene [data-actor="me"]').getAttribute('transform').includes('rotate(-')`, 4000), `${tag}: заезд задним ходом под углом`);
+        }
         if (i === 1 && k === picks.length - 1) await c.shot(`fs_${id}_overtake.png`);
       }
       ok(await waitFor(`document.querySelectorAll('.fs-explain .fs-line').length === ${sc.explain.length}`, 8000), `${tag}: пояснение`);
+      if (sc.type === 'parkspot') {
+        const labs = await c.ev(`[...document.querySelectorAll('#fsScene .fs-lab-text')].map(t => t.textContent).join(' | ')`);
+        ok(labs.includes(`${sc.limit} m`) && labs.includes(`${sc.dist} m`) && await c.ev(`!!document.querySelector('#fsScene .fs-lab.is-on .fs-noparking')`),
+          `${tag}: запретная зона ${sc.limit} m и расстояние ${sc.dist} m (${labs})`);
+        if (k === picks.length - 1) await c.shot(`fs_${id}_park${i + 1}.png`);
+      }
+      if (sc.type === 'parallel') await c.shot(`fs_${id}_parallel.png`);
       if (['stop', 'gap', 'side'].includes(sc.type)) {
         const labs = await c.ev(`[...document.querySelectorAll('#fsScene .fs-lab-text')].map(t => t.textContent).join(' | ')`);
         const m = v => String(v).replace('.', ',') + ' m';

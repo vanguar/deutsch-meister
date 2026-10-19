@@ -967,11 +967,13 @@ const Fahrschule = (() => {
     anims[0] = requestAnimationFrame(tick);
   }
 
-  /* ── Сцены с несколькими участниками: обгон, велосипедист, «молния» ──
-     План сцены — участники с ключевыми кадрами {t: 0…1, x, y, b}: x — нос
-     машины, y — центр полосы, b — поворотник ('l' / 'r') на отрезке от
-     этого кадра. Между кадрами — линейно. Один план и рисует сцену
-     (кадр 0, а после ответа — «снимок» snap), и анимирует её. */
+  /* ── Сцены с несколькими участниками: обгон, велосипедист, «молния»,
+     парковка ──
+     План сцены — участники с ключевыми кадрами {t: 0…1, x, y, r, b}: x — нос
+     машины, y — центр полосы, r — поворот кузова вокруг носа (градусы),
+     b — поворотник ('l' / 'r') на отрезке от этого кадра. Между кадрами —
+     линейно. Один план и рисует сцену (кадр 0, а после ответа — «снимок»
+     snap), и анимирует её. Неподвижные машины — один кадр. */
 
   const LANE_UP = 53;       // встречная / левая полоса
   const LANE_DOWN = 79;     // наша / правая полоса
@@ -1009,6 +1011,36 @@ const Fahrschule = (() => {
         dur: 3200, snap: 0.6, line: 'dashed', gapLabel: true
       };
     },
+    // Можно ли здесь парковаться: машина заезжает в карман у тротуара,
+    // после ответа видны запретная зона (красным) и расстояние в метрах.
+    // Масштаб 8 px = 1 м. У перекрёстка и остановки машина стоит после
+    // объекта, у «зебры» — перед ней (запрет — до 5 м перед переходом).
+    parkspot(sc) {
+      const S = 8;
+      const before = sc.near === 'zebra';
+      const edge = sc.near === 'zebra' ? 230 : sc.near === 'bus' ? 70 : 80;
+      const front = before ? edge - sc.dist * S : edge + sc.dist * S + 28;
+      return {
+        actors: [{ id: 'me', kind: 'car', fill: CAR.blue.fill, keys: [
+          { t: 0, x: 12, y: LANE_UP + 10 }, { t: 0.5, x: front - 16, y: LANE_UP + 10, b: 'r' },
+          { t: 0.85, x: front, y: 84, b: 'r' }, { t: 1, x: front, y: 84 }] }],
+        dur: 2800, snap: 1, line: 'dashed', park: { S, edge, front, before }
+      };
+    },
+    // Параллельная парковка задним ходом: встать рядом с передней машиной,
+    // поворотник вправо, назад с поворотом кузова, затем выровняться
+    parallel() {
+      return {
+        actors: [
+          { id: 'a', kind: 'car', fill: CAR.green.fill, keys: [{ t: 0, x: 150, y: 84 }] },
+          { id: 'b', kind: 'car', fill: CAR.red.fill, keys: [{ t: 0, x: 250, y: 84 }] },
+          { id: 'me', kind: 'car', fill: CAR.blue.fill, keys: [
+            { t: 0, x: 40, y: 62 }, { t: 0.32, x: 258, y: 62, b: 'r' }, { t: 0.4, x: 258, y: 62, b: 'r' },
+            { t: 0.62, x: 236, y: 70, r: -30, b: 'r' }, { t: 0.84, x: 214, y: 82, r: -6 }, { t: 1, x: 212, y: 84 }] }
+        ],
+        dur: 4200, snap: 1, line: 'dashed', curb: true
+      };
+    },
     zipper() {
       return {
         actors: [
@@ -1030,14 +1062,14 @@ const Fahrschule = (() => {
       const a = keys[i - 1], b = keys[i];
       if (t <= b.t) {
         const k = (t - a.t) / ((b.t - a.t) || 1);
-        return { x: a.x + (b.x - a.x) * k, y: a.y + (b.y - a.y) * k, b: a.b };
+        return { x: a.x + (b.x - a.x) * k, y: a.y + (b.y - a.y) * k, r: (a.r || 0) + ((b.r || 0) - (a.r || 0)) * k, b: a.b };
       }
     }
     return keys[keys.length - 1];
   }
 
   function actorTransform(a, k) {
-    return `translate(${k.x.toFixed(1)} ${k.y.toFixed(1)})${a.dir === -1 ? ' scale(-1 1)' : ''}`;
+    return `translate(${k.x.toFixed(1)} ${k.y.toFixed(1)})${k.r ? ` rotate(${k.r.toFixed(1)})` : ''}${a.dir === -1 ? ' scale(-1 1)' : ''}`;
   }
 
   function actorHtml(a, k) {
@@ -1072,6 +1104,8 @@ const Fahrschule = (() => {
       : '';
     const sign = sc.sign && unit.signs[sc.sign]
       ? `<image href="${esc(unit.signs[sc.sign].src)}" x="286" y="8" width="26" height="26"/>` : '';
+    const curb = plan.park || plan.curb ? `<rect class="fs-sidewalk" x="0" y="92" width="${ROAD_W}" height="12"/>` : '';
+    const park = plan.park ? parkHtml(sc, plan.park, final) : '';
     const gap = plan.gapLabel ? `<g class="fs-lab${final ? ' is-on' : ''}">
         <path class="fs-bracket" d="M182 60 H192 M187 60 V75 M182 75 H192"/><path class="fs-leader" d="M192 68 H232 V104"/>
         <text class="fs-lab-text" x="232" y="117">${String(sc.answer).replace('.', ',')} m</text></g>` : '';
@@ -1079,10 +1113,33 @@ const Fahrschule = (() => {
       <rect class="fs-grass" x="0" y="0" width="${ROAD_W}" height="130"/>
       <rect class="fs-road" x="0" y="40" width="${ROAD_W}" height="52"/>
       <path class="fs-mark${solid ? ' is-solid' : ''}" d="M0 66 H${plan.laneEnds ? 222 : ROAD_W}"/>
-      ${ends}${sign}
+      ${curb}${ends}${sign}${park}
       ${plan.actors.map(a => actorHtml(a, keyAt(a.keys, t))).join('')}
       ${gap}
     </svg>`;
+  }
+
+  // Перекрёсток / «зебра» / остановка, запретная зона и расстояние до машины
+  function parkHtml(sc, p, final) {
+    const z = sc.limit * p.S;
+    let obj = '';
+    if (sc.near === 'crossing') {
+      obj = `<rect class="fs-road" x="${p.edge - 40}" y="92" width="40" height="38"/>`;
+    } else if (sc.near === 'zebra') {
+      for (let y = 43; y < 90; y += 8) obj += `<rect class="fs-zebra" x="${p.edge}" y="${y}" width="26" height="4.5"/>`;
+    } else if (sc.near === 'bus' && sc.sign && unit.signs[sc.sign]) {
+      obj = `<image href="${esc(unit.signs[sc.sign].src)}" x="${p.edge - 9}" y="96" width="18" height="18"/>`;
+    }
+    const zx = p.before ? p.edge - z : p.edge;
+    const carEnd = p.before ? p.front : p.front - 28;     // ближний к объекту край машины
+    const lo = Math.min(p.edge, carEnd), hi = Math.max(p.edge, carEnd);
+    return `${obj}
+      <g class="fs-lab${final ? ' is-on' : ''}">
+        <rect class="fs-noparking" x="${zx}" y="76" width="${z}" height="16"/>
+        <text class="fs-lab-text is-b" x="${zx + z / 2}" y="73">${sc.limit} m</text>
+        <path class="fs-bracket" d="M${lo} 108 V114 H${hi} V108"/>
+        <text class="fs-lab-text" x="${(lo + hi) / 2}" y="126">${String(sc.dist).replace('.', ',')} m</text>
+      </g>`;
   }
 
   function animatePlan(sc, svg, done) {

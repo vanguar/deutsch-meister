@@ -43,6 +43,15 @@
     "p-04",
     "r-04"
    ]
+  },
+  {
+   "id": "parken",
+   "emoji": "🅿️",
+   "title": "Halten und Parken",
+   "titleTr": "Остановка и стоянка",
+   "units": [
+    "r-05"
+   ]
   }
  ],
  "units": [
@@ -153,6 +162,15 @@
    "title": "Überholen und Spurwechsel",
    "titleTr": "Обгон и перестроение",
    "count": 5
+  },
+  {
+   "id": "r-05",
+   "kind": "road",
+   "emoji": "🅿️",
+   "level": "A2–B1",
+   "title": "Wo darf ich parken?",
+   "titleTr": "Где можно парковаться?",
+   "count": 4
   }
  ]
 }

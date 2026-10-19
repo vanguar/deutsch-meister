@@ -1,0 +1,589 @@
+{
+ "id": "r-05",
+ "kind": "road",
+ "emoji": "🅿️",
+ "level": "A2–B1",
+ "title": "Wo darf ich parken?",
+ "titleTr": "Де можна паркуватися?",
+ "intro": "Вільне місце — ще не означає, що там можна стояти. Вирішіть, чи можна паркуватися, — і подивіться заборонену зону. Наприкінці — паралельне паркування заднім ходом.",
+ "scenes": [
+  {
+   "type": "parkspot",
+   "options": [
+    {
+     "key": "yes",
+     "de": "Ja, hier darf ich parken.",
+     "tr": "Так, тут паркуватися можна."
+    },
+    {
+     "key": "no",
+     "de": "Nein, hier ist Parken verboten.",
+     "tr": "Ні, тут паркування заборонено."
+    }
+   ],
+   "situation": {
+    "de": "Direkt hinter der Kreuzung ist eine Lücke frei.",
+    "tr": "Одразу за перехрестям є вільне місце."
+   },
+   "question": {
+    "de": "Dürfen Sie hier parken?",
+    "tr": "Чи можна тут паркуватися?"
+   },
+   "explain": [
+    {
+     "de": "Bis 5 Meter vor und hinter einer Kreuzung ist Parken verboten.",
+     "tr": "Ближче ніж 5 метрів до перехрестя і після нього паркуватися заборонено."
+    },
+    {
+     "de": "Ihre Lücke beginnt schon nach 3 Metern. Suchen Sie einen anderen Platz.",
+     "tr": "Ваше місце починається вже через 3 метри. Пошукайте інше."
+    }
+   ],
+   "answer": "no",
+   "limit": 5,
+   "near": "crossing",
+   "dist": 3
+  },
+  {
+   "type": "parkspot",
+   "options": [
+    {
+     "key": "yes",
+     "de": "Ja, hier darf ich parken.",
+     "tr": "Так, тут паркуватися можна."
+    },
+    {
+     "key": "no",
+     "de": "Nein, hier ist Parken verboten.",
+     "tr": "Ні, тут паркування заборонено."
+    }
+   ],
+   "situation": {
+    "de": "Die Lücke ist 20 Meter hinter einer Bushaltestelle.",
+    "tr": "Вільне місце за 20 метрів за зупинкою автобуса."
+   },
+   "question": {
+    "de": "Dürfen Sie hier parken?",
+    "tr": "Чи можна тут паркуватися?"
+   },
+   "explain": [
+    {
+     "de": "Vor und hinter dem Haltestellenschild ist Parken auf 15 Metern verboten.",
+     "tr": "Перед знаком зупинки і за ним паркуватися заборонено на 15 метрів."
+    },
+    {
+     "de": "Hier sind es 20 Meter. Sie dürfen also parken.",
+     "tr": "Тут 20 метрів. Отже, паркуватися можна."
+    }
+   ],
+   "answer": "yes",
+   "limit": 15,
+   "sign": "z224",
+   "near": "bus",
+   "dist": 20
+  },
+  {
+   "type": "parkspot",
+   "options": [
+    {
+     "key": "yes",
+     "de": "Ja, hier darf ich parken.",
+     "tr": "Так, тут паркуватися можна."
+    },
+    {
+     "key": "no",
+     "de": "Nein, hier ist Parken verboten.",
+     "tr": "Ні, тут паркування заборонено."
+    }
+   ],
+   "situation": {
+    "de": "Vor einem Zebrastreifen ist noch Platz für Ihr Auto.",
+    "tr": "Перед «зеброю» ще є місце для вашої машини."
+   },
+   "question": {
+    "de": "Dürfen Sie hier parken?",
+    "tr": "Чи можна тут паркуватися?"
+   },
+   "explain": [
+    {
+     "de": "Bis 5 Meter vor einem Zebrastreifen dürfen Sie nicht einmal halten.",
+     "tr": "Ближче ніж 5 метрів перед «зеброю» не можна навіть зупинятися."
+    },
+    {
+     "de": "Fußgänger und Autofahrer müssen sich gut sehen können.",
+     "tr": "Пішоходи й водії мають добре бачити одне одного."
+    }
+   ],
+   "answer": "no",
+   "limit": 5,
+   "near": "zebra",
+   "dist": 4
+  },
+  {
+   "type": "parallel",
+   "options": [
+    {
+     "key": "back",
+     "de": "Rückwärts in die Lücke.",
+     "tr": "Заднім ходом на місце."
+    },
+    {
+     "key": "front",
+     "de": "Vorwärts in die Lücke.",
+     "tr": "Передом на місце."
+    }
+   ],
+   "situation": {
+    "de": "Am Straßenrand ist eine Lücke zwischen zwei Autos.",
+    "tr": "Біля краю дороги між двома машинами є вільне місце."
+   },
+   "question": {
+    "de": "Wie parken Sie am besten ein?",
+    "tr": "Як найкраще заїхати на це місце?",
+    "o": {
+     "ein": "ein>einparken",
+     "parken": "parken>einparken"
+    }
+   },
+   "explain": [
+    {
+     "de": "In eine enge Lücke am Straßenrand parken Sie rückwärts ein.",
+     "tr": "У вузьке місце біля краю дороги паркуються заднім ходом.",
+     "o": {
+      "ein": "ein>einparken",
+      "parken": "parken>einparken"
+     }
+    },
+    {
+     "de": "Halten Sie neben dem vorderen Auto, blinken Sie rechts und fahren Sie langsam rückwärts.",
+     "tr": "Зупиніться поруч із передньою машиною, увімкніть правий поворотник і повільно здавайте назад."
+    },
+    {
+     "de": "Lenken Sie zuerst nach rechts, dann nach links, bis das Auto parallel zum Bordstein steht.",
+     "tr": "Спочатку поверніть кермо праворуч, потім ліворуч, поки машина не стане паралельно бордюру."
+    }
+   ],
+   "answer": "back"
+  }
+ ],
+ "signs": {
+  "z224": {
+   "de": "Haltestelle",
+   "tr": "Зупинка (автобуса, трамвая)",
+   "src": "data/fahrschule/signs/z224.svg",
+   "n": "224",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_224_-_Haltestelle,_StVO_2017.svg"
+  }
+ },
+ "gloss": {
+  "w": {
+   "also": "also",
+   "am": "an",
+   "anderen": "andere",
+   "auf": "auf",
+   "auto": "Auto",
+   "autofahrer": "Autofahrer",
+   "autos": "Auto",
+   "beginnt": "beginnen",
+   "besten": "gut",
+   "bis": "bis",
+   "blinken": "blinken",
+   "bordstein": "Bordstein",
+   "bushaltestelle": "Bushaltestelle",
+   "dann": "dann",
+   "darf": "dürfen",
+   "das": "der/die/das",
+   "dem": "der/die/das",
+   "der": "der/die/das",
+   "die": "der/die/das",
+   "direkt": "direkt",
+   "dürfen": "dürfen",
+   "ein>einparken": "einparken",
+   "eine": "ein/eine",
+   "einem": "ein/eine",
+   "einen": "ein/eine",
+   "einer": "ein/eine",
+   "einmal": "einmal",
+   "enge": "eng",
+   "es": "es",
+   "fahren": "fahren",
+   "frei": "frei",
+   "fußgänger": "Fußgänger",
+   "für": "für",
+   "gut": "gut",
+   "halten": "halten",
+   "haltestelle": "Haltestelle",
+   "haltestellenschild": "Haltestellenschild",
+   "hier": "hier",
+   "hinter": "hinter",
+   "ich": "ich",
+   "ihr": "Ihr",
+   "ihre": "Ihr",
+   "in": "in",
+   "ist": "sein",
+   "kreuzung": "Kreuzung",
+   "können": "können",
+   "langsam": "langsam",
+   "lenken": "lenken",
+   "links": "links",
+   "lücke": "Lücke",
+   "meter": "Meter",
+   "metern": "Meter",
+   "müssen": "müssen",
+   "nach": "nach",
+   "neben": "neben",
+   "nicht": "nicht",
+   "noch": "noch",
+   "parallel": "parallel",
+   "parken": "parken",
+   "parken>einparken": "einparken",
+   "platz": "Platz",
+   "rechts": "rechts",
+   "rückwärts": "rückwärts",
+   "schon": "schon",
+   "sehen": "sehen",
+   "sich": "sich",
+   "sie": "Sie",
+   "sind": "sein",
+   "steht": "stehen",
+   "straßenrand": "Straßenrand",
+   "suchen": "suchen",
+   "und": "und",
+   "verboten": "verbieten",
+   "vor": "vor",
+   "vorderen": "vorder",
+   "wie": "wie",
+   "wo": "wo",
+   "zebrastreifen": "Zebrastreifen",
+   "zuerst": "zuerst",
+   "zum": "zu",
+   "zwei": "zwei",
+   "zwischen": "zwischen"
+  },
+  "l": {
+   "Auto": {
+    "ru": "машина, автомобіль",
+    "pos": "ім.",
+    "decl": "das Auto · мн.: die Autos"
+   },
+   "Autofahrer": {
+    "ru": "водій (автомобіля)",
+    "pos": "ім.",
+    "decl": "der Autofahrer · мн.: die Autofahrer"
+   },
+   "Bordstein": {
+    "ru": "бордюр",
+    "pos": "ім.",
+    "decl": "der Bordstein · мн.: die Bordsteine"
+   },
+   "Bushaltestelle": {
+    "ru": "зупинка автобуса",
+    "pos": "ім.",
+    "decl": "die Bushaltestelle · мн.: die Bushaltestellen"
+   },
+   "Fußgänger": {
+    "ru": "пішохід",
+    "pos": "ім.",
+    "decl": "der Fußgänger · мн.: die Fußgänger"
+   },
+   "Haltestelle": {
+    "ru": "зупинка (автобуса, трамвая)",
+    "pos": "ім.",
+    "decl": "die Haltestelle · мн.: die Haltestellen"
+   },
+   "Haltestellenschild": {
+    "ru": "знак зупинки",
+    "pos": "ім.",
+    "note": "зелено-жовтий знак із літерою H (Zeichen 224)",
+    "decl": "das Haltestellenschild · мн.: die Haltestellenschilder"
+   },
+   "Ihr": {
+    "ru": "ваш (ввічливо)",
+    "pos": "займ."
+   },
+   "Kreuzung": {
+    "ru": "перехрестя",
+    "pos": "ім.",
+    "decl": "die Kreuzung · мн.: die Kreuzungen"
+   },
+   "Lücke": {
+    "ru": "вільне місце, проміжок",
+    "pos": "ім.",
+    "decl": "die Lücke · мн.: die Lücken"
+   },
+   "Meter": {
+    "ru": "метр",
+    "pos": "ім.",
+    "decl": "der Meter · мн.: die Meter"
+   },
+   "Platz": {
+    "ru": "місце; площа",
+    "pos": "ім.",
+    "decl": "der Platz · мн.: die Plätze"
+   },
+   "Sie": {
+    "ru": "ви (ввічливо)",
+    "pos": "займ.",
+    "note": "Ihnen — вам (давальний): vor Ihnen — перед вами"
+   },
+   "Straßenrand": {
+    "ru": "край дороги",
+    "pos": "ім.",
+    "decl": "der Straßenrand · мн.: die Straßenränder"
+   },
+   "Zebrastreifen": {
+    "ru": "«зебра», пішохідний перехід",
+    "pos": "ім.",
+    "decl": "der Zebrastreifen · мн.: die Zebrastreifen"
+   },
+   "also": {
+    "ru": "отже, тож",
+    "pos": "присл."
+   },
+   "an": {
+    "ru": "біля, на, при",
+    "pos": "прийм.",
+    "note": "am = an dem; an der Kreuzung — на перехресті"
+   },
+   "andere": {
+    "ru": "інший",
+    "pos": "прикм."
+   },
+   "auf": {
+    "ru": "на, по",
+    "pos": "прийм.",
+    "note": "auf der Straße — на дорозі; achten auf — стежити за"
+   },
+   "beginnen": {
+    "ru": "починатися, починати",
+    "pos": "дієсл.",
+    "forms": "begann · hat begonnen"
+   },
+   "bis": {
+    "ru": "поки не; до",
+    "pos": "спол."
+   },
+   "blinken": {
+    "ru": "вмикати поворотник, блимати",
+    "pos": "дієсл.",
+    "forms": "blinkte · hat geblinkt"
+   },
+   "dann": {
+    "ru": "тоді, отже; потім",
+    "pos": "присл."
+   },
+   "der/die/das": {
+    "ru": "означений артикль",
+    "pos": "артикль",
+    "note": "der — ч. р., die — ж. р. і мн., das — с. р.; den — ч. р. у знахідному, dem — ч. і с. р. у давальному; das ще означає «це»"
+   },
+   "direkt": {
+    "ru": "прямо, одразу",
+    "pos": "присл."
+   },
+   "dürfen": {
+    "ru": "могти, мати право",
+    "pos": "дієсл.",
+    "forms": "durfte · hat gedurft"
+   },
+   "ein/eine": {
+    "ru": "неозначений артикль; один",
+    "pos": "артикль",
+    "note": "an einer Kreuzung — на (якомусь) перехресті"
+   },
+   "einmal": {
+    "ru": "один раз; навіть",
+    "pos": "присл.",
+    "note": "nicht einmal — навіть не"
+   },
+   "einparken": {
+    "ru": "паркуватися (заїжджати на місце)",
+    "pos": "дієсл.",
+    "note": "відокремлюваний префікс: parken Sie … ein",
+    "forms": "parkte ein · hat eingeparkt"
+   },
+   "eng": {
+    "ru": "вузький, тісний",
+    "pos": "прикм."
+   },
+   "es": {
+    "ru": "воно; це",
+    "pos": "займ.",
+    "note": "тут — про машину: das Auto"
+   },
+   "fahren": {
+    "ru": "їхати; кермувати машиною",
+    "pos": "дієсл.",
+    "forms": "fuhr · ist gefahren"
+   },
+   "frei": {
+    "ru": "вільний",
+    "pos": "прикм."
+   },
+   "für": {
+    "ru": "для",
+    "pos": "прийм."
+   },
+   "gut": {
+    "ru": "добрий; добре",
+    "pos": "прикм.",
+    "note": "am besten — найкраще",
+    "forms": "gut · besser · am besten"
+   },
+   "halten": {
+    "ru": "зупинятися (ненадовго); тримати",
+    "pos": "дієсл.",
+    "forms": "hielt · hat gehalten"
+   },
+   "hier": {
+    "ru": "тут",
+    "pos": "присл."
+   },
+   "hinter": {
+    "ru": "за, позаду",
+    "pos": "прийм."
+   },
+   "ich": {
+    "ru": "я",
+    "pos": "займ."
+   },
+   "in": {
+    "ru": "в",
+    "pos": "прийм.",
+    "note": "im = in dem: im Bereich — у зоні"
+   },
+   "können": {
+    "ru": "могти",
+    "pos": "дієсл.",
+    "forms": "konnte · hat gekonnt"
+   },
+   "langsam": {
+    "ru": "повільний; повільно",
+    "pos": "прикм."
+   },
+   "lenken": {
+    "ru": "кермувати, повертати кермо",
+    "pos": "дієсл.",
+    "forms": "lenkte · hat gelenkt"
+   },
+   "links": {
+    "ru": "ліворуч",
+    "pos": "присл."
+   },
+   "müssen": {
+    "ru": "мусити, бути повинним",
+    "pos": "дієсл.",
+    "forms": "musste · hat gemusst"
+   },
+   "nach": {
+    "ru": "після; до (напрямок)",
+    "pos": "прийм."
+   },
+   "neben": {
+    "ru": "поруч із, біля",
+    "pos": "прийм."
+   },
+   "nicht": {
+    "ru": "не",
+    "pos": "частка"
+   },
+   "noch": {
+    "ru": "ще",
+    "pos": "присл.",
+    "note": "noch nicht — ще ні"
+   },
+   "parallel": {
+    "ru": "паралельно",
+    "pos": "прикм."
+   },
+   "parken": {
+    "ru": "паркуватися, стояти (про машину)",
+    "pos": "дієсл.",
+    "note": "паркується той, хто стоїть довше 3 хвилин або виходить з машини",
+    "forms": "parkte · hat geparkt"
+   },
+   "rechts": {
+    "ru": "праворуч",
+    "pos": "присл."
+   },
+   "rückwärts": {
+    "ru": "заднім ходом, назад",
+    "pos": "присл."
+   },
+   "schon": {
+    "ru": "вже",
+    "pos": "присл."
+   },
+   "sehen": {
+    "ru": "бачити",
+    "pos": "дієсл.",
+    "forms": "sah · hat gesehen"
+   },
+   "sein": {
+    "ru": "бути",
+    "pos": "дієсл.",
+    "forms": "war · ist gewesen"
+   },
+   "sich": {
+    "ru": "себе, -ся",
+    "pos": "займ."
+   },
+   "stehen": {
+    "ru": "стояти",
+    "pos": "дієсл.",
+    "note": "Schilder stehen — стоять знаки",
+    "forms": "stand · hat gestanden"
+   },
+   "suchen": {
+    "ru": "шукати",
+    "pos": "дієсл.",
+    "forms": "suchte · hat gesucht"
+   },
+   "und": {
+    "ru": "і, та",
+    "pos": "спол."
+   },
+   "verbieten": {
+    "ru": "забороняти",
+    "pos": "дієсл.",
+    "forms": "verbot · hat verboten"
+   },
+   "vor": {
+    "ru": "перед",
+    "pos": "прийм.",
+    "note": "rechts vor links — правий перед лівим"
+   },
+   "vorder": {
+    "ru": "передній",
+    "pos": "прикм."
+   },
+   "wie": {
+    "ru": "як",
+    "pos": "присл.",
+    "note": "wie schnell — з якою швидкістю"
+   },
+   "wo": {
+    "ru": "де",
+    "pos": "присл."
+   },
+   "zu": {
+    "ru": "до; для",
+    "pos": "прийм.",
+    "note": "zum = zu dem: zum Aussteigen — щоб вийти"
+   },
+   "zuerst": {
+    "ru": "спочатку, першим",
+    "pos": "присл."
+   },
+   "zwei": {
+    "ru": "два",
+    "pos": "числ."
+   },
+   "zwischen": {
+    "ru": "між",
+    "pos": "прийм."
+   }
+  }
+ }
+}
