@@ -81,7 +81,7 @@ const Fahrschule = (() => {
   let loadSeq = 0;
   let playing = null;       // ключ того, что звучит: 'all' | 's:<n>' | null
   let sentences = [];       // фразы на экране: [{ de, tr }], индекс = data-s
-  let quiz  = null;         // { i, score, answered, opts, base }
+  let quiz  = null;         // { i, score, answered, opts, base, tr — перевод вопроса и вариантов открыт }
   let scene = null;         // { i, pick, done }
   let anims = [];           // requestAnimationFrame машин
   let timers = [];
@@ -325,11 +325,20 @@ const Fahrschule = (() => {
       </button>
       <button class="news-chip dlg-tr-toggle" type="button" data-tr-toggle aria-pressed="false">🌐 <span>Перевод</span></button>
     </div>
-    <p class="dlg-voice-note fs-hint"><span>Нажмите на слово — появится перевод. 🔊 — озвучка фразы.</span></p>`;
+    <p class="dlg-voice-note fs-hint"><span>Нажмите на слово — перевод слова. 🌐 у строки (или нажатие на строку) — перевод фразы, 🔊 — озвучка.</span></p>`;
   }
 
   function sayBtn(n) {
     return `<button class="dlg-say" type="button" data-say="${n}" title="Озвучить фразу" aria-label="Озвучить фразу">🔊</button>`;
+  }
+
+  // Видимая подсказка, что у фразы есть перевод: 🌐 открывает его у этой строки
+  function trBtn() {
+    return '<button class="dlg-say fs-tr-btn" type="button" data-tr-line aria-pressed="false" title="Перевод фразы" aria-label="Перевод фразы">🌐</button>';
+  }
+
+  function lineBtns(n) {
+    return `<div class="fs-btns">${sayBtn(n)}${trBtn()}</div>`;
   }
 
   function signHtml(s, big) {
@@ -358,7 +367,7 @@ const Fahrschule = (() => {
           ${sign}
           <div class="fs-line-row">
             <div class="fs-line-text">${body}<p class="fs-tr" dir="auto">${esc(ln.tr)}</p></div>
-            ${sayBtn(n)}
+            ${lineBtns(n)}
           </div>
         </li>`;
       }).join('')}</ol>
@@ -384,7 +393,7 @@ const Fahrschule = (() => {
   // фразы (вопрос, пояснение) каждый раз регистрируются заново
   function startQuiz() {
     if (quiz) sentences = sentences.slice(0, quiz.base);
-    quiz = { i: 0, score: 0, answered: false, opts: [], base: sentences.length };
+    quiz = { i: 0, score: 0, answered: false, opts: [], base: sentences.length, tr: !!(quiz && quiz.tr) };
     renderQuiz();
   }
 
@@ -425,7 +434,7 @@ const Fahrschule = (() => {
       }
       return `<button class="${cls}" type="button" data-opt="${esc(sid)}"${answer ? ' disabled' : ''}>
         <span class="fs-opt-de" lang="de" dir="ltr">${esc(o.de)}</span>
-        ${answer ? `<span class="fs-opt-tr">${esc(o.tr)}</span>` : ''}
+        <span class="fs-opt-tr">${esc(o.tr)}</span>
       </button>`;
     }).join('');
     let after = '';
@@ -441,11 +450,14 @@ const Fahrschule = (() => {
         <button class="dlg-play fs-next" type="button" data-quiz-next>${quiz.i + 1 < list.length ? '<span>Дальше</span> ›' : '<span>Результат</span> ›'}</button>`;
     }
     box.innerHTML = `<h3 class="fs-sec-title">Проверьте себя</h3>
-      <div class="fs-quiz-card">
-        <div class="fs-quiz-top"><span>Вопрос</span> <span class="fs-quiz-n">${quiz.i + 1} / ${list.length}</span></div>
+      <div class="fs-quiz-card${quiz.tr ? ' tr-open' : ''}">
+        <div class="fs-quiz-top">
+          <span><span>Вопрос</span> <span class="fs-quiz-n">${quiz.i + 1} / ${list.length}</span></span>
+          <button class="news-chip fs-quiz-tr" type="button" data-tr-line aria-pressed="${quiz.tr ? 'true' : 'false'}">🌐 <span>Перевод</span></button>
+        </div>
         ${signHtml(s, true)}
-        ${unit.quizQuestion ? sentence(unit.quizQuestion, 'p', 'fs-quiz-q') : ''}
-        <div class="fs-opts">${opts}</div>
+        ${unit.quizQuestion ? sentence(unit.quizQuestion, 'p', 'fs-quiz-q') + `<p class="fs-tr fs-quiz-q-tr" dir="auto">${esc(unit.quizQuestion.tr)}</p>` : ''}
+        <div class="fs-opts${answer ? ' is-answered' : ''}">${opts}</div>
         ${after}
       </div>`;
   }
@@ -473,7 +485,7 @@ const Fahrschule = (() => {
           ${sentence(ln, 'div', 'dlg-de fs-de')}
           <div class="dlg-tr fs-tr" dir="auto">${esc(ln.tr || '')}</div>
         </div>
-        ${sayBtn(n)}
+        ${lineBtns(n)}
       </li>`;
     }).join('');
     return controlsHtml('Слушать диалог') + `<ol class="dlg-lines fs-dialog">${lines}</ol>`;
@@ -544,14 +556,17 @@ const Fahrschule = (() => {
       const n = sentences.length;
       return `<li class="fs-line" data-line="${n}"><div class="fs-line-row">
         <div class="fs-line-text">${sentence(e, 'p', 'fs-de')}<p class="fs-tr" dir="auto">${esc(e.tr)}</p></div>
-        ${sayBtn(n)}</div></li>`;
+        ${lineBtns(n)}</div></li>`;
     }).join('') : '';
     box.innerHTML = `
       <div class="fs-scene-top">
         <span><span>Ситуация</span> <span class="fs-scene-n">${scene.i + 1} / ${list.length}</span></span>
         <span class="fs-dots" aria-hidden="true">${list.map((_, k) => `<i class="${k === scene.i ? 'on' : ''}"></i>`).join('')}</span>
       </div>
-      <div class="fs-line-text fs-situation">${sit}<p class="fs-tr" dir="auto">${esc(sc.situation.tr)}</p></div>
+      <div class="fs-situation fs-line-row">
+        <div class="fs-line-text">${sit}<p class="fs-tr" dir="auto">${esc(sc.situation.tr)}</p></div>
+        ${trBtn()}
+      </div>
       ${q}
       <div class="fs-scene" id="fsScene">${sceneSvg(sc)}</div>
       <p class="fs-status" id="fsStatus" aria-live="polite"></p>
@@ -849,10 +864,11 @@ const Fahrschule = (() => {
     if (play) { e.preventDefault(); togglePlay(play.dataset.play); return; }
     if (t.closest('[data-tr-toggle]')) {
       writeStore(TR_KEY, trOn() ? '0' : '1');
-      el.unit.querySelectorAll('.tr-open').forEach(li => li.classList.remove('tr-open'));
+      el.unit.querySelectorAll('.tr-open').forEach(h => toggleLineTr(h, false));
       paintTr();
       return;
     }
+    if (t.closest('[data-tr-line]')) { toggleLineTr(trHolder(t)); return; }
     const opt = t.closest('[data-opt]');
     if (opt) { answerQuiz(opt.dataset.opt); return; }
     if (t.closest('[data-quiz-next]')) { stopSpeech(); quiz.i++; quiz.answered = false; renderQuiz(); return; }
@@ -862,9 +878,22 @@ const Fahrschule = (() => {
     if (t.closest('[data-scene-reset]')) { scene.pick = []; paintScene(); return; }
     if (t.closest('[data-scene-again]')) { openScene(scene.i); return; }
     if (t.closest('[data-scene-next]')) { openScene(scene.i + 1); scrollToScene(); return; }
-    // нажатие на строку открывает её перевод (когда общий перевод скрыт)
-    const line = t.closest('.fs-line, .fs-situation');
-    if (line && !t.closest('a, button')) line.classList.toggle('tr-open');
+    // нажатие на строку (не на слово и не на кнопку) — тоже перевод фразы
+    if (!t.closest('a, button') && (t.closest('.fs-line, .fs-situation') || t.closest('.fs-quiz-q'))) toggleLineTr(trHolder(t));
+  }
+
+  // Чей перевод открывает 🌐 или нажатие: строка, ситуация сцены или
+  // карточка теста (там — вопрос и все варианты сразу)
+  function trHolder(t) {
+    return t.closest('.fs-quiz-card') || t.closest('.fs-line, .fs-situation');
+  }
+
+  function toggleLineTr(holder, force) {
+    if (!holder) return;
+    const on = holder.classList.toggle('tr-open', force);
+    holder.querySelectorAll(':scope > [data-tr-line], :scope > .fs-btns > [data-tr-line], :scope > .fs-line-row > .fs-btns > [data-tr-line], :scope > .fs-quiz-top > [data-tr-line]')
+      .forEach(b => b.setAttribute('aria-pressed', on ? 'true' : 'false'));
+    if (quiz && holder.classList.contains('fs-quiz-card')) quiz.tr = on;
   }
 
   function onKey(e) {

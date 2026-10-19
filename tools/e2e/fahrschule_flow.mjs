@@ -62,6 +62,12 @@ await c.go(B + '/index.html', 800);
 // плитка зовёт openFahrschulePage из js/support.js (подключён в конце страницы)
 ok(await waitFor(`!!document.getElementById('readFahrschule') && typeof openFahrschulePage === 'function'`, 20000), 'главная: плитка «Автошкола» есть');
 ok(await c.ev(`/Автошкола/.test(document.getElementById('readFahrschule').textContent)`), 'главная: подпись плитки');
+// «Читать и слушать» — сетка 2×2: Книги | Автошкола, Новости | Диалоги
+const grid = JSON.parse(await c.ev(`JSON.stringify(['readBooks', 'readFahrschule', 'readNews', 'readDialogs'].map(id => {
+  const r = document.getElementById(id).getBoundingClientRect(); return { t: Math.round(r.top), l: Math.round(r.left), w: Math.round(r.width) }; }))`));
+ok(grid[0].t === grid[1].t && grid[2].t === grid[3].t && grid[0].t < grid[2].t && grid[0].l < grid[1].l && grid[2].l < grid[3].l
+  && new Set(grid.map(g => g.w)).size === 1, `главная: плитки 2×2 одинаковой ширины ${JSON.stringify(grid)}`);
+await c.shot('fs_home_grid.png');
 await c.ev(`document.getElementById('readFahrschule').click()`);
 ok(await waitFor(`/fahrschule\\.html/.test(location.pathname)`, 8000), 'главная → fahrschule.html');
 collect();
@@ -140,6 +146,21 @@ await c.ev(`document.querySelector('[data-tr-toggle]').click()`);
 ok(await c.ev(`getComputedStyle(document.querySelector('.fs-lines .fs-tr')).display !== 'none' && localStorage.getItem('dm_fs_tr') === '1'`), '🌐 показывает перевод и запоминает');
 await c.ev(`document.querySelector('[data-tr-toggle]').click()`);
 
+// 🌐 у строки: перевод этой фразы, повторно — скрыть
+await c.ev(`document.querySelectorAll('.fs-lines [data-tr-line]')[1].click()`);
+ok(await c.ev(`(() => { const li = document.querySelectorAll('.fs-lines > .fs-line')[1];
+  return getComputedStyle(li.querySelector('.fs-tr')).display !== 'none' && li.querySelector('[data-tr-line]').getAttribute('aria-pressed') === 'true'
+    && getComputedStyle(document.querySelectorAll('.fs-lines > .fs-line')[0].querySelector('.fs-tr')).display === 'none'; })()`), '🌐 у строки открывает перевод только этой фразы');
+await c.ev(`document.querySelectorAll('.fs-lines [data-tr-line]')[1].click()`);
+ok(await c.ev(`getComputedStyle(document.querySelectorAll('.fs-lines > .fs-line')[1].querySelector('.fs-tr')).display === 'none'`), '🌐 повторно скрывает перевод');
+// тест: перевод вопроса и вариантов до ответа (🌐 в карточке)
+ok(await c.ev(`getComputedStyle(document.querySelector('#fsQuiz .fs-opt-tr')).display === 'none'`), 'тест: перевод вариантов по умолчанию скрыт');
+await c.ev(`document.querySelector('#fsQuiz [data-tr-line]').click()`);
+ok(await c.ev(`[...document.querySelectorAll('#fsQuiz .fs-opt-tr, #fsQuiz .fs-quiz-q-tr')].every(e => getComputedStyle(e).display !== 'none' && e.textContent.trim())
+  && !document.querySelector('#fsQuiz .fs-opt:disabled')`), 'тест: 🌐 показывает перевод вопроса и вариантов, не отвечая');
+await c.shot('fs_quiz_tr.png');
+await c.ev(`document.querySelector('#fsQuiz [data-tr-line]').click()`);
+ok(await c.ev(`getComputedStyle(document.querySelector('#fsQuiz .fs-opt-tr')).display === 'none'`), 'тест: 🌐 повторно скрывает перевод');
 // тест: 1-й вопрос неверно, остальные верно → 4 из 5
 const quizN = await c.ev(`Fahrschule.unit.quiz.length`);
 for (let i = 0; i < quizN; i++) {
@@ -150,7 +171,7 @@ for (let i = 0; i < quizN; i++) {
   const v = JSON.parse(await c.ev(`JSON.stringify({
     right: !!document.querySelector('#fsQuiz .fs-verdict.is-right'), wrong: !!document.querySelector('#fsQuiz .fs-verdict.is-wrong'),
     marked: document.querySelector('#fsQuiz .fs-opt.is-right').dataset.opt, disabled: [...document.querySelectorAll('#fsQuiz .fs-opt')].every(b => b.disabled),
-    tr: document.querySelectorAll('#fsQuiz .fs-opt-tr').length, explain: !!document.querySelector('#fsQuiz .fs-explain-one .fs-w') })`));
+    tr: [...document.querySelectorAll('#fsQuiz .fs-opt-tr')].filter(e => getComputedStyle(e).display !== 'none').length, explain: !!document.querySelector('#fsQuiz .fs-explain-one .fs-w') })`));
   ok((i === 0 ? v.wrong : v.right) && v.marked === q.sign && v.disabled && v.tr === 3 && v.explain,
     `тест ${i + 1}: ${i === 0 ? 'неверный ответ отмечен' : 'верно'}, правильный подсвечен, перевод и пояснение`);
   ok(await waitFor(`window.__said[0] === Fahrschule.unit.signs['${q.sign}'].de`, 2000), `тест ${i + 1}: название знака озвучено`);

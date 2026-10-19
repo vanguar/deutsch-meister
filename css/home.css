@@ -195,19 +195,9 @@ html[dir="rtl"] .ico.flip { transform: scaleX(-1); }
 }
 .read:active { transform: scale(.985); }
 @media (hover: hover) { .read:hover { background: var(--h-card2); } }
-.read.wide { grid-column: 1 / -1; flex-direction: row; align-items: center; gap: 14px; }
 .read .ico { color: var(--h-accent); }
-.read-ico {
-  display: inline-flex; align-items: center; justify-content: center;
-  width: 48px; height: 48px; border-radius: 14px; flex: none;
-  background: var(--h-bg); color: var(--h-accent);
-}
-.read-ico .ico { width: 24px; height: 24px; }
-.read-txt { flex: 1; min-width: 0; }
 .read-title { display: block; font-size: 17px; font-weight: 700; color: var(--h-text); margin-top: 6px; }
-.read.wide .read-title { margin-top: 0; }
 .read-sub { display: block; font-size: 14px; color: var(--h-hint); }
-.read .chev { color: var(--h-hint); }
 .fresh {
   position: absolute; top: 12px; inset-inline-end: 12px;
   padding: 3px 9px; border-radius: 8px;

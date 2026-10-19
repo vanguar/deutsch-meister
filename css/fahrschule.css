@@ -74,6 +74,13 @@
   font-size: 14px; line-height: 1.45; color: var(--text-muted);
 }
 .show-tr .fs-tr, .tr-open .fs-tr, .fs-tr.is-open { display: block; }
+
+/* Кнопки строки: 🔊 и 🌐 (перевод фразы) друг под другом */
+.fs-btns { flex: none; display: flex; flex-direction: column; gap: 6px; }
+.fs-tr-btn[aria-pressed="true"], .fs-quiz-tr[aria-pressed="true"] {
+  border-color: var(--accent2); background: var(--dlg-a-soft);
+}
+.fs-situation .fs-tr-btn { flex: none; }
 html[dir="rtl"] .fs-tr { text-align: right; }
 
 /* Знак рядом со строкой */
@@ -91,7 +98,11 @@ html[dir="rtl"] .fs-tr { text-align: right; }
   padding: 16px; border-radius: var(--r-lg); text-align: center;
   background: var(--surface2); border: 1px solid var(--border);
 }
-.fs-quiz-top { font-size: 13px; font-weight: 700; color: var(--text-muted); }
+.fs-quiz-top {
+  display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  font-size: 13px; font-weight: 700; color: var(--text-muted);
+}
+.fs-quiz-q-tr { margin: -6px 0 12px; border-top: 0; padding-top: 0; }
 .fs-quiz-n { direction: ltr; unicode-bidi: isolate; }
 .fs-quiz-q { margin: 0 0 12px; font-size: 17px; font-weight: 800; color: var(--text-strong); line-height: 1.45; }
 .fs-opts { display: grid; gap: 8px; text-align: start; }
@@ -107,7 +118,9 @@ html[dir="rtl"] .fs-tr { text-align: right; }
 .fs-opt.is-right { border-color: var(--correct); background: color-mix(in srgb, var(--correct) 14%, var(--surface)); }
 .fs-opt.is-wrong { border-color: var(--wrong); background: color-mix(in srgb, var(--wrong) 12%, var(--surface)); }
 .fs-opt-de { font-size: 15px; font-weight: 800; color: var(--text-strong); }
-.fs-opt-tr { font-size: 13px; color: var(--text-muted); }
+.fs-opt-tr { display: none; font-size: 13px; color: var(--text-muted); }
+/* перевод вариантов: по 🌐 в карточке, общим «Перевод» или после ответа */
+.tr-open .fs-opt-tr, .show-tr .fs-opt-tr, .fs-opts.is-answered .fs-opt-tr { display: block; }
 .fs-verdict { margin: 14px 0 8px; font-size: 16px; font-weight: 800; }
 .fs-verdict.is-right { color: var(--correct); }
 .fs-verdict.is-wrong { color: var(--wrong); }
@@ -132,6 +145,7 @@ html[dir="rtl"] .fs-tr { text-align: right; }
 .fs-dots i { width: 8px; height: 8px; border-radius: 50%; background: var(--border-light); }
 .fs-dots i.on { background: var(--accent2); }
 .fs-situation { margin: 10px 0 0; cursor: pointer; }
+.fs-lines > .fs-line, .fs-dialog .dlg-bubble { cursor: pointer; }
 .fs-junction > .fs-quiz-q { margin: 12px 0 8px; text-align: start; }
 .fs-scene {
   max-width: 420px; margin: 0 auto; border-radius: var(--r-lg); overflow: hidden;
