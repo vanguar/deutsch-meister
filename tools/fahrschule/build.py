@@ -74,8 +74,11 @@ PLURAL = {'uk': ('мн.:', 'мн. немає'), 'ar': ('الجمع:', 'لا جم
 
 KINDS = ('theory', 'dialog', 'junction', 'road')
 PREFIX = {'theory': 't', 'dialog': 'p', 'junction': 'k', 'road': 'r'}   # t-01, p-01, k-01, r-03
-ROAD_TYPES = ('stop', 'gap')
+ROAD_TYPES = ('stop', 'gap', 'side', 'overtake', 'zipper')
+NUMERIC_ROAD = ('stop', 'gap', 'side')        # ответ — метры
 HAZARDS = ('ball', 'deer')
+# Боковой интервал при обгоне пешеходов и велосипедистов (§ 5 Abs. 4 StVO, с 2020)
+SIDE_GAP = {'innerorts': 1.5, 'außerorts': 2}
 CARS = ('blue', 'red', 'green', 'yellow')
 APPROACH = ('S', 'W', 'N', 'E')
 TURNS = ('straight', 'left', 'right')
@@ -268,6 +271,20 @@ def road_answer(sc):
       остановочный путь = реакция + торможение
       дистанция (außerorts) = «halber Tacho»: v / 2 метров
     Возвращает словарь с числами или строку с причиной ошибки."""
+    t = sc.get('type')
+    if t == 'side':
+        if sc.get('where') not in SIDE_GAP:
+            return 'where — innerorts или außerorts'
+        return {'answer': SIDE_GAP[sc['where']]}
+    if t == 'overtake':
+        # обгон запрещён: встречный транспорт, сплошная линия, знак 276 (§ 5 StVO)
+        if sc.get('line') not in ('dashed', 'solid'):
+            return 'line — dashed или solid'
+        free = not sc.get('oncoming') and sc['line'] == 'dashed' and sc.get('sign') != 'z276'
+        return {'answer': 'yes' if free else 'no'}
+    if t == 'zipper':
+        # Reißverschluss: перестраиваться в самом конце полосы, по очереди (§ 7 Abs. 4 StVO)
+        return {'answer': 'end'}
     v = sc.get('v')
     if not isinstance(v, int) or v % 10 or not 10 <= v <= 200:
         return f'скорость v — целое кратное 10, а не {v!r}'
@@ -506,28 +523,52 @@ def main():
                     err(f'{w}: {got}')
                     continue
                 opts = sc.get('options') or []
-                if len(opts) != 3 or len(set(opts)) != 3 or not all(isinstance(o, int) and o > 0 for o in opts):
-                    err(f'{w}: options — три разных положительных целых числа (метры)')
-                if got['answer'] not in opts:
-                    err(f'{w}: по формуле ответ {got["answer"]} м, его нет среди {opts}')
                 expl_src = sc.get('explain') or []
-                # числа в пояснении обязаны совпасть с формулой
-                nums = {int(x) for e in expl_src for x in re.findall(r'\d+', e.get('de', ''))}
-                for k in ('reaction', 'brake', 'answer'):
-                    if k in got and got[k] not in nums:
-                        err(f'{w}: в пояснении нет числа {got[k]} ({k})')
+                opt_out = {lang: opts for lang in LANGS}
+                if sc['type'] in NUMERIC_ROAD:
+                    if len(opts) != 3 or len(set(opts)) != 3 or not all(isinstance(o, (int, float)) and o > 0 for o in opts):
+                        err(f'{w}: options — три разных положительных числа (метры)')
+                    if got['answer'] not in opts:
+                        err(f'{w}: по правилу ответ {got["answer"]} м, его нет среди {opts}')
+                    # числа в пояснении обязаны совпасть с формулой (1,5 — с запятой, как по-немецки)
+                    nums = {x.replace(',', '.') for e in expl_src for x in re.findall(r'\d+(?:,\d+)?', e.get('de', ''))}
+                    for k in ('reaction', 'brake', 'answer'):
+                        if k in got and f'{got[k]:g}' not in nums:
+                            err(f'{w}: в пояснении нет числа {got[k]:g} ({k})')
+                else:
+                    # варианты-фразы: {key, de, tr}; ответ — key
+                    opt_keys = [o.get('key') for o in opts if isinstance(o, dict)]
+                    if len(opt_keys) != len(opts) or len(set(opt_keys)) != len(opt_keys) or not 2 <= len(opt_keys) <= 3:
+                        err(f'{w}: options — 2–3 варианта {{key, de, tr}} с разными key')
+                    if got['answer'] not in opt_keys:
+                        err(f'{w}: по правилу ответ «{got["answer"]}», такого key нет среди {opt_keys}')
+                    for o in opts:
+                        if isinstance(o, dict):
+                            check_de(f'{w} вариант {o.get("key")}', o.get('de'))
+                            check_tr(f'{w} вариант {o.get("key")}', o.get('tr'))
+                    opt_out = {lang: [{'key': o.get('key'), 'de': o.get('de'), 'tr': (o.get('tr') or [''] * 3)[i]}
+                                      for o in opts if isinstance(o, dict)] for i, lang in enumerate(LANGS)}
+                    if sc.get('sign'):
+                        if sc['sign'] not in sign_names:
+                            err(f'{w}: нет знака {sc["sign"]}')
+                        used_signs.add(sc['sign'])
                 sit = text(w + ' ситуация', sc.get('situation') or {})
                 q = text(w + ' вопрос', sc.get('question') or {})
                 expl = [text(f'{w} пояснение {k}', e) for k, e in enumerate(expl_src, 1)]
                 if not expl:
                     err(f'{w}: нет пояснения')
                 for lang in LANGS:
-                    scene = {'type': sc['type'], 'v': sc['v'], 'options': opts,
+                    scene = {'type': sc['type'], 'options': opt_out[lang],
                              'situation': sit[lang], 'question': q[lang], 'explain': [e[lang] for e in expl]}
                     scene.update(got)
+                    if 'v' in sc:
+                        scene['v'] = sc['v']
                     if sc['type'] == 'stop':
                         scene['hazard'] = sc['hazard']
                         scene['emergency'] = bool(sc.get('emergency'))
+                    for k in ('where', 'line', 'oncoming', 'sign'):
+                        if k in sc:
+                            scene[k] = sc[k]
                     out[lang].append(scene)
             for lang in LANGS:
                 per[lang]['scenes'] = out[lang]

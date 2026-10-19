@@ -369,39 +369,59 @@ for (let i = 0; i < lsc.length; i++) {
 }
 collect();
 
-// ── На дороге: остановочный путь и дистанция ──
+// ── На дороге: остановочный путь, дистанция, обгон, велосипедист, «молния» ──
 for (const id of IDX.units.filter(u => u.kind === 'road').map(u => u.id)) {
   await openUnit(id);
   const rs = JSON.parse(await c.ev(`JSON.stringify(Fahrschule.unit.scenes)`));
   for (let i = 0; i < rs.length; i++) {
     const sc = rs[i];
-    ok(await waitFor(`Fahrschule.scene && Fahrschule.scene.i === ${i} && document.querySelectorAll('[data-road-opt]').length === 3`, 4000), `${id} сцена ${i + 1}: три варианта`);
+    const keys = sc.options.map(o => typeof o === 'object' ? o.key : String(o));
+    const answer = String(sc.answer);
+    const tag = `${id} сцена ${i + 1} (${sc.type})`;
+    ok(await waitFor(`Fahrschule.scene && Fahrschule.scene.i === ${i} && document.querySelectorAll('[data-road-opt]').length === ${keys.length}`, 4000), `${tag}: варианты на месте`);
     const au = JSON.parse(await c.ev(TIP_AUDIT));
-    ok(au.bad.length === 0, `${id} сцена ${i + 1}: подсказки у всех слов, включая подписи цветов ${au.bad.slice(0, 4).join(' ')}`);
-    ok(await c.ev(NO_HSCROLL), `${id} сцена ${i + 1}: нет горизонтальной прокрутки`);
-    // первая сцена — сначала неверный ответ, потом «Ещё раз» и верный
-    const picks = i === 0 ? [sc.options.find(o => o !== sc.answer), sc.answer] : [sc.answer];
-    for (const [k, m] of picks.entries()) {
-      await c.ev(`window.__said = []; document.querySelector('[data-road-opt="${m}"]').click()`);
-      const right = m === sc.answer;
-      ok(await c.ev(`!!document.querySelector('#fsStatus.${right ? 'is-right' : 'is-wrong'}') && document.querySelector('[data-road-opt="${sc.answer}"]').classList.contains('is-right') && [...document.querySelectorAll('[data-road-opt]')].every(b => b.disabled)`),
-        `${id} сцена ${i + 1}: ${right ? 'верный' : 'неверный'} ответ ${m} м отмечен, верный подсвечен`);
+    ok(au.bad.length === 0, `${tag}: подсказки у всех слов ${au.bad.slice(0, 4).join(' ')}`);
+    ok(await c.ev(NO_HSCROLL), `${tag}: нет горизонтальной прокрутки`);
+    // первая сцена урока — сначала неверный ответ, потом «Ещё раз» и верный
+    const picks = i === 0 ? [keys.find(k => k !== answer), answer] : [answer];
+    for (const [k, key] of picks.entries()) {
+      await c.ev(`window.__said = []; document.querySelector('[data-road-opt="${key}"]').click()`);
+      const right = key === answer;
+      ok(await c.ev(`!!document.querySelector('#fsStatus.${right ? 'is-right' : 'is-wrong'}') && document.querySelector('[data-road-opt="${answer}"]').classList.contains('is-right') && [...document.querySelectorAll('[data-road-opt]')].every(b => b.disabled)`),
+        `${tag}: ${right ? 'верный' : 'неверный'} ответ «${key}» отмечен, верный подсвечен`);
       if (sc.type === 'stop') {
-        // машина едет и тормозит: жёлтая зона растёт, потом красная, стоп-сигналы горят
-        ok(await waitFor(`parseFloat(document.querySelector('#fsScene .fs-zone-r').getAttribute('width')) > 0`, 2500), `${id} сцена ${i + 1}: путь реакции растёт`);
-        ok(await waitFor(`parseFloat(document.querySelector('#fsScene .fs-zone-b').getAttribute('width')) > 0 && document.querySelector('#fsScene .fs-road-car.is-braking')`, 3000), `${id} сцена ${i + 1}: торможение, стоп-сигналы`);
+        ok(await waitFor(`parseFloat(document.querySelector('#fsScene .fs-zone-r').getAttribute('width')) > 0`, 2500), `${tag}: путь реакции растёт`);
+        ok(await waitFor(`parseFloat(document.querySelector('#fsScene .fs-zone-b').getAttribute('width')) > 0 && document.querySelector('#fsScene .fs-road-car.is-braking')`, 3000), `${tag}: торможение, стоп-сигналы`);
         if (i === 0 && k === 1) await c.shot(`fs_${id}_brake.png`);
-      } else {
+      } else if (sc.type === 'gap') {
         const p0 = await c.ev(`document.querySelector('#fsScene .fs-posts').getAttribute('transform') || ''`);
         await c.wait(500);
-        ok(p0 !== await c.ev(`document.querySelector('#fsScene .fs-posts').getAttribute('transform') || ''`), `${id} сцена ${i + 1}: столбики едут мимо`);
+        ok(p0 !== await c.ev(`document.querySelector('#fsScene .fs-posts').getAttribute('transform') || ''`), `${tag}: столбики едут мимо`);
+      } else {
+        // участники сцены двигаются; при обгоне и «молнии» мигает поворотник
+        const p0 = await c.ev(`document.querySelector('#fsScene [data-actor="me"]').getAttribute('transform')`);
+        await c.wait(900);
+        ok(p0 !== await c.ev(`document.querySelector('#fsScene [data-actor="me"]').getAttribute('transform')`), `${tag}: машина едет`);
+        if (sc.type === 'zipper' || (sc.type === 'overtake' && answer === 'yes') || sc.type === 'side') {
+          ok(await waitFor(`!!document.querySelector('#fsScene .fs-actor.is-blink-l')`, 3000), `${tag}: левый поворотник`);
+        }
+        if (sc.oncoming) ok(await c.ev(`!!document.querySelector('#fsScene [data-actor="oncoming"]')`), `${tag}: встречная машина`);
+        if (sc.line === 'solid') ok(await c.ev(`!!document.querySelector('#fsScene .fs-mark.is-solid')`), `${tag}: сплошная линия`);
+        if (i === 1 && k === picks.length - 1) await c.shot(`fs_${id}_overtake.png`);
       }
-      ok(await waitFor(`document.querySelectorAll('.fs-explain .fs-line').length === ${sc.explain.length} && document.querySelector('#fsScene .fs-lab.is-on')`, 6000), `${id} сцена ${i + 1}: подписи в метрах и пояснение`);
-      const labs = await c.ev(`[...document.querySelectorAll('#fsScene .fs-lab-text')].map(t => t.textContent).join(' | ')`);
-      const want = sc.type === 'stop' ? [`${sc.reaction} m`, `${sc.brake} m`, `= ${sc.answer} m`] : [`${sc.answer} m`];
-      ok(want.every(w => labs.includes(w)), `${id} сцена ${i + 1}: на картинке ${labs}`);
-      ok(await waitFor(`Fahrschule.playing === null && window.__said.length === ${sc.explain.length}`, 8000), `${id} сцена ${i + 1}: пояснение прозвучало`);
-      if (i === rs.length - 1 && k === picks.length - 1) await c.shot(`fs_${id}_gap.png`);
+      ok(await waitFor(`document.querySelectorAll('.fs-explain .fs-line').length === ${sc.explain.length}`, 8000), `${tag}: пояснение`);
+      if (['stop', 'gap', 'side'].includes(sc.type)) {
+        const labs = await c.ev(`[...document.querySelectorAll('#fsScene .fs-lab-text')].map(t => t.textContent).join(' | ')`);
+        const m = v => String(v).replace('.', ',') + ' m';
+        const want = sc.type === 'stop' ? [m(sc.reaction), m(sc.brake), '= ' + m(sc.answer)] : [m(sc.answer)];
+        ok(want.every(w => labs.includes(w)) && await c.ev(`!!document.querySelector('#fsScene .fs-lab.is-on')`), `${tag}: на картинке ${labs}`);
+      }
+      if (typeof sc.options[0] === 'object') {
+        ok(await c.ev(`[...document.querySelectorAll('.fs-road-opt .fs-opt-tr')].every(e => getComputedStyle(e).display !== 'none' && e.textContent.trim())`), `${tag}: после ответа виден перевод вариантов`);
+      }
+      ok(await waitFor(`Fahrschule.playing === null && window.__said.length === ${sc.explain.length}`, 8000), `${tag}: пояснение прозвучало`);
+      if (sc.type === 'side' || sc.type === 'zipper') await c.shot(`fs_${id}_${sc.type}.png`);
+      if (sc.type === 'gap') await c.shot(`fs_${id}_gap.png`);
       if (k < picks.length - 1) await c.ev(`document.querySelector('[data-scene-again]').click()`);
     }
     if (i < rs.length - 1) await c.ev(`ReaderSpeak.stop(); document.querySelector('[data-scene-next]').click()`);

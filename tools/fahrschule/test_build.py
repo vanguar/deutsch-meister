@@ -77,6 +77,13 @@ ok(build.road_answer({'type': 'stop', 'v': 60, 'emergency': True}) == {'reaction
 ok(build.road_answer({'type': 'gap', 'v': 100}) == {'answer': 50}, 'дистанция при 100 — половина спидометра, 50 м')
 ok('не целое' in str(build.road_answer({'type': 'stop', 'v': 50, 'emergency': True})), 'дробный тормозной путь (12,5 м) — ошибка сцены')
 ok('кратное 10' in str(build.road_answer({'type': 'stop', 'v': 55})), 'скорость не кратна 10 — ошибка сцены')
+ok(build.road_answer({'type': 'side', 'where': 'innerorts'}) == {'answer': 1.5}, 'обгон велосипедиста в городе — 1,5 м')
+ok(build.road_answer({'type': 'side', 'where': 'außerorts'}) == {'answer': 2}, 'обгон велосипедиста за городом — 2 м')
+ok(build.road_answer({'type': 'overtake', 'line': 'dashed'}) == {'answer': 'yes'}, 'обгон: прерывистая линия, встречных нет — можно')
+ok(build.road_answer({'type': 'overtake', 'line': 'dashed', 'oncoming': True}) == {'answer': 'no'}, 'обгон: встречная машина — нельзя')
+ok(build.road_answer({'type': 'overtake', 'line': 'solid'}) == {'answer': 'no'}, 'обгон: сплошная линия — нельзя')
+ok(build.road_answer({'type': 'overtake', 'line': 'dashed', 'sign': 'z276'}) == {'answer': 'no'}, 'обгон: знак 276 — нельзя')
+ok(build.road_answer({'type': 'zipper'}) == {'answer': 'end'}, 'молния: перестраиваться в конце полосы')
 
 
 # ── 2. Сборка ловит ошибки и ничего не пишет ──
@@ -142,7 +149,7 @@ code, errs, written = run_with(lambda d: d['lexicon.json']['anhalten'].__setitem
 ok(code == 1 and any('приставку задают в строке' in e for e in errs), 'приставка «an» глобально у глагола — ошибка')
 
 code, errs, written = run_with(lambda d: unit(d, 'r-03')['scenes'][0].__setitem__('options', [25, 45, 50]))
-ok(code == 1 and any('по формуле ответ 40' in e for e in errs), 'нет верного ответа среди вариантов — ошибка')
+ok(code == 1 and any('по правилу ответ 40' in e for e in errs), 'нет верного ответа среди вариантов — ошибка')
 
 code, errs, written = run_with(lambda d: unit(d, 'r-03')['scenes'][0]['explain'][2].__setitem__('de', 'Anhalteweg: 15 plus 25. Sie brauchen also 45 Meter, bis das Auto steht.'))
 ok(code == 1 and any('нет числа 40' in e for e in errs), 'число в пояснении не совпало с формулой — ошибка')

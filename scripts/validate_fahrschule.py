@@ -176,7 +176,8 @@ def main():
                     err(f'{where}: у знака {sid} нет свободной лицензии')
             for ci, sc in enumerate(u.get('scenes') or [], 1):
                 if u['kind'] == 'road':
-                    if sc.get('answer') not in (sc.get('options') or []):
+                    opt_keys = [o['key'] if isinstance(o, dict) else o for o in sc.get('options') or []]
+                    if sc.get('answer') not in opt_keys:
                         err(f'{where} сцена {ci}: ответа {sc.get("answer")} нет среди вариантов')
                     if sc.get('type') == 'stop' and sc.get('reaction', 0) + sc.get('brake', 0) != sc.get('answer'):
                         err(f'{where} сцена {ci}: реакция + торможение ≠ остановочному пути')

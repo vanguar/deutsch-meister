@@ -228,6 +228,7 @@ html[dir="rtl"] .fs-tr { text-align: right; }
 .fs-lab-text.is-r { fill: color-mix(in srgb, #e8c547 70%, var(--text-strong)); }
 .fs-lab-text.is-b { fill: color-mix(in srgb, #f06b6b 70%, var(--text-strong)); }
 .fs-bracket { fill: none; stroke: var(--text-muted); stroke-width: 1.5; }
+.fs-leader { fill: none; stroke: var(--text-muted); stroke-width: 1; stroke-dasharray: 2 2; }
 .fs-post { fill: #f4f4f4; }
 .fs-post-band { fill: #1a1a1a; }
 .fs-truck-box { fill: #9aa4ae; stroke: rgba(0, 0, 0, .35); stroke-width: 1; }
@@ -241,6 +242,19 @@ html[dir="rtl"] .fs-tr { text-align: right; }
 .fs-road-opts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin-top: 10px; }
 .fs-road-opt { align-items: center; text-align: center; }
 .fs-road-opt .fs-opt-de { font-size: 17px; }
+
+/* Обгон, велосипедист, «молния» */
+.fs-mark.is-solid { stroke-dasharray: none; stroke-width: 2.5; }
+.fs-actor .fs-blink { display: none; }
+.fs-actor.is-blink-l .fs-blink-l, .fs-actor.is-blink-r .fs-blink-r { display: inline; }
+.fs-wheel { fill: none; stroke: var(--text-strong); stroke-width: 1.6; }
+.fs-frame { fill: none; stroke: #20b2a6; stroke-width: 2; stroke-linecap: round; }
+.fs-rider { fill: #f0a35e; }
+.fs-barrier-box { fill: #fff; }
+.fs-barrier-stripe { stroke: #e0484f; stroke-width: 3; }
+.fs-road-opts.is-phrases { grid-template-columns: minmax(0, 1fr); }
+.fs-road-opt.is-phrase { align-items: flex-start; text-align: start; }
+.fs-road-opt.is-phrase .fs-opt-de { font-size: 15px; }
 
 @media (prefers-reduced-motion: reduce) {
   .fs-blink { animation: none; }

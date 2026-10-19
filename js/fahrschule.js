@@ -798,6 +798,7 @@ const Fahrschule = (() => {
   }
 
   function roadSvg(sc, final) {
+    if (PLANS[sc.type]) return planSvg(sc, final);
     const g = roadGeom(sc);
     const road = `<rect class="fs-grass" x="0" y="0" width="${ROAD_W}" height="130"/>
       <rect class="fs-road" x="0" y="44" width="${ROAD_W}" height="44"/>
@@ -839,6 +840,7 @@ const Fahrschule = (() => {
 
   // Подпись цветов — немецкие слова с подсказкой, как в тексте урока
   function roadLegendHtml(sc) {
+    if (PLANS[sc.type]) return '';
     const item = (cls, de) => `<span class="fs-legend-item"><i class="fs-sw ${cls}"></i><span lang="de" dir="ltr">${wordsHtml({ de })}</span></span>`;
     return sc.type === 'gap'
       ? `<div class="fs-legend">${item('fs-sw-gap', 'Abstand')}${item('fs-sw-post', 'Leitpfosten')}</div>`
@@ -853,11 +855,14 @@ const Fahrschule = (() => {
     sentences = sentences.slice(0, 1);   // заголовок урока остаётся, фразы сцены — заново
     const sit = sentence(sc.situation, 'p', 'fs-de');
     const q = sentence(sc.question, 'p', 'fs-quiz-q');
-    const opts = sc.options.map(m => {
-      let cls = 'fs-opt fs-road-opt';
-      if (scene.done && m === sc.answer) cls += ' is-right';
-      else if (scene.done && m === scene.pick) cls += ' is-wrong';
-      return `<button class="${cls}" type="button" data-road-opt="${m}"${scene.done ? ' disabled' : ''}><span class="fs-opt-de" dir="ltr">${m} m</span></button>`;
+    const answer = String(sc.answer);
+    const phrases = sc.options.some(o => typeof o === 'object');
+    const opts = roadOptions(sc).map(o => {
+      let cls = 'fs-opt fs-road-opt' + (phrases ? ' is-phrase' : '');
+      if (scene.done && o.key === answer) cls += ' is-right';
+      else if (scene.done && o.key === scene.pick) cls += ' is-wrong';
+      return `<button class="${cls}" type="button" data-road-opt="${esc(o.key)}"${scene.done ? ' disabled' : ''}>
+        <span class="fs-opt-de" lang="de" dir="ltr">${esc(o.label)}</span>${o.tr ? `<span class="fs-opt-tr">${esc(o.tr)}</span>` : ''}</button>`;
     }).join('');
     const explain = scene.shown ? sc.explain.map(e => {
       const n = sentences.length;
@@ -887,7 +892,7 @@ const Fahrschule = (() => {
       ${q}
       <div class="fs-scene fs-road" id="fsScene">${roadSvg(sc, scene.shown)}</div>
       ${roadLegendHtml(sc)}
-      <div class="fs-opts fs-road-opts${scene.done ? ' is-answered' : ''}">${opts}</div>
+      <div class="fs-opts fs-road-opts${phrases ? ' is-phrases' : ''}${scene.done ? ' is-answered' : ''}">${opts}</div>
       <p class="fs-status${scene.done ? (scene.right ? ' is-right' : ' is-wrong') : ''}" id="fsStatus" aria-live="polite">${status}</p>
       <div class="fs-scene-actions" id="fsActions">${actions}</div>
       ${scene.shown ? `<ol class="fs-lines fs-explain">${explain}</ol>` : ''}`;
@@ -895,11 +900,11 @@ const Fahrschule = (() => {
     paintPlay();
   }
 
-  function pickRoad(m) {
+  function pickRoad(key) {
     if (!scene || scene.done) return;
     const sc = unit.scenes[scene.i];
-    scene.pick = m;
-    scene.right = m === sc.answer;
+    scene.pick = key;
+    scene.right = key === String(sc.answer);
     scene.done = true;
     renderRoad();
     animateRoad(sc, () => {
@@ -912,6 +917,7 @@ const Fahrschule = (() => {
   function animateRoad(sc, done) {
     const svg = document.querySelector('#fsScene .fs-road-svg');
     if (!svg || reducedMotion() || typeof requestAnimationFrame !== 'function') { done(); return; }
+    if (PLANS[sc.type]) { animatePlan(sc, svg, done); return; }
     svg.classList.add('is-driving');
     if (sc.type === 'gap') {
       const posts = svg.querySelector('.fs-posts');
@@ -957,6 +963,146 @@ const Fahrschule = (() => {
       }
       car.setAttribute('transform', `translate(${(ROAD_X0 + x).toFixed(1)} 66)`);
       anims[0] = requestAnimationFrame(tick);
+    };
+    anims[0] = requestAnimationFrame(tick);
+  }
+
+  /* ── Сцены с несколькими участниками: обгон, велосипедист, «молния» ──
+     План сцены — участники с ключевыми кадрами {t: 0…1, x, y, b}: x — нос
+     машины, y — центр полосы, b — поворотник ('l' / 'r') на отрезке от
+     этого кадра. Между кадрами — линейно. Один план и рисует сцену
+     (кадр 0, а после ответа — «снимок» snap), и анимирует её. */
+
+  const LANE_UP = 53;       // встречная / левая полоса
+  const LANE_DOWN = 79;     // наша / правая полоса
+
+  function roadOptions(sc) {
+    return sc.options.map(o => typeof o === 'object'
+      ? { key: String(o.key), label: o.de, tr: o.tr }
+      : { key: String(o), label: String(o).replace('.', ',') + ' m', tr: '' });
+  }
+
+  const PLANS = {
+    overtake(sc) {
+      const yes = sc.answer === 'yes';
+      const truck = { id: 'truck', kind: 'truck', keys: [{ t: 0, x: 205, y: LANE_DOWN }, { t: 1, x: 235, y: LANE_DOWN }] };
+      const me = { id: 'me', kind: 'car', fill: CAR.blue.fill, keys: yes
+        ? [{ t: 0, x: 110, y: LANE_DOWN }, { t: 0.12, x: 125, y: LANE_DOWN, b: 'l' }, { t: 0.3, x: 165, y: LANE_UP, b: 'l' },
+           { t: 0.58, x: 255, y: LANE_UP }, { t: 0.66, x: 262, y: LANE_UP, b: 'r' }, { t: 0.82, x: 300, y: LANE_DOWN, b: 'r' },
+           { t: 1, x: 318, y: LANE_DOWN }]
+        : [{ t: 0, x: 110, y: LANE_DOWN }, { t: 1, x: 138, y: LANE_DOWN }] };
+      const actors = [truck, me];
+      if (sc.oncoming) {
+        actors.push({ id: 'oncoming', kind: 'car', dir: -1, fill: CAR.red.fill,
+          keys: [{ t: 0, x: 340, y: LANE_UP }, { t: 1, x: -40, y: LANE_UP }] });
+      }
+      return { actors, dur: 3600, snap: 1, line: sc.line };
+    },
+    side() {
+      return {
+        actors: [
+          { id: 'bike', kind: 'bike', keys: [{ t: 0, x: 170, y: 87 }, { t: 1, x: 200, y: 87 }] },
+          { id: 'me', kind: 'car', fill: CAR.blue.fill, keys: [{ t: 0, x: 40, y: LANE_DOWN }, { t: 0.25, x: 110, y: LANE_DOWN, b: 'l' },
+            { t: 0.42, x: 160, y: 50 }, { t: 0.6, x: 205, y: 50 }, { t: 0.78, x: 265, y: 50, b: 'r' }, { t: 0.9, x: 300, y: LANE_DOWN },
+            { t: 1, x: 318, y: LANE_DOWN }] }
+        ],
+        dur: 3200, snap: 0.6, line: 'dashed', gapLabel: true
+      };
+    },
+    zipper() {
+      return {
+        actors: [
+          { id: 'l1', kind: 'car', fill: CAR.yellow.fill, keys: [{ t: 0, x: 150, y: LANE_UP }, { t: 0.5, x: 340, y: LANE_UP }, { t: 1, x: 340, y: LANE_UP }] },
+          { id: 'me', kind: 'car', fill: CAR.blue.fill, keys: [{ t: 0, x: 170, y: LANE_DOWN }, { t: 0.22, x: 212, y: LANE_DOWN, b: 'l' },
+            { t: 0.36, x: 240, y: LANE_UP, b: 'l' }, { t: 0.7, x: 340, y: LANE_UP }, { t: 1, x: 340, y: LANE_UP }] },
+          { id: 'l2', kind: 'car', fill: CAR.green.fill, keys: [{ t: 0, x: 95, y: LANE_UP }, { t: 0.36, x: 185, y: LANE_UP }, { t: 0.85, x: 340, y: LANE_UP }, { t: 1, x: 340, y: LANE_UP }] },
+          { id: 'r2', kind: 'car', fill: CAR.red.fill, keys: [{ t: 0, x: 115, y: LANE_DOWN }, { t: 0.5, x: 212, y: LANE_DOWN, b: 'l' },
+            { t: 0.64, x: 240, y: LANE_UP, b: 'l' }, { t: 1, x: 340, y: LANE_UP }] }
+        ],
+        dur: 4200, snap: 0.3, line: 'dashed', laneEnds: true
+      };
+    }
+  };
+
+  function keyAt(keys, t) {
+    if (t <= keys[0].t) return keys[0];
+    for (let i = 1; i < keys.length; i++) {
+      const a = keys[i - 1], b = keys[i];
+      if (t <= b.t) {
+        const k = (t - a.t) / ((b.t - a.t) || 1);
+        return { x: a.x + (b.x - a.x) * k, y: a.y + (b.y - a.y) * k, b: a.b };
+      }
+    }
+    return keys[keys.length - 1];
+  }
+
+  function actorTransform(a, k) {
+    return `translate(${k.x.toFixed(1)} ${k.y.toFixed(1)})${a.dir === -1 ? ' scale(-1 1)' : ''}`;
+  }
+
+  function actorHtml(a, k) {
+    const cls = `fs-actor${k.b ? ' is-blink-' + k.b : ''}`;
+    const tr = actorTransform(a, k);
+    if (a.kind === 'truck') {
+      return `<g class="${cls} fs-truck" data-actor="${a.id}" transform="${tr}">
+        <rect x="-58" y="-11" width="46" height="22" rx="3" class="fs-truck-box"/>
+        <rect x="-12" y="-9" width="12" height="18" rx="3" fill="${CAR.yellow.fill}" class="fs-car-shell"/></g>`;
+    }
+    if (a.kind === 'bike') {
+      return `<g class="${cls} fs-bike" data-actor="${a.id}" transform="${tr}">
+        <circle cx="-15" cy="0" r="4.5" class="fs-wheel"/><circle cx="-2" cy="0" r="4.5" class="fs-wheel"/>
+        <path d="M-15 0 L-9 -6 L-2 0 M-9 -6 L-6 -9" class="fs-frame"/><circle cx="-8" cy="-11" r="2.6" class="fs-rider"/></g>`;
+    }
+    return `<g class="${cls}" data-actor="${a.id}" transform="${tr}">
+      <rect x="-28" y="-9" width="28" height="18" rx="5" fill="${a.fill}" class="fs-car-shell"/>
+      <rect class="fs-glass" x="-10" y="-7" width="6" height="14" rx="2"/>
+      <rect class="fs-glass" x="-25" y="-6" width="4" height="12" rx="1.5"/>
+      <circle class="fs-blink fs-blink-l" cx="-2" cy="-8.5" r="2.4"/><circle class="fs-blink fs-blink-l" cx="-26" cy="-8.5" r="2.4"/>
+      <circle class="fs-blink fs-blink-r" cx="-2" cy="8.5" r="2.4"/><circle class="fs-blink fs-blink-r" cx="-26" cy="8.5" r="2.4"/></g>`;
+  }
+
+  function planSvg(sc, final) {
+    const plan = PLANS[sc.type](sc);
+    const t = final ? plan.snap : 0;
+    const solid = plan.line === 'solid';
+    const ends = plan.laneEnds
+      ? `<rect class="fs-grass" x="236" y="66" width="${ROAD_W - 236}" height="26"/>
+         <g class="fs-barrier"><rect x="222" y="67" width="14" height="24" class="fs-barrier-box"/>
+         <path d="M222 73 L236 67 M222 81 L236 73 M222 89 L236 81 M226 91 L236 87" class="fs-barrier-stripe"/></g>`
+      : '';
+    const sign = sc.sign && unit.signs[sc.sign]
+      ? `<image href="${esc(unit.signs[sc.sign].src)}" x="286" y="8" width="26" height="26"/>` : '';
+    const gap = plan.gapLabel ? `<g class="fs-lab${final ? ' is-on' : ''}">
+        <path class="fs-bracket" d="M182 60 H192 M187 60 V75 M182 75 H192"/><path class="fs-leader" d="M192 68 H232 V104"/>
+        <text class="fs-lab-text" x="232" y="117">${String(sc.answer).replace('.', ',')} m</text></g>` : '';
+    return `<svg class="fs-svg fs-road-svg" viewBox="0 0 ${ROAD_W} 130" role="img" aria-label="${esc(sc.type)}">
+      <rect class="fs-grass" x="0" y="0" width="${ROAD_W}" height="130"/>
+      <rect class="fs-road" x="0" y="40" width="${ROAD_W}" height="52"/>
+      <path class="fs-mark${solid ? ' is-solid' : ''}" d="M0 66 H${plan.laneEnds ? 222 : ROAD_W}"/>
+      ${ends}${sign}
+      ${plan.actors.map(a => actorHtml(a, keyAt(a.keys, t))).join('')}
+      ${gap}
+    </svg>`;
+  }
+
+  function animatePlan(sc, svg, done) {
+    const plan = PLANS[sc.type](sc);
+    const nodes = plan.actors.map(a => [a, svg.querySelector(`[data-actor="${a.id}"]`)]);
+    const t0 = performance.now();
+    const tick = now => {
+      const t = Math.min(1, (now - t0) / plan.dur);
+      nodes.forEach(([a, g]) => {
+        if (!g) return;
+        const k = keyAt(a.keys, t);
+        g.setAttribute('transform', actorTransform(a, k));
+        g.classList.toggle('is-blink-l', k.b === 'l');
+        g.classList.toggle('is-blink-r', k.b === 'r');
+      });
+      if (t < 1) { anims[0] = requestAnimationFrame(tick); return; }
+      anims[0] = null;
+      const lab = svg.querySelector('.fs-lab');
+      if (lab) lab.classList.add('is-on');
+      timers.push(setTimeout(done, 500));
     };
     anims[0] = requestAnimationFrame(tick);
   }
@@ -1188,7 +1334,7 @@ const Fahrschule = (() => {
     }
     if (t.closest('[data-tr-line]')) { toggleLineTr(trHolder(t)); return; }
     const ro = t.closest('[data-road-opt]');
-    if (ro) { pickRoad(Number(ro.dataset.roadOpt)); return; }
+    if (ro) { pickRoad(ro.dataset.roadOpt); return; }
     const opt = t.closest('[data-opt]');
     if (opt) { answerQuiz(opt.dataset.opt); return; }
     if (t.closest('[data-quiz-next]')) { stopSpeech(); quiz.i++; quiz.answered = false; renderQuiz(); return; }

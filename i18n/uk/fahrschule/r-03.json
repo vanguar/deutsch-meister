@@ -9,7 +9,6 @@
  "scenes": [
   {
    "type": "stop",
-   "v": 50,
    "options": [
     25,
     40,
@@ -48,12 +47,12 @@
    "reaction": 15,
    "brake": 25,
    "answer": 40,
+   "v": 50,
    "hazard": "ball",
    "emergency": false
   },
   {
    "type": "stop",
-   "v": 100,
    "options": [
     65,
     100,
@@ -92,12 +91,12 @@
    "reaction": 30,
    "brake": 100,
    "answer": 130,
+   "v": 100,
    "hazard": "deer",
    "emergency": false
   },
   {
    "type": "stop",
-   "v": 60,
    "options": [
     36,
     54,
@@ -140,12 +139,12 @@
    "reaction": 18,
    "brake": 18,
    "answer": 36,
+   "v": 60,
    "hazard": "ball",
    "emergency": true
   },
   {
    "type": "gap",
-   "v": 100,
    "options": [
     25,
     50,
@@ -173,7 +172,8 @@
      "tr": "Сигнальні стовпчики на узбіччі стоять через кожні 50 метрів. За ними зручно оцінювати дистанцію."
     }
    ],
-   "answer": 50
+   "answer": 50,
+   "v": 100
   }
  ],
  "signs": {},
