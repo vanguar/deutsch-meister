@@ -2,6 +2,23 @@
  "version": 1,
  "items": [
   {
+   "id": "sparkassen-krypto-2026",
+   "title": "Bitcoin in der Sparkassen-App: Erste Sparkassen starten den Kryptohandel",
+   "titleRu": "Біткоїн у застосунку: перші ощадні каси Sparkasse запустили торгівлю криптовалютою",
+   "blurb": "З 19 жовтня перші німецькі ощадні каси дають змогу купувати Bitcoin, Ethereum і ще три криптовалюти просто у своєму застосунку. Консультацій не буде, а самі Sparkassen попереджають: це високоспекулятивні вкладення, гроші можна втратити повністю.",
+   "rubric": "tech",
+   "level": "B1",
+   "published": "2026-10-19",
+   "added": "2026-10-19",
+   "source": "t3n · WinFuture",
+   "sourceUrl": "https://t3n.de/news/sparkassen-kryptohandel-bitcoin-warnung-1768795/",
+   "cover": "data/news/sparkassen-krypto-2026/img/cover.jpg",
+   "words": 168,
+   "minutes": 2,
+   "photos": 3,
+   "chapters": 1
+  },
+  {
    "id": "riesenpilz-d-rex-2026",
    "title": "D-rex aus dem Wald: Forscher entdecken einen Riesenpilz in China",
    "titleRu": "D-rex із лісу: у Китаї знайшли гігантський гриб",

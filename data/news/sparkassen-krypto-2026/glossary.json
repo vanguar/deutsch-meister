@@ -1,0 +1,617 @@
+{
+  "version": 1,
+  "w": {
+    "aber": "aber",
+    "an": "an",
+    "anbieter": "Anbieter",
+    "andere": "ander",
+    "angebot": "Angebot",
+    "anlagen": "Anlage",
+    "app": "App",
+    "auch": "auch",
+    "aufbewahren": "aufbewahren",
+    "bei": "bei",
+    "beratung": "Beratung",
+    "bieten": "anbieten",
+    "bis": "bis",
+    "bitcoin": "Bitcoin",
+    "börse": "Börse",
+    "dabei": "dabei",
+    "dafür": "dafür",
+    "das": "der/die/das",
+    "dazukommen": "dazukommen",
+    "dekabank": "DekaBank",
+    "dem": "der/die/das",
+    "den": "der/die/das",
+    "der": "der/die/das",
+    "des": "der/die/das",
+    "deutschland": "Deutschland",
+    "die": "der/die/das",
+    "digitalen": "digital",
+    "ein": "ein/eine",
+    "eine": "ein/eine",
+    "einen": "ein/eine",
+    "entscheidet": "entscheiden",
+    "ersten": "erste",
+    "es": "es",
+    "ethereum": "Ethereum",
+    "filiale": "Filiale",
+    "fünf": "fünf",
+    "für": "für",
+    "ganz": "ganz",
+    "ganze": "ganz",
+    "geld": "Geld",
+    "gemeinsamen": "gemeinsam",
+    "gibt": "geben",
+    "gleichzeitig": "gleichzeitig",
+    "großer": "groß",
+    "handel": "Handel",
+    "handeln": "handeln",
+    "heißt": "heißen",
+    "hochspekulative": "hochspekulativ",
+    "hälfte": "Hälfte",
+    "ihr": "ihr (их, её)",
+    "ihre": "ihr (её, их)",
+    "ihrer": "ihr (их, её)",
+    "in": "in",
+    "interessierten": "interessieren",
+    "ist": "sein",
+    "jahres": "Jahr",
+    "jede": "jeder",
+    "jeden": "jeder",
+    "jetzt": "jetzt",
+    "kann": "können",
+    "kaufen": "kaufen",
+    "kommt": "kommen",
+    "kryptohandel": "Kryptohandel",
+    "kryptowährungen": "Kryptowährung",
+    "kunden": "Kunde",
+    "kurs": "Kurs",
+    "können": "können",
+    "länger": "lang",
+    "machen": "machen",
+    "man": "man",
+    "menschen": "Mensch",
+    "mit": "mit",
+    "monat": "Monat",
+    "münzen": "Münze",
+    "nicht": "nicht",
+    "nur": "nur",
+    "oktober": "Oktober",
+    "polygon": "Polygon",
+    "republic": "Trade Republic",
+    "revolut": "Revolut",
+    "richtet": "sich richten an",
+    "ripple": "Ripple",
+    "schon": "schon",
+    "schritt": "Schritt",
+    "schwanken": "schwanken",
+    "seien": "sein",
+    "sein": "sein",
+    "seit": "seit",
+    "selbst": "selbst",
+    "sich": "sich",
+    "sie": "sie",
+    "solana": "Solana",
+    "soll": "sollen",
+    "sollen": "sollen",
+    "sparkasse": "Sparkasse",
+    "sparkassen": "Sparkasse",
+    "stark": "stark",
+    "starttermin": "Starttermin",
+    "stuttgart": "Stuttgart",
+    "technik": "Technik",
+    "teil": "Teil",
+    "trade": "Trade Republic",
+    "und": "und",
+    "verkaufen": "verkaufen",
+    "verlieren": "verlieren",
+    "verwahrt": "verwahren",
+    "volksbanken": "Volksbank",
+    "von": "von",
+    "warnen": "warnen",
+    "weitere": "weiter",
+    "werbung": "Werbung",
+    "wertpapierhaus": "Wertpapierhaus",
+    "wie": "wie",
+    "wollen": "wollen",
+    "zusammen": "zusammen"
+  },
+  "l": {
+    "aber": {
+      "ru": "но, однако",
+      "pos": "союз"
+    },
+    "an": {
+      "ru": "у, к, на",
+      "pos": "предл.",
+      "note": "am = an dem. Тж. отделяемая приставка: anfangen «начинать», annehmen, ansehen, anzünden"
+    },
+    "anbieten": {
+      "ru": "предлагать",
+      "pos": "гл.",
+      "forms": "bot an · hat angeboten",
+      "note": "Handel anbieten — предлагать торговлю"
+    },
+    "Anbieter": {
+      "ru": "поставщик услуг, компания",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Anbieter"
+    },
+    "ander": {
+      "pos": "прил.",
+      "ru": "другой, иной"
+    },
+    "Angebot": {
+      "ru": "предложение",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Angebote"
+    },
+    "Anlage": {
+      "ru": "вложение, инвестиция",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Anlagen",
+      "note": "также «сооружение, установка»"
+    },
+    "App": {
+      "ru": "приложение (для телефона)",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Apps"
+    },
+    "auch": {
+      "ru": "тоже, также; даже",
+      "pos": "частица"
+    },
+    "aufbewahren": {
+      "ru": "хранить",
+      "pos": "гл.",
+      "forms": "bewahrte auf · hat aufbewahrt"
+    },
+    "bei": {
+      "ru": "у, при, возле",
+      "pos": "предл."
+    },
+    "Beratung": {
+      "ru": "консультация",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Beratungen"
+    },
+    "bis": {
+      "ru": "до; пока не",
+      "pos": "союз"
+    },
+    "Bitcoin": {
+      "ru": "биткоин (криптовалюта)",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Bitcoins"
+    },
+    "Börse": {
+      "ru": "биржа",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Börsen"
+    },
+    "dabei": {
+      "ru": "при этом, при том",
+      "pos": "нареч."
+    },
+    "dafür": {
+      "ru": "за это, для этого",
+      "pos": "нареч.",
+      "note": "dafür sorgen, dass … — позаботиться, чтобы …"
+    },
+    "dazukommen": {
+      "ru": "добавляться, присоединяться",
+      "pos": "гл.",
+      "forms": "kam dazu · ist dazugekommen"
+    },
+    "DekaBank": {
+      "ru": "DekaBank (банк сберкасс для ценных бумаг)",
+      "pos": "имя собств."
+    },
+    "der/die/das": {
+      "ru": "определённый артикль",
+      "pos": "артикль",
+      "note": "Тж. относительное местоимение «который»"
+    },
+    "Deutschland": {
+      "ru": "Германия",
+      "pos": "геогр."
+    },
+    "digital": {
+      "ru": "цифровой",
+      "pos": "прил."
+    },
+    "ein/eine": {
+      "ru": "неопределённый артикль",
+      "pos": "артикль",
+      "note": "einer — «один, некто»"
+    },
+    "entscheiden": {
+      "ru": "решать",
+      "pos": "гл.",
+      "forms": "entschied · hat entschieden"
+    },
+    "erste": {
+      "ru": "первый",
+      "pos": "числ."
+    },
+    "es": {
+      "ru": "оно; это",
+      "pos": "мест."
+    },
+    "Ethereum": {
+      "ru": "Ethereum (криптовалюта)",
+      "pos": "имя собств."
+    },
+    "Filiale": {
+      "ru": "отделение, филиал",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Filialen"
+    },
+    "fünf": {
+      "ru": "пять",
+      "pos": "числ."
+    },
+    "für": {
+      "ru": "для, за",
+      "pos": "предл."
+    },
+    "ganz": {
+      "ru": "весь, целый; совсем",
+      "pos": "прил."
+    },
+    "geben": {
+      "ru": "давать",
+      "pos": "гл.",
+      "forms": "gab · hat gegeben"
+    },
+    "Geld": {
+      "art": "das",
+      "pl": "die Gelder",
+      "pos": "сущ.",
+      "ru": "деньги"
+    },
+    "gemeinsam": {
+      "ru": "общий, совместный",
+      "pos": "прил."
+    },
+    "gleichzeitig": {
+      "ru": "одновременно",
+      "pos": "нареч."
+    },
+    "groß": {
+      "ru": "большой",
+      "pos": "прил.",
+      "forms": "groß · größer · am größten"
+    },
+    "Handel": {
+      "art": "der",
+      "note": "an dem Handel war ihm viel gelegen — сделка была ему очень нужна",
+      "pl": null,
+      "pos": "сущ.",
+      "ru": "сделка; торговля"
+    },
+    "handeln": {
+      "ru": "торговать; действовать",
+      "pos": "гл.",
+      "forms": "handelte · hat gehandelt",
+      "note": "mit Aktien handeln — торговать акциями"
+    },
+    "heißen": {
+      "ru": "называться; велеть",
+      "pos": "гл.",
+      "forms": "hieß · hat geheißen"
+    },
+    "hochspekulativ": {
+      "ru": "высокоспекулятивный, очень рискованный",
+      "pos": "прил."
+    },
+    "Hälfte": {
+      "ru": "половина",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Hälften"
+    },
+    "ihr (её, их)": {
+      "ru": "её; их",
+      "pos": "мест."
+    },
+    "ihr (их, её)": {
+      "ru": "их; её",
+      "pos": "мест."
+    },
+    "in": {
+      "ru": "в (im = in dem, ins = in das)",
+      "pos": "предл."
+    },
+    "interessieren": {
+      "ru": "интересовать",
+      "pos": "гл.",
+      "forms": "interessierte · hat interessiert"
+    },
+    "Jahr": {
+      "ru": "год",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Jahre"
+    },
+    "jeder": {
+      "ru": "каждый",
+      "pos": "мест."
+    },
+    "jetzt": {
+      "ru": "сейчас, теперь",
+      "pos": "нареч."
+    },
+    "kaufen": {
+      "ru": "покупать",
+      "pos": "гл.",
+      "forms": "kaufte · hat gekauft"
+    },
+    "kommen": {
+      "ru": "приходить, приезжать",
+      "pos": "гл.",
+      "forms": "kam · ist gekommen"
+    },
+    "Kryptohandel": {
+      "ru": "торговля криптовалютой",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "Kryptowährung": {
+      "ru": "криптовалюта",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Kryptowährungen",
+      "note": "die Währung — валюта"
+    },
+    "Kunde": {
+      "ru": "покупатель, клиент",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Kunden"
+    },
+    "Kurs": {
+      "ru": "курс (цена акции, валюты)",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Kurse"
+    },
+    "können": {
+      "ru": "мочь, уметь",
+      "pos": "гл.",
+      "forms": "konnte · hat gekonnt"
+    },
+    "lang": {
+      "ru": "длинный, долгий",
+      "pos": "прил.",
+      "forms": "lang · länger · am längsten"
+    },
+    "machen": {
+      "ru": "делать",
+      "pos": "гл.",
+      "forms": "machte · hat gemacht",
+      "note": "sich auf den Weg machen — отправиться в путь"
+    },
+    "man": {
+      "ru": "неопределённое «кто-то, люди, мы»",
+      "pos": "мест."
+    },
+    "Mensch": {
+      "ru": "человек",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Menschen",
+      "decl": "n-Deklination: des Menschen · dem/den Menschen"
+    },
+    "mit": {
+      "ru": "с",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: mitgehen «пойти вместе»"
+    },
+    "Monat": {
+      "ru": "месяц",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Monate"
+    },
+    "Münze": {
+      "ru": "монета",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Münzen"
+    },
+    "nicht": {
+      "ru": "не",
+      "pos": "частица"
+    },
+    "nur": {
+      "ru": "только, лишь",
+      "pos": "частица"
+    },
+    "Oktober": {
+      "ru": "октябрь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Oktober"
+    },
+    "Polygon": {
+      "ru": "Polygon (криптовалюта)",
+      "pos": "имя собств."
+    },
+    "Revolut": {
+      "ru": "Revolut (онлайн-банк)",
+      "pos": "имя собств."
+    },
+    "Ripple": {
+      "ru": "Ripple, XRP (криптовалюта)",
+      "pos": "имя собств."
+    },
+    "schon": {
+      "ru": "уже",
+      "pos": "нареч."
+    },
+    "Schritt": {
+      "ru": "шаг",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Schritte"
+    },
+    "schwanken": {
+      "ru": "колебаться",
+      "pos": "гл.",
+      "forms": "schwankte · hat geschwankt"
+    },
+    "sein": {
+      "ru": "быть; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "war · ist gewesen"
+    },
+    "seit": {
+      "ru": "с (какого-то времени)",
+      "pos": "предл."
+    },
+    "selbst": {
+      "ru": "сам; даже",
+      "pos": "мест."
+    },
+    "sich": {
+      "ru": "себя, себе",
+      "pos": "мест.",
+      "note": "Возвратное местоимение, часть возвратного глагола: sich auf den Weg machen, sich setzen, sich legen, sich nähern, sich gefallen lassen, sich getrauen, sich umsehen"
+    },
+    "sich richten an": {
+      "ru": "быть адресованным, рассчитанным на",
+      "pos": "гл.",
+      "forms": "richtete sich an · hat sich an … gerichtet",
+      "note": "das Angebot richtet sich an … — предложение рассчитано на …"
+    },
+    "sie": {
+      "ru": "она; они; Вы",
+      "pos": "мест."
+    },
+    "Solana": {
+      "ru": "Solana (криптовалюта)",
+      "pos": "имя собств."
+    },
+    "sollen": {
+      "ru": "быть должным, следует",
+      "pos": "гл.",
+      "forms": "sollte · hat gesollt"
+    },
+    "Sparkasse": {
+      "ru": "сберкасса, сберегательный банк",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Sparkassen",
+      "note": "местные банки в Германии, обычно принадлежат городу или району"
+    },
+    "stark": {
+      "ru": "сильный, крепкий",
+      "pos": "прил."
+    },
+    "Starttermin": {
+      "ru": "дата старта, начала",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Starttermine"
+    },
+    "Stuttgart": {
+      "ru": "Штутгарт (столица Баден-Вюртемберга)",
+      "pos": "геогр."
+    },
+    "Technik": {
+      "ru": "техника, технология",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Techniken"
+    },
+    "Teil": {
+      "ru": "часть; доля",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Teile",
+      "note": "sein Teil haben — получить своё"
+    },
+    "Trade Republic": {
+      "ru": "Trade Republic (немецкий онлайн-брокер)",
+      "pos": "имя собств."
+    },
+    "und": {
+      "ru": "и, а",
+      "pos": "союз"
+    },
+    "verkaufen": {
+      "ru": "продавать",
+      "pos": "гл.",
+      "forms": "verkaufte · hat verkauft"
+    },
+    "verlieren": {
+      "forms": "verlor · hat verloren",
+      "pos": "гл.",
+      "ru": "терять"
+    },
+    "verwahren": {
+      "ru": "хранить (на хранении)",
+      "pos": "гл.",
+      "forms": "verwahrte · hat verwahrt"
+    },
+    "Volksbank": {
+      "ru": "народный банк (кооперативный банк)",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Volksbanken"
+    },
+    "von": {
+      "ru": "от, из, о (vom = von dem)",
+      "pos": "предл."
+    },
+    "warnen": {
+      "ru": "предупреждать",
+      "pos": "гл.",
+      "forms": "warnte · hat gewarnt",
+      "note": "vor etwas warnen — предостерегать от чего-то"
+    },
+    "weiter": {
+      "ru": "дальнейший; ещё (weitere — ещё, другие)",
+      "pos": "прил.",
+      "note": "30 weitere Sparkassen — ещё 30 сберкасс"
+    },
+    "Werbung": {
+      "ru": "реклама",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null,
+      "note": "Werbung machen — рекламировать"
+    },
+    "Wertpapierhaus": {
+      "ru": "компания по ценным бумагам",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Wertpapierhäuser",
+      "note": "das Wertpapier — ценная бумага (акция, облигация)"
+    },
+    "wie": {
+      "ru": "как; какой",
+      "pos": "союз"
+    },
+    "wollen": {
+      "ru": "хотеть",
+      "pos": "гл.",
+      "forms": "wollte · hat gewollt"
+    },
+    "zusammen": {
+      "ru": "вместе",
+      "pos": "нареч."
+    }
+  }
+}

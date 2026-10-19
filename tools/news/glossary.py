@@ -1886,3 +1886,61 @@ L.update({
     'Aussterben': n('вымирание', 'das', None),
     'Frontiers in Fungal Biology': name('Frontiers in Fungal Biology (научный журнал о грибах)'),
 })
+
+W.update({
+    # Sparkassen: криптовалюта в приложении
+    'sparkassen': 'Sparkasse', 'sparkasse': 'Sparkasse', 'bitcoin': 'Bitcoin', 'kryptowährungen': 'Kryptowährung',
+    'gemeinsamen': 'gemeinsam', 'starttermin': 'Starttermin', 'entscheidet': 'entscheiden', 'monat': 'Monat',
+    'weitere': 'weiter', 'verkaufen': 'verkaufen', 'aufbewahren': 'aufbewahren', 'ethereum': 'Ethereum',
+    'ripple': 'Ripple', 'solana': 'Solana', 'polygon': 'Polygon', 'dekabank': 'DekaBank',
+    'wertpapierhaus': 'Wertpapierhaus', 'münzen': 'Münze', 'verwahrt': 'verwahren', 'börse': 'Börse',
+    'stuttgart': 'Stuttgart', 'beratung': 'Beratung', 'filiale': 'Filiale', 'angebot': 'Angebot',
+    'handeln': 'handeln', 'werbung': 'Werbung', 'hochspekulative': 'hochspekulativ', 'anlagen': 'Anlage',
+    'kurs': 'Kurs', 'schwanken': 'schwanken', 'anbieter': 'Anbieter', 'trade': 'Trade Republic',
+    'republic': 'Trade Republic', 'revolut': 'Revolut', 'volksbanken': 'Volksbank', 'kryptohandel': 'Kryptohandel',
+})
+
+W_ART.update({
+    'sparkassen-krypto-2026': {'bieten': 'anbieten', 'an': 'an', 'ihr': 'ihr (их, её)', 'richtet': 'sich richten an',
+                               'heißt': 'heißen'},
+})
+
+L.update({
+    # Sparkassen: криптовалюта в приложении
+    'Sparkasse': n('сберкасса, сберегательный банк', 'die', 'die Sparkassen',
+                   note='местные банки в Германии, обычно принадлежат городу или району'),
+    'Bitcoin': n('биткоин (криптовалюта)', 'der', 'die Bitcoins'),
+    'Kryptowährung': n('криптовалюта', 'die', 'die Kryptowährungen', note='die Währung — валюта'),
+    'gemeinsam': a('общий, совместный'),
+    'Starttermin': n('дата старта, начала', 'der', 'die Starttermine'),
+    'entscheiden': v('решать', 'entschied · hat entschieden'),
+    'weiter': a('дальнейший; ещё (weitere — ещё, другие)', note='30 weitere Sparkassen — ещё 30 сберкасс'),
+    'anbieten': v('предлагать', 'bot an · hat angeboten', note='Handel anbieten — предлагать торговлю'),
+    'aufbewahren': v('хранить', 'bewahrte auf · hat aufbewahrt'),
+    'Ethereum': name('Ethereum (криптовалюта)'),
+    'Ripple': name('Ripple, XRP (криптовалюта)'),
+    'Solana': name('Solana (криптовалюта)'),
+    'Polygon': name('Polygon (криптовалюта)'),
+    'DekaBank': name('DekaBank (банк сберкасс для ценных бумаг)'),
+    'Wertpapierhaus': n('компания по ценным бумагам', 'das', 'die Wertpapierhäuser',
+                        note='das Wertpapier — ценная бумага (акция, облигация)'),
+    'Münze': n('монета', 'die', 'die Münzen'),
+    'verwahren': v('хранить (на хранении)', 'verwahrte · hat verwahrt'),
+    'Börse': n('биржа', 'die', 'die Börsen'),
+    'Stuttgart': geo('Штутгарт (столица Баден-Вюртемберга)'),
+    'Beratung': n('консультация', 'die', 'die Beratungen'),
+    'Filiale': n('отделение, филиал', 'die', 'die Filialen'),
+    'sich richten an': v('быть адресованным, рассчитанным на', 'richtete sich an · hat sich an … gerichtet',
+                         note='das Angebot richtet sich an … — предложение рассчитано на …'),
+    'handeln': v('торговать; действовать', 'handelte · hat gehandelt', note='mit Aktien handeln — торговать акциями'),
+    'Werbung': n('реклама', 'die', None, note='Werbung machen — рекламировать'),
+    'hochspekulativ': a('высокоспекулятивный, очень рискованный'),
+    'Anlage': n('вложение, инвестиция', 'die', 'die Anlagen', note='также «сооружение, установка»'),
+    'Kurs': n('курс (цена акции, валюты)', 'der', 'die Kurse'),
+    'schwanken': v('колебаться', 'schwankte · hat geschwankt'),
+    'Anbieter': n('поставщик услуг, компания', 'der', 'die Anbieter'),
+    'Trade Republic': name('Trade Republic (немецкий онлайн-брокер)'),
+    'Revolut': name('Revolut (онлайн-банк)'),
+    'Volksbank': n('народный банк (кооперативный банк)', 'die', 'die Volksbanken'),
+    'Kryptohandel': n('торговля криптовалютой', 'der', None),
+})

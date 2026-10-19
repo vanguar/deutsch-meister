@@ -887,3 +887,40 @@ META.update({
 })
 
 ORDER = ['riesenpilz-d-rex-2026'] + ORDER
+
+META.update({
+    'sparkassen-krypto-2026': {
+        'title': 'Bitcoin in der Sparkassen-App: Erste Sparkassen starten den Kryptohandel',
+        'titleRu': 'Биткоин в приложении: первые сберкассы Sparkasse запустили торговлю криптовалютой',
+        'rubric': 'tech',
+        'level': 'B1',
+        'levelNote': 'Отделяемые глаголы (bieten … an, dazukommen), модальные глаголы с инфинитивом в конце '
+                     '(sollen … dazukommen, kann … verlieren), es gibt … nicht, возвратный глагол (richtet sich an), '
+                     'косвенная речь с конъюнктивом I (seien), относительное придаточное (die selbst handeln wollen), '
+                     'лексика финансов и банков.',
+        'published': '2026-10-19',
+        'added': '2026-10-19',
+        'source': 't3n · WinFuture',
+        'sourceUrl': 'https://t3n.de/news/sparkassen-kryptohandel-bitcoin-warnung-1768795/',
+        'blurb': 'С 19 октября первые немецкие сберкассы позволяют покупать Bitcoin, Ethereum и ещё три '
+                 'криптовалюты прямо в своём приложении. Консультаций не будет, а сами Sparkassen предупреждают: '
+                 'это высокоспекулятивные вложения, деньги можно потерять полностью.',
+        'license': 'Текст — пересказ сообщений t3n и WinFuture; фото — Wikimedia Commons',
+        'figs': {
+            'sparkasse': {'w': 567, 'h': 378,
+                          'cap': 'Здание сберкассы в Тауберфранкене (Баден-Вюртемберг). Sparkassen — '
+                                 'местные банки, они есть почти в каждом немецком городе.',
+                          'credit': 'Biest55 · CC0 · Wikimedia Commons'},
+            'bitcoin': {'w': 1200, 'h': 801,
+                        'cap': 'Сувенирная монета с символом биткоина. Настоящие биткоины существуют '
+                               'только в цифровом виде.',
+                        'credit': 'Shixart1985 · CC BY 2.0 · Wikimedia Commons'},
+            'boerse': {'w': 1200, 'h': 800,
+                       'cap': 'Здание Штутгартской биржи. Вместе с ней DekaBank хранит криптовалюты '
+                              'клиентов сберкасс.',
+                       'credit': 'Fred Romero · CC BY 2.0 · Wikimedia Commons'},
+        },
+    },
+})
+
+ORDER = ['sparkassen-krypto-2026'] + ORDER
