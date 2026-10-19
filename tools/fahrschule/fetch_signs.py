@@ -51,6 +51,9 @@ SIGNS = {
     'z311': 'File:Zeichen 311 - Ortstafel (Rückseite), StVO 1970.svg',
     'z3251': 'File:Zeichen 325.1 - Beginn eines verkehrsberuhigten Bereichs, StVO 2009.svg',
     'z350': 'File:Zeichen 350-10 - Fußgängerüberweg (rechts), StVO 1992.svg',
+    'z380': 'File:Zeichen 380 - Richtgeschwindigkeit, StVO 1988.svg',
+    'z3301': 'File:Zeichen 330.1 - Autobahn, StVO 2013.svg',
+    'z282': 'File:Zeichen 282 - Ende sämtlicher Streckenverbote, StVO 1970.svg',
 }
 
 # SVG с Commons встраивается как <img>: скрипты там и так не исполняются,

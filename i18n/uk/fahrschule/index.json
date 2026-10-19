@@ -28,6 +28,7 @@
    "title": "Geschwindigkeit und Abstand",
    "titleTr": "Швидкість і дистанція",
    "units": [
+    "t-03",
     "r-03"
    ]
   }
@@ -86,6 +87,15 @@
    "title": "Ampel und grüner Pfeil",
    "titleTr": "Світлофор і зелена стрілка",
    "count": 3
+  },
+  {
+   "id": "t-03",
+   "kind": "theory",
+   "emoji": "⏱️",
+   "level": "A2–B1",
+   "title": "Geschwindigkeit und Abstand",
+   "titleTr": "Швидкість і дистанція",
+   "count": 21
   },
   {
    "id": "r-03",
