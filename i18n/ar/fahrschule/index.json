@@ -51,6 +51,7 @@
    "titleTr": "التوقف والركن",
    "units": [
     "t-05",
+    "p-05",
     "r-05"
    ]
   }
@@ -172,6 +173,15 @@
    "title": "Halten und Parken",
    "titleTr": "التوقف والركن",
    "count": 17
+  },
+  {
+   "id": "p-05",
+   "kind": "dialog",
+   "emoji": "🕙",
+   "level": "A2",
+   "title": "Einparken in der Stadt",
+   "titleTr": "الركن في المدينة",
+   "count": 15
   },
   {
    "id": "r-05",

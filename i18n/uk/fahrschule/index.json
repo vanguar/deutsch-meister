@@ -51,6 +51,7 @@
    "titleTr": "Зупинка і стоянка",
    "units": [
     "t-05",
+    "p-05",
     "r-05"
    ]
   }
@@ -172,6 +173,15 @@
    "title": "Halten und Parken",
    "titleTr": "Зупинка і стоянка",
    "count": 17
+  },
+  {
+   "id": "p-05",
+   "kind": "dialog",
+   "emoji": "🕙",
+   "level": "A2",
+   "title": "Einparken in der Stadt",
+   "titleTr": "Паркуємося в місті",
+   "count": 15
   },
   {
    "id": "r-05",

@@ -1,0 +1,613 @@
+{
+ "id": "p-05",
+ "kind": "dialog",
+ "emoji": "🕙",
+ "level": "A2",
+ "title": "Einparken in der Stadt",
+ "titleTr": "Паркуємося в місті",
+ "intro": "Софія шукає місце в місті: правило п'яти метрів біля перехрестя, паралельне паркування заднім ходом і диск паркування.",
+ "speakers": {
+  "A": {
+   "name": "Fahrlehrer",
+   "g": "m"
+  },
+  "B": {
+   "name": "Sofiia",
+   "g": "f"
+  }
+ },
+ "lines": [
+  {
+   "de": "Wir suchen jetzt einen Parkplatz. Sehen Sie eine Lücke?",
+   "tr": "Зараз шукаємо місце для стоянки. Бачите вільне місце?",
+   "s": "A"
+  },
+  {
+   "de": "Da vorne, direkt nach der Kreuzung ist eine Lücke frei.",
+   "tr": "Он попереду, одразу після перехрестя, є вільне місце.",
+   "s": "B"
+  },
+  {
+   "de": "Dort dürfen Sie nicht parken. Wie viel Abstand brauchen Sie zur Kreuzung?",
+   "tr": "Там паркуватися не можна. Яка відстань потрібна до перехрестя?",
+   "s": "A"
+  },
+  {
+   "de": "Mindestens fünf Meter. Dann suche ich weiter.",
+   "tr": "Щонайменше п'ять метрів. Тоді шукаю далі.",
+   "o": {
+    "suche": "suche>weitersuchen",
+    "weiter": "weiter>weitersuchen"
+   },
+   "s": "B"
+  },
+  {
+   "de": "Gut. Dort hinten ist eine Lücke zwischen zwei Autos.",
+   "tr": "Добре. Он там позаду є місце між двома машинами.",
+   "s": "A"
+  },
+  {
+   "de": "Ich halte neben dem vorderen Auto und blinke rechts.",
+   "tr": "Зупиняюся поруч із передньою машиною і вмикаю правий поворотник.",
+   "s": "B"
+  },
+  {
+   "de": "Richtig. Jetzt fahren Sie langsam rückwärts und lenken nach rechts.",
+   "tr": "Правильно. Тепер повільно здавайте назад і повертайте кермо праворуч.",
+   "s": "A"
+  },
+  {
+   "de": "Ich schaue über die Schulter. Hinten ist alles frei.",
+   "tr": "Дивлюся через плече. Позаду все вільно.",
+   "s": "B"
+  },
+  {
+   "de": "Jetzt lenken Sie nach links. Achtung, nicht den Bordstein berühren!",
+   "tr": "Тепер поверніть кермо ліворуч. Обережно, не зачепіть бордюр!",
+   "s": "A"
+  },
+  {
+   "de": "Das Auto steht parallel zum Bordstein. Habe ich gut eingeparkt?",
+   "tr": "Машина стоїть паралельно бордюру. Я добре припаркувалася?",
+   "s": "B"
+  },
+  {
+   "de": "Sehr gut. Hier dürfen Sie mit Parkscheibe zwei Stunden parken.",
+   "tr": "Дуже добре. Тут із диском паркування можна стояти дві години.",
+   "s": "A"
+  },
+  {
+   "de": "Es ist zehn Uhr zwölf. Welche Zeit stelle ich ein?",
+   "tr": "Зараз десята дванадцять. Який час мені виставити?",
+   "o": {
+    "ein": "ein>einstellen",
+    "stelle": "stelle>einstellen"
+   },
+   "s": "B"
+  },
+  {
+   "de": "Halb elf. Die Zeit wird auf die nächste halbe Stunde aufgerundet.",
+   "tr": "Пів на одинадцяту. Час округлюють угору до наступного півгодини.",
+   "s": "A"
+  },
+  {
+   "de": "Dann darf ich bis halb eins hier parken.",
+   "tr": "Тоді я можу стояти тут до пів на першу.",
+   "s": "B"
+  },
+  {
+   "de": "Genau. Legen Sie die Parkscheibe gut sichtbar hinter die Windschutzscheibe.",
+   "tr": "Саме так. Покладіть диск паркування на видне місце за лобовим склом.",
+   "s": "A"
+  }
+ ],
+ "signs": {},
+ "gloss": {
+  "w": {
+   "abstand": "Abstand",
+   "achtung": "Achtung",
+   "alles": "alle",
+   "auf": "auf",
+   "aufgerundet": "aufrunden",
+   "auto": "Auto",
+   "autos": "Auto",
+   "berühren": "berühren",
+   "bis": "bis",
+   "blinke": "blinken",
+   "bordstein": "Bordstein",
+   "brauchen": "brauchen",
+   "da": "da",
+   "dann": "dann",
+   "darf": "dürfen",
+   "das": "der/die/das",
+   "dem": "der/die/das",
+   "den": "der/die/das",
+   "der": "der/die/das",
+   "die": "der/die/das",
+   "direkt": "direkt",
+   "dort": "dort",
+   "dürfen": "dürfen",
+   "ein>einstellen": "einstellen",
+   "eine": "ein/eine",
+   "einen": "ein/eine",
+   "eingeparkt": "einparken",
+   "einparken": "einparken",
+   "eins": "eins",
+   "elf": "elf",
+   "es": "es",
+   "fahren": "fahren",
+   "frei": "frei",
+   "fünf": "fünf",
+   "genau": "genau",
+   "gut": "gut",
+   "habe": "haben",
+   "halb": "halb",
+   "halbe": "halb",
+   "halte": "halten",
+   "hier": "hier",
+   "hinten": "hinten",
+   "hinter": "hinter",
+   "ich": "ich",
+   "in": "in",
+   "ist": "sein",
+   "jetzt": "jetzt",
+   "kreuzung": "Kreuzung",
+   "langsam": "langsam",
+   "legen": "legen",
+   "lenken": "lenken",
+   "links": "links",
+   "lücke": "Lücke",
+   "meter": "Meter",
+   "mindestens": "mindestens",
+   "mit": "mit",
+   "nach": "nach",
+   "neben": "neben",
+   "nicht": "nicht",
+   "nächste": "nächste",
+   "parallel": "parallel",
+   "parken": "parken",
+   "parkplatz": "Parkplatz",
+   "parkscheibe": "Parkscheibe",
+   "rechts": "rechts",
+   "richtig": "richtig",
+   "rückwärts": "rückwärts",
+   "schaue": "schauen",
+   "schulter": "Schulter",
+   "sehen": "sehen",
+   "sehr": "sehr",
+   "sichtbar": "sichtbar",
+   "sie": "Sie",
+   "stadt": "Stadt",
+   "steht": "stehen",
+   "stelle>einstellen": "einstellen",
+   "stunde": "Stunde",
+   "stunden": "Stunde",
+   "suche>weitersuchen": "weitersuchen",
+   "suchen": "suchen",
+   "uhr": "Uhr",
+   "und": "und",
+   "viel": "viel",
+   "vorderen": "vorder",
+   "vorne": "vorne",
+   "weiter>weitersuchen": "weitersuchen",
+   "welche": "welcher",
+   "wie": "wie",
+   "windschutzscheibe": "Windschutzscheibe",
+   "wir": "wir",
+   "wird": "werden",
+   "zehn": "zehn",
+   "zeit": "Zeit",
+   "zum": "zu",
+   "zur": "zu",
+   "zwei": "zwei",
+   "zwischen": "zwischen",
+   "zwölf": "zwölf",
+   "über": "über"
+  },
+  "l": {
+   "Abstand": {
+    "ru": "дистанція, відстань",
+    "pos": "ім.",
+    "decl": "der Abstand · мн.: die Abstände"
+   },
+   "Achtung": {
+    "ru": "увага!",
+    "pos": "ім.",
+    "decl": "die Achtung · мн. немає"
+   },
+   "Auto": {
+    "ru": "машина, автомобіль",
+    "pos": "ім.",
+    "decl": "das Auto · мн.: die Autos"
+   },
+   "Bordstein": {
+    "ru": "бордюр",
+    "pos": "ім.",
+    "decl": "der Bordstein · мн.: die Bordsteine"
+   },
+   "Kreuzung": {
+    "ru": "перехрестя",
+    "pos": "ім.",
+    "decl": "die Kreuzung · мн.: die Kreuzungen"
+   },
+   "Lücke": {
+    "ru": "вільне місце, проміжок",
+    "pos": "ім.",
+    "decl": "die Lücke · мн.: die Lücken"
+   },
+   "Meter": {
+    "ru": "метр",
+    "pos": "ім.",
+    "decl": "der Meter · мн.: die Meter"
+   },
+   "Parkplatz": {
+    "ru": "парковка, місце для стоянки",
+    "pos": "ім.",
+    "decl": "der Parkplatz · мн.: die Parkplätze"
+   },
+   "Parkscheibe": {
+    "ru": "диск паркування (Parkscheibe)",
+    "pos": "ім.",
+    "note": "синій диск за лобовим склом: виставляють час прибуття, округлений до наступного півгодини",
+    "decl": "die Parkscheibe · мн.: die Parkscheiben"
+   },
+   "Schulter": {
+    "ru": "плече",
+    "pos": "ім.",
+    "decl": "die Schulter · мн.: die Schultern"
+   },
+   "Sie": {
+    "ru": "ви (ввічливо)",
+    "pos": "займ.",
+    "note": "Ihnen — вам (давальний): vor Ihnen — перед вами"
+   },
+   "Stadt": {
+    "ru": "місто",
+    "pos": "ім.",
+    "decl": "die Stadt · мн.: die Städte"
+   },
+   "Stunde": {
+    "ru": "година; урок",
+    "pos": "ім.",
+    "decl": "die Stunde · мн.: die Stunden"
+   },
+   "Uhr": {
+    "ru": "годинник; (про час) година",
+    "pos": "ім.",
+    "note": "zehn Uhr zwölf — десята година дванадцять хвилин (10:12)",
+    "decl": "die Uhr · мн.: die Uhren"
+   },
+   "Windschutzscheibe": {
+    "ru": "лобове скло",
+    "pos": "ім.",
+    "decl": "die Windschutzscheibe · мн.: die Windschutzscheiben"
+   },
+   "Zeit": {
+    "ru": "час",
+    "pos": "ім.",
+    "decl": "die Zeit · мн.: die Zeiten"
+   },
+   "alle": {
+    "ru": "всі; все",
+    "pos": "займ."
+   },
+   "auf": {
+    "ru": "на, по",
+    "pos": "прийм.",
+    "note": "auf der Straße — на дорозі; achten auf — стежити за"
+   },
+   "aufrunden": {
+    "ru": "округлювати в більший бік",
+    "pos": "дієсл.",
+    "forms": "rundete auf · hat aufgerundet"
+   },
+   "berühren": {
+    "ru": "торкатися, зачіпати",
+    "pos": "дієсл.",
+    "forms": "berührte · hat berührt"
+   },
+   "bis": {
+    "ru": "поки не; до",
+    "pos": "спол."
+   },
+   "blinken": {
+    "ru": "вмикати поворотник, блимати",
+    "pos": "дієсл.",
+    "forms": "blinkte · hat geblinkt"
+   },
+   "brauchen": {
+    "ru": "потребувати, бути потрібним",
+    "pos": "дієсл.",
+    "forms": "brauchte · hat gebraucht"
+   },
+   "da": {
+    "ru": "там, он; тоді",
+    "pos": "присл.",
+    "note": "da vorne — он там попереду"
+   },
+   "dann": {
+    "ru": "тоді, отже; потім",
+    "pos": "присл."
+   },
+   "der/die/das": {
+    "ru": "означений артикль",
+    "pos": "артикль",
+    "note": "der — ч. р., die — ж. р. і мн., das — с. р.; den — ч. р. у знахідному, dem — ч. і с. р. у давальному; das ще означає «це»"
+   },
+   "direkt": {
+    "ru": "прямо, одразу",
+    "pos": "присл."
+   },
+   "dort": {
+    "ru": "там",
+    "pos": "присл."
+   },
+   "dürfen": {
+    "ru": "могти, мати право",
+    "pos": "дієсл.",
+    "forms": "durfte · hat gedurft"
+   },
+   "ein/eine": {
+    "ru": "неозначений артикль; один",
+    "pos": "артикль",
+    "note": "an einer Kreuzung — на (якомусь) перехресті"
+   },
+   "einparken": {
+    "ru": "паркуватися (заїжджати на місце)",
+    "pos": "дієсл.",
+    "note": "відокремлюваний префікс: parken Sie … ein",
+    "forms": "parkte ein · hat eingeparkt"
+   },
+   "eins": {
+    "ru": "один (одна машина)",
+    "pos": "числ."
+   },
+   "einstellen": {
+    "ru": "регулювати, налаштовувати",
+    "pos": "дієсл.",
+    "note": "відокремлюваний префікс: Stellen Sie … ein",
+    "forms": "stellte ein · hat eingestellt"
+   },
+   "elf": {
+    "ru": "одинадцять",
+    "pos": "числ."
+   },
+   "es": {
+    "ru": "воно; це",
+    "pos": "займ.",
+    "note": "тут — про машину: das Auto"
+   },
+   "fahren": {
+    "ru": "їхати; кермувати машиною",
+    "pos": "дієсл.",
+    "forms": "fuhr · ist gefahren"
+   },
+   "frei": {
+    "ru": "вільний",
+    "pos": "прикм."
+   },
+   "fünf": {
+    "ru": "п'ять",
+    "pos": "числ."
+   },
+   "genau": {
+    "ru": "саме так, точно",
+    "pos": "присл.",
+    "note": "genau hundert — рівно сто"
+   },
+   "gut": {
+    "ru": "добрий; добре",
+    "pos": "прикм.",
+    "note": "am besten — найкраще",
+    "forms": "gut · besser · am besten"
+   },
+   "haben": {
+    "ru": "мати",
+    "pos": "дієсл.",
+    "note": "Vorfahrt haben — мати перевагу",
+    "forms": "hatte · hat gehabt"
+   },
+   "halb": {
+    "ru": "половина, наполовину",
+    "pos": "прикм.",
+    "note": "halb so lang — удвічі коротший; halber Tacho — половина спідометра; halb elf — пів на одинадцяту (10:30)"
+   },
+   "halten": {
+    "ru": "зупинятися (ненадовго); тримати",
+    "pos": "дієсл.",
+    "forms": "hielt · hat gehalten"
+   },
+   "hier": {
+    "ru": "тут",
+    "pos": "присл."
+   },
+   "hinten": {
+    "ru": "позаду",
+    "pos": "присл."
+   },
+   "hinter": {
+    "ru": "за, позаду",
+    "pos": "прийм."
+   },
+   "ich": {
+    "ru": "я",
+    "pos": "займ."
+   },
+   "in": {
+    "ru": "в",
+    "pos": "прийм.",
+    "note": "im = in dem: im Bereich — у зоні"
+   },
+   "jetzt": {
+    "ru": "зараз, тепер",
+    "pos": "присл."
+   },
+   "langsam": {
+    "ru": "повільний; повільно",
+    "pos": "прикм."
+   },
+   "legen": {
+    "ru": "класти",
+    "pos": "дієсл.",
+    "forms": "legte · hat gelegt"
+   },
+   "lenken": {
+    "ru": "кермувати, повертати кермо",
+    "pos": "дієсл.",
+    "forms": "lenkte · hat gelenkt"
+   },
+   "links": {
+    "ru": "ліворуч",
+    "pos": "присл."
+   },
+   "mindestens": {
+    "ru": "щонайменше, не менше",
+    "pos": "присл."
+   },
+   "mit": {
+    "ru": "з",
+    "pos": "прийм."
+   },
+   "nach": {
+    "ru": "після; до (напрямок)",
+    "pos": "прийм."
+   },
+   "neben": {
+    "ru": "поруч із, біля",
+    "pos": "прийм."
+   },
+   "nicht": {
+    "ru": "не",
+    "pos": "частка"
+   },
+   "nächste": {
+    "ru": "найближчий, наступний",
+    "pos": "прикм."
+   },
+   "parallel": {
+    "ru": "паралельно",
+    "pos": "прикм."
+   },
+   "parken": {
+    "ru": "паркуватися, стояти (про машину)",
+    "pos": "дієсл.",
+    "note": "паркується той, хто стоїть довше 3 хвилин або виходить з машини",
+    "forms": "parkte · hat geparkt"
+   },
+   "rechts": {
+    "ru": "праворуч",
+    "pos": "присл."
+   },
+   "richtig": {
+    "ru": "правильний; правильно",
+    "pos": "прикм.",
+    "note": "…, richtig? — …, правильно? / так?"
+   },
+   "rückwärts": {
+    "ru": "заднім ходом, назад",
+    "pos": "присл."
+   },
+   "schauen": {
+    "ru": "дивитися",
+    "pos": "дієсл.",
+    "forms": "schaute · hat geschaut"
+   },
+   "sehen": {
+    "ru": "бачити",
+    "pos": "дієсл.",
+    "forms": "sah · hat gesehen"
+   },
+   "sehr": {
+    "ru": "дуже",
+    "pos": "присл."
+   },
+   "sein": {
+    "ru": "бути",
+    "pos": "дієсл.",
+    "forms": "war · ist gewesen"
+   },
+   "sichtbar": {
+    "ru": "видимий, помітний",
+    "pos": "прикм."
+   },
+   "stehen": {
+    "ru": "стояти",
+    "pos": "дієсл.",
+    "note": "Schilder stehen — стоять знаки",
+    "forms": "stand · hat gestanden"
+   },
+   "suchen": {
+    "ru": "шукати",
+    "pos": "дієсл.",
+    "forms": "suchte · hat gesucht"
+   },
+   "und": {
+    "ru": "і, та",
+    "pos": "спол."
+   },
+   "viel": {
+    "ru": "багато; набагато",
+    "pos": "присл."
+   },
+   "vorder": {
+    "ru": "передній",
+    "pos": "прикм."
+   },
+   "vorne": {
+    "ru": "попереду",
+    "pos": "присл."
+   },
+   "weitersuchen": {
+    "ru": "шукати далі",
+    "pos": "дієсл.",
+    "note": "відокремлюваний префікс: suche … weiter",
+    "forms": "suchte weiter · hat weitergesucht"
+   },
+   "welcher": {
+    "ru": "який, котрий",
+    "pos": "займ."
+   },
+   "werden": {
+    "ru": "ставати",
+    "pos": "дієсл.",
+    "note": "die Ampel wird gelb — світлофор перемикається на жовтий",
+    "forms": "wurde · ist geworden"
+   },
+   "wie": {
+    "ru": "як",
+    "pos": "присл.",
+    "note": "wie schnell — з якою швидкістю"
+   },
+   "wir": {
+    "ru": "ми",
+    "pos": "займ.",
+    "note": "uns — нас, нам: vor uns — перед нами"
+   },
+   "zehn": {
+    "ru": "десять",
+    "pos": "числ."
+   },
+   "zu": {
+    "ru": "до; для",
+    "pos": "прийм.",
+    "note": "zum = zu dem, zur = zu der: Abstand zur Kreuzung — відстань до перехрестя"
+   },
+   "zwei": {
+    "ru": "два",
+    "pos": "числ."
+   },
+   "zwischen": {
+    "ru": "між",
+    "pos": "прийм."
+   },
+   "zwölf": {
+    "ru": "дванадцять",
+    "pos": "числ."
+   },
+   "über": {
+    "ru": "через; над",
+    "pos": "прийм."
+   }
+  }
+ }
+}

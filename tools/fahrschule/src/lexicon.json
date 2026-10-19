@@ -1036,6 +1036,9 @@
    "час; урок",
    "година; урок",
    "ساعة؛ درس"
+  ],
+  "f": [
+   "stunden"
   ]
  },
  "Frau": {
@@ -2042,7 +2045,8 @@
    "يتوقف (لوقت قصير)؛ يمسك"
   ],
   "f": [
-   "hält"
+   "hält",
+   "halte"
   ]
  },
  "Haltverbot": {
@@ -2532,12 +2536,13 @@
    "إلى؛ لـ"
   ],
   "f": [
-   "zum"
+   "zum",
+   "zur"
   ],
   "note": [
-   "zum = zu dem: zum Aussteigen — чтобы выйти",
-   "zum = zu dem: zum Aussteigen — щоб вийти",
-   "zum = zu dem: zum Aussteigen — للنزول"
+   "zum = zu dem, zur = zu der: Abstand zur Kreuzung — расстояние до перекрёстка",
+   "zum = zu dem, zur = zu der: Abstand zur Kreuzung — відстань до перехрестя",
+   "zum = zu dem، zur = zu der: Abstand zur Kreuzung — المسافة عن التقاطع"
   ]
  },
  "zusammen": {
@@ -2900,9 +2905,9 @@
    "halbe"
   ],
   "note": [
-   "halb so lang — вдвое короче; halber Tacho — половина спидометра",
-   "halb so lang — удвічі коротший; halber Tacho — половина спідометра",
-   "halb so lang — نصف الطول؛ halber Tacho — نصف العداد"
+   "halb so lang — вдвое короче; halber Tacho — половина спидометра; halb elf — половина одиннадцатого (10:30)",
+   "halb so lang — удвічі коротший; halber Tacho — половина спідометра; halb elf — пів на одинадцяту (10:30)",
+   "halb so lang — نصف الطول؛ halber Tacho — نصف العداد؛ halb elf — العاشرة والنصف (10:30)"
   ]
  },
  "herlaufen": {
@@ -4434,7 +4439,10 @@
    "відокремлюваний префікс: parken Sie … ein",
    "سابقة منفصلة: parken Sie … ein"
   ],
-  "forms": "parkte ein · hat eingeparkt"
+  "forms": "parkte ein · hat eingeparkt",
+  "f": [
+   "eingeparkt"
+  ]
  },
  "eng": {
   "pos": "прил.",
@@ -4861,6 +4869,89 @@
    "место, участок",
    "місце, ділянка",
    "مكان، موضع"
+  ]
+ },
+ "weitersuchen": {
+  "pos": "гл.",
+  "forms": "suchte weiter · hat weitergesucht",
+  "tr": [
+   "искать дальше",
+   "шукати далі",
+   "يواصل البحث"
+  ],
+  "note": [
+   "отделяемая приставка: suche … weiter",
+   "відокремлюваний префікс: suche … weiter",
+   "سابقة منفصلة: suche … weiter"
+  ]
+ },
+ "Schulter": {
+  "pos": "сущ.",
+  "art": "die",
+  "pl": "die Schultern",
+  "tr": [
+   "плечо",
+   "плече",
+   "كتف"
+  ]
+ },
+ "berühren": {
+  "pos": "гл.",
+  "forms": "berührte · hat berührt",
+  "tr": [
+   "касаться, задевать",
+   "торкатися, зачіпати",
+   "يلمس"
+  ]
+ },
+ "Uhr": {
+  "pos": "сущ.",
+  "art": "die",
+  "pl": "die Uhren",
+  "tr": [
+   "часы; (при времени) час",
+   "годинник; (про час) година",
+   "ساعة"
+  ],
+  "note": [
+   "zehn Uhr zwölf — десять часов двенадцать минут (10:12)",
+   "zehn Uhr zwölf — десята година дванадцять хвилин (10:12)",
+   "zehn Uhr zwölf — العاشرة واثنتا عشرة دقيقة (10:12)"
+  ]
+ },
+ "zwölf": {
+  "pos": "числ.",
+  "tr": [
+   "двенадцать",
+   "дванадцять",
+   "اثنا عشر"
+  ]
+ },
+ "elf": {
+  "pos": "числ.",
+  "tr": [
+   "одиннадцать",
+   "одинадцять",
+   "أحد عشر"
+  ]
+ },
+ "welcher": {
+  "pos": "мест.",
+  "f": [
+   "welche"
+  ],
+  "tr": [
+   "какой, который",
+   "який, котрий",
+   "أيّ"
+  ]
+ },
+ "fünf": {
+  "pos": "числ.",
+  "tr": [
+   "пять",
+   "п'ять",
+   "خمسة"
   ]
  }
 }

@@ -51,6 +51,7 @@
    "titleTr": "Остановка и стоянка",
    "units": [
     "t-05",
+    "p-05",
     "r-05"
    ]
   }
@@ -172,6 +173,15 @@
    "title": "Halten und Parken",
    "titleTr": "Остановка и стоянка",
    "count": 17
+  },
+  {
+   "id": "p-05",
+   "kind": "dialog",
+   "emoji": "🕙",
+   "level": "A2",
+   "title": "Einparken in der Stadt",
+   "titleTr": "Паркуемся в городе",
+   "count": 15
   },
   {
    "id": "r-05",

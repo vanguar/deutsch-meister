@@ -1,0 +1,628 @@
+{
+ "id": "p-05",
+ "kind": "dialog",
+ "emoji": "🕙",
+ "level": "A2",
+ "title": "Einparken in der Stadt",
+ "titleTr": "Паркуемся в городе",
+ "intro": "Софья ищет место в городе: правило пяти метров у перекрёстка, параллельная парковка задним ходом и диск парковки.",
+ "speakers": {
+  "A": {
+   "name": "Fahrlehrer",
+   "g": "m"
+  },
+  "B": {
+   "name": "Sofiia",
+   "g": "f"
+  }
+ },
+ "lines": [
+  {
+   "de": "Wir suchen jetzt einen Parkplatz. Sehen Sie eine Lücke?",
+   "tr": "Сейчас ищем место для стоянки. Видите свободное место?",
+   "s": "A"
+  },
+  {
+   "de": "Da vorne, direkt nach der Kreuzung ist eine Lücke frei.",
+   "tr": "Вон впереди, сразу после перекрёстка, есть свободное место.",
+   "s": "B"
+  },
+  {
+   "de": "Dort dürfen Sie nicht parken. Wie viel Abstand brauchen Sie zur Kreuzung?",
+   "tr": "Там парковаться нельзя. Какое расстояние нужно до перекрёстка?",
+   "s": "A"
+  },
+  {
+   "de": "Mindestens fünf Meter. Dann suche ich weiter.",
+   "tr": "Не меньше пяти метров. Тогда ищу дальше.",
+   "o": {
+    "suche": "suche>weitersuchen",
+    "weiter": "weiter>weitersuchen"
+   },
+   "s": "B"
+  },
+  {
+   "de": "Gut. Dort hinten ist eine Lücke zwischen zwei Autos.",
+   "tr": "Хорошо. Вон там сзади есть место между двумя машинами.",
+   "s": "A"
+  },
+  {
+   "de": "Ich halte neben dem vorderen Auto und blinke rechts.",
+   "tr": "Останавливаюсь рядом с передней машиной и включаю правый поворотник.",
+   "s": "B"
+  },
+  {
+   "de": "Richtig. Jetzt fahren Sie langsam rückwärts und lenken nach rechts.",
+   "tr": "Правильно. Теперь медленно сдавайте назад и поворачивайте руль вправо.",
+   "s": "A"
+  },
+  {
+   "de": "Ich schaue über die Schulter. Hinten ist alles frei.",
+   "tr": "Смотрю через плечо. Сзади всё свободно.",
+   "s": "B"
+  },
+  {
+   "de": "Jetzt lenken Sie nach links. Achtung, nicht den Bordstein berühren!",
+   "tr": "Теперь поверните руль влево. Осторожно, не задевайте бордюр!",
+   "s": "A"
+  },
+  {
+   "de": "Das Auto steht parallel zum Bordstein. Habe ich gut eingeparkt?",
+   "tr": "Машина стоит параллельно бордюру. Я хорошо припарковалась?",
+   "s": "B"
+  },
+  {
+   "de": "Sehr gut. Hier dürfen Sie mit Parkscheibe zwei Stunden parken.",
+   "tr": "Очень хорошо. Здесь с диском парковки можно стоять два часа.",
+   "s": "A"
+  },
+  {
+   "de": "Es ist zehn Uhr zwölf. Welche Zeit stelle ich ein?",
+   "tr": "Сейчас десять двенадцать. Какое время мне выставить?",
+   "o": {
+    "ein": "ein>einstellen",
+    "stelle": "stelle>einstellen"
+   },
+   "s": "B"
+  },
+  {
+   "de": "Halb elf. Die Zeit wird auf die nächste halbe Stunde aufgerundet.",
+   "tr": "Половину одиннадцатого. Время округляют вверх до следующего получаса.",
+   "s": "A"
+  },
+  {
+   "de": "Dann darf ich bis halb eins hier parken.",
+   "tr": "Тогда я могу стоять здесь до половины первого.",
+   "s": "B"
+  },
+  {
+   "de": "Genau. Legen Sie die Parkscheibe gut sichtbar hinter die Windschutzscheibe.",
+   "tr": "Точно. Положите диск парковки на видное место за лобовым стеклом.",
+   "s": "A"
+  }
+ ],
+ "signs": {},
+ "gloss": {
+  "w": {
+   "abstand": "Abstand",
+   "achtung": "Achtung",
+   "alles": "alle",
+   "auf": "auf",
+   "aufgerundet": "aufrunden",
+   "auto": "Auto",
+   "autos": "Auto",
+   "berühren": "berühren",
+   "bis": "bis",
+   "blinke": "blinken",
+   "bordstein": "Bordstein",
+   "brauchen": "brauchen",
+   "da": "da",
+   "dann": "dann",
+   "darf": "dürfen",
+   "das": "der/die/das",
+   "dem": "der/die/das",
+   "den": "der/die/das",
+   "der": "der/die/das",
+   "die": "der/die/das",
+   "direkt": "direkt",
+   "dort": "dort",
+   "dürfen": "dürfen",
+   "ein>einstellen": "einstellen",
+   "eine": "ein/eine",
+   "einen": "ein/eine",
+   "eingeparkt": "einparken",
+   "einparken": "einparken",
+   "eins": "eins",
+   "elf": "elf",
+   "es": "es",
+   "fahren": "fahren",
+   "frei": "frei",
+   "fünf": "fünf",
+   "genau": "genau",
+   "gut": "gut",
+   "habe": "haben",
+   "halb": "halb",
+   "halbe": "halb",
+   "halte": "halten",
+   "hier": "hier",
+   "hinten": "hinten",
+   "hinter": "hinter",
+   "ich": "ich",
+   "in": "in",
+   "ist": "sein",
+   "jetzt": "jetzt",
+   "kreuzung": "Kreuzung",
+   "langsam": "langsam",
+   "legen": "legen",
+   "lenken": "lenken",
+   "links": "links",
+   "lücke": "Lücke",
+   "meter": "Meter",
+   "mindestens": "mindestens",
+   "mit": "mit",
+   "nach": "nach",
+   "neben": "neben",
+   "nicht": "nicht",
+   "nächste": "nächste",
+   "parallel": "parallel",
+   "parken": "parken",
+   "parkplatz": "Parkplatz",
+   "parkscheibe": "Parkscheibe",
+   "rechts": "rechts",
+   "richtig": "richtig",
+   "rückwärts": "rückwärts",
+   "schaue": "schauen",
+   "schulter": "Schulter",
+   "sehen": "sehen",
+   "sehr": "sehr",
+   "sichtbar": "sichtbar",
+   "sie": "Sie",
+   "stadt": "Stadt",
+   "steht": "stehen",
+   "stelle>einstellen": "einstellen",
+   "stunde": "Stunde",
+   "stunden": "Stunde",
+   "suche>weitersuchen": "weitersuchen",
+   "suchen": "suchen",
+   "uhr": "Uhr",
+   "und": "und",
+   "viel": "viel",
+   "vorderen": "vorder",
+   "vorne": "vorne",
+   "weiter>weitersuchen": "weitersuchen",
+   "welche": "welcher",
+   "wie": "wie",
+   "windschutzscheibe": "Windschutzscheibe",
+   "wir": "wir",
+   "wird": "werden",
+   "zehn": "zehn",
+   "zeit": "Zeit",
+   "zum": "zu",
+   "zur": "zu",
+   "zwei": "zwei",
+   "zwischen": "zwischen",
+   "zwölf": "zwölf",
+   "über": "über"
+  },
+  "l": {
+   "Abstand": {
+    "ru": "дистанция, расстояние",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Abstände"
+   },
+   "Achtung": {
+    "ru": "внимание!",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": null
+   },
+   "Auto": {
+    "ru": "машина, автомобиль",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Autos"
+   },
+   "Bordstein": {
+    "ru": "бордюр",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Bordsteine"
+   },
+   "Kreuzung": {
+    "ru": "перекрёсток",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Kreuzungen"
+   },
+   "Lücke": {
+    "ru": "свободное место, промежуток",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Lücken"
+   },
+   "Meter": {
+    "ru": "метр",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Meter"
+   },
+   "Parkplatz": {
+    "ru": "парковка, место для стоянки",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Parkplätze"
+   },
+   "Parkscheibe": {
+    "ru": "диск парковки (Parkscheibe)",
+    "pos": "сущ.",
+    "note": "синий диск за лобовым стеклом: выставляют время прибытия, округлённое до следующего получаса",
+    "art": "die",
+    "pl": "die Parkscheiben"
+   },
+   "Schulter": {
+    "ru": "плечо",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Schultern"
+   },
+   "Sie": {
+    "ru": "вы (вежливо)",
+    "pos": "мест.",
+    "note": "Ihnen — вам (дательный): vor Ihnen — перед вами"
+   },
+   "Stadt": {
+    "ru": "город",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Städte"
+   },
+   "Stunde": {
+    "ru": "час; урок",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Stunden"
+   },
+   "Uhr": {
+    "ru": "часы; (при времени) час",
+    "pos": "сущ.",
+    "note": "zehn Uhr zwölf — десять часов двенадцать минут (10:12)",
+    "art": "die",
+    "pl": "die Uhren"
+   },
+   "Windschutzscheibe": {
+    "ru": "лобовое стекло",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Windschutzscheiben"
+   },
+   "Zeit": {
+    "ru": "время",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Zeiten"
+   },
+   "alle": {
+    "ru": "все; всё",
+    "pos": "мест."
+   },
+   "auf": {
+    "ru": "на, по",
+    "pos": "предл.",
+    "note": "auf der Straße — на дороге; achten auf — следить за"
+   },
+   "aufrunden": {
+    "ru": "округлять в большую сторону",
+    "pos": "гл.",
+    "forms": "rundete auf · hat aufgerundet"
+   },
+   "berühren": {
+    "ru": "касаться, задевать",
+    "pos": "гл.",
+    "forms": "berührte · hat berührt"
+   },
+   "bis": {
+    "ru": "пока не; до",
+    "pos": "союз"
+   },
+   "blinken": {
+    "ru": "включать поворотник, мигать",
+    "pos": "гл.",
+    "forms": "blinkte · hat geblinkt"
+   },
+   "brauchen": {
+    "ru": "нуждаться, требоваться",
+    "pos": "гл.",
+    "forms": "brauchte · hat gebraucht"
+   },
+   "da": {
+    "ru": "там, вон; тогда",
+    "pos": "нареч.",
+    "note": "da vorne — вон там впереди"
+   },
+   "dann": {
+    "ru": "тогда, значит; потом",
+    "pos": "нареч."
+   },
+   "der/die/das": {
+    "ru": "определённый артикль",
+    "pos": "артикль",
+    "note": "der — м. р., die — ж. р. и мн. ч., das — ср. р.; den — м. р. в винительном, dem — м. и ср. р. в дательном; das ещё значит «это»"
+   },
+   "direkt": {
+    "ru": "прямо, сразу",
+    "pos": "нареч."
+   },
+   "dort": {
+    "ru": "там",
+    "pos": "нареч."
+   },
+   "dürfen": {
+    "ru": "мочь, иметь право",
+    "pos": "гл.",
+    "forms": "durfte · hat gedurft"
+   },
+   "ein/eine": {
+    "ru": "неопределённый артикль; один",
+    "pos": "артикль",
+    "note": "an einer Kreuzung — на (каком-то) перекрёстке"
+   },
+   "einparken": {
+    "ru": "парковаться (заезжать на место)",
+    "pos": "гл.",
+    "note": "отделяемая приставка: parken Sie … ein",
+    "forms": "parkte ein · hat eingeparkt"
+   },
+   "eins": {
+    "ru": "один (одна машина)",
+    "pos": "числ."
+   },
+   "einstellen": {
+    "ru": "регулировать, настраивать",
+    "pos": "гл.",
+    "note": "отделяемая приставка: Stellen Sie … ein",
+    "forms": "stellte ein · hat eingestellt"
+   },
+   "elf": {
+    "ru": "одиннадцать",
+    "pos": "числ."
+   },
+   "es": {
+    "ru": "оно; это",
+    "pos": "мест.",
+    "note": "здесь — о машине: das Auto"
+   },
+   "fahren": {
+    "ru": "ехать; водить машину",
+    "pos": "гл.",
+    "forms": "fuhr · ist gefahren"
+   },
+   "frei": {
+    "ru": "свободный",
+    "pos": "прил."
+   },
+   "fünf": {
+    "ru": "пять",
+    "pos": "числ."
+   },
+   "genau": {
+    "ru": "точно, именно так",
+    "pos": "нареч.",
+    "note": "genau hundert — ровно сто"
+   },
+   "gut": {
+    "ru": "хороший; хорошо",
+    "pos": "прил.",
+    "note": "am besten — лучше всего",
+    "forms": "gut · besser · am besten"
+   },
+   "haben": {
+    "ru": "иметь",
+    "pos": "гл.",
+    "note": "Vorfahrt haben — иметь преимущество",
+    "forms": "hatte · hat gehabt"
+   },
+   "halb": {
+    "ru": "половина, наполовину",
+    "pos": "прил.",
+    "note": "halb so lang — вдвое короче; halber Tacho — половина спидометра; halb elf — половина одиннадцатого (10:30)"
+   },
+   "halten": {
+    "ru": "останавливаться (ненадолго); держать",
+    "pos": "гл.",
+    "forms": "hielt · hat gehalten"
+   },
+   "hier": {
+    "ru": "здесь",
+    "pos": "нареч."
+   },
+   "hinten": {
+    "ru": "сзади",
+    "pos": "нареч."
+   },
+   "hinter": {
+    "ru": "за, позади",
+    "pos": "предл."
+   },
+   "ich": {
+    "ru": "я",
+    "pos": "мест."
+   },
+   "in": {
+    "ru": "в",
+    "pos": "предл.",
+    "note": "im = in dem: im Bereich — в зоне"
+   },
+   "jetzt": {
+    "ru": "сейчас, теперь",
+    "pos": "нареч."
+   },
+   "langsam": {
+    "ru": "медленный; медленно",
+    "pos": "прил."
+   },
+   "legen": {
+    "ru": "класть",
+    "pos": "гл.",
+    "forms": "legte · hat gelegt"
+   },
+   "lenken": {
+    "ru": "рулить, поворачивать руль",
+    "pos": "гл.",
+    "forms": "lenkte · hat gelenkt"
+   },
+   "links": {
+    "ru": "слева; налево",
+    "pos": "нареч."
+   },
+   "mindestens": {
+    "ru": "по меньшей мере, не меньше",
+    "pos": "нареч."
+   },
+   "mit": {
+    "ru": "с",
+    "pos": "предл."
+   },
+   "nach": {
+    "ru": "после; в, на (направление)",
+    "pos": "предл."
+   },
+   "neben": {
+    "ru": "рядом с, возле",
+    "pos": "предл."
+   },
+   "nicht": {
+    "ru": "не",
+    "pos": "частица"
+   },
+   "nächste": {
+    "ru": "ближайший, следующий",
+    "pos": "прил."
+   },
+   "parallel": {
+    "ru": "параллельно",
+    "pos": "прил."
+   },
+   "parken": {
+    "ru": "парковаться, стоять (о машине)",
+    "pos": "гл.",
+    "note": "паркует тот, кто стоит дольше 3 минут или выходит из машины",
+    "forms": "parkte · hat geparkt"
+   },
+   "rechts": {
+    "ru": "справа; направо",
+    "pos": "нареч."
+   },
+   "richtig": {
+    "ru": "правильный; правильно",
+    "pos": "прил.",
+    "note": "…, richtig? — …, правильно? / да?"
+   },
+   "rückwärts": {
+    "ru": "задним ходом, назад",
+    "pos": "нареч."
+   },
+   "schauen": {
+    "ru": "смотреть",
+    "pos": "гл.",
+    "forms": "schaute · hat geschaut"
+   },
+   "sehen": {
+    "ru": "видеть",
+    "pos": "гл.",
+    "forms": "sah · hat gesehen"
+   },
+   "sehr": {
+    "ru": "очень",
+    "pos": "нареч."
+   },
+   "sein": {
+    "ru": "быть",
+    "pos": "гл.",
+    "forms": "war · ist gewesen"
+   },
+   "sichtbar": {
+    "ru": "видимый, заметный",
+    "pos": "прил."
+   },
+   "stehen": {
+    "ru": "стоять",
+    "pos": "гл.",
+    "note": "Schilder stehen — стоят знаки",
+    "forms": "stand · hat gestanden"
+   },
+   "suchen": {
+    "ru": "искать",
+    "pos": "гл.",
+    "forms": "suchte · hat gesucht"
+   },
+   "und": {
+    "ru": "и",
+    "pos": "союз"
+   },
+   "viel": {
+    "ru": "много; намного",
+    "pos": "нареч."
+   },
+   "vorder": {
+    "ru": "передний",
+    "pos": "прил."
+   },
+   "vorne": {
+    "ru": "впереди",
+    "pos": "нареч."
+   },
+   "weitersuchen": {
+    "ru": "искать дальше",
+    "pos": "гл.",
+    "note": "отделяемая приставка: suche … weiter",
+    "forms": "suchte weiter · hat weitergesucht"
+   },
+   "welcher": {
+    "ru": "какой, который",
+    "pos": "мест."
+   },
+   "werden": {
+    "ru": "становиться",
+    "pos": "гл.",
+    "note": "die Ampel wird gelb — светофор переключается на жёлтый",
+    "forms": "wurde · ist geworden"
+   },
+   "wie": {
+    "ru": "как",
+    "pos": "нареч.",
+    "note": "wie schnell — с какой скоростью"
+   },
+   "wir": {
+    "ru": "мы",
+    "pos": "мест.",
+    "note": "uns — нас, нам: vor uns — перед нами"
+   },
+   "zehn": {
+    "ru": "десять",
+    "pos": "числ."
+   },
+   "zu": {
+    "ru": "к; для",
+    "pos": "предл.",
+    "note": "zum = zu dem, zur = zu der: Abstand zur Kreuzung — расстояние до перекрёстка"
+   },
+   "zwei": {
+    "ru": "два",
+    "pos": "числ."
+   },
+   "zwischen": {
+    "ru": "между",
+    "pos": "предл."
+   },
+   "zwölf": {
+    "ru": "двенадцать",
+    "pos": "числ."
+   },
+   "über": {
+    "ru": "через; над",
+    "pos": "предл."
+   }
+  }
+ }
+}
