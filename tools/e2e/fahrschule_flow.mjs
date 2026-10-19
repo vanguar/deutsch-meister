@@ -369,6 +369,46 @@ for (let i = 0; i < lsc.length; i++) {
 }
 collect();
 
+// ── На дороге: остановочный путь и дистанция ──
+for (const id of IDX.units.filter(u => u.kind === 'road').map(u => u.id)) {
+  await openUnit(id);
+  const rs = JSON.parse(await c.ev(`JSON.stringify(Fahrschule.unit.scenes)`));
+  for (let i = 0; i < rs.length; i++) {
+    const sc = rs[i];
+    ok(await waitFor(`Fahrschule.scene && Fahrschule.scene.i === ${i} && document.querySelectorAll('[data-road-opt]').length === 3`, 4000), `${id} сцена ${i + 1}: три варианта`);
+    const au = JSON.parse(await c.ev(TIP_AUDIT));
+    ok(au.bad.length === 0, `${id} сцена ${i + 1}: подсказки у всех слов, включая подписи цветов ${au.bad.slice(0, 4).join(' ')}`);
+    ok(await c.ev(NO_HSCROLL), `${id} сцена ${i + 1}: нет горизонтальной прокрутки`);
+    // первая сцена — сначала неверный ответ, потом «Ещё раз» и верный
+    const picks = i === 0 ? [sc.options.find(o => o !== sc.answer), sc.answer] : [sc.answer];
+    for (const [k, m] of picks.entries()) {
+      await c.ev(`window.__said = []; document.querySelector('[data-road-opt="${m}"]').click()`);
+      const right = m === sc.answer;
+      ok(await c.ev(`!!document.querySelector('#fsStatus.${right ? 'is-right' : 'is-wrong'}') && document.querySelector('[data-road-opt="${sc.answer}"]').classList.contains('is-right') && [...document.querySelectorAll('[data-road-opt]')].every(b => b.disabled)`),
+        `${id} сцена ${i + 1}: ${right ? 'верный' : 'неверный'} ответ ${m} м отмечен, верный подсвечен`);
+      if (sc.type === 'stop') {
+        // машина едет и тормозит: жёлтая зона растёт, потом красная, стоп-сигналы горят
+        ok(await waitFor(`parseFloat(document.querySelector('#fsScene .fs-zone-r').getAttribute('width')) > 0`, 2500), `${id} сцена ${i + 1}: путь реакции растёт`);
+        ok(await waitFor(`parseFloat(document.querySelector('#fsScene .fs-zone-b').getAttribute('width')) > 0 && document.querySelector('#fsScene .fs-road-car.is-braking')`, 3000), `${id} сцена ${i + 1}: торможение, стоп-сигналы`);
+        if (i === 0 && k === 1) await c.shot(`fs_${id}_brake.png`);
+      } else {
+        const p0 = await c.ev(`document.querySelector('#fsScene .fs-posts').getAttribute('transform') || ''`);
+        await c.wait(500);
+        ok(p0 !== await c.ev(`document.querySelector('#fsScene .fs-posts').getAttribute('transform') || ''`), `${id} сцена ${i + 1}: столбики едут мимо`);
+      }
+      ok(await waitFor(`document.querySelectorAll('.fs-explain .fs-line').length === ${sc.explain.length} && document.querySelector('#fsScene .fs-lab.is-on')`, 6000), `${id} сцена ${i + 1}: подписи в метрах и пояснение`);
+      const labs = await c.ev(`[...document.querySelectorAll('#fsScene .fs-lab-text')].map(t => t.textContent).join(' | ')`);
+      const want = sc.type === 'stop' ? [`${sc.reaction} m`, `${sc.brake} m`, `= ${sc.answer} m`] : [`${sc.answer} m`];
+      ok(want.every(w => labs.includes(w)), `${id} сцена ${i + 1}: на картинке ${labs}`);
+      ok(await waitFor(`Fahrschule.playing === null && window.__said.length === ${sc.explain.length}`, 8000), `${id} сцена ${i + 1}: пояснение прозвучало`);
+      if (i === rs.length - 1 && k === picks.length - 1) await c.shot(`fs_${id}_gap.png`);
+      if (k < picks.length - 1) await c.ev(`document.querySelector('[data-scene-again]').click()`);
+    }
+    if (i < rs.length - 1) await c.ev(`ReaderSpeak.stop(); document.querySelector('[data-scene-next]').click()`);
+  }
+  collect();
+}
+
 // ── Светлая тема ──
 await c.ev(`localStorage.setItem('dm_theme', 'light')`);
 await openUnit('k-01');
@@ -402,9 +442,13 @@ for (const lang of ['uk', 'ar']) {
     }
     ok(r.de, `${lang} ${id}: немецкий текст LTR`);
     ok(r.hs, `${lang} ${id}: нет горизонтальной прокрутки`);
-    await c.ev(`document.querySelector('.fs-w[data-t="kreuzung"], .fs-w[data-t="kupplung"], .fs-w[data-t="ampel"]').click()`);
-    const t = await c.ev(`(document.querySelector('.word-tip.word-tip-visible') || {}).textContent || ''`);
-    ok(lang === 'uk' ? /перехрестя|зчеплення|світлофор/.test(t) : /تقاطع|القابض|إشارة ضوئية/.test(t), `${lang} ${id}: подсказка на своём языке`);
+    // подсказка над первым существительным урока: перевод из копии этого языка
+    const tw = JSON.parse(await c.ev(`(() => { const g = Fahrschule.unit.gloss;
+      const w = [...document.querySelectorAll('#fsBody .fs-w')].find(x => { const e = g.l[g.w[x.dataset.t]]; return e && e.decl; });
+      if (!w) return 'null'; w.click(); const e = g.l[g.w[w.dataset.t]];
+      return JSON.stringify({ word: w.textContent, want: e.ru, tip: (document.querySelector('.word-tip.word-tip-visible .word-tip-ru') || {}).textContent || '' }); })()`));
+    ok(tw && tw.tip === tw.want && (lang === 'uk' ? /[А-Яа-яІіЇїЄєҐґ]/.test(tw.tip) && !/[ыэъё]/i.test(tw.tip) : /[؀-ۿ]/.test(tw.tip)),
+      `${lang} ${id}: подсказка на своём языке (${tw && tw.word} → ${tw && tw.tip})`);
     await c.ev(`ReaderTip.close()`);
     if (id === 'k-01') await c.shot(`fs_k01_${lang}.png`);
     if (id === 't-01') await c.shot(`fs_t01_${lang}.png`);

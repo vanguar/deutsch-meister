@@ -1,0 +1,608 @@
+{
+ "id": "r-03",
+ "kind": "road",
+ "emoji": "📏",
+ "level": "A2–B1",
+ "title": "Anhalteweg und Abstand",
+ "titleTr": "Остановочный путь и дистанция",
+ "intro": "В немецкой автошколе тормозной путь считают в уме по простым формулам. Выберите ответ — машина поедет, увидит помеху и остановится: жёлтым путь реакции, красным тормозной путь.",
+ "scenes": [
+  {
+   "type": "stop",
+   "v": 50,
+   "options": [
+    25,
+    40,
+    50
+   ],
+   "situation": {
+    "de": "Sie fahren innerorts fünfzig. Plötzlich rollt ein Ball auf die Straße.",
+    "tr": "Вы едете в населённом пункте пятьдесят. Вдруг на дорогу выкатывается мяч."
+   },
+   "question": {
+    "de": "Wie lang ist der Anhalteweg?",
+    "tr": "Какой длины остановочный путь?"
+   },
+   "explain": [
+    {
+     "de": "Reaktionsweg: 50 geteilt durch 10, mal 3. Das sind 15 Meter.",
+     "tr": "Путь реакции: 50 разделить на 10 и умножить на 3. Это 15 метров.",
+     "o": {
+      "durch": "durch>geteilt durch",
+      "geteilt": "geteilt>geteilt durch"
+     }
+    },
+    {
+     "de": "Bremsweg: 50 geteilt durch 10, mal 50 geteilt durch 10. Das sind 25 Meter.",
+     "tr": "Тормозной путь: 50 разделить на 10 и умножить на 50, делённое на 10. Это 25 метров.",
+     "o": {
+      "durch": "durch>geteilt durch",
+      "geteilt": "geteilt>geteilt durch"
+     }
+    },
+    {
+     "de": "Anhalteweg: 15 plus 25. Sie brauchen also 40 Meter, bis das Auto steht.",
+     "tr": "Остановочный путь: 15 плюс 25. Значит, машине нужно 40 метров, чтобы остановиться."
+    }
+   ],
+   "reaction": 15,
+   "brake": 25,
+   "answer": 40,
+   "hazard": "ball",
+   "emergency": false
+  },
+  {
+   "type": "stop",
+   "v": 100,
+   "options": [
+    65,
+    100,
+    130
+   ],
+   "situation": {
+    "de": "Auf der Landstraße fahren Sie hundert. Vor Ihnen steht ein Reh auf der Fahrbahn.",
+    "tr": "На загородной дороге вы едете сто. Впереди на проезжей части стоит косуля."
+   },
+   "question": {
+    "de": "Wie lang ist der Anhalteweg?",
+    "tr": "Какой длины остановочный путь?"
+   },
+   "explain": [
+    {
+     "de": "Reaktionsweg: 100 geteilt durch 10, mal 3. Das sind 30 Meter.",
+     "tr": "Путь реакции: 100 разделить на 10 и умножить на 3. Это 30 метров.",
+     "o": {
+      "durch": "durch>geteilt durch",
+      "geteilt": "geteilt>geteilt durch"
+     }
+    },
+    {
+     "de": "Bremsweg: 100 geteilt durch 10, mal 100 geteilt durch 10. Das sind 100 Meter.",
+     "tr": "Тормозной путь: 100 разделить на 10 и умножить на 100, делённое на 10. Это 100 метров.",
+     "o": {
+      "durch": "durch>geteilt durch",
+      "geteilt": "geteilt>geteilt durch"
+     }
+    },
+    {
+     "de": "Anhalteweg: 30 plus 100, also 130 Meter. Doppelt so schnell bedeutet: viermal so langer Bremsweg.",
+     "tr": "Остановочный путь: 30 плюс 100, то есть 130 метров. Вдвое быстрее — значит, тормозной путь вчетверо длиннее."
+    }
+   ],
+   "reaction": 30,
+   "brake": 100,
+   "answer": 130,
+   "hazard": "deer",
+   "emergency": false
+  },
+  {
+   "type": "stop",
+   "v": 60,
+   "options": [
+    36,
+    54,
+    72
+   ],
+   "situation": {
+    "de": "Sie fahren sechzig. Ein Kind läuft hinter dem Ball her, und Sie machen eine Gefahrbremsung.",
+    "tr": "Вы едете шестьдесят. За мячом выбегает ребёнок, и вы тормозите экстренно.",
+    "o": {
+     "her": "her>herlaufen",
+     "läuft": "läuft>herlaufen"
+    }
+   },
+   "question": {
+    "de": "Wie lang ist der Anhalteweg?",
+    "tr": "Какой длины остановочный путь?"
+   },
+   "explain": [
+    {
+     "de": "Reaktionsweg: 60 geteilt durch 10, mal 3. Das sind 18 Meter.",
+     "tr": "Путь реакции: 60 разделить на 10 и умножить на 3. Это 18 метров.",
+     "o": {
+      "durch": "durch>geteilt durch",
+      "geteilt": "geteilt>geteilt durch"
+     }
+    },
+    {
+     "de": "Bei einer Gefahrbremsung ist der Bremsweg nur halb so lang: 36 geteilt durch 2, also 18 Meter.",
+     "tr": "При экстренном торможении тормозной путь вдвое короче: 36 разделить на 2, то есть 18 метров.",
+     "o": {
+      "durch": "durch>geteilt durch",
+      "geteilt": "geteilt>geteilt durch"
+     }
+    },
+    {
+     "de": "Anhalteweg: 18 plus 18. Das sind 36 Meter.",
+     "tr": "Остановочный путь: 18 плюс 18. Это 36 метров."
+    }
+   ],
+   "reaction": 18,
+   "brake": 18,
+   "answer": 36,
+   "hazard": "ball",
+   "emergency": true
+  },
+  {
+   "type": "gap",
+   "v": 100,
+   "options": [
+    25,
+    50,
+    100
+   ],
+   "situation": {
+    "de": "Auf der Landstraße fahren Sie hundert hinter einem Lkw.",
+    "tr": "На загородной дороге вы едете сто за грузовиком."
+   },
+   "question": {
+    "de": "Wie groß muss der Abstand mindestens sein?",
+    "tr": "Какой должна быть дистанция как минимум?"
+   },
+   "explain": [
+    {
+     "de": "Faustregel: Abstand in Metern ist gleich halber Tacho.",
+     "tr": "Правило: дистанция в метрах — половина показаний спидометра."
+    },
+    {
+     "de": "Bei 100 Kilometern pro Stunde also mindestens 50 Meter.",
+     "tr": "При 100 километрах в час — значит, не меньше 50 метров."
+    },
+    {
+     "de": "Die Leitpfosten am Rand stehen alle 50 Meter. So können Sie den Abstand gut schätzen.",
+     "tr": "Сигнальные столбики на обочине стоят через каждые 50 метров. По ним удобно оценивать дистанцию."
+    }
+   ],
+   "answer": 50
+  }
+ ],
+ "signs": {},
+ "gloss": {
+  "w": {
+   "abstand": "Abstand",
+   "alle": "alle",
+   "also": "also",
+   "am": "an",
+   "anhalteweg": "Anhalteweg",
+   "auf": "auf",
+   "auto": "Auto",
+   "ball": "Ball",
+   "bedeutet": "bedeuten",
+   "bei": "bei",
+   "bis": "bis",
+   "brauchen": "brauchen",
+   "bremsweg": "Bremsweg",
+   "das": "der/die/das",
+   "dem": "der/die/das",
+   "den": "der/die/das",
+   "der": "der/die/das",
+   "die": "der/die/das",
+   "doppelt": "doppelt",
+   "durch>geteilt durch": "geteilt durch",
+   "ein": "ein/eine",
+   "eine": "ein/eine",
+   "einem": "ein/eine",
+   "einer": "ein/eine",
+   "fahrbahn": "Fahrbahn",
+   "fahren": "fahren",
+   "faustregel": "Faustregel",
+   "fünfzig": "fünfzig",
+   "gefahrbremsung": "Gefahrbremsung",
+   "geteilt>geteilt durch": "geteilt durch",
+   "gleich": "gleich",
+   "groß": "groß",
+   "gut": "gut",
+   "halb": "halb",
+   "halber": "halb",
+   "her>herlaufen": "herlaufen",
+   "hinter": "hinter",
+   "hundert": "hundert",
+   "ihnen": "Sie",
+   "in": "in",
+   "innerorts": "innerorts",
+   "ist": "sein",
+   "kilometern": "Kilometer",
+   "kind": "Kind",
+   "können": "können",
+   "landstraße": "Landstraße",
+   "lang": "lang",
+   "langer": "lang",
+   "leitpfosten": "Leitpfosten",
+   "lkw": "Lkw",
+   "läuft>herlaufen": "herlaufen",
+   "machen": "machen",
+   "mal": "mal",
+   "meter": "Meter",
+   "metern": "Meter",
+   "mindestens": "mindestens",
+   "muss": "müssen",
+   "nur": "nur",
+   "plus": "plus",
+   "plötzlich": "plötzlich",
+   "pro": "pro",
+   "rand": "Rand",
+   "reaktionsweg": "Reaktionsweg",
+   "reh": "Reh",
+   "rollt": "rollen",
+   "schnell": "schnell",
+   "schätzen": "schätzen",
+   "sechzig": "sechzig",
+   "sein": "sein",
+   "sie": "Sie",
+   "sind": "sein",
+   "so": "so",
+   "stehen": "stehen",
+   "steht": "stehen",
+   "straße": "Straße",
+   "stunde": "Stunde",
+   "tacho": "Tacho",
+   "und": "und",
+   "viermal": "viermal",
+   "vor": "vor",
+   "wie": "wie"
+  },
+  "l": {
+   "Abstand": {
+    "ru": "дистанция, расстояние",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Abstände"
+   },
+   "Anhalteweg": {
+    "ru": "остановочный путь",
+    "pos": "сущ.",
+    "note": "Anhalteweg = Reaktionsweg + Bremsweg (путь реакции + тормозной путь)",
+    "art": "der",
+    "pl": "die Anhaltewege"
+   },
+   "Auto": {
+    "ru": "машина, автомобиль",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Autos"
+   },
+   "Ball": {
+    "ru": "мяч",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Bälle"
+   },
+   "Bremsweg": {
+    "ru": "тормозной путь",
+    "pos": "сущ.",
+    "note": "(v / 10) · (v / 10) метров; при Gefahrbremsung вдвое меньше",
+    "art": "der",
+    "pl": "die Bremswege"
+   },
+   "Fahrbahn": {
+    "ru": "проезжая часть",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Fahrbahnen"
+   },
+   "Faustregel": {
+    "ru": "простое правило, правило «на глаз»",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Faustregeln"
+   },
+   "Gefahrbremsung": {
+    "ru": "экстренное торможение",
+    "pos": "сущ.",
+    "note": "тормоз в пол изо всех сил; тормозной путь примерно вдвое короче",
+    "art": "die",
+    "pl": "die Gefahrbremsungen"
+   },
+   "Kilometer": {
+    "ru": "километр",
+    "pos": "сущ.",
+    "note": "Kilometer pro Stunde — километров в час (km/h)",
+    "art": "der",
+    "pl": "die Kilometer"
+   },
+   "Kind": {
+    "ru": "ребёнок",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Kinder"
+   },
+   "Landstraße": {
+    "ru": "загородная дорога",
+    "pos": "сущ.",
+    "note": "вне населённого пункта: для легковых обычно до 100 км/ч",
+    "art": "die",
+    "pl": "die Landstraßen"
+   },
+   "Leitpfosten": {
+    "ru": "сигнальный столбик (на обочине)",
+    "pos": "сущ.",
+    "note": "белые столбики с чёрной полосой, стоят через каждые 50 м",
+    "art": "der",
+    "pl": "die Leitpfosten"
+   },
+   "Lkw": {
+    "ru": "грузовик",
+    "pos": "сущ.",
+    "note": "сокращение от der Lastkraftwagen",
+    "art": "der",
+    "pl": "die Lkw"
+   },
+   "Meter": {
+    "ru": "метр",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Meter"
+   },
+   "Rand": {
+    "ru": "край, кайма",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Ränder"
+   },
+   "Reaktionsweg": {
+    "ru": "путь реакции",
+    "pos": "сущ.",
+    "note": "путь, пока водитель замечает опасность и переносит ногу на тормоз: (v / 10) · 3 метров",
+    "art": "der",
+    "pl": "die Reaktionswege"
+   },
+   "Reh": {
+    "ru": "косуля",
+    "pos": "сущ.",
+    "note": "Wildwechsel — переход диких животных; особенно опасно утром и в сумерках",
+    "art": "das",
+    "pl": "die Rehe"
+   },
+   "Sie": {
+    "ru": "вы (вежливо)",
+    "pos": "мест.",
+    "note": "Ihnen — вам (дательный): vor Ihnen — перед вами"
+   },
+   "Straße": {
+    "ru": "улица, дорога",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Straßen"
+   },
+   "Stunde": {
+    "ru": "час; урок",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Stunden"
+   },
+   "Tacho": {
+    "ru": "спидометр",
+    "pos": "сущ.",
+    "note": "halber Tacho — половина показаний спидометра (в метрах)",
+    "art": "der",
+    "pl": "die Tachos"
+   },
+   "alle": {
+    "ru": "все; всё",
+    "pos": "мест."
+   },
+   "also": {
+    "ru": "значит, итак",
+    "pos": "нареч."
+   },
+   "an": {
+    "ru": "у, на, при",
+    "pos": "предл.",
+    "note": "am = an dem; an der Kreuzung — на перекрёстке"
+   },
+   "auf": {
+    "ru": "на, по",
+    "pos": "предл.",
+    "note": "auf der Straße — на дороге; achten auf — следить за"
+   },
+   "bedeuten": {
+    "ru": "означать",
+    "pos": "гл.",
+    "forms": "bedeutete · hat bedeutet"
+   },
+   "bei": {
+    "ru": "при, у; на (о сигнале)",
+    "pos": "предл.",
+    "note": "bei Rot — на красный, bei Grün — на зелёный"
+   },
+   "bis": {
+    "ru": "пока не; до",
+    "pos": "союз"
+   },
+   "brauchen": {
+    "ru": "нуждаться, требоваться",
+    "pos": "гл.",
+    "forms": "brauchte · hat gebraucht"
+   },
+   "der/die/das": {
+    "ru": "определённый артикль",
+    "pos": "артикль",
+    "note": "der — м. р., die — ж. р. и мн. ч., das — ср. р.; den — м. р. в винительном, dem — м. и ср. р. в дательном; das ещё значит «это»"
+   },
+   "doppelt": {
+    "ru": "вдвое, вдвойне",
+    "pos": "нареч.",
+    "note": "doppelt so schnell — вдвое быстрее"
+   },
+   "ein/eine": {
+    "ru": "неопределённый артикль; один",
+    "pos": "артикль",
+    "note": "an einer Kreuzung — на (каком-то) перекрёстке"
+   },
+   "fahren": {
+    "ru": "ехать; водить машину",
+    "pos": "гл.",
+    "forms": "fuhr · ist gefahren"
+   },
+   "fünfzig": {
+    "ru": "пятьдесят",
+    "pos": "числ."
+   },
+   "geteilt durch": {
+    "ru": "разделить на",
+    "pos": "выраж."
+   },
+   "gleich": {
+    "ru": "сейчас, сразу",
+    "pos": "нареч."
+   },
+   "groß": {
+    "ru": "большой",
+    "pos": "прил.",
+    "note": "Wie groß …? — Какой величины …?",
+    "forms": "groß · größer · am größten"
+   },
+   "gut": {
+    "ru": "хороший; хорошо",
+    "pos": "прил.",
+    "forms": "gut · besser · am besten"
+   },
+   "halb": {
+    "ru": "половина, наполовину",
+    "pos": "прил.",
+    "note": "halb so lang — вдвое короче; halber Tacho — половина спидометра"
+   },
+   "herlaufen": {
+    "ru": "бежать (за кем-то)",
+    "pos": "гл.",
+    "note": "hinter dem Ball herlaufen — бежать за мячом",
+    "forms": "lief her · ist hergelaufen"
+   },
+   "hinter": {
+    "ru": "за, позади",
+    "pos": "предл."
+   },
+   "hundert": {
+    "ru": "сто",
+    "pos": "числ."
+   },
+   "in": {
+    "ru": "в",
+    "pos": "предл.",
+    "note": "im = in dem: im Bereich — в зоне"
+   },
+   "innerorts": {
+    "ru": "в населённом пункте",
+    "pos": "нареч.",
+    "note": "здесь обычно не больше 50 км/ч"
+   },
+   "können": {
+    "ru": "мочь",
+    "pos": "гл.",
+    "forms": "konnte · hat gekonnt"
+   },
+   "lang": {
+    "ru": "длинный",
+    "pos": "прил.",
+    "note": "Wie lang …? — Какой длины …?",
+    "forms": "lang · länger · am längsten"
+   },
+   "machen": {
+    "ru": "делать",
+    "pos": "гл.",
+    "note": "den Schulterblick machen — оглянуться через плечо; Gut gemacht! — Молодец!",
+    "forms": "machte · hat gemacht"
+   },
+   "mal": {
+    "ru": "умножить на; раз",
+    "pos": "нареч."
+   },
+   "mindestens": {
+    "ru": "по меньшей мере, не меньше",
+    "pos": "нареч."
+   },
+   "müssen": {
+    "ru": "быть должным",
+    "pos": "гл.",
+    "forms": "musste · hat gemusst"
+   },
+   "nur": {
+    "ru": "только",
+    "pos": "нареч."
+   },
+   "plus": {
+    "ru": "плюс",
+    "pos": "нареч."
+   },
+   "plötzlich": {
+    "ru": "вдруг, внезапно",
+    "pos": "нареч."
+   },
+   "pro": {
+    "ru": "в, за (на единицу)",
+    "pos": "предл."
+   },
+   "rollen": {
+    "ru": "катиться",
+    "pos": "гл.",
+    "forms": "rollte · ist gerollt"
+   },
+   "schnell": {
+    "ru": "быстрый; быстро",
+    "pos": "прил."
+   },
+   "schätzen": {
+    "ru": "оценивать (на глаз)",
+    "pos": "гл.",
+    "forms": "schätzte · hat geschätzt"
+   },
+   "sechzig": {
+    "ru": "шестьдесят",
+    "pos": "числ."
+   },
+   "sein": {
+    "ru": "быть",
+    "pos": "гл.",
+    "forms": "war · ist gewesen"
+   },
+   "so": {
+    "ru": "так; вот (так)",
+    "pos": "нареч."
+   },
+   "stehen": {
+    "ru": "стоять",
+    "pos": "гл.",
+    "note": "Schilder stehen — стоят знаки",
+    "forms": "stand · hat gestanden"
+   },
+   "und": {
+    "ru": "и",
+    "pos": "союз"
+   },
+   "viermal": {
+    "ru": "четыре раза, вчетверо",
+    "pos": "нареч."
+   },
+   "vor": {
+    "ru": "перед",
+    "pos": "предл.",
+    "note": "rechts vor links — правый перед левым"
+   },
+   "wie": {
+    "ru": "как",
+    "pos": "нареч.",
+    "note": "wie schnell — с какой скоростью"
+   }
+  }
+ }
+}

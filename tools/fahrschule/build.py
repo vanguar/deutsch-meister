@@ -72,8 +72,10 @@ POS = {
 # (ReaderTip сам собирает её только для pos «сущ.»)
 PLURAL = {'uk': ('мн.:', 'мн. немає'), 'ar': ('الجمع:', 'لا جمع له')}
 
-KINDS = ('theory', 'dialog', 'junction')
-PREFIX = {'theory': 't', 'dialog': 'p', 'junction': 'k'}   # t-01, p-01, k-01
+KINDS = ('theory', 'dialog', 'junction', 'road')
+PREFIX = {'theory': 't', 'dialog': 'p', 'junction': 'k', 'road': 'r'}   # t-01, p-01, k-01, r-03
+ROAD_TYPES = ('stop', 'gap')
+HAZARDS = ('ball', 'deer')
 CARS = ('blue', 'red', 'green', 'yellow')
 APPROACH = ('S', 'W', 'N', 'E')
 TURNS = ('straight', 'left', 'right')
@@ -259,6 +261,26 @@ def solve(cars, signs):
     return order
 
 
+def road_answer(sc):
+    """Ответ сцены «на дороге» по немецким формулам автошкол (Faustformeln):
+      путь реакции  = (v / 10) · 3
+      тормозной путь = (v / 10)²; при экстренном торможении (Gefahrbremsung) — вдвое меньше
+      остановочный путь = реакция + торможение
+      дистанция (außerorts) = «halber Tacho»: v / 2 метров
+    Возвращает словарь с числами или строку с причиной ошибки."""
+    v = sc.get('v')
+    if not isinstance(v, int) or v % 10 or not 10 <= v <= 200:
+        return f'скорость v — целое кратное 10, а не {v!r}'
+    if sc.get('type') == 'gap':
+        return {'answer': v // 2}
+    r = v // 10 * 3
+    b = (v / 10) ** 2 / (2 if sc.get('emergency') else 1)
+    if b != int(b):
+        return f'тормозной путь {b} — не целое; возьмите другую скорость'
+    b = int(b)
+    return {'reaction': r, 'brake': b, 'answer': r + b}
+
+
 def solve_lights(cars, signs, lights):
     """Перекрёсток со светофором: (порядок, сколько машин едет до смены
     сигнала) или строка с причиной ошибки.
@@ -318,8 +340,8 @@ def main():
         if kind not in KINDS:
             err(f'{uid}: kind {kind!r}')
             continue
-        if not re.match(r'^[tpk]-\d\d$', uid):
-            err(f'{uid}: id вида t-01 / p-01 / k-01')
+        if not re.match(r'^[a-z]-\d\d$', uid):
+            err(f'{uid}: id вида t-01 / p-01 / k-01 / r-03')
         if uid[0] != PREFIX[kind]:
             err(f'{uid}: у {kind} id начинается с {PREFIX[kind]}-')
         for key in ('emoji', 'level', 'title', 'titleTr', 'intro'):
@@ -417,7 +439,7 @@ def main():
                 per[lang]['lines'] = lines[lang]
             count = len(lines['ru'])
 
-        else:   # junction
+        elif kind == 'junction':
             scenes = u.get('scenes') or []
             if not scenes:
                 err(f'{uid}: нет сцен')
@@ -462,6 +484,50 @@ def main():
                     if lights:
                         scene['lights'] = lights         # сигналы до смены
                         scene['switchAt'] = switch_at    # столько машин едет до смены сигнала
+                    out[lang].append(scene)
+            for lang in LANGS:
+                per[lang]['scenes'] = out[lang]
+            count = len(scenes)
+
+        elif kind == 'road':
+            scenes = u.get('scenes') or []
+            if not scenes:
+                err(f'{uid}: нет сцен')
+            out = {lang: [] for lang in LANGS}
+            for ci, sc in enumerate(scenes, 1):
+                w = f'{uid} сцена {ci}'
+                if sc.get('type') not in ROAD_TYPES:
+                    err(f'{w}: type — {", ".join(ROAD_TYPES)}')
+                    continue
+                if sc['type'] == 'stop' and sc.get('hazard') not in HAZARDS:
+                    err(f'{w}: hazard — {", ".join(HAZARDS)}')
+                got = road_answer(sc)
+                if isinstance(got, str):
+                    err(f'{w}: {got}')
+                    continue
+                opts = sc.get('options') or []
+                if len(opts) != 3 or len(set(opts)) != 3 or not all(isinstance(o, int) and o > 0 for o in opts):
+                    err(f'{w}: options — три разных положительных целых числа (метры)')
+                if got['answer'] not in opts:
+                    err(f'{w}: по формуле ответ {got["answer"]} м, его нет среди {opts}')
+                expl_src = sc.get('explain') or []
+                # числа в пояснении обязаны совпасть с формулой
+                nums = {int(x) for e in expl_src for x in re.findall(r'\d+', e.get('de', ''))}
+                for k in ('reaction', 'brake', 'answer'):
+                    if k in got and got[k] not in nums:
+                        err(f'{w}: в пояснении нет числа {got[k]} ({k})')
+                sit = text(w + ' ситуация', sc.get('situation') or {})
+                q = text(w + ' вопрос', sc.get('question') or {})
+                expl = [text(f'{w} пояснение {k}', e) for k, e in enumerate(expl_src, 1)]
+                if not expl:
+                    err(f'{w}: нет пояснения')
+                for lang in LANGS:
+                    scene = {'type': sc['type'], 'v': sc['v'], 'options': opts,
+                             'situation': sit[lang], 'question': q[lang], 'explain': [e[lang] for e in expl]}
+                    scene.update(got)
+                    if sc['type'] == 'stop':
+                        scene['hazard'] = sc['hazard']
+                        scene['emergency'] = bool(sc.get('emergency'))
                     out[lang].append(scene)
             for lang in LANGS:
                 per[lang]['scenes'] = out[lang]

@@ -46,7 +46,8 @@ const Fahrschule = (() => {
   const KINDS = {
     theory:   { label: 'Теория',      text: 'Правила и знаки с озвучкой и тестом',   forms: ['правило', 'правила', 'правил'] },
     dialog:   { label: 'Практика',    text: 'Разговор с инструктором за рулём',       forms: ['реплика', 'реплики', 'реплик'] },
-    junction: { label: 'Перекрёсток', text: 'Кто едет первым? Расставьте машины по очереди', forms: ['ситуация', 'ситуации', 'ситуаций'] }
+    junction: { label: 'Перекрёсток', text: 'Кто едет первым? Расставьте машины по очереди', forms: ['ситуация', 'ситуации', 'ситуаций'] },
+    road:     { label: 'На дороге',   text: 'Остановочный путь и дистанция — посчитайте и посмотрите', forms: ['ситуация', 'ситуации', 'ситуаций'] }
   };
 
   // Перекрёсток 300×300: дороги шириной 64 по центру, правостороннее
@@ -387,7 +388,7 @@ const Fahrschule = (() => {
     paintTr();
     paintPlay();
     if (u.kind === 'theory' && u.quiz && u.quiz.length) startQuiz();
-    if (u.kind === 'junction') openScene(0);
+    if (u.kind === 'junction' || u.kind === 'road') openScene(0);
     prefetchAround(u.id);
   }
 
@@ -570,7 +571,9 @@ const Fahrschule = (() => {
 
   function openScene(i) {
     stopAll();
-    scene = { i, pick: [], done: false, right: false };
+    scene = unit.kind === 'road'
+      ? { i, pick: null, done: false, right: false, shown: false }
+      : { i, pick: [], done: false, right: false };
     renderScene();
   }
 
@@ -632,6 +635,7 @@ const Fahrschule = (() => {
   }
 
   function renderScene() {
+    if (unit && unit.kind === 'road') { renderRoad(); return; }
     const box = document.getElementById('fsJunction');
     if (!box || !scene) return;
     const list = unit.scenes;
@@ -756,6 +760,205 @@ const Fahrschule = (() => {
         anims[k] = requestAnimationFrame(tick);
       }, k * NEXT_MS));
     });
+  }
+
+  /* ── На дороге: остановочный путь и дистанция ──
+     Ответ и числа считает tools/fahrschule/build.py по формулам автошкол
+     (реакция (v/10)·3, торможение (v/10)², экстренно — вдвое; дистанция
+     v/2). Здесь только картинка: дорога слева направо, масштаб — чтобы
+     весь путь влез в ширину. Сначала человек выбирает ответ, потом
+     машина едет: видит помеху, жёлтым растёт путь реакции, красным —
+     тормозной путь, затем подписи в метрах. Для дистанции — грузовик
+     впереди, столбики на обочине (через 50 м) «едут» мимо. */
+
+  const ROAD_W = 320;
+  const ROAD_X0 = 26;
+  const REACT_MS = 900;
+  const BRAKE_MS = 1300;
+  const GAP_ANIM_MS = 2400;
+  const HAZARD = { ball: '⚽', deer: '🦌' };
+
+  function roadGeom(sc) {
+    if (sc.type === 'gap') {
+      const S = 200 / sc.answer;          // дистанция — 200 px
+      return { S, front: ROAD_X0 + 34, lead: ROAD_X0 + 34 + sc.answer * S };
+    }
+    const S = (ROAD_W - ROAD_X0 - 40) / sc.answer;
+    return { S, r: sc.reaction * S, b: sc.brake * S, end: ROAD_X0 + sc.answer * S };
+  }
+
+  function carHtml(x, cls, fill) {
+    return `<g class="${cls}" transform="translate(${x.toFixed(1)} 66)">
+      <rect x="-28" y="-9" width="28" height="18" rx="5" fill="${fill}" class="fs-car-shell"/>
+      <rect class="fs-glass" x="-10" y="-7" width="6" height="14" rx="2"/>
+      <rect class="fs-glass" x="-25" y="-6" width="4" height="12" rx="1.5"/>
+      <rect class="fs-brake" x="-29.5" y="-8" width="2.5" height="4" rx="1"/>
+      <rect class="fs-brake" x="-29.5" y="4" width="2.5" height="4" rx="1"/>
+    </g>`;
+  }
+
+  function roadSvg(sc, final) {
+    const g = roadGeom(sc);
+    const road = `<rect class="fs-grass" x="0" y="0" width="${ROAD_W}" height="130"/>
+      <rect class="fs-road" x="0" y="44" width="${ROAD_W}" height="44"/>
+      <path class="fs-mark" d="M0 66 H${ROAD_W}"/>`;
+    if (sc.type === 'gap') {
+      // столбики через 50 м по верхней обочине; двигаются влево — машины едут
+      const step = 50 * g.S;
+      const posts = [];
+      for (let x = -step; x < ROAD_W + step; x += step) {
+        posts.push(`<g transform="translate(${x.toFixed(1)} 30)"><rect class="fs-post" x="-2" y="0" width="4" height="12" rx="1"/><rect class="fs-post-band" x="-2" y="3" width="4" height="3"/></g>`);
+      }
+      const bracket = `<g class="fs-lab${final ? ' is-on' : ''}">
+        <path class="fs-bracket" d="M${g.front} 96 V102 H${g.lead.toFixed(1)} V96"/>
+        <text class="fs-lab-text" x="${((g.front + g.lead) / 2).toFixed(1)}" y="118">${sc.answer} m</text></g>`;
+      return `<svg class="fs-svg fs-road-svg" viewBox="0 0 ${ROAD_W} 130" role="img" aria-label="Abstand">
+        ${road}<g class="fs-posts" data-step="${step.toFixed(2)}">${posts.join('')}</g>
+        ${carHtml(g.front, 'fs-road-car', CAR.blue.fill)}
+        <g class="fs-truck" transform="translate(${g.lead.toFixed(1)} 66)">
+          <rect x="0" y="-11" width="46" height="22" rx="3" class="fs-truck-box"/>
+          <rect x="46" y="-9" width="12" height="18" rx="3" fill="${CAR.yellow.fill}" class="fs-car-shell"/>
+        </g>${bracket}</svg>`;
+    }
+    const xEnd = ROAD_X0 + (final ? g.r + g.b : 0);
+    const lab = (x, y, t, cls) => `<text class="fs-lab-text ${cls || ''}" x="${x.toFixed(1)}" y="${y}">${t}</text>`;
+    return `<svg class="fs-svg fs-road-svg" viewBox="0 0 ${ROAD_W} 130" role="img" aria-label="Anhalteweg">
+      ${road}
+      <rect class="fs-zone-r" x="${ROAD_X0}" y="46" width="${final ? g.r.toFixed(1) : 0}" height="40"/>
+      <rect class="fs-zone-b" x="${(ROAD_X0 + g.r).toFixed(1)}" y="46" width="${final ? g.b.toFixed(1) : 0}" height="40"/>
+      <text class="fs-hazard${final ? ' is-on' : ''}" x="${(g.end + 14).toFixed(1)}" y="72">${HAZARD[sc.hazard] || '⚠️'}</text>
+      ${carHtml(xEnd, 'fs-road-car' + (final ? ' is-braking' : ''), CAR.blue.fill)}
+      <g class="fs-lab${final ? ' is-on' : ''}">
+        ${lab(ROAD_X0 + g.r / 2, 38, sc.reaction + ' m', 'is-r')}
+        ${lab(ROAD_X0 + g.r + g.b / 2, 38, sc.brake + ' m', 'is-b')}
+        <path class="fs-bracket" d="M${ROAD_X0} 96 V102 H${g.end.toFixed(1)} V96"/>
+        ${lab(ROAD_X0 + (g.r + g.b) / 2, 118, '= ' + sc.answer + ' m')}
+      </g>
+    </svg>`;
+  }
+
+  // Подпись цветов — немецкие слова с подсказкой, как в тексте урока
+  function roadLegendHtml(sc) {
+    const item = (cls, de) => `<span class="fs-legend-item"><i class="fs-sw ${cls}"></i><span lang="de" dir="ltr">${wordsHtml({ de })}</span></span>`;
+    return sc.type === 'gap'
+      ? `<div class="fs-legend">${item('fs-sw-gap', 'Abstand')}${item('fs-sw-post', 'Leitpfosten')}</div>`
+      : `<div class="fs-legend">${item('fs-sw-r', 'Reaktionsweg')}${item('fs-sw-b', 'Bremsweg')}${item('fs-sw-sum', 'Anhalteweg')}</div>`;
+  }
+
+  function renderRoad() {
+    const box = document.getElementById('fsJunction');
+    if (!box || !scene) return;
+    const list = unit.scenes;
+    const sc = list[scene.i];
+    sentences = sentences.slice(0, 1);   // заголовок урока остаётся, фразы сцены — заново
+    const sit = sentence(sc.situation, 'p', 'fs-de');
+    const q = sentence(sc.question, 'p', 'fs-quiz-q');
+    const opts = sc.options.map(m => {
+      let cls = 'fs-opt fs-road-opt';
+      if (scene.done && m === sc.answer) cls += ' is-right';
+      else if (scene.done && m === scene.pick) cls += ' is-wrong';
+      return `<button class="${cls}" type="button" data-road-opt="${m}"${scene.done ? ' disabled' : ''}><span class="fs-opt-de" dir="ltr">${m} m</span></button>`;
+    }).join('');
+    const explain = scene.shown ? sc.explain.map(e => {
+      const n = sentences.length;
+      return `<li class="fs-line" data-line="${n}"><div class="fs-line-row">
+        <div class="fs-line-text">${sentence(e, 'p', 'fs-de')}<p class="fs-tr" dir="auto">${esc(e.tr)}</p></div>
+        ${lineBtns(n)}</div></li>`;
+    }).join('') : '';
+    const last = scene.i >= list.length - 1;
+    let status = '<span>Выберите ответ — потом посмотрите, как это выглядит на дороге.</span>';
+    if (scene.done) {
+      status = scene.right ? '✓ <span>Верно!</span>' : '✗ <span>Не совсем. Правильный ответ отмечен зелёным.</span>';
+    }
+    const actions = scene.shown
+      ? `<button class="dlg-play" type="button" data-play="explain" aria-pressed="false"><span class="dlg-play-ico" aria-hidden="true">▶</span> <span class="dlg-play-label">Объяснение</span></button>
+        <button class="news-chip" type="button" data-scene-again>↻ <span>Ещё раз</span></button>
+        ${last ? '' : '<button class="news-chip" type="button" data-scene-next><span>Следующая</span> ›</button>'}`
+      : '';
+    box.innerHTML = `
+      <div class="fs-scene-top">
+        <span><span>Ситуация</span> <span class="fs-scene-n">${scene.i + 1} / ${list.length}</span></span>
+        <span class="fs-dots" aria-hidden="true">${list.map((_, k) => `<i class="${k === scene.i ? 'on' : ''}"></i>`).join('')}</span>
+      </div>
+      <div class="fs-situation fs-line-row">
+        <div class="fs-line-text">${sit}<p class="fs-tr" dir="auto">${esc(sc.situation.tr)}</p></div>
+        ${trBtn()}
+      </div>
+      ${q}
+      <div class="fs-scene fs-road" id="fsScene">${roadSvg(sc, scene.shown)}</div>
+      ${roadLegendHtml(sc)}
+      <div class="fs-opts fs-road-opts${scene.done ? ' is-answered' : ''}">${opts}</div>
+      <p class="fs-status${scene.done ? (scene.right ? ' is-right' : ' is-wrong') : ''}" id="fsStatus" aria-live="polite">${status}</p>
+      <div class="fs-scene-actions" id="fsActions">${actions}</div>
+      ${scene.shown ? `<ol class="fs-lines fs-explain">${explain}</ol>` : ''}`;
+    paintTr();
+    paintPlay();
+  }
+
+  function pickRoad(m) {
+    if (!scene || scene.done) return;
+    const sc = unit.scenes[scene.i];
+    scene.pick = m;
+    scene.right = m === sc.answer;
+    scene.done = true;
+    renderRoad();
+    animateRoad(sc, () => {
+      scene.shown = true;
+      renderRoad();
+      speakList(explainLines(), 'explain');
+    });
+  }
+
+  function animateRoad(sc, done) {
+    const svg = document.querySelector('#fsScene .fs-road-svg');
+    if (!svg || reducedMotion() || typeof requestAnimationFrame !== 'function') { done(); return; }
+    svg.classList.add('is-driving');
+    if (sc.type === 'gap') {
+      const posts = svg.querySelector('.fs-posts');
+      const step = Number(posts.dataset.step);
+      const t0 = performance.now();
+      const tick = now => {
+        const k = now - t0;
+        posts.setAttribute('transform', `translate(${(-((k / 700) % 1) * step).toFixed(1)} 0)`);
+        if (k < GAP_ANIM_MS) { anims[0] = requestAnimationFrame(tick); return; }
+        anims[0] = null;
+        svg.querySelector('.fs-lab').classList.add('is-on');
+        timers.push(setTimeout(done, 700));
+      };
+      anims[0] = requestAnimationFrame(tick);
+      return;
+    }
+    const g = roadGeom(sc);
+    const car = svg.querySelector('.fs-road-car');
+    const zr = svg.querySelector('.fs-zone-r');
+    const zb = svg.querySelector('.fs-zone-b');
+    svg.querySelector('.fs-hazard').classList.add('is-on');
+    const t0 = performance.now() + 350;          // помеха появилась — водитель ещё не среагировал
+    const tick = now => {
+      const k = Math.max(0, now - t0);
+      let x;
+      if (k < REACT_MS) {                       // реакция: едет с прежней скоростью
+        x = g.r * (k / REACT_MS);
+        zr.setAttribute('width', x.toFixed(1));
+      } else {                                  // торможение: замедляется до нуля
+        const t = Math.min(1, (k - REACT_MS) / BRAKE_MS);
+        const e = 1 - (1 - t) * (1 - t);
+        zr.setAttribute('width', g.r.toFixed(1));
+        zb.setAttribute('width', (g.b * e).toFixed(1));
+        car.classList.add('is-braking');
+        x = g.r + g.b * e;
+        if (t >= 1) {
+          car.setAttribute('transform', `translate(${(ROAD_X0 + x).toFixed(1)} 66)`);
+          anims[0] = null;
+          svg.querySelector('.fs-lab').classList.add('is-on');
+          timers.push(setTimeout(done, 700));
+          return;
+        }
+      }
+      car.setAttribute('transform', `translate(${(ROAD_X0 + x).toFixed(1)} 66)`);
+      anims[0] = requestAnimationFrame(tick);
+    };
+    anims[0] = requestAnimationFrame(tick);
   }
 
   function scrollToScene() {
@@ -984,6 +1187,8 @@ const Fahrschule = (() => {
       return;
     }
     if (t.closest('[data-tr-line]')) { toggleLineTr(trHolder(t)); return; }
+    const ro = t.closest('[data-road-opt]');
+    if (ro) { pickRoad(Number(ro.dataset.roadOpt)); return; }
     const opt = t.closest('[data-opt]');
     if (opt) { answerQuiz(opt.dataset.opt); return; }
     if (t.closest('[data-quiz-next]')) { stopSpeech(); quiz.i++; quiz.answered = false; renderQuiz(); return; }

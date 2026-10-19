@@ -214,8 +214,37 @@ html[dir="rtl"] .fs-tr { text-align: right; }
 .fs-scene-actions:empty { display: none; }
 .fs-explain { margin-top: 14px; }
 
+/* ── На дороге: остановочный путь и дистанция ── */
+.fs-road { max-width: 520px; }
+.fs-zone-r { fill: rgba(232, 197, 71, .55); }
+.fs-zone-b { fill: rgba(240, 107, 107, .55); }
+.fs-brake { fill: #5a1a1a; }
+.is-braking .fs-brake { fill: #ff3b30; }
+.fs-hazard { font-size: 18px; opacity: 0; transition: opacity .25s ease; }
+.fs-hazard.is-on { opacity: 1; }
+.fs-lab { opacity: 0; transition: opacity .3s ease; }
+.fs-lab.is-on { opacity: 1; }
+.fs-lab-text { font: 800 11px 'DM Sans', system-ui, sans-serif; fill: var(--text-strong); text-anchor: middle; }
+.fs-lab-text.is-r { fill: color-mix(in srgb, #e8c547 70%, var(--text-strong)); }
+.fs-lab-text.is-b { fill: color-mix(in srgb, #f06b6b 70%, var(--text-strong)); }
+.fs-bracket { fill: none; stroke: var(--text-muted); stroke-width: 1.5; }
+.fs-post { fill: #f4f4f4; }
+.fs-post-band { fill: #1a1a1a; }
+.fs-truck-box { fill: #9aa4ae; stroke: rgba(0, 0, 0, .35); stroke-width: 1; }
+.fs-legend { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 14px; margin: 8px 0 4px; font-size: 13px; color: var(--text); }
+.fs-legend-item { display: inline-flex; align-items: center; gap: 6px; }
+.fs-sw { display: inline-block; width: 14px; height: 10px; border-radius: 3px; }
+.fs-sw-r { background: rgba(232, 197, 71, .8); }
+.fs-sw-b { background: rgba(240, 107, 107, .8); }
+.fs-sw-sum, .fs-sw-gap { background: transparent; border: 1.5px solid var(--text-muted); border-top: 0; height: 6px; border-radius: 0; }
+.fs-sw-post { width: 4px; height: 12px; background: linear-gradient(#f4f4f4 25%, #1a1a1a 25% 50%, #f4f4f4 50%); border-radius: 1px; }
+.fs-road-opts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin-top: 10px; }
+.fs-road-opt { align-items: center; text-align: center; }
+.fs-road-opt .fs-opt-de { font-size: 17px; }
+
 @media (prefers-reduced-motion: reduce) {
   .fs-blink { animation: none; }
+  .fs-hazard, .fs-lab { transition: none; }
   .fs-light circle { transition: none; }
   .fs-lines > .fs-line, .fs-car, .fs-hint-path, .fs-badge, .fs-w, .fs-opt { transition: none; }
 }

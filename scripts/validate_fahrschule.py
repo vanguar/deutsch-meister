@@ -92,6 +92,8 @@ def texts(unit):
         out.append((f'реплика {li}', ln))
     for ci, sc in enumerate(unit.get('scenes') or [], 1):
         out.append((f'сцена {ci} ситуация', sc['situation']))
+        if sc.get('question'):
+            out.append((f'сцена {ci} вопрос', sc['question']))
         for ei, e in enumerate(sc['explain'], 1):
             out.append((f'сцена {ci} пояснение {ei}', e))
     for sid, s in (unit.get('signs') or {}).items():
@@ -173,6 +175,12 @@ def main():
                 if not FREE.search(s.get('license', '')) or not FREE.search((meta.get(sid) or {}).get('license', '')):
                     err(f'{where}: у знака {sid} нет свободной лицензии')
             for ci, sc in enumerate(u.get('scenes') or [], 1):
+                if u['kind'] == 'road':
+                    if sc.get('answer') not in (sc.get('options') or []):
+                        err(f'{where} сцена {ci}: ответа {sc.get("answer")} нет среди вариантов')
+                    if sc.get('type') == 'stop' and sc.get('reaction', 0) + sc.get('brake', 0) != sc.get('answer'):
+                        err(f'{where} сцена {ci}: реакция + торможение ≠ остановочному пути')
+                    continue
                 if sorted(sc.get('order') or []) != sorted(c['id'] for c in sc.get('cars') or []):
                     err(f'{where} сцена {ci}: порядок — не перестановка машин')
                 if sc.get('lights'):

@@ -70,6 +70,14 @@ ok('противоположный' in str(build.solve_lights([car('a', 'S'), ca
 ok('красного' in str(build.solve_lights([car('a', 'S'), car('b', 'W')], {'S': 'z720'}, L_NS)),
    'зелёная стрелка у зелёного сигнала — ошибка сцены')
 
+# Формулы автошкол: реакция (v/10)·3, тормозной (v/10)², экстренно — вдвое, дистанция v/2
+ok(build.road_answer({'type': 'stop', 'v': 50}) == {'reaction': 15, 'brake': 25, 'answer': 40}, 'остановочный путь при 50: 15 + 25 = 40')
+ok(build.road_answer({'type': 'stop', 'v': 100}) == {'reaction': 30, 'brake': 100, 'answer': 130}, 'при 100: 30 + 100 = 130')
+ok(build.road_answer({'type': 'stop', 'v': 60, 'emergency': True}) == {'reaction': 18, 'brake': 18, 'answer': 36}, 'экстренно при 60: 18 + 18 = 36')
+ok(build.road_answer({'type': 'gap', 'v': 100}) == {'answer': 50}, 'дистанция при 100 — половина спидометра, 50 м')
+ok('не целое' in str(build.road_answer({'type': 'stop', 'v': 50, 'emergency': True})), 'дробный тормозной путь (12,5 м) — ошибка сцены')
+ok('кратное 10' in str(build.road_answer({'type': 'stop', 'v': 55})), 'скорость не кратна 10 — ошибка сцены')
+
 
 # ── 2. Сборка ловит ошибки и ничего не пишет ──
 SRC = build.SRC
@@ -132,6 +140,12 @@ ok(code == 1 and any('уже в теме' in e for e in errs), 'урок в дв
 
 code, errs, written = run_with(lambda d: d['lexicon.json']['anhalten'].__setitem__('f', ['an']))
 ok(code == 1 and any('приставку задают в строке' in e for e in errs), 'приставка «an» глобально у глагола — ошибка')
+
+code, errs, written = run_with(lambda d: unit(d, 'r-03')['scenes'][0].__setitem__('options', [25, 45, 50]))
+ok(code == 1 and any('по формуле ответ 40' in e for e in errs), 'нет верного ответа среди вариантов — ошибка')
+
+code, errs, written = run_with(lambda d: unit(d, 'r-03')['scenes'][0]['explain'][2].__setitem__('de', 'Anhalteweg: 15 plus 25. Sie brauchen also 45 Meter, bis das Auto steht.'))
+ok(code == 1 and any('нет числа 40' in e for e in errs), 'число в пояснении не совпало с формулой — ошибка')
 
 print(f'\nFAIL: {fails}' if fails else '\ntest_build: всё ок')
 sys.exit(1 if fails else 0)
