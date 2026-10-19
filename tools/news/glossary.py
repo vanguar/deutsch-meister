@@ -1978,3 +1978,40 @@ L.update({
     'Ausland': n('заграница', 'das', None, note='ins Ausland — за границу; im Ausland — за границей'),
     'deutlich (заметно)': a('заметный, отчётливый', note='deutlich weniger — заметно меньше'),
 })
+
+W.update({
+    # Парижский автосалон 2026
+    'paris': 'Paris', 'automesse': 'Automesse', 'autosalon': 'Autosalon', 'hallen': 'Halle',
+    'autohersteller': 'Autohersteller', 'china': 'China', 'marken': 'Marke', 'frankreich': 'Frankreich',
+    'autos': 'Auto', 'auto': 'Auto', 'fehlten': 'fehlen', 'bmw': 'BMW', 'mini': 'Mini', 'star': 'Star',
+    'citroën': 'Citroën 2CV', 'cv': 'Citroën 2CV', 'elektroauto': 'Elektroauto', 'konzept': 'Konzept',
+    'fertiges': 'fertig', 'ansehen': 'ansehen', 'probefahrten': 'Probefahrt', 'wochenenden': 'Wochenende',
+    'dauern': 'dauern',
+})
+
+W_ART.update({
+    'autosalon-paris-2026': {'zu': 'zu Ende gehen', 'gegangen': 'zu Ende gehen', 'ihre': 'ihr (их, её)'},
+})
+
+L.update({
+    # Парижский автосалон 2026
+    'zu Ende gehen': v('заканчиваться', 'ging zu Ende · ist zu Ende gegangen', note='das Ende — конец'),
+    'Paris': geo('Париж'),
+    'Automesse': n('автомобильная выставка, автосалон', 'die', 'die Automessen'),
+    'Autosalon': n('автосалон (выставка)', 'der', 'die Autosalons'),
+    'Halle': n('зал, павильон', 'die', 'die Hallen'),
+    'Autohersteller': n('автопроизводитель', 'der', 'die Autohersteller'),
+    'Marke': n('марка, бренд', 'die', 'die Marken'),
+    'Frankreich': geo('Франция'),
+    'Auto': n('автомобиль, машина', 'das', 'die Autos'),
+    'fehlen': v('отсутствовать, не хватать', 'fehlte · hat gefehlt'),
+    'BMW': name('BMW (немецкий автопроизводитель)'),
+    'Mini': name('Mini (британская марка автомобилей, принадлежит BMW)'),
+    'Star': n('звезда (знаменитость)', 'der', 'die Stars'),
+    'Citroën 2CV': name('Citroën 2CV (французский автомобиль, прозвище «утка»)',
+                        note='по-немецки die Ente, по-французски Deux Chevaux («две лошадиные силы»)'),
+    'Elektroauto': n('электромобиль', 'das', 'die Elektroautos'),
+    'Konzept': n('концепт, концепция', 'das', 'die Konzepte', note='das Konzeptauto — концепт-кар'),
+    'ansehen': v('смотреть, рассматривать', 'sah an · hat angesehen', note='sich etwas ansehen — посмотреть что-то'),
+    'Probefahrt': n('пробная поездка, тест-драйв', 'die', 'die Probefahrten'),
+})

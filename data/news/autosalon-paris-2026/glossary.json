@@ -1,0 +1,587 @@
+{
+  "version": 1,
+  "w": {
+    "aber": "aber",
+    "aller": "alle/alles",
+    "als": "als",
+    "alte": "alt",
+    "am": "an",
+    "ansehen": "ansehen",
+    "auch": "auch",
+    "auf": "auf",
+    "aus": "aus",
+    "auto": "Auto",
+    "autohersteller": "Autohersteller",
+    "automesse": "Automesse",
+    "autos": "Auto",
+    "autosalon": "Autosalon",
+    "beispiel": "Beispiel",
+    "bekannte": "bekannt",
+    "beliebt": "beliebt",
+    "besonders": "besonders",
+    "besucher": "Besucher",
+    "bisher": "bisher",
+    "bmw": "BMW",
+    "china": "China",
+    "chinesische": "chinesisch",
+    "citroën": "Citroën 2CV",
+    "cv": "Citroën 2CV",
+    "dabei": "dabei",
+    "dann": "dann",
+    "das": "der/die/das",
+    "dauern": "dauern",
+    "den": "der/die/das",
+    "der": "der/die/das",
+    "die": "der/die/das",
+    "ein": "ein/eine",
+    "einige": "einige",
+    "elektroauto": "Elektroauto",
+    "ende": "Ende",
+    "ente": "Ente",
+    "es": "es",
+    "etwa": "etwa",
+    "fahren": "fahren",
+    "fehlten": "fehlen",
+    "fertiges": "fertig",
+    "findet": "stattfinden",
+    "frankreich": "Frankreich",
+    "fünf": "fünf",
+    "gab": "geben",
+    "gegangen": "zu Ende gehen",
+    "große": "groß",
+    "hallen": "Halle",
+    "ihre": "ihr (их, её)",
+    "im": "in",
+    "in": "in",
+    "ist": "sein",
+    "jahren": "Jahr",
+    "jeden": "jeder",
+    "kam": "kommen",
+    "kamen": "kommen",
+    "kommen": "kommen",
+    "konzept": "Konzept",
+    "lang": "lang",
+    "marken": "Marke",
+    "markt": "Markt",
+    "mehr": "mehr",
+    "menschen": "Mensch",
+    "messe": "Messe",
+    "meter": "Meter",
+    "mini": "Mini",
+    "modell": "Modell",
+    "modelle": "Modell",
+    "neue": "neu",
+    "neuen": "neu",
+    "neuer": "neu",
+    "nicht": "nicht",
+    "nie": "nie",
+    "noch": "noch",
+    "nur": "nur",
+    "nächste": "nächste",
+    "oktober": "Oktober",
+    "paris": "Paris",
+    "pariser": "Pariser",
+    "probefahrten": "Probefahrt",
+    "prozent": "Prozent",
+    "rund": "rund",
+    "sechs": "sechs",
+    "sehr": "sehr",
+    "sie": "sie",
+    "sind": "sein",
+    "so": "so",
+    "soll": "sollen",
+    "sondern": "sondern",
+    "sonntag": "Sonntag",
+    "star": "Star",
+    "statt": "stattfinden",
+    "tag": "Tag",
+    "tage": {
+      "l": "Tag",
+      "old": "в обороте in einem Tage — старый дательный с -e; сегодня an einem Tag. В «drei Tage Regenwetter» это обычное мн. ч."
+    },
+    "und": "und",
+    "verkaufen": "verkaufen",
+    "version": "Version",
+    "viele": "viel",
+    "vor": "vor",
+    "waren": "sein",
+    "wie": "wie",
+    "wochenenden": "Wochenende",
+    "wollten": "wollen",
+    "wurde": "werden",
+    "zeigten": "zeigen",
+    "zu": "zu Ende gehen",
+    "zum": "zu",
+    "zuvor": "zuvor",
+    "zwei": "zwei"
+  },
+  "l": {
+    "aber": {
+      "ru": "но, однако",
+      "pos": "союз"
+    },
+    "alle/alles": {
+      "ru": "все; всё",
+      "pos": "мест."
+    },
+    "als": {
+      "ru": "когда; как; чем",
+      "pos": "союз"
+    },
+    "alt": {
+      "ru": "старый",
+      "pos": "прил.",
+      "forms": "alt · älter · am ältesten"
+    },
+    "an": {
+      "ru": "у, к, на",
+      "pos": "предл.",
+      "note": "am = an dem. Тж. отделяемая приставка: anfangen «начинать», annehmen, ansehen, anzünden"
+    },
+    "ansehen": {
+      "ru": "смотреть, рассматривать",
+      "pos": "гл.",
+      "forms": "sah an · hat angesehen",
+      "note": "sich etwas ansehen — посмотреть что-то"
+    },
+    "auch": {
+      "ru": "тоже, также; даже",
+      "pos": "частица"
+    },
+    "auf": {
+      "ru": "на, в",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: aufspringen «вскочить», sich aufmachen"
+    },
+    "aus": {
+      "ru": "из",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: auslöschen «погасить»"
+    },
+    "Auto": {
+      "ru": "автомобиль, машина",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Autos"
+    },
+    "Autohersteller": {
+      "ru": "автопроизводитель",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Autohersteller"
+    },
+    "Automesse": {
+      "ru": "автомобильная выставка, автосалон",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Automessen"
+    },
+    "Autosalon": {
+      "ru": "автосалон (выставка)",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Autosalons"
+    },
+    "Beispiel": {
+      "ru": "пример",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Beispiele",
+      "note": "zum Beispiel — например"
+    },
+    "bekannt": {
+      "ru": "известный, знакомый",
+      "pos": "прил."
+    },
+    "beliebt": {
+      "ru": "популярный, любимый",
+      "pos": "прил."
+    },
+    "besonders": {
+      "ru": "особенно",
+      "pos": "нареч."
+    },
+    "Besucher": {
+      "ru": "посетитель, гость",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Besucher"
+    },
+    "bisher": {
+      "ru": "до сих пор, до этого",
+      "pos": "нареч."
+    },
+    "BMW": {
+      "ru": "BMW (немецкий автопроизводитель)",
+      "pos": "имя собств."
+    },
+    "China": {
+      "ru": "Китай",
+      "pos": "геогр."
+    },
+    "chinesisch": {
+      "ru": "китайский",
+      "pos": "прил."
+    },
+    "Citroën 2CV": {
+      "ru": "Citroën 2CV (французский автомобиль, прозвище «утка»)",
+      "pos": "имя собств.",
+      "note": "по-немецки die Ente, по-французски Deux Chevaux («две лошадиные силы»)"
+    },
+    "dabei": {
+      "ru": "при этом, при том",
+      "pos": "нареч."
+    },
+    "dann": {
+      "ru": "потом, затем",
+      "pos": "нареч."
+    },
+    "dauern": {
+      "ru": "длиться, продолжаться",
+      "pos": "гл.",
+      "forms": "dauerte · hat gedauert"
+    },
+    "der/die/das": {
+      "ru": "определённый артикль",
+      "pos": "артикль",
+      "note": "Тж. относительное местоимение «который»"
+    },
+    "ein/eine": {
+      "ru": "неопределённый артикль",
+      "pos": "артикль",
+      "note": "einer — «один, некто»"
+    },
+    "einige": {
+      "ru": "несколько, некоторые",
+      "pos": "мест."
+    },
+    "Elektroauto": {
+      "ru": "электромобиль",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Elektroautos"
+    },
+    "Ende": {
+      "ru": "конец",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Enden"
+    },
+    "Ente": {
+      "ru": "утка",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Enten"
+    },
+    "es": {
+      "ru": "оно; это",
+      "pos": "мест."
+    },
+    "etwa": {
+      "ru": "примерно, около",
+      "pos": "нареч."
+    },
+    "fahren": {
+      "ru": "ехать",
+      "pos": "гл.",
+      "forms": "fuhr · ist gefahren",
+      "note": "in die Höhe fahren — подскочить"
+    },
+    "fehlen": {
+      "ru": "отсутствовать, не хватать",
+      "pos": "гл.",
+      "forms": "fehlte · hat gefehlt"
+    },
+    "fertig": {
+      "ru": "готовый",
+      "pos": "прил."
+    },
+    "Frankreich": {
+      "ru": "Франция",
+      "pos": "геогр."
+    },
+    "fünf": {
+      "ru": "пять",
+      "pos": "числ."
+    },
+    "geben": {
+      "ru": "давать",
+      "pos": "гл.",
+      "forms": "gab · hat gegeben"
+    },
+    "groß": {
+      "ru": "большой",
+      "pos": "прил.",
+      "forms": "groß · größer · am größten"
+    },
+    "Halle": {
+      "ru": "зал, павильон",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Hallen"
+    },
+    "ihr (их, её)": {
+      "ru": "их; её",
+      "pos": "мест."
+    },
+    "in": {
+      "ru": "в (im = in dem, ins = in das)",
+      "pos": "предл."
+    },
+    "Jahr": {
+      "ru": "год",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Jahre"
+    },
+    "jeder": {
+      "ru": "каждый",
+      "pos": "мест."
+    },
+    "kommen": {
+      "ru": "приходить, приезжать",
+      "pos": "гл.",
+      "forms": "kam · ist gekommen"
+    },
+    "Konzept": {
+      "ru": "концепт, концепция",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Konzepte",
+      "note": "das Konzeptauto — концепт-кар"
+    },
+    "lang": {
+      "ru": "длинный, долгий",
+      "pos": "прил.",
+      "forms": "lang · länger · am längsten"
+    },
+    "Marke": {
+      "ru": "марка, бренд",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Marken"
+    },
+    "Markt": {
+      "ru": "рынок",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Märkte"
+    },
+    "mehr": {
+      "ru": "больше",
+      "pos": "нареч.",
+      "note": "В nicht/kein … mehr — больше не. Формально компаратив от viel"
+    },
+    "Mensch": {
+      "ru": "человек",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Menschen",
+      "decl": "n-Deklination: des Menschen · dem/den Menschen"
+    },
+    "Messe": {
+      "ru": "ярмарка, выставка",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Messen"
+    },
+    "Meter": {
+      "ru": "метр",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Meter",
+      "note": "in 30 Metern Tiefe — на глубине 30 метров"
+    },
+    "Mini": {
+      "ru": "Mini (британская марка автомобилей, принадлежит BMW)",
+      "pos": "имя собств."
+    },
+    "Modell": {
+      "ru": "модель",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Modelle"
+    },
+    "neu": {
+      "ru": "новый",
+      "pos": "прил."
+    },
+    "nicht": {
+      "ru": "не",
+      "pos": "частица"
+    },
+    "nie": {
+      "ru": "никогда",
+      "pos": "нареч."
+    },
+    "noch": {
+      "ru": "ещё",
+      "pos": "нареч."
+    },
+    "nur": {
+      "ru": "только, лишь",
+      "pos": "частица"
+    },
+    "nächste": {
+      "ru": "следующий; ближайший",
+      "pos": "прил."
+    },
+    "Oktober": {
+      "ru": "октябрь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Oktober"
+    },
+    "Paris": {
+      "ru": "Париж",
+      "pos": "геогр."
+    },
+    "Pariser": {
+      "ru": "парижский",
+      "pos": "прил.",
+      "note": "не склоняется: die Pariser Sternwarte"
+    },
+    "Probefahrt": {
+      "ru": "пробная поездка, тест-драйв",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Probefahrten"
+    },
+    "Prozent": {
+      "ru": "процент",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Prozente",
+      "note": "после числа не изменяется: 1,3 Prozent"
+    },
+    "rund": {
+      "ru": "около, примерно; круглый",
+      "pos": "нареч./прил.",
+      "note": "rund 550.000 — около 550 000"
+    },
+    "sechs": {
+      "ru": "шесть",
+      "pos": "числ."
+    },
+    "sehr": {
+      "pos": "нареч.",
+      "ru": "очень"
+    },
+    "sein": {
+      "ru": "быть; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "war · ist gewesen"
+    },
+    "sie": {
+      "ru": "она; они; Вы",
+      "pos": "мест."
+    },
+    "so": {
+      "ru": "так; такой; то (в главном предложении)",
+      "pos": "нареч."
+    },
+    "sollen": {
+      "ru": "быть должным, следует",
+      "pos": "гл.",
+      "forms": "sollte · hat gesollt"
+    },
+    "sondern": {
+      "ru": "а, но (после отрицания)",
+      "pos": "союз"
+    },
+    "Sonntag": {
+      "ru": "воскресенье",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Sonntage"
+    },
+    "Star": {
+      "ru": "звезда (знаменитость)",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Stars"
+    },
+    "stattfinden": {
+      "ru": "иметь место, быть",
+      "pos": "гл.",
+      "forms": "fand statt · hat stattgefunden",
+      "note": "ein Zusammenhang findet statt — связь существует"
+    },
+    "Tag": {
+      "ru": "день",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Tage"
+    },
+    "und": {
+      "ru": "и, а",
+      "pos": "союз"
+    },
+    "verkaufen": {
+      "ru": "продавать",
+      "pos": "гл.",
+      "forms": "verkaufte · hat verkauft"
+    },
+    "Version": {
+      "ru": "версия",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Versionen"
+    },
+    "viel": {
+      "ru": "много, многое",
+      "pos": "мест."
+    },
+    "vor": {
+      "ru": "перед, до; от (страха)",
+      "pos": "предл."
+    },
+    "werden": {
+      "ru": "становиться",
+      "pos": "гл.",
+      "forms": "wurde · ist geworden",
+      "note": "Вспомогательный глагол будущего времени и пассива"
+    },
+    "wie": {
+      "ru": "как; какой",
+      "pos": "союз"
+    },
+    "Wochenende": {
+      "ru": "выходные",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Wochenenden",
+      "note": "am Wochenende — в выходные"
+    },
+    "wollen": {
+      "ru": "хотеть",
+      "pos": "гл.",
+      "forms": "wollte · hat gewollt"
+    },
+    "zeigen": {
+      "ru": "показывать; sich zeigen — появиться",
+      "pos": "гл.",
+      "forms": "zeigte · hat gezeigt"
+    },
+    "zu": {
+      "ru": "к, в; слишком",
+      "pos": "предл.",
+      "note": "zur = zu der, zum = zu dem"
+    },
+    "zu Ende gehen": {
+      "ru": "заканчиваться",
+      "pos": "гл.",
+      "forms": "ging zu Ende · ist zu Ende gegangen",
+      "note": "das Ende — конец"
+    },
+    "zuvor": {
+      "ru": "до того, раньше",
+      "pos": "нареч.",
+      "note": "ein Jahr zuvor — годом раньше"
+    },
+    "zwei": {
+      "ru": "два",
+      "pos": "числ."
+    }
+  }
+}

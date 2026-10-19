@@ -962,3 +962,40 @@ META.update({
 })
 
 ORDER = ['kartoffelernte-2026'] + ORDER
+
+META.update({
+    'autosalon-paris-2026': {
+        'title': 'Über eine halbe Million Besucher: Der Autosalon in Paris ist zu Ende',
+        'titleRu': 'Больше полумиллиона посетителей: в Париже завершился автосалон',
+        'rubric': 'events',
+        'level': 'B1',
+        'levelNote': 'Перфект с sein (ist zu Ende gegangen), претерит (kamen, zeigten, fehlten, wurde, gab, wollten), '
+                     'устойчивые выражения (zu Ende gehen, auf den Markt kommen, stattfinden), nicht nur … sondern auch, '
+                     'сравнения (mehr als, so viele wie nie zuvor), модальный глагол sollen (soll … kommen, soll … dauern).',
+        'published': '2026-10-18',
+        'added': '2026-10-19',
+        'source': 'Mondial de l’Auto · Senior Actu · centre-europe.com · heise',
+        'sourceUrl': 'https://mondial.paris/actualites/auto-mondial/le-mondial-de-l-auto-2026-a-rassemble-518-372-visiteurs-autour-de-la-passion-automobile-99228.html',
+        'blurb': 'Парижский автосалон за шесть дней посетили 518 372 человека — немного больше, чем в 2024 году. '
+                 'Рекорд поставили китайские марки: их было 25. Главной звездой стал концепт электрической '
+                 'Citroën 2CV — наследницы знаменитой «утки».',
+        'license': 'Текст — пересказ сообщений организаторов Mondial de l’Auto, Senior Actu, centre-europe.com и heise; '
+                   'фото — Wikimedia Commons',
+        'figs': {
+            'ente': {'w': 1096, 'h': 730,
+                     'cap': 'Концепт электрической Citroën 2CV на автосалоне 2026 года. Первая 2CV, '
+                            'прозванная «уткой», появилась в 1948 году.',
+                     'credit': '2cv2026 · ' + SA4},
+            'eingang': {'w': 1200, 'h': 927,
+                        'cap': 'Вход в выставочный центр Paris Expo у ворот Порт-де-Версаль. Здесь проходит '
+                               'Парижский автосалон.',
+                        'credit': 'Mbzt · CC BY 3.0 · Wikimedia Commons'},
+            'alfa': {'w': 1200, 'h': 574,
+                     'cap': 'Концепт-кар Alfa Romeo Cuorerosso 2026 года. Концерн Stellantis показал '
+                            'в Париже сразу несколько концептов своих марок.',
+                     'credit': '2cv2026 · ' + SA4},
+        },
+    },
+})
+
+ORDER = ['autosalon-paris-2026'] + ORDER
