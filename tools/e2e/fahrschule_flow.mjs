@@ -260,6 +260,33 @@ ok(await c.ev(`getComputedStyle(document.querySelector('.fs-dialog .dlg-line .dl
 await c.shot('fs_p01_390.png');
 collect();
 
+// ── Остальные диалоги: подсказки, стороны, озвучка ──
+for (const id of IDX.units.filter(u => u.kind === 'dialog' && u.id !== 'p-01').map(u => u.id)) {
+  await openUnit(id);
+  const dv = JSON.parse(await c.ev(`JSON.stringify({ n: document.querySelectorAll('.fs-dialog .dlg-line').length, want: Fahrschule.unit.lines.length,
+    sides: [...document.querySelectorAll('.fs-dialog .dlg-line')].map(l => l.classList.contains('side-a') ? 'a' : 'b').join(''), hs: ${NO_HSCROLL} })`));
+  ok(dv.n === dv.want && !/aa|bb/.test(dv.sides) && dv.hs, `${id}: реплик ${dv.n}, стороны чередуются, без прокрутки вбок`);
+  const ad = JSON.parse(await c.ev(TIP_AUDIT));
+  ok(ad.bad.length === 0, `${id}: подсказка у каждого из ${ad.n} слов ${ad.bad.slice(0, 5).join(' ')}`);
+  await c.ev(`window.__said = []; document.querySelector('[data-play="all"]').click()`);
+  ok(await waitFor(`Fahrschule.playing === null && window.__said.length > 0`, 15000)
+    && (await c.ev(`window.__said.join('|') === Fahrschule.unit.lines.map(l => l.de).join('|')`)), `${id}: озвучены все реплики по порядку`);
+  collect();
+}
+// отделяемые глаголы в строке: подсказка — целый глагол, а «an der Ampel» — предлог
+if (IDX.units.some(u => u.id === 'p-02')) {
+  await openUnit('p-02');
+  const sep = JSON.parse(await c.ev(`(() => { const g = Fahrschule.unit.gloss; const lm = w => g.w[w.dataset.t];
+    const lines = [...document.querySelectorAll('.fs-dialog .dlg-line')];
+    const find = (k, word) => [...lines[k].querySelectorAll('.fs-w')].filter(w => w.textContent === word).map(lm);
+    return JSON.stringify({ halte: find(13, 'halte'), an13: find(13, 'an'), los: find(13, 'los'), bleibe: find(7, 'bleibe'),
+      an11: find(11, 'an'), durch: find(0, 'durch') }); })()`));
+  ok(sep.halte[0] === 'anhalten' && sep.an13[0] === 'anhalten' && sep.los[0] === 'losfahren' && sep.bleibe[0] === 'stehen bleiben',
+    `p-02: halte…an → anhalten, fahre…los → losfahren, bleibe…stehen → stehen bleiben`);
+  ok(sep.an11[0] === 'an' && sep.durch[0] === 'durch', 'p-02: «an der Ampel», «durch die Stadt» — предлоги');
+  collect();
+}
+
 // ── Перекрёсток ──
 await openUnit('k-01');
 const scenes = JSON.parse(await c.ev(`JSON.stringify(Fahrschule.unit.scenes.map(s => ({ cars: s.cars.map(c => c.id), order: s.order })))`));

@@ -131,6 +131,7 @@
      "tr": "السيارة الخضراء تنعطف يسارًا. تترك السيارة المقابلة تمرّ، وتنتظر السيارة الحمراء القادمة من اليمين.",
      "o": {
       "ab": "ab>abbiegen",
+      "durch": "durch>durchlassen",
       "lässt": "lässt>durchlassen"
      }
     }
@@ -178,7 +179,7 @@
    "die": "der/die/das",
    "dieser": "dieser",
    "drei": "drei",
-   "durch": "durchlassen",
+   "durch>durchlassen": "durchlassen",
    "eine": "ein/eine",
    "es": "es",
    "es>es gibt": "es gibt",

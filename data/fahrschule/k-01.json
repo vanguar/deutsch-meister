@@ -131,6 +131,7 @@
      "tr": "Зелёная машина поворачивает налево. Она пропускает встречную и ждёт красную, которая справа.",
      "o": {
       "ab": "ab>abbiegen",
+      "durch": "durch>durchlassen",
       "lässt": "lässt>durchlassen"
      }
     }
@@ -178,7 +179,7 @@
    "die": "der/die/das",
    "dieser": "dieser",
    "drei": "drei",
-   "durch": "durchlassen",
+   "durch>durchlassen": "durchlassen",
    "eine": "ein/eine",
    "es": "es",
    "es>es gibt": "es gibt",

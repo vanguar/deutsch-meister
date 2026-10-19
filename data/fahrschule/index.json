@@ -18,6 +18,7 @@
    "titleTr": "Знаки и светофоры",
    "units": [
     "t-02",
+    "p-02",
     "k-02"
    ]
   }
@@ -58,6 +59,15 @@
    "title": "Verkehrszeichen und Ampeln",
    "titleTr": "Дорожные знаки и светофоры",
    "count": 23
+  },
+  {
+   "id": "p-02",
+   "kind": "dialog",
+   "emoji": "🏙️",
+   "level": "A2",
+   "title": "Stadtfahrt mit Ampeln",
+   "titleTr": "По городу: знаки и светофоры",
+   "count": 15
   },
   {
    "id": "k-02",

@@ -130,5 +130,8 @@ ok(code == 1 and any('k-01' in e and 'ни в одну тему' in e for e in e
 code, errs, written = run_with(lambda d: d['topics.json'].append(dict(d['topics.json'][0], id='copy')))
 ok(code == 1 and any('уже в теме' in e for e in errs), 'урок в двух темах — ошибка')
 
+code, errs, written = run_with(lambda d: d['lexicon.json']['anhalten'].__setitem__('f', ['an']))
+ok(code == 1 and any('приставку задают в строке' in e for e in errs), 'приставка «an» глобально у глагола — ошибка')
+
 print(f'\nFAIL: {fails}' if fails else '\ntest_build: всё ок')
 sys.exit(1 if fails else 0)

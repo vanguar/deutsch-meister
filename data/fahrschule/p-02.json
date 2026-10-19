@@ -1,0 +1,624 @@
+{
+ "id": "p-02",
+ "kind": "dialog",
+ "emoji": "🏙️",
+ "level": "A2",
+ "title": "Stadtfahrt mit Ampeln",
+ "titleTr": "По городу: знаки и светофоры",
+ "intro": "Микола едет по городу с инструктором: табличка населённого пункта, зона 30, жёлтый, красный с жёлтым и зелёная стрелка.",
+ "speakers": {
+  "A": {
+   "name": "Fahrlehrerin",
+   "g": "f"
+  },
+  "B": {
+   "name": "Mykola",
+   "g": "m"
+  }
+ },
+ "lines": [
+  {
+   "de": "So, heute fahren wir durch die Stadt. Achten Sie auf die Schilder!",
+   "tr": "Итак, сегодня мы едем по городу. Следите за знаками!",
+   "s": "A"
+  },
+  {
+   "de": "Gut. Da vorne steht ein gelbes Schild mit dem Namen der Stadt.",
+   "tr": "Хорошо. Вон впереди жёлтая табличка с названием города.",
+   "s": "B"
+  },
+  {
+   "de": "Richtig, das ist das Ortsschild. Wie schnell dürfen Sie jetzt fahren?",
+   "tr": "Правильно, это табличка населённого пункта. С какой скоростью теперь можно ехать?",
+   "s": "A"
+  },
+  {
+   "de": "Innerorts höchstens fünfzig Kilometer pro Stunde.",
+   "tr": "В населённом пункте — не больше пятидесяти километров в час.",
+   "s": "B"
+  },
+  {
+   "de": "Genau. Und was bedeutet das Schild mit der Dreißig?",
+   "tr": "Точно. А что означает знак с цифрой тридцать?",
+   "s": "A"
+  },
+  {
+   "de": "Hier beginnt eine Tempo-30-Zone. Ich fahre langsamer.",
+   "tr": "Здесь начинается зона Tempo 30. Я еду медленнее.",
+   "s": "B"
+  },
+  {
+   "de": "Sehr gut. Achtung, die Ampel wird gelb!",
+   "tr": "Очень хорошо. Внимание, светофор переключается на жёлтый!",
+   "s": "A"
+  },
+  {
+   "de": "Ich bremse und bleibe vor der Haltlinie stehen.",
+   "tr": "Я торможу и останавливаюсь перед стоп-линией.",
+   "o": {
+    "bleibe": "bleibe>stehen bleiben",
+    "stehen": "stehen>stehen bleiben"
+   },
+   "s": "B"
+  },
+  {
+   "de": "Gut gemacht. Jetzt leuchten Rot und Gelb zusammen.",
+   "tr": "Молодец. Теперь горят красный и жёлтый вместе.",
+   "s": "A"
+  },
+  {
+   "de": "Dann kommt gleich Grün, aber ich warte noch.",
+   "tr": "Значит, сейчас будет зелёный, но я ещё жду.",
+   "s": "B"
+  },
+  {
+   "de": "Richtig. Jetzt ist Grün, Sie können fahren.",
+   "tr": "Правильно. Теперь зелёный, можете ехать.",
+   "s": "A"
+  },
+  {
+   "de": "Dort an der Ampel hängt ein grüner Pfeil. Darf ich bei Rot rechts abbiegen?",
+   "tr": "Вон там у светофора висит зелёная стрелка. Можно мне на красный повернуть направо?",
+   "s": "B"
+  },
+  {
+   "de": "Ja, aber erst nach einem vollständigen Halt. Und achten Sie auf Radfahrer!",
+   "tr": "Да, но только после полной остановки. И следите за велосипедистами!",
+   "s": "A"
+  },
+  {
+   "de": "Ich halte an, schaue nach links und rechts und fahre langsam los.",
+   "tr": "Я останавливаюсь, смотрю налево и направо и медленно трогаюсь.",
+   "o": {
+    "an": "an>anhalten",
+    "fahre": "fahre>losfahren",
+    "halte": "halte>anhalten",
+    "los": "los>losfahren"
+   },
+   "s": "B"
+  },
+  {
+   "de": "Perfekt! Das war eine sehr gute Fahrt durch die Stadt.",
+   "tr": "Отлично! Это была очень хорошая поездка по городу.",
+   "s": "A"
+  }
+ ],
+ "signs": {},
+ "gloss": {
+  "w": {
+   "abbiegen": "abbiegen",
+   "aber": "aber",
+   "achten": "achten",
+   "achtung": "Achtung",
+   "ampel": "Ampel",
+   "ampeln": "Ampel",
+   "an": "an",
+   "an>anhalten": "anhalten",
+   "auf": "auf",
+   "bedeutet": "bedeuten",
+   "beginnt": "beginnen",
+   "bei": "bei",
+   "bleibe>stehen bleiben": "stehen bleiben",
+   "bremse": "bremsen",
+   "da": "da",
+   "dann": "dann",
+   "darf": "dürfen",
+   "das": "der/die/das",
+   "dem": "der/die/das",
+   "der": "der/die/das",
+   "die": "der/die/das",
+   "dort": "dort",
+   "dreißig": "dreißig",
+   "durch": "durch",
+   "dürfen": "dürfen",
+   "ein": "ein/eine",
+   "eine": "ein/eine",
+   "einem": "ein/eine",
+   "erst": "erst",
+   "fahre": "fahren",
+   "fahre>losfahren": "losfahren",
+   "fahren": "fahren",
+   "fahrt": "Fahrt",
+   "fünfzig": "fünfzig",
+   "gelb": "gelb",
+   "gelbes": "gelb",
+   "gemacht": "machen",
+   "genau": "genau",
+   "gleich": "gleich",
+   "grün": "grün",
+   "grüner": "grün",
+   "gut": "gut",
+   "gute": "gut",
+   "halt": "Halt",
+   "halte>anhalten": "anhalten",
+   "haltlinie": "Haltlinie",
+   "heute": "heute",
+   "hier": "hier",
+   "hängt": "hängen",
+   "höchstens": "höchstens",
+   "ich": "ich",
+   "innerorts": "innerorts",
+   "ist": "sein",
+   "ja": "ja",
+   "jetzt": "jetzt",
+   "kilometer": "Kilometer",
+   "kommt": "kommen",
+   "können": "können",
+   "langsam": "langsam",
+   "langsamer": "langsam",
+   "leuchten": "leuchten",
+   "links": "links",
+   "los>losfahren": "losfahren",
+   "mit": "mit",
+   "nach": "nach",
+   "namen": "Name",
+   "noch": "noch",
+   "ortsschild": "Ortsschild",
+   "perfekt": "perfekt",
+   "pfeil": "Pfeil",
+   "pro": "pro",
+   "radfahrer": "Radfahrer",
+   "rechts": "rechts",
+   "richtig": "richtig",
+   "rot": "rot",
+   "schaue": "schauen",
+   "schild": "Schild",
+   "schilder": "Schild",
+   "schnell": "schnell",
+   "sehr": "sehr",
+   "sie": "Sie",
+   "so": "so",
+   "stadt": "Stadt",
+   "stadtfahrt": "Stadtfahrt",
+   "stehen>stehen bleiben": "stehen bleiben",
+   "steht": "stehen",
+   "stunde": "Stunde",
+   "tempo": "Tempo",
+   "und": "und",
+   "vollständigen": "vollständig",
+   "vor": "vor",
+   "vorne": "vorne",
+   "war": "sein",
+   "warte": "warten",
+   "was": "was",
+   "wie": "wie",
+   "wir": "wir",
+   "wird": "werden",
+   "zone": "Zone",
+   "zusammen": "zusammen"
+  },
+  "l": {
+   "Achtung": {
+    "ru": "внимание!",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": null
+   },
+   "Ampel": {
+    "ru": "светофор",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Ampeln"
+   },
+   "Fahrt": {
+    "ru": "поездка",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Fahrten"
+   },
+   "Halt": {
+    "ru": "остановка; стоп!",
+    "pos": "сущ.",
+    "note": "Halt! — Стоп! (на знаке 206); nach einem Halt — после остановки",
+    "art": "der",
+    "pl": "die Halte"
+   },
+   "Haltlinie": {
+    "ru": "стоп-линия",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Haltlinien"
+   },
+   "Kilometer": {
+    "ru": "километр",
+    "pos": "сущ.",
+    "note": "Kilometer pro Stunde — километров в час (km/h)",
+    "art": "der",
+    "pl": "die Kilometer"
+   },
+   "Name": {
+    "ru": "имя, название",
+    "pos": "сущ.",
+    "note": "n-склонение: den/dem/des Namen(s)",
+    "art": "der",
+    "pl": "die Namen"
+   },
+   "Ortsschild": {
+    "ru": "табличка с названием населённого пункта",
+    "pos": "сущ.",
+    "note": "официально: die Ortstafel; жёлтая табличка = начало населённого пункта, 50 км/ч",
+    "art": "das",
+    "pl": "die Ortsschilder"
+   },
+   "Pfeil": {
+    "ru": "стрелка",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Pfeile"
+   },
+   "Radfahrer": {
+    "ru": "велосипедист",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Radfahrer"
+   },
+   "Schild": {
+    "ru": "знак, табличка",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Schilder"
+   },
+   "Sie": {
+    "ru": "вы (вежливо)",
+    "pos": "мест."
+   },
+   "Stadt": {
+    "ru": "город",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Städte"
+   },
+   "Stadtfahrt": {
+    "ru": "поездка по городу",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Stadtfahrten"
+   },
+   "Stunde": {
+    "ru": "час; урок",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Stunden"
+   },
+   "Tempo": {
+    "ru": "скорость, темп",
+    "pos": "сущ.",
+    "note": "Tempo-30-Zone — зона с ограничением 30 км/ч",
+    "art": "das",
+    "pl": "die Tempos"
+   },
+   "Zone": {
+    "ru": "зона",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Zonen"
+   },
+   "abbiegen": {
+    "ru": "поворачивать",
+    "pos": "гл.",
+    "note": "отделяемая приставка: Sie biegen … ab",
+    "forms": "bog ab · ist abgebogen"
+   },
+   "aber": {
+    "ru": "но",
+    "pos": "союз"
+   },
+   "achten": {
+    "ru": "следить, обращать внимание",
+    "pos": "гл.",
+    "note": "achten auf + Akk. — следить за",
+    "forms": "achtete · hat geachtet"
+   },
+   "an": {
+    "ru": "у, на, при",
+    "pos": "предл.",
+    "note": "am = an dem; an der Kreuzung — на перекрёстке"
+   },
+   "anhalten": {
+    "ru": "останавливаться",
+    "pos": "гл.",
+    "forms": "hielt an · hat angehalten"
+   },
+   "auf": {
+    "ru": "на, по",
+    "pos": "предл.",
+    "note": "auf der Straße — на дороге; achten auf — следить за"
+   },
+   "bedeuten": {
+    "ru": "означать",
+    "pos": "гл.",
+    "forms": "bedeutete · hat bedeutet"
+   },
+   "beginnen": {
+    "ru": "начинаться, начинать",
+    "pos": "гл.",
+    "forms": "begann · hat begonnen"
+   },
+   "bei": {
+    "ru": "при, у; на (о сигнале)",
+    "pos": "предл.",
+    "note": "bei Rot — на красный, bei Grün — на зелёный"
+   },
+   "bremsen": {
+    "ru": "тормозить",
+    "pos": "гл.",
+    "forms": "bremste · hat gebremst"
+   },
+   "da": {
+    "ru": "там, вон; тогда",
+    "pos": "нареч.",
+    "note": "da vorne — вон там впереди"
+   },
+   "dann": {
+    "ru": "тогда, значит; потом",
+    "pos": "нареч."
+   },
+   "der/die/das": {
+    "ru": "определённый артикль",
+    "pos": "артикль",
+    "note": "der — м. р., die — ж. р. и мн. ч., das — ср. р.; den — м. р. в винительном, dem — м. и ср. р. в дательном; das ещё значит «это»"
+   },
+   "dort": {
+    "ru": "там",
+    "pos": "нареч."
+   },
+   "dreißig": {
+    "ru": "тридцать",
+    "pos": "числ."
+   },
+   "durch": {
+    "ru": "через, по",
+    "pos": "предл.",
+    "note": "durch die Stadt — по городу"
+   },
+   "dürfen": {
+    "ru": "мочь, иметь право",
+    "pos": "гл.",
+    "forms": "durfte · hat gedurft"
+   },
+   "ein/eine": {
+    "ru": "неопределённый артикль; один",
+    "pos": "артикль",
+    "note": "an einer Kreuzung — на (каком-то) перекрёстке"
+   },
+   "erst": {
+    "ru": "только (не раньше чем)",
+    "pos": "нареч."
+   },
+   "fahren": {
+    "ru": "ехать; водить машину",
+    "pos": "гл.",
+    "forms": "fuhr · ist gefahren"
+   },
+   "fünfzig": {
+    "ru": "пятьдесят",
+    "pos": "числ."
+   },
+   "gelb": {
+    "ru": "жёлтый",
+    "pos": "прил.",
+    "note": "Gelb (с большой) — жёлтый сигнал"
+   },
+   "genau": {
+    "ru": "точно, именно так",
+    "pos": "нареч."
+   },
+   "gleich": {
+    "ru": "сейчас, сразу",
+    "pos": "нареч."
+   },
+   "grün": {
+    "ru": "зелёный",
+    "pos": "прил.",
+    "note": "Grün (с большой) — зелёный сигнал: bei Grün — на зелёный"
+   },
+   "gut": {
+    "ru": "хороший; хорошо",
+    "pos": "прил.",
+    "forms": "gut · besser · am besten"
+   },
+   "heute": {
+    "ru": "сегодня",
+    "pos": "нареч."
+   },
+   "hier": {
+    "ru": "здесь",
+    "pos": "нареч."
+   },
+   "hängen": {
+    "ru": "висеть",
+    "pos": "гл.",
+    "forms": "hing · hat gehangen"
+   },
+   "höchstens": {
+    "ru": "самое большее, не больше",
+    "pos": "нареч."
+   },
+   "ich": {
+    "ru": "я",
+    "pos": "мест."
+   },
+   "innerorts": {
+    "ru": "в населённом пункте",
+    "pos": "нареч.",
+    "note": "здесь обычно не больше 50 км/ч"
+   },
+   "ja": {
+    "ru": "да",
+    "pos": "частица"
+   },
+   "jetzt": {
+    "ru": "сейчас, теперь",
+    "pos": "нареч."
+   },
+   "kommen": {
+    "ru": "приходить; ехать (приближаться)",
+    "pos": "гл.",
+    "note": "von rechts kommen — ехать справа",
+    "forms": "kam · ist gekommen"
+   },
+   "können": {
+    "ru": "мочь",
+    "pos": "гл.",
+    "forms": "konnte · hat gekonnt"
+   },
+   "langsam": {
+    "ru": "медленный; медленно",
+    "pos": "прил."
+   },
+   "leuchten": {
+    "ru": "гореть, светиться",
+    "pos": "гл.",
+    "forms": "leuchtete · hat geleuchtet"
+   },
+   "links": {
+    "ru": "слева; налево",
+    "pos": "нареч."
+   },
+   "losfahren": {
+    "ru": "трогаться (с места)",
+    "pos": "гл.",
+    "forms": "fuhr los · ist losgefahren"
+   },
+   "machen": {
+    "ru": "делать",
+    "pos": "гл.",
+    "note": "den Schulterblick machen — оглянуться через плечо; Gut gemacht! — Молодец!",
+    "forms": "machte · hat gemacht"
+   },
+   "mit": {
+    "ru": "с",
+    "pos": "предл."
+   },
+   "nach": {
+    "ru": "после; в, на (направление)",
+    "pos": "предл."
+   },
+   "noch": {
+    "ru": "ещё",
+    "pos": "нареч.",
+    "note": "noch nicht — ещё нет"
+   },
+   "perfekt": {
+    "ru": "отлично, безупречно",
+    "pos": "прил."
+   },
+   "pro": {
+    "ru": "в, за (на единицу)",
+    "pos": "предл."
+   },
+   "rechts": {
+    "ru": "справа; направо",
+    "pos": "нареч."
+   },
+   "richtig": {
+    "ru": "правильный; правильно",
+    "pos": "прил."
+   },
+   "rot": {
+    "ru": "красный",
+    "pos": "прил.",
+    "note": "Rot (с большой) — красный сигнал: bei Rot — на красный"
+   },
+   "schauen": {
+    "ru": "смотреть",
+    "pos": "гл.",
+    "forms": "schaute · hat geschaut"
+   },
+   "schnell": {
+    "ru": "быстрый; быстро",
+    "pos": "прил."
+   },
+   "sehr": {
+    "ru": "очень",
+    "pos": "нареч."
+   },
+   "sein": {
+    "ru": "быть",
+    "pos": "гл.",
+    "forms": "war · ist gewesen"
+   },
+   "so": {
+    "ru": "так; вот (так)",
+    "pos": "нареч."
+   },
+   "stehen": {
+    "ru": "стоять",
+    "pos": "гл.",
+    "note": "Schilder stehen — стоят знаки",
+    "forms": "stand · hat gestanden"
+   },
+   "stehen bleiben": {
+    "ru": "останавливаться (и стоять)",
+    "pos": "выраж.",
+    "note": "ich bleibe stehen — я останавливаюсь"
+   },
+   "und": {
+    "ru": "и",
+    "pos": "союз"
+   },
+   "vollständig": {
+    "ru": "полный",
+    "pos": "прил."
+   },
+   "vor": {
+    "ru": "перед",
+    "pos": "предл.",
+    "note": "rechts vor links — правый перед левым"
+   },
+   "vorne": {
+    "ru": "впереди",
+    "pos": "нареч."
+   },
+   "warten": {
+    "ru": "ждать",
+    "pos": "гл.",
+    "note": "warten auf — ждать (кого-то)",
+    "forms": "wartete · hat gewartet"
+   },
+   "was": {
+    "ru": "что",
+    "pos": "мест."
+   },
+   "werden": {
+    "ru": "становиться",
+    "pos": "гл.",
+    "note": "die Ampel wird gelb — светофор переключается на жёлтый",
+    "forms": "wurde · ist geworden"
+   },
+   "wie": {
+    "ru": "как",
+    "pos": "нареч.",
+    "note": "wie schnell — с какой скоростью"
+   },
+   "wir": {
+    "ru": "мы",
+    "pos": "мест."
+   },
+   "zusammen": {
+    "ru": "вместе",
+    "pos": "нареч."
+   }
+  }
+ }
+}

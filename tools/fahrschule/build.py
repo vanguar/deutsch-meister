@@ -134,6 +134,14 @@ def check_de(where, de):
         err(f'{where}: длиннее 200 символов — озвучка разрежет фразу')
 
 
+# Отделяемые приставки — они же предлоги и наречия (an der Kreuzung / halten
+# Sie an). Глобально такая форма не может вести к глаголу: иначе каждый
+# предлог молча получит подсказку «останавливаться». Значение приставки —
+# только в строке, через "w".
+PARTICLES = {'ab', 'an', 'auf', 'aus', 'bei', 'durch', 'ein', 'los', 'mit', 'nach',
+             'vor', 'weg', 'zu', 'zurück', 'um', 'über', 'hin', 'her', 'fest', 'vorbei'}
+
+
 class Glossary:
     """Слова → леммы. Общая карта форм + значения в конкретной строке."""
 
@@ -147,6 +155,9 @@ class Glossary:
                     continue          # оборот: только через "w" строки
                 if k in self.forms and self.forms[k] != lemma:
                     err(f'словарь: форма «{k}» у двух лемм: {self.forms[k]} и {lemma}')
+                if k in PARTICLES and e.get('pos') in ('гл.', 'выраж.'):
+                    err(f'словарь: «{k}» у глагола {lemma} — приставку задают в строке через "w", '
+                        f'глобально «{k}» — предлог/наречие')
                 self.forms[k] = lemma
         self.used = set()
 
