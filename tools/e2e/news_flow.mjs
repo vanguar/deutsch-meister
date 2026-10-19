@@ -85,7 +85,7 @@ const hub = JSON.parse(await c.ev(`JSON.stringify({
   rubricHidden: document.getElementById('newsRubric').hidden,
   scrollX: document.documentElement.scrollWidth > innerWidth
 })`));
-ok(idx.length === 25, `статей в индексе: ${idx.length}`);
+ok(idx.length === 26, `статей в индексе: ${idx.length}`);
 ok(hub.tiles.map(t => t.id).join() === RUBRICS.join(), 'рубрики: ' + hub.tiles.map(t => t.id).join(', '));
 ok(hub.tiles.every(t => t.live), 'во всех рубриках есть статьи');
 ok(hub.cards === 0 && hub.rubricHidden, 'на витрине нет «простыни» статей — только рубрики');

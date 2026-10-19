@@ -849,3 +849,41 @@ META.update({
 })
 
 ORDER = ['neptun-ringboegen-2026'] + ORDER
+
+META.update({
+    'riesenpilz-d-rex-2026': {
+        'title': 'D-rex aus dem Wald: Forscher entdecken einen Riesenpilz in China',
+        'titleRu': 'D-rex из леса: в Китае нашли гигантский гриб',
+        'rubric': 'science',
+        'level': 'B1',
+        'levelNote': 'Перфект (haben entdeckt, hat gesammelt, ist entstanden, ist erschienen), претерит '
+                     '(wuchsen, kannte, waren), относительные придаточные (den bisher niemand kannte, die gerade absterben), '
+                     'косвенный вопрос (wie alt … ist), dass-придаточное, so … dass, сложные существительные '
+                     '(Schlauchpilz, Pilzfamilie, Fachzeitschrift), лексика биологии.',
+        'published': '2026-10-18',
+        'added': '2026-10-19',
+        'source': 'scinexx · Frontiers',
+        'sourceUrl': 'https://www.scinexx.de/news/biowissen/d-rex-riesenpilz-aus-china-koennte-zur-zeit-des-dinosauriersterbens-entstanden-sein/',
+        'blurb': 'В провинции Юньнань учёные нашли гриб высотой до 50 сантиметров и весом до 2,2 килограмма — '
+                 'самый крупный среди сумчатых грибов. Его назвали D-rex, а для него пришлось выделить '
+                 'новое семейство: оно возникло вскоре после вымирания динозавров.',
+        'license': 'Текст — пересказ сообщений scinexx и Frontiers; фото — Senanayake et al., '
+                   'Frontiers in Fungal Biology (CC BY 4.0) и Wikimedia Commons',
+        'figs': {
+            'pilz': {'w': 885, 'h': 1135,
+                     'cap': 'Плодовые тела D-rex у корней дерева в лесу провинции Юньнань. '
+                            'Они светлые и растут вертикально, как толстые пальцы.',
+                     'credit': 'Senanayake et al. 2026, Frontiers in Fungal Biology · CC BY 4.0'},
+            'waage': {'w': 800, 'h': 660,
+                      'cap': 'Несколько грибов D-rex на весах. Одно плодовое тело может весить '
+                             'до 2,2 килограмма.',
+                      'credit': 'Senanayake et al. 2026, Frontiers in Fungal Biology · CC BY 4.0'},
+            'trex': {'w': 1200, 'h': 848,
+                     'cap': 'Скелет тираннозавра «Сью» в Музее естественной истории Филда в Чикаго. '
+                            'Слово rex в названии гриба — то же, что у тираннозавра: «король».',
+                     'credit': 'Michael Gray · CC BY-SA 2.0 · Wikimedia Commons'},
+        },
+    },
+})
+
+ORDER = ['riesenpilz-d-rex-2026'] + ORDER

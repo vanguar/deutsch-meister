@@ -2,6 +2,23 @@
  "version": 1,
  "items": [
   {
+   "id": "riesenpilz-d-rex-2026",
+   "title": "D-rex aus dem Wald: Forscher entdecken einen Riesenpilz in China",
+   "titleRu": "D-rex із лісу: у Китаї знайшли гігантський гриб",
+   "blurb": "У провінції Юньнань науковці знайшли гриб заввишки до 50 сантиметрів і вагою до 2,2 кілограма — найбільший серед сумчастих грибів. Його назвали D-rex, а для нього довелося виділити нову родину: вона виникла невдовзі після вимирання динозаврів.",
+   "rubric": "science",
+   "level": "B1",
+   "published": "2026-10-18",
+   "added": "2026-10-19",
+   "source": "scinexx · Frontiers",
+   "sourceUrl": "https://www.scinexx.de/news/biowissen/d-rex-riesenpilz-aus-china-koennte-zur-zeit-des-dinosauriersterbens-entstanden-sein/",
+   "cover": "data/news/riesenpilz-d-rex-2026/img/cover.jpg",
+   "words": 234,
+   "minutes": 2,
+   "photos": 3,
+   "chapters": 1
+  },
+  {
    "id": "neptun-ringboegen-2026",
    "title": "Zwei Bögen weg, ein neuer da: Neptuns Ring verändert sich",
    "titleRu": "Дві дуги зникли, одна з'явилася: кільце Нептуна змінюється",
