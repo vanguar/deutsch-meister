@@ -135,6 +135,21 @@
       "cover": "⭐",
       "source": "Kinder- und Haus-Märchen, 7. Auflage, Göttingen 1857 (de.wikisource.org)",
       "license": "public domain"
+    },
+    {
+      "id": "muenchhausen",
+      "title": "Münchhausens wunderbare Reisen",
+      "titleRu": "Удивительные путешествия Мюнхгаузена",
+      "blurb": "Барон рассказывает о себе — и ни одному слову нельзя верить. Конь, привязанный на ночь к столбику в снегу, утром висит на церковной колокольне. Волк, съевший лошадь, сам бежит в упряжке до Петербурга. Утки на одной верёвке уносят охотника по воздуху, у оленя между рогами растёт вишня, полконя пьёт и не напьётся, а из болота барон вытаскивает себя сам — за собственную косицу.",
+      "author": "Gottfried August Bürger",
+      "level": "B2",
+      "year": 1786,
+      "chapters": 6,
+      "words": 2381,
+      "minutes": 22,
+      "cover": "🐎",
+      "source": "Первое издание, Dieterich, Göttingen 1786 (de.wikisource.org)",
+      "license": "public domain"
     }
   ]
 }

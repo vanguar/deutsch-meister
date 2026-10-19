@@ -2597,3 +2597,37 @@ Schuhe), `klopfen`/`weinen` — на существительные; глаго�
 `test_i18n.js`, `check_tips.js`, `test_audience_wording.py` — 0 ошибок.
 Headless Chrome: карточка и ридер на ru и uk, подсказки у всех слов,
 0 исключений.
+
+---
+
+## Десятая книга — «Münchhausens wunderbare Reisen» (Gottfried August Bürger)
+
+Шесть самых известных историй барона из первого немецкого издания 1786 года
+(Dieterich, Göttingen, на титуле «London»): конь на колокольне, волк в
+упряжке, утки на верёвке (с искрами из глаз), вишня на олене, половина коня
+под Очаковом, полёт на ядре и болото с косицей. Каждая история — глава.
+6 глав, 101 предложение, 2381 слово, уровень **B2**.
+
+**Источник.** Вычитанный факсимильный текст de.wikisource (статус «fertig»),
+страницы 17–36 и 53–65. Исходник — `tools/sources/muenchhausen.txt`.
+Орфография приведена к норме (seyn → sein, Thurm → Turm, daß → dass,
+Pohlen → Polen, Oczakow → Otschakow …), речь в »…«; лексика и грамматика не
+тронуты (ward, rennte, die Türpfoste, der Hinterteil, дательные с -e),
+устаревшее помечено `old`. Отступления между историями выпущены — список в
+`meta.normalized`.
+
+**Глоссарий** 948 словоформ / 789 лемм, покрытие 100 %; 525 словоформ
+засеяны из девяти книг и проверены в контексте: `schloss` вёл на
+`das Schloss`, `reiste` — на `abreisen`, `arm/Arm` были перепутаны
+(armen/arme ↔ armes), `lichter` — на `leicht`, `riss` — на `der Riss`,
+`traf` — на `zutreffen`, `macht` (mit aller Macht) — на `machen`,
+`statt` (an seiner Statt) — на `stattfinden`, `heiß` — на `heißen`,
+`leben` (im Leben) — на глагол, `bitten` — на `die Bitte`,
+`stellt … vor`/`stellte` — на `anstellen`, `hing` — на `aufhängen`.
+
+**uk** и **ar** — полный перевод (книга сразу открыта в арабской версии,
+книг 10/10). Общая память снова подменяла подписи: «пока» → «бувай» /
+«مع السلامة», «лицом» → «з лиця», «короче» → «коротший», «леса» → «ліси»,
+«уйти» → «піти» и др. — перекрыто в `i18n/{uk,ar}/src/overrides/books/muenchhausen.json`.
+
+Главная: «10 книг · с переводом и озвучкой» (ru/uk/ar).

@@ -1,0 +1,30 @@
+{
+  "id": "muenchhausen",
+  "title": "Münchhausens wunderbare Reisen",
+  "titleRu": "Удивительные путешествия Мюнхгаузена",
+  "author": "Gottfried August Bürger",
+  "level": "B2",
+  "year": 1786,
+  "chapters": 6,
+  "words": 2381,
+  "minutes": 22,
+  "cover": "🐎",
+  "source": "Wunderbare Reisen zu Wasser und zu Lande, Feldzüge und lustige Abentheuer des Freyherrn von Münchhausen, Dieterich, Göttingen 1786 (на титуле «London»), орфография приведена к современной норме",
+  "sourceUrl": "https://de.wikisource.org/wiki/Des_Freyherrn_von_M%C3%BCnchhausen_Wunderbare_Reisen",
+  "compared": "de.wikisource.org, вычитанный факсимильный текст первого немецкого издания 1786 года (статус «fertig»), страницы 17–36 и 53–65",
+  "license": "public domain",
+  "yearNote": "1786 — первое издание Бюргера: вольный перевод английской книги Рудольфа Эриха Распе (1785), дополненный новыми историями. Бюргер умер в 1794 году: текст в общественном достоянии.",
+  "levelNote": "B2: короткие истории, но длинные периоды XVIII века — придаточные цепочкой через точку с запятой, рамка «so … dass», Konjunktiv II в нереальных условиях (hätte umkommen müssen, wenn nicht …), обращения к слушателям (meine Herren, stellt euch vor). Сюжеты простые и знакомые, поэтому текст читается легче, чем выглядит. Устаревшие слова и формы помечены old.",
+  "normalizedNote": "Правилась орфография и пунктуация, а не язык Бюргера.",
+  "normalized": [
+    "ß, ss и th по современной норме: daß → dass, Rußland → Russland, wußte → wusste, schloß → schloss, Thurm → Turm, thun → tun, Muth → Mut, Thier → Tier, Theil → Teil, Thor → Tor",
+    "старые написания: seyn → sein, bey → bei, beyde → beide, frey → frei, hohlen → holen, Bley → Blei, Geweyhe → Geweih(e), schwehr → schwer, Huth → Hut, queerfeldein → querfeldein, rauh → rau, hülflos → hilflos, Kniee → Knie, ohnfehlbar → unfehlbar",
+    "географические названия: Pohlen → Polen, Liefland → Livland, Esthland → Estland, Lithauer → Litauer, Oczakow → Otschakow",
+    "слитное и раздельное написание: zu Muthe → zumute, zu Statten → zustatten, zu gute → zugute, eben so → ebenso, von einander → voneinander, unvorsichtiger Weise → unvorsichtigerweise, so daß → sodass, jeweiter → je weiter",
+    "апостроф стяжения: ichs → ich's, gings → ging's, kanns → kann's, ers → er's",
+    "прямая речь взята в »…«, как в остальных книгах ридера",
+    "в книгу вошли шесть эпизодов из первой половины «Eigene Erzählung»; между ними опущены отступления (о петербургском свете, лисе, кабанах, святом Губерте, медведе, бешеной шубе, борзой); вступление о почтмейстерах в главе 1 и манёвр с пылью в главе 5 выпущены, поэтому «Wir zerstreueten ihn» стало «Wir zerstreuten den Feind»",
+    "название книги и деление на главы наши"
+  ],
+  "notNormalized": "Лексика и грамматика Бюргера не тронуты: ward вместо wurde, rennte вместо rannte, die Türpfoste, der Hinterteil, старые дательные с -e (im Leibe, auf dem Kirchhofe, mit einem Schusse), größern, das Bette, meines Orts, mehr denn, hernach, flugs, hurtig. Устаревшее помечено полем old в glossary."
+}
