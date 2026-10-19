@@ -20,10 +20,29 @@
   background: color-mix(in srgb, var(--accent2) 6%, var(--surface));
 }
 .fs-topic-head {
-  display: flex; align-items: center; gap: 12px; padding: 12px 14px;
+  display: flex; align-items: center; gap: 12px; width: 100%; padding: 12px 14px;
   background: color-mix(in srgb, var(--accent2) 16%, var(--surface));
-  border-bottom: 1px solid color-mix(in srgb, var(--accent2) 30%, var(--border));
+  border: 0; color: inherit; font: inherit; text-align: start; cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
+.fs-topic.is-open .fs-topic-head { border-bottom: 1px solid color-mix(in srgb, var(--accent2) 30%, var(--border)); }
+.fs-topic-head:hover { background: color-mix(in srgb, var(--accent2) 22%, var(--surface)); }
+.fs-topic-head:focus-visible { outline: 2px solid var(--accent2); outline-offset: -2px; }
+.fs-topic-titles { display: flex; flex-direction: column; align-items: flex-start; flex: 1; }
+.fs-topic-grid[hidden] { display: none; }
+/* Справа в шапке: число уроков, «Показать уроки» / «Скрыть» и стрелка */
+.fs-topic-more { flex: none; display: flex; flex-direction: column; align-items: flex-end; gap: 4px; }
+.fs-topic-count { font-size: 12px; color: var(--text-muted); white-space: nowrap; }
+.fs-topic-count b { color: var(--text-strong); }
+.fs-topic-hint { font-size: 12px; font-weight: 800; color: var(--accent2-text); white-space: nowrap; }
+.fs-topic-hide, .fs-topic.is-open .fs-topic-show { display: none; }
+.fs-topic.is-open .fs-topic-hide { display: inline; }
+.fs-topic-chev {
+  width: 28px; height: 28px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center;
+  background: var(--accent2); color: var(--text-on-btn); transition: transform var(--t-fast);
+}
+.fs-topic-chev::before { content: '▾'; font-size: 16px; line-height: 1; }
+.fs-topic.is-open .fs-topic-chev { transform: rotate(180deg); }
 .fs-topic-grid { padding: 12px; gap: 12px; }
 .fs-topic-titles { min-width: 0; }
 .fs-topic-n {
@@ -33,7 +52,7 @@
 }
 .fs-topic-title {
   margin: 0; font-family: 'Playfair Display', serif; font-size: 21px; font-weight: 900;
-  color: var(--text-strong); line-height: 1.2; text-align: start;
+  color: var(--text-strong); line-height: 1.2; text-align: start; overflow-wrap: anywhere; hyphens: auto;
 }
 .fs-topic-tr { font-size: 13px; color: var(--text-muted); }
 
@@ -262,6 +281,7 @@ html[dir="rtl"] .fs-tr { text-align: right; }
 @media (prefers-reduced-motion: reduce) {
   .fs-blink { animation: none; }
   .fs-hazard, .fs-lab { transition: none; }
+  .fs-topic-chev { transition: none; }
   .fs-light circle { transition: none; }
   .fs-lines > .fs-line, .fs-car, .fs-hint-path, .fs-badge, .fs-w, .fs-opt { transition: none; }
 }

@@ -89,7 +89,38 @@ ok(await c.ev(`Fahrschule.topics.every(t => [...document.querySelectorAll('.fs-t
 ok(await c.ev(`(() => { const cs = getComputedStyle(document.querySelector('.fs-topic')); const hs = getComputedStyle(document.querySelector('.fs-topic-head'));
   return parseFloat(cs.borderTopWidth) >= 1 && cs.backgroundColor !== getComputedStyle(document.body).backgroundColor && hs.backgroundColor !== cs.backgroundColor; })()`),
   'тема выделена: рамка, свой фон и шапка-полоса');
-await c.shot('fs_hub_topics.png');
+// темы сворачиваются: при первом заходе раскрыта первая, у свёрнутых видно «Показать уроки» и стрелку
+const topicState = () => c.ev(`JSON.stringify([...document.querySelectorAll('.fs-topic')].map(t => ({ id: t.dataset.topic,
+  open: t.classList.contains('is-open'), aria: t.querySelector('[data-topic-toggle]').getAttribute('aria-expanded'),
+  visible: [...t.querySelectorAll('[data-unit]')].some(x => x.offsetParent !== null),
+  hint: t.querySelector('.fs-topic-hint').innerText.trim(), chev: getComputedStyle(t.querySelector('.fs-topic-chev'), '::before').content })))`).then(JSON.parse);
+let ts = await topicState();
+ok(ts[0].open && ts[0].visible && ts.slice(1).every(t => !t.open && !t.visible && t.aria === 'false'), `темы: раскрыта только первая (${ts.map(t => t.open ? 1 : 0).join('')})`);
+ok(ts.slice(1).every(t => /Показать уроки/.test(t.hint) && t.chev.includes('▾')), 'свёрнутые темы: «Показать уроки» и стрелка ▾');
+ok(/\d+\s+урок/.test(await c.ev(`document.querySelector('.fs-topic-count').innerText`)), 'в шапке темы — число уроков');
+const t3 = ts[ts.length > 2 ? 2 : 1].id;
+await c.ev(`document.querySelector('[data-topic-toggle="${t3}"]').click()`);
+ts = await topicState();
+let st3 = ts.find(t => t.id === t3);
+ok(st3.open && st3.visible && st3.aria === 'true' && /Скрыть/.test(st3.hint), `тап по шапке раскрывает тему ${t3}: видны уроки, «Скрыть»`);
+await c.shot('fs_hub_collapse.png');
+await c.go(B + '/fahrschule.html', 600);
+await waitFor(`document.querySelectorAll('.fs-topic').length > 0`, 20000);
+ts = await topicState();
+ok(ts.find(t => t.id === t3).open && ts[0].open, 'раскрытые темы запоминаются после перезагрузки');
+await c.ev(`document.querySelector('[data-topic-toggle="${t3}"]').click()`);
+ts = await topicState();
+ok(!ts.find(t => t.id === t3).open && !ts.find(t => t.id === t3).visible, 'повторный тап сворачивает тему');
+// из урока свёрнутой темы обратно — его тема раскрыта
+const lastT = IDX.topics[IDX.topics.length - 1];
+await c.ev(`Fahrschule.go({ name: 'unit', id: '${lastT.units[0]}' })`);
+await waitFor(`Fahrschule.unit && Fahrschule.unit.id === '${lastT.units[0]}'`, 8000);
+await c.ev(`history.back()`);
+await waitFor(`!document.getElementById('fsHub').hidden && document.querySelectorAll('.fs-topic').length > 0`, 4000);
+ok((await topicState()).find(t => t.id === lastT.id).open, 'после урока его тема раскрыта');
+await c.ev(`localStorage.removeItem('dm_fs_open'); localStorage.removeItem('dm_fs_last')`);
+await c.go(B + '/fahrschule.html', 600);
+await waitFor(`document.querySelectorAll('.fs-topic').length > 0`, 20000);
 // на списке первые уроки тем подгружаются в фоне
 ok(await waitFor(`Fahrschule.topics.every(t => Fahrschule.cached.includes(t.units[0]))`, 8000), 'список: первые уроки тем подгружены в фоне');
 ok(await c.ev(NO_HSCROLL), 'список: нет горизонтальной прокрутки (390)');

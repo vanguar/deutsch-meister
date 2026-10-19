@@ -37,6 +37,8 @@ const Fahrschule = (() => {
   const INDEX_URL = 'data/fahrschule/index.json';
   const DATA_DIR  = 'data/fahrschule/';
   const TR_KEY    = 'dm_fs_tr';      // показывать перевод: '1' / '0'
+  const OPEN_KEY  = 'dm_fs_open';    // раскрытые темы: JSON-массив id
+  const LAST_KEY  = 'dm_fs_last';    // последний открытый урок
   const HOME_URL  = 'index.html';
   const GAP_MS    = 380;             // пауза между фразами
   const RATE      = 0.9;
@@ -270,24 +272,64 @@ const Fahrschule = (() => {
 
   // Тема — отдельная карточка: шапка полосой (номер, эмодзи, название),
   // под ней сетка её уроков. Так темы не сливаются в одну ленту плиток.
-  function topicHtml(t, n, byId) {
-    return `<section class="fs-topic" data-topic="${esc(t.id)}" aria-labelledby="fsTopic-${esc(t.id)}">
-      <div class="fs-topic-head">
+  // Тема сворачивается: шапка — кнопка. Справа — сколько уроков и
+  // подсказка «Показать уроки» со стрелкой, чтобы было видно, что по тапу
+  // откроется список. Раскрытые темы запоминаются (OPEN_KEY); пока выбора
+  // не было — открыта тема последнего урока, а при первом заходе — первая.
+  function openTopics() {
+    try {
+      const saved = JSON.parse(readStore(OPEN_KEY) || 'null');
+      if (Array.isArray(saved)) return new Set(saved);
+    } catch (e) { /* испорченное значение — как будто выбора не было */ }
+    const last = readStore(LAST_KEY);
+    const t = topics.find(x => x.units.includes(last)) || topics[0];
+    return new Set(t ? [t.id] : []);
+  }
+
+  function saveOpenTopics(set) {
+    writeStore(OPEN_KEY, JSON.stringify([...set]));
+  }
+
+  function topicHtml(t, n, byId, open) {
+    const list = t.units.filter(id => byId[id]);
+    return `<section class="fs-topic${open ? ' is-open' : ''}" data-topic="${esc(t.id)}">
+      <button class="fs-topic-head" type="button" data-topic-toggle="${esc(t.id)}" aria-expanded="${open ? 'true' : 'false'}" aria-controls="fsTopicList-${esc(t.id)}">
         <span class="news-rubric-ico" aria-hidden="true">${esc(t.emoji)}</span>
-        <div class="fs-topic-titles">
-          <div class="fs-topic-n"><span>Тема</span> ${n}</div>
-          <h2 class="fs-topic-title" id="fsTopic-${esc(t.id)}" lang="de" dir="ltr">${esc(t.title)}</h2>
-          <div class="fs-topic-tr">${esc(t.titleTr)}</div>
-        </div>
-      </div>
-      <div class="news-grid fs-topic-grid">${t.units.filter(id => byId[id]).map(id => tileHtml(byId[id])).join('')}</div>
+        <span class="fs-topic-titles">
+          <span class="fs-topic-n"><span>Тема</span> ${n}</span>
+          <span class="fs-topic-title" lang="de" dir="ltr">${esc(t.title)}</span>
+          <span class="fs-topic-tr">${esc(t.titleTr)}</span>
+        </span>
+        <span class="fs-topic-more">
+          <span class="fs-topic-count">${countHtml(list.length, ['урок', 'урока', 'уроков'])}</span>
+          <span class="fs-topic-hint"><span class="fs-topic-show">Показать уроки</span><span class="fs-topic-hide">Скрыть</span></span>
+          <span class="fs-topic-chev" aria-hidden="true"></span>
+        </span>
+      </button>
+      <div class="news-grid fs-topic-grid" id="fsTopicList-${esc(t.id)}"${open ? '' : ' hidden'}>${list.map(id => tileHtml(byId[id])).join('')}</div>
     </section>`;
+  }
+
+  function toggleTopic(id) {
+    const sec = el.list.querySelector(`.fs-topic[data-topic="${id}"]`);
+    if (!sec) return;
+    const open = !sec.classList.contains('is-open');
+    sec.classList.toggle('is-open', open);
+    sec.querySelector('[data-topic-toggle]').setAttribute('aria-expanded', open ? 'true' : 'false');
+    sec.querySelector('.fs-topic-grid').hidden = !open;
+    const set = new Set([...el.list.querySelectorAll('.fs-topic.is-open')].map(x => x.dataset.topic));
+    saveOpenTopics(set);
   }
 
   function renderHub() {
     el.list.setAttribute('aria-busy', 'false');
     const byId = Object.fromEntries(units.map(u => [u.id, u]));
-    el.list.innerHTML = topics.map((t, k) => topicHtml(t, k + 1, byId)).join('') + soonTileHtml();
+    const open = openTopics();
+    // тема урока, из которого вернулись, всегда раскрыта
+    const last = readStore(LAST_KEY);
+    const lastTopic = topics.find(x => x.units.includes(last));
+    if (lastTopic && !open.has(lastTopic.id)) { open.add(lastTopic.id); saveOpenTopics(open); }
+    el.list.innerHTML = topics.map((t, k) => topicHtml(t, k + 1, byId, open.has(t.id))).join('') + soonTileHtml();
     // первые уроки тем — заранее, пока человек выбирает
     prefetch(topics.map(t => t.units[0]));
   }
@@ -352,6 +394,7 @@ const Fahrschule = (() => {
   }
 
   function openUnit(id) {
+    writeStore(LAST_KEY, id);
     const seq = ++loadSeq;
     unit = null;
     el.body.innerHTML = '<div class="news-loading"><span class="rd-spinner"></span><span>Загружаем урок</span></div>';
@@ -1375,6 +1418,8 @@ const Fahrschule = (() => {
   function onClick(e) {
     const t = e.target;
     if (t.closest('[data-retry]')) { e.preventDefault(); if (view.name === 'unit') openUnit(view.id); else load(); return; }
+    const tt = t.closest('[data-topic-toggle]');
+    if (tt) { e.preventDefault(); toggleTopic(tt.dataset.topicToggle); return; }
     const tile = t.closest('[data-unit]');
     if (tile) { e.preventDefault(); go({ name: 'unit', id: tile.dataset.unit }); return; }
     const w = t.closest('.fs-w');
