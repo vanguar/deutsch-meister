@@ -2,6 +2,23 @@
   "version": 1,
   "items": [
     {
+      "id": "neptun-ringboegen-2026",
+      "title": "Zwei Bögen weg, ein neuer da: Neptuns Ring verändert sich",
+      "titleRu": "Две дуги пропали, одна появилась: кольцо Нептуна меняется",
+      "blurb": "В кольце Адамса у Нептуна с 1989 года были четыре яркие дуги. Две из них исчезли, третья ослабла, зато появилась новая — Sincerity. Почему вещество не расходится по всему кольцу, учёные пока точно не знают.",
+      "rubric": "astronomy",
+      "level": "B1",
+      "published": "2026-10-16",
+      "added": "2026-10-19",
+      "source": "Observatoire de Paris · forschung-und-wissen.de",
+      "sourceUrl": "https://forschung-und-wissen.de/nachrichten/astronomie/neptuns-ring-verliert-zwei-boegen-und-bildet-einen-neuen-133714586",
+      "cover": "data/news/neptun-ringboegen-2026/img/cover.jpg",
+      "words": 235,
+      "minutes": 2,
+      "photos": 3,
+      "chapters": 1
+    },
+    {
       "id": "trump-iran-atomwaffen-2026",
       "title": "Keine Atomwaffen, keine Bodentruppen: Trump spricht über den Krieg mit dem Iran",
       "titleRu": "Без ядерного оружия и сухопутных войск: Трамп о войне с Ираном",

@@ -1,0 +1,800 @@
+{
+  "version": 1,
+  "w": {
+    "adams-ring": "Adams-Ring",
+    "am": "an",
+    "an": "an",
+    "astronomen": "Astronom",
+    "astronomische": "astronomisch",
+    "auf": "auf",
+    "aufrichtigkeit": "Aufrichtigkeit",
+    "august": "August",
+    "aus": "aus",
+    "bekamen": "bekommen",
+    "bekannt": "bekannt geben",
+    "bestätigt": "bestätigen",
+    "bildern": "Bild",
+    "bleibt": "bleiben",
+    "bogen": "Bogen",
+    "brüderlichkeit": "Brüderlichkeit",
+    "bögen": "Bogen",
+    "courage": "Courage",
+    "dafür": "dafür",
+    "damals": "damals",
+    "das": "der/die/das",
+    "dem": "der/die/das",
+    "den": "der/die/das",
+    "der": "der/die/das",
+    "des": "der/die/das",
+    "deutsch": "Deutsch",
+    "dichter": "dicht",
+    "die": "der/die/das",
+    "diesen": "dieser",
+    "dieser": "dieser",
+    "doch": "doch",
+    "dort": "dort",
+    "dunkle": "dunkel",
+    "dünne": "dünn",
+    "eigentlich": "eigentlich",
+    "ein": "ein/eine",
+    "einem": "ein/eine",
+    "einen": "ein/eine",
+    "einigen": "einige",
+    "entdeckte": "entdecken",
+    "entfernt": "entfernt",
+    "entstanden": "entstehen",
+    "er": "er",
+    "erklärung": "Erklärung",
+    "etwa": "etwa",
+    "forscher": "Forscher",
+    "forscherteam": "Forscherteam",
+    "fotografierte": "fotografieren",
+    "französische": "französisch",
+    "fraternité": "Fraternité",
+    "freiheit": "Freiheit",
+    "für": "für",
+    "galatea": "Galatea",
+    "ganz": "ganz",
+    "ganzen": "ganz",
+    "gegeben": "bekannt geben",
+    "gehören": "gehören",
+    "geworden": "werden",
+    "gleichheit": "Gleichheit",
+    "gleichmäßig": "gleichmäßig",
+    "grad": "Grad",
+    "gut": "gut",
+    "hat": "haben",
+    "hawaii": "Hawaii",
+    "heißt": "heißen",
+    "helle": "hell",
+    "heller": "hell",
+    "hält": "zusammenhalten",
+    "ihn": "er",
+    "im": "in",
+    "in": "in",
+    "innerhalb": "innerhalb",
+    "internationale": "international",
+    "internationales": "international",
+    "ist": "sein",
+    "jahr": "Jahr",
+    "jahrzehnte": "Jahrzehnt",
+    "james-webb-weltraumteleskop": "James-Webb-Weltraumteleskop",
+    "juli": "Juli",
+    "juni": "Juni",
+    "keck-teleskop": "Keck-Teleskop",
+    "kilometer": "Kilometer",
+    "klar": "klar",
+    "kleine": "klein",
+    "kürzer": "kurz",
+    "liberté": "Liberté",
+    "material": "Material",
+    "mehrere": "mehrere",
+    "messungen": "Messung",
+    "milliarden": "Milliarde",
+    "mit": "mit",
+    "monaten": "Monat",
+    "mond": "Mond",
+    "mut": "Mut",
+    "müsste": "müssen",
+    "nach": "nach",
+    "namen": "Name",
+    "neptun": "Neptun",
+    "neptuns": "Neptun",
+    "neue": "neu",
+    "neuen": "neu",
+    "neuer": "neu",
+    "nicht": "nicht",
+    "noch": "noch",
+    "nur": "nur",
+    "oktober": "Oktober",
+    "pariser": "Pariser",
+    "passen": "passen",
+    "planet": "Planet",
+    "raumsonde": "Raumsonde",
+    "ring": "Ring",
+    "ringe": "Ring",
+    "rings": "Ring",
+    "rätsel": "Rätsel",
+    "sahen": "sehen",
+    "schon": "schon",
+    "schwerkraft": "Schwerkraft",
+    "schwächer": "schwach",
+    "sehen": "sehen",
+    "seiner": "sein (его, свой)",
+    "seitdem": "seitdem",
+    "sich": "sich",
+    "sincerity": "Sincerity",
+    "sind": "sein",
+    "sondern": "sondern",
+    "sonne": "Sonne",
+    "sonnensystems": "Sonnensystem",
+    "stellen": "Stelle",
+    "sternwarte": "Sternwarte",
+    "team": "Team",
+    "und": "und",
+    "union": "Union",
+    "unseres": "unser",
+    "usa": "USA",
+    "verschwunden": "verschwinden",
+    "verteilen": "verteilen",
+    "verteilt": "verteilen",
+    "verändern": "verändern",
+    "verändert": "verändern",
+    "viel": "viel",
+    "vielleicht": "vielleicht",
+    "vier": "vier",
+    "von": "von",
+    "voyager": "Voyager",
+    "war": "sein",
+    "wenigen": "wenig",
+    "weniger": "wenig",
+    "zu": "zu",
+    "zuerst": "zuerst",
+    "zusammen": "zusammenhalten",
+    "äußerste": "äußerer",
+    "äußersten": "äußerer",
+    "égalité": "Égalité",
+    "über": "über"
+  },
+  "l": {
+    "Adams-Ring": {
+      "ru": "кольцо Адамса (внешнее кольцо Нептуна)",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null,
+      "note": "назван в честь астронома Джона Кауча Адамса"
+    },
+    "an": {
+      "ru": "у, к, на",
+      "pos": "предл.",
+      "note": "am = an dem. Тж. отделяемая приставка: anfangen «начинать», annehmen, ansehen, anzünden"
+    },
+    "Astronom": {
+      "ru": "астроном",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Astronomen"
+    },
+    "astronomisch": {
+      "ru": "астрономический",
+      "pos": "прил.",
+      "note": "die Internationale Astronomische Union — Международный астрономический союз"
+    },
+    "auf": {
+      "ru": "на, в",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: aufspringen «вскочить», sich aufmachen"
+    },
+    "Aufrichtigkeit": {
+      "ru": "искренность",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null,
+      "note": "aufrichtig — искренний"
+    },
+    "August": {
+      "ru": "август",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "aus": {
+      "ru": "из",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: auslöschen «погасить»"
+    },
+    "bekannt geben": {
+      "ru": "объявлять, сообщать",
+      "pos": "гл.",
+      "forms": "gab bekannt · hat bekannt gegeben"
+    },
+    "bekommen": {
+      "ru": "получать",
+      "pos": "гл.",
+      "forms": "bekam · hat bekommen"
+    },
+    "bestätigen": {
+      "ru": "подтверждать, утверждать",
+      "pos": "гл.",
+      "forms": "bestätigte · hat bestätigt"
+    },
+    "Bild": {
+      "ru": "картина, снимок",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Bilder"
+    },
+    "bleiben": {
+      "ru": "оставаться",
+      "pos": "гл.",
+      "forms": "blieb · ist geblieben"
+    },
+    "Bogen": {
+      "ru": "дуга",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Bögen",
+      "note": "также «лук» (оружие) и «лист бумаги»"
+    },
+    "Brüderlichkeit": {
+      "ru": "братство",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "Courage": {
+      "ru": "Courage (фр. «мужество») — дуга в кольце Адамса",
+      "pos": "имя собств."
+    },
+    "dafür": {
+      "ru": "за это, для этого",
+      "pos": "нареч.",
+      "note": "dafür sorgen, dass … — позаботиться, чтобы …"
+    },
+    "damals": {
+      "ru": "тогда, в то время",
+      "pos": "нареч."
+    },
+    "der/die/das": {
+      "ru": "определённый артикль",
+      "pos": "артикль",
+      "note": "Тж. относительное местоимение «который»"
+    },
+    "Deutsch": {
+      "ru": "немецкий язык",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null,
+      "note": "auf Deutsch — по-немецки; Deutsch verstehen — понимать по-немецки"
+    },
+    "dicht": {
+      "ru": "плотно; совсем близко",
+      "pos": "нареч.",
+      "note": "dicht vor dem Dorf — прямо перед деревней"
+    },
+    "dieser": {
+      "ru": "этот, эта, это",
+      "pos": "мест."
+    },
+    "doch": {
+      "ru": "всё же, всё-таки; ведь",
+      "pos": "частица"
+    },
+    "dort": {
+      "ru": "там",
+      "pos": "нареч."
+    },
+    "dunkel": {
+      "ru": "тёмный",
+      "pos": "прил."
+    },
+    "dünn": {
+      "ru": "тонкий",
+      "pos": "прил."
+    },
+    "eigentlich": {
+      "ru": "собственно, вообще-то",
+      "pos": "нареч."
+    },
+    "ein/eine": {
+      "ru": "неопределённый артикль",
+      "pos": "артикль",
+      "note": "einer — «один, некто»"
+    },
+    "einige": {
+      "ru": "несколько, некоторые",
+      "pos": "мест."
+    },
+    "entdecken": {
+      "ru": "обнаруживать",
+      "pos": "гл.",
+      "forms": "entdeckte · hat entdeckt"
+    },
+    "entfernt": {
+      "ru": "удалённый, далёкий",
+      "pos": "прил.",
+      "note": "… von uns entfernt sein — находиться на расстоянии … от нас"
+    },
+    "entstehen": {
+      "ru": "возникать",
+      "pos": "гл.",
+      "forms": "entstand · ist entstanden"
+    },
+    "er": {
+      "ru": "он",
+      "pos": "мест.",
+      "note": "ihn — его, ihm — ему"
+    },
+    "Erklärung": {
+      "ru": "объяснение",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Erklärungen"
+    },
+    "etwa": {
+      "ru": "примерно, около",
+      "pos": "нареч."
+    },
+    "Forscher": {
+      "ru": "исследователь, учёный",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Forscher"
+    },
+    "Forscherteam": {
+      "ru": "группа исследователей",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Forscherteams"
+    },
+    "fotografieren": {
+      "ru": "фотографировать",
+      "pos": "гл.",
+      "forms": "fotografierte · hat fotografiert"
+    },
+    "französisch": {
+      "ru": "французский",
+      "pos": "прил."
+    },
+    "Fraternité": {
+      "ru": "Fraternité (фр. «братство») — дуга в кольце Адамса",
+      "pos": "имя собств."
+    },
+    "Freiheit": {
+      "ru": "свобода",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Freiheiten"
+    },
+    "für": {
+      "ru": "для, за",
+      "pos": "предл."
+    },
+    "Galatea": {
+      "ru": "Галатея (небольшой спутник Нептуна)",
+      "pos": "имя собств."
+    },
+    "ganz": {
+      "ru": "весь, целый; совсем",
+      "pos": "прил."
+    },
+    "gehören": {
+      "ru": "принадлежать, относиться",
+      "pos": "гл.",
+      "forms": "gehörte · hat gehört",
+      "note": "zu etwas gehören — относиться к чему-то, входить в"
+    },
+    "Gleichheit": {
+      "ru": "равенство",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "gleichmäßig": {
+      "ru": "равномерный",
+      "pos": "прил.",
+      "note": "nicht gleichmäßig verteilt — распределён неравномерно"
+    },
+    "Grad": {
+      "ru": "градус",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Grade",
+      "note": "после числа мн. ч. не ставится: 20 Grad"
+    },
+    "gut": {
+      "ru": "хороший, добрый",
+      "pos": "прил.",
+      "forms": "gut · besser · am besten",
+      "note": "besser — лучше"
+    },
+    "haben": {
+      "ru": "иметь; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "hatte · hat gehabt"
+    },
+    "Hawaii": {
+      "ru": "Гавайи",
+      "pos": "геогр."
+    },
+    "heißen": {
+      "ru": "называться; велеть",
+      "pos": "гл.",
+      "forms": "hieß · hat geheißen"
+    },
+    "hell": {
+      "ru": "светлый, яркий",
+      "pos": "прил.",
+      "forms": "hell · heller · am hellsten"
+    },
+    "in": {
+      "ru": "в (im = in dem, ins = in das)",
+      "pos": "предл."
+    },
+    "innerhalb": {
+      "ru": "в течение, внутри",
+      "pos": "предлог",
+      "note": "с родительным падежом: innerhalb einer Woche"
+    },
+    "international": {
+      "ru": "международный",
+      "pos": "прил."
+    },
+    "Jahr": {
+      "ru": "год",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Jahre"
+    },
+    "Jahrzehnt": {
+      "ru": "десятилетие",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Jahrzehnte"
+    },
+    "James-Webb-Weltraumteleskop": {
+      "ru": "космический телескоп «Джеймс Уэбб»",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "Juli": {
+      "ru": "июль",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Julis"
+    },
+    "Juni": {
+      "ru": "июнь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "Keck-Teleskop": {
+      "ru": "телескоп Кека (обсерватория на Гавайях)",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Keck-Teleskope",
+      "note": "два телескопа с зеркалами по 10 метров на горе Мауна-Кеа"
+    },
+    "Kilometer": {
+      "ru": "километр",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Kilometer"
+    },
+    "klar": {
+      "ru": "ясный, понятный",
+      "pos": "прил."
+    },
+    "klein": {
+      "ru": "маленький",
+      "pos": "прил."
+    },
+    "kurz": {
+      "ru": "короткий",
+      "pos": "прил."
+    },
+    "Liberté": {
+      "ru": "Liberté (фр. «свобода») — дуга в кольце Адамса",
+      "pos": "имя собств."
+    },
+    "Material": {
+      "ru": "материал",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Materialien"
+    },
+    "mehrere": {
+      "pos": "мест.",
+      "ru": "несколько"
+    },
+    "Messung": {
+      "ru": "измерение",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Messungen"
+    },
+    "Milliarde": {
+      "ru": "миллиард",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Milliarden"
+    },
+    "mit": {
+      "ru": "с",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: mitgehen «пойти вместе»"
+    },
+    "Monat": {
+      "ru": "месяц",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Monate"
+    },
+    "Mond": {
+      "ru": "Луна; спутник планеты",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Monde"
+    },
+    "Mut": {
+      "ru": "мужество; расположение духа",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null,
+      "note": "mir ist unheimlich zu Mut — мне не по себе (старый оборот; сегодня zumute)"
+    },
+    "müssen": {
+      "ru": "быть вынужденным, должен",
+      "pos": "гл.",
+      "forms": "musste · hat gemusst"
+    },
+    "nach": {
+      "ru": "в, на, после, по",
+      "pos": "предл."
+    },
+    "Name": {
+      "ru": "имя",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Namen",
+      "decl": "des Namens · dem/den Namen (особое склонение)"
+    },
+    "Neptun": {
+      "ru": "Нептун (восьмая, самая дальняя планета Солнечной системы)",
+      "pos": "имя собств."
+    },
+    "neu": {
+      "ru": "новый",
+      "pos": "прил."
+    },
+    "nicht": {
+      "ru": "не",
+      "pos": "частица"
+    },
+    "noch": {
+      "ru": "ещё",
+      "pos": "нареч."
+    },
+    "nur": {
+      "ru": "только, лишь",
+      "pos": "частица"
+    },
+    "Oktober": {
+      "ru": "октябрь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Oktober"
+    },
+    "Pariser": {
+      "ru": "парижский",
+      "pos": "прил.",
+      "note": "не склоняется: die Pariser Sternwarte"
+    },
+    "passen": {
+      "ru": "подходить, соответствовать",
+      "pos": "гл.",
+      "forms": "passte · hat gepasst",
+      "note": "passen zu — подходить к, согласоваться с"
+    },
+    "Planet": {
+      "ru": "планета",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Planeten",
+      "note": "слабое склонение: den/dem/des Planeten"
+    },
+    "Raumsonde": {
+      "ru": "космический зонд",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Raumsonden"
+    },
+    "Ring": {
+      "ru": "кольцо",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Ringe"
+    },
+    "Rätsel": {
+      "ru": "загадка",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Rätsel"
+    },
+    "schon": {
+      "ru": "уже",
+      "pos": "нареч."
+    },
+    "schwach": {
+      "ru": "слабый",
+      "pos": "прил.",
+      "forms": "schwach · schwächer · am schwächsten"
+    },
+    "Schwerkraft": {
+      "ru": "сила тяжести, притяжение",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "sehen": {
+      "ru": "видеть",
+      "pos": "гл.",
+      "forms": "sah · hat gesehen"
+    },
+    "sein": {
+      "ru": "быть; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "war · ist gewesen"
+    },
+    "sein (его, свой)": {
+      "ru": "его, свой",
+      "pos": "мест."
+    },
+    "seitdem": {
+      "ru": "с тех пор",
+      "pos": "нареч."
+    },
+    "sich": {
+      "ru": "себя, себе",
+      "pos": "мест.",
+      "note": "Возвратное местоимение, часть возвратного глагола: sich auf den Weg machen, sich setzen, sich legen, sich nähern, sich gefallen lassen, sich getrauen, sich umsehen"
+    },
+    "Sincerity": {
+      "ru": "Sincerity (англ. «искренность») — новая дуга в кольце Адамса",
+      "pos": "имя собств."
+    },
+    "sondern": {
+      "ru": "а, но (после отрицания)",
+      "pos": "союз"
+    },
+    "Sonne": {
+      "art": "die",
+      "pl": "die Sonnen",
+      "pos": "сущ.",
+      "ru": "солнце"
+    },
+    "Sonnensystem": {
+      "ru": "Солнечная система",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Sonnensysteme"
+    },
+    "Stelle": {
+      "ru": "место",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Stellen",
+      "note": "an Ort und Stelle — на своё место"
+    },
+    "Sternwarte": {
+      "ru": "обсерватория",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Sternwarten",
+      "note": "der Stern — звезда, warten — следить"
+    },
+    "Team": {
+      "ru": "команда",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Teams"
+    },
+    "und": {
+      "ru": "и, а",
+      "pos": "союз"
+    },
+    "Union": {
+      "ru": "союз",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Unionen",
+      "note": "die Europäische Union — Европейский союз"
+    },
+    "unser": {
+      "ru": "наш",
+      "pos": "мест."
+    },
+    "USA": {
+      "ru": "США",
+      "pos": "геогр.",
+      "note": "die USA — во мн. ч.: der USA (род. п.)"
+    },
+    "verschwinden": {
+      "ru": "исчезать",
+      "pos": "гл.",
+      "forms": "verschwand · ist verschwunden"
+    },
+    "verteilen": {
+      "ru": "распределять",
+      "pos": "гл.",
+      "forms": "verteilte · hat verteilt",
+      "note": "sich verteilen — распределяться, расходиться"
+    },
+    "verändern": {
+      "ru": "изменять(ся)",
+      "pos": "гл.",
+      "forms": "veränderte · hat verändert"
+    },
+    "viel": {
+      "ru": "много, многое",
+      "pos": "мест."
+    },
+    "vielleicht": {
+      "pos": "нареч.",
+      "ru": "может быть, пожалуй"
+    },
+    "vier": {
+      "ru": "четыре",
+      "pos": "числ."
+    },
+    "von": {
+      "ru": "от, из, о (vom = von dem)",
+      "pos": "предл."
+    },
+    "Voyager": {
+      "ru": "«Вояджер» (американские космические зонды)",
+      "pos": "имя собств.",
+      "note": "оба зонда запущены в 1977 году"
+    },
+    "wenig": {
+      "ru": "мало; немного",
+      "pos": "мест.",
+      "note": "ein wenig — немножко; etwas Weniges — самую малость"
+    },
+    "werden": {
+      "ru": "становиться",
+      "pos": "гл.",
+      "forms": "wurde · ist geworden",
+      "note": "Вспомогательный глагол будущего времени и пассива"
+    },
+    "zu": {
+      "ru": "к, в; слишком",
+      "pos": "предл.",
+      "note": "zur = zu der, zum = zu dem"
+    },
+    "zuerst": {
+      "pos": "нареч.",
+      "ru": "сначала, сперва"
+    },
+    "zusammenhalten": {
+      "ru": "удерживать вместе",
+      "pos": "гл.",
+      "forms": "hielt zusammen · hat zusammengehalten"
+    },
+    "äußerer": {
+      "ru": "внешний",
+      "pos": "прил.",
+      "note": "der äußerste — самый внешний, крайний"
+    },
+    "Égalité": {
+      "ru": "Égalité (фр. «равенство») — дуга в кольце Адамса",
+      "pos": "имя собств."
+    },
+    "über": {
+      "ru": "над, через, о",
+      "pos": "предл."
+    }
+  }
+}

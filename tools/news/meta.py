@@ -811,3 +811,41 @@ META.update({
 })
 
 ORDER = ['korea-humanoide-fabrik-2026'] + ORDER
+
+META.update({
+    'neptun-ringboegen-2026': {
+        'title': 'Zwei Bögen weg, ein neuer da: Neptuns Ring verändert sich',
+        'titleRu': 'Две дуги пропали, одна появилась: кольцо Нептуна меняется',
+        'rubric': 'astronomy',
+        'level': 'B1',
+        'levelNote': 'Перфект с sein (sind verschwunden, ist entstanden, ist geworden), претерит '
+                     '(entdeckte, bekamen, sahen, fotografierte), пассив состояния (ist verteilt), '
+                     'конъюнктив II (müsste … verteilen), сравнительная степень (dichter, schwächer, kürzer, heller), '
+                     'отделяемые глаголы (hält … zusammen), лексика астрономии.',
+        'published': '2026-10-16',
+        'added': '2026-10-19',
+        'source': 'Observatoire de Paris · forschung-und-wissen.de',
+        'sourceUrl': 'https://forschung-und-wissen.de/nachrichten/astronomie/neptuns-ring-verliert-zwei-boegen-und-bildet-einen-neuen-133714586',
+        'blurb': 'В кольце Адамса у Нептуна с 1989 года были четыре яркие дуги. Две из них исчезли, '
+                 'третья ослабла, зато появилась новая — Sincerity. Почему вещество не расходится '
+                 'по всему кольцу, учёные пока точно не знают.',
+        'license': 'Текст — пересказ сообщений Парижской обсерватории и forschung-und-wissen.de; '
+                   'фото — Wikimedia Commons',
+        'figs': {
+            'neptun': {'w': 900, 'h': 899,
+                       'cap': 'Нептун на снимке «Вояджера-2», август 1989 года. Это единственный зонд, '
+                              'который пролетел мимо этой планеты.',
+                       'credit': 'NASA/JPL · общественное достояние'},
+            'boegen': {'w': 1125, 'h': 889,
+                       'cap': 'Кольца Нептуна на снимке «Вояджера-2». На внешнем кольце, кольце Адамса, '
+                              'видны яркие сгущения вещества — дуги.',
+                       'credit': 'NASA/JPL, Voyager 2 Team · общественное достояние'},
+            'webb': {'w': 1200, 'h': 800,
+                     'cap': 'Нептун и его тонкие кольца на снимке телескопа «Джеймс Уэбб» 2022 года. '
+                            'В инфракрасном свете планета тёмная, поэтому кольца хорошо видны.',
+                     'credit': 'NASA, ESA, CSA, STScI · общественное достояние'},
+        },
+    },
+})
+
+ORDER = ['neptun-ringboegen-2026'] + ORDER

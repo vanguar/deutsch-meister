@@ -1758,3 +1758,63 @@ L.update({
     'hinaufkommen': v('подниматься (наверх)', 'kam hinauf · ist hinaufgekommen',
                       note='Treppen hinaufkommen — подниматься по лестнице'),
 })
+
+W.update({
+    # Нептун: дуги в кольце Адамса
+    'neptun': 'Neptun', 'neptuns': 'Neptun', 'bogen': 'Bogen', 'bögen': 'Bogen', 'forscherteam': 'Forscherteam',
+    'gegeben': 'geben', 'pariser': 'Pariser', 'sternwarte': 'Sternwarte', 'äußerste': 'äußerer',
+    'äußersten': 'äußerer', 'unseres': 'unser', 'sonnensystems': 'Sonnensystem', 'dünne': 'dünn',
+    'adams-ring': 'Adams-Ring', 'entdeckte': 'entdecken', 'voyager': 'Voyager', 'gleichmäßig': 'gleichmäßig',
+    'verteilt': 'verteilen', 'verteilen': 'verteilen', 'bekamen': 'bekommen', 'französische': 'französisch',
+    'courage': 'Courage', 'liberté': 'Liberté', 'égalité': 'Égalité', 'fraternité': 'Fraternité',
+    'gleichheit': 'Gleichheit', 'brüderlichkeit': 'Brüderlichkeit', 'neuer': 'neu', 'entstanden': 'entstehen',
+    'keck-teleskop': 'Keck-Teleskop', 'james-webb-weltraumteleskop': 'James-Webb-Weltraumteleskop',
+    'kürzer': 'kurz', 'sincerity': 'Sincerity', 'aufrichtigkeit': 'Aufrichtigkeit',
+    'internationale': 'international', 'astronomische': 'astronomisch', 'juni': 'Juni', 'bestätigt': 'bestätigen',
+    'wenigen': 'wenig', 'galatea': 'Galatea', 'messungen': 'Messung', 'passen': 'passen',
+    'erklärung': 'Erklärung', 'jahrzehnte': 'Jahrzehnt',
+})
+
+W_ART.update({
+    'neptun-ringboegen-2026': {'bekannt': 'bekannt geben', 'gegeben': 'bekannt geben', 'stellen': 'Stelle',
+                               'dichter': 'dicht', 'rings': 'Ring', 'hält': 'zusammenhalten',
+                               'zusammen': 'zusammenhalten'},
+})
+
+L.update({
+    # Нептун: дуги в кольце Адамса
+    'Neptun': name('Нептун (восьмая, самая дальняя планета Солнечной системы)'),
+    'Bogen': n('дуга', 'der', 'die Bögen', note='также «лук» (оружие) и «лист бумаги»'),
+    'Forscherteam': n('группа исследователей', 'das', 'die Forscherteams'),
+    'bekannt geben': v('объявлять, сообщать', 'gab bekannt · hat bekannt gegeben'),
+    'Pariser': a('парижский', note='не склоняется: die Pariser Sternwarte'),
+    'Sternwarte': n('обсерватория', 'die', 'die Sternwarten', note='der Stern — звезда, warten — следить'),
+    'äußerer': a('внешний', note='der äußerste — самый внешний, крайний'),
+    'Sonnensystem': n('Солнечная система', 'das', 'die Sonnensysteme'),
+    'Adams-Ring': n('кольцо Адамса (внешнее кольцо Нептуна)', 'der', None,
+                    note='назван в честь астронома Джона Кауча Адамса'),
+    'Voyager': name('«Вояджер» (американские космические зонды)', note='оба зонда запущены в 1977 году'),
+    'gleichmäßig': a('равномерный', note='nicht gleichmäßig verteilt — распределён неравномерно'),
+    'verteilen': v('распределять', 'verteilte · hat verteilt', note='sich verteilen — распределяться, расходиться'),
+    'französisch': a('французский'),
+    'Courage': name('Courage (фр. «мужество») — дуга в кольце Адамса'),
+    'Liberté': name('Liberté (фр. «свобода») — дуга в кольце Адамса'),
+    'Égalité': name('Égalité (фр. «равенство») — дуга в кольце Адамса'),
+    'Fraternité': name('Fraternité (фр. «братство») — дуга в кольце Адамса'),
+    'Gleichheit': n('равенство', 'die', None),
+    'Brüderlichkeit': n('братство', 'die', None),
+    'Keck-Teleskop': n('телескоп Кека (обсерватория на Гавайях)', 'das', 'die Keck-Teleskope',
+                       note='два телескопа с зеркалами по 10 метров на горе Мауна-Кеа'),
+    'James-Webb-Weltraumteleskop': n('космический телескоп «Джеймс Уэбб»', 'das', None),
+    'Sincerity': name('Sincerity (англ. «искренность») — новая дуга в кольце Адамса'),
+    'Aufrichtigkeit': n('искренность', 'die', None, note='aufrichtig — искренний'),
+    'astronomisch': a('астрономический', note='die Internationale Astronomische Union — Международный астрономический союз'),
+    'Juni': n('июнь', 'der', None),
+    'bestätigen': v('подтверждать, утверждать', 'bestätigte · hat bestätigt'),
+    'zusammenhalten': v('удерживать вместе', 'hielt zusammen · hat zusammengehalten'),
+    'Galatea': name('Галатея (небольшой спутник Нептуна)'),
+    'Messung': n('измерение', 'die', 'die Messungen'),
+    'passen': v('подходить, соответствовать', 'passte · hat gepasst', note='passen zu — подходить к, согласоваться с'),
+    'Erklärung': n('объяснение', 'die', 'die Erklärungen'),
+    'Jahrzehnt': n('десятилетие', 'das', 'die Jahrzehnte'),
+})
