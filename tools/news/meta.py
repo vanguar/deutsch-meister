@@ -924,3 +924,41 @@ META.update({
 })
 
 ORDER = ['sparkassen-krypto-2026'] + ORDER
+
+META.update({
+    'kartoffelernte-2026': {
+        'title': 'Hitze und Trockenheit: Die Kartoffelernte fällt um ein Viertel kleiner aus',
+        'titleRu': 'Жара и засуха: урожай картофеля стал меньше на четверть',
+        'rubric': 'economy',
+        'level': 'B1',
+        'levelNote': 'Плюсквамперфект (hatten … geerntet), перфект с sein (ist kleiner geworden, sind gestiegen), '
+                     'претерит (war, wuchsen, kosteten, bekamen), сравнительная степень (weniger, teurer, billiger, '
+                     'kleiner), сравнения с als, es gibt, порядковые наречия (erstens, zweitens), лексика сельского '
+                     'хозяйства и цен.',
+        'published': '2026-10-15',
+        'added': '2026-10-19',
+        'source': 'Statistisches Bundesamt · agrarheute',
+        'sourceUrl': 'https://www.destatis.de/DE/Presse/Pressemitteilungen/2026/10/PD26_N070_61.html',
+        'blurb': 'Германия собрала в 2026 году около 10,4 миллиона тонн картофеля — почти на четверть меньше, '
+                 'чем годом раньше. Виноваты жаркое сухое лето и меньшие посевные площади. В магазинах '
+                 'картофель подорожал на 11 процентов, а замороженная картошка фри, наоборот, подешевела.',
+        'license': 'Текст — пересказ сообщений Федерального статистического ведомства и agrarheute; '
+                   'фото — Wikimedia Commons',
+        'figs': {
+            'feld': {'w': 640, 'h': 480,
+                     'cap': 'Уборка картофеля в Баварии: комбайн выкапывает клубни, трактор везёт '
+                            'прицеп с урожаем.',
+                     'credit': 'Hubert F · CC BY-SA 2.0 · Wikimedia Commons'},
+            'ernte': {'w': 1200, 'h': 800,
+                      'cap': 'Свежий картофель прямо с поля. В 2026 году с каждого гектара в Германии '
+                             'собрали в среднем на 15 процентов меньше, чем годом раньше.',
+                      'credit': 'Maja Dumat · CC BY 2.0 · Wikimedia Commons'},
+            'pommes': {'w': 900, 'h': 1200,
+                       'cap': 'Картошка фри на рождественской ярмарке. Замороженная фри в магазинах '
+                              'в сентябре стоила меньше, чем год назад.',
+                       'credit': 'Triplec85 · ' + SA4},
+        },
+    },
+})
+
+ORDER = ['kartoffelernte-2026'] + ORDER

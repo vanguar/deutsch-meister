@@ -1,0 +1,556 @@
+{
+  "version": 1,
+  "w": {
+    "aber": "aber",
+    "als": "als",
+    "anderthalbmal": "anderthalbmal",
+    "angebaut": "anbauen",
+    "auch": "auch",
+    "auf": "auf",
+    "august": "August",
+    "ausland": "Ausland",
+    "bauern": "Bauer",
+    "bekamen": "bekommen",
+    "billiger": "billig",
+    "braucht": "brauchen",
+    "bundesamt": "Statistisches Bundesamt",
+    "dafür": "dafür",
+    "damals": "damals",
+    "das": "der/die/das",
+    "den": "der/die/das",
+    "der": "der/die/das",
+    "deshalb": "deshalb",
+    "deutlich": "deutlich (заметно)",
+    "deutschland": "Deutschland",
+    "die": "der/die/das",
+    "diesem": "dieser",
+    "drei": "drei",
+    "durchschnitt": "Durchschnitt",
+    "ein": "ein/eine",
+    "eine": "ein/eine",
+    "einem": "ein/eine",
+    "elf": "elf",
+    "ernte": "Ernte",
+    "erntet": "ernten",
+    "erstens": "erstens",
+    "es": "es",
+    "extrem": "extrem",
+    "fast": "fast",
+    "fläche": "Fläche",
+    "frites": "Pommes frites",
+    "für": "für",
+    "geerntet": "ernten",
+    "geld": "Geld",
+    "gestiegen": "steigen (о ценах)",
+    "geworden": "werden",
+    "gibt": "geben",
+    "gründe": "Grund",
+    "gute": "gut",
+    "haben": "haben",
+    "hatten": "haben",
+    "heiß": "heiß",
+    "hektar": "Hektar",
+    "im": "in",
+    "in": "in",
+    "ins": "in",
+    "ist": "sein",
+    "jahr": "Jahr",
+    "jahren": "Jahr",
+    "jedem": "jeder",
+    "kartoffeln": "Kartoffel",
+    "kleiner": "klein",
+    "kosten": "kosten",
+    "kosteten": "kosten",
+    "kunden": "Kunde",
+    "land": "Land",
+    "landwirte": "Landwirt",
+    "mehr": "mehr",
+    "millionen": "Million",
+    "nachricht": "Nachricht",
+    "nicht": "nicht",
+    "normalerweise": "normalerweise",
+    "pommes": "Pommes frites",
+    "preise": "Preis",
+    "prozent": "Prozent",
+    "rest": "Rest",
+    "schätzt": "schätzen",
+    "sehr": "sehr",
+    "seit": "seit",
+    "selbst": "selbst",
+    "september": "September",
+    "sie": "sie",
+    "sind": "sein",
+    "so": "so",
+    "sogar": "sogar",
+    "sommer": "Sommer",
+    "speisekartoffeln": "Speisekartoffel",
+    "stark": "stark",
+    "statistische": "Statistisches Bundesamt",
+    "statt": "statt",
+    "supermarkt": "Supermarkt",
+    "teurer": "teuer",
+    "tiefgekühlte": "tiefgekühlt",
+    "tonnen": "Tonne",
+    "trocken": "trocken",
+    "um": "um",
+    "und": "und",
+    "verkauft": "verkaufen",
+    "viel": "viel",
+    "viele": "viel",
+    "viertel": "Viertel",
+    "vor": "vor",
+    "vorher": "vorher",
+    "war": "sein",
+    "weniger": "wenig",
+    "werden": "werden",
+    "wuchsen": "wachsen",
+    "zwei": "zwei",
+    "zweitens": "zweitens"
+  },
+  "l": {
+    "aber": {
+      "ru": "но, однако",
+      "pos": "союз"
+    },
+    "als": {
+      "ru": "когда; как; чем",
+      "pos": "союз"
+    },
+    "anbauen": {
+      "ru": "выращивать (растения)",
+      "pos": "гл.",
+      "forms": "baute an · hat angebaut"
+    },
+    "anderthalbmal": {
+      "ru": "в полтора раза",
+      "pos": "нареч.",
+      "note": "anderthalbmal so viele — в полтора раза больше"
+    },
+    "auch": {
+      "ru": "тоже, также; даже",
+      "pos": "частица"
+    },
+    "auf": {
+      "ru": "на, в",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: aufspringen «вскочить», sich aufmachen"
+    },
+    "August": {
+      "ru": "август",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "Ausland": {
+      "ru": "заграница",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null,
+      "note": "ins Ausland — за границу; im Ausland — за границей"
+    },
+    "Bauer": {
+      "ru": "крестьянин",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Bauern",
+      "decl": "n-Deklination: der Bauer / des Bauern / dem Bauern / den Bauern"
+    },
+    "bekommen": {
+      "ru": "получать",
+      "pos": "гл.",
+      "forms": "bekam · hat bekommen"
+    },
+    "billig": {
+      "ru": "дешёвый",
+      "pos": "прил."
+    },
+    "brauchen": {
+      "ru": "нуждаться; годиться",
+      "pos": "гл.",
+      "forms": "brauchte · hat gebraucht",
+      "note": "nicht zu brauchen — никуда не годится"
+    },
+    "dafür": {
+      "ru": "за это, для этого",
+      "pos": "нареч.",
+      "note": "dafür sorgen, dass … — позаботиться, чтобы …"
+    },
+    "damals": {
+      "ru": "тогда, в то время",
+      "pos": "нареч."
+    },
+    "der/die/das": {
+      "ru": "определённый артикль",
+      "pos": "артикль",
+      "note": "Тж. относительное местоимение «который»"
+    },
+    "deshalb": {
+      "ru": "поэтому",
+      "pos": "нареч."
+    },
+    "deutlich (заметно)": {
+      "ru": "заметный, отчётливый",
+      "pos": "прил.",
+      "note": "deutlich weniger — заметно меньше"
+    },
+    "Deutschland": {
+      "ru": "Германия",
+      "pos": "геогр."
+    },
+    "dieser": {
+      "ru": "этот, эта, это",
+      "pos": "мест."
+    },
+    "drei": {
+      "ru": "три",
+      "pos": "числ."
+    },
+    "Durchschnitt": {
+      "ru": "среднее (значение)",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Durchschnitte",
+      "note": "im Durchschnitt — в среднем"
+    },
+    "ein/eine": {
+      "ru": "неопределённый артикль",
+      "pos": "артикль",
+      "note": "einer — «один, некто»"
+    },
+    "elf": {
+      "ru": "одиннадцать",
+      "pos": "числ."
+    },
+    "Ernte": {
+      "ru": "урожай; уборка урожая",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Ernten"
+    },
+    "ernten": {
+      "ru": "собирать урожай",
+      "pos": "гл.",
+      "forms": "erntete · hat geerntet"
+    },
+    "erstens": {
+      "ru": "во-первых",
+      "pos": "нареч."
+    },
+    "es": {
+      "ru": "оно; это",
+      "pos": "мест."
+    },
+    "extrem": {
+      "ru": "чрезвычайно, крайне",
+      "pos": "нареч."
+    },
+    "fast": {
+      "ru": "почти",
+      "pos": "нареч."
+    },
+    "Fläche": {
+      "ru": "поверхность, площадка",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Flächen"
+    },
+    "für": {
+      "ru": "для, за",
+      "pos": "предл."
+    },
+    "geben": {
+      "ru": "давать",
+      "pos": "гл.",
+      "forms": "gab · hat gegeben"
+    },
+    "Geld": {
+      "art": "das",
+      "pl": "die Gelder",
+      "pos": "сущ.",
+      "ru": "деньги"
+    },
+    "Grund": {
+      "ru": "основание, дно; причина",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Gründe",
+      "note": "der Sache auf den Grund kommen — дойти до сути дела"
+    },
+    "gut": {
+      "ru": "хороший, добрый",
+      "pos": "прил.",
+      "forms": "gut · besser · am besten",
+      "note": "besser — лучше"
+    },
+    "haben": {
+      "ru": "иметь; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "hatte · hat gehabt"
+    },
+    "heiß": {
+      "ru": "жаркий, горячий",
+      "pos": "прил."
+    },
+    "Hektar": {
+      "ru": "гектар",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Hektar",
+      "note": "также das Hektar; после числа без окончания: 268.300 Hektar"
+    },
+    "in": {
+      "ru": "в (im = in dem, ins = in das)",
+      "pos": "предл."
+    },
+    "Jahr": {
+      "ru": "год",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Jahre"
+    },
+    "jeder": {
+      "ru": "каждый",
+      "pos": "мест."
+    },
+    "Kartoffel": {
+      "ru": "картофель, картофелина",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Kartoffeln"
+    },
+    "klein": {
+      "ru": "маленький",
+      "pos": "прил."
+    },
+    "kosten": {
+      "ru": "стоить",
+      "pos": "гл.",
+      "forms": "kostete · hat gekostet",
+      "note": "es koste, was es wolle — чего бы это ни стоило"
+    },
+    "Kunde": {
+      "ru": "покупатель, клиент",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Kunden"
+    },
+    "Land": {
+      "ru": "страна; суша; деревня",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Länder"
+    },
+    "Landwirt": {
+      "ru": "фермер, сельский хозяин",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Landwirte"
+    },
+    "mehr": {
+      "ru": "больше",
+      "pos": "нареч.",
+      "note": "В nicht/kein … mehr — больше не. Формально компаратив от viel"
+    },
+    "Million": {
+      "ru": "миллион",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Millionen"
+    },
+    "Nachricht": {
+      "ru": "новость, сообщение",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Nachrichten"
+    },
+    "nicht": {
+      "ru": "не",
+      "pos": "частица"
+    },
+    "normalerweise": {
+      "ru": "обычно",
+      "pos": "нареч."
+    },
+    "Pommes frites": {
+      "ru": "картофель фри",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null,
+      "note": "мн. ч.; разговорно — die Pommes"
+    },
+    "Preis": {
+      "ru": "цена; премия, приз",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Preise"
+    },
+    "Prozent": {
+      "ru": "процент",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Prozente",
+      "note": "после числа не изменяется: 1,3 Prozent"
+    },
+    "Rest": {
+      "ru": "остаток",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Reste"
+    },
+    "schätzen": {
+      "ru": "считать, оценивать",
+      "pos": "гл.",
+      "forms": "schätzte · hat geschätzt",
+      "note": "verloren geschätzt — считавшийся потерянным"
+    },
+    "sehr": {
+      "pos": "нареч.",
+      "ru": "очень"
+    },
+    "sein": {
+      "ru": "быть; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "war · ist gewesen"
+    },
+    "seit": {
+      "ru": "с (какого-то времени)",
+      "pos": "предл."
+    },
+    "selbst": {
+      "ru": "сам; даже",
+      "pos": "мест."
+    },
+    "September": {
+      "ru": "сентябрь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die September"
+    },
+    "sie": {
+      "ru": "она; они; Вы",
+      "pos": "мест."
+    },
+    "so": {
+      "ru": "так; такой; то (в главном предложении)",
+      "pos": "нареч."
+    },
+    "sogar": {
+      "ru": "даже",
+      "pos": "частица"
+    },
+    "Sommer": {
+      "ru": "лето",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Sommer"
+    },
+    "Speisekartoffel": {
+      "ru": "столовый картофель",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Speisekartoffeln",
+      "note": "die Speise — еда, блюдо; картофель для еды, а не для крахмала или корма"
+    },
+    "stark": {
+      "ru": "сильный, крепкий",
+      "pos": "прил."
+    },
+    "Statistisches Bundesamt": {
+      "ru": "Федеральное статистическое ведомство (Destatis, Висбаден)",
+      "pos": "имя собств."
+    },
+    "statt": {
+      "ru": "вместо",
+      "pos": "предлог",
+      "note": "statt der Arbeit — вместо работы (родит.)"
+    },
+    "steigen (о ценах)": {
+      "ru": "расти, повышаться",
+      "pos": "гл.",
+      "forms": "stieg · ist gestiegen",
+      "note": "auf 3 Prozent steigen — вырасти до 3 %"
+    },
+    "Supermarkt": {
+      "ru": "супермаркет",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Supermärkte"
+    },
+    "teuer": {
+      "ru": "дорогой",
+      "pos": "прил.",
+      "forms": "teuer · teurer · am teuersten"
+    },
+    "tiefgekühlt": {
+      "ru": "замороженный (глубокой заморозки)",
+      "pos": "прил."
+    },
+    "Tonne": {
+      "ru": "тонна; бак, бочка",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Tonnen"
+    },
+    "trocken": {
+      "ru": "сухой",
+      "pos": "прил."
+    },
+    "um": {
+      "ru": "вокруг, в (о времени)",
+      "pos": "предл.",
+      "note": "um … zu — чтобы. Тж. отделяемая приставка: sich umsehen «оглядеться»"
+    },
+    "und": {
+      "ru": "и, а",
+      "pos": "союз"
+    },
+    "verkaufen": {
+      "ru": "продавать",
+      "pos": "гл.",
+      "forms": "verkaufte · hat verkauft"
+    },
+    "viel": {
+      "ru": "много, многое",
+      "pos": "мест."
+    },
+    "Viertel": {
+      "ru": "четверть; квартал",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Viertel"
+    },
+    "vor": {
+      "ru": "перед, до; от (страха)",
+      "pos": "предл."
+    },
+    "vorher": {
+      "ru": "прежде, сначала",
+      "pos": "нареч."
+    },
+    "wachsen": {
+      "ru": "расти",
+      "pos": "гл.",
+      "forms": "wuchs · ist gewachsen",
+      "note": "er wächst — с умлаутом в 2-м и 3-м л."
+    },
+    "wenig": {
+      "ru": "мало; немного",
+      "pos": "мест.",
+      "note": "ein wenig — немножко; etwas Weniges — самую малость"
+    },
+    "werden": {
+      "ru": "становиться",
+      "pos": "гл.",
+      "forms": "wurde · ist geworden",
+      "note": "Вспомогательный глагол будущего времени и пассива"
+    },
+    "zwei": {
+      "ru": "два",
+      "pos": "числ."
+    },
+    "zweitens": {
+      "ru": "во-вторых",
+      "pos": "нареч."
+    }
+  }
+}

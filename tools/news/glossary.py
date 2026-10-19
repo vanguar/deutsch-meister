@@ -1944,3 +1944,37 @@ L.update({
     'Volksbank': n('народный банк (кооперативный банк)', 'die', 'die Volksbanken'),
     'Kryptohandel': n('торговля криптовалютой', 'der', None),
 })
+
+W.update({
+    # урожай картофеля 2026
+    'kartoffeln': 'Kartoffel', 'schätzt': 'schätzen', 'ernte': 'Ernte', 'tonnen': 'Tonne', 'bauern': 'Bauer',
+    'geerntet': 'ernten', 'erntet': 'ernten', 'gründe': 'Grund', 'erstens': 'erstens', 'landwirte': 'Landwirt',
+    'angebaut': 'anbauen', 'trocken': 'trocken', 'hektar': 'Hektar', 'supermarkt': 'Supermarkt',
+    'speisekartoffeln': 'Speisekartoffel', 'gestiegen': 'steigen (о ценах)', 'nachricht': 'Nachricht',
+    'tiefgekühlte': 'tiefgekühlt', 'pommes': 'Pommes frites', 'frites': 'Pommes frites',
+    'anderthalbmal': 'anderthalbmal', 'rest': 'Rest', 'ausland': 'Ausland',
+})
+
+W_ART.update({
+    'kartoffelernte-2026': {'heiß': 'heiß', 'statt': 'statt', 'preise': 'Preis', 'deutlich': 'deutlich (заметно)'},
+})
+
+L.update({
+    # урожай картофеля 2026
+    'Kartoffel': n('картофель, картофелина', 'die', 'die Kartoffeln'),
+    'Ernte': n('урожай; уборка урожая', 'die', 'die Ernten'),
+    'ernten': v('собирать урожай', 'erntete · hat geerntet'),
+    'erstens': adv('во-первых'),
+    'Landwirt': n('фермер, сельский хозяин', 'der', 'die Landwirte'),
+    'anbauen': v('выращивать (растения)', 'baute an · hat angebaut'),
+    'Hektar': n('гектар', 'der', 'die Hektar', note='также das Hektar; после числа без окончания: 268.300 Hektar'),
+    'Supermarkt': n('супермаркет', 'der', 'die Supermärkte'),
+    'Speisekartoffel': n('столовый картофель', 'die', 'die Speisekartoffeln',
+                         note='die Speise — еда, блюдо; картофель для еды, а не для крахмала или корма'),
+    'Nachricht': n('новость, сообщение', 'die', 'die Nachrichten'),
+    'tiefgekühlt': a('замороженный (глубокой заморозки)'),
+    'Pommes frites': n('картофель фри', 'die', None, note='мн. ч.; разговорно — die Pommes'),
+    'anderthalbmal': adv('в полтора раза', note='anderthalbmal so viele — в полтора раза больше'),
+    'Ausland': n('заграница', 'das', None, note='ins Ausland — за границу; im Ausland — за границей'),
+    'deutlich (заметно)': a('заметный, отчётливый', note='deutlich weniger — заметно меньше'),
+})
