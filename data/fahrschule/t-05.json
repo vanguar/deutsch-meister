@@ -1,0 +1,764 @@
+{
+ "id": "t-05",
+ "kind": "theory",
+ "emoji": "🅿️",
+ "level": "A2–B1",
+ "title": "Halten und Parken",
+ "titleTr": "Остановка и стоянка",
+ "intro": "Чем остановка отличается от стоянки, где нельзя ни то ни другое, как пользоваться диском парковки и парковочным билетом — и что будет, если поставить машину неправильно.",
+ "sections": [
+  {
+   "title": "Остановка или стоянка?",
+   "lines": [
+    {
+     "de": "Wer länger als drei Minuten hält oder das Auto verlässt, parkt.",
+     "tr": "Кто стоит дольше трёх минут или выходит из машины, тот паркуется."
+    },
+    {
+     "de": "Wenn jemand nur kurz aussteigt, ist das Halten und nicht Parken.",
+     "tr": "Если кто-то только ненадолго выходит, это остановка, а не стоянка."
+    }
+   ]
+  },
+  {
+   "title": "Где нельзя останавливаться",
+   "lines": [
+    {
+     "de": "Absolutes Haltverbot: Hier dürfen Sie gar nicht halten.",
+     "tr": "Остановка запрещена: здесь нельзя останавливаться вообще.",
+     "sign": "z283"
+    },
+    {
+     "de": "Eingeschränktes Haltverbot: Sie dürfen höchstens drei Minuten halten.",
+     "tr": "Стоянка запрещена: остановиться можно не больше чем на три минуты.",
+     "sign": "z286"
+    },
+    {
+     "de": "Auf einem Zebrastreifen und bis 5 Meter davor dürfen Sie nicht halten.",
+     "tr": "На «зебре» и ближе 5 метров перед ней останавливаться нельзя."
+    },
+    {
+     "de": "An engen und unübersichtlichen Stellen und in scharfen Kurven ist Halten verboten.",
+     "tr": "В узких местах, где плохо видно дорогу, и на крутых поворотах останавливаться запрещено."
+    }
+   ]
+  },
+  {
+   "title": "Где нельзя парковаться",
+   "lines": [
+    {
+     "de": "Bis 5 Meter vor und hinter Kreuzungen und Einmündungen dürfen Sie nicht parken.",
+     "tr": "Ближе 5 метров до перекрёстков и примыканий и после них парковаться нельзя."
+    },
+    {
+     "de": "Bis 15 Meter vor und hinter einem Haltestellenschild ist Parken verboten.",
+     "tr": "Ближе 15 метров до знака остановки и после него парковка запрещена.",
+     "sign": "z224"
+    },
+    {
+     "de": "Vor Einfahrten und vor abgesenkten Bordsteinen dürfen Sie nicht parken.",
+     "tr": "Перед въездами и перед опущенными бордюрами парковаться нельзя."
+    },
+    {
+     "de": "In zweiter Reihe parken ist verboten.",
+     "tr": "Парковаться во втором ряду запрещено."
+    }
+   ]
+  },
+  {
+   "title": "Где и как парковаться",
+   "lines": [
+    {
+     "de": "Dieses Schild zeigt einen Parkplatz.",
+     "tr": "Этот знак обозначает место для стоянки.",
+     "sign": "z314"
+    },
+    {
+     "de": "Parken Sie am rechten Fahrbahnrand und in Fahrtrichtung.",
+     "tr": "Паркуйтесь у правого края проезжей части и по направлению движения."
+    },
+    {
+     "de": "Auf dem Gehweg dürfen Sie nur parken, wenn dieses Schild es erlaubt.",
+     "tr": "На тротуаре можно парковаться, только если это разрешает такой знак.",
+     "sign": "z315"
+    }
+   ]
+  },
+  {
+   "title": "Диск парковки и билет",
+   "lines": [
+    {
+     "de": "Mit der Parkscheibe stellen Sie Ihre Ankunftszeit ein.",
+     "tr": "На диске парковки вы выставляете время прибытия.",
+     "o": {
+      "ein": "ein>einstellen",
+      "stellen": "stellen>einstellen"
+     },
+     "sign": "z318"
+    },
+    {
+     "de": "Die Zeit wird auf die nächste halbe Stunde aufgerundet.",
+     "tr": "Время округляют вверх до следующего получаса."
+    },
+    {
+     "de": "Am Parkscheinautomaten bezahlen Sie und legen den Parkschein gut sichtbar hinter die Windschutzscheibe.",
+     "tr": "В паркомате вы платите и кладёте парковочный билет на видное место за лобовым стеклом."
+    },
+    {
+     "de": "Wer falsch parkt, zahlt ein Bußgeld oder wird abgeschleppt.",
+     "tr": "Кто паркуется неправильно, платит штраф, или машину увозит эвакуатор."
+    }
+   ]
+  }
+ ],
+ "quiz": [
+  {
+   "sign": "z314",
+   "wrong": [
+    "z315",
+    "z224"
+   ]
+  },
+  {
+   "sign": "z315",
+   "wrong": [
+    "z314",
+    "z283"
+   ]
+  },
+  {
+   "sign": "z318",
+   "wrong": [
+    "z314",
+    "z286"
+   ]
+  },
+  {
+   "sign": "z224",
+   "wrong": [
+    "z350",
+    "z314"
+   ]
+  },
+  {
+   "sign": "z286",
+   "wrong": [
+    "z283",
+    "z318"
+   ]
+  }
+ ],
+ "quizQuestion": {
+  "de": "Was bedeutet dieses Schild?",
+  "tr": "Что означает этот знак?"
+ },
+ "signs": {
+  "z224": {
+   "de": "Haltestelle",
+   "tr": "Остановка (автобуса, трамвая)",
+   "src": "data/fahrschule/signs/z224.svg",
+   "n": "224",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_224_-_Haltestelle,_StVO_2017.svg"
+  },
+  "z283": {
+   "de": "Absolutes Haltverbot",
+   "tr": "Остановка запрещена",
+   "src": "data/fahrschule/signs/z283.svg",
+   "n": "283",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_283_-_Absolutes_Haltverbot,_StVO_2017.svg"
+  },
+  "z286": {
+   "de": "Eingeschränktes Haltverbot",
+   "tr": "Стоянка запрещена (остановка до трёх минут)",
+   "src": "data/fahrschule/signs/z286.svg",
+   "n": "286",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_286_-_Eingeschr%C3%A4nktes_Halteverbot,_StVO_1970.svg"
+  },
+  "z314": {
+   "de": "Parken",
+   "tr": "Место для стоянки",
+   "src": "data/fahrschule/signs/z314.svg",
+   "n": "314",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_314_-_Parken,_StVO_2017.svg"
+  },
+  "z315": {
+   "de": "Parken auf Gehwegen",
+   "tr": "Стоянка на тротуаре разрешена",
+   "src": "data/fahrschule/signs/z315.svg",
+   "n": "315",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_315_-_Parken_auf_Gehwegen,_StVO_1970.svg"
+  },
+  "z318": {
+   "de": "Parkscheibe",
+   "tr": "Диск парковки",
+   "src": "data/fahrschule/signs/z318.svg",
+   "n": "318",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_318_-_Parkscheibe,_StVO_2013.svg"
+  },
+  "z350": {
+   "de": "Fußgängerüberweg",
+   "tr": "Пешеходный переход",
+   "src": "data/fahrschule/signs/z350.svg",
+   "n": "350",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_350-10_-_Fu%C3%9Fg%C3%A4nger%C3%BCberweg_(rechts),_StVO_1992.svg"
+  }
+ },
+ "gloss": {
+  "w": {
+   "abgeschleppt": "abschleppen",
+   "abgesenkten": "abgesenkt",
+   "absolutes": "absolut",
+   "als": "als",
+   "am": "an",
+   "an": "an",
+   "ankunftszeit": "Ankunftszeit",
+   "auf": "auf",
+   "aufgerundet": "aufrunden",
+   "aussteigt": "aussteigen",
+   "auto": "Auto",
+   "bedeutet": "bedeuten",
+   "bezahlen": "bezahlen",
+   "bis": "bis",
+   "bordsteinen": "Bordstein",
+   "bußgeld": "Bußgeld",
+   "das": "der/die/das",
+   "davor": "davor",
+   "dem": "der/die/das",
+   "den": "der/die/das",
+   "der": "der/die/das",
+   "die": "der/die/das",
+   "dieses": "dieser",
+   "drei": "drei",
+   "dürfen": "dürfen",
+   "ein": "ein/eine",
+   "ein>einstellen": "einstellen",
+   "einem": "ein/eine",
+   "einen": "ein/eine",
+   "einfahrten": "Einfahrt",
+   "eingeschränktes": "eingeschränkt",
+   "einmündungen": "Einmündung",
+   "engen": "eng",
+   "erlaubt": "erlauben",
+   "es": "es",
+   "fahrbahnrand": "Fahrbahnrand",
+   "fahrtrichtung": "Fahrtrichtung",
+   "falsch": "falsch",
+   "fußgängerüberweg": "Fußgängerüberweg",
+   "gar": "gar",
+   "gehweg": "Gehweg",
+   "gehwegen": "Gehweg",
+   "gut": "gut",
+   "halbe": "halb",
+   "halten": "halten",
+   "haltestelle": "Haltestelle",
+   "haltestellenschild": "Haltestellenschild",
+   "haltverbot": "Haltverbot",
+   "hier": "hier",
+   "hinter": "hinter",
+   "hält": "halten",
+   "höchstens": "höchstens",
+   "ihre": "Ihr",
+   "in": "in",
+   "ist": "sein",
+   "jemand": "jemand",
+   "kreuzungen": "Kreuzung",
+   "kurven": "Kurve",
+   "kurz": "kurz",
+   "legen": "legen",
+   "länger": "lang",
+   "meter": "Meter",
+   "minuten": "Minute",
+   "mit": "mit",
+   "nicht": "nicht",
+   "nur": "nur",
+   "nächste": "nächste",
+   "oder": "oder",
+   "parken": "parken",
+   "parkplatz": "Parkplatz",
+   "parkscheibe": "Parkscheibe",
+   "parkschein": "Parkschein",
+   "parkscheinautomaten": "Parkscheinautomat",
+   "parkt": "parken",
+   "rechten": "recht",
+   "reihe": "Reihe",
+   "scharfen": "scharf",
+   "schild": "Schild",
+   "sichtbar": "sichtbar",
+   "sie": "Sie",
+   "stellen": "Stelle",
+   "stellen>einstellen": "einstellen",
+   "stunde": "Stunde",
+   "und": "und",
+   "unübersichtlichen": "unübersichtlich",
+   "verboten": "verbieten",
+   "verlässt": "verlassen",
+   "vor": "vor",
+   "was": "was",
+   "wenn": "wenn",
+   "wer": "wer",
+   "windschutzscheibe": "Windschutzscheibe",
+   "wird": "werden",
+   "zahlt": "zahlen",
+   "zebrastreifen": "Zebrastreifen",
+   "zeigt": "zeigen",
+   "zeit": "Zeit",
+   "zweiter": "zweite"
+  },
+  "l": {
+   "Ankunftszeit": {
+    "ru": "время прибытия",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Ankunftszeiten"
+   },
+   "Auto": {
+    "ru": "машина, автомобиль",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Autos"
+   },
+   "Bordstein": {
+    "ru": "бордюр",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Bordsteine"
+   },
+   "Bußgeld": {
+    "ru": "штраф",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Bußgelder"
+   },
+   "Einfahrt": {
+    "ru": "въезд",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Einfahrten"
+   },
+   "Einmündung": {
+    "ru": "примыкание (дороги), Т-образный перекрёсток",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Einmündungen"
+   },
+   "Fahrbahnrand": {
+    "ru": "край проезжей части",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Fahrbahnränder"
+   },
+   "Fahrtrichtung": {
+    "ru": "направление движения",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Fahrtrichtungen"
+   },
+   "Fußgängerüberweg": {
+    "ru": "пешеходный переход",
+    "pos": "сущ.",
+    "note": "в разговоре: der Zebrastreifen",
+    "art": "der",
+    "pl": "die Fußgängerüberwege"
+   },
+   "Gehweg": {
+    "ru": "тротуар",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Gehwege"
+   },
+   "Haltestelle": {
+    "ru": "остановка (автобуса, трамвая)",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Haltestellen"
+   },
+   "Haltestellenschild": {
+    "ru": "знак остановки",
+    "pos": "сущ.",
+    "note": "зелёно-жёлтый знак с буквой H (Zeichen 224)",
+    "art": "das",
+    "pl": "die Haltestellenschilder"
+   },
+   "Haltverbot": {
+    "ru": "запрет остановки",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Haltverbote"
+   },
+   "Ihr": {
+    "ru": "ваш (вежливо)",
+    "pos": "мест."
+   },
+   "Kreuzung": {
+    "ru": "перекрёсток",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Kreuzungen"
+   },
+   "Kurve": {
+    "ru": "поворот, изгиб дороги",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Kurven"
+   },
+   "Meter": {
+    "ru": "метр",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Meter"
+   },
+   "Minute": {
+    "ru": "минута",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Minuten"
+   },
+   "Parkplatz": {
+    "ru": "парковка, место для стоянки",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Parkplätze"
+   },
+   "Parkscheibe": {
+    "ru": "диск парковки (Parkscheibe)",
+    "pos": "сущ.",
+    "note": "синий диск за лобовым стеклом: выставляют время прибытия, округлённое до следующего получаса",
+    "art": "die",
+    "pl": "die Parkscheiben"
+   },
+   "Parkschein": {
+    "ru": "парковочный билет",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Parkscheine"
+   },
+   "Parkscheinautomat": {
+    "ru": "паркомат",
+    "pos": "сущ.",
+    "note": "n-склонение: den/dem/des Parkscheinautomaten",
+    "art": "der",
+    "pl": "die Parkscheinautomaten"
+   },
+   "Reihe": {
+    "ru": "ряд",
+    "pos": "сущ.",
+    "note": "in zweiter Reihe parken — парковаться во втором ряду",
+    "art": "die",
+    "pl": "die Reihen"
+   },
+   "Schild": {
+    "ru": "знак, табличка",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Schilder"
+   },
+   "Sie": {
+    "ru": "вы (вежливо)",
+    "pos": "мест.",
+    "note": "Ihnen — вам (дательный): vor Ihnen — перед вами"
+   },
+   "Stelle": {
+    "ru": "место, участок",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Stellen"
+   },
+   "Stunde": {
+    "ru": "час; урок",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Stunden"
+   },
+   "Windschutzscheibe": {
+    "ru": "лобовое стекло",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Windschutzscheiben"
+   },
+   "Zebrastreifen": {
+    "ru": "«зебра», пешеходный переход",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Zebrastreifen"
+   },
+   "Zeit": {
+    "ru": "время",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Zeiten"
+   },
+   "abgesenkt": {
+    "ru": "опущенный, пониженный",
+    "pos": "прил.",
+    "note": "abgesenkter Bordstein — съезд для колясок, инвалидных кресел, велосипедов"
+   },
+   "abschleppen": {
+    "ru": "эвакуировать (машину)",
+    "pos": "гл.",
+    "note": "wird abgeschleppt — машину увозит эвакуатор; платит владелец",
+    "forms": "schleppte ab · hat abgeschleppt"
+   },
+   "absolut": {
+    "ru": "абсолютный, полный",
+    "pos": "прил."
+   },
+   "als": {
+    "ru": "чем (при сравнении); как",
+    "pos": "союз"
+   },
+   "an": {
+    "ru": "у, на, при",
+    "pos": "предл.",
+    "note": "am = an dem; an der Kreuzung — на перекрёстке"
+   },
+   "auf": {
+    "ru": "на, по",
+    "pos": "предл.",
+    "note": "auf der Straße — на дороге; achten auf — следить за"
+   },
+   "aufrunden": {
+    "ru": "округлять в большую сторону",
+    "pos": "гл.",
+    "forms": "rundete auf · hat aufgerundet"
+   },
+   "aussteigen": {
+    "ru": "выходить (из машины)",
+    "pos": "гл.",
+    "forms": "stieg aus · ist ausgestiegen"
+   },
+   "bedeuten": {
+    "ru": "означать",
+    "pos": "гл.",
+    "forms": "bedeutete · hat bedeutet"
+   },
+   "bezahlen": {
+    "ru": "платить, оплачивать",
+    "pos": "гл.",
+    "forms": "bezahlte · hat bezahlt"
+   },
+   "bis": {
+    "ru": "пока не; до",
+    "pos": "союз"
+   },
+   "davor": {
+    "ru": "перед этим, перед ним",
+    "pos": "нареч."
+   },
+   "der/die/das": {
+    "ru": "определённый артикль",
+    "pos": "артикль",
+    "note": "der — м. р., die — ж. р. и мн. ч., das — ср. р.; den — м. р. в винительном, dem — м. и ср. р. в дательном; das ещё значит «это»"
+   },
+   "dieser": {
+    "ru": "этот, эта, это",
+    "pos": "мест."
+   },
+   "drei": {
+    "ru": "три",
+    "pos": "числ."
+   },
+   "dürfen": {
+    "ru": "мочь, иметь право",
+    "pos": "гл.",
+    "forms": "durfte · hat gedurft"
+   },
+   "ein/eine": {
+    "ru": "неопределённый артикль; один",
+    "pos": "артикль",
+    "note": "an einer Kreuzung — на (каком-то) перекрёстке"
+   },
+   "eingeschränkt": {
+    "ru": "ограниченный",
+    "pos": "прил."
+   },
+   "einstellen": {
+    "ru": "регулировать, настраивать",
+    "pos": "гл.",
+    "note": "отделяемая приставка: Stellen Sie … ein",
+    "forms": "stellte ein · hat eingestellt"
+   },
+   "eng": {
+    "ru": "узкий, тесный",
+    "pos": "прил."
+   },
+   "erlauben": {
+    "ru": "разрешать",
+    "pos": "гл.",
+    "forms": "erlaubte · hat erlaubt"
+   },
+   "es": {
+    "ru": "оно; это",
+    "pos": "мест.",
+    "note": "здесь — о машине: das Auto"
+   },
+   "falsch": {
+    "ru": "неправильный; неправильно",
+    "pos": "прил."
+   },
+   "gar": {
+    "ru": "совсем, вовсе",
+    "pos": "частица",
+    "note": "gar nicht — вообще не"
+   },
+   "gut": {
+    "ru": "хороший; хорошо",
+    "pos": "прил.",
+    "note": "am besten — лучше всего",
+    "forms": "gut · besser · am besten"
+   },
+   "halb": {
+    "ru": "половина, наполовину",
+    "pos": "прил.",
+    "note": "halb so lang — вдвое короче; halber Tacho — половина спидометра"
+   },
+   "halten": {
+    "ru": "останавливаться (ненадолго); держать",
+    "pos": "гл.",
+    "forms": "hielt · hat gehalten"
+   },
+   "hier": {
+    "ru": "здесь",
+    "pos": "нареч."
+   },
+   "hinter": {
+    "ru": "за, позади",
+    "pos": "предл."
+   },
+   "höchstens": {
+    "ru": "самое большее, не больше",
+    "pos": "нареч."
+   },
+   "in": {
+    "ru": "в",
+    "pos": "предл.",
+    "note": "im = in dem: im Bereich — в зоне"
+   },
+   "jemand": {
+    "ru": "кто-то",
+    "pos": "мест."
+   },
+   "kurz": {
+    "ru": "короткий; ненадолго",
+    "pos": "прил."
+   },
+   "lang": {
+    "ru": "длинный",
+    "pos": "прил.",
+    "note": "Wie lang …? — Какой длины …?",
+    "forms": "lang · länger · am längsten"
+   },
+   "legen": {
+    "ru": "класть",
+    "pos": "гл.",
+    "forms": "legte · hat gelegt"
+   },
+   "mit": {
+    "ru": "с",
+    "pos": "предл."
+   },
+   "nicht": {
+    "ru": "не",
+    "pos": "частица"
+   },
+   "nur": {
+    "ru": "только",
+    "pos": "нареч."
+   },
+   "nächste": {
+    "ru": "ближайший, следующий",
+    "pos": "прил."
+   },
+   "oder": {
+    "ru": "или",
+    "pos": "союз",
+    "note": "…, oder? — …, правда? / да?"
+   },
+   "parken": {
+    "ru": "парковаться, стоять (о машине)",
+    "pos": "гл.",
+    "note": "паркует тот, кто стоит дольше 3 минут или выходит из машины",
+    "forms": "parkte · hat geparkt"
+   },
+   "recht": {
+    "ru": "правый",
+    "pos": "прил."
+   },
+   "scharf": {
+    "ru": "крутой (поворот); острый",
+    "pos": "прил."
+   },
+   "sein": {
+    "ru": "быть",
+    "pos": "гл.",
+    "forms": "war · ist gewesen"
+   },
+   "sichtbar": {
+    "ru": "видимый, заметный",
+    "pos": "прил."
+   },
+   "und": {
+    "ru": "и",
+    "pos": "союз"
+   },
+   "unübersichtlich": {
+    "ru": "с плохим обзором",
+    "pos": "прил."
+   },
+   "verbieten": {
+    "ru": "запрещать",
+    "pos": "гл.",
+    "forms": "verbot · hat verboten"
+   },
+   "verlassen": {
+    "ru": "покидать, выезжать из",
+    "pos": "гл.",
+    "forms": "verließ · hat verlassen"
+   },
+   "vor": {
+    "ru": "перед",
+    "pos": "предл.",
+    "note": "rechts vor links — правый перед левым"
+   },
+   "was": {
+    "ru": "что",
+    "pos": "мест."
+   },
+   "wenn": {
+    "ru": "если; когда",
+    "pos": "союз",
+    "note": "auch wenn — даже если"
+   },
+   "wer": {
+    "ru": "кто",
+    "pos": "мест."
+   },
+   "werden": {
+    "ru": "становиться",
+    "pos": "гл.",
+    "note": "die Ampel wird gelb — светофор переключается на жёлтый",
+    "forms": "wurde · ist geworden"
+   },
+   "zahlen": {
+    "ru": "платить",
+    "pos": "гл.",
+    "forms": "zahlte · hat gezahlt"
+   },
+   "zeigen": {
+    "ru": "показывать",
+    "pos": "гл.",
+    "forms": "zeigte · hat gezeigt"
+   },
+   "zweite": {
+    "ru": "второй",
+    "pos": "числ."
+   }
+  }
+ }
+}

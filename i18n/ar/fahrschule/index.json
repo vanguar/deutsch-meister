@@ -50,6 +50,7 @@
    "title": "Halten und Parken",
    "titleTr": "التوقف والركن",
    "units": [
+    "t-05",
     "r-05"
    ]
   }
@@ -162,6 +163,15 @@
    "title": "Überholen und Spurwechsel",
    "titleTr": "التجاوز وتغيير المسار",
    "count": 5
+  },
+  {
+   "id": "t-05",
+   "kind": "theory",
+   "emoji": "🅿️",
+   "level": "A2–B1",
+   "title": "Halten und Parken",
+   "titleTr": "التوقف والركن",
+   "count": 17
   },
   {
    "id": "r-05",

@@ -50,6 +50,7 @@
    "title": "Halten und Parken",
    "titleTr": "Зупинка і стоянка",
    "units": [
+    "t-05",
     "r-05"
    ]
   }
@@ -162,6 +163,15 @@
    "title": "Überholen und Spurwechsel",
    "titleTr": "Обгін і перестроювання",
    "count": 5
+  },
+  {
+   "id": "t-05",
+   "kind": "theory",
+   "emoji": "🅿️",
+   "level": "A2–B1",
+   "title": "Halten und Parken",
+   "titleTr": "Зупинка і стоянка",
+   "count": 17
   },
   {
    "id": "r-05",
