@@ -1,0 +1,569 @@
+{
+ "id": "p-04",
+ "kind": "dialog",
+ "emoji": "🚑",
+ "level": "A2–B1",
+ "title": "Auf der Autobahn",
+ "titleTr": "На автобані",
+ "intro": "Андрій уперше на автобані: розгін, правило правого ряду, обгін і коридор для швидкої в заторі.",
+ "speakers": {
+  "A": {
+   "name": "Fahrlehrerin",
+   "g": "f"
+  },
+  "B": {
+   "name": "Andrij",
+   "g": "m"
+  }
+ },
+ "lines": [
+  {
+   "de": "Gleich fahren wir auf die Autobahn. Auf dem Beschleunigungsstreifen beschleunigen Sie kräftig.",
+   "tr": "Зараз ми виїжджаємо на автобан. На смузі розгону добре розганяйтеся.",
+   "s": "A"
+  },
+  {
+   "de": "Ich blinke links, schaue in den Spiegel und mache den Schulterblick.",
+   "tr": "Вмикаю лівий поворотник, дивлюся в дзеркало й озираюся через плече.",
+   "s": "B"
+  },
+  {
+   "de": "Gut. Jetzt fahren Sie rechts, das ist das Rechtsfahrgebot.",
+   "tr": "Добре. Тепер тримайтеся правої смуги — це правило правого ряду.",
+   "s": "A"
+  },
+  {
+   "de": "Vor uns fährt ein langsamer Lkw. Darf ich ihn überholen?",
+   "tr": "Перед нами повільна вантажівка. Можна її обігнати?",
+   "s": "B"
+  },
+  {
+   "de": "Ja, die linke Spur ist frei. Denken Sie an Spiegel, Blinker und Schulterblick.",
+   "tr": "Так, ліва смуга вільна. Пам'ятайте: дзеркало, поворотник, погляд через плече.",
+   "s": "A"
+  },
+  {
+   "de": "Ich habe überholt. Jetzt blinke ich rechts und fahre zurück auf die rechte Spur.",
+   "tr": "Я обігнав. Тепер вмикаю правий поворотник і повертаюся в праву смугу.",
+   "o": {
+    "fahre": "fahre>zurückfahren",
+    "zurück": "zurück>zurückfahren"
+   },
+   "s": "B"
+  },
+  {
+   "de": "Sehr gut. Achtung, vorne bremsen alle. Da ist ein Stau.",
+   "tr": "Дуже добре. Увага, попереду всі гальмують. Там затор.",
+   "s": "A"
+  },
+  {
+   "de": "Was muss ich jetzt machen?",
+   "tr": "Що мені зараз робити?",
+   "s": "B"
+  },
+  {
+   "de": "Bilden Sie sofort eine Rettungsgasse. Wir sind auf der linken Spur, also fahren wir ganz nach links.",
+   "tr": "Одразу звільніть коридор для рятувальників. Ми в лівій смузі, тож притискаємося ліворуч.",
+   "s": "A"
+  },
+  {
+   "de": "Und die Autos auf der mittleren und rechten Spur fahren nach rechts, richtig?",
+   "tr": "А машини в середній і правій смузі відходять праворуч, так?",
+   "s": "B"
+  },
+  {
+   "de": "Genau. Hören Sie? Da kommt schon ein Krankenwagen.",
+   "tr": "Саме так. Чуєте? Ось уже їде швидка.",
+   "s": "A"
+  },
+  {
+   "de": "Ich bleibe stehen, bis er vorbei ist.",
+   "tr": "Я стою, поки вона не проїде.",
+   "o": {
+    "bleibe": "bleibe>stehen bleiben",
+    "stehen": "stehen>stehen bleiben"
+   },
+   "s": "B"
+  },
+  {
+   "de": "Richtig. Und lassen Sie die Gasse frei, bis der Stau vorbei ist.",
+   "tr": "Правильно. І тримайте коридор вільним, поки затор не розсмокчеться.",
+   "o": {
+    "frei": "frei>frei lassen",
+    "lassen": "lassen>frei lassen"
+   },
+   "s": "A"
+  },
+  {
+   "de": "Der Verkehr fährt wieder. Das war spannend!",
+   "tr": "Рух знову пішов. Це було хвилююче!",
+   "s": "B"
+  },
+  {
+   "de": "Sie haben alles richtig gemacht. Bis zum nächsten Mal!",
+   "tr": "Ви все зробили правильно. До наступного разу!",
+   "s": "A"
+  }
+ ],
+ "signs": {},
+ "gloss": {
+  "w": {
+   "achtung": "Achtung",
+   "alle": "alle",
+   "alles": "alle",
+   "also": "also",
+   "an": "an",
+   "auf": "auf",
+   "autobahn": "Autobahn",
+   "autos": "Auto",
+   "beschleunigen": "beschleunigen",
+   "beschleunigungsstreifen": "Beschleunigungsstreifen",
+   "bilden": "bilden",
+   "bis": "bis",
+   "bleibe>stehen bleiben": "stehen bleiben",
+   "blinke": "blinken",
+   "blinker": "Blinker",
+   "bremsen": "bremsen",
+   "da": "da",
+   "darf": "dürfen",
+   "das": "der/die/das",
+   "dem": "der/die/das",
+   "den": "der/die/das",
+   "denken": "denken",
+   "der": "der/die/das",
+   "die": "der/die/das",
+   "ein": "ein/eine",
+   "eine": "ein/eine",
+   "er": "er",
+   "fahre>zurückfahren": "zurückfahren",
+   "fahren": "fahren",
+   "frei": "frei",
+   "frei>frei lassen": "frei lassen",
+   "fährt": "fahren",
+   "ganz": "ganz",
+   "gasse": "Gasse",
+   "gemacht": "machen",
+   "genau": "genau",
+   "gleich": "gleich",
+   "gut": "gut",
+   "habe": "haben",
+   "haben": "haben",
+   "hören": "hören",
+   "ich": "ich",
+   "ihn": "er",
+   "in": "in",
+   "ist": "sein",
+   "ja": "ja",
+   "jetzt": "jetzt",
+   "kommt": "kommen",
+   "krankenwagen": "Krankenwagen",
+   "kräftig": "kräftig",
+   "langsamer": "langsam",
+   "lassen>frei lassen": "frei lassen",
+   "linke": "link",
+   "linken": "link",
+   "links": "links",
+   "lkw": "Lkw",
+   "mache": "machen",
+   "machen": "machen",
+   "mal": "mal",
+   "mittleren": "mittler",
+   "muss": "müssen",
+   "nach": "nach",
+   "nächsten": "nächste",
+   "rechte": "recht",
+   "rechten": "recht",
+   "rechts": "rechts",
+   "rechtsfahrgebot": "Rechtsfahrgebot",
+   "rettungsgasse": "Rettungsgasse",
+   "richtig": "richtig",
+   "schaue": "schauen",
+   "schon": "schon",
+   "schulterblick": "Schulterblick",
+   "sehr": "sehr",
+   "sie": "Sie",
+   "sind": "sein",
+   "sofort": "sofort",
+   "spannend": "spannend",
+   "spiegel": "Spiegel",
+   "spur": "Spur",
+   "stau": "Stau",
+   "stehen>stehen bleiben": "stehen bleiben",
+   "und": "und",
+   "uns": "wir",
+   "verkehr": "Verkehr",
+   "vor": "vor",
+   "vorbei": "vorbei",
+   "vorne": "vorne",
+   "war": "sein",
+   "was": "was",
+   "wieder": "wieder",
+   "wir": "wir",
+   "zum": "zu",
+   "zurück>zurückfahren": "zurückfahren",
+   "überholen": "überholen",
+   "überholt": "überholen"
+  },
+  "l": {
+   "Achtung": {
+    "ru": "увага!",
+    "pos": "ім.",
+    "decl": "die Achtung · мн. немає"
+   },
+   "Auto": {
+    "ru": "машина, автомобіль",
+    "pos": "ім.",
+    "decl": "das Auto · мн.: die Autos"
+   },
+   "Autobahn": {
+    "ru": "автобан, автомагістраль",
+    "pos": "ім.",
+    "decl": "die Autobahn · мн.: die Autobahnen"
+   },
+   "Beschleunigungsstreifen": {
+    "ru": "смуга розгону",
+    "pos": "ім.",
+    "note": "на ній розганяються до швидкості потоку й лише потім перестроюються",
+    "decl": "der Beschleunigungsstreifen · мн.: die Beschleunigungsstreifen"
+   },
+   "Blinker": {
+    "ru": "поворотник",
+    "pos": "ім.",
+    "decl": "der Blinker · мн.: die Blinker"
+   },
+   "Gasse": {
+    "ru": "прохід, коридор; провулок",
+    "pos": "ім.",
+    "decl": "die Gasse · мн.: die Gassen"
+   },
+   "Krankenwagen": {
+    "ru": "машина швидкої допомоги",
+    "pos": "ім.",
+    "decl": "der Krankenwagen · мн.: die Krankenwagen"
+   },
+   "Lkw": {
+    "ru": "вантажівка",
+    "pos": "ім.",
+    "note": "скорочення від der Lastkraftwagen",
+    "decl": "der Lkw · мн.: die Lkw"
+   },
+   "Rechtsfahrgebot": {
+    "ru": "правило правого ряду",
+    "pos": "ім.",
+    "note": "триматися якомога правіше; на автобані обганяти ліворуч і повертатися праворуч",
+    "decl": "das Rechtsfahrgebot · мн. немає"
+   },
+   "Rettungsgasse": {
+    "ru": "коридор для екстрених служб",
+    "pos": "ім.",
+    "note": "ліва смуга — ліворуч, усі інші — праворуч; утворити одразу, щойно рух зупинився",
+    "decl": "die Rettungsgasse · мн.: die Rettungsgassen"
+   },
+   "Schulterblick": {
+    "ru": "погляд через плече",
+    "pos": "ім.",
+    "note": "так перевіряють «мертву зону» перед стартом і поворотом",
+    "decl": "der Schulterblick · мн.: die Schulterblicke"
+   },
+   "Sie": {
+    "ru": "ви (ввічливо)",
+    "pos": "займ.",
+    "note": "Ihnen — вам (давальний): vor Ihnen — перед вами"
+   },
+   "Spiegel": {
+    "ru": "дзеркало",
+    "pos": "ім.",
+    "decl": "der Spiegel · мн.: die Spiegel"
+   },
+   "Spur": {
+    "ru": "смуга (руху)",
+    "pos": "ім.",
+    "decl": "die Spur · мн.: die Spuren"
+   },
+   "Stau": {
+    "ru": "затор, корок",
+    "pos": "ім.",
+    "decl": "der Stau · мн.: die Staus"
+   },
+   "Verkehr": {
+    "ru": "рух, транспорт",
+    "pos": "ім.",
+    "decl": "der Verkehr · мн. немає"
+   },
+   "alle": {
+    "ru": "всі; все",
+    "pos": "займ."
+   },
+   "also": {
+    "ru": "отже, тож",
+    "pos": "присл."
+   },
+   "an": {
+    "ru": "біля, на, при",
+    "pos": "прийм.",
+    "note": "am = an dem; an der Kreuzung — на перехресті"
+   },
+   "auf": {
+    "ru": "на, по",
+    "pos": "прийм.",
+    "note": "auf der Straße — на дорозі; achten auf — стежити за"
+   },
+   "beschleunigen": {
+    "ru": "розганятися, прискорюватися",
+    "pos": "дієсл.",
+    "forms": "beschleunigte · hat beschleunigt"
+   },
+   "bilden": {
+    "ru": "утворювати, створювати",
+    "pos": "дієсл.",
+    "note": "eine Rettungsgasse bilden — звільнити коридор для рятувальників",
+    "forms": "bildete · hat gebildet"
+   },
+   "bis": {
+    "ru": "поки не; до",
+    "pos": "спол."
+   },
+   "blinken": {
+    "ru": "вмикати поворотник, блимати",
+    "pos": "дієсл.",
+    "forms": "blinkte · hat geblinkt"
+   },
+   "bremsen": {
+    "ru": "гальмувати",
+    "pos": "дієсл.",
+    "forms": "bremste · hat gebremst"
+   },
+   "da": {
+    "ru": "там, он; тоді",
+    "pos": "присл.",
+    "note": "da vorne — он там попереду"
+   },
+   "denken": {
+    "ru": "думати",
+    "pos": "дієсл.",
+    "note": "denken an — пам'ятати про, думати про",
+    "forms": "dachte · hat gedacht"
+   },
+   "der/die/das": {
+    "ru": "означений артикль",
+    "pos": "артикль",
+    "note": "der — ч. р., die — ж. р. і мн., das — с. р.; den — ч. р. у знахідному, dem — ч. і с. р. у давальному; das ще означає «це»"
+   },
+   "dürfen": {
+    "ru": "могти, мати право",
+    "pos": "дієсл.",
+    "forms": "durfte · hat gedurft"
+   },
+   "ein/eine": {
+    "ru": "неозначений артикль; один",
+    "pos": "артикль",
+    "note": "an einer Kreuzung — на (якомусь) перехресті"
+   },
+   "er": {
+    "ru": "він",
+    "pos": "займ.",
+    "note": "ihn — його (знах.); тут — про вантажівку чи швидку: der Lkw, der Krankenwagen"
+   },
+   "fahren": {
+    "ru": "їхати; кермувати машиною",
+    "pos": "дієсл.",
+    "forms": "fuhr · ist gefahren"
+   },
+   "frei": {
+    "ru": "вільний",
+    "pos": "прикм."
+   },
+   "frei lassen": {
+    "ru": "залишати вільним",
+    "pos": "вираз"
+   },
+   "ganz": {
+    "ru": "цілком, зовсім",
+    "pos": "присл."
+   },
+   "genau": {
+    "ru": "саме так, точно",
+    "pos": "присл.",
+    "note": "genau hundert — рівно сто"
+   },
+   "gleich": {
+    "ru": "зараз, одразу",
+    "pos": "присл."
+   },
+   "gut": {
+    "ru": "добрий; добре",
+    "pos": "прикм.",
+    "forms": "gut · besser · am besten"
+   },
+   "haben": {
+    "ru": "мати",
+    "pos": "дієсл.",
+    "note": "Vorfahrt haben — мати перевагу",
+    "forms": "hatte · hat gehabt"
+   },
+   "hören": {
+    "ru": "чути, слухати",
+    "pos": "дієсл.",
+    "forms": "hörte · hat gehört"
+   },
+   "ich": {
+    "ru": "я",
+    "pos": "займ."
+   },
+   "in": {
+    "ru": "в",
+    "pos": "прийм.",
+    "note": "im = in dem: im Bereich — у зоні"
+   },
+   "ja": {
+    "ru": "так",
+    "pos": "частка"
+   },
+   "jetzt": {
+    "ru": "зараз, тепер",
+    "pos": "присл."
+   },
+   "kommen": {
+    "ru": "приходити; їхати (наближатися)",
+    "pos": "дієсл.",
+    "note": "von rechts kommen — їхати праворуч",
+    "forms": "kam · ist gekommen"
+   },
+   "kräftig": {
+    "ru": "сильно, енергійно",
+    "pos": "прикм."
+   },
+   "langsam": {
+    "ru": "повільний; повільно",
+    "pos": "прикм."
+   },
+   "link": {
+    "ru": "лівий",
+    "pos": "прикм."
+   },
+   "links": {
+    "ru": "ліворуч",
+    "pos": "присл."
+   },
+   "machen": {
+    "ru": "робити",
+    "pos": "дієсл.",
+    "note": "den Schulterblick machen — озирнутися через плече; Gut gemacht! — Молодець!",
+    "forms": "machte · hat gemacht"
+   },
+   "mal": {
+    "ru": "помножити на; раз",
+    "pos": "присл.",
+    "note": "das Mal — раз: bis zum nächsten Mal — до наступного разу"
+   },
+   "mittler": {
+    "ru": "середній",
+    "pos": "прикм."
+   },
+   "müssen": {
+    "ru": "мусити, бути повинним",
+    "pos": "дієсл.",
+    "forms": "musste · hat gemusst"
+   },
+   "nach": {
+    "ru": "після; до (напрямок)",
+    "pos": "прийм."
+   },
+   "nächste": {
+    "ru": "найближчий, наступний",
+    "pos": "прикм."
+   },
+   "recht": {
+    "ru": "правий",
+    "pos": "прикм."
+   },
+   "rechts": {
+    "ru": "праворуч",
+    "pos": "присл."
+   },
+   "richtig": {
+    "ru": "правильний; правильно",
+    "pos": "прикм.",
+    "note": "…, richtig? — …, правильно? / так?"
+   },
+   "schauen": {
+    "ru": "дивитися",
+    "pos": "дієсл.",
+    "forms": "schaute · hat geschaut"
+   },
+   "schon": {
+    "ru": "вже",
+    "pos": "присл."
+   },
+   "sehr": {
+    "ru": "дуже",
+    "pos": "присл."
+   },
+   "sein": {
+    "ru": "бути",
+    "pos": "дієсл.",
+    "forms": "war · ist gewesen"
+   },
+   "sofort": {
+    "ru": "одразу, негайно",
+    "pos": "присл."
+   },
+   "spannend": {
+    "ru": "хвилюючий, захопливий",
+    "pos": "прикм."
+   },
+   "stehen bleiben": {
+    "ru": "зупинятися (і стояти)",
+    "pos": "вираз",
+    "note": "ich bleibe stehen — я зупиняюся"
+   },
+   "und": {
+    "ru": "і, та",
+    "pos": "спол."
+   },
+   "vor": {
+    "ru": "перед",
+    "pos": "прийм.",
+    "note": "rechts vor links — правий перед лівим"
+   },
+   "vorbei": {
+    "ru": "повз; позаду, скінчилося",
+    "pos": "присл.",
+    "note": "… ist vorbei — … проїхав / закінчився"
+   },
+   "vorne": {
+    "ru": "попереду",
+    "pos": "присл."
+   },
+   "was": {
+    "ru": "що",
+    "pos": "займ."
+   },
+   "wieder": {
+    "ru": "знову",
+    "pos": "присл."
+   },
+   "wir": {
+    "ru": "ми",
+    "pos": "займ.",
+    "note": "uns — нас, нам: vor uns — перед нами"
+   },
+   "zu": {
+    "ru": "до; для",
+    "pos": "прийм.",
+    "note": "zum = zu dem: zum Aussteigen — щоб вийти"
+   },
+   "zurückfahren": {
+    "ru": "повертатися (машиною)",
+    "pos": "дієсл.",
+    "note": "відокремлюваний префікс: fahre … zurück",
+    "forms": "fuhr zurück · ist zurückgefahren"
+   },
+   "überholen": {
+    "ru": "обганяти",
+    "pos": "дієсл.",
+    "forms": "überholte · hat überholt"
+   }
+  }
+ }
+}

@@ -1,0 +1,569 @@
+{
+ "id": "p-04",
+ "kind": "dialog",
+ "emoji": "🚑",
+ "level": "A2–B1",
+ "title": "Auf der Autobahn",
+ "titleTr": "على الأوتوبان",
+ "intro": "أندري على الأوتوبان لأول مرة: التسارع، وقاعدة القيادة على اليمين، والتجاوز، وممر الإسعاف في الازدحام.",
+ "speakers": {
+  "A": {
+   "name": "Fahrlehrerin",
+   "g": "f"
+  },
+  "B": {
+   "name": "Andrij",
+   "g": "m"
+  }
+ },
+ "lines": [
+  {
+   "de": "Gleich fahren wir auf die Autobahn. Auf dem Beschleunigungsstreifen beschleunigen Sie kräftig.",
+   "tr": "بعد قليل ندخل الأوتوبان. على مسار التسارع زِد سرعتك بقوة.",
+   "s": "A"
+  },
+  {
+   "de": "Ich blinke links, schaue in den Spiegel und mache den Schulterblick.",
+   "tr": "أشغّل إشارة اليسار، وأنظر في المرآة، وألتفت فوق كتفي.",
+   "s": "B"
+  },
+  {
+   "de": "Gut. Jetzt fahren Sie rechts, das ist das Rechtsfahrgebot.",
+   "tr": "جيد. الآن ابقَ على اليمين، هذه قاعدة القيادة على اليمين.",
+   "s": "A"
+  },
+  {
+   "de": "Vor uns fährt ein langsamer Lkw. Darf ich ihn überholen?",
+   "tr": "أمامنا شاحنة بطيئة. هل يجوز لي تجاوزها؟",
+   "s": "B"
+  },
+  {
+   "de": "Ja, die linke Spur ist frei. Denken Sie an Spiegel, Blinker und Schulterblick.",
+   "tr": "نعم، المسار الأيسر خالٍ. تذكّر: المرآة، والإشارة، والالتفات فوق الكتف.",
+   "s": "A"
+  },
+  {
+   "de": "Ich habe überholt. Jetzt blinke ich rechts und fahre zurück auf die rechte Spur.",
+   "tr": "لقد تجاوزت. الآن أشغّل إشارة اليمين وأعود إلى المسار الأيمن.",
+   "o": {
+    "fahre": "fahre>zurückfahren",
+    "zurück": "zurück>zurückfahren"
+   },
+   "s": "B"
+  },
+  {
+   "de": "Sehr gut. Achtung, vorne bremsen alle. Da ist ein Stau.",
+   "tr": "جيد جدًا. انتبه، الجميع في الأمام يكبحون. هناك ازدحام.",
+   "s": "A"
+  },
+  {
+   "de": "Was muss ich jetzt machen?",
+   "tr": "ماذا يجب أن أفعل الآن؟",
+   "s": "B"
+  },
+  {
+   "de": "Bilden Sie sofort eine Rettungsgasse. Wir sind auf der linken Spur, also fahren wir ganz nach links.",
+   "tr": "افتح فورًا ممر الطوارئ. نحن على المسار الأيسر، لذا نقترب تمامًا من اليسار.",
+   "s": "A"
+  },
+  {
+   "de": "Und die Autos auf der mittleren und rechten Spur fahren nach rechts, richtig?",
+   "tr": "والسيارات على المسارين الأوسط والأيمن تتجه إلى اليمين، صحيح؟",
+   "s": "B"
+  },
+  {
+   "de": "Genau. Hören Sie? Da kommt schon ein Krankenwagen.",
+   "tr": "تمامًا. هل تسمع؟ ها هي سيارة إسعاف قادمة.",
+   "s": "A"
+  },
+  {
+   "de": "Ich bleibe stehen, bis er vorbei ist.",
+   "tr": "أبقى متوقفًا حتى تمرّ.",
+   "o": {
+    "bleibe": "bleibe>stehen bleiben",
+    "stehen": "stehen>stehen bleiben"
+   },
+   "s": "B"
+  },
+  {
+   "de": "Richtig. Und lassen Sie die Gasse frei, bis der Stau vorbei ist.",
+   "tr": "صحيح. وأبقِ الممر خاليًا حتى ينتهي الازدحام.",
+   "o": {
+    "frei": "frei>frei lassen",
+    "lassen": "lassen>frei lassen"
+   },
+   "s": "A"
+  },
+  {
+   "de": "Der Verkehr fährt wieder. Das war spannend!",
+   "tr": "عادت الحركة من جديد. كان ذلك مثيرًا!",
+   "s": "B"
+  },
+  {
+   "de": "Sie haben alles richtig gemacht. Bis zum nächsten Mal!",
+   "tr": "لقد فعلت كل شيء بشكل صحيح. إلى المرة القادمة!",
+   "s": "A"
+  }
+ ],
+ "signs": {},
+ "gloss": {
+  "w": {
+   "achtung": "Achtung",
+   "alle": "alle",
+   "alles": "alle",
+   "also": "also",
+   "an": "an",
+   "auf": "auf",
+   "autobahn": "Autobahn",
+   "autos": "Auto",
+   "beschleunigen": "beschleunigen",
+   "beschleunigungsstreifen": "Beschleunigungsstreifen",
+   "bilden": "bilden",
+   "bis": "bis",
+   "bleibe>stehen bleiben": "stehen bleiben",
+   "blinke": "blinken",
+   "blinker": "Blinker",
+   "bremsen": "bremsen",
+   "da": "da",
+   "darf": "dürfen",
+   "das": "der/die/das",
+   "dem": "der/die/das",
+   "den": "der/die/das",
+   "denken": "denken",
+   "der": "der/die/das",
+   "die": "der/die/das",
+   "ein": "ein/eine",
+   "eine": "ein/eine",
+   "er": "er",
+   "fahre>zurückfahren": "zurückfahren",
+   "fahren": "fahren",
+   "frei": "frei",
+   "frei>frei lassen": "frei lassen",
+   "fährt": "fahren",
+   "ganz": "ganz",
+   "gasse": "Gasse",
+   "gemacht": "machen",
+   "genau": "genau",
+   "gleich": "gleich",
+   "gut": "gut",
+   "habe": "haben",
+   "haben": "haben",
+   "hören": "hören",
+   "ich": "ich",
+   "ihn": "er",
+   "in": "in",
+   "ist": "sein",
+   "ja": "ja",
+   "jetzt": "jetzt",
+   "kommt": "kommen",
+   "krankenwagen": "Krankenwagen",
+   "kräftig": "kräftig",
+   "langsamer": "langsam",
+   "lassen>frei lassen": "frei lassen",
+   "linke": "link",
+   "linken": "link",
+   "links": "links",
+   "lkw": "Lkw",
+   "mache": "machen",
+   "machen": "machen",
+   "mal": "mal",
+   "mittleren": "mittler",
+   "muss": "müssen",
+   "nach": "nach",
+   "nächsten": "nächste",
+   "rechte": "recht",
+   "rechten": "recht",
+   "rechts": "rechts",
+   "rechtsfahrgebot": "Rechtsfahrgebot",
+   "rettungsgasse": "Rettungsgasse",
+   "richtig": "richtig",
+   "schaue": "schauen",
+   "schon": "schon",
+   "schulterblick": "Schulterblick",
+   "sehr": "sehr",
+   "sie": "Sie",
+   "sind": "sein",
+   "sofort": "sofort",
+   "spannend": "spannend",
+   "spiegel": "Spiegel",
+   "spur": "Spur",
+   "stau": "Stau",
+   "stehen>stehen bleiben": "stehen bleiben",
+   "und": "und",
+   "uns": "wir",
+   "verkehr": "Verkehr",
+   "vor": "vor",
+   "vorbei": "vorbei",
+   "vorne": "vorne",
+   "war": "sein",
+   "was": "was",
+   "wieder": "wieder",
+   "wir": "wir",
+   "zum": "zu",
+   "zurück>zurückfahren": "zurückfahren",
+   "überholen": "überholen",
+   "überholt": "überholen"
+  },
+  "l": {
+   "Achtung": {
+    "ru": "انتبه!",
+    "pos": "اسم",
+    "decl": "die Achtung · لا جمع له"
+   },
+   "Auto": {
+    "ru": "سيارة",
+    "pos": "اسم",
+    "decl": "das Auto · الجمع: die Autos"
+   },
+   "Autobahn": {
+    "ru": "الطريق السريع (أوتوبان)",
+    "pos": "اسم",
+    "decl": "die Autobahn · الجمع: die Autobahnen"
+   },
+   "Beschleunigungsstreifen": {
+    "ru": "مسار التسارع",
+    "pos": "اسم",
+    "note": "عليه تصل إلى سرعة السير ثم تنتقل",
+    "decl": "der Beschleunigungsstreifen · الجمع: die Beschleunigungsstreifen"
+   },
+   "Blinker": {
+    "ru": "إشارة الانعطاف",
+    "pos": "اسم",
+    "decl": "der Blinker · الجمع: die Blinker"
+   },
+   "Gasse": {
+    "ru": "ممر؛ زقاق",
+    "pos": "اسم",
+    "decl": "die Gasse · الجمع: die Gassen"
+   },
+   "Krankenwagen": {
+    "ru": "سيارة إسعاف",
+    "pos": "اسم",
+    "decl": "der Krankenwagen · الجمع: die Krankenwagen"
+   },
+   "Lkw": {
+    "ru": "شاحنة",
+    "pos": "اسم",
+    "note": "اختصار لـ der Lastkraftwagen",
+    "decl": "der Lkw · الجمع: die Lkw"
+   },
+   "Rechtsfahrgebot": {
+    "ru": "قاعدة القيادة على اليمين",
+    "pos": "اسم",
+    "note": "التزم أقصى اليمين؛ تجاوز من اليسار وعُد إلى اليمين",
+    "decl": "das Rechtsfahrgebot · لا جمع له"
+   },
+   "Rettungsgasse": {
+    "ru": "ممر الطوارئ",
+    "pos": "اسم",
+    "note": "المسار الأيسر إلى اليسار وكل الباقي إلى اليمين؛ فورًا حين تتوقف الحركة",
+    "decl": "die Rettungsgasse · الجمع: die Rettungsgassen"
+   },
+   "Schulterblick": {
+    "ru": "الالتفات فوق الكتف",
+    "pos": "اسم",
+    "note": "هكذا تُفحص «النقطة العمياء» قبل الانطلاق والانعطاف",
+    "decl": "der Schulterblick · الجمع: die Schulterblicke"
+   },
+   "Sie": {
+    "ru": "حضرتك (صيغة الاحترام)",
+    "pos": "ضمير",
+    "note": "Ihnen — لكم (حالة الجر): vor Ihnen — أمامك"
+   },
+   "Spiegel": {
+    "ru": "مرآة",
+    "pos": "اسم",
+    "decl": "der Spiegel · الجمع: die Spiegel"
+   },
+   "Spur": {
+    "ru": "مسار",
+    "pos": "اسم",
+    "decl": "die Spur · الجمع: die Spuren"
+   },
+   "Stau": {
+    "ru": "ازدحام مروري",
+    "pos": "اسم",
+    "decl": "der Stau · الجمع: die Staus"
+   },
+   "Verkehr": {
+    "ru": "حركة المرور",
+    "pos": "اسم",
+    "decl": "der Verkehr · لا جمع له"
+   },
+   "alle": {
+    "ru": "كل؛ كل شيء",
+    "pos": "ضمير"
+   },
+   "also": {
+    "ru": "إذن",
+    "pos": "ظرف"
+   },
+   "an": {
+    "ru": "عند، على",
+    "pos": "حرف جر",
+    "note": "am = an dem؛ an der Kreuzung — عند التقاطع"
+   },
+   "auf": {
+    "ru": "على",
+    "pos": "حرف جر",
+    "note": "auf der Straße — على الطريق؛ achten auf — ينتبه لـ"
+   },
+   "beschleunigen": {
+    "ru": "يتسارع",
+    "pos": "فعل",
+    "forms": "beschleunigte · hat beschleunigt"
+   },
+   "bilden": {
+    "ru": "يشكّل",
+    "pos": "فعل",
+    "note": "eine Rettungsgasse bilden — يفتح ممر الطوارئ",
+    "forms": "bildete · hat gebildet"
+   },
+   "bis": {
+    "ru": "حتى",
+    "pos": "أداة ربط"
+   },
+   "blinken": {
+    "ru": "يشغّل إشارة الانعطاف",
+    "pos": "فعل",
+    "forms": "blinkte · hat geblinkt"
+   },
+   "bremsen": {
+    "ru": "يكبح، يفرمل",
+    "pos": "فعل",
+    "forms": "bremste · hat gebremst"
+   },
+   "da": {
+    "ru": "هناك",
+    "pos": "ظرف",
+    "note": "da vorne — هناك في الأمام"
+   },
+   "denken": {
+    "ru": "يفكّر",
+    "pos": "فعل",
+    "note": "denken an — يتذكّر، يفكّر في",
+    "forms": "dachte · hat gedacht"
+   },
+   "der/die/das": {
+    "ru": "أداة التعريف",
+    "pos": "أداة تعريف",
+    "note": "der للمذكر، die للمؤنث والجمع، das للمحايد؛ den للمذكر في حالة النصب، dem للمذكر والمحايد في حالة الجر؛ وdas تعني أيضًا «هذا»"
+   },
+   "dürfen": {
+    "ru": "يحق له، يُسمح له",
+    "pos": "فعل",
+    "forms": "durfte · hat gedurft"
+   },
+   "ein/eine": {
+    "ru": "أداة النكرة؛ واحد",
+    "pos": "أداة تعريف",
+    "note": "an einer Kreuzung — عند تقاطعٍ ما"
+   },
+   "er": {
+    "ru": "هو",
+    "pos": "ضمير",
+    "note": "ihn — ـه (مفعول)؛ هنا عن الشاحنة أو الإسعاف"
+   },
+   "fahren": {
+    "ru": "يسير بالسيارة؛ يقود",
+    "pos": "فعل",
+    "forms": "fuhr · ist gefahren"
+   },
+   "frei": {
+    "ru": "خالٍ، فارغ",
+    "pos": "صفة"
+   },
+   "frei lassen": {
+    "ru": "يترك خاليًا",
+    "pos": "تعبير"
+   },
+   "ganz": {
+    "ru": "تمامًا",
+    "pos": "ظرف"
+   },
+   "genau": {
+    "ru": "تمامًا، بالضبط",
+    "pos": "ظرف",
+    "note": "genau hundert — مئة بالضبط"
+   },
+   "gleich": {
+    "ru": "حالًا، فورًا",
+    "pos": "ظرف"
+   },
+   "gut": {
+    "ru": "جيد",
+    "pos": "صفة",
+    "forms": "gut · besser · am besten"
+   },
+   "haben": {
+    "ru": "يملك، لديه",
+    "pos": "فعل",
+    "note": "Vorfahrt haben — له أولوية المرور",
+    "forms": "hatte · hat gehabt"
+   },
+   "hören": {
+    "ru": "يسمع",
+    "pos": "فعل",
+    "forms": "hörte · hat gehört"
+   },
+   "ich": {
+    "ru": "أنا",
+    "pos": "ضمير"
+   },
+   "in": {
+    "ru": "في",
+    "pos": "حرف جر",
+    "note": "im = in dem: im Bereich — في المنطقة"
+   },
+   "ja": {
+    "ru": "نعم",
+    "pos": "أداة"
+   },
+   "jetzt": {
+    "ru": "الآن",
+    "pos": "ظرف"
+   },
+   "kommen": {
+    "ru": "يأتي",
+    "pos": "فعل",
+    "note": "von rechts kommen — يأتي من اليمين",
+    "forms": "kam · ist gekommen"
+   },
+   "kräftig": {
+    "ru": "بقوة",
+    "pos": "صفة"
+   },
+   "langsam": {
+    "ru": "بطيء؛ ببطء",
+    "pos": "صفة"
+   },
+   "link": {
+    "ru": "أيسر",
+    "pos": "صفة"
+   },
+   "links": {
+    "ru": "يسارًا، على اليسار",
+    "pos": "ظرف"
+   },
+   "machen": {
+    "ru": "يفعل",
+    "pos": "فعل",
+    "note": "den Schulterblick machen — يلتفت فوق كتفه؛ Gut gemacht! — أحسنت!",
+    "forms": "machte · hat gemacht"
+   },
+   "mal": {
+    "ru": "مضروبًا في؛ مرة",
+    "pos": "ظرف",
+    "note": "das Mal — مرة: bis zum nächsten Mal — إلى المرة القادمة"
+   },
+   "mittler": {
+    "ru": "أوسط",
+    "pos": "صفة"
+   },
+   "müssen": {
+    "ru": "يجب عليه",
+    "pos": "فعل",
+    "forms": "musste · hat gemusst"
+   },
+   "nach": {
+    "ru": "بعد؛ إلى",
+    "pos": "حرف جر"
+   },
+   "nächste": {
+    "ru": "القادم، الأقرب",
+    "pos": "صفة"
+   },
+   "recht": {
+    "ru": "أيمن",
+    "pos": "صفة"
+   },
+   "rechts": {
+    "ru": "يمينًا، على اليمين",
+    "pos": "ظرف"
+   },
+   "richtig": {
+    "ru": "صحيح",
+    "pos": "صفة",
+    "note": "…, richtig? — …، صحيح؟"
+   },
+   "schauen": {
+    "ru": "ينظر",
+    "pos": "فعل",
+    "forms": "schaute · hat geschaut"
+   },
+   "schon": {
+    "ru": "بالفعل",
+    "pos": "ظرف"
+   },
+   "sehr": {
+    "ru": "جدًا",
+    "pos": "ظرف"
+   },
+   "sein": {
+    "ru": "يكون",
+    "pos": "فعل",
+    "forms": "war · ist gewesen"
+   },
+   "sofort": {
+    "ru": "فورًا",
+    "pos": "ظرف"
+   },
+   "spannend": {
+    "ru": "مثير",
+    "pos": "صفة"
+   },
+   "stehen bleiben": {
+    "ru": "يتوقف (ويبقى واقفًا)",
+    "pos": "تعبير",
+    "note": "ich bleibe stehen — أتوقف"
+   },
+   "und": {
+    "ru": "و",
+    "pos": "أداة ربط"
+   },
+   "vor": {
+    "ru": "قبل، أمام",
+    "pos": "حرف جر",
+    "note": "rechts vor links — اليمين قبل اليسار"
+   },
+   "vorbei": {
+    "ru": "مارًّا؛ انتهى",
+    "pos": "ظرف",
+    "note": "… ist vorbei — مرّ / انتهى"
+   },
+   "vorne": {
+    "ru": "في الأمام",
+    "pos": "ظرف"
+   },
+   "was": {
+    "ru": "ماذا",
+    "pos": "ضمير"
+   },
+   "wieder": {
+    "ru": "من جديد",
+    "pos": "ظرف"
+   },
+   "wir": {
+    "ru": "نحن",
+    "pos": "ضمير",
+    "note": "uns — نا: vor uns — أمامنا"
+   },
+   "zu": {
+    "ru": "إلى؛ لـ",
+    "pos": "حرف جر",
+    "note": "zum = zu dem: zum Aussteigen — للنزول"
+   },
+   "zurückfahren": {
+    "ru": "يعود (بالسيارة)",
+    "pos": "فعل",
+    "note": "سابقة منفصلة: fahre … zurück",
+    "forms": "fuhr zurück · ist zurückgefahren"
+   },
+   "überholen": {
+    "ru": "يتجاوز",
+    "pos": "فعل",
+    "forms": "überholte · hat überholt"
+   }
+  }
+ }
+}
