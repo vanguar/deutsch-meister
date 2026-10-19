@@ -1,0 +1,602 @@
+{
+ "id": "p-03",
+ "kind": "dialog",
+ "emoji": "🌫️",
+ "level": "A2–B1",
+ "title": "Auf der Landstraße",
+ "titleTr": "على الطريق الريفي",
+ "intro": "تقود إيرينا خارج المدينة لأول مرة: المسافة بأعمدة الإرشاد، والضباب، ثم الأوتوبان مع السرعة الموصى بها.",
+ "speakers": {
+  "A": {
+   "name": "Fahrlehrer",
+   "g": "m"
+  },
+  "B": {
+   "name": "Iryna",
+   "g": "f"
+  }
+ },
+ "lines": [
+  {
+   "de": "Wir verlassen jetzt den Ort. Was gilt nach dem Ortsende?",
+   "tr": "نحن نغادر البلدة الآن. ما الذي يسري بعد لوحة نهاية البلدة؟",
+   "s": "A"
+  },
+  {
+   "de": "Außerorts darf ich höchstens hundert fahren.",
+   "tr": "خارج البلدة يجوز لي القيادة بسرعة مئة كحدّ أقصى.",
+   "s": "B"
+  },
+  {
+   "de": "Richtig. Vor uns fährt ein Lkw. Wie groß muss der Abstand sein?",
+   "tr": "صحيح. أمامنا شاحنة. كم يجب أن تكون المسافة؟",
+   "s": "A"
+  },
+  {
+   "de": "Halber Tacho, also bei achtzig ungefähr vierzig Meter.",
+   "tr": "نصف العداد، أي عند ثمانين نحو أربعين مترًا.",
+   "s": "B"
+  },
+  {
+   "de": "Gut. Und wie können Sie das schätzen?",
+   "tr": "جيد. وكيف يمكنكِ تقدير ذلك؟",
+   "s": "A"
+  },
+  {
+   "de": "Mit den Leitpfosten. Sie stehen alle fünfzig Meter.",
+   "tr": "بأعمدة الإرشاد. إنها موضوعة كل خمسين مترًا.",
+   "s": "B"
+  },
+  {
+   "de": "Sehr gut. Achtung, da vorne kommt Nebel.",
+   "tr": "جيد جدًا. انتبهي، هناك ضباب في الأمام.",
+   "s": "A"
+  },
+  {
+   "de": "Ich sehe kaum etwas. Ich fahre langsamer und mache das Abblendlicht an.",
+   "tr": "لا أكاد أرى شيئًا. أخفف السرعة وأشغّل الأضواء المنخفضة.",
+   "o": {
+    "an": "an>anmachen",
+    "mache": "mache>anmachen"
+   },
+   "s": "B"
+  },
+  {
+   "de": "Richtig. Unter fünfzig Metern Sicht dürfen Sie höchstens fünfzig fahren.",
+   "tr": "صحيح. حين تقل الرؤية عن خمسين مترًا يجوز لكِ خمسون كحدّ أقصى.",
+   "s": "A"
+  },
+  {
+   "de": "Jetzt ist die Sicht wieder gut. Fahren wir gleich auf die Autobahn?",
+   "tr": "الرؤية جيدة مرة أخرى الآن. هل سندخل الأوتوبان قريبًا؟",
+   "s": "B"
+  },
+  {
+   "de": "Ja. Dort gibt es kein allgemeines Tempolimit, aber wir fahren nicht schneller als hundertdreißig.",
+   "tr": "نعم. هناك لا يوجد حدّ عام للسرعة، لكننا لن نتجاوز مئة وثلاثين.",
+   "o": {
+    "es": "es>es gibt"
+   },
+   "s": "A"
+  },
+  {
+   "de": "Das ist die Richtgeschwindigkeit, oder?",
+   "tr": "هذه هي السرعة الموصى بها، أليس كذلك؟",
+   "s": "B"
+  },
+  {
+   "de": "Genau. Und dort steht ein Blitzer. Wie schnell fahren wir gerade?",
+   "tr": "تمامًا. وهناك كاميرا سرعة. بأي سرعة نسير الآن؟",
+   "s": "A"
+  },
+  {
+   "de": "Genau hundert. Hier ist hundert erlaubt, also alles in Ordnung.",
+   "tr": "مئة بالضبط. المسموح هنا مئة، إذن كل شيء على ما يرام.",
+   "s": "B"
+  },
+  {
+   "de": "Prima! Sie fahren schon sehr sicher.",
+   "tr": "ممتاز! أنتِ تقودين بثقة كبيرة الآن.",
+   "s": "A"
+  }
+ ],
+ "signs": {},
+ "gloss": {
+  "w": {
+   "abblendlicht": "Abblendlicht",
+   "aber": "aber",
+   "abstand": "Abstand",
+   "achtung": "Achtung",
+   "achtzig": "achtzig",
+   "alle": "alle",
+   "alles": "alle",
+   "allgemeines": "allgemein",
+   "als": "als",
+   "also": "also",
+   "an>anmachen": "anmachen",
+   "auf": "auf",
+   "autobahn": "Autobahn",
+   "außerorts": "außerorts",
+   "bei": "bei",
+   "blitzer": "Blitzer",
+   "da": "da",
+   "darf": "dürfen",
+   "das": "der/die/das",
+   "dem": "der/die/das",
+   "den": "der/die/das",
+   "der": "der/die/das",
+   "die": "der/die/das",
+   "dort": "dort",
+   "dürfen": "dürfen",
+   "ein": "ein/eine",
+   "erlaubt": "erlauben",
+   "es>es gibt": "es gibt",
+   "etwas": "etwas",
+   "fahre": "fahren",
+   "fahren": "fahren",
+   "fährt": "fahren",
+   "fünfzig": "fünfzig",
+   "genau": "genau",
+   "gerade": "gerade",
+   "gibt": "es gibt",
+   "gilt": "gelten",
+   "gleich": "gleich",
+   "groß": "groß",
+   "gut": "gut",
+   "halber": "halb",
+   "hier": "hier",
+   "hundert": "hundert",
+   "hundertdreißig": "hundertdreißig",
+   "höchstens": "höchstens",
+   "ich": "ich",
+   "in": "in",
+   "ist": "sein",
+   "ja": "ja",
+   "jetzt": "jetzt",
+   "kaum": "kaum",
+   "kein": "kein",
+   "kommt": "kommen",
+   "können": "können",
+   "landstraße": "Landstraße",
+   "langsamer": "langsam",
+   "leitpfosten": "Leitpfosten",
+   "lkw": "Lkw",
+   "mache>anmachen": "anmachen",
+   "meter": "Meter",
+   "metern": "Meter",
+   "mit": "mit",
+   "muss": "müssen",
+   "nach": "nach",
+   "nebel": "Nebel",
+   "nicht": "nicht",
+   "oder": "oder",
+   "ordnung": "Ordnung",
+   "ort": "Ort",
+   "ortsende": "Ortsende",
+   "prima": "prima",
+   "richtgeschwindigkeit": "Richtgeschwindigkeit",
+   "richtig": "richtig",
+   "schnell": "schnell",
+   "schneller": "schnell",
+   "schon": "schon",
+   "schätzen": "schätzen",
+   "sehe": "sehen",
+   "sehr": "sehr",
+   "sein": "sein",
+   "sicher": "sicher",
+   "sicht": "Sicht",
+   "sie": "Sie",
+   "stehen": "stehen",
+   "steht": "stehen",
+   "tacho": "Tacho",
+   "tempolimit": "Tempolimit",
+   "und": "und",
+   "ungefähr": "ungefähr",
+   "uns": "wir",
+   "unter": "unter",
+   "verlassen": "verlassen",
+   "vierzig": "vierzig",
+   "vor": "vor",
+   "vorne": "vorne",
+   "was": "was",
+   "wie": "wie",
+   "wieder": "wieder",
+   "wir": "wir"
+  },
+  "l": {
+   "Abblendlicht": {
+    "ru": "الأضواء المنخفضة",
+    "pos": "اسم",
+    "decl": "das Abblendlicht · لا جمع له"
+   },
+   "Abstand": {
+    "ru": "المسافة (بين السيارات)",
+    "pos": "اسم",
+    "decl": "der Abstand · الجمع: die Abstände"
+   },
+   "Achtung": {
+    "ru": "انتبه!",
+    "pos": "اسم",
+    "decl": "die Achtung · لا جمع له"
+   },
+   "Autobahn": {
+    "ru": "الطريق السريع (أوتوبان)",
+    "pos": "اسم",
+    "decl": "die Autobahn · الجمع: die Autobahnen"
+   },
+   "Blitzer": {
+    "ru": "كاميرا مراقبة السرعة",
+    "pos": "اسم",
+    "decl": "der Blitzer · الجمع: die Blitzer"
+   },
+   "Landstraße": {
+    "ru": "طريق ريفي",
+    "pos": "اسم",
+    "note": "خارج البلدات: للسيارات عادةً حتى 100 كم/س",
+    "decl": "die Landstraße · الجمع: die Landstraßen"
+   },
+   "Leitpfosten": {
+    "ru": "عمود إرشاد (على حافة الطريق)",
+    "pos": "اسم",
+    "note": "أعمدة بيضاء بشريط أسود، كل 50 مترًا",
+    "decl": "der Leitpfosten · الجمع: die Leitpfosten"
+   },
+   "Lkw": {
+    "ru": "شاحنة",
+    "pos": "اسم",
+    "note": "اختصار لـ der Lastkraftwagen",
+    "decl": "der Lkw · الجمع: die Lkw"
+   },
+   "Meter": {
+    "ru": "متر",
+    "pos": "اسم",
+    "decl": "der Meter · الجمع: die Meter"
+   },
+   "Nebel": {
+    "ru": "ضباب",
+    "pos": "اسم",
+    "decl": "der Nebel · الجمع: die Nebel"
+   },
+   "Ordnung": {
+    "ru": "نظام، ترتيب",
+    "pos": "اسم",
+    "note": "in Ordnung — على ما يرام",
+    "decl": "die Ordnung · الجمع: die Ordnungen"
+   },
+   "Ort": {
+    "ru": "بلدة؛ مكان",
+    "pos": "اسم",
+    "decl": "der Ort · الجمع: die Orte"
+   },
+   "Ortsende": {
+    "ru": "نهاية البلدة",
+    "pos": "اسم",
+    "decl": "das Ortsende · الجمع: die Ortsenden"
+   },
+   "Richtgeschwindigkeit": {
+    "ru": "السرعة الموصى بها",
+    "pos": "اسم",
+    "note": "على الأوتوبان 130 كم/س — توصية لا قانون؛ وعند حادث بسرعة أعلى قد تتحمل جزءًا من المسؤولية",
+    "decl": "die Richtgeschwindigkeit · الجمع: die Richtgeschwindigkeiten"
+   },
+   "Sicht": {
+    "ru": "الرؤية",
+    "pos": "اسم",
+    "decl": "die Sicht · لا جمع له"
+   },
+   "Sie": {
+    "ru": "حضرتك (صيغة الاحترام)",
+    "pos": "ضمير",
+    "note": "Ihnen — لكم (حالة الجر): vor Ihnen — أمامك"
+   },
+   "Tacho": {
+    "ru": "عداد السرعة",
+    "pos": "اسم",
+    "note": "halber Tacho — نصف قراءة العداد (بالأمتار)",
+    "decl": "der Tacho · الجمع: die Tachos"
+   },
+   "Tempolimit": {
+    "ru": "حدّ السرعة",
+    "pos": "اسم",
+    "decl": "das Tempolimit · الجمع: die Tempolimits"
+   },
+   "aber": {
+    "ru": "لكن",
+    "pos": "أداة ربط"
+   },
+   "achtzig": {
+    "ru": "ثمانون",
+    "pos": "عدد"
+   },
+   "alle": {
+    "ru": "كل؛ كل شيء",
+    "pos": "ضمير"
+   },
+   "allgemein": {
+    "ru": "عام",
+    "pos": "صفة"
+   },
+   "als": {
+    "ru": "من (في المقارنة)؛ كـ",
+    "pos": "أداة ربط"
+   },
+   "also": {
+    "ru": "إذن",
+    "pos": "ظرف"
+   },
+   "anmachen": {
+    "ru": "يشغّل",
+    "pos": "فعل",
+    "note": "سابقة منفصلة: mache … an",
+    "forms": "machte an · hat angemacht"
+   },
+   "auf": {
+    "ru": "على",
+    "pos": "حرف جر",
+    "note": "auf der Straße — على الطريق؛ achten auf — ينتبه لـ"
+   },
+   "außerorts": {
+    "ru": "خارج المدن والبلدات",
+    "pos": "ظرف",
+    "note": "للسيارات عادةً 100 كم/س كحد أقصى"
+   },
+   "bei": {
+    "ru": "عند",
+    "pos": "حرف جر",
+    "note": "beim = bei dem: beim Fahren — أثناء القيادة؛ bei Rot — عند الأحمر"
+   },
+   "da": {
+    "ru": "هناك",
+    "pos": "ظرف",
+    "note": "da vorne — هناك في الأمام"
+   },
+   "der/die/das": {
+    "ru": "أداة التعريف",
+    "pos": "أداة تعريف",
+    "note": "der للمذكر، die للمؤنث والجمع، das للمحايد؛ den للمذكر في حالة النصب، dem للمذكر والمحايد في حالة الجر؛ وdas تعني أيضًا «هذا»"
+   },
+   "dort": {
+    "ru": "هناك",
+    "pos": "ظرف"
+   },
+   "dürfen": {
+    "ru": "يحق له، يُسمح له",
+    "pos": "فعل",
+    "forms": "durfte · hat gedurft"
+   },
+   "ein/eine": {
+    "ru": "أداة النكرة؛ واحد",
+    "pos": "أداة تعريف",
+    "note": "an einer Kreuzung — عند تقاطعٍ ما"
+   },
+   "erlauben": {
+    "ru": "يسمح",
+    "pos": "فعل",
+    "forms": "erlaubte · hat erlaubt"
+   },
+   "es gibt": {
+    "ru": "يوجد",
+    "pos": "تعبير"
+   },
+   "etwas": {
+    "ru": "قليلًا؛ شيء ما",
+    "pos": "ظرف"
+   },
+   "fahren": {
+    "ru": "يسير بالسيارة؛ يقود",
+    "pos": "فعل",
+    "forms": "fuhr · ist gefahren"
+   },
+   "fünfzig": {
+    "ru": "خمسون",
+    "pos": "عدد"
+   },
+   "gelten": {
+    "ru": "يسري، ينطبق",
+    "pos": "فعل",
+    "forms": "galt · hat gegolten"
+   },
+   "genau": {
+    "ru": "تمامًا، بالضبط",
+    "pos": "ظرف",
+    "note": "genau hundert — مئة بالضبط"
+   },
+   "gerade": {
+    "ru": "الآن، حاليًا",
+    "pos": "ظرف"
+   },
+   "gleich": {
+    "ru": "حالًا، فورًا",
+    "pos": "ظرف"
+   },
+   "groß": {
+    "ru": "كبير",
+    "pos": "صفة",
+    "note": "Wie groß …؟ — كم حجم …؟",
+    "forms": "groß · größer · am größten"
+   },
+   "gut": {
+    "ru": "جيد",
+    "pos": "صفة",
+    "forms": "gut · besser · am besten"
+   },
+   "halb": {
+    "ru": "نصف",
+    "pos": "صفة",
+    "note": "halb so lang — نصف الطول؛ halber Tacho — نصف العداد"
+   },
+   "hier": {
+    "ru": "هنا",
+    "pos": "ظرف"
+   },
+   "hundert": {
+    "ru": "مئة",
+    "pos": "عدد"
+   },
+   "hundertdreißig": {
+    "ru": "مئة وثلاثون",
+    "pos": "عدد"
+   },
+   "höchstens": {
+    "ru": "كحدّ أقصى",
+    "pos": "ظرف"
+   },
+   "ich": {
+    "ru": "أنا",
+    "pos": "ضمير"
+   },
+   "in": {
+    "ru": "في",
+    "pos": "حرف جر",
+    "note": "im = in dem: im Bereich — في المنطقة"
+   },
+   "ja": {
+    "ru": "نعم",
+    "pos": "أداة"
+   },
+   "jetzt": {
+    "ru": "الآن",
+    "pos": "ظرف"
+   },
+   "kaum": {
+    "ru": "بالكاد",
+    "pos": "ظرف",
+    "note": "kaum etwas sehen — لا يكاد يرى شيئًا"
+   },
+   "kein": {
+    "ru": "لا (نفي الاسم)",
+    "pos": "ضمير"
+   },
+   "kommen": {
+    "ru": "يأتي",
+    "pos": "فعل",
+    "note": "von rechts kommen — يأتي من اليمين",
+    "forms": "kam · ist gekommen"
+   },
+   "können": {
+    "ru": "يستطيع",
+    "pos": "فعل",
+    "forms": "konnte · hat gekonnt"
+   },
+   "langsam": {
+    "ru": "بطيء؛ ببطء",
+    "pos": "صفة"
+   },
+   "mit": {
+    "ru": "مع",
+    "pos": "حرف جر"
+   },
+   "müssen": {
+    "ru": "يجب عليه",
+    "pos": "فعل",
+    "forms": "musste · hat gemusst"
+   },
+   "nach": {
+    "ru": "بعد؛ إلى",
+    "pos": "حرف جر"
+   },
+   "nicht": {
+    "ru": "لا، ليس",
+    "pos": "أداة"
+   },
+   "oder": {
+    "ru": "أو",
+    "pos": "أداة ربط",
+    "note": "…, oder? — …، أليس كذلك؟"
+   },
+   "prima": {
+    "ru": "ممتاز",
+    "pos": "ظرف"
+   },
+   "richtig": {
+    "ru": "صحيح",
+    "pos": "صفة"
+   },
+   "schnell": {
+    "ru": "سريع؛ بسرعة",
+    "pos": "صفة"
+   },
+   "schon": {
+    "ru": "بالفعل",
+    "pos": "ظرف"
+   },
+   "schätzen": {
+    "ru": "يقدّر",
+    "pos": "فعل",
+    "forms": "schätzte · hat geschätzt"
+   },
+   "sehen": {
+    "ru": "يرى",
+    "pos": "فعل",
+    "forms": "sah · hat gesehen"
+   },
+   "sehr": {
+    "ru": "جدًا",
+    "pos": "ظرف"
+   },
+   "sein": {
+    "ru": "يكون",
+    "pos": "فعل",
+    "forms": "war · ist gewesen"
+   },
+   "sicher": {
+    "ru": "آمن؛ متأكد",
+    "pos": "صفة"
+   },
+   "stehen": {
+    "ru": "يقف؛ يوجد",
+    "pos": "فعل",
+    "note": "Schilder stehen — توجد لافتات",
+    "forms": "stand · hat gestanden"
+   },
+   "und": {
+    "ru": "و",
+    "pos": "أداة ربط"
+   },
+   "ungefähr": {
+    "ru": "تقريبًا",
+    "pos": "ظرف"
+   },
+   "unter": {
+    "ru": "تحت؛ أقل من",
+    "pos": "حرف جر"
+   },
+   "verlassen": {
+    "ru": "يغادر",
+    "pos": "فعل",
+    "forms": "verließ · hat verlassen"
+   },
+   "vierzig": {
+    "ru": "أربعون",
+    "pos": "عدد"
+   },
+   "vor": {
+    "ru": "قبل، أمام",
+    "pos": "حرف جر",
+    "note": "rechts vor links — اليمين قبل اليسار"
+   },
+   "vorne": {
+    "ru": "في الأمام",
+    "pos": "ظرف"
+   },
+   "was": {
+    "ru": "ماذا",
+    "pos": "ضمير"
+   },
+   "wie": {
+    "ru": "كيف",
+    "pos": "ظرف",
+    "note": "wie schnell — بأي سرعة"
+   },
+   "wieder": {
+    "ru": "من جديد",
+    "pos": "ظرف"
+   },
+   "wir": {
+    "ru": "نحن",
+    "pos": "ضمير",
+    "note": "uns — نا: vor uns — أمامنا"
+   }
+  }
+ }
+}

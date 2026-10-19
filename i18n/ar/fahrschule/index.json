@@ -29,6 +29,7 @@
    "titleTr": "السرعة والمسافة الآمنة",
    "units": [
     "t-03",
+    "p-03",
     "r-03"
    ]
   }
@@ -96,6 +97,15 @@
    "title": "Geschwindigkeit und Abstand",
    "titleTr": "السرعة والمسافة الآمنة",
    "count": 21
+  },
+  {
+   "id": "p-03",
+   "kind": "dialog",
+   "emoji": "🌫️",
+   "level": "A2–B1",
+   "title": "Auf der Landstraße",
+   "titleTr": "على الطريق الريفي",
+   "count": 15
   },
   {
    "id": "r-03",

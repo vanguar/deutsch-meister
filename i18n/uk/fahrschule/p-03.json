@@ -1,0 +1,602 @@
+{
+ "id": "p-03",
+ "kind": "dialog",
+ "emoji": "🌫️",
+ "level": "A2–B1",
+ "title": "Auf der Landstraße",
+ "titleTr": "За містом",
+ "intro": "Ірина вперше їде за місто: дистанція за стовпчиками, туман і виїзд на автобан із рекомендованою швидкістю.",
+ "speakers": {
+  "A": {
+   "name": "Fahrlehrer",
+   "g": "m"
+  },
+  "B": {
+   "name": "Iryna",
+   "g": "f"
+  }
+ },
+ "lines": [
+  {
+   "de": "Wir verlassen jetzt den Ort. Was gilt nach dem Ortsende?",
+   "tr": "Зараз ми виїжджаємо з населеного пункту. Що діє після таблички кінця населеного пункту?",
+   "s": "A"
+  },
+  {
+   "de": "Außerorts darf ich höchstens hundert fahren.",
+   "tr": "Поза населеним пунктом можна не більше ста.",
+   "s": "B"
+  },
+  {
+   "de": "Richtig. Vor uns fährt ein Lkw. Wie groß muss der Abstand sein?",
+   "tr": "Правильно. Перед нами їде вантажівка. Якою має бути дистанція?",
+   "s": "A"
+  },
+  {
+   "de": "Halber Tacho, also bei achtzig ungefähr vierzig Meter.",
+   "tr": "Половина спідометра, тобто за вісімдесяти приблизно сорок метрів.",
+   "s": "B"
+  },
+  {
+   "de": "Gut. Und wie können Sie das schätzen?",
+   "tr": "Добре. А як це оцінити?",
+   "s": "A"
+  },
+  {
+   "de": "Mit den Leitpfosten. Sie stehen alle fünfzig Meter.",
+   "tr": "За сигнальними стовпчиками. Вони стоять через кожні п'ятдесят метрів.",
+   "s": "B"
+  },
+  {
+   "de": "Sehr gut. Achtung, da vorne kommt Nebel.",
+   "tr": "Дуже добре. Увага, попереду туман.",
+   "s": "A"
+  },
+  {
+   "de": "Ich sehe kaum etwas. Ich fahre langsamer und mache das Abblendlicht an.",
+   "tr": "Майже нічого не видно. Я їду повільніше й вмикаю ближнє світло.",
+   "o": {
+    "an": "an>anmachen",
+    "mache": "mache>anmachen"
+   },
+   "s": "B"
+  },
+  {
+   "de": "Richtig. Unter fünfzig Metern Sicht dürfen Sie höchstens fünfzig fahren.",
+   "tr": "Правильно. За видимості менше п'ятдесяти метрів можна не більше п'ятдесяти.",
+   "s": "A"
+  },
+  {
+   "de": "Jetzt ist die Sicht wieder gut. Fahren wir gleich auf die Autobahn?",
+   "tr": "Тепер видимість знову добра. Ми зараз поїдемо на автобан?",
+   "s": "B"
+  },
+  {
+   "de": "Ja. Dort gibt es kein allgemeines Tempolimit, aber wir fahren nicht schneller als hundertdreißig.",
+   "tr": "Так. Там немає загального обмеження швидкості, але ми їдемо не швидше ста тридцяти.",
+   "o": {
+    "es": "es>es gibt"
+   },
+   "s": "A"
+  },
+  {
+   "de": "Das ist die Richtgeschwindigkeit, oder?",
+   "tr": "Це рекомендована швидкість, так?",
+   "s": "B"
+  },
+  {
+   "de": "Genau. Und dort steht ein Blitzer. Wie schnell fahren wir gerade?",
+   "tr": "Саме так. А он стоїть камера контролю швидкості. З якою швидкістю ми зараз їдемо?",
+   "s": "A"
+  },
+  {
+   "de": "Genau hundert. Hier ist hundert erlaubt, also alles in Ordnung.",
+   "tr": "Рівно сто. Тут дозволено сто, тож усе гаразд.",
+   "s": "B"
+  },
+  {
+   "de": "Prima! Sie fahren schon sehr sicher.",
+   "tr": "Чудово! Ви вже їдете дуже впевнено.",
+   "s": "A"
+  }
+ ],
+ "signs": {},
+ "gloss": {
+  "w": {
+   "abblendlicht": "Abblendlicht",
+   "aber": "aber",
+   "abstand": "Abstand",
+   "achtung": "Achtung",
+   "achtzig": "achtzig",
+   "alle": "alle",
+   "alles": "alle",
+   "allgemeines": "allgemein",
+   "als": "als",
+   "also": "also",
+   "an>anmachen": "anmachen",
+   "auf": "auf",
+   "autobahn": "Autobahn",
+   "außerorts": "außerorts",
+   "bei": "bei",
+   "blitzer": "Blitzer",
+   "da": "da",
+   "darf": "dürfen",
+   "das": "der/die/das",
+   "dem": "der/die/das",
+   "den": "der/die/das",
+   "der": "der/die/das",
+   "die": "der/die/das",
+   "dort": "dort",
+   "dürfen": "dürfen",
+   "ein": "ein/eine",
+   "erlaubt": "erlauben",
+   "es>es gibt": "es gibt",
+   "etwas": "etwas",
+   "fahre": "fahren",
+   "fahren": "fahren",
+   "fährt": "fahren",
+   "fünfzig": "fünfzig",
+   "genau": "genau",
+   "gerade": "gerade",
+   "gibt": "es gibt",
+   "gilt": "gelten",
+   "gleich": "gleich",
+   "groß": "groß",
+   "gut": "gut",
+   "halber": "halb",
+   "hier": "hier",
+   "hundert": "hundert",
+   "hundertdreißig": "hundertdreißig",
+   "höchstens": "höchstens",
+   "ich": "ich",
+   "in": "in",
+   "ist": "sein",
+   "ja": "ja",
+   "jetzt": "jetzt",
+   "kaum": "kaum",
+   "kein": "kein",
+   "kommt": "kommen",
+   "können": "können",
+   "landstraße": "Landstraße",
+   "langsamer": "langsam",
+   "leitpfosten": "Leitpfosten",
+   "lkw": "Lkw",
+   "mache>anmachen": "anmachen",
+   "meter": "Meter",
+   "metern": "Meter",
+   "mit": "mit",
+   "muss": "müssen",
+   "nach": "nach",
+   "nebel": "Nebel",
+   "nicht": "nicht",
+   "oder": "oder",
+   "ordnung": "Ordnung",
+   "ort": "Ort",
+   "ortsende": "Ortsende",
+   "prima": "prima",
+   "richtgeschwindigkeit": "Richtgeschwindigkeit",
+   "richtig": "richtig",
+   "schnell": "schnell",
+   "schneller": "schnell",
+   "schon": "schon",
+   "schätzen": "schätzen",
+   "sehe": "sehen",
+   "sehr": "sehr",
+   "sein": "sein",
+   "sicher": "sicher",
+   "sicht": "Sicht",
+   "sie": "Sie",
+   "stehen": "stehen",
+   "steht": "stehen",
+   "tacho": "Tacho",
+   "tempolimit": "Tempolimit",
+   "und": "und",
+   "ungefähr": "ungefähr",
+   "uns": "wir",
+   "unter": "unter",
+   "verlassen": "verlassen",
+   "vierzig": "vierzig",
+   "vor": "vor",
+   "vorne": "vorne",
+   "was": "was",
+   "wie": "wie",
+   "wieder": "wieder",
+   "wir": "wir"
+  },
+  "l": {
+   "Abblendlicht": {
+    "ru": "ближнє світло",
+    "pos": "ім.",
+    "decl": "das Abblendlicht · мн. немає"
+   },
+   "Abstand": {
+    "ru": "дистанція, відстань",
+    "pos": "ім.",
+    "decl": "der Abstand · мн.: die Abstände"
+   },
+   "Achtung": {
+    "ru": "увага!",
+    "pos": "ім.",
+    "decl": "die Achtung · мн. немає"
+   },
+   "Autobahn": {
+    "ru": "автобан, автомагістраль",
+    "pos": "ім.",
+    "decl": "die Autobahn · мн.: die Autobahnen"
+   },
+   "Blitzer": {
+    "ru": "камера контролю швидкості",
+    "pos": "ім.",
+    "decl": "der Blitzer · мн.: die Blitzer"
+   },
+   "Landstraße": {
+    "ru": "заміська дорога",
+    "pos": "ім.",
+    "note": "поза населеним пунктом: для легкових зазвичай до 100 км/год",
+    "decl": "die Landstraße · мн.: die Landstraßen"
+   },
+   "Leitpfosten": {
+    "ru": "сигнальний стовпчик (на узбіччі)",
+    "pos": "ім.",
+    "note": "білі стовпчики з чорною смугою, стоять через кожні 50 м",
+    "decl": "der Leitpfosten · мн.: die Leitpfosten"
+   },
+   "Lkw": {
+    "ru": "вантажівка",
+    "pos": "ім.",
+    "note": "скорочення від der Lastkraftwagen",
+    "decl": "der Lkw · мн.: die Lkw"
+   },
+   "Meter": {
+    "ru": "метр",
+    "pos": "ім.",
+    "decl": "der Meter · мн.: die Meter"
+   },
+   "Nebel": {
+    "ru": "туман",
+    "pos": "ім.",
+    "decl": "der Nebel · мн.: die Nebel"
+   },
+   "Ordnung": {
+    "ru": "порядок",
+    "pos": "ім.",
+    "note": "in Ordnung — гаразд, у порядку",
+    "decl": "die Ordnung · мн.: die Ordnungen"
+   },
+   "Ort": {
+    "ru": "населений пункт; місце",
+    "pos": "ім.",
+    "decl": "der Ort · мн.: die Orte"
+   },
+   "Ortsende": {
+    "ru": "кінець населеного пункту",
+    "pos": "ім.",
+    "decl": "das Ortsende · мн.: die Ortsenden"
+   },
+   "Richtgeschwindigkeit": {
+    "ru": "рекомендована швидкість",
+    "pos": "ім.",
+    "note": "на автобані 130 км/год — не закон, а рекомендація; у разі аварії на більшій швидкості може бути часткова вина",
+    "decl": "die Richtgeschwindigkeit · мн.: die Richtgeschwindigkeiten"
+   },
+   "Sicht": {
+    "ru": "видимість",
+    "pos": "ім.",
+    "decl": "die Sicht · мн. немає"
+   },
+   "Sie": {
+    "ru": "ви (ввічливо)",
+    "pos": "займ.",
+    "note": "Ihnen — вам (давальний): vor Ihnen — перед вами"
+   },
+   "Tacho": {
+    "ru": "спідометр",
+    "pos": "ім.",
+    "note": "halber Tacho — половина показів спідометра (у метрах)",
+    "decl": "der Tacho · мн.: die Tachos"
+   },
+   "Tempolimit": {
+    "ru": "обмеження швидкості",
+    "pos": "ім.",
+    "decl": "das Tempolimit · мн.: die Tempolimits"
+   },
+   "aber": {
+    "ru": "але",
+    "pos": "спол."
+   },
+   "achtzig": {
+    "ru": "вісімдесят",
+    "pos": "числ."
+   },
+   "alle": {
+    "ru": "всі; все",
+    "pos": "займ."
+   },
+   "allgemein": {
+    "ru": "загальний",
+    "pos": "прикм."
+   },
+   "als": {
+    "ru": "ніж (при порівнянні); як",
+    "pos": "спол."
+   },
+   "also": {
+    "ru": "отже, тож",
+    "pos": "присл."
+   },
+   "anmachen": {
+    "ru": "вмикати",
+    "pos": "дієсл.",
+    "note": "відокремлюваний префікс: mache … an",
+    "forms": "machte an · hat angemacht"
+   },
+   "auf": {
+    "ru": "на, по",
+    "pos": "прийм.",
+    "note": "auf der Straße — на дорозі; achten auf — стежити за"
+   },
+   "außerorts": {
+    "ru": "поза населеним пунктом",
+    "pos": "присл.",
+    "note": "для легкових зазвичай не більше 100 км/год"
+   },
+   "bei": {
+    "ru": "при, біля; на (про сигнал)",
+    "pos": "прийм.",
+    "note": "beim = bei dem: beim Fahren — під час їзди; bei Rot — на червоний"
+   },
+   "da": {
+    "ru": "там, он; тоді",
+    "pos": "присл.",
+    "note": "da vorne — он там попереду"
+   },
+   "der/die/das": {
+    "ru": "означений артикль",
+    "pos": "артикль",
+    "note": "der — ч. р., die — ж. р. і мн., das — с. р.; den — ч. р. у знахідному, dem — ч. і с. р. у давальному; das ще означає «це»"
+   },
+   "dort": {
+    "ru": "там",
+    "pos": "присл."
+   },
+   "dürfen": {
+    "ru": "могти, мати право",
+    "pos": "дієсл.",
+    "forms": "durfte · hat gedurft"
+   },
+   "ein/eine": {
+    "ru": "неозначений артикль; один",
+    "pos": "артикль",
+    "note": "an einer Kreuzung — на (якомусь) перехресті"
+   },
+   "erlauben": {
+    "ru": "дозволяти",
+    "pos": "дієсл.",
+    "forms": "erlaubte · hat erlaubt"
+   },
+   "es gibt": {
+    "ru": "є, існує",
+    "pos": "вираз"
+   },
+   "etwas": {
+    "ru": "трохи; щось",
+    "pos": "присл."
+   },
+   "fahren": {
+    "ru": "їхати; кермувати машиною",
+    "pos": "дієсл.",
+    "forms": "fuhr · ist gefahren"
+   },
+   "fünfzig": {
+    "ru": "п'ятдесят",
+    "pos": "числ."
+   },
+   "gelten": {
+    "ru": "діяти (про правило)",
+    "pos": "дієсл.",
+    "forms": "galt · hat gegolten"
+   },
+   "genau": {
+    "ru": "саме так, точно",
+    "pos": "присл.",
+    "note": "genau hundert — рівно сто"
+   },
+   "gerade": {
+    "ru": "зараз, саме",
+    "pos": "присл."
+   },
+   "gleich": {
+    "ru": "зараз, одразу",
+    "pos": "присл."
+   },
+   "groß": {
+    "ru": "великий",
+    "pos": "прикм.",
+    "note": "Wie groß …? — Якої величини …?",
+    "forms": "groß · größer · am größten"
+   },
+   "gut": {
+    "ru": "добрий; добре",
+    "pos": "прикм.",
+    "forms": "gut · besser · am besten"
+   },
+   "halb": {
+    "ru": "половина, наполовину",
+    "pos": "прикм.",
+    "note": "halb so lang — удвічі коротший; halber Tacho — половина спідометра"
+   },
+   "hier": {
+    "ru": "тут",
+    "pos": "присл."
+   },
+   "hundert": {
+    "ru": "сто",
+    "pos": "числ."
+   },
+   "hundertdreißig": {
+    "ru": "сто тридцять",
+    "pos": "числ."
+   },
+   "höchstens": {
+    "ru": "щонайбільше, не більше",
+    "pos": "присл."
+   },
+   "ich": {
+    "ru": "я",
+    "pos": "займ."
+   },
+   "in": {
+    "ru": "в",
+    "pos": "прийм.",
+    "note": "im = in dem: im Bereich — у зоні"
+   },
+   "ja": {
+    "ru": "так",
+    "pos": "частка"
+   },
+   "jetzt": {
+    "ru": "зараз, тепер",
+    "pos": "присл."
+   },
+   "kaum": {
+    "ru": "ледве, майже не",
+    "pos": "присл.",
+    "note": "kaum etwas sehen — майже нічого не бачити"
+   },
+   "kein": {
+    "ru": "жодний; не (заперечення при іменнику)",
+    "pos": "займ."
+   },
+   "kommen": {
+    "ru": "приходити; їхати (наближатися)",
+    "pos": "дієсл.",
+    "note": "von rechts kommen — їхати праворуч",
+    "forms": "kam · ist gekommen"
+   },
+   "können": {
+    "ru": "могти",
+    "pos": "дієсл.",
+    "forms": "konnte · hat gekonnt"
+   },
+   "langsam": {
+    "ru": "повільний; повільно",
+    "pos": "прикм."
+   },
+   "mit": {
+    "ru": "з",
+    "pos": "прийм."
+   },
+   "müssen": {
+    "ru": "мусити, бути повинним",
+    "pos": "дієсл.",
+    "forms": "musste · hat gemusst"
+   },
+   "nach": {
+    "ru": "після; до (напрямок)",
+    "pos": "прийм."
+   },
+   "nicht": {
+    "ru": "не",
+    "pos": "частка"
+   },
+   "oder": {
+    "ru": "або",
+    "pos": "спол.",
+    "note": "…, oder? — …, правда? / так?"
+   },
+   "prima": {
+    "ru": "чудово",
+    "pos": "присл."
+   },
+   "richtig": {
+    "ru": "правильний; правильно",
+    "pos": "прикм."
+   },
+   "schnell": {
+    "ru": "швидкий; швидко",
+    "pos": "прикм."
+   },
+   "schon": {
+    "ru": "вже",
+    "pos": "присл."
+   },
+   "schätzen": {
+    "ru": "оцінювати (на око)",
+    "pos": "дієсл.",
+    "forms": "schätzte · hat geschätzt"
+   },
+   "sehen": {
+    "ru": "бачити",
+    "pos": "дієсл.",
+    "forms": "sah · hat gesehen"
+   },
+   "sehr": {
+    "ru": "дуже",
+    "pos": "присл."
+   },
+   "sein": {
+    "ru": "бути",
+    "pos": "дієсл.",
+    "forms": "war · ist gewesen"
+   },
+   "sicher": {
+    "ru": "безпечний; упевнений",
+    "pos": "прикм."
+   },
+   "stehen": {
+    "ru": "стояти",
+    "pos": "дієсл.",
+    "note": "Schilder stehen — стоять знаки",
+    "forms": "stand · hat gestanden"
+   },
+   "und": {
+    "ru": "і, та",
+    "pos": "спол."
+   },
+   "ungefähr": {
+    "ru": "приблизно",
+    "pos": "присл."
+   },
+   "unter": {
+    "ru": "під; менше",
+    "pos": "прийм."
+   },
+   "verlassen": {
+    "ru": "залишати, виїжджати з",
+    "pos": "дієсл.",
+    "forms": "verließ · hat verlassen"
+   },
+   "vierzig": {
+    "ru": "сорок",
+    "pos": "числ."
+   },
+   "vor": {
+    "ru": "перед",
+    "pos": "прийм.",
+    "note": "rechts vor links — правий перед лівим"
+   },
+   "vorne": {
+    "ru": "попереду",
+    "pos": "присл."
+   },
+   "was": {
+    "ru": "що",
+    "pos": "займ."
+   },
+   "wie": {
+    "ru": "як",
+    "pos": "присл.",
+    "note": "wie schnell — з якою швидкістю"
+   },
+   "wieder": {
+    "ru": "знову",
+    "pos": "присл."
+   },
+   "wir": {
+    "ru": "ми",
+    "pos": "займ.",
+    "note": "uns — нас, нам: vor uns — перед нами"
+   }
+  }
+ }
+}
