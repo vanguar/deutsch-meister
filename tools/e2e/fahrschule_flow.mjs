@@ -83,10 +83,13 @@ const hub = await c.ev(`[...document.querySelectorAll('.fs-tile[data-unit]')].ma
 ok(hub === ORDER.join(), `порядок по темам: ${hub}`);
 ok(await c.ev(`document.querySelectorAll('.fs-soon').length === 1`), 'плитка «Скоро» с планами');
 const topicsN = await c.ev(`Fahrschule.topics.length`);
-ok(await c.ev(`document.querySelectorAll('.fs-topic-head').length === ${topicsN} && ${topicsN} >= 1`), `темы: ${topicsN} заголовк(а/ов) над уроками`);
-ok(await c.ev(`(() => { const head = document.querySelector('.fs-topic-head'); let el = head.nextElementSibling; const ids = [];
-  while (el && !el.classList.contains('fs-topic-head') && el.dataset.unit) { ids.push(el.dataset.unit); el = el.nextElementSibling; }
-  return ids.join() === Fahrschule.topics[0].units.join(); })()`), 'под заголовком темы — её уроки по порядку');
+ok(await c.ev(`document.querySelectorAll('.fs-topic').length === ${topicsN} && ${topicsN} >= 1`), `темы: ${topicsN} карточк(и) тем`);
+ok(await c.ev(`Fahrschule.topics.every(t => [...document.querySelectorAll('.fs-topic[data-topic="' + t.id + '"] [data-unit]')].map(e => e.dataset.unit).join() === t.units.join())`),
+  'в карточке каждой темы — её уроки по порядку');
+ok(await c.ev(`(() => { const cs = getComputedStyle(document.querySelector('.fs-topic')); const hs = getComputedStyle(document.querySelector('.fs-topic-head'));
+  return parseFloat(cs.borderTopWidth) >= 1 && cs.backgroundColor !== getComputedStyle(document.body).backgroundColor && hs.backgroundColor !== cs.backgroundColor; })()`),
+  'тема выделена: рамка, свой фон и шапка-полоса');
+await c.shot('fs_hub_topics.png');
 // на списке первые уроки тем подгружаются в фоне
 ok(await waitFor(`Fahrschule.topics.every(t => Fahrschule.cached.includes(t.units[0]))`, 8000), 'список: первые уроки тем подгружены в фоне');
 ok(await c.ev(NO_HSCROLL), 'список: нет горизонтальной прокрутки (390)');

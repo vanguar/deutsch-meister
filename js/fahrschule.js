@@ -267,22 +267,26 @@ const Fahrschule = (() => {
     </div>`;
   }
 
-  function topicHeadHtml(t, n) {
-    return `<div class="fs-topic-head">
-      <span class="news-rubric-ico" aria-hidden="true">${esc(t.emoji)}</span>
-      <div class="fs-topic-titles">
-        <div class="fs-topic-n"><span>Тема</span> ${n}</div>
-        <h2 class="fs-topic-title" lang="de" dir="ltr">${esc(t.title)}</h2>
-        <div class="fs-topic-tr">${esc(t.titleTr)}</div>
+  // Тема — отдельная карточка: шапка полосой (номер, эмодзи, название),
+  // под ней сетка её уроков. Так темы не сливаются в одну ленту плиток.
+  function topicHtml(t, n, byId) {
+    return `<section class="fs-topic" data-topic="${esc(t.id)}" aria-labelledby="fsTopic-${esc(t.id)}">
+      <div class="fs-topic-head">
+        <span class="news-rubric-ico" aria-hidden="true">${esc(t.emoji)}</span>
+        <div class="fs-topic-titles">
+          <div class="fs-topic-n"><span>Тема</span> ${n}</div>
+          <h2 class="fs-topic-title" id="fsTopic-${esc(t.id)}" lang="de" dir="ltr">${esc(t.title)}</h2>
+          <div class="fs-topic-tr">${esc(t.titleTr)}</div>
+        </div>
       </div>
-    </div>`;
+      <div class="news-grid fs-topic-grid">${t.units.filter(id => byId[id]).map(id => tileHtml(byId[id])).join('')}</div>
+    </section>`;
   }
 
   function renderHub() {
     el.list.setAttribute('aria-busy', 'false');
     const byId = Object.fromEntries(units.map(u => [u.id, u]));
-    el.list.innerHTML = topics.map((t, k) => topicHeadHtml(t, k + 1)
-      + t.units.filter(id => byId[id]).map(id => tileHtml(byId[id])).join('')).join('') + soonTileHtml();
+    el.list.innerHTML = topics.map((t, k) => topicHtml(t, k + 1, byId)).join('') + soonTileHtml();
     // первые уроки тем — заранее, пока человек выбирает
     prefetch(topics.map(t => t.units[0]));
   }

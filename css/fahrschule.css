@@ -12,11 +12,25 @@
 /* Значок и подпись в чипе («↻ Ещё раз»): в inline-flex пробел между ними теряется */
 .fs-page .news-chip { gap: 6px; }
 
-/* ── Темы: заголовок на всю ширину сетки, под ним уроки темы ── */
-.fs-topic-head { grid-column: 1 / -1; display: flex; align-items: center; gap: 12px; margin-top: 10px; }
-.fs-topic-head:first-child { margin-top: 0; }
+/* ── Темы: каждая — карточка с шапкой-полосой, внутри сетка уроков ── */
+.fs-list { display: flex; flex-direction: column; gap: 18px; }
+.fs-topic {
+  border: 1px solid color-mix(in srgb, var(--accent2) 38%, var(--border));
+  border-radius: var(--r-xl); overflow: hidden;
+  background: color-mix(in srgb, var(--accent2) 6%, var(--surface));
+}
+.fs-topic-head {
+  display: flex; align-items: center; gap: 12px; padding: 12px 14px;
+  background: color-mix(in srgb, var(--accent2) 16%, var(--surface));
+  border-bottom: 1px solid color-mix(in srgb, var(--accent2) 30%, var(--border));
+}
+.fs-topic-grid { padding: 12px; gap: 12px; }
 .fs-topic-titles { min-width: 0; }
-.fs-topic-n { font-size: 12px; font-weight: 800; letter-spacing: .4px; text-transform: uppercase; color: var(--text-dim); }
+.fs-topic-n {
+  display: inline-block; padding: 1px 8px; border-radius: var(--r-full); margin-bottom: 3px;
+  background: var(--accent2); color: var(--text-on-btn);
+  font-size: 11px; font-weight: 800; letter-spacing: .4px; text-transform: uppercase;
+}
 .fs-topic-title {
   margin: 0; font-family: 'Playfair Display', serif; font-size: 21px; font-weight: 900;
   color: var(--text-strong); line-height: 1.2; text-align: start;
