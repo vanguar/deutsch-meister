@@ -20,6 +20,8 @@ import json
 import os
 import re
 import sys
+import time
+import urllib.error
 import urllib.parse
 import urllib.request
 
@@ -37,6 +39,18 @@ SIGNS = {
     'z306': 'File:Zeichen 306 - Vorfahrtstraße, StVO 1970.svg',
     'z307': 'File:Zeichen 307 - Ende der Vorfahrtstraße, StVO 1970.svg',
     'z720': 'File:Zeichen 720 - Grünpfeil, StVO 1994.svg',
+    'z101': 'File:Zeichen 101 - Gefahrstelle, StVO 1970.svg',
+    'z136': 'File:Zeichen 136 - Kinder, StVO 1970.svg',
+    'z267': 'File:Zeichen 267 - Verbot der Einfahrt, StVO 1970.svg',
+    'z274': 'File:Zeichen 274-30 - Zulässige Höchstgeschwindigkeit, StVO 2017.svg',
+    'z2741': 'File:Zeichen 274.1 - Beginn einer Tempo 30-Zone, StVO 2013.svg',
+    'z276': 'File:Zeichen 276 - Überholverbot für Kraftfahrzeuge aller Art, StVO 1992.svg',
+    'z283': 'File:Zeichen 283 - Absolutes Haltverbot, StVO 2017.svg',
+    'z286': 'File:Zeichen 286 - Eingeschränktes Halteverbot, StVO 1970.svg',
+    'z310': 'File:Zeichen 310 - Ortstafel Vorderseite, StVO 2017.svg',
+    'z311': 'File:Zeichen 311 - Ortstafel (Rückseite), StVO 1970.svg',
+    'z3251': 'File:Zeichen 325.1 - Beginn eines verkehrsberuhigten Bereichs, StVO 2009.svg',
+    'z350': 'File:Zeichen 350-10 - Fußgängerüberweg (rechts), StVO 1992.svg',
 }
 
 # SVG с Commons встраивается как <img>: скрипты там и так не исполняются,
@@ -45,10 +59,25 @@ UNSAFE = re.compile(r'<script|\son[a-z]+\s*=|javascript:|<foreignObject', re.I)
 EXTERNAL = re.compile(r'(?:href|src)\s*=\s*["\']https?:', re.I)
 
 
+PAUSE = 1.5      # между запросами: Commons режет частые запросы (HTTP 429)
+TRIES = 6
+
+
 def get(url):
-    req = urllib.request.Request(url, headers={'User-Agent': UA})
-    with urllib.request.urlopen(req, timeout=30) as r:
-        return r.read()
+    """GET с паузой и повторами: на 429/503 ждём Retry-After (или 5, 10, 20… с)."""
+    for k in range(TRIES):
+        time.sleep(PAUSE)
+        req = urllib.request.Request(url, headers={'User-Agent': UA})
+        try:
+            with urllib.request.urlopen(req, timeout=30) as r:
+                return r.read()
+        except urllib.error.HTTPError as e:
+            if e.code not in (429, 503) or k == TRIES - 1:
+                raise
+            wait = int(e.headers.get('Retry-After') or 0) or 5 * 2 ** k
+            print(f'  Commons просит подождать ({e.code}), пауза {wait} с')
+            time.sleep(wait)
+    raise RuntimeError('недоступно: ' + url)
 
 
 def strip_html(s):

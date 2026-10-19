@@ -130,6 +130,7 @@
      "de": "Das grüne Auto biegt links ab. Es lässt den Gegenverkehr durch und wartet auf das rote Auto von rechts.",
      "tr": "Зелёная машина поворачивает налево. Она пропускает встречную и ждёт красную, которая справа.",
      "o": {
+      "ab": "ab>abbiegen",
       "lässt": "lässt>durchlassen"
      }
     }
@@ -156,7 +157,7 @@
  },
  "gloss": {
   "w": {
-   "ab": "abbiegen",
+   "ab>abbiegen": "abbiegen",
    "aber": "aber",
    "achtung": "Achtung",
    "also": "also",
@@ -355,7 +356,8 @@
    },
    "gelb": {
     "ru": "жёлтый",
-    "pos": "прил."
+    "pos": "прил.",
+    "note": "Gelb (с большой) — жёлтый сигнал"
    },
    "gelten": {
     "ru": "действовать (о правиле)",

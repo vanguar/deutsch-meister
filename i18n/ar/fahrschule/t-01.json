@@ -285,8 +285,10 @@
     "decl": "der Gegenverkehr · لا جمع له"
    },
    "Halt": {
-    "ru": "قف!",
-    "pos": "تعجّب"
+    "ru": "توقف؛ قف!",
+    "pos": "اسم",
+    "note": "Halt! — قف! (على اللافتة 206)؛ nach einem Halt — بعد التوقف",
+    "decl": "der Halt · الجمع: die Halte"
    },
    "Kreuzung": {
     "ru": "تقاطع",

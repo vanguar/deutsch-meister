@@ -469,7 +469,7 @@ def main():
                 m = sign_meta.get(s, {})
                 signs_out[s] = {
                     'de': sign_names[s]['de'], 'tr': sign_names[s]['tr'][i],
-                    'src': f'data/fahrschule/signs/{s}.svg', 'n': s[1:],
+                    'src': f'data/fahrschule/signs/{s}.svg', 'n': sign_names[s].get('n') or s[1:],
                     'license': m.get('license', ''), 'source': m.get('source', ''),
                 }
             unit = {

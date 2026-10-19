@@ -92,6 +92,9 @@
   {
    "de": "Wir sind innerorts, also höchstens fünfzig. An der nächsten Kreuzung biegen Sie rechts ab.",
    "tr": "Ми в населеному пункті, тож не більше п'ятдесяти. На наступному перехресті поверніть праворуч.",
+   "o": {
+    "ab": "ab>abbiegen"
+   },
    "s": "A"
   },
   {
@@ -108,7 +111,7 @@
  "signs": {},
  "gloss": {
   "w": {
-   "ab": "abbiegen",
+   "ab>abbiegen": "abbiegen",
    "aber": "aber",
    "achte": "achten",
    "alles": "alle",
@@ -426,7 +429,8 @@
    },
    "in": {
     "ru": "в",
-    "pos": "прийм."
+    "pos": "прийм.",
+    "note": "im = in dem: im Bereich — у зоні"
    },
    "innerorts": {
     "ru": "у населеному пункті",

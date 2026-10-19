@@ -85,7 +85,10 @@
    "explain": [
     {
      "de": "Das grüne Auto biegt links ab und lässt das blaue Auto zuerst durchfahren.",
-     "tr": "Зелена машина повертає ліворуч і спочатку пропускає синю."
+     "tr": "Зелена машина повертає ліворуч і спочатку пропускає синю.",
+     "o": {
+      "ab": "ab>abbiegen"
+     }
     },
     {
      "de": "Auch bei Grün gilt: Wer links abbiegt, wartet auf den Gegenverkehr.",
@@ -169,7 +172,7 @@
  },
  "gloss": {
   "w": {
-   "ab": "abbiegen",
+   "ab>abbiegen": "abbiegen",
    "abbiegen": "abbiegen",
    "abbiegt": "abbiegen",
    "aber": "aber",
@@ -373,7 +376,8 @@
    },
    "gelb": {
     "ru": "жовтий",
-    "pos": "прикм."
+    "pos": "прикм.",
+    "note": "Gelb (з великої) — жовтий сигнал"
    },
    "gelten": {
     "ru": "діяти (про правило)",

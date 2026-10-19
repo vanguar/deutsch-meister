@@ -1,0 +1,1149 @@
+{
+ "id": "t-02",
+ "kind": "theory",
+ "emoji": "🚸",
+ "level": "A2–B1",
+ "title": "Verkehrszeichen und Ampeln",
+ "titleTr": "Дорожні знаки і світлофори",
+ "intro": "Які бувають знаки, що заборонено, як змінюється швидкість у населеному пункті і що означають сигнали світлофора в Німеччині — разом із червоним і жовтим та табличкою із зеленою стрілкою.",
+ "sections": [
+  {
+   "title": "Три види знаків",
+   "lines": [
+    {
+     "de": "Gefahrzeichen sind Dreiecke mit rotem Rand. Sie warnen vor einer Gefahr.",
+     "tr": "Попереджувальні знаки — трикутники з червоною облямівкою. Вони попереджають про небезпеку.",
+     "sign": "z101"
+    },
+    {
+     "de": "Vorschriftzeichen sind meistens rund. Sie verbieten oder erlauben etwas.",
+     "tr": "Знаки приписів найчастіше круглі. Вони щось забороняють або дозволяють.",
+     "sign": "z267"
+    },
+    {
+     "de": "Richtzeichen sind meistens eckig. Sie geben Hinweise, zum Beispiel zum Zebrastreifen.",
+     "tr": "Інформаційні знаки найчастіше прямокутні. Вони підказують, наприклад, де пішохідний перехід.",
+     "sign": "z350"
+    }
+   ]
+  },
+  {
+   "title": "Заборони",
+   "lines": [
+    {
+     "de": "In diese Straße dürfen Sie nicht hineinfahren.",
+     "tr": "На цю вулицю в'їжджати не можна.",
+     "sign": "z267"
+    },
+    {
+     "de": "Hier dürfen Sie höchstens dreißig Kilometer pro Stunde fahren.",
+     "tr": "Тут можна їхати не швидше тридцяти кілометрів на годину.",
+     "sign": "z274"
+    },
+    {
+     "de": "Hier dürfen Sie keine anderen Autos überholen.",
+     "tr": "Тут не можна обганяти інші машини.",
+     "sign": "z276"
+    },
+    {
+     "de": "Absolutes Haltverbot: Hier dürfen Sie nicht einmal kurz halten.",
+     "tr": "Зупинку заборонено повністю: тут не можна зупинитися навіть на хвилину.",
+     "sign": "z283"
+    },
+    {
+     "de": "Eingeschränktes Haltverbot: Sie dürfen höchstens drei Minuten halten oder kurz zum Ein- und Aussteigen.",
+     "tr": "Стоянку заборонено: зупинитися можна не більше ніж на три хвилини або ненадовго, щоб сісти чи вийти.",
+     "o": {
+      "ein": "ein>einsteigen"
+     },
+     "sign": "z286"
+    }
+   ]
+  },
+  {
+   "title": "У населеному пункті",
+   "lines": [
+    {
+     "de": "Ab dem gelben Ortsschild gilt innerorts fünfzig Kilometer pro Stunde.",
+     "tr": "Від жовтої таблички з назвою населеного пункту діє обмеження п'ятдесят кілометрів на годину.",
+     "o": {
+      "ab": "ab>ab"
+     },
+     "sign": "z310"
+    },
+    {
+     "de": "Am Ortsende gilt außerorts höchstens hundert Kilometer pro Stunde.",
+     "tr": "Після таблички кінця населеного пункту — не більше ста кілометрів на годину.",
+     "sign": "z311"
+    },
+    {
+     "de": "In einer Tempo-30-Zone gilt überall höchstens dreißig. Meistens gilt dort rechts vor links.",
+     "tr": "У зоні Tempo 30 скрізь не більше тридцяти. Зазвичай там діє «правий перед лівим».",
+     "sign": "z2741"
+    },
+    {
+     "de": "Im verkehrsberuhigten Bereich fahren Sie Schrittgeschwindigkeit. Kinder dürfen überall spielen.",
+     "tr": "У житловій зоні їздять зі швидкістю пішохода. Діти можуть гратися скрізь.",
+     "sign": "z3251"
+    },
+    {
+     "de": "Am Zebrastreifen haben Fußgänger Vorrang. Halten Sie an, wenn jemand über die Straße gehen will.",
+     "tr": "На «зебрі» пішоходи мають перевагу. Зупиніться, якщо хтось хоче перейти дорогу.",
+     "o": {
+      "an": "an>anhalten",
+      "halten": "halten>anhalten"
+     },
+     "sign": "z350"
+    },
+    {
+     "de": "Achtung, Kinder! Fahren Sie hier besonders langsam und vorsichtig.",
+     "tr": "Увага, діти! Тут їдьте особливо повільно й обережно.",
+     "sign": "z136"
+    }
+   ]
+  },
+  {
+   "title": "Світлофор",
+   "lines": [
+    {
+     "de": "Rot bedeutet: Halten Sie vor der Haltlinie an.",
+     "tr": "Червоний означає: зупиніться перед стоп-лінією.",
+     "o": {
+      "an": "an>anhalten",
+      "halten": "halten>anhalten"
+     }
+    },
+    {
+     "de": "Rot und Gelb zusammen bedeutet: Gleich kommt Grün, aber Sie dürfen noch nicht fahren.",
+     "tr": "Червоний і жовтий разом означають: зараз буде зелений, але їхати ще не можна."
+    },
+    {
+     "de": "Gelb bedeutet: Halten Sie an, wenn das noch sicher möglich ist.",
+     "tr": "Жовтий означає: зупиніться, якщо це ще можна зробити безпечно.",
+     "o": {
+      "an": "an>anhalten",
+      "halten": "halten>anhalten"
+     }
+    },
+    {
+     "de": "Bei Grün dürfen Sie fahren, aber achten Sie auf Fußgänger und Radfahrer.",
+     "tr": "На зелений можна їхати, але стежте за пішоходами й велосипедистами."
+    },
+    {
+     "de": "Wer bei Rot fährt, zahlt mindestens neunzig Euro und bekommt einen Punkt in Flensburg.",
+     "tr": "Хто їде на червоний, платить щонайменше дев'яносто євро й отримує штрафний бал у Фленсбурзі."
+    },
+    {
+     "de": "Ist die Ampel ausgefallen, gelten die Verkehrszeichen.",
+     "tr": "Якщо світлофор не працює, діють дорожні знаки."
+    }
+   ]
+  },
+  {
+   "title": "Зелена стрілка",
+   "lines": [
+    {
+     "de": "Der grüne Pfeil neben der Ampel ist ein Schild aus Metall, kein Licht.",
+     "tr": "Зелена стрілка біля світлофора — металева табличка, а не сигнал.",
+     "sign": "z720"
+    },
+    {
+     "de": "Mit diesem Schild dürfen Sie bei Rot rechts abbiegen, aber nur nach einem vollständigen Halt.",
+     "tr": "З цією табличкою на червоний можна повернути праворуч, але лише після повної зупинки."
+    },
+    {
+     "de": "Fußgänger und Radfahrer mit Grün dürfen Sie dabei nicht behindern.",
+     "tr": "Пішоходам і велосипедистам, у яких зелений, заважати при цьому не можна."
+    }
+   ]
+  }
+ ],
+ "quiz": [
+  {
+   "sign": "z267",
+   "wrong": [
+    "z283",
+    "z276"
+   ]
+  },
+  {
+   "sign": "z286",
+   "wrong": [
+    "z283",
+    "z3251"
+   ]
+  },
+  {
+   "sign": "z310",
+   "wrong": [
+    "z311",
+    "z2741"
+   ]
+  },
+  {
+   "sign": "z2741",
+   "wrong": [
+    "z274",
+    "z3251"
+   ]
+  },
+  {
+   "sign": "z3251",
+   "wrong": [
+    "z350",
+    "z2741"
+   ]
+  },
+  {
+   "sign": "z720",
+   "wrong": [
+    "z350",
+    "z267"
+   ]
+  },
+  {
+   "sign": "z136",
+   "wrong": [
+    "z101",
+    "z350"
+   ]
+  }
+ ],
+ "quizQuestion": {
+  "de": "Was bedeutet dieses Schild?",
+  "tr": "Що означає цей знак?"
+ },
+ "signs": {
+  "z101": {
+   "de": "Gefahrstelle",
+   "tr": "Небезпечна ділянка",
+   "src": "data/fahrschule/signs/z101.svg",
+   "n": "101",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_101_-_Gefahrstelle,_StVO_1970.svg"
+  },
+  "z136": {
+   "de": "Kinder",
+   "tr": "Діти",
+   "src": "data/fahrschule/signs/z136.svg",
+   "n": "136",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_136_-_Kinder,_StVO_1970.svg"
+  },
+  "z267": {
+   "de": "Verbot der Einfahrt",
+   "tr": "В'їзд заборонено",
+   "src": "data/fahrschule/signs/z267.svg",
+   "n": "267",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_267_-_Verbot_der_Einfahrt,_StVO_1970.svg"
+  },
+  "z274": {
+   "de": "Zulässige Höchstgeschwindigkeit",
+   "tr": "Обмеження максимальної швидкості",
+   "src": "data/fahrschule/signs/z274.svg",
+   "n": "274",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_274-30_-_Zul%C3%A4ssige_H%C3%B6chstgeschwindigkeit,_StVO_2017.svg"
+  },
+  "z2741": {
+   "de": "Tempo-30-Zone",
+   "tr": "Зона Tempo 30",
+   "src": "data/fahrschule/signs/z2741.svg",
+   "n": "274.1",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_274.1_-_Beginn_einer_Tempo_30-Zone,_StVO_2013.svg"
+  },
+  "z276": {
+   "de": "Überholverbot",
+   "tr": "Обгін заборонено",
+   "src": "data/fahrschule/signs/z276.svg",
+   "n": "276",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_276_-_%C3%9Cberholverbot_f%C3%BCr_Kraftfahrzeuge_aller_Art,_StVO_1992.svg"
+  },
+  "z283": {
+   "de": "Absolutes Haltverbot",
+   "tr": "Зупинку заборонено",
+   "src": "data/fahrschule/signs/z283.svg",
+   "n": "283",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_283_-_Absolutes_Haltverbot,_StVO_2017.svg"
+  },
+  "z286": {
+   "de": "Eingeschränktes Haltverbot",
+   "tr": "Стоянку заборонено (зупинка до трьох хвилин)",
+   "src": "data/fahrschule/signs/z286.svg",
+   "n": "286",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_286_-_Eingeschr%C3%A4nktes_Halteverbot,_StVO_1970.svg"
+  },
+  "z310": {
+   "de": "Ortstafel: Anfang der Ortschaft",
+   "tr": "Початок населеного пункту",
+   "src": "data/fahrschule/signs/z310.svg",
+   "n": "310",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_310_-_Ortstafel_Vorderseite,_StVO_2017.svg"
+  },
+  "z311": {
+   "de": "Ortstafel: Ende der Ortschaft",
+   "tr": "Кінець населеного пункту",
+   "src": "data/fahrschule/signs/z311.svg",
+   "n": "311",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_311_-_Ortstafel_(R%C3%BCckseite),_StVO_1970.svg"
+  },
+  "z3251": {
+   "de": "Verkehrsberuhigter Bereich",
+   "tr": "Житлова зона",
+   "src": "data/fahrschule/signs/z3251.svg",
+   "n": "325.1",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_325.1_-_Beginn_eines_verkehrsberuhigten_Bereichs,_StVO_2009.svg"
+  },
+  "z350": {
+   "de": "Fußgängerüberweg",
+   "tr": "Пішохідний перехід",
+   "src": "data/fahrschule/signs/z350.svg",
+   "n": "350",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_350-10_-_Fu%C3%9Fg%C3%A4nger%C3%BCberweg_(rechts),_StVO_1992.svg"
+  },
+  "z720": {
+   "de": "Grünpfeil",
+   "tr": "Зелена стрілка: праворуч на червоний після зупинки",
+   "src": "data/fahrschule/signs/z720.svg",
+   "n": "720",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_720_-_Gr%C3%BCnpfeil,_StVO_1994.svg"
+  }
+ },
+ "gloss": {
+  "w": {
+   "ab>ab": "ab",
+   "abbiegen": "abbiegen",
+   "aber": "aber",
+   "absolutes": "absolut",
+   "achten": "achten",
+   "achtung": "Achtung",
+   "am": "an",
+   "ampel": "Ampel",
+   "ampeln": "Ampel",
+   "an>anhalten": "anhalten",
+   "anderen": "andere",
+   "anfang": "Anfang",
+   "auf": "auf",
+   "aus": "aus",
+   "ausgefallen": "ausfallen",
+   "aussteigen": "aussteigen",
+   "autos": "Auto",
+   "außerorts": "außerorts",
+   "bedeutet": "bedeuten",
+   "behindern": "behindern",
+   "bei": "bei",
+   "beispiel": "Beispiel",
+   "bekommt": "bekommen",
+   "bereich": "Bereich",
+   "besonders": "besonders",
+   "dabei": "dabei",
+   "das": "der/die/das",
+   "dem": "der/die/das",
+   "der": "der/die/das",
+   "die": "der/die/das",
+   "diese": "dieser",
+   "diesem": "dieser",
+   "dieses": "dieser",
+   "dort": "dort",
+   "drei": "drei",
+   "dreiecke": "Dreieck",
+   "dreißig": "dreißig",
+   "dürfen": "dürfen",
+   "eckig": "eckig",
+   "ein": "ein/eine",
+   "ein>einsteigen": "einsteigen",
+   "einem": "ein/eine",
+   "einen": "ein/eine",
+   "einer": "ein/eine",
+   "einfahrt": "Einfahrt",
+   "eingeschränktes": "eingeschränkt",
+   "einmal": "einmal",
+   "ende": "Ende",
+   "erlauben": "erlauben",
+   "etwas": "etwas",
+   "euro": "Euro",
+   "fahren": "fahren",
+   "flensburg": "Flensburg",
+   "fußgänger": "Fußgänger",
+   "fußgängerüberweg": "Fußgängerüberweg",
+   "fährt": "fahren",
+   "fünfzig": "fünfzig",
+   "geben": "geben",
+   "gefahr": "Gefahr",
+   "gefahrstelle": "Gefahrstelle",
+   "gefahrzeichen": "Gefahrzeichen",
+   "gehen": "gehen",
+   "gelb": "gelb",
+   "gelben": "gelb",
+   "gelten": "gelten",
+   "gilt": "gelten",
+   "gleich": "gleich",
+   "grün": "grün",
+   "grüne": "grün",
+   "grünpfeil": "Grünpfeil",
+   "haben": "haben",
+   "halt": "Halt",
+   "halten": "halten",
+   "halten>anhalten": "anhalten",
+   "haltlinie": "Haltlinie",
+   "haltverbot": "Haltverbot",
+   "hier": "hier",
+   "hineinfahren": "hineinfahren",
+   "hinweise": "Hinweis",
+   "hundert": "hundert",
+   "höchstens": "höchstens",
+   "höchstgeschwindigkeit": "Höchstgeschwindigkeit",
+   "im": "in",
+   "in": "in",
+   "innerorts": "innerorts",
+   "ist": "sein",
+   "jemand": "jemand",
+   "kein": "kein",
+   "keine": "kein",
+   "kilometer": "Kilometer",
+   "kinder": "Kind",
+   "kommt": "kommen",
+   "kurz": "kurz",
+   "langsam": "langsam",
+   "licht": "Licht",
+   "links": "links",
+   "meistens": "meistens",
+   "metall": "Metall",
+   "mindestens": "mindestens",
+   "minuten": "Minute",
+   "mit": "mit",
+   "möglich": "möglich",
+   "nach": "nach",
+   "neben": "neben",
+   "neunzig": "neunzig",
+   "nicht": "nicht",
+   "noch": "noch",
+   "nur": "nur",
+   "oder": "oder",
+   "ortschaft": "Ortschaft",
+   "ortsende": "Ortsende",
+   "ortsschild": "Ortsschild",
+   "ortstafel": "Ortstafel",
+   "pfeil": "Pfeil",
+   "pro": "pro",
+   "punkt": "Punkt",
+   "radfahrer": "Radfahrer",
+   "rand": "Rand",
+   "rechts": "rechts",
+   "richtzeichen": "Richtzeichen",
+   "rot": "rot",
+   "rotem": "rot",
+   "rund": "rund",
+   "schild": "Schild",
+   "schrittgeschwindigkeit": "Schrittgeschwindigkeit",
+   "sicher": "sicher",
+   "sie": "Sie",
+   "sind": "sein",
+   "spielen": "spielen",
+   "straße": "Straße",
+   "stunde": "Stunde",
+   "tempo": "Tempo",
+   "und": "und",
+   "verbieten": "verbieten",
+   "verbot": "Verbot",
+   "verkehrsberuhigten": "verkehrsberuhigt",
+   "verkehrsberuhigter": "verkehrsberuhigt",
+   "verkehrszeichen": "Verkehrszeichen",
+   "vollständigen": "vollständig",
+   "vor": "vor",
+   "vorrang": "Vorrang",
+   "vorschriftzeichen": "Vorschriftzeichen",
+   "vorsichtig": "vorsichtig",
+   "warnen": "warnen",
+   "was": "was",
+   "wenn": "wenn",
+   "wer": "wer",
+   "will": "wollen",
+   "zahlt": "zahlen",
+   "zebrastreifen": "Zebrastreifen",
+   "zone": "Zone",
+   "zulässige": "zulässig",
+   "zum": "zu",
+   "zusammen": "zusammen",
+   "über": "über",
+   "überall": "überall",
+   "überholen": "überholen",
+   "überholverbot": "Überholverbot"
+  },
+  "l": {
+   "Achtung": {
+    "ru": "увага!",
+    "pos": "ім.",
+    "decl": "die Achtung · мн. немає"
+   },
+   "Ampel": {
+    "ru": "світлофор",
+    "pos": "ім.",
+    "decl": "die Ampel · мн.: die Ampeln"
+   },
+   "Anfang": {
+    "ru": "початок",
+    "pos": "ім.",
+    "decl": "der Anfang · мн.: die Anfänge"
+   },
+   "Auto": {
+    "ru": "машина, автомобіль",
+    "pos": "ім.",
+    "decl": "das Auto · мн.: die Autos"
+   },
+   "Beispiel": {
+    "ru": "приклад",
+    "pos": "ім.",
+    "note": "zum Beispiel — наприклад",
+    "decl": "das Beispiel · мн.: die Beispiele"
+   },
+   "Bereich": {
+    "ru": "зона, ділянка",
+    "pos": "ім.",
+    "decl": "der Bereich · мн.: die Bereiche"
+   },
+   "Dreieck": {
+    "ru": "трикутник",
+    "pos": "ім.",
+    "decl": "das Dreieck · мн.: die Dreiecke"
+   },
+   "Einfahrt": {
+    "ru": "в'їзд",
+    "pos": "ім.",
+    "decl": "die Einfahrt · мн.: die Einfahrten"
+   },
+   "Ende": {
+    "ru": "кінець",
+    "pos": "ім.",
+    "decl": "das Ende · мн.: die Enden"
+   },
+   "Euro": {
+    "ru": "євро",
+    "pos": "ім.",
+    "decl": "der Euro · мн.: die Euro"
+   },
+   "Flensburg": {
+    "ru": "Фленсбург",
+    "pos": "власна назва",
+    "note": "там відомство KBA веде реєстр штрафних балів водіїв; «Punkt in Flensburg» — штрафний бал"
+   },
+   "Fußgänger": {
+    "ru": "пішохід",
+    "pos": "ім.",
+    "decl": "der Fußgänger · мн.: die Fußgänger"
+   },
+   "Fußgängerüberweg": {
+    "ru": "пішохідний перехід",
+    "pos": "ім.",
+    "note": "у розмові: der Zebrastreifen",
+    "decl": "der Fußgängerüberweg · мн.: die Fußgängerüberwege"
+   },
+   "Gefahr": {
+    "ru": "небезпека",
+    "pos": "ім.",
+    "decl": "die Gefahr · мн.: die Gefahren"
+   },
+   "Gefahrstelle": {
+    "ru": "небезпечне місце",
+    "pos": "ім.",
+    "decl": "die Gefahrstelle · мн.: die Gefahrstellen"
+   },
+   "Gefahrzeichen": {
+    "ru": "попереджувальний знак",
+    "pos": "ім.",
+    "decl": "das Gefahrzeichen · мн.: die Gefahrzeichen"
+   },
+   "Grünpfeil": {
+    "ru": "зелена стрілка (табличка біля світлофора)",
+    "pos": "ім.",
+    "note": "дозволяє праворуч на червоний, але лише після повної зупинки",
+    "decl": "der Grünpfeil · мн.: die Grünpfeile"
+   },
+   "Halt": {
+    "ru": "зупинка; стоп!",
+    "pos": "ім.",
+    "note": "Halt! — Стоп! (на знаку 206); nach einem Halt — після зупинки",
+    "decl": "der Halt · мн.: die Halte"
+   },
+   "Haltlinie": {
+    "ru": "стоп-лінія",
+    "pos": "ім.",
+    "decl": "die Haltlinie · мн.: die Haltlinien"
+   },
+   "Haltverbot": {
+    "ru": "заборона зупинки",
+    "pos": "ім.",
+    "decl": "das Haltverbot · мн.: die Haltverbote"
+   },
+   "Hinweis": {
+    "ru": "вказівка, підказка",
+    "pos": "ім.",
+    "decl": "der Hinweis · мн.: die Hinweise"
+   },
+   "Höchstgeschwindigkeit": {
+    "ru": "максимальна швидкість",
+    "pos": "ім.",
+    "decl": "die Höchstgeschwindigkeit · мн.: die Höchstgeschwindigkeiten"
+   },
+   "Kilometer": {
+    "ru": "кілометр",
+    "pos": "ім.",
+    "note": "Kilometer pro Stunde — кілометрів на годину (km/h)",
+    "decl": "der Kilometer · мн.: die Kilometer"
+   },
+   "Kind": {
+    "ru": "дитина",
+    "pos": "ім.",
+    "decl": "das Kind · мн.: die Kinder"
+   },
+   "Licht": {
+    "ru": "світло; сигнал",
+    "pos": "ім.",
+    "decl": "das Licht · мн.: die Lichter"
+   },
+   "Metall": {
+    "ru": "метал",
+    "pos": "ім.",
+    "decl": "das Metall · мн.: die Metalle"
+   },
+   "Minute": {
+    "ru": "хвилина",
+    "pos": "ім.",
+    "decl": "die Minute · мн.: die Minuten"
+   },
+   "Ortschaft": {
+    "ru": "населений пункт",
+    "pos": "ім.",
+    "decl": "die Ortschaft · мн.: die Ortschaften"
+   },
+   "Ortsende": {
+    "ru": "кінець населеного пункту",
+    "pos": "ім.",
+    "decl": "das Ortsende · мн.: die Ortsenden"
+   },
+   "Ortsschild": {
+    "ru": "табличка з назвою населеного пункту",
+    "pos": "ім.",
+    "note": "офіційно: die Ortstafel; жовта табличка = початок населеного пункту, 50 км/год",
+    "decl": "das Ortsschild · мн.: die Ortsschilder"
+   },
+   "Ortstafel": {
+    "ru": "табличка населеного пункту",
+    "pos": "ім.",
+    "decl": "die Ortstafel · мн.: die Ortstafeln"
+   },
+   "Pfeil": {
+    "ru": "стрілка",
+    "pos": "ім.",
+    "decl": "der Pfeil · мн.: die Pfeile"
+   },
+   "Punkt": {
+    "ru": "бал; точка",
+    "pos": "ім.",
+    "decl": "der Punkt · мн.: die Punkte"
+   },
+   "Radfahrer": {
+    "ru": "велосипедист",
+    "pos": "ім.",
+    "decl": "der Radfahrer · мн.: die Radfahrer"
+   },
+   "Rand": {
+    "ru": "край, облямівка",
+    "pos": "ім.",
+    "decl": "der Rand · мн.: die Ränder"
+   },
+   "Richtzeichen": {
+    "ru": "інформаційно-вказівний знак",
+    "pos": "ім.",
+    "decl": "das Richtzeichen · мн.: die Richtzeichen"
+   },
+   "Schild": {
+    "ru": "знак, табличка",
+    "pos": "ім.",
+    "decl": "das Schild · мн.: die Schilder"
+   },
+   "Schrittgeschwindigkeit": {
+    "ru": "швидкість пішохода (кроком)",
+    "pos": "ім.",
+    "note": "на практиці 4–7 км/год",
+    "decl": "die Schrittgeschwindigkeit · мн. немає"
+   },
+   "Sie": {
+    "ru": "ви (ввічливо)",
+    "pos": "займ."
+   },
+   "Straße": {
+    "ru": "вулиця, дорога",
+    "pos": "ім.",
+    "decl": "die Straße · мн.: die Straßen"
+   },
+   "Stunde": {
+    "ru": "година; урок",
+    "pos": "ім.",
+    "decl": "die Stunde · мн.: die Stunden"
+   },
+   "Tempo": {
+    "ru": "швидкість, темп",
+    "pos": "ім.",
+    "note": "Tempo-30-Zone — зона з обмеженням 30 км/год",
+    "decl": "das Tempo · мн.: die Tempos"
+   },
+   "Verbot": {
+    "ru": "заборона",
+    "pos": "ім.",
+    "decl": "das Verbot · мн.: die Verbote"
+   },
+   "Verkehrszeichen": {
+    "ru": "дорожній знак",
+    "pos": "ім.",
+    "decl": "das Verkehrszeichen · мн.: die Verkehrszeichen"
+   },
+   "Vorrang": {
+    "ru": "перевага, першочерговість",
+    "pos": "ім.",
+    "decl": "der Vorrang · мн. немає"
+   },
+   "Vorschriftzeichen": {
+    "ru": "знак припису або заборони",
+    "pos": "ім.",
+    "decl": "das Vorschriftzeichen · мн.: die Vorschriftzeichen"
+   },
+   "Zebrastreifen": {
+    "ru": "«зебра», пішохідний перехід",
+    "pos": "ім.",
+    "decl": "der Zebrastreifen · мн.: die Zebrastreifen"
+   },
+   "Zone": {
+    "ru": "зона",
+    "pos": "ім.",
+    "decl": "die Zone · мн.: die Zonen"
+   },
+   "ab": {
+    "ru": "з, починаючи з",
+    "pos": "прийм.",
+    "note": "ab hier — звідси; ab dem Schild — від знака"
+   },
+   "abbiegen": {
+    "ru": "повертати",
+    "pos": "дієсл.",
+    "note": "відокремлюваний префікс: Sie biegen … ab",
+    "forms": "bog ab · ist abgebogen"
+   },
+   "aber": {
+    "ru": "але",
+    "pos": "спол."
+   },
+   "absolut": {
+    "ru": "абсолютний, повний",
+    "pos": "прикм."
+   },
+   "achten": {
+    "ru": "стежити, звертати увагу",
+    "pos": "дієсл.",
+    "note": "achten auf + Akk. — стежити за",
+    "forms": "achtete · hat geachtet"
+   },
+   "an": {
+    "ru": "біля, на, при",
+    "pos": "прийм.",
+    "note": "am = an dem; an der Kreuzung — на перехресті"
+   },
+   "andere": {
+    "ru": "інший",
+    "pos": "прикм."
+   },
+   "anhalten": {
+    "ru": "зупинятися",
+    "pos": "дієсл.",
+    "forms": "hielt an · hat angehalten"
+   },
+   "auf": {
+    "ru": "на, по",
+    "pos": "прийм.",
+    "note": "auf der Straße — на дорозі; achten auf — стежити за"
+   },
+   "aus": {
+    "ru": "з",
+    "pos": "прийм.",
+    "note": "aus Metall — з металу"
+   },
+   "ausfallen": {
+    "ru": "виходити з ладу, не працювати",
+    "pos": "дієсл.",
+    "forms": "fiel aus · ist ausgefallen"
+   },
+   "aussteigen": {
+    "ru": "виходити (з машини)",
+    "pos": "дієсл.",
+    "forms": "stieg aus · ist ausgestiegen"
+   },
+   "außerorts": {
+    "ru": "поза населеним пунктом",
+    "pos": "присл.",
+    "note": "для легкових зазвичай не більше 100 км/год"
+   },
+   "bedeuten": {
+    "ru": "означати",
+    "pos": "дієсл.",
+    "forms": "bedeutete · hat bedeutet"
+   },
+   "behindern": {
+    "ru": "заважати, створювати перешкоду",
+    "pos": "дієсл.",
+    "forms": "behinderte · hat behindert"
+   },
+   "bei": {
+    "ru": "при, біля; на (про сигнал)",
+    "pos": "прийм.",
+    "note": "bei Rot — на червоний, bei Grün — на зелений"
+   },
+   "bekommen": {
+    "ru": "отримувати",
+    "pos": "дієсл.",
+    "forms": "bekam · hat bekommen"
+   },
+   "besonders": {
+    "ru": "особливо",
+    "pos": "присл."
+   },
+   "dabei": {
+    "ru": "при цьому",
+    "pos": "присл."
+   },
+   "der/die/das": {
+    "ru": "означений артикль",
+    "pos": "артикль",
+    "note": "der — ч. р., die — ж. р. і мн., das — с. р.; den — ч. р. у знахідному, dem — ч. і с. р. у давальному; das ще означає «це»"
+   },
+   "dieser": {
+    "ru": "цей, ця, це",
+    "pos": "займ."
+   },
+   "dort": {
+    "ru": "там",
+    "pos": "присл."
+   },
+   "drei": {
+    "ru": "три",
+    "pos": "числ."
+   },
+   "dreißig": {
+    "ru": "тридцять",
+    "pos": "числ."
+   },
+   "dürfen": {
+    "ru": "могти, мати право",
+    "pos": "дієсл.",
+    "forms": "durfte · hat gedurft"
+   },
+   "eckig": {
+    "ru": "кутастий, прямокутний",
+    "pos": "прикм."
+   },
+   "ein/eine": {
+    "ru": "неозначений артикль; один",
+    "pos": "артикль",
+    "note": "an einer Kreuzung — на (якомусь) перехресті"
+   },
+   "eingeschränkt": {
+    "ru": "обмежений",
+    "pos": "прикм."
+   },
+   "einmal": {
+    "ru": "один раз; навіть",
+    "pos": "присл.",
+    "note": "nicht einmal — навіть не"
+   },
+   "einsteigen": {
+    "ru": "сідати (в машину)",
+    "pos": "дієсл.",
+    "note": "Ein- und Aussteigen — посадка й висадка",
+    "forms": "stieg ein · ist eingestiegen"
+   },
+   "erlauben": {
+    "ru": "дозволяти",
+    "pos": "дієсл.",
+    "forms": "erlaubte · hat erlaubt"
+   },
+   "etwas": {
+    "ru": "трохи; щось",
+    "pos": "присл."
+   },
+   "fahren": {
+    "ru": "їхати; кермувати машиною",
+    "pos": "дієсл.",
+    "forms": "fuhr · ist gefahren"
+   },
+   "fünfzig": {
+    "ru": "п'ятдесят",
+    "pos": "числ."
+   },
+   "geben": {
+    "ru": "давати",
+    "pos": "дієсл.",
+    "note": "Hinweise geben — підказувати, інформувати",
+    "forms": "gab · hat gegeben"
+   },
+   "gehen": {
+    "ru": "іти (пішки)",
+    "pos": "дієсл.",
+    "note": "über die Straße gehen — переходити дорогу",
+    "forms": "ging · ist gegangen"
+   },
+   "gelb": {
+    "ru": "жовтий",
+    "pos": "прикм.",
+    "note": "Gelb (з великої) — жовтий сигнал"
+   },
+   "gelten": {
+    "ru": "діяти (про правило)",
+    "pos": "дієсл.",
+    "forms": "galt · hat gegolten"
+   },
+   "gleich": {
+    "ru": "зараз, одразу",
+    "pos": "присл."
+   },
+   "grün": {
+    "ru": "зелений",
+    "pos": "прикм.",
+    "note": "Grün (з великої) — зелений сигнал: bei Grün — на зелений"
+   },
+   "haben": {
+    "ru": "мати",
+    "pos": "дієсл.",
+    "note": "Vorfahrt haben — мати перевагу",
+    "forms": "hatte · hat gehabt"
+   },
+   "halten": {
+    "ru": "зупинятися (ненадовго); тримати",
+    "pos": "дієсл.",
+    "forms": "hielt · hat gehalten"
+   },
+   "hier": {
+    "ru": "тут",
+    "pos": "присл."
+   },
+   "hineinfahren": {
+    "ru": "в'їжджати (всередину)",
+    "pos": "дієсл.",
+    "forms": "fuhr hinein · ist hineingefahren"
+   },
+   "hundert": {
+    "ru": "сто",
+    "pos": "числ."
+   },
+   "höchstens": {
+    "ru": "щонайбільше, не більше",
+    "pos": "присл."
+   },
+   "in": {
+    "ru": "в",
+    "pos": "прийм.",
+    "note": "im = in dem: im Bereich — у зоні"
+   },
+   "innerorts": {
+    "ru": "у населеному пункті",
+    "pos": "присл.",
+    "note": "тут зазвичай не більше 50 км/год"
+   },
+   "jemand": {
+    "ru": "хтось",
+    "pos": "займ."
+   },
+   "kein": {
+    "ru": "жодний; не (заперечення при іменнику)",
+    "pos": "займ."
+   },
+   "kommen": {
+    "ru": "приходити; їхати (наближатися)",
+    "pos": "дієсл.",
+    "note": "von rechts kommen — їхати праворуч",
+    "forms": "kam · ist gekommen"
+   },
+   "kurz": {
+    "ru": "короткий; ненадовго",
+    "pos": "прикм."
+   },
+   "langsam": {
+    "ru": "повільний; повільно",
+    "pos": "прикм."
+   },
+   "links": {
+    "ru": "ліворуч",
+    "pos": "присл."
+   },
+   "meistens": {
+    "ru": "найчастіше, зазвичай",
+    "pos": "присл."
+   },
+   "mindestens": {
+    "ru": "щонайменше, не менше",
+    "pos": "присл."
+   },
+   "mit": {
+    "ru": "з",
+    "pos": "прийм."
+   },
+   "möglich": {
+    "ru": "можливий",
+    "pos": "прикм."
+   },
+   "nach": {
+    "ru": "після; до (напрямок)",
+    "pos": "прийм."
+   },
+   "neben": {
+    "ru": "поруч із, біля",
+    "pos": "прийм."
+   },
+   "neunzig": {
+    "ru": "дев'яносто",
+    "pos": "числ."
+   },
+   "nicht": {
+    "ru": "не",
+    "pos": "частка"
+   },
+   "noch": {
+    "ru": "ще",
+    "pos": "присл.",
+    "note": "noch nicht — ще ні"
+   },
+   "nur": {
+    "ru": "лише",
+    "pos": "присл."
+   },
+   "oder": {
+    "ru": "або",
+    "pos": "спол."
+   },
+   "pro": {
+    "ru": "на, за (на одиницю)",
+    "pos": "прийм."
+   },
+   "rechts": {
+    "ru": "праворуч",
+    "pos": "присл."
+   },
+   "rot": {
+    "ru": "червоний",
+    "pos": "прикм.",
+    "note": "Rot (з великої) — червоний сигнал: bei Rot — на червоний"
+   },
+   "rund": {
+    "ru": "круглий",
+    "pos": "прикм."
+   },
+   "sein": {
+    "ru": "бути",
+    "pos": "дієсл.",
+    "forms": "war · ist gewesen"
+   },
+   "sicher": {
+    "ru": "безпечний; упевнений",
+    "pos": "прикм."
+   },
+   "spielen": {
+    "ru": "гратися",
+    "pos": "дієсл.",
+    "forms": "spielte · hat gespielt"
+   },
+   "und": {
+    "ru": "і, та",
+    "pos": "спол."
+   },
+   "verbieten": {
+    "ru": "забороняти",
+    "pos": "дієсл.",
+    "forms": "verbot · hat verboten"
+   },
+   "verkehrsberuhigt": {
+    "ru": "зі спокійним рухом (житлова зона)",
+    "pos": "прикм."
+   },
+   "vollständig": {
+    "ru": "повний",
+    "pos": "прикм."
+   },
+   "vor": {
+    "ru": "перед",
+    "pos": "прийм.",
+    "note": "rechts vor links — правий перед лівим"
+   },
+   "vorsichtig": {
+    "ru": "обережний",
+    "pos": "прикм."
+   },
+   "warnen": {
+    "ru": "попереджати",
+    "pos": "дієсл.",
+    "forms": "warnte · hat gewarnt"
+   },
+   "was": {
+    "ru": "що",
+    "pos": "займ."
+   },
+   "wenn": {
+    "ru": "якщо; коли",
+    "pos": "спол.",
+    "note": "auch wenn — навіть якщо"
+   },
+   "wer": {
+    "ru": "хто",
+    "pos": "займ."
+   },
+   "wollen": {
+    "ru": "хотіти",
+    "pos": "дієсл.",
+    "forms": "wollte · hat gewollt"
+   },
+   "zahlen": {
+    "ru": "платити",
+    "pos": "дієсл.",
+    "forms": "zahlte · hat gezahlt"
+   },
+   "zu": {
+    "ru": "до; для",
+    "pos": "прийм.",
+    "note": "zum = zu dem: zum Aussteigen — щоб вийти"
+   },
+   "zulässig": {
+    "ru": "допустимий, дозволений",
+    "pos": "прикм."
+   },
+   "zusammen": {
+    "ru": "разом",
+    "pos": "присл."
+   },
+   "Überholverbot": {
+    "ru": "заборона обгону",
+    "pos": "ім.",
+    "decl": "das Überholverbot · мн.: die Überholverbote"
+   },
+   "über": {
+    "ru": "через; над",
+    "pos": "прийм."
+   },
+   "überall": {
+    "ru": "скрізь",
+    "pos": "присл."
+   },
+   "überholen": {
+    "ru": "обганяти",
+    "pos": "дієсл.",
+    "forms": "überholte · hat überholt"
+   }
+  }
+ }
+}

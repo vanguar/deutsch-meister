@@ -92,6 +92,9 @@
   {
    "de": "Wir sind innerorts, also höchstens fünfzig. An der nächsten Kreuzung biegen Sie rechts ab.",
    "tr": "نحن داخل المدينة، إذن خمسون كحد أقصى. عند التقاطع القادم انعطفي يمينًا.",
+   "o": {
+    "ab": "ab>abbiegen"
+   },
    "s": "A"
   },
   {
@@ -108,7 +111,7 @@
  "signs": {},
  "gloss": {
   "w": {
-   "ab": "abbiegen",
+   "ab>abbiegen": "abbiegen",
    "aber": "aber",
    "achte": "achten",
    "alles": "alle",
@@ -426,7 +429,8 @@
    },
    "in": {
     "ru": "في",
-    "pos": "حرف جر"
+    "pos": "حرف جر",
+    "note": "im = in dem: im Bereich — في المنطقة"
    },
    "innerorts": {
     "ru": "داخل المدن والبلدات",

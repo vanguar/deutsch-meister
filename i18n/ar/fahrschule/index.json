@@ -17,6 +17,7 @@
    "title": "Verkehrszeichen und Ampeln",
    "titleTr": "لافتات المرور والإشارات الضوئية",
    "units": [
+    "t-02",
     "k-02"
    ]
   }
@@ -48,6 +49,15 @@
    "title": "Wer fährt zuerst?",
    "titleTr": "من يمرّ أولًا؟",
    "count": 3
+  },
+  {
+   "id": "t-02",
+   "kind": "theory",
+   "emoji": "🚸",
+   "level": "A2–B1",
+   "title": "Verkehrszeichen und Ampeln",
+   "titleTr": "لافتات المرور والإشارات الضوئية",
+   "count": 23
   },
   {
    "id": "k-02",

@@ -17,6 +17,7 @@
    "title": "Verkehrszeichen und Ampeln",
    "titleTr": "Знаки і світлофори",
    "units": [
+    "t-02",
     "k-02"
    ]
   }
@@ -48,6 +49,15 @@
    "title": "Wer fährt zuerst?",
    "titleTr": "Хто їде першим?",
    "count": 3
+  },
+  {
+   "id": "t-02",
+   "kind": "theory",
+   "emoji": "🚸",
+   "level": "A2–B1",
+   "title": "Verkehrszeichen und Ampeln",
+   "titleTr": "Дорожні знаки і світлофори",
+   "count": 23
   },
   {
    "id": "k-02",

@@ -1,0 +1,1149 @@
+{
+ "id": "t-02",
+ "kind": "theory",
+ "emoji": "🚸",
+ "level": "A2–B1",
+ "title": "Verkehrszeichen und Ampeln",
+ "titleTr": "لافتات المرور والإشارات الضوئية",
+ "intro": "أنواع اللافتات، وما هو ممنوع، وكيف تتغيّر السرعة داخل المدن، وماذا تعني إشارات المرور الضوئية في ألمانيا — بما في ذلك الأحمر مع الأصفر ولوحة السهم الأخضر.",
+ "sections": [
+  {
+   "title": "ثلاثة أنواع من اللافتات",
+   "lines": [
+    {
+     "de": "Gefahrzeichen sind Dreiecke mit rotem Rand. Sie warnen vor einer Gefahr.",
+     "tr": "لافتات الخطر مثلثات بحافة حمراء. إنها تحذّر من خطر.",
+     "sign": "z101"
+    },
+    {
+     "de": "Vorschriftzeichen sind meistens rund. Sie verbieten oder erlauben etwas.",
+     "tr": "لافتات الأوامر غالبًا ما تكون دائرية. إنها تمنع شيئًا أو تسمح به.",
+     "sign": "z267"
+    },
+    {
+     "de": "Richtzeichen sind meistens eckig. Sie geben Hinweise, zum Beispiel zum Zebrastreifen.",
+     "tr": "لافتات الإرشاد غالبًا ما تكون مستطيلة. إنها تعطي معلومات، مثلًا عن ممر المشاة.",
+     "sign": "z350"
+    }
+   ]
+  },
+  {
+   "title": "الممنوعات",
+   "lines": [
+    {
+     "de": "In diese Straße dürfen Sie nicht hineinfahren.",
+     "tr": "لا يجوز لك دخول هذا الشارع.",
+     "sign": "z267"
+    },
+    {
+     "de": "Hier dürfen Sie höchstens dreißig Kilometer pro Stunde fahren.",
+     "tr": "هنا يجوز لك القيادة بسرعة ثلاثين كيلومترًا في الساعة كحدّ أقصى.",
+     "sign": "z274"
+    },
+    {
+     "de": "Hier dürfen Sie keine anderen Autos überholen.",
+     "tr": "هنا لا يجوز لك تجاوز السيارات الأخرى.",
+     "sign": "z276"
+    },
+    {
+     "de": "Absolutes Haltverbot: Hier dürfen Sie nicht einmal kurz halten.",
+     "tr": "ممنوع التوقف تمامًا: لا يجوز لك هنا التوقف ولو لحظة.",
+     "sign": "z283"
+    },
+    {
+     "de": "Eingeschränktes Haltverbot: Sie dürfen höchstens drei Minuten halten oder kurz zum Ein- und Aussteigen.",
+     "tr": "التوقف مقيّد: يجوز لك التوقف ثلاث دقائق كحدّ أقصى أو لحظة للصعود والنزول.",
+     "o": {
+      "ein": "ein>einsteigen"
+     },
+     "sign": "z286"
+    }
+   ]
+  },
+  {
+   "title": "داخل المدن والبلدات",
+   "lines": [
+    {
+     "de": "Ab dem gelben Ortsschild gilt innerorts fünfzig Kilometer pro Stunde.",
+     "tr": "ابتداءً من لوحة اسم البلدة الصفراء تكون السرعة داخل البلدة خمسين كيلومترًا في الساعة.",
+     "o": {
+      "ab": "ab>ab"
+     },
+     "sign": "z310"
+    },
+    {
+     "de": "Am Ortsende gilt außerorts höchstens hundert Kilometer pro Stunde.",
+     "tr": "بعد لوحة نهاية البلدة تكون السرعة خارجها مئة كيلومتر في الساعة كحدّ أقصى.",
+     "sign": "z311"
+    },
+    {
+     "de": "In einer Tempo-30-Zone gilt überall höchstens dreißig. Meistens gilt dort rechts vor links.",
+     "tr": "في منطقة السرعة 30 تكون السرعة ثلاثين كحدّ أقصى في كل مكان. وغالبًا تنطبق هناك قاعدة اليمين قبل اليسار.",
+     "sign": "z2741"
+    },
+    {
+     "de": "Im verkehrsberuhigten Bereich fahren Sie Schrittgeschwindigkeit. Kinder dürfen überall spielen.",
+     "tr": "في المنطقة الهادئة تسير بسرعة المشي. ويحق للأطفال اللعب في كل مكان.",
+     "sign": "z3251"
+    },
+    {
+     "de": "Am Zebrastreifen haben Fußgänger Vorrang. Halten Sie an, wenn jemand über die Straße gehen will.",
+     "tr": "عند ممر المشاة للمشاة الأولوية. توقّف إذا أراد أحد عبور الشارع.",
+     "o": {
+      "an": "an>anhalten",
+      "halten": "halten>anhalten"
+     },
+     "sign": "z350"
+    },
+    {
+     "de": "Achtung, Kinder! Fahren Sie hier besonders langsam und vorsichtig.",
+     "tr": "انتبه، أطفال! قُد هنا ببطء وحذر شديدين.",
+     "sign": "z136"
+    }
+   ]
+  },
+  {
+   "title": "الإشارة الضوئية",
+   "lines": [
+    {
+     "de": "Rot bedeutet: Halten Sie vor der Haltlinie an.",
+     "tr": "الأحمر يعني: توقّف قبل خط التوقف.",
+     "o": {
+      "an": "an>anhalten",
+      "halten": "halten>anhalten"
+     }
+    },
+    {
+     "de": "Rot und Gelb zusammen bedeutet: Gleich kommt Grün, aber Sie dürfen noch nicht fahren.",
+     "tr": "الأحمر والأصفر معًا يعنيان: سيأتي الأخضر حالًا، لكن لا يجوز لك التحرك بعد."
+    },
+    {
+     "de": "Gelb bedeutet: Halten Sie an, wenn das noch sicher möglich ist.",
+     "tr": "الأصفر يعني: توقّف إن كان ذلك لا يزال ممكنًا بأمان.",
+     "o": {
+      "an": "an>anhalten",
+      "halten": "halten>anhalten"
+     }
+    },
+    {
+     "de": "Bei Grün dürfen Sie fahren, aber achten Sie auf Fußgänger und Radfahrer.",
+     "tr": "عند الأخضر يجوز لك التحرك، لكن انتبه للمشاة وراكبي الدراجات."
+    },
+    {
+     "de": "Wer bei Rot fährt, zahlt mindestens neunzig Euro und bekommt einen Punkt in Flensburg.",
+     "tr": "من يقود عند الأحمر يدفع تسعين يورو على الأقل ويحصل على نقطة مخالفة في فلنسبورغ."
+    },
+    {
+     "de": "Ist die Ampel ausgefallen, gelten die Verkehrszeichen.",
+     "tr": "إذا تعطّلت الإشارة الضوئية، تسري لافتات المرور."
+    }
+   ]
+  },
+  {
+   "title": "السهم الأخضر",
+   "lines": [
+    {
+     "de": "Der grüne Pfeil neben der Ampel ist ein Schild aus Metall, kein Licht.",
+     "tr": "السهم الأخضر بجانب الإشارة لوحة معدنية، وليس ضوءًا.",
+     "sign": "z720"
+    },
+    {
+     "de": "Mit diesem Schild dürfen Sie bei Rot rechts abbiegen, aber nur nach einem vollständigen Halt.",
+     "tr": "مع هذه اللوحة يجوز لك الانعطاف يمينًا عند الأحمر، لكن بعد توقف تام فقط."
+    },
+    {
+     "de": "Fußgänger und Radfahrer mit Grün dürfen Sie dabei nicht behindern.",
+     "tr": "ولا يجوز لك في أثناء ذلك إعاقة المشاة وراكبي الدراجات الذين إشارتهم خضراء."
+    }
+   ]
+  }
+ ],
+ "quiz": [
+  {
+   "sign": "z267",
+   "wrong": [
+    "z283",
+    "z276"
+   ]
+  },
+  {
+   "sign": "z286",
+   "wrong": [
+    "z283",
+    "z3251"
+   ]
+  },
+  {
+   "sign": "z310",
+   "wrong": [
+    "z311",
+    "z2741"
+   ]
+  },
+  {
+   "sign": "z2741",
+   "wrong": [
+    "z274",
+    "z3251"
+   ]
+  },
+  {
+   "sign": "z3251",
+   "wrong": [
+    "z350",
+    "z2741"
+   ]
+  },
+  {
+   "sign": "z720",
+   "wrong": [
+    "z350",
+    "z267"
+   ]
+  },
+  {
+   "sign": "z136",
+   "wrong": [
+    "z101",
+    "z350"
+   ]
+  }
+ ],
+ "quizQuestion": {
+  "de": "Was bedeutet dieses Schild?",
+  "tr": "ماذا تعني هذه اللافتة؟"
+ },
+ "signs": {
+  "z101": {
+   "de": "Gefahrstelle",
+   "tr": "موضع خطر",
+   "src": "data/fahrschule/signs/z101.svg",
+   "n": "101",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_101_-_Gefahrstelle,_StVO_1970.svg"
+  },
+  "z136": {
+   "de": "Kinder",
+   "tr": "أطفال",
+   "src": "data/fahrschule/signs/z136.svg",
+   "n": "136",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_136_-_Kinder,_StVO_1970.svg"
+  },
+  "z267": {
+   "de": "Verbot der Einfahrt",
+   "tr": "ممنوع الدخول",
+   "src": "data/fahrschule/signs/z267.svg",
+   "n": "267",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_267_-_Verbot_der_Einfahrt,_StVO_1970.svg"
+  },
+  "z274": {
+   "de": "Zulässige Höchstgeschwindigkeit",
+   "tr": "الحد الأقصى المسموح للسرعة",
+   "src": "data/fahrschule/signs/z274.svg",
+   "n": "274",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_274-30_-_Zul%C3%A4ssige_H%C3%B6chstgeschwindigkeit,_StVO_2017.svg"
+  },
+  "z2741": {
+   "de": "Tempo-30-Zone",
+   "tr": "منطقة السرعة 30",
+   "src": "data/fahrschule/signs/z2741.svg",
+   "n": "274.1",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_274.1_-_Beginn_einer_Tempo_30-Zone,_StVO_2013.svg"
+  },
+  "z276": {
+   "de": "Überholverbot",
+   "tr": "ممنوع التجاوز",
+   "src": "data/fahrschule/signs/z276.svg",
+   "n": "276",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_276_-_%C3%9Cberholverbot_f%C3%BCr_Kraftfahrzeuge_aller_Art,_StVO_1992.svg"
+  },
+  "z283": {
+   "de": "Absolutes Haltverbot",
+   "tr": "ممنوع التوقف",
+   "src": "data/fahrschule/signs/z283.svg",
+   "n": "283",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_283_-_Absolutes_Haltverbot,_StVO_2017.svg"
+  },
+  "z286": {
+   "de": "Eingeschränktes Haltverbot",
+   "tr": "التوقف مقيّد (حتى ثلاث دقائق)",
+   "src": "data/fahrschule/signs/z286.svg",
+   "n": "286",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_286_-_Eingeschr%C3%A4nktes_Halteverbot,_StVO_1970.svg"
+  },
+  "z310": {
+   "de": "Ortstafel: Anfang der Ortschaft",
+   "tr": "بداية البلدة",
+   "src": "data/fahrschule/signs/z310.svg",
+   "n": "310",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_310_-_Ortstafel_Vorderseite,_StVO_2017.svg"
+  },
+  "z311": {
+   "de": "Ortstafel: Ende der Ortschaft",
+   "tr": "نهاية البلدة",
+   "src": "data/fahrschule/signs/z311.svg",
+   "n": "311",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_311_-_Ortstafel_(R%C3%BCckseite),_StVO_1970.svg"
+  },
+  "z3251": {
+   "de": "Verkehrsberuhigter Bereich",
+   "tr": "منطقة هادئة (بسرعة المشي)",
+   "src": "data/fahrschule/signs/z3251.svg",
+   "n": "325.1",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_325.1_-_Beginn_eines_verkehrsberuhigten_Bereichs,_StVO_2009.svg"
+  },
+  "z350": {
+   "de": "Fußgängerüberweg",
+   "tr": "ممر المشاة",
+   "src": "data/fahrschule/signs/z350.svg",
+   "n": "350",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_350-10_-_Fu%C3%9Fg%C3%A4nger%C3%BCberweg_(rechts),_StVO_1992.svg"
+  },
+  "z720": {
+   "de": "Grünpfeil",
+   "tr": "السهم الأخضر: يمينًا عند الأحمر بعد التوقف",
+   "src": "data/fahrschule/signs/z720.svg",
+   "n": "720",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_720_-_Gr%C3%BCnpfeil,_StVO_1994.svg"
+  }
+ },
+ "gloss": {
+  "w": {
+   "ab>ab": "ab",
+   "abbiegen": "abbiegen",
+   "aber": "aber",
+   "absolutes": "absolut",
+   "achten": "achten",
+   "achtung": "Achtung",
+   "am": "an",
+   "ampel": "Ampel",
+   "ampeln": "Ampel",
+   "an>anhalten": "anhalten",
+   "anderen": "andere",
+   "anfang": "Anfang",
+   "auf": "auf",
+   "aus": "aus",
+   "ausgefallen": "ausfallen",
+   "aussteigen": "aussteigen",
+   "autos": "Auto",
+   "außerorts": "außerorts",
+   "bedeutet": "bedeuten",
+   "behindern": "behindern",
+   "bei": "bei",
+   "beispiel": "Beispiel",
+   "bekommt": "bekommen",
+   "bereich": "Bereich",
+   "besonders": "besonders",
+   "dabei": "dabei",
+   "das": "der/die/das",
+   "dem": "der/die/das",
+   "der": "der/die/das",
+   "die": "der/die/das",
+   "diese": "dieser",
+   "diesem": "dieser",
+   "dieses": "dieser",
+   "dort": "dort",
+   "drei": "drei",
+   "dreiecke": "Dreieck",
+   "dreißig": "dreißig",
+   "dürfen": "dürfen",
+   "eckig": "eckig",
+   "ein": "ein/eine",
+   "ein>einsteigen": "einsteigen",
+   "einem": "ein/eine",
+   "einen": "ein/eine",
+   "einer": "ein/eine",
+   "einfahrt": "Einfahrt",
+   "eingeschränktes": "eingeschränkt",
+   "einmal": "einmal",
+   "ende": "Ende",
+   "erlauben": "erlauben",
+   "etwas": "etwas",
+   "euro": "Euro",
+   "fahren": "fahren",
+   "flensburg": "Flensburg",
+   "fußgänger": "Fußgänger",
+   "fußgängerüberweg": "Fußgängerüberweg",
+   "fährt": "fahren",
+   "fünfzig": "fünfzig",
+   "geben": "geben",
+   "gefahr": "Gefahr",
+   "gefahrstelle": "Gefahrstelle",
+   "gefahrzeichen": "Gefahrzeichen",
+   "gehen": "gehen",
+   "gelb": "gelb",
+   "gelben": "gelb",
+   "gelten": "gelten",
+   "gilt": "gelten",
+   "gleich": "gleich",
+   "grün": "grün",
+   "grüne": "grün",
+   "grünpfeil": "Grünpfeil",
+   "haben": "haben",
+   "halt": "Halt",
+   "halten": "halten",
+   "halten>anhalten": "anhalten",
+   "haltlinie": "Haltlinie",
+   "haltverbot": "Haltverbot",
+   "hier": "hier",
+   "hineinfahren": "hineinfahren",
+   "hinweise": "Hinweis",
+   "hundert": "hundert",
+   "höchstens": "höchstens",
+   "höchstgeschwindigkeit": "Höchstgeschwindigkeit",
+   "im": "in",
+   "in": "in",
+   "innerorts": "innerorts",
+   "ist": "sein",
+   "jemand": "jemand",
+   "kein": "kein",
+   "keine": "kein",
+   "kilometer": "Kilometer",
+   "kinder": "Kind",
+   "kommt": "kommen",
+   "kurz": "kurz",
+   "langsam": "langsam",
+   "licht": "Licht",
+   "links": "links",
+   "meistens": "meistens",
+   "metall": "Metall",
+   "mindestens": "mindestens",
+   "minuten": "Minute",
+   "mit": "mit",
+   "möglich": "möglich",
+   "nach": "nach",
+   "neben": "neben",
+   "neunzig": "neunzig",
+   "nicht": "nicht",
+   "noch": "noch",
+   "nur": "nur",
+   "oder": "oder",
+   "ortschaft": "Ortschaft",
+   "ortsende": "Ortsende",
+   "ortsschild": "Ortsschild",
+   "ortstafel": "Ortstafel",
+   "pfeil": "Pfeil",
+   "pro": "pro",
+   "punkt": "Punkt",
+   "radfahrer": "Radfahrer",
+   "rand": "Rand",
+   "rechts": "rechts",
+   "richtzeichen": "Richtzeichen",
+   "rot": "rot",
+   "rotem": "rot",
+   "rund": "rund",
+   "schild": "Schild",
+   "schrittgeschwindigkeit": "Schrittgeschwindigkeit",
+   "sicher": "sicher",
+   "sie": "Sie",
+   "sind": "sein",
+   "spielen": "spielen",
+   "straße": "Straße",
+   "stunde": "Stunde",
+   "tempo": "Tempo",
+   "und": "und",
+   "verbieten": "verbieten",
+   "verbot": "Verbot",
+   "verkehrsberuhigten": "verkehrsberuhigt",
+   "verkehrsberuhigter": "verkehrsberuhigt",
+   "verkehrszeichen": "Verkehrszeichen",
+   "vollständigen": "vollständig",
+   "vor": "vor",
+   "vorrang": "Vorrang",
+   "vorschriftzeichen": "Vorschriftzeichen",
+   "vorsichtig": "vorsichtig",
+   "warnen": "warnen",
+   "was": "was",
+   "wenn": "wenn",
+   "wer": "wer",
+   "will": "wollen",
+   "zahlt": "zahlen",
+   "zebrastreifen": "Zebrastreifen",
+   "zone": "Zone",
+   "zulässige": "zulässig",
+   "zum": "zu",
+   "zusammen": "zusammen",
+   "über": "über",
+   "überall": "überall",
+   "überholen": "überholen",
+   "überholverbot": "Überholverbot"
+  },
+  "l": {
+   "Achtung": {
+    "ru": "انتبه!",
+    "pos": "اسم",
+    "decl": "die Achtung · لا جمع له"
+   },
+   "Ampel": {
+    "ru": "إشارة ضوئية",
+    "pos": "اسم",
+    "decl": "die Ampel · الجمع: die Ampeln"
+   },
+   "Anfang": {
+    "ru": "بداية",
+    "pos": "اسم",
+    "decl": "der Anfang · الجمع: die Anfänge"
+   },
+   "Auto": {
+    "ru": "سيارة",
+    "pos": "اسم",
+    "decl": "das Auto · الجمع: die Autos"
+   },
+   "Beispiel": {
+    "ru": "مثال",
+    "pos": "اسم",
+    "note": "zum Beispiel — مثلًا",
+    "decl": "das Beispiel · الجمع: die Beispiele"
+   },
+   "Bereich": {
+    "ru": "منطقة",
+    "pos": "اسم",
+    "decl": "der Bereich · الجمع: die Bereiche"
+   },
+   "Dreieck": {
+    "ru": "مثلث",
+    "pos": "اسم",
+    "decl": "das Dreieck · الجمع: die Dreiecke"
+   },
+   "Einfahrt": {
+    "ru": "الدخول، المدخل",
+    "pos": "اسم",
+    "decl": "die Einfahrt · الجمع: die Einfahrten"
+   },
+   "Ende": {
+    "ru": "نهاية",
+    "pos": "اسم",
+    "decl": "das Ende · الجمع: die Enden"
+   },
+   "Euro": {
+    "ru": "يورو",
+    "pos": "اسم",
+    "decl": "der Euro · الجمع: die Euro"
+   },
+   "Flensburg": {
+    "ru": "فلنسبورغ",
+    "pos": "اسم علم",
+    "note": "هناك تسجّل هيئة KBA نقاط مخالفات السائقين؛ «Punkt in Flensburg» نقطة مخالفة"
+   },
+   "Fußgänger": {
+    "ru": "ماشٍ، المشاة",
+    "pos": "اسم",
+    "decl": "der Fußgänger · الجمع: die Fußgänger"
+   },
+   "Fußgängerüberweg": {
+    "ru": "ممر المشاة",
+    "pos": "اسم",
+    "note": "في الكلام: der Zebrastreifen",
+    "decl": "der Fußgängerüberweg · الجمع: die Fußgängerüberwege"
+   },
+   "Gefahr": {
+    "ru": "خطر",
+    "pos": "اسم",
+    "decl": "die Gefahr · الجمع: die Gefahren"
+   },
+   "Gefahrstelle": {
+    "ru": "موضع خطر",
+    "pos": "اسم",
+    "decl": "die Gefahrstelle · الجمع: die Gefahrstellen"
+   },
+   "Gefahrzeichen": {
+    "ru": "لافتة تحذير",
+    "pos": "اسم",
+    "decl": "das Gefahrzeichen · الجمع: die Gefahrzeichen"
+   },
+   "Grünpfeil": {
+    "ru": "السهم الأخضر (لوحة بجانب الإشارة)",
+    "pos": "اسم",
+    "note": "يسمح بالانعطاف يمينًا عند الأحمر، لكن بعد التوقف التام فقط",
+    "decl": "der Grünpfeil · الجمع: die Grünpfeile"
+   },
+   "Halt": {
+    "ru": "توقف؛ قف!",
+    "pos": "اسم",
+    "note": "Halt! — قف! (على اللافتة 206)؛ nach einem Halt — بعد التوقف",
+    "decl": "der Halt · الجمع: die Halte"
+   },
+   "Haltlinie": {
+    "ru": "خط التوقف",
+    "pos": "اسم",
+    "decl": "die Haltlinie · الجمع: die Haltlinien"
+   },
+   "Haltverbot": {
+    "ru": "منع التوقف",
+    "pos": "اسم",
+    "decl": "das Haltverbot · الجمع: die Haltverbote"
+   },
+   "Hinweis": {
+    "ru": "إرشاد، معلومة",
+    "pos": "اسم",
+    "decl": "der Hinweis · الجمع: die Hinweise"
+   },
+   "Höchstgeschwindigkeit": {
+    "ru": "السرعة القصوى",
+    "pos": "اسم",
+    "decl": "die Höchstgeschwindigkeit · الجمع: die Höchstgeschwindigkeiten"
+   },
+   "Kilometer": {
+    "ru": "كيلومتر",
+    "pos": "اسم",
+    "note": "Kilometer pro Stunde — كيلومتر في الساعة",
+    "decl": "der Kilometer · الجمع: die Kilometer"
+   },
+   "Kind": {
+    "ru": "طفل",
+    "pos": "اسم",
+    "decl": "das Kind · الجمع: die Kinder"
+   },
+   "Licht": {
+    "ru": "ضوء",
+    "pos": "اسم",
+    "decl": "das Licht · الجمع: die Lichter"
+   },
+   "Metall": {
+    "ru": "معدن",
+    "pos": "اسم",
+    "decl": "das Metall · الجمع: die Metalle"
+   },
+   "Minute": {
+    "ru": "دقيقة",
+    "pos": "اسم",
+    "decl": "die Minute · الجمع: die Minuten"
+   },
+   "Ortschaft": {
+    "ru": "بلدة، تجمّع سكني",
+    "pos": "اسم",
+    "decl": "die Ortschaft · الجمع: die Ortschaften"
+   },
+   "Ortsende": {
+    "ru": "نهاية البلدة",
+    "pos": "اسم",
+    "decl": "das Ortsende · الجمع: die Ortsenden"
+   },
+   "Ortsschild": {
+    "ru": "لوحة اسم البلدة",
+    "pos": "اسم",
+    "note": "رسميًا: die Ortstafel؛ اللوحة الصفراء = بداية البلدة، 50 كم/س",
+    "decl": "das Ortsschild · الجمع: die Ortsschilder"
+   },
+   "Ortstafel": {
+    "ru": "لوحة البلدة",
+    "pos": "اسم",
+    "decl": "die Ortstafel · الجمع: die Ortstafeln"
+   },
+   "Pfeil": {
+    "ru": "سهم",
+    "pos": "اسم",
+    "decl": "der Pfeil · الجمع: die Pfeile"
+   },
+   "Punkt": {
+    "ru": "نقطة",
+    "pos": "اسم",
+    "decl": "der Punkt · الجمع: die Punkte"
+   },
+   "Radfahrer": {
+    "ru": "راكب دراجة",
+    "pos": "اسم",
+    "decl": "der Radfahrer · الجمع: die Radfahrer"
+   },
+   "Rand": {
+    "ru": "حافة",
+    "pos": "اسم",
+    "decl": "der Rand · الجمع: die Ränder"
+   },
+   "Richtzeichen": {
+    "ru": "لافتة إرشادية",
+    "pos": "اسم",
+    "decl": "das Richtzeichen · الجمع: die Richtzeichen"
+   },
+   "Schild": {
+    "ru": "لافتة",
+    "pos": "اسم",
+    "decl": "das Schild · الجمع: die Schilder"
+   },
+   "Schrittgeschwindigkeit": {
+    "ru": "سرعة المشي",
+    "pos": "اسم",
+    "note": "عمليًا 4–7 كم/س",
+    "decl": "die Schrittgeschwindigkeit · لا جمع له"
+   },
+   "Sie": {
+    "ru": "حضرتك (صيغة الاحترام)",
+    "pos": "ضمير"
+   },
+   "Straße": {
+    "ru": "شارع، طريق",
+    "pos": "اسم",
+    "decl": "die Straße · الجمع: die Straßen"
+   },
+   "Stunde": {
+    "ru": "ساعة؛ درس",
+    "pos": "اسم",
+    "decl": "die Stunde · الجمع: die Stunden"
+   },
+   "Tempo": {
+    "ru": "سرعة",
+    "pos": "اسم",
+    "note": "Tempo-30-Zone — منطقة بحد سرعة 30 كم/س",
+    "decl": "das Tempo · الجمع: die Tempos"
+   },
+   "Verbot": {
+    "ru": "منع",
+    "pos": "اسم",
+    "decl": "das Verbot · الجمع: die Verbote"
+   },
+   "Verkehrszeichen": {
+    "ru": "لافتة مرور",
+    "pos": "اسم",
+    "decl": "das Verkehrszeichen · الجمع: die Verkehrszeichen"
+   },
+   "Vorrang": {
+    "ru": "أسبقية، أولوية",
+    "pos": "اسم",
+    "decl": "der Vorrang · لا جمع له"
+   },
+   "Vorschriftzeichen": {
+    "ru": "لافتة أوامر",
+    "pos": "اسم",
+    "decl": "das Vorschriftzeichen · الجمع: die Vorschriftzeichen"
+   },
+   "Zebrastreifen": {
+    "ru": "ممر المشاة (المخطط)",
+    "pos": "اسم",
+    "decl": "der Zebrastreifen · الجمع: die Zebrastreifen"
+   },
+   "Zone": {
+    "ru": "منطقة",
+    "pos": "اسم",
+    "decl": "die Zone · الجمع: die Zonen"
+   },
+   "ab": {
+    "ru": "ابتداءً من",
+    "pos": "حرف جر",
+    "note": "ab hier — من هنا"
+   },
+   "abbiegen": {
+    "ru": "ينعطف",
+    "pos": "فعل",
+    "note": "سابقة منفصلة: Sie biegen … ab",
+    "forms": "bog ab · ist abgebogen"
+   },
+   "aber": {
+    "ru": "لكن",
+    "pos": "أداة ربط"
+   },
+   "absolut": {
+    "ru": "مطلق، تام",
+    "pos": "صفة"
+   },
+   "achten": {
+    "ru": "ينتبه",
+    "pos": "فعل",
+    "note": "achten auf — ينتبه لـ",
+    "forms": "achtete · hat geachtet"
+   },
+   "an": {
+    "ru": "عند، على",
+    "pos": "حرف جر",
+    "note": "am = an dem؛ an der Kreuzung — عند التقاطع"
+   },
+   "andere": {
+    "ru": "آخر",
+    "pos": "صفة"
+   },
+   "anhalten": {
+    "ru": "يتوقف",
+    "pos": "فعل",
+    "forms": "hielt an · hat angehalten"
+   },
+   "auf": {
+    "ru": "على",
+    "pos": "حرف جر",
+    "note": "auf der Straße — على الطريق؛ achten auf — ينتبه لـ"
+   },
+   "aus": {
+    "ru": "من (مادة)",
+    "pos": "حرف جر",
+    "note": "aus Metall — من المعدن"
+   },
+   "ausfallen": {
+    "ru": "يتعطّل",
+    "pos": "فعل",
+    "forms": "fiel aus · ist ausgefallen"
+   },
+   "aussteigen": {
+    "ru": "ينزل (من السيارة)",
+    "pos": "فعل",
+    "forms": "stieg aus · ist ausgestiegen"
+   },
+   "außerorts": {
+    "ru": "خارج المدن والبلدات",
+    "pos": "ظرف",
+    "note": "للسيارات عادةً 100 كم/س كحد أقصى"
+   },
+   "bedeuten": {
+    "ru": "يعني",
+    "pos": "فعل",
+    "forms": "bedeutete · hat bedeutet"
+   },
+   "behindern": {
+    "ru": "يُعيق",
+    "pos": "فعل",
+    "forms": "behinderte · hat behindert"
+   },
+   "bei": {
+    "ru": "عند",
+    "pos": "حرف جر",
+    "note": "bei Rot — عند الأحمر، bei Grün — عند الأخضر"
+   },
+   "bekommen": {
+    "ru": "يحصل على",
+    "pos": "فعل",
+    "forms": "bekam · hat bekommen"
+   },
+   "besonders": {
+    "ru": "بشكل خاص",
+    "pos": "ظرف"
+   },
+   "dabei": {
+    "ru": "في أثناء ذلك",
+    "pos": "ظرف"
+   },
+   "der/die/das": {
+    "ru": "أداة التعريف",
+    "pos": "أداة تعريف",
+    "note": "der للمذكر، die للمؤنث والجمع، das للمحايد؛ den للمذكر في حالة النصب، dem للمذكر والمحايد في حالة الجر؛ وdas تعني أيضًا «هذا»"
+   },
+   "dieser": {
+    "ru": "هذا، هذه",
+    "pos": "ضمير"
+   },
+   "dort": {
+    "ru": "هناك",
+    "pos": "ظرف"
+   },
+   "drei": {
+    "ru": "ثلاثة",
+    "pos": "عدد"
+   },
+   "dreißig": {
+    "ru": "ثلاثون",
+    "pos": "عدد"
+   },
+   "dürfen": {
+    "ru": "يحق له، يُسمح له",
+    "pos": "فعل",
+    "forms": "durfte · hat gedurft"
+   },
+   "eckig": {
+    "ru": "ذو زوايا، مستطيل",
+    "pos": "صفة"
+   },
+   "ein/eine": {
+    "ru": "أداة النكرة؛ واحد",
+    "pos": "أداة تعريف",
+    "note": "an einer Kreuzung — عند تقاطعٍ ما"
+   },
+   "eingeschränkt": {
+    "ru": "مقيّد",
+    "pos": "صفة"
+   },
+   "einmal": {
+    "ru": "مرة؛ حتى",
+    "pos": "ظرف",
+    "note": "nicht einmal — ولا حتى"
+   },
+   "einsteigen": {
+    "ru": "يركب (السيارة)",
+    "pos": "فعل",
+    "note": "Ein- und Aussteigen — الصعود والنزول",
+    "forms": "stieg ein · ist eingestiegen"
+   },
+   "erlauben": {
+    "ru": "يسمح",
+    "pos": "فعل",
+    "forms": "erlaubte · hat erlaubt"
+   },
+   "etwas": {
+    "ru": "قليلًا؛ شيء ما",
+    "pos": "ظرف"
+   },
+   "fahren": {
+    "ru": "يسير بالسيارة؛ يقود",
+    "pos": "فعل",
+    "forms": "fuhr · ist gefahren"
+   },
+   "fünfzig": {
+    "ru": "خمسون",
+    "pos": "عدد"
+   },
+   "geben": {
+    "ru": "يعطي",
+    "pos": "فعل",
+    "note": "Hinweise geben — يعطي معلومات",
+    "forms": "gab · hat gegeben"
+   },
+   "gehen": {
+    "ru": "يمشي",
+    "pos": "فعل",
+    "note": "über die Straße gehen — يعبر الشارع",
+    "forms": "ging · ist gegangen"
+   },
+   "gelb": {
+    "ru": "أصفر",
+    "pos": "صفة",
+    "note": "Gelb (بحرف كبير) — الإشارة الصفراء"
+   },
+   "gelten": {
+    "ru": "يسري، ينطبق",
+    "pos": "فعل",
+    "forms": "galt · hat gegolten"
+   },
+   "gleich": {
+    "ru": "حالًا، فورًا",
+    "pos": "ظرف"
+   },
+   "grün": {
+    "ru": "أخضر",
+    "pos": "صفة",
+    "note": "Grün (بحرف كبير) — الإشارة الخضراء: bei Grün — عند الأخضر"
+   },
+   "haben": {
+    "ru": "يملك، لديه",
+    "pos": "فعل",
+    "note": "Vorfahrt haben — له أولوية المرور",
+    "forms": "hatte · hat gehabt"
+   },
+   "halten": {
+    "ru": "يتوقف (لوقت قصير)؛ يمسك",
+    "pos": "فعل",
+    "forms": "hielt · hat gehalten"
+   },
+   "hier": {
+    "ru": "هنا",
+    "pos": "ظرف"
+   },
+   "hineinfahren": {
+    "ru": "يدخل بالسيارة",
+    "pos": "فعل",
+    "forms": "fuhr hinein · ist hineingefahren"
+   },
+   "hundert": {
+    "ru": "مئة",
+    "pos": "عدد"
+   },
+   "höchstens": {
+    "ru": "كحدّ أقصى",
+    "pos": "ظرف"
+   },
+   "in": {
+    "ru": "في",
+    "pos": "حرف جر",
+    "note": "im = in dem: im Bereich — في المنطقة"
+   },
+   "innerorts": {
+    "ru": "داخل المدن والبلدات",
+    "pos": "ظرف",
+    "note": "الحد الأقصى هنا عادةً 50 كم/س"
+   },
+   "jemand": {
+    "ru": "أحدٌ ما",
+    "pos": "ضمير"
+   },
+   "kein": {
+    "ru": "لا (نفي الاسم)",
+    "pos": "ضمير"
+   },
+   "kommen": {
+    "ru": "يأتي",
+    "pos": "فعل",
+    "note": "von rechts kommen — يأتي من اليمين",
+    "forms": "kam · ist gekommen"
+   },
+   "kurz": {
+    "ru": "قصير؛ لوقت قصير",
+    "pos": "صفة"
+   },
+   "langsam": {
+    "ru": "بطيء؛ ببطء",
+    "pos": "صفة"
+   },
+   "links": {
+    "ru": "يسارًا، على اليسار",
+    "pos": "ظرف"
+   },
+   "meistens": {
+    "ru": "غالبًا",
+    "pos": "ظرف"
+   },
+   "mindestens": {
+    "ru": "على الأقل",
+    "pos": "ظرف"
+   },
+   "mit": {
+    "ru": "مع",
+    "pos": "حرف جر"
+   },
+   "möglich": {
+    "ru": "ممكن",
+    "pos": "صفة"
+   },
+   "nach": {
+    "ru": "بعد؛ إلى",
+    "pos": "حرف جر"
+   },
+   "neben": {
+    "ru": "بجانب",
+    "pos": "حرف جر"
+   },
+   "neunzig": {
+    "ru": "تسعون",
+    "pos": "عدد"
+   },
+   "nicht": {
+    "ru": "لا، ليس",
+    "pos": "أداة"
+   },
+   "noch": {
+    "ru": "بعدُ، لا يزال",
+    "pos": "ظرف",
+    "note": "noch nicht — ليس بعد"
+   },
+   "nur": {
+    "ru": "فقط",
+    "pos": "ظرف"
+   },
+   "oder": {
+    "ru": "أو",
+    "pos": "أداة ربط"
+   },
+   "pro": {
+    "ru": "في، لكلّ",
+    "pos": "حرف جر"
+   },
+   "rechts": {
+    "ru": "يمينًا، على اليمين",
+    "pos": "ظرف"
+   },
+   "rot": {
+    "ru": "أحمر",
+    "pos": "صفة",
+    "note": "Rot (بحرف كبير) — الإشارة الحمراء: bei Rot — عند الأحمر"
+   },
+   "rund": {
+    "ru": "دائري",
+    "pos": "صفة"
+   },
+   "sein": {
+    "ru": "يكون",
+    "pos": "فعل",
+    "forms": "war · ist gewesen"
+   },
+   "sicher": {
+    "ru": "آمن؛ متأكد",
+    "pos": "صفة"
+   },
+   "spielen": {
+    "ru": "يلعب",
+    "pos": "فعل",
+    "forms": "spielte · hat gespielt"
+   },
+   "und": {
+    "ru": "و",
+    "pos": "أداة ربط"
+   },
+   "verbieten": {
+    "ru": "يمنع",
+    "pos": "فعل",
+    "forms": "verbot · hat verboten"
+   },
+   "verkehrsberuhigt": {
+    "ru": "هادئ الحركة (منطقة سكنية)",
+    "pos": "صفة"
+   },
+   "vollständig": {
+    "ru": "تام، كامل",
+    "pos": "صفة"
+   },
+   "vor": {
+    "ru": "قبل، أمام",
+    "pos": "حرف جر",
+    "note": "rechts vor links — اليمين قبل اليسار"
+   },
+   "vorsichtig": {
+    "ru": "حذِر",
+    "pos": "صفة"
+   },
+   "warnen": {
+    "ru": "يحذّر",
+    "pos": "فعل",
+    "forms": "warnte · hat gewarnt"
+   },
+   "was": {
+    "ru": "ماذا",
+    "pos": "ضمير"
+   },
+   "wenn": {
+    "ru": "إذا؛ عندما",
+    "pos": "أداة ربط",
+    "note": "auch wenn — حتى لو"
+   },
+   "wer": {
+    "ru": "مَن",
+    "pos": "ضمير"
+   },
+   "wollen": {
+    "ru": "يريد",
+    "pos": "فعل",
+    "forms": "wollte · hat gewollt"
+   },
+   "zahlen": {
+    "ru": "يدفع",
+    "pos": "فعل",
+    "forms": "zahlte · hat gezahlt"
+   },
+   "zu": {
+    "ru": "إلى؛ لـ",
+    "pos": "حرف جر",
+    "note": "zum = zu dem: zum Aussteigen — للنزول"
+   },
+   "zulässig": {
+    "ru": "مسموح به",
+    "pos": "صفة"
+   },
+   "zusammen": {
+    "ru": "معًا",
+    "pos": "ظرف"
+   },
+   "Überholverbot": {
+    "ru": "منع التجاوز",
+    "pos": "اسم",
+    "decl": "das Überholverbot · الجمع: die Überholverbote"
+   },
+   "über": {
+    "ru": "عبر؛ فوق",
+    "pos": "حرف جر"
+   },
+   "überall": {
+    "ru": "في كل مكان",
+    "pos": "ظرف"
+   },
+   "überholen": {
+    "ru": "يتجاوز",
+    "pos": "فعل",
+    "forms": "überholte · hat überholt"
+   }
+  }
+ }
+}

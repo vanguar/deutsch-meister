@@ -285,8 +285,10 @@
     "decl": "der Gegenverkehr · мн. немає"
    },
    "Halt": {
-    "ru": "стоп! стій!",
-    "pos": "вигук"
+    "ru": "зупинка; стоп!",
+    "pos": "ім.",
+    "note": "Halt! — Стоп! (на знаку 206); nach einem Halt — після зупинки",
+    "decl": "der Halt · мн.: die Halte"
    },
    "Kreuzung": {
     "ru": "перехрестя",

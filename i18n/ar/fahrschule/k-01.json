@@ -130,6 +130,7 @@
      "de": "Das grüne Auto biegt links ab. Es lässt den Gegenverkehr durch und wartet auf das rote Auto von rechts.",
      "tr": "السيارة الخضراء تنعطف يسارًا. تترك السيارة المقابلة تمرّ، وتنتظر السيارة الحمراء القادمة من اليمين.",
      "o": {
+      "ab": "ab>abbiegen",
       "lässt": "lässt>durchlassen"
      }
     }
@@ -156,7 +157,7 @@
  },
  "gloss": {
   "w": {
-   "ab": "abbiegen",
+   "ab>abbiegen": "abbiegen",
    "aber": "aber",
    "achtung": "Achtung",
    "also": "also",
@@ -346,7 +347,8 @@
    },
    "gelb": {
     "ru": "أصفر",
-    "pos": "صفة"
+    "pos": "صفة",
+    "note": "Gelb (بحرف كبير) — الإشارة الصفراء"
    },
    "gelten": {
     "ru": "يسري، ينطبق",

@@ -261,7 +261,7 @@ const Fahrschule = (() => {
         <div class="news-tile-ico fs-kind-ico" aria-hidden="true">🛣️</div>
         <div class="news-tile-head">
           <div class="news-tile-title">Дальше</div>
-          <div class="news-tile-text">Скорость, обгон, парковка, автобан и экзамен — после пилота</div>
+          <div class="news-tile-text">Скорость, обгон, парковка, автобан и экзамен — следующие темы</div>
         </div>
       </div>
     </div>`;
@@ -466,13 +466,15 @@ const Fahrschule = (() => {
     renderQuiz();
   }
 
-  // Строка теории, которая объясняет знак, — она же пояснение к ответу
+  // Строка теории, которая объясняет знак, — она же пояснение к ответу.
+  // Последняя: знак сначала мелькает в обзоре («знаки бывают круглые»),
+  // а подробное правило про него идёт ниже.
   function lineForSign(sid) {
+    let found = null;
     for (const sec of unit.sections || []) {
-      const ln = sec.lines.find(l => l.sign === sid);
-      if (ln) return ln;
+      for (const l of sec.lines) if (l.sign === sid) found = l;
     }
-    return null;
+    return found;
   }
 
   function renderQuiz() {
