@@ -54,6 +54,15 @@
     "p-05",
     "r-05"
    ]
+  },
+  {
+   "id": "ruecksicht",
+   "emoji": "🚸",
+   "title": "Fußgänger, Radfahrer und Busse",
+   "titleTr": "Пішоходи, велосипедисти й автобуси",
+   "units": [
+    "r-06"
+   ]
   }
  ],
  "units": [
@@ -191,6 +200,15 @@
    "title": "Wo darf ich parken?",
    "titleTr": "Де можна паркуватися?",
    "count": 4
+  },
+  {
+   "id": "r-06",
+   "kind": "road",
+   "emoji": "🚸",
+   "level": "A2–B1",
+   "title": "Rücksicht auf andere",
+   "titleTr": "Увага до інших",
+   "count": 5
   }
  ]
 }

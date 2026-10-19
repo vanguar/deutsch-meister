@@ -1084,6 +1084,47 @@ const Fahrschule = (() => {
         dur: 4200, snap: 1, line: 'dashed', curb: true
       };
     },
+    // Поворот направо: велосипедист едет прямо по велодорожке или пешеход
+    // переходит улицу, в которую поворачиваем, — ждём, потом поворачиваем
+    rightturn(sc) {
+      const wait = sc.answer === 'wait';
+      const me = { id: 'me', kind: 'car', fill: CAR.blue.fill, keys: wait
+        ? [{ t: 0, x: 40, y: 74 }, { t: 0.32, x: 190, y: 74, b: 'r' }, { t: 0.58, x: 193, y: 74, b: 'r' },
+           { t: 0.76, x: 214, y: 92, r: 55, b: 'r' }, { t: 0.9, x: 221, y: 114, r: 90 }, { t: 1, x: 221, y: 138, r: 90 }]
+        : [{ t: 0, x: 40, y: 74 }, { t: 0.4, x: 192, y: 74, b: 'r' }, { t: 0.62, x: 214, y: 92, r: 55, b: 'r' },
+           { t: 0.8, x: 221, y: 114, r: 90 }, { t: 1, x: 221, y: 138, r: 90 }] };
+      const actors = [me];
+      if (sc.who === 'bike') actors.push({ id: 'bike', kind: 'bike', keys: [{ t: 0, x: 40, y: 89 }, { t: 0.5, x: 255, y: 89 }, { t: 1, x: 340, y: 89 }] });
+      if (sc.who === 'pedestrian') actors.push({ id: 'ped', kind: 'ped', keys: [{ t: 0, x: 186, y: 100 }, { t: 0.2, x: 186, y: 100 }, { t: 0.6, x: 252, y: 100 }, { t: 1, x: 280, y: 100 }] });
+      return { actors, dur: 4200, snap: 0.45, line: 'dashed', curb: true, bikeLane: true, sideStreet: true };
+    },
+    // «Зебра»: пешеход ждёт у края — машина останавливается и пропускает
+    zebracross(sc) {
+      const stop = sc.answer === 'stop';
+      const actors = [{ id: 'me', kind: 'car', fill: CAR.blue.fill, keys: stop
+        ? [{ t: 0, x: 40, y: LANE_DOWN }, { t: 0.3, x: 192, y: LANE_DOWN }, { t: 0.82, x: 192, y: LANE_DOWN }, { t: 1, x: 330, y: LANE_DOWN }]
+        : [{ t: 0, x: 40, y: LANE_DOWN }, { t: 1, x: 330, y: LANE_DOWN }] }];
+      if (sc.ped === 'waiting') actors.push({ id: 'ped', kind: 'ped', keys: [{ t: 0, x: 213, y: 101 }, { t: 0.34, x: 213, y: 101 }, { t: 0.8, x: 213, y: 28 }, { t: 1, x: 213, y: 28 }] });
+      return { actors, dur: 4000, snap: 0.55, line: 'dashed', curb: true, zebraX: 200 };
+    },
+    // Автобус с аварийкой у остановки: стоит — объезжаем шагом; подъезжает —
+    // не обгоняем, едем следом
+    bus(sc) {
+      const stopped = sc.state === 'stopped';
+      return stopped ? {
+        actors: [
+          { id: 'bus', kind: 'bus', keys: [{ t: 0, x: 232, y: LANE_DOWN, b: 'both' }, { t: 1, x: 232, y: LANE_DOWN, b: 'both' }] },
+          { id: 'kid', kind: 'ped', keys: [{ t: 0, x: 244, y: 101 }, { t: 1, x: 262, y: 101 }] },
+          { id: 'me', kind: 'car', fill: CAR.blue.fill, keys: [{ t: 0, x: 30, y: LANE_DOWN }, { t: 0.22, x: 128, y: LANE_DOWN, b: 'l' },
+            { t: 0.36, x: 150, y: LANE_UP, b: 'l' }, { t: 0.82, x: 262, y: LANE_UP }, { t: 0.92, x: 292, y: 66, b: 'r' }, { t: 1, x: 318, y: LANE_DOWN }] }
+        ], dur: 5200, snap: 0.6, line: 'dashed', curb: true, stopSign: 238
+      } : {
+        actors: [
+          { id: 'bus', kind: 'bus', keys: [{ t: 0, x: 170, y: LANE_DOWN, b: 'both' }, { t: 1, x: 240, y: LANE_DOWN, b: 'both' }] },
+          { id: 'me', kind: 'car', fill: CAR.blue.fill, keys: [{ t: 0, x: 60, y: LANE_DOWN }, { t: 1, x: 132, y: LANE_DOWN }] }
+        ], dur: 3600, snap: 1, line: 'dashed', curb: true, stopSign: 246
+      };
+    },
     zipper() {
       return {
         actors: [
@@ -1115,13 +1156,30 @@ const Fahrschule = (() => {
     return `translate(${k.x.toFixed(1)} ${k.y.toFixed(1)})${k.r ? ` rotate(${k.r.toFixed(1)})` : ''}${a.dir === -1 ? ' scale(-1 1)' : ''}`;
   }
 
+  function blinkCls(b) {
+    if (b === 'both') return ' is-blink-l is-blink-r';
+    return b ? ' is-blink-' + b : '';
+  }
+
   function actorHtml(a, k) {
-    const cls = `fs-actor${k.b ? ' is-blink-' + k.b : ''}`;
+    const cls = `fs-actor${blinkCls(k.b)}`;
     const tr = actorTransform(a, k);
     if (a.kind === 'truck') {
       return `<g class="${cls} fs-truck" data-actor="${a.id}" transform="${tr}">
         <rect x="-58" y="-11" width="46" height="22" rx="3" class="fs-truck-box"/>
         <rect x="-12" y="-9" width="12" height="18" rx="3" fill="${CAR.yellow.fill}" class="fs-car-shell"/></g>`;
+    }
+    if (a.kind === 'bus') {
+      return `<g class="${cls} fs-bus" data-actor="${a.id}" transform="${tr}">
+        <rect x="-72" y="-11" width="72" height="22" rx="4" class="fs-bus-box"/>
+        ${[-64, -50, -36, -22].map(x => `<rect class="fs-glass" x="${x}" y="-8" width="10" height="16" rx="2"/>`).join('')}
+        <circle class="fs-blink fs-blink-l" cx="-2" cy="-10" r="2.6"/><circle class="fs-blink fs-blink-l" cx="-70" cy="-10" r="2.6"/>
+        <circle class="fs-blink fs-blink-r" cx="-2" cy="10" r="2.6"/><circle class="fs-blink fs-blink-r" cx="-70" cy="10" r="2.6"/></g>`;
+    }
+    if (a.kind === 'ped') {
+      return `<g class="${cls} fs-ped" data-actor="${a.id}" transform="${tr}">
+        <circle cx="0" cy="-7" r="3.2" class="fs-ped-head"/>
+        <path d="M0 -4 V4 M-3.5 0 H3.5 M0 4 L-3 10 M0 4 L3 10" class="fs-ped-body"/></g>`;
     }
     if (a.kind === 'bike') {
       return `<g class="${cls} fs-bike" data-actor="${a.id}" transform="${tr}">
@@ -1145,9 +1203,14 @@ const Fahrschule = (() => {
          <g class="fs-barrier"><rect x="222" y="67" width="14" height="24" class="fs-barrier-box"/>
          <path d="M222 73 L236 67 M222 81 L236 73 M222 89 L236 81 M226 91 L236 87" class="fs-barrier-stripe"/></g>`
       : '';
-    const sign = sc.sign && unit.signs[sc.sign]
+    // знак сцены — в углу; у остановки он уже стоит у тротуара (stopSign)
+    const sign = sc.sign && unit.signs[sc.sign] && !plan.stopSign
       ? `<image href="${esc(unit.signs[sc.sign].src)}" x="286" y="8" width="26" height="26"/>` : '';
-    const curb = plan.park || plan.curb ? `<rect class="fs-sidewalk" x="0" y="92" width="${ROAD_W}" height="12"/>` : '';
+    const curb = (plan.park || plan.curb ? `<rect class="fs-sidewalk" x="0" y="92" width="${ROAD_W}" height="12"/>` : '')
+      + (plan.bikeLane ? `<rect class="fs-bikelane" x="0" y="84" width="${ROAD_W}" height="9"/>` : '')
+      + (plan.sideStreet ? `<rect class="fs-road" x="200" y="84" width="42" height="46"/>` : '')
+      + (plan.zebraX ? [43, 51, 59, 67, 75, 83].map(y => `<rect class="fs-zebra" x="${plan.zebraX}" y="${y}" width="26" height="4.5"/>`).join('') : '')
+      + (plan.stopSign && unit.signs.z224 ? `<image href="${esc(unit.signs.z224.src)}" x="${plan.stopSign}" y="104" width="16" height="16"/>` : '');
     const park = plan.park ? parkHtml(sc, plan.park, final) : '';
     const gap = plan.gapLabel ? `<g class="fs-lab${final ? ' is-on' : ''}">
         <path class="fs-bracket" d="M182 60 H192 M187 60 V75 M182 75 H192"/><path class="fs-leader" d="M192 68 H232 V104"/>
@@ -1195,8 +1258,8 @@ const Fahrschule = (() => {
         if (!g) return;
         const k = keyAt(a.keys, t);
         g.setAttribute('transform', actorTransform(a, k));
-        g.classList.toggle('is-blink-l', k.b === 'l');
-        g.classList.toggle('is-blink-r', k.b === 'r');
+        g.classList.toggle('is-blink-l', k.b === 'l' || k.b === 'both');
+        g.classList.toggle('is-blink-r', k.b === 'r' || k.b === 'both');
       });
       if (t < 1) { anims[0] = requestAnimationFrame(tick); return; }
       anims[0] = null;

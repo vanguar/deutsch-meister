@@ -90,6 +90,12 @@ ok(build.road_answer({'type': 'parkspot', 'near': 'bus', 'dist': 10}) == {'answe
 ok(build.road_answer({'type': 'parkspot', 'near': 'zebra', 'dist': 4})['answer'] == 'no', '«зебра»: 4 м — нельзя')
 ok('near' in str(build.road_answer({'type': 'parkspot', 'near': 'tree', 'dist': 4})), 'неизвестный объект — ошибка сцены')
 ok(build.road_answer({'type': 'parallel'}) == {'answer': 'back'}, 'параллельная парковка — задним ходом')
+ok(build.road_answer({'type': 'rightturn', 'who': 'bike'}) == {'answer': 'wait'}, 'направо: велосипедист прямо — ждать')
+ok(build.road_answer({'type': 'rightturn', 'who': 'pedestrian'}) == {'answer': 'wait'}, 'направо: пешеход на улице — ждать')
+ok(build.road_answer({'type': 'rightturn', 'who': 'none'}) == {'answer': 'go'}, 'направо: никого — ехать')
+ok(build.road_answer({'type': 'zebracross', 'ped': 'waiting'}) == {'answer': 'stop'}, '«зебра»: пешеход ждёт — остановиться')
+ok(build.road_answer({'type': 'bus', 'state': 'stopped'}) == {'answer': 'walk'}, 'автобус с аварийкой на остановке — шагом')
+ok(build.road_answer({'type': 'bus', 'state': 'approaching'}) == {'answer': 'stay'}, 'автобус с аварийкой подъезжает — не обгонять')
 
 
 # ── 2. Сборка ловит ошибки и ничего не пишет ──

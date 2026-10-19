@@ -438,6 +438,18 @@ for (const id of IDX.units.filter(u => u.kind === 'road').map(u => u.id)) {
         }
         if (sc.oncoming) ok(await c.ev(`!!document.querySelector('#fsScene [data-actor="oncoming"]')`), `${tag}: встречная машина`);
         if (sc.line === 'solid') ok(await c.ev(`!!document.querySelector('#fsScene .fs-mark.is-solid')`), `${tag}: сплошная линия`);
+        if (sc.type === 'rightturn') {
+          ok(await waitFor(`!!document.querySelector('#fsScene [data-actor="me"].is-blink-r')`, 3000), `${tag}: правый поворотник`);
+          ok(await waitFor(`document.querySelector('#fsScene [data-actor="me"]').getAttribute('transform').includes('rotate(') && !document.querySelector('#fsScene [data-actor="me"]').getAttribute('transform').includes('rotate(-')`, 6000), `${tag}: машина поворачивает направо`);
+        }
+        if (sc.type === 'zebracross') {
+          const p0 = await c.ev(`document.querySelector('#fsScene [data-actor="ped"]').getAttribute('transform')`);
+          await c.wait(1500);
+          ok(p0 !== await c.ev(`document.querySelector('#fsScene [data-actor="ped"]').getAttribute('transform')`), `${tag}: пешеход переходит`);
+        }
+        if (sc.type === 'bus') {
+          ok(await c.ev(`(() => { const b = document.querySelector('#fsScene [data-actor="bus"]'); return b.classList.contains('is-blink-l') && b.classList.contains('is-blink-r'); })()`), `${tag}: у автобуса аварийка`);
+        }
         if (sc.type === 'parallel') {
           ok(await waitFor(`document.querySelector('#fsScene [data-actor="me"]').getAttribute('transform').includes('rotate(-')`, 4000), `${tag}: заезд задним ходом под углом`);
         }

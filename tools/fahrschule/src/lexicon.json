@@ -2026,6 +2026,9 @@
    "über die Straße gehen — переходить дорогу",
    "über die Straße gehen — переходити дорогу",
    "über die Straße gehen — يعبر الشارع"
+  ],
+  "f": [
+   "geht"
   ]
  },
  "gleich": {
@@ -4953,5 +4956,163 @@
    "п'ять",
    "خمسة"
   ]
+ },
+ "Bus": {
+  "pos": "сущ.",
+  "art": "der",
+  "pl": "die Busse",
+  "tr": [
+   "автобус",
+   "автобус",
+   "حافلة"
+  ]
+ },
+ "passieren": {
+  "pos": "гл.",
+  "tr": [
+   "происходить, случаться",
+   "відбуватися, траплятися",
+   "يحدث"
+  ],
+  "forms": "passierte · ist passiert"
+ },
+ "Rücksicht": {
+  "pos": "сущ.",
+  "art": "die",
+  "pl": null,
+  "tr": [
+   "внимание, уважение (к другим)",
+   "увага, повага (до інших)",
+   "مراعاة"
+  ],
+  "note": [
+   "§ 1 StVO: ständige Vorsicht und gegenseitige Rücksicht — постоянная осторожность и взаимное уважение",
+   "§ 1 StVO: ständige Vorsicht und gegenseitige Rücksicht — постійна обережність і взаємна повага",
+   "المادة 1: الحذر الدائم والمراعاة المتبادلة"
+  ]
+ },
+ "Schulbus": {
+  "pos": "сущ.",
+  "art": "der",
+  "pl": "die Schulbusse",
+  "tr": [
+   "школьный автобус",
+   "шкільний автобус",
+   "حافلة مدرسية"
+  ]
+ },
+ "tot": {
+  "pos": "прил.",
+  "tr": [
+   "мёртвый",
+   "мертвий",
+   "ميت"
+  ],
+  "f": [
+   "toten"
+  ],
+  "note": [
+   "der tote Winkel — «мёртвая зона» (не видна в зеркалах)",
+   "der tote Winkel — «мертва зона» (не видно в дзеркалах)",
+   "der tote Winkel — النقطة العمياء"
+  ]
+ },
+ "Unfall": {
+  "pos": "сущ.",
+  "art": "der",
+  "pl": "die Unfälle",
+  "tr": [
+   "авария, ДТП",
+   "аварія, ДТП",
+   "حادث"
+  ],
+  "f": [
+   "unfälle"
+  ]
+ },
+ "viele": {
+  "pos": "мест.",
+  "tr": [
+   "многие, много",
+   "багато, чимало",
+   "كثير من"
+  ]
+ },
+ "vorbeifahren": {
+  "pos": "гл.",
+  "tr": [
+   "проезжать мимо",
+   "проїжджати повз",
+   "يمرّ بجانب"
+  ],
+  "note": [
+   "отделяемая приставка: fahren … vorbei",
+   "відокремлюваний префікс: fahren … vorbei",
+   "سابقة منفصلة: fahren … vorbei"
+  ],
+  "forms": "fuhr vorbei · ist vorbeigefahren"
+ },
+ "Warnblinkanlage": {
+  "pos": "сущ.",
+  "art": "die",
+  "pl": "die Warnblinkanlagen",
+  "tr": [
+   "аварийная сигнализация",
+   "аварійна сигналізація",
+   "أضواء التحذير"
+  ]
+ },
+ "Warnblinklicht": {
+  "pos": "сущ.",
+  "art": "das",
+  "pl": null,
+  "tr": [
+   "аварийный сигнал (мигают все поворотники)",
+   "аварійний сигнал (блимають усі поворотники)",
+   "ضوء التحذير الوامض"
+  ]
+ },
+ "Weg": {
+  "pos": "сущ.",
+  "art": "der",
+  "pl": "die Wege",
+  "tr": [
+   "путь, дорога",
+   "шлях, дорога",
+   "طريق"
+  ]
+ },
+ "Winkel": {
+  "pos": "сущ.",
+  "art": "der",
+  "pl": "die Winkel",
+  "tr": [
+   "угол",
+   "кут",
+   "زاوية"
+  ]
+ },
+ "zufahren": {
+  "pos": "гл.",
+  "tr": [
+   "подъезжать (к)",
+   "під'їжджати (до)",
+   "يتجه نحو"
+  ],
+  "note": [
+   "auf die Haltestelle zufahren — подъезжать к остановке; приставка: fährt … zu",
+   "auf die Haltestelle zufahren — під'їжджати до зупинки; префікс: fährt … zu",
+   "auf die Haltestelle zufahren — يقترب من الموقف"
+  ],
+  "forms": "fuhr zu · ist zugefahren"
+ },
+ "überqueren": {
+  "pos": "гл.",
+  "tr": [
+   "пересекать, переходить",
+   "перетинати, переходити",
+   "يعبر"
+  ],
+  "forms": "überquerte · hat überquert"
  }
 }

@@ -274,6 +274,10 @@ html[dir="rtl"] .fs-tr { text-align: right; }
 .fs-sidewalk { fill: color-mix(in srgb, var(--text-dim) 45%, var(--surface)); }
 .fs-zebra { fill: #fff; opacity: .9; }
 .fs-noparking { fill: rgba(240, 107, 107, .35); stroke: #f06b6b; stroke-width: 1; stroke-dasharray: 4 3; }
+.fs-bikelane { fill: #b5524a; opacity: .75; }
+.fs-bus-box { fill: #e8b923; stroke: rgba(0, 0, 0, .35); stroke-width: 1; }
+.fs-ped-head { fill: #f0a35e; }
+.fs-ped-body { fill: none; stroke: var(--text-strong); stroke-width: 2; stroke-linecap: round; }
 .fs-road-opts.is-phrases { grid-template-columns: minmax(0, 1fr); }
 .fs-road-opt.is-phrase { align-items: flex-start; text-align: start; }
 .fs-road-opt.is-phrase .fs-opt-de { font-size: 15px; }
