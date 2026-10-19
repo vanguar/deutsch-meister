@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#16202a">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="German Morning">
+  <link rel="apple-touch-icon" sizes="180x180" href="/deutsch-meister/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/deutsch-meister/icons/favicon-32.png">
+  <title>Автошкола на немецком | German Morning</title>
+  <meta name="description" content="Немецкий для будущих водителей категории B: правила и знаки с озвучкой, разговор с инструктором и перекрёстки «кто едет первым».">
+  <link rel="canonical" href="https://vanguar.github.io/deutsch-meister/fahrschule.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="German Morning">
+  <meta property="og:title" content="Автошкола на немецком — German Morning">
+  <meta property="og:description" content="Немецкий для будущих водителей категории B: правила и знаки с озвучкой, разговор с инструктором и перекрёстки «кто едет первым».">
+  <meta property="og:url" content="https://vanguar.github.io/deutsch-meister/fahrschule.html">
+  <meta property="og:image" content="https://vanguar.github.io/german-morning/assets/img/og-image.png">
+  <!-- язык интерфейса: первым, до данных и стилей -->
+  <script src="js/i18n.js?v=147"></script>
+  <!-- цвета темы Telegram — до первой отрисовки (js/tg-theme.js) -->
+  <script src="js/tg-theme.js?v=147"></script>
+  <link rel="stylesheet" href="css/base.css?v=147">
+  <!-- тултип слова (.word-tip) — из уроков и ридера, как в новостях -->
+  <link rel="stylesheet" href="css/lesson.css?v=147">
+  <link rel="stylesheet" href="css/reader.css?v=147">
+  <!-- шапка, плитки, чипы — новости; кнопки и реплики — диалоги -->
+  <link rel="stylesheet" href="css/news.css?v=147">
+  <link rel="stylesheet" href="css/dialogs.css?v=147">
+  <link rel="stylesheet" href="css/fahrschule.css?v=147">
+</head>
+<body>
+
+<div class="bg-mesh"></div>
+
+<div class="news-page dlg-page fs-page" id="fsApp">
+  <header class="news-head">
+    <a class="news-back" href="index.html">← Главная</a>
+    <div class="news-titles">
+      <h1 class="news-h1">Автошкола</h1>
+      <div class="news-sub">Немецкий за рулём · категория B</div>
+    </div>
+    <button class="news-btn" data-lang-toggle onclick="I18N.toggle()" title="Язык · Мова" aria-label="Язык · Мова">RU</button>
+    <button class="news-btn" id="themeToggle" onclick="toggleTheme()" title="Сменить тему" aria-label="Сменить тему">🌙</button>
+  </header>
+
+  <!-- ── СПИСОК УРОКОВ (fahrschule.html) ── -->
+  <section class="fs-hub" id="fsHub">
+    <p class="news-intro">Пилот раздела для тех, кто учится водить в Германии: теория со знаками, разговор
+      с инструктором и перекрёстки «кто едет первым». Нажимайте на немецкие слова — появится перевод,
+      🔊 — озвучка фразы.</p>
+    <div class="news-grid fs-list" id="fsList" aria-label="Уроки" aria-live="polite" aria-busy="true"></div>
+  </section>
+
+  <!-- ── УРОК (fahrschule.html#u=t-01) ── -->
+  <section class="fs-unit" id="fsUnit" hidden>
+    <div class="dlg-view-top">
+      <button class="news-chip news-crumb" type="button" id="fsToHub">← Все уроки</button>
+    </div>
+    <div class="dlg-heading fs-heading" id="fsHeading"></div>
+    <div class="fs-body" id="fsBody"></div>
+  </section>
+
+  <p class="news-note" id="fsNote">Дорожные знаки — официальные знаки StVO с Wikimedia Commons (общественное
+    достояние). Тексты составлены для курса German Morning; это учебник немецкого языка, а не официальный
+    экзаменационный каталог.</p>
+</div>
+
+<script src="js/sw-register.js?v=147"></script>
+<script src="js/tts.js?v=147"></script>
+<script src="js/reader-speak.js?v=147"></script>
+<script src="js/reader-tip.js?v=147"></script>
+<script src="js/fahrschule.js?v=147"></script>
+<script src="js/telegram.js?v=147"></script>
+<script>
+  function initTheme() {
+    let saved = 'dark';
+    try { saved = localStorage.getItem('dm_theme') || 'dark'; } catch (e) {}
+    document.documentElement.setAttribute('data-theme', saved);
+    const btn = document.getElementById('themeToggle');
+    if (btn) btn.textContent = saved === 'dark' ? '☀️' : '🌙';
+  }
+  function toggleTheme() {
+    const next = (document.documentElement.getAttribute('data-theme') || 'dark') === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    try { localStorage.setItem('dm_theme', next); } catch (e) {}
+    const btn = document.getElementById('themeToggle');
+    if (btn) btn.textContent = next === 'dark' ? '☀️' : '🌙';
+  }
+  initTheme();
+</script>
+
+</body>
+</html>

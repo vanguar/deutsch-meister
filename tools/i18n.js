@@ -199,7 +199,7 @@ function uiStrings() {
   for (const [file, src] of Object.entries(sources)) {
     for (const s of jsStrings(src)) for (const f of fragments(s.text)) { out.push(f); if (f.includes('{n}')) tplKeys.push(file + ': ' + f); }
   }
-  for (const f of ['index.html', 'books.html', 'news.html', 'dialogs.html']) htmlStrings(read(f)).forEach(s => out.push(s));
+  for (const f of ['index.html', 'books.html', 'news.html', 'dialogs.html', 'fahrschule.html']) htmlStrings(read(f)).forEach(s => out.push(s));
   return { out, tplKeys };
 }
 

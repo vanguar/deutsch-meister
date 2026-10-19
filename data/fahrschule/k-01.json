@@ -1,0 +1,463 @@
+{
+ "id": "k-01",
+ "kind": "junction",
+ "emoji": "🔀",
+ "level": "A2–B1",
+ "title": "Wer fährt zuerst?",
+ "titleTr": "Кто едет первым?",
+ "intro": "Три ситуации на перекрёстке. Нажмите на машины в том порядке, в котором они должны проехать, — потом они поедут, а объяснение можно послушать.",
+ "scenes": [
+  {
+   "situation": {
+    "de": "Eine Kreuzung ohne Ampel und ohne Schilder.",
+    "tr": "Перекрёсток без светофора и без знаков."
+   },
+   "cars": [
+    {
+     "id": "blue",
+     "from": "S",
+     "turn": "straight"
+    },
+    {
+     "id": "red",
+     "from": "E",
+     "turn": "straight"
+    }
+   ],
+   "signs": {},
+   "order": [
+    "red",
+    "blue"
+   ],
+   "explain": [
+    {
+     "de": "Hier gibt es keine Schilder, also gilt rechts vor links.",
+     "tr": "Здесь нет знаков, значит, действует «правый перед левым».",
+     "o": {
+      "es": "es>es gibt"
+     }
+    },
+    {
+     "de": "Das rote Auto kommt von rechts. Es fährt zuerst.",
+     "tr": "Красная машина едет справа. Она проезжает первой."
+    },
+    {
+     "de": "Danach fährt das blaue Auto.",
+     "tr": "После неё едет синяя машина."
+    }
+   ]
+  },
+  {
+   "situation": {
+    "de": "An dieser Kreuzung stehen Schilder.",
+    "tr": "На этом перекрёстке стоят знаки."
+   },
+   "cars": [
+    {
+     "id": "green",
+     "from": "S",
+     "turn": "straight"
+    },
+    {
+     "id": "yellow",
+     "from": "W",
+     "turn": "straight"
+    }
+   ],
+   "signs": {
+    "S": "z205",
+    "N": "z205",
+    "W": "z306",
+    "E": "z306"
+   },
+   "order": [
+    "yellow",
+    "green"
+   ],
+   "explain": [
+    {
+     "de": "Das grüne Auto hat das Schild Vorfahrt gewähren.",
+     "tr": "У зелёной машины знак «Уступите дорогу»."
+    },
+    {
+     "de": "Das gelbe Auto fährt auf der Vorfahrtstraße und darf zuerst fahren.",
+     "tr": "Жёлтая машина едет по главной дороге и проезжает первой."
+    },
+    {
+     "de": "Achtung: Das grüne Auto kommt von rechts, aber die Schilder sind wichtiger.",
+     "tr": "Внимание: зелёная машина едет справа, но знаки важнее."
+    }
+   ]
+  },
+  {
+   "situation": {
+    "de": "Drei Autos, keine Ampel und keine Schilder.",
+    "tr": "Три машины, нет ни светофора, ни знаков."
+   },
+   "cars": [
+    {
+     "id": "blue",
+     "from": "S",
+     "turn": "straight"
+    },
+    {
+     "id": "red",
+     "from": "W",
+     "turn": "straight"
+    },
+    {
+     "id": "green",
+     "from": "N",
+     "turn": "left"
+    }
+   ],
+   "signs": {},
+   "order": [
+    "blue",
+    "red",
+    "green"
+   ],
+   "explain": [
+    {
+     "de": "Rechts vom blauen Auto ist kein Fahrzeug. Es fährt zuerst.",
+     "tr": "Справа от синей машины никого нет. Она проезжает первой."
+    },
+    {
+     "de": "Das rote Auto muss warten, denn das blaue Auto kommt von rechts.",
+     "tr": "Красная машина должна ждать: синяя едет справа от неё."
+    },
+    {
+     "de": "Das grüne Auto biegt links ab. Es lässt den Gegenverkehr durch und wartet auf das rote Auto von rechts.",
+     "tr": "Зелёная машина поворачивает налево. Она пропускает встречную и ждёт красную, которая справа.",
+     "o": {
+      "lässt": "lässt>durchlassen"
+     }
+    }
+   ]
+  }
+ ],
+ "signs": {
+  "z205": {
+   "de": "Vorfahrt gewähren!",
+   "tr": "Уступите дорогу!",
+   "src": "data/fahrschule/signs/z205.svg",
+   "n": "205",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_205_-_Vorfahrt_gew%C3%A4hren!_StVO_1970.svg"
+  },
+  "z306": {
+   "de": "Vorfahrtstraße",
+   "tr": "Главная дорога",
+   "src": "data/fahrschule/signs/z306.svg",
+   "n": "306",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_306_-_Vorfahrtstra%C3%9Fe,_StVO_1970.svg"
+  }
+ },
+ "gloss": {
+  "w": {
+   "ab": "abbiegen",
+   "aber": "aber",
+   "achtung": "Achtung",
+   "also": "also",
+   "ampel": "Ampel",
+   "an": "an",
+   "auf": "auf",
+   "auto": "Auto",
+   "autos": "Auto",
+   "biegt": "abbiegen",
+   "blaue": "blau",
+   "blauen": "blau",
+   "danach": "danach",
+   "darf": "dürfen",
+   "das": "der/die/das",
+   "den": "der/die/das",
+   "denn": "denn",
+   "der": "der/die/das",
+   "die": "der/die/das",
+   "dieser": "dieser",
+   "drei": "drei",
+   "durch": "durchlassen",
+   "eine": "ein/eine",
+   "es": "es",
+   "es>es gibt": "es gibt",
+   "fahren": "fahren",
+   "fahrzeug": "Fahrzeug",
+   "fährt": "fahren",
+   "gegenverkehr": "Gegenverkehr",
+   "gelbe": "gelb",
+   "gewähren": "gewähren",
+   "gibt": "es gibt",
+   "gilt": "gelten",
+   "grüne": "grün",
+   "hat": "haben",
+   "hier": "hier",
+   "ist": "sein",
+   "kein": "kein",
+   "keine": "kein",
+   "kommt": "kommen",
+   "kreuzung": "Kreuzung",
+   "links": "links",
+   "lässt>durchlassen": "durchlassen",
+   "muss": "müssen",
+   "ohne": "ohne",
+   "rechts": "rechts",
+   "rote": "rot",
+   "schild": "Schild",
+   "schilder": "Schild",
+   "sind": "sein",
+   "stehen": "stehen",
+   "und": "und",
+   "vom": "von",
+   "von": "von",
+   "vor": "vor",
+   "vorfahrt": "Vorfahrt",
+   "vorfahrtstraße": "Vorfahrtstraße",
+   "warten": "warten",
+   "wartet": "warten",
+   "wer": "wer",
+   "wichtiger": "wichtig",
+   "zuerst": "zuerst"
+  },
+  "l": {
+   "Achtung": {
+    "ru": "внимание!",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": null
+   },
+   "Ampel": {
+    "ru": "светофор",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Ampeln"
+   },
+   "Auto": {
+    "ru": "машина, автомобиль",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Autos"
+   },
+   "Fahrzeug": {
+    "ru": "транспортное средство, машина",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Fahrzeuge"
+   },
+   "Gegenverkehr": {
+    "ru": "встречный транспорт",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": null
+   },
+   "Kreuzung": {
+    "ru": "перекрёсток",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Kreuzungen"
+   },
+   "Schild": {
+    "ru": "знак, табличка",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Schilder"
+   },
+   "Vorfahrt": {
+    "ru": "преимущество (право проехать первым)",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": null
+   },
+   "Vorfahrtstraße": {
+    "ru": "главная дорога",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Vorfahrtstraßen"
+   },
+   "abbiegen": {
+    "ru": "поворачивать",
+    "pos": "гл.",
+    "note": "отделяемая приставка: Sie biegen … ab",
+    "forms": "bog ab · ist abgebogen"
+   },
+   "aber": {
+    "ru": "но",
+    "pos": "союз"
+   },
+   "also": {
+    "ru": "значит, итак",
+    "pos": "нареч."
+   },
+   "an": {
+    "ru": "у, на, при",
+    "pos": "предл.",
+    "note": "am = an dem; an der Kreuzung — на перекрёстке"
+   },
+   "auf": {
+    "ru": "на, по",
+    "pos": "предл.",
+    "note": "auf der Straße — на дороге; achten auf — следить за"
+   },
+   "blau": {
+    "ru": "синий",
+    "pos": "прил."
+   },
+   "danach": {
+    "ru": "после этого, потом",
+    "pos": "нареч."
+   },
+   "denn": {
+    "ru": "потому что, ведь",
+    "pos": "союз"
+   },
+   "der/die/das": {
+    "ru": "определённый артикль",
+    "pos": "артикль",
+    "note": "der — м. р., die — ж. р. и мн. ч., das — ср. р., den — м. р. в винительном; das ещё значит «это»"
+   },
+   "dieser": {
+    "ru": "этот, эта, это",
+    "pos": "мест."
+   },
+   "drei": {
+    "ru": "три",
+    "pos": "числ."
+   },
+   "durchlassen": {
+    "ru": "пропускать",
+    "pos": "гл.",
+    "note": "отделяемая приставка: lässt … durch",
+    "forms": "ließ durch · hat durchgelassen"
+   },
+   "dürfen": {
+    "ru": "мочь, иметь право",
+    "pos": "гл.",
+    "forms": "durfte · hat gedurft"
+   },
+   "ein/eine": {
+    "ru": "неопределённый артикль; один",
+    "pos": "артикль",
+    "note": "an einer Kreuzung — на (каком-то) перекрёстке"
+   },
+   "es": {
+    "ru": "оно; это",
+    "pos": "мест.",
+    "note": "здесь — о машине: das Auto"
+   },
+   "es gibt": {
+    "ru": "есть, имеется",
+    "pos": "выраж."
+   },
+   "fahren": {
+    "ru": "ехать; водить машину",
+    "pos": "гл.",
+    "forms": "fuhr · ist gefahren"
+   },
+   "gelb": {
+    "ru": "жёлтый",
+    "pos": "прил."
+   },
+   "gelten": {
+    "ru": "действовать (о правиле)",
+    "pos": "гл.",
+    "forms": "galt · hat gegolten"
+   },
+   "gewähren": {
+    "ru": "предоставлять",
+    "pos": "гл.",
+    "note": "Vorfahrt gewähren — уступить дорогу",
+    "forms": "gewährte · hat gewährt"
+   },
+   "grün": {
+    "ru": "зелёный",
+    "pos": "прил."
+   },
+   "haben": {
+    "ru": "иметь",
+    "pos": "гл.",
+    "note": "Vorfahrt haben — иметь преимущество",
+    "forms": "hatte · hat gehabt"
+   },
+   "hier": {
+    "ru": "здесь",
+    "pos": "нареч."
+   },
+   "kein": {
+    "ru": "никакой; не (отрицание при существительном)",
+    "pos": "мест."
+   },
+   "kommen": {
+    "ru": "приходить; ехать (приближаться)",
+    "pos": "гл.",
+    "note": "von rechts kommen — ехать справа",
+    "forms": "kam · ist gekommen"
+   },
+   "links": {
+    "ru": "слева; налево",
+    "pos": "нареч."
+   },
+   "müssen": {
+    "ru": "быть должным",
+    "pos": "гл.",
+    "forms": "musste · hat gemusst"
+   },
+   "ohne": {
+    "ru": "без",
+    "pos": "предл."
+   },
+   "rechts": {
+    "ru": "справа; направо",
+    "pos": "нареч."
+   },
+   "rot": {
+    "ru": "красный",
+    "pos": "прил."
+   },
+   "sein": {
+    "ru": "быть",
+    "pos": "гл.",
+    "forms": "war · ist gewesen"
+   },
+   "stehen": {
+    "ru": "стоять",
+    "pos": "гл.",
+    "note": "Schilder stehen — стоят знаки",
+    "forms": "stand · hat gestanden"
+   },
+   "und": {
+    "ru": "и",
+    "pos": "союз"
+   },
+   "von": {
+    "ru": "от, из, с",
+    "pos": "предл.",
+    "note": "vom = von dem; von rechts — справа"
+   },
+   "vor": {
+    "ru": "перед",
+    "pos": "предл.",
+    "note": "rechts vor links — правый перед левым"
+   },
+   "warten": {
+    "ru": "ждать",
+    "pos": "гл.",
+    "note": "warten auf — ждать (кого-то)",
+    "forms": "wartete · hat gewartet"
+   },
+   "wer": {
+    "ru": "кто",
+    "pos": "мест."
+   },
+   "wichtig": {
+    "ru": "важный",
+    "pos": "прил.",
+    "note": "wichtiger als — важнее, чем",
+    "forms": "wichtig · wichtiger · am wichtigsten"
+   },
+   "zuerst": {
+    "ru": "сначала, первым",
+    "pos": "нареч."
+   }
+  }
+ }
+}

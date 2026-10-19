@@ -1,0 +1,604 @@
+{
+ "id": "t-01",
+ "kind": "theory",
+ "emoji": "🚦",
+ "level": "A2–B1",
+ "title": "Vorfahrt: Wer fährt zuerst?",
+ "titleTr": "Преимущество: кто едет первым?",
+ "intro": "Главная тема теории: кто проезжает перекрёсток первым. Слушайте правила, нажимайте на слова и проверьте себя по знакам в конце.",
+ "sections": [
+  {
+   "title": "Правый перед левым",
+   "lines": [
+    {
+     "de": "An einer Kreuzung ohne Ampel und ohne Schilder gilt: rechts vor links.",
+     "tr": "На перекрёстке без светофора и без знаков действует правило: правый перед левым."
+    },
+    {
+     "de": "Wer von rechts kommt, darf zuerst fahren.",
+     "tr": "Кто едет справа, тот проезжает первым."
+    },
+    {
+     "de": "Kommt ein Fahrzeug von rechts, müssen Sie warten.",
+     "tr": "Если справа едет машина, вы должны подождать."
+    },
+    {
+     "de": "Dieses Schild warnt: An der nächsten Kreuzung gilt rechts vor links.",
+     "tr": "Этот знак предупреждает: на ближайшем перекрёстке действует правило «правый перед левым».",
+     "sign": "z102"
+    }
+   ]
+  },
+  {
+   "title": "Знаки приоритета",
+   "lines": [
+    {
+     "de": "Dieses Schild bedeutet: Vorfahrt gewähren. Lassen Sie die Fahrzeuge auf der anderen Straße zuerst fahren.",
+     "tr": "Этот знак означает: уступите дорогу. Сначала пропустите машины на другой дороге.",
+     "sign": "z205"
+    },
+    {
+     "de": "Am Stoppschild müssen Sie immer anhalten, auch wenn die Straße frei ist.",
+     "tr": "У знака «Стоп» нужно всегда останавливаться, даже если дорога свободна.",
+     "sign": "z206"
+    },
+    {
+     "de": "Dieses Schild gilt nur an der nächsten Kreuzung. Dort haben Sie Vorfahrt.",
+     "tr": "Этот знак действует только на ближайшем перекрёстке. Там у вас преимущество.",
+     "sign": "z301"
+    },
+    {
+     "de": "Auf einer Vorfahrtstraße haben Sie an allen Kreuzungen Vorfahrt.",
+     "tr": "На главной дороге у вас преимущество на всех перекрёстках.",
+     "sign": "z306"
+    },
+    {
+     "de": "Hier endet die Vorfahrtstraße. Danach gilt wieder rechts vor links, wenn kein anderes Schild steht.",
+     "tr": "Здесь главная дорога заканчивается. Дальше снова действует «правый перед левым», если нет другого знака.",
+     "sign": "z307"
+    }
+   ]
+  },
+  {
+   "title": "Что главнее",
+   "lines": [
+    {
+     "de": "Die Zeichen der Polizei sind wichtiger als die Ampel.",
+     "tr": "Сигналы полиции важнее светофора."
+    },
+    {
+     "de": "Die Ampel ist wichtiger als die Verkehrszeichen.",
+     "tr": "Светофор важнее дорожных знаков."
+    },
+    {
+     "de": "Die Verkehrszeichen sind wichtiger als die Regel rechts vor links.",
+     "tr": "Дорожные знаки важнее правила «правый перед левым»."
+    }
+   ]
+  },
+  {
+   "title": "Поворот налево",
+   "lines": [
+    {
+     "de": "Wer links abbiegt, muss den Gegenverkehr zuerst durchfahren lassen.",
+     "tr": "Кто поворачивает налево, должен сначала пропустить встречный транспорт."
+    },
+    {
+     "de": "Blinken Sie rechtzeitig, damit die anderen wissen, wohin Sie fahren.",
+     "tr": "Включайте поворотник заранее, чтобы другие знали, куда вы едете."
+    }
+   ]
+  }
+ ],
+ "quiz": [
+  {
+   "sign": "z205",
+   "wrong": [
+    "z301",
+    "z307"
+   ]
+  },
+  {
+   "sign": "z306",
+   "wrong": [
+    "z206",
+    "z102"
+   ]
+  },
+  {
+   "sign": "z206",
+   "wrong": [
+    "z205",
+    "z306"
+   ]
+  },
+  {
+   "sign": "z301",
+   "wrong": [
+    "z307",
+    "z102"
+   ]
+  },
+  {
+   "sign": "z307",
+   "wrong": [
+    "z306",
+    "z205"
+   ]
+  }
+ ],
+ "quizQuestion": {
+  "de": "Was bedeutet dieses Schild?",
+  "tr": "Что означает этот знак?"
+ },
+ "signs": {
+  "z102": {
+   "de": "Kreuzung mit Vorfahrt von rechts",
+   "tr": "Перекрёсток: преимущество у тех, кто справа",
+   "src": "data/fahrschule/signs/z102.svg",
+   "n": "102",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_102_-_Kreuzung_oder_Einm%C3%BCndung_mit_Vorfahrt_von_rechts,_StVO_1970.svg"
+  },
+  "z205": {
+   "de": "Vorfahrt gewähren!",
+   "tr": "Уступите дорогу!",
+   "src": "data/fahrschule/signs/z205.svg",
+   "n": "205",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_205_-_Vorfahrt_gew%C3%A4hren!_StVO_1970.svg"
+  },
+  "z206": {
+   "de": "Halt! Vorfahrt gewähren!",
+   "tr": "Стоп! Уступите дорогу!",
+   "src": "data/fahrschule/signs/z206.svg",
+   "n": "206",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_206_-_Halt!_Vorfahrt_gew%C3%A4hren!_StVO_1970.svg"
+  },
+  "z301": {
+   "de": "Vorfahrt an der nächsten Kreuzung",
+   "tr": "Преимущество на ближайшем перекрёстке",
+   "src": "data/fahrschule/signs/z301.svg",
+   "n": "301",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_301_-_Vorfahrt,_StVO_1970.svg"
+  },
+  "z306": {
+   "de": "Vorfahrtstraße",
+   "tr": "Главная дорога",
+   "src": "data/fahrschule/signs/z306.svg",
+   "n": "306",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_306_-_Vorfahrtstra%C3%9Fe,_StVO_1970.svg"
+  },
+  "z307": {
+   "de": "Ende der Vorfahrtstraße",
+   "tr": "Конец главной дороги",
+   "src": "data/fahrschule/signs/z307.svg",
+   "n": "307",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_307_-_Ende_der_Vorfahrtstra%C3%9Fe,_StVO_1970.svg"
+  }
+ },
+ "gloss": {
+  "w": {
+   "abbiegt": "abbiegen",
+   "allen": "alle",
+   "als": "als",
+   "am": "an",
+   "ampel": "Ampel",
+   "an": "an",
+   "anderen": "andere",
+   "anderes": "andere",
+   "anhalten": "anhalten",
+   "auch": "auch",
+   "auf": "auf",
+   "bedeutet": "bedeuten",
+   "blinken": "blinken",
+   "damit": "damit",
+   "danach": "danach",
+   "darf": "dürfen",
+   "den": "der/die/das",
+   "der": "der/die/das",
+   "die": "der/die/das",
+   "dieses": "dieser",
+   "dort": "dort",
+   "durchfahren": "durchfahren",
+   "ein": "ein/eine",
+   "einer": "ein/eine",
+   "ende": "Ende",
+   "endet": "enden",
+   "fahren": "fahren",
+   "fahrzeug": "Fahrzeug",
+   "fahrzeuge": "Fahrzeug",
+   "frei": "frei",
+   "fährt": "fahren",
+   "gegenverkehr": "Gegenverkehr",
+   "gewähren": "gewähren",
+   "gilt": "gelten",
+   "haben": "haben",
+   "halt": "Halt",
+   "hier": "hier",
+   "immer": "immer",
+   "ist": "sein",
+   "kein": "kein",
+   "kommt": "kommen",
+   "kreuzung": "Kreuzung",
+   "kreuzungen": "Kreuzung",
+   "lassen": "lassen",
+   "links": "links",
+   "mit": "mit",
+   "muss": "müssen",
+   "müssen": "müssen",
+   "nur": "nur",
+   "nächsten": "nächste",
+   "ohne": "ohne",
+   "polizei": "Polizei",
+   "rechts": "rechts",
+   "rechtzeitig": "rechtzeitig",
+   "regel": "Regel",
+   "schild": "Schild",
+   "schilder": "Schild",
+   "sie": "Sie",
+   "sind": "sein",
+   "steht": "stehen",
+   "stoppschild": "Stoppschild",
+   "straße": "Straße",
+   "und": "und",
+   "verkehrszeichen": "Verkehrszeichen",
+   "von": "von",
+   "vor": "vor",
+   "vorfahrt": "Vorfahrt",
+   "vorfahrtstraße": "Vorfahrtstraße",
+   "warnt": "warnen",
+   "warten": "warten",
+   "was": "was",
+   "wenn": "wenn",
+   "wer": "wer",
+   "wichtiger": "wichtig",
+   "wieder": "wieder",
+   "wissen": "wissen",
+   "wohin": "wohin",
+   "zeichen": "Zeichen",
+   "zuerst": "zuerst"
+  },
+  "l": {
+   "Ampel": {
+    "ru": "светофор",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Ampeln"
+   },
+   "Ende": {
+    "ru": "конец",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Enden"
+   },
+   "Fahrzeug": {
+    "ru": "транспортное средство, машина",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Fahrzeuge"
+   },
+   "Gegenverkehr": {
+    "ru": "встречный транспорт",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": null
+   },
+   "Halt": {
+    "ru": "стоп! стой!",
+    "pos": "межд."
+   },
+   "Kreuzung": {
+    "ru": "перекрёсток",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Kreuzungen"
+   },
+   "Polizei": {
+    "ru": "полиция",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": null
+   },
+   "Regel": {
+    "ru": "правило",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Regeln"
+   },
+   "Schild": {
+    "ru": "знак, табличка",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Schilder"
+   },
+   "Sie": {
+    "ru": "вы (вежливо)",
+    "pos": "мест."
+   },
+   "Stoppschild": {
+    "ru": "знак «Стоп»",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Stoppschilder"
+   },
+   "Straße": {
+    "ru": "улица, дорога",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Straßen"
+   },
+   "Verkehrszeichen": {
+    "ru": "дорожный знак",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Verkehrszeichen"
+   },
+   "Vorfahrt": {
+    "ru": "преимущество (право проехать первым)",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": null
+   },
+   "Vorfahrtstraße": {
+    "ru": "главная дорога",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Vorfahrtstraßen"
+   },
+   "Zeichen": {
+    "ru": "знак; сигнал",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Zeichen"
+   },
+   "abbiegen": {
+    "ru": "поворачивать",
+    "pos": "гл.",
+    "note": "отделяемая приставка: Sie biegen … ab",
+    "forms": "bog ab · ist abgebogen"
+   },
+   "alle": {
+    "ru": "все; всё",
+    "pos": "мест."
+   },
+   "als": {
+    "ru": "чем (при сравнении); как",
+    "pos": "союз"
+   },
+   "an": {
+    "ru": "у, на, при",
+    "pos": "предл.",
+    "note": "am = an dem; an der Kreuzung — на перекрёстке"
+   },
+   "andere": {
+    "ru": "другой",
+    "pos": "прил."
+   },
+   "anhalten": {
+    "ru": "останавливаться",
+    "pos": "гл.",
+    "forms": "hielt an · hat angehalten"
+   },
+   "auch": {
+    "ru": "тоже; даже (auch wenn)",
+    "pos": "нареч."
+   },
+   "auf": {
+    "ru": "на, по",
+    "pos": "предл.",
+    "note": "auf der Straße — на дороге; achten auf — следить за"
+   },
+   "bedeuten": {
+    "ru": "означать",
+    "pos": "гл.",
+    "forms": "bedeutete · hat bedeutet"
+   },
+   "blinken": {
+    "ru": "включать поворотник, мигать",
+    "pos": "гл.",
+    "forms": "blinkte · hat geblinkt"
+   },
+   "damit": {
+    "ru": "чтобы",
+    "pos": "союз"
+   },
+   "danach": {
+    "ru": "после этого, потом",
+    "pos": "нареч."
+   },
+   "der/die/das": {
+    "ru": "определённый артикль",
+    "pos": "артикль",
+    "note": "der — м. р., die — ж. р. и мн. ч., das — ср. р., den — м. р. в винительном; das ещё значит «это»"
+   },
+   "dieser": {
+    "ru": "этот, эта, это",
+    "pos": "мест."
+   },
+   "dort": {
+    "ru": "там",
+    "pos": "нареч."
+   },
+   "durchfahren": {
+    "ru": "проезжать",
+    "pos": "гл.",
+    "forms": "fuhr durch · ist durchgefahren"
+   },
+   "dürfen": {
+    "ru": "мочь, иметь право",
+    "pos": "гл.",
+    "forms": "durfte · hat gedurft"
+   },
+   "ein/eine": {
+    "ru": "неопределённый артикль; один",
+    "pos": "артикль",
+    "note": "an einer Kreuzung — на (каком-то) перекрёстке"
+   },
+   "enden": {
+    "ru": "заканчиваться",
+    "pos": "гл.",
+    "forms": "endete · hat geendet"
+   },
+   "fahren": {
+    "ru": "ехать; водить машину",
+    "pos": "гл.",
+    "forms": "fuhr · ist gefahren"
+   },
+   "frei": {
+    "ru": "свободный",
+    "pos": "прил."
+   },
+   "gelten": {
+    "ru": "действовать (о правиле)",
+    "pos": "гл.",
+    "forms": "galt · hat gegolten"
+   },
+   "gewähren": {
+    "ru": "предоставлять",
+    "pos": "гл.",
+    "note": "Vorfahrt gewähren — уступить дорогу",
+    "forms": "gewährte · hat gewährt"
+   },
+   "haben": {
+    "ru": "иметь",
+    "pos": "гл.",
+    "note": "Vorfahrt haben — иметь преимущество",
+    "forms": "hatte · hat gehabt"
+   },
+   "hier": {
+    "ru": "здесь",
+    "pos": "нареч."
+   },
+   "immer": {
+    "ru": "всегда",
+    "pos": "нареч."
+   },
+   "kein": {
+    "ru": "никакой; не (отрицание при существительном)",
+    "pos": "мест."
+   },
+   "kommen": {
+    "ru": "приходить; ехать (приближаться)",
+    "pos": "гл.",
+    "note": "von rechts kommen — ехать справа",
+    "forms": "kam · ist gekommen"
+   },
+   "lassen": {
+    "ru": "позволять; пропускать; оставлять",
+    "pos": "гл.",
+    "note": "jemanden fahren lassen — пропустить кого-то вперёд",
+    "forms": "ließ · hat gelassen"
+   },
+   "links": {
+    "ru": "слева; налево",
+    "pos": "нареч."
+   },
+   "mit": {
+    "ru": "с",
+    "pos": "предл."
+   },
+   "müssen": {
+    "ru": "быть должным",
+    "pos": "гл.",
+    "forms": "musste · hat gemusst"
+   },
+   "nur": {
+    "ru": "только",
+    "pos": "нареч."
+   },
+   "nächste": {
+    "ru": "ближайший, следующий",
+    "pos": "прил."
+   },
+   "ohne": {
+    "ru": "без",
+    "pos": "предл."
+   },
+   "rechts": {
+    "ru": "справа; направо",
+    "pos": "нареч."
+   },
+   "rechtzeitig": {
+    "ru": "вовремя, заранее",
+    "pos": "нареч."
+   },
+   "sein": {
+    "ru": "быть",
+    "pos": "гл.",
+    "forms": "war · ist gewesen"
+   },
+   "stehen": {
+    "ru": "стоять",
+    "pos": "гл.",
+    "note": "Schilder stehen — стоят знаки",
+    "forms": "stand · hat gestanden"
+   },
+   "und": {
+    "ru": "и",
+    "pos": "союз"
+   },
+   "von": {
+    "ru": "от, из, с",
+    "pos": "предл.",
+    "note": "vom = von dem; von rechts — справа"
+   },
+   "vor": {
+    "ru": "перед",
+    "pos": "предл.",
+    "note": "rechts vor links — правый перед левым"
+   },
+   "warnen": {
+    "ru": "предупреждать",
+    "pos": "гл.",
+    "forms": "warnte · hat gewarnt"
+   },
+   "warten": {
+    "ru": "ждать",
+    "pos": "гл.",
+    "note": "warten auf — ждать (кого-то)",
+    "forms": "wartete · hat gewartet"
+   },
+   "was": {
+    "ru": "что",
+    "pos": "мест."
+   },
+   "wenn": {
+    "ru": "если; когда",
+    "pos": "союз",
+    "note": "auch wenn — даже если"
+   },
+   "wer": {
+    "ru": "кто",
+    "pos": "мест."
+   },
+   "wichtig": {
+    "ru": "важный",
+    "pos": "прил.",
+    "note": "wichtiger als — важнее, чем",
+    "forms": "wichtig · wichtiger · am wichtigsten"
+   },
+   "wieder": {
+    "ru": "снова",
+    "pos": "нареч."
+   },
+   "wissen": {
+    "ru": "знать",
+    "pos": "гл.",
+    "forms": "wusste · hat gewusst"
+   },
+   "wohin": {
+    "ru": "куда",
+    "pos": "нареч."
+   },
+   "zuerst": {
+    "ru": "сначала, первым",
+    "pos": "нареч."
+   }
+  }
+ }
+}

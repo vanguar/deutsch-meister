@@ -1,0 +1,31 @@
+{
+ "units": [
+  {
+   "id": "t-01",
+   "kind": "theory",
+   "emoji": "🚦",
+   "level": "A2–B1",
+   "title": "Vorfahrt: Wer fährt zuerst?",
+   "titleTr": "Перевага: хто їде першим?",
+   "count": 14
+  },
+  {
+   "id": "p-01",
+   "kind": "dialog",
+   "emoji": "🚗",
+   "level": "A2",
+   "title": "Die erste Fahrstunde",
+   "titleTr": "Перший урок водіння",
+   "count": 15
+  },
+  {
+   "id": "k-01",
+   "kind": "junction",
+   "emoji": "🔀",
+   "level": "A2–B1",
+   "title": "Wer fährt zuerst?",
+   "titleTr": "Хто їде першим?",
+   "count": 3
+  }
+ ]
+}

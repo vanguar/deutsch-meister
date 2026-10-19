@@ -351,6 +351,17 @@ function dmAddDialogsItem() {
   } catch (e) {}
 }
 
+/* ── Раздел «Автошкола» ──────────────────────────────────────────
+   fahrschule.html — немецкий для будущих водителей категории B
+   (пилот: теория, разговор с инструктором, перекрёстки). На главной —
+   плитка «Автошкола» (index.html).                                    */
+function dmFahrschuleUrl() { return dmBasePath() + 'fahrschule.html'; }
+
+function openFahrschulePage() {
+  dmHaptic('light');
+  window.location.href = dmFahrschuleUrl();
+}
+
 /* ── Пункт «Связь с автором» ─────────────────────────────────────
    Замечания и предложения — в личные сообщения Telegram. Внутри
    мини-аппа ссылку открывает сам Telegram (иначе WebView уйдёт со
@@ -414,7 +425,9 @@ Object.assign(window, {
   openNewsPage,
   dmNewsUrl,
   openDialogsPage,
-  dmDialogsUrl
+  dmDialogsUrl,
+  openFahrschulePage,
+  dmFahrschuleUrl
 });
 
 /* Закрытие по Esc */

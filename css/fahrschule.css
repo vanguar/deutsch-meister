@@ -1,0 +1,175 @@
+/* ═══════════════════════════════════════════════
+   fahrschule.css — раздел «Автошкола» (fahrschule.html)
+   Шапка, плитки и чипы — из css/news.css, кнопка «Слушать», чипы-
+   переключатели и реплики-«пузыри» — из css/dialogs.css, тултип слова —
+   из css/lesson.css + css/reader.css. Здесь — только своё: строки правил,
+   знаки, тест и перекрёсток. Цвета — токены css/base.css (обе темы и
+   тема Telegram через js/tg-theme.js). Направления — логические свойства:
+   в арабском интерфейсе раскладка зеркалится, немецкий остаётся LTR.
+   ═══════════════════════════════════════════════ */
+
+.fs-hub[hidden], .fs-unit[hidden] { display: none; }
+/* Значок и подпись в чипе («↻ Ещё раз»): в inline-flex пробел между ними теряется */
+.fs-page .news-chip { gap: 6px; }
+
+/* ── Плитки уроков ── */
+.fs-tile-unit { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.fs-tile-de {
+  font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 800; color: var(--text-strong);
+  line-height: 1.25; overflow-wrap: anywhere; text-align: start;
+}
+.fs-tile-tr { font-size: 13px; color: var(--text-muted); line-height: 1.4; }
+.fs-tile-level { font-size: 12px; font-weight: 700; color: var(--text-dim); direction: ltr; unicode-bidi: isolate; }
+.fs-tile .news-tile-top { padding-right: 0; }
+.fs-soon .news-tile-top { padding-inline-end: 70px; }
+.fs-soon { cursor: default; }
+.fs-soon:hover { transform: none; border-color: var(--border); }
+
+/* Вид урока: та же плашка, что уровень в «Диалогах» */
+.fs-kind-chip.kind-theory   { background: #2a62a6; }
+.fs-kind-chip.kind-dialog   { background: #0e7490; }
+.fs-kind-chip.kind-junction { background: #c2410c; }
+.fs-level {
+  margin-inline-start: 8px; font-size: 12px; font-weight: 700; color: var(--text-muted);
+  direction: ltr; unicode-bidi: isolate;
+}
+.fs-heading .dlg-title { display: block; }
+
+/* ── Слово с подсказкой ── */
+.fs-w {
+  cursor: pointer; border-radius: 3px; outline: none;
+  transition: background-color var(--t-fast), color var(--t-fast);
+}
+.fs-w:focus-visible { box-shadow: 0 0 0 2px var(--accent2); }
+@media (hover: hover) { .fs-w:hover { background: var(--dlg-a-soft); } }
+.fs-w.word-tip-open { color: var(--accent2-text); background: var(--dlg-a-soft); }
+.fs-s.bs--active { background: var(--tint); border-radius: 4px; }
+
+.fs-hint:empty { display: none; }
+
+/* ── Теория: разделы и строки ── */
+.fs-sec { margin-top: 22px; }
+.fs-sec-title {
+  margin: 0 0 10px; font-family: 'Playfair Display', serif; font-size: 19px; font-weight: 900;
+  color: var(--text-strong); line-height: 1.25;
+}
+.fs-lines { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.fs-lines > .fs-line {
+  padding: 10px 12px; border-radius: var(--r-lg);
+  background: var(--surface2); border: 1px solid var(--border);
+  transition: border-color .25s ease, box-shadow .25s ease;
+}
+.fs-lines > .fs-line.is-speaking {
+  border-color: var(--dlg-speak);
+  box-shadow: 0 0 0 1px var(--dlg-speak) inset, 0 4px 18px rgba(232, 197, 71, .2);
+}
+.fs-line-row { display: flex; align-items: flex-start; gap: 8px; }
+.fs-line-text { flex: 1; min-width: 0; }
+.fs-de {
+  margin: 0; font-size: 16px; line-height: 1.6; color: var(--text-strong);
+  text-align: start; overflow-wrap: anywhere;
+}
+.fs-tr {
+  display: none; margin: 6px 0 0; padding-top: 6px; border-top: 1px dashed var(--border);
+  font-size: 14px; line-height: 1.45; color: var(--text-muted);
+}
+.show-tr .fs-tr, .tr-open .fs-tr, .fs-tr.is-open { display: block; }
+html[dir="rtl"] .fs-tr { text-align: right; }
+
+/* Знак рядом со строкой */
+.fs-sign { display: flex; align-items: center; gap: 12px; margin: 0 0 10px; }
+.fs-sign-img { flex: none; display: block; width: 64px; height: 64px; object-fit: contain; }
+.fs-sign-img.is-big { width: 120px; height: 120px; margin: 10px auto 12px; }
+.fs-sign figcaption { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.fs-sign-n { font-size: 11px; font-weight: 800; letter-spacing: .4px; color: var(--text-dim); text-transform: uppercase; direction: ltr; text-align: start; }
+.fs-sign-de { font-size: 15px; font-weight: 800; color: var(--text-strong); text-align: start; }
+.fs-sign-tr { font-size: 13px; color: var(--text-muted); }
+
+/* ── Тест по знакам ── */
+.fs-quiz { margin-top: 26px; }
+.fs-quiz-card {
+  padding: 16px; border-radius: var(--r-lg); text-align: center;
+  background: var(--surface2); border: 1px solid var(--border);
+}
+.fs-quiz-top { font-size: 13px; font-weight: 700; color: var(--text-muted); }
+.fs-quiz-n { direction: ltr; unicode-bidi: isolate; }
+.fs-quiz-q { margin: 0 0 12px; font-size: 17px; font-weight: 800; color: var(--text-strong); line-height: 1.45; }
+.fs-opts { display: grid; gap: 8px; text-align: start; }
+.fs-opt {
+  display: flex; flex-direction: column; gap: 2px; width: 100%; min-height: 48px; padding: 11px 14px;
+  border-radius: var(--r-md); border: 1px solid var(--border); background: var(--surface);
+  color: var(--text); font: inherit; text-align: start; cursor: pointer;
+  -webkit-tap-highlight-color: transparent; transition: border-color var(--t-fast), background-color var(--t-fast);
+}
+.fs-opt:hover:not(:disabled) { border-color: var(--accent2); }
+.fs-opt:focus-visible { outline: 2px solid var(--accent2); outline-offset: 2px; }
+.fs-opt:disabled { cursor: default; }
+.fs-opt.is-right { border-color: var(--correct); background: color-mix(in srgb, var(--correct) 14%, var(--surface)); }
+.fs-opt.is-wrong { border-color: var(--wrong); background: color-mix(in srgb, var(--wrong) 12%, var(--surface)); }
+.fs-opt-de { font-size: 15px; font-weight: 800; color: var(--text-strong); }
+.fs-opt-tr { font-size: 13px; color: var(--text-muted); }
+.fs-verdict { margin: 14px 0 8px; font-size: 16px; font-weight: 800; }
+.fs-verdict.is-right { color: var(--correct); }
+.fs-verdict.is-wrong { color: var(--wrong); }
+.fs-explain-one {
+  padding: 10px 12px; border-radius: var(--r-md); text-align: start;
+  background: var(--tint); border: 1px solid var(--tint-border);
+}
+.fs-next { margin-top: 14px; }
+.fs-result { padding: 8px 0; }
+.fs-result-big { font-size: 44px; line-height: 1.2; }
+.fs-result-text { margin: 6px 0 12px; font-size: 18px; color: var(--text); }
+.fs-result-text b { color: var(--text-strong); }
+
+/* ── Перекрёсток ── */
+.fs-junction { margin-top: 18px; }
+.fs-scene-top {
+  display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  font-size: 13px; font-weight: 700; color: var(--text-muted);
+}
+.fs-scene-n { direction: ltr; unicode-bidi: isolate; }
+.fs-dots { display: inline-flex; gap: 6px; }
+.fs-dots i { width: 8px; height: 8px; border-radius: 50%; background: var(--border-light); }
+.fs-dots i.on { background: var(--accent2); }
+.fs-situation { margin: 10px 0 0; cursor: pointer; }
+.fs-junction > .fs-quiz-q { margin: 12px 0 8px; text-align: start; }
+.fs-scene {
+  max-width: 420px; margin: 0 auto; border-radius: var(--r-lg); overflow: hidden;
+  border: 1px solid var(--border);
+}
+.fs-svg { display: block; width: 100%; height: auto; touch-action: manipulation; user-select: none; -webkit-user-select: none; }
+.fs-grass { fill: color-mix(in srgb, var(--green) 16%, var(--surface)); }
+.fs-road  { fill: var(--border-light); }
+.fs-mark  { fill: none; stroke: #fff; stroke-opacity: .8; stroke-width: 2; stroke-dasharray: 8 7; }
+.fs-wait  { fill: none; stroke: #fff; stroke-width: 3; }
+.fs-path  { fill: none; stroke: none; }
+.fs-hint-path {
+  fill: none; stroke-width: 3; stroke-linecap: round; stroke-dasharray: 4 5; opacity: .75;
+  transition: opacity .3s ease;
+}
+.fs-car { cursor: pointer; outline: none; -webkit-tap-highlight-color: transparent; transition: opacity .35s ease; }
+.fs-car-hit { fill: transparent; }
+.fs-car-shell { stroke: rgba(0, 0, 0, .35); stroke-width: 1; }
+.fs-car:focus-visible .fs-car-shell { stroke: var(--accent); stroke-width: 3; }
+.fs-glass { fill: rgba(10, 20, 30, .55); }
+.fs-blink { fill: #ffb000; animation: fs-blink 1s steps(2, jump-none) infinite; }
+@keyframes fs-blink { from { opacity: 1; } to { opacity: .15; } }
+.fs-badge circle { fill: #fff; stroke: rgba(0, 0, 0, .45); stroke-width: 1; }
+.fs-badge text { font: 800 12px 'DM Sans', system-ui, sans-serif; fill: #111; text-anchor: middle; }
+.fs-car.is-picked .fs-badge circle { fill: var(--accent2); stroke: #fff; stroke-width: 1.5; }
+.fs-car.is-picked .fs-badge text { fill: #fff; }
+.fs-badge { transition: opacity .25s ease; }
+.is-driving .fs-badge, .is-driving .fs-hint-path { opacity: 0; }
+.fs-car.is-gone { opacity: 0; }
+
+.fs-status { min-height: 22px; margin: 10px 0 0; font-size: 14px; line-height: 1.5; text-align: center; color: var(--text-muted); }
+.fs-status.is-right { color: var(--correct); font-weight: 800; }
+.fs-status.is-wrong { color: var(--wrong); font-weight: 800; }
+.fs-scene-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 10px; }
+.fs-scene-actions:empty { display: none; }
+.fs-explain { margin-top: 14px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .fs-blink { animation: none; }
+  .fs-lines > .fs-line, .fs-car, .fs-hint-path, .fs-badge, .fs-w, .fs-opt { transition: none; }
+}

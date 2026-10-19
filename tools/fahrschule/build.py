@@ -1,0 +1,480 @@
+#!/usr/bin/env python3
+"""
+tools/fahrschule/build.py — сборка раздела «Автошкола» (fahrschule.html).
+
+Исходники (правятся руками):
+  tools/fahrschule/src/units.json   — уроки трёх видов:
+      theory   — правила по разделам (+ знак у строки) и тест по знакам;
+      dialog   — разговор инструктора и ученика (как в «Диалогах»);
+      junction — перекрёстки «Wer fährt zuerst?»: машины, знаки, порядок.
+    Любой немецкий текст — {"de": ..., "tr": [ru, uk, ar]}; необязательное
+    "w": {"слово": "лемма"} — значение слова именно в этой строке
+    (отделяемые приставки, обороты: Stellen Sie … ein → einstellen).
+  tools/fahrschule/src/lexicon.json — подсказки над словами: лемма →
+    {pos, tr: [ru, uk, ar], note?: [ru, uk, ar], art/pl у сущ., forms,
+    f: [другие формы слова]}.
+  tools/fahrschule/src/signs.json   — названия знаков (de + [ru, uk, ar]).
+  tools/fahrschule/signs.json       — лицензии знаков (fetch_signs.py),
+    сами SVG — data/fahrschule/signs/<id>.svg.
+
+Выход — готовые файлы на каждый язык, без общей памяти переводов
+(короткие подписи слов там путались бы с чужими: «с», «на», «пока»):
+  data/fahrschule/index.json, data/fahrschule/<id>.json      — русский;
+  i18n/uk/fahrschule/…, i18n/ar/fahrschule/…                — копии с той
+    же структурой; js/i18n.js подставляет их вместо data/fahrschule/.
+
+Проверки (ошибка = выход 1, ничего не пишется):
+  * у каждого немецкого слова есть подсказка (лемма в словаре), и в
+    словаре нет лишних лемм;
+  * алфавиты: немецкий без кириллицы, украинский без ы/э/ъ/ё, арабский —
+    арабицей без кириллицы;
+  * знаки: SVG и свободная лицензия есть;
+  * перекрёстки: порядок проезда вычисляется по правилам (знаки →
+    «правый перед левым» → поворот налево уступает встречным) и обязан
+    совпасть с ответом в исходнике; неоднозначные сцены не допускаются.
+
+Запуск: python tools/fahrschule/build.py
+"""
+
+import json
+import os
+import re
+import sys
+
+BASE = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+SRC = os.path.join(BASE, 'tools', 'fahrschule', 'src')
+SIGN_META = os.path.join(BASE, 'tools', 'fahrschule', 'signs.json')
+OUT = os.path.join(BASE, 'data', 'fahrschule')
+LANGS = ['ru', 'uk', 'ar']
+
+# Слово — как в js/fahrschule.js (WORD_RE): держать одинаковыми
+WORD_RE = re.compile(r'km/h|[A-Za-zÄÖÜäöüßÉé]+(?:-[A-Za-zÄÖÜäöüßÉé]+)*')
+
+CYR = re.compile(r'[А-Яа-яЁёІіЇїЄєҐґ]')
+ARABIC = re.compile(r'[؀-ۿ]')
+RU_ONLY = re.compile(r'[ЫыЭэЪъЁё]')
+UK_ONLY = re.compile(r'[ІіЇїЄєҐґ]')
+LATIN_DE = re.compile(r'[A-Za-zÄäÖöÜüß]')
+
+# Части речи — те же подписи, что в глоссариях книг и новостей
+POS = {
+    'сущ.': ('ім.', 'اسم'), 'гл.': ('дієсл.', 'فعل'), 'прил.': ('прикм.', 'صفة'),
+    'нареч.': ('присл.', 'ظرف'), 'мест.': ('займ.', 'ضمير'), 'предл.': ('прийм.', 'حرف جر'),
+    'союз': ('спол.', 'أداة ربط'), 'частица': ('частка', 'أداة'), 'числ.': ('числ.', 'عدد'),
+    'артикль': ('артикль', 'أداة تعريف'), 'имя собств.': ('власна назва', 'اسم علم'),
+    'межд.': ('вигук', 'تعجّب'), 'выраж.': ('вираз', 'تعبير'),
+}
+# Существительное в украинском и арабском: строка рода и мн. числа
+# (ReaderTip сам собирает её только для pos «сущ.»)
+PLURAL = {'uk': ('мн.:', 'мн. немає'), 'ar': ('الجمع:', 'لا جمع له')}
+
+KINDS = ('theory', 'dialog', 'junction')
+PREFIX = {'theory': 't', 'dialog': 'p', 'junction': 'k'}   # t-01, p-01, k-01
+CARS = ('blue', 'red', 'green', 'yellow')
+APPROACH = ('S', 'W', 'N', 'E')
+TURNS = ('straight', 'left', 'right')
+# Справа от машины, которая едет с этой стороны (правостороннее движение):
+# с юга (едет на север) справа восток и т. д.
+RIGHT = {'S': 'E', 'W': 'S', 'N': 'W', 'E': 'N'}
+OPPOSITE = {'S': 'N', 'N': 'S', 'W': 'E', 'E': 'W'}
+YIELD_SIGNS = ('z205', 'z206')
+MAIN_SIGNS = ('z301', 'z306')
+
+errors = []
+warnings = []
+
+
+def err(msg):
+    errors.append(msg)
+
+
+def read_json(path):
+    with open(path, encoding='utf-8') as f:
+        return json.load(f)
+
+
+def write_json(path, obj):
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    with open(path, 'w', encoding='utf-8', newline='\n') as f:
+        json.dump(obj, f, ensure_ascii=False, indent=1)
+        f.write('\n')
+
+
+def check_tr(where, tr):
+    if not isinstance(tr, list) or len(tr) != 3:
+        err(f'{where}: перевод — [ru, uk, ar]')
+        return
+    ru, uk, ar = tr
+    if not ru or not CYR.search(ru):
+        err(f'{where}: нет русского текста: {ru!r}')
+    elif UK_ONLY.search(ru):
+        err(f'{where}: в русском украинские буквы: {ru}')
+    if not uk or not CYR.search(uk):
+        err(f'{where}: нет украинского перевода')
+    elif RU_ONLY.search(uk):
+        err(f'{where}: в украинском русские буквы (ы/э/ъ/ё): {uk}')
+    if not ar or not ARABIC.search(ar):
+        err(f'{where}: нет арабского перевода')
+    elif CYR.search(ar):
+        err(f'{where}: кириллица в арабском: {ar}')
+
+
+def check_de(where, de):
+    if not isinstance(de, str) or not de.strip() or CYR.search(de) or ARABIC.search(de) or not LATIN_DE.search(de):
+        err(f'{where}: немецкий текст: {de!r}')
+    elif de != de.strip() or '  ' in de:
+        err(f'{where}: лишние пробелы в немецком')
+    elif len(de) > 200:
+        err(f'{where}: длиннее 200 символов — озвучка разрежет фразу')
+
+
+class Glossary:
+    """Слова → леммы. Общая карта форм + значения в конкретной строке."""
+
+    def __init__(self, lexicon):
+        self.lex = lexicon
+        self.forms = {}
+        for lemma, e in lexicon.items():
+            keys = [lemma.lower()] + [x.lower() for x in e.get('f', [])]
+            for k in keys:
+                if ' ' in k:
+                    continue          # оборот: только через "w" строки
+                if k in self.forms and self.forms[k] != lemma:
+                    err(f'словарь: форма «{k}» у двух лемм: {self.forms[k]} и {lemma}')
+                self.forms[k] = lemma
+        self.used = set()
+
+    def resolve(self, where, de, local):
+        """Для строки — карта {слово: ключ} там, где значение своё, и
+        ключи (слово → лемма) для общего глоссария урока."""
+        local = {k.lower(): v for k, v in (local or {}).items()}
+        tokens = {t.lower() for t in WORD_RE.findall(de)}
+        for k in local:
+            if k not in tokens:
+                err(f'{where}: в "w" слово «{k}», которого нет в строке')
+        keys, own = {}, {}
+        for t in sorted(tokens):
+            if t in local:
+                lemma = local[t]
+                if lemma not in self.lex:
+                    err(f'{where}: «{t}» → «{lemma}», а такой леммы нет в словаре')
+                    continue
+                key = t + '>' + lemma
+                own[t] = key
+                keys[key] = lemma
+            elif t in self.forms:
+                keys[t] = self.forms[t]
+            else:
+                err(f'{where}: нет подсказки для слова «{t}» (добавьте в lexicon.json)')
+                continue
+            self.used.add(keys.get(own.get(t, t)))
+        return keys, own
+
+
+def check_lexicon(lex):
+    for lemma, e in lex.items():
+        where = f'словарь «{lemma}»'
+        if e.get('pos') not in POS:
+            err(f'{where}: часть речи {e.get("pos")!r} — нужна одна из {", ".join(POS)}')
+        check_tr(where, e.get('tr'))
+        if 'note' in e:
+            check_tr(where + ' note', e['note'])
+        if e.get('pos') == 'сущ.':
+            if e.get('art') not in ('der', 'die', 'das'):
+                err(f'{where}: у существительного нужен art (der/die/das)')
+            if 'pl' not in e:
+                err(f'{where}: у существительного нужен pl (строка или null)')
+        if e.get('pos') == 'гл.' and not e.get('forms'):
+            err(f'{where}: у глагола нужны forms (Präteritum · Perfekt)')
+
+
+def entry_for(lemma, e, lang):
+    i = LANGS.index(lang)
+    out = {'ru': e['tr'][i], 'pos': e['pos'] if lang == 'ru' else POS[e['pos']][i - 1]}
+    if e.get('note'):
+        out['note'] = e['note'][i]
+    if e.get('forms'):
+        out['forms'] = e['forms']
+    if e['pos'] == 'сущ.':
+        if lang == 'ru':
+            out['art'] = e['art']
+            out['pl'] = e['pl']
+        else:
+            has, none = PLURAL[lang]
+            out['decl'] = f'{e["art"]} {lemma} · ' + (f'{has} {e["pl"]}' if e['pl'] else none)
+    return out
+
+
+# ── Перекрёсток: кто кого пропускает ──
+
+def sign_class(sign):
+    if sign in YIELD_SIGNS:
+        return 'yield'
+    if sign in MAIN_SIGNS:
+        return 'main'
+    return 'none'
+
+
+def beats(x, y, signs):
+    """True, если машина x проезжает раньше y."""
+    cx, cy = sign_class(signs.get(x['from'])), sign_class(signs.get(y['from']))
+    if cx != cy and 'yield' in (cx, cy):
+        return cy == 'yield'                      # знаки главнее
+    if RIGHT[y['from']] == x['from']:
+        return True                               # x справа от y
+    if OPPOSITE[y['from']] == x['from'] and y['turn'] == 'left' and x['turn'] != 'left':
+        return True                               # y поворачивает налево — пропускает встречного
+    return False
+
+
+def solve(cars, signs):
+    """Порядок проезда или строка с причиной, почему его нет."""
+    rest = list(cars)
+    order = []
+    while rest:
+        free = [c for c in rest if not any(beats(d, c, signs) for d in rest if d is not c)]
+        if not free:
+            return 'тупик: каждая машина кому-то уступает'
+        if len(free) > 1:
+            return 'неоднозначно: могут ехать сразу ' + ', '.join(c['id'] for c in free)
+        order.append(free[0]['id'])
+        rest.remove(free[0])
+    return order
+
+
+def main():
+    units = read_json(os.path.join(SRC, 'units.json'))
+    lexicon = read_json(os.path.join(SRC, 'lexicon.json'))
+    sign_names = read_json(os.path.join(SRC, 'signs.json'))
+    sign_meta = read_json(SIGN_META) if os.path.isfile(SIGN_META) else {}
+
+    check_lexicon(lexicon)
+    gloss = Glossary(lexicon)
+
+    for sid, s in sign_names.items():
+        check_de(f'знак {sid}', s.get('de'))
+        check_tr(f'знак {sid}', s.get('tr'))
+        if not os.path.isfile(os.path.join(OUT, 'signs', sid + '.svg')):
+            err(f'знак {sid}: нет data/fahrschule/signs/{sid}.svg (python tools/fahrschule/fetch_signs.py)')
+        m = sign_meta.get(sid)
+        if not m or not m.get('source') or not re.search(r'public domain|cc0', m.get('license', ''), re.I):
+            err(f'знак {sid}: нет свободной лицензии в tools/fahrschule/signs.json')
+
+    built = {lang: [] for lang in LANGS}
+    index = {lang: [] for lang in LANGS}
+    ids = set()
+
+    for u in units:
+        uid = u.get('id', '?')
+        if uid in ids:
+            err(f'{uid}: id повторяется')
+        ids.add(uid)
+        kind = u.get('kind')
+        if kind not in KINDS:
+            err(f'{uid}: kind {kind!r}')
+            continue
+        if not re.match(r'^[tpk]-\d\d$', uid):
+            err(f'{uid}: id вида t-01 / p-01 / k-01')
+        if uid[0] != PREFIX[kind]:
+            err(f'{uid}: у {kind} id начинается с {PREFIX[kind]}-')
+        for key in ('emoji', 'level', 'title', 'titleTr', 'intro'):
+            if not u.get(key):
+                err(f'{uid}: нет поля {key}')
+        check_de(f'{uid} название', u.get('title', ''))
+        check_tr(f'{uid} название', u.get('titleTr'))
+        check_tr(f'{uid} вступление', u.get('intro'))
+
+        keys = {}        # общий глоссарий урока: ключ → лемма
+        used_signs = set()
+
+        def text(where, obj):
+            """{de, tr, w?} → по языкам {de, tr, o?} и ключи в глоссарий."""
+            check_de(where, obj.get('de'))
+            check_tr(where, obj.get('tr'))
+            k, own = gloss.resolve(where, obj.get('de') or '', obj.get('w'))
+            keys.update(k)
+            res = {}
+            for i, lang in enumerate(LANGS):
+                t = {'de': obj.get('de'), 'tr': (obj.get('tr') or [''] * 3)[i]}
+                if own:
+                    t['o'] = own
+                res[lang] = t
+            return res
+
+        title_keys, _ = gloss.resolve(f'{uid} название', u.get('title', ''), None)
+        keys.update(title_keys)
+        per = {lang: {} for lang in LANGS}
+
+        if kind == 'theory':
+            secs = u.get('sections') or []
+            if not secs:
+                err(f'{uid}: нет разделов')
+            out_secs = {lang: [] for lang in LANGS}
+            for si, sec in enumerate(secs, 1):
+                check_tr(f'{uid} раздел {si}', sec.get('title'))
+                lines = {lang: [] for lang in LANGS}
+                for li, ln in enumerate(sec.get('lines') or [], 1):
+                    t = text(f'{uid} раздел {si} строка {li}', ln)
+                    if ln.get('sign'):
+                        if ln['sign'] not in sign_names:
+                            err(f'{uid} раздел {si} строка {li}: нет знака {ln["sign"]}')
+                        used_signs.add(ln['sign'])
+                    for lang in LANGS:
+                        if ln.get('sign'):
+                            t[lang]['sign'] = ln['sign']
+                        lines[lang].append(t[lang])
+                if not lines['ru']:
+                    err(f'{uid} раздел {si}: нет строк')
+                for i, lang in enumerate(LANGS):
+                    out_secs[lang].append({'title': (sec.get('title') or [''] * 3)[i], 'lines': lines[lang]})
+            quiz = u.get('quiz') or []
+            explained = {ln.get('sign') for sec in secs for ln in sec.get('lines') or []}
+            for qi, q in enumerate(quiz, 1):
+                opts = [q.get('sign')] + list(q.get('wrong') or [])
+                if len(opts) != 3 or len(set(opts)) != 3:
+                    err(f'{uid} тест {qi}: нужен знак и два разных неверных варианта')
+                for s in opts:
+                    if s not in sign_names:
+                        err(f'{uid} тест {qi}: нет знака {s}')
+                    used_signs.add(s)
+                if q.get('sign') not in explained:
+                    err(f'{uid} тест {qi}: знак {q.get("sign")} не объяснён в теории — нечем пояснить ответ')
+            if quiz and len({q.get('sign') for q in quiz}) != len(quiz):
+                err(f'{uid}: в тесте знак повторяется')
+            question = text(f'{uid} вопрос теста', u.get('quizQuestion') or {}) if quiz else None
+            for lang in LANGS:
+                per[lang]['sections'] = out_secs[lang]
+                per[lang]['quiz'] = [{'sign': q['sign'], 'wrong': q['wrong']} for q in quiz]
+                if question:
+                    per[lang]['quizQuestion'] = question[lang]
+            count = sum(len(s['lines']) for s in out_secs['ru'])
+
+        elif kind == 'dialog':
+            sp = u.get('speakers') or {}
+            if set(sp) != {'A', 'B'} or any(s.get('g') not in ('f', 'm') or not s.get('name') for s in sp.values()):
+                err(f'{uid}: персонажи A и B с name и g (f/m)')
+            prev = None
+            lines = {lang: [] for lang in LANGS}
+            for li, ln in enumerate(u.get('lines') or [], 1):
+                if ln.get('s') not in ('A', 'B'):
+                    err(f'{uid} реплика {li}: персонаж {ln.get("s")!r}')
+                if ln.get('s') == prev:
+                    err(f'{uid} реплика {li}: персонаж говорит дважды подряд')
+                prev = ln.get('s')
+                t = text(f'{uid} реплика {li}', ln)
+                for lang in LANGS:
+                    t[lang]['s'] = ln.get('s')
+                    lines[lang].append(t[lang])
+            if len(lines['ru']) < 8:
+                err(f'{uid}: в диалоге меньше 8 реплик')
+            for lang in LANGS:
+                per[lang]['speakers'] = sp
+                per[lang]['lines'] = lines[lang]
+            count = len(lines['ru'])
+
+        else:   # junction
+            scenes = u.get('scenes') or []
+            if not scenes:
+                err(f'{uid}: нет сцен')
+            out = {lang: [] for lang in LANGS}
+            for ci, sc in enumerate(scenes, 1):
+                w = f'{uid} сцена {ci}'
+                cars = sc.get('cars') or []
+                signs = sc.get('signs') or {}
+                if not 2 <= len(cars) <= 4:
+                    err(f'{w}: машин от 2 до 4')
+                if len({c.get('id') for c in cars}) != len(cars) or any(c.get('id') not in CARS for c in cars):
+                    err(f'{w}: машины — разные из {", ".join(CARS)}')
+                if len({c.get('from') for c in cars}) != len(cars) or any(c.get('from') not in APPROACH for c in cars):
+                    err(f'{w}: у каждой машины свой подъезд из {", ".join(APPROACH)}')
+                if any(c.get('turn') not in TURNS for c in cars):
+                    err(f'{w}: turn — {", ".join(TURNS)}')
+                for a, s in signs.items():
+                    if a not in APPROACH or s not in sign_names:
+                        err(f'{w}: знак {a}: {s}')
+                    used_signs.add(s)
+                if not errors:
+                    got = solve(cars, signs)
+                    if isinstance(got, str):
+                        err(f'{w}: {got}')
+                    elif got != sc.get('order'):
+                        err(f'{w}: по правилам порядок {got}, а в исходнике {sc.get("order")}')
+                sit = text(w + ' ситуация', sc.get('situation') or {})
+                expl = [text(f'{w} пояснение {k}', e) for k, e in enumerate(sc.get('explain') or [], 1)]
+                if not expl:
+                    err(f'{w}: нет пояснения')
+                for lang in LANGS:
+                    out[lang].append({
+                        'situation': sit[lang], 'cars': cars, 'signs': signs,
+                        'order': sc.get('order'), 'explain': [e[lang] for e in expl],
+                    })
+            for lang in LANGS:
+                per[lang]['scenes'] = out[lang]
+            count = len(scenes)
+
+        # названия знаков (подписи и варианты теста) — тоже с подсказками
+        for s in sorted(used_signs):
+            if s in sign_names:
+                keys.update(gloss.resolve(f'{uid} знак {s}', sign_names[s]['de'], None)[0])
+
+        for i, lang in enumerate(LANGS):
+            signs_out = {}
+            for s in sorted(used_signs):
+                if s not in sign_names:
+                    continue
+                m = sign_meta.get(s, {})
+                signs_out[s] = {
+                    'de': sign_names[s]['de'], 'tr': sign_names[s]['tr'][i],
+                    'src': f'data/fahrschule/signs/{s}.svg', 'n': s[1:],
+                    'license': m.get('license', ''), 'source': m.get('source', ''),
+                }
+            unit = {
+                'id': uid, 'kind': kind, 'emoji': u.get('emoji'), 'level': u.get('level'),
+                'title': u.get('title'), 'titleTr': (u.get('titleTr') or [''] * 3)[i],
+                'intro': (u.get('intro') or [''] * 3)[i],
+            }
+            unit.update(per[lang])
+            unit['signs'] = signs_out
+            unit['gloss'] = {
+                'w': dict(sorted(keys.items())),
+                'l': {lm: entry_for(lm, lexicon[lm], lang) for lm in sorted(set(keys.values())) if lm in lexicon},
+            }
+            built[lang].append(unit)
+            index[lang].append({
+                'id': uid, 'kind': kind, 'emoji': u.get('emoji'), 'level': u.get('level'),
+                'title': u.get('title'), 'titleTr': unit['titleTr'], 'count': count,
+            })
+    unused = sorted(set(lexicon) - gloss.used)
+    if unused:
+        err('словарь: леммы нигде не встречаются (удалите или используйте): ' + ', '.join(unused))
+
+    if errors:
+        for w in warnings:
+            print('WARNING:', w)
+        for e in errors:
+            print('ERROR:', e)
+        print(f'\nОшибок: {len(errors)} — ничего не записано')
+        return 1
+
+    dirs = {'ru': OUT, 'uk': os.path.join(BASE, 'i18n', 'uk', 'fahrschule'),
+            'ar': os.path.join(BASE, 'i18n', 'ar', 'fahrschule')}
+    for lang in LANGS:
+        d = dirs[lang]
+        keep = {u['id'] + '.json' for u in built[lang]} | {'index.json'}
+        if os.path.isdir(d):
+            for f in os.listdir(d):
+                if f.endswith('.json') and f not in keep:
+                    os.remove(os.path.join(d, f))    # урок убрали из исходника
+        write_json(os.path.join(d, 'index.json'), {'units': index[lang]})
+        for unit in built[lang]:
+            write_json(os.path.join(d, unit['id'] + '.json'), unit)
+
+    for w in warnings:
+        print('WARNING:', w)
+    kinds = {k: sum(1 for u in units if u['kind'] == k) for k in KINDS}
+    print(f'fahrschule: ok — уроков {len(units)} {kinds}, слов в словаре {len(lexicon)}, знаков {len(sign_names)}')
+    return 0
+
+
+if __name__ == '__main__':
+    sys.exit(main())

@@ -1,0 +1,588 @@
+{
+ "id": "p-01",
+ "kind": "dialog",
+ "emoji": "🚗",
+ "level": "A2",
+ "title": "Die erste Fahrstunde",
+ "titleTr": "Первый урок вождения",
+ "intro": "Олена впервые садится за руль с инструктором: сиденье и зеркала, старт и первый поворот.",
+ "speakers": {
+  "A": {
+   "name": "Fahrlehrer",
+   "g": "m"
+  },
+  "B": {
+   "name": "Olena",
+   "g": "f"
+  }
+ },
+ "lines": [
+  {
+   "de": "Guten Tag, Frau Kovalenko! Sind Sie bereit für Ihre erste Fahrstunde?",
+   "tr": "Добрый день, госпожа Коваленко! Вы готовы к своему первому уроку вождения?",
+   "s": "A"
+  },
+  {
+   "de": "Guten Tag! Ja, aber ich bin ein bisschen nervös.",
+   "tr": "Добрый день! Да, но я немного нервничаю.",
+   "s": "B"
+  },
+  {
+   "de": "Das ist ganz normal. Stellen Sie zuerst den Sitz und die Spiegel ein.",
+   "tr": "Это совершенно нормально. Сначала отрегулируйте сиденье и зеркала.",
+   "o": {
+    "ein": "ein>einstellen",
+    "stellen": "stellen>einstellen"
+   },
+   "s": "A"
+  },
+  {
+   "de": "So, jetzt sehe ich alles gut.",
+   "tr": "Вот, теперь мне всё хорошо видно.",
+   "s": "B"
+  },
+  {
+   "de": "Sehr gut. Schnallen Sie sich bitte an.",
+   "tr": "Очень хорошо. Пристегнитесь, пожалуйста.",
+   "o": {
+    "an": "an>anschnallen"
+   },
+   "s": "A"
+  },
+  {
+   "de": "Ich bin angeschnallt. Was mache ich jetzt?",
+   "tr": "Я пристегнулась. Что мне теперь делать?",
+   "s": "B"
+  },
+  {
+   "de": "Treten Sie die Kupplung und starten Sie den Motor.",
+   "tr": "Выжмите сцепление и заведите двигатель.",
+   "s": "A"
+  },
+  {
+   "de": "Der Motor läuft. Kann ich losfahren?",
+   "tr": "Двигатель работает. Можно трогаться?",
+   "s": "B"
+  },
+  {
+   "de": "Noch nicht. Schauen Sie in den Spiegel und machen Sie den Schulterblick.",
+   "tr": "Ещё нет. Посмотрите в зеркало и оглянитесь через плечо.",
+   "s": "A"
+  },
+  {
+   "de": "Hinten ist alles frei. Ich blinke links.",
+   "tr": "Сзади всё свободно. Включаю левый поворотник.",
+   "s": "B"
+  },
+  {
+   "de": "Genau. Lassen Sie jetzt langsam die Kupplung kommen und geben Sie etwas Gas.",
+   "tr": "Точно. Теперь медленно отпускайте сцепление и немного добавьте газу.",
+   "o": {
+    "geben": "geben>Gas geben",
+    "kommen": "kommen>kommen lassen",
+    "lassen": "lassen>kommen lassen"
+   },
+   "s": "A"
+  },
+  {
+   "de": "Das Auto fährt! Wie schnell darf ich hier fahren?",
+   "tr": "Машина едет! С какой скоростью здесь можно ехать?",
+   "s": "B"
+  },
+  {
+   "de": "Wir sind innerorts, also höchstens fünfzig. An der nächsten Kreuzung biegen Sie rechts ab.",
+   "tr": "Мы в населённом пункте, значит, не больше пятидесяти. На следующем перекрёстке поверните направо.",
+   "s": "A"
+  },
+  {
+   "de": "Ich blinke rechts, bremse und achte auf Fußgänger.",
+   "tr": "Включаю правый поворотник, торможу и слежу за пешеходами.",
+   "s": "B"
+  },
+  {
+   "de": "Prima! Für die erste Stunde fahren Sie schon sehr gut.",
+   "tr": "Отлично! Для первого урока вы едете уже очень хорошо.",
+   "s": "A"
+  }
+ ],
+ "signs": {},
+ "gloss": {
+  "w": {
+   "ab": "abbiegen",
+   "aber": "aber",
+   "achte": "achten",
+   "alles": "alle",
+   "also": "also",
+   "an": "an",
+   "an>anschnallen": "anschnallen",
+   "angeschnallt": "anschnallen",
+   "auf": "auf",
+   "auto": "Auto",
+   "bereit": "bereit",
+   "biegen": "abbiegen",
+   "bin": "sein",
+   "bisschen": "bisschen",
+   "bitte": "bitte",
+   "blinke": "blinken",
+   "bremse": "bremsen",
+   "darf": "dürfen",
+   "das": "der/die/das",
+   "den": "der/die/das",
+   "der": "der/die/das",
+   "die": "der/die/das",
+   "ein": "ein/eine",
+   "ein>einstellen": "einstellen",
+   "erste": "erste",
+   "etwas": "etwas",
+   "fahren": "fahren",
+   "fahrstunde": "Fahrstunde",
+   "frau": "Frau",
+   "frei": "frei",
+   "fußgänger": "Fußgänger",
+   "fährt": "fahren",
+   "fünfzig": "fünfzig",
+   "für": "für",
+   "ganz": "ganz",
+   "gas": "Gas",
+   "geben>Gas geben": "Gas geben",
+   "genau": "genau",
+   "gut": "gut",
+   "guten": "gut",
+   "hier": "hier",
+   "hinten": "hinten",
+   "höchstens": "höchstens",
+   "ich": "ich",
+   "ihre": "Ihr",
+   "in": "in",
+   "innerorts": "innerorts",
+   "ist": "sein",
+   "ja": "ja",
+   "jetzt": "jetzt",
+   "kann": "können",
+   "kommen>kommen lassen": "kommen lassen",
+   "kovalenko": "Kovalenko",
+   "kreuzung": "Kreuzung",
+   "kupplung": "Kupplung",
+   "langsam": "langsam",
+   "lassen>kommen lassen": "kommen lassen",
+   "links": "links",
+   "losfahren": "losfahren",
+   "läuft": "laufen",
+   "mache": "machen",
+   "machen": "machen",
+   "motor": "Motor",
+   "nervös": "nervös",
+   "nicht": "nicht",
+   "noch": "noch",
+   "normal": "normal",
+   "nächsten": "nächste",
+   "prima": "prima",
+   "rechts": "rechts",
+   "schauen": "schauen",
+   "schnallen": "anschnallen",
+   "schnell": "schnell",
+   "schon": "schon",
+   "schulterblick": "Schulterblick",
+   "sehe": "sehen",
+   "sehr": "sehr",
+   "sich": "sich",
+   "sie": "Sie",
+   "sind": "sein",
+   "sitz": "Sitz",
+   "so": "so",
+   "spiegel": "Spiegel",
+   "starten": "starten",
+   "stellen>einstellen": "einstellen",
+   "stunde": "Stunde",
+   "tag": "Tag",
+   "treten": "treten",
+   "und": "und",
+   "was": "was",
+   "wie": "wie",
+   "wir": "wir",
+   "zuerst": "zuerst"
+  },
+  "l": {
+   "Auto": {
+    "ru": "машина, автомобиль",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Autos"
+   },
+   "Fahrstunde": {
+    "ru": "урок вождения",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Fahrstunden"
+   },
+   "Frau": {
+    "ru": "госпожа; женщина",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Frauen"
+   },
+   "Fußgänger": {
+    "ru": "пешеход",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Fußgänger"
+   },
+   "Gas": {
+    "ru": "газ (педаль газа)",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": null
+   },
+   "Gas geben": {
+    "ru": "давать газ, ускоряться",
+    "pos": "выраж."
+   },
+   "Ihr": {
+    "ru": "ваш (вежливо)",
+    "pos": "мест."
+   },
+   "Kovalenko": {
+    "ru": "Коваленко (фамилия)",
+    "pos": "имя собств."
+   },
+   "Kreuzung": {
+    "ru": "перекрёсток",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Kreuzungen"
+   },
+   "Kupplung": {
+    "ru": "сцепление",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Kupplungen"
+   },
+   "Motor": {
+    "ru": "двигатель, мотор",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Motoren"
+   },
+   "Schulterblick": {
+    "ru": "взгляд через плечо",
+    "pos": "сущ.",
+    "note": "так проверяют «мёртвую зону» перед стартом и поворотом",
+    "art": "der",
+    "pl": "die Schulterblicke"
+   },
+   "Sie": {
+    "ru": "вы (вежливо)",
+    "pos": "мест."
+   },
+   "Sitz": {
+    "ru": "сиденье",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Sitze"
+   },
+   "Spiegel": {
+    "ru": "зеркало",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Spiegel"
+   },
+   "Stunde": {
+    "ru": "час; урок",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Stunden"
+   },
+   "Tag": {
+    "ru": "день",
+    "pos": "сущ.",
+    "note": "Guten Tag! — Добрый день!",
+    "art": "der",
+    "pl": "die Tage"
+   },
+   "abbiegen": {
+    "ru": "поворачивать",
+    "pos": "гл.",
+    "note": "отделяемая приставка: Sie biegen … ab",
+    "forms": "bog ab · ist abgebogen"
+   },
+   "aber": {
+    "ru": "но",
+    "pos": "союз"
+   },
+   "achten": {
+    "ru": "следить, обращать внимание",
+    "pos": "гл.",
+    "note": "achten auf + Akk. — следить за",
+    "forms": "achtete · hat geachtet"
+   },
+   "alle": {
+    "ru": "все; всё",
+    "pos": "мест."
+   },
+   "also": {
+    "ru": "значит, итак",
+    "pos": "нареч."
+   },
+   "an": {
+    "ru": "у, на, при",
+    "pos": "предл.",
+    "note": "am = an dem; an der Kreuzung — на перекрёстке"
+   },
+   "anschnallen": {
+    "ru": "пристёгивать",
+    "pos": "гл.",
+    "note": "sich anschnallen — пристегнуться; angeschnallt — пристёгнутый",
+    "forms": "schnallte an · hat angeschnallt"
+   },
+   "auf": {
+    "ru": "на, по",
+    "pos": "предл.",
+    "note": "auf der Straße — на дороге; achten auf — следить за"
+   },
+   "bereit": {
+    "ru": "готовый",
+    "pos": "прил.",
+    "note": "bereit für — готов к"
+   },
+   "bisschen": {
+    "ru": "немного (ein bisschen)",
+    "pos": "нареч."
+   },
+   "bitte": {
+    "ru": "пожалуйста",
+    "pos": "частица"
+   },
+   "blinken": {
+    "ru": "включать поворотник, мигать",
+    "pos": "гл.",
+    "forms": "blinkte · hat geblinkt"
+   },
+   "bremsen": {
+    "ru": "тормозить",
+    "pos": "гл.",
+    "forms": "bremste · hat gebremst"
+   },
+   "der/die/das": {
+    "ru": "определённый артикль",
+    "pos": "артикль",
+    "note": "der — м. р., die — ж. р. и мн. ч., das — ср. р., den — м. р. в винительном; das ещё значит «это»"
+   },
+   "dürfen": {
+    "ru": "мочь, иметь право",
+    "pos": "гл.",
+    "forms": "durfte · hat gedurft"
+   },
+   "ein/eine": {
+    "ru": "неопределённый артикль; один",
+    "pos": "артикль",
+    "note": "an einer Kreuzung — на (каком-то) перекрёстке"
+   },
+   "einstellen": {
+    "ru": "регулировать, настраивать",
+    "pos": "гл.",
+    "note": "отделяемая приставка: Stellen Sie … ein",
+    "forms": "stellte ein · hat eingestellt"
+   },
+   "erste": {
+    "ru": "первый",
+    "pos": "прил."
+   },
+   "etwas": {
+    "ru": "немного; что-то",
+    "pos": "нареч."
+   },
+   "fahren": {
+    "ru": "ехать; водить машину",
+    "pos": "гл.",
+    "forms": "fuhr · ist gefahren"
+   },
+   "frei": {
+    "ru": "свободный",
+    "pos": "прил."
+   },
+   "fünfzig": {
+    "ru": "пятьдесят",
+    "pos": "числ."
+   },
+   "für": {
+    "ru": "для",
+    "pos": "предл."
+   },
+   "ganz": {
+    "ru": "совсем, вполне",
+    "pos": "нареч."
+   },
+   "genau": {
+    "ru": "точно, именно так",
+    "pos": "нареч."
+   },
+   "gut": {
+    "ru": "хороший; хорошо",
+    "pos": "прил.",
+    "forms": "gut · besser · am besten"
+   },
+   "hier": {
+    "ru": "здесь",
+    "pos": "нареч."
+   },
+   "hinten": {
+    "ru": "сзади",
+    "pos": "нареч."
+   },
+   "höchstens": {
+    "ru": "самое большее, не больше",
+    "pos": "нареч."
+   },
+   "ich": {
+    "ru": "я",
+    "pos": "мест."
+   },
+   "in": {
+    "ru": "в",
+    "pos": "предл."
+   },
+   "innerorts": {
+    "ru": "в населённом пункте",
+    "pos": "нареч.",
+    "note": "здесь обычно не больше 50 км/ч"
+   },
+   "ja": {
+    "ru": "да",
+    "pos": "частица"
+   },
+   "jetzt": {
+    "ru": "сейчас, теперь",
+    "pos": "нареч."
+   },
+   "kommen lassen": {
+    "ru": "(сцепление) плавно отпускать",
+    "pos": "выраж."
+   },
+   "können": {
+    "ru": "мочь",
+    "pos": "гл.",
+    "forms": "konnte · hat gekonnt"
+   },
+   "langsam": {
+    "ru": "медленный; медленно",
+    "pos": "прил."
+   },
+   "laufen": {
+    "ru": "бежать; (о моторе) работать",
+    "pos": "гл.",
+    "forms": "lief · ist gelaufen"
+   },
+   "links": {
+    "ru": "слева; налево",
+    "pos": "нареч."
+   },
+   "losfahren": {
+    "ru": "трогаться (с места)",
+    "pos": "гл.",
+    "forms": "fuhr los · ist losgefahren"
+   },
+   "machen": {
+    "ru": "делать",
+    "pos": "гл.",
+    "note": "den Schulterblick machen — оглянуться через плечо",
+    "forms": "machte · hat gemacht"
+   },
+   "nervös": {
+    "ru": "взволнованный, нервный",
+    "pos": "прил."
+   },
+   "nicht": {
+    "ru": "не",
+    "pos": "частица"
+   },
+   "noch": {
+    "ru": "ещё",
+    "pos": "нареч.",
+    "note": "noch nicht — ещё нет"
+   },
+   "normal": {
+    "ru": "нормальный",
+    "pos": "прил."
+   },
+   "nächste": {
+    "ru": "ближайший, следующий",
+    "pos": "прил."
+   },
+   "prima": {
+    "ru": "отлично",
+    "pos": "нареч."
+   },
+   "rechts": {
+    "ru": "справа; направо",
+    "pos": "нареч."
+   },
+   "schauen": {
+    "ru": "смотреть",
+    "pos": "гл.",
+    "forms": "schaute · hat geschaut"
+   },
+   "schnell": {
+    "ru": "быстрый; быстро",
+    "pos": "прил."
+   },
+   "schon": {
+    "ru": "уже",
+    "pos": "нареч."
+   },
+   "sehen": {
+    "ru": "видеть",
+    "pos": "гл.",
+    "forms": "sah · hat gesehen"
+   },
+   "sehr": {
+    "ru": "очень",
+    "pos": "нареч."
+   },
+   "sein": {
+    "ru": "быть",
+    "pos": "гл.",
+    "forms": "war · ist gewesen"
+   },
+   "sich": {
+    "ru": "себя, -ся",
+    "pos": "мест."
+   },
+   "so": {
+    "ru": "так; вот (так)",
+    "pos": "нареч."
+   },
+   "starten": {
+    "ru": "заводить; стартовать",
+    "pos": "гл.",
+    "forms": "startete · hat gestartet"
+   },
+   "treten": {
+    "ru": "нажимать (ногой)",
+    "pos": "гл.",
+    "note": "die Kupplung treten — выжать сцепление",
+    "forms": "trat · hat getreten"
+   },
+   "und": {
+    "ru": "и",
+    "pos": "союз"
+   },
+   "was": {
+    "ru": "что",
+    "pos": "мест."
+   },
+   "wie": {
+    "ru": "как",
+    "pos": "нареч.",
+    "note": "wie schnell — с какой скоростью"
+   },
+   "wir": {
+    "ru": "мы",
+    "pos": "мест."
+   },
+   "zuerst": {
+    "ru": "сначала, первым",
+    "pos": "нареч."
+   }
+  }
+ }
+}

@@ -1,0 +1,108 @@
+#!/usr/bin/env python3
+"""
+tools/fahrschule/fetch_signs.py — дорожные знаки для раздела «Автошкола».
+
+Знаки StVO — официальные произведения (§ 5 UrhG), на Wikimedia Commons
+лежат в общественном достоянии (векторные SVG по Bundesgesetzblatt).
+Скрипт качает SVG по названию файла на Commons, проверяет, что внутри
+нет скриптов и внешних ссылок, и записывает автора/лицензию/источник
+в tools/fahrschule/signs.json (их показывает страница и проверяет
+build.py).
+
+Запуск:
+  python tools/fahrschule/fetch_signs.py            — скачать недостающие
+  python tools/fahrschule/fetch_signs.py --force    — перекачать все
+
+Новый знак: добавить строку в SIGNS (id → точное имя файла на Commons).
+"""
+
+import json
+import os
+import re
+import sys
+import urllib.parse
+import urllib.request
+
+BASE = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+OUT_DIR = os.path.join(BASE, 'data', 'fahrschule', 'signs')
+META = os.path.join(BASE, 'tools', 'fahrschule', 'signs.json')
+API = 'https://commons.wikimedia.org/w/api.php'
+UA = 'DeutschMeister/1.0 (https://vanguar.github.io/deutsch-meister/)'
+
+SIGNS = {
+    'z102': 'File:Zeichen 102 - Kreuzung oder Einmündung mit Vorfahrt von rechts, StVO 1970.svg',
+    'z205': 'File:Zeichen 205 - Vorfahrt gewähren! StVO 1970.svg',
+    'z206': 'File:Zeichen 206 - Halt! Vorfahrt gewähren! StVO 1970.svg',
+    'z301': 'File:Zeichen 301 - Vorfahrt, StVO 1970.svg',
+    'z306': 'File:Zeichen 306 - Vorfahrtstraße, StVO 1970.svg',
+    'z307': 'File:Zeichen 307 - Ende der Vorfahrtstraße, StVO 1970.svg',
+}
+
+# SVG с Commons встраивается как <img>: скрипты там и так не исполняются,
+# но в репозиторий кладём только «чистую» графику
+UNSAFE = re.compile(r'<script|\son[a-z]+\s*=|javascript:|<foreignObject', re.I)
+EXTERNAL = re.compile(r'(?:href|src)\s*=\s*["\']https?:', re.I)
+
+
+def get(url):
+    req = urllib.request.Request(url, headers={'User-Agent': UA})
+    with urllib.request.urlopen(req, timeout=30) as r:
+        return r.read()
+
+
+def strip_html(s):
+    return re.sub(r'\s+', ' ', re.sub(r'<[^>]+>', '', s or '')).strip()
+
+
+def info(title):
+    q = urllib.parse.urlencode({
+        'action': 'query', 'titles': title, 'prop': 'imageinfo',
+        'iiprop': 'url|extmetadata|mime', 'format': 'json',
+    })
+    data = json.loads(get(API + '?' + q))
+    page = next(iter(data['query']['pages'].values()))
+    if 'imageinfo' not in page:
+        raise RuntimeError(f'нет файла на Commons: {title}')
+    ii = page['imageinfo'][0]
+    meta = ii.get('extmetadata', {})
+    return {
+        'url': ii['url'],
+        'mime': ii.get('mime'),
+        'license': strip_html(meta.get('LicenseShortName', {}).get('value')),
+        'author': strip_html(meta.get('Artist', {}).get('value')) or 'Wikimedia Commons',
+        'source': ii.get('descriptionurl') or ('https://commons.wikimedia.org/wiki/' + urllib.parse.quote(title)),
+    }
+
+
+def main(argv):
+    force = '--force' in argv
+    os.makedirs(OUT_DIR, exist_ok=True)
+    meta = {}
+    if os.path.isfile(META):
+        with open(META, encoding='utf-8') as f:
+            meta = json.load(f)
+    for sid, title in SIGNS.items():
+        path = os.path.join(OUT_DIR, sid + '.svg')
+        if os.path.isfile(path) and sid in meta and not force:
+            continue
+        i = info(title)
+        if i['mime'] != 'image/svg+xml':
+            raise RuntimeError(f'{sid}: не SVG ({i["mime"]})')
+        if not re.search(r'public domain|^pd|cc0', i['license'], re.I):
+            raise RuntimeError(f'{sid}: лицензия не свободная: {i["license"]!r}')
+        svg = get(i['url']).decode('utf-8')
+        if UNSAFE.search(svg) or EXTERNAL.search(svg):
+            raise RuntimeError(f'{sid}: в SVG скрипт или внешняя ссылка — не берём')
+        with open(path, 'w', encoding='utf-8', newline='\n') as f:
+            f.write(svg)
+        meta[sid] = {'title': title[5:], 'license': i['license'], 'author': i['author'], 'source': i['source']}
+        print(f'{sid}: {len(svg)} байт · {i["license"]}')
+    with open(META, 'w', encoding='utf-8', newline='\n') as f:
+        json.dump(meta, f, ensure_ascii=False, indent=1)
+        f.write('\n')
+    print(f'знаков: {len(meta)}')
+    return 0
+
+
+if __name__ == '__main__':
+    sys.exit(main(sys.argv[1:]))

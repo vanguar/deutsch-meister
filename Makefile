@@ -1,7 +1,7 @@
 # Deutsch Meister — команды деплоя (см. ДЕПЛОЙ-инструкция.md)
 # Windows: запускать из Git Bash. Без make — прямые команды указаны в целях.
 
-.PHONY: vocab bump validate check-tips check-audience deploy-web deploy-api check-api i18n-check i18n-build test-i18n news dialogs test-dialogs
+.PHONY: vocab bump validate check-tips check-audience deploy-web deploy-api check-api i18n-check i18n-build test-i18n news dialogs test-dialogs fahrschule fahrschule-signs test-fahrschule
 
 # Поднять ?v=N во всех HTML + CACHE в service-worker.js (обязательно перед
 # пушем любых правок JS/CSS)
@@ -17,6 +17,7 @@ vocab:
 validate:
 	python scripts/validate_lessons.py
 	python scripts/validate_dialogs.py
+	python scripts/validate_fahrschule.py
 	node tools/vocab/build.js --check
 
 # Регресс подсказок: у каждого слова фраз всех уроков подсказка обязана
@@ -46,6 +47,21 @@ dialogs:
 # Юнит-тесты озвучки диалогов (TTS + ReaderSpeak, vm с моками)
 test-dialogs:
 	node tools/test_dialogs_tts.js
+
+# Автошкола: собрать data/fahrschule и готовые копии i18n/uk|ar/fahrschule
+# из tools/fahrschule/src/*.json (переводы — прямо в исходнике), проверить.
+# Потом — bump. Новые строки интерфейса — i18n-check / todo ui / merge.
+fahrschule:
+	python tools/fahrschule/build.py
+	python scripts/validate_fahrschule.py
+
+# Докачать дорожные знаки StVO с Wikimedia Commons (новый знак — в SIGNS)
+fahrschule-signs:
+	python tools/fahrschule/fetch_signs.py
+
+# Тесты сборщика: решатель перекрёстка и проверки исходника
+test-fahrschule:
+	python tools/fahrschule/test_build.py
 
 # Фронтенд: GitHub Pages деплоит сам при пуше в main
 deploy-web:
