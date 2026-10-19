@@ -1,0 +1,790 @@
+{
+ "id": "t-04",
+ "kind": "theory",
+ "emoji": "🛣️",
+ "level": "A2–B1",
+ "title": "Überholen, Spurwechsel und Rettungsgasse",
+ "titleTr": "التجاوز وتغيير المسار وممر الطوارئ",
+ "intro": "أين وكيف تتجاوز، وأي لافتات وخطوط تمنع ذلك، وكم مسافة تترك لراكبي الدراجات، وكيف تغيّر المسار، وكيف تفتح ممرًا للإسعاف في الازدحام — وفق القواعد الألمانية.",
+ "sections": [
+  {
+   "title": "كيف تتجاوز",
+   "lines": [
+    {
+     "de": "Sie überholen grundsätzlich links.",
+     "tr": "التجاوز يكون من اليسار كقاعدة."
+    },
+    {
+     "de": "Rechts überholen ist verboten. Innerorts dürfen Sie auf mehreren Spuren aber rechts schneller fahren.",
+     "tr": "التجاوز من اليمين ممنوع. لكن داخل البلدة وعلى عدة مسارات يجوز أن تسير على اليمين بسرعة أكبر."
+    },
+    {
+     "de": "Überholen dürfen Sie nur, wenn niemand gefährdet wird und die Straße weit genug frei ist.",
+     "tr": "لا يجوز التجاوز إلا إذا لم يتعرض أحد للخطر وكان الطريق خاليًا لمسافة كافية."
+    },
+    {
+     "de": "Sie müssen deutlich schneller sein als das Fahrzeug, das Sie überholen.",
+     "tr": "يجب أن تكون أسرع بوضوح من المركبة التي تتجاوزها."
+    }
+   ]
+  },
+  {
+   "title": "أين يُمنع التجاوز",
+   "lines": [
+    {
+     "de": "Überholverbot: Mehrspurige Fahrzeuge dürfen Sie hier nicht überholen. Radfahrer schon.",
+     "tr": "ممنوع التجاوز: لا يجوز هنا تجاوز المركبات متعددة المسارات. أما راكبو الدراجات فيجوز.",
+     "sign": "z276"
+    },
+    {
+     "de": "Ende des Überholverbots: Ab hier dürfen Sie wieder überholen.",
+     "tr": "نهاية منع التجاوز: من هنا يجوز لك التجاوز من جديد.",
+     "o": {
+      "ab": "ab>ab"
+     },
+     "sign": "z280"
+    },
+    {
+     "de": "Eine durchgezogene Linie dürfen Sie nicht überfahren. Dann ist auch Überholen verboten.",
+     "tr": "لا يجوز لك عبور الخط المتصل. لذلك يكون التجاوز ممنوعًا أيضًا.",
+     "sign": "z295"
+    },
+    {
+     "de": "Vor Kurven, vor Kuppen und am Zebrastreifen ist Überholen verboten.",
+     "tr": "التجاوز ممنوع قبل المنعطفات وقبل قمم المرتفعات وعند ممر المشاة."
+    }
+   ]
+  },
+  {
+   "title": "راكبو الدراجات",
+   "lines": [
+    {
+     "de": "Beim Überholen von Radfahrern brauchen Sie innerorts 1,5 Meter Abstand, außerorts 2 Meter.",
+     "tr": "عند تجاوز راكبي الدراجات تحتاج مسافة 1,5 متر داخل البلدة ومترين خارجها."
+    },
+    {
+     "de": "Dieses Schild verbietet das Überholen von Radfahrern und Motorrädern.",
+     "tr": "هذه اللافتة تمنع تجاوز راكبي الدراجات والدراجات النارية.",
+     "sign": "z2771"
+    }
+   ]
+  },
+  {
+   "title": "تغيير المسار",
+   "lines": [
+    {
+     "de": "Vor jedem Spurwechsel: Spiegel, Blinker, Schulterblick.",
+     "tr": "قبل كل تغيير للمسار: المرآة، ثم الإشارة، ثم الالتفات فوق الكتف."
+    },
+    {
+     "de": "Auf der Autobahn gilt das Rechtsfahrgebot: Fahren Sie rechts, wenn die Spur frei ist.",
+     "tr": "على الأوتوبان تنطبق قاعدة القيادة على اليمين: ابقَ على المسار الأيمن إذا كان خاليًا."
+    },
+    {
+     "de": "Endet eine Spur und der Verkehr ist dicht, gilt das Reißverschlussverfahren am Ende der Spur.",
+     "tr": "إذا انتهى مسار وكانت الحركة كثيفة، تنطبق قاعدة السحّاب في نهاية المسار."
+    }
+   ]
+  },
+  {
+   "title": "ممر الطوارئ",
+   "lines": [
+    {
+     "de": "Bei Stau auf der Autobahn bilden Sie sofort eine Rettungsgasse.",
+     "tr": "عند الازدحام على الأوتوبان افتح فورًا ممرًا لسيارات الطوارئ."
+    },
+    {
+     "de": "Die Gasse liegt zwischen der linken Spur und allen anderen Spuren.",
+     "tr": "يقع الممر بين المسار الأيسر وجميع المسارات الأخرى."
+    },
+    {
+     "de": "Wer keine Rettungsgasse bildet, zahlt mindestens zweihundert Euro und bekommt zwei Punkte.",
+     "tr": "من لا يفتح ممر الطوارئ يدفع مئتي يورو على الأقل ويحصل على نقطتي مخالفة."
+    }
+   ]
+  }
+ ],
+ "quiz": [
+  {
+   "sign": "z276",
+   "wrong": [
+    "z280",
+    "z2771"
+   ]
+  },
+  {
+   "sign": "z280",
+   "wrong": [
+    "z276",
+    "z282"
+   ]
+  },
+  {
+   "sign": "z2771",
+   "wrong": [
+    "z276",
+    "z136"
+   ]
+  },
+  {
+   "sign": "z295",
+   "wrong": [
+    "z350",
+    "z283"
+   ]
+  }
+ ],
+ "quizQuestion": {
+  "de": "Was bedeutet dieses Schild?",
+  "tr": "ماذا تعني هذه اللافتة؟"
+ },
+ "signs": {
+  "z136": {
+   "de": "Kinder",
+   "tr": "أطفال",
+   "src": "data/fahrschule/signs/z136.svg",
+   "n": "136",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_136_-_Kinder,_StVO_1970.svg"
+  },
+  "z276": {
+   "de": "Überholverbot",
+   "tr": "ممنوع التجاوز",
+   "src": "data/fahrschule/signs/z276.svg",
+   "n": "276",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_276_-_%C3%9Cberholverbot_f%C3%BCr_Kraftfahrzeuge_aller_Art,_StVO_1992.svg"
+  },
+  "z2771": {
+   "de": "Überholverbot für Radfahrer und Motorräder",
+   "tr": "منع تجاوز الدراجات والدراجات النارية",
+   "src": "data/fahrschule/signs/z2771.svg",
+   "n": "277.1",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_277.1_-_Verbot_des_%C3%9Cberholens_von_einspurigen_Fahrzeugen_f%C3%BCr_mehrspurige_Kraftfahrzeuge_und_Kraftr%C3%A4dern_mit_Beiwagen;_StVO_2020.svg"
+  },
+  "z280": {
+   "de": "Ende des Überholverbots",
+   "tr": "نهاية منع التجاوز",
+   "src": "data/fahrschule/signs/z280.svg",
+   "n": "280",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_280_-_Ende_des_%C3%9Cberholverbotes_f%C3%BCr_Kraftfahrzeuge_aller_Art,_StVO_1992.svg"
+  },
+  "z282": {
+   "de": "Ende sämtlicher Streckenverbote",
+   "tr": "نهاية جميع القيود",
+   "src": "data/fahrschule/signs/z282.svg",
+   "n": "282",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_282_-_Ende_s%C3%A4mtlicher_Streckenverbote,_StVO_1970.svg"
+  },
+  "z283": {
+   "de": "Absolutes Haltverbot",
+   "tr": "ممنوع التوقف",
+   "src": "data/fahrschule/signs/z283.svg",
+   "n": "283",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_283_-_Absolutes_Haltverbot,_StVO_2017.svg"
+  },
+  "z295": {
+   "de": "Durchgezogene Linie",
+   "tr": "خط متصل",
+   "src": "data/fahrschule/signs/z295.svg",
+   "n": "295",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_295_-_Fahrstreifenbegrenzung_und_Fahrbahnbegrenzung,_StVO_1970.svg"
+  },
+  "z350": {
+   "de": "Fußgängerüberweg",
+   "tr": "ممر المشاة",
+   "src": "data/fahrschule/signs/z350.svg",
+   "n": "350",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_350-10_-_Fu%C3%9Fg%C3%A4nger%C3%BCberweg_(rechts),_StVO_1992.svg"
+  }
+ },
+ "gloss": {
+  "w": {
+   "ab>ab": "ab",
+   "aber": "aber",
+   "absolutes": "absolut",
+   "abstand": "Abstand",
+   "allen": "alle",
+   "als": "als",
+   "am": "an",
+   "anderen": "andere",
+   "auch": "auch",
+   "auf": "auf",
+   "autobahn": "Autobahn",
+   "außerorts": "außerorts",
+   "bedeutet": "bedeuten",
+   "bei": "bei",
+   "beim": "bei",
+   "bekommt": "bekommen",
+   "bilden": "bilden",
+   "bildet": "bilden",
+   "blinker": "Blinker",
+   "brauchen": "brauchen",
+   "dann": "dann",
+   "das": "der/die/das",
+   "der": "der/die/das",
+   "des": "der/die/das",
+   "deutlich": "deutlich",
+   "dicht": "dicht",
+   "die": "der/die/das",
+   "dieses": "dieser",
+   "durchgezogene": "durchgezogen",
+   "dürfen": "dürfen",
+   "eine": "ein/eine",
+   "ende": "Ende",
+   "endet": "enden",
+   "euro": "Euro",
+   "fahren": "fahren",
+   "fahrzeug": "Fahrzeug",
+   "fahrzeuge": "Fahrzeug",
+   "frei": "frei",
+   "fußgängerüberweg": "Fußgängerüberweg",
+   "für": "für",
+   "gasse": "Gasse",
+   "gefährdet": "gefährden",
+   "genug": "genug",
+   "gilt": "gelten",
+   "grundsätzlich": "grundsätzlich",
+   "haltverbot": "Haltverbot",
+   "hier": "hier",
+   "innerorts": "innerorts",
+   "ist": "sein",
+   "jedem": "jeder",
+   "keine": "kein",
+   "kinder": "Kind",
+   "kuppen": "Kuppe",
+   "kurven": "Kurve",
+   "liegt": "liegen",
+   "linie": "Linie",
+   "linken": "link",
+   "links": "links",
+   "mehreren": "mehrere",
+   "mehrspurige": "mehrspurig",
+   "meter": "Meter",
+   "mindestens": "mindestens",
+   "motorräder": "Motorrad",
+   "motorrädern": "Motorrad",
+   "müssen": "müssen",
+   "nicht": "nicht",
+   "niemand": "niemand",
+   "nur": "nur",
+   "punkte": "Punkt",
+   "radfahrer": "Radfahrer",
+   "radfahrern": "Radfahrer",
+   "rechts": "rechts",
+   "rechtsfahrgebot": "Rechtsfahrgebot",
+   "reißverschlussverfahren": "Reißverschlussverfahren",
+   "rettungsgasse": "Rettungsgasse",
+   "schild": "Schild",
+   "schneller": "schnell",
+   "schon": "schon",
+   "schulterblick": "Schulterblick",
+   "sein": "sein",
+   "sie": "Sie",
+   "sofort": "sofort",
+   "spiegel": "Spiegel",
+   "spur": "Spur",
+   "spuren": "Spur",
+   "spurwechsel": "Spurwechsel",
+   "stau": "Stau",
+   "straße": "Straße",
+   "streckenverbote": "Streckenverbot",
+   "sämtlicher": "sämtlich",
+   "und": "und",
+   "verbietet": "verbieten",
+   "verboten": "verbieten",
+   "verkehr": "Verkehr",
+   "von": "von",
+   "vor": "vor",
+   "was": "was",
+   "weit": "weit",
+   "wenn": "wenn",
+   "wer": "wer",
+   "wieder": "wieder",
+   "wird": "werden",
+   "zahlt": "zahlen",
+   "zebrastreifen": "Zebrastreifen",
+   "zwei": "zwei",
+   "zweihundert": "zweihundert",
+   "zwischen": "zwischen",
+   "überfahren": "überfahren",
+   "überholen": "überholen",
+   "überholverbot": "Überholverbot",
+   "überholverbots": "Überholverbot"
+  },
+  "l": {
+   "Abstand": {
+    "ru": "المسافة (بين السيارات)",
+    "pos": "اسم",
+    "decl": "der Abstand · الجمع: die Abstände"
+   },
+   "Autobahn": {
+    "ru": "الطريق السريع (أوتوبان)",
+    "pos": "اسم",
+    "decl": "die Autobahn · الجمع: die Autobahnen"
+   },
+   "Blinker": {
+    "ru": "إشارة الانعطاف",
+    "pos": "اسم",
+    "decl": "der Blinker · الجمع: die Blinker"
+   },
+   "Ende": {
+    "ru": "نهاية",
+    "pos": "اسم",
+    "decl": "das Ende · الجمع: die Enden"
+   },
+   "Euro": {
+    "ru": "يورو",
+    "pos": "اسم",
+    "decl": "der Euro · الجمع: die Euro"
+   },
+   "Fahrzeug": {
+    "ru": "مركبة",
+    "pos": "اسم",
+    "decl": "das Fahrzeug · الجمع: die Fahrzeuge"
+   },
+   "Fußgängerüberweg": {
+    "ru": "ممر المشاة",
+    "pos": "اسم",
+    "note": "في الكلام: der Zebrastreifen",
+    "decl": "der Fußgängerüberweg · الجمع: die Fußgängerüberwege"
+   },
+   "Gasse": {
+    "ru": "ممر؛ زقاق",
+    "pos": "اسم",
+    "decl": "die Gasse · الجمع: die Gassen"
+   },
+   "Haltverbot": {
+    "ru": "منع التوقف",
+    "pos": "اسم",
+    "decl": "das Haltverbot · الجمع: die Haltverbote"
+   },
+   "Kind": {
+    "ru": "طفل",
+    "pos": "اسم",
+    "decl": "das Kind · الجمع: die Kinder"
+   },
+   "Kuppe": {
+    "ru": "قمة مرتفع (لا يُرى ما بعدها)",
+    "pos": "اسم",
+    "decl": "die Kuppe · الجمع: die Kuppen"
+   },
+   "Kurve": {
+    "ru": "منعطف",
+    "pos": "اسم",
+    "decl": "die Kurve · الجمع: die Kurven"
+   },
+   "Linie": {
+    "ru": "خط",
+    "pos": "اسم",
+    "decl": "die Linie · الجمع: die Linien"
+   },
+   "Meter": {
+    "ru": "متر",
+    "pos": "اسم",
+    "decl": "der Meter · الجمع: die Meter"
+   },
+   "Motorrad": {
+    "ru": "دراجة نارية",
+    "pos": "اسم",
+    "decl": "das Motorrad · الجمع: die Motorräder"
+   },
+   "Punkt": {
+    "ru": "نقطة",
+    "pos": "اسم",
+    "decl": "der Punkt · الجمع: die Punkte"
+   },
+   "Radfahrer": {
+    "ru": "راكب دراجة",
+    "pos": "اسم",
+    "decl": "der Radfahrer · الجمع: die Radfahrer"
+   },
+   "Rechtsfahrgebot": {
+    "ru": "قاعدة القيادة على اليمين",
+    "pos": "اسم",
+    "note": "التزم أقصى اليمين؛ تجاوز من اليسار وعُد إلى اليمين",
+    "decl": "das Rechtsfahrgebot · لا جمع له"
+   },
+   "Reißverschlussverfahren": {
+    "ru": "قاعدة السحّاب (الدخول بالتناوب)",
+    "pos": "اسم",
+    "note": "يتم الانتقال في نهاية المسار تمامًا، سيارة بسيارة",
+    "decl": "das Reißverschlussverfahren · لا جمع له"
+   },
+   "Rettungsgasse": {
+    "ru": "ممر الطوارئ",
+    "pos": "اسم",
+    "note": "المسار الأيسر إلى اليسار وكل الباقي إلى اليمين؛ فورًا حين تتوقف الحركة",
+    "decl": "die Rettungsgasse · الجمع: die Rettungsgassen"
+   },
+   "Schild": {
+    "ru": "لافتة",
+    "pos": "اسم",
+    "decl": "das Schild · الجمع: die Schilder"
+   },
+   "Schulterblick": {
+    "ru": "الالتفات فوق الكتف",
+    "pos": "اسم",
+    "note": "هكذا تُفحص «النقطة العمياء» قبل الانطلاق والانعطاف",
+    "decl": "der Schulterblick · الجمع: die Schulterblicke"
+   },
+   "Sie": {
+    "ru": "حضرتك (صيغة الاحترام)",
+    "pos": "ضمير",
+    "note": "Ihnen — لكم (حالة الجر): vor Ihnen — أمامك"
+   },
+   "Spiegel": {
+    "ru": "مرآة",
+    "pos": "اسم",
+    "decl": "der Spiegel · الجمع: die Spiegel"
+   },
+   "Spur": {
+    "ru": "مسار",
+    "pos": "اسم",
+    "decl": "die Spur · الجمع: die Spuren"
+   },
+   "Spurwechsel": {
+    "ru": "تغيير المسار",
+    "pos": "اسم",
+    "decl": "der Spurwechsel · الجمع: die Spurwechsel"
+   },
+   "Stau": {
+    "ru": "ازدحام مروري",
+    "pos": "اسم",
+    "decl": "der Stau · الجمع: die Staus"
+   },
+   "Straße": {
+    "ru": "شارع، طريق",
+    "pos": "اسم",
+    "decl": "die Straße · الجمع: die Straßen"
+   },
+   "Streckenverbot": {
+    "ru": "منع على مقطع الطريق",
+    "pos": "اسم",
+    "decl": "das Streckenverbot · الجمع: die Streckenverbote"
+   },
+   "Verkehr": {
+    "ru": "حركة المرور",
+    "pos": "اسم",
+    "decl": "der Verkehr · لا جمع له"
+   },
+   "Zebrastreifen": {
+    "ru": "ممر المشاة (المخطط)",
+    "pos": "اسم",
+    "decl": "der Zebrastreifen · الجمع: die Zebrastreifen"
+   },
+   "ab": {
+    "ru": "ابتداءً من",
+    "pos": "حرف جر",
+    "note": "ab hier — من هنا"
+   },
+   "aber": {
+    "ru": "لكن",
+    "pos": "أداة ربط"
+   },
+   "absolut": {
+    "ru": "مطلق، تام",
+    "pos": "صفة"
+   },
+   "alle": {
+    "ru": "كل؛ كل شيء",
+    "pos": "ضمير"
+   },
+   "als": {
+    "ru": "من (في المقارنة)؛ كـ",
+    "pos": "أداة ربط"
+   },
+   "an": {
+    "ru": "عند، على",
+    "pos": "حرف جر",
+    "note": "am = an dem؛ an der Kreuzung — عند التقاطع"
+   },
+   "andere": {
+    "ru": "آخر",
+    "pos": "صفة"
+   },
+   "auch": {
+    "ru": "أيضًا؛ حتى (auch wenn)",
+    "pos": "ظرف"
+   },
+   "auf": {
+    "ru": "على",
+    "pos": "حرف جر",
+    "note": "auf der Straße — على الطريق؛ achten auf — ينتبه لـ"
+   },
+   "außerorts": {
+    "ru": "خارج المدن والبلدات",
+    "pos": "ظرف",
+    "note": "للسيارات عادةً 100 كم/س كحد أقصى"
+   },
+   "bedeuten": {
+    "ru": "يعني",
+    "pos": "فعل",
+    "forms": "bedeutete · hat bedeutet"
+   },
+   "bei": {
+    "ru": "عند",
+    "pos": "حرف جر",
+    "note": "beim = bei dem: beim Fahren — أثناء القيادة؛ bei Rot — عند الأحمر"
+   },
+   "bekommen": {
+    "ru": "يحصل على",
+    "pos": "فعل",
+    "forms": "bekam · hat bekommen"
+   },
+   "bilden": {
+    "ru": "يشكّل",
+    "pos": "فعل",
+    "note": "eine Rettungsgasse bilden — يفتح ممر الطوارئ",
+    "forms": "bildete · hat gebildet"
+   },
+   "brauchen": {
+    "ru": "يحتاج",
+    "pos": "فعل",
+    "forms": "brauchte · hat gebraucht"
+   },
+   "dann": {
+    "ru": "إذن؛ ثم",
+    "pos": "ظرف"
+   },
+   "der/die/das": {
+    "ru": "أداة التعريف",
+    "pos": "أداة تعريف",
+    "note": "der للمذكر، die للمؤنث والجمع، das للمحايد؛ den للمذكر في حالة النصب، dem للمذكر والمحايد في حالة الجر؛ وdas تعني أيضًا «هذا»"
+   },
+   "deutlich": {
+    "ru": "بوضوح",
+    "pos": "صفة"
+   },
+   "dicht": {
+    "ru": "كثيف؛ قريب",
+    "pos": "صفة"
+   },
+   "dieser": {
+    "ru": "هذا، هذه",
+    "pos": "ضمير"
+   },
+   "durchgezogen": {
+    "ru": "متصل (عن الخط)",
+    "pos": "صفة",
+    "note": "لا يجوز عبور الخط المتصل"
+   },
+   "dürfen": {
+    "ru": "يحق له، يُسمح له",
+    "pos": "فعل",
+    "forms": "durfte · hat gedurft"
+   },
+   "ein/eine": {
+    "ru": "أداة النكرة؛ واحد",
+    "pos": "أداة تعريف",
+    "note": "an einer Kreuzung — عند تقاطعٍ ما"
+   },
+   "enden": {
+    "ru": "ينتهي",
+    "pos": "فعل",
+    "forms": "endete · hat geendet"
+   },
+   "fahren": {
+    "ru": "يسير بالسيارة؛ يقود",
+    "pos": "فعل",
+    "forms": "fuhr · ist gefahren"
+   },
+   "frei": {
+    "ru": "خالٍ، فارغ",
+    "pos": "صفة"
+   },
+   "für": {
+    "ru": "لـ، من أجل",
+    "pos": "حرف جر"
+   },
+   "gefährden": {
+    "ru": "يعرّض للخطر",
+    "pos": "فعل",
+    "note": "niemand wird gefährdet — لا يتعرض أحد للخطر",
+    "forms": "gefährdete · hat gefährdet"
+   },
+   "gelten": {
+    "ru": "يسري، ينطبق",
+    "pos": "فعل",
+    "forms": "galt · hat gegolten"
+   },
+   "genug": {
+    "ru": "بما يكفي",
+    "pos": "ظرف"
+   },
+   "grundsätzlich": {
+    "ru": "من حيث المبدأ، كقاعدة",
+    "pos": "ظرف"
+   },
+   "hier": {
+    "ru": "هنا",
+    "pos": "ظرف"
+   },
+   "innerorts": {
+    "ru": "داخل المدن والبلدات",
+    "pos": "ظرف",
+    "note": "الحد الأقصى هنا عادةً 50 كم/س"
+   },
+   "jeder": {
+    "ru": "كل",
+    "pos": "ضمير"
+   },
+   "kein": {
+    "ru": "لا (نفي الاسم)",
+    "pos": "ضمير"
+   },
+   "liegen": {
+    "ru": "يقع",
+    "pos": "فعل",
+    "forms": "lag · hat gelegen"
+   },
+   "link": {
+    "ru": "أيسر",
+    "pos": "صفة"
+   },
+   "links": {
+    "ru": "يسارًا، على اليسار",
+    "pos": "ظرف"
+   },
+   "mehrere": {
+    "ru": "عدة",
+    "pos": "ضمير"
+   },
+   "mehrspurig": {
+    "ru": "متعدد المسارات (سيارة، شاحنة — لا دراجة)",
+    "pos": "صفة"
+   },
+   "mindestens": {
+    "ru": "على الأقل",
+    "pos": "ظرف"
+   },
+   "müssen": {
+    "ru": "يجب عليه",
+    "pos": "فعل",
+    "forms": "musste · hat gemusst"
+   },
+   "nicht": {
+    "ru": "لا، ليس",
+    "pos": "أداة"
+   },
+   "niemand": {
+    "ru": "لا أحد",
+    "pos": "ضمير"
+   },
+   "nur": {
+    "ru": "فقط",
+    "pos": "ظرف"
+   },
+   "rechts": {
+    "ru": "يمينًا، على اليمين",
+    "pos": "ظرف"
+   },
+   "schnell": {
+    "ru": "سريع؛ بسرعة",
+    "pos": "صفة"
+   },
+   "schon": {
+    "ru": "بالفعل",
+    "pos": "ظرف"
+   },
+   "sein": {
+    "ru": "يكون",
+    "pos": "فعل",
+    "forms": "war · ist gewesen"
+   },
+   "sofort": {
+    "ru": "فورًا",
+    "pos": "ظرف"
+   },
+   "sämtlich": {
+    "ru": "جميع",
+    "pos": "صفة"
+   },
+   "und": {
+    "ru": "و",
+    "pos": "أداة ربط"
+   },
+   "verbieten": {
+    "ru": "يمنع",
+    "pos": "فعل",
+    "forms": "verbot · hat verboten"
+   },
+   "von": {
+    "ru": "من",
+    "pos": "حرف جر",
+    "note": "vom = von dem؛ von rechts — من اليمين"
+   },
+   "vor": {
+    "ru": "قبل، أمام",
+    "pos": "حرف جر",
+    "note": "rechts vor links — اليمين قبل اليسار"
+   },
+   "was": {
+    "ru": "ماذا",
+    "pos": "ضمير"
+   },
+   "weit": {
+    "ru": "بعيد؛ واسع",
+    "pos": "صفة",
+    "note": "weit genug — بعيدًا بما يكفي"
+   },
+   "wenn": {
+    "ru": "إذا؛ عندما",
+    "pos": "أداة ربط",
+    "note": "auch wenn — حتى لو"
+   },
+   "wer": {
+    "ru": "مَن",
+    "pos": "ضمير"
+   },
+   "werden": {
+    "ru": "يصبح",
+    "pos": "فعل",
+    "note": "die Ampel wird gelb — الإشارة تصبح صفراء",
+    "forms": "wurde · ist geworden"
+   },
+   "wieder": {
+    "ru": "من جديد",
+    "pos": "ظرف"
+   },
+   "zahlen": {
+    "ru": "يدفع",
+    "pos": "فعل",
+    "forms": "zahlte · hat gezahlt"
+   },
+   "zwei": {
+    "ru": "اثنان",
+    "pos": "عدد"
+   },
+   "zweihundert": {
+    "ru": "مئتان",
+    "pos": "عدد"
+   },
+   "zwischen": {
+    "ru": "بين",
+    "pos": "حرف جر"
+   },
+   "Überholverbot": {
+    "ru": "منع التجاوز",
+    "pos": "اسم",
+    "decl": "das Überholverbot · الجمع: die Überholverbote"
+   },
+   "überfahren": {
+    "ru": "يعبر (الخط)",
+    "pos": "فعل",
+    "forms": "überfuhr · hat überfahren"
+   },
+   "überholen": {
+    "ru": "يتجاوز",
+    "pos": "فعل",
+    "forms": "überholte · hat überholt"
+   }
+  }
+ }
+}

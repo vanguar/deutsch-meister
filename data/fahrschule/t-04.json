@@ -1,0 +1,821 @@
+{
+ "id": "t-04",
+ "kind": "theory",
+ "emoji": "🛣️",
+ "level": "A2–B1",
+ "title": "Überholen, Spurwechsel und Rettungsgasse",
+ "titleTr": "Обгон, перестроение и коридор для спасателей",
+ "intro": "Где и как обгонять, какие знаки и линии это запрещают, сколько места оставлять велосипедистам, как перестраиваться и как в пробке освободить коридор для скорой — по немецким правилам.",
+ "sections": [
+  {
+   "title": "Как обгонять",
+   "lines": [
+    {
+     "de": "Sie überholen grundsätzlich links.",
+     "tr": "Обгоняют, как правило, слева."
+    },
+    {
+     "de": "Rechts überholen ist verboten. Innerorts dürfen Sie auf mehreren Spuren aber rechts schneller fahren.",
+     "tr": "Обгонять справа запрещено. Но в населённом пункте при нескольких полосах справа можно ехать быстрее."
+    },
+    {
+     "de": "Überholen dürfen Sie nur, wenn niemand gefährdet wird und die Straße weit genug frei ist.",
+     "tr": "Обгонять можно, только если никто не подвергается опасности и дорога свободна достаточно далеко."
+    },
+    {
+     "de": "Sie müssen deutlich schneller sein als das Fahrzeug, das Sie überholen.",
+     "tr": "Вы должны ехать заметно быстрее машины, которую обгоняете."
+    }
+   ]
+  },
+  {
+   "title": "Где обгонять нельзя",
+   "lines": [
+    {
+     "de": "Überholverbot: Mehrspurige Fahrzeuge dürfen Sie hier nicht überholen. Radfahrer schon.",
+     "tr": "Обгон запрещён: многоколейные транспортные средства здесь обгонять нельзя. Велосипедистов — можно.",
+     "sign": "z276"
+    },
+    {
+     "de": "Ende des Überholverbots: Ab hier dürfen Sie wieder überholen.",
+     "tr": "Конец запрета обгона: отсюда снова можно обгонять.",
+     "o": {
+      "ab": "ab>ab"
+     },
+     "sign": "z280"
+    },
+    {
+     "de": "Eine durchgezogene Linie dürfen Sie nicht überfahren. Dann ist auch Überholen verboten.",
+     "tr": "Сплошную линию пересекать нельзя. Значит, и обгон запрещён.",
+     "sign": "z295"
+    },
+    {
+     "de": "Vor Kurven, vor Kuppen und am Zebrastreifen ist Überholen verboten.",
+     "tr": "Перед поворотами, перед вершинами подъёмов и у «зебры» обгон запрещён."
+    }
+   ]
+  },
+  {
+   "title": "Велосипедисты",
+   "lines": [
+    {
+     "de": "Beim Überholen von Radfahrern brauchen Sie innerorts 1,5 Meter Abstand, außerorts 2 Meter.",
+     "tr": "При обгоне велосипедистов нужен интервал 1,5 метра в населённом пункте и 2 метра вне его."
+    },
+    {
+     "de": "Dieses Schild verbietet das Überholen von Radfahrern und Motorrädern.",
+     "tr": "Этот знак запрещает обгонять велосипедистов и мотоциклы.",
+     "sign": "z2771"
+    }
+   ]
+  },
+  {
+   "title": "Перестроение",
+   "lines": [
+    {
+     "de": "Vor jedem Spurwechsel: Spiegel, Blinker, Schulterblick.",
+     "tr": "Перед каждым перестроением: зеркало, поворотник, взгляд через плечо."
+    },
+    {
+     "de": "Auf der Autobahn gilt das Rechtsfahrgebot: Fahren Sie rechts, wenn die Spur frei ist.",
+     "tr": "На автобане действует правило правого ряда: держитесь правой полосы, если она свободна."
+    },
+    {
+     "de": "Endet eine Spur und der Verkehr ist dicht, gilt das Reißverschlussverfahren am Ende der Spur.",
+     "tr": "Если полоса заканчивается и движение плотное, действует «молния» в конце полосы."
+    }
+   ]
+  },
+  {
+   "title": "Коридор для спасателей",
+   "lines": [
+    {
+     "de": "Bei Stau auf der Autobahn bilden Sie sofort eine Rettungsgasse.",
+     "tr": "При пробке на автобане сразу освободите коридор для экстренных служб."
+    },
+    {
+     "de": "Die Gasse liegt zwischen der linken Spur und allen anderen Spuren.",
+     "tr": "Коридор проходит между левой полосой и всеми остальными."
+    },
+    {
+     "de": "Wer keine Rettungsgasse bildet, zahlt mindestens zweihundert Euro und bekommt zwei Punkte.",
+     "tr": "Кто не освобождает коридор, платит не меньше двухсот евро и получает два штрафных балла."
+    }
+   ]
+  }
+ ],
+ "quiz": [
+  {
+   "sign": "z276",
+   "wrong": [
+    "z280",
+    "z2771"
+   ]
+  },
+  {
+   "sign": "z280",
+   "wrong": [
+    "z276",
+    "z282"
+   ]
+  },
+  {
+   "sign": "z2771",
+   "wrong": [
+    "z276",
+    "z136"
+   ]
+  },
+  {
+   "sign": "z295",
+   "wrong": [
+    "z350",
+    "z283"
+   ]
+  }
+ ],
+ "quizQuestion": {
+  "de": "Was bedeutet dieses Schild?",
+  "tr": "Что означает этот знак?"
+ },
+ "signs": {
+  "z136": {
+   "de": "Kinder",
+   "tr": "Дети",
+   "src": "data/fahrschule/signs/z136.svg",
+   "n": "136",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_136_-_Kinder,_StVO_1970.svg"
+  },
+  "z276": {
+   "de": "Überholverbot",
+   "tr": "Обгон запрещён",
+   "src": "data/fahrschule/signs/z276.svg",
+   "n": "276",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_276_-_%C3%9Cberholverbot_f%C3%BCr_Kraftfahrzeuge_aller_Art,_StVO_1992.svg"
+  },
+  "z2771": {
+   "de": "Überholverbot für Radfahrer und Motorräder",
+   "tr": "Запрет обгона велосипедистов и мотоциклов",
+   "src": "data/fahrschule/signs/z2771.svg",
+   "n": "277.1",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_277.1_-_Verbot_des_%C3%9Cberholens_von_einspurigen_Fahrzeugen_f%C3%BCr_mehrspurige_Kraftfahrzeuge_und_Kraftr%C3%A4dern_mit_Beiwagen;_StVO_2020.svg"
+  },
+  "z280": {
+   "de": "Ende des Überholverbots",
+   "tr": "Конец запрета обгона",
+   "src": "data/fahrschule/signs/z280.svg",
+   "n": "280",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_280_-_Ende_des_%C3%9Cberholverbotes_f%C3%BCr_Kraftfahrzeuge_aller_Art,_StVO_1992.svg"
+  },
+  "z282": {
+   "de": "Ende sämtlicher Streckenverbote",
+   "tr": "Конец всех ограничений",
+   "src": "data/fahrschule/signs/z282.svg",
+   "n": "282",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_282_-_Ende_s%C3%A4mtlicher_Streckenverbote,_StVO_1970.svg"
+  },
+  "z283": {
+   "de": "Absolutes Haltverbot",
+   "tr": "Остановка запрещена",
+   "src": "data/fahrschule/signs/z283.svg",
+   "n": "283",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_283_-_Absolutes_Haltverbot,_StVO_2017.svg"
+  },
+  "z295": {
+   "de": "Durchgezogene Linie",
+   "tr": "Сплошная линия разметки",
+   "src": "data/fahrschule/signs/z295.svg",
+   "n": "295",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_295_-_Fahrstreifenbegrenzung_und_Fahrbahnbegrenzung,_StVO_1970.svg"
+  },
+  "z350": {
+   "de": "Fußgängerüberweg",
+   "tr": "Пешеходный переход",
+   "src": "data/fahrschule/signs/z350.svg",
+   "n": "350",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_350-10_-_Fu%C3%9Fg%C3%A4nger%C3%BCberweg_(rechts),_StVO_1992.svg"
+  }
+ },
+ "gloss": {
+  "w": {
+   "ab>ab": "ab",
+   "aber": "aber",
+   "absolutes": "absolut",
+   "abstand": "Abstand",
+   "allen": "alle",
+   "als": "als",
+   "am": "an",
+   "anderen": "andere",
+   "auch": "auch",
+   "auf": "auf",
+   "autobahn": "Autobahn",
+   "außerorts": "außerorts",
+   "bedeutet": "bedeuten",
+   "bei": "bei",
+   "beim": "bei",
+   "bekommt": "bekommen",
+   "bilden": "bilden",
+   "bildet": "bilden",
+   "blinker": "Blinker",
+   "brauchen": "brauchen",
+   "dann": "dann",
+   "das": "der/die/das",
+   "der": "der/die/das",
+   "des": "der/die/das",
+   "deutlich": "deutlich",
+   "dicht": "dicht",
+   "die": "der/die/das",
+   "dieses": "dieser",
+   "durchgezogene": "durchgezogen",
+   "dürfen": "dürfen",
+   "eine": "ein/eine",
+   "ende": "Ende",
+   "endet": "enden",
+   "euro": "Euro",
+   "fahren": "fahren",
+   "fahrzeug": "Fahrzeug",
+   "fahrzeuge": "Fahrzeug",
+   "frei": "frei",
+   "fußgängerüberweg": "Fußgängerüberweg",
+   "für": "für",
+   "gasse": "Gasse",
+   "gefährdet": "gefährden",
+   "genug": "genug",
+   "gilt": "gelten",
+   "grundsätzlich": "grundsätzlich",
+   "haltverbot": "Haltverbot",
+   "hier": "hier",
+   "innerorts": "innerorts",
+   "ist": "sein",
+   "jedem": "jeder",
+   "keine": "kein",
+   "kinder": "Kind",
+   "kuppen": "Kuppe",
+   "kurven": "Kurve",
+   "liegt": "liegen",
+   "linie": "Linie",
+   "linken": "link",
+   "links": "links",
+   "mehreren": "mehrere",
+   "mehrspurige": "mehrspurig",
+   "meter": "Meter",
+   "mindestens": "mindestens",
+   "motorräder": "Motorrad",
+   "motorrädern": "Motorrad",
+   "müssen": "müssen",
+   "nicht": "nicht",
+   "niemand": "niemand",
+   "nur": "nur",
+   "punkte": "Punkt",
+   "radfahrer": "Radfahrer",
+   "radfahrern": "Radfahrer",
+   "rechts": "rechts",
+   "rechtsfahrgebot": "Rechtsfahrgebot",
+   "reißverschlussverfahren": "Reißverschlussverfahren",
+   "rettungsgasse": "Rettungsgasse",
+   "schild": "Schild",
+   "schneller": "schnell",
+   "schon": "schon",
+   "schulterblick": "Schulterblick",
+   "sein": "sein",
+   "sie": "Sie",
+   "sofort": "sofort",
+   "spiegel": "Spiegel",
+   "spur": "Spur",
+   "spuren": "Spur",
+   "spurwechsel": "Spurwechsel",
+   "stau": "Stau",
+   "straße": "Straße",
+   "streckenverbote": "Streckenverbot",
+   "sämtlicher": "sämtlich",
+   "und": "und",
+   "verbietet": "verbieten",
+   "verboten": "verbieten",
+   "verkehr": "Verkehr",
+   "von": "von",
+   "vor": "vor",
+   "was": "was",
+   "weit": "weit",
+   "wenn": "wenn",
+   "wer": "wer",
+   "wieder": "wieder",
+   "wird": "werden",
+   "zahlt": "zahlen",
+   "zebrastreifen": "Zebrastreifen",
+   "zwei": "zwei",
+   "zweihundert": "zweihundert",
+   "zwischen": "zwischen",
+   "überfahren": "überfahren",
+   "überholen": "überholen",
+   "überholverbot": "Überholverbot",
+   "überholverbots": "Überholverbot"
+  },
+  "l": {
+   "Abstand": {
+    "ru": "дистанция, расстояние",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Abstände"
+   },
+   "Autobahn": {
+    "ru": "автобан, автомагистраль",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Autobahnen"
+   },
+   "Blinker": {
+    "ru": "поворотник",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Blinker"
+   },
+   "Ende": {
+    "ru": "конец",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Enden"
+   },
+   "Euro": {
+    "ru": "евро",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Euro"
+   },
+   "Fahrzeug": {
+    "ru": "транспортное средство, машина",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Fahrzeuge"
+   },
+   "Fußgängerüberweg": {
+    "ru": "пешеходный переход",
+    "pos": "сущ.",
+    "note": "в разговоре: der Zebrastreifen",
+    "art": "der",
+    "pl": "die Fußgängerüberwege"
+   },
+   "Gasse": {
+    "ru": "проход, коридор; переулок",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Gassen"
+   },
+   "Haltverbot": {
+    "ru": "запрет остановки",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Haltverbote"
+   },
+   "Kind": {
+    "ru": "ребёнок",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Kinder"
+   },
+   "Kuppe": {
+    "ru": "вершина подъёма (дорога за ней не видна)",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Kuppen"
+   },
+   "Kurve": {
+    "ru": "поворот, изгиб дороги",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Kurven"
+   },
+   "Linie": {
+    "ru": "линия",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Linien"
+   },
+   "Meter": {
+    "ru": "метр",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Meter"
+   },
+   "Motorrad": {
+    "ru": "мотоцикл",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Motorräder"
+   },
+   "Punkt": {
+    "ru": "балл; точка",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Punkte"
+   },
+   "Radfahrer": {
+    "ru": "велосипедист",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Radfahrer"
+   },
+   "Rechtsfahrgebot": {
+    "ru": "правило правого ряда",
+    "pos": "сущ.",
+    "note": "держаться как можно правее; на автобане обгонять слева и возвращаться вправо",
+    "art": "das",
+    "pl": null
+   },
+   "Reißverschlussverfahren": {
+    "ru": "правило «молнии» (поочерёдное перестроение)",
+    "pos": "сущ.",
+    "note": "перестраиваются в самом конце полосы, по одной машине; раньше времени — нарушение правил",
+    "art": "das",
+    "pl": null
+   },
+   "Rettungsgasse": {
+    "ru": "коридор для экстренных служб",
+    "pos": "сущ.",
+    "note": "левая полоса — влево, все остальные — вправо; образовать сразу, как только движение встало",
+    "art": "die",
+    "pl": "die Rettungsgassen"
+   },
+   "Schild": {
+    "ru": "знак, табличка",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Schilder"
+   },
+   "Schulterblick": {
+    "ru": "взгляд через плечо",
+    "pos": "сущ.",
+    "note": "так проверяют «мёртвую зону» перед стартом и поворотом",
+    "art": "der",
+    "pl": "die Schulterblicke"
+   },
+   "Sie": {
+    "ru": "вы (вежливо)",
+    "pos": "мест.",
+    "note": "Ihnen — вам (дательный): vor Ihnen — перед вами"
+   },
+   "Spiegel": {
+    "ru": "зеркало",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Spiegel"
+   },
+   "Spur": {
+    "ru": "полоса (движения)",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Spuren"
+   },
+   "Spurwechsel": {
+    "ru": "перестроение (смена полосы)",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Spurwechsel"
+   },
+   "Stau": {
+    "ru": "пробка, затор",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Staus"
+   },
+   "Straße": {
+    "ru": "улица, дорога",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Straßen"
+   },
+   "Streckenverbot": {
+    "ru": "запрет на участке дороги",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Streckenverbote"
+   },
+   "Verkehr": {
+    "ru": "движение, транспорт",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": null
+   },
+   "Zebrastreifen": {
+    "ru": "«зебра», пешеходный переход",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Zebrastreifen"
+   },
+   "ab": {
+    "ru": "с, начиная с",
+    "pos": "предл.",
+    "note": "ab hier — отсюда; ab dem Schild — от знака"
+   },
+   "aber": {
+    "ru": "но",
+    "pos": "союз"
+   },
+   "absolut": {
+    "ru": "абсолютный, полный",
+    "pos": "прил."
+   },
+   "alle": {
+    "ru": "все; всё",
+    "pos": "мест."
+   },
+   "als": {
+    "ru": "чем (при сравнении); как",
+    "pos": "союз"
+   },
+   "an": {
+    "ru": "у, на, при",
+    "pos": "предл.",
+    "note": "am = an dem; an der Kreuzung — на перекрёстке"
+   },
+   "andere": {
+    "ru": "другой",
+    "pos": "прил."
+   },
+   "auch": {
+    "ru": "тоже; даже (auch wenn)",
+    "pos": "нареч."
+   },
+   "auf": {
+    "ru": "на, по",
+    "pos": "предл.",
+    "note": "auf der Straße — на дороге; achten auf — следить за"
+   },
+   "außerorts": {
+    "ru": "вне населённого пункта",
+    "pos": "нареч.",
+    "note": "для легковых обычно не больше 100 км/ч"
+   },
+   "bedeuten": {
+    "ru": "означать",
+    "pos": "гл.",
+    "forms": "bedeutete · hat bedeutet"
+   },
+   "bei": {
+    "ru": "при, у; на (о сигнале)",
+    "pos": "предл.",
+    "note": "beim = bei dem: beim Fahren — во время езды; bei Rot — на красный"
+   },
+   "bekommen": {
+    "ru": "получать",
+    "pos": "гл.",
+    "forms": "bekam · hat bekommen"
+   },
+   "bilden": {
+    "ru": "образовывать, создавать",
+    "pos": "гл.",
+    "note": "eine Rettungsgasse bilden — освободить коридор для спасателей",
+    "forms": "bildete · hat gebildet"
+   },
+   "brauchen": {
+    "ru": "нуждаться, требоваться",
+    "pos": "гл.",
+    "forms": "brauchte · hat gebraucht"
+   },
+   "dann": {
+    "ru": "тогда, значит; потом",
+    "pos": "нареч."
+   },
+   "der/die/das": {
+    "ru": "определённый артикль",
+    "pos": "артикль",
+    "note": "der — м. р., die — ж. р. и мн. ч., das — ср. р.; den — м. р. в винительном, dem — м. и ср. р. в дательном; das ещё значит «это»"
+   },
+   "deutlich": {
+    "ru": "заметно, явно",
+    "pos": "прил."
+   },
+   "dicht": {
+    "ru": "плотный; близко",
+    "pos": "прил."
+   },
+   "dieser": {
+    "ru": "этот, эта, это",
+    "pos": "мест."
+   },
+   "durchgezogen": {
+    "ru": "сплошной (о линии)",
+    "pos": "прил.",
+    "note": "сплошную линию пересекать нельзя"
+   },
+   "dürfen": {
+    "ru": "мочь, иметь право",
+    "pos": "гл.",
+    "forms": "durfte · hat gedurft"
+   },
+   "ein/eine": {
+    "ru": "неопределённый артикль; один",
+    "pos": "артикль",
+    "note": "an einer Kreuzung — на (каком-то) перекрёстке"
+   },
+   "enden": {
+    "ru": "заканчиваться",
+    "pos": "гл.",
+    "forms": "endete · hat geendet"
+   },
+   "fahren": {
+    "ru": "ехать; водить машину",
+    "pos": "гл.",
+    "forms": "fuhr · ist gefahren"
+   },
+   "frei": {
+    "ru": "свободный",
+    "pos": "прил."
+   },
+   "für": {
+    "ru": "для",
+    "pos": "предл."
+   },
+   "gefährden": {
+    "ru": "подвергать опасности",
+    "pos": "гл.",
+    "note": "niemand wird gefährdet — никто не подвергается опасности",
+    "forms": "gefährdete · hat gefährdet"
+   },
+   "gelten": {
+    "ru": "действовать (о правиле)",
+    "pos": "гл.",
+    "forms": "galt · hat gegolten"
+   },
+   "genug": {
+    "ru": "достаточно",
+    "pos": "нареч."
+   },
+   "grundsätzlich": {
+    "ru": "в принципе, как правило",
+    "pos": "нареч."
+   },
+   "hier": {
+    "ru": "здесь",
+    "pos": "нареч."
+   },
+   "innerorts": {
+    "ru": "в населённом пункте",
+    "pos": "нареч.",
+    "note": "здесь обычно не больше 50 км/ч"
+   },
+   "jeder": {
+    "ru": "каждый",
+    "pos": "мест."
+   },
+   "kein": {
+    "ru": "никакой; не (отрицание при существительном)",
+    "pos": "мест."
+   },
+   "liegen": {
+    "ru": "лежать, находиться",
+    "pos": "гл.",
+    "forms": "lag · hat gelegen"
+   },
+   "link": {
+    "ru": "левый",
+    "pos": "прил."
+   },
+   "links": {
+    "ru": "слева; налево",
+    "pos": "нареч."
+   },
+   "mehrere": {
+    "ru": "несколько",
+    "pos": "мест."
+   },
+   "mehrspurig": {
+    "ru": "многоколейный (машина, грузовик — не велосипед)",
+    "pos": "прил."
+   },
+   "mindestens": {
+    "ru": "по меньшей мере, не меньше",
+    "pos": "нареч."
+   },
+   "müssen": {
+    "ru": "быть должным",
+    "pos": "гл.",
+    "forms": "musste · hat gemusst"
+   },
+   "nicht": {
+    "ru": "не",
+    "pos": "частица"
+   },
+   "niemand": {
+    "ru": "никто",
+    "pos": "мест."
+   },
+   "nur": {
+    "ru": "только",
+    "pos": "нареч."
+   },
+   "rechts": {
+    "ru": "справа; направо",
+    "pos": "нареч."
+   },
+   "schnell": {
+    "ru": "быстрый; быстро",
+    "pos": "прил."
+   },
+   "schon": {
+    "ru": "уже",
+    "pos": "нареч."
+   },
+   "sein": {
+    "ru": "быть",
+    "pos": "гл.",
+    "forms": "war · ist gewesen"
+   },
+   "sofort": {
+    "ru": "сразу, немедленно",
+    "pos": "нареч."
+   },
+   "sämtlich": {
+    "ru": "все, всякий",
+    "pos": "прил."
+   },
+   "und": {
+    "ru": "и",
+    "pos": "союз"
+   },
+   "verbieten": {
+    "ru": "запрещать",
+    "pos": "гл.",
+    "forms": "verbot · hat verboten"
+   },
+   "von": {
+    "ru": "от, из, с",
+    "pos": "предл.",
+    "note": "vom = von dem; von rechts — справа"
+   },
+   "vor": {
+    "ru": "перед",
+    "pos": "предл.",
+    "note": "rechts vor links — правый перед левым"
+   },
+   "was": {
+    "ru": "что",
+    "pos": "мест."
+   },
+   "weit": {
+    "ru": "далеко; широкий",
+    "pos": "прил.",
+    "note": "weit genug — достаточно далеко"
+   },
+   "wenn": {
+    "ru": "если; когда",
+    "pos": "союз",
+    "note": "auch wenn — даже если"
+   },
+   "wer": {
+    "ru": "кто",
+    "pos": "мест."
+   },
+   "werden": {
+    "ru": "становиться",
+    "pos": "гл.",
+    "note": "die Ampel wird gelb — светофор переключается на жёлтый",
+    "forms": "wurde · ist geworden"
+   },
+   "wieder": {
+    "ru": "снова",
+    "pos": "нареч."
+   },
+   "zahlen": {
+    "ru": "платить",
+    "pos": "гл.",
+    "forms": "zahlte · hat gezahlt"
+   },
+   "zwei": {
+    "ru": "два",
+    "pos": "числ."
+   },
+   "zweihundert": {
+    "ru": "двести",
+    "pos": "числ."
+   },
+   "zwischen": {
+    "ru": "между",
+    "pos": "предл."
+   },
+   "Überholverbot": {
+    "ru": "запрет обгона",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Überholverbote"
+   },
+   "überfahren": {
+    "ru": "переезжать (линию)",
+    "pos": "гл.",
+    "forms": "überfuhr · hat überfahren"
+   },
+   "überholen": {
+    "ru": "обгонять",
+    "pos": "гл.",
+    "forms": "überholte · hat überholt"
+   }
+  }
+ }
+}
