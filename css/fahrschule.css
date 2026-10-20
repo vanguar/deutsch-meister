@@ -292,3 +292,17 @@ html[dir="rtl"] .fs-tr { text-align: right; }
   .fs-light circle { transition: none; }
   .fs-lines > .fs-line, .fs-car, .fs-hint-path, .fs-badge, .fs-w, .fs-opt { transition: none; }
 }
+
+/* Ночь, туман, дикие животные (тема 7) */
+.fs-night { fill: #070b18; opacity: .62; }
+.fs-beam { fill: #ffe9a3; opacity: 0; transition: opacity .25s ease; }
+.is-low .fs-beam-low, .is-high .fs-beam-high { opacity: .38; }
+.fs-rearfog { fill: #5a1a1a; }
+.is-fog .fs-rearfog { fill: #ff2a2a; filter: drop-shadow(0 0 3px #ff2a2a); }
+.fs-horn { fill: none; stroke: #ffe9a3; stroke-width: 1.6; stroke-linecap: round; opacity: 0; }
+.is-horn .fs-horn { opacity: 1; }
+.fs-deer-ico { font-size: 20px; }
+.fs-fog { pointer-events: none; }
+.fs-lab-fog { fill: #1d2733; }
+.fs-bracket-fog { stroke: #1d2733; }
+@media (prefers-reduced-motion: reduce) { .fs-beam { transition: none; } }

@@ -74,7 +74,8 @@ PLURAL = {'uk': ('мн.:', 'мн. немає'), 'ar': ('الجمع:', 'لا جم
 
 KINDS = ('theory', 'dialog', 'junction', 'road')
 PREFIX = {'theory': 't', 'dialog': 'p', 'junction': 'k', 'road': 'r'}   # t-01, p-01, k-01, r-03
-ROAD_TYPES = ('stop', 'gap', 'side', 'overtake', 'zipper', 'parkspot', 'parallel', 'rightturn', 'zebracross', 'bus')
+ROAD_TYPES = ('stop', 'gap', 'side', 'overtake', 'zipper', 'parkspot', 'parallel', 'rightturn', 'zebracross', 'bus',
+              'fog', 'highbeam', 'wild')
 NUMERIC_ROAD = ('stop', 'gap', 'side')        # ответ — метры
 HAZARDS = ('ball', 'deer')
 # Боковой интервал при обгоне пешеходов и велосипедистов (§ 5 Abs. 4 StVO, с 2020)
@@ -83,6 +84,9 @@ SIDE_GAP = {'innerorts': 1.5, 'außerorts': 2}
 # «зебра» — 5 м, там нельзя даже остановиться (Abs. 1), остановка автобуса —
 # 15 м от знака 224 (Abs. 3 Nr. 4)
 PARK_LIMIT = {'crossing': 5, 'zebra': 5, 'bus': 15}
+# Туман: при видимости меньше 50 м — не быстрее 50 км/ч (§ 3 Abs. 1 StVO),
+# задний противотуманный фонарь — только тогда (§ 17 Abs. 3 StVO)
+FOG_SIGHT = 50
 CARS = ('blue', 'red', 'green', 'yellow')
 APPROACH = ('S', 'W', 'N', 'E')
 TURNS = ('straight', 'left', 'right')
@@ -317,6 +321,20 @@ def road_answer(sc):
         if sc.get('state') not in ('stopped', 'approaching'):
             return 'state — stopped или approaching'
         return {'answer': 'walk' if sc['state'] == 'stopped' else 'stay'}
+    if t == 'fog':
+        d = sc.get('sight')
+        if not isinstance(d, int) or not 10 <= d <= 200:
+            return f'sight — видимость в метрах (10–200), а не {d!r}'
+        return {'answer': 'on', 'limit': FOG_SIGHT} if d < FOG_SIGHT else {'answer': 'off'}
+    if t == 'highbeam':
+        # дальний свет: переключиться на ближний, если кто-то едет навстречу
+        # или впереди близко (§ 17 Abs. 2 StVO)
+        if sc.get('who') not in ('oncoming', 'ahead', 'none'):
+            return 'who — oncoming, ahead или none'
+        return {'answer': 'high' if sc['who'] == 'none' else 'dim'}
+    if t == 'wild':
+        # животное на дороге: ближний свет, сигнал, тормоз — не уходить в сторону
+        return {'answer': 'brake'}
     v = sc.get('v')
     if not isinstance(v, int) or v % 10 or not 10 <= v <= 200:
         return f'скорость v — целое кратное 10, а не {v!r}'
@@ -600,7 +618,7 @@ def main():
                     if sc['type'] == 'stop':
                         scene['hazard'] = sc['hazard']
                         scene['emergency'] = bool(sc.get('emergency'))
-                    for k in ('where', 'line', 'oncoming', 'sign', 'near', 'dist', 'who', 'ped', 'state'):
+                    for k in ('where', 'line', 'oncoming', 'sign', 'near', 'dist', 'who', 'ped', 'state', 'sight'):
                         if k in sc:
                             scene[k] = sc[k]
                     out[lang].append(scene)

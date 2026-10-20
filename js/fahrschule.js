@@ -1026,6 +1026,8 @@ const Fahrschule = (() => {
 
   const LANE_UP = 53;       // встречная / левая полоса
   const LANE_DOWN = 79;     // наша / правая полоса
+  const FOG_X = 80;         // нос машины в тумане в конце сцены
+  const FOG_S = 1.6;        // туман: px на метр (столбики через 50 м = 80 px)
 
   function roadOptions(sc) {
     return sc.options.map(o => typeof o === 'object'
@@ -1131,6 +1133,49 @@ const Fahrschule = (() => {
         ], dur: 3600, snap: 1, line: 'dashed', curb: true, stopSign: 246
       };
     },
+    // Ночь, загородная дорога, дальний свет: встречная машина или машина
+    // близко впереди — переключаемся на ближний; никого — дальний остаётся
+    highbeam(sc) {
+      const dim = sc.answer === 'dim';
+      const me = { id: 'me', kind: 'car', fill: CAR.blue.fill, lights: true, keys: dim
+        ? [{ t: 0, x: 30, y: LANE_DOWN, l: 'high' }, { t: 0.3, x: 90, y: LANE_DOWN, l: 'low' }, { t: 1, x: 190, y: LANE_DOWN, l: 'low' }]
+        : [{ t: 0, x: 30, y: LANE_DOWN, l: 'high' }, { t: 1, x: 230, y: LANE_DOWN, l: 'high' }] };
+      const actors = [me];
+      if (sc.who === 'oncoming') {
+        actors.push({ id: 'oncoming', kind: 'car', dir: -1, fill: CAR.red.fill, lights: true,
+          keys: [{ t: 0, x: 360, y: LANE_UP, l: 'low' }, { t: 1, x: -20, y: LANE_UP, l: 'low' }] });
+      }
+      if (sc.who === 'ahead') {
+        actors.unshift({ id: 'ahead', kind: 'car', fill: CAR.yellow.fill, lights: true,
+          keys: [{ t: 0, x: 150, y: LANE_DOWN, l: 'low' }, { t: 1, x: 260, y: LANE_DOWN, l: 'low' }] });
+      }
+      return { actors, dur: 3800, snap: 0.6, line: 'dashed', night: true };
+    },
+    // Туман: столбики через 50 м, дальше видимости — белая пелена. Меньше
+    // 50 м — включаем задний противотуманный фонарь и едем не быстрее 50
+    fog(sc) {
+      const on = sc.answer === 'on';
+      return {
+        actors: [{ id: 'me', kind: 'car', fill: CAR.blue.fill, lights: true, keys: [
+          { t: 0, x: 24, y: LANE_DOWN, l: 'low' }, { t: 0.35, x: 56, y: LANE_DOWN, l: 'low', f: on },
+          { t: 1, x: FOG_X, y: LANE_DOWN, l: 'low', f: on }] }],
+        dur: 3000, snap: 1, line: 'dashed', fog: { S: FOG_S }
+      };
+    },
+    // Косуля ночью: ближний свет, сигнал, торможение — по прямой, без
+    // манёвра; животное уходит с дороги
+    wild() {
+      return {
+        actors: [
+          { id: 'deer', kind: 'deer', keys: [{ t: 0, x: 236, y: 72 }, { t: 0.55, x: 236, y: 72 }, { t: 1, x: 246, y: 24 }] },
+          { id: 'me', kind: 'car', fill: CAR.blue.fill, lights: true, keys: [
+            { t: 0, x: 30, y: LANE_DOWN, l: 'high' }, { t: 0.2, x: 80, y: LANE_DOWN, l: 'low', h: true },
+            { t: 0.4, x: 120, y: LANE_DOWN, l: 'low', br: true, h: true }, { t: 0.62, x: 158, y: LANE_DOWN, l: 'low', br: true },
+            { t: 1, x: 160, y: LANE_DOWN, l: 'low', br: true }] }
+        ],
+        dur: 4200, snap: 1, line: 'dashed', night: true
+      };
+    },
     zipper() {
       return {
         actors: [
@@ -1152,7 +1197,8 @@ const Fahrschule = (() => {
       const a = keys[i - 1], b = keys[i];
       if (t <= b.t) {
         const k = (t - a.t) / ((b.t - a.t) || 1);
-        return { x: a.x + (b.x - a.x) * k, y: a.y + (b.y - a.y) * k, r: (a.r || 0) + ((b.r || 0) - (a.r || 0)) * k, b: a.b };
+        return { x: a.x + (b.x - a.x) * k, y: a.y + (b.y - a.y) * k, r: (a.r || 0) + ((b.r || 0) - (a.r || 0)) * k,
+          b: a.b, l: a.l, f: a.f, br: a.br, h: a.h };
       }
     }
     return keys[keys.length - 1];
@@ -1167,8 +1213,17 @@ const Fahrschule = (() => {
     return b ? ' is-blink-' + b : '';
   }
 
+  // Свет и звук машины в кадре: l — фары ('low' ближний / 'high' дальний),
+  // f — задний противотуманный фонарь, br — тормоз, h — звуковой сигнал
+  const STATES = { 'is-low': k => k.l === 'low', 'is-high': k => k.l === 'high', 'is-fog': k => !!k.f,
+    'is-braking': k => !!k.br, 'is-horn': k => !!k.h };
+
+  function stateCls(k) {
+    return Object.keys(STATES).filter(c => STATES[c](k)).map(c => ' ' + c).join('');
+  }
+
   function actorHtml(a, k) {
-    const cls = `fs-actor${blinkCls(k.b)}`;
+    const cls = `fs-actor${blinkCls(k.b)}${stateCls(k)}`;
     const tr = actorTransform(a, k);
     if (a.kind === 'truck') {
       return `<g class="${cls} fs-truck" data-actor="${a.id}" transform="${tr}">
@@ -1187,13 +1242,23 @@ const Fahrschule = (() => {
         <circle cx="0" cy="-7" r="3.2" class="fs-ped-head"/>
         <path d="M0 -4 V4 M-3.5 0 H3.5 M0 4 L-3 10 M0 4 L3 10" class="fs-ped-body"/></g>`;
     }
+    if (a.kind === 'deer') {
+      return `<g class="${cls} fs-deer" data-actor="${a.id}" transform="${tr}"><text x="-11" y="7" class="fs-deer-ico">🦌</text></g>`;
+    }
     if (a.kind === 'bike') {
       return `<g class="${cls} fs-bike" data-actor="${a.id}" transform="${tr}">
         <circle cx="-15" cy="0" r="4.5" class="fs-wheel"/><circle cx="-2" cy="0" r="4.5" class="fs-wheel"/>
         <path d="M-15 0 L-9 -6 L-2 0 M-9 -6 L-6 -9" class="fs-frame"/><circle cx="-8" cy="-11" r="2.6" class="fs-rider"/></g>`;
     }
-    return `<g class="${cls}" data-actor="${a.id}" transform="${tr}">
-      <rect x="-28" y="-9" width="28" height="18" rx="5" fill="${a.fill}" class="fs-car-shell"/>
+    // фары: конус перед носом (ближний короче), сзади тормоз и «противотуманка»
+    const lights = a.lights ? `<path class="fs-beam fs-beam-low" d="M0 -6 L64 -15 L64 15 L0 6 Z"/>
+      <path class="fs-beam fs-beam-high" d="M0 -6 L170 -30 L170 30 L0 6 Z"/>
+      <path class="fs-horn" d="M5 -7 Q11 0 5 7 M10 -11 Q19 0 10 11"/>` : '';
+    const rear = a.lights ? `<rect class="fs-brake" x="-29.5" y="-8" width="2.5" height="4" rx="1"/>
+      <rect class="fs-brake" x="-29.5" y="4" width="2.5" height="4" rx="1"/>
+      <rect class="fs-rearfog" x="-30" y="-1.5" width="2.5" height="3" rx="1"/>` : '';
+    return `<g class="${cls}" data-actor="${a.id}" transform="${tr}">${lights}
+      <rect x="-28" y="-9" width="28" height="18" rx="5" fill="${a.fill}" class="fs-car-shell"/>${rear}
       <rect class="fs-glass" x="-10" y="-7" width="6" height="14" rx="2"/>
       <rect class="fs-glass" x="-25" y="-6" width="4" height="12" rx="1.5"/>
       <circle class="fs-blink fs-blink-l" cx="-2" cy="-8.5" r="2.4"/><circle class="fs-blink fs-blink-l" cx="-26" cy="-8.5" r="2.4"/>
@@ -1218,6 +1283,7 @@ const Fahrschule = (() => {
       + (plan.zebraX ? [43, 51, 59, 67, 75, 83].map(y => `<rect class="fs-zebra" x="${plan.zebraX}" y="${y}" width="26" height="4.5"/>`).join('') : '')
       + (plan.stopSign && unit.signs.z224 ? `<image href="${esc(unit.signs.z224.src)}" x="${plan.stopSign}" y="104" width="16" height="16"/>` : '');
     const park = plan.park ? parkHtml(sc, plan.park, final) : '';
+    const night = plan.night ? `<rect class="fs-night" x="0" y="0" width="${ROAD_W}" height="130"/>` : '';
     const gap = plan.gapLabel ? `<g class="fs-lab${final ? ' is-on' : ''}">
         <path class="fs-bracket" d="M182 60 H192 M187 60 V75 M182 75 H192"/><path class="fs-leader" d="M192 68 H232 V104"/>
         <text class="fs-lab-text" x="232" y="117">${String(sc.answer).replace('.', ',')} m</text></g>` : '';
@@ -1225,10 +1291,35 @@ const Fahrschule = (() => {
       <rect class="fs-grass" x="0" y="0" width="${ROAD_W}" height="130"/>
       <rect class="fs-road" x="0" y="40" width="${ROAD_W}" height="52"/>
       <path class="fs-mark${solid ? ' is-solid' : ''}" d="M0 66 H${plan.laneEnds ? 222 : ROAD_W}"/>
-      ${curb}${ends}${sign}${park}
+      ${curb}${ends}${sign}${park}${night}${plan.fog ? fogPosts(plan.fog) : ''}
       ${plan.actors.map(a => actorHtml(a, keyAt(a.keys, t))).join('')}
-      ${gap}
+      ${plan.fog ? fogHtml(sc, plan.fog, final) : ''}${gap}
     </svg>`;
+  }
+
+  // Столбики через 50 м от носа машины — по ним водитель оценивает видимость
+  function fogPosts(f) {
+    let out = '';
+    for (let x = FOG_X + 50 * f.S; x <= ROAD_W; x += 50 * f.S) {
+      out += `<g transform="translate(${x.toFixed(1)} 26)"><rect class="fs-post" x="-2" y="0" width="4" height="12" rx="1"/><rect class="fs-post-band" x="-2" y="3" width="4" height="3"/></g>`;
+    }
+    return out;
+  }
+
+  // Пелена тумана: у машины почти прозрачная, на границе видимости — сплошная;
+  // после ответа — скобка «N m» видимости и, если меньше 50 м, «max. 50 km/h»
+  function fogHtml(sc, f, final) {
+    const x2 = Math.min(FOG_X + sc.sight * f.S, ROAD_W - 2);
+    const id = 'fsFog' + sc.sight;
+    return `<defs><linearGradient id="${id}" gradientUnits="userSpaceOnUse" x1="${FOG_X - 30}" y1="0" x2="${x2.toFixed(1)}" y2="0">
+        <stop offset="0" stop-color="#e9edf1" stop-opacity=".12"/><stop offset="1" stop-color="#e9edf1" stop-opacity=".96"/>
+      </linearGradient></defs>
+      <rect x="0" y="0" width="${ROAD_W}" height="130" fill="url(#${id})" class="fs-fog"/>
+      <g class="fs-lab${final ? ' is-on' : ''}">
+        <path class="fs-bracket fs-bracket-fog" d="M${FOG_X} 98 V104 H${x2.toFixed(1)} V98"/>
+        <text class="fs-lab-text fs-lab-fog" x="${((FOG_X + x2) / 2).toFixed(1)}" y="118">${sc.sight} m</text>
+        ${sc.limit ? `<text class="fs-lab-text fs-lab-fog" x="${FOG_X - 40}" y="118">max. 50 km/h</text>` : ''}
+      </g>`;
   }
 
   // Перекрёсток / «зебра» / остановка, запретная зона и расстояние до машины
@@ -1266,6 +1357,7 @@ const Fahrschule = (() => {
         g.setAttribute('transform', actorTransform(a, k));
         g.classList.toggle('is-blink-l', k.b === 'l' || k.b === 'both');
         g.classList.toggle('is-blink-r', k.b === 'r' || k.b === 'both');
+        Object.keys(STATES).forEach(c => g.classList.toggle(c, STATES[c](k)));
       });
       if (t < 1) { anims[0] = requestAnimationFrame(tick); return; }
       anims[0] = null;

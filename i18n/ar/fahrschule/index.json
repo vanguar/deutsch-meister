@@ -73,7 +73,8 @@
    "titleTr": "الأضواء والليل والطقس",
    "units": [
     "t-07",
-    "p-07"
+    "p-07",
+    "r-07"
    ]
   }
  ],
@@ -257,6 +258,15 @@
    "title": "Nachtfahrt im Herbst",
    "titleTr": "قيادة ليلية في الخريف",
    "count": 15
+  },
+  {
+   "id": "r-07",
+   "kind": "road",
+   "emoji": "🌫️",
+   "level": "A2–B1",
+   "title": "Nachts und im Nebel",
+   "titleTr": "في الليل وفي الضباب",
+   "count": 6
   }
  ]
 }

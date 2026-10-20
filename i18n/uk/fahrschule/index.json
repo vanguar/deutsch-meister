@@ -73,7 +73,8 @@
    "titleTr": "Світло, ніч і погода",
    "units": [
     "t-07",
-    "p-07"
+    "p-07",
+    "r-07"
    ]
   }
  ],
@@ -257,6 +258,15 @@
    "title": "Nachtfahrt im Herbst",
    "titleTr": "Нічна поїздка восени",
    "count": 15
+  },
+  {
+   "id": "r-07",
+   "kind": "road",
+   "emoji": "🌫️",
+   "level": "A2–B1",
+   "title": "Nachts und im Nebel",
+   "titleTr": "Уночі й у тумані",
+   "count": 6
   }
  ]
 }
