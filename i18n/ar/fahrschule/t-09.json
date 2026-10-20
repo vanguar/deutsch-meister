@@ -1,0 +1,655 @@
+{
+ "id": "t-09",
+ "kind": "theory",
+ "emoji": "🔧",
+ "level": "B1",
+ "title": "Technik und Fahrzeugkontrolle",
+ "titleTr": "التقنية وفحص السيارة",
+ "intro": "ما الذي تفحصه قبل الرحلة: الإطارات والأضواء والزيت والسوائل؛ وما الذي يجب أن يكون في السيارة؛ وماذا تعني لمبات التحذير وكم مرة يلزم الفحص الفني (HU).",
+ "sections": [
+  {
+   "title": "الإطارات",
+   "lines": [
+    {
+     "de": "Das Reifenprofil muss mindestens 1,6 Millimeter tief sein.",
+     "tr": "يجب ألا يقل عمق نقش الإطار عن 1,6 مليمتر."
+    },
+    {
+     "de": "Sicherer sind 3 Millimeter im Sommer und 4 Millimeter im Winter.",
+     "tr": "الأكثر أمانًا 3 مليمترات في الصيف و4 مليمترات في الشتاء."
+    },
+    {
+     "de": "Prüfen Sie den Reifendruck alle zwei Wochen und vor langen Fahrten.",
+     "tr": "افحص ضغط الإطارات كل أسبوعين وقبل الرحلات الطويلة."
+    }
+   ]
+  },
+  {
+   "title": "الأضواء والزيت والسوائل",
+   "lines": [
+    {
+     "de": "Vor der Fahrt kontrollieren Sie Licht, Blinker und Bremslicht.",
+     "tr": "قبل الرحلة تفحص الأضواء والإشارات الجانبية وأضواء الفرامل."
+    },
+    {
+     "de": "Den Ölstand prüfen Sie mit dem Ölmessstab, bei kaltem Motor und auf ebener Straße.",
+     "tr": "تفحص مستوى الزيت بعصا القياس والمحرك بارد والسيارة على طريق مستوٍ."
+    },
+    {
+     "de": "Kontrollieren Sie auch Kühlwasser, Bremsflüssigkeit und Scheibenwaschwasser.",
+     "tr": "افحص أيضًا ماء التبريد وسائل الفرامل وماء غسل الزجاج."
+    },
+    {
+     "de": "Im Winter braucht das Scheibenwaschwasser Frostschutz.",
+     "tr": "في الشتاء يحتاج ماء غسل الزجاج إلى مانع تجمد."
+    }
+   ]
+  },
+  {
+   "title": "لمبات التحذير",
+   "lines": [
+    {
+     "de": "Leuchtet eine rote Kontrollleuchte, halten Sie sofort an einer sicheren Stelle an.",
+     "tr": "إذا أضاءت لمبة تحذير حمراء فتوقف فورًا في مكان آمن.",
+     "o": {
+      "an": "an>anhalten",
+      "halten": "halten>anhalten"
+     }
+    },
+    {
+     "de": "Eine gelbe Kontrollleuchte bedeutet: Bald in die Werkstatt fahren.",
+     "tr": "لمبة التحذير الصفراء تعني: اذهب قريبًا إلى الورشة."
+    },
+    {
+     "de": "Rot sind zum Beispiel Öldruck, Bremsanlage und Batterie.",
+     "tr": "من اللمبات الحمراء مثلًا: ضغط الزيت والفرامل والبطارية."
+    }
+   ]
+  },
+  {
+   "title": "إلزامي في السيارة",
+   "lines": [
+    {
+     "de": "Im Auto müssen ein Warndreieck, ein Verbandkasten und eine Warnweste sein.",
+     "tr": "يجب أن يكون في السيارة مثلث تحذير وحقيبة إسعافات أولية وسترة عاكسة."
+    },
+    {
+     "de": "Die Warnweste liegt am besten griffbereit neben dem Fahrersitz.",
+     "tr": "من الأفضل أن تكون السترة العاكسة في متناول اليد بجانب مقعد السائق."
+    },
+    {
+     "de": "Ladung im Auto müssen Sie sichern, damit sie beim Bremsen nicht nach vorne fliegt.",
+     "tr": "يجب أن تثبّت الحمولة في السيارة كي لا تطير إلى الأمام عند الفرملة."
+    }
+   ]
+  },
+  {
+   "title": "الفحص الفني",
+   "lines": [
+    {
+     "de": "Alle zwei Jahre muss das Auto zur Hauptuntersuchung, kurz HU.",
+     "tr": "كل سنتين يجب أن تخضع السيارة للفحص الفني الرئيسي، واختصاره HU."
+    },
+    {
+     "de": "Ein neues Auto muss erst nach drei Jahren zur HU.",
+     "tr": "السيارة الجديدة تخضع للفحص لأول مرة بعد ثلاث سنوات فقط."
+    },
+    {
+     "de": "Die Plakette auf dem hinteren Kennzeichen zeigt, wann die nächste HU fällig ist.",
+     "tr": "الملصق على اللوحة الخلفية يبيّن موعد الفحص التالي."
+    }
+   ]
+  }
+ ],
+ "quiz": [],
+ "signs": {},
+ "gloss": {
+  "w": {
+   "alle": "alle",
+   "am": "an",
+   "an>anhalten": "anhalten",
+   "auch": "auch",
+   "auf": "auf",
+   "auto": "Auto",
+   "bald": "bald",
+   "batterie": "Batterie",
+   "bedeutet": "bedeuten",
+   "bei": "bei",
+   "beim": "bei",
+   "beispiel": "Beispiel",
+   "besten": "gut",
+   "blinker": "Blinker",
+   "braucht": "brauchen",
+   "bremsanlage": "Bremsanlage",
+   "bremsen": "bremsen",
+   "bremsflüssigkeit": "Bremsflüssigkeit",
+   "bremslicht": "Bremslicht",
+   "damit": "damit",
+   "das": "der/die/das",
+   "dem": "der/die/das",
+   "den": "der/die/das",
+   "der": "der/die/das",
+   "die": "der/die/das",
+   "drei": "drei",
+   "ebener": "eben",
+   "ein": "ein/eine",
+   "eine": "ein/eine",
+   "einer": "ein/eine",
+   "erst": "erst",
+   "fahren": "fahren",
+   "fahrersitz": "Fahrersitz",
+   "fahrt": "Fahrt",
+   "fahrten": "Fahrt",
+   "fahrzeugkontrolle": "Fahrzeugkontrolle",
+   "fliegt": "fliegen",
+   "frostschutz": "Frostschutz",
+   "fällig": "fällig",
+   "gelbe": "gelb",
+   "griffbereit": "griffbereit",
+   "halten>anhalten": "anhalten",
+   "hauptuntersuchung": "Hauptuntersuchung",
+   "hinteren": "hinterer",
+   "hu": "HU",
+   "im": "in",
+   "in": "in",
+   "ist": "sein",
+   "jahre": "Jahr",
+   "jahren": "Jahr",
+   "kaltem": "kalt",
+   "kennzeichen": "Kennzeichen",
+   "kontrollieren": "kontrollieren",
+   "kontrollleuchte": "Kontrollleuchte",
+   "kurz": "kurz",
+   "kühlwasser": "Kühlwasser",
+   "ladung": "Ladung",
+   "langen": "lang",
+   "leuchtet": "leuchten",
+   "licht": "Licht",
+   "liegt": "liegen",
+   "millimeter": "Millimeter",
+   "mindestens": "mindestens",
+   "mit": "mit",
+   "motor": "Motor",
+   "muss": "müssen",
+   "müssen": "müssen",
+   "nach": "nach",
+   "neben": "neben",
+   "neues": "neu",
+   "nicht": "nicht",
+   "nächste": "nächste",
+   "plakette": "Plakette",
+   "prüfen": "prüfen",
+   "reifendruck": "Reifendruck",
+   "reifenprofil": "Reifenprofil",
+   "rot": "rot",
+   "rote": "rot",
+   "scheibenwaschwasser": "Scheibenwaschwasser",
+   "sein": "sein",
+   "sicheren": "sicher",
+   "sicherer": "sicher",
+   "sichern": "sichern",
+   "sie": "Sie",
+   "sind": "sein",
+   "sofort": "sofort",
+   "sommer": "Sommer",
+   "stelle": "Stelle",
+   "straße": "Straße",
+   "technik": "Technik",
+   "tief": "tief",
+   "und": "und",
+   "verbandkasten": "Verbandkasten",
+   "vor": "vor",
+   "vorne": "vorne",
+   "wann": "wann",
+   "warndreieck": "Warndreieck",
+   "warnweste": "Warnweste",
+   "werkstatt": "Werkstatt",
+   "winter": "Winter",
+   "wochen": "Woche",
+   "zeigt": "zeigen",
+   "zum": "zu",
+   "zur": "zu",
+   "zwei": "zwei",
+   "öldruck": "Öldruck",
+   "ölmessstab": "Ölmessstab",
+   "ölstand": "Ölstand"
+  },
+  "l": {
+   "Auto": {
+    "ru": "سيارة",
+    "pos": "اسم",
+    "decl": "das Auto · الجمع: die Autos"
+   },
+   "Batterie": {
+    "ru": "البطارية",
+    "pos": "اسم",
+    "decl": "die Batterie · الجمع: die Batterien"
+   },
+   "Beispiel": {
+    "ru": "مثال",
+    "pos": "اسم",
+    "note": "zum Beispiel — مثلًا",
+    "decl": "das Beispiel · الجمع: die Beispiele"
+   },
+   "Blinker": {
+    "ru": "إشارة الانعطاف",
+    "pos": "اسم",
+    "decl": "der Blinker · الجمع: die Blinker"
+   },
+   "Bremsanlage": {
+    "ru": "نظام الفرامل",
+    "pos": "اسم",
+    "decl": "die Bremsanlage · الجمع: die Bremsanlagen"
+   },
+   "Bremsflüssigkeit": {
+    "ru": "سائل الفرامل",
+    "pos": "اسم",
+    "decl": "die Bremsflüssigkeit · لا جمع له"
+   },
+   "Bremslicht": {
+    "ru": "ضوء الفرامل",
+    "pos": "اسم",
+    "decl": "das Bremslicht · الجمع: die Bremslichter"
+   },
+   "Fahrersitz": {
+    "ru": "مقعد السائق",
+    "pos": "اسم",
+    "decl": "der Fahrersitz · الجمع: die Fahrersitze"
+   },
+   "Fahrt": {
+    "ru": "رحلة، جولة بالسيارة",
+    "pos": "اسم",
+    "decl": "die Fahrt · الجمع: die Fahrten"
+   },
+   "Fahrzeugkontrolle": {
+    "ru": "فحص السيارة",
+    "pos": "اسم",
+    "decl": "die Fahrzeugkontrolle · الجمع: die Fahrzeugkontrollen"
+   },
+   "Frostschutz": {
+    "ru": "مانع التجمد",
+    "pos": "اسم",
+    "decl": "der Frostschutz · لا جمع له"
+   },
+   "HU": {
+    "ru": "الفحص الفني (Hauptuntersuchung)",
+    "pos": "اسم",
+    "decl": "die HU · لا جمع له"
+   },
+   "Hauptuntersuchung": {
+    "ru": "الفحص الفني الرئيسي",
+    "pos": "اسم",
+    "note": "في الكلام اليومي: «zum TÜV»",
+    "decl": "die Hauptuntersuchung · الجمع: die Hauptuntersuchungen"
+   },
+   "Jahr": {
+    "ru": "سنة",
+    "pos": "اسم",
+    "decl": "das Jahr · الجمع: die Jahre"
+   },
+   "Kennzeichen": {
+    "ru": "لوحة الأرقام",
+    "pos": "اسم",
+    "decl": "das Kennzeichen · الجمع: die Kennzeichen"
+   },
+   "Kontrollleuchte": {
+    "ru": "لمبة تحذير (في لوحة العدادات)",
+    "pos": "اسم",
+    "decl": "die Kontrollleuchte · الجمع: die Kontrollleuchten"
+   },
+   "Kühlwasser": {
+    "ru": "ماء التبريد",
+    "pos": "اسم",
+    "decl": "das Kühlwasser · لا جمع له"
+   },
+   "Ladung": {
+    "ru": "الحمولة",
+    "pos": "اسم",
+    "decl": "die Ladung · الجمع: die Ladungen"
+   },
+   "Licht": {
+    "ru": "ضوء",
+    "pos": "اسم",
+    "decl": "das Licht · الجمع: die Lichter"
+   },
+   "Millimeter": {
+    "ru": "مليمتر",
+    "pos": "اسم",
+    "decl": "der Millimeter · الجمع: die Millimeter"
+   },
+   "Motor": {
+    "ru": "محرك",
+    "pos": "اسم",
+    "decl": "der Motor · الجمع: die Motoren"
+   },
+   "Plakette": {
+    "ru": "ملصق (الفحص الفني)",
+    "pos": "اسم",
+    "decl": "die Plakette · الجمع: die Plaketten"
+   },
+   "Reifendruck": {
+    "ru": "ضغط الإطارات",
+    "pos": "اسم",
+    "decl": "der Reifendruck · لا جمع له"
+   },
+   "Reifenprofil": {
+    "ru": "نقش الإطار",
+    "pos": "اسم",
+    "note": "الحد الأدنى قانونًا 1,6 مم",
+    "decl": "das Reifenprofil · الجمع: die Reifenprofile"
+   },
+   "Scheibenwaschwasser": {
+    "ru": "ماء غسل الزجاج",
+    "pos": "اسم",
+    "decl": "das Scheibenwaschwasser · لا جمع له"
+   },
+   "Sie": {
+    "ru": "حضرتك (صيغة الاحترام)",
+    "pos": "ضمير",
+    "note": "Ihnen — لكم (حالة الجر): vor Ihnen — أمامك"
+   },
+   "Sommer": {
+    "ru": "الصيف",
+    "pos": "اسم",
+    "decl": "der Sommer · الجمع: die Sommer"
+   },
+   "Stelle": {
+    "ru": "مكان، موضع",
+    "pos": "اسم",
+    "decl": "die Stelle · الجمع: die Stellen"
+   },
+   "Straße": {
+    "ru": "شارع، طريق",
+    "pos": "اسم",
+    "decl": "die Straße · الجمع: die Straßen"
+   },
+   "Technik": {
+    "ru": "التقنية",
+    "pos": "اسم",
+    "decl": "die Technik · لا جمع له"
+   },
+   "Verbandkasten": {
+    "ru": "حقيبة الإسعافات الأولية",
+    "pos": "اسم",
+    "decl": "der Verbandkasten · الجمع: die Verbandkästen"
+   },
+   "Warndreieck": {
+    "ru": "مثلث التحذير",
+    "pos": "اسم",
+    "decl": "das Warndreieck · الجمع: die Warndreiecke"
+   },
+   "Warnweste": {
+    "ru": "سترة عاكسة",
+    "pos": "اسم",
+    "decl": "die Warnweste · الجمع: die Warnwesten"
+   },
+   "Werkstatt": {
+    "ru": "ورشة تصليح",
+    "pos": "اسم",
+    "decl": "die Werkstatt · الجمع: die Werkstätten"
+   },
+   "Winter": {
+    "ru": "الشتاء",
+    "pos": "اسم",
+    "decl": "der Winter · الجمع: die Winter"
+   },
+   "Woche": {
+    "ru": "أسبوع",
+    "pos": "اسم",
+    "decl": "die Woche · الجمع: die Wochen"
+   },
+   "alle": {
+    "ru": "كل؛ كل شيء",
+    "pos": "ضمير"
+   },
+   "an": {
+    "ru": "عند، على",
+    "pos": "حرف جر",
+    "note": "am = an dem؛ an der Kreuzung — عند التقاطع"
+   },
+   "anhalten": {
+    "ru": "يتوقف",
+    "pos": "فعل",
+    "forms": "hielt an · hat angehalten"
+   },
+   "auch": {
+    "ru": "أيضًا؛ حتى (auch wenn)",
+    "pos": "ظرف"
+   },
+   "auf": {
+    "ru": "على",
+    "pos": "حرف جر",
+    "note": "auf der Straße — على الطريق؛ achten auf — ينتبه لـ"
+   },
+   "bald": {
+    "ru": "قريبًا",
+    "pos": "ظرف"
+   },
+   "bedeuten": {
+    "ru": "يعني",
+    "pos": "فعل",
+    "forms": "bedeutete · hat bedeutet"
+   },
+   "bei": {
+    "ru": "عند",
+    "pos": "حرف جر",
+    "note": "beim = bei dem: beim Fahren — أثناء القيادة؛ bei Rot — عند الأحمر"
+   },
+   "brauchen": {
+    "ru": "يحتاج",
+    "pos": "فعل",
+    "forms": "brauchte · hat gebraucht"
+   },
+   "bremsen": {
+    "ru": "يكبح، يفرمل",
+    "pos": "فعل",
+    "forms": "bremste · hat gebremst"
+   },
+   "damit": {
+    "ru": "لكي",
+    "pos": "أداة ربط"
+   },
+   "der/die/das": {
+    "ru": "أداة التعريف",
+    "pos": "أداة تعريف",
+    "note": "der للمذكر، die للمؤنث والجمع، das للمحايد؛ den للمذكر في حالة النصب، dem للمذكر والمحايد في حالة الجر؛ وdas تعني أيضًا «هذا»"
+   },
+   "drei": {
+    "ru": "ثلاثة",
+    "pos": "عدد"
+   },
+   "eben": {
+    "ru": "مستوٍ",
+    "pos": "صفة"
+   },
+   "ein/eine": {
+    "ru": "أداة النكرة؛ واحد",
+    "pos": "أداة تعريف",
+    "note": "an einer Kreuzung — عند تقاطعٍ ما"
+   },
+   "erst": {
+    "ru": "لا … إلا (ليس قبل)",
+    "pos": "ظرف"
+   },
+   "fahren": {
+    "ru": "يسير بالسيارة؛ يقود",
+    "pos": "فعل",
+    "forms": "fuhr · ist gefahren"
+   },
+   "fliegen": {
+    "ru": "يطير",
+    "pos": "فعل",
+    "forms": "flog · ist geflogen"
+   },
+   "fällig": {
+    "ru": "مستحق، حان موعده",
+    "pos": "صفة"
+   },
+   "gelb": {
+    "ru": "أصفر",
+    "pos": "صفة",
+    "note": "Gelb (بحرف كبير) — الإشارة الصفراء"
+   },
+   "griffbereit": {
+    "ru": "في متناول اليد",
+    "pos": "صفة"
+   },
+   "gut": {
+    "ru": "جيد",
+    "pos": "صفة",
+    "note": "am besten — من الأفضل",
+    "forms": "gut · besser · am besten"
+   },
+   "hinterer": {
+    "ru": "خلفي",
+    "pos": "صفة"
+   },
+   "in": {
+    "ru": "في",
+    "pos": "حرف جر",
+    "note": "im = in dem: im Bereich — في المنطقة"
+   },
+   "kalt": {
+    "ru": "بارد",
+    "pos": "صفة"
+   },
+   "kontrollieren": {
+    "ru": "يفتّش، يراقب",
+    "pos": "فعل",
+    "forms": "kontrollierte · hat kontrolliert"
+   },
+   "kurz": {
+    "ru": "قصير؛ لوقت قصير",
+    "pos": "صفة"
+   },
+   "lang": {
+    "ru": "طويل",
+    "pos": "صفة",
+    "note": "Wie lang …؟ — كم طول …؟",
+    "forms": "lang · länger · am längsten"
+   },
+   "leuchten": {
+    "ru": "يضيء",
+    "pos": "فعل",
+    "forms": "leuchtete · hat geleuchtet"
+   },
+   "liegen": {
+    "ru": "يقع",
+    "pos": "فعل",
+    "forms": "lag · hat gelegen"
+   },
+   "mindestens": {
+    "ru": "على الأقل",
+    "pos": "ظرف"
+   },
+   "mit": {
+    "ru": "مع",
+    "pos": "حرف جر"
+   },
+   "müssen": {
+    "ru": "يجب عليه",
+    "pos": "فعل",
+    "forms": "musste · hat gemusst"
+   },
+   "nach": {
+    "ru": "بعد؛ إلى",
+    "pos": "حرف جر"
+   },
+   "neben": {
+    "ru": "بجانب",
+    "pos": "حرف جر"
+   },
+   "neu": {
+    "ru": "جديد",
+    "pos": "صفة"
+   },
+   "nicht": {
+    "ru": "لا، ليس",
+    "pos": "أداة"
+   },
+   "nächste": {
+    "ru": "القادم، الأقرب",
+    "pos": "صفة"
+   },
+   "prüfen": {
+    "ru": "يفحص",
+    "pos": "فعل",
+    "forms": "prüfte · hat geprüft"
+   },
+   "rot": {
+    "ru": "أحمر",
+    "pos": "صفة",
+    "note": "Rot (بحرف كبير) — الإشارة الحمراء: bei Rot — عند الأحمر"
+   },
+   "sein": {
+    "ru": "يكون",
+    "pos": "فعل",
+    "forms": "war · ist gewesen"
+   },
+   "sicher": {
+    "ru": "آمن؛ متأكد",
+    "pos": "صفة"
+   },
+   "sichern": {
+    "ru": "يؤمّن",
+    "pos": "فعل",
+    "note": "تأمين مكان الحادث: أضواء التحذير والسترة والمثلث",
+    "forms": "sicherte · hat gesichert"
+   },
+   "sofort": {
+    "ru": "فورًا",
+    "pos": "ظرف"
+   },
+   "tief": {
+    "ru": "عميق",
+    "pos": "صفة"
+   },
+   "und": {
+    "ru": "و",
+    "pos": "أداة ربط"
+   },
+   "vor": {
+    "ru": "قبل، أمام",
+    "pos": "حرف جر",
+    "note": "rechts vor links — اليمين قبل اليسار"
+   },
+   "vorne": {
+    "ru": "في الأمام",
+    "pos": "ظرف"
+   },
+   "wann": {
+    "ru": "متى",
+    "pos": "ظرف"
+   },
+   "zeigen": {
+    "ru": "يُظهر، يعرض",
+    "pos": "فعل",
+    "forms": "zeigte · hat gezeigt"
+   },
+   "zu": {
+    "ru": "إلى؛ لـ",
+    "pos": "حرف جر",
+    "note": "zum = zu dem، zur = zu der: Abstand zur Kreuzung — المسافة عن التقاطع"
+   },
+   "zwei": {
+    "ru": "اثنان",
+    "pos": "عدد"
+   },
+   "Öldruck": {
+    "ru": "ضغط الزيت",
+    "pos": "اسم",
+    "decl": "der Öldruck · لا جمع له"
+   },
+   "Ölmessstab": {
+    "ru": "عصا قياس الزيت",
+    "pos": "اسم",
+    "decl": "der Ölmessstab · الجمع: die Ölmessstäbe"
+   },
+   "Ölstand": {
+    "ru": "مستوى الزيت",
+    "pos": "اسم",
+    "decl": "der Ölstand · لا جمع له"
+   }
+  }
+ }
+}

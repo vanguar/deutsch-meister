@@ -87,6 +87,15 @@
     "p-08",
     "r-08"
    ]
+  },
+  {
+   "id": "technik",
+   "emoji": "🔧",
+   "title": "Technik und Fahrzeugkontrolle",
+   "titleTr": "التقنية وفحص السيارة",
+   "units": [
+    "t-09"
+   ]
   }
  ],
  "units": [
@@ -305,6 +314,15 @@
    "title": "Promille und Pausen",
    "titleTr": "نسبة الكحول والاستراحات",
    "count": 6
+  },
+  {
+   "id": "t-09",
+   "kind": "theory",
+   "emoji": "🔧",
+   "level": "B1",
+   "title": "Technik und Fahrzeugkontrolle",
+   "titleTr": "التقنية وفحص السيارة",
+   "count": 16
   }
  ]
 }

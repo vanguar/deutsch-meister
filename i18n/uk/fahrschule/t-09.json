@@ -1,0 +1,655 @@
+{
+ "id": "t-09",
+ "kind": "theory",
+ "emoji": "🔧",
+ "level": "B1",
+ "title": "Technik und Fahrzeugkontrolle",
+ "titleTr": "Техніка й перевірка машини",
+ "intro": "Що перевірити перед поїздкою: шини, світло, масло, рідини; що обов'язково має бути в машині; що означають контрольні лампи і як часто потрібен техогляд (HU).",
+ "sections": [
+  {
+   "title": "Шини",
+   "lines": [
+    {
+     "de": "Das Reifenprofil muss mindestens 1,6 Millimeter tief sein.",
+     "tr": "Глибина протектора має бути не менше 1,6 міліметра."
+    },
+    {
+     "de": "Sicherer sind 3 Millimeter im Sommer und 4 Millimeter im Winter.",
+     "tr": "Безпечніше 3 міліметри влітку й 4 міліметри взимку."
+    },
+    {
+     "de": "Prüfen Sie den Reifendruck alle zwei Wochen und vor langen Fahrten.",
+     "tr": "Перевіряйте тиск у шинах кожні два тижні й перед довгими поїздками."
+    }
+   ]
+  },
+  {
+   "title": "Світло, масло й рідини",
+   "lines": [
+    {
+     "de": "Vor der Fahrt kontrollieren Sie Licht, Blinker und Bremslicht.",
+     "tr": "Перед поїздкою ви перевіряєте фари, поворотники й стоп-сигнали."
+    },
+    {
+     "de": "Den Ölstand prüfen Sie mit dem Ölmessstab, bei kaltem Motor und auf ebener Straße.",
+     "tr": "Рівень масла перевіряють щупом, на холодному двигуні й на рівній дорозі."
+    },
+    {
+     "de": "Kontrollieren Sie auch Kühlwasser, Bremsflüssigkeit und Scheibenwaschwasser.",
+     "tr": "Перевіряйте також охолоджувальну рідину, гальмівну рідину й воду омивача."
+    },
+    {
+     "de": "Im Winter braucht das Scheibenwaschwasser Frostschutz.",
+     "tr": "Взимку у воду омивача потрібен антифриз."
+    }
+   ]
+  },
+  {
+   "title": "Контрольні лампи",
+   "lines": [
+    {
+     "de": "Leuchtet eine rote Kontrollleuchte, halten Sie sofort an einer sicheren Stelle an.",
+     "tr": "Якщо світиться червона контрольна лампа, одразу зупиніться в безпечному місці.",
+     "o": {
+      "an": "an>anhalten",
+      "halten": "halten>anhalten"
+     }
+    },
+    {
+     "de": "Eine gelbe Kontrollleuchte bedeutet: Bald in die Werkstatt fahren.",
+     "tr": "Жовта контрольна лампа означає: скоро треба до майстерні."
+    },
+    {
+     "de": "Rot sind zum Beispiel Öldruck, Bremsanlage und Batterie.",
+     "tr": "Червоні — наприклад, тиск масла, гальмо й акумулятор."
+    }
+   ]
+  },
+  {
+   "title": "Обов'язково в машині",
+   "lines": [
+    {
+     "de": "Im Auto müssen ein Warndreieck, ein Verbandkasten und eine Warnweste sein.",
+     "tr": "У машині мають бути знак аварійної зупинки, аптечка і світловідбивний жилет."
+    },
+    {
+     "de": "Die Warnweste liegt am besten griffbereit neben dem Fahrersitz.",
+     "tr": "Жилет краще тримати під рукою поруч із водійським сидінням."
+    },
+    {
+     "de": "Ladung im Auto müssen Sie sichern, damit sie beim Bremsen nicht nach vorne fliegt.",
+     "tr": "Вантаж у машині треба закріпити, щоб під час гальмування він не полетів уперед."
+    }
+   ]
+  },
+  {
+   "title": "Техогляд",
+   "lines": [
+    {
+     "de": "Alle zwei Jahre muss das Auto zur Hauptuntersuchung, kurz HU.",
+     "tr": "Кожні два роки машина має проходити техогляд, скорочено HU."
+    },
+    {
+     "de": "Ein neues Auto muss erst nach drei Jahren zur HU.",
+     "tr": "Нова машина вперше йде на HU лише через три роки."
+    },
+    {
+     "de": "Die Plakette auf dem hinteren Kennzeichen zeigt, wann die nächste HU fällig ist.",
+     "tr": "Наліпка на задньому номері показує, коли наступний техогляд."
+    }
+   ]
+  }
+ ],
+ "quiz": [],
+ "signs": {},
+ "gloss": {
+  "w": {
+   "alle": "alle",
+   "am": "an",
+   "an>anhalten": "anhalten",
+   "auch": "auch",
+   "auf": "auf",
+   "auto": "Auto",
+   "bald": "bald",
+   "batterie": "Batterie",
+   "bedeutet": "bedeuten",
+   "bei": "bei",
+   "beim": "bei",
+   "beispiel": "Beispiel",
+   "besten": "gut",
+   "blinker": "Blinker",
+   "braucht": "brauchen",
+   "bremsanlage": "Bremsanlage",
+   "bremsen": "bremsen",
+   "bremsflüssigkeit": "Bremsflüssigkeit",
+   "bremslicht": "Bremslicht",
+   "damit": "damit",
+   "das": "der/die/das",
+   "dem": "der/die/das",
+   "den": "der/die/das",
+   "der": "der/die/das",
+   "die": "der/die/das",
+   "drei": "drei",
+   "ebener": "eben",
+   "ein": "ein/eine",
+   "eine": "ein/eine",
+   "einer": "ein/eine",
+   "erst": "erst",
+   "fahren": "fahren",
+   "fahrersitz": "Fahrersitz",
+   "fahrt": "Fahrt",
+   "fahrten": "Fahrt",
+   "fahrzeugkontrolle": "Fahrzeugkontrolle",
+   "fliegt": "fliegen",
+   "frostschutz": "Frostschutz",
+   "fällig": "fällig",
+   "gelbe": "gelb",
+   "griffbereit": "griffbereit",
+   "halten>anhalten": "anhalten",
+   "hauptuntersuchung": "Hauptuntersuchung",
+   "hinteren": "hinterer",
+   "hu": "HU",
+   "im": "in",
+   "in": "in",
+   "ist": "sein",
+   "jahre": "Jahr",
+   "jahren": "Jahr",
+   "kaltem": "kalt",
+   "kennzeichen": "Kennzeichen",
+   "kontrollieren": "kontrollieren",
+   "kontrollleuchte": "Kontrollleuchte",
+   "kurz": "kurz",
+   "kühlwasser": "Kühlwasser",
+   "ladung": "Ladung",
+   "langen": "lang",
+   "leuchtet": "leuchten",
+   "licht": "Licht",
+   "liegt": "liegen",
+   "millimeter": "Millimeter",
+   "mindestens": "mindestens",
+   "mit": "mit",
+   "motor": "Motor",
+   "muss": "müssen",
+   "müssen": "müssen",
+   "nach": "nach",
+   "neben": "neben",
+   "neues": "neu",
+   "nicht": "nicht",
+   "nächste": "nächste",
+   "plakette": "Plakette",
+   "prüfen": "prüfen",
+   "reifendruck": "Reifendruck",
+   "reifenprofil": "Reifenprofil",
+   "rot": "rot",
+   "rote": "rot",
+   "scheibenwaschwasser": "Scheibenwaschwasser",
+   "sein": "sein",
+   "sicheren": "sicher",
+   "sicherer": "sicher",
+   "sichern": "sichern",
+   "sie": "Sie",
+   "sind": "sein",
+   "sofort": "sofort",
+   "sommer": "Sommer",
+   "stelle": "Stelle",
+   "straße": "Straße",
+   "technik": "Technik",
+   "tief": "tief",
+   "und": "und",
+   "verbandkasten": "Verbandkasten",
+   "vor": "vor",
+   "vorne": "vorne",
+   "wann": "wann",
+   "warndreieck": "Warndreieck",
+   "warnweste": "Warnweste",
+   "werkstatt": "Werkstatt",
+   "winter": "Winter",
+   "wochen": "Woche",
+   "zeigt": "zeigen",
+   "zum": "zu",
+   "zur": "zu",
+   "zwei": "zwei",
+   "öldruck": "Öldruck",
+   "ölmessstab": "Ölmessstab",
+   "ölstand": "Ölstand"
+  },
+  "l": {
+   "Auto": {
+    "ru": "машина, автомобіль",
+    "pos": "ім.",
+    "decl": "das Auto · мн.: die Autos"
+   },
+   "Batterie": {
+    "ru": "акумулятор",
+    "pos": "ім.",
+    "decl": "die Batterie · мн.: die Batterien"
+   },
+   "Beispiel": {
+    "ru": "приклад",
+    "pos": "ім.",
+    "note": "zum Beispiel — наприклад",
+    "decl": "das Beispiel · мн.: die Beispiele"
+   },
+   "Blinker": {
+    "ru": "поворотник",
+    "pos": "ім.",
+    "decl": "der Blinker · мн.: die Blinker"
+   },
+   "Bremsanlage": {
+    "ru": "гальмівна система",
+    "pos": "ім.",
+    "decl": "die Bremsanlage · мн.: die Bremsanlagen"
+   },
+   "Bremsflüssigkeit": {
+    "ru": "гальмівна рідина",
+    "pos": "ім.",
+    "decl": "die Bremsflüssigkeit · мн. немає"
+   },
+   "Bremslicht": {
+    "ru": "стоп-сигнал",
+    "pos": "ім.",
+    "decl": "das Bremslicht · мн.: die Bremslichter"
+   },
+   "Fahrersitz": {
+    "ru": "водійське сидіння",
+    "pos": "ім.",
+    "decl": "der Fahrersitz · мн.: die Fahrersitze"
+   },
+   "Fahrt": {
+    "ru": "поїздка",
+    "pos": "ім.",
+    "decl": "die Fahrt · мн.: die Fahrten"
+   },
+   "Fahrzeugkontrolle": {
+    "ru": "перевірка машини",
+    "pos": "ім.",
+    "decl": "die Fahrzeugkontrolle · мн.: die Fahrzeugkontrollen"
+   },
+   "Frostschutz": {
+    "ru": "антифриз, захист від морозу",
+    "pos": "ім.",
+    "decl": "der Frostschutz · мн. немає"
+   },
+   "HU": {
+    "ru": "техогляд (Hauptuntersuchung)",
+    "pos": "ім.",
+    "decl": "die HU · мн. немає"
+   },
+   "Hauptuntersuchung": {
+    "ru": "техогляд (HU)",
+    "pos": "ім.",
+    "note": "у розмові: «zum TÜV»",
+    "decl": "die Hauptuntersuchung · мн.: die Hauptuntersuchungen"
+   },
+   "Jahr": {
+    "ru": "рік",
+    "pos": "ім.",
+    "decl": "das Jahr · мн.: die Jahre"
+   },
+   "Kennzeichen": {
+    "ru": "номерний знак",
+    "pos": "ім.",
+    "decl": "das Kennzeichen · мн.: die Kennzeichen"
+   },
+   "Kontrollleuchte": {
+    "ru": "контрольна лампа (на панелі)",
+    "pos": "ім.",
+    "decl": "die Kontrollleuchte · мн.: die Kontrollleuchten"
+   },
+   "Kühlwasser": {
+    "ru": "охолоджувальна рідина",
+    "pos": "ім.",
+    "decl": "das Kühlwasser · мн. немає"
+   },
+   "Ladung": {
+    "ru": "вантаж",
+    "pos": "ім.",
+    "decl": "die Ladung · мн.: die Ladungen"
+   },
+   "Licht": {
+    "ru": "світло; сигнал",
+    "pos": "ім.",
+    "decl": "das Licht · мн.: die Lichter"
+   },
+   "Millimeter": {
+    "ru": "міліметр",
+    "pos": "ім.",
+    "decl": "der Millimeter · мн.: die Millimeter"
+   },
+   "Motor": {
+    "ru": "двигун, мотор",
+    "pos": "ім.",
+    "decl": "der Motor · мн.: die Motoren"
+   },
+   "Plakette": {
+    "ru": "наліпка (техогляду)",
+    "pos": "ім.",
+    "decl": "die Plakette · мн.: die Plaketten"
+   },
+   "Reifendruck": {
+    "ru": "тиск у шинах",
+    "pos": "ім.",
+    "decl": "der Reifendruck · мн. немає"
+   },
+   "Reifenprofil": {
+    "ru": "протектор шини",
+    "pos": "ім.",
+    "note": "мінімум за законом 1,6 мм (§ 36 StVZO)",
+    "decl": "das Reifenprofil · мн.: die Reifenprofile"
+   },
+   "Scheibenwaschwasser": {
+    "ru": "вода для омивача",
+    "pos": "ім.",
+    "decl": "das Scheibenwaschwasser · мн. немає"
+   },
+   "Sie": {
+    "ru": "ви (ввічливо)",
+    "pos": "займ.",
+    "note": "Ihnen — вам (давальний): vor Ihnen — перед вами"
+   },
+   "Sommer": {
+    "ru": "літо",
+    "pos": "ім.",
+    "decl": "der Sommer · мн.: die Sommer"
+   },
+   "Stelle": {
+    "ru": "місце, ділянка",
+    "pos": "ім.",
+    "decl": "die Stelle · мн.: die Stellen"
+   },
+   "Straße": {
+    "ru": "вулиця, дорога",
+    "pos": "ім.",
+    "decl": "die Straße · мн.: die Straßen"
+   },
+   "Technik": {
+    "ru": "техніка",
+    "pos": "ім.",
+    "decl": "die Technik · мн. немає"
+   },
+   "Verbandkasten": {
+    "ru": "аптечка",
+    "pos": "ім.",
+    "decl": "der Verbandkasten · мн.: die Verbandkästen"
+   },
+   "Warndreieck": {
+    "ru": "знак аварійної зупинки",
+    "pos": "ім.",
+    "decl": "das Warndreieck · мн.: die Warndreiecke"
+   },
+   "Warnweste": {
+    "ru": "світловідбивний жилет",
+    "pos": "ім.",
+    "decl": "die Warnweste · мн.: die Warnwesten"
+   },
+   "Werkstatt": {
+    "ru": "автомайстерня",
+    "pos": "ім.",
+    "decl": "die Werkstatt · мн.: die Werkstätten"
+   },
+   "Winter": {
+    "ru": "зима",
+    "pos": "ім.",
+    "decl": "der Winter · мн.: die Winter"
+   },
+   "Woche": {
+    "ru": "тиждень",
+    "pos": "ім.",
+    "decl": "die Woche · мн.: die Wochen"
+   },
+   "alle": {
+    "ru": "всі; все",
+    "pos": "займ."
+   },
+   "an": {
+    "ru": "біля, на, при",
+    "pos": "прийм.",
+    "note": "am = an dem; an der Kreuzung — на перехресті"
+   },
+   "anhalten": {
+    "ru": "зупинятися",
+    "pos": "дієсл.",
+    "forms": "hielt an · hat angehalten"
+   },
+   "auch": {
+    "ru": "теж; навіть (auch wenn)",
+    "pos": "присл."
+   },
+   "auf": {
+    "ru": "на, по",
+    "pos": "прийм.",
+    "note": "auf der Straße — на дорозі; achten auf — стежити за"
+   },
+   "bald": {
+    "ru": "незабаром",
+    "pos": "присл."
+   },
+   "bedeuten": {
+    "ru": "означати",
+    "pos": "дієсл.",
+    "forms": "bedeutete · hat bedeutet"
+   },
+   "bei": {
+    "ru": "при, біля; на (про сигнал)",
+    "pos": "прийм.",
+    "note": "beim = bei dem: beim Fahren — під час їзди; bei Rot — на червоний"
+   },
+   "brauchen": {
+    "ru": "потребувати, бути потрібним",
+    "pos": "дієсл.",
+    "forms": "brauchte · hat gebraucht"
+   },
+   "bremsen": {
+    "ru": "гальмувати",
+    "pos": "дієсл.",
+    "forms": "bremste · hat gebremst"
+   },
+   "damit": {
+    "ru": "щоб",
+    "pos": "спол."
+   },
+   "der/die/das": {
+    "ru": "означений артикль",
+    "pos": "артикль",
+    "note": "der — ч. р., die — ж. р. і мн., das — с. р.; den — ч. р. у знахідному, dem — ч. і с. р. у давальному; das ще означає «це»"
+   },
+   "drei": {
+    "ru": "три",
+    "pos": "числ."
+   },
+   "eben": {
+    "ru": "рівний",
+    "pos": "прикм."
+   },
+   "ein/eine": {
+    "ru": "неозначений артикль; один",
+    "pos": "артикль",
+    "note": "an einer Kreuzung — на (якомусь) перехресті"
+   },
+   "erst": {
+    "ru": "лише (не раніше ніж)",
+    "pos": "присл."
+   },
+   "fahren": {
+    "ru": "їхати; кермувати машиною",
+    "pos": "дієсл.",
+    "forms": "fuhr · ist gefahren"
+   },
+   "fliegen": {
+    "ru": "летіти",
+    "pos": "дієсл.",
+    "forms": "flog · ist geflogen"
+   },
+   "fällig": {
+    "ru": "належний (за строком)",
+    "pos": "прикм."
+   },
+   "gelb": {
+    "ru": "жовтий",
+    "pos": "прикм.",
+    "note": "Gelb (з великої) — жовтий сигнал"
+   },
+   "griffbereit": {
+    "ru": "під рукою",
+    "pos": "прикм."
+   },
+   "gut": {
+    "ru": "добрий; добре",
+    "pos": "прикм.",
+    "note": "am besten — найкраще",
+    "forms": "gut · besser · am besten"
+   },
+   "hinterer": {
+    "ru": "задній",
+    "pos": "прикм."
+   },
+   "in": {
+    "ru": "в",
+    "pos": "прийм.",
+    "note": "im = in dem: im Bereich — у зоні"
+   },
+   "kalt": {
+    "ru": "холодний",
+    "pos": "прикм."
+   },
+   "kontrollieren": {
+    "ru": "перевіряти, контролювати",
+    "pos": "дієсл.",
+    "forms": "kontrollierte · hat kontrolliert"
+   },
+   "kurz": {
+    "ru": "короткий; ненадовго",
+    "pos": "прикм."
+   },
+   "lang": {
+    "ru": "довгий",
+    "pos": "прикм.",
+    "note": "Wie lang …? — Якої довжини …?",
+    "forms": "lang · länger · am längsten"
+   },
+   "leuchten": {
+    "ru": "горіти, світитися",
+    "pos": "дієсл.",
+    "forms": "leuchtete · hat geleuchtet"
+   },
+   "liegen": {
+    "ru": "лежати, знаходитися",
+    "pos": "дієсл.",
+    "forms": "lag · hat gelegen"
+   },
+   "mindestens": {
+    "ru": "щонайменше, не менше",
+    "pos": "присл."
+   },
+   "mit": {
+    "ru": "з",
+    "pos": "прийм."
+   },
+   "müssen": {
+    "ru": "мусити, бути повинним",
+    "pos": "дієсл.",
+    "forms": "musste · hat gemusst"
+   },
+   "nach": {
+    "ru": "після; до (напрямок)",
+    "pos": "прийм."
+   },
+   "neben": {
+    "ru": "поруч із, біля",
+    "pos": "прийм."
+   },
+   "neu": {
+    "ru": "новий",
+    "pos": "прикм."
+   },
+   "nicht": {
+    "ru": "не",
+    "pos": "частка"
+   },
+   "nächste": {
+    "ru": "найближчий, наступний",
+    "pos": "прикм."
+   },
+   "prüfen": {
+    "ru": "перевіряти",
+    "pos": "дієсл.",
+    "forms": "prüfte · hat geprüft"
+   },
+   "rot": {
+    "ru": "червоний",
+    "pos": "прикм.",
+    "note": "Rot (з великої) — червоний сигнал: bei Rot — на червоний"
+   },
+   "sein": {
+    "ru": "бути",
+    "pos": "дієсл.",
+    "forms": "war · ist gewesen"
+   },
+   "sicher": {
+    "ru": "безпечний; упевнений",
+    "pos": "прикм."
+   },
+   "sichern": {
+    "ru": "убезпечити, позначити",
+    "pos": "дієсл.",
+    "note": "Unfallstelle sichern: аварійка, жилет, знак аварійної зупинки",
+    "forms": "sicherte · hat gesichert"
+   },
+   "sofort": {
+    "ru": "одразу, негайно",
+    "pos": "присл."
+   },
+   "tief": {
+    "ru": "глибокий",
+    "pos": "прикм."
+   },
+   "und": {
+    "ru": "і, та",
+    "pos": "спол."
+   },
+   "vor": {
+    "ru": "перед",
+    "pos": "прийм.",
+    "note": "rechts vor links — правий перед лівим"
+   },
+   "vorne": {
+    "ru": "попереду",
+    "pos": "присл."
+   },
+   "wann": {
+    "ru": "коли",
+    "pos": "присл."
+   },
+   "zeigen": {
+    "ru": "показувати",
+    "pos": "дієсл.",
+    "forms": "zeigte · hat gezeigt"
+   },
+   "zu": {
+    "ru": "до; для",
+    "pos": "прийм.",
+    "note": "zum = zu dem, zur = zu der: Abstand zur Kreuzung — відстань до перехрестя"
+   },
+   "zwei": {
+    "ru": "два",
+    "pos": "числ."
+   },
+   "Öldruck": {
+    "ru": "тиск масла",
+    "pos": "ім.",
+    "decl": "der Öldruck · мн. немає"
+   },
+   "Ölmessstab": {
+    "ru": "масляний щуп",
+    "pos": "ім.",
+    "decl": "der Ölmessstab · мн.: die Ölmessstäbe"
+   },
+   "Ölstand": {
+    "ru": "рівень масла",
+    "pos": "ім.",
+    "decl": "der Ölstand · мн. немає"
+   }
+  }
+ }
+}

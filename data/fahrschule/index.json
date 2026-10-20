@@ -87,6 +87,15 @@
     "p-08",
     "r-08"
    ]
+  },
+  {
+   "id": "technik",
+   "emoji": "🔧",
+   "title": "Technik und Fahrzeugkontrolle",
+   "titleTr": "Техника и проверка машины",
+   "units": [
+    "t-09"
+   ]
   }
  ],
  "units": [
@@ -305,6 +314,15 @@
    "title": "Promille und Pausen",
    "titleTr": "Промилле и перерывы",
    "count": 6
+  },
+  {
+   "id": "t-09",
+   "kind": "theory",
+   "emoji": "🔧",
+   "level": "B1",
+   "title": "Technik und Fahrzeugkontrolle",
+   "titleTr": "Техника и проверка машины",
+   "count": 16
   }
  ]
 }
