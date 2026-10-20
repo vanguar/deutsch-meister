@@ -1,0 +1,561 @@
+{
+ "id": "p-09",
+ "kind": "dialog",
+ "emoji": "🛢️",
+ "level": "B1",
+ "title": "Die Sicherheitskontrolle",
+ "titleTr": "Проверка безопасности",
+ "intro": "На экзамене просят показать проверку машины. Катерина тренируется с инструктором: масло, протектор, свет, жилет и знак аварийной остановки.",
+ "speakers": {
+  "A": {
+   "name": "Fahrlehrer",
+   "g": "m"
+  },
+  "B": {
+   "name": "Kateryna",
+   "g": "f"
+  }
+ },
+ "lines": [
+  {
+   "de": "In der Prüfung fragt der Prüfer oft nach Technik. Wir üben das jetzt.",
+   "tr": "На экзамене экзаменатор часто спрашивает про технику. Сейчас мы это потренируем.",
+   "s": "A"
+  },
+  {
+   "de": "Gut. Was muss ich zeigen?",
+   "tr": "Хорошо. Что я должна показать?",
+   "s": "B"
+  },
+  {
+   "de": "Zeigen Sie mir bitte, wie Sie den Ölstand prüfen.",
+   "tr": "Покажите, пожалуйста, как вы проверяете уровень масла.",
+   "s": "A"
+  },
+  {
+   "de": "Der Motor ist kalt, und das Auto steht eben. Ich ziehe den Ölmessstab heraus.",
+   "tr": "Двигатель холодный, и машина стоит ровно. Я вытаскиваю масляный щуп.",
+   "o": {
+    "heraus": "heraus>herausziehen",
+    "ziehe": "ziehe>herausziehen"
+   },
+   "s": "B"
+  },
+  {
+   "de": "Und was sehen Sie?",
+   "tr": "И что вы видите?",
+   "s": "A"
+  },
+  {
+   "de": "Das Öl ist zwischen Minimum und Maximum. Alles in Ordnung.",
+   "tr": "Масло между минимумом и максимумом. Всё в порядке.",
+   "s": "B"
+  },
+  {
+   "de": "Sehr gut. Wie tief muss das Reifenprofil mindestens sein?",
+   "tr": "Очень хорошо. Какой минимальной глубины должен быть протектор?",
+   "s": "A"
+  },
+  {
+   "de": "Mindestens 1,6 Millimeter. Sicherer sind aber 3 Millimeter.",
+   "tr": "Не меньше 1,6 миллиметра. Но безопаснее 3 миллиметра.",
+   "s": "B"
+  },
+  {
+   "de": "Richtig. Jetzt prüfen wir das Licht. Ich stehe hinter dem Auto.",
+   "tr": "Верно. Теперь проверим свет. Я стою за машиной.",
+   "s": "A"
+  },
+  {
+   "de": "Ich schalte das Abblendlicht ein. Dann blinke ich links und rechts.",
+   "tr": "Я включаю ближний свет. Потом мигаю поворотником влево и вправо.",
+   "o": {
+    "ein": "ein>einschalten",
+    "schalte": "schalte>einschalten"
+   },
+   "s": "B"
+  },
+  {
+   "de": "Gut. Und jetzt treten Sie das Bremspedal.",
+   "tr": "Хорошо. А теперь нажмите педаль тормоза.",
+   "s": "A"
+  },
+  {
+   "de": "Leuchten beide Bremslichter?",
+   "tr": "Оба стоп-сигнала горят?",
+   "s": "B"
+  },
+  {
+   "de": "Ja, alles funktioniert. Wo ist Ihre Warnweste?",
+   "tr": "Да, всё работает. Где ваш светоотражающий жилет?",
+   "s": "A"
+  },
+  {
+   "de": "Griffbereit in der Fahrertür. Das Warndreieck liegt im Kofferraum.",
+   "tr": "Под рукой, в водительской двери. Знак аварийной остановки лежит в багажнике.",
+   "s": "B"
+  },
+  {
+   "de": "Perfekt. So bestehen Sie die Sicherheitskontrolle.",
+   "tr": "Отлично. Так вы пройдёте проверку безопасности.",
+   "s": "A"
+  }
+ ],
+ "signs": {},
+ "gloss": {
+  "w": {
+   "abblendlicht": "Abblendlicht",
+   "aber": "aber",
+   "alles": "alle",
+   "auto": "Auto",
+   "beide": "beide",
+   "bestehen": "bestehen",
+   "bitte": "bitte",
+   "blinke": "blinken",
+   "bremslichter": "Bremslicht",
+   "bremspedal": "Bremspedal",
+   "dann": "dann",
+   "das": "der/die/das",
+   "dem": "der/die/das",
+   "den": "der/die/das",
+   "der": "der/die/das",
+   "die": "der/die/das",
+   "eben": "eben",
+   "ein>einschalten": "einschalten",
+   "fahrertür": "Fahrertür",
+   "fragt": "fragen",
+   "funktioniert": "funktionieren",
+   "griffbereit": "griffbereit",
+   "gut": "gut",
+   "heraus>herausziehen": "herausziehen",
+   "hinter": "hinter",
+   "ich": "ich",
+   "ihre": "Ihr",
+   "im": "in",
+   "in": "in",
+   "ist": "sein",
+   "ja": "ja",
+   "jetzt": "jetzt",
+   "kalt": "kalt",
+   "kofferraum": "Kofferraum",
+   "leuchten": "leuchten",
+   "licht": "Licht",
+   "liegt": "liegen",
+   "links": "links",
+   "maximum": "Maximum",
+   "millimeter": "Millimeter",
+   "mindestens": "mindestens",
+   "minimum": "Minimum",
+   "mir": "mir",
+   "motor": "Motor",
+   "muss": "müssen",
+   "nach": "nach",
+   "oft": "oft",
+   "ordnung": "Ordnung",
+   "perfekt": "perfekt",
+   "prüfen": "prüfen",
+   "prüfer": "Prüfer",
+   "prüfung": "Prüfung",
+   "rechts": "rechts",
+   "reifenprofil": "Reifenprofil",
+   "richtig": "richtig",
+   "schalte>einschalten": "einschalten",
+   "sehen": "sehen",
+   "sehr": "sehr",
+   "sein": "sein",
+   "sicherer": "sicher",
+   "sicherheitskontrolle": "Sicherheitskontrolle",
+   "sie": "Sie",
+   "sind": "sein",
+   "so": "so",
+   "stehe": "stehen",
+   "steht": "stehen",
+   "technik": "Technik",
+   "tief": "tief",
+   "treten": "treten",
+   "und": "und",
+   "warndreieck": "Warndreieck",
+   "warnweste": "Warnweste",
+   "was": "was",
+   "wie": "wie",
+   "wir": "wir",
+   "wo": "wo",
+   "zeigen": "zeigen",
+   "ziehe>herausziehen": "herausziehen",
+   "zwischen": "zwischen",
+   "öl": "Öl",
+   "ölmessstab": "Ölmessstab",
+   "ölstand": "Ölstand",
+   "üben": "üben"
+  },
+  "l": {
+   "Abblendlicht": {
+    "ru": "ближний свет",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": null
+   },
+   "Auto": {
+    "ru": "машина, автомобиль",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Autos"
+   },
+   "Bremslicht": {
+    "ru": "стоп-сигнал",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Bremslichter"
+   },
+   "Bremspedal": {
+    "ru": "педаль тормоза",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Bremspedale"
+   },
+   "Fahrertür": {
+    "ru": "водительская дверь",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Fahrertüren"
+   },
+   "Ihr": {
+    "ru": "ваш (вежливо)",
+    "pos": "мест."
+   },
+   "Kofferraum": {
+    "ru": "багажник",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Kofferräume"
+   },
+   "Licht": {
+    "ru": "свет; сигнал",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Lichter"
+   },
+   "Maximum": {
+    "ru": "максимум",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Maxima"
+   },
+   "Millimeter": {
+    "ru": "миллиметр",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Millimeter"
+   },
+   "Minimum": {
+    "ru": "минимум",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Minima"
+   },
+   "Motor": {
+    "ru": "двигатель, мотор",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Motoren"
+   },
+   "Ordnung": {
+    "ru": "порядок",
+    "pos": "сущ.",
+    "note": "in Ordnung — в порядке",
+    "art": "die",
+    "pl": "die Ordnungen"
+   },
+   "Prüfer": {
+    "ru": "экзаменатор",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Prüfer"
+   },
+   "Prüfung": {
+    "ru": "экзамен",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Prüfungen"
+   },
+   "Reifenprofil": {
+    "ru": "протектор шины",
+    "pos": "сущ.",
+    "note": "минимум по закону 1,6 мм (§ 36 StVZO)",
+    "art": "das",
+    "pl": "die Reifenprofile"
+   },
+   "Sicherheitskontrolle": {
+    "ru": "проверка безопасности (на экзамене)",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Sicherheitskontrollen"
+   },
+   "Sie": {
+    "ru": "вы (вежливо)",
+    "pos": "мест.",
+    "note": "Ihnen — вам (дательный): vor Ihnen — перед вами"
+   },
+   "Technik": {
+    "ru": "техника",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": null
+   },
+   "Warndreieck": {
+    "ru": "знак аварийной остановки",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Warndreiecke"
+   },
+   "Warnweste": {
+    "ru": "светоотражающий жилет",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Warnwesten"
+   },
+   "aber": {
+    "ru": "но",
+    "pos": "союз"
+   },
+   "alle": {
+    "ru": "все; всё",
+    "pos": "мест."
+   },
+   "beide": {
+    "ru": "оба, обе",
+    "pos": "мест."
+   },
+   "bestehen": {
+    "ru": "сдать (экзамен), пройти",
+    "pos": "гл.",
+    "forms": "bestand · hat bestanden"
+   },
+   "bitte": {
+    "ru": "пожалуйста",
+    "pos": "частица"
+   },
+   "blinken": {
+    "ru": "включать поворотник, мигать",
+    "pos": "гл.",
+    "forms": "blinkte · hat geblinkt"
+   },
+   "dann": {
+    "ru": "тогда, значит; потом",
+    "pos": "нареч."
+   },
+   "der/die/das": {
+    "ru": "определённый артикль",
+    "pos": "артикль",
+    "note": "der — м. р., die — ж. р. и мн. ч., das — ср. р.; den — м. р. в винительном, dem — м. и ср. р. в дательном; das ещё значит «это»"
+   },
+   "eben": {
+    "ru": "ровный",
+    "pos": "прил."
+   },
+   "einschalten": {
+    "ru": "включать",
+    "pos": "гл.",
+    "note": "отделяемая приставка: schalten … ein",
+    "forms": "schaltete ein · hat eingeschaltet"
+   },
+   "fragen": {
+    "ru": "спрашивать",
+    "pos": "гл.",
+    "note": "fragen nach — спрашивать о",
+    "forms": "fragte · hat gefragt"
+   },
+   "funktionieren": {
+    "ru": "работать, функционировать",
+    "pos": "гл.",
+    "forms": "funktionierte · hat funktioniert"
+   },
+   "griffbereit": {
+    "ru": "под рукой",
+    "pos": "прил."
+   },
+   "gut": {
+    "ru": "хороший; хорошо",
+    "pos": "прил.",
+    "note": "am besten — лучше всего",
+    "forms": "gut · besser · am besten"
+   },
+   "herausziehen": {
+    "ru": "вытаскивать",
+    "pos": "гл.",
+    "note": "отделяемая приставка: ziehe … heraus",
+    "forms": "zog heraus · hat herausgezogen"
+   },
+   "hinter": {
+    "ru": "за, позади",
+    "pos": "предл."
+   },
+   "ich": {
+    "ru": "я",
+    "pos": "мест."
+   },
+   "in": {
+    "ru": "в",
+    "pos": "предл.",
+    "note": "im = in dem: im Bereich — в зоне"
+   },
+   "ja": {
+    "ru": "да",
+    "pos": "частица"
+   },
+   "jetzt": {
+    "ru": "сейчас, теперь",
+    "pos": "нареч."
+   },
+   "kalt": {
+    "ru": "холодный",
+    "pos": "прил."
+   },
+   "leuchten": {
+    "ru": "гореть, светиться",
+    "pos": "гл.",
+    "forms": "leuchtete · hat geleuchtet"
+   },
+   "liegen": {
+    "ru": "лежать, находиться",
+    "pos": "гл.",
+    "forms": "lag · hat gelegen"
+   },
+   "links": {
+    "ru": "слева; налево",
+    "pos": "нареч."
+   },
+   "mindestens": {
+    "ru": "по меньшей мере, не меньше",
+    "pos": "нареч."
+   },
+   "mir": {
+    "ru": "мне",
+    "pos": "мест."
+   },
+   "müssen": {
+    "ru": "быть должным",
+    "pos": "гл.",
+    "forms": "musste · hat gemusst"
+   },
+   "nach": {
+    "ru": "после; в, на (направление)",
+    "pos": "предл."
+   },
+   "oft": {
+    "ru": "часто",
+    "pos": "нареч."
+   },
+   "perfekt": {
+    "ru": "отлично, безупречно",
+    "pos": "прил."
+   },
+   "prüfen": {
+    "ru": "проверять",
+    "pos": "гл.",
+    "forms": "prüfte · hat geprüft"
+   },
+   "rechts": {
+    "ru": "справа; направо",
+    "pos": "нареч."
+   },
+   "richtig": {
+    "ru": "правильный; правильно",
+    "pos": "прил.",
+    "note": "…, richtig? — …, правильно? / да?"
+   },
+   "sehen": {
+    "ru": "видеть",
+    "pos": "гл.",
+    "forms": "sah · hat gesehen"
+   },
+   "sehr": {
+    "ru": "очень",
+    "pos": "нареч."
+   },
+   "sein": {
+    "ru": "быть",
+    "pos": "гл.",
+    "forms": "war · ist gewesen"
+   },
+   "sicher": {
+    "ru": "безопасный; уверенный",
+    "pos": "прил."
+   },
+   "so": {
+    "ru": "так; вот (так)",
+    "pos": "нареч."
+   },
+   "stehen": {
+    "ru": "стоять",
+    "pos": "гл.",
+    "note": "Schilder stehen — стоят знаки",
+    "forms": "stand · hat gestanden"
+   },
+   "tief": {
+    "ru": "глубокий",
+    "pos": "прил."
+   },
+   "treten": {
+    "ru": "нажимать (ногой)",
+    "pos": "гл.",
+    "note": "die Kupplung treten — выжать сцепление",
+    "forms": "trat · hat getreten"
+   },
+   "und": {
+    "ru": "и",
+    "pos": "союз"
+   },
+   "was": {
+    "ru": "что",
+    "pos": "мест."
+   },
+   "wie": {
+    "ru": "как",
+    "pos": "нареч.",
+    "note": "wie schnell — с какой скоростью"
+   },
+   "wir": {
+    "ru": "мы",
+    "pos": "мест.",
+    "note": "uns — нас, нам: vor uns — перед нами"
+   },
+   "wo": {
+    "ru": "где",
+    "pos": "нареч."
+   },
+   "zeigen": {
+    "ru": "показывать",
+    "pos": "гл.",
+    "forms": "zeigte · hat gezeigt"
+   },
+   "zwischen": {
+    "ru": "между",
+    "pos": "предл."
+   },
+   "Öl": {
+    "ru": "масло",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Öle"
+   },
+   "Ölmessstab": {
+    "ru": "масляный щуп",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Ölmessstäbe"
+   },
+   "Ölstand": {
+    "ru": "уровень масла",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": null
+   },
+   "üben": {
+    "ru": "упражняться, тренироваться",
+    "pos": "гл.",
+    "forms": "übte · hat geübt"
+   }
+  }
+ }
+}

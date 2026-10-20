@@ -1,0 +1,539 @@
+{
+ "id": "p-09",
+ "kind": "dialog",
+ "emoji": "🛢️",
+ "level": "B1",
+ "title": "Die Sicherheitskontrolle",
+ "titleTr": "فحص السلامة",
+ "intro": "في الامتحان يُطلب منك أن تُظهر فحص السيارة. تتدرب كاترينا مع المدرّب: الزيت ونقش الإطار والأضواء والسترة ومثلث التحذير.",
+ "speakers": {
+  "A": {
+   "name": "Fahrlehrer",
+   "g": "m"
+  },
+  "B": {
+   "name": "Kateryna",
+   "g": "f"
+  }
+ },
+ "lines": [
+  {
+   "de": "In der Prüfung fragt der Prüfer oft nach Technik. Wir üben das jetzt.",
+   "tr": "في الامتحان كثيرًا ما يسأل الممتحِن عن التقنية. سنتدرب على ذلك الآن.",
+   "s": "A"
+  },
+  {
+   "de": "Gut. Was muss ich zeigen?",
+   "tr": "حسنًا. ماذا يجب أن أُظهر؟",
+   "s": "B"
+  },
+  {
+   "de": "Zeigen Sie mir bitte, wie Sie den Ölstand prüfen.",
+   "tr": "أريني من فضلك كيف تفحصين مستوى الزيت.",
+   "s": "A"
+  },
+  {
+   "de": "Der Motor ist kalt, und das Auto steht eben. Ich ziehe den Ölmessstab heraus.",
+   "tr": "المحرك بارد والسيارة على أرض مستوية. أسحب عصا قياس الزيت.",
+   "o": {
+    "heraus": "heraus>herausziehen",
+    "ziehe": "ziehe>herausziehen"
+   },
+   "s": "B"
+  },
+  {
+   "de": "Und was sehen Sie?",
+   "tr": "وماذا ترين؟",
+   "s": "A"
+  },
+  {
+   "de": "Das Öl ist zwischen Minimum und Maximum. Alles in Ordnung.",
+   "tr": "الزيت بين الحد الأدنى والحد الأقصى. كل شيء على ما يرام.",
+   "s": "B"
+  },
+  {
+   "de": "Sehr gut. Wie tief muss das Reifenprofil mindestens sein?",
+   "tr": "جيد جدًا. ما أقل عمق مسموح لنقش الإطار؟",
+   "s": "A"
+  },
+  {
+   "de": "Mindestens 1,6 Millimeter. Sicherer sind aber 3 Millimeter.",
+   "tr": "1,6 مليمتر على الأقل. لكن 3 مليمترات أكثر أمانًا.",
+   "s": "B"
+  },
+  {
+   "de": "Richtig. Jetzt prüfen wir das Licht. Ich stehe hinter dem Auto.",
+   "tr": "صحيح. الآن نفحص الأضواء. أنا أقف خلف السيارة.",
+   "s": "A"
+  },
+  {
+   "de": "Ich schalte das Abblendlicht ein. Dann blinke ich links und rechts.",
+   "tr": "أشغّل الأضواء القصيرة. ثم أشغّل إشارة اليسار واليمين.",
+   "o": {
+    "ein": "ein>einschalten",
+    "schalte": "schalte>einschalten"
+   },
+   "s": "B"
+  },
+  {
+   "de": "Gut. Und jetzt treten Sie das Bremspedal.",
+   "tr": "جيد. والآن اضغطي على دواسة الفرامل.",
+   "s": "A"
+  },
+  {
+   "de": "Leuchten beide Bremslichter?",
+   "tr": "هل يضيء ضوءا الفرامل كلاهما؟",
+   "s": "B"
+  },
+  {
+   "de": "Ja, alles funktioniert. Wo ist Ihre Warnweste?",
+   "tr": "نعم، كل شيء يعمل. أين سترتك العاكسة؟",
+   "s": "A"
+  },
+  {
+   "de": "Griffbereit in der Fahrertür. Das Warndreieck liegt im Kofferraum.",
+   "tr": "في متناول اليد في باب السائق. ومثلث التحذير في صندوق السيارة.",
+   "s": "B"
+  },
+  {
+   "de": "Perfekt. So bestehen Sie die Sicherheitskontrolle.",
+   "tr": "ممتاز. هكذا تنجحين في فحص السلامة.",
+   "s": "A"
+  }
+ ],
+ "signs": {},
+ "gloss": {
+  "w": {
+   "abblendlicht": "Abblendlicht",
+   "aber": "aber",
+   "alles": "alle",
+   "auto": "Auto",
+   "beide": "beide",
+   "bestehen": "bestehen",
+   "bitte": "bitte",
+   "blinke": "blinken",
+   "bremslichter": "Bremslicht",
+   "bremspedal": "Bremspedal",
+   "dann": "dann",
+   "das": "der/die/das",
+   "dem": "der/die/das",
+   "den": "der/die/das",
+   "der": "der/die/das",
+   "die": "der/die/das",
+   "eben": "eben",
+   "ein>einschalten": "einschalten",
+   "fahrertür": "Fahrertür",
+   "fragt": "fragen",
+   "funktioniert": "funktionieren",
+   "griffbereit": "griffbereit",
+   "gut": "gut",
+   "heraus>herausziehen": "herausziehen",
+   "hinter": "hinter",
+   "ich": "ich",
+   "ihre": "Ihr",
+   "im": "in",
+   "in": "in",
+   "ist": "sein",
+   "ja": "ja",
+   "jetzt": "jetzt",
+   "kalt": "kalt",
+   "kofferraum": "Kofferraum",
+   "leuchten": "leuchten",
+   "licht": "Licht",
+   "liegt": "liegen",
+   "links": "links",
+   "maximum": "Maximum",
+   "millimeter": "Millimeter",
+   "mindestens": "mindestens",
+   "minimum": "Minimum",
+   "mir": "mir",
+   "motor": "Motor",
+   "muss": "müssen",
+   "nach": "nach",
+   "oft": "oft",
+   "ordnung": "Ordnung",
+   "perfekt": "perfekt",
+   "prüfen": "prüfen",
+   "prüfer": "Prüfer",
+   "prüfung": "Prüfung",
+   "rechts": "rechts",
+   "reifenprofil": "Reifenprofil",
+   "richtig": "richtig",
+   "schalte>einschalten": "einschalten",
+   "sehen": "sehen",
+   "sehr": "sehr",
+   "sein": "sein",
+   "sicherer": "sicher",
+   "sicherheitskontrolle": "Sicherheitskontrolle",
+   "sie": "Sie",
+   "sind": "sein",
+   "so": "so",
+   "stehe": "stehen",
+   "steht": "stehen",
+   "technik": "Technik",
+   "tief": "tief",
+   "treten": "treten",
+   "und": "und",
+   "warndreieck": "Warndreieck",
+   "warnweste": "Warnweste",
+   "was": "was",
+   "wie": "wie",
+   "wir": "wir",
+   "wo": "wo",
+   "zeigen": "zeigen",
+   "ziehe>herausziehen": "herausziehen",
+   "zwischen": "zwischen",
+   "öl": "Öl",
+   "ölmessstab": "Ölmessstab",
+   "ölstand": "Ölstand",
+   "üben": "üben"
+  },
+  "l": {
+   "Abblendlicht": {
+    "ru": "الأضواء المنخفضة",
+    "pos": "اسم",
+    "decl": "das Abblendlicht · لا جمع له"
+   },
+   "Auto": {
+    "ru": "سيارة",
+    "pos": "اسم",
+    "decl": "das Auto · الجمع: die Autos"
+   },
+   "Bremslicht": {
+    "ru": "ضوء الفرامل",
+    "pos": "اسم",
+    "decl": "das Bremslicht · الجمع: die Bremslichter"
+   },
+   "Bremspedal": {
+    "ru": "دواسة الفرامل",
+    "pos": "اسم",
+    "decl": "das Bremspedal · الجمع: die Bremspedale"
+   },
+   "Fahrertür": {
+    "ru": "باب السائق",
+    "pos": "اسم",
+    "decl": "die Fahrertür · الجمع: die Fahrertüren"
+   },
+   "Ihr": {
+    "ru": "ـكَ، ـكِ (صيغة الاحترام)",
+    "pos": "ضمير"
+   },
+   "Kofferraum": {
+    "ru": "صندوق السيارة",
+    "pos": "اسم",
+    "decl": "der Kofferraum · الجمع: die Kofferräume"
+   },
+   "Licht": {
+    "ru": "ضوء",
+    "pos": "اسم",
+    "decl": "das Licht · الجمع: die Lichter"
+   },
+   "Maximum": {
+    "ru": "الحد الأقصى",
+    "pos": "اسم",
+    "decl": "das Maximum · الجمع: die Maxima"
+   },
+   "Millimeter": {
+    "ru": "مليمتر",
+    "pos": "اسم",
+    "decl": "der Millimeter · الجمع: die Millimeter"
+   },
+   "Minimum": {
+    "ru": "الحد الأدنى",
+    "pos": "اسم",
+    "decl": "das Minimum · الجمع: die Minima"
+   },
+   "Motor": {
+    "ru": "محرك",
+    "pos": "اسم",
+    "decl": "der Motor · الجمع: die Motoren"
+   },
+   "Ordnung": {
+    "ru": "نظام، ترتيب",
+    "pos": "اسم",
+    "note": "in Ordnung — على ما يرام",
+    "decl": "die Ordnung · الجمع: die Ordnungen"
+   },
+   "Prüfer": {
+    "ru": "الممتحِن",
+    "pos": "اسم",
+    "decl": "der Prüfer · الجمع: die Prüfer"
+   },
+   "Prüfung": {
+    "ru": "امتحان",
+    "pos": "اسم",
+    "decl": "die Prüfung · الجمع: die Prüfungen"
+   },
+   "Reifenprofil": {
+    "ru": "نقش الإطار",
+    "pos": "اسم",
+    "note": "الحد الأدنى قانونًا 1,6 مم",
+    "decl": "das Reifenprofil · الجمع: die Reifenprofile"
+   },
+   "Sicherheitskontrolle": {
+    "ru": "فحص السلامة (في الامتحان)",
+    "pos": "اسم",
+    "decl": "die Sicherheitskontrolle · الجمع: die Sicherheitskontrollen"
+   },
+   "Sie": {
+    "ru": "حضرتك (صيغة الاحترام)",
+    "pos": "ضمير",
+    "note": "Ihnen — لكم (حالة الجر): vor Ihnen — أمامك"
+   },
+   "Technik": {
+    "ru": "التقنية",
+    "pos": "اسم",
+    "decl": "die Technik · لا جمع له"
+   },
+   "Warndreieck": {
+    "ru": "مثلث التحذير",
+    "pos": "اسم",
+    "decl": "das Warndreieck · الجمع: die Warndreiecke"
+   },
+   "Warnweste": {
+    "ru": "سترة عاكسة",
+    "pos": "اسم",
+    "decl": "die Warnweste · الجمع: die Warnwesten"
+   },
+   "aber": {
+    "ru": "لكن",
+    "pos": "أداة ربط"
+   },
+   "alle": {
+    "ru": "كل؛ كل شيء",
+    "pos": "ضمير"
+   },
+   "beide": {
+    "ru": "كلا، الاثنان",
+    "pos": "ضمير"
+   },
+   "bestehen": {
+    "ru": "ينجح (في امتحان)",
+    "pos": "فعل",
+    "forms": "bestand · hat bestanden"
+   },
+   "bitte": {
+    "ru": "من فضلك",
+    "pos": "أداة"
+   },
+   "blinken": {
+    "ru": "يشغّل إشارة الانعطاف",
+    "pos": "فعل",
+    "forms": "blinkte · hat geblinkt"
+   },
+   "dann": {
+    "ru": "إذن؛ ثم",
+    "pos": "ظرف"
+   },
+   "der/die/das": {
+    "ru": "أداة التعريف",
+    "pos": "أداة تعريف",
+    "note": "der للمذكر، die للمؤنث والجمع، das للمحايد؛ den للمذكر في حالة النصب، dem للمذكر والمحايد في حالة الجر؛ وdas تعني أيضًا «هذا»"
+   },
+   "eben": {
+    "ru": "مستوٍ",
+    "pos": "صفة"
+   },
+   "einschalten": {
+    "ru": "يشغّل",
+    "pos": "فعل",
+    "note": "سابقة منفصلة: schalten … ein",
+    "forms": "schaltete ein · hat eingeschaltet"
+   },
+   "fragen": {
+    "ru": "يسأل",
+    "pos": "فعل",
+    "note": "fragen nach — يسأل عن",
+    "forms": "fragte · hat gefragt"
+   },
+   "funktionieren": {
+    "ru": "يعمل",
+    "pos": "فعل",
+    "forms": "funktionierte · hat funktioniert"
+   },
+   "griffbereit": {
+    "ru": "في متناول اليد",
+    "pos": "صفة"
+   },
+   "gut": {
+    "ru": "جيد",
+    "pos": "صفة",
+    "note": "am besten — من الأفضل",
+    "forms": "gut · besser · am besten"
+   },
+   "herausziehen": {
+    "ru": "يسحب إلى الخارج",
+    "pos": "فعل",
+    "note": "سابقة منفصلة: ziehe … heraus",
+    "forms": "zog heraus · hat herausgezogen"
+   },
+   "hinter": {
+    "ru": "خلف",
+    "pos": "حرف جر"
+   },
+   "ich": {
+    "ru": "أنا",
+    "pos": "ضمير"
+   },
+   "in": {
+    "ru": "في",
+    "pos": "حرف جر",
+    "note": "im = in dem: im Bereich — في المنطقة"
+   },
+   "ja": {
+    "ru": "نعم",
+    "pos": "أداة"
+   },
+   "jetzt": {
+    "ru": "الآن",
+    "pos": "ظرف"
+   },
+   "kalt": {
+    "ru": "بارد",
+    "pos": "صفة"
+   },
+   "leuchten": {
+    "ru": "يضيء",
+    "pos": "فعل",
+    "forms": "leuchtete · hat geleuchtet"
+   },
+   "liegen": {
+    "ru": "يقع",
+    "pos": "فعل",
+    "forms": "lag · hat gelegen"
+   },
+   "links": {
+    "ru": "يسارًا، على اليسار",
+    "pos": "ظرف"
+   },
+   "mindestens": {
+    "ru": "على الأقل",
+    "pos": "ظرف"
+   },
+   "mir": {
+    "ru": "لي",
+    "pos": "ضمير"
+   },
+   "müssen": {
+    "ru": "يجب عليه",
+    "pos": "فعل",
+    "forms": "musste · hat gemusst"
+   },
+   "nach": {
+    "ru": "بعد؛ إلى",
+    "pos": "حرف جر"
+   },
+   "oft": {
+    "ru": "غالبًا",
+    "pos": "ظرف"
+   },
+   "perfekt": {
+    "ru": "ممتاز، مثالي",
+    "pos": "صفة"
+   },
+   "prüfen": {
+    "ru": "يفحص",
+    "pos": "فعل",
+    "forms": "prüfte · hat geprüft"
+   },
+   "rechts": {
+    "ru": "يمينًا، على اليمين",
+    "pos": "ظرف"
+   },
+   "richtig": {
+    "ru": "صحيح",
+    "pos": "صفة",
+    "note": "…, richtig? — …، صحيح؟"
+   },
+   "sehen": {
+    "ru": "يرى",
+    "pos": "فعل",
+    "forms": "sah · hat gesehen"
+   },
+   "sehr": {
+    "ru": "جدًا",
+    "pos": "ظرف"
+   },
+   "sein": {
+    "ru": "يكون",
+    "pos": "فعل",
+    "forms": "war · ist gewesen"
+   },
+   "sicher": {
+    "ru": "آمن؛ متأكد",
+    "pos": "صفة"
+   },
+   "so": {
+    "ru": "هكذا",
+    "pos": "ظرف"
+   },
+   "stehen": {
+    "ru": "يقف؛ يوجد",
+    "pos": "فعل",
+    "note": "Schilder stehen — توجد لافتات",
+    "forms": "stand · hat gestanden"
+   },
+   "tief": {
+    "ru": "عميق",
+    "pos": "صفة"
+   },
+   "treten": {
+    "ru": "يضغط بقدمه",
+    "pos": "فعل",
+    "note": "die Kupplung treten — يضغط على القابض",
+    "forms": "trat · hat getreten"
+   },
+   "und": {
+    "ru": "و",
+    "pos": "أداة ربط"
+   },
+   "was": {
+    "ru": "ماذا",
+    "pos": "ضمير"
+   },
+   "wie": {
+    "ru": "كيف",
+    "pos": "ظرف",
+    "note": "wie schnell — بأي سرعة"
+   },
+   "wir": {
+    "ru": "نحن",
+    "pos": "ضمير",
+    "note": "uns — نا: vor uns — أمامنا"
+   },
+   "wo": {
+    "ru": "أين",
+    "pos": "ظرف"
+   },
+   "zeigen": {
+    "ru": "يُظهر، يعرض",
+    "pos": "فعل",
+    "forms": "zeigte · hat gezeigt"
+   },
+   "zwischen": {
+    "ru": "بين",
+    "pos": "حرف جر"
+   },
+   "Öl": {
+    "ru": "الزيت",
+    "pos": "اسم",
+    "decl": "das Öl · الجمع: die Öle"
+   },
+   "Ölmessstab": {
+    "ru": "عصا قياس الزيت",
+    "pos": "اسم",
+    "decl": "der Ölmessstab · الجمع: die Ölmessstäbe"
+   },
+   "Ölstand": {
+    "ru": "مستوى الزيت",
+    "pos": "اسم",
+    "decl": "der Ölstand · لا جمع له"
+   },
+   "üben": {
+    "ru": "يتدرب",
+    "pos": "فعل",
+    "forms": "übte · hat geübt"
+   }
+  }
+ }
+}

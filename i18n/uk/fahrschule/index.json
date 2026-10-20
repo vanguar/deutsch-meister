@@ -94,7 +94,8 @@
    "title": "Technik und Fahrzeugkontrolle",
    "titleTr": "Техніка й перевірка машини",
    "units": [
-    "t-09"
+    "t-09",
+    "p-09"
    ]
   }
  ],
@@ -323,6 +324,15 @@
    "title": "Technik und Fahrzeugkontrolle",
    "titleTr": "Техніка й перевірка машини",
    "count": 16
+  },
+  {
+   "id": "p-09",
+   "kind": "dialog",
+   "emoji": "🛢️",
+   "level": "B1",
+   "title": "Die Sicherheitskontrolle",
+   "titleTr": "Перевірка безпеки",
+   "count": 15
   }
  ]
 }
