@@ -81,7 +81,7 @@ await c.go(B + '/fahrschule.html', 600);
 ok(await waitFor(`document.querySelectorAll('.fs-tile[data-unit]').length === ${ORDER.length}`, 20000), `все уроки на странице (${ORDER.length})`);
 const hub = await c.ev(`[...document.querySelectorAll('.fs-tile[data-unit]')].map(t => t.dataset.unit).join(',')`);
 ok(hub === ORDER.join(), `порядок по темам: ${hub}`);
-ok(await c.ev(`document.querySelectorAll('.fs-soon').length === 1`), 'плитка «Скоро» с планами');
+ok(await c.ev(`document.querySelectorAll('.fs-soon').length === 0`), 'плитки «Скоро» больше нет: все темы готовы');
 const topicsN = await c.ev(`Fahrschule.topics.length`);
 ok(await c.ev(`document.querySelectorAll('.fs-topic').length === ${topicsN} && ${topicsN} >= 1`), `темы: ${topicsN} карточк(и) тем`);
 ok(await c.ev(`Fahrschule.topics.every(t => [...document.querySelectorAll('.fs-topic[data-topic="' + t.id + '"] [data-unit]')].map(e => e.dataset.unit).join() === t.units.join())`),

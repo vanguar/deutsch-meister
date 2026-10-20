@@ -57,7 +57,8 @@ const Fahrschule = (() => {
   const TOPIC_ICONS = {
     'vorfahrt': 'i-light', 'zeichen-ampeln': 'i-warn', 'tempo-abstand': 'i-gauge', 'ueberholen': 'i-updown',
     'parken': 'i-park', 'ruecksicht': 'i-bike', 'licht-wetter': 'i-moon', 'alkohol': 'i-glass',
-    'technik': 'i-wrench', 'unfall': 'i-aid', 'autobahn': 'i-road', 'kreis-bahn': 'i-ring', 'umwelt': 'i-leaf'
+    'technik': 'i-wrench', 'unfall': 'i-aid', 'autobahn': 'i-road', 'kreis-bahn': 'i-ring', 'umwelt': 'i-leaf',
+    'pruefung': 'i-cap'
   };
 
   // Перекрёсток 300×300: дороги шириной 64 по центру, правостороннее
@@ -321,17 +322,6 @@ const Fahrschule = (() => {
     </a>`;
   }
 
-  function soonTileHtml() {
-    return `<div class="fs-soon" aria-disabled="true">
-      <span class="fs-topic-ico" aria-hidden="true">${icon('i-car')}</span>
-      <span class="fs-topic-titles">
-        <span class="fs-topic-n">Дальше</span>
-        <span class="fs-topic-tr">Экзамен на права — следующая тема</span>
-      </span>
-      <span class="fs-soon-badge">Скоро</span>
-    </div>`;
-  }
-
   // Открытая тема: выбор человека (OPEN_KEY; открытый урок выбирает свою
   // тему), а при первом заходе — тема последнего урока или первая
   function openTopic() {
@@ -419,7 +409,7 @@ const Fahrschule = (() => {
     el.cont.innerHTML = continueHtml(byId, prog);
     el.done.innerHTML = `<span>Пройдено</span>: ${ofHtml(units.filter(u => progressOf(u.id, prog).done).length, units.length)}`;
     el.listHead.hidden = false;
-    el.list.innerHTML = topics.map((t, k) => topicHtml(t, k + 1, byId, t.id === open, prog)).join('') + soonTileHtml();
+    el.list.innerHTML = topics.map((t, k) => topicHtml(t, k + 1, byId, t.id === open, prog)).join('');
     // первые уроки тем — заранее, пока человек выбирает
     prefetch(topics.map(t => t.units[0]));
   }

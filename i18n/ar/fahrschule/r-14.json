@@ -1,0 +1,1234 @@
+{
+ "id": "r-14",
+ "kind": "road",
+ "emoji": "🏁",
+ "level": "B1",
+ "title": "Die Prüfungsfahrt",
+ "titleTr": "رحلة الامتحان",
+ "intro": "بروفة نهائية: الممتحن في الخلف وأنت خلف المقود. الركن، والانعطاف، وممر المشاة، والدوّار، والتجاوز، وممر السكة، والكبح الطارئ، والاحتفال بعد الامتحان.",
+ "scenes": [
+  {
+   "type": "parallel",
+   "options": [
+    {
+     "key": "back",
+     "de": "Rückwärts in die Lücke.",
+     "tr": "إلى الخلف في المكان."
+    },
+    {
+     "key": "front",
+     "de": "Vorwärts in die Lücke.",
+     "tr": "إلى الأمام في المكان."
+    }
+   ],
+   "situation": {
+    "de": "Der Prüfer sagt: «Parken Sie bitte in die Lücke am Straßenrand ein.»",
+    "tr": "يقول الممتحن: «اركن من فضلك في المكان الفارغ على حافة الطريق».",
+    "o": {
+     "ein": "ein>einparken",
+     "parken": "parken>einparken"
+    }
+   },
+   "question": {
+    "de": "Wie parken Sie am besten ein?",
+    "tr": "ما أفضل طريقة للركن هنا؟",
+    "o": {
+     "ein": "ein>einparken",
+     "parken": "parken>einparken"
+    }
+   },
+   "explain": [
+    {
+     "de": "In eine enge Lücke am Straßenrand parken Sie rückwärts ein.",
+     "tr": "في المكان الضيق على حافة الطريق تركن إلى الخلف.",
+     "o": {
+      "ein": "ein>einparken",
+      "parken": "parken>einparken"
+     }
+    },
+    {
+     "de": "Halten Sie neben dem vorderen Auto, blinken Sie rechts und fahren Sie langsam rückwärts.",
+     "tr": "توقف بجانب السيارة الأمامية، وشغّل إشارة اليمين، وارجع ببطء."
+    },
+    {
+     "de": "Lenken Sie zuerst nach rechts, dann nach links, bis das Auto parallel zum Bordstein steht.",
+     "tr": "أدر المقود أولًا إلى اليمين ثم إلى اليسار حتى تصبح السيارة موازية للرصيف."
+    }
+   ],
+   "answer": "back"
+  },
+  {
+   "type": "rightturn",
+   "options": [
+    {
+     "key": "go",
+     "de": "Ich biege sofort ab.",
+     "tr": "أنعطف فورًا."
+    },
+    {
+     "key": "wait",
+     "de": "Ich warte und lasse den Radfahrer zuerst fahren.",
+     "tr": "أنتظر وأترك راكب الدراجة يمرّ أولًا."
+    }
+   ],
+   "situation": {
+    "de": "Der Prüfer sagt: «An der nächsten Kreuzung bitte rechts.» Neben Ihnen fährt ein Radfahrer geradeaus.",
+    "tr": "يقول الممتحن: «عند التقاطع القادم يمينًا من فضلك». وبجانبك راكب دراجة يسير مستقيمًا."
+   },
+   "question": {
+    "de": "Was machen Sie?",
+    "tr": "ماذا تفعل؟"
+   },
+   "explain": [
+    {
+     "de": "Radfahrer, die geradeaus fahren, haben Vorrang.",
+     "tr": "راكبو الدراجات الذين يسيرون مستقيمًا لهم الأسبقية."
+    },
+    {
+     "de": "Schauen Sie vor dem Abbiegen in den Spiegel und über die Schulter.",
+     "tr": "قبل الانعطاف انظر في المرآة وفوق كتفك."
+    },
+    {
+     "de": "Viele Unfälle passieren im toten Winkel.",
+     "tr": "كثير من الحوادث يقع في النقطة العمياء."
+    }
+   ],
+   "answer": "wait",
+   "who": "bike"
+  },
+  {
+   "type": "zebracross",
+   "options": [
+    {
+     "key": "go",
+     "de": "Ich fahre weiter, er wartet ja.",
+     "tr": "أواصل القيادة، فهو ينتظر."
+    },
+    {
+     "key": "stop",
+     "de": "Ich halte an und lasse ihn gehen.",
+     "tr": "أتوقف وأتركه يعبر."
+    }
+   ],
+   "situation": {
+    "de": "Sie fahren selbstständig nach den Schildern. Am Zebrastreifen wartet ein Fußgänger.",
+    "tr": "تقود بنفسك حسب اللافتات. عند ممر المشاة ينتظر أحد المشاة."
+   },
+   "question": {
+    "de": "Was machen Sie?",
+    "tr": "ماذا تفعل؟"
+   },
+   "explain": [
+    {
+     "de": "Am Zebrastreifen haben Fußgänger Vorrang.",
+     "tr": "عند ممر المشاة للمشاة الأسبقية."
+    },
+    {
+     "de": "Sie müssen anhalten, wenn jemand die Straße überqueren will.",
+     "tr": "يجب أن تتوقف إذا أراد أحد عبور الشارع."
+    },
+    {
+     "de": "Am Zebrastreifen ist Überholen verboten.",
+     "tr": "التجاوز ممنوع عند ممر المشاة."
+    }
+   ],
+   "answer": "stop",
+   "ped": "waiting"
+  },
+  {
+   "type": "roundabout",
+   "options": [
+    {
+     "key": "none",
+     "de": "Ich blinke nicht.",
+     "tr": "لا أشغّل الإشارة."
+    },
+    {
+     "key": "left",
+     "de": "Ich blinke links.",
+     "tr": "أشغّل إشارة اليسار."
+    },
+    {
+     "key": "right",
+     "de": "Ich blinke rechts.",
+     "tr": "أشغّل إشارة اليمين."
+    }
+   ],
+   "situation": {
+    "de": "Der Prüfer sagt: «Im Kreisverkehr die zweite Ausfahrt, bitte.» Die erste liegt schon hinter Ihnen, jetzt kommt Ihre.",
+    "tr": "يقول الممتحن: «في الدوّار المخرج الثاني من فضلك». الأول صار خلفك، والآن يأتي مخرجك."
+   },
+   "question": {
+    "de": "Wie blinken Sie jetzt?",
+    "tr": "كيف تشغّل الإشارة الآن؟"
+   },
+   "explain": [
+    {
+     "de": "Vor dem Hinausfahren blinken Sie rechts.",
+     "tr": "قبل الخروج من الدوّار شغّل إشارة اليمين."
+    },
+    {
+     "de": "So wissen die anderen, dass Sie den Kreis verlassen.",
+     "tr": "هكذا يعرف الآخرون أنك تغادر الدوّار."
+    }
+   ],
+   "answer": "right",
+   "sign": "z215",
+   "ask": "exit"
+  },
+  {
+   "type": "overtake",
+   "options": [
+    {
+     "key": "yes",
+     "de": "Ja, ich überhole jetzt.",
+     "tr": "نعم، أتجاوز الآن."
+    },
+    {
+     "key": "no",
+     "de": "Nein, ich bleibe hinter dem Lkw.",
+     "tr": "لا، أبقى خلف الشاحنة."
+    }
+   ],
+   "situation": {
+    "de": "Auf der Landstraße fährt ein Lkw langsam vor Ihnen. Die Gegenfahrbahn ist frei, aber die Mittellinie ist durchgezogen.",
+    "tr": "على الطريق الريفي تسير شاحنة ببطء أمامك. المسار المقابل خالٍ، لكن الخط الأوسط متصل."
+   },
+   "question": {
+    "de": "Dürfen Sie jetzt überholen?",
+    "tr": "هل يجوز لك التجاوز الآن؟"
+   },
+   "explain": [
+    {
+     "de": "Eine durchgezogene Linie dürfen Sie nicht überfahren.",
+     "tr": "لا يجوز لك عبور الخط المتصل."
+    },
+    {
+     "de": "Auch wenn niemand kommt, ist Überholen hier verboten.",
+     "tr": "حتى لو لم يأتِ أحد، فالتجاوز هنا ممنوع."
+    }
+   ],
+   "answer": "no",
+   "line": "solid"
+  },
+  {
+   "type": "railway",
+   "options": [
+    {
+     "key": "stop",
+     "de": "Ich halte vor dem Andreaskreuz an.",
+     "tr": "أتوقف قبل صليب أندراوس."
+    },
+    {
+     "key": "go",
+     "de": "Ich fahre schnell über die Gleise.",
+     "tr": "أعبر السكة بسرعة."
+    }
+   ],
+   "situation": {
+    "de": "Der Prüfer sagt nichts. Vor einem Bahnübergang blinkt das rote Licht, aber Sie sehen keinen Zug.",
+    "tr": "الممتحن لا يقول شيئًا. أمام ممر السكة يومض الضوء الأحمر، لكنك لا ترى قطارًا."
+   },
+   "question": {
+    "de": "Was machen Sie?",
+    "tr": "ماذا تفعل؟"
+   },
+   "explain": [
+    {
+     "de": "Blinkt das rote Licht, müssen Sie vor dem Andreaskreuz halten.",
+     "tr": "إذا ومض الضوء الأحمر فعليك التوقف قبل صليب أندراوس."
+    },
+    {
+     "de": "Der Zug kommt oft schneller, als man denkt.",
+     "tr": "غالبًا ما يصل القطار أسرع مما تظن."
+    }
+   ],
+   "answer": "stop",
+   "sign": "z201",
+   "signal": "red"
+  },
+  {
+   "type": "stop",
+   "options": [
+    20,
+    28,
+    36
+   ],
+   "situation": {
+    "de": "Sie fahren vierzig. Plötzlich rollt ein Ball auf die Straße, und Sie machen eine Gefahrbremsung.",
+    "tr": "تقود بسرعة أربعين. فجأة تتدحرج كرة إلى الشارع، فتكبح كبحًا طارئًا."
+   },
+   "question": {
+    "de": "Wie lang ist der Anhalteweg?",
+    "tr": "كم طول مسافة التوقف؟"
+   },
+   "explain": [
+    {
+     "de": "Reaktionsweg: 40 geteilt durch 10, mal 3. Das sind 12 Meter.",
+     "tr": "مسافة رد الفعل: 40 مقسومة على 10، مضروبة في 3. أي 12 مترًا.",
+     "o": {
+      "durch": "durch>geteilt durch",
+      "geteilt": "geteilt>geteilt durch"
+     }
+    },
+    {
+     "de": "Bei einer Gefahrbremsung ist der Bremsweg nur halb so lang: 16 geteilt durch 2, also 8 Meter.",
+     "tr": "عند الكبح الطارئ تكون مسافة الكبح نصف الطول فقط: 16 مقسومة على 2، أي 8 أمتار.",
+     "o": {
+      "durch": "durch>geteilt durch",
+      "geteilt": "geteilt>geteilt durch"
+     }
+    },
+    {
+     "de": "Anhalteweg: 12 plus 8. Das sind 20 Meter. Diese Aufgabe kommt oft in der Prüfung.",
+     "tr": "مسافة التوقف: 12 زائد 8. أي 20 مترًا. هذه المهمة تأتي كثيرًا في الامتحان."
+    }
+   ],
+   "reaction": 12,
+   "brake": 8,
+   "answer": 20,
+   "v": 40,
+   "hazard": "ball",
+   "emergency": true
+  },
+  {
+   "type": "promille",
+   "options": [
+    {
+     "key": "drive",
+     "de": "Ja, unter 0,5 Promille ist Fahren erlaubt.",
+     "tr": "نعم، القيادة مسموحة تحت 0,5 في الألف."
+    },
+    {
+     "key": "stay",
+     "de": "Nein, ich lasse das Auto stehen und nehme ein Taxi.",
+     "tr": "لا، أترك السيارة وآخذ سيارة أجرة."
+    }
+   ],
+   "situation": {
+    "de": "Sie haben die Prüfung gestern bestanden. Auf der Feier trinken Sie ein Glas Sekt, der Test zeigt 0,2 Promille.",
+    "tr": "نجحت في الامتحان أمس. في الحفل تشرب كأسًا من النبيذ الفوّار، ويُظهر الاختبار 0,2 في الألف."
+   },
+   "question": {
+    "de": "Dürfen Sie jetzt fahren?",
+    "tr": "هل يجوز لك القيادة الآن؟"
+   },
+   "explain": [
+    {
+     "de": "In der Probezeit und unter 21 Jahren gilt 0,0 Promille.",
+     "tr": "في فترة الاختبار وتحت سن 21 يسري حدّ 0,0 في الألف."
+    },
+    {
+     "de": "Schon ein Glas Sekt ist für Sie verboten. Lassen Sie das Auto stehen.",
+     "tr": "حتى كأس واحد من النبيذ الفوّار ممنوع عليك. اترك السيارة."
+    }
+   ],
+   "answer": "stay",
+   "p": 0.2,
+   "novice": true
+  }
+ ],
+ "signs": {
+  "z201": {
+   "de": "Andreaskreuz",
+   "tr": "صليب أندراوس (الأولوية للقطار)",
+   "src": "data/fahrschule/signs/z201.svg",
+   "n": "201",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Andreaskreuz_(ohne_Ma%C3%9Fe)_1970.svg"
+  },
+  "z215": {
+   "de": "Kreisverkehr",
+   "tr": "دوّار",
+   "src": "data/fahrschule/signs/z215.svg",
+   "n": "215",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_215_-_Kreisverkehr,_StVO_2000.svg"
+  }
+ },
+ "gloss": {
+  "w": {
+   "abbiegen": "abbiegen",
+   "aber": "aber",
+   "als": "als",
+   "also": "also",
+   "am": "an",
+   "an": "an",
+   "anderen": "andere",
+   "andreaskreuz": "Andreaskreuz",
+   "anhalten": "anhalten",
+   "anhalteweg": "Anhalteweg",
+   "auch": "auch",
+   "auf": "auf",
+   "aufgabe": "Aufgabe",
+   "ausfahrt": "Ausfahrt",
+   "auto": "Auto",
+   "bahnübergang": "Bahnübergang",
+   "ball": "Ball",
+   "bei": "bei",
+   "bestanden": "bestehen",
+   "besten": "gut",
+   "bis": "bis",
+   "bitte": "bitte",
+   "blinken": "blinken",
+   "blinkt": "blinken",
+   "bordstein": "Bordstein",
+   "bremsweg": "Bremsweg",
+   "dann": "dann",
+   "das": "der/die/das",
+   "dass": "dass",
+   "dem": "der/die/das",
+   "den": "der/die/das",
+   "denkt": "denken",
+   "der": "der/die/das",
+   "die": "der/die/das",
+   "diese": "dieser",
+   "durch>geteilt durch": "geteilt durch",
+   "durchgezogen": "durchgezogen",
+   "durchgezogene": "durchgezogen",
+   "dürfen": "dürfen",
+   "ein": "ein/eine",
+   "ein>einparken": "einparken",
+   "eine": "ein/eine",
+   "einem": "ein/eine",
+   "einer": "ein/eine",
+   "enge": "eng",
+   "erste": "erste",
+   "fahren": "fahren",
+   "feier": "Feier",
+   "frei": "frei",
+   "fußgänger": "Fußgänger",
+   "fährt": "fahren",
+   "für": "für",
+   "gefahrbremsung": "Gefahrbremsung",
+   "gegenfahrbahn": "Gegenfahrbahn",
+   "geradeaus": "geradeaus",
+   "gestern": "gestern",
+   "geteilt>geteilt durch": "geteilt durch",
+   "gilt": "gelten",
+   "glas": "Glas",
+   "haben": "haben",
+   "halb": "halb",
+   "halten": "halten",
+   "hier": "hier",
+   "hinausfahren": "hinausfahren",
+   "hinter": "hinter",
+   "ihnen": "Sie",
+   "ihre": "Ihr",
+   "im": "in",
+   "in": "in",
+   "ist": "sein",
+   "jahren": "Jahr",
+   "jemand": "jemand",
+   "jetzt": "jetzt",
+   "keinen": "kein",
+   "kommt": "kommen",
+   "kreis": "Kreis",
+   "kreisverkehr": "Kreisverkehr",
+   "kreuzung": "Kreuzung",
+   "landstraße": "Landstraße",
+   "lang": "lang",
+   "langsam": "langsam",
+   "lassen": "lassen",
+   "lenken": "lenken",
+   "licht": "Licht",
+   "liegt": "liegen",
+   "linie": "Linie",
+   "links": "links",
+   "lkw": "Lkw",
+   "lücke": "Lücke",
+   "machen": "machen",
+   "mal": "mal",
+   "man": "man",
+   "meter": "Meter",
+   "mittellinie": "Mittellinie",
+   "müssen": "müssen",
+   "nach": "nach",
+   "neben": "neben",
+   "nicht": "nicht",
+   "nichts": "nichts",
+   "niemand": "niemand",
+   "nur": "nur",
+   "nächsten": "nächste",
+   "oft": "oft",
+   "parallel": "parallel",
+   "parken>einparken": "einparken",
+   "passieren": "passieren",
+   "plus": "plus",
+   "plötzlich": "plötzlich",
+   "probezeit": "Probezeit",
+   "promille": "Promille",
+   "prüfer": "Prüfer",
+   "prüfung": "Prüfung",
+   "prüfungsfahrt": "Prüfungsfahrt",
+   "radfahrer": "Radfahrer",
+   "reaktionsweg": "Reaktionsweg",
+   "rechts": "rechts",
+   "rollt": "rollen",
+   "rote": "rot",
+   "rückwärts": "rückwärts",
+   "sagt": "sagen",
+   "schauen": "schauen",
+   "schildern": "Schild",
+   "schneller": "schnell",
+   "schon": "schon",
+   "schulter": "Schulter",
+   "sehen": "sehen",
+   "sekt": "Sekt",
+   "selbstständig": "selbstständig",
+   "sie": "Sie",
+   "sind": "sein",
+   "so": "so",
+   "spiegel": "Spiegel",
+   "stehen": "stehen",
+   "steht": "stehen",
+   "straße": "Straße",
+   "straßenrand": "Straßenrand",
+   "test": "Test",
+   "toten": "tot",
+   "trinken": "trinken",
+   "und": "und",
+   "unfälle": "Unfall",
+   "unter": "unter",
+   "verboten": "verbieten",
+   "verlassen": "verlassen",
+   "viele": "viele",
+   "vierzig": "vierzig",
+   "vor": "vor",
+   "vorderen": "vorder",
+   "vorrang": "Vorrang",
+   "wartet": "warten",
+   "was": "was",
+   "wenn": "wenn",
+   "wie": "wie",
+   "will": "wollen",
+   "winkel": "Winkel",
+   "wissen": "wissen",
+   "zebrastreifen": "Zebrastreifen",
+   "zeigt": "zeigen",
+   "zuerst": "zuerst",
+   "zug": "Zug",
+   "zum": "zu",
+   "zweite": "zweite",
+   "über": "über",
+   "überfahren": "überfahren",
+   "überholen": "überholen",
+   "überqueren": "überqueren"
+  },
+  "l": {
+   "Andreaskreuz": {
+    "ru": "صليب أندراوس (لافتة عند السكة)",
+    "pos": "اسم",
+    "decl": "das Andreaskreuz · الجمع: die Andreaskreuze"
+   },
+   "Anhalteweg": {
+    "ru": "مسافة التوقف",
+    "pos": "اسم",
+    "note": "Anhalteweg = Reaktionsweg + Bremsweg (مسافة رد الفعل + مسافة الكبح)",
+    "decl": "der Anhalteweg · الجمع: die Anhaltewege"
+   },
+   "Aufgabe": {
+    "ru": "مهمة",
+    "pos": "اسم",
+    "decl": "die Aufgabe · الجمع: die Aufgaben"
+   },
+   "Ausfahrt": {
+    "ru": "مخرج (من الطريق السريع)",
+    "pos": "اسم",
+    "decl": "die Ausfahrt · الجمع: die Ausfahrten"
+   },
+   "Auto": {
+    "ru": "سيارة",
+    "pos": "اسم",
+    "decl": "das Auto · الجمع: die Autos"
+   },
+   "Bahnübergang": {
+    "ru": "ممر سكة حديدية",
+    "pos": "اسم",
+    "decl": "der Bahnübergang · الجمع: die Bahnübergänge"
+   },
+   "Ball": {
+    "ru": "كرة",
+    "pos": "اسم",
+    "decl": "der Ball · الجمع: die Bälle"
+   },
+   "Bordstein": {
+    "ru": "حافة الرصيف",
+    "pos": "اسم",
+    "decl": "der Bordstein · الجمع: die Bordsteine"
+   },
+   "Bremsweg": {
+    "ru": "مسافة الكبح",
+    "pos": "اسم",
+    "note": "(v / 10) · (v / 10) مترًا؛ ونصفها عند الكبح الطارئ",
+    "decl": "der Bremsweg · الجمع: die Bremswege"
+   },
+   "Feier": {
+    "ru": "حفلة",
+    "pos": "اسم",
+    "decl": "die Feier · الجمع: die Feiern"
+   },
+   "Fußgänger": {
+    "ru": "ماشٍ، المشاة",
+    "pos": "اسم",
+    "decl": "der Fußgänger · الجمع: die Fußgänger"
+   },
+   "Gefahrbremsung": {
+    "ru": "كبح طارئ",
+    "pos": "اسم",
+    "note": "الضغط على المكابح بكامل القوة؛ مسافة الكبح نحو النصف",
+    "decl": "die Gefahrbremsung · الجمع: die Gefahrbremsungen"
+   },
+   "Gegenfahrbahn": {
+    "ru": "المسار المقابل",
+    "pos": "اسم",
+    "decl": "die Gegenfahrbahn · الجمع: die Gegenfahrbahnen"
+   },
+   "Glas": {
+    "ru": "كأس",
+    "pos": "اسم",
+    "decl": "das Glas · الجمع: die Gläser"
+   },
+   "Ihr": {
+    "ru": "ـكَ، ـكِ (صيغة الاحترام)",
+    "pos": "ضمير"
+   },
+   "Jahr": {
+    "ru": "سنة",
+    "pos": "اسم",
+    "decl": "das Jahr · الجمع: die Jahre"
+   },
+   "Kreis": {
+    "ru": "دائرة",
+    "pos": "اسم",
+    "decl": "der Kreis · الجمع: die Kreise"
+   },
+   "Kreisverkehr": {
+    "ru": "دوّار",
+    "pos": "اسم",
+    "decl": "der Kreisverkehr · الجمع: die Kreisverkehre"
+   },
+   "Kreuzung": {
+    "ru": "تقاطع",
+    "pos": "اسم",
+    "decl": "die Kreuzung · الجمع: die Kreuzungen"
+   },
+   "Landstraße": {
+    "ru": "طريق ريفي",
+    "pos": "اسم",
+    "note": "خارج البلدات: للسيارات عادةً حتى 100 كم/س",
+    "decl": "die Landstraße · الجمع: die Landstraßen"
+   },
+   "Licht": {
+    "ru": "ضوء",
+    "pos": "اسم",
+    "decl": "das Licht · الجمع: die Lichter"
+   },
+   "Linie": {
+    "ru": "خط",
+    "pos": "اسم",
+    "decl": "die Linie · الجمع: die Linien"
+   },
+   "Lkw": {
+    "ru": "شاحنة",
+    "pos": "اسم",
+    "note": "اختصار لـ der Lastkraftwagen",
+    "decl": "der Lkw · الجمع: die Lkw"
+   },
+   "Lücke": {
+    "ru": "فراغ، مكان فارغ",
+    "pos": "اسم",
+    "decl": "die Lücke · الجمع: die Lücken"
+   },
+   "Meter": {
+    "ru": "متر",
+    "pos": "اسم",
+    "decl": "der Meter · الجمع: die Meter"
+   },
+   "Mittellinie": {
+    "ru": "الخط الأوسط",
+    "pos": "اسم",
+    "decl": "die Mittellinie · الجمع: die Mittellinien"
+   },
+   "Probezeit": {
+    "ru": "فترة الاختبار (للسائقين الجدد)",
+    "pos": "اسم",
+    "note": "سنتان بعد الحصول على الرخصة؛ والأخطاء أغلى ثمنًا",
+    "decl": "die Probezeit · الجمع: die Probezeiten"
+   },
+   "Promille": {
+    "ru": "في الألف (نسبة الكحول في الدم)",
+    "pos": "اسم",
+    "decl": "das Promille · الجمع: die Promille"
+   },
+   "Prüfer": {
+    "ru": "الممتحِن",
+    "pos": "اسم",
+    "decl": "der Prüfer · الجمع: die Prüfer"
+   },
+   "Prüfung": {
+    "ru": "امتحان",
+    "pos": "اسم",
+    "decl": "die Prüfung · الجمع: die Prüfungen"
+   },
+   "Prüfungsfahrt": {
+    "ru": "رحلة الامتحان",
+    "pos": "اسم",
+    "decl": "die Prüfungsfahrt · الجمع: die Prüfungsfahrten"
+   },
+   "Radfahrer": {
+    "ru": "راكب دراجة",
+    "pos": "اسم",
+    "decl": "der Radfahrer · الجمع: die Radfahrer"
+   },
+   "Reaktionsweg": {
+    "ru": "مسافة رد الفعل",
+    "pos": "اسم",
+    "note": "المسافة حتى يلاحظ السائق الخطر وينقل قدمه إلى المكابح: (v / 10) · 3 أمتار",
+    "decl": "der Reaktionsweg · الجمع: die Reaktionswege"
+   },
+   "Schild": {
+    "ru": "لافتة",
+    "pos": "اسم",
+    "decl": "das Schild · الجمع: die Schilder"
+   },
+   "Schulter": {
+    "ru": "كتف",
+    "pos": "اسم",
+    "decl": "die Schulter · الجمع: die Schultern"
+   },
+   "Sekt": {
+    "ru": "نبيذ فوّار",
+    "pos": "اسم",
+    "decl": "der Sekt · الجمع: die Sekte"
+   },
+   "Sie": {
+    "ru": "حضرتك (صيغة الاحترام)",
+    "pos": "ضمير",
+    "note": "Ihnen — لكم (حالة الجر): vor Ihnen — أمامك"
+   },
+   "Spiegel": {
+    "ru": "مرآة",
+    "pos": "اسم",
+    "decl": "der Spiegel · الجمع: die Spiegel"
+   },
+   "Straße": {
+    "ru": "شارع، طريق",
+    "pos": "اسم",
+    "decl": "die Straße · الجمع: die Straßen"
+   },
+   "Straßenrand": {
+    "ru": "حافة الطريق",
+    "pos": "اسم",
+    "decl": "der Straßenrand · الجمع: die Straßenränder"
+   },
+   "Test": {
+    "ru": "اختبار (هنا: جهاز قياس الكحول)",
+    "pos": "اسم",
+    "decl": "der Test · الجمع: die Tests"
+   },
+   "Unfall": {
+    "ru": "حادث",
+    "pos": "اسم",
+    "decl": "der Unfall · الجمع: die Unfälle"
+   },
+   "Vorrang": {
+    "ru": "أسبقية، أولوية",
+    "pos": "اسم",
+    "decl": "der Vorrang · لا جمع له"
+   },
+   "Winkel": {
+    "ru": "زاوية",
+    "pos": "اسم",
+    "decl": "der Winkel · الجمع: die Winkel"
+   },
+   "Zebrastreifen": {
+    "ru": "ممر المشاة (المخطط)",
+    "pos": "اسم",
+    "decl": "der Zebrastreifen · الجمع: die Zebrastreifen"
+   },
+   "Zug": {
+    "ru": "قطار",
+    "pos": "اسم",
+    "decl": "der Zug · الجمع: die Züge"
+   },
+   "abbiegen": {
+    "ru": "ينعطف",
+    "pos": "فعل",
+    "note": "سابقة منفصلة: Sie biegen … ab",
+    "forms": "bog ab · ist abgebogen"
+   },
+   "aber": {
+    "ru": "لكن",
+    "pos": "أداة ربط"
+   },
+   "als": {
+    "ru": "من (في المقارنة)؛ كـ",
+    "pos": "أداة ربط"
+   },
+   "also": {
+    "ru": "إذن",
+    "pos": "ظرف"
+   },
+   "an": {
+    "ru": "عند، على",
+    "pos": "حرف جر",
+    "note": "am = an dem؛ an der Kreuzung — عند التقاطع"
+   },
+   "andere": {
+    "ru": "آخر",
+    "pos": "صفة"
+   },
+   "anhalten": {
+    "ru": "يتوقف",
+    "pos": "فعل",
+    "forms": "hielt an · hat angehalten"
+   },
+   "auch": {
+    "ru": "أيضًا؛ حتى (auch wenn)",
+    "pos": "ظرف"
+   },
+   "auf": {
+    "ru": "على",
+    "pos": "حرف جر",
+    "note": "auf der Straße — على الطريق؛ achten auf — ينتبه لـ"
+   },
+   "bei": {
+    "ru": "عند",
+    "pos": "حرف جر",
+    "note": "beim = bei dem: beim Fahren — أثناء القيادة؛ bei Rot — عند الأحمر"
+   },
+   "bestehen": {
+    "ru": "ينجح (في امتحان)",
+    "pos": "فعل",
+    "forms": "bestand · hat bestanden"
+   },
+   "bis": {
+    "ru": "حتى",
+    "pos": "أداة ربط"
+   },
+   "bitte": {
+    "ru": "من فضلك",
+    "pos": "أداة"
+   },
+   "blinken": {
+    "ru": "يشغّل إشارة الانعطاف",
+    "pos": "فعل",
+    "forms": "blinkte · hat geblinkt"
+   },
+   "dann": {
+    "ru": "إذن؛ ثم",
+    "pos": "ظرف"
+   },
+   "dass": {
+    "ru": "أنّ",
+    "pos": "أداة ربط"
+   },
+   "denken": {
+    "ru": "يفكّر",
+    "pos": "فعل",
+    "note": "denken an — يتذكّر، يفكّر في",
+    "forms": "dachte · hat gedacht"
+   },
+   "der/die/das": {
+    "ru": "أداة التعريف",
+    "pos": "أداة تعريف",
+    "note": "der للمذكر، die للمؤنث والجمع، das للمحايد؛ den للمذكر في حالة النصب، dem للمذكر والمحايد في حالة الجر؛ وdas تعني أيضًا «هذا»"
+   },
+   "dieser": {
+    "ru": "هذا، هذه",
+    "pos": "ضمير"
+   },
+   "durchgezogen": {
+    "ru": "متصل (عن الخط)",
+    "pos": "صفة",
+    "note": "لا يجوز عبور الخط المتصل"
+   },
+   "dürfen": {
+    "ru": "يحق له، يُسمح له",
+    "pos": "فعل",
+    "forms": "durfte · hat gedurft"
+   },
+   "ein/eine": {
+    "ru": "أداة النكرة؛ واحد",
+    "pos": "أداة تعريف",
+    "note": "an einer Kreuzung — عند تقاطعٍ ما"
+   },
+   "einparken": {
+    "ru": "يركن السيارة",
+    "pos": "فعل",
+    "note": "سابقة منفصلة: parken Sie … ein",
+    "forms": "parkte ein · hat eingeparkt"
+   },
+   "eng": {
+    "ru": "ضيق",
+    "pos": "صفة"
+   },
+   "erste": {
+    "ru": "الأول",
+    "pos": "صفة"
+   },
+   "fahren": {
+    "ru": "يسير بالسيارة؛ يقود",
+    "pos": "فعل",
+    "forms": "fuhr · ist gefahren"
+   },
+   "frei": {
+    "ru": "خالٍ، فارغ",
+    "pos": "صفة"
+   },
+   "für": {
+    "ru": "لـ، من أجل",
+    "pos": "حرف جر"
+   },
+   "gelten": {
+    "ru": "يسري، ينطبق",
+    "pos": "فعل",
+    "forms": "galt · hat gegolten"
+   },
+   "geradeaus": {
+    "ru": "مستقيمًا",
+    "pos": "ظرف"
+   },
+   "gestern": {
+    "ru": "أمس",
+    "pos": "ظرف"
+   },
+   "geteilt durch": {
+    "ru": "مقسومًا على",
+    "pos": "تعبير"
+   },
+   "gut": {
+    "ru": "جيد",
+    "pos": "صفة",
+    "note": "am besten — من الأفضل",
+    "forms": "gut · besser · am besten"
+   },
+   "haben": {
+    "ru": "يملك، لديه",
+    "pos": "فعل",
+    "note": "Vorfahrt haben — له أولوية المرور",
+    "forms": "hatte · hat gehabt"
+   },
+   "halb": {
+    "ru": "نصف",
+    "pos": "صفة",
+    "note": "halb so lang — نصف الطول؛ halber Tacho — نصف العداد؛ halb elf — العاشرة والنصف (10:30)"
+   },
+   "halten": {
+    "ru": "يتوقف (لوقت قصير)؛ يمسك",
+    "pos": "فعل",
+    "forms": "hielt · hat gehalten"
+   },
+   "hier": {
+    "ru": "هنا",
+    "pos": "ظرف"
+   },
+   "hinausfahren": {
+    "ru": "يخرج بالسيارة",
+    "pos": "فعل",
+    "note": "das Hinausfahren — الخروج (من الدوّار)",
+    "forms": "fuhr hinaus · ist hinausgefahren"
+   },
+   "hinter": {
+    "ru": "خلف",
+    "pos": "حرف جر"
+   },
+   "in": {
+    "ru": "في",
+    "pos": "حرف جر",
+    "note": "im = in dem: im Bereich — في المنطقة"
+   },
+   "jemand": {
+    "ru": "أحدٌ ما",
+    "pos": "ضمير"
+   },
+   "jetzt": {
+    "ru": "الآن",
+    "pos": "ظرف"
+   },
+   "kein": {
+    "ru": "لا (نفي الاسم)",
+    "pos": "ضمير"
+   },
+   "kommen": {
+    "ru": "يأتي",
+    "pos": "فعل",
+    "note": "von rechts kommen — يأتي من اليمين",
+    "forms": "kam · ist gekommen"
+   },
+   "lang": {
+    "ru": "طويل",
+    "pos": "صفة",
+    "note": "Wie lang …؟ — كم طول …؟",
+    "forms": "lang · länger · am längsten"
+   },
+   "langsam": {
+    "ru": "بطيء؛ ببطء",
+    "pos": "صفة"
+   },
+   "lassen": {
+    "ru": "يدع، يترك",
+    "pos": "فعل",
+    "note": "jemanden fahren lassen — يدع أحدًا يمرّ أولًا",
+    "forms": "ließ · hat gelassen"
+   },
+   "lenken": {
+    "ru": "يدير المقود",
+    "pos": "فعل",
+    "forms": "lenkte · hat gelenkt"
+   },
+   "liegen": {
+    "ru": "يقع",
+    "pos": "فعل",
+    "forms": "lag · hat gelegen"
+   },
+   "links": {
+    "ru": "يسارًا، على اليسار",
+    "pos": "ظرف"
+   },
+   "machen": {
+    "ru": "يفعل",
+    "pos": "فعل",
+    "note": "den Schulterblick machen — يلتفت فوق كتفه؛ Gut gemacht! — أحسنت!",
+    "forms": "machte · hat gemacht"
+   },
+   "mal": {
+    "ru": "مضروبًا في؛ مرة",
+    "pos": "ظرف",
+    "note": "das Mal — مرة: bis zum nächsten Mal — إلى المرة القادمة"
+   },
+   "man": {
+    "ru": "(ضمير عام: «المرء»)",
+    "pos": "ضمير",
+    "note": "als man denkt — مما يظن المرء"
+   },
+   "müssen": {
+    "ru": "يجب عليه",
+    "pos": "فعل",
+    "forms": "musste · hat gemusst"
+   },
+   "nach": {
+    "ru": "بعد؛ إلى",
+    "pos": "حرف جر"
+   },
+   "neben": {
+    "ru": "بجانب",
+    "pos": "حرف جر"
+   },
+   "nicht": {
+    "ru": "لا، ليس",
+    "pos": "أداة"
+   },
+   "nichts": {
+    "ru": "لا شيء",
+    "pos": "ضمير"
+   },
+   "niemand": {
+    "ru": "لا أحد",
+    "pos": "ضمير"
+   },
+   "nur": {
+    "ru": "فقط",
+    "pos": "ظرف"
+   },
+   "nächste": {
+    "ru": "القادم، الأقرب",
+    "pos": "صفة"
+   },
+   "oft": {
+    "ru": "غالبًا",
+    "pos": "ظرف"
+   },
+   "parallel": {
+    "ru": "موازٍ",
+    "pos": "صفة"
+   },
+   "passieren": {
+    "ru": "يحدث",
+    "pos": "فعل",
+    "forms": "passierte · ist passiert"
+   },
+   "plus": {
+    "ru": "زائد",
+    "pos": "ظرف"
+   },
+   "plötzlich": {
+    "ru": "فجأة",
+    "pos": "ظرف"
+   },
+   "rechts": {
+    "ru": "يمينًا، على اليمين",
+    "pos": "ظرف"
+   },
+   "rollen": {
+    "ru": "يتدحرج",
+    "pos": "فعل",
+    "forms": "rollte · ist gerollt"
+   },
+   "rot": {
+    "ru": "أحمر",
+    "pos": "صفة",
+    "note": "Rot (بحرف كبير) — الإشارة الحمراء: bei Rot — عند الأحمر"
+   },
+   "rückwärts": {
+    "ru": "إلى الخلف",
+    "pos": "ظرف"
+   },
+   "sagen": {
+    "ru": "يقول",
+    "pos": "فعل",
+    "forms": "sagte · hat gesagt"
+   },
+   "schauen": {
+    "ru": "ينظر",
+    "pos": "فعل",
+    "forms": "schaute · hat geschaut"
+   },
+   "schnell": {
+    "ru": "سريع؛ بسرعة",
+    "pos": "صفة"
+   },
+   "schon": {
+    "ru": "بالفعل",
+    "pos": "ظرف"
+   },
+   "sehen": {
+    "ru": "يرى",
+    "pos": "فعل",
+    "forms": "sah · hat gesehen"
+   },
+   "sein": {
+    "ru": "يكون",
+    "pos": "فعل",
+    "forms": "war · ist gewesen"
+   },
+   "selbstständig": {
+    "ru": "مستقل؛ بنفسه",
+    "pos": "صفة"
+   },
+   "so": {
+    "ru": "هكذا",
+    "pos": "ظرف"
+   },
+   "stehen": {
+    "ru": "يقف؛ يوجد",
+    "pos": "فعل",
+    "note": "Schilder stehen — توجد لافتات",
+    "forms": "stand · hat gestanden"
+   },
+   "tot": {
+    "ru": "ميت",
+    "pos": "صفة",
+    "note": "der tote Winkel — النقطة العمياء"
+   },
+   "trinken": {
+    "ru": "يشرب",
+    "pos": "فعل",
+    "forms": "trank · hat getrunken"
+   },
+   "und": {
+    "ru": "و",
+    "pos": "أداة ربط"
+   },
+   "unter": {
+    "ru": "تحت؛ أقل من",
+    "pos": "حرف جر"
+   },
+   "verbieten": {
+    "ru": "يمنع",
+    "pos": "فعل",
+    "forms": "verbot · hat verboten"
+   },
+   "verlassen": {
+    "ru": "يغادر",
+    "pos": "فعل",
+    "forms": "verließ · hat verlassen"
+   },
+   "viele": {
+    "ru": "كثير من",
+    "pos": "ضمير"
+   },
+   "vierzig": {
+    "ru": "أربعون",
+    "pos": "عدد"
+   },
+   "vor": {
+    "ru": "قبل، أمام",
+    "pos": "حرف جر",
+    "note": "rechts vor links — اليمين قبل اليسار"
+   },
+   "vorder": {
+    "ru": "أمامي",
+    "pos": "صفة"
+   },
+   "warten": {
+    "ru": "ينتظر",
+    "pos": "فعل",
+    "note": "warten auf — ينتظر (أحدًا)",
+    "forms": "wartete · hat gewartet"
+   },
+   "was": {
+    "ru": "ماذا",
+    "pos": "ضمير"
+   },
+   "wenn": {
+    "ru": "إذا؛ عندما",
+    "pos": "أداة ربط",
+    "note": "auch wenn — حتى لو"
+   },
+   "wie": {
+    "ru": "كيف",
+    "pos": "ظرف",
+    "note": "wie schnell — بأي سرعة"
+   },
+   "wissen": {
+    "ru": "يعرف",
+    "pos": "فعل",
+    "forms": "wusste · hat gewusst"
+   },
+   "wollen": {
+    "ru": "يريد",
+    "pos": "فعل",
+    "forms": "wollte · hat gewollt"
+   },
+   "zeigen": {
+    "ru": "يُظهر، يعرض",
+    "pos": "فعل",
+    "forms": "zeigte · hat gezeigt"
+   },
+   "zu": {
+    "ru": "إلى؛ لـ",
+    "pos": "حرف جر",
+    "note": "zum = zu dem، zur = zu der: Abstand zur Kreuzung — المسافة عن التقاطع"
+   },
+   "zuerst": {
+    "ru": "أولًا",
+    "pos": "ظرف"
+   },
+   "zweite": {
+    "ru": "الثاني",
+    "pos": "عدد"
+   },
+   "über": {
+    "ru": "عبر؛ فوق",
+    "pos": "حرف جر"
+   },
+   "überfahren": {
+    "ru": "يعبر (الخط)",
+    "pos": "فعل",
+    "forms": "überfuhr · hat überfahren"
+   },
+   "überholen": {
+    "ru": "يتجاوز",
+    "pos": "فعل",
+    "forms": "überholte · hat überholt"
+   },
+   "überqueren": {
+    "ru": "يعبر",
+    "pos": "فعل",
+    "forms": "überquerte · hat überquert"
+   }
+  }
+ }
+}

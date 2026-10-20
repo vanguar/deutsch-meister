@@ -1,0 +1,756 @@
+{
+ "id": "p-14",
+ "kind": "dialog",
+ "emoji": "📋",
+ "level": "B1",
+ "title": "Die Prüfungsfahrt",
+ "titleTr": "Экзаменационная поездка",
+ "intro": "Олена сдаёт практический экзамен: проверка безопасности, указания экзаменатора, парковка, экстренное торможение — и права в конце.",
+ "speakers": {
+  "A": {
+   "name": "Prüfer",
+   "g": "m"
+  },
+  "B": {
+   "name": "Olena",
+   "g": "f"
+  }
+ },
+ "lines": [
+  {
+   "de": "Guten Tag, ich bin heute Ihr Prüfer. Ihren Ausweis, bitte.",
+   "tr": "Добрый день, сегодня я ваш экзаменатор. Ваше удостоверение, пожалуйста.",
+   "s": "A"
+  },
+  {
+   "de": "Guten Tag. Hier, bitte. Ich bin ein bisschen nervös.",
+   "tr": "Добрый день. Вот, пожалуйста. Я немного нервничаю.",
+   "s": "B"
+  },
+  {
+   "de": "Das ist ganz normal. Zuerst die Sicherheitskontrolle: Wo prüfen Sie den Ölstand?",
+   "tr": "Это совершенно нормально. Сначала проверка безопасности: где вы проверяете уровень масла?",
+   "s": "A"
+  },
+  {
+   "de": "Unter der Motorhaube. Hier ist der Messstab für das Öl.",
+   "tr": "Под капотом. Вот щуп для масла.",
+   "s": "B"
+  },
+  {
+   "de": "Richtig. Dann fahren wir los. An der nächsten Kreuzung biegen Sie bitte rechts ab.",
+   "tr": "Верно. Тогда поехали. На следующем перекрёстке, пожалуйста, поверните направо.",
+   "o": {
+    "ab": "ab>abbiegen",
+    "biegen": "biegen>abbiegen",
+    "fahren": "fahren>losfahren",
+    "los": "los>losfahren"
+   },
+   "s": "A"
+  },
+  {
+   "de": "Rechts, alles klar. Ich blinke, schaue in den Spiegel und über die Schulter.",
+   "tr": "Направо, всё ясно. Включаю поворотник, смотрю в зеркало и через плечо.",
+   "s": "B"
+  },
+  {
+   "de": "Gut. Parken Sie bitte hinter dem blauen Auto rückwärts ein.",
+   "tr": "Хорошо. Припаркуйтесь, пожалуйста, задним ходом за синей машиной.",
+   "o": {
+    "ein": "ein>einparken",
+    "parken": "parken>einparken"
+   },
+   "s": "A"
+  },
+  {
+   "de": "Fertig. Das Auto steht jetzt parallel zum Bordstein.",
+   "tr": "Готово. Машина теперь стоит параллельно бордюру.",
+   "s": "B"
+  },
+  {
+   "de": "Sehr schön. Jetzt fahren Sie bitte selbstständig nach den Schildern Richtung Bahnhof.",
+   "tr": "Очень хорошо. Теперь, пожалуйста, езжайте самостоятельно по указателям в сторону вокзала.",
+   "s": "A"
+  },
+  {
+   "de": "Darf ich hier fünfzig fahren? Ach nein, das ist eine Tempo-30-Zone.",
+   "tr": "Можно мне здесь ехать пятьдесят? Ах нет, это зона «Темп 30».",
+   "s": "B"
+  },
+  {
+   "de": "Genau. Gleich kommt die Gefahrbremsung. Wenn ich «Stopp» sage, bremsen Sie so stark wie möglich.",
+   "tr": "Именно. Сейчас будет экстренное торможение. Когда я скажу «Стоп», тормозите как можно сильнее.",
+   "s": "A"
+  },
+  {
+   "de": "Verstanden. Ich schaue vorher noch in den Spiegel.",
+   "tr": "Поняла. Я ещё заранее смотрю в зеркало.",
+   "s": "B"
+  },
+  {
+   "de": "Stopp! … Sehr gut, das Auto stand sofort. Fahren Sie bitte zurück zur Fahrschule.",
+   "tr": "Стоп! … Очень хорошо, машина сразу встала. Езжайте, пожалуйста, обратно в автошколу.",
+   "s": "A"
+  },
+  {
+   "de": "Und? Habe ich bestanden?",
+   "tr": "И как? Я сдала?",
+   "s": "B"
+  },
+  {
+   "de": "Herzlichen Glückwunsch, Sie haben bestanden! Hier ist Ihr Führerschein.",
+   "tr": "Поздравляю, вы сдали! Вот ваши права.",
+   "s": "A"
+  },
+  {
+   "de": "Vielen Dank! Ich weiß: zwei Jahre Probezeit und kein Alkohol am Steuer.",
+   "tr": "Большое спасибо! Я знаю: два года испытательного срока и никакого алкоголя за рулём.",
+   "s": "B"
+  }
+ ],
+ "signs": {},
+ "gloss": {
+  "w": {
+   "ab>abbiegen": "abbiegen",
+   "ach": "ach",
+   "alkohol": "Alkohol",
+   "alles": "alle",
+   "am": "an",
+   "an": "an",
+   "ausweis": "Ausweis",
+   "auto": "Auto",
+   "bahnhof": "Bahnhof",
+   "bestanden": "bestehen",
+   "biegen>abbiegen": "abbiegen",
+   "bin": "sein",
+   "bisschen": "bisschen",
+   "bitte": "bitte",
+   "blauen": "blau",
+   "blinke": "blinken",
+   "bordstein": "Bordstein",
+   "bremsen": "bremsen",
+   "dank": "Dank",
+   "dann": "dann",
+   "darf": "dürfen",
+   "das": "der/die/das",
+   "dem": "der/die/das",
+   "den": "der/die/das",
+   "der": "der/die/das",
+   "die": "der/die/das",
+   "ein": "ein/eine",
+   "ein>einparken": "einparken",
+   "eine": "ein/eine",
+   "fahren": "fahren",
+   "fahren>losfahren": "losfahren",
+   "fahrschule": "Fahrschule",
+   "fertig": "fertig",
+   "führerschein": "Führerschein",
+   "fünfzig": "fünfzig",
+   "für": "für",
+   "ganz": "ganz",
+   "gefahrbremsung": "Gefahrbremsung",
+   "genau": "genau",
+   "gleich": "gleich",
+   "glückwunsch": "Glückwunsch",
+   "gut": "gut",
+   "guten": "gut",
+   "habe": "haben",
+   "haben": "haben",
+   "herzlichen": "herzlich",
+   "heute": "heute",
+   "hier": "hier",
+   "hinter": "hinter",
+   "ich": "ich",
+   "ihr": "Ihr",
+   "ihren": "Ihr",
+   "in": "in",
+   "ist": "sein",
+   "jahre": "Jahr",
+   "jetzt": "jetzt",
+   "kein": "kein",
+   "klar": "klar",
+   "kommt": "kommen",
+   "kreuzung": "Kreuzung",
+   "los>losfahren": "losfahren",
+   "messstab": "Messstab",
+   "motorhaube": "Motorhaube",
+   "möglich": "möglich",
+   "nach": "nach",
+   "nein": "nein",
+   "nervös": "nervös",
+   "noch": "noch",
+   "normal": "normal",
+   "nächsten": "nächste",
+   "parallel": "parallel",
+   "parken>einparken": "einparken",
+   "probezeit": "Probezeit",
+   "prüfen": "prüfen",
+   "prüfer": "Prüfer",
+   "prüfungsfahrt": "Prüfungsfahrt",
+   "rechts": "rechts",
+   "richtig": "richtig",
+   "richtung": "Richtung",
+   "rückwärts": "rückwärts",
+   "sage": "sagen",
+   "schaue": "schauen",
+   "schildern": "Schild",
+   "schulter": "Schulter",
+   "schön": "schön",
+   "sehr": "sehr",
+   "selbstständig": "selbstständig",
+   "sicherheitskontrolle": "Sicherheitskontrolle",
+   "sie": "Sie",
+   "so": "so",
+   "sofort": "sofort",
+   "spiegel": "Spiegel",
+   "stand": "Stand",
+   "stark": "stark",
+   "steht": "stehen",
+   "steuer": "Steuer",
+   "stopp": "Stopp",
+   "tag": "Tag",
+   "tempo": "Tempo",
+   "und": "und",
+   "unter": "unter",
+   "verstanden": "verstehen",
+   "vielen": "viel",
+   "vorher": "vorher",
+   "weiß": "weiß",
+   "wenn": "wenn",
+   "wie": "wie",
+   "wir": "wir",
+   "wo": "wo",
+   "zone": "Zone",
+   "zuerst": "zuerst",
+   "zum": "zu",
+   "zur": "zu",
+   "zurück": "zurück",
+   "zwei": "zwei",
+   "öl": "Öl",
+   "ölstand": "Ölstand",
+   "über": "über"
+  },
+  "l": {
+   "Alkohol": {
+    "ru": "алкоголь",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": null
+   },
+   "Ausweis": {
+    "ru": "удостоверение личности",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Ausweise"
+   },
+   "Auto": {
+    "ru": "машина, автомобиль",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Autos"
+   },
+   "Bahnhof": {
+    "ru": "вокзал",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Bahnhöfe"
+   },
+   "Bordstein": {
+    "ru": "бордюр",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Bordsteine"
+   },
+   "Dank": {
+    "ru": "благодарность",
+    "pos": "сущ.",
+    "note": "Vielen Dank! — Большое спасибо!",
+    "art": "der",
+    "pl": null
+   },
+   "Fahrschule": {
+    "ru": "автошкола",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Fahrschulen"
+   },
+   "Führerschein": {
+    "ru": "водительские права",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Führerscheine"
+   },
+   "Gefahrbremsung": {
+    "ru": "экстренное торможение",
+    "pos": "сущ.",
+    "note": "тормоз в пол изо всех сил; тормозной путь примерно вдвое короче",
+    "art": "die",
+    "pl": "die Gefahrbremsungen"
+   },
+   "Glückwunsch": {
+    "ru": "поздравление",
+    "pos": "сущ.",
+    "note": "Herzlichen Glückwunsch! — Поздравляю!",
+    "art": "der",
+    "pl": "die Glückwünsche"
+   },
+   "Ihr": {
+    "ru": "ваш (вежливо)",
+    "pos": "мест."
+   },
+   "Jahr": {
+    "ru": "год",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Jahre"
+   },
+   "Kreuzung": {
+    "ru": "перекрёсток",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Kreuzungen"
+   },
+   "Messstab": {
+    "ru": "щуп (уровня масла)",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Messstäbe"
+   },
+   "Motorhaube": {
+    "ru": "капот",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Motorhauben"
+   },
+   "Probezeit": {
+    "ru": "испытательный срок (для новых водителей)",
+    "pos": "сущ.",
+    "note": "два года после получения прав; ошибки обходятся дороже",
+    "art": "die",
+    "pl": "die Probezeiten"
+   },
+   "Prüfer": {
+    "ru": "экзаменатор",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Prüfer"
+   },
+   "Prüfungsfahrt": {
+    "ru": "экзаменационная поездка",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Prüfungsfahrten"
+   },
+   "Richtung": {
+    "ru": "направление",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Richtungen"
+   },
+   "Schild": {
+    "ru": "знак, табличка",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Schilder"
+   },
+   "Schulter": {
+    "ru": "плечо",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Schultern"
+   },
+   "Sicherheitskontrolle": {
+    "ru": "проверка безопасности (на экзамене)",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Sicherheitskontrollen"
+   },
+   "Sie": {
+    "ru": "вы (вежливо)",
+    "pos": "мест.",
+    "note": "Ihnen — вам (дательный): vor Ihnen — перед вами"
+   },
+   "Spiegel": {
+    "ru": "зеркало",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Spiegel"
+   },
+   "Stand": {
+    "ru": "стоянка, неподвижность",
+    "pos": "сущ.",
+    "note": "im Stand — на месте, не двигаясь",
+    "art": "der",
+    "pl": null
+   },
+   "Steuer": {
+    "ru": "руль",
+    "pos": "сущ.",
+    "note": "am Steuer — за рулём (die Steuer — налог)",
+    "art": "das",
+    "pl": "die Steuer"
+   },
+   "Stopp": {
+    "ru": "стоп!",
+    "pos": "межд."
+   },
+   "Tag": {
+    "ru": "день",
+    "pos": "сущ.",
+    "note": "Guten Tag! — Добрый день!",
+    "art": "der",
+    "pl": "die Tage"
+   },
+   "Tempo": {
+    "ru": "скорость, темп",
+    "pos": "сущ.",
+    "note": "Tempo-30-Zone — зона с ограничением 30 км/ч",
+    "art": "das",
+    "pl": "die Tempos"
+   },
+   "Zone": {
+    "ru": "зона",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Zonen"
+   },
+   "abbiegen": {
+    "ru": "поворачивать",
+    "pos": "гл.",
+    "note": "отделяемая приставка: Sie biegen … ab",
+    "forms": "bog ab · ist abgebogen"
+   },
+   "ach": {
+    "ru": "ах, ох",
+    "pos": "межд."
+   },
+   "alle": {
+    "ru": "все; всё",
+    "pos": "мест."
+   },
+   "an": {
+    "ru": "у, на, при",
+    "pos": "предл.",
+    "note": "am = an dem; an der Kreuzung — на перекрёстке"
+   },
+   "bestehen": {
+    "ru": "сдать (экзамен), пройти",
+    "pos": "гл.",
+    "forms": "bestand · hat bestanden"
+   },
+   "bisschen": {
+    "ru": "немного (ein bisschen)",
+    "pos": "нареч."
+   },
+   "bitte": {
+    "ru": "пожалуйста",
+    "pos": "частица"
+   },
+   "blau": {
+    "ru": "синий",
+    "pos": "прил."
+   },
+   "blinken": {
+    "ru": "включать поворотник, мигать",
+    "pos": "гл.",
+    "forms": "blinkte · hat geblinkt"
+   },
+   "bremsen": {
+    "ru": "тормозить",
+    "pos": "гл.",
+    "forms": "bremste · hat gebremst"
+   },
+   "dann": {
+    "ru": "тогда, значит; потом",
+    "pos": "нареч."
+   },
+   "der/die/das": {
+    "ru": "определённый артикль",
+    "pos": "артикль",
+    "note": "der — м. р., die — ж. р. и мн. ч., das — ср. р.; den — м. р. в винительном, dem — м. и ср. р. в дательном; das ещё значит «это»"
+   },
+   "dürfen": {
+    "ru": "мочь, иметь право",
+    "pos": "гл.",
+    "forms": "durfte · hat gedurft"
+   },
+   "ein/eine": {
+    "ru": "неопределённый артикль; один",
+    "pos": "артикль",
+    "note": "an einer Kreuzung — на (каком-то) перекрёстке"
+   },
+   "einparken": {
+    "ru": "парковаться (заезжать на место)",
+    "pos": "гл.",
+    "note": "отделяемая приставка: parken Sie … ein",
+    "forms": "parkte ein · hat eingeparkt"
+   },
+   "fahren": {
+    "ru": "ехать; водить машину",
+    "pos": "гл.",
+    "forms": "fuhr · ist gefahren"
+   },
+   "fertig": {
+    "ru": "готовый; закончил",
+    "pos": "прил."
+   },
+   "fünfzig": {
+    "ru": "пятьдесят",
+    "pos": "числ."
+   },
+   "für": {
+    "ru": "для",
+    "pos": "предл."
+   },
+   "ganz": {
+    "ru": "совсем, вполне",
+    "pos": "нареч."
+   },
+   "genau": {
+    "ru": "точно, именно так",
+    "pos": "нареч.",
+    "note": "genau hundert — ровно сто"
+   },
+   "gleich": {
+    "ru": "сейчас, сразу",
+    "pos": "нареч."
+   },
+   "gut": {
+    "ru": "хороший; хорошо",
+    "pos": "прил.",
+    "note": "am besten — лучше всего",
+    "forms": "gut · besser · am besten"
+   },
+   "haben": {
+    "ru": "иметь",
+    "pos": "гл.",
+    "note": "Vorfahrt haben — иметь преимущество",
+    "forms": "hatte · hat gehabt"
+   },
+   "herzlich": {
+    "ru": "сердечный",
+    "pos": "прил."
+   },
+   "heute": {
+    "ru": "сегодня",
+    "pos": "нареч."
+   },
+   "hier": {
+    "ru": "здесь",
+    "pos": "нареч."
+   },
+   "hinter": {
+    "ru": "за, позади",
+    "pos": "предл."
+   },
+   "ich": {
+    "ru": "я",
+    "pos": "мест."
+   },
+   "in": {
+    "ru": "в",
+    "pos": "предл.",
+    "note": "im = in dem: im Bereich — в зоне"
+   },
+   "jetzt": {
+    "ru": "сейчас, теперь",
+    "pos": "нареч."
+   },
+   "kein": {
+    "ru": "никакой; не (отрицание при существительном)",
+    "pos": "мест."
+   },
+   "klar": {
+    "ru": "ясный, понятный",
+    "pos": "прил.",
+    "note": "alles klar — всё ясно"
+   },
+   "kommen": {
+    "ru": "приходить; ехать (приближаться)",
+    "pos": "гл.",
+    "note": "von rechts kommen — ехать справа",
+    "forms": "kam · ist gekommen"
+   },
+   "losfahren": {
+    "ru": "трогаться (с места)",
+    "pos": "гл.",
+    "forms": "fuhr los · ist losgefahren"
+   },
+   "möglich": {
+    "ru": "возможный",
+    "pos": "прил."
+   },
+   "nach": {
+    "ru": "после; в, на (направление)",
+    "pos": "предл."
+   },
+   "nein": {
+    "ru": "нет",
+    "pos": "частица"
+   },
+   "nervös": {
+    "ru": "взволнованный, нервный",
+    "pos": "прил."
+   },
+   "noch": {
+    "ru": "ещё",
+    "pos": "нареч.",
+    "note": "noch nicht — ещё нет"
+   },
+   "normal": {
+    "ru": "нормальный",
+    "pos": "прил."
+   },
+   "nächste": {
+    "ru": "ближайший, следующий",
+    "pos": "прил."
+   },
+   "parallel": {
+    "ru": "параллельно",
+    "pos": "прил."
+   },
+   "prüfen": {
+    "ru": "проверять",
+    "pos": "гл.",
+    "forms": "prüfte · hat geprüft"
+   },
+   "rechts": {
+    "ru": "справа; направо",
+    "pos": "нареч."
+   },
+   "richtig": {
+    "ru": "правильный; правильно",
+    "pos": "прил.",
+    "note": "…, richtig? — …, правильно? / да?"
+   },
+   "rückwärts": {
+    "ru": "задним ходом, назад",
+    "pos": "нареч."
+   },
+   "sagen": {
+    "ru": "говорить, сказать",
+    "pos": "гл.",
+    "forms": "sagte · hat gesagt"
+   },
+   "schauen": {
+    "ru": "смотреть",
+    "pos": "гл.",
+    "forms": "schaute · hat geschaut"
+   },
+   "schön": {
+    "ru": "красивый; хорошо",
+    "pos": "прил.",
+    "note": "Sehr schön! — Очень хорошо!"
+   },
+   "sehr": {
+    "ru": "очень",
+    "pos": "нареч."
+   },
+   "sein": {
+    "ru": "быть",
+    "pos": "гл.",
+    "forms": "war · ist gewesen"
+   },
+   "selbstständig": {
+    "ru": "самостоятельный; самостоятельно",
+    "pos": "прил."
+   },
+   "so": {
+    "ru": "так; вот (так)",
+    "pos": "нареч."
+   },
+   "sofort": {
+    "ru": "сразу, немедленно",
+    "pos": "нареч."
+   },
+   "stark": {
+    "ru": "сильный; сильно",
+    "pos": "прил."
+   },
+   "stehen": {
+    "ru": "стоять",
+    "pos": "гл.",
+    "note": "Schilder stehen — стоят знаки",
+    "forms": "stand · hat gestanden"
+   },
+   "und": {
+    "ru": "и",
+    "pos": "союз"
+   },
+   "unter": {
+    "ru": "под; меньше",
+    "pos": "предл."
+   },
+   "verstehen": {
+    "ru": "понимать",
+    "pos": "гл.",
+    "note": "Verstanden! — Понял(а)!",
+    "forms": "verstand · hat verstanden"
+   },
+   "viel": {
+    "ru": "много; намного",
+    "pos": "нареч."
+   },
+   "vorher": {
+    "ru": "заранее, раньше",
+    "pos": "нареч."
+   },
+   "weiß": {
+    "ru": "белый",
+    "pos": "прил."
+   },
+   "wenn": {
+    "ru": "если; когда",
+    "pos": "союз",
+    "note": "auch wenn — даже если"
+   },
+   "wie": {
+    "ru": "как",
+    "pos": "нареч.",
+    "note": "wie schnell — с какой скоростью"
+   },
+   "wir": {
+    "ru": "мы",
+    "pos": "мест.",
+    "note": "uns — нас, нам: vor uns — перед нами"
+   },
+   "wo": {
+    "ru": "где",
+    "pos": "нареч."
+   },
+   "zu": {
+    "ru": "к; для",
+    "pos": "предл.",
+    "note": "zum = zu dem, zur = zu der: Abstand zur Kreuzung — расстояние до перекрёстка"
+   },
+   "zuerst": {
+    "ru": "сначала, первым",
+    "pos": "нареч."
+   },
+   "zurück": {
+    "ru": "назад, обратно",
+    "pos": "нареч."
+   },
+   "zwei": {
+    "ru": "два",
+    "pos": "числ."
+   },
+   "Öl": {
+    "ru": "масло",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Öle"
+   },
+   "Ölstand": {
+    "ru": "уровень масла",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": null
+   },
+   "über": {
+    "ru": "через; над",
+    "pos": "предл."
+   }
+  }
+ }
+}

@@ -1,0 +1,727 @@
+{
+ "id": "p-14",
+ "kind": "dialog",
+ "emoji": "📋",
+ "level": "B1",
+ "title": "Die Prüfungsfahrt",
+ "titleTr": "رحلة الامتحان",
+ "intro": "تخوض أولينا الامتحان العملي: فحص السلامة، وتعليمات الممتحن، والركن، والكبح الطارئ — والرخصة في النهاية.",
+ "speakers": {
+  "A": {
+   "name": "Prüfer",
+   "g": "m"
+  },
+  "B": {
+   "name": "Olena",
+   "g": "f"
+  }
+ },
+ "lines": [
+  {
+   "de": "Guten Tag, ich bin heute Ihr Prüfer. Ihren Ausweis, bitte.",
+   "tr": "مرحبًا، أنا ممتحنك اليوم. بطاقة هويتك من فضلك.",
+   "s": "A"
+  },
+  {
+   "de": "Guten Tag. Hier, bitte. Ich bin ein bisschen nervös.",
+   "tr": "مرحبًا. تفضّل. أنا متوترة قليلًا.",
+   "s": "B"
+  },
+  {
+   "de": "Das ist ganz normal. Zuerst die Sicherheitskontrolle: Wo prüfen Sie den Ölstand?",
+   "tr": "هذا طبيعي تمامًا. أولًا فحص السلامة: أين تفحصين مستوى الزيت؟",
+   "s": "A"
+  },
+  {
+   "de": "Unter der Motorhaube. Hier ist der Messstab für das Öl.",
+   "tr": "تحت غطاء المحرك. هذا هو مقياس الزيت.",
+   "s": "B"
+  },
+  {
+   "de": "Richtig. Dann fahren wir los. An der nächsten Kreuzung biegen Sie bitte rechts ab.",
+   "tr": "صحيح. إذن لننطلق. عند التقاطع القادم انعطفي يمينًا من فضلك.",
+   "o": {
+    "ab": "ab>abbiegen",
+    "biegen": "biegen>abbiegen",
+    "fahren": "fahren>losfahren",
+    "los": "los>losfahren"
+   },
+   "s": "A"
+  },
+  {
+   "de": "Rechts, alles klar. Ich blinke, schaue in den Spiegel und über die Schulter.",
+   "tr": "يمينًا، حسنًا. أشغّل الإشارة، وأنظر في المرآة ومن فوق الكتف.",
+   "s": "B"
+  },
+  {
+   "de": "Gut. Parken Sie bitte hinter dem blauen Auto rückwärts ein.",
+   "tr": "جيد. اركني من فضلك إلى الخلف خلف السيارة الزرقاء.",
+   "o": {
+    "ein": "ein>einparken",
+    "parken": "parken>einparken"
+   },
+   "s": "A"
+  },
+  {
+   "de": "Fertig. Das Auto steht jetzt parallel zum Bordstein.",
+   "tr": "انتهيت. السيارة الآن موازية للرصيف.",
+   "s": "B"
+  },
+  {
+   "de": "Sehr schön. Jetzt fahren Sie bitte selbstständig nach den Schildern Richtung Bahnhof.",
+   "tr": "جميل جدًا. الآن قودي بنفسك من فضلك حسب اللافتات باتجاه محطة القطار.",
+   "s": "A"
+  },
+  {
+   "de": "Darf ich hier fünfzig fahren? Ach nein, das ist eine Tempo-30-Zone.",
+   "tr": "هل يجوز لي القيادة هنا بسرعة خمسين؟ آه لا، هذه منطقة السرعة 30.",
+   "s": "B"
+  },
+  {
+   "de": "Genau. Gleich kommt die Gefahrbremsung. Wenn ich «Stopp» sage, bremsen Sie so stark wie möglich.",
+   "tr": "بالضبط. الآن يأتي الكبح الطارئ. عندما أقول «قف» اكبحي بأقصى قوة ممكنة.",
+   "s": "A"
+  },
+  {
+   "de": "Verstanden. Ich schaue vorher noch in den Spiegel.",
+   "tr": "فهمت. سأنظر في المرآة قبل ذلك.",
+   "s": "B"
+  },
+  {
+   "de": "Stopp! … Sehr gut, das Auto stand sofort. Fahren Sie bitte zurück zur Fahrschule.",
+   "tr": "قف! … جيد جدًا، توقفت السيارة فورًا. عودي من فضلك إلى مدرسة القيادة.",
+   "s": "A"
+  },
+  {
+   "de": "Und? Habe ich bestanden?",
+   "tr": "وماذا؟ هل نجحت؟",
+   "s": "B"
+  },
+  {
+   "de": "Herzlichen Glückwunsch, Sie haben bestanden! Hier ist Ihr Führerschein.",
+   "tr": "تهانينا، لقد نجحتِ! هذه رخصة قيادتك.",
+   "s": "A"
+  },
+  {
+   "de": "Vielen Dank! Ich weiß: zwei Jahre Probezeit und kein Alkohol am Steuer.",
+   "tr": "شكرًا جزيلًا! أعرف: سنتان فترة اختبار ولا كحول أثناء القيادة.",
+   "s": "B"
+  }
+ ],
+ "signs": {},
+ "gloss": {
+  "w": {
+   "ab>abbiegen": "abbiegen",
+   "ach": "ach",
+   "alkohol": "Alkohol",
+   "alles": "alle",
+   "am": "an",
+   "an": "an",
+   "ausweis": "Ausweis",
+   "auto": "Auto",
+   "bahnhof": "Bahnhof",
+   "bestanden": "bestehen",
+   "biegen>abbiegen": "abbiegen",
+   "bin": "sein",
+   "bisschen": "bisschen",
+   "bitte": "bitte",
+   "blauen": "blau",
+   "blinke": "blinken",
+   "bordstein": "Bordstein",
+   "bremsen": "bremsen",
+   "dank": "Dank",
+   "dann": "dann",
+   "darf": "dürfen",
+   "das": "der/die/das",
+   "dem": "der/die/das",
+   "den": "der/die/das",
+   "der": "der/die/das",
+   "die": "der/die/das",
+   "ein": "ein/eine",
+   "ein>einparken": "einparken",
+   "eine": "ein/eine",
+   "fahren": "fahren",
+   "fahren>losfahren": "losfahren",
+   "fahrschule": "Fahrschule",
+   "fertig": "fertig",
+   "führerschein": "Führerschein",
+   "fünfzig": "fünfzig",
+   "für": "für",
+   "ganz": "ganz",
+   "gefahrbremsung": "Gefahrbremsung",
+   "genau": "genau",
+   "gleich": "gleich",
+   "glückwunsch": "Glückwunsch",
+   "gut": "gut",
+   "guten": "gut",
+   "habe": "haben",
+   "haben": "haben",
+   "herzlichen": "herzlich",
+   "heute": "heute",
+   "hier": "hier",
+   "hinter": "hinter",
+   "ich": "ich",
+   "ihr": "Ihr",
+   "ihren": "Ihr",
+   "in": "in",
+   "ist": "sein",
+   "jahre": "Jahr",
+   "jetzt": "jetzt",
+   "kein": "kein",
+   "klar": "klar",
+   "kommt": "kommen",
+   "kreuzung": "Kreuzung",
+   "los>losfahren": "losfahren",
+   "messstab": "Messstab",
+   "motorhaube": "Motorhaube",
+   "möglich": "möglich",
+   "nach": "nach",
+   "nein": "nein",
+   "nervös": "nervös",
+   "noch": "noch",
+   "normal": "normal",
+   "nächsten": "nächste",
+   "parallel": "parallel",
+   "parken>einparken": "einparken",
+   "probezeit": "Probezeit",
+   "prüfen": "prüfen",
+   "prüfer": "Prüfer",
+   "prüfungsfahrt": "Prüfungsfahrt",
+   "rechts": "rechts",
+   "richtig": "richtig",
+   "richtung": "Richtung",
+   "rückwärts": "rückwärts",
+   "sage": "sagen",
+   "schaue": "schauen",
+   "schildern": "Schild",
+   "schulter": "Schulter",
+   "schön": "schön",
+   "sehr": "sehr",
+   "selbstständig": "selbstständig",
+   "sicherheitskontrolle": "Sicherheitskontrolle",
+   "sie": "Sie",
+   "so": "so",
+   "sofort": "sofort",
+   "spiegel": "Spiegel",
+   "stand": "Stand",
+   "stark": "stark",
+   "steht": "stehen",
+   "steuer": "Steuer",
+   "stopp": "Stopp",
+   "tag": "Tag",
+   "tempo": "Tempo",
+   "und": "und",
+   "unter": "unter",
+   "verstanden": "verstehen",
+   "vielen": "viel",
+   "vorher": "vorher",
+   "weiß": "weiß",
+   "wenn": "wenn",
+   "wie": "wie",
+   "wir": "wir",
+   "wo": "wo",
+   "zone": "Zone",
+   "zuerst": "zuerst",
+   "zum": "zu",
+   "zur": "zu",
+   "zurück": "zurück",
+   "zwei": "zwei",
+   "öl": "Öl",
+   "ölstand": "Ölstand",
+   "über": "über"
+  },
+  "l": {
+   "Alkohol": {
+    "ru": "الكحول",
+    "pos": "اسم",
+    "decl": "der Alkohol · لا جمع له"
+   },
+   "Ausweis": {
+    "ru": "بطاقة الهوية",
+    "pos": "اسم",
+    "decl": "der Ausweis · الجمع: die Ausweise"
+   },
+   "Auto": {
+    "ru": "سيارة",
+    "pos": "اسم",
+    "decl": "das Auto · الجمع: die Autos"
+   },
+   "Bahnhof": {
+    "ru": "محطة القطار",
+    "pos": "اسم",
+    "decl": "der Bahnhof · الجمع: die Bahnhöfe"
+   },
+   "Bordstein": {
+    "ru": "حافة الرصيف",
+    "pos": "اسم",
+    "decl": "der Bordstein · الجمع: die Bordsteine"
+   },
+   "Dank": {
+    "ru": "شكر",
+    "pos": "اسم",
+    "note": "Vielen Dank! — شكرًا جزيلًا!",
+    "decl": "der Dank · لا جمع له"
+   },
+   "Fahrschule": {
+    "ru": "مدرسة القيادة",
+    "pos": "اسم",
+    "decl": "die Fahrschule · الجمع: die Fahrschulen"
+   },
+   "Führerschein": {
+    "ru": "رخصة القيادة",
+    "pos": "اسم",
+    "decl": "der Führerschein · الجمع: die Führerscheine"
+   },
+   "Gefahrbremsung": {
+    "ru": "كبح طارئ",
+    "pos": "اسم",
+    "note": "الضغط على المكابح بكامل القوة؛ مسافة الكبح نحو النصف",
+    "decl": "die Gefahrbremsung · الجمع: die Gefahrbremsungen"
+   },
+   "Glückwunsch": {
+    "ru": "تهنئة",
+    "pos": "اسم",
+    "note": "Herzlichen Glückwunsch! — تهانينا!",
+    "decl": "der Glückwunsch · الجمع: die Glückwünsche"
+   },
+   "Ihr": {
+    "ru": "ـكَ، ـكِ (صيغة الاحترام)",
+    "pos": "ضمير"
+   },
+   "Jahr": {
+    "ru": "سنة",
+    "pos": "اسم",
+    "decl": "das Jahr · الجمع: die Jahre"
+   },
+   "Kreuzung": {
+    "ru": "تقاطع",
+    "pos": "اسم",
+    "decl": "die Kreuzung · الجمع: die Kreuzungen"
+   },
+   "Messstab": {
+    "ru": "مقياس الزيت",
+    "pos": "اسم",
+    "decl": "der Messstab · الجمع: die Messstäbe"
+   },
+   "Motorhaube": {
+    "ru": "غطاء المحرك",
+    "pos": "اسم",
+    "decl": "die Motorhaube · الجمع: die Motorhauben"
+   },
+   "Probezeit": {
+    "ru": "فترة الاختبار (للسائقين الجدد)",
+    "pos": "اسم",
+    "note": "سنتان بعد الحصول على الرخصة؛ والأخطاء أغلى ثمنًا",
+    "decl": "die Probezeit · الجمع: die Probezeiten"
+   },
+   "Prüfer": {
+    "ru": "الممتحِن",
+    "pos": "اسم",
+    "decl": "der Prüfer · الجمع: die Prüfer"
+   },
+   "Prüfungsfahrt": {
+    "ru": "رحلة الامتحان",
+    "pos": "اسم",
+    "decl": "die Prüfungsfahrt · الجمع: die Prüfungsfahrten"
+   },
+   "Richtung": {
+    "ru": "اتجاه",
+    "pos": "اسم",
+    "decl": "die Richtung · الجمع: die Richtungen"
+   },
+   "Schild": {
+    "ru": "لافتة",
+    "pos": "اسم",
+    "decl": "das Schild · الجمع: die Schilder"
+   },
+   "Schulter": {
+    "ru": "كتف",
+    "pos": "اسم",
+    "decl": "die Schulter · الجمع: die Schultern"
+   },
+   "Sicherheitskontrolle": {
+    "ru": "فحص السلامة (في الامتحان)",
+    "pos": "اسم",
+    "decl": "die Sicherheitskontrolle · الجمع: die Sicherheitskontrollen"
+   },
+   "Sie": {
+    "ru": "حضرتك (صيغة الاحترام)",
+    "pos": "ضمير",
+    "note": "Ihnen — لكم (حالة الجر): vor Ihnen — أمامك"
+   },
+   "Spiegel": {
+    "ru": "مرآة",
+    "pos": "اسم",
+    "decl": "der Spiegel · الجمع: die Spiegel"
+   },
+   "Stand": {
+    "ru": "وقوف، ثبات",
+    "pos": "اسم",
+    "note": "im Stand — في مكانه دون حركة",
+    "decl": "der Stand · لا جمع له"
+   },
+   "Steuer": {
+    "ru": "المقود",
+    "pos": "اسم",
+    "note": "am Steuer — خلف المقود (die Steuer: ضريبة)",
+    "decl": "das Steuer · الجمع: die Steuer"
+   },
+   "Stopp": {
+    "ru": "قف!",
+    "pos": "تعجّب"
+   },
+   "Tag": {
+    "ru": "يوم",
+    "pos": "اسم",
+    "note": "Guten Tag! — مرحبًا! (نهارًا)",
+    "decl": "der Tag · الجمع: die Tage"
+   },
+   "Tempo": {
+    "ru": "سرعة",
+    "pos": "اسم",
+    "note": "Tempo-30-Zone — منطقة بحد سرعة 30 كم/س",
+    "decl": "das Tempo · الجمع: die Tempos"
+   },
+   "Zone": {
+    "ru": "منطقة",
+    "pos": "اسم",
+    "decl": "die Zone · الجمع: die Zonen"
+   },
+   "abbiegen": {
+    "ru": "ينعطف",
+    "pos": "فعل",
+    "note": "سابقة منفصلة: Sie biegen … ab",
+    "forms": "bog ab · ist abgebogen"
+   },
+   "ach": {
+    "ru": "آه",
+    "pos": "تعجّب"
+   },
+   "alle": {
+    "ru": "كل؛ كل شيء",
+    "pos": "ضمير"
+   },
+   "an": {
+    "ru": "عند، على",
+    "pos": "حرف جر",
+    "note": "am = an dem؛ an der Kreuzung — عند التقاطع"
+   },
+   "bestehen": {
+    "ru": "ينجح (في امتحان)",
+    "pos": "فعل",
+    "forms": "bestand · hat bestanden"
+   },
+   "bisschen": {
+    "ru": "قليلًا (ein bisschen)",
+    "pos": "ظرف"
+   },
+   "bitte": {
+    "ru": "من فضلك",
+    "pos": "أداة"
+   },
+   "blau": {
+    "ru": "أزرق",
+    "pos": "صفة"
+   },
+   "blinken": {
+    "ru": "يشغّل إشارة الانعطاف",
+    "pos": "فعل",
+    "forms": "blinkte · hat geblinkt"
+   },
+   "bremsen": {
+    "ru": "يكبح، يفرمل",
+    "pos": "فعل",
+    "forms": "bremste · hat gebremst"
+   },
+   "dann": {
+    "ru": "إذن؛ ثم",
+    "pos": "ظرف"
+   },
+   "der/die/das": {
+    "ru": "أداة التعريف",
+    "pos": "أداة تعريف",
+    "note": "der للمذكر، die للمؤنث والجمع، das للمحايد؛ den للمذكر في حالة النصب، dem للمذكر والمحايد في حالة الجر؛ وdas تعني أيضًا «هذا»"
+   },
+   "dürfen": {
+    "ru": "يحق له، يُسمح له",
+    "pos": "فعل",
+    "forms": "durfte · hat gedurft"
+   },
+   "ein/eine": {
+    "ru": "أداة النكرة؛ واحد",
+    "pos": "أداة تعريف",
+    "note": "an einer Kreuzung — عند تقاطعٍ ما"
+   },
+   "einparken": {
+    "ru": "يركن السيارة",
+    "pos": "فعل",
+    "note": "سابقة منفصلة: parken Sie … ein",
+    "forms": "parkte ein · hat eingeparkt"
+   },
+   "fahren": {
+    "ru": "يسير بالسيارة؛ يقود",
+    "pos": "فعل",
+    "forms": "fuhr · ist gefahren"
+   },
+   "fertig": {
+    "ru": "جاهز؛ انتهى",
+    "pos": "صفة"
+   },
+   "fünfzig": {
+    "ru": "خمسون",
+    "pos": "عدد"
+   },
+   "für": {
+    "ru": "لـ، من أجل",
+    "pos": "حرف جر"
+   },
+   "ganz": {
+    "ru": "تمامًا",
+    "pos": "ظرف"
+   },
+   "genau": {
+    "ru": "تمامًا، بالضبط",
+    "pos": "ظرف",
+    "note": "genau hundert — مئة بالضبط"
+   },
+   "gleich": {
+    "ru": "حالًا، فورًا",
+    "pos": "ظرف"
+   },
+   "gut": {
+    "ru": "جيد",
+    "pos": "صفة",
+    "note": "am besten — من الأفضل",
+    "forms": "gut · besser · am besten"
+   },
+   "haben": {
+    "ru": "يملك، لديه",
+    "pos": "فعل",
+    "note": "Vorfahrt haben — له أولوية المرور",
+    "forms": "hatte · hat gehabt"
+   },
+   "herzlich": {
+    "ru": "قلبي",
+    "pos": "صفة"
+   },
+   "heute": {
+    "ru": "اليوم",
+    "pos": "ظرف"
+   },
+   "hier": {
+    "ru": "هنا",
+    "pos": "ظرف"
+   },
+   "hinter": {
+    "ru": "خلف",
+    "pos": "حرف جر"
+   },
+   "ich": {
+    "ru": "أنا",
+    "pos": "ضمير"
+   },
+   "in": {
+    "ru": "في",
+    "pos": "حرف جر",
+    "note": "im = in dem: im Bereich — في المنطقة"
+   },
+   "jetzt": {
+    "ru": "الآن",
+    "pos": "ظرف"
+   },
+   "kein": {
+    "ru": "لا (نفي الاسم)",
+    "pos": "ضمير"
+   },
+   "klar": {
+    "ru": "واضح",
+    "pos": "صفة",
+    "note": "alles klar — كل شيء واضح"
+   },
+   "kommen": {
+    "ru": "يأتي",
+    "pos": "فعل",
+    "note": "von rechts kommen — يأتي من اليمين",
+    "forms": "kam · ist gekommen"
+   },
+   "losfahren": {
+    "ru": "ينطلق",
+    "pos": "فعل",
+    "forms": "fuhr los · ist losgefahren"
+   },
+   "möglich": {
+    "ru": "ممكن",
+    "pos": "صفة"
+   },
+   "nach": {
+    "ru": "بعد؛ إلى",
+    "pos": "حرف جر"
+   },
+   "nein": {
+    "ru": "لا",
+    "pos": "أداة"
+   },
+   "nervös": {
+    "ru": "متوتر",
+    "pos": "صفة"
+   },
+   "noch": {
+    "ru": "بعدُ، لا يزال",
+    "pos": "ظرف",
+    "note": "noch nicht — ليس بعد"
+   },
+   "normal": {
+    "ru": "طبيعي",
+    "pos": "صفة"
+   },
+   "nächste": {
+    "ru": "القادم، الأقرب",
+    "pos": "صفة"
+   },
+   "parallel": {
+    "ru": "موازٍ",
+    "pos": "صفة"
+   },
+   "prüfen": {
+    "ru": "يفحص",
+    "pos": "فعل",
+    "forms": "prüfte · hat geprüft"
+   },
+   "rechts": {
+    "ru": "يمينًا، على اليمين",
+    "pos": "ظرف"
+   },
+   "richtig": {
+    "ru": "صحيح",
+    "pos": "صفة",
+    "note": "…, richtig? — …، صحيح؟"
+   },
+   "rückwärts": {
+    "ru": "إلى الخلف",
+    "pos": "ظرف"
+   },
+   "sagen": {
+    "ru": "يقول",
+    "pos": "فعل",
+    "forms": "sagte · hat gesagt"
+   },
+   "schauen": {
+    "ru": "ينظر",
+    "pos": "فعل",
+    "forms": "schaute · hat geschaut"
+   },
+   "schön": {
+    "ru": "جميل",
+    "pos": "صفة",
+    "note": "Sehr schön! — جميل جدًا!"
+   },
+   "sehr": {
+    "ru": "جدًا",
+    "pos": "ظرف"
+   },
+   "sein": {
+    "ru": "يكون",
+    "pos": "فعل",
+    "forms": "war · ist gewesen"
+   },
+   "selbstständig": {
+    "ru": "مستقل؛ بنفسه",
+    "pos": "صفة"
+   },
+   "so": {
+    "ru": "هكذا",
+    "pos": "ظرف"
+   },
+   "sofort": {
+    "ru": "فورًا",
+    "pos": "ظرف"
+   },
+   "stark": {
+    "ru": "قوي؛ بقوة",
+    "pos": "صفة"
+   },
+   "stehen": {
+    "ru": "يقف؛ يوجد",
+    "pos": "فعل",
+    "note": "Schilder stehen — توجد لافتات",
+    "forms": "stand · hat gestanden"
+   },
+   "und": {
+    "ru": "و",
+    "pos": "أداة ربط"
+   },
+   "unter": {
+    "ru": "تحت؛ أقل من",
+    "pos": "حرف جر"
+   },
+   "verstehen": {
+    "ru": "يفهم",
+    "pos": "فعل",
+    "note": "Verstanden! — فهمت!",
+    "forms": "verstand · hat verstanden"
+   },
+   "viel": {
+    "ru": "كثير؛ بكثير",
+    "pos": "ظرف"
+   },
+   "vorher": {
+    "ru": "مسبقًا، قبل ذلك",
+    "pos": "ظرف"
+   },
+   "weiß": {
+    "ru": "أبيض",
+    "pos": "صفة"
+   },
+   "wenn": {
+    "ru": "إذا؛ عندما",
+    "pos": "أداة ربط",
+    "note": "auch wenn — حتى لو"
+   },
+   "wie": {
+    "ru": "كيف",
+    "pos": "ظرف",
+    "note": "wie schnell — بأي سرعة"
+   },
+   "wir": {
+    "ru": "نحن",
+    "pos": "ضمير",
+    "note": "uns — نا: vor uns — أمامنا"
+   },
+   "wo": {
+    "ru": "أين",
+    "pos": "ظرف"
+   },
+   "zu": {
+    "ru": "إلى؛ لـ",
+    "pos": "حرف جر",
+    "note": "zum = zu dem، zur = zu der: Abstand zur Kreuzung — المسافة عن التقاطع"
+   },
+   "zuerst": {
+    "ru": "أولًا",
+    "pos": "ظرف"
+   },
+   "zurück": {
+    "ru": "إلى الخلف، عودةً",
+    "pos": "ظرف"
+   },
+   "zwei": {
+    "ru": "اثنان",
+    "pos": "عدد"
+   },
+   "Öl": {
+    "ru": "الزيت",
+    "pos": "اسم",
+    "decl": "das Öl · الجمع: die Öle"
+   },
+   "Ölstand": {
+    "ru": "مستوى الزيت",
+    "pos": "اسم",
+    "decl": "der Ölstand · لا جمع له"
+   },
+   "über": {
+    "ru": "عبر؛ فوق",
+    "pos": "حرف جر"
+   }
+  }
+ }
+}

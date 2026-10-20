@@ -115,7 +115,7 @@ html[dir="rtl"] .fs-page .ico.flip { transform: scaleX(-1); }
   -webkit-tap-highlight-color: transparent;
 }
 .fs-page .fs-topic-head:focus-visible { outline-offset: -3px; border-radius: 20px; }
-.fs-topic-ico, .fs-soon > .fs-topic-ico {
+.fs-topic-ico {
   flex: none; width: 44px; height: 44px; border-radius: 12px;
   display: flex; align-items: center; justify-content: center;
   background: var(--surface3); color: var(--text-strong);
@@ -174,16 +174,6 @@ html[dir="rtl"] .fs-page .ico.flip { transform: scaleX(-1); }
 .fs-row-n { font-size: 14px; font-weight: 700; color: var(--accent2-text); font-variant-numeric: tabular-nums; direction: ltr; unicode-bidi: isolate; }
 .fs-page .fs-row-chev { width: 20px; height: 20px; }
 .fs-level { direction: ltr; unicode-bidi: isolate; }
-
-/* «Дальше: экзамен» — следующая тема, пока не готова */
-.fs-soon {
-  display: flex; align-items: center; gap: 14px; padding: 16px 18px; border-radius: 20px;
-  border: 1.5px dashed var(--border-light); color: var(--text-muted);
-}
-.fs-soon-badge {
-  flex: none; padding: 3px 10px; border-radius: var(--r-full);
-  background: var(--surface3); color: var(--text); font-size: 12px; font-weight: 700;
-}
 
 /* ── Урок: панель «‹ Тема N · X из Y» над уроком ── */
 .fs-bar {

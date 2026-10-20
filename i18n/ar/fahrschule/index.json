@@ -142,6 +142,17 @@
     "p-13",
     "r-13"
    ]
+  },
+  {
+   "id": "pruefung",
+   "emoji": "🎓",
+   "title": "Die Fahrprüfung",
+   "titleTr": "امتحان رخصة القيادة",
+   "units": [
+    "t-14",
+    "p-14",
+    "r-14"
+   ]
   }
  ],
  "units": [
@@ -495,6 +506,33 @@
    "title": "Sparsam und sauber",
    "titleTr": "باقتصاد ونظافة",
    "count": 6
+  },
+  {
+   "id": "t-14",
+   "kind": "theory",
+   "emoji": "🎓",
+   "level": "B1",
+   "title": "Die Fahrprüfung",
+   "titleTr": "امتحان رخصة القيادة",
+   "count": 26
+  },
+  {
+   "id": "p-14",
+   "kind": "dialog",
+   "emoji": "📋",
+   "level": "B1",
+   "title": "Die Prüfungsfahrt",
+   "titleTr": "رحلة الامتحان",
+   "count": 16
+  },
+  {
+   "id": "r-14",
+   "kind": "road",
+   "emoji": "🏁",
+   "level": "B1",
+   "title": "Die Prüfungsfahrt",
+   "titleTr": "رحلة الامتحان",
+   "count": 8
   }
  ]
 }

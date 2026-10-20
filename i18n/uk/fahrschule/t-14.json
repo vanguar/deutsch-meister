@@ -1,0 +1,1224 @@
+{
+ "id": "t-14",
+ "kind": "theory",
+ "emoji": "🎓",
+ "level": "B1",
+ "title": "Die Fahrprüfung",
+ "titleTr": "Іспит на права",
+ "intro": "Як влаштований шлях до прав у Німеччині: обов'язкові поїздки в автошколі, теоретичний і практичний іспит, типові помилки та випробувальний термін після іспиту.",
+ "sections": [
+  {
+   "title": "Шлях до прав",
+   "lines": [
+    {
+     "de": "Für den Führerschein der Klasse B brauchen Sie einen Sehtest und einen Kurs in Erster Hilfe.",
+     "tr": "Для прав категорії B вам потрібні перевірка зору й курс першої допомоги."
+    },
+    {
+     "de": "Mit dem Antrag gehen Sie zur Führerscheinstelle Ihrer Stadt.",
+     "tr": "Із заявою ви йдете до відділу посвідчень водія свого міста."
+    },
+    {
+     "de": "In der Fahrschule lernen Sie die Theorie und machen Fahrstunden.",
+     "tr": "В автошколі ви вчите теорію й берете уроки водіння."
+    },
+    {
+     "de": "Pflicht sind zwölf besondere Fahrten: fünf auf der Landstraße, vier auf der Autobahn und drei bei Dunkelheit.",
+     "tr": "Обов'язкові дванадцять особливих поїздок: п'ять заміською дорогою, чотири автобаном і три в темряві."
+    },
+    {
+     "de": "Jede dieser Fahrten dauert 45 Minuten.",
+     "tr": "Кожна з цих поїздок триває 45 хвилин."
+    }
+   ]
+  },
+  {
+   "title": "Теоретичний іспит",
+   "lines": [
+    {
+     "de": "Die Theorieprüfung machen Sie am Computer, zum Beispiel beim TÜV oder bei der DEKRA.",
+     "tr": "Теоретичний іспит ви складаєте на комп'ютері, наприклад у TÜV або DEKRA."
+    },
+    {
+     "de": "Sie bekommen 30 Fragen. Jede Frage hat zwei bis fünf Fehlerpunkte.",
+     "tr": "Ви отримуєте 30 запитань. Кожне запитання коштує від двох до п'яти штрафних балів."
+    },
+    {
+     "de": "Mit höchstens zehn Fehlerpunkten haben Sie bestanden.",
+     "tr": "Якщо штрафних балів не більше десяти, іспит складено."
+    },
+    {
+     "de": "Aber zwei falsche Antworten mit fünf Fehlerpunkten bedeuten: nicht bestanden.",
+     "tr": "Але дві неправильні відповіді по п'ять штрафних балів означають: не складено."
+    },
+    {
+     "de": "Nach der Theorieprüfung haben Sie zwölf Monate Zeit für die praktische Prüfung.",
+     "tr": "Після теоретичного іспиту у вас є дванадцять місяців на практичний."
+    }
+   ]
+  },
+  {
+   "title": "Практичний іспит",
+   "lines": [
+    {
+     "de": "Die praktische Prüfung dauert etwa 55 Minuten.",
+     "tr": "Практичний іспит триває близько 55 хвилин."
+    },
+    {
+     "de": "Hinten sitzt der Prüfer, neben Ihnen sitzt Ihr Fahrlehrer.",
+     "tr": "Позаду сидить екзаменатор, поруч із вами — ваш інструктор."
+    },
+    {
+     "de": "Am Anfang zeigen Sie bei der Sicherheitskontrolle, wo Licht, Öl und Bremsanlage zu prüfen sind.",
+     "tr": "Спочатку на перевірці безпеки ви показуєте, де перевіряють світло, оливу й гальмівну систему."
+    },
+    {
+     "de": "Typische Aufgaben sind rückwärts Einparken, Umkehren und eine Gefahrbremsung.",
+     "tr": "Типові завдання — паркування заднім ходом, розворот і екстрене гальмування."
+    },
+    {
+     "de": "Einen Teil der Strecke fahren Sie selbstständig nach Schildern oder nach dem Navi.",
+     "tr": "Частину маршруту ви їдете самостійно — за вказівниками або за навігатором."
+    },
+    {
+     "de": "Haben Sie eine Anweisung nicht verstanden, fragen Sie einfach nach.",
+     "tr": "Якщо ви не зрозуміли вказівку, просто перепитайте.",
+     "o": {
+      "fragen": "fragen>nachfragen",
+      "nach": "nach>nachfragen"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Типові помилки",
+   "lines": [
+    {
+     "de": "Am Stoppschild halten Sie immer ganz an, auch wenn niemand kommt.",
+     "tr": "Біля знака «Стоп» завжди зупиняйтеся повністю, навіть якщо ніхто не їде.",
+     "o": {
+      "an": "an>anhalten",
+      "halten": "halten>anhalten"
+     },
+     "sign": "z206"
+    },
+    {
+     "de": "Bei diesem Schild lassen Sie die anderen zuerst fahren.",
+     "tr": "За цього знака ви спочатку пропускаєте інших.",
+     "sign": "z205"
+    },
+    {
+     "de": "Wer schneller als erlaubt fährt, fällt oft durch.",
+     "tr": "Хто їде швидше, ніж дозволено, часто провалює іспит.",
+     "o": {
+      "durch": "durch>durchfallen",
+      "fällt": "fällt>durchfallen"
+     },
+     "sign": "z274"
+    },
+    {
+     "de": "Im verkehrsberuhigten Bereich fahren Sie nur Schrittgeschwindigkeit.",
+     "tr": "У житловій зоні ви їдете лише зі швидкістю пішохода.",
+     "sign": "z3251"
+    },
+    {
+     "de": "Vergessen Sie den Schulterblick nicht: beim Abbiegen und beim Spurwechsel.",
+     "tr": "Не забувайте дивитися через плече: під час повороту й зміни смуги."
+    }
+   ]
+  },
+  {
+   "title": "Після іспиту",
+   "lines": [
+    {
+     "de": "Nach der Prüfung bekommen Sie den Führerschein auf Probe.",
+     "tr": "Після іспиту ви отримуєте права з випробувальним терміном."
+    },
+    {
+     "de": "Die Probezeit dauert zwei Jahre.",
+     "tr": "Випробувальний термін триває два роки."
+    },
+    {
+     "de": "In der Probezeit und unter 21 Jahren gilt 0,0 Promille.",
+     "tr": "Під час випробувального терміну й до 21 року діє 0,0 проміле."
+    },
+    {
+     "de": "Nach einem schweren Verstoß dauert die Probezeit vier Jahre, und Sie müssen ein Aufbauseminar machen.",
+     "tr": "Після серйозного порушення випробувальний термін триває чотири роки, і ви маєте пройти спеціальний семінар."
+    },
+    {
+     "de": "Sind Sie durchgefallen, können Sie die Prüfung meistens nach zwei Wochen wiederholen.",
+     "tr": "Якщо ви провалилися, перескласти іспит зазвичай можна через два тижні."
+    }
+   ]
+  }
+ ],
+ "quiz": [
+  {
+   "sign": "z206",
+   "wrong": [
+    "z205",
+    "z267"
+   ]
+  },
+  {
+   "sign": "z205",
+   "wrong": [
+    "z206",
+    "z301"
+   ]
+  },
+  {
+   "sign": "z274",
+   "wrong": [
+    "z380",
+    "z275"
+   ]
+  },
+  {
+   "sign": "z3251",
+   "wrong": [
+    "z2741",
+    "z240"
+   ]
+  }
+ ],
+ "quizQuestion": {
+  "de": "Was bedeutet dieses Schild?",
+  "tr": "Що означає цей знак?"
+ },
+ "signs": {
+  "z205": {
+   "de": "Vorfahrt gewähren!",
+   "tr": "Дайте дорогу!",
+   "src": "data/fahrschule/signs/z205.svg",
+   "n": "205",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_205_-_Vorfahrt_gew%C3%A4hren!_StVO_1970.svg"
+  },
+  "z206": {
+   "de": "Halt! Vorfahrt gewähren!",
+   "tr": "Стоп! Дайте дорогу!",
+   "src": "data/fahrschule/signs/z206.svg",
+   "n": "206",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_206_-_Halt!_Vorfahrt_gew%C3%A4hren!_StVO_1970.svg"
+  },
+  "z240": {
+   "de": "Gemeinsamer Geh- und Radweg",
+   "tr": "Спільна доріжка для пішоходів і велосипедистів",
+   "src": "data/fahrschule/signs/z240.svg",
+   "n": "240",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_240_-_Gemeinsamer_Fu%C3%9F-_und_Radweg,_StVO_1992.svg"
+  },
+  "z267": {
+   "de": "Verbot der Einfahrt",
+   "tr": "В'їзд заборонено",
+   "src": "data/fahrschule/signs/z267.svg",
+   "n": "267",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_267_-_Verbot_der_Einfahrt,_StVO_1970.svg"
+  },
+  "z274": {
+   "de": "Zulässige Höchstgeschwindigkeit",
+   "tr": "Обмеження максимальної швидкості",
+   "src": "data/fahrschule/signs/z274.svg",
+   "n": "274",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_274-30_-_Zul%C3%A4ssige_H%C3%B6chstgeschwindigkeit,_StVO_2017.svg"
+  },
+  "z2741": {
+   "de": "Tempo-30-Zone",
+   "tr": "Зона Tempo 30",
+   "src": "data/fahrschule/signs/z2741.svg",
+   "n": "274.1",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_274.1_-_Beginn_einer_Tempo_30-Zone,_StVO_2013.svg"
+  },
+  "z275": {
+   "de": "Mindestgeschwindigkeit",
+   "tr": "Мінімальна швидкість",
+   "src": "data/fahrschule/signs/z275.svg",
+   "n": "275",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_275-30_-_Vorgeschriebene_Mindestgeschwindigkeit,_StVO_2017.svg"
+  },
+  "z301": {
+   "de": "Vorfahrt an der nächsten Kreuzung",
+   "tr": "Перевага на найближчому перехресті",
+   "src": "data/fahrschule/signs/z301.svg",
+   "n": "301",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_301_-_Vorfahrt,_StVO_1970.svg"
+  },
+  "z3251": {
+   "de": "Verkehrsberuhigter Bereich",
+   "tr": "Житлова зона",
+   "src": "data/fahrschule/signs/z3251.svg",
+   "n": "325.1",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_325.1_-_Beginn_eines_verkehrsberuhigten_Bereichs,_StVO_2009.svg"
+  },
+  "z380": {
+   "de": "Richtgeschwindigkeit",
+   "tr": "Рекомендована швидкість",
+   "src": "data/fahrschule/signs/z380.svg",
+   "n": "380",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_380_-_Richtgeschwindigkeit,_StVO_1988.svg"
+  }
+ },
+ "gloss": {
+  "w": {
+   "abbiegen": "abbiegen",
+   "aber": "aber",
+   "als": "als",
+   "am": "an",
+   "an": "an",
+   "an>anhalten": "anhalten",
+   "anderen": "andere",
+   "anfang": "Anfang",
+   "antrag": "Antrag",
+   "antworten": "Antwort",
+   "anweisung": "Anweisung",
+   "auch": "auch",
+   "auf": "auf",
+   "aufbauseminar": "Aufbauseminar",
+   "aufgaben": "Aufgabe",
+   "autobahn": "Autobahn",
+   "b": "B",
+   "bedeuten": "bedeuten",
+   "bedeutet": "bedeuten",
+   "bei": "bei",
+   "beim": "bei",
+   "beispiel": "Beispiel",
+   "bekommen": "bekommen",
+   "bereich": "Bereich",
+   "besondere": "besonderer",
+   "bestanden": "bestehen",
+   "bis": "bis",
+   "brauchen": "brauchen",
+   "bremsanlage": "Bremsanlage",
+   "computer": "Computer",
+   "dauert": "dauern",
+   "dekra": "DEKRA",
+   "dem": "der/die/das",
+   "den": "der/die/das",
+   "der": "der/die/das",
+   "die": "der/die/das",
+   "diesem": "dieser",
+   "dieser": "dieser",
+   "dieses": "dieser",
+   "drei": "drei",
+   "dunkelheit": "Dunkelheit",
+   "durch>durchfallen": "durchfallen",
+   "durchgefallen": "durchfallen",
+   "ein": "ein/eine",
+   "eine": "ein/eine",
+   "einem": "ein/eine",
+   "einen": "ein/eine",
+   "einfach": "einfach",
+   "einfahrt": "Einfahrt",
+   "einparken": "einparken",
+   "erlaubt": "erlauben",
+   "erster": "erster",
+   "etwa": "etwa",
+   "fahren": "fahren",
+   "fahrlehrer": "Fahrlehrer",
+   "fahrprüfung": "Fahrprüfung",
+   "fahrschule": "Fahrschule",
+   "fahrstunden": "Fahrstunde",
+   "fahrten": "Fahrt",
+   "falsche": "falsch",
+   "fehlerpunkte": "Fehlerpunkt",
+   "fehlerpunkten": "Fehlerpunkt",
+   "frage": "Frage",
+   "fragen": "fragen",
+   "fragen>nachfragen": "nachfragen",
+   "fährt": "fahren",
+   "fällt>durchfallen": "durchfallen",
+   "führerschein": "Führerschein",
+   "führerscheinstelle": "Führerscheinstelle",
+   "fünf": "fünf",
+   "für": "für",
+   "ganz": "ganz",
+   "gefahrbremsung": "Gefahrbremsung",
+   "geh": "Gehweg",
+   "gehen": "gehen",
+   "gemeinsamer": "gemeinsam",
+   "gewähren": "gewähren",
+   "gilt": "gelten",
+   "haben": "haben",
+   "halt": "Halt",
+   "halten>anhalten": "anhalten",
+   "hat": "haben",
+   "hilfe": "Hilfe",
+   "hinten": "hinten",
+   "höchstens": "höchstens",
+   "höchstgeschwindigkeit": "Höchstgeschwindigkeit",
+   "ihnen": "Sie",
+   "ihr": "Ihr",
+   "ihrer": "Ihr",
+   "im": "in",
+   "immer": "immer",
+   "in": "in",
+   "jahre": "Jahr",
+   "jahren": "Jahr",
+   "jede": "jeder",
+   "klasse": "Klasse",
+   "kommt": "kommen",
+   "kreuzung": "Kreuzung",
+   "kurs": "Kurs",
+   "können": "können",
+   "landstraße": "Landstraße",
+   "lassen": "lassen",
+   "lernen": "lernen",
+   "licht": "Licht",
+   "machen": "machen",
+   "meistens": "meistens",
+   "mindestgeschwindigkeit": "Mindestgeschwindigkeit",
+   "minuten": "Minute",
+   "mit": "mit",
+   "monate": "Monat",
+   "müssen": "müssen",
+   "nach": "nach",
+   "nach>nachfragen": "nachfragen",
+   "navi": "Navi",
+   "neben": "neben",
+   "nicht": "nicht",
+   "niemand": "niemand",
+   "nur": "nur",
+   "nächsten": "nächste",
+   "oder": "oder",
+   "oft": "oft",
+   "pflicht": "Pflicht",
+   "praktische": "praktisch",
+   "probe": "Probe",
+   "probezeit": "Probezeit",
+   "promille": "Promille",
+   "prüfen": "prüfen",
+   "prüfer": "Prüfer",
+   "prüfung": "Prüfung",
+   "radweg": "Radweg",
+   "richtgeschwindigkeit": "Richtgeschwindigkeit",
+   "rückwärts": "rückwärts",
+   "schild": "Schild",
+   "schildern": "Schild",
+   "schneller": "schnell",
+   "schrittgeschwindigkeit": "Schrittgeschwindigkeit",
+   "schulterblick": "Schulterblick",
+   "schweren": "schwer",
+   "sehtest": "Sehtest",
+   "selbstständig": "selbstständig",
+   "sicherheitskontrolle": "Sicherheitskontrolle",
+   "sie": "Sie",
+   "sind": "sein",
+   "sitzt": "sitzen",
+   "spurwechsel": "Spurwechsel",
+   "stadt": "Stadt",
+   "stoppschild": "Stoppschild",
+   "strecke": "Strecke",
+   "teil": "Teil",
+   "tempo": "Tempo",
+   "theorie": "Theorie",
+   "theorieprüfung": "Theorieprüfung",
+   "typische": "typisch",
+   "tüv": "TÜV",
+   "umkehren": "umkehren",
+   "und": "und",
+   "unter": "unter",
+   "verbot": "Verbot",
+   "vergessen": "vergessen",
+   "verkehrsberuhigten": "verkehrsberuhigt",
+   "verkehrsberuhigter": "verkehrsberuhigt",
+   "verstanden": "verstehen",
+   "verstoß": "Verstoß",
+   "vier": "vier",
+   "vorfahrt": "Vorfahrt",
+   "was": "was",
+   "wenn": "wenn",
+   "wer": "wer",
+   "wiederholen": "wiederholen",
+   "wo": "wo",
+   "wochen": "Woche",
+   "zehn": "zehn",
+   "zeigen": "zeigen",
+   "zeit": "Zeit",
+   "zone": "Zone",
+   "zu": "zu",
+   "zuerst": "zuerst",
+   "zulässige": "zulässig",
+   "zum": "zu",
+   "zur": "zu",
+   "zwei": "zwei",
+   "zwölf": "zwölf",
+   "öl": "Öl"
+  },
+  "l": {
+   "Anfang": {
+    "ru": "початок",
+    "pos": "ім.",
+    "decl": "der Anfang · мн.: die Anfänge"
+   },
+   "Antrag": {
+    "ru": "заява",
+    "pos": "ім.",
+    "note": "einen Antrag stellen — подати заяву",
+    "decl": "der Antrag · мн.: die Anträge"
+   },
+   "Antwort": {
+    "ru": "відповідь",
+    "pos": "ім.",
+    "decl": "die Antwort · мн.: die Antworten"
+   },
+   "Anweisung": {
+    "ru": "вказівка",
+    "pos": "ім.",
+    "decl": "die Anweisung · мн.: die Anweisungen"
+   },
+   "Aufbauseminar": {
+    "ru": "курс для водіїв-порушників (Aufbauseminar)",
+    "pos": "ім.",
+    "note": "обов'язковий після серйозного порушення у випробувальний термін; платний",
+    "decl": "das Aufbauseminar · мн.: die Aufbauseminare"
+   },
+   "Aufgabe": {
+    "ru": "завдання",
+    "pos": "ім.",
+    "decl": "die Aufgabe · мн.: die Aufgaben"
+   },
+   "Autobahn": {
+    "ru": "автобан, автомагістраль",
+    "pos": "ім.",
+    "decl": "die Autobahn · мн.: die Autobahnen"
+   },
+   "B": {
+    "ru": "B — категорія прав на легковий автомобіль",
+    "pos": "власна назва"
+   },
+   "Beispiel": {
+    "ru": "приклад",
+    "pos": "ім.",
+    "note": "zum Beispiel — наприклад",
+    "decl": "das Beispiel · мн.: die Beispiele"
+   },
+   "Bereich": {
+    "ru": "зона, ділянка",
+    "pos": "ім.",
+    "decl": "der Bereich · мн.: die Bereiche"
+   },
+   "Bremsanlage": {
+    "ru": "гальмівна система",
+    "pos": "ім.",
+    "decl": "die Bremsanlage · мн.: die Bremsanlagen"
+   },
+   "Computer": {
+    "ru": "комп'ютер",
+    "pos": "ім.",
+    "decl": "der Computer · мн.: die Computer"
+   },
+   "DEKRA": {
+    "ru": "DEKRA — організація технічного нагляду, приймає іспити на права",
+    "pos": "власна назва"
+   },
+   "Dunkelheit": {
+    "ru": "темрява",
+    "pos": "ім.",
+    "decl": "die Dunkelheit · мн. немає"
+   },
+   "Einfahrt": {
+    "ru": "в'їзд",
+    "pos": "ім.",
+    "decl": "die Einfahrt · мн.: die Einfahrten"
+   },
+   "Fahrlehrer": {
+    "ru": "інструктор автошколи",
+    "pos": "ім.",
+    "decl": "der Fahrlehrer · мн.: die Fahrlehrer"
+   },
+   "Fahrprüfung": {
+    "ru": "іспит на права",
+    "pos": "ім.",
+    "decl": "die Fahrprüfung · мн.: die Fahrprüfungen"
+   },
+   "Fahrschule": {
+    "ru": "автошкола",
+    "pos": "ім.",
+    "decl": "die Fahrschule · мн.: die Fahrschulen"
+   },
+   "Fahrstunde": {
+    "ru": "урок водіння",
+    "pos": "ім.",
+    "decl": "die Fahrstunde · мн.: die Fahrstunden"
+   },
+   "Fahrt": {
+    "ru": "поїздка",
+    "pos": "ім.",
+    "decl": "die Fahrt · мн.: die Fahrten"
+   },
+   "Fehlerpunkt": {
+    "ru": "штрафний бал",
+    "pos": "ім.",
+    "decl": "der Fehlerpunkt · мн.: die Fehlerpunkte"
+   },
+   "Frage": {
+    "ru": "питання",
+    "pos": "ім.",
+    "decl": "die Frage · мн.: die Fragen"
+   },
+   "Führerschein": {
+    "ru": "посвідчення водія",
+    "pos": "ім.",
+    "decl": "der Führerschein · мн.: die Führerscheine"
+   },
+   "Führerscheinstelle": {
+    "ru": "відділ посвідчень водія",
+    "pos": "ім.",
+    "decl": "die Führerscheinstelle · мн.: die Führerscheinstellen"
+   },
+   "Gefahrbremsung": {
+    "ru": "екстрене гальмування",
+    "pos": "ім.",
+    "note": "гальмо в підлогу щосили; гальмівний шлях приблизно вдвічі коротший",
+    "decl": "die Gefahrbremsung · мн.: die Gefahrbremsungen"
+   },
+   "Gehweg": {
+    "ru": "тротуар",
+    "pos": "ім.",
+    "decl": "der Gehweg · мн.: die Gehwege"
+   },
+   "Halt": {
+    "ru": "зупинка; стоп!",
+    "pos": "ім.",
+    "note": "Halt! — Стоп! (на знаку 206); nach einem Halt — після зупинки",
+    "decl": "der Halt · мн.: die Halte"
+   },
+   "Hilfe": {
+    "ru": "допомога",
+    "pos": "ім.",
+    "decl": "die Hilfe · мн. немає"
+   },
+   "Höchstgeschwindigkeit": {
+    "ru": "максимальна швидкість",
+    "pos": "ім.",
+    "decl": "die Höchstgeschwindigkeit · мн.: die Höchstgeschwindigkeiten"
+   },
+   "Ihr": {
+    "ru": "ваш (ввічливо)",
+    "pos": "займ."
+   },
+   "Jahr": {
+    "ru": "рік",
+    "pos": "ім.",
+    "decl": "das Jahr · мн.: die Jahre"
+   },
+   "Klasse": {
+    "ru": "категорія (прав); клас",
+    "pos": "ім.",
+    "decl": "die Klasse · мн.: die Klassen"
+   },
+   "Kreuzung": {
+    "ru": "перехрестя",
+    "pos": "ім.",
+    "decl": "die Kreuzung · мн.: die Kreuzungen"
+   },
+   "Kurs": {
+    "ru": "курс",
+    "pos": "ім.",
+    "decl": "der Kurs · мн.: die Kurse"
+   },
+   "Landstraße": {
+    "ru": "заміська дорога",
+    "pos": "ім.",
+    "note": "поза населеним пунктом: для легкових зазвичай до 100 км/год",
+    "decl": "die Landstraße · мн.: die Landstraßen"
+   },
+   "Licht": {
+    "ru": "світло; сигнал",
+    "pos": "ім.",
+    "decl": "das Licht · мн.: die Lichter"
+   },
+   "Mindestgeschwindigkeit": {
+    "ru": "мінімальна швидкість",
+    "pos": "ім.",
+    "decl": "die Mindestgeschwindigkeit · мн.: die Mindestgeschwindigkeiten"
+   },
+   "Minute": {
+    "ru": "хвилина",
+    "pos": "ім.",
+    "decl": "die Minute · мн.: die Minuten"
+   },
+   "Monat": {
+    "ru": "місяць",
+    "pos": "ім.",
+    "decl": "der Monat · мн.: die Monate"
+   },
+   "Navi": {
+    "ru": "навігатор",
+    "pos": "ім.",
+    "decl": "das Navi · мн.: die Navis"
+   },
+   "Pflicht": {
+    "ru": "обов'язок",
+    "pos": "ім.",
+    "decl": "die Pflicht · мн.: die Pflichten"
+   },
+   "Probe": {
+    "ru": "проба, випробування",
+    "pos": "ім.",
+    "note": "auf Probe — з випробувальним терміном",
+    "decl": "die Probe · мн.: die Proben"
+   },
+   "Probezeit": {
+    "ru": "випробувальний термін (для нових водіїв)",
+    "pos": "ім.",
+    "note": "два роки після отримання прав; помилки коштують дорожче",
+    "decl": "die Probezeit · мн.: die Probezeiten"
+   },
+   "Promille": {
+    "ru": "проміле (‰ алкоголю в крові)",
+    "pos": "ім.",
+    "decl": "das Promille · мн.: die Promille"
+   },
+   "Prüfer": {
+    "ru": "екзаменатор",
+    "pos": "ім.",
+    "decl": "der Prüfer · мн.: die Prüfer"
+   },
+   "Prüfung": {
+    "ru": "іспит",
+    "pos": "ім.",
+    "decl": "die Prüfung · мн.: die Prüfungen"
+   },
+   "Radweg": {
+    "ru": "велодоріжка",
+    "pos": "ім.",
+    "note": "синій круглий знак — велосипедисти мусять нею їхати",
+    "decl": "der Radweg · мн.: die Radwege"
+   },
+   "Richtgeschwindigkeit": {
+    "ru": "рекомендована швидкість",
+    "pos": "ім.",
+    "note": "на автобані 130 км/год — не закон, а рекомендація; у разі аварії на більшій швидкості може бути часткова вина",
+    "decl": "die Richtgeschwindigkeit · мн.: die Richtgeschwindigkeiten"
+   },
+   "Schild": {
+    "ru": "знак, табличка",
+    "pos": "ім.",
+    "decl": "das Schild · мн.: die Schilder"
+   },
+   "Schrittgeschwindigkeit": {
+    "ru": "швидкість пішохода (кроком)",
+    "pos": "ім.",
+    "note": "на практиці 4–7 км/год",
+    "decl": "die Schrittgeschwindigkeit · мн. немає"
+   },
+   "Schulterblick": {
+    "ru": "погляд через плече",
+    "pos": "ім.",
+    "note": "так перевіряють «мертву зону» перед стартом і поворотом",
+    "decl": "der Schulterblick · мн.: die Schulterblicke"
+   },
+   "Sehtest": {
+    "ru": "перевірка зору",
+    "pos": "ім.",
+    "decl": "der Sehtest · мн.: die Sehtests"
+   },
+   "Sicherheitskontrolle": {
+    "ru": "перевірка безпеки (на іспиті)",
+    "pos": "ім.",
+    "decl": "die Sicherheitskontrolle · мн.: die Sicherheitskontrollen"
+   },
+   "Sie": {
+    "ru": "ви (ввічливо)",
+    "pos": "займ.",
+    "note": "Ihnen — вам (давальний): vor Ihnen — перед вами"
+   },
+   "Spurwechsel": {
+    "ru": "перестроювання (зміна смуги)",
+    "pos": "ім.",
+    "decl": "der Spurwechsel · мн.: die Spurwechsel"
+   },
+   "Stadt": {
+    "ru": "місто",
+    "pos": "ім.",
+    "decl": "die Stadt · мн.: die Städte"
+   },
+   "Stoppschild": {
+    "ru": "знак «Стоп»",
+    "pos": "ім.",
+    "decl": "das Stoppschild · мн.: die Stoppschilder"
+   },
+   "Strecke": {
+    "ru": "ділянка шляху, відстань",
+    "pos": "ім.",
+    "decl": "die Strecke · мн.: die Strecken"
+   },
+   "Teil": {
+    "ru": "частина",
+    "pos": "ім.",
+    "decl": "der Teil · мн.: die Teile"
+   },
+   "Tempo": {
+    "ru": "швидкість, темп",
+    "pos": "ім.",
+    "note": "Tempo-30-Zone — зона з обмеженням 30 км/год",
+    "decl": "das Tempo · мн.: die Tempos"
+   },
+   "Theorie": {
+    "ru": "теорія",
+    "pos": "ім.",
+    "decl": "die Theorie · мн.: die Theorien"
+   },
+   "Theorieprüfung": {
+    "ru": "теоретичний іспит",
+    "pos": "ім.",
+    "decl": "die Theorieprüfung · мн.: die Theorieprüfungen"
+   },
+   "TÜV": {
+    "ru": "TÜV — союз технічного нагляду: іспити на права, техогляд",
+    "pos": "власна назва"
+   },
+   "Verbot": {
+    "ru": "заборона",
+    "pos": "ім.",
+    "decl": "das Verbot · мн.: die Verbote"
+   },
+   "Verstoß": {
+    "ru": "порушення",
+    "pos": "ім.",
+    "decl": "der Verstoß · мн.: die Verstöße"
+   },
+   "Vorfahrt": {
+    "ru": "перевага (право проїхати першим)",
+    "pos": "ім.",
+    "decl": "die Vorfahrt · мн. немає"
+   },
+   "Woche": {
+    "ru": "тиждень",
+    "pos": "ім.",
+    "decl": "die Woche · мн.: die Wochen"
+   },
+   "Zeit": {
+    "ru": "час",
+    "pos": "ім.",
+    "decl": "die Zeit · мн.: die Zeiten"
+   },
+   "Zone": {
+    "ru": "зона",
+    "pos": "ім.",
+    "decl": "die Zone · мн.: die Zonen"
+   },
+   "abbiegen": {
+    "ru": "повертати",
+    "pos": "дієсл.",
+    "note": "відокремлюваний префікс: Sie biegen … ab",
+    "forms": "bog ab · ist abgebogen"
+   },
+   "aber": {
+    "ru": "але",
+    "pos": "спол."
+   },
+   "als": {
+    "ru": "ніж (при порівнянні); як",
+    "pos": "спол."
+   },
+   "an": {
+    "ru": "біля, на, при",
+    "pos": "прийм.",
+    "note": "am = an dem; an der Kreuzung — на перехресті"
+   },
+   "andere": {
+    "ru": "інший",
+    "pos": "прикм."
+   },
+   "anhalten": {
+    "ru": "зупинятися",
+    "pos": "дієсл.",
+    "forms": "hielt an · hat angehalten"
+   },
+   "auch": {
+    "ru": "теж; навіть (auch wenn)",
+    "pos": "присл."
+   },
+   "auf": {
+    "ru": "на, по",
+    "pos": "прийм.",
+    "note": "auf der Straße — на дорозі; achten auf — стежити за"
+   },
+   "bedeuten": {
+    "ru": "означати",
+    "pos": "дієсл.",
+    "forms": "bedeutete · hat bedeutet"
+   },
+   "bei": {
+    "ru": "при, біля; на (про сигнал)",
+    "pos": "прийм.",
+    "note": "beim = bei dem: beim Fahren — під час їзди; bei Rot — на червоний"
+   },
+   "bekommen": {
+    "ru": "отримувати",
+    "pos": "дієсл.",
+    "forms": "bekam · hat bekommen"
+   },
+   "besonderer": {
+    "ru": "особливий",
+    "pos": "прикм."
+   },
+   "bestehen": {
+    "ru": "скласти (іспит), пройти",
+    "pos": "дієсл.",
+    "forms": "bestand · hat bestanden"
+   },
+   "bis": {
+    "ru": "поки не; до",
+    "pos": "спол."
+   },
+   "brauchen": {
+    "ru": "потребувати, бути потрібним",
+    "pos": "дієсл.",
+    "forms": "brauchte · hat gebraucht"
+   },
+   "dauern": {
+    "ru": "тривати",
+    "pos": "дієсл.",
+    "forms": "dauerte · hat gedauert"
+   },
+   "der/die/das": {
+    "ru": "означений артикль",
+    "pos": "артикль",
+    "note": "der — ч. р., die — ж. р. і мн., das — с. р.; den — ч. р. у знахідному, dem — ч. і с. р. у давальному; das ще означає «це»"
+   },
+   "dieser": {
+    "ru": "цей, ця, це",
+    "pos": "займ."
+   },
+   "drei": {
+    "ru": "три",
+    "pos": "числ."
+   },
+   "durchfallen": {
+    "ru": "провалитися (на іспиті)",
+    "pos": "дієсл.",
+    "note": "відокремлюваний префікс: er fällt … durch",
+    "forms": "fiel durch · ist durchgefallen"
+   },
+   "ein/eine": {
+    "ru": "неозначений артикль; один",
+    "pos": "артикль",
+    "note": "an einer Kreuzung — на (якомусь) перехресті"
+   },
+   "einfach": {
+    "ru": "простий; просто",
+    "pos": "прикм.",
+    "forms": "einfach · einfacher · am einfachsten"
+   },
+   "einparken": {
+    "ru": "паркуватися (заїжджати на місце)",
+    "pos": "дієсл.",
+    "note": "відокремлюваний префікс: parken Sie … ein",
+    "forms": "parkte ein · hat eingeparkt"
+   },
+   "erlauben": {
+    "ru": "дозволяти",
+    "pos": "дієсл.",
+    "forms": "erlaubte · hat erlaubt"
+   },
+   "erster": {
+    "ru": "перший",
+    "pos": "прикм.",
+    "note": "Erste Hilfe — перша допомога"
+   },
+   "etwa": {
+    "ru": "приблизно, близько",
+    "pos": "присл."
+   },
+   "fahren": {
+    "ru": "їхати; кермувати машиною",
+    "pos": "дієсл.",
+    "forms": "fuhr · ist gefahren"
+   },
+   "falsch": {
+    "ru": "неправильний; неправильно",
+    "pos": "прикм."
+   },
+   "fragen": {
+    "ru": "питати",
+    "pos": "дієсл.",
+    "note": "fragen nach — питати про",
+    "forms": "fragte · hat gefragt"
+   },
+   "fünf": {
+    "ru": "п'ять",
+    "pos": "числ."
+   },
+   "für": {
+    "ru": "для",
+    "pos": "прийм."
+   },
+   "ganz": {
+    "ru": "цілком, зовсім",
+    "pos": "присл."
+   },
+   "gehen": {
+    "ru": "іти (пішки)",
+    "pos": "дієсл.",
+    "note": "über die Straße gehen — переходити дорогу",
+    "forms": "ging · ist gegangen"
+   },
+   "gelten": {
+    "ru": "діяти (про правило)",
+    "pos": "дієсл.",
+    "forms": "galt · hat gegolten"
+   },
+   "gemeinsam": {
+    "ru": "спільний; разом",
+    "pos": "прикм."
+   },
+   "gewähren": {
+    "ru": "надавати",
+    "pos": "дієсл.",
+    "note": "Vorfahrt gewähren — дати дорогу",
+    "forms": "gewährte · hat gewährt"
+   },
+   "haben": {
+    "ru": "мати",
+    "pos": "дієсл.",
+    "note": "Vorfahrt haben — мати перевагу",
+    "forms": "hatte · hat gehabt"
+   },
+   "hinten": {
+    "ru": "позаду",
+    "pos": "присл."
+   },
+   "höchstens": {
+    "ru": "щонайбільше, не більше",
+    "pos": "присл."
+   },
+   "immer": {
+    "ru": "завжди",
+    "pos": "присл."
+   },
+   "in": {
+    "ru": "в",
+    "pos": "прийм.",
+    "note": "im = in dem: im Bereich — у зоні"
+   },
+   "jeder": {
+    "ru": "кожен",
+    "pos": "займ."
+   },
+   "kommen": {
+    "ru": "приходити; їхати (наближатися)",
+    "pos": "дієсл.",
+    "note": "von rechts kommen — їхати праворуч",
+    "forms": "kam · ist gekommen"
+   },
+   "können": {
+    "ru": "могти",
+    "pos": "дієсл.",
+    "forms": "konnte · hat gekonnt"
+   },
+   "lassen": {
+    "ru": "дозволяти; пропускати; залишати",
+    "pos": "дієсл.",
+    "note": "jemanden fahren lassen — пропустити когось уперед",
+    "forms": "ließ · hat gelassen"
+   },
+   "lernen": {
+    "ru": "вчити, вчитися",
+    "pos": "дієсл.",
+    "forms": "lernte · hat gelernt"
+   },
+   "machen": {
+    "ru": "робити",
+    "pos": "дієсл.",
+    "note": "den Schulterblick machen — озирнутися через плече; Gut gemacht! — Молодець!",
+    "forms": "machte · hat gemacht"
+   },
+   "meistens": {
+    "ru": "найчастіше, зазвичай",
+    "pos": "присл."
+   },
+   "mit": {
+    "ru": "з",
+    "pos": "прийм."
+   },
+   "müssen": {
+    "ru": "мусити, бути повинним",
+    "pos": "дієсл.",
+    "forms": "musste · hat gemusst"
+   },
+   "nach": {
+    "ru": "після; до (напрямок)",
+    "pos": "прийм."
+   },
+   "nachfragen": {
+    "ru": "перепитати, уточнити",
+    "pos": "дієсл.",
+    "note": "відокремлюваний префікс: fragen Sie … nach",
+    "forms": "fragte nach · hat nachgefragt"
+   },
+   "neben": {
+    "ru": "поруч із, біля",
+    "pos": "прийм."
+   },
+   "nicht": {
+    "ru": "не",
+    "pos": "частка"
+   },
+   "niemand": {
+    "ru": "ніхто",
+    "pos": "займ."
+   },
+   "nur": {
+    "ru": "лише",
+    "pos": "присл."
+   },
+   "nächste": {
+    "ru": "найближчий, наступний",
+    "pos": "прикм."
+   },
+   "oder": {
+    "ru": "або",
+    "pos": "спол.",
+    "note": "…, oder? — …, правда? / так?"
+   },
+   "oft": {
+    "ru": "часто",
+    "pos": "присл."
+   },
+   "praktisch": {
+    "ru": "практичний",
+    "pos": "прикм."
+   },
+   "prüfen": {
+    "ru": "перевіряти",
+    "pos": "дієсл.",
+    "forms": "prüfte · hat geprüft"
+   },
+   "rückwärts": {
+    "ru": "заднім ходом, назад",
+    "pos": "присл."
+   },
+   "schnell": {
+    "ru": "швидкий; швидко",
+    "pos": "прикм."
+   },
+   "schwer": {
+    "ru": "важкий; серйозний",
+    "pos": "прикм.",
+    "forms": "schwer · schwerer · am schwersten"
+   },
+   "sein": {
+    "ru": "бути",
+    "pos": "дієсл.",
+    "forms": "war · ist gewesen"
+   },
+   "selbstständig": {
+    "ru": "самостійний; самостійно",
+    "pos": "прикм."
+   },
+   "sitzen": {
+    "ru": "сидіти",
+    "pos": "дієсл.",
+    "forms": "saß · hat gesessen"
+   },
+   "typisch": {
+    "ru": "типовий",
+    "pos": "прикм."
+   },
+   "umkehren": {
+    "ru": "розвернутися (поїхати назад)",
+    "pos": "дієсл.",
+    "note": "das Umkehren — розворот",
+    "forms": "kehrte um · ist umgekehrt"
+   },
+   "und": {
+    "ru": "і, та",
+    "pos": "спол."
+   },
+   "unter": {
+    "ru": "під; менше",
+    "pos": "прийм."
+   },
+   "vergessen": {
+    "ru": "забувати",
+    "pos": "дієсл.",
+    "forms": "vergaß · hat vergessen"
+   },
+   "verkehrsberuhigt": {
+    "ru": "зі спокійним рухом (житлова зона)",
+    "pos": "прикм."
+   },
+   "verstehen": {
+    "ru": "розуміти",
+    "pos": "дієсл.",
+    "note": "Verstanden! — Зрозумів(ла)!",
+    "forms": "verstand · hat verstanden"
+   },
+   "vier": {
+    "ru": "чотири",
+    "pos": "числ."
+   },
+   "was": {
+    "ru": "що",
+    "pos": "займ."
+   },
+   "wenn": {
+    "ru": "якщо; коли",
+    "pos": "спол.",
+    "note": "auch wenn — навіть якщо"
+   },
+   "wer": {
+    "ru": "хто",
+    "pos": "займ."
+   },
+   "wiederholen": {
+    "ru": "повторювати; перескладати (іспит)",
+    "pos": "дієсл.",
+    "forms": "wiederholte · hat wiederholt"
+   },
+   "wo": {
+    "ru": "де",
+    "pos": "присл."
+   },
+   "zehn": {
+    "ru": "десять",
+    "pos": "числ."
+   },
+   "zeigen": {
+    "ru": "показувати",
+    "pos": "дієсл.",
+    "forms": "zeigte · hat gezeigt"
+   },
+   "zu": {
+    "ru": "до; для",
+    "pos": "прийм.",
+    "note": "zum = zu dem, zur = zu der: Abstand zur Kreuzung — відстань до перехрестя"
+   },
+   "zuerst": {
+    "ru": "спочатку, першим",
+    "pos": "присл."
+   },
+   "zulässig": {
+    "ru": "допустимий, дозволений",
+    "pos": "прикм."
+   },
+   "zwei": {
+    "ru": "два",
+    "pos": "числ."
+   },
+   "zwölf": {
+    "ru": "дванадцять",
+    "pos": "числ."
+   },
+   "Öl": {
+    "ru": "масло",
+    "pos": "ім.",
+    "decl": "das Öl · мн.: die Öle"
+   }
+  }
+ }
+}
