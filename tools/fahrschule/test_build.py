@@ -132,8 +132,8 @@ code, errs, written = run_with(lambda d: None)
 ok(code == 0 and not errs and written, 'исходник как есть собирается')
 
 code, errs, written = run_with(lambda d: unit(d, 't-01')['sections'][0]['lines'].append(
-    {'de': 'Das Fahrrad fährt.', 'tr': ['Велосипед едет.', 'Велосипед їде.', 'الدراجة تسير.']}))
-ok(code == 1 and any('fahrrad' in e for e in errs) and not written, 'слово без подсказки — ошибка, ничего не записано')
+    {'de': 'Das Pferd läuft.', 'tr': ['Лошадь бежит.', 'Кінь біжить.', 'الحصان يجري.']}))
+ok(code == 1 and any('pferd' in e for e in errs) and not written, 'слово без подсказки — ошибка, ничего не записано')
 
 code, errs, written = run_with(lambda d: unit(d, 'k-01')['scenes'][0].__setitem__('order', ['blue', 'red']))
 ok(code == 1 and any('по правилам порядок' in e for e in errs) and not written, 'неверный порядок проезда — ошибка')
@@ -142,8 +142,8 @@ code, errs, written = run_with(lambda d: unit(d, 'p-01')['lines'][0]['tr'].__set
 ok(code == 1 and any('русские буквы' in e for e in errs), 'русские буквы в украинском — ошибка')
 
 code, errs, written = run_with(lambda d: d['lexicon.json'].__setitem__(
-    'Fahrrad', {'pos': 'сущ.', 'art': 'das', 'pl': 'die Fahrräder', 'tr': ['велосипед', 'велосипед', 'دراجة']}))
-ok(code == 1 and any('нигде не встречаются' in e and 'Fahrrad' in e for e in errs), 'лишняя лемма в словаре — ошибка')
+    'Pferd', {'pos': 'сущ.', 'art': 'das', 'pl': 'die Pferde', 'tr': ['лошадь', 'кінь', 'حصان']}))
+ok(code == 1 and any('нигде не встречаются' in e and 'Pferd' in e for e in errs), 'лишняя лемма в словаре — ошибка')
 
 code, errs, written = run_with(lambda d: unit(d, 'p-01')['lines'][1].__setitem__('w', {'stellen': 'einstellen'}))
 ok(code == 1 and any('которого нет в строке' in e for e in errs), '"w" на слово, которого нет в строке — ошибка')

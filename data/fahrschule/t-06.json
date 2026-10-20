@@ -1,0 +1,948 @@
+{
+ "id": "t-06",
+ "kind": "theory",
+ "emoji": "🚸",
+ "level": "A2–B1",
+ "title": "Fußgänger, Radfahrer und Busse",
+ "titleTr": "Пешеходы, велосипедисты и автобусы",
+ "intro": "Кого водитель должен особенно беречь: детей и пожилых, пешеходов на «зебре», велосипедистов на поворотах и в Fahrradstraße, пассажиров у автобуса на остановке. Плюс знаки велодорожек и тротуаров.",
+ "sections": [
+  {
+   "title": "Пешеходы и дети",
+   "lines": [
+    {
+     "de": "Dieses Schild warnt vor Fußgängern auf der Fahrbahn.",
+     "tr": "Этот знак предупреждает о пешеходах на проезжей части.",
+     "sign": "z133"
+    },
+    {
+     "de": "Bei Kindern, älteren und hilfsbedürftigen Menschen fahren Sie langsam und sind bremsbereit.",
+     "tr": "Рядом с детьми, пожилыми и беспомощными людьми вы едете медленно и готовы затормозить.",
+     "sign": "z136"
+    },
+    {
+     "de": "Am Zebrastreifen müssen Sie Fußgängern das Überqueren ermöglichen.",
+     "tr": "У «зебры» вы обязаны дать пешеходам перейти дорогу.",
+     "sign": "z350"
+    },
+    {
+     "de": "An einem Zebrastreifen dürfen Sie nicht überholen.",
+     "tr": "У «зебры» обгонять нельзя."
+    }
+   ]
+  },
+  {
+   "title": "Поворот: сначала пешеходы и велосипедисты",
+   "lines": [
+    {
+     "de": "Beim Abbiegen haben Radfahrer, die geradeaus fahren, Vorrang.",
+     "tr": "При повороте велосипедисты, которые едут прямо, имеют преимущество."
+    },
+    {
+     "de": "Auf Fußgänger nehmen Sie beim Abbiegen besondere Rücksicht; wenn nötig, warten Sie.",
+     "tr": "При повороте вы особенно внимательны к пешеходам; если нужно, ждёте."
+    },
+    {
+     "de": "Vor dem Rechtsabbiegen schauen Sie in den Spiegel und über die Schulter.",
+     "tr": "Перед поворотом направо вы смотрите в зеркало и через плечо."
+    }
+   ]
+  },
+  {
+   "title": "Велодорожки и тротуары",
+   "lines": [
+    {
+     "de": "Dieses Schild zeigt einen Radweg. Radfahrer müssen ihn benutzen, Autos dürfen dort nicht fahren.",
+     "tr": "Этот знак обозначает велодорожку. Велосипедисты обязаны ею пользоваться, автомобилям там ездить нельзя.",
+     "sign": "z237"
+    },
+    {
+     "de": "Dieses Schild zeigt einen Gehweg nur für Fußgänger.",
+     "tr": "Этот знак обозначает дорожку только для пешеходов.",
+     "sign": "z239"
+    },
+    {
+     "de": "Auf diesem Weg fahren Radfahrer und gehen Fußgänger gemeinsam.",
+     "tr": "По этой дорожке велосипедисты и пешеходы движутся вместе.",
+     "sign": "z240"
+    },
+    {
+     "de": "Hier ist der Weg geteilt: links fahren Radfahrer, rechts gehen Fußgänger.",
+     "tr": "Здесь дорожка разделена: слева едут велосипедисты, справа идут пешеходы.",
+     "sign": "z241"
+    },
+    {
+     "de": "Kinder bis acht Jahre fahren mit dem Fahrrad auf dem Gehweg.",
+     "tr": "Дети до восьми лет ездят на велосипеде по тротуару."
+    },
+    {
+     "de": "Öffnen Sie die Autotür vorsichtig: Von hinten kann ein Radfahrer kommen.",
+     "tr": "Открывайте дверь машины осторожно: сзади может ехать велосипедист."
+    }
+   ]
+  },
+  {
+   "title": "Велосипедная улица",
+   "lines": [
+    {
+     "de": "Dieses Schild warnt vor Radverkehr.",
+     "tr": "Этот знак предупреждает о велосипедистах.",
+     "sign": "z138"
+    },
+    {
+     "de": "In einer Fahrradstraße dürfen Autos nur fahren, wenn ein Zusatzzeichen es erlaubt.",
+     "tr": "В велосипедной улице автомобили могут ездить, только если это разрешает дополнительная табличка.",
+     "sign": "z2441"
+    },
+    {
+     "de": "Dort gilt höchstens Tempo 30, und Radfahrer dürfen nebeneinander fahren.",
+     "tr": "Там действует не больше 30 км/ч, а велосипедисты могут ехать рядом друг с другом."
+    }
+   ]
+  },
+  {
+   "title": "Автобусы и школьные автобусы",
+   "lines": [
+    {
+     "de": "Steigen an der Haltestelle Fahrgäste aus, fahren Sie rechts nur mit Schrittgeschwindigkeit vorbei.",
+     "tr": "Если на остановке выходят пассажиры, справа вы проезжаете мимо только со скоростью пешехода.",
+     "o": {
+      "aus": "aus>aussteigen",
+      "fahren": "fahren>vorbeifahren",
+      "steigen": "steigen>aussteigen",
+      "vorbei": "vorbei>vorbeifahren"
+     }
+    },
+    {
+     "de": "Einen Bus mit Warnblinklicht, der sich einer Haltestelle nähert, dürfen Sie nicht überholen.",
+     "tr": "Автобус с включённой аварийкой, который подъезжает к остановке, обгонять нельзя."
+    },
+    {
+     "de": "Hält ein Schulbus mit Warnblinklicht, gilt Schrittgeschwindigkeit auch für den Gegenverkehr.",
+     "tr": "Если школьный автобус стоит с аварийкой, скорость пешехода действует и для встречного движения."
+    },
+    {
+     "de": "Will ein Linienbus von der Haltestelle abfahren, lassen Sie ihn fahren; wenn nötig, warten Sie.",
+     "tr": "Если рейсовый автобус хочет отъехать от остановки, пропустите его; если нужно, подождите."
+    }
+   ]
+  }
+ ],
+ "quiz": [
+  {
+   "sign": "z133",
+   "wrong": [
+    "z136",
+    "z138"
+   ]
+  },
+  {
+   "sign": "z138",
+   "wrong": [
+    "z237",
+    "z133"
+   ]
+  },
+  {
+   "sign": "z237",
+   "wrong": [
+    "z2441",
+    "z240"
+   ]
+  },
+  {
+   "sign": "z239",
+   "wrong": [
+    "z240",
+    "z350"
+   ]
+  },
+  {
+   "sign": "z240",
+   "wrong": [
+    "z241",
+    "z239"
+   ]
+  },
+  {
+   "sign": "z241",
+   "wrong": [
+    "z240",
+    "z237"
+   ]
+  },
+  {
+   "sign": "z2441",
+   "wrong": [
+    "z237",
+    "z3251"
+   ]
+  }
+ ],
+ "quizQuestion": {
+  "de": "Was bedeutet dieses Schild?",
+  "tr": "Что означает этот знак?"
+ },
+ "signs": {
+  "z133": {
+   "de": "Fußgänger",
+   "tr": "Пешеходы",
+   "src": "data/fahrschule/signs/z133.svg",
+   "n": "133",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_133-10_-_Fu%C3%9Fg%C3%A4nger_(Aufstellung_rechts),_StVO_1992.svg"
+  },
+  "z136": {
+   "de": "Kinder",
+   "tr": "Дети",
+   "src": "data/fahrschule/signs/z136.svg",
+   "n": "136",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_136_-_Kinder,_StVO_1970.svg"
+  },
+  "z138": {
+   "de": "Radverkehr",
+   "tr": "Велосипедисты",
+   "src": "data/fahrschule/signs/z138.svg",
+   "n": "138",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_138-10_-_Radverkehr,_StVO_2013.svg"
+  },
+  "z237": {
+   "de": "Radweg",
+   "tr": "Велодорожка",
+   "src": "data/fahrschule/signs/z237.svg",
+   "n": "237",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_237_-_Sonderweg_Radfahrer,_StVO_1992.svg"
+  },
+  "z239": {
+   "de": "Gehweg",
+   "tr": "Пешеходная дорожка",
+   "src": "data/fahrschule/signs/z239.svg",
+   "n": "239",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_239_-_Sonderweg_Fu%C3%9Fg%C3%A4nger,_StVO_1992.svg"
+  },
+  "z240": {
+   "de": "Gemeinsamer Geh- und Radweg",
+   "tr": "Общая дорожка для пешеходов и велосипедистов",
+   "src": "data/fahrschule/signs/z240.svg",
+   "n": "240",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_240_-_Gemeinsamer_Fu%C3%9F-_und_Radweg,_StVO_1992.svg"
+  },
+  "z241": {
+   "de": "Getrennter Rad- und Gehweg",
+   "tr": "Разделённая дорожка: велосипедисты и пешеходы",
+   "src": "data/fahrschule/signs/z241.svg",
+   "n": "241",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_241-30_-_getrennter_Rad-_und_Fu%C3%9Fweg,_StVO_1992.svg"
+  },
+  "z2441": {
+   "de": "Fahrradstraße",
+   "tr": "Велосипедная улица",
+   "src": "data/fahrschule/signs/z2441.svg",
+   "n": "244.1",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_244.1_-_Beginn_einer_Fahrradstra%C3%9Fe,_StVO_2013.svg"
+  },
+  "z3251": {
+   "de": "Verkehrsberuhigter Bereich",
+   "tr": "Жилая зона",
+   "src": "data/fahrschule/signs/z3251.svg",
+   "n": "325.1",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_325.1_-_Beginn_eines_verkehrsberuhigten_Bereichs,_StVO_2009.svg"
+  },
+  "z350": {
+   "de": "Fußgängerüberweg",
+   "tr": "Пешеходный переход",
+   "src": "data/fahrschule/signs/z350.svg",
+   "n": "350",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_350-10_-_Fu%C3%9Fg%C3%A4nger%C3%BCberweg_(rechts),_StVO_1992.svg"
+  }
+ },
+ "gloss": {
+  "w": {
+   "abbiegen": "abbiegen",
+   "abfahren": "abfahren",
+   "acht": "acht",
+   "am": "an",
+   "an": "an",
+   "auch": "auch",
+   "auf": "auf",
+   "aus>aussteigen": "aussteigen",
+   "autos": "Auto",
+   "autotür": "Autotür",
+   "bedeutet": "bedeuten",
+   "bei": "bei",
+   "beim": "bei",
+   "benutzen": "benutzen",
+   "bereich": "Bereich",
+   "besondere": "besonderer",
+   "bis": "bis",
+   "bremsbereit": "bremsbereit",
+   "bus": "Bus",
+   "busse": "Bus",
+   "das": "der/die/das",
+   "dem": "der/die/das",
+   "den": "der/die/das",
+   "der": "der/die/das",
+   "die": "der/die/das",
+   "diesem": "dieser",
+   "dieses": "dieser",
+   "dort": "dort",
+   "dürfen": "dürfen",
+   "ein": "ein/eine",
+   "einem": "ein/eine",
+   "einen": "ein/eine",
+   "einer": "ein/eine",
+   "erlaubt": "erlauben",
+   "ermöglichen": "ermöglichen",
+   "es": "es",
+   "fahrbahn": "Fahrbahn",
+   "fahren": "fahren",
+   "fahren>vorbeifahren": "vorbeifahren",
+   "fahrgäste": "Fahrgast",
+   "fahrrad": "Fahrrad",
+   "fahrradstraße": "Fahrradstraße",
+   "fußgänger": "Fußgänger",
+   "fußgängern": "Fußgänger",
+   "fußgängerüberweg": "Fußgängerüberweg",
+   "für": "für",
+   "gegenverkehr": "Gegenverkehr",
+   "geh": "Gehweg",
+   "gehen": "gehen",
+   "gehweg": "Gehweg",
+   "gemeinsam": "gemeinsam",
+   "gemeinsamer": "gemeinsam",
+   "geradeaus": "geradeaus",
+   "geteilt": "teilen",
+   "getrennter": "trennen",
+   "gilt": "gelten",
+   "haben": "haben",
+   "haltestelle": "Haltestelle",
+   "hier": "hier",
+   "hilfsbedürftigen": "hilfsbedürftig",
+   "hinten": "hinten",
+   "hält": "halten",
+   "höchstens": "höchstens",
+   "ihn": "er",
+   "in": "in",
+   "ist": "sein",
+   "jahre": "Jahr",
+   "kann": "können",
+   "kinder": "Kind",
+   "kindern": "Kind",
+   "kommen": "kommen",
+   "langsam": "langsam",
+   "lassen": "lassen",
+   "linienbus": "Linienbus",
+   "links": "links",
+   "menschen": "Mensch",
+   "mit": "mit",
+   "müssen": "müssen",
+   "nebeneinander": "nebeneinander",
+   "nehmen": "nehmen",
+   "nicht": "nicht",
+   "nur": "nur",
+   "nähert": "nähern",
+   "nötig": "nötig",
+   "rad": "Radweg",
+   "radfahrer": "Radfahrer",
+   "radverkehr": "Radverkehr",
+   "radweg": "Radweg",
+   "rechts": "rechts",
+   "rechtsabbiegen": "Rechtsabbiegen",
+   "rücksicht": "Rücksicht",
+   "schauen": "schauen",
+   "schild": "Schild",
+   "schrittgeschwindigkeit": "Schrittgeschwindigkeit",
+   "schulbus": "Schulbus",
+   "schulter": "Schulter",
+   "sich": "sich",
+   "sie": "Sie",
+   "sind": "sein",
+   "spiegel": "Spiegel",
+   "steigen>aussteigen": "aussteigen",
+   "tempo": "Tempo",
+   "und": "und",
+   "verkehrsberuhigter": "verkehrsberuhigt",
+   "von": "von",
+   "vor": "vor",
+   "vorbei>vorbeifahren": "vorbeifahren",
+   "vorrang": "Vorrang",
+   "vorsichtig": "vorsichtig",
+   "warnblinklicht": "Warnblinklicht",
+   "warnt": "warnen",
+   "warten": "warten",
+   "was": "was",
+   "weg": "Weg",
+   "wenn": "wenn",
+   "will": "wollen",
+   "zebrastreifen": "Zebrastreifen",
+   "zeigt": "zeigen",
+   "zusatzzeichen": "Zusatzzeichen",
+   "älteren": "alt",
+   "öffnen": "öffnen",
+   "über": "über",
+   "überholen": "überholen",
+   "überqueren": "überqueren"
+  },
+  "l": {
+   "Auto": {
+    "ru": "машина, автомобиль",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Autos"
+   },
+   "Autotür": {
+    "ru": "дверь машины",
+    "pos": "сущ.",
+    "note": "открывать правой рукой — так сам повернёшься и увидишь велосипедиста",
+    "art": "die",
+    "pl": "die Autotüren"
+   },
+   "Bereich": {
+    "ru": "зона, участок",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Bereiche"
+   },
+   "Bus": {
+    "ru": "автобус",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Busse"
+   },
+   "Fahrbahn": {
+    "ru": "проезжая часть",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Fahrbahnen"
+   },
+   "Fahrgast": {
+    "ru": "пассажир",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Fahrgäste"
+   },
+   "Fahrrad": {
+    "ru": "велосипед",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Fahrräder"
+   },
+   "Fahrradstraße": {
+    "ru": "велосипедная улица",
+    "pos": "сущ.",
+    "note": "знак 244.1: макс. 30 км/ч, машины — только с табличкой",
+    "art": "die",
+    "pl": "die Fahrradstraßen"
+   },
+   "Fußgänger": {
+    "ru": "пешеход",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Fußgänger"
+   },
+   "Fußgängerüberweg": {
+    "ru": "пешеходный переход",
+    "pos": "сущ.",
+    "note": "в разговоре: der Zebrastreifen",
+    "art": "der",
+    "pl": "die Fußgängerüberwege"
+   },
+   "Gegenverkehr": {
+    "ru": "встречный транспорт",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": null
+   },
+   "Gehweg": {
+    "ru": "тротуар",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Gehwege"
+   },
+   "Haltestelle": {
+    "ru": "остановка (автобуса, трамвая)",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Haltestellen"
+   },
+   "Jahr": {
+    "ru": "год",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Jahre"
+   },
+   "Kind": {
+    "ru": "ребёнок",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Kinder"
+   },
+   "Linienbus": {
+    "ru": "рейсовый автобус",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Linienbusse"
+   },
+   "Mensch": {
+    "ru": "человек",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Menschen"
+   },
+   "Radfahrer": {
+    "ru": "велосипедист",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Radfahrer"
+   },
+   "Radverkehr": {
+    "ru": "велосипедное движение",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": null
+   },
+   "Radweg": {
+    "ru": "велодорожка",
+    "pos": "сущ.",
+    "note": "синий круглый знак — велосипедисты обязаны по нему ехать",
+    "art": "der",
+    "pl": "die Radwege"
+   },
+   "Rechtsabbiegen": {
+    "ru": "поворот направо",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": null
+   },
+   "Rücksicht": {
+    "ru": "внимание, уважение (к другим)",
+    "pos": "сущ.",
+    "note": "§ 1 StVO: ständige Vorsicht und gegenseitige Rücksicht — постоянная осторожность и взаимное уважение",
+    "art": "die",
+    "pl": null
+   },
+   "Schild": {
+    "ru": "знак, табличка",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Schilder"
+   },
+   "Schrittgeschwindigkeit": {
+    "ru": "скорость пешехода (шагом)",
+    "pos": "сущ.",
+    "note": "на практике 4–7 км/ч",
+    "art": "die",
+    "pl": null
+   },
+   "Schulbus": {
+    "ru": "школьный автобус",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Schulbusse"
+   },
+   "Schulter": {
+    "ru": "плечо",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Schultern"
+   },
+   "Sie": {
+    "ru": "вы (вежливо)",
+    "pos": "мест.",
+    "note": "Ihnen — вам (дательный): vor Ihnen — перед вами"
+   },
+   "Spiegel": {
+    "ru": "зеркало",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Spiegel"
+   },
+   "Tempo": {
+    "ru": "скорость, темп",
+    "pos": "сущ.",
+    "note": "Tempo-30-Zone — зона с ограничением 30 км/ч",
+    "art": "das",
+    "pl": "die Tempos"
+   },
+   "Vorrang": {
+    "ru": "преимущество, первоочерёдность",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": null
+   },
+   "Warnblinklicht": {
+    "ru": "аварийный сигнал (мигают все поворотники)",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": null
+   },
+   "Weg": {
+    "ru": "путь, дорога",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Wege"
+   },
+   "Zebrastreifen": {
+    "ru": "«зебра», пешеходный переход",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Zebrastreifen"
+   },
+   "Zusatzzeichen": {
+    "ru": "дополнительная табличка (под знаком)",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Zusatzzeichen"
+   },
+   "abbiegen": {
+    "ru": "поворачивать",
+    "pos": "гл.",
+    "note": "отделяемая приставка: Sie biegen … ab",
+    "forms": "bog ab · ist abgebogen"
+   },
+   "abfahren": {
+    "ru": "отъезжать, отправляться",
+    "pos": "гл.",
+    "forms": "fuhr ab · ist abgefahren"
+   },
+   "acht": {
+    "ru": "восемь",
+    "pos": "числ."
+   },
+   "alt": {
+    "ru": "старый; пожилой",
+    "pos": "прил.",
+    "note": "ältere Menschen — пожилые люди"
+   },
+   "an": {
+    "ru": "у, на, при",
+    "pos": "предл.",
+    "note": "am = an dem; an der Kreuzung — на перекрёстке"
+   },
+   "auch": {
+    "ru": "тоже; даже (auch wenn)",
+    "pos": "нареч."
+   },
+   "auf": {
+    "ru": "на, по",
+    "pos": "предл.",
+    "note": "auf der Straße — на дороге; achten auf — следить за"
+   },
+   "aussteigen": {
+    "ru": "выходить (из машины)",
+    "pos": "гл.",
+    "forms": "stieg aus · ist ausgestiegen"
+   },
+   "bedeuten": {
+    "ru": "означать",
+    "pos": "гл.",
+    "forms": "bedeutete · hat bedeutet"
+   },
+   "bei": {
+    "ru": "при, у; на (о сигнале)",
+    "pos": "предл.",
+    "note": "beim = bei dem: beim Fahren — во время езды; bei Rot — на красный"
+   },
+   "benutzen": {
+    "ru": "пользоваться",
+    "pos": "гл.",
+    "forms": "benutzte · hat benutzt"
+   },
+   "besonderer": {
+    "ru": "особый",
+    "pos": "прил."
+   },
+   "bis": {
+    "ru": "пока не; до",
+    "pos": "союз"
+   },
+   "bremsbereit": {
+    "ru": "готовый затормозить",
+    "pos": "прил.",
+    "note": "нога готова к тормозу, скорость снижена"
+   },
+   "der/die/das": {
+    "ru": "определённый артикль",
+    "pos": "артикль",
+    "note": "der — м. р., die — ж. р. и мн. ч., das — ср. р.; den — м. р. в винительном, dem — м. и ср. р. в дательном; das ещё значит «это»"
+   },
+   "dieser": {
+    "ru": "этот, эта, это",
+    "pos": "мест."
+   },
+   "dort": {
+    "ru": "там",
+    "pos": "нареч."
+   },
+   "dürfen": {
+    "ru": "мочь, иметь право",
+    "pos": "гл.",
+    "forms": "durfte · hat gedurft"
+   },
+   "ein/eine": {
+    "ru": "неопределённый артикль; один",
+    "pos": "артикль",
+    "note": "an einer Kreuzung — на (каком-то) перекрёстке"
+   },
+   "er": {
+    "ru": "он",
+    "pos": "мест.",
+    "note": "ihn — его (вин. п.); здесь — о грузовике или скорой: der Lkw, der Krankenwagen"
+   },
+   "erlauben": {
+    "ru": "разрешать",
+    "pos": "гл.",
+    "forms": "erlaubte · hat erlaubt"
+   },
+   "ermöglichen": {
+    "ru": "давать возможность, позволять",
+    "pos": "гл.",
+    "forms": "ermöglichte · hat ermöglicht"
+   },
+   "es": {
+    "ru": "оно; это",
+    "pos": "мест.",
+    "note": "здесь — о машине: das Auto"
+   },
+   "fahren": {
+    "ru": "ехать; водить машину",
+    "pos": "гл.",
+    "forms": "fuhr · ist gefahren"
+   },
+   "für": {
+    "ru": "для",
+    "pos": "предл."
+   },
+   "gehen": {
+    "ru": "идти (пешком)",
+    "pos": "гл.",
+    "note": "über die Straße gehen — переходить дорогу",
+    "forms": "ging · ist gegangen"
+   },
+   "gelten": {
+    "ru": "действовать (о правиле)",
+    "pos": "гл.",
+    "forms": "galt · hat gegolten"
+   },
+   "gemeinsam": {
+    "ru": "общий; вместе",
+    "pos": "прил."
+   },
+   "geradeaus": {
+    "ru": "прямо",
+    "pos": "нареч."
+   },
+   "haben": {
+    "ru": "иметь",
+    "pos": "гл.",
+    "note": "Vorfahrt haben — иметь преимущество",
+    "forms": "hatte · hat gehabt"
+   },
+   "halten": {
+    "ru": "останавливаться (ненадолго); держать",
+    "pos": "гл.",
+    "forms": "hielt · hat gehalten"
+   },
+   "hier": {
+    "ru": "здесь",
+    "pos": "нареч."
+   },
+   "hilfsbedürftig": {
+    "ru": "нуждающийся в помощи, беспомощный",
+    "pos": "прил.",
+    "note": "§ 3 Abs. 2a StVO: особая осторожность с детьми, беспомощными и пожилыми"
+   },
+   "hinten": {
+    "ru": "сзади",
+    "pos": "нареч."
+   },
+   "höchstens": {
+    "ru": "самое большее, не больше",
+    "pos": "нареч."
+   },
+   "in": {
+    "ru": "в",
+    "pos": "предл.",
+    "note": "im = in dem: im Bereich — в зоне"
+   },
+   "kommen": {
+    "ru": "приходить; ехать (приближаться)",
+    "pos": "гл.",
+    "note": "von rechts kommen — ехать справа",
+    "forms": "kam · ist gekommen"
+   },
+   "können": {
+    "ru": "мочь",
+    "pos": "гл.",
+    "forms": "konnte · hat gekonnt"
+   },
+   "langsam": {
+    "ru": "медленный; медленно",
+    "pos": "прил."
+   },
+   "lassen": {
+    "ru": "позволять; пропускать; оставлять",
+    "pos": "гл.",
+    "note": "jemanden fahren lassen — пропустить кого-то вперёд",
+    "forms": "ließ · hat gelassen"
+   },
+   "links": {
+    "ru": "слева; налево",
+    "pos": "нареч."
+   },
+   "mit": {
+    "ru": "с",
+    "pos": "предл."
+   },
+   "müssen": {
+    "ru": "быть должным",
+    "pos": "гл.",
+    "forms": "musste · hat gemusst"
+   },
+   "nebeneinander": {
+    "ru": "рядом друг с другом",
+    "pos": "нареч."
+   },
+   "nehmen": {
+    "ru": "брать",
+    "pos": "гл.",
+    "note": "Rücksicht nehmen auf — быть внимательным к",
+    "forms": "nahm · hat genommen"
+   },
+   "nicht": {
+    "ru": "не",
+    "pos": "частица"
+   },
+   "nur": {
+    "ru": "только",
+    "pos": "нареч."
+   },
+   "nähern": {
+    "ru": "приближаться (sich)",
+    "pos": "гл.",
+    "note": "sich einer Haltestelle nähern — подъезжать к остановке (дательный падеж)",
+    "forms": "näherte · hat genähert"
+   },
+   "nötig": {
+    "ru": "нужный, необходимый",
+    "pos": "прил.",
+    "note": "wenn nötig — если нужно"
+   },
+   "rechts": {
+    "ru": "справа; направо",
+    "pos": "нареч."
+   },
+   "schauen": {
+    "ru": "смотреть",
+    "pos": "гл.",
+    "forms": "schaute · hat geschaut"
+   },
+   "sein": {
+    "ru": "быть",
+    "pos": "гл.",
+    "forms": "war · ist gewesen"
+   },
+   "sich": {
+    "ru": "себя, -ся",
+    "pos": "мест."
+   },
+   "teilen": {
+    "ru": "делить, разделять",
+    "pos": "гл.",
+    "forms": "teilte · hat geteilt"
+   },
+   "trennen": {
+    "ru": "разделять",
+    "pos": "гл.",
+    "note": "getrennt — раздельный",
+    "forms": "trennte · hat getrennt"
+   },
+   "und": {
+    "ru": "и",
+    "pos": "союз"
+   },
+   "verkehrsberuhigt": {
+    "ru": "с успокоенным движением (жилая зона)",
+    "pos": "прил."
+   },
+   "von": {
+    "ru": "от, из, с",
+    "pos": "предл.",
+    "note": "vom = von dem; von rechts — справа"
+   },
+   "vor": {
+    "ru": "перед",
+    "pos": "предл.",
+    "note": "rechts vor links — правый перед левым"
+   },
+   "vorbeifahren": {
+    "ru": "проезжать мимо",
+    "pos": "гл.",
+    "note": "отделяемая приставка: fahren … vorbei",
+    "forms": "fuhr vorbei · ist vorbeigefahren"
+   },
+   "vorsichtig": {
+    "ru": "осторожный",
+    "pos": "прил."
+   },
+   "warnen": {
+    "ru": "предупреждать",
+    "pos": "гл.",
+    "forms": "warnte · hat gewarnt"
+   },
+   "warten": {
+    "ru": "ждать",
+    "pos": "гл.",
+    "note": "warten auf — ждать (кого-то)",
+    "forms": "wartete · hat gewartet"
+   },
+   "was": {
+    "ru": "что",
+    "pos": "мест."
+   },
+   "wenn": {
+    "ru": "если; когда",
+    "pos": "союз",
+    "note": "auch wenn — даже если"
+   },
+   "wollen": {
+    "ru": "хотеть",
+    "pos": "гл.",
+    "forms": "wollte · hat gewollt"
+   },
+   "zeigen": {
+    "ru": "показывать",
+    "pos": "гл.",
+    "forms": "zeigte · hat gezeigt"
+   },
+   "öffnen": {
+    "ru": "открывать",
+    "pos": "гл.",
+    "forms": "öffnete · hat geöffnet"
+   },
+   "über": {
+    "ru": "через; над",
+    "pos": "предл."
+   },
+   "überholen": {
+    "ru": "обгонять",
+    "pos": "гл.",
+    "forms": "überholte · hat überholt"
+   },
+   "überqueren": {
+    "ru": "пересекать, переходить",
+    "pos": "гл.",
+    "forms": "überquerte · hat überquert"
+   }
+  }
+ }
+}

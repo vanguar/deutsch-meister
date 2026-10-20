@@ -61,6 +61,7 @@
    "title": "Fußgänger, Radfahrer und Busse",
    "titleTr": "Пешеходы, велосипедисты и автобусы",
    "units": [
+    "t-06",
     "r-06"
    ]
   }
@@ -200,6 +201,15 @@
    "title": "Wo darf ich parken?",
    "titleTr": "Где можно парковаться?",
    "count": 4
+  },
+  {
+   "id": "t-06",
+   "kind": "theory",
+   "emoji": "🚸",
+   "level": "A2–B1",
+   "title": "Fußgänger, Radfahrer und Busse",
+   "titleTr": "Пешеходы, велосипедисты и автобусы",
+   "count": 20
   },
   {
    "id": "r-06",

@@ -1,0 +1,915 @@
+{
+ "id": "t-06",
+ "kind": "theory",
+ "emoji": "🚸",
+ "level": "A2–B1",
+ "title": "Fußgänger, Radfahrer und Busse",
+ "titleTr": "المشاة وراكبو الدراجات والحافلات",
+ "intro": "من يجب على السائق أن يحميه بشكل خاص: الأطفال وكبار السن، والمشاة على ممر المشاة، وراكبو الدراجات عند الانعطاف وفي شارع الدراجات، والركاب عند الحافلة في الموقف. بالإضافة إلى لافتات مسارات الدراجات والأرصفة.",
+ "sections": [
+  {
+   "title": "المشاة والأطفال",
+   "lines": [
+    {
+     "de": "Dieses Schild warnt vor Fußgängern auf der Fahrbahn.",
+     "tr": "هذه اللافتة تحذّر من وجود مشاة على الطريق.",
+     "sign": "z133"
+    },
+    {
+     "de": "Bei Kindern, älteren und hilfsbedürftigen Menschen fahren Sie langsam und sind bremsbereit.",
+     "tr": "قرب الأطفال وكبار السن والأشخاص المحتاجين إلى المساعدة تسير ببطء وتكون مستعدًا للفرملة.",
+     "sign": "z136"
+    },
+    {
+     "de": "Am Zebrastreifen müssen Sie Fußgängern das Überqueren ermöglichen.",
+     "tr": "عند ممر المشاة يجب أن تتيح للمشاة عبور الطريق.",
+     "sign": "z350"
+    },
+    {
+     "de": "An einem Zebrastreifen dürfen Sie nicht überholen.",
+     "tr": "لا يجوز لك التجاوز عند ممر المشاة."
+    }
+   ]
+  },
+  {
+   "title": "الانعطاف: المشاة وراكبو الدراجات أولًا",
+   "lines": [
+    {
+     "de": "Beim Abbiegen haben Radfahrer, die geradeaus fahren, Vorrang.",
+     "tr": "عند الانعطاف تكون الأولوية لراكبي الدراجات الذين يسيرون مباشرة."
+    },
+    {
+     "de": "Auf Fußgänger nehmen Sie beim Abbiegen besondere Rücksicht; wenn nötig, warten Sie.",
+     "tr": "عند الانعطاف تراعي المشاة بشكل خاص؛ وإذا لزم الأمر تنتظر."
+    },
+    {
+     "de": "Vor dem Rechtsabbiegen schauen Sie in den Spiegel und über die Schulter.",
+     "tr": "قبل الانعطاف يمينًا تنظر في المرآة وفوق كتفك."
+    }
+   ]
+  },
+  {
+   "title": "مسارات الدراجات والأرصفة",
+   "lines": [
+    {
+     "de": "Dieses Schild zeigt einen Radweg. Radfahrer müssen ihn benutzen, Autos dürfen dort nicht fahren.",
+     "tr": "هذه اللافتة تدل على مسار للدراجات. يجب على راكبي الدراجات استخدامه، ولا يجوز للسيارات السير فيه.",
+     "sign": "z237"
+    },
+    {
+     "de": "Dieses Schild zeigt einen Gehweg nur für Fußgänger.",
+     "tr": "هذه اللافتة تدل على ممر للمشاة فقط.",
+     "sign": "z239"
+    },
+    {
+     "de": "Auf diesem Weg fahren Radfahrer und gehen Fußgänger gemeinsam.",
+     "tr": "على هذا الممر يسير راكبو الدراجات والمشاة معًا.",
+     "sign": "z240"
+    },
+    {
+     "de": "Hier ist der Weg geteilt: links fahren Radfahrer, rechts gehen Fußgänger.",
+     "tr": "هنا الممر مقسوم: على اليسار يسير راكبو الدراجات، وعلى اليمين يمشي المشاة.",
+     "sign": "z241"
+    },
+    {
+     "de": "Kinder bis acht Jahre fahren mit dem Fahrrad auf dem Gehweg.",
+     "tr": "الأطفال حتى سن الثامنة يركبون الدراجة على الرصيف."
+    },
+    {
+     "de": "Öffnen Sie die Autotür vorsichtig: Von hinten kann ein Radfahrer kommen.",
+     "tr": "افتح باب السيارة بحذر: قد يأتي راكب دراجة من الخلف."
+    }
+   ]
+  },
+  {
+   "title": "شارع الدراجات",
+   "lines": [
+    {
+     "de": "Dieses Schild warnt vor Radverkehr.",
+     "tr": "هذه اللافتة تحذّر من حركة الدراجات.",
+     "sign": "z138"
+    },
+    {
+     "de": "In einer Fahrradstraße dürfen Autos nur fahren, wenn ein Zusatzzeichen es erlaubt.",
+     "tr": "في شارع الدراجات لا يجوز للسيارات السير إلا إذا سمحت بذلك لافتة إضافية.",
+     "sign": "z2441"
+    },
+    {
+     "de": "Dort gilt höchstens Tempo 30, und Radfahrer dürfen nebeneinander fahren.",
+     "tr": "هناك السرعة 30 كم/س كحدّ أقصى، ويجوز لراكبي الدراجات السير جنبًا إلى جنب."
+    }
+   ]
+  },
+  {
+   "title": "الحافلات والحافلات المدرسية",
+   "lines": [
+    {
+     "de": "Steigen an der Haltestelle Fahrgäste aus, fahren Sie rechts nur mit Schrittgeschwindigkeit vorbei.",
+     "tr": "إذا نزل ركاب في الموقف، فلا تمرّ بجانب الحافلة من اليمين إلا بسرعة المشي.",
+     "o": {
+      "aus": "aus>aussteigen",
+      "fahren": "fahren>vorbeifahren",
+      "steigen": "steigen>aussteigen",
+      "vorbei": "vorbei>vorbeifahren"
+     }
+    },
+    {
+     "de": "Einen Bus mit Warnblinklicht, der sich einer Haltestelle nähert, dürfen Sie nicht überholen.",
+     "tr": "لا يجوز لك تجاوز حافلة تقترب من الموقف وأضواء التحذير فيها مضاءة."
+    },
+    {
+     "de": "Hält ein Schulbus mit Warnblinklicht, gilt Schrittgeschwindigkeit auch für den Gegenverkehr.",
+     "tr": "إذا توقفت حافلة مدرسية وأضواء التحذير فيها مضاءة، فسرعة المشي تسري على الاتجاه المعاكس أيضًا."
+    },
+    {
+     "de": "Will ein Linienbus von der Haltestelle abfahren, lassen Sie ihn fahren; wenn nötig, warten Sie.",
+     "tr": "إذا أرادت حافلة نقل عام الانطلاق من الموقف، فدعها تنطلق؛ وإذا لزم الأمر انتظر."
+    }
+   ]
+  }
+ ],
+ "quiz": [
+  {
+   "sign": "z133",
+   "wrong": [
+    "z136",
+    "z138"
+   ]
+  },
+  {
+   "sign": "z138",
+   "wrong": [
+    "z237",
+    "z133"
+   ]
+  },
+  {
+   "sign": "z237",
+   "wrong": [
+    "z2441",
+    "z240"
+   ]
+  },
+  {
+   "sign": "z239",
+   "wrong": [
+    "z240",
+    "z350"
+   ]
+  },
+  {
+   "sign": "z240",
+   "wrong": [
+    "z241",
+    "z239"
+   ]
+  },
+  {
+   "sign": "z241",
+   "wrong": [
+    "z240",
+    "z237"
+   ]
+  },
+  {
+   "sign": "z2441",
+   "wrong": [
+    "z237",
+    "z3251"
+   ]
+  }
+ ],
+ "quizQuestion": {
+  "de": "Was bedeutet dieses Schild?",
+  "tr": "ماذا تعني هذه اللافتة؟"
+ },
+ "signs": {
+  "z133": {
+   "de": "Fußgänger",
+   "tr": "مشاة",
+   "src": "data/fahrschule/signs/z133.svg",
+   "n": "133",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_133-10_-_Fu%C3%9Fg%C3%A4nger_(Aufstellung_rechts),_StVO_1992.svg"
+  },
+  "z136": {
+   "de": "Kinder",
+   "tr": "أطفال",
+   "src": "data/fahrschule/signs/z136.svg",
+   "n": "136",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_136_-_Kinder,_StVO_1970.svg"
+  },
+  "z138": {
+   "de": "Radverkehr",
+   "tr": "حركة الدراجات",
+   "src": "data/fahrschule/signs/z138.svg",
+   "n": "138",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_138-10_-_Radverkehr,_StVO_2013.svg"
+  },
+  "z237": {
+   "de": "Radweg",
+   "tr": "مسار الدراجات",
+   "src": "data/fahrschule/signs/z237.svg",
+   "n": "237",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_237_-_Sonderweg_Radfahrer,_StVO_1992.svg"
+  },
+  "z239": {
+   "de": "Gehweg",
+   "tr": "ممر المشاة",
+   "src": "data/fahrschule/signs/z239.svg",
+   "n": "239",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_239_-_Sonderweg_Fu%C3%9Fg%C3%A4nger,_StVO_1992.svg"
+  },
+  "z240": {
+   "de": "Gemeinsamer Geh- und Radweg",
+   "tr": "ممر مشترك للمشاة والدراجات",
+   "src": "data/fahrschule/signs/z240.svg",
+   "n": "240",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_240_-_Gemeinsamer_Fu%C3%9F-_und_Radweg,_StVO_1992.svg"
+  },
+  "z241": {
+   "de": "Getrennter Rad- und Gehweg",
+   "tr": "ممر مقسوم: للدراجات وللمشاة",
+   "src": "data/fahrschule/signs/z241.svg",
+   "n": "241",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_241-30_-_getrennter_Rad-_und_Fu%C3%9Fweg,_StVO_1992.svg"
+  },
+  "z2441": {
+   "de": "Fahrradstraße",
+   "tr": "شارع الدراجات",
+   "src": "data/fahrschule/signs/z2441.svg",
+   "n": "244.1",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_244.1_-_Beginn_einer_Fahrradstra%C3%9Fe,_StVO_2013.svg"
+  },
+  "z3251": {
+   "de": "Verkehrsberuhigter Bereich",
+   "tr": "منطقة هادئة (بسرعة المشي)",
+   "src": "data/fahrschule/signs/z3251.svg",
+   "n": "325.1",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_325.1_-_Beginn_eines_verkehrsberuhigten_Bereichs,_StVO_2009.svg"
+  },
+  "z350": {
+   "de": "Fußgängerüberweg",
+   "tr": "ممر المشاة",
+   "src": "data/fahrschule/signs/z350.svg",
+   "n": "350",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_350-10_-_Fu%C3%9Fg%C3%A4nger%C3%BCberweg_(rechts),_StVO_1992.svg"
+  }
+ },
+ "gloss": {
+  "w": {
+   "abbiegen": "abbiegen",
+   "abfahren": "abfahren",
+   "acht": "acht",
+   "am": "an",
+   "an": "an",
+   "auch": "auch",
+   "auf": "auf",
+   "aus>aussteigen": "aussteigen",
+   "autos": "Auto",
+   "autotür": "Autotür",
+   "bedeutet": "bedeuten",
+   "bei": "bei",
+   "beim": "bei",
+   "benutzen": "benutzen",
+   "bereich": "Bereich",
+   "besondere": "besonderer",
+   "bis": "bis",
+   "bremsbereit": "bremsbereit",
+   "bus": "Bus",
+   "busse": "Bus",
+   "das": "der/die/das",
+   "dem": "der/die/das",
+   "den": "der/die/das",
+   "der": "der/die/das",
+   "die": "der/die/das",
+   "diesem": "dieser",
+   "dieses": "dieser",
+   "dort": "dort",
+   "dürfen": "dürfen",
+   "ein": "ein/eine",
+   "einem": "ein/eine",
+   "einen": "ein/eine",
+   "einer": "ein/eine",
+   "erlaubt": "erlauben",
+   "ermöglichen": "ermöglichen",
+   "es": "es",
+   "fahrbahn": "Fahrbahn",
+   "fahren": "fahren",
+   "fahren>vorbeifahren": "vorbeifahren",
+   "fahrgäste": "Fahrgast",
+   "fahrrad": "Fahrrad",
+   "fahrradstraße": "Fahrradstraße",
+   "fußgänger": "Fußgänger",
+   "fußgängern": "Fußgänger",
+   "fußgängerüberweg": "Fußgängerüberweg",
+   "für": "für",
+   "gegenverkehr": "Gegenverkehr",
+   "geh": "Gehweg",
+   "gehen": "gehen",
+   "gehweg": "Gehweg",
+   "gemeinsam": "gemeinsam",
+   "gemeinsamer": "gemeinsam",
+   "geradeaus": "geradeaus",
+   "geteilt": "teilen",
+   "getrennter": "trennen",
+   "gilt": "gelten",
+   "haben": "haben",
+   "haltestelle": "Haltestelle",
+   "hier": "hier",
+   "hilfsbedürftigen": "hilfsbedürftig",
+   "hinten": "hinten",
+   "hält": "halten",
+   "höchstens": "höchstens",
+   "ihn": "er",
+   "in": "in",
+   "ist": "sein",
+   "jahre": "Jahr",
+   "kann": "können",
+   "kinder": "Kind",
+   "kindern": "Kind",
+   "kommen": "kommen",
+   "langsam": "langsam",
+   "lassen": "lassen",
+   "linienbus": "Linienbus",
+   "links": "links",
+   "menschen": "Mensch",
+   "mit": "mit",
+   "müssen": "müssen",
+   "nebeneinander": "nebeneinander",
+   "nehmen": "nehmen",
+   "nicht": "nicht",
+   "nur": "nur",
+   "nähert": "nähern",
+   "nötig": "nötig",
+   "rad": "Radweg",
+   "radfahrer": "Radfahrer",
+   "radverkehr": "Radverkehr",
+   "radweg": "Radweg",
+   "rechts": "rechts",
+   "rechtsabbiegen": "Rechtsabbiegen",
+   "rücksicht": "Rücksicht",
+   "schauen": "schauen",
+   "schild": "Schild",
+   "schrittgeschwindigkeit": "Schrittgeschwindigkeit",
+   "schulbus": "Schulbus",
+   "schulter": "Schulter",
+   "sich": "sich",
+   "sie": "Sie",
+   "sind": "sein",
+   "spiegel": "Spiegel",
+   "steigen>aussteigen": "aussteigen",
+   "tempo": "Tempo",
+   "und": "und",
+   "verkehrsberuhigter": "verkehrsberuhigt",
+   "von": "von",
+   "vor": "vor",
+   "vorbei>vorbeifahren": "vorbeifahren",
+   "vorrang": "Vorrang",
+   "vorsichtig": "vorsichtig",
+   "warnblinklicht": "Warnblinklicht",
+   "warnt": "warnen",
+   "warten": "warten",
+   "was": "was",
+   "weg": "Weg",
+   "wenn": "wenn",
+   "will": "wollen",
+   "zebrastreifen": "Zebrastreifen",
+   "zeigt": "zeigen",
+   "zusatzzeichen": "Zusatzzeichen",
+   "älteren": "alt",
+   "öffnen": "öffnen",
+   "über": "über",
+   "überholen": "überholen",
+   "überqueren": "überqueren"
+  },
+  "l": {
+   "Auto": {
+    "ru": "سيارة",
+    "pos": "اسم",
+    "decl": "das Auto · الجمع: die Autos"
+   },
+   "Autotür": {
+    "ru": "باب السيارة",
+    "pos": "اسم",
+    "note": "افتحه باليد اليمنى فتلتفت وترى راكب الدراجة",
+    "decl": "die Autotür · الجمع: die Autotüren"
+   },
+   "Bereich": {
+    "ru": "منطقة",
+    "pos": "اسم",
+    "decl": "der Bereich · الجمع: die Bereiche"
+   },
+   "Bus": {
+    "ru": "حافلة",
+    "pos": "اسم",
+    "decl": "der Bus · الجمع: die Busse"
+   },
+   "Fahrbahn": {
+    "ru": "مسار السيارات، الطريق",
+    "pos": "اسم",
+    "decl": "die Fahrbahn · الجمع: die Fahrbahnen"
+   },
+   "Fahrgast": {
+    "ru": "راكب",
+    "pos": "اسم",
+    "decl": "der Fahrgast · الجمع: die Fahrgäste"
+   },
+   "Fahrrad": {
+    "ru": "دراجة هوائية",
+    "pos": "اسم",
+    "decl": "das Fahrrad · الجمع: die Fahrräder"
+   },
+   "Fahrradstraße": {
+    "ru": "شارع الدراجات",
+    "pos": "اسم",
+    "note": "اللافتة 244.1: 30 كم/س كحد أقصى، والسيارات فقط مع لافتة إضافية",
+    "decl": "die Fahrradstraße · الجمع: die Fahrradstraßen"
+   },
+   "Fußgänger": {
+    "ru": "ماشٍ، المشاة",
+    "pos": "اسم",
+    "decl": "der Fußgänger · الجمع: die Fußgänger"
+   },
+   "Fußgängerüberweg": {
+    "ru": "ممر المشاة",
+    "pos": "اسم",
+    "note": "في الكلام: der Zebrastreifen",
+    "decl": "der Fußgängerüberweg · الجمع: die Fußgängerüberwege"
+   },
+   "Gegenverkehr": {
+    "ru": "حركة السير المقابلة",
+    "pos": "اسم",
+    "decl": "der Gegenverkehr · لا جمع له"
+   },
+   "Gehweg": {
+    "ru": "رصيف المشاة",
+    "pos": "اسم",
+    "decl": "der Gehweg · الجمع: die Gehwege"
+   },
+   "Haltestelle": {
+    "ru": "موقف",
+    "pos": "اسم",
+    "decl": "die Haltestelle · الجمع: die Haltestellen"
+   },
+   "Jahr": {
+    "ru": "سنة",
+    "pos": "اسم",
+    "decl": "das Jahr · الجمع: die Jahre"
+   },
+   "Kind": {
+    "ru": "طفل",
+    "pos": "اسم",
+    "decl": "das Kind · الجمع: die Kinder"
+   },
+   "Linienbus": {
+    "ru": "حافلة نقل عام",
+    "pos": "اسم",
+    "decl": "der Linienbus · الجمع: die Linienbusse"
+   },
+   "Mensch": {
+    "ru": "إنسان",
+    "pos": "اسم",
+    "decl": "der Mensch · الجمع: die Menschen"
+   },
+   "Radfahrer": {
+    "ru": "راكب دراجة",
+    "pos": "اسم",
+    "decl": "der Radfahrer · الجمع: die Radfahrer"
+   },
+   "Radverkehr": {
+    "ru": "حركة الدراجات",
+    "pos": "اسم",
+    "decl": "der Radverkehr · لا جمع له"
+   },
+   "Radweg": {
+    "ru": "مسار الدراجات",
+    "pos": "اسم",
+    "note": "اللافتة الزرقاء المستديرة: استخدامه إلزامي لراكبي الدراجات",
+    "decl": "der Radweg · الجمع: die Radwege"
+   },
+   "Rechtsabbiegen": {
+    "ru": "الانعطاف يمينًا",
+    "pos": "اسم",
+    "decl": "das Rechtsabbiegen · لا جمع له"
+   },
+   "Rücksicht": {
+    "ru": "مراعاة",
+    "pos": "اسم",
+    "note": "المادة 1: الحذر الدائم والمراعاة المتبادلة",
+    "decl": "die Rücksicht · لا جمع له"
+   },
+   "Schild": {
+    "ru": "لافتة",
+    "pos": "اسم",
+    "decl": "das Schild · الجمع: die Schilder"
+   },
+   "Schrittgeschwindigkeit": {
+    "ru": "سرعة المشي",
+    "pos": "اسم",
+    "note": "عمليًا 4–7 كم/س",
+    "decl": "die Schrittgeschwindigkeit · لا جمع له"
+   },
+   "Schulbus": {
+    "ru": "حافلة مدرسية",
+    "pos": "اسم",
+    "decl": "der Schulbus · الجمع: die Schulbusse"
+   },
+   "Schulter": {
+    "ru": "كتف",
+    "pos": "اسم",
+    "decl": "die Schulter · الجمع: die Schultern"
+   },
+   "Sie": {
+    "ru": "حضرتك (صيغة الاحترام)",
+    "pos": "ضمير",
+    "note": "Ihnen — لكم (حالة الجر): vor Ihnen — أمامك"
+   },
+   "Spiegel": {
+    "ru": "مرآة",
+    "pos": "اسم",
+    "decl": "der Spiegel · الجمع: die Spiegel"
+   },
+   "Tempo": {
+    "ru": "سرعة",
+    "pos": "اسم",
+    "note": "Tempo-30-Zone — منطقة بحد سرعة 30 كم/س",
+    "decl": "das Tempo · الجمع: die Tempos"
+   },
+   "Vorrang": {
+    "ru": "أسبقية، أولوية",
+    "pos": "اسم",
+    "decl": "der Vorrang · لا جمع له"
+   },
+   "Warnblinklicht": {
+    "ru": "ضوء التحذير الوامض",
+    "pos": "اسم",
+    "decl": "das Warnblinklicht · لا جمع له"
+   },
+   "Weg": {
+    "ru": "طريق",
+    "pos": "اسم",
+    "decl": "der Weg · الجمع: die Wege"
+   },
+   "Zebrastreifen": {
+    "ru": "ممر المشاة (المخطط)",
+    "pos": "اسم",
+    "decl": "der Zebrastreifen · الجمع: die Zebrastreifen"
+   },
+   "Zusatzzeichen": {
+    "ru": "لافتة إضافية (تحت اللافتة)",
+    "pos": "اسم",
+    "decl": "das Zusatzzeichen · الجمع: die Zusatzzeichen"
+   },
+   "abbiegen": {
+    "ru": "ينعطف",
+    "pos": "فعل",
+    "note": "سابقة منفصلة: Sie biegen … ab",
+    "forms": "bog ab · ist abgebogen"
+   },
+   "abfahren": {
+    "ru": "ينطلق، يغادر",
+    "pos": "فعل",
+    "forms": "fuhr ab · ist abgefahren"
+   },
+   "acht": {
+    "ru": "ثمانية",
+    "pos": "عدد"
+   },
+   "alt": {
+    "ru": "كبير في السن، قديم",
+    "pos": "صفة",
+    "note": "ältere Menschen — كبار السن"
+   },
+   "an": {
+    "ru": "عند، على",
+    "pos": "حرف جر",
+    "note": "am = an dem؛ an der Kreuzung — عند التقاطع"
+   },
+   "auch": {
+    "ru": "أيضًا؛ حتى (auch wenn)",
+    "pos": "ظرف"
+   },
+   "auf": {
+    "ru": "على",
+    "pos": "حرف جر",
+    "note": "auf der Straße — على الطريق؛ achten auf — ينتبه لـ"
+   },
+   "aussteigen": {
+    "ru": "ينزل (من السيارة)",
+    "pos": "فعل",
+    "forms": "stieg aus · ist ausgestiegen"
+   },
+   "bedeuten": {
+    "ru": "يعني",
+    "pos": "فعل",
+    "forms": "bedeutete · hat bedeutet"
+   },
+   "bei": {
+    "ru": "عند",
+    "pos": "حرف جر",
+    "note": "beim = bei dem: beim Fahren — أثناء القيادة؛ bei Rot — عند الأحمر"
+   },
+   "benutzen": {
+    "ru": "يستخدم",
+    "pos": "فعل",
+    "forms": "benutzte · hat benutzt"
+   },
+   "besonderer": {
+    "ru": "خاص",
+    "pos": "صفة"
+   },
+   "bis": {
+    "ru": "حتى",
+    "pos": "أداة ربط"
+   },
+   "bremsbereit": {
+    "ru": "مستعد للفرملة",
+    "pos": "صفة",
+    "note": "القدم جاهزة على الفرامل والسرعة منخفضة"
+   },
+   "der/die/das": {
+    "ru": "أداة التعريف",
+    "pos": "أداة تعريف",
+    "note": "der للمذكر، die للمؤنث والجمع، das للمحايد؛ den للمذكر في حالة النصب، dem للمذكر والمحايد في حالة الجر؛ وdas تعني أيضًا «هذا»"
+   },
+   "dieser": {
+    "ru": "هذا، هذه",
+    "pos": "ضمير"
+   },
+   "dort": {
+    "ru": "هناك",
+    "pos": "ظرف"
+   },
+   "dürfen": {
+    "ru": "يحق له، يُسمح له",
+    "pos": "فعل",
+    "forms": "durfte · hat gedurft"
+   },
+   "ein/eine": {
+    "ru": "أداة النكرة؛ واحد",
+    "pos": "أداة تعريف",
+    "note": "an einer Kreuzung — عند تقاطعٍ ما"
+   },
+   "er": {
+    "ru": "هو",
+    "pos": "ضمير",
+    "note": "ihn — ـه (مفعول)؛ هنا عن الشاحنة أو الإسعاف"
+   },
+   "erlauben": {
+    "ru": "يسمح",
+    "pos": "فعل",
+    "forms": "erlaubte · hat erlaubt"
+   },
+   "ermöglichen": {
+    "ru": "يتيح، يمكّن",
+    "pos": "فعل",
+    "forms": "ermöglichte · hat ermöglicht"
+   },
+   "es": {
+    "ru": "هو، هي (لغير العاقل)",
+    "pos": "ضمير",
+    "note": "هنا: السيارة (das Auto)"
+   },
+   "fahren": {
+    "ru": "يسير بالسيارة؛ يقود",
+    "pos": "فعل",
+    "forms": "fuhr · ist gefahren"
+   },
+   "für": {
+    "ru": "لـ، من أجل",
+    "pos": "حرف جر"
+   },
+   "gehen": {
+    "ru": "يمشي",
+    "pos": "فعل",
+    "note": "über die Straße gehen — يعبر الشارع",
+    "forms": "ging · ist gegangen"
+   },
+   "gelten": {
+    "ru": "يسري، ينطبق",
+    "pos": "فعل",
+    "forms": "galt · hat gegolten"
+   },
+   "gemeinsam": {
+    "ru": "مشترك؛ معًا",
+    "pos": "صفة"
+   },
+   "geradeaus": {
+    "ru": "مستقيمًا",
+    "pos": "ظرف"
+   },
+   "haben": {
+    "ru": "يملك، لديه",
+    "pos": "فعل",
+    "note": "Vorfahrt haben — له أولوية المرور",
+    "forms": "hatte · hat gehabt"
+   },
+   "halten": {
+    "ru": "يتوقف (لوقت قصير)؛ يمسك",
+    "pos": "فعل",
+    "forms": "hielt · hat gehalten"
+   },
+   "hier": {
+    "ru": "هنا",
+    "pos": "ظرف"
+   },
+   "hilfsbedürftig": {
+    "ru": "محتاج إلى المساعدة",
+    "pos": "صفة",
+    "note": "المادة 3 الفقرة 2a: حذر خاص مع الأطفال والمحتاجين وكبار السن"
+   },
+   "hinten": {
+    "ru": "في الخلف",
+    "pos": "ظرف"
+   },
+   "höchstens": {
+    "ru": "كحدّ أقصى",
+    "pos": "ظرف"
+   },
+   "in": {
+    "ru": "في",
+    "pos": "حرف جر",
+    "note": "im = in dem: im Bereich — في المنطقة"
+   },
+   "kommen": {
+    "ru": "يأتي",
+    "pos": "فعل",
+    "note": "von rechts kommen — يأتي من اليمين",
+    "forms": "kam · ist gekommen"
+   },
+   "können": {
+    "ru": "يستطيع",
+    "pos": "فعل",
+    "forms": "konnte · hat gekonnt"
+   },
+   "langsam": {
+    "ru": "بطيء؛ ببطء",
+    "pos": "صفة"
+   },
+   "lassen": {
+    "ru": "يدع، يترك",
+    "pos": "فعل",
+    "note": "jemanden fahren lassen — يدع أحدًا يمرّ أولًا",
+    "forms": "ließ · hat gelassen"
+   },
+   "links": {
+    "ru": "يسارًا، على اليسار",
+    "pos": "ظرف"
+   },
+   "mit": {
+    "ru": "مع",
+    "pos": "حرف جر"
+   },
+   "müssen": {
+    "ru": "يجب عليه",
+    "pos": "فعل",
+    "forms": "musste · hat gemusst"
+   },
+   "nebeneinander": {
+    "ru": "جنبًا إلى جنب",
+    "pos": "ظرف"
+   },
+   "nehmen": {
+    "ru": "يأخذ",
+    "pos": "فعل",
+    "note": "Rücksicht nehmen auf — يراعي",
+    "forms": "nahm · hat genommen"
+   },
+   "nicht": {
+    "ru": "لا، ليس",
+    "pos": "أداة"
+   },
+   "nur": {
+    "ru": "فقط",
+    "pos": "ظرف"
+   },
+   "nähern": {
+    "ru": "يقترب (sich)",
+    "pos": "فعل",
+    "note": "sich einer Haltestelle nähern — يقترب من الموقف",
+    "forms": "näherte · hat genähert"
+   },
+   "nötig": {
+    "ru": "ضروري، لازم",
+    "pos": "صفة",
+    "note": "wenn nötig — إذا لزم الأمر"
+   },
+   "rechts": {
+    "ru": "يمينًا، على اليمين",
+    "pos": "ظرف"
+   },
+   "schauen": {
+    "ru": "ينظر",
+    "pos": "فعل",
+    "forms": "schaute · hat geschaut"
+   },
+   "sein": {
+    "ru": "يكون",
+    "pos": "فعل",
+    "forms": "war · ist gewesen"
+   },
+   "sich": {
+    "ru": "نفسه (ضمير انعكاسي)",
+    "pos": "ضمير"
+   },
+   "teilen": {
+    "ru": "يقسم، يتقاسم",
+    "pos": "فعل",
+    "forms": "teilte · hat geteilt"
+   },
+   "trennen": {
+    "ru": "يفصل",
+    "pos": "فعل",
+    "note": "getrennt — منفصل",
+    "forms": "trennte · hat getrennt"
+   },
+   "und": {
+    "ru": "و",
+    "pos": "أداة ربط"
+   },
+   "verkehrsberuhigt": {
+    "ru": "هادئ الحركة (منطقة سكنية)",
+    "pos": "صفة"
+   },
+   "von": {
+    "ru": "من",
+    "pos": "حرف جر",
+    "note": "vom = von dem؛ von rechts — من اليمين"
+   },
+   "vor": {
+    "ru": "قبل، أمام",
+    "pos": "حرف جر",
+    "note": "rechts vor links — اليمين قبل اليسار"
+   },
+   "vorbeifahren": {
+    "ru": "يمرّ بجانب",
+    "pos": "فعل",
+    "note": "سابقة منفصلة: fahren … vorbei",
+    "forms": "fuhr vorbei · ist vorbeigefahren"
+   },
+   "vorsichtig": {
+    "ru": "حذِر",
+    "pos": "صفة"
+   },
+   "warnen": {
+    "ru": "يحذّر",
+    "pos": "فعل",
+    "forms": "warnte · hat gewarnt"
+   },
+   "warten": {
+    "ru": "ينتظر",
+    "pos": "فعل",
+    "note": "warten auf — ينتظر (أحدًا)",
+    "forms": "wartete · hat gewartet"
+   },
+   "was": {
+    "ru": "ماذا",
+    "pos": "ضمير"
+   },
+   "wenn": {
+    "ru": "إذا؛ عندما",
+    "pos": "أداة ربط",
+    "note": "auch wenn — حتى لو"
+   },
+   "wollen": {
+    "ru": "يريد",
+    "pos": "فعل",
+    "forms": "wollte · hat gewollt"
+   },
+   "zeigen": {
+    "ru": "يُظهر، يعرض",
+    "pos": "فعل",
+    "forms": "zeigte · hat gezeigt"
+   },
+   "öffnen": {
+    "ru": "يفتح",
+    "pos": "فعل",
+    "forms": "öffnete · hat geöffnet"
+   },
+   "über": {
+    "ru": "عبر؛ فوق",
+    "pos": "حرف جر"
+   },
+   "überholen": {
+    "ru": "يتجاوز",
+    "pos": "فعل",
+    "forms": "überholte · hat überholt"
+   },
+   "überqueren": {
+    "ru": "يعبر",
+    "pos": "فعل",
+    "forms": "überquerte · hat überquert"
+   }
+  }
+ }
+}

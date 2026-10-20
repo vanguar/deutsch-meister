@@ -61,6 +61,13 @@ SIGNS = {
     'z314': 'File:Zeichen 314 - Parken, StVO 2017.svg',
     'z315': 'File:Zeichen 315 - Parken auf Gehwegen, StVO 1970.svg',
     'z318': 'File:Zeichen 318 - Parkscheibe, StVO 2013.svg',
+    'z133': 'File:Zeichen 133-10 - Fußgänger (Aufstellung rechts), StVO 1992.svg',
+    'z138': 'File:Zeichen 138-10 - Radverkehr, StVO 2013.svg',
+    'z237': 'File:Zeichen 237 - Sonderweg Radfahrer, StVO 1992.svg',
+    'z239': 'File:Zeichen 239 - Sonderweg Fußgänger, StVO 1992.svg',
+    'z240': 'File:Zeichen 240 - Gemeinsamer Fuß- und Radweg, StVO 1992.svg',
+    'z241': 'File:Zeichen 241-30 - getrennter Rad- und Fußweg, StVO 1992.svg',
+    'z2441': 'File:Zeichen 244.1 - Beginn einer Fahrradstraße, StVO 2013.svg',
 }
 
 # SVG с Commons встраивается как <img>: скрипты там и так не исполняются,
