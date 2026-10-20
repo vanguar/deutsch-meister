@@ -551,6 +551,35 @@ for (const lang of ['uk', 'ar']) {
 }
 await setLang('ru');
 
+// ── 🌐 при включённом общем «Перевод» (ярлык на рабочем столе): скрывает
+// перевод строки / теста / сцены и показывает снова ──
+await c.ev(`localStorage.setItem('dm_fs_tr', '1')`);
+const shown = sel => `(() => { const e = document.querySelector('${sel}'); return !!e && getComputedStyle(e).display !== 'none'; })()`;
+const trCases = [
+  ['t-01', '.fs-sec .fs-line', '.fs-sec .fs-line [data-tr-line]', '.fs-sec .fs-line .fs-tr'],
+  ['p-01', '.fs-dialog .dlg-line', '.fs-dialog .dlg-line [data-tr-line]', '.fs-dialog .dlg-line .dlg-tr'],
+  ['t-01', '#fsQuiz', '#fsQuiz [data-tr-line]', '#fsQuiz .fs-quiz-q-tr'],
+  ['k-01', '#fsJunction', '#fsJunction .fs-situation [data-tr-line]', '#fsJunction .fs-situation .fs-tr'],
+  ['r-09', '#fsJunction', '#fsJunction .fs-situation [data-tr-line]', '#fsJunction .fs-situation .fs-tr'],
+  ['r-09', '#fsJunction', '#fsJunction .fs-situation [data-tr-line]', '#fsJunction .fs-road-opt .fs-opt-tr'],
+];
+for (const [id, box, btn, tr] of trCases) {
+  await openUnit(id);
+  await waitFor(`!!document.querySelector('${btn}')`, 5000);
+  const tag = `общий перевод вкл., ${id} ${tr.split(' ').pop()}`;
+  ok(await c.ev(shown(tr)), `${tag}: перевод виден`);
+  await c.ev(`document.querySelector('${btn}').click()`);
+  ok(!(await c.ev(shown(tr))), `${tag}: 🌐 скрывает`);
+  await c.ev(`document.querySelector('${btn}').click()`);
+  ok(await c.ev(shown(tr)), `${tag}: 🌐 снова показывает`);
+}
+// общий «Перевод» выкл. → вкл. сбрасывает выбор 🌐
+await openUnit('t-01');
+await c.ev(`document.querySelector('.fs-sec .fs-line [data-tr-line]').click()`);
+await c.ev(`document.querySelector('[data-tr-toggle]').click(); document.querySelector('[data-tr-toggle]').click()`);
+ok(await c.ev(shown('.fs-sec .fs-line .fs-tr')), 'общий «Перевод» выкл./вкл. сбрасывает скрытие у строки');
+await c.ev(`localStorage.setItem('dm_fs_tr', '0')`);
+
 ok(allErrors.length === 0, `нет ошибок в консоли ${allErrors.slice(0, 3).join(' | ')}`);
 c.close();
 console.log(fail ? `\nFAIL: ${fail}` : '\nfahrschule_flow: всё ок');

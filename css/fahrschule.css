@@ -331,3 +331,9 @@ html[dir="rtl"] .fs-tr { text-align: right; }
 .fs-amb-blue { fill: #2f7fff; animation: fs-blink .5s steps(2, jump-none) infinite; }
 .fs-amb-blue.is-b { animation-delay: .25s; }
 @media (prefers-reduced-motion: reduce) { .fs-amb-blue { animation: none; } }
+
+/* 🌐 при включённом общем «Перевод» — скрыть перевод строки, теста или сцены */
+.show-tr .tr-closed .fs-tr, .show-tr .tr-closed .fs-opt-tr, .show-tr .tr-closed .dlg-tr,
+.show-tr .dlg-line.tr-closed .dlg-tr,
+.show-tr .scene-tr-off > .fs-situation .fs-tr, .show-tr .scene-tr-off > .fs-quiz-q-tr,
+.show-tr .scene-tr-off .fs-road-opt .fs-opt-tr, .show-tr .scene-tr-off .fs-opts:not(.is-answered) .fs-opt-tr { display: none; }

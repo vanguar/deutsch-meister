@@ -418,7 +418,7 @@ const Fahrschule = (() => {
     sentences = [];
     quiz = null;
     scene = null;
-    sceneTr = false;
+    sceneTr = trOn();
     const k = KINDS[u.kind];
     el.heading.innerHTML = `
       <span class="dlg-level-chip fs-kind-chip kind-${u.kind}">${esc(k.label)}</span>
@@ -512,7 +512,8 @@ const Fahrschule = (() => {
   // фразы (вопрос, пояснение) каждый раз регистрируются заново
   function startQuiz() {
     if (quiz) sentences = sentences.slice(0, quiz.base);
-    quiz = { i: 0, score: 0, answered: false, opts: [], base: sentences.length, tr: !!(quiz && quiz.tr) };
+    // tr: null — как общий «Перевод», true/false — выбор 🌐 в тесте
+    quiz = { i: 0, score: 0, answered: false, opts: [], base: sentences.length, tr: quiz ? quiz.tr : null };
     renderQuiz();
   }
 
@@ -571,10 +572,10 @@ const Fahrschule = (() => {
         <button class="dlg-play fs-next" type="button" data-quiz-next>${quiz.i + 1 < list.length ? '<span>Дальше</span> ›' : '<span>Результат</span> ›'}</button>`;
     }
     box.innerHTML = `<h3 class="fs-sec-title">Проверьте себя</h3>
-      <div class="fs-quiz-card${quiz.tr ? ' tr-open' : ''}">
+      <div class="fs-quiz-card${trCls(quizTr())}">
         <div class="fs-quiz-top">
           <span><span>Вопрос</span> <span class="fs-quiz-n">${quiz.i + 1} / ${list.length}</span></span>
-          <button class="news-chip fs-quiz-tr" type="button" data-tr-line aria-pressed="${quiz.tr ? 'true' : 'false'}">🌐 <span>Перевод</span></button>
+          <button class="news-chip fs-quiz-tr" type="button" data-tr-line aria-pressed="${quizTr() ? 'true' : 'false'}">🌐 <span>Перевод</span></button>
         </div>
         ${signHtml(s, true)}
         ${unit.quizQuestion ? sentence(unit.quizQuestion, 'p', 'fs-quiz-q') + `<p class="fs-tr fs-quiz-q-tr" dir="auto">${esc(unit.quizQuestion.tr)}</p>` : ''}
@@ -1530,6 +1531,17 @@ const Fahrschule = (() => {
 
   function trOn() { return readStore(TR_KEY) === '1'; }
 
+  function lineTrShown(h) {
+    return trOn() ? !h.classList.contains('tr-closed') : h.classList.contains('tr-open');
+  }
+
+  function trCls(shown) {
+    const g = trOn();
+    return shown && !g ? ' tr-open' : !shown && g ? ' tr-closed' : '';
+  }
+
+  function quizTr() { return quiz && quiz.tr !== null ? quiz.tr : trOn(); }
+
   function paintTr() {
     const on = trOn();
     el.unit.classList.toggle('show-tr', on);
@@ -1713,8 +1725,13 @@ const Fahrschule = (() => {
     const play = t.closest('[data-play]');
     if (play) { e.preventDefault(); togglePlay(play.dataset.play); return; }
     if (t.closest('[data-tr-toggle]')) {
+      // общий «Перевод» сбрасывает выбор 🌐 у строк, сцены и теста
       writeStore(TR_KEY, trOn() ? '0' : '1');
-      el.unit.querySelectorAll('.tr-open').forEach(h => toggleLineTr(h, false));
+      el.unit.querySelectorAll('.tr-open, .tr-closed').forEach(h => h.classList.remove('tr-open', 'tr-closed'));
+      sceneTr = trOn();
+      if (quiz) quiz.tr = null;
+      const box = document.getElementById('fsJunction');
+      if (box) paintSceneTr(box);
       paintTr();
       return;
     }
@@ -1747,6 +1764,7 @@ const Fahrschule = (() => {
 
   function paintSceneTr(box) {
     box.classList.toggle('scene-tr', sceneTr);
+    box.classList.toggle('scene-tr-off', !sceneTr);
     const b = box.querySelector('.fs-situation [data-tr-line]');
     if (b) b.setAttribute('aria-pressed', sceneTr ? 'true' : 'false');
   }
@@ -1758,7 +1776,13 @@ const Fahrschule = (() => {
       paintSceneTr(holder);
       return;
     }
-    const on = holder.classList.toggle('tr-open', force);
+    // 🌐 переключает видимость относительно общего «Перевода»: при общем
+    // включённом — скрывает перевод этой строки (tr-closed), при выключенном —
+    // показывает (tr-open)
+    const on = force === undefined ? !lineTrShown(holder) : force;
+    const g = trOn();
+    holder.classList.toggle('tr-open', on && !g);
+    holder.classList.toggle('tr-closed', !on && g);
     holder.querySelectorAll(':scope > [data-tr-line], :scope > .fs-btns > [data-tr-line], :scope > .fs-line-row > .fs-btns > [data-tr-line], :scope > .fs-quiz-top > [data-tr-line]')
       .forEach(b => b.setAttribute('aria-pressed', on ? 'true' : 'false'));
     if (quiz && holder.classList.contains('fs-quiz-card')) quiz.tr = on;
