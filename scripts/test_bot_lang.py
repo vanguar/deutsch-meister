@@ -82,13 +82,14 @@ datas = [row[0]["callback_data"] for row in kb]
 check("кнопки ru / uk / ar", datas == ["lang:ru", "lang:uk", "lang:ar"], datas)
 check("арабский помечен «пробная версия»", "تجريبية" in kb[2][0]["text"])
 
-print("2. Арабский — пробная версия: сохраняется и открывает приложение на ar")
+print("2. Арабский: сохраняется и открывает приложение на ar")
 CALLS.clear()
 W.handle_update(cb("lang:ar"))
 rec = json.loads(REDIS.get("dm:lang:42", "null") or "null")
 check("сохранено ar", rec and rec["lang"] == "ar", rec)
 wel = calls("sendMessage")
-check("приветствие по-арабски с пометкой о пробной версии", wel and "تجريبية" in wel[0]["text"] and "@ObiVan1978" in wel[0]["text"])
+check("приветствие по-арабски: курс, автошкола, контакт, без пометки «пробная»",
+      wel and "مدرسة القيادة" in wel[0]["text"] and "@ObiVan1978" in wel[0]["text"] and "تجريبية" not in wel[0]["text"])
 btn = wel[0]["reply_markup"]["inline_keyboard"][0][0]
 check("кнопка открывает ar", lang_params(btn["web_app"]["url"])[0] == "ar")
 check("донат без перевода — из ru", W.tr("ar", "donate") == W.tr("ru", "donate"))
