@@ -273,17 +273,40 @@ const Laender = (() => {
     el.map.classList.toggle('is-game', !!game);
   }
 
+  // Ключевые цифры для карточки под картой — из паспорта земли
+  const PICK_FACTS = ['Население', 'Площадь', 'Столица'];
+
+  // Карточка выбранной земли под картой: шапка (флаг, название, столица),
+  // описание на всю ширину, 2–3 цифры чипами и кнопки во всю ширину —
+  // на телефоне текст не сжимается в узкую колонку
   function renderPick() {
     const land = picked && byId[picked];
     if (!land || game) { el.pick.innerHTML = ''; return; }
-    el.pick.innerHTML = `<div class="ld-pick-card${land.ready ? '' : ' is-soon'}">
-      ${flagHtml(land)}
-      <div class="ld-pick-text">
-        <div class="ld-card-de" lang="de" dir="ltr">${esc(land.name)}</div>
-        <div class="ld-card-ru"><span>${esc(land.nameRu)}</span> · <span>столица</span> <span lang="de" dir="ltr">${esc(land.capital)}</span></div>
-        ${land.ready ? `<div class="ld-pick-blurb">${esc(land.blurb)}</div>` : '<div class="ld-pick-blurb"><span>Эта земля пока в разработке</span></div>'}
+    const head = `<div class="ld-pick-head">
+        ${flagHtml(land, 'is-mid')}
+        <div class="ld-pick-titles">
+          <div class="ld-pick-de" lang="de" dir="ltr">${esc(land.name)}</div>
+          <div class="ld-card-ru"><span>${esc(land.nameRu)}</span> · <span>столица</span> <span lang="de" dir="ltr">${esc(land.capital)}</span></div>
+        </div>
+        <button class="ld-pick-close" type="button" data-pick-close aria-label="Закрыть" title="Закрыть">✕</button>
+      </div>`;
+    if (!land.ready) {
+      el.pick.innerHTML = `<div class="ld-pick-card is-soon">${head}
+        <p class="ld-pick-blurb"><span>Эта земля пока в разработке</span> 🚧</p></div>`;
+      return;
+    }
+    const facts = (land.facts || []).filter(([k]) => PICK_FACTS.includes(k) && k !== 'Столица')
+      .map(([k, v]) => `<span class="ld-pick-fact"><b>${esc(k)}</b><span>${esc(v)}</span></span>`).join('');
+    const t = land.texts[level()] || Object.values(land.texts)[0];
+    const lv = Object.keys(land.texts).find(k => land.texts[k] === t);
+    const p = percentOf(t.id);
+    el.pick.innerHTML = `<div class="ld-pick-card">${head}
+      <p class="ld-pick-blurb">${esc(land.blurb)}</p>
+      ${facts ? `<div class="ld-pick-facts">${facts}</div>` : ''}
+      <div class="ld-pick-actions">
+        <button class="ld-open is-wide" type="button" data-read="${esc(t.id)}">▶ <span>${p > 0 && p < READ_PCT ? 'Продолжить' : 'Читать'}</span> · ${esc(levels[lv].level)}</button>
+        <button class="news-chip ld-pick-more" type="button" data-open="${esc(land.id)}"><span>Паспорт и тест</span> ›</button>
       </div>
-      ${land.ready ? `<button class="ld-open" type="button" data-open="${esc(land.id)}"><span>Открыть</span> ›</button>` : ''}
     </div>`;
   }
 
@@ -369,7 +392,8 @@ const Laender = (() => {
     if (!land) return;
     const cur = level();
     const t = land.texts[cur] || Object.values(land.texts)[0];
-    const facts = land.facts.map(([k, v]) => `<div class="ld-fact"><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join('');
+    // длинное значение — плитка во всю ширину, короткие — по две в ряд
+    const facts = land.facts.map(([k, v]) => `<div class="ld-fact${String(v).length > 34 ? ' is-wide' : ''}"><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join('');
     const lv = Object.entries(land.texts).map(([k, x]) => {
       const p = percentOf(x.id);
       return `<button class="ld-read${k === cur ? ' is-cur' : ''}" type="button" data-read="${esc(x.id)}">
@@ -465,6 +489,7 @@ const Laender = (() => {
       return;
     }
     if (t.closest('#ldGameBtn')) { startGame(); return; }
+    if (t.closest('[data-pick-close]')) { picked = null; paintMap(); renderPick(); return; }
     const gm = t.closest('[data-game]');
     if (gm) { if (gm.dataset.game === 'again') startGame(); else stopGame(); return; }
     const shape = t.closest('.ld-shape, .ld-hit');

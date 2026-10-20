@@ -59,15 +59,35 @@
 }
 .ld-label.is-on { opacity: 1; }
 
-/* карточка выбранной земли под картой */
+/* карточка выбранной земли под картой: всё во всю ширину, текст не сжимается */
 .ld-pick:empty { display: none; }
 .ld-pick-card {
-  display: flex; align-items: center; gap: 12px; margin-top: 12px; padding: 12px;
-  border-radius: var(--r-lg); background: var(--surface); border: 1px solid var(--border);
+  display: grid; gap: 12px; margin-top: 12px; padding: 16px; border-radius: var(--r-lg);
+  background: linear-gradient(180deg, color-mix(in srgb, var(--accent2) 12%, var(--surface)) 0%, var(--surface) 70%);
+  border: 1px solid color-mix(in srgb, var(--accent2) 35%, var(--border));
+  animation: ld-pick-in .22s ease-out;
 }
-.ld-pick-card.is-soon { opacity: .85; }
-.ld-pick-text { flex: 1 1 auto; min-width: 0; }
-.ld-pick-blurb { margin-top: 4px; font-size: 13px; line-height: 1.45; color: var(--text-muted); }
+.ld-pick-card.is-soon { background: var(--surface); border-color: var(--border); border-style: dashed; }
+@keyframes ld-pick-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+.ld-pick-head { display: flex; align-items: center; gap: 12px; }
+.ld-flag.is-mid { width: 52px; height: 32px; border-radius: 4px; }
+.ld-pick-titles { flex: 1 1 auto; min-width: 0; }
+.ld-pick-de { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; line-height: 1.15; color: var(--text-strong); overflow-wrap: anywhere; }
+.ld-pick-close {
+  flex: none; width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--border); background: var(--surface2);
+  color: var(--text-muted); font: inherit; font-size: 14px; cursor: pointer;
+}
+.ld-pick-blurb { margin: 0; font-size: 15px; line-height: 1.6; color: var(--text); }
+.ld-pick-facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 8px; }
+.ld-pick-fact {
+  display: flex; flex-direction: column; gap: 2px; padding: 8px 10px; border-radius: var(--r-md);
+  background: var(--surface2); border: 1px solid var(--border); font-size: 13px; line-height: 1.35; color: var(--text);
+}
+.ld-pick-fact b { font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--text-muted); }
+.ld-pick-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.ld-open.is-wide { flex: 1 1 180px; justify-content: center; }
+.ld-pick-more { flex: 1 1 140px; justify-content: center; min-height: 44px; }
+@media (prefers-reduced-motion: reduce) { .ld-pick-card { animation: none; } }
 .ld-open {
   flex: none; display: inline-flex; align-items: center; gap: 4px; min-height: 44px; padding: 0 16px;
   border: 0; border-radius: var(--r-full); background: var(--accent2); color: var(--text-on-btn);
@@ -130,11 +150,14 @@ html[dir="rtl"] .ld-go { transform: scaleX(-1); }
 .ld-blurb { margin: 14px 0; font-size: 15px; line-height: 1.55; color: var(--text); }
 .ld-box { margin-top: 14px; padding: 16px; border-radius: var(--r-xl); background: var(--surface2); border: 1px solid var(--border); }
 .ld-box-title { display: flex; justify-content: space-between; gap: 10px; margin: 0 0 10px; font-family: 'DM Sans', sans-serif; font-size: 17px; color: var(--text-strong); }
-.ld-facts { display: grid; gap: 0; margin: 0; }
-.ld-fact { display: grid; grid-template-columns: minmax(110px, 38%) 1fr; gap: 10px; padding: 8px 0; border-top: 1px solid var(--border); }
-.ld-fact:first-child { border-top: 0; padding-top: 0; }
-.ld-fact dt { font-size: 13px; color: var(--text-muted); }
-.ld-fact dd { margin: 0; font-size: 14px; line-height: 1.45; color: var(--text); }
+.ld-facts { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); grid-auto-flow: dense; gap: 8px; margin: 0; }
+.ld-fact {
+  display: flex; flex-direction: column; gap: 3px; padding: 10px 12px; border-radius: var(--r-md);
+  background: var(--surface); border: 1px solid var(--border);
+}
+.ld-fact.is-wide { grid-column: 1 / -1; }
+.ld-fact dt { font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--text-muted); }
+.ld-fact dd { margin: 0; font-size: 14px; line-height: 1.45; color: var(--text); overflow-wrap: anywhere; }
 .ld-reads { display: grid; gap: 8px; }
 .ld-read {
   display: flex; align-items: center; gap: 12px; width: 100%; padding: 12px 14px; border-radius: var(--r-lg);
