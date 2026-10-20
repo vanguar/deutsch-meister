@@ -313,3 +313,13 @@ html[dir="rtl"] .fs-tr { text-align: right; }
 .fs-badge-s rect { fill: var(--surface); stroke: var(--border); stroke-width: 1; }
 .fs-badge-s text { font: 800 12px 'DM Sans', system-ui, sans-serif; fill: var(--text-strong); }
 .fs-zzz { font-size: 16px; }
+
+/* Техника: контрольные лампы и протектор (тема 9) */
+.fs-badge-s.is-red text { fill: #e0484f; }
+.fs-badge-s.is-yellow text { fill: #c98a00; }
+.fs-rubber { fill: #454b55; stroke: #8a929e; stroke-width: 1.5; }
+.fs-groove { fill: color-mix(in srgb, var(--green) 16%, var(--surface)); }
+.fs-tread-min { stroke: #f06b6b; stroke-width: 1.5; stroke-dasharray: 5 3; }
+.fs-tread-val { fill: #fff; }
+.fs-gauge-head { fill: #c9ced6; stroke: rgba(0, 0, 0, .35); }
+.fs-gauge-pin { fill: #e8eaee; }

@@ -1026,6 +1026,9 @@ const Fahrschule = (() => {
 
   const LANE_UP = 53;       // встречная / левая полоса
   const LANE_DOWN = 79;     // наша / правая полоса
+  const TREAD_Y = 40;       // протектор: верх резины и масштаб (px на мм)
+  const TREAD_S = 12;
+  const LAMP = { oil: '● Öldruck', brake: '● Bremsanlage', battery: '● Batterie', engine: '● Motor', tyre: '● Reifendruck' };
   const FOG_X = 80;         // нос машины в тумане в конце сцены
   const FOG_S = 1.6;        // туман: px на метр (столбики через 50 м = 80 px)
 
@@ -1203,6 +1206,26 @@ const Fahrschule = (() => {
         dur: 3800, snap: 1, line: 'dashed', restArea: true, badge: `${String(sc.hours).replace('.', ',')} h`, zzz: rest
       };
     },
+    // Контрольная лампа: красная — поворотник, к тротуару, стоп с аварийкой;
+    // жёлтая — едем дальше (в мастерскую — скоро)
+    lamp(sc) {
+      const stop = sc.answer === 'stop';
+      return {
+        actors: [{ id: 'me', kind: 'car', fill: CAR.blue.fill, keys: stop
+          ? [{ t: 0, x: 30, y: LANE_DOWN }, { t: 0.3, x: 140, y: LANE_DOWN, b: 'r' }, { t: 0.62, x: 236, y: 84, b: 'r' },
+             { t: 0.7, x: 240, y: 84, b: 'both', br: true }, { t: 1, x: 240, y: 84, b: 'both', br: true }]
+          : [{ t: 0, x: 30, y: LANE_DOWN }, { t: 1, x: 350, y: LANE_DOWN }], lights: true }],
+        dur: 3600, snap: 1, line: 'dashed', curb: true, badge: LAMP[sc.lamp], badgeCls: 'is-' + sc.color
+      };
+    },
+    // Замер протектора: щуп опускается в канавку; красная линия — 1,6 мм
+    tread(sc) {
+      return {
+        actors: [{ id: 'gauge', kind: 'gauge', keys: [{ t: 0, x: 160, y: 8 }, { t: 0.15, x: 160, y: 8 },
+          { t: 1, x: 160, y: TREAD_Y + sc.depth * TREAD_S }] }],
+        dur: 2400, snap: 1, tyre: true
+      };
+    },
     zipper() {
       return {
         actors: [
@@ -1269,6 +1292,10 @@ const Fahrschule = (() => {
         <circle cx="0" cy="-7" r="3.2" class="fs-ped-head"/>
         <path d="M0 -4 V4 M-3.5 0 H3.5 M0 4 L-3 10 M0 4 L3 10" class="fs-ped-body"/></g>`;
     }
+    if (a.kind === 'gauge') {
+      return `<g class="${cls} fs-gauge" data-actor="${a.id}" transform="${tr}">
+        <rect x="-14" y="-34" width="28" height="12" rx="3" class="fs-gauge-head"/><rect x="-2" y="-22" width="4" height="22" class="fs-gauge-pin"/></g>`;
+    }
     if (a.kind === 'deer') {
       return `<g class="${cls} fs-deer" data-actor="${a.id}" transform="${tr}"><text x="-11" y="7" class="fs-deer-ico">🦌</text></g>`;
     }
@@ -1316,20 +1343,34 @@ const Fahrschule = (() => {
     const rest = plan.restArea ? `<path class="fs-road" d="M140 92 L180 98 H310 V128 H180 Z"/>
       ${[200, 230, 260, 290].map(x => `<path class="fs-mark is-solid" d="M${x} 100 V126"/>`).join('')}` : '';
     // табличка над сценой: промилле, часы за рулём
-    const badge = plan.badge ? `<g class="fs-badge-s"><rect x="8" y="8" width="${(plan.badge.length * 6.6 + 16).toFixed(0)}" height="20" rx="10"/>
+    const badge = plan.badge ? `<g class="fs-badge-s ${plan.badgeCls || ''}"><rect x="8" y="8" width="${(plan.badge.length * 6.6 + 16).toFixed(0)}" height="20" rx="10"/>
       <text x="16" y="22">${esc(plan.badge)}</text></g>` : '';
     const zzz = plan.zzz ? `<text class="fs-lab${final ? ' is-on' : ''} fs-zzz" x="262" y="104">😴</text>` : '';
     const gap = plan.gapLabel ? `<g class="fs-lab${final ? ' is-on' : ''}">
         <path class="fs-bracket" d="M182 60 H192 M187 60 V75 M182 75 H192"/><path class="fs-leader" d="M192 68 H232 V104"/>
         <text class="fs-lab-text" x="232" y="117">${String(sc.answer).replace('.', ',')} m</text></g>` : '';
+    const ground = plan.tyre ? tyreHtml(sc, final) : `<rect class="fs-road" x="0" y="40" width="${ROAD_W}" height="52"/>
+      <path class="fs-mark${solid ? ' is-solid' : ''}" d="M0 66 H${plan.laneEnds ? 222 : ROAD_W}"/>`;
     return `<svg class="fs-svg fs-road-svg" viewBox="0 0 ${ROAD_W} 130" role="img" aria-label="${esc(sc.type)}">
       <rect class="fs-grass" x="0" y="0" width="${ROAD_W}" height="130"/>
-      <rect class="fs-road" x="0" y="40" width="${ROAD_W}" height="52"/>
-      <path class="fs-mark${solid ? ' is-solid' : ''}" d="M0 66 H${plan.laneEnds ? 222 : ROAD_W}"/>
+      ${ground}
       ${curb}${rest}${ends}${sign}${park}${night}${plan.fog ? fogPosts(plan.fog) : ''}
       ${plan.actors.map(a => actorHtml(a, keyAt(a.keys, t))).join('')}
       ${plan.fog ? fogHtml(sc, plan.fog, final) : ''}${gap}${zzz}${badge}
     </svg>`;
+  }
+
+  // Протектор в разрезе: резина с тремя канавками глубиной depth мм,
+  // после ответа — красная линия минимума 1,6 мм и подписи
+  function tyreHtml(sc, final) {
+    const d = sc.depth * TREAD_S, min = TREAD_Y + 1.6 * TREAD_S;
+    const grooves = [70, 148, 226].map(x => `<rect class="fs-groove" x="${x}" y="${TREAD_Y}" width="24" height="${d.toFixed(1)}"/>`).join('');
+    return `<rect class="fs-rubber" x="20" y="${TREAD_Y}" width="280" height="90" rx="4"/>${grooves}
+      <g class="fs-lab${final ? ' is-on' : ''}">
+        <path class="fs-tread-min" d="M20 ${min.toFixed(1)} H300"/>
+        <text class="fs-lab-text is-b" x="44" y="${(min - 4).toFixed(1)}">1,6 mm</text>
+        <text class="fs-lab-text fs-tread-val" x="214" y="${(TREAD_Y + d + 16).toFixed(1)}">${String(sc.depth).replace('.', ',')} mm</text>
+      </g>`;
   }
 
   // Столбики через 50 м от носа машины — по ним водитель оценивает видимость

@@ -1,0 +1,787 @@
+{
+ "id": "r-09",
+ "kind": "road",
+ "emoji": "🚨",
+ "level": "B1",
+ "title": "Kontrollleuchten und Reifen",
+ "titleTr": "Контрольні лампи і шини",
+ "intro": "Засвітилася лампа на панелі — зупинитися одразу чи доїхати до майстерні? І чи вистачає протектора, щоб їхати далі.",
+ "scenes": [
+  {
+   "type": "lamp",
+   "options": [
+    {
+     "key": "later",
+     "de": "Ich fahre weiter und gehe morgen in die Werkstatt.",
+     "tr": "Їду далі, а завтра піду до майстерні."
+    },
+    {
+     "key": "stop",
+     "de": "Ich halte sofort an einer sicheren Stelle an und mache den Motor aus.",
+     "tr": "Одразу зупиняюся в безпечному місці й глушу двигун."
+    }
+   ],
+   "situation": {
+    "de": "Während der Fahrt leuchtet plötzlich die rote Kontrollleuchte für den Öldruck.",
+    "tr": "Під час їзди раптом світиться червона лампа тиску масла."
+   },
+   "question": {
+    "de": "Was machen Sie?",
+    "tr": "Що ви робите?"
+   },
+   "explain": [
+    {
+     "de": "Rot bedeutet Gefahr: Ohne Öldruck kann der Motor in wenigen Minuten kaputt sein.",
+     "tr": "Червоний означає небезпеку: без тиску масла двигун може зламатися за кілька хвилин."
+    },
+    {
+     "de": "Halten Sie sofort an und machen Sie den Motor aus.",
+     "tr": "Одразу зупиніться й заглушіть двигун.",
+     "o": {
+      "an": "an>anhalten",
+      "aus": "aus>ausmachen",
+      "halten": "halten>anhalten",
+      "machen": "machen>ausmachen"
+     }
+    }
+   ],
+   "answer": "stop",
+   "color": "red",
+   "lamp": "oil"
+  },
+  {
+   "type": "lamp",
+   "options": [
+    {
+     "key": "later",
+     "de": "Ich fahre vorsichtig weiter und fahre bald in die Werkstatt.",
+     "tr": "Обережно їду далі й незабаром заїду до майстерні."
+    },
+    {
+     "key": "stop",
+     "de": "Ich halte sofort an einer sicheren Stelle an und mache den Motor aus.",
+     "tr": "Одразу зупиняюся в безпечному місці й глушу двигун."
+    }
+   ],
+   "situation": {
+    "de": "Die gelbe Motorkontrollleuchte leuchtet, aber das Auto fährt normal.",
+    "tr": "Світиться жовта лампа двигуна, але машина їде нормально."
+   },
+   "question": {
+    "de": "Was machen Sie?",
+    "tr": "Що ви робите?"
+   },
+   "explain": [
+    {
+     "de": "Gelb bedeutet: Es gibt ein Problem, aber Sie dürfen vorsichtig weiterfahren.",
+     "tr": "Жовтий означає: є проблема, але можна обережно їхати далі."
+    },
+    {
+     "de": "Lassen Sie das Auto bald in der Werkstatt prüfen.",
+     "tr": "Незабаром покажіть машину в майстерні."
+    }
+   ],
+   "answer": "later",
+   "color": "yellow",
+   "lamp": "engine"
+  },
+  {
+   "type": "lamp",
+   "options": [
+    {
+     "key": "later",
+     "de": "Ich bremse ab jetzt einfach früher.",
+     "tr": "Просто гальмуватиму раніше."
+    },
+    {
+     "key": "stop",
+     "de": "Ich halte sofort an einer sicheren Stelle an und mache den Motor aus.",
+     "tr": "Одразу зупиняюся в безпечному місці й глушу двигун."
+    }
+   ],
+   "situation": {
+    "de": "Beim Fahren leuchtet die rote Kontrollleuchte für die Bremsanlage.",
+    "tr": "Під час їзди світиться червона лампа гальмівної системи."
+   },
+   "question": {
+    "de": "Was machen Sie?",
+    "tr": "Що ви робите?"
+   },
+   "explain": [
+    {
+     "de": "Vielleicht fehlt Bremsflüssigkeit. Dann bremst das Auto schlecht.",
+     "tr": "Можливо, бракує гальмівної рідини. Тоді машина погано гальмує."
+    },
+    {
+     "de": "Halten Sie an einer sicheren Stelle an und rufen Sie die Pannenhilfe.",
+     "tr": "Зупиніться в безпечному місці й викличте техдопомогу.",
+     "o": {
+      "an": "an>anhalten",
+      "halten": "halten>anhalten"
+     }
+    }
+   ],
+   "answer": "stop",
+   "color": "red",
+   "lamp": "brake"
+  },
+  {
+   "type": "lamp",
+   "options": [
+    {
+     "key": "later",
+     "de": "Ich fahre langsam zur nächsten Tankstelle und prüfe den Druck.",
+     "tr": "Повільно їду до найближчої заправки й перевіряю тиск."
+    },
+    {
+     "key": "stop",
+     "de": "Ich halte sofort an einer sicheren Stelle an und mache den Motor aus.",
+     "tr": "Одразу зупиняюся в безпечному місці й глушу двигун."
+    }
+   ],
+   "situation": {
+    "de": "Die gelbe Kontrollleuchte für den Reifendruck leuchtet.",
+    "tr": "Світиться жовта лампа тиску в шинах."
+   },
+   "question": {
+    "de": "Was machen Sie?",
+    "tr": "Що ви робите?"
+   },
+   "explain": [
+    {
+     "de": "Ein Reifen hat wenig Luft. Fahren Sie langsam zur nächsten Tankstelle.",
+     "tr": "У шині мало повітря. Повільно доїжджайте до найближчої заправки."
+    },
+    {
+     "de": "Dort prüfen Sie den Reifendruck und füllen Luft nach.",
+     "tr": "Там ви перевіряєте тиск і підкачуєте шини.",
+     "o": {
+      "füllen": "füllen>nachfüllen",
+      "nach": "nach>nachfüllen"
+     }
+    }
+   ],
+   "answer": "later",
+   "color": "yellow",
+   "lamp": "tyre"
+  },
+  {
+   "type": "tread",
+   "options": [
+    {
+     "key": "ok",
+     "de": "Ja, das Profil ist tief genug.",
+     "tr": "Так, протектор досить глибокий."
+    },
+    {
+     "key": "no",
+     "de": "Nein, ich brauche neue Reifen.",
+     "tr": "Ні, мені потрібні нові шини."
+    }
+   ],
+   "situation": {
+    "de": "Sie messen das Reifenprofil Ihrer Sommerreifen: nur 1,2 Millimeter.",
+    "tr": "Ви вимірюєте протектор літніх шин: лише 1,2 міліметра."
+   },
+   "question": {
+    "de": "Dürfen Sie mit diesen Reifen fahren?",
+    "tr": "Чи можна їздити на цих шинах?"
+   },
+   "explain": [
+    {
+     "de": "Das Minimum sind 1,6 Millimeter. Mit 1,2 Millimetern dürfen Sie nicht fahren.",
+     "tr": "Мінімум — 1,6 міліметра. З 1,2 міліметра їздити не можна."
+    },
+    {
+     "de": "Das kostet 60 Euro und einen Punkt. Bei Nässe droht Aquaplaning.",
+     "tr": "Це коштує 60 євро й один бал. На мокрій дорозі загрожує аквапланування."
+    }
+   ],
+   "answer": "no",
+   "depth": 1.2
+  },
+  {
+   "type": "tread",
+   "options": [
+    {
+     "key": "ok",
+     "de": "Ja, das Profil ist tief genug.",
+     "tr": "Так, протектор досить глибокий."
+    },
+    {
+     "key": "no",
+     "de": "Nein, ich brauche neue Reifen.",
+     "tr": "Ні, мені потрібні нові шини."
+    }
+   ],
+   "situation": {
+    "de": "Im Oktober messen Sie das Profil Ihrer Winterreifen: 4 Millimeter.",
+    "tr": "У жовтні ви вимірюєте протектор зимових шин: 4 міліметри."
+   },
+   "question": {
+    "de": "Dürfen Sie mit diesen Reifen fahren?",
+    "tr": "Чи можна їздити на цих шинах?"
+   },
+   "explain": [
+    {
+     "de": "4 Millimeter sind deutlich mehr als das Minimum von 1,6 Millimetern.",
+     "tr": "4 міліметри — помітно більше за мінімум 1,6 міліметра."
+    },
+    {
+     "de": "Für Winterreifen empfehlen Experten mindestens 4 Millimeter.",
+     "tr": "Для зимових шин експерти радять щонайменше 4 міліметри."
+    }
+   ],
+   "answer": "ok",
+   "depth": 4
+  }
+ ],
+ "signs": {},
+ "gloss": {
+  "w": {
+   "aber": "aber",
+   "als": "als",
+   "an>anhalten": "anhalten",
+   "aquaplaning": "Aquaplaning",
+   "aus>ausmachen": "ausmachen",
+   "auto": "Auto",
+   "bald": "bald",
+   "bedeutet": "bedeuten",
+   "bei": "bei",
+   "beim": "bei",
+   "bremsanlage": "Bremsanlage",
+   "bremsflüssigkeit": "Bremsflüssigkeit",
+   "bremst": "bremsen",
+   "dann": "dann",
+   "das": "der/die/das",
+   "den": "der/die/das",
+   "der": "der/die/das",
+   "deutlich": "deutlich",
+   "die": "der/die/das",
+   "diesen": "dieser",
+   "dort": "dort",
+   "droht": "drohen",
+   "dürfen": "dürfen",
+   "ein": "ein/eine",
+   "einen": "ein/eine",
+   "einer": "ein/eine",
+   "empfehlen": "empfehlen",
+   "es": "es",
+   "euro": "Euro",
+   "experten": "Experte",
+   "fahren": "fahren",
+   "fahrt": "Fahrt",
+   "fehlt": "fehlen",
+   "fährt": "fahren",
+   "füllen>nachfüllen": "nachfüllen",
+   "für": "für",
+   "gefahr": "Gefahr",
+   "gelb": "gelb",
+   "gelbe": "gelb",
+   "gibt": "es gibt",
+   "halten>anhalten": "anhalten",
+   "hat": "haben",
+   "ihrer": "Ihr",
+   "im": "in",
+   "in": "in",
+   "kann": "können",
+   "kaputt": "kaputt",
+   "kontrollleuchte": "Kontrollleuchte",
+   "kontrollleuchten": "Kontrollleuchte",
+   "kostet": "kosten",
+   "langsam": "langsam",
+   "lassen": "lassen",
+   "leuchtet": "leuchten",
+   "luft": "Luft",
+   "machen": "machen",
+   "machen>ausmachen": "ausmachen",
+   "mehr": "mehr",
+   "messen": "messen",
+   "millimeter": "Millimeter",
+   "millimetern": "Millimeter",
+   "mindestens": "mindestens",
+   "minimum": "Minimum",
+   "minuten": "Minute",
+   "mit": "mit",
+   "motor": "Motor",
+   "motorkontrollleuchte": "Motorkontrollleuchte",
+   "nach>nachfüllen": "nachfüllen",
+   "nicht": "nicht",
+   "normal": "normal",
+   "nur": "nur",
+   "nächsten": "nächste",
+   "nässe": "Nässe",
+   "ohne": "ohne",
+   "oktober": "Oktober",
+   "pannenhilfe": "Pannenhilfe",
+   "plötzlich": "plötzlich",
+   "problem": "Problem",
+   "profil": "Profil",
+   "prüfen": "prüfen",
+   "punkt": "Punkt",
+   "reifen": "Reifen",
+   "reifendruck": "Reifendruck",
+   "reifenprofil": "Reifenprofil",
+   "rot": "rot",
+   "rote": "rot",
+   "rufen": "rufen",
+   "schlecht": "schlecht",
+   "sein": "sein",
+   "sicheren": "sicher",
+   "sie": "Sie",
+   "sind": "sein",
+   "sofort": "sofort",
+   "sommerreifen": "Sommerreifen",
+   "stelle": "Stelle",
+   "tankstelle": "Tankstelle",
+   "und": "und",
+   "vielleicht": "vielleicht",
+   "von": "von",
+   "vorsichtig": "vorsichtig",
+   "was": "was",
+   "weiterfahren": "weiterfahren",
+   "wenig": "wenig",
+   "wenigen": "wenig",
+   "werkstatt": "Werkstatt",
+   "winterreifen": "Winterreifen",
+   "während": "während",
+   "zur": "zu",
+   "öldruck": "Öldruck"
+  },
+  "l": {
+   "Aquaplaning": {
+    "ru": "аквапланування (шини ковзають по воді)",
+    "pos": "ім.",
+    "decl": "das Aquaplaning · мн. немає"
+   },
+   "Auto": {
+    "ru": "машина, автомобіль",
+    "pos": "ім.",
+    "decl": "das Auto · мн.: die Autos"
+   },
+   "Bremsanlage": {
+    "ru": "гальмівна система",
+    "pos": "ім.",
+    "decl": "die Bremsanlage · мн.: die Bremsanlagen"
+   },
+   "Bremsflüssigkeit": {
+    "ru": "гальмівна рідина",
+    "pos": "ім.",
+    "decl": "die Bremsflüssigkeit · мн. немає"
+   },
+   "Euro": {
+    "ru": "євро",
+    "pos": "ім.",
+    "decl": "der Euro · мн.: die Euro"
+   },
+   "Experte": {
+    "ru": "експерт",
+    "pos": "ім.",
+    "decl": "der Experte · мн.: die Experten"
+   },
+   "Fahrt": {
+    "ru": "поїздка",
+    "pos": "ім.",
+    "decl": "die Fahrt · мн.: die Fahrten"
+   },
+   "Gefahr": {
+    "ru": "небезпека",
+    "pos": "ім.",
+    "decl": "die Gefahr · мн.: die Gefahren"
+   },
+   "Ihr": {
+    "ru": "ваш (ввічливо)",
+    "pos": "займ."
+   },
+   "Kontrollleuchte": {
+    "ru": "контрольна лампа (на панелі)",
+    "pos": "ім.",
+    "decl": "die Kontrollleuchte · мн.: die Kontrollleuchten"
+   },
+   "Luft": {
+    "ru": "повітря",
+    "pos": "ім.",
+    "decl": "die Luft · мн. немає"
+   },
+   "Millimeter": {
+    "ru": "міліметр",
+    "pos": "ім.",
+    "decl": "der Millimeter · мн.: die Millimeter"
+   },
+   "Minimum": {
+    "ru": "мінімум",
+    "pos": "ім.",
+    "decl": "das Minimum · мн.: die Minima"
+   },
+   "Minute": {
+    "ru": "хвилина",
+    "pos": "ім.",
+    "decl": "die Minute · мн.: die Minuten"
+   },
+   "Motor": {
+    "ru": "двигун, мотор",
+    "pos": "ім.",
+    "decl": "der Motor · мн.: die Motoren"
+   },
+   "Motorkontrollleuchte": {
+    "ru": "лампа «перевір двигун»",
+    "pos": "ім.",
+    "decl": "die Motorkontrollleuchte · мн.: die Motorkontrollleuchten"
+   },
+   "Nässe": {
+    "ru": "вологість, мокра дорога",
+    "pos": "ім.",
+    "decl": "die Nässe · мн. немає"
+   },
+   "Oktober": {
+    "ru": "жовтень",
+    "pos": "ім.",
+    "decl": "der Oktober · мн. немає"
+   },
+   "Pannenhilfe": {
+    "ru": "техдопомога на дорозі",
+    "pos": "ім.",
+    "decl": "die Pannenhilfe · мн. немає"
+   },
+   "Problem": {
+    "ru": "проблема",
+    "pos": "ім.",
+    "decl": "das Problem · мн.: die Probleme"
+   },
+   "Profil": {
+    "ru": "протектор (шини)",
+    "pos": "ім.",
+    "decl": "das Profil · мн.: die Profile"
+   },
+   "Punkt": {
+    "ru": "бал; точка",
+    "pos": "ім.",
+    "decl": "der Punkt · мн.: die Punkte"
+   },
+   "Reifen": {
+    "ru": "шина",
+    "pos": "ім.",
+    "decl": "der Reifen · мн.: die Reifen"
+   },
+   "Reifendruck": {
+    "ru": "тиск у шинах",
+    "pos": "ім.",
+    "decl": "der Reifendruck · мн. немає"
+   },
+   "Reifenprofil": {
+    "ru": "протектор шини",
+    "pos": "ім.",
+    "note": "мінімум за законом 1,6 мм (§ 36 StVZO)",
+    "decl": "das Reifenprofil · мн.: die Reifenprofile"
+   },
+   "Sie": {
+    "ru": "ви (ввічливо)",
+    "pos": "займ.",
+    "note": "Ihnen — вам (давальний): vor Ihnen — перед вами"
+   },
+   "Sommerreifen": {
+    "ru": "літня шина",
+    "pos": "ім.",
+    "decl": "der Sommerreifen · мн.: die Sommerreifen"
+   },
+   "Stelle": {
+    "ru": "місце, ділянка",
+    "pos": "ім.",
+    "decl": "die Stelle · мн.: die Stellen"
+   },
+   "Tankstelle": {
+    "ru": "заправка",
+    "pos": "ім.",
+    "decl": "die Tankstelle · мн.: die Tankstellen"
+   },
+   "Werkstatt": {
+    "ru": "автомайстерня",
+    "pos": "ім.",
+    "decl": "die Werkstatt · мн.: die Werkstätten"
+   },
+   "Winterreifen": {
+    "ru": "зимова шина",
+    "pos": "ім.",
+    "note": "з жовтня 2024 — лише зі значком «гора зі сніжинкою» (Alpine)",
+    "decl": "der Winterreifen · мн.: die Winterreifen"
+   },
+   "aber": {
+    "ru": "але",
+    "pos": "спол."
+   },
+   "als": {
+    "ru": "ніж (при порівнянні); як",
+    "pos": "спол."
+   },
+   "anhalten": {
+    "ru": "зупинятися",
+    "pos": "дієсл.",
+    "forms": "hielt an · hat angehalten"
+   },
+   "ausmachen": {
+    "ru": "вимикати, глушити (мотор)",
+    "pos": "дієсл.",
+    "note": "відокремлюваний префікс: machen … aus",
+    "forms": "machte aus · hat ausgemacht"
+   },
+   "bald": {
+    "ru": "незабаром",
+    "pos": "присл."
+   },
+   "bedeuten": {
+    "ru": "означати",
+    "pos": "дієсл.",
+    "forms": "bedeutete · hat bedeutet"
+   },
+   "bei": {
+    "ru": "при, біля; на (про сигнал)",
+    "pos": "прийм.",
+    "note": "beim = bei dem: beim Fahren — під час їзди; bei Rot — на червоний"
+   },
+   "bremsen": {
+    "ru": "гальмувати",
+    "pos": "дієсл.",
+    "forms": "bremste · hat gebremst"
+   },
+   "dann": {
+    "ru": "тоді, отже; потім",
+    "pos": "присл."
+   },
+   "der/die/das": {
+    "ru": "означений артикль",
+    "pos": "артикль",
+    "note": "der — ч. р., die — ж. р. і мн., das — с. р.; den — ч. р. у знахідному, dem — ч. і с. р. у давальному; das ще означає «це»"
+   },
+   "deutlich": {
+    "ru": "помітно, явно",
+    "pos": "прикм."
+   },
+   "dieser": {
+    "ru": "цей, ця, це",
+    "pos": "займ."
+   },
+   "dort": {
+    "ru": "там",
+    "pos": "присл."
+   },
+   "drohen": {
+    "ru": "загрожувати",
+    "pos": "дієсл.",
+    "forms": "drohte · hat gedroht"
+   },
+   "dürfen": {
+    "ru": "могти, мати право",
+    "pos": "дієсл.",
+    "forms": "durfte · hat gedurft"
+   },
+   "ein/eine": {
+    "ru": "неозначений артикль; один",
+    "pos": "артикль",
+    "note": "an einer Kreuzung — на (якомусь) перехресті"
+   },
+   "empfehlen": {
+    "ru": "рекомендувати",
+    "pos": "дієсл.",
+    "forms": "empfahl · hat empfohlen"
+   },
+   "es": {
+    "ru": "воно; це",
+    "pos": "займ.",
+    "note": "тут — про машину: das Auto"
+   },
+   "es gibt": {
+    "ru": "є, існує",
+    "pos": "вираз"
+   },
+   "fahren": {
+    "ru": "їхати; кермувати машиною",
+    "pos": "дієсл.",
+    "forms": "fuhr · ist gefahren"
+   },
+   "fehlen": {
+    "ru": "бракувати, бути відсутнім",
+    "pos": "дієсл.",
+    "forms": "fehlte · hat gefehlt"
+   },
+   "für": {
+    "ru": "для",
+    "pos": "прийм."
+   },
+   "gelb": {
+    "ru": "жовтий",
+    "pos": "прикм.",
+    "note": "Gelb (з великої) — жовтий сигнал"
+   },
+   "haben": {
+    "ru": "мати",
+    "pos": "дієсл.",
+    "note": "Vorfahrt haben — мати перевагу",
+    "forms": "hatte · hat gehabt"
+   },
+   "in": {
+    "ru": "в",
+    "pos": "прийм.",
+    "note": "im = in dem: im Bereich — у зоні"
+   },
+   "kaputt": {
+    "ru": "зламаний",
+    "pos": "прикм."
+   },
+   "kosten": {
+    "ru": "коштувати",
+    "pos": "дієсл.",
+    "forms": "kostete · hat gekostet"
+   },
+   "können": {
+    "ru": "могти",
+    "pos": "дієсл.",
+    "forms": "konnte · hat gekonnt"
+   },
+   "langsam": {
+    "ru": "повільний; повільно",
+    "pos": "прикм."
+   },
+   "lassen": {
+    "ru": "дозволяти; пропускати; залишати",
+    "pos": "дієсл.",
+    "note": "jemanden fahren lassen — пропустити когось уперед",
+    "forms": "ließ · hat gelassen"
+   },
+   "leuchten": {
+    "ru": "горіти, світитися",
+    "pos": "дієсл.",
+    "forms": "leuchtete · hat geleuchtet"
+   },
+   "machen": {
+    "ru": "робити",
+    "pos": "дієсл.",
+    "note": "den Schulterblick machen — озирнутися через плече; Gut gemacht! — Молодець!",
+    "forms": "machte · hat gemacht"
+   },
+   "mehr": {
+    "ru": "більше",
+    "pos": "присл.",
+    "note": "mehr als — більше ніж"
+   },
+   "messen": {
+    "ru": "вимірювати",
+    "pos": "дієсл.",
+    "forms": "maß · hat gemessen"
+   },
+   "mindestens": {
+    "ru": "щонайменше, не менше",
+    "pos": "присл."
+   },
+   "mit": {
+    "ru": "з",
+    "pos": "прийм."
+   },
+   "nachfüllen": {
+    "ru": "доливати, підкачувати",
+    "pos": "дієсл.",
+    "note": "відокремлюваний префікс: füllen … nach; Luft nachfüllen — підкачати шини",
+    "forms": "füllte nach · hat nachgefüllt"
+   },
+   "nicht": {
+    "ru": "не",
+    "pos": "частка"
+   },
+   "normal": {
+    "ru": "нормальний",
+    "pos": "прикм."
+   },
+   "nur": {
+    "ru": "лише",
+    "pos": "присл."
+   },
+   "nächste": {
+    "ru": "найближчий, наступний",
+    "pos": "прикм."
+   },
+   "ohne": {
+    "ru": "без",
+    "pos": "прийм."
+   },
+   "plötzlich": {
+    "ru": "раптом, несподівано",
+    "pos": "присл."
+   },
+   "prüfen": {
+    "ru": "перевіряти",
+    "pos": "дієсл.",
+    "forms": "prüfte · hat geprüft"
+   },
+   "rot": {
+    "ru": "червоний",
+    "pos": "прикм.",
+    "note": "Rot (з великої) — червоний сигнал: bei Rot — на червоний"
+   },
+   "rufen": {
+    "ru": "кликати, викликати",
+    "pos": "дієсл.",
+    "forms": "rief · hat gerufen"
+   },
+   "schlecht": {
+    "ru": "поганий",
+    "pos": "прикм."
+   },
+   "sein": {
+    "ru": "бути",
+    "pos": "дієсл.",
+    "forms": "war · ist gewesen"
+   },
+   "sicher": {
+    "ru": "безпечний; упевнений",
+    "pos": "прикм."
+   },
+   "sofort": {
+    "ru": "одразу, негайно",
+    "pos": "присл."
+   },
+   "und": {
+    "ru": "і, та",
+    "pos": "спол."
+   },
+   "vielleicht": {
+    "ru": "можливо",
+    "pos": "присл."
+   },
+   "von": {
+    "ru": "від, з",
+    "pos": "прийм.",
+    "note": "vom = von dem; von rechts — праворуч"
+   },
+   "vorsichtig": {
+    "ru": "обережний",
+    "pos": "прикм."
+   },
+   "was": {
+    "ru": "що",
+    "pos": "займ."
+   },
+   "weiterfahren": {
+    "ru": "їхати далі",
+    "pos": "дієсл.",
+    "forms": "fuhr weiter · ist weitergefahren"
+   },
+   "wenig": {
+    "ru": "мало; небагато",
+    "pos": "займ."
+   },
+   "während": {
+    "ru": "під час",
+    "pos": "прийм."
+   },
+   "zu": {
+    "ru": "до; для",
+    "pos": "прийм.",
+    "note": "zum = zu dem, zur = zu der: Abstand zur Kreuzung — відстань до перехрестя"
+   },
+   "Öldruck": {
+    "ru": "тиск масла",
+    "pos": "ім.",
+    "decl": "der Öldruck · мн. немає"
+   }
+  }
+ }
+}

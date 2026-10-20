@@ -1,0 +1,787 @@
+{
+ "id": "r-09",
+ "kind": "road",
+ "emoji": "🚨",
+ "level": "B1",
+ "title": "Kontrollleuchten und Reifen",
+ "titleTr": "لمبات التحذير والإطارات",
+ "intro": "أضاءت لمبة في لوحة العدادات — هل تتوقف فورًا أم تذهب إلى الورشة؟ وهل نقش الإطار كافٍ لمواصلة القيادة.",
+ "scenes": [
+  {
+   "type": "lamp",
+   "options": [
+    {
+     "key": "later",
+     "de": "Ich fahre weiter und gehe morgen in die Werkstatt.",
+     "tr": "أواصل القيادة وأذهب غدًا إلى الورشة."
+    },
+    {
+     "key": "stop",
+     "de": "Ich halte sofort an einer sicheren Stelle an und mache den Motor aus.",
+     "tr": "أتوقف فورًا في مكان آمن وأطفئ المحرك."
+    }
+   ],
+   "situation": {
+    "de": "Während der Fahrt leuchtet plötzlich die rote Kontrollleuchte für den Öldruck.",
+    "tr": "أثناء القيادة تضيء فجأة لمبة التحذير الحمراء لضغط الزيت."
+   },
+   "question": {
+    "de": "Was machen Sie?",
+    "tr": "ماذا تفعل؟"
+   },
+   "explain": [
+    {
+     "de": "Rot bedeutet Gefahr: Ohne Öldruck kann der Motor in wenigen Minuten kaputt sein.",
+     "tr": "الأحمر يعني الخطر: من دون ضغط الزيت قد يتعطل المحرك خلال دقائق قليلة."
+    },
+    {
+     "de": "Halten Sie sofort an und machen Sie den Motor aus.",
+     "tr": "توقف فورًا وأطفئ المحرك.",
+     "o": {
+      "an": "an>anhalten",
+      "aus": "aus>ausmachen",
+      "halten": "halten>anhalten",
+      "machen": "machen>ausmachen"
+     }
+    }
+   ],
+   "answer": "stop",
+   "color": "red",
+   "lamp": "oil"
+  },
+  {
+   "type": "lamp",
+   "options": [
+    {
+     "key": "later",
+     "de": "Ich fahre vorsichtig weiter und fahre bald in die Werkstatt.",
+     "tr": "أواصل القيادة بحذر وأذهب قريبًا إلى الورشة."
+    },
+    {
+     "key": "stop",
+     "de": "Ich halte sofort an einer sicheren Stelle an und mache den Motor aus.",
+     "tr": "أتوقف فورًا في مكان آمن وأطفئ المحرك."
+    }
+   ],
+   "situation": {
+    "de": "Die gelbe Motorkontrollleuchte leuchtet, aber das Auto fährt normal.",
+    "tr": "تضيء لمبة المحرك الصفراء، لكن السيارة تسير بشكل طبيعي."
+   },
+   "question": {
+    "de": "Was machen Sie?",
+    "tr": "ماذا تفعل؟"
+   },
+   "explain": [
+    {
+     "de": "Gelb bedeutet: Es gibt ein Problem, aber Sie dürfen vorsichtig weiterfahren.",
+     "tr": "الأصفر يعني: هناك مشكلة، لكن يجوز لك مواصلة القيادة بحذر."
+    },
+    {
+     "de": "Lassen Sie das Auto bald in der Werkstatt prüfen.",
+     "tr": "اجعل الورشة تفحص السيارة قريبًا."
+    }
+   ],
+   "answer": "later",
+   "color": "yellow",
+   "lamp": "engine"
+  },
+  {
+   "type": "lamp",
+   "options": [
+    {
+     "key": "later",
+     "de": "Ich bremse ab jetzt einfach früher.",
+     "tr": "سأفرمل من الآن مبكرًا فقط."
+    },
+    {
+     "key": "stop",
+     "de": "Ich halte sofort an einer sicheren Stelle an und mache den Motor aus.",
+     "tr": "أتوقف فورًا في مكان آمن وأطفئ المحرك."
+    }
+   ],
+   "situation": {
+    "de": "Beim Fahren leuchtet die rote Kontrollleuchte für die Bremsanlage.",
+    "tr": "أثناء القيادة تضيء لمبة التحذير الحمراء لنظام الفرامل."
+   },
+   "question": {
+    "de": "Was machen Sie?",
+    "tr": "ماذا تفعل؟"
+   },
+   "explain": [
+    {
+     "de": "Vielleicht fehlt Bremsflüssigkeit. Dann bremst das Auto schlecht.",
+     "tr": "ربما ينقص سائل الفرامل. عندها تفرمل السيارة بشكل سيئ."
+    },
+    {
+     "de": "Halten Sie an einer sicheren Stelle an und rufen Sie die Pannenhilfe.",
+     "tr": "توقف في مكان آمن واتصل بخدمة المساعدة على الطريق.",
+     "o": {
+      "an": "an>anhalten",
+      "halten": "halten>anhalten"
+     }
+    }
+   ],
+   "answer": "stop",
+   "color": "red",
+   "lamp": "brake"
+  },
+  {
+   "type": "lamp",
+   "options": [
+    {
+     "key": "later",
+     "de": "Ich fahre langsam zur nächsten Tankstelle und prüfe den Druck.",
+     "tr": "أقود ببطء إلى أقرب محطة وقود وأفحص الضغط."
+    },
+    {
+     "key": "stop",
+     "de": "Ich halte sofort an einer sicheren Stelle an und mache den Motor aus.",
+     "tr": "أتوقف فورًا في مكان آمن وأطفئ المحرك."
+    }
+   ],
+   "situation": {
+    "de": "Die gelbe Kontrollleuchte für den Reifendruck leuchtet.",
+    "tr": "تضيء لمبة التحذير الصفراء لضغط الإطارات."
+   },
+   "question": {
+    "de": "Was machen Sie?",
+    "tr": "ماذا تفعل؟"
+   },
+   "explain": [
+    {
+     "de": "Ein Reifen hat wenig Luft. Fahren Sie langsam zur nächsten Tankstelle.",
+     "tr": "في أحد الإطارات هواء قليل. قد ببطء إلى أقرب محطة وقود."
+    },
+    {
+     "de": "Dort prüfen Sie den Reifendruck und füllen Luft nach.",
+     "tr": "هناك تفحص ضغط الإطارات وتضيف الهواء.",
+     "o": {
+      "füllen": "füllen>nachfüllen",
+      "nach": "nach>nachfüllen"
+     }
+    }
+   ],
+   "answer": "later",
+   "color": "yellow",
+   "lamp": "tyre"
+  },
+  {
+   "type": "tread",
+   "options": [
+    {
+     "key": "ok",
+     "de": "Ja, das Profil ist tief genug.",
+     "tr": "نعم، النقش عميق بما يكفي."
+    },
+    {
+     "key": "no",
+     "de": "Nein, ich brauche neue Reifen.",
+     "tr": "لا، أحتاج إلى إطارات جديدة."
+    }
+   ],
+   "situation": {
+    "de": "Sie messen das Reifenprofil Ihrer Sommerreifen: nur 1,2 Millimeter.",
+    "tr": "تقيس نقش إطاراتك الصيفية: 1,2 مليمتر فقط."
+   },
+   "question": {
+    "de": "Dürfen Sie mit diesen Reifen fahren?",
+    "tr": "هل يجوز لك القيادة بهذه الإطارات؟"
+   },
+   "explain": [
+    {
+     "de": "Das Minimum sind 1,6 Millimeter. Mit 1,2 Millimetern dürfen Sie nicht fahren.",
+     "tr": "الحد الأدنى 1,6 مليمتر. لا يجوز لك القيادة بـ 1,2 مليمتر."
+    },
+    {
+     "de": "Das kostet 60 Euro und einen Punkt. Bei Nässe droht Aquaplaning.",
+     "tr": "هذا يكلّف 60 يورو ونقطة واحدة. وعلى الطريق المبتل يهدد خطر الانزلاق المائي."
+    }
+   ],
+   "answer": "no",
+   "depth": 1.2
+  },
+  {
+   "type": "tread",
+   "options": [
+    {
+     "key": "ok",
+     "de": "Ja, das Profil ist tief genug.",
+     "tr": "نعم، النقش عميق بما يكفي."
+    },
+    {
+     "key": "no",
+     "de": "Nein, ich brauche neue Reifen.",
+     "tr": "لا، أحتاج إلى إطارات جديدة."
+    }
+   ],
+   "situation": {
+    "de": "Im Oktober messen Sie das Profil Ihrer Winterreifen: 4 Millimeter.",
+    "tr": "في أكتوبر تقيس نقش إطاراتك الشتوية: 4 مليمترات."
+   },
+   "question": {
+    "de": "Dürfen Sie mit diesen Reifen fahren?",
+    "tr": "هل يجوز لك القيادة بهذه الإطارات؟"
+   },
+   "explain": [
+    {
+     "de": "4 Millimeter sind deutlich mehr als das Minimum von 1,6 Millimetern.",
+     "tr": "4 مليمترات أكثر بوضوح من الحد الأدنى البالغ 1,6 مليمتر."
+    },
+    {
+     "de": "Für Winterreifen empfehlen Experten mindestens 4 Millimeter.",
+     "tr": "للإطارات الشتوية ينصح الخبراء بـ 4 مليمترات على الأقل."
+    }
+   ],
+   "answer": "ok",
+   "depth": 4
+  }
+ ],
+ "signs": {},
+ "gloss": {
+  "w": {
+   "aber": "aber",
+   "als": "als",
+   "an>anhalten": "anhalten",
+   "aquaplaning": "Aquaplaning",
+   "aus>ausmachen": "ausmachen",
+   "auto": "Auto",
+   "bald": "bald",
+   "bedeutet": "bedeuten",
+   "bei": "bei",
+   "beim": "bei",
+   "bremsanlage": "Bremsanlage",
+   "bremsflüssigkeit": "Bremsflüssigkeit",
+   "bremst": "bremsen",
+   "dann": "dann",
+   "das": "der/die/das",
+   "den": "der/die/das",
+   "der": "der/die/das",
+   "deutlich": "deutlich",
+   "die": "der/die/das",
+   "diesen": "dieser",
+   "dort": "dort",
+   "droht": "drohen",
+   "dürfen": "dürfen",
+   "ein": "ein/eine",
+   "einen": "ein/eine",
+   "einer": "ein/eine",
+   "empfehlen": "empfehlen",
+   "es": "es",
+   "euro": "Euro",
+   "experten": "Experte",
+   "fahren": "fahren",
+   "fahrt": "Fahrt",
+   "fehlt": "fehlen",
+   "fährt": "fahren",
+   "füllen>nachfüllen": "nachfüllen",
+   "für": "für",
+   "gefahr": "Gefahr",
+   "gelb": "gelb",
+   "gelbe": "gelb",
+   "gibt": "es gibt",
+   "halten>anhalten": "anhalten",
+   "hat": "haben",
+   "ihrer": "Ihr",
+   "im": "in",
+   "in": "in",
+   "kann": "können",
+   "kaputt": "kaputt",
+   "kontrollleuchte": "Kontrollleuchte",
+   "kontrollleuchten": "Kontrollleuchte",
+   "kostet": "kosten",
+   "langsam": "langsam",
+   "lassen": "lassen",
+   "leuchtet": "leuchten",
+   "luft": "Luft",
+   "machen": "machen",
+   "machen>ausmachen": "ausmachen",
+   "mehr": "mehr",
+   "messen": "messen",
+   "millimeter": "Millimeter",
+   "millimetern": "Millimeter",
+   "mindestens": "mindestens",
+   "minimum": "Minimum",
+   "minuten": "Minute",
+   "mit": "mit",
+   "motor": "Motor",
+   "motorkontrollleuchte": "Motorkontrollleuchte",
+   "nach>nachfüllen": "nachfüllen",
+   "nicht": "nicht",
+   "normal": "normal",
+   "nur": "nur",
+   "nächsten": "nächste",
+   "nässe": "Nässe",
+   "ohne": "ohne",
+   "oktober": "Oktober",
+   "pannenhilfe": "Pannenhilfe",
+   "plötzlich": "plötzlich",
+   "problem": "Problem",
+   "profil": "Profil",
+   "prüfen": "prüfen",
+   "punkt": "Punkt",
+   "reifen": "Reifen",
+   "reifendruck": "Reifendruck",
+   "reifenprofil": "Reifenprofil",
+   "rot": "rot",
+   "rote": "rot",
+   "rufen": "rufen",
+   "schlecht": "schlecht",
+   "sein": "sein",
+   "sicheren": "sicher",
+   "sie": "Sie",
+   "sind": "sein",
+   "sofort": "sofort",
+   "sommerreifen": "Sommerreifen",
+   "stelle": "Stelle",
+   "tankstelle": "Tankstelle",
+   "und": "und",
+   "vielleicht": "vielleicht",
+   "von": "von",
+   "vorsichtig": "vorsichtig",
+   "was": "was",
+   "weiterfahren": "weiterfahren",
+   "wenig": "wenig",
+   "wenigen": "wenig",
+   "werkstatt": "Werkstatt",
+   "winterreifen": "Winterreifen",
+   "während": "während",
+   "zur": "zu",
+   "öldruck": "Öldruck"
+  },
+  "l": {
+   "Aquaplaning": {
+    "ru": "الانزلاق المائي",
+    "pos": "اسم",
+    "decl": "das Aquaplaning · لا جمع له"
+   },
+   "Auto": {
+    "ru": "سيارة",
+    "pos": "اسم",
+    "decl": "das Auto · الجمع: die Autos"
+   },
+   "Bremsanlage": {
+    "ru": "نظام الفرامل",
+    "pos": "اسم",
+    "decl": "die Bremsanlage · الجمع: die Bremsanlagen"
+   },
+   "Bremsflüssigkeit": {
+    "ru": "سائل الفرامل",
+    "pos": "اسم",
+    "decl": "die Bremsflüssigkeit · لا جمع له"
+   },
+   "Euro": {
+    "ru": "يورو",
+    "pos": "اسم",
+    "decl": "der Euro · الجمع: die Euro"
+   },
+   "Experte": {
+    "ru": "خبير",
+    "pos": "اسم",
+    "decl": "der Experte · الجمع: die Experten"
+   },
+   "Fahrt": {
+    "ru": "رحلة، جولة بالسيارة",
+    "pos": "اسم",
+    "decl": "die Fahrt · الجمع: die Fahrten"
+   },
+   "Gefahr": {
+    "ru": "خطر",
+    "pos": "اسم",
+    "decl": "die Gefahr · الجمع: die Gefahren"
+   },
+   "Ihr": {
+    "ru": "ـكَ، ـكِ (صيغة الاحترام)",
+    "pos": "ضمير"
+   },
+   "Kontrollleuchte": {
+    "ru": "لمبة تحذير (في لوحة العدادات)",
+    "pos": "اسم",
+    "decl": "die Kontrollleuchte · الجمع: die Kontrollleuchten"
+   },
+   "Luft": {
+    "ru": "هواء",
+    "pos": "اسم",
+    "decl": "die Luft · لا جمع له"
+   },
+   "Millimeter": {
+    "ru": "مليمتر",
+    "pos": "اسم",
+    "decl": "der Millimeter · الجمع: die Millimeter"
+   },
+   "Minimum": {
+    "ru": "الحد الأدنى",
+    "pos": "اسم",
+    "decl": "das Minimum · الجمع: die Minima"
+   },
+   "Minute": {
+    "ru": "دقيقة",
+    "pos": "اسم",
+    "decl": "die Minute · الجمع: die Minuten"
+   },
+   "Motor": {
+    "ru": "محرك",
+    "pos": "اسم",
+    "decl": "der Motor · الجمع: die Motoren"
+   },
+   "Motorkontrollleuchte": {
+    "ru": "لمبة فحص المحرك",
+    "pos": "اسم",
+    "decl": "die Motorkontrollleuchte · الجمع: die Motorkontrollleuchten"
+   },
+   "Nässe": {
+    "ru": "البلل، الطريق المبتل",
+    "pos": "اسم",
+    "decl": "die Nässe · لا جمع له"
+   },
+   "Oktober": {
+    "ru": "أكتوبر",
+    "pos": "اسم",
+    "decl": "der Oktober · لا جمع له"
+   },
+   "Pannenhilfe": {
+    "ru": "خدمة المساعدة على الطريق",
+    "pos": "اسم",
+    "decl": "die Pannenhilfe · لا جمع له"
+   },
+   "Problem": {
+    "ru": "مشكلة",
+    "pos": "اسم",
+    "decl": "das Problem · الجمع: die Probleme"
+   },
+   "Profil": {
+    "ru": "نقش (الإطار)",
+    "pos": "اسم",
+    "decl": "das Profil · الجمع: die Profile"
+   },
+   "Punkt": {
+    "ru": "نقطة",
+    "pos": "اسم",
+    "decl": "der Punkt · الجمع: die Punkte"
+   },
+   "Reifen": {
+    "ru": "إطار",
+    "pos": "اسم",
+    "decl": "der Reifen · الجمع: die Reifen"
+   },
+   "Reifendruck": {
+    "ru": "ضغط الإطارات",
+    "pos": "اسم",
+    "decl": "der Reifendruck · لا جمع له"
+   },
+   "Reifenprofil": {
+    "ru": "نقش الإطار",
+    "pos": "اسم",
+    "note": "الحد الأدنى قانونًا 1,6 مم",
+    "decl": "das Reifenprofil · الجمع: die Reifenprofile"
+   },
+   "Sie": {
+    "ru": "حضرتك (صيغة الاحترام)",
+    "pos": "ضمير",
+    "note": "Ihnen — لكم (حالة الجر): vor Ihnen — أمامك"
+   },
+   "Sommerreifen": {
+    "ru": "إطار صيفي",
+    "pos": "اسم",
+    "decl": "der Sommerreifen · الجمع: die Sommerreifen"
+   },
+   "Stelle": {
+    "ru": "مكان، موضع",
+    "pos": "اسم",
+    "decl": "die Stelle · الجمع: die Stellen"
+   },
+   "Tankstelle": {
+    "ru": "محطة وقود",
+    "pos": "اسم",
+    "decl": "die Tankstelle · الجمع: die Tankstellen"
+   },
+   "Werkstatt": {
+    "ru": "ورشة تصليح",
+    "pos": "اسم",
+    "decl": "die Werkstatt · الجمع: die Werkstätten"
+   },
+   "Winterreifen": {
+    "ru": "إطار شتوي",
+    "pos": "اسم",
+    "note": "منذ أكتوبر 2024 فقط برمز الجبل مع ندفة الثلج",
+    "decl": "der Winterreifen · الجمع: die Winterreifen"
+   },
+   "aber": {
+    "ru": "لكن",
+    "pos": "أداة ربط"
+   },
+   "als": {
+    "ru": "من (في المقارنة)؛ كـ",
+    "pos": "أداة ربط"
+   },
+   "anhalten": {
+    "ru": "يتوقف",
+    "pos": "فعل",
+    "forms": "hielt an · hat angehalten"
+   },
+   "ausmachen": {
+    "ru": "يطفئ",
+    "pos": "فعل",
+    "note": "سابقة منفصلة: machen … aus",
+    "forms": "machte aus · hat ausgemacht"
+   },
+   "bald": {
+    "ru": "قريبًا",
+    "pos": "ظرف"
+   },
+   "bedeuten": {
+    "ru": "يعني",
+    "pos": "فعل",
+    "forms": "bedeutete · hat bedeutet"
+   },
+   "bei": {
+    "ru": "عند",
+    "pos": "حرف جر",
+    "note": "beim = bei dem: beim Fahren — أثناء القيادة؛ bei Rot — عند الأحمر"
+   },
+   "bremsen": {
+    "ru": "يكبح، يفرمل",
+    "pos": "فعل",
+    "forms": "bremste · hat gebremst"
+   },
+   "dann": {
+    "ru": "إذن؛ ثم",
+    "pos": "ظرف"
+   },
+   "der/die/das": {
+    "ru": "أداة التعريف",
+    "pos": "أداة تعريف",
+    "note": "der للمذكر، die للمؤنث والجمع، das للمحايد؛ den للمذكر في حالة النصب، dem للمذكر والمحايد في حالة الجر؛ وdas تعني أيضًا «هذا»"
+   },
+   "deutlich": {
+    "ru": "بوضوح",
+    "pos": "صفة"
+   },
+   "dieser": {
+    "ru": "هذا، هذه",
+    "pos": "ضمير"
+   },
+   "dort": {
+    "ru": "هناك",
+    "pos": "ظرف"
+   },
+   "drohen": {
+    "ru": "يهدد",
+    "pos": "فعل",
+    "forms": "drohte · hat gedroht"
+   },
+   "dürfen": {
+    "ru": "يحق له، يُسمح له",
+    "pos": "فعل",
+    "forms": "durfte · hat gedurft"
+   },
+   "ein/eine": {
+    "ru": "أداة النكرة؛ واحد",
+    "pos": "أداة تعريف",
+    "note": "an einer Kreuzung — عند تقاطعٍ ما"
+   },
+   "empfehlen": {
+    "ru": "يوصي",
+    "pos": "فعل",
+    "forms": "empfahl · hat empfohlen"
+   },
+   "es": {
+    "ru": "هو، هي (لغير العاقل)",
+    "pos": "ضمير",
+    "note": "هنا: السيارة (das Auto)"
+   },
+   "es gibt": {
+    "ru": "يوجد",
+    "pos": "تعبير"
+   },
+   "fahren": {
+    "ru": "يسير بالسيارة؛ يقود",
+    "pos": "فعل",
+    "forms": "fuhr · ist gefahren"
+   },
+   "fehlen": {
+    "ru": "ينقص",
+    "pos": "فعل",
+    "forms": "fehlte · hat gefehlt"
+   },
+   "für": {
+    "ru": "لـ، من أجل",
+    "pos": "حرف جر"
+   },
+   "gelb": {
+    "ru": "أصفر",
+    "pos": "صفة",
+    "note": "Gelb (بحرف كبير) — الإشارة الصفراء"
+   },
+   "haben": {
+    "ru": "يملك، لديه",
+    "pos": "فعل",
+    "note": "Vorfahrt haben — له أولوية المرور",
+    "forms": "hatte · hat gehabt"
+   },
+   "in": {
+    "ru": "في",
+    "pos": "حرف جر",
+    "note": "im = in dem: im Bereich — في المنطقة"
+   },
+   "kaputt": {
+    "ru": "معطّل",
+    "pos": "صفة"
+   },
+   "kosten": {
+    "ru": "يكلّف",
+    "pos": "فعل",
+    "forms": "kostete · hat gekostet"
+   },
+   "können": {
+    "ru": "يستطيع",
+    "pos": "فعل",
+    "forms": "konnte · hat gekonnt"
+   },
+   "langsam": {
+    "ru": "بطيء؛ ببطء",
+    "pos": "صفة"
+   },
+   "lassen": {
+    "ru": "يدع، يترك",
+    "pos": "فعل",
+    "note": "jemanden fahren lassen — يدع أحدًا يمرّ أولًا",
+    "forms": "ließ · hat gelassen"
+   },
+   "leuchten": {
+    "ru": "يضيء",
+    "pos": "فعل",
+    "forms": "leuchtete · hat geleuchtet"
+   },
+   "machen": {
+    "ru": "يفعل",
+    "pos": "فعل",
+    "note": "den Schulterblick machen — يلتفت فوق كتفه؛ Gut gemacht! — أحسنت!",
+    "forms": "machte · hat gemacht"
+   },
+   "mehr": {
+    "ru": "أكثر",
+    "pos": "ظرف",
+    "note": "mehr als — أكثر من"
+   },
+   "messen": {
+    "ru": "يقيس",
+    "pos": "فعل",
+    "forms": "maß · hat gemessen"
+   },
+   "mindestens": {
+    "ru": "على الأقل",
+    "pos": "ظرف"
+   },
+   "mit": {
+    "ru": "مع",
+    "pos": "حرف جر"
+   },
+   "nachfüllen": {
+    "ru": "يعيد الملء",
+    "pos": "فعل",
+    "note": "سابقة منفصلة: füllen … nach",
+    "forms": "füllte nach · hat nachgefüllt"
+   },
+   "nicht": {
+    "ru": "لا، ليس",
+    "pos": "أداة"
+   },
+   "normal": {
+    "ru": "طبيعي",
+    "pos": "صفة"
+   },
+   "nur": {
+    "ru": "فقط",
+    "pos": "ظرف"
+   },
+   "nächste": {
+    "ru": "القادم، الأقرب",
+    "pos": "صفة"
+   },
+   "ohne": {
+    "ru": "بدون",
+    "pos": "حرف جر"
+   },
+   "plötzlich": {
+    "ru": "فجأة",
+    "pos": "ظرف"
+   },
+   "prüfen": {
+    "ru": "يفحص",
+    "pos": "فعل",
+    "forms": "prüfte · hat geprüft"
+   },
+   "rot": {
+    "ru": "أحمر",
+    "pos": "صفة",
+    "note": "Rot (بحرف كبير) — الإشارة الحمراء: bei Rot — عند الأحمر"
+   },
+   "rufen": {
+    "ru": "ينادي، يستدعي",
+    "pos": "فعل",
+    "forms": "rief · hat gerufen"
+   },
+   "schlecht": {
+    "ru": "سيئ",
+    "pos": "صفة"
+   },
+   "sein": {
+    "ru": "يكون",
+    "pos": "فعل",
+    "forms": "war · ist gewesen"
+   },
+   "sicher": {
+    "ru": "آمن؛ متأكد",
+    "pos": "صفة"
+   },
+   "sofort": {
+    "ru": "فورًا",
+    "pos": "ظرف"
+   },
+   "und": {
+    "ru": "و",
+    "pos": "أداة ربط"
+   },
+   "vielleicht": {
+    "ru": "ربما",
+    "pos": "ظرف"
+   },
+   "von": {
+    "ru": "من",
+    "pos": "حرف جر",
+    "note": "vom = von dem؛ von rechts — من اليمين"
+   },
+   "vorsichtig": {
+    "ru": "حذِر",
+    "pos": "صفة"
+   },
+   "was": {
+    "ru": "ماذا",
+    "pos": "ضمير"
+   },
+   "weiterfahren": {
+    "ru": "يواصل القيادة",
+    "pos": "فعل",
+    "forms": "fuhr weiter · ist weitergefahren"
+   },
+   "wenig": {
+    "ru": "قليل",
+    "pos": "ضمير"
+   },
+   "während": {
+    "ru": "أثناء",
+    "pos": "حرف جر"
+   },
+   "zu": {
+    "ru": "إلى؛ لـ",
+    "pos": "حرف جر",
+    "note": "zum = zu dem، zur = zu der: Abstand zur Kreuzung — المسافة عن التقاطع"
+   },
+   "Öldruck": {
+    "ru": "ضغط الزيت",
+    "pos": "اسم",
+    "decl": "der Öldruck · لا جمع له"
+   }
+  }
+ }
+}

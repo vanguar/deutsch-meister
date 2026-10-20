@@ -95,7 +95,8 @@
    "titleTr": "Техніка й перевірка машини",
    "units": [
     "t-09",
-    "p-09"
+    "p-09",
+    "r-09"
    ]
   }
  ],
@@ -333,6 +334,15 @@
    "title": "Die Sicherheitskontrolle",
    "titleTr": "Перевірка безпеки",
    "count": 15
+  },
+  {
+   "id": "r-09",
+   "kind": "road",
+   "emoji": "🚨",
+   "level": "B1",
+   "title": "Kontrollleuchten und Reifen",
+   "titleTr": "Контрольні лампи і шини",
+   "count": 6
   }
  ]
 }

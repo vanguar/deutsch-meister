@@ -75,7 +75,7 @@ PLURAL = {'uk': ('мн.:', 'мн. немає'), 'ar': ('الجمع:', 'لا جم
 KINDS = ('theory', 'dialog', 'junction', 'road')
 PREFIX = {'theory': 't', 'dialog': 'p', 'junction': 'k', 'road': 'r'}   # t-01, p-01, k-01, r-03
 ROAD_TYPES = ('stop', 'gap', 'side', 'overtake', 'zipper', 'parkspot', 'parallel', 'rightturn', 'zebracross', 'bus',
-              'fog', 'highbeam', 'wild', 'promille', 'tired')
+              'fog', 'highbeam', 'wild', 'promille', 'tired', 'lamp', 'tread')
 NUMERIC_ROAD = ('stop', 'gap', 'side')        # ответ — метры
 HAZARDS = ('ball', 'deer')
 # Боковой интервал при обгоне пешеходов и велосипедистов (§ 5 Abs. 4 StVO, с 2020)
@@ -93,6 +93,8 @@ PROMILLE_LIMIT = 0.5
 PROMILLE_SYMPTOMS = 0.3
 # Усталость: перерыв не реже чем раз в два часа (рекомендация ADAC/DVR)
 REST_HOURS = 2
+# Протектор: не меньше 1,6 мм (§ 36 Abs. 2 StVZO)
+TREAD_MIN = 1.6
 CARS = ('blue', 'red', 'green', 'yellow')
 APPROACH = ('S', 'W', 'N', 'E')
 TURNS = ('straight', 'left', 'right')
@@ -349,6 +351,18 @@ def road_answer(sc):
         if not isinstance(h, (int, float)) or not 0 < h <= 12:
             return f'hours — часы за рулём (0–12), а не {h!r}'
         return {'answer': 'rest' if sc.get('tired') or h >= REST_HOURS else 'go'}
+    if t == 'lamp':
+        # красная контрольная лампа — сразу остановиться, жёлтая — скоро в мастерскую
+        if sc.get('color') not in ('red', 'yellow'):
+            return 'color — red или yellow'
+        if sc.get('lamp') not in ('oil', 'brake', 'battery', 'engine', 'tyre'):
+            return 'lamp — oil, brake, battery, engine или tyre'
+        return {'answer': 'stop' if sc['color'] == 'red' else 'later'}
+    if t == 'tread':
+        d = sc.get('depth')
+        if not isinstance(d, (int, float)) or not 0.5 <= d <= 6:
+            return f'depth — глубина протектора 0,5–6 мм, а не {d!r}'
+        return {'answer': 'ok' if d >= TREAD_MIN else 'no'}
     if t == 'wild':
         # животное на дороге: ближний свет, сигнал, тормоз — не уходить в сторону
         return {'answer': 'brake'}
@@ -591,6 +605,8 @@ def main():
                     continue
                 opts = sc.get('options') or []
                 expl_src = sc.get('explain') or []
+                if sc['type'] == 'tread' and not any('1,6' in e.get('de', '') for e in expl_src):
+                    err(f'{w}: в пояснении нет минимума 1,6 мм')
                 opt_out = {lang: opts for lang in LANGS}
                 if sc['type'] in NUMERIC_ROAD:
                     if len(opts) != 3 or len(set(opts)) != 3 or not all(isinstance(o, (int, float)) and o > 0 for o in opts):
@@ -635,7 +651,7 @@ def main():
                     if sc['type'] == 'stop':
                         scene['hazard'] = sc['hazard']
                         scene['emergency'] = bool(sc.get('emergency'))
-                    for k in ('where', 'line', 'oncoming', 'sign', 'near', 'dist', 'who', 'ped', 'state', 'sight', 'p', 'novice', 'symptoms', 'hours', 'tired'):
+                    for k in ('where', 'line', 'oncoming', 'sign', 'near', 'dist', 'who', 'ped', 'state', 'sight', 'p', 'novice', 'symptoms', 'hours', 'tired', 'color', 'lamp', 'depth'):
                         if k in sc:
                             scene[k] = sc[k]
                     out[lang].append(scene)
