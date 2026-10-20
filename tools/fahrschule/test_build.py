@@ -76,6 +76,12 @@ ok(build.road_answer({'type': 'stop', 'v': 100}) == {'reaction': 30, 'brake': 10
 ok(build.road_answer({'type': 'stop', 'v': 60, 'emergency': True}) == {'reaction': 18, 'brake': 18, 'answer': 36}, 'экстренно при 60: 18 + 18 = 36')
 ok(build.road_answer({'type': 'gap', 'v': 100}) == {'answer': 50}, 'дистанция при 100 — половина спидометра, 50 м')
 ok('не целое' in str(build.road_answer({'type': 'stop', 'v': 50, 'emergency': True})), 'дробный тормозной путь (12,5 м) — ошибка сцены')
+ok(build.road_answer({'type': 'fog', 'sight': 30}) == {'answer': 'on', 'limit': 50}, 'туман 30 м: противотуманный фонарь, не быстрее 50')
+ok(build.road_answer({'type': 'fog', 'sight': 50}) == {'answer': 'off'}, 'туман ровно 50 м — фонарь нельзя (только меньше 50)')
+ok(build.road_answer({'type': 'highbeam', 'who': 'oncoming'})['answer'] == 'dim', 'встречная машина — ближний свет')
+ok(build.road_answer({'type': 'highbeam', 'who': 'ahead'})['answer'] == 'dim', 'машина близко впереди — ближний свет')
+ok(build.road_answer({'type': 'highbeam', 'who': 'none'})['answer'] == 'high', 'никого — дальний можно')
+ok(build.road_answer({'type': 'wild'})['answer'] == 'brake', 'косуля — тормозить, не уходить в сторону')
 ok('кратное 10' in str(build.road_answer({'type': 'stop', 'v': 55})), 'скорость не кратна 10 — ошибка сцены')
 ok(build.road_answer({'type': 'side', 'where': 'innerorts'}) == {'answer': 1.5}, 'обгон велосипедиста в городе — 1,5 м')
 ok(build.road_answer({'type': 'side', 'where': 'außerorts'}) == {'answer': 2}, 'обгон велосипедиста за городом — 2 м')
@@ -165,6 +171,16 @@ ok(code == 1 and any('по правилу ответ 40' in e for e in errs), '�
 
 code, errs, written = run_with(lambda d: unit(d, 'r-03')['scenes'][0]['explain'][2].__setitem__('de', 'Anhalteweg: 15 plus 25. Sie brauchen also 45 Meter, bis das Auto steht.'))
 ok(code == 1 and any('нет числа 40' in e for e in errs), 'число в пояснении не совпало с формулой — ошибка')
+
+
+def fog_no_limit(d):
+    sc = next(x for x in unit(d, 'r-07')['scenes'] if x['type'] == 'fog' and x['sight'] < 50)
+    for e in sc['explain']:
+        e['de'] = e['de'].replace('50', 'fünfzig')
+
+
+code, errs, written = run_with(fog_no_limit)
+ok(code == 1 and any('предельного расстояния 50' in e for e in errs), 'туман: в пояснении нет 50 — ошибка')
 
 print(f'\nFAIL: {fails}' if fails else '\ntest_build: всё ок')
 sys.exit(1 if fails else 0)
