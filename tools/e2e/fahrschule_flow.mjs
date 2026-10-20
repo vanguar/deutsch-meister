@@ -445,9 +445,11 @@ for (const id of IDX.units.filter(u => u.kind === 'road').map(u => u.id)) {
         ok(p0 !== await c.ev(`document.querySelector('#fsScene .fs-posts').getAttribute('transform') || ''`), `${tag}: столбики едут мимо`);
       } else {
         // участники сцены двигаются; при обгоне и «молнии» мигает поворотник
-        const p0 = await c.ev(`document.querySelector('#fsScene [data-actor="me"]').getAttribute('transform')`);
+        // (с алкоголем наша машина может остаться у тротуара — едет такси, идёт человек)
+        const pos = `[...document.querySelectorAll('#fsScene [data-actor]')].map(a => a.getAttribute('transform')).join('|')`;
+        const p0 = await c.ev(pos);
         await c.wait(900);
-        ok(p0 !== await c.ev(`document.querySelector('#fsScene [data-actor="me"]').getAttribute('transform')`), `${tag}: машина едет`);
+        ok(p0 !== await c.ev(pos), `${tag}: участники двигаются`);
         if (sc.type === 'zipper' || (sc.type === 'overtake' && answer === 'yes') || sc.type === 'side') {
           ok(await waitFor(`!!document.querySelector('#fsScene .fs-actor.is-blink-l')`, 3000), `${tag}: левый поворотник`);
         }

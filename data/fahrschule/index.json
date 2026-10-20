@@ -84,7 +84,8 @@
    "titleTr": "Алкоголь, усталость и отвлечение",
    "units": [
     "t-08",
-    "p-08"
+    "p-08",
+    "r-08"
    ]
   }
  ],
@@ -295,6 +296,15 @@
    "title": "Nach der Party",
    "titleTr": "После вечеринки",
    "count": 15
+  },
+  {
+   "id": "r-08",
+   "kind": "road",
+   "emoji": "🚕",
+   "level": "B1",
+   "title": "Promille und Pausen",
+   "titleTr": "Промилле и перерывы",
+   "count": 6
   }
  ]
 }

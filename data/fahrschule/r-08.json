@@ -1,0 +1,792 @@
+{
+ "id": "r-08",
+ "kind": "road",
+ "emoji": "🚕",
+ "level": "B1",
+ "title": "Promille und Pausen",
+ "titleTr": "Промилле и перерывы",
+ "intro": "Можно ли садиться за руль после бокала, утром после вечеринки, в испытательный срок — и когда пора на стоянку отдохнуть.",
+ "scenes": [
+  {
+   "type": "promille",
+   "options": [
+    {
+     "key": "drive",
+     "de": "Ja, unter 0,5 Promille ist Fahren erlaubt.",
+     "tr": "Да, ниже 0,5 промилле ездить можно."
+    },
+    {
+     "key": "stay",
+     "de": "Nein, ich lasse das Auto stehen und nehme ein Taxi.",
+     "tr": "Нет, я оставляю машину и беру такси."
+    }
+   ],
+   "situation": {
+    "de": "Sie haben den Führerschein seit einem Jahr. Nach einem kleinen Bier zeigt der Test 0,3 Promille.",
+    "tr": "У вас права уже год. После маленького пива тест показывает 0,3 промилле."
+   },
+   "question": {
+    "de": "Dürfen Sie jetzt fahren?",
+    "tr": "Можно ли вам сейчас ехать?"
+   },
+   "explain": [
+    {
+     "de": "In der Probezeit und unter 21 Jahren gilt 0,0 Promille.",
+     "tr": "В испытательный срок и до 21 года действует 0,0 промилле."
+    },
+    {
+     "de": "Schon ein kleines Bier ist für Sie verboten: 250 Euro, ein Punkt und eine längere Probezeit.",
+     "tr": "Даже маленькое пиво для вас запрещено: 250 евро, балл и более длинный испытательный срок."
+    }
+   ],
+   "answer": "stay",
+   "p": 0.3,
+   "novice": true
+  },
+  {
+   "type": "promille",
+   "options": [
+    {
+     "key": "drive",
+     "de": "Ja, ich fahre ja schon lange und sicher.",
+     "tr": "Да, я ведь давно и уверенно вожу."
+    },
+    {
+     "key": "stay",
+     "de": "Nein, ich lasse das Auto stehen und nehme ein Taxi.",
+     "tr": "Нет, я оставляю машину и беру такси."
+    }
+   ],
+   "situation": {
+    "de": "Sie fahren seit zehn Jahren Auto. Nach zwei Gläsern Wein haben Sie 0,6 Promille.",
+    "tr": "Вы водите уже десять лет. После двух бокалов вина у вас 0,6 промилле."
+   },
+   "question": {
+    "de": "Dürfen Sie jetzt fahren?",
+    "tr": "Можно ли вам сейчас ехать?"
+   },
+   "explain": [
+    {
+     "de": "Ab 0,5 Promille ist Fahren für alle verboten.",
+     "tr": "С 0,5 промилле ездить запрещено всем."
+    },
+    {
+     "de": "Das kostet 500 Euro, zwei Punkte und einen Monat Fahrverbot.",
+     "tr": "Это стоит 500 евро, два балла и месяц лишения прав."
+    }
+   ],
+   "answer": "stay",
+   "p": 0.6
+  },
+  {
+   "type": "promille",
+   "options": [
+    {
+     "key": "drive",
+     "de": "Ja, jetzt darf ich fahren.",
+     "tr": "Да, теперь мне можно ехать."
+    },
+    {
+     "key": "stay",
+     "de": "Nein, ich lasse das Auto stehen und nehme ein Taxi.",
+     "tr": "Нет, я оставляю машину и беру такси."
+    }
+   ],
+   "situation": {
+    "de": "Um 23 Uhr hatten Sie 1,0 Promille. Jetzt ist es 9 Uhr am nächsten Morgen, und der Test zeigt 0,0 Promille.",
+    "tr": "В 23 часа у вас было 1,0 промилле. Сейчас 9 часов следующего утра, и тест показывает 0,0 промилле."
+   },
+   "question": {
+    "de": "Dürfen Sie jetzt fahren?",
+    "tr": "Можно ли вам сейчас ехать?"
+   },
+   "explain": [
+    {
+     "de": "Pro Stunde baut der Körper etwa 0,1 Promille ab.",
+     "tr": "За час организм выводит примерно 0,1 промилле.",
+     "o": {
+      "ab": "ab>abbauen",
+      "baut": "baut>abbauen"
+     }
+    },
+    {
+     "de": "Nach zehn Stunden ist kein Alkohol mehr im Blut. Mit 0,0 Promille dürfen auch Fahranfänger fahren.",
+     "tr": "Через десять часов алкоголя в крови больше нет. С 0,0 промилле могут ехать и новички."
+    }
+   ],
+   "answer": "drive",
+   "p": 0,
+   "novice": true
+  },
+  {
+   "type": "tired",
+   "options": [
+    {
+     "key": "go",
+     "de": "Ich fahre weiter und mache die Musik lauter.",
+     "tr": "Еду дальше и делаю музыку громче."
+    },
+    {
+     "key": "rest",
+     "de": "Ich fahre auf den nächsten Parkplatz und mache eine Pause.",
+     "tr": "Я заезжаю на ближайшую стоянку и делаю перерыв."
+    }
+   ],
+   "situation": {
+    "de": "Sie fahren seit drei Stunden ohne Pause auf der Autobahn.",
+    "tr": "Вы едете по автобану уже три часа без перерыва."
+   },
+   "question": {
+    "de": "Was machen Sie?",
+    "tr": "Что вы делаете?"
+   },
+   "explain": [
+    {
+     "de": "Machen Sie spätestens nach zwei Stunden eine Pause.",
+     "tr": "Делайте перерыв не позже чем через два часа."
+    },
+    {
+     "de": "Laute Musik hilft nur kurz gegen Müdigkeit.",
+     "tr": "Громкая музыка помогает от усталости лишь ненадолго."
+    }
+   ],
+   "answer": "rest",
+   "hours": 3
+  },
+  {
+   "type": "tired",
+   "options": [
+    {
+     "key": "go",
+     "de": "Ich fahre weiter und mache in einer Stunde Pause.",
+     "tr": "Еду дальше и сделаю перерыв через час."
+    },
+    {
+     "key": "rest",
+     "de": "Ich fahre auf den nächsten Parkplatz und mache eine Pause.",
+     "tr": "Я заезжаю на ближайшую стоянку и делаю перерыв."
+    }
+   ],
+   "situation": {
+    "de": "Sie fahren seit einer Stunde und fühlen sich fit und wach.",
+    "tr": "Вы едете час и чувствуете себя бодрым."
+   },
+   "question": {
+    "de": "Was machen Sie?",
+    "tr": "Что вы делаете?"
+   },
+   "explain": [
+    {
+     "de": "Nach einer Stunde und ohne Müdigkeit können Sie weiterfahren.",
+     "tr": "Через час и без усталости можно ехать дальше."
+    },
+    {
+     "de": "Planen Sie die Pause spätestens nach zwei Stunden.",
+     "tr": "Запланируйте перерыв не позже чем через два часа."
+    }
+   ],
+   "answer": "go",
+   "hours": 1
+  },
+  {
+   "type": "tired",
+   "options": [
+    {
+     "key": "go",
+     "de": "Ich fahre weiter, die zwei Stunden sind noch nicht vorbei.",
+     "tr": "Еду дальше, два часа ещё не прошли."
+    },
+    {
+     "key": "rest",
+     "de": "Ich fahre auf den nächsten Parkplatz und mache eine Pause.",
+     "tr": "Я заезжаю на ближайшую стоянку и делаю перерыв."
+    }
+   ],
+   "situation": {
+    "de": "Sie fahren erst seit einer Stunde, aber Sie gähnen ständig und Ihre Augen brennen.",
+    "tr": "Вы едете всего час, но постоянно зеваете, и глаза жжёт."
+   },
+   "question": {
+    "de": "Was machen Sie?",
+    "tr": "Что вы делаете?"
+   },
+   "explain": [
+    {
+     "de": "Gähnen und brennende Augen sind Warnsignale.",
+     "tr": "Зевота и жжение в глазах — сигналы опасности."
+    },
+    {
+     "de": "Machen Sie sofort eine Pause. Schon 15 Minuten Schlaf helfen.",
+     "tr": "Сразу сделайте перерыв. Уже 15 минут сна помогают."
+    }
+   ],
+   "answer": "rest",
+   "hours": 1,
+   "tired": true
+  }
+ ],
+ "signs": {},
+ "gloss": {
+  "w": {
+   "ab": "ab",
+   "ab>abbauen": "abbauen",
+   "aber": "aber",
+   "alkohol": "Alkohol",
+   "alle": "alle",
+   "am": "an",
+   "auch": "auch",
+   "auf": "auf",
+   "augen": "Auge",
+   "auto": "Auto",
+   "autobahn": "Autobahn",
+   "baut>abbauen": "abbauen",
+   "bier": "Bier",
+   "blut": "Blut",
+   "brennen": "brennen",
+   "brennende": "brennen",
+   "das": "der/die/das",
+   "den": "der/die/das",
+   "der": "der/die/das",
+   "die": "der/die/das",
+   "drei": "drei",
+   "dürfen": "dürfen",
+   "ein": "ein/eine",
+   "eine": "ein/eine",
+   "einem": "ein/eine",
+   "einen": "ein/eine",
+   "einer": "ein/eine",
+   "erst": "erst",
+   "es": "es",
+   "etwa": "etwa",
+   "euro": "Euro",
+   "fahranfänger": "Fahranfänger",
+   "fahren": "fahren",
+   "fahrverbot": "Fahrverbot",
+   "fit": "fit",
+   "fühlen": "fühlen",
+   "führerschein": "Führerschein",
+   "für": "für",
+   "gegen": "gegen",
+   "gilt": "gelten",
+   "gläsern": "Glas",
+   "gähnen": "gähnen",
+   "haben": "haben",
+   "hatten": "haben",
+   "helfen": "helfen",
+   "hilft": "helfen",
+   "ihre": "Ihr",
+   "im": "in",
+   "in": "in",
+   "ist": "sein",
+   "jahr": "Jahr",
+   "jahren": "Jahr",
+   "jetzt": "jetzt",
+   "kein": "kein",
+   "kleinen": "klein",
+   "kleines": "klein",
+   "kostet": "kosten",
+   "kurz": "kurz",
+   "können": "können",
+   "körper": "Körper",
+   "laute": "laut",
+   "längere": "lang",
+   "machen": "machen",
+   "mehr": "mehr",
+   "minuten": "Minute",
+   "mit": "mit",
+   "monat": "Monat",
+   "morgen": "Morgen",
+   "musik": "Musik",
+   "müdigkeit": "Müdigkeit",
+   "nach": "nach",
+   "nur": "nur",
+   "nächsten": "nächste",
+   "ohne": "ohne",
+   "pause": "Pause",
+   "pausen": "Pause",
+   "planen": "planen",
+   "pro": "pro",
+   "probezeit": "Probezeit",
+   "promille": "Promille",
+   "punkt": "Punkt",
+   "punkte": "Punkt",
+   "schlaf": "Schlaf",
+   "schon": "schon",
+   "seit": "seit",
+   "sich": "sich",
+   "sie": "Sie",
+   "sind": "sein",
+   "sofort": "sofort",
+   "spätestens": "spätestens",
+   "stunde": "Stunde",
+   "stunden": "Stunde",
+   "ständig": "ständig",
+   "test": "Test",
+   "uhr": "Uhr",
+   "um": "um",
+   "und": "und",
+   "unter": "unter",
+   "verboten": "verbieten",
+   "wach": "wach",
+   "warnsignale": "Warnsignal",
+   "was": "was",
+   "wein": "Wein",
+   "weiterfahren": "weiterfahren",
+   "zehn": "zehn",
+   "zeigt": "zeigen",
+   "zwei": "zwei"
+  },
+  "l": {
+   "Alkohol": {
+    "ru": "алкоголь",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": null
+   },
+   "Auge": {
+    "ru": "глаз",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Augen"
+   },
+   "Auto": {
+    "ru": "машина, автомобиль",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Autos"
+   },
+   "Autobahn": {
+    "ru": "автобан, автомагистраль",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Autobahnen"
+   },
+   "Bier": {
+    "ru": "пиво",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Biere"
+   },
+   "Blut": {
+    "ru": "кровь",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": null
+   },
+   "Euro": {
+    "ru": "евро",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Euro"
+   },
+   "Fahranfänger": {
+    "ru": "начинающий водитель",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Fahranfänger"
+   },
+   "Fahrverbot": {
+    "ru": "временное лишение права управления",
+    "pos": "сущ.",
+    "note": "обычно от одного до трёх месяцев; права сдают на хранение",
+    "art": "das",
+    "pl": "die Fahrverbote"
+   },
+   "Führerschein": {
+    "ru": "водительские права",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Führerscheine"
+   },
+   "Glas": {
+    "ru": "стакан, бокал",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Gläser"
+   },
+   "Ihr": {
+    "ru": "ваш (вежливо)",
+    "pos": "мест."
+   },
+   "Jahr": {
+    "ru": "год",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Jahre"
+   },
+   "Körper": {
+    "ru": "тело, организм",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Körper"
+   },
+   "Minute": {
+    "ru": "минута",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Minuten"
+   },
+   "Monat": {
+    "ru": "месяц",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Monate"
+   },
+   "Morgen": {
+    "ru": "утро",
+    "pos": "сущ.",
+    "note": "am Morgen — утром",
+    "art": "der",
+    "pl": "die Morgen"
+   },
+   "Musik": {
+    "ru": "музыка",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": null
+   },
+   "Müdigkeit": {
+    "ru": "усталость, сонливость",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": null
+   },
+   "Pause": {
+    "ru": "перерыв, пауза",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Pausen"
+   },
+   "Probezeit": {
+    "ru": "испытательный срок (для новых водителей)",
+    "pos": "сущ.",
+    "note": "два года после получения прав; ошибки обходятся дороже",
+    "art": "die",
+    "pl": "die Probezeiten"
+   },
+   "Promille": {
+    "ru": "промилле (‰ алкоголя в крови)",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Promille"
+   },
+   "Punkt": {
+    "ru": "балл; точка",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Punkte"
+   },
+   "Schlaf": {
+    "ru": "сон",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": null
+   },
+   "Sie": {
+    "ru": "вы (вежливо)",
+    "pos": "мест.",
+    "note": "Ihnen — вам (дательный): vor Ihnen — перед вами"
+   },
+   "Stunde": {
+    "ru": "час; урок",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Stunden"
+   },
+   "Test": {
+    "ru": "тест (здесь: алкотестер)",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Tests"
+   },
+   "Uhr": {
+    "ru": "часы; (при времени) час",
+    "pos": "сущ.",
+    "note": "zehn Uhr zwölf — десять часов двенадцать минут (10:12)",
+    "art": "die",
+    "pl": "die Uhren"
+   },
+   "Warnsignal": {
+    "ru": "сигнал опасности",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Warnsignale"
+   },
+   "Wein": {
+    "ru": "вино",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Weine"
+   },
+   "ab": {
+    "ru": "с, начиная с",
+    "pos": "предл.",
+    "note": "ab hier — отсюда; ab dem Schild — от знака"
+   },
+   "abbauen": {
+    "ru": "расщеплять, выводить (из организма)",
+    "pos": "гл.",
+    "note": "отделяемая приставка: baut … ab",
+    "forms": "baute ab · hat abgebaut"
+   },
+   "aber": {
+    "ru": "но",
+    "pos": "союз"
+   },
+   "alle": {
+    "ru": "все; всё",
+    "pos": "мест."
+   },
+   "an": {
+    "ru": "у, на, при",
+    "pos": "предл.",
+    "note": "am = an dem; an der Kreuzung — на перекрёстке"
+   },
+   "auch": {
+    "ru": "тоже; даже (auch wenn)",
+    "pos": "нареч."
+   },
+   "auf": {
+    "ru": "на, по",
+    "pos": "предл.",
+    "note": "auf der Straße — на дороге; achten auf — следить за"
+   },
+   "brennen": {
+    "ru": "гореть; жечь",
+    "pos": "гл.",
+    "forms": "brannte · hat gebrannt"
+   },
+   "der/die/das": {
+    "ru": "определённый артикль",
+    "pos": "артикль",
+    "note": "der — м. р., die — ж. р. и мн. ч., das — ср. р.; den — м. р. в винительном, dem — м. и ср. р. в дательном; das ещё значит «это»"
+   },
+   "drei": {
+    "ru": "три",
+    "pos": "числ."
+   },
+   "dürfen": {
+    "ru": "мочь, иметь право",
+    "pos": "гл.",
+    "forms": "durfte · hat gedurft"
+   },
+   "ein/eine": {
+    "ru": "неопределённый артикль; один",
+    "pos": "артикль",
+    "note": "an einer Kreuzung — на (каком-то) перекрёстке"
+   },
+   "erst": {
+    "ru": "только (не раньше чем)",
+    "pos": "нареч."
+   },
+   "es": {
+    "ru": "оно; это",
+    "pos": "мест.",
+    "note": "здесь — о машине: das Auto"
+   },
+   "etwa": {
+    "ru": "примерно, около",
+    "pos": "нареч."
+   },
+   "fahren": {
+    "ru": "ехать; водить машину",
+    "pos": "гл.",
+    "forms": "fuhr · ist gefahren"
+   },
+   "fit": {
+    "ru": "в форме, бодрый",
+    "pos": "прил."
+   },
+   "fühlen": {
+    "ru": "чувствовать",
+    "pos": "гл.",
+    "note": "sich fühlen — чувствовать себя",
+    "forms": "fühlte · hat gefühlt"
+   },
+   "für": {
+    "ru": "для",
+    "pos": "предл."
+   },
+   "gegen": {
+    "ru": "против; от (средство)",
+    "pos": "предл."
+   },
+   "gelten": {
+    "ru": "действовать (о правиле)",
+    "pos": "гл.",
+    "forms": "galt · hat gegolten"
+   },
+   "gähnen": {
+    "ru": "зевать",
+    "pos": "гл.",
+    "forms": "gähnte · hat gegähnt"
+   },
+   "haben": {
+    "ru": "иметь",
+    "pos": "гл.",
+    "note": "Vorfahrt haben — иметь преимущество",
+    "forms": "hatte · hat gehabt"
+   },
+   "helfen": {
+    "ru": "помогать",
+    "pos": "гл.",
+    "forms": "half · hat geholfen"
+   },
+   "in": {
+    "ru": "в",
+    "pos": "предл.",
+    "note": "im = in dem: im Bereich — в зоне"
+   },
+   "jetzt": {
+    "ru": "сейчас, теперь",
+    "pos": "нареч."
+   },
+   "kein": {
+    "ru": "никакой; не (отрицание при существительном)",
+    "pos": "мест."
+   },
+   "klein": {
+    "ru": "маленький",
+    "pos": "прил."
+   },
+   "kosten": {
+    "ru": "стоить",
+    "pos": "гл.",
+    "forms": "kostete · hat gekostet"
+   },
+   "kurz": {
+    "ru": "короткий; ненадолго",
+    "pos": "прил."
+   },
+   "können": {
+    "ru": "мочь",
+    "pos": "гл.",
+    "forms": "konnte · hat gekonnt"
+   },
+   "lang": {
+    "ru": "длинный",
+    "pos": "прил.",
+    "note": "Wie lang …? — Какой длины …?",
+    "forms": "lang · länger · am längsten"
+   },
+   "laut": {
+    "ru": "громкий",
+    "pos": "прил."
+   },
+   "machen": {
+    "ru": "делать",
+    "pos": "гл.",
+    "note": "den Schulterblick machen — оглянуться через плечо; Gut gemacht! — Молодец!",
+    "forms": "machte · hat gemacht"
+   },
+   "mehr": {
+    "ru": "больше",
+    "pos": "нареч.",
+    "note": "mehr als — больше чем"
+   },
+   "mit": {
+    "ru": "с",
+    "pos": "предл."
+   },
+   "nach": {
+    "ru": "после; в, на (направление)",
+    "pos": "предл."
+   },
+   "nur": {
+    "ru": "только",
+    "pos": "нареч."
+   },
+   "nächste": {
+    "ru": "ближайший, следующий",
+    "pos": "прил."
+   },
+   "ohne": {
+    "ru": "без",
+    "pos": "предл."
+   },
+   "planen": {
+    "ru": "планировать",
+    "pos": "гл.",
+    "forms": "plante · hat geplant"
+   },
+   "pro": {
+    "ru": "в, за (на единицу)",
+    "pos": "предл."
+   },
+   "schon": {
+    "ru": "уже",
+    "pos": "нареч."
+   },
+   "sein": {
+    "ru": "быть",
+    "pos": "гл.",
+    "forms": "war · ist gewesen"
+   },
+   "seit": {
+    "ru": "с (какого времени); уже (столько-то)",
+    "pos": "предл.",
+    "note": "seit einer Stunde — уже час"
+   },
+   "sich": {
+    "ru": "себя, -ся",
+    "pos": "мест."
+   },
+   "sofort": {
+    "ru": "сразу, немедленно",
+    "pos": "нареч."
+   },
+   "spätestens": {
+    "ru": "не позднее",
+    "pos": "нареч."
+   },
+   "ständig": {
+    "ru": "постоянно",
+    "pos": "нареч."
+   },
+   "um": {
+    "ru": "в (о времени); вокруг",
+    "pos": "предл.",
+    "note": "um 23 Uhr — в 23 часа"
+   },
+   "und": {
+    "ru": "и",
+    "pos": "союз"
+   },
+   "unter": {
+    "ru": "под; меньше",
+    "pos": "предл."
+   },
+   "verbieten": {
+    "ru": "запрещать",
+    "pos": "гл.",
+    "forms": "verbot · hat verboten"
+   },
+   "wach": {
+    "ru": "бодрствующий, бодрый",
+    "pos": "прил."
+   },
+   "was": {
+    "ru": "что",
+    "pos": "мест."
+   },
+   "weiterfahren": {
+    "ru": "ехать дальше",
+    "pos": "гл.",
+    "forms": "fuhr weiter · ist weitergefahren"
+   },
+   "zehn": {
+    "ru": "десять",
+    "pos": "числ."
+   },
+   "zeigen": {
+    "ru": "показывать",
+    "pos": "гл.",
+    "forms": "zeigte · hat gezeigt"
+   },
+   "zwei": {
+    "ru": "два",
+    "pos": "числ."
+   }
+  }
+ }
+}

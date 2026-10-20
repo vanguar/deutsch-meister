@@ -1176,6 +1176,33 @@ const Fahrschule = (() => {
         dur: 4200, snap: 1, line: 'dashed', night: true
       };
     },
+    // Сесть за руль после алкоголя? Нельзя — человек уезжает на такси,
+    // наша машина остаётся у тротуара; можно — садится и уезжает
+    promille(sc) {
+      const stay = sc.answer === 'stay';
+      const actors = stay ? [
+        { id: 'ped', kind: 'ped', keys: [{ t: 0, x: 96, y: 100 }, { t: 0.42, x: 136, y: 100 }, { t: 0.5, x: 136, y: 86 }, { t: 0.54, x: 136, y: 86, g: true }] },
+        { id: 'me', kind: 'car', fill: CAR.blue.fill, keys: [{ t: 0, x: 236, y: 84 }] },
+        { id: 'taxi', kind: 'car', fill: CAR.yellow.fill, taxi: true, keys: [{ t: 0, x: -30, y: LANE_DOWN }, { t: 0.36, x: 150, y: 84 },
+          { t: 0.56, x: 150, y: 84, b: 'l' }, { t: 0.7, x: 196, y: LANE_DOWN - 8 }, { t: 1, x: 360, y: LANE_DOWN - 8 }] }
+      ] : [
+        { id: 'ped', kind: 'ped', keys: [{ t: 0, x: 120, y: 100 }, { t: 0.32, x: 196, y: 100 }, { t: 0.4, x: 196, y: 86 }, { t: 0.44, x: 196, y: 86, g: true }] },
+        { id: 'me', kind: 'car', fill: CAR.blue.fill, keys: [{ t: 0, x: 220, y: 84 }, { t: 0.46, x: 220, y: 84, b: 'l' },
+          { t: 0.66, x: 262, y: LANE_DOWN - 8 }, { t: 1, x: 360, y: LANE_DOWN - 8 }] }
+      ];
+      return { actors, dur: 4200, snap: 1, line: 'dashed', curb: true, badge: `${sc.p.toFixed(1).replace('.', ',')} ‰${sc.novice ? ' · Probezeit' : ''}` };
+    },
+    // Устали или едете больше двух часов — съезд на стоянку и сон 15–20 минут
+    tired(sc) {
+      const rest = sc.answer === 'rest';
+      return {
+        actors: [{ id: 'me', kind: 'car', fill: CAR.blue.fill, keys: rest
+          ? [{ t: 0, x: 30, y: LANE_DOWN }, { t: 0.36, x: 150, y: LANE_DOWN, b: 'r' }, { t: 0.58, x: 206, y: 104, r: 28, b: 'r' },
+             { t: 0.76, x: 246, y: 112 }, { t: 1, x: 252, y: 112 }]
+          : [{ t: 0, x: 30, y: LANE_DOWN }, { t: 1, x: 350, y: LANE_DOWN }] }],
+        dur: 3800, snap: 1, line: 'dashed', restArea: true, badge: `${String(sc.hours).replace('.', ',')} h`, zzz: rest
+      };
+    },
     zipper() {
       return {
         actors: [
@@ -1198,7 +1225,7 @@ const Fahrschule = (() => {
       if (t <= b.t) {
         const k = (t - a.t) / ((b.t - a.t) || 1);
         return { x: a.x + (b.x - a.x) * k, y: a.y + (b.y - a.y) * k, r: (a.r || 0) + ((b.r || 0) - (a.r || 0)) * k,
-          b: a.b, l: a.l, f: a.f, br: a.br, h: a.h };
+          b: a.b, l: a.l, f: a.f, br: a.br, h: a.h, g: a.g };
       }
     }
     return keys[keys.length - 1];
@@ -1216,7 +1243,7 @@ const Fahrschule = (() => {
   // Свет и звук машины в кадре: l — фары ('low' ближний / 'high' дальний),
   // f — задний противотуманный фонарь, br — тормоз, h — звуковой сигнал
   const STATES = { 'is-low': k => k.l === 'low', 'is-high': k => k.l === 'high', 'is-fog': k => !!k.f,
-    'is-braking': k => !!k.br, 'is-horn': k => !!k.h };
+    'is-braking': k => !!k.br, 'is-horn': k => !!k.h, 'is-gone': k => !!k.g };
 
   function stateCls(k) {
     return Object.keys(STATES).filter(c => STATES[c](k)).map(c => ' ' + c).join('');
@@ -1259,6 +1286,7 @@ const Fahrschule = (() => {
       <rect class="fs-rearfog" x="-30" y="-1.5" width="2.5" height="3" rx="1"/>` : '';
     return `<g class="${cls}" data-actor="${a.id}" transform="${tr}">${lights}
       <rect x="-28" y="-9" width="28" height="18" rx="5" fill="${a.fill}" class="fs-car-shell"/>${rear}
+      ${a.taxi ? '<rect class="fs-taxi" x="-19" y="-3.5" width="7" height="7" rx="1.5"/>' : ''}
       <rect class="fs-glass" x="-10" y="-7" width="6" height="14" rx="2"/>
       <rect class="fs-glass" x="-25" y="-6" width="4" height="12" rx="1.5"/>
       <circle class="fs-blink fs-blink-l" cx="-2" cy="-8.5" r="2.4"/><circle class="fs-blink fs-blink-l" cx="-26" cy="-8.5" r="2.4"/>
@@ -1284,6 +1312,13 @@ const Fahrschule = (() => {
       + (plan.stopSign && unit.signs.z224 ? `<image href="${esc(unit.signs.z224.src)}" x="${plan.stopSign}" y="104" width="16" height="16"/>` : '');
     const park = plan.park ? parkHtml(sc, plan.park, final) : '';
     const night = plan.night ? `<rect class="fs-night" x="0" y="0" width="${ROAD_W}" height="130"/>` : '';
+    // стоянка у дороги (Parkplatz) — ниже проезжей части
+    const rest = plan.restArea ? `<path class="fs-road" d="M140 92 L180 98 H310 V128 H180 Z"/>
+      ${[200, 230, 260, 290].map(x => `<path class="fs-mark is-solid" d="M${x} 100 V126"/>`).join('')}` : '';
+    // табличка над сценой: промилле, часы за рулём
+    const badge = plan.badge ? `<g class="fs-badge-s"><rect x="8" y="8" width="${(plan.badge.length * 6.6 + 16).toFixed(0)}" height="20" rx="10"/>
+      <text x="16" y="22">${esc(plan.badge)}</text></g>` : '';
+    const zzz = plan.zzz ? `<text class="fs-lab${final ? ' is-on' : ''} fs-zzz" x="262" y="104">😴</text>` : '';
     const gap = plan.gapLabel ? `<g class="fs-lab${final ? ' is-on' : ''}">
         <path class="fs-bracket" d="M182 60 H192 M187 60 V75 M182 75 H192"/><path class="fs-leader" d="M192 68 H232 V104"/>
         <text class="fs-lab-text" x="232" y="117">${String(sc.answer).replace('.', ',')} m</text></g>` : '';
@@ -1291,9 +1326,9 @@ const Fahrschule = (() => {
       <rect class="fs-grass" x="0" y="0" width="${ROAD_W}" height="130"/>
       <rect class="fs-road" x="0" y="40" width="${ROAD_W}" height="52"/>
       <path class="fs-mark${solid ? ' is-solid' : ''}" d="M0 66 H${plan.laneEnds ? 222 : ROAD_W}"/>
-      ${curb}${ends}${sign}${park}${night}${plan.fog ? fogPosts(plan.fog) : ''}
+      ${curb}${rest}${ends}${sign}${park}${night}${plan.fog ? fogPosts(plan.fog) : ''}
       ${plan.actors.map(a => actorHtml(a, keyAt(a.keys, t))).join('')}
-      ${plan.fog ? fogHtml(sc, plan.fog, final) : ''}${gap}
+      ${plan.fog ? fogHtml(sc, plan.fog, final) : ''}${gap}${zzz}${badge}
     </svg>`;
   }
 

@@ -75,7 +75,7 @@ PLURAL = {'uk': ('мн.:', 'мн. немає'), 'ar': ('الجمع:', 'لا جم
 KINDS = ('theory', 'dialog', 'junction', 'road')
 PREFIX = {'theory': 't', 'dialog': 'p', 'junction': 'k', 'road': 'r'}   # t-01, p-01, k-01, r-03
 ROAD_TYPES = ('stop', 'gap', 'side', 'overtake', 'zipper', 'parkspot', 'parallel', 'rightturn', 'zebracross', 'bus',
-              'fog', 'highbeam', 'wild')
+              'fog', 'highbeam', 'wild', 'promille', 'tired')
 NUMERIC_ROAD = ('stop', 'gap', 'side')        # ответ — метры
 HAZARDS = ('ball', 'deer')
 # Боковой интервал при обгоне пешеходов и велосипедистов (§ 5 Abs. 4 StVO, с 2020)
@@ -87,6 +87,12 @@ PARK_LIMIT = {'crossing': 5, 'zebra': 5, 'bus': 15}
 # Туман: при видимости меньше 50 м — не быстрее 50 км/ч (§ 3 Abs. 1 StVO),
 # задний противотуманный фонарь — только тогда (§ 17 Abs. 3 StVO)
 FOG_SIGHT = 50
+# Алкоголь (§ 24a StVG, § 316 StGB): с 0,5 ‰ нельзя; с 0,3 ‰ и признаками
+# опьянения (Fahrfehler) — тоже; новичкам и до 21 года — 0,0 ‰ (§ 24c StVG)
+PROMILLE_LIMIT = 0.5
+PROMILLE_SYMPTOMS = 0.3
+# Усталость: перерыв не реже чем раз в два часа (рекомендация ADAC/DVR)
+REST_HOURS = 2
 CARS = ('blue', 'red', 'green', 'yellow')
 APPROACH = ('S', 'W', 'N', 'E')
 TURNS = ('straight', 'left', 'right')
@@ -332,6 +338,17 @@ def road_answer(sc):
         if sc.get('who') not in ('oncoming', 'ahead', 'none'):
             return 'who — oncoming, ahead или none'
         return {'answer': 'high' if sc['who'] == 'none' else 'dim'}
+    if t == 'promille':
+        p = sc.get('p')
+        if not isinstance(p, (int, float)) or not 0 <= p <= 3:
+            return f'p — промилле 0–3, а не {p!r}'
+        stay = (sc.get('novice') and p > 0) or p >= PROMILLE_LIMIT or (sc.get('symptoms') and p >= PROMILLE_SYMPTOMS)
+        return {'answer': 'stay' if stay else 'drive'}
+    if t == 'tired':
+        h = sc.get('hours')
+        if not isinstance(h, (int, float)) or not 0 < h <= 12:
+            return f'hours — часы за рулём (0–12), а не {h!r}'
+        return {'answer': 'rest' if sc.get('tired') or h >= REST_HOURS else 'go'}
     if t == 'wild':
         # животное на дороге: ближний свет, сигнал, тормоз — не уходить в сторону
         return {'answer': 'brake'}
@@ -618,7 +635,7 @@ def main():
                     if sc['type'] == 'stop':
                         scene['hazard'] = sc['hazard']
                         scene['emergency'] = bool(sc.get('emergency'))
-                    for k in ('where', 'line', 'oncoming', 'sign', 'near', 'dist', 'who', 'ped', 'state', 'sight'):
+                    for k in ('where', 'line', 'oncoming', 'sign', 'near', 'dist', 'who', 'ped', 'state', 'sight', 'p', 'novice', 'symptoms', 'hours', 'tired'):
                         if k in sc:
                             scene[k] = sc[k]
                     out[lang].append(scene)

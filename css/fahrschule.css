@@ -306,3 +306,10 @@ html[dir="rtl"] .fs-tr { text-align: right; }
 .fs-lab-fog { fill: #1d2733; }
 .fs-bracket-fog { stroke: #1d2733; }
 @media (prefers-reduced-motion: reduce) { .fs-beam { transition: none; } }
+
+/* Алкоголь и усталость (тема 8) */
+.fs-actor.is-gone { opacity: 0; }
+.fs-taxi { fill: #1a1a1a; }
+.fs-badge-s rect { fill: var(--surface); stroke: var(--border); stroke-width: 1; }
+.fs-badge-s text { font: 800 12px 'DM Sans', system-ui, sans-serif; fill: var(--text-strong); }
+.fs-zzz { font-size: 16px; }
