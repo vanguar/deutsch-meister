@@ -62,6 +62,7 @@
    "titleTr": "Пешеходы, велосипедисты и автобусы",
    "units": [
     "t-06",
+    "p-06",
     "r-06"
    ]
   }
@@ -210,6 +211,15 @@
    "title": "Fußgänger, Radfahrer und Busse",
    "titleTr": "Пешеходы, велосипедисты и автобусы",
    "count": 20
+  },
+  {
+   "id": "p-06",
+   "kind": "dialog",
+   "emoji": "🏫",
+   "level": "A2",
+   "title": "Schule, Radweg und Bus",
+   "titleTr": "Школа, велодорожка и автобус",
+   "count": 15
   },
   {
    "id": "r-06",

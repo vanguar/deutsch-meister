@@ -1,0 +1,591 @@
+{
+ "id": "p-06",
+ "kind": "dialog",
+ "emoji": "🏫",
+ "level": "A2",
+ "title": "Schule, Radweg und Bus",
+ "titleTr": "مدرسة ومسار دراجات وحافلة",
+ "intro": "يمرّ تاراس بجانب مدرسة: أطفال قرب الطريق، وحافلة مدرسية بأضواء التحذير، وراكب دراجة عند الانعطاف يمينًا، وممر مشاة، وشارع للدراجات.",
+ "speakers": {
+  "A": {
+   "name": "Fahrlehrerin",
+   "g": "f"
+  },
+  "B": {
+   "name": "Taras",
+   "g": "m"
+  }
+ },
+ "lines": [
+  {
+   "de": "Wir fahren jetzt durch ein Wohngebiet mit einer Schule. Worauf achten Sie?",
+   "tr": "نسير الآن عبر حيّ سكني فيه مدرسة. إلامَ تنتبه؟",
+   "s": "A"
+  },
+  {
+   "de": "Auf Kinder. Sie können plötzlich auf die Straße laufen.",
+   "tr": "إلى الأطفال. قد يركضون فجأة إلى الشارع.",
+   "s": "B"
+  },
+  {
+   "de": "Richtig. Deshalb fahren Sie langsam und sind bremsbereit.",
+   "tr": "صحيح. لذلك تسير ببطء وتكون مستعدًا للفرملة.",
+   "s": "A"
+  },
+  {
+   "de": "Da vorne steht ein Schulbus mit Warnblinklicht.",
+   "tr": "هناك في الأمام تقف حافلة مدرسية وأضواء التحذير فيها مضاءة.",
+   "s": "B"
+  },
+  {
+   "de": "Was gilt jetzt, auch für uns im Gegenverkehr?",
+   "tr": "ما الذي يسري الآن، علينا أيضًا في الاتجاه المعاكس؟",
+   "s": "A"
+  },
+  {
+   "de": "Nur Schrittgeschwindigkeit, und wenn nötig, halte ich an.",
+   "tr": "سرعة المشي فقط، وإذا لزم الأمر أتوقف.",
+   "o": {
+    "an": "an>anhalten",
+    "halte": "halte>anhalten"
+   },
+   "s": "B"
+  },
+  {
+   "de": "Gut. Gleich biegen wir rechts ab. Was sehen Sie im Spiegel?",
+   "tr": "جيد. بعد قليل ننعطف يمينًا. ماذا ترى في المرآة؟",
+   "o": {
+    "ab": "ab>abbiegen",
+    "biegen": "biegen>abbiegen"
+   },
+   "s": "A"
+  },
+  {
+   "de": "Einen Radfahrer auf dem Radweg. Er fährt geradeaus.",
+   "tr": "راكب دراجة على مسار الدراجات. إنه يسير مباشرة.",
+   "s": "B"
+  },
+  {
+   "de": "Und was machen Sie?",
+   "tr": "وماذا تفعل؟",
+   "s": "A"
+  },
+  {
+   "de": "Ich warte und lasse ihn zuerst fahren. Dann noch ein Schulterblick.",
+   "tr": "أنتظر وأدعه يمرّ أولًا. ثم نظرة فوق الكتف أيضًا.",
+   "s": "B"
+  },
+  {
+   "de": "Sehr gut. Achtung, am Zebrastreifen wartet eine ältere Frau.",
+   "tr": "جيد جدًا. انتبه، عند ممر المشاة تنتظر امرأة مسنّة.",
+   "s": "A"
+  },
+  {
+   "de": "Ich halte an, damit sie die Straße überqueren kann.",
+   "tr": "أتوقف لكي تستطيع عبور الشارع.",
+   "o": {
+    "an": "an>anhalten",
+    "halte": "halte>anhalten"
+   },
+   "s": "B"
+  },
+  {
+   "de": "Prima. Jetzt fahren wir in eine Fahrradstraße. Was ist hier anders?",
+   "tr": "ممتاز. الآن ندخل شارعًا للدراجات. ما المختلف هنا؟",
+   "s": "A"
+  },
+  {
+   "de": "Hier haben Radfahrer Vorrang, und es gilt höchstens Tempo 30.",
+   "tr": "هنا الأولوية لراكبي الدراجات، والسرعة 30 كم/س كحدّ أقصى.",
+   "s": "B"
+  },
+  {
+   "de": "Genau. Und Radfahrer dürfen hier nebeneinander fahren.",
+   "tr": "تمامًا. ويجوز لراكبي الدراجات هنا السير جنبًا إلى جنب.",
+   "s": "A"
+  }
+ ],
+ "signs": {},
+ "gloss": {
+  "w": {
+   "ab>abbiegen": "abbiegen",
+   "achten": "achten",
+   "achtung": "Achtung",
+   "am": "an",
+   "an>anhalten": "anhalten",
+   "anders": "anders",
+   "auch": "auch",
+   "auf": "auf",
+   "biegen>abbiegen": "abbiegen",
+   "bremsbereit": "bremsbereit",
+   "bus": "Bus",
+   "da": "da",
+   "damit": "damit",
+   "dann": "dann",
+   "dem": "der/die/das",
+   "deshalb": "deshalb",
+   "die": "der/die/das",
+   "durch": "durch",
+   "dürfen": "dürfen",
+   "ein": "ein/eine",
+   "eine": "ein/eine",
+   "einen": "ein/eine",
+   "einer": "ein/eine",
+   "er": "er",
+   "es": "es",
+   "fahren": "fahren",
+   "fahrradstraße": "Fahrradstraße",
+   "frau": "Frau",
+   "fährt": "fahren",
+   "für": "für",
+   "gegenverkehr": "Gegenverkehr",
+   "genau": "genau",
+   "geradeaus": "geradeaus",
+   "gilt": "gelten",
+   "gleich": "gleich",
+   "gut": "gut",
+   "haben": "haben",
+   "halte>anhalten": "anhalten",
+   "hier": "hier",
+   "höchstens": "höchstens",
+   "ich": "ich",
+   "ihn": "er",
+   "im": "in",
+   "in": "in",
+   "ist": "sein",
+   "jetzt": "jetzt",
+   "kann": "können",
+   "kinder": "Kind",
+   "können": "können",
+   "langsam": "langsam",
+   "lasse": "lassen",
+   "laufen": "laufen",
+   "machen": "machen",
+   "mit": "mit",
+   "nebeneinander": "nebeneinander",
+   "noch": "noch",
+   "nur": "nur",
+   "nötig": "nötig",
+   "plötzlich": "plötzlich",
+   "prima": "prima",
+   "radfahrer": "Radfahrer",
+   "radweg": "Radweg",
+   "rechts": "rechts",
+   "richtig": "richtig",
+   "schrittgeschwindigkeit": "Schrittgeschwindigkeit",
+   "schulbus": "Schulbus",
+   "schule": "Schule",
+   "schulterblick": "Schulterblick",
+   "sehen": "sehen",
+   "sehr": "sehr",
+   "sie": "Sie",
+   "sind": "sein",
+   "spiegel": "Spiegel",
+   "steht": "stehen",
+   "straße": "Straße",
+   "tempo": "Tempo",
+   "und": "und",
+   "uns": "wir",
+   "vorne": "vorne",
+   "vorrang": "Vorrang",
+   "warnblinklicht": "Warnblinklicht",
+   "warte": "warten",
+   "wartet": "warten",
+   "was": "was",
+   "wenn": "wenn",
+   "wir": "wir",
+   "wohngebiet": "Wohngebiet",
+   "worauf": "worauf",
+   "zebrastreifen": "Zebrastreifen",
+   "zuerst": "zuerst",
+   "ältere": "alt",
+   "überqueren": "überqueren"
+  },
+  "l": {
+   "Achtung": {
+    "ru": "انتبه!",
+    "pos": "اسم",
+    "decl": "die Achtung · لا جمع له"
+   },
+   "Bus": {
+    "ru": "حافلة",
+    "pos": "اسم",
+    "decl": "der Bus · الجمع: die Busse"
+   },
+   "Fahrradstraße": {
+    "ru": "شارع الدراجات",
+    "pos": "اسم",
+    "note": "اللافتة 244.1: 30 كم/س كحد أقصى، والسيارات فقط مع لافتة إضافية",
+    "decl": "die Fahrradstraße · الجمع: die Fahrradstraßen"
+   },
+   "Frau": {
+    "ru": "سيدة؛ امرأة",
+    "pos": "اسم",
+    "decl": "die Frau · الجمع: die Frauen"
+   },
+   "Gegenverkehr": {
+    "ru": "حركة السير المقابلة",
+    "pos": "اسم",
+    "decl": "der Gegenverkehr · لا جمع له"
+   },
+   "Kind": {
+    "ru": "طفل",
+    "pos": "اسم",
+    "decl": "das Kind · الجمع: die Kinder"
+   },
+   "Radfahrer": {
+    "ru": "راكب دراجة",
+    "pos": "اسم",
+    "decl": "der Radfahrer · الجمع: die Radfahrer"
+   },
+   "Radweg": {
+    "ru": "مسار الدراجات",
+    "pos": "اسم",
+    "note": "اللافتة الزرقاء المستديرة: استخدامه إلزامي لراكبي الدراجات",
+    "decl": "der Radweg · الجمع: die Radwege"
+   },
+   "Schrittgeschwindigkeit": {
+    "ru": "سرعة المشي",
+    "pos": "اسم",
+    "note": "عمليًا 4–7 كم/س",
+    "decl": "die Schrittgeschwindigkeit · لا جمع له"
+   },
+   "Schulbus": {
+    "ru": "حافلة مدرسية",
+    "pos": "اسم",
+    "decl": "der Schulbus · الجمع: die Schulbusse"
+   },
+   "Schule": {
+    "ru": "مدرسة",
+    "pos": "اسم",
+    "decl": "die Schule · الجمع: die Schulen"
+   },
+   "Schulterblick": {
+    "ru": "الالتفات فوق الكتف",
+    "pos": "اسم",
+    "note": "هكذا تُفحص «النقطة العمياء» قبل الانطلاق والانعطاف",
+    "decl": "der Schulterblick · الجمع: die Schulterblicke"
+   },
+   "Sie": {
+    "ru": "حضرتك (صيغة الاحترام)",
+    "pos": "ضمير",
+    "note": "Ihnen — لكم (حالة الجر): vor Ihnen — أمامك"
+   },
+   "Spiegel": {
+    "ru": "مرآة",
+    "pos": "اسم",
+    "decl": "der Spiegel · الجمع: die Spiegel"
+   },
+   "Straße": {
+    "ru": "شارع، طريق",
+    "pos": "اسم",
+    "decl": "die Straße · الجمع: die Straßen"
+   },
+   "Tempo": {
+    "ru": "سرعة",
+    "pos": "اسم",
+    "note": "Tempo-30-Zone — منطقة بحد سرعة 30 كم/س",
+    "decl": "das Tempo · الجمع: die Tempos"
+   },
+   "Vorrang": {
+    "ru": "أسبقية، أولوية",
+    "pos": "اسم",
+    "decl": "der Vorrang · لا جمع له"
+   },
+   "Warnblinklicht": {
+    "ru": "ضوء التحذير الوامض",
+    "pos": "اسم",
+    "decl": "das Warnblinklicht · لا جمع له"
+   },
+   "Wohngebiet": {
+    "ru": "حيّ سكني",
+    "pos": "اسم",
+    "decl": "das Wohngebiet · الجمع: die Wohngebiete"
+   },
+   "Zebrastreifen": {
+    "ru": "ممر المشاة (المخطط)",
+    "pos": "اسم",
+    "decl": "der Zebrastreifen · الجمع: die Zebrastreifen"
+   },
+   "abbiegen": {
+    "ru": "ينعطف",
+    "pos": "فعل",
+    "note": "سابقة منفصلة: Sie biegen … ab",
+    "forms": "bog ab · ist abgebogen"
+   },
+   "achten": {
+    "ru": "ينتبه",
+    "pos": "فعل",
+    "note": "achten auf — ينتبه لـ",
+    "forms": "achtete · hat geachtet"
+   },
+   "alt": {
+    "ru": "كبير في السن، قديم",
+    "pos": "صفة",
+    "note": "ältere Menschen — كبار السن"
+   },
+   "an": {
+    "ru": "عند، على",
+    "pos": "حرف جر",
+    "note": "am = an dem؛ an der Kreuzung — عند التقاطع"
+   },
+   "anders": {
+    "ru": "بشكل مختلف",
+    "pos": "ظرف"
+   },
+   "anhalten": {
+    "ru": "يتوقف",
+    "pos": "فعل",
+    "forms": "hielt an · hat angehalten"
+   },
+   "auch": {
+    "ru": "أيضًا؛ حتى (auch wenn)",
+    "pos": "ظرف"
+   },
+   "auf": {
+    "ru": "على",
+    "pos": "حرف جر",
+    "note": "auf der Straße — على الطريق؛ achten auf — ينتبه لـ"
+   },
+   "bremsbereit": {
+    "ru": "مستعد للفرملة",
+    "pos": "صفة",
+    "note": "القدم جاهزة على الفرامل والسرعة منخفضة"
+   },
+   "da": {
+    "ru": "هناك",
+    "pos": "ظرف",
+    "note": "da vorne — هناك في الأمام"
+   },
+   "damit": {
+    "ru": "لكي",
+    "pos": "أداة ربط"
+   },
+   "dann": {
+    "ru": "إذن؛ ثم",
+    "pos": "ظرف"
+   },
+   "der/die/das": {
+    "ru": "أداة التعريف",
+    "pos": "أداة تعريف",
+    "note": "der للمذكر، die للمؤنث والجمع، das للمحايد؛ den للمذكر في حالة النصب، dem للمذكر والمحايد في حالة الجر؛ وdas تعني أيضًا «هذا»"
+   },
+   "deshalb": {
+    "ru": "لذلك",
+    "pos": "ظرف"
+   },
+   "durch": {
+    "ru": "عبر، في",
+    "pos": "حرف جر",
+    "note": "durch die Stadt — في المدينة"
+   },
+   "dürfen": {
+    "ru": "يحق له، يُسمح له",
+    "pos": "فعل",
+    "forms": "durfte · hat gedurft"
+   },
+   "ein/eine": {
+    "ru": "أداة النكرة؛ واحد",
+    "pos": "أداة تعريف",
+    "note": "an einer Kreuzung — عند تقاطعٍ ما"
+   },
+   "er": {
+    "ru": "هو",
+    "pos": "ضمير",
+    "note": "ihn — ـه (مفعول)؛ هنا عن الشاحنة أو الإسعاف"
+   },
+   "es": {
+    "ru": "هو، هي (لغير العاقل)",
+    "pos": "ضمير",
+    "note": "هنا: السيارة (das Auto)"
+   },
+   "fahren": {
+    "ru": "يسير بالسيارة؛ يقود",
+    "pos": "فعل",
+    "forms": "fuhr · ist gefahren"
+   },
+   "für": {
+    "ru": "لـ، من أجل",
+    "pos": "حرف جر"
+   },
+   "gelten": {
+    "ru": "يسري، ينطبق",
+    "pos": "فعل",
+    "forms": "galt · hat gegolten"
+   },
+   "genau": {
+    "ru": "تمامًا، بالضبط",
+    "pos": "ظرف",
+    "note": "genau hundert — مئة بالضبط"
+   },
+   "geradeaus": {
+    "ru": "مستقيمًا",
+    "pos": "ظرف"
+   },
+   "gleich": {
+    "ru": "حالًا، فورًا",
+    "pos": "ظرف"
+   },
+   "gut": {
+    "ru": "جيد",
+    "pos": "صفة",
+    "note": "am besten — من الأفضل",
+    "forms": "gut · besser · am besten"
+   },
+   "haben": {
+    "ru": "يملك، لديه",
+    "pos": "فعل",
+    "note": "Vorfahrt haben — له أولوية المرور",
+    "forms": "hatte · hat gehabt"
+   },
+   "hier": {
+    "ru": "هنا",
+    "pos": "ظرف"
+   },
+   "höchstens": {
+    "ru": "كحدّ أقصى",
+    "pos": "ظرف"
+   },
+   "ich": {
+    "ru": "أنا",
+    "pos": "ضمير"
+   },
+   "in": {
+    "ru": "في",
+    "pos": "حرف جر",
+    "note": "im = in dem: im Bereich — في المنطقة"
+   },
+   "jetzt": {
+    "ru": "الآن",
+    "pos": "ظرف"
+   },
+   "können": {
+    "ru": "يستطيع",
+    "pos": "فعل",
+    "forms": "konnte · hat gekonnt"
+   },
+   "langsam": {
+    "ru": "بطيء؛ ببطء",
+    "pos": "صفة"
+   },
+   "lassen": {
+    "ru": "يدع، يترك",
+    "pos": "فعل",
+    "note": "jemanden fahren lassen — يدع أحدًا يمرّ أولًا",
+    "forms": "ließ · hat gelassen"
+   },
+   "laufen": {
+    "ru": "يجري؛ (المحرك) يعمل",
+    "pos": "فعل",
+    "forms": "lief · ist gelaufen"
+   },
+   "machen": {
+    "ru": "يفعل",
+    "pos": "فعل",
+    "note": "den Schulterblick machen — يلتفت فوق كتفه؛ Gut gemacht! — أحسنت!",
+    "forms": "machte · hat gemacht"
+   },
+   "mit": {
+    "ru": "مع",
+    "pos": "حرف جر"
+   },
+   "nebeneinander": {
+    "ru": "جنبًا إلى جنب",
+    "pos": "ظرف"
+   },
+   "noch": {
+    "ru": "بعدُ، لا يزال",
+    "pos": "ظرف",
+    "note": "noch nicht — ليس بعد"
+   },
+   "nur": {
+    "ru": "فقط",
+    "pos": "ظرف"
+   },
+   "nötig": {
+    "ru": "ضروري، لازم",
+    "pos": "صفة",
+    "note": "wenn nötig — إذا لزم الأمر"
+   },
+   "plötzlich": {
+    "ru": "فجأة",
+    "pos": "ظرف"
+   },
+   "prima": {
+    "ru": "ممتاز",
+    "pos": "ظرف"
+   },
+   "rechts": {
+    "ru": "يمينًا، على اليمين",
+    "pos": "ظرف"
+   },
+   "richtig": {
+    "ru": "صحيح",
+    "pos": "صفة",
+    "note": "…, richtig? — …، صحيح؟"
+   },
+   "sehen": {
+    "ru": "يرى",
+    "pos": "فعل",
+    "forms": "sah · hat gesehen"
+   },
+   "sehr": {
+    "ru": "جدًا",
+    "pos": "ظرف"
+   },
+   "sein": {
+    "ru": "يكون",
+    "pos": "فعل",
+    "forms": "war · ist gewesen"
+   },
+   "stehen": {
+    "ru": "يقف؛ يوجد",
+    "pos": "فعل",
+    "note": "Schilder stehen — توجد لافتات",
+    "forms": "stand · hat gestanden"
+   },
+   "und": {
+    "ru": "و",
+    "pos": "أداة ربط"
+   },
+   "vorne": {
+    "ru": "في الأمام",
+    "pos": "ظرف"
+   },
+   "warten": {
+    "ru": "ينتظر",
+    "pos": "فعل",
+    "note": "warten auf — ينتظر (أحدًا)",
+    "forms": "wartete · hat gewartet"
+   },
+   "was": {
+    "ru": "ماذا",
+    "pos": "ضمير"
+   },
+   "wenn": {
+    "ru": "إذا؛ عندما",
+    "pos": "أداة ربط",
+    "note": "auch wenn — حتى لو"
+   },
+   "wir": {
+    "ru": "نحن",
+    "pos": "ضمير",
+    "note": "uns — نا: vor uns — أمامنا"
+   },
+   "worauf": {
+    "ru": "إلامَ، على ماذا",
+    "pos": "ظرف",
+    "note": "من achten auf: worauf achten Sie? — إلامَ تنتبه؟"
+   },
+   "zuerst": {
+    "ru": "أولًا",
+    "pos": "ظرف"
+   },
+   "überqueren": {
+    "ru": "يعبر",
+    "pos": "فعل",
+    "forms": "überquerte · hat überquert"
+   }
+  }
+ }
+}

@@ -1,0 +1,591 @@
+{
+ "id": "p-06",
+ "kind": "dialog",
+ "emoji": "🏫",
+ "level": "A2",
+ "title": "Schule, Radweg und Bus",
+ "titleTr": "Школа, велодоріжка й автобус",
+ "intro": "Тарас їде повз школу: діти біля дороги, шкільний автобус з аварійкою, велосипедист під час повороту праворуч, «зебра» і велосипедна вулиця.",
+ "speakers": {
+  "A": {
+   "name": "Fahrlehrerin",
+   "g": "f"
+  },
+  "B": {
+   "name": "Taras",
+   "g": "m"
+  }
+ },
+ "lines": [
+  {
+   "de": "Wir fahren jetzt durch ein Wohngebiet mit einer Schule. Worauf achten Sie?",
+   "tr": "Зараз ми їдемо через житловий район зі школою. На що ви звертаєте увагу?",
+   "s": "A"
+  },
+  {
+   "de": "Auf Kinder. Sie können plötzlich auf die Straße laufen.",
+   "tr": "На дітей. Вони можуть раптово вибігти на дорогу.",
+   "s": "B"
+  },
+  {
+   "de": "Richtig. Deshalb fahren Sie langsam und sind bremsbereit.",
+   "tr": "Правильно. Тому ви їдете повільно й готові загальмувати.",
+   "s": "A"
+  },
+  {
+   "de": "Da vorne steht ein Schulbus mit Warnblinklicht.",
+   "tr": "Он попереду стоїть шкільний автобус з аварійкою.",
+   "s": "B"
+  },
+  {
+   "de": "Was gilt jetzt, auch für uns im Gegenverkehr?",
+   "tr": "Що зараз діє, зокрема для нас у зустрічному напрямку?",
+   "s": "A"
+  },
+  {
+   "de": "Nur Schrittgeschwindigkeit, und wenn nötig, halte ich an.",
+   "tr": "Тільки швидкість пішохода, а якщо потрібно, я зупиняюся.",
+   "o": {
+    "an": "an>anhalten",
+    "halte": "halte>anhalten"
+   },
+   "s": "B"
+  },
+  {
+   "de": "Gut. Gleich biegen wir rechts ab. Was sehen Sie im Spiegel?",
+   "tr": "Добре. Зараз повернемо праворуч. Що ви бачите в дзеркалі?",
+   "o": {
+    "ab": "ab>abbiegen",
+    "biegen": "biegen>abbiegen"
+   },
+   "s": "A"
+  },
+  {
+   "de": "Einen Radfahrer auf dem Radweg. Er fährt geradeaus.",
+   "tr": "Велосипедиста на велодоріжці. Він їде прямо.",
+   "s": "B"
+  },
+  {
+   "de": "Und was machen Sie?",
+   "tr": "І що ви робите?",
+   "s": "A"
+  },
+  {
+   "de": "Ich warte und lasse ihn zuerst fahren. Dann noch ein Schulterblick.",
+   "tr": "Я чекаю і пропускаю його. Потім ще погляд через плече.",
+   "s": "B"
+  },
+  {
+   "de": "Sehr gut. Achtung, am Zebrastreifen wartet eine ältere Frau.",
+   "tr": "Дуже добре. Увага, біля «зебри» чекає літня жінка.",
+   "s": "A"
+  },
+  {
+   "de": "Ich halte an, damit sie die Straße überqueren kann.",
+   "tr": "Я зупиняюся, щоб вона могла перейти дорогу.",
+   "o": {
+    "an": "an>anhalten",
+    "halte": "halte>anhalten"
+   },
+   "s": "B"
+  },
+  {
+   "de": "Prima. Jetzt fahren wir in eine Fahrradstraße. Was ist hier anders?",
+   "tr": "Чудово. Тепер ми в'їжджаємо у велосипедну вулицю. Що тут інакше?",
+   "s": "A"
+  },
+  {
+   "de": "Hier haben Radfahrer Vorrang, und es gilt höchstens Tempo 30.",
+   "tr": "Тут перевага у велосипедистів, і діє не більше 30 км/год.",
+   "s": "B"
+  },
+  {
+   "de": "Genau. Und Radfahrer dürfen hier nebeneinander fahren.",
+   "tr": "Саме так. І велосипедисти можуть їхати тут поруч одне з одним.",
+   "s": "A"
+  }
+ ],
+ "signs": {},
+ "gloss": {
+  "w": {
+   "ab>abbiegen": "abbiegen",
+   "achten": "achten",
+   "achtung": "Achtung",
+   "am": "an",
+   "an>anhalten": "anhalten",
+   "anders": "anders",
+   "auch": "auch",
+   "auf": "auf",
+   "biegen>abbiegen": "abbiegen",
+   "bremsbereit": "bremsbereit",
+   "bus": "Bus",
+   "da": "da",
+   "damit": "damit",
+   "dann": "dann",
+   "dem": "der/die/das",
+   "deshalb": "deshalb",
+   "die": "der/die/das",
+   "durch": "durch",
+   "dürfen": "dürfen",
+   "ein": "ein/eine",
+   "eine": "ein/eine",
+   "einen": "ein/eine",
+   "einer": "ein/eine",
+   "er": "er",
+   "es": "es",
+   "fahren": "fahren",
+   "fahrradstraße": "Fahrradstraße",
+   "frau": "Frau",
+   "fährt": "fahren",
+   "für": "für",
+   "gegenverkehr": "Gegenverkehr",
+   "genau": "genau",
+   "geradeaus": "geradeaus",
+   "gilt": "gelten",
+   "gleich": "gleich",
+   "gut": "gut",
+   "haben": "haben",
+   "halte>anhalten": "anhalten",
+   "hier": "hier",
+   "höchstens": "höchstens",
+   "ich": "ich",
+   "ihn": "er",
+   "im": "in",
+   "in": "in",
+   "ist": "sein",
+   "jetzt": "jetzt",
+   "kann": "können",
+   "kinder": "Kind",
+   "können": "können",
+   "langsam": "langsam",
+   "lasse": "lassen",
+   "laufen": "laufen",
+   "machen": "machen",
+   "mit": "mit",
+   "nebeneinander": "nebeneinander",
+   "noch": "noch",
+   "nur": "nur",
+   "nötig": "nötig",
+   "plötzlich": "plötzlich",
+   "prima": "prima",
+   "radfahrer": "Radfahrer",
+   "radweg": "Radweg",
+   "rechts": "rechts",
+   "richtig": "richtig",
+   "schrittgeschwindigkeit": "Schrittgeschwindigkeit",
+   "schulbus": "Schulbus",
+   "schule": "Schule",
+   "schulterblick": "Schulterblick",
+   "sehen": "sehen",
+   "sehr": "sehr",
+   "sie": "Sie",
+   "sind": "sein",
+   "spiegel": "Spiegel",
+   "steht": "stehen",
+   "straße": "Straße",
+   "tempo": "Tempo",
+   "und": "und",
+   "uns": "wir",
+   "vorne": "vorne",
+   "vorrang": "Vorrang",
+   "warnblinklicht": "Warnblinklicht",
+   "warte": "warten",
+   "wartet": "warten",
+   "was": "was",
+   "wenn": "wenn",
+   "wir": "wir",
+   "wohngebiet": "Wohngebiet",
+   "worauf": "worauf",
+   "zebrastreifen": "Zebrastreifen",
+   "zuerst": "zuerst",
+   "ältere": "alt",
+   "überqueren": "überqueren"
+  },
+  "l": {
+   "Achtung": {
+    "ru": "увага!",
+    "pos": "ім.",
+    "decl": "die Achtung · мн. немає"
+   },
+   "Bus": {
+    "ru": "автобус",
+    "pos": "ім.",
+    "decl": "der Bus · мн.: die Busse"
+   },
+   "Fahrradstraße": {
+    "ru": "велосипедна вулиця",
+    "pos": "ім.",
+    "note": "знак 244.1: макс. 30 км/год, машини — лише з табличкою",
+    "decl": "die Fahrradstraße · мн.: die Fahrradstraßen"
+   },
+   "Frau": {
+    "ru": "пані; жінка",
+    "pos": "ім.",
+    "decl": "die Frau · мн.: die Frauen"
+   },
+   "Gegenverkehr": {
+    "ru": "зустрічний транспорт",
+    "pos": "ім.",
+    "decl": "der Gegenverkehr · мн. немає"
+   },
+   "Kind": {
+    "ru": "дитина",
+    "pos": "ім.",
+    "decl": "das Kind · мн.: die Kinder"
+   },
+   "Radfahrer": {
+    "ru": "велосипедист",
+    "pos": "ім.",
+    "decl": "der Radfahrer · мн.: die Radfahrer"
+   },
+   "Radweg": {
+    "ru": "велодоріжка",
+    "pos": "ім.",
+    "note": "синій круглий знак — велосипедисти мусять нею їхати",
+    "decl": "der Radweg · мн.: die Radwege"
+   },
+   "Schrittgeschwindigkeit": {
+    "ru": "швидкість пішохода (кроком)",
+    "pos": "ім.",
+    "note": "на практиці 4–7 км/год",
+    "decl": "die Schrittgeschwindigkeit · мн. немає"
+   },
+   "Schulbus": {
+    "ru": "шкільний автобус",
+    "pos": "ім.",
+    "decl": "der Schulbus · мн.: die Schulbusse"
+   },
+   "Schule": {
+    "ru": "школа",
+    "pos": "ім.",
+    "decl": "die Schule · мн.: die Schulen"
+   },
+   "Schulterblick": {
+    "ru": "погляд через плече",
+    "pos": "ім.",
+    "note": "так перевіряють «мертву зону» перед стартом і поворотом",
+    "decl": "der Schulterblick · мн.: die Schulterblicke"
+   },
+   "Sie": {
+    "ru": "ви (ввічливо)",
+    "pos": "займ.",
+    "note": "Ihnen — вам (давальний): vor Ihnen — перед вами"
+   },
+   "Spiegel": {
+    "ru": "дзеркало",
+    "pos": "ім.",
+    "decl": "der Spiegel · мн.: die Spiegel"
+   },
+   "Straße": {
+    "ru": "вулиця, дорога",
+    "pos": "ім.",
+    "decl": "die Straße · мн.: die Straßen"
+   },
+   "Tempo": {
+    "ru": "швидкість, темп",
+    "pos": "ім.",
+    "note": "Tempo-30-Zone — зона з обмеженням 30 км/год",
+    "decl": "das Tempo · мн.: die Tempos"
+   },
+   "Vorrang": {
+    "ru": "перевага, першочерговість",
+    "pos": "ім.",
+    "decl": "der Vorrang · мн. немає"
+   },
+   "Warnblinklicht": {
+    "ru": "аварійний сигнал (блимають усі поворотники)",
+    "pos": "ім.",
+    "decl": "das Warnblinklicht · мн. немає"
+   },
+   "Wohngebiet": {
+    "ru": "житловий район",
+    "pos": "ім.",
+    "decl": "das Wohngebiet · мн.: die Wohngebiete"
+   },
+   "Zebrastreifen": {
+    "ru": "«зебра», пішохідний перехід",
+    "pos": "ім.",
+    "decl": "der Zebrastreifen · мн.: die Zebrastreifen"
+   },
+   "abbiegen": {
+    "ru": "повертати",
+    "pos": "дієсл.",
+    "note": "відокремлюваний префікс: Sie biegen … ab",
+    "forms": "bog ab · ist abgebogen"
+   },
+   "achten": {
+    "ru": "стежити, звертати увагу",
+    "pos": "дієсл.",
+    "note": "achten auf + Akk. — стежити за",
+    "forms": "achtete · hat geachtet"
+   },
+   "alt": {
+    "ru": "старий; літній",
+    "pos": "прикм.",
+    "note": "ältere Menschen — літні люди"
+   },
+   "an": {
+    "ru": "біля, на, при",
+    "pos": "прийм.",
+    "note": "am = an dem; an der Kreuzung — на перехресті"
+   },
+   "anders": {
+    "ru": "інакше, по-іншому",
+    "pos": "присл."
+   },
+   "anhalten": {
+    "ru": "зупинятися",
+    "pos": "дієсл.",
+    "forms": "hielt an · hat angehalten"
+   },
+   "auch": {
+    "ru": "теж; навіть (auch wenn)",
+    "pos": "присл."
+   },
+   "auf": {
+    "ru": "на, по",
+    "pos": "прийм.",
+    "note": "auf der Straße — на дорозі; achten auf — стежити за"
+   },
+   "bremsbereit": {
+    "ru": "готовий загальмувати",
+    "pos": "прикм.",
+    "note": "нога готова до гальма, швидкість знижено"
+   },
+   "da": {
+    "ru": "там, он; тоді",
+    "pos": "присл.",
+    "note": "da vorne — он там попереду"
+   },
+   "damit": {
+    "ru": "щоб",
+    "pos": "спол."
+   },
+   "dann": {
+    "ru": "тоді, отже; потім",
+    "pos": "присл."
+   },
+   "der/die/das": {
+    "ru": "означений артикль",
+    "pos": "артикль",
+    "note": "der — ч. р., die — ж. р. і мн., das — с. р.; den — ч. р. у знахідному, dem — ч. і с. р. у давальному; das ще означає «це»"
+   },
+   "deshalb": {
+    "ru": "тому",
+    "pos": "присл."
+   },
+   "durch": {
+    "ru": "через, по",
+    "pos": "прийм.",
+    "note": "durch die Stadt — містом"
+   },
+   "dürfen": {
+    "ru": "могти, мати право",
+    "pos": "дієсл.",
+    "forms": "durfte · hat gedurft"
+   },
+   "ein/eine": {
+    "ru": "неозначений артикль; один",
+    "pos": "артикль",
+    "note": "an einer Kreuzung — на (якомусь) перехресті"
+   },
+   "er": {
+    "ru": "він",
+    "pos": "займ.",
+    "note": "ihn — його (знах.); тут — про вантажівку чи швидку: der Lkw, der Krankenwagen"
+   },
+   "es": {
+    "ru": "воно; це",
+    "pos": "займ.",
+    "note": "тут — про машину: das Auto"
+   },
+   "fahren": {
+    "ru": "їхати; кермувати машиною",
+    "pos": "дієсл.",
+    "forms": "fuhr · ist gefahren"
+   },
+   "für": {
+    "ru": "для",
+    "pos": "прийм."
+   },
+   "gelten": {
+    "ru": "діяти (про правило)",
+    "pos": "дієсл.",
+    "forms": "galt · hat gegolten"
+   },
+   "genau": {
+    "ru": "саме так, точно",
+    "pos": "присл.",
+    "note": "genau hundert — рівно сто"
+   },
+   "geradeaus": {
+    "ru": "прямо",
+    "pos": "присл."
+   },
+   "gleich": {
+    "ru": "зараз, одразу",
+    "pos": "присл."
+   },
+   "gut": {
+    "ru": "добрий; добре",
+    "pos": "прикм.",
+    "note": "am besten — найкраще",
+    "forms": "gut · besser · am besten"
+   },
+   "haben": {
+    "ru": "мати",
+    "pos": "дієсл.",
+    "note": "Vorfahrt haben — мати перевагу",
+    "forms": "hatte · hat gehabt"
+   },
+   "hier": {
+    "ru": "тут",
+    "pos": "присл."
+   },
+   "höchstens": {
+    "ru": "щонайбільше, не більше",
+    "pos": "присл."
+   },
+   "ich": {
+    "ru": "я",
+    "pos": "займ."
+   },
+   "in": {
+    "ru": "в",
+    "pos": "прийм.",
+    "note": "im = in dem: im Bereich — у зоні"
+   },
+   "jetzt": {
+    "ru": "зараз, тепер",
+    "pos": "присл."
+   },
+   "können": {
+    "ru": "могти",
+    "pos": "дієсл.",
+    "forms": "konnte · hat gekonnt"
+   },
+   "langsam": {
+    "ru": "повільний; повільно",
+    "pos": "прикм."
+   },
+   "lassen": {
+    "ru": "дозволяти; пропускати; залишати",
+    "pos": "дієсл.",
+    "note": "jemanden fahren lassen — пропустити когось уперед",
+    "forms": "ließ · hat gelassen"
+   },
+   "laufen": {
+    "ru": "бігти; (про мотор) працювати",
+    "pos": "дієсл.",
+    "forms": "lief · ist gelaufen"
+   },
+   "machen": {
+    "ru": "робити",
+    "pos": "дієсл.",
+    "note": "den Schulterblick machen — озирнутися через плече; Gut gemacht! — Молодець!",
+    "forms": "machte · hat gemacht"
+   },
+   "mit": {
+    "ru": "з",
+    "pos": "прийм."
+   },
+   "nebeneinander": {
+    "ru": "поруч одне з одним",
+    "pos": "присл."
+   },
+   "noch": {
+    "ru": "ще",
+    "pos": "присл.",
+    "note": "noch nicht — ще ні"
+   },
+   "nur": {
+    "ru": "лише",
+    "pos": "присл."
+   },
+   "nötig": {
+    "ru": "потрібний, необхідний",
+    "pos": "прикм.",
+    "note": "wenn nötig — якщо потрібно"
+   },
+   "plötzlich": {
+    "ru": "раптом, несподівано",
+    "pos": "присл."
+   },
+   "prima": {
+    "ru": "чудово",
+    "pos": "присл."
+   },
+   "rechts": {
+    "ru": "праворуч",
+    "pos": "присл."
+   },
+   "richtig": {
+    "ru": "правильний; правильно",
+    "pos": "прикм.",
+    "note": "…, richtig? — …, правильно? / так?"
+   },
+   "sehen": {
+    "ru": "бачити",
+    "pos": "дієсл.",
+    "forms": "sah · hat gesehen"
+   },
+   "sehr": {
+    "ru": "дуже",
+    "pos": "присл."
+   },
+   "sein": {
+    "ru": "бути",
+    "pos": "дієсл.",
+    "forms": "war · ist gewesen"
+   },
+   "stehen": {
+    "ru": "стояти",
+    "pos": "дієсл.",
+    "note": "Schilder stehen — стоять знаки",
+    "forms": "stand · hat gestanden"
+   },
+   "und": {
+    "ru": "і, та",
+    "pos": "спол."
+   },
+   "vorne": {
+    "ru": "попереду",
+    "pos": "присл."
+   },
+   "warten": {
+    "ru": "чекати",
+    "pos": "дієсл.",
+    "note": "warten auf — чекати на (когось)",
+    "forms": "wartete · hat gewartet"
+   },
+   "was": {
+    "ru": "що",
+    "pos": "займ."
+   },
+   "wenn": {
+    "ru": "якщо; коли",
+    "pos": "спол.",
+    "note": "auch wenn — навіть якщо"
+   },
+   "wir": {
+    "ru": "ми",
+    "pos": "займ.",
+    "note": "uns — нас, нам: vor uns — перед нами"
+   },
+   "worauf": {
+    "ru": "на що",
+    "pos": "присл.",
+    "note": "від achten auf: worauf achten Sie? — на що ви звертаєте увагу?"
+   },
+   "zuerst": {
+    "ru": "спочатку, першим",
+    "pos": "присл."
+   },
+   "überqueren": {
+    "ru": "перетинати, переходити",
+    "pos": "дієсл.",
+    "forms": "überquerte · hat überquert"
+   }
+  }
+ }
+}
