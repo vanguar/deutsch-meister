@@ -1,83 +1,235 @@
 /* ═══════════════════════════════════════════════
    fahrschule.css — раздел «Автошкола» (fahrschule.html)
-   Шапка, плитки и чипы — из css/news.css, кнопка «Слушать», чипы-
-   переключатели и реплики-«пузыри» — из css/dialogs.css, тултип слова —
-   из css/lesson.css + css/reader.css. Здесь — только своё: строки правил,
-   знаки, тест и перекрёсток. Цвета — токены css/base.css (обе темы и
+   Страница-обёртка и чипы — из css/news.css, кнопка «Слушать» и реплики-
+   «пузыри» — из css/dialogs.css, тултип слова — из css/lesson.css +
+   css/reader.css. Здесь — своё: шапка, «Продолжить», темы-аккордеоны,
+   панель урока, строки правил, знаки, тест и сцены. Цвета — токены css/base.css (обе темы и
    тема Telegram через js/tg-theme.js). Направления — логические свойства:
    в арабском интерфейсе раскладка зеркалится, немецкий остаётся LTR.
    ═══════════════════════════════════════════════ */
 
-.fs-hub[hidden], .fs-unit[hidden] { display: none; }
+/* ── Токены раздела: поверх общих токенов base.css (тёмная — по умолчанию,
+   светлая — [data-theme="light"]; цвета Telegram приходят через общие) ── */
+:root {
+  --fs-card:      var(--surface2);
+  --fs-line:      var(--border);             /* разделители */
+  --fs-track:     var(--border-light);       /* дорожка прогресса */
+  --fs-shadow:    none;
+  --fs-theory:    #7ab8f2;  --fs-theory-bg: rgba(91, 160, 230, .16);
+  --fs-dialog:    #f2a365;  --fs-dialog-bg: rgba(240, 140, 60, .16);
+  --fs-scene:     #4fd1c5;  --fs-scene-bg:  rgba(40, 190, 175, .15);
+  --fs-speak-bg:  rgba(91, 160, 230, .13);   /* звучащая фраза, урок в процессе */
+  --fs-cta-bg:    #0c1218;                   /* карточка «В конце урока» */
+}
+[data-theme="light"] {
+  --fs-shadow:    0 1px 3px rgba(18, 22, 31, .06);
+  --fs-theory:    #1f5faf;  --fs-theory-bg: #e3edfa;
+  --fs-dialog:    #b4500b;  --fs-dialog-bg: #fdeee3;
+  --fs-scene:     #0e6e67;  --fs-scene-bg:  #e1f3f1;
+  --fs-speak-bg:  #e3edfa;
+  --fs-cta-bg:    #12161f;
+}
+
+.fs-hub[hidden], .fs-unit[hidden], .fs-head[hidden], .fs-list-head[hidden] { display: none; }
 /* Значок и подпись в чипе («↻ Ещё раз»): в inline-flex пробел между ними теряется */
 .fs-page .news-chip { gap: 6px; }
 
-/* ── Темы: каждая — карточка с шапкой-полосой, внутри сетка уроков ── */
-.fs-list { display: flex; flex-direction: column; gap: 18px; }
-.fs-topic {
-  border: 1px solid color-mix(in srgb, var(--accent2) 38%, var(--border));
-  border-radius: var(--r-xl); overflow: hidden;
-  background: color-mix(in srgb, var(--accent2) 6%, var(--surface));
+/* Линейные иконки (спрайт в fahrschule.html) */
+.fs-page .ico {
+  width: 22px; height: 22px; flex: none;
+  fill: none; stroke: currentColor; stroke-width: 1.8;
+  stroke-linecap: round; stroke-linejoin: round;
 }
-.fs-topic-head {
-  display: flex; align-items: center; gap: 12px; width: 100%; padding: 12px 14px;
-  background: color-mix(in srgb, var(--accent2) 16%, var(--surface));
-  border: 0; color: inherit; font: inherit; text-align: start; cursor: pointer;
+.fs-page .dlg-play-ico, .fs-cont-go .ico { width: 18px; height: 18px; fill: currentColor; }
+html[dir="rtl"] .fs-page .ico.flip { transform: scaleX(-1); }
+.fs-page :is(a, button):focus-visible { outline: 2px solid var(--accent2-text); outline-offset: 2px; }
+
+/* Русские заголовки — шрифтом текста (base.css даёт h1–h3 Playfair) */
+.fs-list-title, .fs-sec-title, .fs-quiz-cta { font-family: 'DM Sans', sans-serif; }
+
+/* Немецкие названия переносятся только между словами */
+.fs-topic-title, .fs-row-de, .fs-cont-de, .fs-title { overflow-wrap: break-word; hyphens: manual; }
+
+/* ── Шапка списка ── */
+.fs-head { margin-bottom: 12px; }
+.fs-head-row { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; }
+.fs-back {
+  display: inline-flex; align-items: center; gap: 2px; min-height: 44px; margin-inline: -6px auto;
+  padding-inline-end: 8px; border-radius: var(--r-md);
+  color: var(--text-muted); text-decoration: none; font-size: 15px; font-weight: 600;
+}
+.fs-back:hover { color: var(--text-strong); }
+.fs-round {
+  width: 44px; height: 44px; flex: none; border-radius: 50%; cursor: pointer;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: var(--fs-card); border: 1px solid var(--border); box-shadow: var(--fs-shadow);
+  color: var(--text-strong); font: inherit; font-size: 14px; font-weight: 700;
   -webkit-tap-highlight-color: transparent;
 }
-.fs-topic.is-open .fs-topic-head { border-bottom: 1px solid color-mix(in srgb, var(--accent2) 30%, var(--border)); }
-.fs-topic-head:hover { background: color-mix(in srgb, var(--accent2) 22%, var(--surface)); }
-.fs-topic-head:focus-visible { outline: 2px solid var(--accent2); outline-offset: -2px; }
-.fs-topic-titles { display: flex; flex-direction: column; align-items: flex-start; flex: 1; }
-.fs-topic-grid[hidden] { display: none; }
-/* Справа в шапке: число уроков, «Показать уроки» / «Скрыть» и стрелка */
-.fs-topic-more { flex: none; display: flex; flex-direction: column; align-items: flex-end; gap: 4px; }
-.fs-topic-count { font-size: 12px; color: var(--text-muted); white-space: nowrap; }
-.fs-topic-count b { color: var(--text-strong); }
-.fs-topic-hint { font-size: 12px; font-weight: 800; color: var(--accent2-text); white-space: nowrap; }
-.fs-topic-hide, .fs-topic.is-open .fs-topic-show { display: none; }
-.fs-topic.is-open .fs-topic-hide { display: inline; }
-.fs-topic-chev {
-  width: 28px; height: 28px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center;
-  background: var(--accent2); color: var(--text-on-btn); transition: transform var(--t-fast);
+.fs-round .ico { width: 20px; height: 20px; }
+/* тёмная тема — солнце (переключить на светлую), светлая — луна */
+.fs-theme .fs-ico-moon, [data-theme="light"] .fs-theme .fs-ico-sun { display: none; }
+[data-theme="light"] .fs-theme .fs-ico-moon { display: block; }
+.fs-h1 {
+  margin: 0; font-family: 'Playfair Display', serif; font-size: 34px; font-weight: 900;
+  line-height: 1.1; color: var(--text-strong);
 }
-.fs-topic-chev::before { content: '▾'; font-size: 16px; line-height: 1; }
-.fs-topic.is-open .fs-topic-chev { transform: rotate(180deg); }
-.fs-topic-grid { padding: 12px; gap: 12px; }
-.fs-topic-titles { min-width: 0; }
-.fs-topic-n {
-  display: inline-block; padding: 1px 8px; border-radius: var(--r-full); margin-bottom: 3px;
-  background: var(--accent2); color: var(--text-on-btn);
-  font-size: 11px; font-weight: 800; letter-spacing: .4px; text-transform: uppercase;
+.fs-sub { margin: 4px 0 0; font-size: 15px; color: var(--text-muted); }
+.fs-tip { display: flex; align-items: center; gap: 8px; margin: 0 0 18px; font-size: 14px; line-height: 1.4; color: var(--text-muted); }
+.fs-tip .ico { width: 18px; height: 18px; color: var(--accent2-text); }
+
+/* ── Прогресс: тонкая полоска ── */
+.fs-track { display: block; height: 4px; border-radius: var(--r-full); background: var(--fs-track); overflow: hidden; }
+.fs-track i { display: block; height: 100%; border-radius: inherit; background: var(--accent2); transition: width var(--t-slow); }
+
+/* ── «Продолжить» ── */
+.fs-cont {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 14px;
+  margin-bottom: 26px; padding: 18px 18px 20px; border-radius: 20px;
+  background: var(--accent2); color: var(--text-on-btn); text-decoration: none;
+  box-shadow: var(--shadow-accent); -webkit-tap-highlight-color: transparent;
 }
+.fs-cont-text { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+.fs-cont-k { font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.fs-cont-de { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; line-height: 1.2; text-align: start; }
+.fs-cont-meta { font-size: 14px; line-height: 1.4; }
+.fs-cont-meta b { font-weight: 600; }
+.fs-cont-go {
+  width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  background: #fff; color: #1f5faf;
+}
+.fs-cont .fs-track { grid-column: 1 / -1; background: rgba(255, 255, 255, .3); }
+.fs-cont .fs-track i { background: #fff; }
+.fs-cont:active { transform: scale(.99); }
+
+/* ── Темы: карточки-аккордеоны, открыта одна ── */
+.fs-list-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin: 0 2px 12px; }
+.fs-list-title { margin: 0; font-size: 20px; font-weight: 700; color: var(--text-strong); }
+.fs-list-done { font-size: 14px; color: var(--text-muted); text-align: end; }
+.fs-list-done b { font-weight: 600; color: var(--text); }
+.fs-list { display: flex; flex-direction: column; gap: 12px; }
+.fs-topic { border-radius: 20px; background: var(--fs-card); box-shadow: var(--fs-shadow); overflow: hidden; }
+.fs-topic-head {
+  display: flex; align-items: flex-start; gap: 14px; width: 100%; padding: 18px 16px 18px 18px;
+  background: none; border: 0; color: inherit; font: inherit; text-align: start; cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.fs-page .fs-topic-head:focus-visible { outline-offset: -3px; border-radius: 20px; }
+.fs-topic-ico, .fs-soon > .fs-topic-ico {
+  flex: none; width: 44px; height: 44px; border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--surface3); color: var(--text-strong);
+}
+.fs-topic.is-open .fs-topic-ico { background: var(--fs-theory-bg); color: var(--fs-theory); }
+.fs-topic-titles { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 3px; }
+.fs-topic-n { font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--text-muted); }
+.fs-topic.is-open .fs-topic-n { color: var(--accent2-text); }
 .fs-topic-title {
-  margin: 0; font-family: 'Playfair Display', serif; font-size: 21px; font-weight: 900;
-  color: var(--text-strong); line-height: 1.2; text-align: start; overflow-wrap: anywhere; hyphens: auto;
+  font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; line-height: 1.2;
+  color: var(--text-strong); text-align: start;
 }
-.fs-topic-tr { font-size: 13px; color: var(--text-muted); }
+.fs-topic-tr { font-size: 14px; line-height: 1.4; color: var(--text-muted); }
+.fs-topic-count { white-space: nowrap; }
+.fs-topic-count b { font-weight: 400; }
+.fs-topic-prog { display: flex; align-items: center; gap: 10px; margin-top: 8px; }
+.fs-topic-prog .fs-track { flex: 1; }
+.fs-topic-frac { font-size: 13px; color: var(--text-muted); font-variant-numeric: tabular-nums; direction: ltr; unicode-bidi: isolate; }
+.fs-page .fs-topic-chev { margin-top: 11px; color: var(--text-muted); transition: transform var(--t-normal); }
+.fs-topic-head:hover .fs-topic-chev { color: var(--text-strong); }
+.fs-topic.is-open .fs-topic-chev { transform: rotate(180deg); }
+.fs-topic-list { display: flex; flex-direction: column; gap: 2px; padding: 6px 8px 8px; border-top: 1px solid var(--fs-line); }
+.fs-topic-list[hidden] { display: none; }
+@media (max-width: 380px) {
+  .fs-topic-head { gap: 12px; padding-inline: 14px 12px; }
+  .fs-topic-title { font-size: 20px; }
+}
 
-/* ── Плитки уроков ── */
-.fs-tile-unit { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
-.fs-tile-de {
-  font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 800; color: var(--text-strong);
-  line-height: 1.25; overflow-wrap: anywhere; text-align: start;
+/* Урок в теме — строка-ссылка: плитка вида, «Теория · 14 правил · A2–B1»,
+   немецкое название, справа статус */
+.fs-row {
+  display: flex; align-items: center; gap: 12px; min-height: 64px; padding: 10px;
+  border-radius: 14px; color: inherit; text-decoration: none; -webkit-tap-highlight-color: transparent;
+  transition: background-color var(--t-fast);
 }
-.fs-tile-tr { font-size: 13px; color: var(--text-muted); line-height: 1.4; }
-.fs-tile-level { font-size: 12px; font-weight: 700; color: var(--text-dim); direction: ltr; unicode-bidi: isolate; }
-.fs-tile .news-tile-top { padding-right: 0; }
-.fs-soon .news-tile-top { padding-inline-end: 70px; }
-.fs-soon { cursor: default; }
-.fs-soon:hover { transform: none; border-color: var(--border); }
+@media (hover: hover) { .fs-row:hover { background: var(--tint); } }
+.fs-row.is-going { background: var(--fs-speak-bg); }
+.fs-kind-ico {
+  flex: none; width: 36px; height: 36px; border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+}
+.fs-page .fs-kind-ico .ico { width: 20px; height: 20px; }
+.kind-theory { background: var(--fs-theory-bg); color: var(--fs-theory); }
+.kind-dialog { background: var(--fs-dialog-bg); color: var(--fs-dialog); }
+.kind-junction, .kind-road { background: var(--fs-scene-bg); color: var(--fs-scene); }
+.fs-row-text { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.fs-row-meta { font-size: 12px; line-height: 1.35; color: var(--text-muted); }
+.fs-row-meta b, .fs-hero-meta b { font-weight: 500; }
+.fs-row-de { font-size: 16px; font-weight: 600; line-height: 1.3; color: var(--text-strong); text-align: start; }
+.fs-row-state { flex: none; min-width: 26px; display: flex; justify-content: center; color: var(--text-muted); }
+.fs-row-done {
+  width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  background: var(--accent2); color: var(--text-on-btn);
+}
+.fs-page .fs-row-done .ico { width: 16px; height: 16px; stroke-width: 2.6; }
+.fs-row-n { font-size: 14px; font-weight: 700; color: var(--accent2-text); font-variant-numeric: tabular-nums; direction: ltr; unicode-bidi: isolate; }
+.fs-page .fs-row-chev { width: 20px; height: 20px; }
+.fs-level { direction: ltr; unicode-bidi: isolate; }
 
-/* Вид урока: та же плашка, что уровень в «Диалогах» */
-.fs-kind-chip.kind-theory   { background: #2a62a6; }
-.fs-kind-chip.kind-dialog   { background: #0e7490; }
-.fs-kind-chip.kind-junction { background: #c2410c; }
-.fs-level {
-  margin-inline-start: 8px; font-size: 12px; font-weight: 700; color: var(--text-muted);
-  direction: ltr; unicode-bidi: isolate;
+/* «Дальше: экзамен» — следующая тема, пока не готова */
+.fs-soon {
+  display: flex; align-items: center; gap: 14px; padding: 16px 18px; border-radius: 20px;
+  border: 1.5px dashed var(--border-light); color: var(--text-muted);
 }
-.fs-heading .dlg-title { display: block; }
+.fs-soon-badge {
+  flex: none; padding: 3px 10px; border-radius: var(--r-full);
+  background: var(--surface3); color: var(--text); font-size: 12px; font-weight: 700;
+}
+
+/* ── Урок: панель «‹ Тема N · X из Y» над уроком ── */
+.fs-bar {
+  position: sticky; top: 0; z-index: 20; margin: -18px -16px 18px; padding: 4px 16px 10px;
+  background: var(--bg); border-bottom: 1px solid var(--fs-line);
+}
+.fs-bar-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.fs-bar-back {
+  display: inline-flex; align-items: center; gap: 2px; min-height: 44px; margin-inline-start: -6px;
+  padding-inline-end: 8px; background: none; border: 0; border-radius: var(--r-md); cursor: pointer;
+  color: var(--text); font: inherit; font-size: 15px; font-weight: 600; -webkit-tap-highlight-color: transparent;
+}
+.fs-bar-count { font-size: 13px; font-weight: 600; color: var(--text-muted); text-align: end; }
+.fs-bar-count b { color: var(--text-strong); }
+
+/* Герой: вид урока, уровень, название, описание */
+.fs-hero { margin-bottom: 16px; }
+.fs-hero-top { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.fs-kind-chip {
+  padding: 3px 8px; border-radius: 6px;
+  font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+}
+.fs-hero-meta { font-size: 13px; color: var(--text-muted); }
+.fs-title {
+  margin: 10px 0 0; font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 700;
+  line-height: 1.15; color: var(--text-strong); text-align: start;
+}
+.fs-hero .fs-title-tr { margin-top: 4px; font-size: 15px; }
+.fs-intro { margin: 8px 0 0; font-size: 15px; line-height: 1.5; color: var(--text-muted); }
+
+/* «Слушать урок» и переключатель перевода всех фраз */
+.fs-controls { display: flex; flex-wrap: nowrap; align-items: stretch; gap: 10px; }
+.fs-controls .fs-play { flex: 1 1 auto; min-height: 52px; font-size: 16px; }
+.fs-tr-all {
+  flex: none; display: inline-flex; align-items: center; gap: 6px; min-height: 52px; padding: 0 18px;
+  border-radius: var(--r-full); border: 1.5px solid var(--accent2); background: transparent; cursor: pointer;
+  color: var(--accent2-text); font: inherit; font-size: 15px; font-weight: 700; -webkit-tap-highlight-color: transparent;
+}
+.fs-tr-all[aria-pressed="true"] { background: var(--accent2); color: var(--text-on-btn); }
+.fs-page .fs-tr-all .ico { width: 18px; height: 18px; }
+.fs-note {
+  display: flex; align-items: flex-start; gap: 10px; margin: 12px 0 0; padding: 12px 14px;
+  border-radius: 14px; background: var(--fs-card); box-shadow: var(--fs-shadow);
+  font-size: 13px; line-height: 1.45; color: var(--text-muted);
+}
+.fs-page .fs-note .ico { width: 18px; height: 18px; margin-top: 1px; color: var(--accent2-text); }
 
 /* ── Слово с подсказкой ── */
 .fs-w {
@@ -89,61 +241,83 @@
 .fs-w.word-tip-open { color: var(--accent2-text); background: var(--dlg-a-soft); }
 .fs-s.bs--active { background: var(--tint); border-radius: 4px; }
 
-.fs-hint:empty { display: none; }
-
-/* ── Теория: разделы и строки ── */
-.fs-sec { margin-top: 22px; }
-.fs-sec-title {
-  margin: 0 0 10px; font-family: 'Playfair Display', serif; font-size: 19px; font-weight: 900;
-  color: var(--text-strong); line-height: 1.25;
+/* ── Теория: раздел — карточка строк с разделителями, знак — своя карточка ── */
+.fs-sec { margin-top: 26px; }
+.fs-sec-title { margin: 0 2px 10px; font-size: 18px; font-weight: 700; line-height: 1.3; color: var(--text-strong); }
+.fs-lines {
+  list-style: none; margin: 0; padding: 0; border-radius: 18px; overflow: hidden;
+  background: var(--fs-card); box-shadow: var(--fs-shadow);
 }
-.fs-lines { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
-.fs-lines > .fs-line {
-  padding: 10px 12px; border-radius: var(--r-lg);
-  background: var(--surface2); border: 1px solid var(--border);
-  transition: border-color .25s ease, box-shadow .25s ease;
-}
-.fs-lines > .fs-line.is-speaking {
-  border-color: var(--dlg-speak);
-  box-shadow: 0 0 0 1px var(--dlg-speak) inset, 0 4px 18px rgba(232, 197, 71, .2);
-}
-.fs-line-row { display: flex; align-items: flex-start; gap: 8px; }
+.fs-lines + .fs-lines { margin-top: 10px; }
+.fs-lines > .fs-line { padding: 14px 12px 14px 16px; scroll-margin: 84px 0 16px; transition: background-color .25s ease; }
+.fs-lines > .fs-line + .fs-line { border-top: 1px solid var(--fs-line); }
+.fs-lines > .fs-line.is-speaking { background: var(--fs-speak-bg); }
+.fs-line-row { display: flex; align-items: flex-start; gap: 10px; }
 .fs-line-text { flex: 1; min-width: 0; }
 .fs-de {
-  margin: 0; font-size: 16px; line-height: 1.6; color: var(--text-strong);
-  text-align: start; overflow-wrap: anywhere;
+  margin: 0; font-size: 17px; line-height: 1.45; color: var(--text-strong);
+  text-align: start; overflow-wrap: break-word;
 }
-.fs-tr {
-  display: none; margin: 6px 0 0; padding-top: 6px; border-top: 1px dashed var(--border);
-  font-size: 14px; line-height: 1.45; color: var(--text-muted);
-}
+.fs-tr { display: none; margin: 6px 0 0; font-size: 14px; line-height: 1.45; color: var(--text-muted); }
 .show-tr .fs-tr, .tr-open .fs-tr, .fs-tr.is-open { display: block; }
-/* сцена: перевод ситуации, вопроса и вариантов одной кнопкой 🌐 */
+/* сцена: перевод ситуации, вопроса и вариантов одной кнопкой */
 .scene-tr > .fs-situation .fs-tr, .scene-tr > .fs-quiz-q-tr, .scene-tr .fs-road-opt .fs-opt-tr { display: block; }
 .fs-junction > .fs-quiz-q { cursor: pointer; }
-
-/* Кнопки строки: 🔊 и 🌐 (перевод фразы) друг под другом */
-.fs-btns { flex: none; display: flex; flex-direction: column; gap: 6px; }
-.fs-tr-btn[aria-pressed="true"], .fs-quiz-tr[aria-pressed="true"] {
-  border-color: var(--accent2); background: var(--dlg-a-soft);
-}
-.fs-situation .fs-tr-btn { flex: none; }
 html[dir="rtl"] .fs-tr { text-align: right; }
 
-/* Знак рядом со строкой */
-.fs-sign { display: flex; align-items: center; gap: 12px; margin: 0 0 10px; }
+/* Кнопка строки: озвучка 44px; звучит — синяя с паузой */
+.fs-btns { flex: none; display: flex; flex-direction: column; gap: 6px; }
+.fs-page .dlg-say {
+  width: 44px; height: 44px; border: 0; background: var(--surface3); color: var(--accent2-text);
+  transition: background-color var(--t-fast), color var(--t-fast);
+}
+.fs-page .dlg-say .ico { width: 20px; height: 20px; }
+.fs-say .fs-say-off { display: none; }
+.fs-page .fs-say.is-on, .fs-line.is-speaking .fs-say { background: var(--accent2); color: var(--text-on-btn); box-shadow: none; }
+:is(.fs-say.is-on, .fs-line.is-speaking .fs-say) .fs-say-on { display: none; }
+:is(.fs-say.is-on, .fs-line.is-speaking .fs-say) .fs-say-off { display: block; }
+.fs-dialog .dlg-line.is-speaking .dlg-bubble { border-color: var(--accent2); box-shadow: 0 0 0 1px var(--accent2) inset; }
+.fs-page .fs-tr-btn[aria-pressed="true"] { background: var(--accent2); color: var(--text-on-btn); }
+.fs-quiz-tr[aria-pressed="true"] { border-color: var(--accent2); background: var(--dlg-a-soft); }
+.fs-page .fs-quiz-tr .ico { width: 16px; height: 16px; }
+.fs-situation .fs-tr-btn { flex: none; }
+
+/* Карточка знака: знак, номер, название; под чертой — правило */
+.fs-sign-card > .fs-line { padding-top: 16px; }
+.fs-sign {
+  display: flex; align-items: center; gap: 14px; margin: 0 0 14px; padding-bottom: 14px;
+  border-bottom: 1px solid var(--fs-line);
+}
 .fs-sign-img { flex: none; display: block; width: 64px; height: 64px; object-fit: contain; }
 .fs-sign-img.is-big { width: 120px; height: 120px; margin: 10px auto 12px; }
 .fs-sign figcaption { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
-.fs-sign-n { font-size: 11px; font-weight: 800; letter-spacing: .4px; color: var(--text-dim); text-transform: uppercase; direction: ltr; text-align: start; }
-.fs-sign-de { font-size: 15px; font-weight: 800; color: var(--text-strong); text-align: start; }
-.fs-sign-tr { font-size: 13px; color: var(--text-muted); }
+.fs-sign-n { font-size: 12px; font-weight: 700; letter-spacing: .08em; color: var(--text-muted); text-transform: uppercase; direction: ltr; text-align: start; }
+.fs-sign-de { font-size: 17px; font-weight: 600; line-height: 1.3; color: var(--text-strong); text-align: start; }
+.fs-sign-tr { font-size: 14px; color: var(--text-muted); }
+
+/* Тест: сначала тёмная карточка-приглашение «В конце урока» */
+.fs-quiz-start {
+  display: flex; flex-direction: column; align-items: flex-start; gap: 4px; padding: 20px;
+  border-radius: 20px; background: var(--fs-cta-bg); border: 1px solid var(--border); color: #fff;
+}
+[data-theme="light"] .fs-quiz-start { border-color: transparent; }
+.fs-quiz-k { font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: rgba(255, 255, 255, .78); }
+.fs-quiz-cta { margin: 0; font-size: 20px; font-weight: 700; line-height: 1.25; color: #fff; }
+.fs-quiz-sub { font-size: 14px; color: rgba(255, 255, 255, .78); }
+.fs-quiz-sub b { font-weight: 500; }
+.fs-quiz-go {
+  display: inline-flex; align-items: center; gap: 4px; min-height: 44px; margin-top: 12px; padding: 0 14px 0 20px;
+  border: 0; border-radius: var(--r-full); background: #fff; color: #12161f; cursor: pointer;
+  font: inherit; font-size: 15px; font-weight: 700; -webkit-tap-highlight-color: transparent;
+}
+.fs-page .fs-quiz-go .ico { width: 18px; height: 18px; }
+.fs-page .fs-quiz-go:focus-visible { outline-color: #fff; outline-offset: 3px; }
 
 /* ── Тест по знакам ── */
-.fs-quiz { margin-top: 26px; }
+.fs-quiz { margin-top: 28px; scroll-margin-top: 84px; }
 .fs-quiz-card {
-  padding: 16px; border-radius: var(--r-lg); text-align: center;
-  background: var(--surface2); border: 1px solid var(--border);
+  padding: 16px; border-radius: 18px; text-align: center;
+  background: var(--fs-card); box-shadow: var(--fs-shadow);
 }
 .fs-quiz-top {
   display: flex; align-items: center; justify-content: space-between; gap: 10px;
@@ -177,7 +351,8 @@ html[dir="rtl"] .fs-tr { text-align: right; }
 }
 .fs-next { margin-top: 14px; }
 .fs-result { padding: 8px 0; }
-.fs-result-big { font-size: 44px; line-height: 1.2; }
+.fs-result-big { display: flex; justify-content: center; color: var(--accent2-text); }
+.fs-page .fs-result-big .ico { width: 44px; height: 44px; stroke-width: 1.6; }
 .fs-result-text { margin: 6px 0 12px; font-size: 18px; color: var(--text); }
 .fs-result-text b { color: var(--text-strong); }
 
@@ -288,7 +463,7 @@ html[dir="rtl"] .fs-tr { text-align: right; }
 @media (prefers-reduced-motion: reduce) {
   .fs-blink { animation: none; }
   .fs-hazard, .fs-lab { transition: none; }
-  .fs-topic-chev { transition: none; }
+  .fs-page .fs-topic-chev, .fs-track i, .fs-row, .fs-page .dlg-say { transition: none; }
   .fs-light circle { transition: none; }
   .fs-lines > .fs-line, .fs-car, .fs-hint-path, .fs-badge, .fs-w, .fs-opt { transition: none; }
 }

@@ -21,45 +21,92 @@
   <meta property="og:url" content="https://vanguar.github.io/deutsch-meister/fahrschule.html">
   <meta property="og:image" content="https://vanguar.github.io/german-morning/assets/img/og-image.png">
   <!-- язык интерфейса: первым, до данных и стилей -->
-  <script src="js/i18n.js?v=185"></script>
+  <script src="js/i18n.js?v=186"></script>
   <!-- цвета темы Telegram — до первой отрисовки (js/tg-theme.js) -->
-  <script src="js/tg-theme.js?v=185"></script>
-  <link rel="stylesheet" href="css/base.css?v=185">
+  <script src="js/tg-theme.js?v=186"></script>
+  <link rel="stylesheet" href="css/base.css?v=186">
   <!-- тултип слова (.word-tip) — из уроков и ридера, как в новостях -->
-  <link rel="stylesheet" href="css/lesson.css?v=185">
-  <link rel="stylesheet" href="css/reader.css?v=185">
+  <link rel="stylesheet" href="css/lesson.css?v=186">
+  <link rel="stylesheet" href="css/reader.css?v=186">
   <!-- шапка, плитки, чипы — новости; кнопки и реплики — диалоги -->
-  <link rel="stylesheet" href="css/news.css?v=185">
-  <link rel="stylesheet" href="css/dialogs.css?v=185">
-  <link rel="stylesheet" href="css/fahrschule.css?v=185">
+  <link rel="stylesheet" href="css/news.css?v=186">
+  <link rel="stylesheet" href="css/dialogs.css?v=186">
+  <link rel="stylesheet" href="css/fahrschule.css?v=186">
 </head>
 <body>
 
 <div class="bg-mesh"></div>
 
+<!-- Линейные иконки раздела (stroke = currentColor, класс .ico) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-back" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></symbol>
+  <symbol id="i-speaker" viewBox="0 0 24 24"><path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.6 5.4a9.5 9.5 0 0 1 0 13.2"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4.5v15a.8.8 0 0 0 1.2.7l12-7.5a.8.8 0 0 0 0-1.4l-12-7.5A.8.8 0 0 0 7 4.5z"/></symbol>
+  <symbol id="i-stop" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/></symbol>
+  <symbol id="i-pause" viewBox="0 0 24 24"><rect x="6" y="4.5" width="4" height="15" rx="1"/><rect x="14" y="4.5" width="4" height="15" rx="1"/></symbol>
+  <symbol id="i-translate" viewBox="0 0 24 24"><path d="m5 8 6 6M4 14l6-6 2-3M2 5h12M7 2h1M22 22l-5-10-5 10M14 18h6"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 16v-4M12 8h.01"/></symbol>
+  <symbol id="i-trophy" viewBox="0 0 24 24"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6M18 9h1.5a2.5 2.5 0 0 0 0-5H18M4 22h16M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0z"/></symbol>
+  <!-- виды уроков -->
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></symbol>
+  <symbol id="i-cross" viewBox="0 0 24 24"><path d="M9 3v6H3M15 3v6h6M9 21v-6H3M15 21v-6h6"/></symbol>
+  <symbol id="i-route" viewBox="0 0 24 24"><circle cx="6" cy="19" r="2.6"/><circle cx="18" cy="5" r="2.6"/><path d="M8.6 19h8.9a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7h8.9"/></symbol>
+  <!-- темы -->
+  <symbol id="i-car" viewBox="0 0 24 24"><path d="M19 17h2a1 1 0 0 0 1-1v-3a2 2 0 0 0-1.5-1.9L16 10l-2.2-2.3A2.5 2.5 0 0 0 12 7H5a1.6 1.6 0 0 0-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4a1 1 0 0 0 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></symbol>
+  <symbol id="i-light" viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="3"/><circle cx="12" cy="7" r="1.6"/><circle cx="12" cy="12" r="1.6"/><circle cx="12" cy="17" r="1.6"/></symbol>
+  <symbol id="i-warn" viewBox="0 0 24 24"><path d="m21.7 18-8-14a2 2 0 0 0-3.4 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.7-3z"/><path d="M12 9v4M12 17h.01"/></symbol>
+  <symbol id="i-gauge" viewBox="0 0 24 24"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></symbol>
+  <symbol id="i-updown" viewBox="0 0 24 24"><path d="m21 16-4 4-4-4M17 20V4M3 8l4-4 4 4M7 4v16"/></symbol>
+  <symbol id="i-park" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 17V7h4a3 3 0 0 1 0 6H9"/></symbol>
+  <symbol id="i-bike" viewBox="0 0 24 24"><circle cx="18.5" cy="17.5" r="3.5"/><circle cx="5.5" cy="17.5" r="3.5"/><circle cx="15" cy="5" r="1"/><path d="M12 17.5V14l-3-3 4-3 2 3h2"/></symbol>
+  <symbol id="i-glass" viewBox="0 0 24 24"><path d="M8 22h8M7 10h10M12 15v7"/><path d="M12 15a5 5 0 0 0 5-5c0-2-.5-4-2-8H9c-1.5 4-2 6-2 8a5 5 0 0 0 5 5z"/></symbol>
+  <symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94z"/></symbol>
+  <symbol id="i-aid" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M12 8v8M8 12h8"/></symbol>
+  <symbol id="i-road" viewBox="0 0 24 24"><path d="M4 21 9 3M20 21 15 3M12 4v2M12 10v3M12 17v4"/></symbol>
+  <symbol id="i-ring" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></symbol>
+  <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></symbol>
+</svg>
+
 <div class="news-page dlg-page fs-page" id="fsApp">
-  <header class="news-head">
-    <a class="news-back" href="index.html">← Главная</a>
-    <div class="news-titles">
-      <h1 class="news-h1">Автошкола</h1>
-      <div class="news-sub">Немецкий за рулём · категория B</div>
+  <header class="fs-head" id="fsHead">
+    <div class="fs-head-row">
+      <a class="fs-back" href="index.html"><svg class="ico flip" aria-hidden="true"><use href="#i-back"/></svg><span>Главная</span></a>
+      <button class="fs-round" type="button" data-lang-toggle onclick="I18N.toggle()" title="Язык · Мова" aria-label="Язык · Мова">RU</button>
+      <button class="fs-round fs-theme" type="button" id="fsThemeBtn" onclick="toggleTheme()" title="Сменить тему" aria-label="Сменить тему">
+        <svg class="ico fs-ico-moon" aria-hidden="true"><use href="#i-moon"/></svg><svg class="ico fs-ico-sun" aria-hidden="true"><use href="#i-sun"/></svg>
+      </button>
     </div>
-    <button class="news-btn" data-lang-toggle onclick="I18N.toggle()" title="Язык · Мова" aria-label="Язык · Мова">RU</button>
-    <button class="news-btn" id="themeToggle" onclick="toggleTheme()" title="Сменить тему" aria-label="Сменить тему">🌙</button>
+    <h1 class="fs-h1">Автошкола</h1>
+    <p class="fs-sub">Немецкий за рулём · категория B</p>
   </header>
 
   <!-- ── СПИСОК УРОКОВ (fahrschule.html) ── -->
   <section class="fs-hub" id="fsHub">
-    <p class="news-intro">Немецкий для тех, кто учится водить в Германии: темы по порядку — теория со знаками, разговор с инструктором и анимации на дороге. Нажимайте на немецкие слова — появится перевод, 🔊 — озвучка фразы.</p>
+    <p class="fs-tip"><svg class="ico" aria-hidden="true"><use href="#i-speaker"/></svg><span>Нажмите на немецкое слово — появится перевод</span></p>
+    <div id="fsContinue"></div>
+    <div class="fs-list-head" id="fsListHead" hidden>
+      <h2 class="fs-list-title">Темы</h2>
+      <span class="fs-list-done" id="fsDone"></span>
+    </div>
     <div class="fs-list" id="fsList" aria-label="Уроки" aria-live="polite" aria-busy="true"></div>
   </section>
 
   <!-- ── УРОК (fahrschule.html#u=t-01) ── -->
   <section class="fs-unit" id="fsUnit" hidden>
-    <div class="dlg-view-top">
-      <button class="news-chip news-crumb" type="button" id="fsToHub">← Все уроки</button>
+    <div class="fs-bar">
+      <div class="fs-bar-row">
+        <button class="fs-bar-back" type="button" id="fsToHub"><svg class="ico flip" aria-hidden="true"><use href="#i-back"/></svg><span id="fsBarTopic"></span></button>
+        <span class="fs-bar-count" id="fsBarCount"></span>
+      </div>
+      <div class="fs-track" aria-hidden="true"><i id="fsBarFill"></i></div>
     </div>
-    <div class="dlg-heading fs-heading" id="fsHeading"></div>
+    <div class="fs-hero" id="fsHeading"></div>
     <div class="fs-body" id="fsBody"></div>
   </section>
 
@@ -68,26 +115,22 @@
     экзаменационный каталог.</p>
 </div>
 
-<script src="js/sw-register.js?v=185"></script>
-<script src="js/tts.js?v=185"></script>
-<script src="js/reader-speak.js?v=185"></script>
-<script src="js/reader-tip.js?v=185"></script>
-<script src="js/fahrschule.js?v=185"></script>
-<script src="js/telegram.js?v=185"></script>
+<script src="js/sw-register.js?v=186"></script>
+<script src="js/tts.js?v=186"></script>
+<script src="js/reader-speak.js?v=186"></script>
+<script src="js/reader-tip.js?v=186"></script>
+<script src="js/fahrschule.js?v=186"></script>
+<script src="js/telegram.js?v=186"></script>
 <script>
   function initTheme() {
     let saved = 'dark';
     try { saved = localStorage.getItem('dm_theme') || 'dark'; } catch (e) {}
     document.documentElement.setAttribute('data-theme', saved);
-    const btn = document.getElementById('themeToggle');
-    if (btn) btn.textContent = saved === 'dark' ? '☀️' : '🌙';
   }
   function toggleTheme() {
     const next = (document.documentElement.getAttribute('data-theme') || 'dark') === 'dark' ? 'light' : 'dark';
     document.documentElement.setAttribute('data-theme', next);
     try { localStorage.setItem('dm_theme', next); } catch (e) {}
-    const btn = document.getElementById('themeToggle');
-    if (btn) btn.textContent = next === 'dark' ? '☀️' : '🌙';
   }
   initTheme();
 </script>

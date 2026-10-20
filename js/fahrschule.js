@@ -39,17 +39,25 @@ const Fahrschule = (() => {
   const TR_KEY    = 'dm_fs_tr';      // показывать перевод: '1' / '0'
   const OPEN_KEY  = 'dm_fs_open';    // раскрытые темы: JSON-массив id
   const LAST_KEY  = 'dm_fs_last';    // последний открытый урок
+  const PROG_KEY  = 'dm_fs_progress';// прогресс: { id: { n — сколько строк/сцен пройдено, done } }
   const HOME_URL  = 'index.html';
   const GAP_MS    = 380;             // пауза между фразами
   const RATE      = 0.9;
   // Слово — как в tools/fahrschule/build.py (WORD_RE): держать одинаковыми
   const WORD_RE   = /km\/h|[A-Za-zÄÖÜäöüßÉé]+(?:-[A-Za-zÄÖÜäöüßÉé]+)*/g;
 
+  // icon — символ из спрайта fahrschule.html, цвет плитки — класс kind-<вид>
   const KINDS = {
-    theory:   { label: 'Теория',      text: 'Правила и знаки с озвучкой и тестом',   forms: ['правило', 'правила', 'правил'] },
-    dialog:   { label: 'Практика',    text: 'Разговор с инструктором за рулём',       forms: ['реплика', 'реплики', 'реплик'] },
-    junction: { label: 'Перекрёсток', text: 'Кто едет первым? Расставьте машины по очереди', forms: ['ситуация', 'ситуации', 'ситуаций'] },
-    road:     { label: 'На дороге',   text: 'Остановочный путь и дистанция — посчитайте и посмотрите', forms: ['ситуация', 'ситуации', 'ситуаций'] }
+    theory:   { label: 'Теория',      icon: 'i-book',  forms: ['правило', 'правила', 'правил'] },
+    dialog:   { label: 'Практика',    icon: 'i-chat',  forms: ['реплика', 'реплики', 'реплик'] },
+    junction: { label: 'Перекрёсток', icon: 'i-cross', forms: ['ситуация', 'ситуации', 'ситуаций'] },
+    road:     { label: 'На дороге',   icon: 'i-route', forms: ['ситуация', 'ситуации', 'ситуаций'] }
+  };
+  // Иконка темы (topics.json: id). Новая тема без своей иконки — машина.
+  const TOPIC_ICONS = {
+    'vorfahrt': 'i-light', 'zeichen-ampeln': 'i-warn', 'tempo-abstand': 'i-gauge', 'ueberholen': 'i-updown',
+    'parken': 'i-park', 'ruecksicht': 'i-bike', 'licht-wetter': 'i-moon', 'alkohol': 'i-glass',
+    'technik': 'i-wrench', 'unfall': 'i-aid', 'autobahn': 'i-road', 'kreis-bahn': 'i-ring', 'umwelt': 'i-leaf'
   };
 
   // Перекрёсток 300×300: дороги шириной 64 по центру, правостороннее
@@ -131,6 +139,52 @@ const Fahrschule = (() => {
 
   function ofHtml(a, b) {
     return `<b>${a}</b> <span>из</span> <b>${b}</b>`;
+  }
+
+  // «3 из 14 правил», «3 из 21 правила»: после «из» — родительный падеж
+  function ofCountHtml(a, b, forms) {
+    const gen = b % 10 === 1 && b % 100 !== 11 ? forms[1] : forms[2];
+    return `${ofHtml(a, b)} <span>${gen}</span>`;
+  }
+
+  function icon(id, cls) {
+    return `<svg class="ico${cls ? ' ' + cls : ''}" aria-hidden="true"><use href="#${id}"/></svg>`;
+  }
+
+  /* ── Прогресс ──
+     Только в этом браузере (localStorage). Теория и диалог — сколько разных
+     строк человек увидел или прослушал (seen — их номера); пройдены — тест
+     по знакам завершён (теория) или увидены все реплики (диалог).
+     Сцены — сколько ситуаций решено подряд; пройдены — все. */
+
+  function readProgress() {
+    try {
+      const p = JSON.parse(readStore(PROG_KEY) || '{}');
+      return p && typeof p === 'object' && !Array.isArray(p) ? p : {};
+    } catch (e) { return {}; }
+  }
+
+  function progressOf(id, all) {
+    const p = (all || readProgress())[id];
+    return { n: p && Number(p.n) > 0 ? Number(p.n) : 0, done: !!(p && p.done) };
+  }
+
+  // Сколько строк (реплик, ситуаций) в уроке — из оглавления: в <id>.json числа нет
+  function unitCount(id) {
+    const u = units.find(x => x.id === id);
+    return u ? u.count : 0;
+  }
+
+  function saveProgress(id, n, done, seen) {
+    const all = readProgress();
+    const cur = progressOf(id, all);
+    const next = { n: Math.max(cur.n, Number(n) || 0), done: cur.done || !!done };
+    if (next.n === cur.n && next.done === cur.done && !seen) return;
+    const old = all[id] && all[id].seen;
+    if (seen || old) next.seen = seen || old;
+    all[id] = next;
+    writeStore(PROG_KEY, JSON.stringify(all));
+    paintBar();
   }
 
   function reducedMotion() {
@@ -225,7 +279,9 @@ const Fahrschule = (() => {
       setUrl(v, 'replace');
     }
     view = v;
+    stopSeen();
     el.hub.hidden  = v.name !== 'hub';
+    el.head.hidden = v.name !== 'hub';     // в уроке вместо шапки — панель «‹ Тема N»
     el.unit.hidden = v.name !== 'unit';
     syncTgBack();
     if (!loaded) return;
@@ -234,103 +290,136 @@ const Fahrschule = (() => {
     window.scrollTo(0, 0);
   }
 
-  /* ── Список уроков ── */
+  /* ── Список уроков ──
+     Сверху — «Продолжить»: последний открытый урок, если он не пройден,
+     иначе следующий непройденный (карточки нет, пока прогресса нет).
+     Ниже темы — карточки-аккордеоны: шапка — кнопка на всю ширину, открыта
+     одна тема. Уроки темы — строки-ссылки, справа статус: ✓ пройден,
+     «6/15» в процессе, › не начат. */
 
-  function tileHtml(u) {
+  function topicOf(id) {
+    return topics.findIndex(t => t.units.includes(id));
+  }
+
+  function kindIcoHtml(kind) {
+    return `<span class="fs-kind-ico kind-${kind}" aria-hidden="true">${icon(KINDS[kind].icon)}</span>`;
+  }
+
+  function tileHtml(u, p) {
     const k = KINDS[u.kind];
-    return `<a class="news-tile is-live fs-tile" href="#u=${esc(u.id)}" data-unit="${esc(u.id)}">
-      <div class="news-tile-top">
-        <div class="news-tile-ico fs-kind-ico kind-${u.kind}" aria-hidden="true">${esc(u.emoji)}</div>
-        <div class="news-tile-head">
-          <div class="news-tile-title">${esc(k.label)}</div>
-          <div class="news-tile-text">${esc(k.text)}</div>
-        </div>
-      </div>
-      <div class="fs-tile-unit">
-        <span class="fs-tile-de" lang="de" dir="ltr">${esc(u.title)}</span>
-        <span class="fs-tile-tr">${esc(u.titleTr)}</span>
-      </div>
-      <div class="news-tile-foot">
-        <span class="news-tile-count">${countHtml(u.count, k.forms)}</span>
-        <span class="fs-tile-level">${esc(u.level)}</span>
-        <span class="news-tile-go">Открыть →</span>
-      </div>
+    const going = !p.done && p.n > 0;
+    let state = icon('i-chev', 'flip fs-row-chev');
+    if (p.done) state = `<span class="fs-row-done">${icon('i-check')}<span class="sr-only">Пройдено</span></span>`;
+    else if (going) state = `<span class="fs-row-n">${Math.min(p.n, u.count)}/${u.count}</span>`;
+    return `<a class="fs-tile fs-row${p.done ? ' is-done' : ''}${going ? ' is-going' : ''}" href="#u=${esc(u.id)}" data-unit="${esc(u.id)}">
+      ${kindIcoHtml(u.kind)}
+      <span class="fs-row-text">
+        <span class="fs-row-meta"><span>${esc(k.label)}</span> · ${countHtml(u.count, k.forms)} · <span class="fs-level">${esc(u.level)}</span></span>
+        <span class="fs-row-de" lang="de" dir="ltr">${esc(u.title)}</span>
+      </span>
+      <span class="fs-row-state">${state}</span>
     </a>`;
   }
 
   function soonTileHtml() {
-    return `<div class="news-tile is-soon fs-tile fs-soon" aria-disabled="true">
-      <span class="news-tile-badge soon">Скоро</span>
-      <div class="news-tile-top">
-        <div class="news-tile-ico fs-kind-ico" aria-hidden="true">🛣️</div>
-        <div class="news-tile-head">
-          <div class="news-tile-title">Дальше</div>
-          <div class="news-tile-text">Экзамен на права — следующая тема</div>
-        </div>
-      </div>
+    return `<div class="fs-soon" aria-disabled="true">
+      <span class="fs-topic-ico" aria-hidden="true">${icon('i-car')}</span>
+      <span class="fs-topic-titles">
+        <span class="fs-topic-n">Дальше</span>
+        <span class="fs-topic-tr">Экзамен на права — следующая тема</span>
+      </span>
+      <span class="fs-soon-badge">Скоро</span>
     </div>`;
   }
 
-  // Тема — отдельная карточка: шапка полосой (номер, эмодзи, название),
-  // под ней сетка её уроков. Так темы не сливаются в одну ленту плиток.
-  // Тема сворачивается: шапка — кнопка. Справа — сколько уроков и
-  // подсказка «Показать уроки» со стрелкой, чтобы было видно, что по тапу
-  // откроется список. Раскрытые темы запоминаются (OPEN_KEY); пока выбора
-  // не было — открыта тема последнего урока, а при первом заходе — первая.
-  function openTopics() {
+  // Открытая тема: выбор человека (OPEN_KEY; открытый урок выбирает свою
+  // тему), а при первом заходе — тема последнего урока или первая
+  function openTopic() {
+    const last = topics[topicOf(readStore(LAST_KEY))];
     try {
       const saved = JSON.parse(readStore(OPEN_KEY) || 'null');
-      if (Array.isArray(saved)) return new Set(saved);
+      if (Array.isArray(saved)) {
+        if (last && saved.includes(last.id)) return last.id;
+        return saved.find(id => topics.some(t => t.id === id)) || null;
+      }
     } catch (e) { /* испорченное значение — как будто выбора не было */ }
-    const last = readStore(LAST_KEY);
-    const t = topics.find(x => x.units.includes(last)) || topics[0];
-    return new Set(t ? [t.id] : []);
+    return (last || topics[0] || {}).id || null;
   }
 
-  function saveOpenTopics(set) {
-    writeStore(OPEN_KEY, JSON.stringify([...set]));
+  function trackHtml(a, b) {
+    const pct = b > 0 ? Math.round(100 * Math.min(a, b) / b) : 0;
+    return `<span class="fs-track" aria-hidden="true"><i style="width:${pct}%"></i></span>`;
   }
 
-  function topicHtml(t, n, byId, open) {
+  function topicHtml(t, n, byId, open, prog) {
     const list = t.units.filter(id => byId[id]);
+    const ps = list.map(id => progressOf(id, prog));
+    const done = ps.filter(p => p.done).length;
+    const started = ps.some(p => p.done || p.n > 0);
     return `<section class="fs-topic${open ? ' is-open' : ''}" data-topic="${esc(t.id)}">
       <button class="fs-topic-head" type="button" data-topic-toggle="${esc(t.id)}" aria-expanded="${open ? 'true' : 'false'}" aria-controls="fsTopicList-${esc(t.id)}">
-        <span class="news-rubric-ico" aria-hidden="true">${esc(t.emoji)}</span>
+        <span class="fs-topic-ico" aria-hidden="true">${icon(TOPIC_ICONS[t.id] || 'i-car')}</span>
         <span class="fs-topic-titles">
           <span class="fs-topic-n"><span>Тема</span> ${n}</span>
           <span class="fs-topic-title" lang="de" dir="ltr">${esc(t.title)}</span>
-          <span class="fs-topic-tr">${esc(t.titleTr)}</span>
+          <span class="fs-topic-tr">${t.titleTr ? `<span>${esc(t.titleTr)}</span> · ` : ''}<span class="fs-topic-count">${countHtml(list.length, ['урок', 'урока', 'уроков'])}</span></span>
+          ${started ? `<span class="fs-topic-prog">${trackHtml(done, list.length)}<span class="fs-topic-frac">${done}/${list.length}</span></span>` : ''}
         </span>
-        <span class="fs-topic-more">
-          <span class="fs-topic-count">${countHtml(list.length, ['урок', 'урока', 'уроков'])}</span>
-          <span class="fs-topic-hint"><span class="fs-topic-show">Показать уроки</span><span class="fs-topic-hide">Скрыть</span></span>
-          <span class="fs-topic-chev" aria-hidden="true"></span>
-        </span>
+        ${icon('i-down', 'fs-topic-chev')}
       </button>
-      <div class="news-grid fs-topic-grid" id="fsTopicList-${esc(t.id)}"${open ? '' : ' hidden'}>${list.map(id => tileHtml(byId[id])).join('')}</div>
+      <div class="fs-topic-list" id="fsTopicList-${esc(t.id)}"${open ? '' : ' hidden'}>${list.map((id, k) => tileHtml(byId[id], ps[k])).join('')}</div>
     </section>`;
   }
 
+  // Открыта одна тема: открыть другую — прежняя сворачивается
   function toggleTopic(id) {
     const sec = el.list.querySelector(`.fs-topic[data-topic="${id}"]`);
     if (!sec) return;
     const open = !sec.classList.contains('is-open');
-    sec.classList.toggle('is-open', open);
-    sec.querySelector('[data-topic-toggle]').setAttribute('aria-expanded', open ? 'true' : 'false');
-    sec.querySelector('.fs-topic-grid').hidden = !open;
-    const set = new Set([...el.list.querySelectorAll('.fs-topic.is-open')].map(x => x.dataset.topic));
-    saveOpenTopics(set);
+    el.list.querySelectorAll('.fs-topic').forEach(x => {
+      const on = open && x === sec;
+      x.classList.toggle('is-open', on);
+      x.querySelector('[data-topic-toggle]').setAttribute('aria-expanded', on ? 'true' : 'false');
+      x.querySelector('.fs-topic-list').hidden = !on;
+    });
+    writeStore(OPEN_KEY, JSON.stringify(open ? [id] : []));
+    // свернулась длинная тема выше — открытая уехала вверх: вернуть её шапку в кадр
+    if (open && sec.getBoundingClientRect().top < 0) sec.scrollIntoView({ block: 'start' });
+  }
+
+  function continueHtml(byId, prog) {
+    if (!Object.keys(prog).some(id => byId[id])) return '';
+    const order = topics.flatMap(t => t.units).filter(id => byId[id]);
+    const from = Math.max(0, order.indexOf(readStore(LAST_KEY)));
+    let id = null;
+    for (let j = 0; j < order.length && !id; j++) {
+      const x = order[(from + j) % order.length];
+      if (!progressOf(x, prog).done) id = x;
+    }
+    if (!id) return '';
+    const u = byId[id];
+    const k = KINDS[u.kind];
+    const p = progressOf(id, prog);
+    return `<a class="fs-cont" href="#u=${esc(id)}" data-unit="${esc(id)}">
+      <span class="fs-cont-text">
+        <span class="fs-cont-k">Продолжить</span>
+        <span class="fs-cont-de" lang="de" dir="ltr">${esc(u.title)}</span>
+        <span class="fs-cont-meta"><span>Тема</span> ${topicOf(id) + 1} · <span>${esc(k.label)}</span> · ${ofCountHtml(Math.min(p.n, u.count), u.count, k.forms)}</span>
+      </span>
+      <span class="fs-cont-go" aria-hidden="true">${icon('i-play')}</span>
+      ${trackHtml(p.n, u.count)}
+    </a>`;
   }
 
   function renderHub() {
     el.list.setAttribute('aria-busy', 'false');
     const byId = Object.fromEntries(units.map(u => [u.id, u]));
-    const open = openTopics();
-    // тема урока, из которого вернулись, всегда раскрыта
-    const last = readStore(LAST_KEY);
-    const lastTopic = topics.find(x => x.units.includes(last));
-    if (lastTopic && !open.has(lastTopic.id)) { open.add(lastTopic.id); saveOpenTopics(open); }
-    el.list.innerHTML = topics.map((t, k) => topicHtml(t, k + 1, byId, open.has(t.id))).join('') + soonTileHtml();
+    const prog = readProgress();
+    const open = openTopic();
+    el.cont.innerHTML = continueHtml(byId, prog);
+    el.done.innerHTML = `<span>Пройдено</span>: ${ofHtml(units.filter(u => progressOf(u.id, prog).done).length, units.length)}`;
+    el.listHead.hidden = false;
+    el.list.innerHTML = topics.map((t, k) => topicHtml(t, k + 1, byId, t.id === open, prog)).join('') + soonTileHtml();
     // первые уроки тем — заранее, пока человек выбирает
     prefetch(topics.map(t => t.units[0]));
   }
@@ -396,10 +485,14 @@ const Fahrschule = (() => {
 
   function openUnit(id) {
     writeStore(LAST_KEY, id);
+    // вернёмся в список — будет раскрыта тема этого урока
+    const ti = topicOf(id);
+    if (topics[ti]) writeStore(OPEN_KEY, JSON.stringify([topics[ti].id]));
     const seq = ++loadSeq;
     unit = null;
     el.body.innerHTML = '<div class="news-loading"><span class="rd-spinner"></span><span>Загружаем урок</span></div>';
     el.heading.innerHTML = '';
+    paintBar();
     fetchUnit(id).then(d => {
       if (seq !== loadSeq) return;
       unit = d;
@@ -420,44 +513,61 @@ const Fahrschule = (() => {
     scene = null;
     sceneTr = trOn();
     const k = KINDS[u.kind];
+    // Заголовок урока — фраза 0 (сцены перерегистрируют свои фразы после неё)
     el.heading.innerHTML = `
-      <span class="dlg-level-chip fs-kind-chip kind-${u.kind}">${esc(k.label)}</span>
-      <span class="fs-level">${esc(u.level)}</span>
-      ${sentence({ de: u.title, tr: u.titleTr }, 'h2', 'dlg-title')}
-      <div class="dlg-title-tr">${esc(u.titleTr)}</div>
-      <p class="dlg-situation">${esc(u.intro)}</p>`;
+      <div class="fs-hero-top">
+        <span class="fs-kind-chip kind-${u.kind}">${esc(k.label)}</span>
+        <span class="fs-hero-meta"><span class="fs-level">${esc(u.level)}</span> · ${countHtml(unitCount(u.id), k.forms)}</span>
+      </div>
+      ${sentence({ de: u.title, tr: u.titleTr }, 'h1', 'fs-title')}
+      <p class="fs-tr fs-title-tr" dir="auto">${esc(u.titleTr)}</p>
+      <p class="fs-intro">${esc(u.intro)}</p>`;
     document.title = u.title + ' | German Morning';
     if (u.kind === 'theory') el.body.innerHTML = theoryHtml(u);
     else if (u.kind === 'dialog') el.body.innerHTML = dialogHtml(u);
     else el.body.innerHTML = '<div class="fs-junction" id="fsJunction"></div>';
     paintTr();
     paintPlay();
+    paintBar();
     if (u.kind === 'theory' && u.quiz && u.quiz.length) startQuiz();
     if (u.kind === 'junction' || u.kind === 'road') openScene(0);
+    else watchSeen();
     prefetchAround(u.id);
   }
 
+  // Кнопка с иконкой ▶/■: «Слушать урок», «Объяснение» (paintPlay меняет
+  // иконку и подпись)
+  function playBtnHtml(kind, label, cls) {
+    return `<button class="dlg-play${cls ? ' ' + cls : ''}" type="button" data-play="${kind}" aria-pressed="false">
+      <svg class="ico dlg-play-ico" aria-hidden="true"><use href="#i-play"/></svg> <span class="dlg-play-label">${esc(label)}</span>
+    </button>`;
+  }
+
+  // «Слушать» и общий перевод всех фраз (подпись — язык перевода: RU/UA/AR)
   function controlsHtml(label) {
-    return `<div class="dlg-controls">
-      <button class="dlg-play" type="button" data-play="all" aria-pressed="false">
-        <span class="dlg-play-ico" aria-hidden="true">▶</span> <span class="dlg-play-label">${esc(label)}</span>
+    const lang = (window.I18N && I18N.lang) || 'ru';
+    const code = { ru: 'RU', uk: 'UA', ar: 'AR' }[lang] || lang.toUpperCase();
+    return `<div class="fs-controls">
+      ${playBtnHtml('all', label, 'fs-play')}
+      <button class="fs-tr-all" type="button" data-tr-toggle aria-pressed="false" title="Перевод всех фраз" aria-label="Перевод всех фраз">
+        ${icon('i-translate')}<span lang="en">${code}</span>
       </button>
-      <button class="news-chip dlg-tr-toggle" type="button" data-tr-toggle aria-pressed="false">🌐 <span>Перевод</span></button>
     </div>
-    <p class="dlg-voice-note fs-hint"><span>Нажмите на слово — перевод слова. 🌐 у строки (или нажатие на строку) — перевод фразы, 🔊 — озвучка.</span></p>`;
+    <p class="fs-note">${icon('i-info')}<span>Нажмите на слово — перевод слова, на строку — перевод фразы. Кнопка с языком показывает или скрывает перевод всех фраз.</span></p>`;
   }
 
+  // Озвучка строки. Пока звучит (сама или в «Слушать урок») — синяя, с паузой
   function sayBtn(n) {
-    return `<button class="dlg-say" type="button" data-say="${n}" title="Озвучить фразу" aria-label="Озвучить фразу">🔊</button>`;
+    return `<button class="dlg-say fs-say" type="button" data-say="${n}" title="Озвучить фразу" aria-label="Озвучить фразу">${icon('i-speaker', 'fs-say-on')}${icon('i-pause', 'fs-say-off')}</button>`;
   }
 
-  // Видимая подсказка, что у фразы есть перевод: 🌐 открывает его у этой строки
+  // Перевод ситуации сцены: ситуация, вопрос и варианты разом
   function trBtn() {
-    return '<button class="dlg-say fs-tr-btn" type="button" data-tr-line aria-pressed="false" title="Перевод фразы" aria-label="Перевод фразы">🌐</button>';
+    return `<button class="dlg-say fs-tr-btn" type="button" data-tr-line aria-pressed="false" title="Перевод" aria-label="Перевод">${icon('i-translate')}</button>`;
   }
 
   function lineBtns(n) {
-    return `<div class="fs-btns">${sayBtn(n)}${trBtn()}</div>`;
+    return `<div class="fs-btns">${sayBtn(n)}</div>`;
   }
 
   function signHtml(s, big) {
@@ -465,32 +575,51 @@ const Fahrschule = (() => {
     return `<img class="fs-sign-img${big ? ' is-big' : ''}" src="${esc(s.src)}" alt="Zeichen ${esc(s.n)}" width="${big ? 120 : 64}" height="${big ? 120 : 64}" decoding="async">`;
   }
 
-  /* ── Теория ── */
+  /* ── Теория ──
+     Строки раздела — одна карточка с разделителями; строка со знаком —
+     своя карточка: знак, номер и название, под чертой — правило. */
+
+  function lineHtml(ln, k) {
+    const n = sentences.length;
+    return `<li class="fs-line" data-line="${n}" data-k="${k}">
+      <div class="fs-line-row">
+        <div class="fs-line-text">${sentence(ln, 'p', 'fs-de')}<p class="fs-tr" dir="auto">${esc(ln.tr)}</p></div>
+        ${lineBtns(n)}
+      </div>
+    </li>`;
+  }
 
   function theoryHtml(u) {
-    const secs = (u.sections || []).map(sec => `<section class="fs-sec">
-      <h3 class="fs-sec-title">${esc(sec.title)}</h3>
-      <ol class="fs-lines">${sec.lines.map(ln => {
+    let k = 0;
+    const secs = (u.sections || []).map(sec => {
+      const groups = [];
+      sec.lines.forEach(ln => {
         const s = ln.sign && u.signs[ln.sign];
-        const n = sentences.length;
-        const body = sentence(ln, 'p', 'fs-de');
-        const sign = s ? `<figure class="fs-sign">
+        if (!s) {
+          const g = groups[groups.length - 1];
+          if (g && !g.sign) g.lines.push(ln); else groups.push({ lines: [ln] });
+          return;
+        }
+        groups.push({ sign: s, lines: [ln] });
+      });
+      const cards = groups.map(g => {
+        if (!g.sign) return `<ol class="fs-lines">${g.lines.map(ln => lineHtml(ln, k++)).join('')}</ol>`;
+        const s = g.sign;
+        const fig = `<figure class="fs-sign">
             ${signHtml(s)}
             <figcaption>
               <span class="fs-sign-n">Zeichen ${esc(s.n)}</span>
               ${sentence({ de: s.de, tr: s.tr }, 'span', 'fs-sign-de')}
               <span class="fs-sign-tr">${esc(s.tr)}</span>
             </figcaption>
-          </figure>` : '';
-        return `<li class="fs-line" data-line="${n}">
-          ${sign}
-          <div class="fs-line-row">
-            <div class="fs-line-text">${body}<p class="fs-tr" dir="auto">${esc(ln.tr)}</p></div>
-            ${lineBtns(n)}
-          </div>
-        </li>`;
-      }).join('')}</ol>
-    </section>`).join('');
+          </figure>`;
+        return `<ol class="fs-lines fs-sign-card">${lineHtml(g.lines[0], k++).replace('<div class="fs-line-row">', fig + '<div class="fs-line-row">')}</ol>`;
+      }).join('');
+      return `<section class="fs-sec">
+        <h2 class="fs-sec-title">${esc(sec.title)}</h2>
+        ${cards}
+      </section>`;
+    }).join('');
     const quizBox = u.quiz && u.quiz.length
       ? `<section class="fs-quiz" id="fsQuiz" aria-live="polite"></section>` : '';
     return controlsHtml('Слушать урок') + secs + quizBox;
@@ -512,8 +641,9 @@ const Fahrschule = (() => {
   // фразы (вопрос, пояснение) каждый раз регистрируются заново
   function startQuiz() {
     if (quiz) sentences = sentences.slice(0, quiz.base);
-    // tr: null — как общий «Перевод», true/false — выбор 🌐 в тесте
-    quiz = { i: 0, score: 0, answered: false, opts: [], base: sentences.length, tr: quiz ? quiz.tr : null };
+    // tr: null — как общий перевод, true/false — выбор кнопкой «Перевод» в тесте;
+    // started — нажали «Начать тест» (до этого — карточка-приглашение)
+    quiz = { i: 0, score: 0, answered: false, opts: [], base: sentences.length, tr: quiz ? quiz.tr : null, started: !!(quiz && quiz.started) };
     renderQuiz();
   }
 
@@ -533,11 +663,21 @@ const Fahrschule = (() => {
     if (!box || !quiz) return;
     sentences = sentences.slice(0, quiz.base);
     const list = unit.quiz;
+    if (!quiz.started) {
+      box.innerHTML = `<div class="fs-quiz-start">
+          <span class="fs-quiz-k">В конце урока</span>
+          <h2 class="fs-quiz-cta">Проверьте себя по знакам</h2>
+          <span class="fs-quiz-sub">${countHtml(list.length, ['вопрос', 'вопроса', 'вопросов'])}</span>
+          <button class="fs-quiz-go" type="button" data-quiz-start><span>Начать тест</span> ${icon('i-chev', 'flip')}</button>
+        </div>`;
+      return;
+    }
     if (quiz.i >= list.length) {
       const all = quiz.score === list.length;
-      box.innerHTML = `<h3 class="fs-sec-title">Проверьте себя</h3>
+      saveProgress(unit.id, unitCount(unit.id), true);
+      box.innerHTML = `<h2 class="fs-sec-title">Проверьте себя</h2>
         <div class="fs-result${all ? ' is-all' : ''}">
-          <div class="fs-result-big">${all ? '🏆' : '🚗'}</div>
+          <div class="fs-result-big" aria-hidden="true">${icon(all ? 'i-trophy' : 'i-car')}</div>
           <div class="fs-result-text"><span>Правильно</span>: ${ofHtml(quiz.score, list.length)}</div>
           <button class="news-chip" type="button" data-quiz-restart>↻ <span>Пройти ещё раз</span></button>
         </div>`;
@@ -571,11 +711,11 @@ const Fahrschule = (() => {
         </div>` : ''}
         <button class="dlg-play fs-next" type="button" data-quiz-next>${quiz.i + 1 < list.length ? '<span>Дальше</span> ›' : '<span>Результат</span> ›'}</button>`;
     }
-    box.innerHTML = `<h3 class="fs-sec-title">Проверьте себя</h3>
+    box.innerHTML = `<h2 class="fs-sec-title">Проверьте себя</h2>
       <div class="fs-quiz-card${trCls(quizTr())}">
         <div class="fs-quiz-top">
           <span><span>Вопрос</span> <span class="fs-quiz-n">${quiz.i + 1} / ${list.length}</span></span>
-          <button class="news-chip fs-quiz-tr" type="button" data-tr-line aria-pressed="${quizTr() ? 'true' : 'false'}">🌐 <span>Перевод</span></button>
+          <button class="news-chip fs-quiz-tr" type="button" data-tr-line aria-pressed="${quizTr() ? 'true' : 'false'}">${icon('i-translate')}<span>Перевод</span></button>
         </div>
         ${signHtml(s, true)}
         ${unit.quizQuestion ? sentence(unit.quizQuestion, 'p', 'fs-quiz-q') + `<p class="fs-tr fs-quiz-q-tr" dir="auto">${esc(unit.quizQuestion.tr)}</p>` : ''}
@@ -598,10 +738,10 @@ const Fahrschule = (() => {
 
   function dialogHtml(u) {
     const sp = u.speakers || {};
-    const lines = u.lines.map(ln => {
+    const lines = u.lines.map((ln, k) => {
       const who = sp[ln.s] || { name: ln.s };
       const n = sentences.length;
-      return `<li class="dlg-line side-${ln.s === 'A' ? 'a' : 'b'} fs-line" data-line="${n}">
+      return `<li class="dlg-line side-${ln.s === 'A' ? 'a' : 'b'} fs-line" data-line="${n}" data-k="${k}">
         <div class="dlg-bubble">
           <div class="dlg-who" lang="de" dir="ltr">${esc(who.name)}</div>
           ${sentence(ln, 'div', 'dlg-de fs-de')}
@@ -614,6 +754,11 @@ const Fahrschule = (() => {
   }
 
   /* ── Перекрёсток ── */
+
+  // Ситуация решена (верно или нет — человек увидел разбор): в прогресс
+  function sceneSolved() {
+    saveProgress(unit.id, scene.i + 1, scene.i + 1 >= unit.scenes.length);
+  }
 
   function openScene(i) {
     stopAll();
@@ -744,7 +889,7 @@ const Fahrschule = (() => {
       ? '✓ <span>Верно! Так машины и поедут.</span>'
       : '✗ <span>Не совсем. Правильный порядок — на машинах.</span>';
     act.innerHTML = `
-      <button class="dlg-play" type="button" data-play="explain" aria-pressed="false"><span class="dlg-play-ico" aria-hidden="true">▶</span> <span class="dlg-play-label">Объяснение</span></button>
+      ${playBtnHtml('explain', 'Объяснение')}
       <button class="news-chip" type="button" data-scene-again>↻ <span>Ещё раз</span></button>
       ${last ? '' : '<button class="news-chip" type="button" data-scene-next><span>Следующая</span> ›</button>'}`;
     paintPlay();
@@ -760,6 +905,7 @@ const Fahrschule = (() => {
     if (scene.pick.length === sc.cars.length) {
       scene.right = scene.pick.join() === sc.order.join();
       scene.done = true;
+      sceneSolved();
       const after = () => {
         renderScene();
         speakList(explainLines(), 'explain');
@@ -925,7 +1071,7 @@ const Fahrschule = (() => {
       status = scene.right ? '✓ <span>Верно!</span>' : '✗ <span>Не совсем. Правильный ответ отмечен зелёным.</span>';
     }
     const actions = scene.shown
-      ? `<button class="dlg-play" type="button" data-play="explain" aria-pressed="false"><span class="dlg-play-ico" aria-hidden="true">▶</span> <span class="dlg-play-label">Объяснение</span></button>
+      ? `${playBtnHtml('explain', 'Объяснение')}
         <button class="news-chip" type="button" data-scene-again>↻ <span>Ещё раз</span></button>
         ${last ? '' : '<button class="news-chip" type="button" data-scene-next><span>Следующая</span> ›</button>'}`
       : '';
@@ -956,6 +1102,7 @@ const Fahrschule = (() => {
     scene.pick = key;
     scene.right = key === String(sc.answer);
     scene.done = true;
+    sceneSolved();
     renderRoad();
     animateRoad(sc, () => {
       scene.shown = true;
@@ -1750,6 +1897,66 @@ const Fahrschule = (() => {
     timers = [];
   }
 
+  /* ── Пройдено в уроке ──
+     Строка теории или реплика засчитывается, когда её видно на экране
+     (IntersectionObserver) не меньше SEEN_MS или она прозвучала; строки,
+     пролетевшие при быстрой прокрутке, не засчитываются. Панель «‹ Тема N · X из Y». */
+
+  let seenObs = null;
+
+  const SEEN_MS = 800;       // столько строка должна пробыть на экране
+  let seenWait = new Map();  // строка → таймер «ещё на экране»
+
+  function stopSeen() {
+    if (seenObs) { seenObs.disconnect(); seenObs = null; }
+    seenWait.forEach(t => clearTimeout(t));
+    seenWait = new Map();
+  }
+
+  function lineSeen(k) {
+    if (!unit || !(k >= 0)) return;
+    const p = readProgress()[unit.id];
+    const seen = new Set(p && Array.isArray(p.seen) ? p.seen : []);
+    if (seen.has(k)) return;
+    seen.add(k);
+    // диалог (и теория без теста) пройден, когда увидены все строки
+    const byLines = unit.kind === 'dialog' || !(unit.quiz && unit.quiz.length);
+    saveProgress(unit.id, seen.size, byLines && seen.size >= unitCount(unit.id), [...seen].sort((a, b) => a - b));
+  }
+
+  function watchSeen() {
+    stopSeen();
+    if (!unit || typeof IntersectionObserver !== 'function') return;
+    // строка, пролетевшая мимо при прокрутке, не считается — только задержавшаяся
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        const li = e.target;
+        clearTimeout(seenWait.get(li));
+        seenWait.delete(li);
+        if (!e.isIntersecting) return;
+        seenWait.set(li, setTimeout(() => {
+          seenWait.delete(li);
+          obs.unobserve(li);
+          lineSeen(Number(li.dataset.k));
+        }, SEEN_MS));
+      });
+    }, { threshold: 0.6 });
+    seenObs = obs;
+    el.body.querySelectorAll('.fs-line[data-k]').forEach(li => obs.observe(li));
+  }
+
+  function paintBar() {
+    if (!el.barCount) return;
+    const u = view.name === 'unit' ? units.find(x => x.id === view.id) : null;
+    if (!u) return;
+    const ti = topicOf(u.id);
+    el.barTopic.innerHTML = ti >= 0 ? `<span>Тема</span> ${ti + 1}` : '<span>Все уроки</span>';
+    const p = progressOf(u.id);
+    const n = p.done ? u.count : Math.min(p.n, u.count);
+    el.barCount.innerHTML = ofCountHtml(n, u.count, KINDS[u.kind].forms);
+    el.barFill.style.width = (u.count > 0 ? Math.round(100 * n / u.count) : 0) + '%';
+  }
+
   /* ── Перевод ── */
 
   function trOn() { return readStore(TR_KEY) === '1'; }
@@ -1778,8 +1985,8 @@ const Fahrschule = (() => {
       const on = playing === b.dataset.play;
       b.setAttribute('aria-pressed', on ? 'true' : 'false');
       b.classList.toggle('is-on', on);
-      const ico = b.querySelector('.dlg-play-ico');
-      if (ico) ico.textContent = on ? '■' : '▶';
+      const ico = b.querySelector('.dlg-play-ico use');
+      if (ico) ico.setAttribute('href', on ? '#i-stop' : '#i-play');
       const lab = b.querySelector('.dlg-play-label');
       if (lab) {
         if (!b.dataset.label) b.dataset.label = lab.textContent;
@@ -1795,6 +2002,7 @@ const Fahrschule = (() => {
     const li = el.unit.querySelector(`.fs-line[data-line="${n}"]`);
     if (!li) return;
     li.classList.add('is-speaking');
+    if (li.dataset.k != null) lineSeen(Number(li.dataset.k));
     if (li.scrollIntoView) {
       try { li.scrollIntoView({ block: 'nearest', behavior: 'smooth' }); } catch (e) { li.scrollIntoView(false); }
     }
@@ -1851,8 +2059,10 @@ const Fahrschule = (() => {
     else if (kind === 'explain' && scene) speakList(explainLines(), 'explain');
   }
 
+  // Повторное нажатие — стоп; и у строки, что звучит в «Слушать урок» (на ней пауза)
   function sayLine(n) {
-    if (playing === 's:' + n) { stopSpeech(); return; }
+    const inQueue = playing && el.unit.querySelector(`.fs-line.is-speaking[data-line="${n}"]`);
+    if (playing === 's:' + n || inQueue) { stopSpeech(); return; }
     speakList([n], 's:' + n);
   }
 
@@ -1948,7 +2158,7 @@ const Fahrschule = (() => {
     const play = t.closest('[data-play]');
     if (play) { e.preventDefault(); togglePlay(play.dataset.play); return; }
     if (t.closest('[data-tr-toggle]')) {
-      // общий «Перевод» сбрасывает выбор 🌐 у строк, сцены и теста
+      // общий перевод сбрасывает выбор у отдельных строк, сцены и теста
       writeStore(TR_KEY, trOn() ? '0' : '1');
       el.unit.querySelectorAll('.tr-open, .tr-closed').forEach(h => h.classList.remove('tr-open', 'tr-closed'));
       sceneTr = trOn();
@@ -1961,6 +2171,14 @@ const Fahrschule = (() => {
     if (t.closest('[data-tr-line]')) { toggleLineTr(trHolder(t)); return; }
     const ro = t.closest('[data-road-opt]');
     if (ro) { pickRoad(ro.dataset.roadOpt); return; }
+    if (t.closest('[data-quiz-start]') && quiz) {
+      quiz.started = true;
+      renderQuiz();
+      const first = document.querySelector('#fsQuiz [data-opt]');
+      if (first) first.focus({ preventScroll: true });
+      document.getElementById('fsQuiz').scrollIntoView({ block: 'start', behavior: reducedMotion() ? 'auto' : 'smooth' });
+      return;
+    }
     const opt = t.closest('[data-opt]');
     if (opt) { answerQuiz(opt.dataset.opt); return; }
     if (t.closest('[data-quiz-next]')) { stopSpeech(); quiz.i++; quiz.answered = false; renderQuiz(); return; }
@@ -1974,11 +2192,10 @@ const Fahrschule = (() => {
     if (!t.closest('a, button') && (t.closest('.fs-line, .fs-situation') || t.closest('.fs-quiz-q'))) toggleLineTr(trHolder(t));
   }
 
-  // Чей перевод открывает 🌐 или нажатие: строка, ситуация сцены или
-  // карточка теста (там — вопрос и все варианты сразу)
-  // В сцене (перекрёсток, «на дороге») 🌐 у ситуации и тап по вопросу
-  // переводят всё, что нужно для ответа: ситуацию, вопрос и варианты.
-  // Пояснения после ответа — у каждой строки своя 🌐.
+  // Чей перевод открывает нажатие: строка или карточка теста (её кнопка —
+  // вопрос и все варианты сразу). В сцене (перекрёсток, «на дороге») кнопка
+  // у ситуации и тап по вопросу переводят всё, что нужно для ответа:
+  // ситуацию, вопрос и варианты. Пояснения после ответа — по строке.
   function trHolder(t) {
     const box = t.closest('.fs-junction');
     if (box && !t.closest('.fs-explain') && (t.closest('.fs-situation') || t.closest('.fs-quiz-q'))) return box;
@@ -1999,14 +2216,14 @@ const Fahrschule = (() => {
       paintSceneTr(holder);
       return;
     }
-    // 🌐 переключает видимость относительно общего «Перевода»: при общем
-    // включённом — скрывает перевод этой строки (tr-closed), при выключенном —
+    // Строка переключается относительно общего перевода: при общем
+    // включённом — скрывает свой перевод (tr-closed), при выключенном —
     // показывает (tr-open)
     const on = force === undefined ? !lineTrShown(holder) : force;
     const g = trOn();
     holder.classList.toggle('tr-open', on && !g);
     holder.classList.toggle('tr-closed', !on && g);
-    holder.querySelectorAll(':scope > [data-tr-line], :scope > .fs-btns > [data-tr-line], :scope > .fs-line-row > .fs-btns > [data-tr-line], :scope > .fs-quiz-top > [data-tr-line]')
+    holder.querySelectorAll(':scope > .fs-quiz-top > [data-tr-line]')
       .forEach(b => b.setAttribute('aria-pressed', on ? 'true' : 'false'));
     if (quiz && holder.classList.contains('fs-quiz-card')) quiz.tr = on;
   }
@@ -2045,10 +2262,12 @@ const Fahrschule = (() => {
   function init() {
     const $ = id => document.getElementById(id);
     el = {
-      hub: $('fsHub'), list: $('fsList'),
-      unit: $('fsUnit'), heading: $('fsHeading'), body: $('fsBody')
+      head: $('fsHead'), hub: $('fsHub'), list: $('fsList'),
+      cont: $('fsContinue'), listHead: $('fsListHead'), done: $('fsDone'),
+      unit: $('fsUnit'), heading: $('fsHeading'), body: $('fsBody'),
+      barTopic: $('fsBarTopic'), barCount: $('fsBarCount'), barFill: $('fsBarFill')
     };
-    if (!el.hub || !el.unit) return;
+    if (!el.hub || !el.unit || !el.head) return;
     el.baseTitle = document.title;
     const app = $('fsApp');
     app.addEventListener('click', onClick);

@@ -86,38 +86,46 @@ const topicsN = await c.ev(`Fahrschule.topics.length`);
 ok(await c.ev(`document.querySelectorAll('.fs-topic').length === ${topicsN} && ${topicsN} >= 1`), `темы: ${topicsN} карточк(и) тем`);
 ok(await c.ev(`Fahrschule.topics.every(t => [...document.querySelectorAll('.fs-topic[data-topic="' + t.id + '"] [data-unit]')].map(e => e.dataset.unit).join() === t.units.join())`),
   'в карточке каждой темы — её уроки по порядку');
-ok(await c.ev(`(() => { const cs = getComputedStyle(document.querySelector('.fs-topic')); const hs = getComputedStyle(document.querySelector('.fs-topic-head'));
-  return parseFloat(cs.borderTopWidth) >= 1 && cs.backgroundColor !== getComputedStyle(document.body).backgroundColor && hs.backgroundColor !== cs.backgroundColor; })()`),
-  'тема выделена: рамка, свой фон и шапка-полоса');
-// темы сворачиваются: при первом заходе раскрыта первая, у свёрнутых видно «Показать уроки» и стрелку
+ok(await c.ev(`getComputedStyle(document.querySelector('.fs-topic')).backgroundColor !== getComputedStyle(document.body).backgroundColor`),
+  'тема — карточка со своим фоном');
+ok(await c.ev(`!document.querySelector('.fs-topic-hint, .fs-topic-more') && [...document.querySelectorAll('.fs-topic')].every(t => t.querySelectorAll('svg.fs-topic-chev').length === 1)`),
+  'шапка темы: одна стрелка, без «Показать уроки»');
+ok(await c.ev(`!document.querySelector('.fs-cont')`), 'без прогресса карточки «Продолжить» нет');
+ok(/Пройдено:\s*0\s+из\s+\d+/.test(await c.ev(`document.getElementById('fsDone').innerText`)), 'над темами — «Пройдено: 0 из N»');
+// темы сворачиваются: при первом заходе раскрыта первая, открыта всегда одна
 const topicState = () => c.ev(`JSON.stringify([...document.querySelectorAll('.fs-topic')].map(t => ({ id: t.dataset.topic,
   open: t.classList.contains('is-open'), aria: t.querySelector('[data-topic-toggle]').getAttribute('aria-expanded'),
   visible: [...t.querySelectorAll('[data-unit]')].some(x => x.offsetParent !== null),
-  hint: t.querySelector('.fs-topic-hint').innerText.trim(), chev: getComputedStyle(t.querySelector('.fs-topic-chev'), '::before').content })))`).then(JSON.parse);
+  chev: getComputedStyle(t.querySelector('.fs-topic-chev')).transform })))`).then(JSON.parse);
 let ts = await topicState();
 ok(ts[0].open && ts[0].visible && ts.slice(1).every(t => !t.open && !t.visible && t.aria === 'false'), `темы: раскрыта только первая (${ts.map(t => t.open ? 1 : 0).join('')})`);
-ok(ts.slice(1).every(t => /Показать уроки/.test(t.hint) && t.chev.includes('▾')), 'свёрнутые темы: «Показать уроки» и стрелка ▾');
+ok(ts[0].chev !== 'none' && ts.slice(1).every(t => t.chev === 'none'), 'стрелка раскрытой темы повёрнута');
 ok(/\d+\s+урок/.test(await c.ev(`document.querySelector('.fs-topic-count').innerText`)), 'в шапке темы — число уроков');
+ok(await c.ev(`(() => { const r = document.querySelector('.fs-row'); return r.querySelector('.fs-kind-ico svg') && /Теория\\s+·\\s+\\d+\\s+правил/.test(r.querySelector('.fs-row-meta').innerText) && !/Открыть/.test(r.innerText) && r.getBoundingClientRect().height >= 64; })()`),
+  'строка урока: плитка вида, «Теория · N правил · уровень», высота ≥ 64, без «Открыть →»');
 const t3 = ts[ts.length > 2 ? 2 : 1].id;
 await c.ev(`document.querySelector('[data-topic-toggle="${t3}"]').click()`);
 ts = await topicState();
 let st3 = ts.find(t => t.id === t3);
-ok(st3.open && st3.visible && st3.aria === 'true' && /Скрыть/.test(st3.hint), `тап по шапке раскрывает тему ${t3}: видны уроки, «Скрыть»`);
+ok(st3.open && st3.visible && st3.aria === 'true' && ts.filter(t => t.open).length === 1, `тап по шапке раскрывает тему ${t3}, прежняя сворачивается`);
 await c.shot('fs_hub_collapse.png');
 await c.go(B + '/fahrschule.html', 600);
 await waitFor(`document.querySelectorAll('.fs-topic').length > 0`, 20000);
 ts = await topicState();
-ok(ts.find(t => t.id === t3).open && ts[0].open, 'раскрытые темы запоминаются после перезагрузки');
+ok(ts.find(t => t.id === t3).open && !ts[0].open, 'раскрытая тема запоминается после перезагрузки');
 await c.ev(`document.querySelector('[data-topic-toggle="${t3}"]').click()`);
 ts = await topicState();
-ok(!ts.find(t => t.id === t3).open && !ts.find(t => t.id === t3).visible, 'повторный тап сворачивает тему');
+ok(!ts.find(t => t.id === t3).open && !ts.find(t => t.id === t3).visible && ts.every(t => !t.open), 'повторный тап сворачивает тему');
 // из урока свёрнутой темы обратно — его тема раскрыта
 const lastT = IDX.topics[IDX.topics.length - 1];
 await c.ev(`Fahrschule.go({ name: 'unit', id: '${lastT.units[0]}' })`);
 await waitFor(`Fahrschule.unit && Fahrschule.unit.id === '${lastT.units[0]}'`, 8000);
+ok(await c.ev(`document.getElementById('fsHead').hidden && /Тема\\s+${IDX.topics.length}/.test(document.getElementById('fsToHub').innerText)`), 'в уроке вместо шапки — панель «‹ Тема N»');
 await c.ev(`history.back()`);
 await waitFor(`!document.getElementById('fsHub').hidden && document.querySelectorAll('.fs-topic').length > 0`, 4000);
 ok((await topicState()).find(t => t.id === lastT.id).open, 'после урока его тема раскрыта');
+ok(await c.ev(`!document.getElementById('fsHead').hidden`), 'в списке шапка снова видна');
+await c.ev(`localStorage.removeItem('dm_fs_progress')`);
 await c.ev(`localStorage.removeItem('dm_fs_open'); localStorage.removeItem('dm_fs_last')`);
 await c.go(B + '/fahrschule.html', 600);
 await waitFor(`document.querySelectorAll('.fs-topic').length > 0`, 20000);
@@ -153,6 +161,31 @@ const th = JSON.parse(await c.ev(`JSON.stringify({
 ok(th.lines === th.want && th.lines > 0, `теория: строк ${th.lines}`);
 ok(th.signs === th.wantSigns && th.signs > 0 && th.signsOk, `теория: знаки загрузились (${th.signs})`);
 ok(th.hs, 'теория: нет горизонтальной прокрутки');
+const hero = JSON.parse(await c.ev(`JSON.stringify({
+  chip: document.querySelector('.fs-hero .fs-kind-chip').innerText, meta: document.querySelector('.fs-hero-meta').innerText,
+  notes: document.querySelectorAll('.fs-note').length, old: document.querySelectorAll('.dlg-voice-note, .fs-hint, .fs-lines .fs-tr-btn').length,
+  perLine: document.querySelectorAll('.fs-lines > .fs-line').length === document.querySelectorAll('.fs-lines > .fs-line [data-say]').length
+    && !document.querySelector('.fs-lines [data-tr-line]'),
+  say44: [...document.querySelectorAll('.fs-lines [data-say]')].every(b => b.offsetWidth >= 44 && b.offsetHeight >= 44),
+  emoji: /[\\u{1F300}-\\u{1FAFF}]/u.test([...document.querySelectorAll('#fsUnit button')].map(b => b.innerText).join(' ')),
+  bar: document.getElementById('fsBarCount').innerText, topic: document.getElementById('fsToHub').innerText })`));
+ok(/теория/i.test(hero.chip) && /A2–B1\s+·\s+14\s+правил/.test(hero.meta), `герой: чип вида и «уровень · N правил» (${hero.meta})`);
+ok(hero.notes === 1 && hero.old === 0, 'подсказка про нажатия — одна, 🌐 у строк нет');
+ok(hero.perLine && hero.say44, 'у каждой строки одна кнопка озвучки 44×44');
+ok(!hero.emoji, 'на кнопках урока нет эмодзи');
+ok(/Тема\s+1/.test(hero.topic) && /из\s+14\s+правил/.test(hero.bar), `панель: «${hero.topic}» и «${hero.bar}»`);
+ok(await c.ev(`(() => { const sc = document.querySelector('.fs-sign-card'); return !!sc && sc.querySelectorAll('.fs-line').length === 1 && !!sc.querySelector('.fs-sign-n'); })()`),
+  'строка со знаком — отдельная карточка');
+// прыжок в конец урока не засчитывает строки, которые не показывались
+await c.ev(`localStorage.removeItem('dm_fs_progress')`);
+await openUnit('t-01');
+await c.wait(1200);   // начало урока на экране дольше SEEN_MS — засчитано
+await c.ev(`document.getElementById('fsQuiz').scrollIntoView({ block: 'end' })`);
+await c.wait(1500);
+const seenN = await c.ev(`(JSON.parse(localStorage.getItem('dm_fs_progress') || '{}')['t-01'] || { n: 0 }).n`);
+ok(seenN > 0 && seenN < 14 && new RegExp('^' + seenN + '\\s+из\\s+14').test(await c.ev(`document.getElementById('fsBarCount').innerText`)),
+  `прогресс — увиденные строки, а не самая дальняя (${seenN} из 14)`);
+await c.ev(`window.scrollTo(0, 0)`);
 const audit = JSON.parse(await c.ev(TIP_AUDIT));
 ok(audit.n > 100 && audit.bad.length === 0, `теория: подсказка у каждого из ${audit.n} слов ${audit.bad.slice(0, 5).join(' ')}`);
 await c.shot('fs_t01_390.png');
@@ -187,7 +220,8 @@ ok(await waitFor(`!ReaderTip.isOpen()`, 1000), 'палец: повторный �
 
 // «Слушать урок»: все правила по порядку, подсветка
 await c.ev(`window.__said = []; document.querySelector('[data-play="all"]').click()`);
-ok(await waitFor(`document.querySelector('.fs-line.is-speaking') !== null`, 2000), 'подсветка звучащей строки');
+ok(await waitFor(`(() => { const li = document.querySelector('.fs-line.is-speaking'); return !!li && getComputedStyle(li.querySelector('.fs-say-off')).display !== 'none'; })()`, 2000),
+  'подсветка звучащей строки, на её кнопке — пауза');
 ok(await waitFor(`Fahrschule.playing === null`, 15000), 'урок дочитан до конца');
 const saidT = JSON.parse(await c.ev(`JSON.stringify(window.__said)`));
 const wantT = JSON.parse(await c.ev(`JSON.stringify(Fahrschule.unit.sections.flatMap(s => s.lines.map(l => l.de)))`));
@@ -198,16 +232,21 @@ ok(await waitFor(`window.__said.length === 1`, 2000) && (await c.ev(`window.__sa
 // перевод
 ok(await c.ev(`getComputedStyle(document.querySelector('.fs-lines .fs-tr')).display === 'none'`), 'перевод по умолчанию скрыт');
 await c.ev(`document.querySelector('[data-tr-toggle]').click()`);
-ok(await c.ev(`getComputedStyle(document.querySelector('.fs-lines .fs-tr')).display !== 'none' && localStorage.getItem('dm_fs_tr') === '1'`), '🌐 показывает перевод и запоминает');
+ok(await c.ev(`getComputedStyle(document.querySelector('.fs-lines .fs-tr')).display !== 'none' && localStorage.getItem('dm_fs_tr') === '1'
+  && document.querySelector('[data-tr-toggle]').getAttribute('aria-pressed') === 'true'`), 'переключатель перевода показывает перевод всех фраз и запоминает');
 await c.ev(`document.querySelector('[data-tr-toggle]').click()`);
 
-// 🌐 у строки: перевод этой фразы, повторно — скрыть
-await c.ev(`document.querySelectorAll('.fs-lines [data-tr-line]')[1].click()`);
+// нажатие на строку (не на слово): перевод этой фразы, повторно — скрыть
+await c.ev(`document.querySelectorAll('.fs-lines > .fs-line')[1].click()`);
 ok(await c.ev(`(() => { const li = document.querySelectorAll('.fs-lines > .fs-line')[1];
-  return getComputedStyle(li.querySelector('.fs-tr')).display !== 'none' && li.querySelector('[data-tr-line]').getAttribute('aria-pressed') === 'true'
-    && getComputedStyle(document.querySelectorAll('.fs-lines > .fs-line')[0].querySelector('.fs-tr')).display === 'none'; })()`), '🌐 у строки открывает перевод только этой фразы');
-await c.ev(`document.querySelectorAll('.fs-lines [data-tr-line]')[1].click()`);
-ok(await c.ev(`getComputedStyle(document.querySelectorAll('.fs-lines > .fs-line')[1].querySelector('.fs-tr')).display === 'none'`), '🌐 повторно скрывает перевод');
+  return getComputedStyle(li.querySelector('.fs-tr')).display !== 'none'
+    && getComputedStyle(document.querySelectorAll('.fs-lines > .fs-line')[0].querySelector('.fs-tr')).display === 'none'; })()`), 'нажатие на строку открывает перевод только этой фразы');
+await c.ev(`document.querySelectorAll('.fs-lines > .fs-line')[1].click()`);
+ok(await c.ev(`getComputedStyle(document.querySelectorAll('.fs-lines > .fs-line')[1].querySelector('.fs-tr')).display === 'none'`), 'повторное нажатие скрывает перевод');
+// тест начинается с карточки «В конце урока»
+ok(await c.ev(`!!document.querySelector('#fsQuiz .fs-quiz-start [data-quiz-start]') && !document.querySelector('#fsQuiz [data-opt]')`), 'тест: сначала карточка «Начать тест»');
+await c.ev(`document.querySelector('[data-quiz-start]').click()`);
+ok(await waitFor(`document.querySelectorAll('#fsQuiz [data-opt]').length === 3 && document.activeElement === document.querySelector('#fsQuiz [data-opt]')`, 2000), '«Начать тест» открывает первый вопрос, фокус на варианте');
 // тест: перевод вопроса и вариантов до ответа (🌐 в карточке)
 ok(await c.ev(`getComputedStyle(document.querySelector('#fsQuiz .fs-opt-tr')).display === 'none'`), 'тест: перевод вариантов по умолчанию скрыт');
 await c.ev(`document.querySelector('#fsQuiz [data-tr-line]').click()`);
@@ -234,8 +273,28 @@ for (let i = 0; i < quizN; i++) {
   await c.ev(`document.querySelector('#fsQuiz [data-quiz-next]').click()`);
 }
 ok(await waitFor(`/4\\s*из\\s*5/.test(document.querySelector('#fsQuiz .fs-result-text').textContent)`, 2000), 'тест: итог 4 из 5');
+ok(await c.ev(`JSON.parse(localStorage.getItem('dm_fs_progress'))['t-01'].done === true && /14\\s+из\\s+14/.test(document.getElementById('fsBarCount').innerText)
+  && document.getElementById('fsBarFill').style.width === '100%'`), 'тест завершён — урок пройден, панель «14 из 14»');
 await c.ev(`document.querySelector('#fsQuiz [data-quiz-restart]').click()`);
-ok(await c.ev(`Fahrschule.quiz.i === 0 && Fahrschule.quiz.score === 0`), 'тест: «Пройти ещё раз» начинает заново');
+ok(await c.ev(`Fahrschule.quiz.i === 0 && Fahrschule.quiz.score === 0 && document.querySelectorAll('#fsQuiz [data-opt]').length === 3`), 'тест: «Пройти ещё раз» начинает заново, сразу с вопроса');
+// список: урок отмечен пройденным, «Продолжить» ведёт к следующему
+await c.ev(`localStorage.setItem('dm_fs_progress', JSON.stringify({ 't-01': { n: 14, done: true }, 'p-01': { n: 6 } })); localStorage.setItem('dm_fs_last', 'p-01')`);
+await c.ev(`Fahrschule.go({ name: 'hub' })`);
+await waitFor(`!document.getElementById('fsHub').hidden && document.querySelectorAll('.fs-topic').length > 0`, 4000);
+const hp = JSON.parse(await c.ev(`JSON.stringify({
+  cont: document.querySelector('.fs-cont') && document.querySelector('.fs-cont').dataset.unit,
+  contText: document.querySelector('.fs-cont') ? document.querySelector('.fs-cont').innerText : '',
+  done: !!document.querySelector('.fs-row[data-unit="t-01"].is-done .fs-row-done'),
+  going: (document.querySelector('.fs-row[data-unit="p-01"].is-going .fs-row-n') || {}).textContent,
+  frac: (document.querySelector('.fs-topic[data-topic="vorfahrt"] .fs-topic-frac') || {}).textContent,
+  total: document.getElementById('fsDone').innerText })`));
+ok(hp.cont === 'p-01' && /Die erste Fahrstunde/.test(hp.contText) && /Тема\s+1\s+·\s+Практика\s+·\s+6\s+из\s+15\s+реплик/.test(hp.contText),
+  `«Продолжить»: незаконченный урок (${hp.contText.replace(/\s+/g, ' ')})`);
+ok(hp.done && hp.going === '6/15' && hp.frac === '1/3' && /Пройдено:\s*1\s+из/.test(hp.total), `статусы: ✓, 6/15, тема 1/3, ${hp.total}`);
+await c.shot('fs_hub_progress.png');
+await c.ev(`document.querySelector('.fs-cont').click()`);
+ok(await waitFor(`location.hash === '#u=p-01' && Fahrschule.unit && Fahrschule.unit.id === 'p-01'`, 4000), '«Продолжить» открывает урок');
+await c.ev(`localStorage.removeItem('dm_fs_progress')`);
 collect();
 
 // ── Остальные уроки теории: знаки, подсказки, тест целиком ──
@@ -255,6 +314,7 @@ for (const id of IDX.units.filter(u => u.kind === 'theory' && u.id !== 't-01').m
   ok(au.bad.length === 0, `${id}: подсказка у каждого из ${au.n} слов ${au.bad.slice(0, 5).join(' ')}`);
   // теория без знаков (алкоголь, усталость…) — без теста
   const qn = await c.ev(`(Fahrschule.unit.quiz || []).length`);
+  if (qn) await c.ev(`document.querySelector('[data-quiz-start]').click()`);
   for (let i = 0; i < qn; i++) {
     await waitFor(`document.querySelectorAll('#fsQuiz [data-opt]').length === 3 && document.querySelector('#fsQuiz .fs-quiz-n').textContent === '${i + 1} / ${qn}'`, 3000);
     await c.ev(`document.querySelector('#fsQuiz [data-opt="' + Fahrschule.unit.quiz[${i}].sign + '"]').click()`);
@@ -291,6 +351,7 @@ ok(await waitFor(`/регулировать/.test((document.querySelector('.word
 await c.ev(`ReaderTip.close()`);
 await c.ev(`window.__said = []; document.querySelector('[data-play="all"]').click()`);
 ok(await waitFor(`Fahrschule.playing === null && window.__said.length > 0`, 15000), 'диалог доигран до конца');
+ok(await c.ev(`(JSON.parse(localStorage.getItem('dm_fs_progress') || '{}')['p-01'] || {}).done === true`), 'диалог прослушан — урок пройден');
 const saidD = JSON.parse(await c.ev(`JSON.stringify(window.__said)`));
 const wantD = JSON.parse(await c.ev(`JSON.stringify(Fahrschule.unit.lines.map(l => l.de))`));
 ok(saidD.join('|') === wantD.join('|'), `озвучены все ${wantD.length} реплик по порядку`);
@@ -376,7 +437,7 @@ ok(await waitFor(`Fahrschule.playing === null`, 8000), 'пояснение по�
 await c.ev(`window.__said = []; document.querySelector('[data-play="explain"]').click()`);
 ok(await waitFor(`Fahrschule.playing === 'explain'`, 1000), 'пояснение можно переслушать');
 await c.ev(`document.getElementById('fsToHub').click()`);
-ok(await waitFor(`Fahrschule.playing === null && !document.getElementById('fsHub').hidden`, 2000), '«← Все уроки» останавливает озвучку');
+ok(await waitFor(`Fahrschule.playing === null && !document.getElementById('fsHub').hidden`, 2000), '«‹ Тема N» останавливает озвучку');
 collect();
 
 // ── Перекрёсток со светофором: сигналы, табличка Grünpfeil, смена сигнала ──
@@ -519,7 +580,7 @@ for (const lang of ['uk', 'ar']) {
   for (const id of ORDER) {
     await openUnit(id);
     const r = JSON.parse(await c.ev(`JSON.stringify({
-      tr: [...document.querySelectorAll('.fs-tr, .dlg-title-tr, .dlg-situation')].map(e => e.textContent).join(' '),
+      tr: [...document.querySelectorAll('.fs-tr, .fs-intro')].map(e => e.textContent).join(' '),
       ui: document.body.innerText,
       de: [...document.querySelectorAll('.fs-s')].every(e => e.dir === 'ltr' && getComputedStyle(e).direction === 'ltr'),
       hs: ${NO_HSCROLL} })`));
@@ -551,13 +612,13 @@ for (const lang of ['uk', 'ar']) {
 }
 await setLang('ru');
 
-// ── 🌐 при включённом общем «Перевод» (ярлык на рабочем столе): скрывает
-// перевод строки / теста / сцены и показывает снова ──
+// ── При включённом общем переводе (ярлык на рабочем столе) нажатие на строку
+// и кнопки «Перевод» теста / сцены скрывают перевод и показывают снова ──
 await c.ev(`localStorage.setItem('dm_fs_tr', '1')`);
 const shown = sel => `(() => { const e = document.querySelector('${sel}'); return !!e && getComputedStyle(e).display !== 'none'; })()`;
 const trCases = [
-  ['t-01', '.fs-sec .fs-line', '.fs-sec .fs-line [data-tr-line]', '.fs-sec .fs-line .fs-tr'],
-  ['p-01', '.fs-dialog .dlg-line', '.fs-dialog .dlg-line [data-tr-line]', '.fs-dialog .dlg-line .dlg-tr'],
+  ['t-01', '.fs-sec .fs-line', '.fs-sec .fs-line', '.fs-sec .fs-line .fs-tr'],
+  ['p-01', '.fs-dialog .dlg-line', '.fs-dialog .dlg-line .dlg-bubble', '.fs-dialog .dlg-line .dlg-tr'],
   ['t-01', '#fsQuiz', '#fsQuiz [data-tr-line]', '#fsQuiz .fs-quiz-q-tr'],
   ['k-01', '#fsJunction', '#fsJunction .fs-situation [data-tr-line]', '#fsJunction .fs-situation .fs-tr'],
   ['r-09', '#fsJunction', '#fsJunction .fs-situation [data-tr-line]', '#fsJunction .fs-situation .fs-tr'],
@@ -565,17 +626,18 @@ const trCases = [
 ];
 for (const [id, box, btn, tr] of trCases) {
   await openUnit(id);
+  await c.ev(`(document.querySelector('[data-quiz-start]') || { click() {} }).click()`);
   await waitFor(`!!document.querySelector('${btn}')`, 5000);
   const tag = `общий перевод вкл., ${id} ${tr.split(' ').pop()}`;
   ok(await c.ev(shown(tr)), `${tag}: перевод виден`);
   await c.ev(`document.querySelector('${btn}').click()`);
-  ok(!(await c.ev(shown(tr))), `${tag}: 🌐 скрывает`);
+  ok(!(await c.ev(shown(tr))), `${tag}: нажатие скрывает`);
   await c.ev(`document.querySelector('${btn}').click()`);
-  ok(await c.ev(shown(tr)), `${tag}: 🌐 снова показывает`);
+  ok(await c.ev(shown(tr)), `${tag}: повторное нажатие показывает`);
 }
-// общий «Перевод» выкл. → вкл. сбрасывает выбор 🌐
+// общий перевод выкл. → вкл. сбрасывает выбор у строк
 await openUnit('t-01');
-await c.ev(`document.querySelector('.fs-sec .fs-line [data-tr-line]').click()`);
+await c.ev(`document.querySelector('.fs-sec .fs-line').click()`);
 await c.ev(`document.querySelector('[data-tr-toggle]').click(); document.querySelector('[data-tr-toggle]').click()`);
 ok(await c.ev(shown('.fs-sec .fs-line .fs-tr')), 'общий «Перевод» выкл./вкл. сбрасывает скрытие у строки');
 await c.ev(`localStorage.setItem('dm_fs_tr', '0')`);
