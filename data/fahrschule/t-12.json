@@ -1,0 +1,867 @@
+{
+ "id": "t-12",
+ "kind": "theory",
+ "emoji": "🔄",
+ "level": "B1",
+ "title": "Kreisverkehr, Bahnübergang und Baustelle",
+ "titleTr": "Кольцо, переезд и ремонт дороги",
+ "intro": "Как въезжать на кольцо и когда включать поворотник, кто главный на железнодорожном переезде и какие линии действуют на участке ремонта дороги.",
+ "sections": [
+  {
+   "title": "Круговое движение",
+   "lines": [
+    {
+     "de": "Dieses Schild zeigt einen Kreisverkehr. Dort fahren Sie gegen den Uhrzeigersinn.",
+     "tr": "Этот знак обозначает круговое движение. Там едут против часовой стрелки.",
+     "sign": "z215"
+    },
+    {
+     "de": "Meistens steht davor „Vorfahrt gewähren“. Dann hat Vorfahrt, wer schon im Kreis fährt.",
+     "tr": "Обычно перед ним стоит «Уступите дорогу». Тогда преимущество у того, кто уже едет по кругу."
+    },
+    {
+     "de": "Beim Hineinfahren blinken Sie nicht.",
+     "tr": "При въезде на кольцо поворотник не включают."
+    },
+    {
+     "de": "Vor dem Hinausfahren blinken Sie rechts.",
+     "tr": "Перед съездом с кольца включите правый поворотник."
+    },
+    {
+     "de": "Achten Sie an der Ausfahrt auf Fußgänger und Radfahrer.",
+     "tr": "На выезде с кольца следите за пешеходами и велосипедистами."
+    },
+    {
+     "de": "Im Kreisverkehr dürfen Sie nicht halten.",
+     "tr": "На кольце останавливаться нельзя."
+    }
+   ]
+  },
+  {
+   "title": "Железнодорожный переезд",
+   "lines": [
+    {
+     "de": "Dieses Schild warnt vor einem Bahnübergang.",
+     "tr": "Этот знак предупреждает о железнодорожном переезде.",
+     "sign": "z151"
+    },
+    {
+     "de": "Baken mit drei, zwei und einem Streifen stehen etwa 240, 160 und 80 Meter vor dem Bahnübergang.",
+     "tr": "Указатели с тремя, двумя и одной полосой стоят примерно за 240, 160 и 80 метров до переезда.",
+     "sign": "z156"
+    },
+    {
+     "de": "Das Andreaskreuz bedeutet: Der Zug hat immer Vorrang.",
+     "tr": "Андреевский крест означает: у поезда всегда преимущество.",
+     "sign": "z201"
+    },
+    {
+     "de": "Blinkt das rote Licht oder senken sich die Schranken, halten Sie vor dem Andreaskreuz an.",
+     "tr": "Если мигает красный свет или опускаются шлагбаумы, остановитесь перед андреевским крестом.",
+     "o": {
+      "an": "an>anhalten",
+      "halten": "halten>anhalten"
+     }
+    },
+    {
+     "de": "Zwischen dem ersten Warnschild und dem Bahnübergang dürfen Sie nicht überholen.",
+     "tr": "Между первым предупреждающим знаком и переездом обгонять нельзя."
+    },
+    {
+     "de": "Bleibt Ihr Auto auf den Gleisen stehen, steigen alle sofort aus.",
+     "tr": "Если машина заглохла на путях, все сразу выходят.",
+     "o": {
+      "aus": "aus>aussteigen",
+      "bleibt": "bleibt>stehen bleiben",
+      "stehen": "stehen>stehen bleiben",
+      "steigen": "steigen>aussteigen"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Ремонт дороги",
+   "lines": [
+    {
+     "de": "Dieses Schild warnt vor einer Baustelle.",
+     "tr": "Этот знак предупреждает о дорожных работах.",
+     "sign": "z123"
+    },
+    {
+     "de": "In einer Baustelle gelten die gelben Linien. Die weißen Linien gelten dann nicht.",
+     "tr": "На участке ремонта действуют жёлтые линии. Белые линии тогда не действуют."
+    },
+    {
+     "de": "Die Fahrstreifen sind dort oft schmal. Fahren Sie langsam und halten Sie Abstand.",
+     "tr": "Полосы там часто узкие. Езжайте медленно и держите дистанцию."
+    },
+    {
+     "de": "An einer Engstelle bedeutet dieses Schild: Lassen Sie den Gegenverkehr zuerst durchfahren.",
+     "tr": "В узком месте этот знак означает: сначала пропустите встречный транспорт.",
+     "sign": "z208"
+    }
+   ]
+  }
+ ],
+ "quiz": [
+  {
+   "sign": "z215",
+   "wrong": [
+    "z205",
+    "z306"
+   ]
+  },
+  {
+   "sign": "z151",
+   "wrong": [
+    "z201",
+    "z101"
+   ]
+  },
+  {
+   "sign": "z201",
+   "wrong": [
+    "z151",
+    "z206"
+   ]
+  },
+  {
+   "sign": "z156",
+   "wrong": [
+    "z450",
+    "z151"
+   ]
+  },
+  {
+   "sign": "z123",
+   "wrong": [
+    "z101",
+    "z114"
+   ]
+  },
+  {
+   "sign": "z208",
+   "wrong": [
+    "z205",
+    "z267"
+   ]
+  }
+ ],
+ "quizQuestion": {
+  "de": "Was bedeutet dieses Schild?",
+  "tr": "Что означает этот знак?"
+ },
+ "signs": {
+  "z101": {
+   "de": "Gefahrstelle",
+   "tr": "Опасный участок",
+   "src": "data/fahrschule/signs/z101.svg",
+   "n": "101",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_101_-_Gefahrstelle,_StVO_1970.svg"
+  },
+  "z114": {
+   "de": "Schleuder- oder Rutschgefahr",
+   "tr": "Скользкая дорога",
+   "src": "data/fahrschule/signs/z114.svg",
+   "n": "114",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_114_-_Schleuder-_oder_Rutschgefahr,_StVO_2013.svg"
+  },
+  "z123": {
+   "de": "Baustelle",
+   "tr": "Дорожные работы",
+   "src": "data/fahrschule/signs/z123.svg",
+   "n": "123",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_123_-_Arbeitsstelle,_StVO_2013.svg"
+  },
+  "z151": {
+   "de": "Bahnübergang",
+   "tr": "Железнодорожный переезд",
+   "src": "data/fahrschule/signs/z151.svg",
+   "n": "151",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_151_-_Bahn%C3%BCbergang,_StVO_2013.svg"
+  },
+  "z156": {
+   "de": "Bake vor dem Bahnübergang",
+   "tr": "Указатель перед переездом (240 м)",
+   "src": "data/fahrschule/signs/z156.svg",
+   "n": "156",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_156-10_-_Bahn%C3%BCbergang_mit_dreistreifiger_Bake,_StVO_2013.svg"
+  },
+  "z201": {
+   "de": "Andreaskreuz",
+   "tr": "Андреевский крест (поезд имеет преимущество)",
+   "src": "data/fahrschule/signs/z201.svg",
+   "n": "201",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Andreaskreuz_(ohne_Ma%C3%9Fe)_1970.svg"
+  },
+  "z205": {
+   "de": "Vorfahrt gewähren!",
+   "tr": "Уступите дорогу!",
+   "src": "data/fahrschule/signs/z205.svg",
+   "n": "205",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_205_-_Vorfahrt_gew%C3%A4hren!_StVO_1970.svg"
+  },
+  "z206": {
+   "de": "Halt! Vorfahrt gewähren!",
+   "tr": "Стоп! Уступите дорогу!",
+   "src": "data/fahrschule/signs/z206.svg",
+   "n": "206",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_206_-_Halt!_Vorfahrt_gew%C3%A4hren!_StVO_1970.svg"
+  },
+  "z208": {
+   "de": "Dem Gegenverkehr Vorrang gewähren",
+   "tr": "Уступите встречному транспорту",
+   "src": "data/fahrschule/signs/z208.svg",
+   "n": "208",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_208_-_Dem_Gegenverkehr_Vorrang_gew%C3%A4hren!_StVO_1970.svg"
+  },
+  "z215": {
+   "de": "Kreisverkehr",
+   "tr": "Круговое движение",
+   "src": "data/fahrschule/signs/z215.svg",
+   "n": "215",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_215_-_Kreisverkehr,_StVO_2000.svg"
+  },
+  "z267": {
+   "de": "Verbot der Einfahrt",
+   "tr": "Въезд запрещён",
+   "src": "data/fahrschule/signs/z267.svg",
+   "n": "267",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_267_-_Verbot_der_Einfahrt,_StVO_1970.svg"
+  },
+  "z306": {
+   "de": "Vorfahrtstraße",
+   "tr": "Главная дорога",
+   "src": "data/fahrschule/signs/z306.svg",
+   "n": "306",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_306_-_Vorfahrtstra%C3%9Fe,_StVO_1970.svg"
+  },
+  "z450": {
+   "de": "Ankündigungsbake",
+   "tr": "Указатель расстояния до съезда",
+   "src": "data/fahrschule/signs/z450.svg",
+   "n": "450",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_450-51_-_Ank%C3%BCndigungsbake_zweistreifig_(200_m),_StVO_2013.svg"
+  }
+ },
+ "gloss": {
+  "w": {
+   "abstand": "Abstand",
+   "achten": "achten",
+   "alle": "alle",
+   "an": "an",
+   "an>anhalten": "anhalten",
+   "andreaskreuz": "Andreaskreuz",
+   "ankündigungsbake": "Ankündigungsbake",
+   "auf": "auf",
+   "aus>aussteigen": "aussteigen",
+   "ausfahrt": "Ausfahrt",
+   "auto": "Auto",
+   "bahnübergang": "Bahnübergang",
+   "bake": "Bake",
+   "baken": "Bake",
+   "baustelle": "Baustelle",
+   "bedeutet": "bedeuten",
+   "beim": "bei",
+   "bleibt>stehen bleiben": "stehen bleiben",
+   "blinken": "blinken",
+   "blinkt": "blinken",
+   "dann": "dann",
+   "das": "der/die/das",
+   "davor": "davor",
+   "dem": "der/die/das",
+   "den": "der/die/das",
+   "der": "der/die/das",
+   "die": "der/die/das",
+   "dieses": "dieser",
+   "dort": "dort",
+   "drei": "drei",
+   "durchfahren": "durchfahren",
+   "dürfen": "dürfen",
+   "einem": "ein/eine",
+   "einen": "ein/eine",
+   "einer": "ein/eine",
+   "einfahrt": "Einfahrt",
+   "engstelle": "Engstelle",
+   "ersten": "erster",
+   "etwa": "etwa",
+   "fahren": "fahren",
+   "fahrstreifen": "Fahrstreifen",
+   "fußgänger": "Fußgänger",
+   "fährt": "fahren",
+   "gefahrstelle": "Gefahrstelle",
+   "gegen": "gegen",
+   "gegenverkehr": "Gegenverkehr",
+   "gelben": "gelb",
+   "gelten": "gelten",
+   "gewähren": "gewähren",
+   "gleisen": "Gleis",
+   "halt": "Halt",
+   "halten": "halten",
+   "halten>anhalten": "anhalten",
+   "hat": "haben",
+   "hinausfahren": "hinausfahren",
+   "hineinfahren": "hineinfahren",
+   "ihr": "Ihr",
+   "im": "in",
+   "immer": "immer",
+   "in": "in",
+   "kreis": "Kreis",
+   "kreisverkehr": "Kreisverkehr",
+   "langsam": "langsam",
+   "lassen": "lassen",
+   "licht": "Licht",
+   "linien": "Linie",
+   "meistens": "meistens",
+   "meter": "Meter",
+   "mit": "mit",
+   "nicht": "nicht",
+   "oder": "oder",
+   "oft": "oft",
+   "radfahrer": "Radfahrer",
+   "rechts": "rechts",
+   "rote": "rot",
+   "rutschgefahr": "Rutschgefahr",
+   "schild": "Schild",
+   "schleuder": "Schleudergefahr",
+   "schmal": "schmal",
+   "schon": "schon",
+   "schranken": "Schranke",
+   "senken": "senken",
+   "sich": "sich",
+   "sie": "Sie",
+   "sind": "sein",
+   "sofort": "sofort",
+   "stehen": "stehen",
+   "stehen>stehen bleiben": "stehen bleiben",
+   "steht": "stehen",
+   "steigen>aussteigen": "aussteigen",
+   "streifen": "Streifen",
+   "uhrzeigersinn": "Uhrzeigersinn",
+   "und": "und",
+   "verbot": "Verbot",
+   "vor": "vor",
+   "vorfahrt": "Vorfahrt",
+   "vorfahrtstraße": "Vorfahrtstraße",
+   "vorrang": "Vorrang",
+   "warnschild": "Warnschild",
+   "warnt": "warnen",
+   "was": "was",
+   "weißen": "weiß",
+   "wer": "wer",
+   "zeigt": "zeigen",
+   "zuerst": "zuerst",
+   "zug": "Zug",
+   "zwei": "zwei",
+   "zwischen": "zwischen",
+   "überholen": "überholen"
+  },
+  "l": {
+   "Abstand": {
+    "ru": "дистанция, расстояние",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Abstände"
+   },
+   "Andreaskreuz": {
+    "ru": "андреевский крест (знак у переезда)",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Andreaskreuze"
+   },
+   "Ankündigungsbake": {
+    "ru": "указатель расстояния до съезда",
+    "pos": "сущ.",
+    "note": "три полосы — 300 м, две — 200 м, одна — 100 м",
+    "art": "die",
+    "pl": "die Ankündigungsbaken"
+   },
+   "Ausfahrt": {
+    "ru": "съезд, выезд (с автобана)",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Ausfahrten"
+   },
+   "Auto": {
+    "ru": "машина, автомобиль",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Autos"
+   },
+   "Bahnübergang": {
+    "ru": "железнодорожный переезд",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Bahnübergänge"
+   },
+   "Bake": {
+    "ru": "указатель расстояния (полосатый знак)",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Baken"
+   },
+   "Baustelle": {
+    "ru": "дорожные работы, стройка",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Baustellen"
+   },
+   "Einfahrt": {
+    "ru": "въезд",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Einfahrten"
+   },
+   "Engstelle": {
+    "ru": "сужение дороги",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Engstellen"
+   },
+   "Fahrstreifen": {
+    "ru": "полоса движения",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Fahrstreifen"
+   },
+   "Fußgänger": {
+    "ru": "пешеход",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Fußgänger"
+   },
+   "Gefahrstelle": {
+    "ru": "опасное место",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Gefahrstellen"
+   },
+   "Gegenverkehr": {
+    "ru": "встречный транспорт",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": null
+   },
+   "Gleis": {
+    "ru": "железнодорожный путь, колея",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Gleise"
+   },
+   "Halt": {
+    "ru": "остановка; стоп!",
+    "pos": "сущ.",
+    "note": "Halt! — Стоп! (на знаке 206); nach einem Halt — после остановки",
+    "art": "der",
+    "pl": "die Halte"
+   },
+   "Ihr": {
+    "ru": "ваш (вежливо)",
+    "pos": "мест."
+   },
+   "Kreis": {
+    "ru": "круг",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Kreise"
+   },
+   "Kreisverkehr": {
+    "ru": "круговое движение, кольцо",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Kreisverkehre"
+   },
+   "Licht": {
+    "ru": "свет; сигнал",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Lichter"
+   },
+   "Linie": {
+    "ru": "линия",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Linien"
+   },
+   "Meter": {
+    "ru": "метр",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Meter"
+   },
+   "Radfahrer": {
+    "ru": "велосипедист",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Radfahrer"
+   },
+   "Rutschgefahr": {
+    "ru": "опасность заноса, скользко",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": null
+   },
+   "Schild": {
+    "ru": "знак, табличка",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Schilder"
+   },
+   "Schleudergefahr": {
+    "ru": "опасность заноса",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": null
+   },
+   "Schranke": {
+    "ru": "шлагбаум",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Schranken"
+   },
+   "Sie": {
+    "ru": "вы (вежливо)",
+    "pos": "мест.",
+    "note": "Ihnen — вам (дательный): vor Ihnen — перед вами"
+   },
+   "Streifen": {
+    "ru": "полоса (полоска)",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Streifen"
+   },
+   "Uhrzeigersinn": {
+    "ru": "направление часовой стрелки",
+    "pos": "сущ.",
+    "note": "gegen den Uhrzeigersinn — против часовой стрелки",
+    "art": "der",
+    "pl": null
+   },
+   "Verbot": {
+    "ru": "запрет",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Verbote"
+   },
+   "Vorfahrt": {
+    "ru": "преимущество (право проехать первым)",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": null
+   },
+   "Vorfahrtstraße": {
+    "ru": "главная дорога",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Vorfahrtstraßen"
+   },
+   "Vorrang": {
+    "ru": "преимущество, первоочерёдность",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": null
+   },
+   "Warnschild": {
+    "ru": "предупреждающий знак",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Warnschilder"
+   },
+   "Zug": {
+    "ru": "поезд",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Züge"
+   },
+   "achten": {
+    "ru": "следить, обращать внимание",
+    "pos": "гл.",
+    "note": "achten auf + Akk. — следить за",
+    "forms": "achtete · hat geachtet"
+   },
+   "alle": {
+    "ru": "все; всё",
+    "pos": "мест."
+   },
+   "an": {
+    "ru": "у, на, при",
+    "pos": "предл.",
+    "note": "am = an dem; an der Kreuzung — на перекрёстке"
+   },
+   "anhalten": {
+    "ru": "останавливаться",
+    "pos": "гл.",
+    "forms": "hielt an · hat angehalten"
+   },
+   "auf": {
+    "ru": "на, по",
+    "pos": "предл.",
+    "note": "auf der Straße — на дороге; achten auf — следить за"
+   },
+   "aussteigen": {
+    "ru": "выходить (из машины)",
+    "pos": "гл.",
+    "forms": "stieg aus · ist ausgestiegen"
+   },
+   "bedeuten": {
+    "ru": "означать",
+    "pos": "гл.",
+    "forms": "bedeutete · hat bedeutet"
+   },
+   "bei": {
+    "ru": "при, у; на (о сигнале)",
+    "pos": "предл.",
+    "note": "beim = bei dem: beim Fahren — во время езды; bei Rot — на красный"
+   },
+   "blinken": {
+    "ru": "включать поворотник, мигать",
+    "pos": "гл.",
+    "forms": "blinkte · hat geblinkt"
+   },
+   "dann": {
+    "ru": "тогда, значит; потом",
+    "pos": "нареч."
+   },
+   "davor": {
+    "ru": "перед этим, перед ним",
+    "pos": "нареч."
+   },
+   "der/die/das": {
+    "ru": "определённый артикль",
+    "pos": "артикль",
+    "note": "der — м. р., die — ж. р. и мн. ч., das — ср. р.; den — м. р. в винительном, dem — м. и ср. р. в дательном; das ещё значит «это»"
+   },
+   "dieser": {
+    "ru": "этот, эта, это",
+    "pos": "мест."
+   },
+   "dort": {
+    "ru": "там",
+    "pos": "нареч."
+   },
+   "drei": {
+    "ru": "три",
+    "pos": "числ."
+   },
+   "durchfahren": {
+    "ru": "проезжать",
+    "pos": "гл.",
+    "forms": "fuhr durch · ist durchgefahren"
+   },
+   "dürfen": {
+    "ru": "мочь, иметь право",
+    "pos": "гл.",
+    "forms": "durfte · hat gedurft"
+   },
+   "ein/eine": {
+    "ru": "неопределённый артикль; один",
+    "pos": "артикль",
+    "note": "an einer Kreuzung — на (каком-то) перекрёстке"
+   },
+   "erster": {
+    "ru": "первый",
+    "pos": "прил.",
+    "note": "Erste Hilfe — первая помощь"
+   },
+   "etwa": {
+    "ru": "примерно, около",
+    "pos": "нареч."
+   },
+   "fahren": {
+    "ru": "ехать; водить машину",
+    "pos": "гл.",
+    "forms": "fuhr · ist gefahren"
+   },
+   "gegen": {
+    "ru": "против; от (средство)",
+    "pos": "предл."
+   },
+   "gelb": {
+    "ru": "жёлтый",
+    "pos": "прил.",
+    "note": "Gelb (с большой) — жёлтый сигнал"
+   },
+   "gelten": {
+    "ru": "действовать (о правиле)",
+    "pos": "гл.",
+    "forms": "galt · hat gegolten"
+   },
+   "gewähren": {
+    "ru": "предоставлять",
+    "pos": "гл.",
+    "note": "Vorfahrt gewähren — уступить дорогу",
+    "forms": "gewährte · hat gewährt"
+   },
+   "haben": {
+    "ru": "иметь",
+    "pos": "гл.",
+    "note": "Vorfahrt haben — иметь преимущество",
+    "forms": "hatte · hat gehabt"
+   },
+   "halten": {
+    "ru": "останавливаться (ненадолго); держать",
+    "pos": "гл.",
+    "forms": "hielt · hat gehalten"
+   },
+   "hinausfahren": {
+    "ru": "выезжать (наружу)",
+    "pos": "гл.",
+    "note": "das Hinausfahren — съезд (с кольца)",
+    "forms": "fuhr hinaus · ist hinausgefahren"
+   },
+   "hineinfahren": {
+    "ru": "въезжать (внутрь)",
+    "pos": "гл.",
+    "forms": "fuhr hinein · ist hineingefahren"
+   },
+   "immer": {
+    "ru": "всегда",
+    "pos": "нареч."
+   },
+   "in": {
+    "ru": "в",
+    "pos": "предл.",
+    "note": "im = in dem: im Bereich — в зоне"
+   },
+   "langsam": {
+    "ru": "медленный; медленно",
+    "pos": "прил."
+   },
+   "lassen": {
+    "ru": "позволять; пропускать; оставлять",
+    "pos": "гл.",
+    "note": "jemanden fahren lassen — пропустить кого-то вперёд",
+    "forms": "ließ · hat gelassen"
+   },
+   "meistens": {
+    "ru": "чаще всего, обычно",
+    "pos": "нареч."
+   },
+   "mit": {
+    "ru": "с",
+    "pos": "предл."
+   },
+   "nicht": {
+    "ru": "не",
+    "pos": "частица"
+   },
+   "oder": {
+    "ru": "или",
+    "pos": "союз",
+    "note": "…, oder? — …, правда? / да?"
+   },
+   "oft": {
+    "ru": "часто",
+    "pos": "нареч."
+   },
+   "rechts": {
+    "ru": "справа; направо",
+    "pos": "нареч."
+   },
+   "rot": {
+    "ru": "красный",
+    "pos": "прил.",
+    "note": "Rot (с большой) — красный сигнал: bei Rot — на красный"
+   },
+   "schmal": {
+    "ru": "узкий",
+    "pos": "прил."
+   },
+   "schon": {
+    "ru": "уже",
+    "pos": "нареч."
+   },
+   "sein": {
+    "ru": "быть",
+    "pos": "гл.",
+    "forms": "war · ist gewesen"
+   },
+   "senken": {
+    "ru": "опускать",
+    "pos": "гл.",
+    "note": "sich senken — опускаться",
+    "forms": "senkte · hat gesenkt"
+   },
+   "sich": {
+    "ru": "себя, -ся",
+    "pos": "мест."
+   },
+   "sofort": {
+    "ru": "сразу, немедленно",
+    "pos": "нареч."
+   },
+   "stehen": {
+    "ru": "стоять",
+    "pos": "гл.",
+    "note": "Schilder stehen — стоят знаки",
+    "forms": "stand · hat gestanden"
+   },
+   "stehen bleiben": {
+    "ru": "останавливаться (и стоять)",
+    "pos": "выраж.",
+    "note": "ich bleibe stehen — я останавливаюсь"
+   },
+   "und": {
+    "ru": "и",
+    "pos": "союз"
+   },
+   "vor": {
+    "ru": "перед",
+    "pos": "предл.",
+    "note": "rechts vor links — правый перед левым"
+   },
+   "warnen": {
+    "ru": "предупреждать",
+    "pos": "гл.",
+    "forms": "warnte · hat gewarnt"
+   },
+   "was": {
+    "ru": "что",
+    "pos": "мест."
+   },
+   "weiß": {
+    "ru": "белый",
+    "pos": "прил."
+   },
+   "wer": {
+    "ru": "кто",
+    "pos": "мест."
+   },
+   "zeigen": {
+    "ru": "показывать",
+    "pos": "гл.",
+    "forms": "zeigte · hat gezeigt"
+   },
+   "zuerst": {
+    "ru": "сначала, первым",
+    "pos": "нареч."
+   },
+   "zwei": {
+    "ru": "два",
+    "pos": "числ."
+   },
+   "zwischen": {
+    "ru": "между",
+    "pos": "предл."
+   },
+   "überholen": {
+    "ru": "обгонять",
+    "pos": "гл.",
+    "forms": "überholte · hat überholt"
+   }
+  }
+ }
+}

@@ -76,7 +76,7 @@ KINDS = ('theory', 'dialog', 'junction', 'road')
 PREFIX = {'theory': 't', 'dialog': 'p', 'junction': 'k', 'road': 'r'}   # t-01, p-01, k-01, r-03
 ROAD_TYPES = ('stop', 'gap', 'side', 'overtake', 'zipper', 'parkspot', 'parallel', 'rightturn', 'zebracross', 'bus',
               'fog', 'highbeam', 'wild', 'promille', 'tired', 'lamp', 'tread', 'triangle', 'rescuelane',
-              'access', 'merge', 'missed')
+              'access', 'merge', 'missed', 'roundabout', 'railway', 'yellow')
 NUMERIC_ROAD = ('stop', 'gap', 'side', 'triangle')        # ответ — метры
 HAZARDS = ('ball', 'deer')
 # Боковой интервал при обгоне пешеходов и велосипедистов (§ 5 Abs. 4 StVO, с 2020)
@@ -397,6 +397,25 @@ def road_answer(sc):
     if t == 'missed':
         # пропустили съезд: разворот и задний ход запрещены (§ 18 Abs. 7)
         return {'answer': 'next'}
+    if t == 'roundabout':
+        # Kreisverkehr (§ 9a StVO): при въезде не мигать, перед съездом —
+        # направо; у въезда «Vorfahrt gewähren» — пропустить тех, кто в круге
+        ask = sc.get('ask')
+        if ask not in ('enter', 'exit', 'yield'):
+            return 'ask — enter, exit или yield'
+        if ask == 'yield':
+            if not isinstance(sc.get('inside'), bool):
+                return 'inside — true/false (машина в круге)'
+            return {'answer': 'wait' if sc['inside'] else 'go'}
+        return {'answer': 'none' if ask == 'enter' else 'right'}
+    if t == 'railway':
+        # переезд (§ 19 StVO): мигает красный — стоять перед Andreaskreuz
+        if sc.get('signal') not in ('red', 'none'):
+            return 'signal — red или none'
+        return {'answer': 'stop' if sc['signal'] == 'red' else 'go'}
+    if t == 'yellow':
+        # на ремонте дороги жёлтая разметка главнее белой (Anlage 2 StVO)
+        return {'answer': 'yellow'}
     if t == 'wild':
         # животное на дороге: ближний свет, сигнал, тормоз — не уходить в сторону
         return {'answer': 'brake'}
@@ -686,7 +705,7 @@ def main():
                         scene['hazard'] = sc['hazard']
                         scene['emergency'] = bool(sc.get('emergency'))
                     for k in ('where', 'line', 'oncoming', 'sign', 'near', 'dist', 'who', 'ped', 'state', 'sight', 'p', 'novice', 'symptoms', 'hours', 'tired', 'color', 'lamp', 'depth', 'lanes', 'lane',
-                              'vehicle', 'vmax', 'beside'):
+                              'vehicle', 'vmax', 'beside', 'ask', 'inside', 'signal'):
                         if k in sc:
                             scene[k] = sc[k]
                     out[lang].append(scene)

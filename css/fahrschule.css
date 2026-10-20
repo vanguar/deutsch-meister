@@ -341,3 +341,12 @@ html[dir="rtl"] .fs-tr { text-align: right; }
 /* Автобан: въезд, полоса разгона, съезд (тема 11) */
 .fs-mark.is-block { stroke-dasharray: 5 4; stroke-width: 2.5; }
 .fs-moped-body { fill: none; stroke: #e0484f; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+
+/* Кольцо, переезд, ремонт дороги (тема 12) */
+.fs-island { fill: color-mix(in srgb, var(--green) 30%, var(--surface)); stroke: #fff; stroke-opacity: .8; stroke-width: 2; }
+.fs-sleeper { fill: #7a6248; }
+.fs-rail { fill: none; stroke: #9aa4ae; stroke-width: 2.5; }
+.fs-rail-light { fill: #ff2a2a; filter: drop-shadow(0 0 4px #ff2a2a); animation: fs-blink .9s steps(2, jump-none) infinite; }
+.fs-train-car { fill: #d0d6dc; stroke: #e0484f; stroke-width: 2; }
+.fs-mark.is-yellow { stroke: #f2c200; stroke-opacity: 1; stroke-width: 3; }
+@media (prefers-reduced-motion: reduce) { .fs-rail-light { animation: none; } }

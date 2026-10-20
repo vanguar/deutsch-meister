@@ -109,6 +109,14 @@ ok('vehicle' in str(build.road_answer({'type': 'access', 'vehicle': 'tank', 'vma
 ok(build.road_answer({'type': 'merge', 'beside': True}) == {'answer': 'behind'}, 'полоса разгона: грузовик рядом — встать за ним')
 ok(build.road_answer({'type': 'merge'}) == {'answer': 'merge'}, 'полоса разгона: промежуток свободен — встраиваться')
 ok(build.road_answer({'type': 'missed'}) == {'answer': 'next'}, 'пропущенный съезд — до следующего, без разворота')
+ok(build.road_answer({'type': 'roundabout', 'ask': 'enter'}) == {'answer': 'none'}, 'кольцо: при въезде не мигать')
+ok(build.road_answer({'type': 'roundabout', 'ask': 'exit'}) == {'answer': 'right'}, 'кольцо: перед съездом — направо')
+ok(build.road_answer({'type': 'roundabout', 'ask': 'yield', 'inside': True}) == {'answer': 'wait'}, 'кольцо: машина в круге — пропустить')
+ok(build.road_answer({'type': 'roundabout', 'ask': 'yield', 'inside': False}) == {'answer': 'go'}, 'кольцо: в круге пусто — ехать')
+ok('inside' in str(build.road_answer({'type': 'roundabout', 'ask': 'yield'})), 'кольцо: без inside — ошибка сцены')
+ok(build.road_answer({'type': 'railway', 'signal': 'red'}) == {'answer': 'stop'}, 'переезд: мигает красный — стоять')
+ok(build.road_answer({'type': 'railway', 'signal': 'none'}) == {'answer': 'go'}, 'переезд: сигнала нет — проезжать без остановки')
+ok(build.road_answer({'type': 'yellow'}) == {'answer': 'yellow'}, 'ремонт дороги: жёлтая разметка главнее')
 
 
 # ── 2. Сборка ловит ошибки и ничего не пишет ──

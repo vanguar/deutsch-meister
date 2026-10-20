@@ -120,6 +120,17 @@
     "p-11",
     "r-11"
    ]
+  },
+  {
+   "id": "kreis-bahn",
+   "emoji": "🔄",
+   "title": "Kreisverkehr, Bahnübergang und Baustelle",
+   "titleTr": "Кільце, переїзд і ремонт дороги",
+   "units": [
+    "t-12",
+    "p-12",
+    "r-12"
+   ]
   }
  ],
  "units": [
@@ -419,6 +430,33 @@
    "title": "Auffahren und Abfahren",
    "titleTr": "В'їзд і з'їзд",
    "count": 5
+  },
+  {
+   "id": "t-12",
+   "kind": "theory",
+   "emoji": "🔄",
+   "level": "B1",
+   "title": "Kreisverkehr, Bahnübergang und Baustelle",
+   "titleTr": "Кільце, переїзд і ремонт дороги",
+   "count": 16
+  },
+  {
+   "id": "p-12",
+   "kind": "dialog",
+   "emoji": "🚂",
+   "level": "B1",
+   "title": "Kreisverkehr und Bahnübergang",
+   "titleTr": "Кільце й переїзд",
+   "count": 15
+  },
+  {
+   "id": "r-12",
+   "kind": "road",
+   "emoji": "🚂",
+   "level": "B1",
+   "title": "Im Kreis und an den Gleisen",
+   "titleTr": "На кільці й біля колій",
+   "count": 6
   }
  ]
 }

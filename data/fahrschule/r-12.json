@@ -1,0 +1,739 @@
+{
+ "id": "r-12",
+ "kind": "road",
+ "emoji": "🚂",
+ "level": "B1",
+ "title": "Im Kreis und an den Gleisen",
+ "titleTr": "На кольце и у путей",
+ "intro": "Когда мигать на кольце, кого пропускать при въезде, что делать у переезда с мигающим светом и каким линиям верить на ремонте дороги.",
+ "scenes": [
+  {
+   "type": "roundabout",
+   "options": [
+    {
+     "key": "none",
+     "de": "Ich blinke nicht.",
+     "tr": "Не включаю поворотник."
+    },
+    {
+     "key": "left",
+     "de": "Ich blinke links.",
+     "tr": "Включаю левый поворотник."
+    },
+    {
+     "key": "right",
+     "de": "Ich blinke rechts.",
+     "tr": "Включаю правый поворотник."
+    }
+   ],
+   "situation": {
+    "de": "Sie kommen an einen Kreisverkehr. Im Kreis fährt gerade kein Auto.",
+    "tr": "Вы подъезжаете к кольцу. На кольце сейчас нет машин."
+   },
+   "question": {
+    "de": "Wie blinken Sie beim Hineinfahren?",
+    "tr": "Как вы мигаете при въезде?"
+   },
+   "explain": [
+    {
+     "de": "Beim Hineinfahren in den Kreisverkehr blinken Sie nicht.",
+     "tr": "При въезде на кольцо поворотник не включают."
+    },
+    {
+     "de": "Rechts blinken Sie erst kurz vor Ihrer Ausfahrt.",
+     "tr": "Правый поворотник включают только незадолго до своего съезда."
+    }
+   ],
+   "answer": "none",
+   "sign": "z215",
+   "ask": "enter"
+  },
+  {
+   "type": "roundabout",
+   "options": [
+    {
+     "key": "none",
+     "de": "Ich blinke nicht.",
+     "tr": "Не включаю поворотник."
+    },
+    {
+     "key": "left",
+     "de": "Ich blinke links.",
+     "tr": "Включаю левый поворотник."
+    },
+    {
+     "key": "right",
+     "de": "Ich blinke rechts.",
+     "tr": "Включаю правый поворотник."
+    }
+   ],
+   "situation": {
+    "de": "Sie fahren im Kreisverkehr. Die nächste Ausfahrt ist Ihre.",
+    "tr": "Вы едете по кольцу. Следующий съезд — ваш."
+   },
+   "question": {
+    "de": "Wie blinken Sie jetzt?",
+    "tr": "Как вы мигаете сейчас?"
+   },
+   "explain": [
+    {
+     "de": "Vor dem Hinausfahren blinken Sie rechts.",
+     "tr": "Перед съездом с кольца включите правый поворотник."
+    },
+    {
+     "de": "So wissen die anderen, dass Sie den Kreis verlassen.",
+     "tr": "Так другие знают, что вы покидаете кольцо."
+    }
+   ],
+   "answer": "right",
+   "sign": "z215",
+   "ask": "exit"
+  },
+  {
+   "type": "roundabout",
+   "options": [
+    {
+     "key": "wait",
+     "de": "Ich warte, bis das rote Auto vorbei ist.",
+     "tr": "Жду, пока красная машина проедет."
+    },
+    {
+     "key": "go",
+     "de": "Ich fahre zuerst, denn ich komme von rechts.",
+     "tr": "Еду первым, ведь я приближаюсь справа."
+    }
+   ],
+   "situation": {
+    "de": "Sie wollen in den Kreisverkehr fahren. Im Kreis kommt von links ein rotes Auto.",
+    "tr": "Вы хотите въехать на кольцо. По кольцу слева приближается красная машина."
+   },
+   "question": {
+    "de": "Was machen Sie?",
+    "tr": "Что вы делаете?"
+   },
+   "explain": [
+    {
+     "de": "Am Kreisverkehr steht meistens „Vorfahrt gewähren“.",
+     "tr": "У кольца обычно стоит «Уступите дорогу»."
+    },
+    {
+     "de": "Wer im Kreis fährt, hat Vorfahrt. Rechts vor links gilt hier nicht.",
+     "tr": "У того, кто едет по кругу, преимущество. «Правый перед левым» здесь не действует."
+    }
+   ],
+   "answer": "wait",
+   "sign": "z205",
+   "ask": "yield",
+   "inside": true
+  },
+  {
+   "type": "railway",
+   "options": [
+    {
+     "key": "stop",
+     "de": "Ich halte vor dem Andreaskreuz an.",
+     "tr": "Останавливаюсь перед андреевским крестом."
+    },
+    {
+     "key": "go",
+     "de": "Ich fahre schnell über die Gleise.",
+     "tr": "Быстро проезжаю через пути."
+    }
+   ],
+   "situation": {
+    "de": "Vor Ihnen ist ein Bahnübergang. Das rote Licht blinkt, aber Sie sehen keinen Zug.",
+    "tr": "Перед вами переезд. Мигает красный свет, но поезда вы не видите."
+   },
+   "question": {
+    "de": "Was machen Sie?",
+    "tr": "Что вы делаете?"
+   },
+   "explain": [
+    {
+     "de": "Blinkt das rote Licht, müssen Sie vor dem Andreaskreuz halten.",
+     "tr": "Если мигает красный свет, нужно остановиться перед андреевским крестом."
+    },
+    {
+     "de": "Der Zug kommt oft schneller, als man denkt.",
+     "tr": "Поезд часто приближается быстрее, чем кажется."
+    }
+   ],
+   "answer": "stop",
+   "sign": "z201",
+   "signal": "red"
+  },
+  {
+   "type": "railway",
+   "options": [
+    {
+     "key": "stop",
+     "de": "Ich halte auf den Gleisen und schaue nach links und rechts.",
+     "tr": "Останавливаюсь на путях и смотрю налево и направо."
+    },
+    {
+     "key": "go",
+     "de": "Ich schaue vorher nach links und rechts und fahre zügig über die Gleise.",
+     "tr": "Заранее смотрю налево и направо и без задержки переезжаю пути."
+    }
+   ],
+   "situation": {
+    "de": "Ein Bahnübergang ohne Schranken. Kein Licht blinkt, und Sie sehen keinen Zug.",
+    "tr": "Переезд без шлагбаумов. Свет не мигает, и поезда вы не видите."
+   },
+   "question": {
+    "de": "Was machen Sie?",
+    "tr": "Что вы делаете?"
+   },
+   "explain": [
+    {
+     "de": "Kommt kein Zug, fahren Sie zügig über den Bahnübergang.",
+     "tr": "Если поезда нет, переезжайте без задержки."
+    },
+    {
+     "de": "Halten Sie nie auf den Gleisen.",
+     "tr": "Никогда не останавливайтесь на путях."
+    }
+   ],
+   "answer": "go",
+   "sign": "z201",
+   "signal": "none"
+  },
+  {
+   "type": "yellow",
+   "options": [
+    {
+     "key": "white",
+     "de": "Ich folge den weißen Linien.",
+     "tr": "Еду по белым линиям."
+    },
+    {
+     "key": "yellow",
+     "de": "Ich folge den gelben Linien.",
+     "tr": "Еду по жёлтым линиям."
+    }
+   ],
+   "situation": {
+    "de": "Sie fahren in eine Baustelle. Auf der Straße sind weiße und gelbe Linien.",
+    "tr": "Вы въезжаете на участок ремонта. На дороге белые и жёлтые линии."
+   },
+   "question": {
+    "de": "Welchen Linien folgen Sie?",
+    "tr": "По каким линиям вы едете?"
+   },
+   "explain": [
+    {
+     "de": "In einer Baustelle gelten die gelben Linien.",
+     "tr": "На участке ремонта действуют жёлтые линии."
+    },
+    {
+     "de": "Die weißen Linien gelten dort nicht.",
+     "tr": "Белые линии там не действуют."
+    }
+   ],
+   "answer": "yellow",
+   "sign": "z123"
+  }
+ ],
+ "signs": {
+  "z123": {
+   "de": "Baustelle",
+   "tr": "Дорожные работы",
+   "src": "data/fahrschule/signs/z123.svg",
+   "n": "123",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_123_-_Arbeitsstelle,_StVO_2013.svg"
+  },
+  "z201": {
+   "de": "Andreaskreuz",
+   "tr": "Андреевский крест (поезд имеет преимущество)",
+   "src": "data/fahrschule/signs/z201.svg",
+   "n": "201",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Andreaskreuz_(ohne_Ma%C3%9Fe)_1970.svg"
+  },
+  "z205": {
+   "de": "Vorfahrt gewähren!",
+   "tr": "Уступите дорогу!",
+   "src": "data/fahrschule/signs/z205.svg",
+   "n": "205",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_205_-_Vorfahrt_gew%C3%A4hren!_StVO_1970.svg"
+  },
+  "z215": {
+   "de": "Kreisverkehr",
+   "tr": "Круговое движение",
+   "src": "data/fahrschule/signs/z215.svg",
+   "n": "215",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_215_-_Kreisverkehr,_StVO_2000.svg"
+  }
+ },
+ "gloss": {
+  "w": {
+   "aber": "aber",
+   "als": "als",
+   "am": "an",
+   "an": "an",
+   "anderen": "andere",
+   "andreaskreuz": "Andreaskreuz",
+   "auf": "auf",
+   "ausfahrt": "Ausfahrt",
+   "auto": "Auto",
+   "bahnübergang": "Bahnübergang",
+   "baustelle": "Baustelle",
+   "beim": "bei",
+   "blinken": "blinken",
+   "blinkt": "blinken",
+   "das": "der/die/das",
+   "dass": "dass",
+   "dem": "der/die/das",
+   "den": "der/die/das",
+   "denkt": "denken",
+   "der": "der/die/das",
+   "die": "der/die/das",
+   "dort": "dort",
+   "ein": "ein/eine",
+   "eine": "ein/eine",
+   "einen": "ein/eine",
+   "einer": "ein/eine",
+   "erst": "erst",
+   "fahren": "fahren",
+   "folgen": "folgen",
+   "fährt": "fahren",
+   "gelbe": "gelb",
+   "gelben": "gelb",
+   "gelten": "gelten",
+   "gerade": "gerade",
+   "gewähren": "gewähren",
+   "gilt": "gelten",
+   "gleisen": "Gleis",
+   "halten": "halten",
+   "hat": "haben",
+   "hier": "hier",
+   "hinausfahren": "hinausfahren",
+   "hineinfahren": "hineinfahren",
+   "ihnen": "Sie",
+   "ihre": "Ihr",
+   "ihrer": "Ihr",
+   "im": "in",
+   "in": "in",
+   "ist": "sein",
+   "jetzt": "jetzt",
+   "kein": "kein",
+   "keinen": "kein",
+   "kommen": "kommen",
+   "kommt": "kommen",
+   "kreis": "Kreis",
+   "kreisverkehr": "Kreisverkehr",
+   "kurz": "kurz",
+   "licht": "Licht",
+   "linien": "Linie",
+   "links": "links",
+   "machen": "machen",
+   "man": "man",
+   "meistens": "meistens",
+   "müssen": "müssen",
+   "nicht": "nicht",
+   "nie": "nie",
+   "nächste": "nächste",
+   "oft": "oft",
+   "ohne": "ohne",
+   "rechts": "rechts",
+   "rote": "rot",
+   "rotes": "rot",
+   "schneller": "schnell",
+   "schranken": "Schranke",
+   "sehen": "sehen",
+   "sie": "Sie",
+   "sind": "sein",
+   "so": "so",
+   "steht": "stehen",
+   "straße": "Straße",
+   "und": "und",
+   "verlassen": "verlassen",
+   "von": "von",
+   "vor": "vor",
+   "vorfahrt": "Vorfahrt",
+   "was": "was",
+   "weiße": "weiß",
+   "weißen": "weiß",
+   "welchen": "welcher",
+   "wer": "wer",
+   "wie": "wie",
+   "wissen": "wissen",
+   "wollen": "wollen",
+   "zug": "Zug",
+   "zügig": "zügig",
+   "über": "über"
+  },
+  "l": {
+   "Andreaskreuz": {
+    "ru": "андреевский крест (знак у переезда)",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Andreaskreuze"
+   },
+   "Ausfahrt": {
+    "ru": "съезд, выезд (с автобана)",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Ausfahrten"
+   },
+   "Auto": {
+    "ru": "машина, автомобиль",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Autos"
+   },
+   "Bahnübergang": {
+    "ru": "железнодорожный переезд",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Bahnübergänge"
+   },
+   "Baustelle": {
+    "ru": "дорожные работы, стройка",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Baustellen"
+   },
+   "Gleis": {
+    "ru": "железнодорожный путь, колея",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Gleise"
+   },
+   "Ihr": {
+    "ru": "ваш (вежливо)",
+    "pos": "мест."
+   },
+   "Kreis": {
+    "ru": "круг",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Kreise"
+   },
+   "Kreisverkehr": {
+    "ru": "круговое движение, кольцо",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Kreisverkehre"
+   },
+   "Licht": {
+    "ru": "свет; сигнал",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Lichter"
+   },
+   "Linie": {
+    "ru": "линия",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Linien"
+   },
+   "Schranke": {
+    "ru": "шлагбаум",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Schranken"
+   },
+   "Sie": {
+    "ru": "вы (вежливо)",
+    "pos": "мест.",
+    "note": "Ihnen — вам (дательный): vor Ihnen — перед вами"
+   },
+   "Straße": {
+    "ru": "улица, дорога",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Straßen"
+   },
+   "Vorfahrt": {
+    "ru": "преимущество (право проехать первым)",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": null
+   },
+   "Zug": {
+    "ru": "поезд",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Züge"
+   },
+   "aber": {
+    "ru": "но",
+    "pos": "союз"
+   },
+   "als": {
+    "ru": "чем (при сравнении); как",
+    "pos": "союз"
+   },
+   "an": {
+    "ru": "у, на, при",
+    "pos": "предл.",
+    "note": "am = an dem; an der Kreuzung — на перекрёстке"
+   },
+   "andere": {
+    "ru": "другой",
+    "pos": "прил."
+   },
+   "auf": {
+    "ru": "на, по",
+    "pos": "предл.",
+    "note": "auf der Straße — на дороге; achten auf — следить за"
+   },
+   "bei": {
+    "ru": "при, у; на (о сигнале)",
+    "pos": "предл.",
+    "note": "beim = bei dem: beim Fahren — во время езды; bei Rot — на красный"
+   },
+   "blinken": {
+    "ru": "включать поворотник, мигать",
+    "pos": "гл.",
+    "forms": "blinkte · hat geblinkt"
+   },
+   "dass": {
+    "ru": "что (союз)",
+    "pos": "союз"
+   },
+   "denken": {
+    "ru": "думать",
+    "pos": "гл.",
+    "note": "denken an — помнить о, думать о",
+    "forms": "dachte · hat gedacht"
+   },
+   "der/die/das": {
+    "ru": "определённый артикль",
+    "pos": "артикль",
+    "note": "der — м. р., die — ж. р. и мн. ч., das — ср. р.; den — м. р. в винительном, dem — м. и ср. р. в дательном; das ещё значит «это»"
+   },
+   "dort": {
+    "ru": "там",
+    "pos": "нареч."
+   },
+   "ein/eine": {
+    "ru": "неопределённый артикль; один",
+    "pos": "артикль",
+    "note": "an einer Kreuzung — на (каком-то) перекрёстке"
+   },
+   "erst": {
+    "ru": "только (не раньше чем)",
+    "pos": "нареч."
+   },
+   "fahren": {
+    "ru": "ехать; водить машину",
+    "pos": "гл.",
+    "forms": "fuhr · ist gefahren"
+   },
+   "folgen": {
+    "ru": "следовать (за кем-то)",
+    "pos": "гл.",
+    "forms": "folgte · ist gefolgt"
+   },
+   "gelb": {
+    "ru": "жёлтый",
+    "pos": "прил.",
+    "note": "Gelb (с большой) — жёлтый сигнал"
+   },
+   "gelten": {
+    "ru": "действовать (о правиле)",
+    "pos": "гл.",
+    "forms": "galt · hat gegolten"
+   },
+   "gerade": {
+    "ru": "сейчас, как раз",
+    "pos": "нареч."
+   },
+   "gewähren": {
+    "ru": "предоставлять",
+    "pos": "гл.",
+    "note": "Vorfahrt gewähren — уступить дорогу",
+    "forms": "gewährte · hat gewährt"
+   },
+   "haben": {
+    "ru": "иметь",
+    "pos": "гл.",
+    "note": "Vorfahrt haben — иметь преимущество",
+    "forms": "hatte · hat gehabt"
+   },
+   "halten": {
+    "ru": "останавливаться (ненадолго); держать",
+    "pos": "гл.",
+    "forms": "hielt · hat gehalten"
+   },
+   "hier": {
+    "ru": "здесь",
+    "pos": "нареч."
+   },
+   "hinausfahren": {
+    "ru": "выезжать (наружу)",
+    "pos": "гл.",
+    "note": "das Hinausfahren — съезд (с кольца)",
+    "forms": "fuhr hinaus · ist hinausgefahren"
+   },
+   "hineinfahren": {
+    "ru": "въезжать (внутрь)",
+    "pos": "гл.",
+    "forms": "fuhr hinein · ist hineingefahren"
+   },
+   "in": {
+    "ru": "в",
+    "pos": "предл.",
+    "note": "im = in dem: im Bereich — в зоне"
+   },
+   "jetzt": {
+    "ru": "сейчас, теперь",
+    "pos": "нареч."
+   },
+   "kein": {
+    "ru": "никакой; не (отрицание при существительном)",
+    "pos": "мест."
+   },
+   "kommen": {
+    "ru": "приходить; ехать (приближаться)",
+    "pos": "гл.",
+    "note": "von rechts kommen — ехать справа",
+    "forms": "kam · ist gekommen"
+   },
+   "kurz": {
+    "ru": "короткий; ненадолго",
+    "pos": "прил."
+   },
+   "links": {
+    "ru": "слева; налево",
+    "pos": "нареч."
+   },
+   "machen": {
+    "ru": "делать",
+    "pos": "гл.",
+    "note": "den Schulterblick machen — оглянуться через плечо; Gut gemacht! — Молодец!",
+    "forms": "machte · hat gemacht"
+   },
+   "man": {
+    "ru": "(неопределённо-личное: «люди», «кто-то»)",
+    "pos": "мест.",
+    "note": "als man denkt — чем думаешь, чем кажется"
+   },
+   "meistens": {
+    "ru": "чаще всего, обычно",
+    "pos": "нареч."
+   },
+   "müssen": {
+    "ru": "быть должным",
+    "pos": "гл.",
+    "forms": "musste · hat gemusst"
+   },
+   "nicht": {
+    "ru": "не",
+    "pos": "частица"
+   },
+   "nie": {
+    "ru": "никогда",
+    "pos": "нареч."
+   },
+   "nächste": {
+    "ru": "ближайший, следующий",
+    "pos": "прил."
+   },
+   "oft": {
+    "ru": "часто",
+    "pos": "нареч."
+   },
+   "ohne": {
+    "ru": "без",
+    "pos": "предл."
+   },
+   "rechts": {
+    "ru": "справа; направо",
+    "pos": "нареч."
+   },
+   "rot": {
+    "ru": "красный",
+    "pos": "прил.",
+    "note": "Rot (с большой) — красный сигнал: bei Rot — на красный"
+   },
+   "schnell": {
+    "ru": "быстрый; быстро",
+    "pos": "прил."
+   },
+   "sehen": {
+    "ru": "видеть",
+    "pos": "гл.",
+    "forms": "sah · hat gesehen"
+   },
+   "sein": {
+    "ru": "быть",
+    "pos": "гл.",
+    "forms": "war · ist gewesen"
+   },
+   "so": {
+    "ru": "так; вот (так)",
+    "pos": "нареч."
+   },
+   "stehen": {
+    "ru": "стоять",
+    "pos": "гл.",
+    "note": "Schilder stehen — стоят знаки",
+    "forms": "stand · hat gestanden"
+   },
+   "und": {
+    "ru": "и",
+    "pos": "союз"
+   },
+   "verlassen": {
+    "ru": "покидать, выезжать из",
+    "pos": "гл.",
+    "forms": "verließ · hat verlassen"
+   },
+   "von": {
+    "ru": "от, из, с",
+    "pos": "предл.",
+    "note": "vom = von dem; von rechts — справа"
+   },
+   "vor": {
+    "ru": "перед",
+    "pos": "предл.",
+    "note": "rechts vor links — правый перед левым"
+   },
+   "was": {
+    "ru": "что",
+    "pos": "мест."
+   },
+   "weiß": {
+    "ru": "белый",
+    "pos": "прил."
+   },
+   "welcher": {
+    "ru": "какой, который",
+    "pos": "мест."
+   },
+   "wer": {
+    "ru": "кто",
+    "pos": "мест."
+   },
+   "wie": {
+    "ru": "как",
+    "pos": "нареч.",
+    "note": "wie schnell — с какой скоростью"
+   },
+   "wissen": {
+    "ru": "знать",
+    "pos": "гл.",
+    "forms": "wusste · hat gewusst"
+   },
+   "wollen": {
+    "ru": "хотеть",
+    "pos": "гл.",
+    "forms": "wollte · hat gewollt"
+   },
+   "zügig": {
+    "ru": "быстро, без задержки",
+    "pos": "прил."
+   },
+   "über": {
+    "ru": "через; над",
+    "pos": "предл."
+   }
+  }
+ }
+}

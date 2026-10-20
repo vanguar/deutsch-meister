@@ -1,0 +1,725 @@
+{
+ "id": "r-12",
+ "kind": "road",
+ "emoji": "🚂",
+ "level": "B1",
+ "title": "Im Kreis und an den Gleisen",
+ "titleTr": "في الدوّار وعند السكة",
+ "intro": "متى تشغّل الإشارة في الدوّار، ولمن تعطي الأولوية عند الدخول، وماذا تفعل عند ممر سكة بضوء وامض، وأي خطوط تتبع في أعمال الطرق.",
+ "scenes": [
+  {
+   "type": "roundabout",
+   "options": [
+    {
+     "key": "none",
+     "de": "Ich blinke nicht.",
+     "tr": "لا أشغّل الإشارة."
+    },
+    {
+     "key": "left",
+     "de": "Ich blinke links.",
+     "tr": "أشغّل إشارة اليسار."
+    },
+    {
+     "key": "right",
+     "de": "Ich blinke rechts.",
+     "tr": "أشغّل إشارة اليمين."
+    }
+   ],
+   "situation": {
+    "de": "Sie kommen an einen Kreisverkehr. Im Kreis fährt gerade kein Auto.",
+    "tr": "تقترب من دوّار. لا توجد الآن أي سيارة داخله."
+   },
+   "question": {
+    "de": "Wie blinken Sie beim Hineinfahren?",
+    "tr": "كيف تشغّل الإشارة عند الدخول؟"
+   },
+   "explain": [
+    {
+     "de": "Beim Hineinfahren in den Kreisverkehr blinken Sie nicht.",
+     "tr": "عند الدخول إلى الدوّار لا تشغّل الإشارة."
+    },
+    {
+     "de": "Rechts blinken Sie erst kurz vor Ihrer Ausfahrt.",
+     "tr": "تشغّل إشارة اليمين فقط قبيل مخرجك."
+    }
+   ],
+   "answer": "none",
+   "sign": "z215",
+   "ask": "enter"
+  },
+  {
+   "type": "roundabout",
+   "options": [
+    {
+     "key": "none",
+     "de": "Ich blinke nicht.",
+     "tr": "لا أشغّل الإشارة."
+    },
+    {
+     "key": "left",
+     "de": "Ich blinke links.",
+     "tr": "أشغّل إشارة اليسار."
+    },
+    {
+     "key": "right",
+     "de": "Ich blinke rechts.",
+     "tr": "أشغّل إشارة اليمين."
+    }
+   ],
+   "situation": {
+    "de": "Sie fahren im Kreisverkehr. Die nächste Ausfahrt ist Ihre.",
+    "tr": "أنت داخل الدوّار. المخرج القادم هو مخرجك."
+   },
+   "question": {
+    "de": "Wie blinken Sie jetzt?",
+    "tr": "كيف تشغّل الإشارة الآن؟"
+   },
+   "explain": [
+    {
+     "de": "Vor dem Hinausfahren blinken Sie rechts.",
+     "tr": "قبل الخروج من الدوّار شغّل إشارة اليمين."
+    },
+    {
+     "de": "So wissen die anderen, dass Sie den Kreis verlassen.",
+     "tr": "هكذا يعرف الآخرون أنك تغادر الدوّار."
+    }
+   ],
+   "answer": "right",
+   "sign": "z215",
+   "ask": "exit"
+  },
+  {
+   "type": "roundabout",
+   "options": [
+    {
+     "key": "wait",
+     "de": "Ich warte, bis das rote Auto vorbei ist.",
+     "tr": "أنتظر حتى تمر السيارة الحمراء."
+    },
+    {
+     "key": "go",
+     "de": "Ich fahre zuerst, denn ich komme von rechts.",
+     "tr": "أدخل أولًا لأنني آتٍ من اليمين."
+    }
+   ],
+   "situation": {
+    "de": "Sie wollen in den Kreisverkehr fahren. Im Kreis kommt von links ein rotes Auto.",
+    "tr": "تريد دخول الدوّار. داخل الدوّار تقترب سيارة حمراء من اليسار."
+   },
+   "question": {
+    "de": "Was machen Sie?",
+    "tr": "ماذا تفعل؟"
+   },
+   "explain": [
+    {
+     "de": "Am Kreisverkehr steht meistens „Vorfahrt gewähren“.",
+     "tr": "عند الدوّار توجد غالبًا لافتة «أعطِ الأولوية»."
+    },
+    {
+     "de": "Wer im Kreis fährt, hat Vorfahrt. Rechts vor links gilt hier nicht.",
+     "tr": "من يسير داخل الدوّار له الأولوية. قاعدة اليمين قبل اليسار لا تسري هنا."
+    }
+   ],
+   "answer": "wait",
+   "sign": "z205",
+   "ask": "yield",
+   "inside": true
+  },
+  {
+   "type": "railway",
+   "options": [
+    {
+     "key": "stop",
+     "de": "Ich halte vor dem Andreaskreuz an.",
+     "tr": "أتوقف قبل صليب أندراوس."
+    },
+    {
+     "key": "go",
+     "de": "Ich fahre schnell über die Gleise.",
+     "tr": "أعبر السكة بسرعة."
+    }
+   ],
+   "situation": {
+    "de": "Vor Ihnen ist ein Bahnübergang. Das rote Licht blinkt, aber Sie sehen keinen Zug.",
+    "tr": "أمامك ممر سكة حديدية. الضوء الأحمر يومض، لكنك لا ترى قطارًا."
+   },
+   "question": {
+    "de": "Was machen Sie?",
+    "tr": "ماذا تفعل؟"
+   },
+   "explain": [
+    {
+     "de": "Blinkt das rote Licht, müssen Sie vor dem Andreaskreuz halten.",
+     "tr": "إذا ومض الضوء الأحمر فعليك التوقف قبل صليب أندراوس."
+    },
+    {
+     "de": "Der Zug kommt oft schneller, als man denkt.",
+     "tr": "غالبًا ما يصل القطار أسرع مما تظن."
+    }
+   ],
+   "answer": "stop",
+   "sign": "z201",
+   "signal": "red"
+  },
+  {
+   "type": "railway",
+   "options": [
+    {
+     "key": "stop",
+     "de": "Ich halte auf den Gleisen und schaue nach links und rechts.",
+     "tr": "أتوقف على السكة وأنظر يسارًا ويمينًا."
+    },
+    {
+     "key": "go",
+     "de": "Ich schaue vorher nach links und rechts und fahre zügig über die Gleise.",
+     "tr": "أنظر مسبقًا يسارًا ويمينًا ثم أعبر السكة دون تأخير."
+    }
+   ],
+   "situation": {
+    "de": "Ein Bahnübergang ohne Schranken. Kein Licht blinkt, und Sie sehen keinen Zug.",
+    "tr": "ممر سكة بلا حواجز. لا يومض أي ضوء، ولا ترى قطارًا."
+   },
+   "question": {
+    "de": "Was machen Sie?",
+    "tr": "ماذا تفعل؟"
+   },
+   "explain": [
+    {
+     "de": "Kommt kein Zug, fahren Sie zügig über den Bahnübergang.",
+     "tr": "إذا لم يأتِ قطار فاعبر الممر دون تأخير."
+    },
+    {
+     "de": "Halten Sie nie auf den Gleisen.",
+     "tr": "لا تتوقف أبدًا على السكة."
+    }
+   ],
+   "answer": "go",
+   "sign": "z201",
+   "signal": "none"
+  },
+  {
+   "type": "yellow",
+   "options": [
+    {
+     "key": "white",
+     "de": "Ich folge den weißen Linien.",
+     "tr": "أتبع الخطوط البيضاء."
+    },
+    {
+     "key": "yellow",
+     "de": "Ich folge den gelben Linien.",
+     "tr": "أتبع الخطوط الصفراء."
+    }
+   ],
+   "situation": {
+    "de": "Sie fahren in eine Baustelle. Auf der Straße sind weiße und gelbe Linien.",
+    "tr": "تدخل منطقة أعمال طرق. على الطريق خطوط بيضاء وصفراء."
+   },
+   "question": {
+    "de": "Welchen Linien folgen Sie?",
+    "tr": "أي خطوط تتبع؟"
+   },
+   "explain": [
+    {
+     "de": "In einer Baustelle gelten die gelben Linien.",
+     "tr": "في منطقة الأعمال تسري الخطوط الصفراء."
+    },
+    {
+     "de": "Die weißen Linien gelten dort nicht.",
+     "tr": "الخطوط البيضاء لا تسري هناك."
+    }
+   ],
+   "answer": "yellow",
+   "sign": "z123"
+  }
+ ],
+ "signs": {
+  "z123": {
+   "de": "Baustelle",
+   "tr": "أعمال طرق",
+   "src": "data/fahrschule/signs/z123.svg",
+   "n": "123",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_123_-_Arbeitsstelle,_StVO_2013.svg"
+  },
+  "z201": {
+   "de": "Andreaskreuz",
+   "tr": "صليب أندراوس (الأولوية للقطار)",
+   "src": "data/fahrschule/signs/z201.svg",
+   "n": "201",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Andreaskreuz_(ohne_Ma%C3%9Fe)_1970.svg"
+  },
+  "z205": {
+   "de": "Vorfahrt gewähren!",
+   "tr": "أفسح الطريق!",
+   "src": "data/fahrschule/signs/z205.svg",
+   "n": "205",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_205_-_Vorfahrt_gew%C3%A4hren!_StVO_1970.svg"
+  },
+  "z215": {
+   "de": "Kreisverkehr",
+   "tr": "دوّار",
+   "src": "data/fahrschule/signs/z215.svg",
+   "n": "215",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_215_-_Kreisverkehr,_StVO_2000.svg"
+  }
+ },
+ "gloss": {
+  "w": {
+   "aber": "aber",
+   "als": "als",
+   "am": "an",
+   "an": "an",
+   "anderen": "andere",
+   "andreaskreuz": "Andreaskreuz",
+   "auf": "auf",
+   "ausfahrt": "Ausfahrt",
+   "auto": "Auto",
+   "bahnübergang": "Bahnübergang",
+   "baustelle": "Baustelle",
+   "beim": "bei",
+   "blinken": "blinken",
+   "blinkt": "blinken",
+   "das": "der/die/das",
+   "dass": "dass",
+   "dem": "der/die/das",
+   "den": "der/die/das",
+   "denkt": "denken",
+   "der": "der/die/das",
+   "die": "der/die/das",
+   "dort": "dort",
+   "ein": "ein/eine",
+   "eine": "ein/eine",
+   "einen": "ein/eine",
+   "einer": "ein/eine",
+   "erst": "erst",
+   "fahren": "fahren",
+   "folgen": "folgen",
+   "fährt": "fahren",
+   "gelbe": "gelb",
+   "gelben": "gelb",
+   "gelten": "gelten",
+   "gerade": "gerade",
+   "gewähren": "gewähren",
+   "gilt": "gelten",
+   "gleisen": "Gleis",
+   "halten": "halten",
+   "hat": "haben",
+   "hier": "hier",
+   "hinausfahren": "hinausfahren",
+   "hineinfahren": "hineinfahren",
+   "ihnen": "Sie",
+   "ihre": "Ihr",
+   "ihrer": "Ihr",
+   "im": "in",
+   "in": "in",
+   "ist": "sein",
+   "jetzt": "jetzt",
+   "kein": "kein",
+   "keinen": "kein",
+   "kommen": "kommen",
+   "kommt": "kommen",
+   "kreis": "Kreis",
+   "kreisverkehr": "Kreisverkehr",
+   "kurz": "kurz",
+   "licht": "Licht",
+   "linien": "Linie",
+   "links": "links",
+   "machen": "machen",
+   "man": "man",
+   "meistens": "meistens",
+   "müssen": "müssen",
+   "nicht": "nicht",
+   "nie": "nie",
+   "nächste": "nächste",
+   "oft": "oft",
+   "ohne": "ohne",
+   "rechts": "rechts",
+   "rote": "rot",
+   "rotes": "rot",
+   "schneller": "schnell",
+   "schranken": "Schranke",
+   "sehen": "sehen",
+   "sie": "Sie",
+   "sind": "sein",
+   "so": "so",
+   "steht": "stehen",
+   "straße": "Straße",
+   "und": "und",
+   "verlassen": "verlassen",
+   "von": "von",
+   "vor": "vor",
+   "vorfahrt": "Vorfahrt",
+   "was": "was",
+   "weiße": "weiß",
+   "weißen": "weiß",
+   "welchen": "welcher",
+   "wer": "wer",
+   "wie": "wie",
+   "wissen": "wissen",
+   "wollen": "wollen",
+   "zug": "Zug",
+   "zügig": "zügig",
+   "über": "über"
+  },
+  "l": {
+   "Andreaskreuz": {
+    "ru": "صليب أندراوس (لافتة عند السكة)",
+    "pos": "اسم",
+    "decl": "das Andreaskreuz · الجمع: die Andreaskreuze"
+   },
+   "Ausfahrt": {
+    "ru": "مخرج (من الطريق السريع)",
+    "pos": "اسم",
+    "decl": "die Ausfahrt · الجمع: die Ausfahrten"
+   },
+   "Auto": {
+    "ru": "سيارة",
+    "pos": "اسم",
+    "decl": "das Auto · الجمع: die Autos"
+   },
+   "Bahnübergang": {
+    "ru": "ممر سكة حديدية",
+    "pos": "اسم",
+    "decl": "der Bahnübergang · الجمع: die Bahnübergänge"
+   },
+   "Baustelle": {
+    "ru": "أعمال طرق، ورشة بناء",
+    "pos": "اسم",
+    "decl": "die Baustelle · الجمع: die Baustellen"
+   },
+   "Gleis": {
+    "ru": "سكة حديدية",
+    "pos": "اسم",
+    "decl": "das Gleis · الجمع: die Gleise"
+   },
+   "Ihr": {
+    "ru": "ـكَ، ـكِ (صيغة الاحترام)",
+    "pos": "ضمير"
+   },
+   "Kreis": {
+    "ru": "دائرة",
+    "pos": "اسم",
+    "decl": "der Kreis · الجمع: die Kreise"
+   },
+   "Kreisverkehr": {
+    "ru": "دوّار",
+    "pos": "اسم",
+    "decl": "der Kreisverkehr · الجمع: die Kreisverkehre"
+   },
+   "Licht": {
+    "ru": "ضوء",
+    "pos": "اسم",
+    "decl": "das Licht · الجمع: die Lichter"
+   },
+   "Linie": {
+    "ru": "خط",
+    "pos": "اسم",
+    "decl": "die Linie · الجمع: die Linien"
+   },
+   "Schranke": {
+    "ru": "حاجز",
+    "pos": "اسم",
+    "decl": "die Schranke · الجمع: die Schranken"
+   },
+   "Sie": {
+    "ru": "حضرتك (صيغة الاحترام)",
+    "pos": "ضمير",
+    "note": "Ihnen — لكم (حالة الجر): vor Ihnen — أمامك"
+   },
+   "Straße": {
+    "ru": "شارع، طريق",
+    "pos": "اسم",
+    "decl": "die Straße · الجمع: die Straßen"
+   },
+   "Vorfahrt": {
+    "ru": "أولوية المرور",
+    "pos": "اسم",
+    "decl": "die Vorfahrt · لا جمع له"
+   },
+   "Zug": {
+    "ru": "قطار",
+    "pos": "اسم",
+    "decl": "der Zug · الجمع: die Züge"
+   },
+   "aber": {
+    "ru": "لكن",
+    "pos": "أداة ربط"
+   },
+   "als": {
+    "ru": "من (في المقارنة)؛ كـ",
+    "pos": "أداة ربط"
+   },
+   "an": {
+    "ru": "عند، على",
+    "pos": "حرف جر",
+    "note": "am = an dem؛ an der Kreuzung — عند التقاطع"
+   },
+   "andere": {
+    "ru": "آخر",
+    "pos": "صفة"
+   },
+   "auf": {
+    "ru": "على",
+    "pos": "حرف جر",
+    "note": "auf der Straße — على الطريق؛ achten auf — ينتبه لـ"
+   },
+   "bei": {
+    "ru": "عند",
+    "pos": "حرف جر",
+    "note": "beim = bei dem: beim Fahren — أثناء القيادة؛ bei Rot — عند الأحمر"
+   },
+   "blinken": {
+    "ru": "يشغّل إشارة الانعطاف",
+    "pos": "فعل",
+    "forms": "blinkte · hat geblinkt"
+   },
+   "dass": {
+    "ru": "أنّ",
+    "pos": "أداة ربط"
+   },
+   "denken": {
+    "ru": "يفكّر",
+    "pos": "فعل",
+    "note": "denken an — يتذكّر، يفكّر في",
+    "forms": "dachte · hat gedacht"
+   },
+   "der/die/das": {
+    "ru": "أداة التعريف",
+    "pos": "أداة تعريف",
+    "note": "der للمذكر، die للمؤنث والجمع، das للمحايد؛ den للمذكر في حالة النصب، dem للمذكر والمحايد في حالة الجر؛ وdas تعني أيضًا «هذا»"
+   },
+   "dort": {
+    "ru": "هناك",
+    "pos": "ظرف"
+   },
+   "ein/eine": {
+    "ru": "أداة النكرة؛ واحد",
+    "pos": "أداة تعريف",
+    "note": "an einer Kreuzung — عند تقاطعٍ ما"
+   },
+   "erst": {
+    "ru": "لا … إلا (ليس قبل)",
+    "pos": "ظرف"
+   },
+   "fahren": {
+    "ru": "يسير بالسيارة؛ يقود",
+    "pos": "فعل",
+    "forms": "fuhr · ist gefahren"
+   },
+   "folgen": {
+    "ru": "يتبع",
+    "pos": "فعل",
+    "forms": "folgte · ist gefolgt"
+   },
+   "gelb": {
+    "ru": "أصفر",
+    "pos": "صفة",
+    "note": "Gelb (بحرف كبير) — الإشارة الصفراء"
+   },
+   "gelten": {
+    "ru": "يسري، ينطبق",
+    "pos": "فعل",
+    "forms": "galt · hat gegolten"
+   },
+   "gerade": {
+    "ru": "الآن، حاليًا",
+    "pos": "ظرف"
+   },
+   "gewähren": {
+    "ru": "يمنح",
+    "pos": "فعل",
+    "note": "Vorfahrt gewähren — أفسح الطريق",
+    "forms": "gewährte · hat gewährt"
+   },
+   "haben": {
+    "ru": "يملك، لديه",
+    "pos": "فعل",
+    "note": "Vorfahrt haben — له أولوية المرور",
+    "forms": "hatte · hat gehabt"
+   },
+   "halten": {
+    "ru": "يتوقف (لوقت قصير)؛ يمسك",
+    "pos": "فعل",
+    "forms": "hielt · hat gehalten"
+   },
+   "hier": {
+    "ru": "هنا",
+    "pos": "ظرف"
+   },
+   "hinausfahren": {
+    "ru": "يخرج بالسيارة",
+    "pos": "فعل",
+    "note": "das Hinausfahren — الخروج (من الدوّار)",
+    "forms": "fuhr hinaus · ist hinausgefahren"
+   },
+   "hineinfahren": {
+    "ru": "يدخل بالسيارة",
+    "pos": "فعل",
+    "forms": "fuhr hinein · ist hineingefahren"
+   },
+   "in": {
+    "ru": "في",
+    "pos": "حرف جر",
+    "note": "im = in dem: im Bereich — في المنطقة"
+   },
+   "jetzt": {
+    "ru": "الآن",
+    "pos": "ظرف"
+   },
+   "kein": {
+    "ru": "لا (نفي الاسم)",
+    "pos": "ضمير"
+   },
+   "kommen": {
+    "ru": "يأتي",
+    "pos": "فعل",
+    "note": "von rechts kommen — يأتي من اليمين",
+    "forms": "kam · ist gekommen"
+   },
+   "kurz": {
+    "ru": "قصير؛ لوقت قصير",
+    "pos": "صفة"
+   },
+   "links": {
+    "ru": "يسارًا، على اليسار",
+    "pos": "ظرف"
+   },
+   "machen": {
+    "ru": "يفعل",
+    "pos": "فعل",
+    "note": "den Schulterblick machen — يلتفت فوق كتفه؛ Gut gemacht! — أحسنت!",
+    "forms": "machte · hat gemacht"
+   },
+   "man": {
+    "ru": "(ضمير عام: «المرء»)",
+    "pos": "ضمير",
+    "note": "als man denkt — مما يظن المرء"
+   },
+   "meistens": {
+    "ru": "غالبًا",
+    "pos": "ظرف"
+   },
+   "müssen": {
+    "ru": "يجب عليه",
+    "pos": "فعل",
+    "forms": "musste · hat gemusst"
+   },
+   "nicht": {
+    "ru": "لا، ليس",
+    "pos": "أداة"
+   },
+   "nie": {
+    "ru": "أبدًا",
+    "pos": "ظرف"
+   },
+   "nächste": {
+    "ru": "القادم، الأقرب",
+    "pos": "صفة"
+   },
+   "oft": {
+    "ru": "غالبًا",
+    "pos": "ظرف"
+   },
+   "ohne": {
+    "ru": "بدون",
+    "pos": "حرف جر"
+   },
+   "rechts": {
+    "ru": "يمينًا، على اليمين",
+    "pos": "ظرف"
+   },
+   "rot": {
+    "ru": "أحمر",
+    "pos": "صفة",
+    "note": "Rot (بحرف كبير) — الإشارة الحمراء: bei Rot — عند الأحمر"
+   },
+   "schnell": {
+    "ru": "سريع؛ بسرعة",
+    "pos": "صفة"
+   },
+   "sehen": {
+    "ru": "يرى",
+    "pos": "فعل",
+    "forms": "sah · hat gesehen"
+   },
+   "sein": {
+    "ru": "يكون",
+    "pos": "فعل",
+    "forms": "war · ist gewesen"
+   },
+   "so": {
+    "ru": "هكذا",
+    "pos": "ظرف"
+   },
+   "stehen": {
+    "ru": "يقف؛ يوجد",
+    "pos": "فعل",
+    "note": "Schilder stehen — توجد لافتات",
+    "forms": "stand · hat gestanden"
+   },
+   "und": {
+    "ru": "و",
+    "pos": "أداة ربط"
+   },
+   "verlassen": {
+    "ru": "يغادر",
+    "pos": "فعل",
+    "forms": "verließ · hat verlassen"
+   },
+   "von": {
+    "ru": "من",
+    "pos": "حرف جر",
+    "note": "vom = von dem؛ von rechts — من اليمين"
+   },
+   "vor": {
+    "ru": "قبل، أمام",
+    "pos": "حرف جر",
+    "note": "rechts vor links — اليمين قبل اليسار"
+   },
+   "was": {
+    "ru": "ماذا",
+    "pos": "ضمير"
+   },
+   "weiß": {
+    "ru": "أبيض",
+    "pos": "صفة"
+   },
+   "welcher": {
+    "ru": "أيّ",
+    "pos": "ضمير"
+   },
+   "wer": {
+    "ru": "مَن",
+    "pos": "ضمير"
+   },
+   "wie": {
+    "ru": "كيف",
+    "pos": "ظرف",
+    "note": "wie schnell — بأي سرعة"
+   },
+   "wissen": {
+    "ru": "يعرف",
+    "pos": "فعل",
+    "forms": "wusste · hat gewusst"
+   },
+   "wollen": {
+    "ru": "يريد",
+    "pos": "فعل",
+    "forms": "wollte · hat gewollt"
+   },
+   "zügig": {
+    "ru": "دون تأخير",
+    "pos": "صفة"
+   },
+   "über": {
+    "ru": "عبر؛ فوق",
+    "pos": "حرف جر"
+   }
+  }
+ }
+}

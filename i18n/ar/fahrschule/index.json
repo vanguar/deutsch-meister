@@ -120,6 +120,17 @@
     "p-11",
     "r-11"
    ]
+  },
+  {
+   "id": "kreis-bahn",
+   "emoji": "🔄",
+   "title": "Kreisverkehr, Bahnübergang und Baustelle",
+   "titleTr": "الدوّار وممر السكة الحديدية وأعمال الطرق",
+   "units": [
+    "t-12",
+    "p-12",
+    "r-12"
+   ]
   }
  ],
  "units": [
@@ -419,6 +430,33 @@
    "title": "Auffahren und Abfahren",
    "titleTr": "الدخول والخروج",
    "count": 5
+  },
+  {
+   "id": "t-12",
+   "kind": "theory",
+   "emoji": "🔄",
+   "level": "B1",
+   "title": "Kreisverkehr, Bahnübergang und Baustelle",
+   "titleTr": "الدوّار وممر السكة الحديدية وأعمال الطرق",
+   "count": 16
+  },
+  {
+   "id": "p-12",
+   "kind": "dialog",
+   "emoji": "🚂",
+   "level": "B1",
+   "title": "Kreisverkehr und Bahnübergang",
+   "titleTr": "الدوّار وممر السكة",
+   "count": 15
+  },
+  {
+   "id": "r-12",
+   "kind": "road",
+   "emoji": "🚂",
+   "level": "B1",
+   "title": "Im Kreis und an den Gleisen",
+   "titleTr": "في الدوّار وعند السكة",
+   "count": 6
   }
  ]
 }

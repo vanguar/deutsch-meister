@@ -265,7 +265,7 @@ const Fahrschule = (() => {
         <div class="news-tile-ico fs-kind-ico" aria-hidden="true">🛣️</div>
         <div class="news-tile-head">
           <div class="news-tile-title">Дальше</div>
-          <div class="news-tile-text">Кольцо, переезд, экономичная езда и экзамен — следующие темы</div>
+          <div class="news-tile-text">Экономичная езда и экзамен — следующие темы</div>
         </div>
       </div>
     </div>`;
@@ -1033,6 +1033,49 @@ const Fahrschule = (() => {
   const FOG_X = 80;         // нос машины в тумане в конце сцены
   const FOG_S = 1.6;        // туман: px на метр (столбики через 50 м = 80 px)
 
+  const RING = { x: 170, y: 65, r: 40 };   // кольцо: центр и радиус полосы
+  const RAIL_X = 230;                       // переезд: ось путей
+
+  // Ключевые кадры по кругу против часовой стрелки (на экране угол
+  // убывает: запад → юг → восток) от угла a до b, градусы; поворотник
+  // направо — с угла blinkAt и дальше
+  function ringKeys(a, b, t0, t1, blinkAt) {
+    const keys = [];
+    const n = Math.max(1, Math.round((a - b) / 20));
+    for (let i = 0; i <= n; i++) {
+      const deg = a - (a - b) * i / n;
+      const th = deg * Math.PI / 180;
+      const key = { t: t0 + (t1 - t0) * i / n, x: RING.x + RING.r * Math.cos(th), y: RING.y + RING.r * Math.sin(th),
+        r: Math.atan2(-Math.cos(th), Math.sin(th)) * 180 / Math.PI };
+      if (deg <= blinkAt) key.b = 'r';
+      keys.push(key);
+    }
+    return keys;
+  }
+
+  // Кольцо с четырьмя рукавами, переезд, участок ремонта
+  function ringHtml() {
+    const { x, y } = RING;
+    return `<rect class="fs-road" x="0" y="${y - 25}" width="${ROAD_W}" height="50"/>
+      <rect class="fs-road" x="${x - 22}" y="0" width="44" height="130"/>
+      <circle class="fs-road" cx="${x}" cy="${y}" r="56"/><circle class="fs-island" cx="${x}" cy="${y}" r="25"/>
+      <path class="fs-mark" d="M0 ${y} H${x - 58} M${x + 58} ${y} H${ROAD_W}"/>`;
+  }
+
+  function railHtml(r) {
+    let sleepers = '';
+    for (let y = 2; y < 130; y += 9) sleepers += `<rect class="fs-sleeper" x="${RAIL_X - 11}" y="${y}" width="22" height="4"/>`;
+    return `${sleepers}<path class="fs-rail" d="M${RAIL_X - 6} 0 V130 M${RAIL_X + 6} 0 V130"/>
+      ${r.light ? `<circle class="fs-rail-light" cx="214" cy="105" r="4"/>` : ''}`;
+  }
+
+  function worksHtml() {
+    return `<path class="fs-road" d="M100 41 L140 18 H260 L300 41 Z"/>
+      <path class="fs-mark is-yellow" d="M0 66 H108 L140 44 H260 L292 66 H${ROAD_W}"/>
+      <g class="fs-barrier">${[150, 175, 200, 225].map(x => `<rect x="${x}" y="72" width="22" height="16" class="fs-barrier-box"/>
+        <path d="M${x} 84 L${x + 8} 72 M${x + 8} 88 L${x + 18} 72 M${x + 17} 88 L${x + 22} 80" class="fs-barrier-stripe"/>`).join('')}</g>`;
+  }
+
   function roadOptions(sc) {
     return sc.options.map(o => typeof o === 'object'
       ? { key: String(o.key), label: o.de, tr: o.tr }
@@ -1293,6 +1336,49 @@ const Fahrschule = (() => {
         dur: 3600, snap: 0.56, line: 'dashed', ramps: [-40, 200], signAt: { x: 38, y: 112, w: 52, h: 12 }, badge: 'Ausfahrt: 8 km'
       };
     },
+    // Кольцо: въезд с запада без поворотника, по кругу против часовой
+    // стрелки, перед съездом на восток — направо. В круге может ехать
+    // красная машина — тогда ждём у въезда
+    roundabout(sc) {
+      const yieldTo = sc.ask === 'yield';
+      const wait = sc.answer === 'wait';
+      const t0 = wait ? 0.6 : 0.3;
+      const me = { id: 'me', kind: 'car', fill: CAR.blue.fill, keys: [{ t: 0, x: 20, y: LANE_DOWN },
+        ...(wait ? [{ t: 0.2, x: 104, y: LANE_DOWN, br: true }, { t: 0.55, x: 104, y: LANE_DOWN }] : [{ t: 0.25, x: 104, y: LANE_DOWN }]),
+        ...ringKeys(150, 30, t0, t0 + 0.42, 50),
+        { t: t0 + 0.5, x: 232, y: LANE_DOWN }, { t: 1, x: 340, y: LANE_DOWN }] };
+      const actors = [me];
+      if (yieldTo && sc.inside) {
+        actors.push({ id: 'ring', kind: 'car', fill: CAR.red.fill, keys: [...ringKeys(300, 30, 0, 0.55, 50),
+          { t: 0.62, x: 232, y: LANE_DOWN }, { t: 0.8, x: 340, y: LANE_DOWN }] });
+      }
+      const snap = yieldTo ? 0.25 : sc.ask === 'enter' ? 0.27 : 0.68;
+      return { actors, dur: yieldTo ? 5000 : 4200, snap, ring: true, signAt: { x: 66, y: 96, w: 24, h: 24 } };
+    },
+    // Переезд: мигает красный — стоп перед андреевским крестом, проходит
+    // поезд, потом едем; сигнала нет — переезжаем без остановки
+    railway(sc) {
+      const stop = sc.answer === 'stop';
+      const actors = [{ id: 'me', kind: 'car', fill: CAR.blue.fill, keys: stop
+        ? [{ t: 0, x: 30, y: LANE_DOWN }, { t: 0.22, x: 192, y: LANE_DOWN, br: true }, { t: 0.78, x: 192, y: LANE_DOWN }, { t: 1, x: 350, y: LANE_DOWN }]
+        : [{ t: 0, x: 30, y: LANE_DOWN }, { t: 1, x: 350, y: LANE_DOWN }] }];
+      if (stop) actors.push({ id: 'train', kind: 'train', keys: [{ t: 0, x: RAIL_X, y: -12, r: 90 }, { t: 0.25, x: RAIL_X, y: -12, r: 90 }, { t: 0.72, x: RAIL_X, y: 262, r: 90 }] });
+      return { actors, dur: 4600, snap: stop ? 0.5 : 0.72, line: 'dashed', rail: { light: sc.signal === 'red' },
+        signAt: { x: 186, y: 94, w: 22, h: 22 } };
+    },
+    // Ремонт дороги: белая разметка старая, жёлтая уводит полосы влево в
+    // объезд ограждения — едем по жёлтой, встречная тоже
+    yellow() {
+      return {
+        actors: [
+          { id: 'oncoming', kind: 'car', dir: -1, fill: CAR.red.fill, keys: [{ t: 0, x: 380, y: LANE_UP }, { t: 0.18, x: 300, y: LANE_UP },
+            { t: 0.3, x: 262, y: 31 }, { t: 0.62, x: 138, y: 31 }, { t: 0.74, x: 100, y: LANE_UP }, { t: 1, x: -40, y: LANE_UP }] },
+          { id: 'me', kind: 'car', fill: CAR.blue.fill, keys: [{ t: 0, x: 20, y: LANE_DOWN }, { t: 0.25, x: 112, y: LANE_DOWN, b: 'l' },
+            { t: 0.36, x: 146, y: 58 }, { t: 0.7, x: 262, y: 58, b: 'r' }, { t: 0.8, x: 298, y: LANE_DOWN }, { t: 1, x: 350, y: LANE_DOWN }] }
+        ],
+        dur: 4200, snap: 0.5, line: 'dashed', works: true, signAt: { x: 8, y: 98, w: 24, h: 24 }
+      };
+    },
     zipper() {
       return {
         actors: [
@@ -1375,6 +1461,12 @@ const Fahrschule = (() => {
     if (a.kind === 'deer') {
       return `<g class="${cls} fs-deer" data-actor="${a.id}" transform="${tr}"><text x="-11" y="7" class="fs-deer-ico">🦌</text></g>`;
     }
+    if (a.kind === 'train') {
+      return `<g class="${cls} fs-train" data-actor="${a.id}" transform="${tr}">
+        <rect x="-118" y="-11" width="56" height="22" rx="4" class="fs-train-car"/><rect x="-60" y="-11" width="60" height="22" rx="8" class="fs-train-car"/>
+        ${[-110, -96, -82, -52, -38].map(x => `<rect class="fs-glass" x="${x}" y="-8" width="9" height="16" rx="2"/>`).join('')}
+        <rect class="fs-glass" x="-12" y="-8" width="8" height="16" rx="2"/></g>`;
+    }
     if (a.kind === 'moped') {
       return `<g class="${cls} fs-moped" data-actor="${a.id}" transform="${tr}">
         <circle cx="-17" cy="5" r="4.2" class="fs-wheel"/><circle cx="-3" cy="5" r="4.2" class="fs-wheel"/>
@@ -1436,6 +1528,7 @@ const Fahrschule = (() => {
     const ramps = (plan.ramps || []).map(x => `<path class="fs-road" d="M${x} 90 H${x + 62} L${x + 132} 130 H${x + 70} Z"/>`).join('')
       + (plan.accel ? `<path class="fs-road" d="M0 90 H300 L232 112 H0 Z"/><path class="fs-mark is-block" d="M0 91.5 H232"/>` : '');
     const ground = plan.tyre ? tyreHtml(sc, final)
+      : plan.ring ? ringHtml()
       : plan.lanes3 ? `<rect class="fs-road" x="0" y="28" width="${ROAD_W}" height="78"/>
         <path class="fs-mark" d="M0 54 H${ROAD_W}"/><path class="fs-mark" d="M0 80 H${ROAD_W}"/>`
       : `<rect class="fs-road" x="0" y="40" width="${ROAD_W}" height="52"/>
@@ -1447,6 +1540,7 @@ const Fahrschule = (() => {
     return `<svg class="fs-svg fs-road-svg" viewBox="0 0 ${ROAD_W} 130" role="img" aria-label="${esc(sc.type)}">
       <rect class="fs-grass" x="0" y="0" width="${ROAD_W}" height="130"/>
       ${ramps}${ground}
+      ${plan.rail ? railHtml(plan.rail) : ''}${plan.works ? worksHtml() : ''}
       ${curb}${rest}${ends}${sign}${park}${night}${plan.fog ? fogPosts(plan.fog) : ''}
       ${plan.actors.map(a => actorHtml(a, keyAt(a.keys, t))).join('')}
       ${plan.fog ? fogHtml(sc, plan.fog, final) : ''}${gap}${zzz}${badge}${measure}

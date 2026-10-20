@@ -76,6 +76,12 @@ SIGNS = {
     'z275': 'File:Zeichen 275-30 - Vorgeschriebene Mindestgeschwindigkeit, StVO 2017.svg',
     'z333': 'File:Zeichen 333 - Pfeilschild - Ausfahrt von der Autobahn, StVO 1980.svg',
     'z450': 'File:Zeichen 450-51 - Ankündigungsbake zweistreifig (200 m), StVO 2013.svg',
+    'z215': 'File:Zeichen 215 - Kreisverkehr, StVO 2000.svg',
+    'z151': 'File:Zeichen 151 - Bahnübergang, StVO 2013.svg',
+    'z201': 'File:Andreaskreuz (ohne Maße) 1970.svg',
+    'z156': 'File:Zeichen 156-10 - Bahnübergang mit dreistreifiger Bake, StVO 2013.svg',
+    'z123': 'File:Zeichen 123 - Arbeitsstelle, StVO 2013.svg',
+    'z208': 'File:Zeichen 208 - Dem Gegenverkehr Vorrang gewähren! StVO 1970.svg',
 }
 
 # SVG с Commons встраивается как <img>: скрипты там и так не исполняются,
