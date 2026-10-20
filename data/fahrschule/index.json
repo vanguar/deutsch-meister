@@ -65,6 +65,15 @@
     "p-06",
     "r-06"
    ]
+  },
+  {
+   "id": "licht-wetter",
+   "emoji": "🌙",
+   "title": "Licht, Nacht und Wetter",
+   "titleTr": "Свет, ночь и погода",
+   "units": [
+    "t-07"
+   ]
   }
  ],
  "units": [
@@ -229,6 +238,15 @@
    "title": "Rücksicht auf andere",
    "titleTr": "Внимание к другим",
    "count": 5
+  },
+  {
+   "id": "t-07",
+   "kind": "theory",
+   "emoji": "🌙",
+   "level": "A2–B1",
+   "title": "Licht, Nacht und Wetter",
+   "titleTr": "Свет, ночь и погода",
+   "count": 20
   }
  ]
 }

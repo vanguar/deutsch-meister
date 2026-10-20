@@ -1,0 +1,898 @@
+{
+ "id": "t-07",
+ "kind": "theory",
+ "emoji": "🌙",
+ "level": "A2–B1",
+ "title": "Licht, Nacht und Wetter",
+ "titleTr": "الأضواء والليل والطقس",
+ "intro": "متى تشغّل الأضواء القصيرة والطويلة، وماذا تفعل في الضباب والمطر والجليد، ومتى تكون إطارات الشتاء إلزامية، وكيف تتصرف إذا ظهر غزال على الطريق.",
+ "sections": [
+  {
+   "title": "الأضواء القصيرة والطويلة",
+   "lines": [
+    {
+     "de": "Bei Dämmerung, Dunkelheit und schlechter Sicht fahren Sie mit Abblendlicht.",
+     "tr": "عند الغسق وفي الظلام وعند ضعف الرؤية تقود بالأضواء القصيرة."
+    },
+    {
+     "de": "Tagfahrlicht reicht bei Dunkelheit nicht: Hinten bleibt das Auto oft dunkel.",
+     "tr": "أضواء النهار لا تكفي في الظلام: فالسيارة غالبًا تبقى مظلمة من الخلف."
+    },
+    {
+     "de": "Fernlicht dürfen Sie nur benutzen, wenn Sie niemanden blenden.",
+     "tr": "لا يجوز لك استخدام الأضواء الطويلة إلا إذا لم تُبهر أحدًا."
+    },
+    {
+     "de": "Sie müssen abblenden, wenn ein Auto entgegenkommt oder wenn Sie dicht hinter einem anderen Auto fahren.",
+     "tr": "يجب أن تخفض الأضواء إذا جاءت سيارة من الاتجاه المقابل أو إذا كنت تسير قريبًا خلف سيارة أخرى."
+    },
+    {
+     "de": "Auf Straßen mit durchgehend guter Beleuchtung ist Fernlicht verboten.",
+     "tr": "على الشوارع المضاءة جيدًا على طولها تُمنع الأضواء الطويلة."
+    },
+    {
+     "de": "Werden Sie geblendet, schauen Sie auf den rechten Fahrbahnrand.",
+     "tr": "إذا انبهرت، فانظر إلى الحافة اليمنى للطريق."
+    }
+   ]
+  },
+  {
+   "title": "الضباب والمطر والثلج",
+   "lines": [
+    {
+     "de": "Leitpfosten stehen alle 50 Meter. So schätzen Sie die Sichtweite.",
+     "tr": "أعمدة الإرشاد على جانب الطريق موضوعة كل 50 مترًا. بها تقدّر مدى الرؤية."
+    },
+    {
+     "de": "Ist die Sichtweite durch Nebel, Schneefall oder Regen unter 50 Metern, fahren Sie höchstens 50 km/h.",
+     "tr": "إذا كان مدى الرؤية بسبب الضباب أو الثلج أو المطر أقل من 50 مترًا، فلا تتجاوز 50 كم/س."
+    },
+    {
+     "de": "Die Nebelschlussleuchte dürfen Sie nur bei Nebel und einer Sichtweite unter 50 Metern benutzen.",
+     "tr": "لا يجوز لك استخدام ضوء الضباب الخلفي إلا في الضباب ومع مدى رؤية أقل من 50 مترًا."
+    },
+    {
+     "de": "Fahren Sie auf Sicht: Sie müssen auf der Strecke halten können, die Sie überblicken.",
+     "tr": "قُد حسب مدى الرؤية: يجب أن تستطيع التوقف ضمن المسافة التي تراها."
+    }
+   ]
+  },
+  {
+   "title": "الطريق المبتل والزلق",
+   "lines": [
+    {
+     "de": "Dieses Schild warnt: Die Fahrbahn kann nass oder schmutzig und rutschig sein.",
+     "tr": "هذه اللافتة تحذّر: قد يكون الطريق مبتلًا أو متسخًا وزلقًا.",
+     "sign": "z114"
+    },
+    {
+     "de": "Bei Nässe wird der Bremsweg länger. Halten Sie mehr Abstand.",
+     "tr": "على الطريق المبتل تطول مسافة الكبح. حافظ على مسافة أكبر."
+    },
+    {
+     "de": "Bei Aquaplaning treten Sie die Kupplung und halten das Lenkrad gerade. Bremsen Sie nicht.",
+     "tr": "عند الانزلاق المائي اضغط على القابض وأمسك المقود مستقيمًا. لا تفرمل."
+    },
+    {
+     "de": "Dieses Schild warnt vor Schnee und Glatteis.",
+     "tr": "هذه اللافتة تحذّر من الثلج والجليد.",
+     "sign": "z10151"
+    },
+    {
+     "de": "Bei Glatteis, Schnee und Schneematsch sind Winterreifen Pflicht.",
+     "tr": "عند الجليد والثلج والثلج الذائب تكون إطارات الشتاء إلزامية."
+    },
+    {
+     "de": "Auf Glätte bremsen, lenken und beschleunigen Sie ganz sanft.",
+     "tr": "على الطريق الزلق فرمل ووجّه المقود وتسارع بلطف شديد."
+    }
+   ]
+  },
+  {
+   "title": "الحيوانات البرية",
+   "lines": [
+    {
+     "de": "Dieses Schild warnt vor Wildwechsel, besonders in der Dämmerung.",
+     "tr": "هذه اللافتة تحذّر من عبور الحيوانات البرية، خاصة عند الغسق.",
+     "sign": "z142"
+    },
+    {
+     "de": "Steht ein Tier auf der Straße: abblenden, hupen, bremsen.",
+     "tr": "إذا وقف حيوان على الطريق: خفّض الأضواء، استخدم البوق، فرمل."
+    },
+    {
+     "de": "Weichen Sie nicht aus: Ein Unfall mit einem Baum ist oft schlimmer.",
+     "tr": "لا تنحرف جانبًا: فالاصطدام بشجرة غالبًا أسوأ.",
+     "o": {
+      "aus": "aus>ausweichen",
+      "weichen": "weichen>ausweichen"
+     }
+    },
+    {
+     "de": "Nach einem Wildunfall sichern Sie die Unfallstelle und rufen die Polizei.",
+     "tr": "بعد الاصطدام بحيوان بري تؤمّن مكان الحادث وتتصل بالشرطة."
+    }
+   ]
+  }
+ ],
+ "quiz": [
+  {
+   "sign": "z142",
+   "wrong": [
+    "z136",
+    "z10151"
+   ]
+  },
+  {
+   "sign": "z114",
+   "wrong": [
+    "z10151",
+    "z101"
+   ]
+  },
+  {
+   "sign": "z10151",
+   "wrong": [
+    "z114",
+    "z142"
+   ]
+  }
+ ],
+ "quizQuestion": {
+  "de": "Was bedeutet dieses Schild?",
+  "tr": "ماذا تعني هذه اللافتة؟"
+ },
+ "signs": {
+  "z101": {
+   "de": "Gefahrstelle",
+   "tr": "موضع خطر",
+   "src": "data/fahrschule/signs/z101.svg",
+   "n": "101",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_101_-_Gefahrstelle,_StVO_1970.svg"
+  },
+  "z10151": {
+   "de": "Schnee- oder Eisglätte",
+   "tr": "ثلج أو جليد",
+   "src": "data/fahrschule/signs/z10151.svg",
+   "n": "101-51",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_101-51_-_Schnee-_oder_Eisgl%C3%A4tte,_StVO_2017.svg"
+  },
+  "z114": {
+   "de": "Schleuder- oder Rutschgefahr",
+   "tr": "خطر الانزلاق",
+   "src": "data/fahrschule/signs/z114.svg",
+   "n": "114",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_114_-_Schleuder-_oder_Rutschgefahr,_StVO_2013.svg"
+  },
+  "z136": {
+   "de": "Kinder",
+   "tr": "أطفال",
+   "src": "data/fahrschule/signs/z136.svg",
+   "n": "136",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_136_-_Kinder,_StVO_1970.svg"
+  },
+  "z142": {
+   "de": "Wildwechsel",
+   "tr": "عبور حيوانات برية",
+   "src": "data/fahrschule/signs/z142.svg",
+   "n": "142",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_142-10_-_Wildwechsel,_Aufstellung_rechts,_StVO_1992.svg"
+  }
+ },
+ "gloss": {
+  "w": {
+   "abblenden": "abblenden",
+   "abblendlicht": "Abblendlicht",
+   "abstand": "Abstand",
+   "alle": "alle",
+   "anderen": "andere",
+   "aquaplaning": "Aquaplaning",
+   "auf": "auf",
+   "aus>ausweichen": "ausweichen",
+   "auto": "Auto",
+   "baum": "Baum",
+   "bedeutet": "bedeuten",
+   "bei": "bei",
+   "beleuchtung": "Beleuchtung",
+   "benutzen": "benutzen",
+   "beschleunigen": "beschleunigen",
+   "besonders": "besonders",
+   "bleibt": "bleiben",
+   "blenden": "blenden",
+   "bremsen": "bremsen",
+   "bremsweg": "Bremsweg",
+   "das": "der/die/das",
+   "den": "der/die/das",
+   "der": "der/die/das",
+   "dicht": "dicht",
+   "die": "der/die/das",
+   "dieses": "dieser",
+   "dunkel": "dunkel",
+   "dunkelheit": "Dunkelheit",
+   "durch": "durch",
+   "durchgehend": "durchgehend",
+   "dämmerung": "Dämmerung",
+   "dürfen": "dürfen",
+   "ein": "ein/eine",
+   "einem": "ein/eine",
+   "einer": "ein/eine",
+   "eisglätte": "Eisglätte",
+   "entgegenkommt": "entgegenkommen",
+   "fahrbahn": "Fahrbahn",
+   "fahrbahnrand": "Fahrbahnrand",
+   "fahren": "fahren",
+   "fernlicht": "Fernlicht",
+   "ganz": "ganz",
+   "geblendet": "blenden",
+   "gefahrstelle": "Gefahrstelle",
+   "gerade": "gerade",
+   "glatteis": "Glatteis",
+   "glätte": "Glätte",
+   "guter": "gut",
+   "halten": "halten",
+   "hinten": "hinten",
+   "hinter": "hinter",
+   "hupen": "hupen",
+   "höchstens": "höchstens",
+   "in": "in",
+   "ist": "sein",
+   "kann": "können",
+   "kinder": "Kind",
+   "km/h": "km/h",
+   "kupplung": "Kupplung",
+   "können": "können",
+   "leitpfosten": "Leitpfosten",
+   "lenken": "lenken",
+   "lenkrad": "Lenkrad",
+   "licht": "Licht",
+   "länger": "lang",
+   "mehr": "mehr",
+   "meter": "Meter",
+   "metern": "Meter",
+   "mit": "mit",
+   "müssen": "müssen",
+   "nach": "nach",
+   "nacht": "Nacht",
+   "nass": "nass",
+   "nebel": "Nebel",
+   "nebelschlussleuchte": "Nebelschlussleuchte",
+   "nicht": "nicht",
+   "niemanden": "niemand",
+   "nur": "nur",
+   "nässe": "Nässe",
+   "oder": "oder",
+   "oft": "oft",
+   "pflicht": "Pflicht",
+   "polizei": "Polizei",
+   "rechten": "recht",
+   "regen": "Regen",
+   "reicht": "reichen",
+   "rufen": "rufen",
+   "rutschgefahr": "Rutschgefahr",
+   "rutschig": "rutschig",
+   "sanft": "sanft",
+   "schauen": "schauen",
+   "schild": "Schild",
+   "schlechter": "schlecht",
+   "schleuder": "Schleudergefahr",
+   "schlimmer": "schlimm",
+   "schmutzig": "schmutzig",
+   "schnee": "Schnee",
+   "schneefall": "Schneefall",
+   "schneematsch": "Schneematsch",
+   "schätzen": "schätzen",
+   "sein": "sein",
+   "sichern": "sichern",
+   "sicht": "Sicht",
+   "sichtweite": "Sichtweite",
+   "sie": "Sie",
+   "sind": "sein",
+   "so": "so",
+   "stehen": "stehen",
+   "steht": "stehen",
+   "straße": "Straße",
+   "straßen": "Straße",
+   "strecke": "Strecke",
+   "tagfahrlicht": "Tagfahrlicht",
+   "tier": "Tier",
+   "treten": "treten",
+   "und": "und",
+   "unfall": "Unfall",
+   "unfallstelle": "Unfallstelle",
+   "unter": "unter",
+   "verboten": "verbieten",
+   "vor": "vor",
+   "warnt": "warnen",
+   "was": "was",
+   "weichen>ausweichen": "ausweichen",
+   "wenn": "wenn",
+   "werden": "werden",
+   "wetter": "Wetter",
+   "wildunfall": "Wildunfall",
+   "wildwechsel": "Wildwechsel",
+   "winterreifen": "Winterreifen",
+   "wird": "werden",
+   "überblicken": "überblicken"
+  },
+  "l": {
+   "Abblendlicht": {
+    "ru": "الأضواء المنخفضة",
+    "pos": "اسم",
+    "decl": "das Abblendlicht · لا جمع له"
+   },
+   "Abstand": {
+    "ru": "المسافة (بين السيارات)",
+    "pos": "اسم",
+    "decl": "der Abstand · الجمع: die Abstände"
+   },
+   "Aquaplaning": {
+    "ru": "الانزلاق المائي",
+    "pos": "اسم",
+    "decl": "das Aquaplaning · لا جمع له"
+   },
+   "Auto": {
+    "ru": "سيارة",
+    "pos": "اسم",
+    "decl": "das Auto · الجمع: die Autos"
+   },
+   "Baum": {
+    "ru": "شجرة",
+    "pos": "اسم",
+    "decl": "der Baum · الجمع: die Bäume"
+   },
+   "Beleuchtung": {
+    "ru": "إضاءة",
+    "pos": "اسم",
+    "decl": "die Beleuchtung · لا جمع له"
+   },
+   "Bremsweg": {
+    "ru": "مسافة الكبح",
+    "pos": "اسم",
+    "note": "(v / 10) · (v / 10) مترًا؛ ونصفها عند الكبح الطارئ",
+    "decl": "der Bremsweg · الجمع: die Bremswege"
+   },
+   "Dunkelheit": {
+    "ru": "ظلام",
+    "pos": "اسم",
+    "decl": "die Dunkelheit · لا جمع له"
+   },
+   "Dämmerung": {
+    "ru": "الغسق",
+    "pos": "اسم",
+    "decl": "die Dämmerung · لا جمع له"
+   },
+   "Eisglätte": {
+    "ru": "جليد زلق",
+    "pos": "اسم",
+    "decl": "die Eisglätte · لا جمع له"
+   },
+   "Fahrbahn": {
+    "ru": "مسار السيارات، الطريق",
+    "pos": "اسم",
+    "decl": "die Fahrbahn · الجمع: die Fahrbahnen"
+   },
+   "Fahrbahnrand": {
+    "ru": "حافة الطريق",
+    "pos": "اسم",
+    "decl": "der Fahrbahnrand · الجمع: die Fahrbahnränder"
+   },
+   "Fernlicht": {
+    "ru": "الأضواء الطويلة",
+    "pos": "اسم",
+    "decl": "das Fernlicht · لا جمع له"
+   },
+   "Gefahrstelle": {
+    "ru": "موضع خطر",
+    "pos": "اسم",
+    "decl": "die Gefahrstelle · الجمع: die Gefahrstellen"
+   },
+   "Glatteis": {
+    "ru": "جليد",
+    "pos": "اسم",
+    "decl": "das Glatteis · لا جمع له"
+   },
+   "Glätte": {
+    "ru": "انزلاق، جليد على الطريق",
+    "pos": "اسم",
+    "decl": "die Glätte · لا جمع له"
+   },
+   "Kind": {
+    "ru": "طفل",
+    "pos": "اسم",
+    "decl": "das Kind · الجمع: die Kinder"
+   },
+   "Kupplung": {
+    "ru": "القابض (الدبرياج)",
+    "pos": "اسم",
+    "decl": "die Kupplung · الجمع: die Kupplungen"
+   },
+   "Leitpfosten": {
+    "ru": "عمود إرشاد (على حافة الطريق)",
+    "pos": "اسم",
+    "note": "أعمدة بيضاء بشريط أسود، كل 50 مترًا",
+    "decl": "der Leitpfosten · الجمع: die Leitpfosten"
+   },
+   "Lenkrad": {
+    "ru": "المقود",
+    "pos": "اسم",
+    "decl": "das Lenkrad · الجمع: die Lenkräder"
+   },
+   "Licht": {
+    "ru": "ضوء",
+    "pos": "اسم",
+    "decl": "das Licht · الجمع: die Lichter"
+   },
+   "Meter": {
+    "ru": "متر",
+    "pos": "اسم",
+    "decl": "der Meter · الجمع: die Meter"
+   },
+   "Nacht": {
+    "ru": "ليل",
+    "pos": "اسم",
+    "decl": "die Nacht · الجمع: die Nächte"
+   },
+   "Nebel": {
+    "ru": "ضباب",
+    "pos": "اسم",
+    "decl": "der Nebel · الجمع: die Nebel"
+   },
+   "Nebelschlussleuchte": {
+    "ru": "ضوء الضباب الخلفي",
+    "pos": "اسم",
+    "note": "فقط في الضباب ومع رؤية أقل من 50 م",
+    "decl": "die Nebelschlussleuchte · الجمع: die Nebelschlussleuchten"
+   },
+   "Nässe": {
+    "ru": "البلل، الطريق المبتل",
+    "pos": "اسم",
+    "decl": "die Nässe · لا جمع له"
+   },
+   "Pflicht": {
+    "ru": "واجب، إلزام",
+    "pos": "اسم",
+    "decl": "die Pflicht · الجمع: die Pflichten"
+   },
+   "Polizei": {
+    "ru": "الشرطة",
+    "pos": "اسم",
+    "decl": "die Polizei · لا جمع له"
+   },
+   "Regen": {
+    "ru": "مطر",
+    "pos": "اسم",
+    "decl": "der Regen · لا جمع له"
+   },
+   "Rutschgefahr": {
+    "ru": "خطر الانزلاق",
+    "pos": "اسم",
+    "decl": "die Rutschgefahr · لا جمع له"
+   },
+   "Schild": {
+    "ru": "لافتة",
+    "pos": "اسم",
+    "decl": "das Schild · الجمع: die Schilder"
+   },
+   "Schleudergefahr": {
+    "ru": "خطر الانزلاق الجانبي",
+    "pos": "اسم",
+    "decl": "die Schleudergefahr · لا جمع له"
+   },
+   "Schnee": {
+    "ru": "ثلج",
+    "pos": "اسم",
+    "decl": "der Schnee · لا جمع له"
+   },
+   "Schneefall": {
+    "ru": "تساقط الثلج",
+    "pos": "اسم",
+    "decl": "der Schneefall · لا جمع له"
+   },
+   "Schneematsch": {
+    "ru": "ثلج ذائب",
+    "pos": "اسم",
+    "decl": "der Schneematsch · لا جمع له"
+   },
+   "Sicht": {
+    "ru": "الرؤية",
+    "pos": "اسم",
+    "decl": "die Sicht · لا جمع له"
+   },
+   "Sichtweite": {
+    "ru": "مدى الرؤية",
+    "pos": "اسم",
+    "decl": "die Sichtweite · لا جمع له"
+   },
+   "Sie": {
+    "ru": "حضرتك (صيغة الاحترام)",
+    "pos": "ضمير",
+    "note": "Ihnen — لكم (حالة الجر): vor Ihnen — أمامك"
+   },
+   "Straße": {
+    "ru": "شارع، طريق",
+    "pos": "اسم",
+    "decl": "die Straße · الجمع: die Straßen"
+   },
+   "Strecke": {
+    "ru": "مسافة، مقطع من الطريق",
+    "pos": "اسم",
+    "decl": "die Strecke · الجمع: die Strecken"
+   },
+   "Tagfahrlicht": {
+    "ru": "أضواء النهار",
+    "pos": "اسم",
+    "decl": "das Tagfahrlicht · لا جمع له"
+   },
+   "Tier": {
+    "ru": "حيوان",
+    "pos": "اسم",
+    "decl": "das Tier · الجمع: die Tiere"
+   },
+   "Unfall": {
+    "ru": "حادث",
+    "pos": "اسم",
+    "decl": "der Unfall · الجمع: die Unfälle"
+   },
+   "Unfallstelle": {
+    "ru": "مكان الحادث",
+    "pos": "اسم",
+    "decl": "die Unfallstelle · الجمع: die Unfallstellen"
+   },
+   "Wetter": {
+    "ru": "الطقس",
+    "pos": "اسم",
+    "decl": "das Wetter · لا جمع له"
+   },
+   "Wildunfall": {
+    "ru": "اصطدام بحيوان بري",
+    "pos": "اسم",
+    "decl": "der Wildunfall · الجمع: die Wildunfälle"
+   },
+   "Wildwechsel": {
+    "ru": "عبور الحيوانات البرية",
+    "pos": "اسم",
+    "decl": "der Wildwechsel · لا جمع له"
+   },
+   "Winterreifen": {
+    "ru": "إطار شتوي",
+    "pos": "اسم",
+    "note": "منذ أكتوبر 2024 فقط برمز الجبل مع ندفة الثلج",
+    "decl": "der Winterreifen · الجمع: die Winterreifen"
+   },
+   "abblenden": {
+    "ru": "يخفض الأضواء",
+    "pos": "فعل",
+    "forms": "blendete ab · hat abgeblendet"
+   },
+   "alle": {
+    "ru": "كل؛ كل شيء",
+    "pos": "ضمير"
+   },
+   "andere": {
+    "ru": "آخر",
+    "pos": "صفة"
+   },
+   "auf": {
+    "ru": "على",
+    "pos": "حرف جر",
+    "note": "auf der Straße — على الطريق؛ achten auf — ينتبه لـ"
+   },
+   "ausweichen": {
+    "ru": "يتفادى، ينحرف جانبًا",
+    "pos": "فعل",
+    "note": "سابقة منفصلة: weichen … aus",
+    "forms": "wich aus · ist ausgewichen"
+   },
+   "bedeuten": {
+    "ru": "يعني",
+    "pos": "فعل",
+    "forms": "bedeutete · hat bedeutet"
+   },
+   "bei": {
+    "ru": "عند",
+    "pos": "حرف جر",
+    "note": "beim = bei dem: beim Fahren — أثناء القيادة؛ bei Rot — عند الأحمر"
+   },
+   "benutzen": {
+    "ru": "يستخدم",
+    "pos": "فعل",
+    "forms": "benutzte · hat benutzt"
+   },
+   "beschleunigen": {
+    "ru": "يتسارع",
+    "pos": "فعل",
+    "forms": "beschleunigte · hat beschleunigt"
+   },
+   "besonders": {
+    "ru": "بشكل خاص",
+    "pos": "ظرف"
+   },
+   "bleiben": {
+    "ru": "يبقى",
+    "pos": "فعل",
+    "forms": "blieb · ist geblieben"
+   },
+   "blenden": {
+    "ru": "يُبهر (بالضوء)",
+    "pos": "فعل",
+    "forms": "blendete · hat geblendet"
+   },
+   "bremsen": {
+    "ru": "يكبح، يفرمل",
+    "pos": "فعل",
+    "forms": "bremste · hat gebremst"
+   },
+   "der/die/das": {
+    "ru": "أداة التعريف",
+    "pos": "أداة تعريف",
+    "note": "der للمذكر، die للمؤنث والجمع، das للمحايد؛ den للمذكر في حالة النصب، dem للمذكر والمحايد في حالة الجر؛ وdas تعني أيضًا «هذا»"
+   },
+   "dicht": {
+    "ru": "كثيف؛ قريب",
+    "pos": "صفة"
+   },
+   "dieser": {
+    "ru": "هذا، هذه",
+    "pos": "ضمير"
+   },
+   "dunkel": {
+    "ru": "مظلم",
+    "pos": "صفة"
+   },
+   "durch": {
+    "ru": "عبر، في",
+    "pos": "حرف جر",
+    "note": "durch die Stadt — في المدينة"
+   },
+   "durchgehend": {
+    "ru": "على طول الطريق، بلا انقطاع",
+    "pos": "ظرف"
+   },
+   "dürfen": {
+    "ru": "يحق له، يُسمح له",
+    "pos": "فعل",
+    "forms": "durfte · hat gedurft"
+   },
+   "ein/eine": {
+    "ru": "أداة النكرة؛ واحد",
+    "pos": "أداة تعريف",
+    "note": "an einer Kreuzung — عند تقاطعٍ ما"
+   },
+   "entgegenkommen": {
+    "ru": "يأتي من الاتجاه المقابل",
+    "pos": "فعل",
+    "note": "سابقة منفصلة: kommt … entgegen",
+    "forms": "kam entgegen · ist entgegengekommen"
+   },
+   "fahren": {
+    "ru": "يسير بالسيارة؛ يقود",
+    "pos": "فعل",
+    "forms": "fuhr · ist gefahren"
+   },
+   "ganz": {
+    "ru": "تمامًا",
+    "pos": "ظرف"
+   },
+   "gerade": {
+    "ru": "الآن، حاليًا",
+    "pos": "ظرف"
+   },
+   "gut": {
+    "ru": "جيد",
+    "pos": "صفة",
+    "note": "am besten — من الأفضل",
+    "forms": "gut · besser · am besten"
+   },
+   "halten": {
+    "ru": "يتوقف (لوقت قصير)؛ يمسك",
+    "pos": "فعل",
+    "forms": "hielt · hat gehalten"
+   },
+   "hinten": {
+    "ru": "في الخلف",
+    "pos": "ظرف"
+   },
+   "hinter": {
+    "ru": "خلف",
+    "pos": "حرف جر"
+   },
+   "hupen": {
+    "ru": "يستخدم البوق",
+    "pos": "فعل",
+    "forms": "hupte · hat gehupt"
+   },
+   "höchstens": {
+    "ru": "كحدّ أقصى",
+    "pos": "ظرف"
+   },
+   "in": {
+    "ru": "في",
+    "pos": "حرف جر",
+    "note": "im = in dem: im Bereich — في المنطقة"
+   },
+   "km/h": {
+    "ru": "كم/س",
+    "pos": "تعبير",
+    "note": "تُقرأ: Kilometer pro Stunde"
+   },
+   "können": {
+    "ru": "يستطيع",
+    "pos": "فعل",
+    "forms": "konnte · hat gekonnt"
+   },
+   "lang": {
+    "ru": "طويل",
+    "pos": "صفة",
+    "note": "Wie lang …؟ — كم طول …؟",
+    "forms": "lang · länger · am längsten"
+   },
+   "lenken": {
+    "ru": "يدير المقود",
+    "pos": "فعل",
+    "forms": "lenkte · hat gelenkt"
+   },
+   "mehr": {
+    "ru": "أكثر",
+    "pos": "ظرف",
+    "note": "mehr als — أكثر من"
+   },
+   "mit": {
+    "ru": "مع",
+    "pos": "حرف جر"
+   },
+   "müssen": {
+    "ru": "يجب عليه",
+    "pos": "فعل",
+    "forms": "musste · hat gemusst"
+   },
+   "nach": {
+    "ru": "بعد؛ إلى",
+    "pos": "حرف جر"
+   },
+   "nass": {
+    "ru": "مبتل",
+    "pos": "صفة"
+   },
+   "nicht": {
+    "ru": "لا، ليس",
+    "pos": "أداة"
+   },
+   "niemand": {
+    "ru": "لا أحد",
+    "pos": "ضمير"
+   },
+   "nur": {
+    "ru": "فقط",
+    "pos": "ظرف"
+   },
+   "oder": {
+    "ru": "أو",
+    "pos": "أداة ربط",
+    "note": "…, oder? — …، أليس كذلك؟"
+   },
+   "oft": {
+    "ru": "غالبًا",
+    "pos": "ظرف"
+   },
+   "recht": {
+    "ru": "أيمن",
+    "pos": "صفة"
+   },
+   "reichen": {
+    "ru": "يكفي",
+    "pos": "فعل",
+    "forms": "reichte · hat gereicht"
+   },
+   "rufen": {
+    "ru": "ينادي، يستدعي",
+    "pos": "فعل",
+    "forms": "rief · hat gerufen"
+   },
+   "rutschig": {
+    "ru": "زلق",
+    "pos": "صفة"
+   },
+   "sanft": {
+    "ru": "لطيف، ناعم",
+    "pos": "صفة"
+   },
+   "schauen": {
+    "ru": "ينظر",
+    "pos": "فعل",
+    "forms": "schaute · hat geschaut"
+   },
+   "schlecht": {
+    "ru": "سيئ",
+    "pos": "صفة"
+   },
+   "schlimm": {
+    "ru": "سيئ، خطير",
+    "pos": "صفة"
+   },
+   "schmutzig": {
+    "ru": "متسخ",
+    "pos": "صفة"
+   },
+   "schätzen": {
+    "ru": "يقدّر",
+    "pos": "فعل",
+    "forms": "schätzte · hat geschätzt"
+   },
+   "sein": {
+    "ru": "يكون",
+    "pos": "فعل",
+    "forms": "war · ist gewesen"
+   },
+   "sichern": {
+    "ru": "يؤمّن",
+    "pos": "فعل",
+    "note": "تأمين مكان الحادث: أضواء التحذير والسترة والمثلث",
+    "forms": "sicherte · hat gesichert"
+   },
+   "so": {
+    "ru": "هكذا",
+    "pos": "ظرف"
+   },
+   "stehen": {
+    "ru": "يقف؛ يوجد",
+    "pos": "فعل",
+    "note": "Schilder stehen — توجد لافتات",
+    "forms": "stand · hat gestanden"
+   },
+   "treten": {
+    "ru": "يضغط بقدمه",
+    "pos": "فعل",
+    "note": "die Kupplung treten — يضغط على القابض",
+    "forms": "trat · hat getreten"
+   },
+   "und": {
+    "ru": "و",
+    "pos": "أداة ربط"
+   },
+   "unter": {
+    "ru": "تحت؛ أقل من",
+    "pos": "حرف جر"
+   },
+   "verbieten": {
+    "ru": "يمنع",
+    "pos": "فعل",
+    "forms": "verbot · hat verboten"
+   },
+   "vor": {
+    "ru": "قبل، أمام",
+    "pos": "حرف جر",
+    "note": "rechts vor links — اليمين قبل اليسار"
+   },
+   "warnen": {
+    "ru": "يحذّر",
+    "pos": "فعل",
+    "forms": "warnte · hat gewarnt"
+   },
+   "was": {
+    "ru": "ماذا",
+    "pos": "ضمير"
+   },
+   "wenn": {
+    "ru": "إذا؛ عندما",
+    "pos": "أداة ربط",
+    "note": "auch wenn — حتى لو"
+   },
+   "werden": {
+    "ru": "يصبح",
+    "pos": "فعل",
+    "note": "die Ampel wird gelb — الإشارة تصبح صفراء",
+    "forms": "wurde · ist geworden"
+   },
+   "überblicken": {
+    "ru": "يرى بوضوح، يستطلع",
+    "pos": "فعل",
+    "forms": "überblickte · hat überblickt"
+   }
+  }
+ }
+}

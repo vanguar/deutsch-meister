@@ -1,0 +1,945 @@
+{
+ "id": "t-07",
+ "kind": "theory",
+ "emoji": "🌙",
+ "level": "A2–B1",
+ "title": "Licht, Nacht und Wetter",
+ "titleTr": "Свет, ночь и погода",
+ "intro": "Когда включать ближний и дальний свет, что делать в тумане, под дождём и на гололёде, когда обязательна зимняя резина и как вести себя, если на дорогу вышла косуля.",
+ "sections": [
+  {
+   "title": "Ближний и дальний свет",
+   "lines": [
+    {
+     "de": "Bei Dämmerung, Dunkelheit und schlechter Sicht fahren Sie mit Abblendlicht.",
+     "tr": "В сумерках, в темноте и при плохой видимости вы едете с ближним светом."
+    },
+    {
+     "de": "Tagfahrlicht reicht bei Dunkelheit nicht: Hinten bleibt das Auto oft dunkel.",
+     "tr": "Дневных ходовых огней в темноте недостаточно: сзади машина часто остаётся тёмной."
+    },
+    {
+     "de": "Fernlicht dürfen Sie nur benutzen, wenn Sie niemanden blenden.",
+     "tr": "Дальним светом можно пользоваться, только если вы никого не ослепляете."
+    },
+    {
+     "de": "Sie müssen abblenden, wenn ein Auto entgegenkommt oder wenn Sie dicht hinter einem anderen Auto fahren.",
+     "tr": "Вы обязаны переключиться на ближний, если навстречу едет машина или если вы едете близко за другой машиной."
+    },
+    {
+     "de": "Auf Straßen mit durchgehend guter Beleuchtung ist Fernlicht verboten.",
+     "tr": "На улицах со сплошным хорошим освещением дальний свет запрещён."
+    },
+    {
+     "de": "Werden Sie geblendet, schauen Sie auf den rechten Fahrbahnrand.",
+     "tr": "Если вас ослепили, смотрите на правый край проезжей части."
+    }
+   ]
+  },
+  {
+   "title": "Туман, дождь, снег",
+   "lines": [
+    {
+     "de": "Leitpfosten stehen alle 50 Meter. So schätzen Sie die Sichtweite.",
+     "tr": "Придорожные столбики стоят через каждые 50 метров. По ним вы оцениваете видимость."
+    },
+    {
+     "de": "Ist die Sichtweite durch Nebel, Schneefall oder Regen unter 50 Metern, fahren Sie höchstens 50 km/h.",
+     "tr": "Если из-за тумана, снегопада или дождя видимость меньше 50 метров, вы едете не быстрее 50 км/ч."
+    },
+    {
+     "de": "Die Nebelschlussleuchte dürfen Sie nur bei Nebel und einer Sichtweite unter 50 Metern benutzen.",
+     "tr": "Задний противотуманный фонарь можно включать только в тумане и при видимости меньше 50 метров."
+    },
+    {
+     "de": "Fahren Sie auf Sicht: Sie müssen auf der Strecke halten können, die Sie überblicken.",
+     "tr": "Едьте «по видимости»: вы должны успеть остановиться на том участке, который видите."
+    }
+   ]
+  },
+  {
+   "title": "Мокрая и скользкая дорога",
+   "lines": [
+    {
+     "de": "Dieses Schild warnt: Die Fahrbahn kann nass oder schmutzig und rutschig sein.",
+     "tr": "Этот знак предупреждает: дорога может быть мокрой или грязной и скользкой.",
+     "sign": "z114"
+    },
+    {
+     "de": "Bei Nässe wird der Bremsweg länger. Halten Sie mehr Abstand.",
+     "tr": "На мокрой дороге тормозной путь длиннее. Держите большую дистанцию."
+    },
+    {
+     "de": "Bei Aquaplaning treten Sie die Kupplung und halten das Lenkrad gerade. Bremsen Sie nicht.",
+     "tr": "При аквапланировании выжмите сцепление и держите руль прямо. Не тормозите."
+    },
+    {
+     "de": "Dieses Schild warnt vor Schnee und Glatteis.",
+     "tr": "Этот знак предупреждает о снеге и гололёде.",
+     "sign": "z10151"
+    },
+    {
+     "de": "Bei Glatteis, Schnee und Schneematsch sind Winterreifen Pflicht.",
+     "tr": "При гололёде, снеге и снежной каше зимняя резина обязательна."
+    },
+    {
+     "de": "Auf Glätte bremsen, lenken und beschleunigen Sie ganz sanft.",
+     "tr": "На скользкой дороге тормозите, рулите и разгоняйтесь очень плавно."
+    }
+   ]
+  },
+  {
+   "title": "Дикие животные",
+   "lines": [
+    {
+     "de": "Dieses Schild warnt vor Wildwechsel, besonders in der Dämmerung.",
+     "tr": "Этот знак предупреждает о переходе диких животных, особенно в сумерках.",
+     "sign": "z142"
+    },
+    {
+     "de": "Steht ein Tier auf der Straße: abblenden, hupen, bremsen.",
+     "tr": "Если на дороге стоит животное: ближний свет, сигнал, тормоз."
+    },
+    {
+     "de": "Weichen Sie nicht aus: Ein Unfall mit einem Baum ist oft schlimmer.",
+     "tr": "Не уходите в сторону: авария с деревом часто хуже.",
+     "o": {
+      "aus": "aus>ausweichen",
+      "weichen": "weichen>ausweichen"
+     }
+    },
+    {
+     "de": "Nach einem Wildunfall sichern Sie die Unfallstelle und rufen die Polizei.",
+     "tr": "После столкновения с диким животным вы обозначаете место аварии и вызываете полицию."
+    }
+   ]
+  }
+ ],
+ "quiz": [
+  {
+   "sign": "z142",
+   "wrong": [
+    "z136",
+    "z10151"
+   ]
+  },
+  {
+   "sign": "z114",
+   "wrong": [
+    "z10151",
+    "z101"
+   ]
+  },
+  {
+   "sign": "z10151",
+   "wrong": [
+    "z114",
+    "z142"
+   ]
+  }
+ ],
+ "quizQuestion": {
+  "de": "Was bedeutet dieses Schild?",
+  "tr": "Что означает этот знак?"
+ },
+ "signs": {
+  "z101": {
+   "de": "Gefahrstelle",
+   "tr": "Опасный участок",
+   "src": "data/fahrschule/signs/z101.svg",
+   "n": "101",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_101_-_Gefahrstelle,_StVO_1970.svg"
+  },
+  "z10151": {
+   "de": "Schnee- oder Eisglätte",
+   "tr": "Снег или гололёд",
+   "src": "data/fahrschule/signs/z10151.svg",
+   "n": "101-51",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_101-51_-_Schnee-_oder_Eisgl%C3%A4tte,_StVO_2017.svg"
+  },
+  "z114": {
+   "de": "Schleuder- oder Rutschgefahr",
+   "tr": "Скользкая дорога",
+   "src": "data/fahrschule/signs/z114.svg",
+   "n": "114",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_114_-_Schleuder-_oder_Rutschgefahr,_StVO_2013.svg"
+  },
+  "z136": {
+   "de": "Kinder",
+   "tr": "Дети",
+   "src": "data/fahrschule/signs/z136.svg",
+   "n": "136",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_136_-_Kinder,_StVO_1970.svg"
+  },
+  "z142": {
+   "de": "Wildwechsel",
+   "tr": "Дикие животные",
+   "src": "data/fahrschule/signs/z142.svg",
+   "n": "142",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_142-10_-_Wildwechsel,_Aufstellung_rechts,_StVO_1992.svg"
+  }
+ },
+ "gloss": {
+  "w": {
+   "abblenden": "abblenden",
+   "abblendlicht": "Abblendlicht",
+   "abstand": "Abstand",
+   "alle": "alle",
+   "anderen": "andere",
+   "aquaplaning": "Aquaplaning",
+   "auf": "auf",
+   "aus>ausweichen": "ausweichen",
+   "auto": "Auto",
+   "baum": "Baum",
+   "bedeutet": "bedeuten",
+   "bei": "bei",
+   "beleuchtung": "Beleuchtung",
+   "benutzen": "benutzen",
+   "beschleunigen": "beschleunigen",
+   "besonders": "besonders",
+   "bleibt": "bleiben",
+   "blenden": "blenden",
+   "bremsen": "bremsen",
+   "bremsweg": "Bremsweg",
+   "das": "der/die/das",
+   "den": "der/die/das",
+   "der": "der/die/das",
+   "dicht": "dicht",
+   "die": "der/die/das",
+   "dieses": "dieser",
+   "dunkel": "dunkel",
+   "dunkelheit": "Dunkelheit",
+   "durch": "durch",
+   "durchgehend": "durchgehend",
+   "dämmerung": "Dämmerung",
+   "dürfen": "dürfen",
+   "ein": "ein/eine",
+   "einem": "ein/eine",
+   "einer": "ein/eine",
+   "eisglätte": "Eisglätte",
+   "entgegenkommt": "entgegenkommen",
+   "fahrbahn": "Fahrbahn",
+   "fahrbahnrand": "Fahrbahnrand",
+   "fahren": "fahren",
+   "fernlicht": "Fernlicht",
+   "ganz": "ganz",
+   "geblendet": "blenden",
+   "gefahrstelle": "Gefahrstelle",
+   "gerade": "gerade",
+   "glatteis": "Glatteis",
+   "glätte": "Glätte",
+   "guter": "gut",
+   "halten": "halten",
+   "hinten": "hinten",
+   "hinter": "hinter",
+   "hupen": "hupen",
+   "höchstens": "höchstens",
+   "in": "in",
+   "ist": "sein",
+   "kann": "können",
+   "kinder": "Kind",
+   "km/h": "km/h",
+   "kupplung": "Kupplung",
+   "können": "können",
+   "leitpfosten": "Leitpfosten",
+   "lenken": "lenken",
+   "lenkrad": "Lenkrad",
+   "licht": "Licht",
+   "länger": "lang",
+   "mehr": "mehr",
+   "meter": "Meter",
+   "metern": "Meter",
+   "mit": "mit",
+   "müssen": "müssen",
+   "nach": "nach",
+   "nacht": "Nacht",
+   "nass": "nass",
+   "nebel": "Nebel",
+   "nebelschlussleuchte": "Nebelschlussleuchte",
+   "nicht": "nicht",
+   "niemanden": "niemand",
+   "nur": "nur",
+   "nässe": "Nässe",
+   "oder": "oder",
+   "oft": "oft",
+   "pflicht": "Pflicht",
+   "polizei": "Polizei",
+   "rechten": "recht",
+   "regen": "Regen",
+   "reicht": "reichen",
+   "rufen": "rufen",
+   "rutschgefahr": "Rutschgefahr",
+   "rutschig": "rutschig",
+   "sanft": "sanft",
+   "schauen": "schauen",
+   "schild": "Schild",
+   "schlechter": "schlecht",
+   "schleuder": "Schleudergefahr",
+   "schlimmer": "schlimm",
+   "schmutzig": "schmutzig",
+   "schnee": "Schnee",
+   "schneefall": "Schneefall",
+   "schneematsch": "Schneematsch",
+   "schätzen": "schätzen",
+   "sein": "sein",
+   "sichern": "sichern",
+   "sicht": "Sicht",
+   "sichtweite": "Sichtweite",
+   "sie": "Sie",
+   "sind": "sein",
+   "so": "so",
+   "stehen": "stehen",
+   "steht": "stehen",
+   "straße": "Straße",
+   "straßen": "Straße",
+   "strecke": "Strecke",
+   "tagfahrlicht": "Tagfahrlicht",
+   "tier": "Tier",
+   "treten": "treten",
+   "und": "und",
+   "unfall": "Unfall",
+   "unfallstelle": "Unfallstelle",
+   "unter": "unter",
+   "verboten": "verbieten",
+   "vor": "vor",
+   "warnt": "warnen",
+   "was": "was",
+   "weichen>ausweichen": "ausweichen",
+   "wenn": "wenn",
+   "werden": "werden",
+   "wetter": "Wetter",
+   "wildunfall": "Wildunfall",
+   "wildwechsel": "Wildwechsel",
+   "winterreifen": "Winterreifen",
+   "wird": "werden",
+   "überblicken": "überblicken"
+  },
+  "l": {
+   "Abblendlicht": {
+    "ru": "ближний свет",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": null
+   },
+   "Abstand": {
+    "ru": "дистанция, расстояние",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Abstände"
+   },
+   "Aquaplaning": {
+    "ru": "аквапланирование (шины скользят по воде)",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": null
+   },
+   "Auto": {
+    "ru": "машина, автомобиль",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Autos"
+   },
+   "Baum": {
+    "ru": "дерево",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Bäume"
+   },
+   "Beleuchtung": {
+    "ru": "освещение",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": null
+   },
+   "Bremsweg": {
+    "ru": "тормозной путь",
+    "pos": "сущ.",
+    "note": "(v / 10) · (v / 10) метров; при Gefahrbremsung вдвое меньше",
+    "art": "der",
+    "pl": "die Bremswege"
+   },
+   "Dunkelheit": {
+    "ru": "темнота",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": null
+   },
+   "Dämmerung": {
+    "ru": "сумерки",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": null
+   },
+   "Eisglätte": {
+    "ru": "гололёд",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": null
+   },
+   "Fahrbahn": {
+    "ru": "проезжая часть",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Fahrbahnen"
+   },
+   "Fahrbahnrand": {
+    "ru": "край проезжей части",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Fahrbahnränder"
+   },
+   "Fernlicht": {
+    "ru": "дальний свет",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": null
+   },
+   "Gefahrstelle": {
+    "ru": "опасное место",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Gefahrstellen"
+   },
+   "Glatteis": {
+    "ru": "гололёд",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": null
+   },
+   "Glätte": {
+    "ru": "гололёд, скользкая дорога",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": null
+   },
+   "Kind": {
+    "ru": "ребёнок",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Kinder"
+   },
+   "Kupplung": {
+    "ru": "сцепление",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Kupplungen"
+   },
+   "Leitpfosten": {
+    "ru": "сигнальный столбик (на обочине)",
+    "pos": "сущ.",
+    "note": "белые столбики с чёрной полосой, стоят через каждые 50 м",
+    "art": "der",
+    "pl": "die Leitpfosten"
+   },
+   "Lenkrad": {
+    "ru": "руль",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Lenkräder"
+   },
+   "Licht": {
+    "ru": "свет; сигнал",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Lichter"
+   },
+   "Meter": {
+    "ru": "метр",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Meter"
+   },
+   "Nacht": {
+    "ru": "ночь",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Nächte"
+   },
+   "Nebel": {
+    "ru": "туман",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Nebel"
+   },
+   "Nebelschlussleuchte": {
+    "ru": "задний противотуманный фонарь",
+    "pos": "сущ.",
+    "note": "только при тумане и видимости < 50 м (§ 17 Abs. 3 StVO)",
+    "art": "die",
+    "pl": "die Nebelschlussleuchten"
+   },
+   "Nässe": {
+    "ru": "сырость, мокрая дорога",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": null
+   },
+   "Pflicht": {
+    "ru": "обязанность",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Pflichten"
+   },
+   "Polizei": {
+    "ru": "полиция",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": null
+   },
+   "Regen": {
+    "ru": "дождь",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": null
+   },
+   "Rutschgefahr": {
+    "ru": "опасность заноса, скользко",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": null
+   },
+   "Schild": {
+    "ru": "знак, табличка",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Schilder"
+   },
+   "Schleudergefahr": {
+    "ru": "опасность заноса",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": null
+   },
+   "Schnee": {
+    "ru": "снег",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": null
+   },
+   "Schneefall": {
+    "ru": "снегопад",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": null
+   },
+   "Schneematsch": {
+    "ru": "снежная каша",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": null
+   },
+   "Sicht": {
+    "ru": "видимость",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": null
+   },
+   "Sichtweite": {
+    "ru": "дальность видимости",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": null
+   },
+   "Sie": {
+    "ru": "вы (вежливо)",
+    "pos": "мест.",
+    "note": "Ihnen — вам (дательный): vor Ihnen — перед вами"
+   },
+   "Straße": {
+    "ru": "улица, дорога",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Straßen"
+   },
+   "Strecke": {
+    "ru": "участок пути, расстояние",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Strecken"
+   },
+   "Tagfahrlicht": {
+    "ru": "дневные ходовые огни",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": null
+   },
+   "Tier": {
+    "ru": "животное",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Tiere"
+   },
+   "Unfall": {
+    "ru": "авария, ДТП",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Unfälle"
+   },
+   "Unfallstelle": {
+    "ru": "место аварии",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Unfallstellen"
+   },
+   "Wetter": {
+    "ru": "погода",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": null
+   },
+   "Wildunfall": {
+    "ru": "столкновение с диким животным",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Wildunfälle"
+   },
+   "Wildwechsel": {
+    "ru": "переход диких животных",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": null
+   },
+   "Winterreifen": {
+    "ru": "зимняя шина",
+    "pos": "сущ.",
+    "note": "с октября 2024 — только со значком «гора со снежинкой» (Alpine)",
+    "art": "der",
+    "pl": "die Winterreifen"
+   },
+   "abblenden": {
+    "ru": "переключиться на ближний свет",
+    "pos": "гл.",
+    "forms": "blendete ab · hat abgeblendet"
+   },
+   "alle": {
+    "ru": "все; всё",
+    "pos": "мест."
+   },
+   "andere": {
+    "ru": "другой",
+    "pos": "прил."
+   },
+   "auf": {
+    "ru": "на, по",
+    "pos": "предл.",
+    "note": "auf der Straße — на дороге; achten auf — следить за"
+   },
+   "ausweichen": {
+    "ru": "уклоняться, объезжать",
+    "pos": "гл.",
+    "note": "отделяемая приставка: weichen … aus",
+    "forms": "wich aus · ist ausgewichen"
+   },
+   "bedeuten": {
+    "ru": "означать",
+    "pos": "гл.",
+    "forms": "bedeutete · hat bedeutet"
+   },
+   "bei": {
+    "ru": "при, у; на (о сигнале)",
+    "pos": "предл.",
+    "note": "beim = bei dem: beim Fahren — во время езды; bei Rot — на красный"
+   },
+   "benutzen": {
+    "ru": "пользоваться",
+    "pos": "гл.",
+    "forms": "benutzte · hat benutzt"
+   },
+   "beschleunigen": {
+    "ru": "разгоняться, ускоряться",
+    "pos": "гл.",
+    "forms": "beschleunigte · hat beschleunigt"
+   },
+   "besonders": {
+    "ru": "особенно",
+    "pos": "нареч."
+   },
+   "bleiben": {
+    "ru": "оставаться",
+    "pos": "гл.",
+    "forms": "blieb · ist geblieben"
+   },
+   "blenden": {
+    "ru": "ослеплять (светом)",
+    "pos": "гл.",
+    "forms": "blendete · hat geblendet"
+   },
+   "bremsen": {
+    "ru": "тормозить",
+    "pos": "гл.",
+    "forms": "bremste · hat gebremst"
+   },
+   "der/die/das": {
+    "ru": "определённый артикль",
+    "pos": "артикль",
+    "note": "der — м. р., die — ж. р. и мн. ч., das — ср. р.; den — м. р. в винительном, dem — м. и ср. р. в дательном; das ещё значит «это»"
+   },
+   "dicht": {
+    "ru": "плотный; близко",
+    "pos": "прил."
+   },
+   "dieser": {
+    "ru": "этот, эта, это",
+    "pos": "мест."
+   },
+   "dunkel": {
+    "ru": "тёмный",
+    "pos": "прил."
+   },
+   "durch": {
+    "ru": "через, по",
+    "pos": "предл.",
+    "note": "durch die Stadt — по городу"
+   },
+   "durchgehend": {
+    "ru": "сплошь, без перерыва",
+    "pos": "нареч."
+   },
+   "dürfen": {
+    "ru": "мочь, иметь право",
+    "pos": "гл.",
+    "forms": "durfte · hat gedurft"
+   },
+   "ein/eine": {
+    "ru": "неопределённый артикль; один",
+    "pos": "артикль",
+    "note": "an einer Kreuzung — на (каком-то) перекрёстке"
+   },
+   "entgegenkommen": {
+    "ru": "ехать навстречу",
+    "pos": "гл.",
+    "note": "отделяемая приставка: kommt … entgegen",
+    "forms": "kam entgegen · ist entgegengekommen"
+   },
+   "fahren": {
+    "ru": "ехать; водить машину",
+    "pos": "гл.",
+    "forms": "fuhr · ist gefahren"
+   },
+   "ganz": {
+    "ru": "совсем, вполне",
+    "pos": "нареч."
+   },
+   "gerade": {
+    "ru": "сейчас, как раз",
+    "pos": "нареч."
+   },
+   "gut": {
+    "ru": "хороший; хорошо",
+    "pos": "прил.",
+    "note": "am besten — лучше всего",
+    "forms": "gut · besser · am besten"
+   },
+   "halten": {
+    "ru": "останавливаться (ненадолго); держать",
+    "pos": "гл.",
+    "forms": "hielt · hat gehalten"
+   },
+   "hinten": {
+    "ru": "сзади",
+    "pos": "нареч."
+   },
+   "hinter": {
+    "ru": "за, позади",
+    "pos": "предл."
+   },
+   "hupen": {
+    "ru": "сигналить",
+    "pos": "гл.",
+    "forms": "hupte · hat gehupt"
+   },
+   "höchstens": {
+    "ru": "самое большее, не больше",
+    "pos": "нареч."
+   },
+   "in": {
+    "ru": "в",
+    "pos": "предл.",
+    "note": "im = in dem: im Bereich — в зоне"
+   },
+   "km/h": {
+    "ru": "км/ч",
+    "pos": "выраж.",
+    "note": "читается: Kilometer pro Stunde"
+   },
+   "können": {
+    "ru": "мочь",
+    "pos": "гл.",
+    "forms": "konnte · hat gekonnt"
+   },
+   "lang": {
+    "ru": "длинный",
+    "pos": "прил.",
+    "note": "Wie lang …? — Какой длины …?",
+    "forms": "lang · länger · am längsten"
+   },
+   "lenken": {
+    "ru": "рулить, поворачивать руль",
+    "pos": "гл.",
+    "forms": "lenkte · hat gelenkt"
+   },
+   "mehr": {
+    "ru": "больше",
+    "pos": "нареч.",
+    "note": "mehr als — больше чем"
+   },
+   "mit": {
+    "ru": "с",
+    "pos": "предл."
+   },
+   "müssen": {
+    "ru": "быть должным",
+    "pos": "гл.",
+    "forms": "musste · hat gemusst"
+   },
+   "nach": {
+    "ru": "после; в, на (направление)",
+    "pos": "предл."
+   },
+   "nass": {
+    "ru": "мокрый",
+    "pos": "прил."
+   },
+   "nicht": {
+    "ru": "не",
+    "pos": "частица"
+   },
+   "niemand": {
+    "ru": "никто",
+    "pos": "мест."
+   },
+   "nur": {
+    "ru": "только",
+    "pos": "нареч."
+   },
+   "oder": {
+    "ru": "или",
+    "pos": "союз",
+    "note": "…, oder? — …, правда? / да?"
+   },
+   "oft": {
+    "ru": "часто",
+    "pos": "нареч."
+   },
+   "recht": {
+    "ru": "правый",
+    "pos": "прил."
+   },
+   "reichen": {
+    "ru": "хватать, быть достаточным",
+    "pos": "гл.",
+    "forms": "reichte · hat gereicht"
+   },
+   "rufen": {
+    "ru": "звать, вызывать",
+    "pos": "гл.",
+    "forms": "rief · hat gerufen"
+   },
+   "rutschig": {
+    "ru": "скользкий",
+    "pos": "прил."
+   },
+   "sanft": {
+    "ru": "мягкий, плавный",
+    "pos": "прил."
+   },
+   "schauen": {
+    "ru": "смотреть",
+    "pos": "гл.",
+    "forms": "schaute · hat geschaut"
+   },
+   "schlecht": {
+    "ru": "плохой",
+    "pos": "прил."
+   },
+   "schlimm": {
+    "ru": "плохой, тяжёлый",
+    "pos": "прил."
+   },
+   "schmutzig": {
+    "ru": "грязный",
+    "pos": "прил."
+   },
+   "schätzen": {
+    "ru": "оценивать (на глаз)",
+    "pos": "гл.",
+    "forms": "schätzte · hat geschätzt"
+   },
+   "sein": {
+    "ru": "быть",
+    "pos": "гл.",
+    "forms": "war · ist gewesen"
+   },
+   "sichern": {
+    "ru": "обезопасить, обозначить",
+    "pos": "гл.",
+    "note": "Unfallstelle sichern: аварийка, жилет, знак аварийной остановки",
+    "forms": "sicherte · hat gesichert"
+   },
+   "so": {
+    "ru": "так; вот (так)",
+    "pos": "нареч."
+   },
+   "stehen": {
+    "ru": "стоять",
+    "pos": "гл.",
+    "note": "Schilder stehen — стоят знаки",
+    "forms": "stand · hat gestanden"
+   },
+   "treten": {
+    "ru": "нажимать (ногой)",
+    "pos": "гл.",
+    "note": "die Kupplung treten — выжать сцепление",
+    "forms": "trat · hat getreten"
+   },
+   "und": {
+    "ru": "и",
+    "pos": "союз"
+   },
+   "unter": {
+    "ru": "под; меньше",
+    "pos": "предл."
+   },
+   "verbieten": {
+    "ru": "запрещать",
+    "pos": "гл.",
+    "forms": "verbot · hat verboten"
+   },
+   "vor": {
+    "ru": "перед",
+    "pos": "предл.",
+    "note": "rechts vor links — правый перед левым"
+   },
+   "warnen": {
+    "ru": "предупреждать",
+    "pos": "гл.",
+    "forms": "warnte · hat gewarnt"
+   },
+   "was": {
+    "ru": "что",
+    "pos": "мест."
+   },
+   "wenn": {
+    "ru": "если; когда",
+    "pos": "союз",
+    "note": "auch wenn — даже если"
+   },
+   "werden": {
+    "ru": "становиться",
+    "pos": "гл.",
+    "note": "die Ampel wird gelb — светофор переключается на жёлтый",
+    "forms": "wurde · ist geworden"
+   },
+   "überblicken": {
+    "ru": "видеть, обозревать",
+    "pos": "гл.",
+    "forms": "überblickte · hat überblickt"
+   }
+  }
+ }
+}

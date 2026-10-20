@@ -122,7 +122,8 @@ await c.ev(`localStorage.removeItem('dm_fs_open'); localStorage.removeItem('dm_f
 await c.go(B + '/fahrschule.html', 600);
 await waitFor(`document.querySelectorAll('.fs-topic').length > 0`, 20000);
 // на списке первые уроки тем подгружаются в фоне
-ok(await waitFor(`Fahrschule.topics.every(t => Fahrschule.cached.includes(t.units[0]))`, 8000), 'список: первые уроки тем подгружены в фоне');
+// не больше PREFETCH_MAX (6) уроков за раз — первые уроки первых шести тем
+ok(await waitFor(`Fahrschule.topics.slice(0, 6).every(t => Fahrschule.cached.includes(t.units[0]))`, 8000), 'список: первые уроки тем подгружены в фоне');
 ok(await c.ev(NO_HSCROLL), 'список: нет горизонтальной прокрутки (390)');
 await c.shot('fs_hub_390.png');
 await c.ev(`document.querySelector('.fs-tile[data-unit="t-01"]').click()`);
@@ -248,7 +249,7 @@ for (const id of IDX.units.filter(u => u.kind === 'theory' && u.id !== 't-01').m
     nums: [...document.querySelectorAll('.fs-sign-n')].map(e => e.textContent), hs: ${NO_HSCROLL} })`));
   ok(tv.lines === tv.want && tv.lines > 0, `${id}: строк ${tv.lines}`);
   ok(tv.signs.length > 0 && tv.signs.every(Boolean), `${id}: все ${tv.signs.length} знаков загрузились`);
-  ok(tv.nums.every(n => /^Zeichen \d{3}(\.\d)?$/.test(n)), `${id}: номера знаков (${[...new Set(tv.nums)].join(', ')})`);
+  ok(tv.nums.every(n => /^Zeichen \d{3}([.-]\d+)?$/.test(n)), `${id}: номера знаков (${[...new Set(tv.nums)].join(', ')})`);
   ok(tv.hs, `${id}: нет горизонтальной прокрутки`);
   const au = JSON.parse(await c.ev(TIP_AUDIT));
   ok(au.bad.length === 0, `${id}: подсказка у каждого из ${au.n} слов ${au.bad.slice(0, 5).join(' ')}`);

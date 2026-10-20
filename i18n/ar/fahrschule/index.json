@@ -65,6 +65,15 @@
     "p-06",
     "r-06"
    ]
+  },
+  {
+   "id": "licht-wetter",
+   "emoji": "🌙",
+   "title": "Licht, Nacht und Wetter",
+   "titleTr": "الأضواء والليل والطقس",
+   "units": [
+    "t-07"
+   ]
   }
  ],
  "units": [
@@ -229,6 +238,15 @@
    "title": "Rücksicht auf andere",
    "titleTr": "مراعاة الآخرين",
    "count": 5
+  },
+  {
+   "id": "t-07",
+   "kind": "theory",
+   "emoji": "🌙",
+   "level": "A2–B1",
+   "title": "Licht, Nacht und Wetter",
+   "titleTr": "الأضواء والليل والطقس",
+   "count": 20
   }
  ]
 }

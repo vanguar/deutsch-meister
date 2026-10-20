@@ -68,6 +68,9 @@ SIGNS = {
     'z240': 'File:Zeichen 240 - Gemeinsamer Fuß- und Radweg, StVO 1992.svg',
     'z241': 'File:Zeichen 241-30 - getrennter Rad- und Fußweg, StVO 1992.svg',
     'z2441': 'File:Zeichen 244.1 - Beginn einer Fahrradstraße, StVO 2013.svg',
+    'z10151': 'File:Zeichen 101-51 - Schnee- oder Eisglätte, StVO 2017.svg',
+    'z114': 'File:Zeichen 114 - Schleuder- oder Rutschgefahr, StVO 2013.svg',
+    'z142': 'File:Zeichen 142-10 - Wildwechsel, Aufstellung rechts, StVO 1992.svg',
 }
 
 # SVG с Commons встраивается как <img>: скрипты там и так не исполняются,
