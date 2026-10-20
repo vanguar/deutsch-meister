@@ -1,0 +1,617 @@
+{
+ "id": "p-07",
+ "kind": "dialog",
+ "emoji": "🦌",
+ "level": "A2–B1",
+ "title": "Nachtfahrt im Herbst",
+ "titleTr": "Ночная поездка осенью",
+ "intro": "Оксана впервые едет вечером: ближний и дальний свет, знак «дикие животные», косуля на дороге и густой туман.",
+ "speakers": {
+  "A": {
+   "name": "Fahrlehrer",
+   "g": "m"
+  },
+  "B": {
+   "name": "Oksana",
+   "g": "f"
+  }
+ },
+ "lines": [
+  {
+   "de": "Heute fahren wir in der Dämmerung. Welches Licht brauchen Sie?",
+   "tr": "Сегодня мы едем в сумерках. Какой свет вам нужен?",
+   "s": "A"
+  },
+  {
+   "de": "Abblendlicht. Das Tagfahrlicht reicht nicht.",
+   "tr": "Ближний свет. Дневных ходовых огней недостаточно.",
+   "s": "B"
+  },
+  {
+   "de": "Richtig. Jetzt sind wir auf der Landstraße, und es ist dunkel.",
+   "tr": "Верно. Теперь мы на загородной дороге, и уже темно.",
+   "s": "A"
+  },
+  {
+   "de": "Hier darf ich Fernlicht benutzen, wenn niemand entgegenkommt.",
+   "tr": "Здесь я могу включить дальний свет, если никто не едет навстречу.",
+   "s": "B"
+  },
+  {
+   "de": "Da vorne kommt ein Auto.",
+   "tr": "Вон впереди едет машина.",
+   "s": "A"
+  },
+  {
+   "de": "Dann muss ich abblenden, damit ich den Fahrer nicht blende.",
+   "tr": "Тогда я должна переключиться на ближний, чтобы не ослепить водителя.",
+   "s": "B"
+  },
+  {
+   "de": "Gut. Achtung, das Schild dort warnt vor Wildwechsel.",
+   "tr": "Хорошо. Внимание, вон тот знак предупреждает о диких животных.",
+   "s": "A"
+  },
+  {
+   "de": "Ich fahre langsamer und schaue auch auf den Rand der Straße.",
+   "tr": "Я еду медленнее и смотрю также на край дороги.",
+   "s": "B"
+  },
+  {
+   "de": "Und wenn ein Reh auf der Straße steht?",
+   "tr": "А если на дороге стоит косуля?",
+   "s": "A"
+  },
+  {
+   "de": "Abblenden, hupen, bremsen. Und nicht ausweichen.",
+   "tr": "Ближний свет, сигнал, тормоз. И не уходить в сторону.",
+   "s": "B"
+  },
+  {
+   "de": "Sehr gut. Jetzt kommt dichter Nebel. Sie sehen den nächsten Leitpfosten nicht mehr.",
+   "tr": "Очень хорошо. Теперь начинается густой туман. Следующего столбика вы уже не видите.",
+   "s": "A"
+  },
+  {
+   "de": "Dann ist die Sichtweite unter 50 Metern. Ich fahre höchstens 50.",
+   "tr": "Значит, видимость меньше 50 метров. Я еду не быстрее 50.",
+   "s": "B"
+  },
+  {
+   "de": "Und welches Licht schalten Sie jetzt ein?",
+   "tr": "А какой свет вы теперь включаете?",
+   "o": {
+    "ein": "ein>einschalten",
+    "schalten": "schalten>einschalten"
+   },
+   "s": "A"
+  },
+  {
+   "de": "Die Nebelschlussleuchte. Wenn die Sicht wieder gut ist, schalte ich sie aus.",
+   "tr": "Задний противотуманный фонарь. Когда видимость снова станет хорошей, я его выключу.",
+   "o": {
+    "aus": "aus>ausschalten",
+    "schalte": "schalte>ausschalten"
+   },
+   "s": "B"
+  },
+  {
+   "de": "Perfekt. So fahren Sie sicher durch die Nacht.",
+   "tr": "Отлично. Так вы безопасно проедете ночью.",
+   "s": "A"
+  }
+ ],
+ "signs": {},
+ "gloss": {
+  "w": {
+   "abblenden": "abblenden",
+   "abblendlicht": "Abblendlicht",
+   "achtung": "Achtung",
+   "auch": "auch",
+   "auf": "auf",
+   "aus>ausschalten": "ausschalten",
+   "ausweichen": "ausweichen",
+   "auto": "Auto",
+   "benutzen": "benutzen",
+   "blende": "blenden",
+   "brauchen": "brauchen",
+   "bremsen": "bremsen",
+   "da": "da",
+   "damit": "damit",
+   "dann": "dann",
+   "darf": "dürfen",
+   "das": "der/die/das",
+   "den": "der/die/das",
+   "der": "der/die/das",
+   "dichter": "dicht",
+   "die": "der/die/das",
+   "dort": "dort",
+   "dunkel": "dunkel",
+   "durch": "durch",
+   "dämmerung": "Dämmerung",
+   "ein": "ein/eine",
+   "ein>einschalten": "einschalten",
+   "entgegenkommt": "entgegenkommen",
+   "es": "es",
+   "fahre": "fahren",
+   "fahren": "fahren",
+   "fahrer": "Fahrer",
+   "fernlicht": "Fernlicht",
+   "gut": "gut",
+   "herbst": "Herbst",
+   "heute": "heute",
+   "hier": "hier",
+   "hupen": "hupen",
+   "höchstens": "höchstens",
+   "ich": "ich",
+   "im": "in",
+   "in": "in",
+   "ist": "sein",
+   "jetzt": "jetzt",
+   "kommt": "kommen",
+   "landstraße": "Landstraße",
+   "langsamer": "langsam",
+   "leitpfosten": "Leitpfosten",
+   "licht": "Licht",
+   "mehr": "mehr",
+   "metern": "Meter",
+   "muss": "müssen",
+   "nacht": "Nacht",
+   "nachtfahrt": "Nachtfahrt",
+   "nebel": "Nebel",
+   "nebelschlussleuchte": "Nebelschlussleuchte",
+   "nicht": "nicht",
+   "niemand": "niemand",
+   "nächsten": "nächste",
+   "perfekt": "perfekt",
+   "rand": "Rand",
+   "reh": "Reh",
+   "reicht": "reichen",
+   "richtig": "richtig",
+   "schalte>ausschalten": "ausschalten",
+   "schalten>einschalten": "einschalten",
+   "schaue": "schauen",
+   "schild": "Schild",
+   "sehen": "sehen",
+   "sehr": "sehr",
+   "sicher": "sicher",
+   "sicht": "Sicht",
+   "sichtweite": "Sichtweite",
+   "sie": "Sie",
+   "sind": "sein",
+   "so": "so",
+   "steht": "stehen",
+   "straße": "Straße",
+   "tagfahrlicht": "Tagfahrlicht",
+   "und": "und",
+   "unter": "unter",
+   "vor": "vor",
+   "vorne": "vorne",
+   "warnt": "warnen",
+   "welches": "welcher",
+   "wenn": "wenn",
+   "wieder": "wieder",
+   "wildwechsel": "Wildwechsel",
+   "wir": "wir"
+  },
+  "l": {
+   "Abblendlicht": {
+    "ru": "ближний свет",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": null
+   },
+   "Achtung": {
+    "ru": "внимание!",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": null
+   },
+   "Auto": {
+    "ru": "машина, автомобиль",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Autos"
+   },
+   "Dämmerung": {
+    "ru": "сумерки",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": null
+   },
+   "Fahrer": {
+    "ru": "водитель",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Fahrer"
+   },
+   "Fernlicht": {
+    "ru": "дальний свет",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": null
+   },
+   "Herbst": {
+    "ru": "осень",
+    "pos": "сущ.",
+    "note": "im Herbst — осенью",
+    "art": "der",
+    "pl": "die Herbste"
+   },
+   "Landstraße": {
+    "ru": "загородная дорога",
+    "pos": "сущ.",
+    "note": "вне населённого пункта: для легковых обычно до 100 км/ч",
+    "art": "die",
+    "pl": "die Landstraßen"
+   },
+   "Leitpfosten": {
+    "ru": "сигнальный столбик (на обочине)",
+    "pos": "сущ.",
+    "note": "белые столбики с чёрной полосой, стоят через каждые 50 м",
+    "art": "der",
+    "pl": "die Leitpfosten"
+   },
+   "Licht": {
+    "ru": "свет; сигнал",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Lichter"
+   },
+   "Meter": {
+    "ru": "метр",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Meter"
+   },
+   "Nacht": {
+    "ru": "ночь",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Nächte"
+   },
+   "Nachtfahrt": {
+    "ru": "ночная поездка",
+    "pos": "сущ.",
+    "note": "в автошколе — обязательный урок (Sonderfahrt)",
+    "art": "die",
+    "pl": "die Nachtfahrten"
+   },
+   "Nebel": {
+    "ru": "туман",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Nebel"
+   },
+   "Nebelschlussleuchte": {
+    "ru": "задний противотуманный фонарь",
+    "pos": "сущ.",
+    "note": "только при тумане и видимости < 50 м (§ 17 Abs. 3 StVO)",
+    "art": "die",
+    "pl": "die Nebelschlussleuchten"
+   },
+   "Rand": {
+    "ru": "край, кайма",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Ränder"
+   },
+   "Reh": {
+    "ru": "косуля",
+    "pos": "сущ.",
+    "note": "Wildwechsel — переход диких животных; особенно опасно утром и в сумерках",
+    "art": "das",
+    "pl": "die Rehe"
+   },
+   "Schild": {
+    "ru": "знак, табличка",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Schilder"
+   },
+   "Sicht": {
+    "ru": "видимость",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": null
+   },
+   "Sichtweite": {
+    "ru": "дальность видимости",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": null
+   },
+   "Sie": {
+    "ru": "вы (вежливо)",
+    "pos": "мест.",
+    "note": "Ihnen — вам (дательный): vor Ihnen — перед вами"
+   },
+   "Straße": {
+    "ru": "улица, дорога",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Straßen"
+   },
+   "Tagfahrlicht": {
+    "ru": "дневные ходовые огни",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": null
+   },
+   "Wildwechsel": {
+    "ru": "переход диких животных",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": null
+   },
+   "abblenden": {
+    "ru": "переключиться на ближний свет",
+    "pos": "гл.",
+    "forms": "blendete ab · hat abgeblendet"
+   },
+   "auch": {
+    "ru": "тоже; даже (auch wenn)",
+    "pos": "нареч."
+   },
+   "auf": {
+    "ru": "на, по",
+    "pos": "предл.",
+    "note": "auf der Straße — на дороге; achten auf — следить за"
+   },
+   "ausschalten": {
+    "ru": "выключать",
+    "pos": "гл.",
+    "note": "отделяемая приставка: schalten … aus",
+    "forms": "schaltete aus · hat ausgeschaltet"
+   },
+   "ausweichen": {
+    "ru": "уклоняться, объезжать",
+    "pos": "гл.",
+    "note": "отделяемая приставка: weichen … aus",
+    "forms": "wich aus · ist ausgewichen"
+   },
+   "benutzen": {
+    "ru": "пользоваться",
+    "pos": "гл.",
+    "forms": "benutzte · hat benutzt"
+   },
+   "blenden": {
+    "ru": "ослеплять (светом)",
+    "pos": "гл.",
+    "forms": "blendete · hat geblendet"
+   },
+   "brauchen": {
+    "ru": "нуждаться, требоваться",
+    "pos": "гл.",
+    "forms": "brauchte · hat gebraucht"
+   },
+   "bremsen": {
+    "ru": "тормозить",
+    "pos": "гл.",
+    "forms": "bremste · hat gebremst"
+   },
+   "da": {
+    "ru": "там, вон; тогда",
+    "pos": "нареч.",
+    "note": "da vorne — вон там впереди"
+   },
+   "damit": {
+    "ru": "чтобы",
+    "pos": "союз"
+   },
+   "dann": {
+    "ru": "тогда, значит; потом",
+    "pos": "нареч."
+   },
+   "der/die/das": {
+    "ru": "определённый артикль",
+    "pos": "артикль",
+    "note": "der — м. р., die — ж. р. и мн. ч., das — ср. р.; den — м. р. в винительном, dem — м. и ср. р. в дательном; das ещё значит «это»"
+   },
+   "dicht": {
+    "ru": "плотный; близко",
+    "pos": "прил."
+   },
+   "dort": {
+    "ru": "там",
+    "pos": "нареч."
+   },
+   "dunkel": {
+    "ru": "тёмный",
+    "pos": "прил."
+   },
+   "durch": {
+    "ru": "через, по",
+    "pos": "предл.",
+    "note": "durch die Stadt — по городу"
+   },
+   "dürfen": {
+    "ru": "мочь, иметь право",
+    "pos": "гл.",
+    "forms": "durfte · hat gedurft"
+   },
+   "ein/eine": {
+    "ru": "неопределённый артикль; один",
+    "pos": "артикль",
+    "note": "an einer Kreuzung — на (каком-то) перекрёстке"
+   },
+   "einschalten": {
+    "ru": "включать",
+    "pos": "гл.",
+    "note": "отделяемая приставка: schalten … ein",
+    "forms": "schaltete ein · hat eingeschaltet"
+   },
+   "entgegenkommen": {
+    "ru": "ехать навстречу",
+    "pos": "гл.",
+    "note": "отделяемая приставка: kommt … entgegen",
+    "forms": "kam entgegen · ist entgegengekommen"
+   },
+   "es": {
+    "ru": "оно; это",
+    "pos": "мест.",
+    "note": "здесь — о машине: das Auto"
+   },
+   "fahren": {
+    "ru": "ехать; водить машину",
+    "pos": "гл.",
+    "forms": "fuhr · ist gefahren"
+   },
+   "gut": {
+    "ru": "хороший; хорошо",
+    "pos": "прил.",
+    "note": "am besten — лучше всего",
+    "forms": "gut · besser · am besten"
+   },
+   "heute": {
+    "ru": "сегодня",
+    "pos": "нареч."
+   },
+   "hier": {
+    "ru": "здесь",
+    "pos": "нареч."
+   },
+   "hupen": {
+    "ru": "сигналить",
+    "pos": "гл.",
+    "forms": "hupte · hat gehupt"
+   },
+   "höchstens": {
+    "ru": "самое большее, не больше",
+    "pos": "нареч."
+   },
+   "ich": {
+    "ru": "я",
+    "pos": "мест."
+   },
+   "in": {
+    "ru": "в",
+    "pos": "предл.",
+    "note": "im = in dem: im Bereich — в зоне"
+   },
+   "jetzt": {
+    "ru": "сейчас, теперь",
+    "pos": "нареч."
+   },
+   "kommen": {
+    "ru": "приходить; ехать (приближаться)",
+    "pos": "гл.",
+    "note": "von rechts kommen — ехать справа",
+    "forms": "kam · ist gekommen"
+   },
+   "langsam": {
+    "ru": "медленный; медленно",
+    "pos": "прил."
+   },
+   "mehr": {
+    "ru": "больше",
+    "pos": "нареч.",
+    "note": "mehr als — больше чем"
+   },
+   "müssen": {
+    "ru": "быть должным",
+    "pos": "гл.",
+    "forms": "musste · hat gemusst"
+   },
+   "nicht": {
+    "ru": "не",
+    "pos": "частица"
+   },
+   "niemand": {
+    "ru": "никто",
+    "pos": "мест."
+   },
+   "nächste": {
+    "ru": "ближайший, следующий",
+    "pos": "прил."
+   },
+   "perfekt": {
+    "ru": "отлично, безупречно",
+    "pos": "прил."
+   },
+   "reichen": {
+    "ru": "хватать, быть достаточным",
+    "pos": "гл.",
+    "forms": "reichte · hat gereicht"
+   },
+   "richtig": {
+    "ru": "правильный; правильно",
+    "pos": "прил.",
+    "note": "…, richtig? — …, правильно? / да?"
+   },
+   "schauen": {
+    "ru": "смотреть",
+    "pos": "гл.",
+    "forms": "schaute · hat geschaut"
+   },
+   "sehen": {
+    "ru": "видеть",
+    "pos": "гл.",
+    "forms": "sah · hat gesehen"
+   },
+   "sehr": {
+    "ru": "очень",
+    "pos": "нареч."
+   },
+   "sein": {
+    "ru": "быть",
+    "pos": "гл.",
+    "forms": "war · ist gewesen"
+   },
+   "sicher": {
+    "ru": "безопасный; уверенный",
+    "pos": "прил."
+   },
+   "so": {
+    "ru": "так; вот (так)",
+    "pos": "нареч."
+   },
+   "stehen": {
+    "ru": "стоять",
+    "pos": "гл.",
+    "note": "Schilder stehen — стоят знаки",
+    "forms": "stand · hat gestanden"
+   },
+   "und": {
+    "ru": "и",
+    "pos": "союз"
+   },
+   "unter": {
+    "ru": "под; меньше",
+    "pos": "предл."
+   },
+   "vor": {
+    "ru": "перед",
+    "pos": "предл.",
+    "note": "rechts vor links — правый перед левым"
+   },
+   "vorne": {
+    "ru": "впереди",
+    "pos": "нареч."
+   },
+   "warnen": {
+    "ru": "предупреждать",
+    "pos": "гл.",
+    "forms": "warnte · hat gewarnt"
+   },
+   "welcher": {
+    "ru": "какой, который",
+    "pos": "мест."
+   },
+   "wenn": {
+    "ru": "если; когда",
+    "pos": "союз",
+    "note": "auch wenn — даже если"
+   },
+   "wieder": {
+    "ru": "снова",
+    "pos": "нареч."
+   },
+   "wir": {
+    "ru": "мы",
+    "pos": "мест.",
+    "note": "uns — нас, нам: vor uns — перед нами"
+   }
+  }
+ }
+}

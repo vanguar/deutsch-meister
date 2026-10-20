@@ -72,7 +72,8 @@
    "title": "Licht, Nacht und Wetter",
    "titleTr": "Світло, ніч і погода",
    "units": [
-    "t-07"
+    "t-07",
+    "p-07"
    ]
   }
  ],
@@ -247,6 +248,15 @@
    "title": "Licht, Nacht und Wetter",
    "titleTr": "Світло, ніч і погода",
    "count": 20
+  },
+  {
+   "id": "p-07",
+   "kind": "dialog",
+   "emoji": "🦌",
+   "level": "A2–B1",
+   "title": "Nachtfahrt im Herbst",
+   "titleTr": "Нічна поїздка восени",
+   "count": 15
   }
  ]
 }

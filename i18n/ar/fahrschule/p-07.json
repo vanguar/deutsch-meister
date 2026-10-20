@@ -1,0 +1,594 @@
+{
+ "id": "p-07",
+ "kind": "dialog",
+ "emoji": "🦌",
+ "level": "A2–B1",
+ "title": "Nachtfahrt im Herbst",
+ "titleTr": "قيادة ليلية في الخريف",
+ "intro": "تقود أوكسانا لأول مرة في المساء: الأضواء القصيرة والطويلة، ولافتة الحيوانات البرية، وغزال على الطريق، وضباب كثيف.",
+ "speakers": {
+  "A": {
+   "name": "Fahrlehrer",
+   "g": "m"
+  },
+  "B": {
+   "name": "Oksana",
+   "g": "f"
+  }
+ },
+ "lines": [
+  {
+   "de": "Heute fahren wir in der Dämmerung. Welches Licht brauchen Sie?",
+   "tr": "اليوم نقود عند الغسق. أي ضوء تحتاجين؟",
+   "s": "A"
+  },
+  {
+   "de": "Abblendlicht. Das Tagfahrlicht reicht nicht.",
+   "tr": "الأضواء القصيرة. أضواء النهار لا تكفي.",
+   "s": "B"
+  },
+  {
+   "de": "Richtig. Jetzt sind wir auf der Landstraße, und es ist dunkel.",
+   "tr": "صحيح. نحن الآن على الطريق الريفي، والجو مظلم.",
+   "s": "A"
+  },
+  {
+   "de": "Hier darf ich Fernlicht benutzen, wenn niemand entgegenkommt.",
+   "tr": "هنا يجوز لي استخدام الأضواء الطويلة إذا لم تأتِ سيارة من الاتجاه المقابل.",
+   "s": "B"
+  },
+  {
+   "de": "Da vorne kommt ein Auto.",
+   "tr": "هناك في الأمام سيارة قادمة.",
+   "s": "A"
+  },
+  {
+   "de": "Dann muss ich abblenden, damit ich den Fahrer nicht blende.",
+   "tr": "إذن يجب أن أخفض الأضواء كي لا أُبهر السائق.",
+   "s": "B"
+  },
+  {
+   "de": "Gut. Achtung, das Schild dort warnt vor Wildwechsel.",
+   "tr": "جيد. انتبهي، تلك اللافتة تحذّر من عبور الحيوانات البرية.",
+   "s": "A"
+  },
+  {
+   "de": "Ich fahre langsamer und schaue auch auf den Rand der Straße.",
+   "tr": "أقود أبطأ وأنظر أيضًا إلى حافة الطريق.",
+   "s": "B"
+  },
+  {
+   "de": "Und wenn ein Reh auf der Straße steht?",
+   "tr": "وإذا وقف غزال على الطريق؟",
+   "s": "A"
+  },
+  {
+   "de": "Abblenden, hupen, bremsen. Und nicht ausweichen.",
+   "tr": "أخفض الأضواء، أستخدم البوق، أفرمل. ولا أنحرف جانبًا.",
+   "s": "B"
+  },
+  {
+   "de": "Sehr gut. Jetzt kommt dichter Nebel. Sie sehen den nächsten Leitpfosten nicht mehr.",
+   "tr": "جيد جدًا. الآن يأتي ضباب كثيف. لم تعودي ترين عمود الإرشاد التالي.",
+   "s": "A"
+  },
+  {
+   "de": "Dann ist die Sichtweite unter 50 Metern. Ich fahre höchstens 50.",
+   "tr": "إذن مدى الرؤية أقل من 50 مترًا. أقود بسرعة 50 كحدّ أقصى.",
+   "s": "B"
+  },
+  {
+   "de": "Und welches Licht schalten Sie jetzt ein?",
+   "tr": "وأي ضوء تشغّلين الآن؟",
+   "o": {
+    "ein": "ein>einschalten",
+    "schalten": "schalten>einschalten"
+   },
+   "s": "A"
+  },
+  {
+   "de": "Die Nebelschlussleuchte. Wenn die Sicht wieder gut ist, schalte ich sie aus.",
+   "tr": "ضوء الضباب الخلفي. وعندما تعود الرؤية جيدة أطفئه.",
+   "o": {
+    "aus": "aus>ausschalten",
+    "schalte": "schalte>ausschalten"
+   },
+   "s": "B"
+  },
+  {
+   "de": "Perfekt. So fahren Sie sicher durch die Nacht.",
+   "tr": "ممتاز. هكذا تقودين بأمان في الليل.",
+   "s": "A"
+  }
+ ],
+ "signs": {},
+ "gloss": {
+  "w": {
+   "abblenden": "abblenden",
+   "abblendlicht": "Abblendlicht",
+   "achtung": "Achtung",
+   "auch": "auch",
+   "auf": "auf",
+   "aus>ausschalten": "ausschalten",
+   "ausweichen": "ausweichen",
+   "auto": "Auto",
+   "benutzen": "benutzen",
+   "blende": "blenden",
+   "brauchen": "brauchen",
+   "bremsen": "bremsen",
+   "da": "da",
+   "damit": "damit",
+   "dann": "dann",
+   "darf": "dürfen",
+   "das": "der/die/das",
+   "den": "der/die/das",
+   "der": "der/die/das",
+   "dichter": "dicht",
+   "die": "der/die/das",
+   "dort": "dort",
+   "dunkel": "dunkel",
+   "durch": "durch",
+   "dämmerung": "Dämmerung",
+   "ein": "ein/eine",
+   "ein>einschalten": "einschalten",
+   "entgegenkommt": "entgegenkommen",
+   "es": "es",
+   "fahre": "fahren",
+   "fahren": "fahren",
+   "fahrer": "Fahrer",
+   "fernlicht": "Fernlicht",
+   "gut": "gut",
+   "herbst": "Herbst",
+   "heute": "heute",
+   "hier": "hier",
+   "hupen": "hupen",
+   "höchstens": "höchstens",
+   "ich": "ich",
+   "im": "in",
+   "in": "in",
+   "ist": "sein",
+   "jetzt": "jetzt",
+   "kommt": "kommen",
+   "landstraße": "Landstraße",
+   "langsamer": "langsam",
+   "leitpfosten": "Leitpfosten",
+   "licht": "Licht",
+   "mehr": "mehr",
+   "metern": "Meter",
+   "muss": "müssen",
+   "nacht": "Nacht",
+   "nachtfahrt": "Nachtfahrt",
+   "nebel": "Nebel",
+   "nebelschlussleuchte": "Nebelschlussleuchte",
+   "nicht": "nicht",
+   "niemand": "niemand",
+   "nächsten": "nächste",
+   "perfekt": "perfekt",
+   "rand": "Rand",
+   "reh": "Reh",
+   "reicht": "reichen",
+   "richtig": "richtig",
+   "schalte>ausschalten": "ausschalten",
+   "schalten>einschalten": "einschalten",
+   "schaue": "schauen",
+   "schild": "Schild",
+   "sehen": "sehen",
+   "sehr": "sehr",
+   "sicher": "sicher",
+   "sicht": "Sicht",
+   "sichtweite": "Sichtweite",
+   "sie": "Sie",
+   "sind": "sein",
+   "so": "so",
+   "steht": "stehen",
+   "straße": "Straße",
+   "tagfahrlicht": "Tagfahrlicht",
+   "und": "und",
+   "unter": "unter",
+   "vor": "vor",
+   "vorne": "vorne",
+   "warnt": "warnen",
+   "welches": "welcher",
+   "wenn": "wenn",
+   "wieder": "wieder",
+   "wildwechsel": "Wildwechsel",
+   "wir": "wir"
+  },
+  "l": {
+   "Abblendlicht": {
+    "ru": "الأضواء المنخفضة",
+    "pos": "اسم",
+    "decl": "das Abblendlicht · لا جمع له"
+   },
+   "Achtung": {
+    "ru": "انتبه!",
+    "pos": "اسم",
+    "decl": "die Achtung · لا جمع له"
+   },
+   "Auto": {
+    "ru": "سيارة",
+    "pos": "اسم",
+    "decl": "das Auto · الجمع: die Autos"
+   },
+   "Dämmerung": {
+    "ru": "الغسق",
+    "pos": "اسم",
+    "decl": "die Dämmerung · لا جمع له"
+   },
+   "Fahrer": {
+    "ru": "سائق",
+    "pos": "اسم",
+    "decl": "der Fahrer · الجمع: die Fahrer"
+   },
+   "Fernlicht": {
+    "ru": "الأضواء الطويلة",
+    "pos": "اسم",
+    "decl": "das Fernlicht · لا جمع له"
+   },
+   "Herbst": {
+    "ru": "الخريف",
+    "pos": "اسم",
+    "note": "im Herbst — في الخريف",
+    "decl": "der Herbst · الجمع: die Herbste"
+   },
+   "Landstraße": {
+    "ru": "طريق ريفي",
+    "pos": "اسم",
+    "note": "خارج البلدات: للسيارات عادةً حتى 100 كم/س",
+    "decl": "die Landstraße · الجمع: die Landstraßen"
+   },
+   "Leitpfosten": {
+    "ru": "عمود إرشاد (على حافة الطريق)",
+    "pos": "اسم",
+    "note": "أعمدة بيضاء بشريط أسود، كل 50 مترًا",
+    "decl": "der Leitpfosten · الجمع: die Leitpfosten"
+   },
+   "Licht": {
+    "ru": "ضوء",
+    "pos": "اسم",
+    "decl": "das Licht · الجمع: die Lichter"
+   },
+   "Meter": {
+    "ru": "متر",
+    "pos": "اسم",
+    "decl": "der Meter · الجمع: die Meter"
+   },
+   "Nacht": {
+    "ru": "ليل",
+    "pos": "اسم",
+    "decl": "die Nacht · الجمع: die Nächte"
+   },
+   "Nachtfahrt": {
+    "ru": "قيادة ليلية",
+    "pos": "اسم",
+    "note": "في مدرسة القيادة درس إلزامي (Sonderfahrt)",
+    "decl": "die Nachtfahrt · الجمع: die Nachtfahrten"
+   },
+   "Nebel": {
+    "ru": "ضباب",
+    "pos": "اسم",
+    "decl": "der Nebel · الجمع: die Nebel"
+   },
+   "Nebelschlussleuchte": {
+    "ru": "ضوء الضباب الخلفي",
+    "pos": "اسم",
+    "note": "فقط في الضباب ومع رؤية أقل من 50 م",
+    "decl": "die Nebelschlussleuchte · الجمع: die Nebelschlussleuchten"
+   },
+   "Rand": {
+    "ru": "حافة",
+    "pos": "اسم",
+    "decl": "der Rand · الجمع: die Ränder"
+   },
+   "Reh": {
+    "ru": "غزال (اليحمور)",
+    "pos": "اسم",
+    "note": "Wildwechsel — عبور الحيوانات البرية؛ خطر خاصة صباحًا وعند الغسق",
+    "decl": "das Reh · الجمع: die Rehe"
+   },
+   "Schild": {
+    "ru": "لافتة",
+    "pos": "اسم",
+    "decl": "das Schild · الجمع: die Schilder"
+   },
+   "Sicht": {
+    "ru": "الرؤية",
+    "pos": "اسم",
+    "decl": "die Sicht · لا جمع له"
+   },
+   "Sichtweite": {
+    "ru": "مدى الرؤية",
+    "pos": "اسم",
+    "decl": "die Sichtweite · لا جمع له"
+   },
+   "Sie": {
+    "ru": "حضرتك (صيغة الاحترام)",
+    "pos": "ضمير",
+    "note": "Ihnen — لكم (حالة الجر): vor Ihnen — أمامك"
+   },
+   "Straße": {
+    "ru": "شارع، طريق",
+    "pos": "اسم",
+    "decl": "die Straße · الجمع: die Straßen"
+   },
+   "Tagfahrlicht": {
+    "ru": "أضواء النهار",
+    "pos": "اسم",
+    "decl": "das Tagfahrlicht · لا جمع له"
+   },
+   "Wildwechsel": {
+    "ru": "عبور الحيوانات البرية",
+    "pos": "اسم",
+    "decl": "der Wildwechsel · لا جمع له"
+   },
+   "abblenden": {
+    "ru": "يخفض الأضواء",
+    "pos": "فعل",
+    "forms": "blendete ab · hat abgeblendet"
+   },
+   "auch": {
+    "ru": "أيضًا؛ حتى (auch wenn)",
+    "pos": "ظرف"
+   },
+   "auf": {
+    "ru": "على",
+    "pos": "حرف جر",
+    "note": "auf der Straße — على الطريق؛ achten auf — ينتبه لـ"
+   },
+   "ausschalten": {
+    "ru": "يطفئ",
+    "pos": "فعل",
+    "note": "سابقة منفصلة: schalten … aus",
+    "forms": "schaltete aus · hat ausgeschaltet"
+   },
+   "ausweichen": {
+    "ru": "يتفادى، ينحرف جانبًا",
+    "pos": "فعل",
+    "note": "سابقة منفصلة: weichen … aus",
+    "forms": "wich aus · ist ausgewichen"
+   },
+   "benutzen": {
+    "ru": "يستخدم",
+    "pos": "فعل",
+    "forms": "benutzte · hat benutzt"
+   },
+   "blenden": {
+    "ru": "يُبهر (بالضوء)",
+    "pos": "فعل",
+    "forms": "blendete · hat geblendet"
+   },
+   "brauchen": {
+    "ru": "يحتاج",
+    "pos": "فعل",
+    "forms": "brauchte · hat gebraucht"
+   },
+   "bremsen": {
+    "ru": "يكبح، يفرمل",
+    "pos": "فعل",
+    "forms": "bremste · hat gebremst"
+   },
+   "da": {
+    "ru": "هناك",
+    "pos": "ظرف",
+    "note": "da vorne — هناك في الأمام"
+   },
+   "damit": {
+    "ru": "لكي",
+    "pos": "أداة ربط"
+   },
+   "dann": {
+    "ru": "إذن؛ ثم",
+    "pos": "ظرف"
+   },
+   "der/die/das": {
+    "ru": "أداة التعريف",
+    "pos": "أداة تعريف",
+    "note": "der للمذكر، die للمؤنث والجمع، das للمحايد؛ den للمذكر في حالة النصب، dem للمذكر والمحايد في حالة الجر؛ وdas تعني أيضًا «هذا»"
+   },
+   "dicht": {
+    "ru": "كثيف؛ قريب",
+    "pos": "صفة"
+   },
+   "dort": {
+    "ru": "هناك",
+    "pos": "ظرف"
+   },
+   "dunkel": {
+    "ru": "مظلم",
+    "pos": "صفة"
+   },
+   "durch": {
+    "ru": "عبر، في",
+    "pos": "حرف جر",
+    "note": "durch die Stadt — في المدينة"
+   },
+   "dürfen": {
+    "ru": "يحق له، يُسمح له",
+    "pos": "فعل",
+    "forms": "durfte · hat gedurft"
+   },
+   "ein/eine": {
+    "ru": "أداة النكرة؛ واحد",
+    "pos": "أداة تعريف",
+    "note": "an einer Kreuzung — عند تقاطعٍ ما"
+   },
+   "einschalten": {
+    "ru": "يشغّل",
+    "pos": "فعل",
+    "note": "سابقة منفصلة: schalten … ein",
+    "forms": "schaltete ein · hat eingeschaltet"
+   },
+   "entgegenkommen": {
+    "ru": "يأتي من الاتجاه المقابل",
+    "pos": "فعل",
+    "note": "سابقة منفصلة: kommt … entgegen",
+    "forms": "kam entgegen · ist entgegengekommen"
+   },
+   "es": {
+    "ru": "هو، هي (لغير العاقل)",
+    "pos": "ضمير",
+    "note": "هنا: السيارة (das Auto)"
+   },
+   "fahren": {
+    "ru": "يسير بالسيارة؛ يقود",
+    "pos": "فعل",
+    "forms": "fuhr · ist gefahren"
+   },
+   "gut": {
+    "ru": "جيد",
+    "pos": "صفة",
+    "note": "am besten — من الأفضل",
+    "forms": "gut · besser · am besten"
+   },
+   "heute": {
+    "ru": "اليوم",
+    "pos": "ظرف"
+   },
+   "hier": {
+    "ru": "هنا",
+    "pos": "ظرف"
+   },
+   "hupen": {
+    "ru": "يستخدم البوق",
+    "pos": "فعل",
+    "forms": "hupte · hat gehupt"
+   },
+   "höchstens": {
+    "ru": "كحدّ أقصى",
+    "pos": "ظرف"
+   },
+   "ich": {
+    "ru": "أنا",
+    "pos": "ضمير"
+   },
+   "in": {
+    "ru": "في",
+    "pos": "حرف جر",
+    "note": "im = in dem: im Bereich — في المنطقة"
+   },
+   "jetzt": {
+    "ru": "الآن",
+    "pos": "ظرف"
+   },
+   "kommen": {
+    "ru": "يأتي",
+    "pos": "فعل",
+    "note": "von rechts kommen — يأتي من اليمين",
+    "forms": "kam · ist gekommen"
+   },
+   "langsam": {
+    "ru": "بطيء؛ ببطء",
+    "pos": "صفة"
+   },
+   "mehr": {
+    "ru": "أكثر",
+    "pos": "ظرف",
+    "note": "mehr als — أكثر من"
+   },
+   "müssen": {
+    "ru": "يجب عليه",
+    "pos": "فعل",
+    "forms": "musste · hat gemusst"
+   },
+   "nicht": {
+    "ru": "لا، ليس",
+    "pos": "أداة"
+   },
+   "niemand": {
+    "ru": "لا أحد",
+    "pos": "ضمير"
+   },
+   "nächste": {
+    "ru": "القادم، الأقرب",
+    "pos": "صفة"
+   },
+   "perfekt": {
+    "ru": "ممتاز، مثالي",
+    "pos": "صفة"
+   },
+   "reichen": {
+    "ru": "يكفي",
+    "pos": "فعل",
+    "forms": "reichte · hat gereicht"
+   },
+   "richtig": {
+    "ru": "صحيح",
+    "pos": "صفة",
+    "note": "…, richtig? — …، صحيح؟"
+   },
+   "schauen": {
+    "ru": "ينظر",
+    "pos": "فعل",
+    "forms": "schaute · hat geschaut"
+   },
+   "sehen": {
+    "ru": "يرى",
+    "pos": "فعل",
+    "forms": "sah · hat gesehen"
+   },
+   "sehr": {
+    "ru": "جدًا",
+    "pos": "ظرف"
+   },
+   "sein": {
+    "ru": "يكون",
+    "pos": "فعل",
+    "forms": "war · ist gewesen"
+   },
+   "sicher": {
+    "ru": "آمن؛ متأكد",
+    "pos": "صفة"
+   },
+   "so": {
+    "ru": "هكذا",
+    "pos": "ظرف"
+   },
+   "stehen": {
+    "ru": "يقف؛ يوجد",
+    "pos": "فعل",
+    "note": "Schilder stehen — توجد لافتات",
+    "forms": "stand · hat gestanden"
+   },
+   "und": {
+    "ru": "و",
+    "pos": "أداة ربط"
+   },
+   "unter": {
+    "ru": "تحت؛ أقل من",
+    "pos": "حرف جر"
+   },
+   "vor": {
+    "ru": "قبل، أمام",
+    "pos": "حرف جر",
+    "note": "rechts vor links — اليمين قبل اليسار"
+   },
+   "vorne": {
+    "ru": "في الأمام",
+    "pos": "ظرف"
+   },
+   "warnen": {
+    "ru": "يحذّر",
+    "pos": "فعل",
+    "forms": "warnte · hat gewarnt"
+   },
+   "welcher": {
+    "ru": "أيّ",
+    "pos": "ضمير"
+   },
+   "wenn": {
+    "ru": "إذا؛ عندما",
+    "pos": "أداة ربط",
+    "note": "auch wenn — حتى لو"
+   },
+   "wieder": {
+    "ru": "من جديد",
+    "pos": "ظرف"
+   },
+   "wir": {
+    "ru": "نحن",
+    "pos": "ضمير",
+    "note": "uns — نا: vor uns — أمامنا"
+   }
+  }
+ }
+}

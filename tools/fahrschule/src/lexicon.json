@@ -4960,7 +4960,8 @@
  "welcher": {
   "pos": "мест.",
   "f": [
-   "welche"
+   "welche",
+   "welches"
   ],
   "tr": [
    "какой, который",
@@ -5524,7 +5525,8 @@
  "blenden": {
   "pos": "гл.",
   "f": [
-   "geblendet"
+   "geblendet",
+   "blende"
   ],
   "forms": "blendete · hat geblendet",
   "tr": [
@@ -5943,6 +5945,74 @@
    "с октября 2024 — только со значком «гора со снежинкой» (Alpine)",
    "з жовтня 2024 — лише зі значком «гора зі сніжинкою» (Alpine)",
    "منذ أكتوبر 2024 فقط برمز الجبل مع ندفة الثلج"
+  ]
+ },
+ "einschalten": {
+  "pos": "гл.",
+  "forms": "schaltete ein · hat eingeschaltet",
+  "tr": [
+   "включать",
+   "вмикати",
+   "يشغّل"
+  ],
+  "note": [
+   "отделяемая приставка: schalten … ein",
+   "відокремлюваний префікс: schalten … ein",
+   "سابقة منفصلة: schalten … ein"
+  ]
+ },
+ "ausschalten": {
+  "pos": "гл.",
+  "forms": "schaltete aus · hat ausgeschaltet",
+  "tr": [
+   "выключать",
+   "вимикати",
+   "يطفئ"
+  ],
+  "note": [
+   "отделяемая приставка: schalten … aus",
+   "відокремлюваний префікс: schalten … aus",
+   "سابقة منفصلة: schalten … aus"
+  ]
+ },
+ "Fahrer": {
+  "pos": "сущ.",
+  "art": "der",
+  "pl": "die Fahrer",
+  "tr": [
+   "водитель",
+   "водій",
+   "سائق"
+  ]
+ },
+ "Herbst": {
+  "pos": "сущ.",
+  "art": "der",
+  "pl": "die Herbste",
+  "tr": [
+   "осень",
+   "осінь",
+   "الخريف"
+  ],
+  "note": [
+   "im Herbst — осенью",
+   "im Herbst — восени",
+   "im Herbst — في الخريف"
+  ]
+ },
+ "Nachtfahrt": {
+  "pos": "сущ.",
+  "art": "die",
+  "pl": "die Nachtfahrten",
+  "tr": [
+   "ночная поездка",
+   "нічна поїздка",
+   "قيادة ليلية"
+  ],
+  "note": [
+   "в автошколе — обязательный урок (Sonderfahrt)",
+   "в автошколі — обов'язковий урок (Sonderfahrt)",
+   "في مدرسة القيادة درس إلزامي (Sonderfahrt)"
   ]
  }
 }
