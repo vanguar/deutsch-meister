@@ -30,6 +30,36 @@
       "source": "Википедия (de): «Bayern» и связанные статьи (история, Октоберфест, CSU, диалекты, праздники)",
       "license": "текст курса German Morning",
       "land": "bayern"
+    },
+    {
+      "id": "mecklenburg-vorpommern-b1",
+      "title": "Mecklenburg-Vorpommern",
+      "titleRu": "Мекленбург — Передняя Померания",
+      "author": "German Morning",
+      "level": "B1",
+      "year": "2026",
+      "chapters": 7,
+      "words": 416,
+      "minutes": 4,
+      "cover": "⚓",
+      "source": "Википедия (de): «Mecklenburg-Vorpommern» и связанные статьи (история, университеты, острова, курорты, нижненемецкий, праздники)",
+      "license": "текст курса German Morning",
+      "land": "mecklenburg-vorpommern"
+    },
+    {
+      "id": "mecklenburg-vorpommern-b2",
+      "title": "Mecklenburg-Vorpommern",
+      "titleRu": "Мекленбург — Передняя Померания",
+      "author": "German Morning",
+      "level": "B2",
+      "year": "2026",
+      "chapters": 7,
+      "words": 661,
+      "minutes": 6,
+      "cover": "⚓",
+      "source": "Википедия (de): «Mecklenburg-Vorpommern» и связанные статьи (история, университеты, острова, курорты, нижненемецкий, праздники)",
+      "license": "текст курса German Morning",
+      "land": "mecklenburg-vorpommern"
     }
   ]
 }

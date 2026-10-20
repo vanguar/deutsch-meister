@@ -1,0 +1,1950 @@
+{
+  "version": 1,
+  "w": {
+    "abodriten": "Abodriten",
+    "abwanderung": "Abwanderung",
+    "acht": "acht",
+    "allem": "alle/alles",
+    "als": "als",
+    "altstädte": "Altstadt",
+    "am": "an",
+    "an": "an",
+    "anderen": "ander",
+    "arbeitsfrei": "arbeitsfrei",
+    "arbeitslosenquote": "Arbeitslosenquote",
+    "auch": "auch",
+    "auf": "auf",
+    "aufgeteilt": "aufteilen",
+    "aufstellen": "aufstellen",
+    "aus": "aus",
+    "backsteingotik": "Backsteingotik",
+    "bartelmann": "Bartelmann",
+    "befehl": "Befehl",
+    "begründer": "Begründer",
+    "bei": "bei",
+    "bekannt": "bekannt",
+    "bekanntesten": "bekanntest",
+    "berge": "Berg",
+    "besiedelte": "besiedelt",
+    "besteht": "bestehen",
+    "besucher": "Besucher",
+    "bezirke": "Bezirk",
+    "bilder": "Bild",
+    "bis": "bis",
+    "brandenburg": "Brandenburg",
+    "bruttoinlandsprodukt": "Bruttoinlandsprodukt",
+    "bruttolohn": "Bruttolohn",
+    "bundesrepublik": "Bundesrepublik",
+    "bäderarchitektur": "Bäderarchitektur",
+    "bäderregelung": "Bäderregelung",
+    "caspar": "Caspar",
+    "charta": "Charta",
+    "damals": "damals",
+    "danach": "danach",
+    "das": "der/die/das",
+    "david": "David",
+    "ddr": "DDR",
+    "dem": "der/die/das",
+    "den": "der/die/das",
+    "der": "der/die/das",
+    "des": "der/die/das",
+    "dessen": "dessen",
+    "deutlich": "deutlich",
+    "deutschen": "deutsch",
+    "deutschland": "Deutschland",
+    "deutschlands": "Deutschland (страна)",
+    "dezember": "Dezember",
+    "die": "der/die/das",
+    "diese": "dieser",
+    "dort": "dort",
+    "drei": "drei",
+    "durch": "durch",
+    "durchschnitt": "Durchschnitt",
+    "dünnsten": "dünn",
+    "ein": "ein/eine",
+    "einbruch": "Einbruch",
+    "eine": "ein/eine",
+    "einen": "ein/eine",
+    "einer": "ein/eine",
+    "eines": "ein/eine",
+    "einheit": "Einheit",
+    "einwohner": "Einwohner",
+    "einwohnern": "Einwohner",
+    "ende": "Ende",
+    "energien": "Energie",
+    "entstand": "entstehen",
+    "er": "er",
+    "erfinder": "Erfinder",
+    "erhebung": "Erhebung",
+    "erholungsorten": "Erholungsort",
+    "erlauben": "erlauben",
+    "erneuerbaren": "erneuerbar",
+    "erst": "erst",
+    "erster": "erst (первый)",
+    "erwirtschaftete": "erwirtschaften",
+    "es": "es",
+    "euro": "Euro",
+    "europäische": "europäisch",
+    "evangelischen": "evangelisch",
+    "feiertag": "Feiertag",
+    "feste": "fest",
+    "fiel": "fallen",
+    "findet": "stattfinden",
+    "fischland-darß-zingst": "Fischland-Darß-Zingst",
+    "flach": "flach",
+    "folgte": "folgen",
+    "frauentag": "Frauentag",
+    "frieden": "Frieden",
+    "friedrich": "Friedrich",
+    "fritz": "Fritz",
+    "für": "für",
+    "gebiet": "Gebiet",
+    "geburtenzahlen": "Geburtenzahl",
+    "gegründet": "gründen",
+    "gehören": "gehören",
+    "gehört": "gehören",
+    "gehörte": "gehören / hören",
+    "gehörten": "gehören",
+    "gesetzlicher": "gesetzlich",
+    "gesprochen": "sprechen",
+    "gibt": "geben",
+    "gilt": "gelten",
+    "gipfel": "Gipfel",
+    "greifswald": "Greifswald",
+    "grenze": "Grenze",
+    "grenzt": "grenzen",
+    "großen": "groß",
+    "großes": "groß",
+    "großstadt": "Großstadt",
+    "größte": "groß",
+    "haben": "haben",
+    "handelszentren": "Handelszentrum",
+    "hanse": "Hanse",
+    "hansestädte": "Hansestadt",
+    "hat": "haben",
+    "heiligendamm": "Heiligendamm",
+    "helpter": "Helpter Berge",
+    "heute": "heute",
+    "heutigen": "heutig",
+    "hiddensee": "Hiddensee",
+    "hier": "hier",
+    "hoch": "hoch",
+    "hochdeutsch": "Hochdeutsch",
+    "hohe": "hoch (высокий праздник)",
+    "höchste": "hoch",
+    "hügelig": "hügelig",
+    "ihrer": "ihr (их, её)",
+    "im": "in",
+    "in": "in",
+    "industriestaaten": "Industriestaat",
+    "ins": "in",
+    "insel": "Insel",
+    "international": "international",
+    "internationale": "international",
+    "internationalen": "international",
+    "ist": "sein",
+    "jahr": "Jahr",
+    "jahren": "Jahr",
+    "jahrhundert": "Jahrhundert",
+    "jasmund": "Jasmund",
+    "jedem": "jeder",
+    "jeden": "jeder",
+    "jedes": "jeder",
+    "jeweils": "jeweils",
+    "juli": "Juli",
+    "jährlich": "jährlich",
+    "kam": "kommen",
+    "kann": "können",
+    "katholischen": "katholisch",
+    "keine": "kein",
+    "kirche": "Kirche",
+    "kleinen": "klein",
+    "kleiner": "klein",
+    "knapp": "knapp",
+    "konkurrierten": "konkurrieren",
+    "konzentriert": "konzentrieren",
+    "korb": "Korb",
+    "korbmacher": "Korbmacher",
+    "kreidefelsen": "Kreidefelsen",
+    "kreisfreien": "kreisfrei",
+    "kur": "Kurland",
+    "königsstuhl": "Königsstuhl",
+    "lag": "liegen",
+    "land": "Land (земля)",
+    "landes": "Land (земля)",
+    "landeshauptstadt": "Landeshauptstadt",
+    "landkreisen": "Landkreis",
+    "landschaft": "Landschaft",
+    "landtag": "Landtag",
+    "lange": "lang",
+    "lebten": "leben",
+    "liegen": "liegen",
+    "liegt": "liegen",
+    "literatur": "Literatur",
+    "länder": "Land (земля)",
+    "ländern": "Land (земля)",
+    "löhne": "Lohn",
+    "löste": "auflösen",
+    "maler": "Maler",
+    "malte": "malen",
+    "manchmal": "manchmal",
+    "maritimen": "maritim",
+    "mecklenburg": "Mecklenburg",
+    "mecklenburg-vorpommern": "Mecklenburg-Vorpommern",
+    "mecklenburgischen": "mecklenburgisch",
+    "mehr": "mehr",
+    "menschen": "Mensch",
+    "meter": "Meter",
+    "militäradministration": "Militäradministration",
+    "milliarden": "Milliarde",
+    "million": "Million",
+    "millionen": "Million",
+    "minderheitensprachen": "Minderheitensprache",
+    "mit": "mit",
+    "mittelalter": "Mittelalter",
+    "mittlere": "mittler",
+    "mittleren": "mittler",
+    "musste": "müssen",
+    "märz": "März",
+    "müritz": "Müritz",
+    "nach": "nach",
+    "nationalpark": "Nationalpark",
+    "nationalparks": "Nationalpark",
+    "neben": "neben",
+    "neu": {
+      "l": "neu",
+      "old": "в обороте aufs neu — снова; сегодня aufs Neue"
+    },
+    "neubrandenburg": "Neubrandenburg",
+    "neueren": "neuer",
+    "neunziger": "neunziger",
+    "niederdeutsch": "Niederdeutsch",
+    "niederdeutsche": "Niederdeutsch",
+    "niederdeutschen": "niederdeutsch",
+    "niedersachsen": "Niedersachsen",
+    "niedriger": "niedrig",
+    "noch": "noch",
+    "nordosten": "Nordosten",
+    "nur": "nur",
+    "oder": "oder",
+    "ohne": "ohne",
+    "oktober": "Oktober",
+    "ostdeutschen": "ostdeutsch",
+    "osten": "Osten",
+    "ostsee": "Ostsee",
+    "ostseeraum": "Ostseeraum",
+    "platt": "Platt",
+    "polen": "Polen",
+    "politische": "politisch",
+    "preußen": "Preußen",
+    "pro": "pro",
+    "prozent": "Prozent",
+    "quadratkilometer": "Quadratkilometer",
+    "quadratkilometern": "Quadratkilometer",
+    "ralswiek": "Ralswiek",
+    "reformationstag": "Reformationstag",
+    "regional": "regional",
+    "residenzensembles": "Residenzensemble",
+    "reuter": "Reuter",
+    "romantik": "Romantik",
+    "rostock": "Rostock",
+    "rostock-warnemünde": "Rostock-Warnemünde",
+    "rostocker": "Rostocker",
+    "rund": "rund",
+    "rügen": "Rügen",
+    "sail": "Sail",
+    "saison": "Saison",
+    "schleswig-holstein": "Schleswig-Holstein",
+    "schloss": "Schloss",
+    "schulfach": "Schulfach",
+    "schweden": "Schweden",
+    "schwedisch-pommern": "Schwedisch-Pommern",
+    "schwerin": "Schwerin",
+    "schweriner": "Schweriner",
+    "sechs": "sechs",
+    "see": "See",
+    "seebad": "Seebad",
+    "seebäder": "Seebad",
+    "seen": "See",
+    "segelschiffe": "Segelschiff",
+    "seiner": "sein (его, свой)",
+    "seit": "seit",
+    "seitdem": "seitdem",
+    "setzte": "setzen",
+    "sich": "sich",
+    "sie": "sie",
+    "siedelten": "siedeln",
+    "sind": "sein",
+    "sitz": "Sitz",
+    "slawischen": "slawisch",
+    "sogenannten": "sogenannt",
+    "sommer": "Sommer",
+    "sondern": "sondern",
+    "sonntagsöffnungen": "Sonntagsöffnung",
+    "sowjetischen": "sowjetisch",
+    "spielen": "spielen",
+    "spitzenreitern": "Spitzenreiter",
+    "statt": "stattfinden",
+    "stattfand": "stattfinden",
+    "stavenhagen": "Stavenhagen",
+    "steht": "stehen",
+    "stettin": "Stettin",
+    "stieg": "steigen",
+    "stralsund": "Stralsund",
+    "strandkorbs": "Strandkorb",
+    "städten": "Stadt",
+    "stärker": "stark",
+    "störtebeker-festspiele": "Störtebeker-Festspiele",
+    "tagt": "tagen",
+    "teil": "Teil",
+    "teilen": "Teil",
+    "tourismus": "Tourismus",
+    "traditioneller": "traditionell",
+    "treffen": "Treffen",
+    "trends": "Trend",
+    "um": "um",
+    "umbruch": "Umbruch",
+    "und": "und",
+    "unesco-welterbe": "UNESCO-Welterbe",
+    "universität": "Universität",
+    "unternehmen": "Unternehmen",
+    "unterzeichnet": "unterzeichnen",
+    "usedom": "Usedom",
+    "usedoms": "Usedom",
+    "verbliebenen": "verbleiben",
+    "vereinte": "vereinen",
+    "verlangsamt": "verlangsamen",
+    "verlor": "verlieren",
+    "verstanden": "verstehen",
+    "verwaltet": "verwalten",
+    "vollständig": "vollständig",
+    "vom": "von",
+    "von": "von",
+    "vor": "vor",
+    "vorpommern": "Vorpommern",
+    "vorpommerns": "Vorpommern",
+    "vorpommerschen": "vorpommersch",
+    "völlig": "völlig",
+    "waren": "sein",
+    "warnemünde": "Warnemünde",
+    "warnemünder": "Warnemünder",
+    "weiten": "weit",
+    "weitere": "weiter",
+    "welt": "Welt",
+    "werften": "Werft",
+    "westdeutschen": "westdeutsch",
+    "westen": "Westen",
+    "westfälischen": "westfälisch",
+    "wichtigen": "wichtig",
+    "wie": "wie",
+    "wieder": "wieder",
+    "wiedervereinigung": "Wiedervereinigung",
+    "wilhelm": "Wilhelm",
+    "windkraft": "Windkraft",
+    "wird": "werden",
+    "wirtschaft": "Wirtschaft",
+    "wismar": "Wismar",
+    "woche": "Woche",
+    "wolgast": "Wolgast",
+    "wuchs": "wachsen",
+    "wurde": "werden",
+    "wurden": "werden",
+    "zahl": "Zahl",
+    "zentren": "Zentrum",
+    "ziehen": "ziehen",
+    "zieht": "ziehen",
+    "zu": "zu",
+    "zudem": "zudem",
+    "zum": "zu",
+    "zur": "zu",
+    "zusammen": "zusammen",
+    "zwei": "zwei",
+    "zweitgrößte": "zweitgrößt",
+    "zwischen": "zwischen",
+    "älteren": "ältere (пожилые)",
+    "älteste": "alt",
+    "über": "über",
+    "übergang": "Übergang",
+    "übernachtungsgäste": "Übernachtungsgast"
+  },
+  "l": {
+    "Abodriten": {
+      "ru": "бодричи (славянский племенной союз)",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null,
+      "note": "только во мн. ч.: die Abodriten"
+    },
+    "Abwanderung": {
+      "ru": "отток (населения), миграция",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "acht": {
+      "ru": "восемь",
+      "pos": "числ."
+    },
+    "alle/alles": {
+      "ru": "все; всё",
+      "pos": "мест."
+    },
+    "als": {
+      "ru": "когда; как; чем",
+      "pos": "союз"
+    },
+    "alt": {
+      "ru": "старый",
+      "pos": "прил.",
+      "forms": "alt · älter · am ältesten"
+    },
+    "Altstadt": {
+      "ru": "старый город, исторический центр",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Altstädte"
+    },
+    "an": {
+      "ru": "у, к, на",
+      "pos": "предл.",
+      "note": "am = an dem. Тж. отделяемая приставка: anfangen «начинать», annehmen, ansehen, anzünden"
+    },
+    "ander": {
+      "pos": "прил.",
+      "ru": "другой, иной"
+    },
+    "arbeitsfrei": {
+      "ru": "нерабочий",
+      "pos": "прил."
+    },
+    "Arbeitslosenquote": {
+      "ru": "уровень безработицы",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Arbeitslosenquoten"
+    },
+    "auch": {
+      "ru": "тоже, также; даже",
+      "pos": "частица"
+    },
+    "auf": {
+      "ru": "на, в",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: aufspringen «вскочить», sich aufmachen"
+    },
+    "auflösen": {
+      "ru": "распускать, упразднять",
+      "pos": "гл.",
+      "forms": "löste auf · hat aufgelöst"
+    },
+    "aufstellen": {
+      "ru": "выстраивать; sich neu aufstellen — перестроиться",
+      "pos": "гл.",
+      "forms": "stellte auf · hat aufgestellt"
+    },
+    "aufteilen": {
+      "ru": "делить, разделять",
+      "pos": "гл.",
+      "forms": "teilte auf · hat aufgeteilt"
+    },
+    "aus": {
+      "ru": "из",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: auslöschen «погасить»"
+    },
+    "Backsteingotik": {
+      "ru": "кирпичная готика",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "Bartelmann": {
+      "ru": "Бартельман (фамилия)",
+      "pos": "имя собств."
+    },
+    "Befehl": {
+      "ru": "приказ",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Befehle"
+    },
+    "Begründer": {
+      "ru": "основатель",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Begründer"
+    },
+    "bei": {
+      "ru": "у, при, возле",
+      "pos": "предл."
+    },
+    "bekannt": {
+      "ru": "известный, знакомый",
+      "pos": "прил."
+    },
+    "bekanntest": {
+      "ru": "самый известный",
+      "pos": "прил."
+    },
+    "Berg": {
+      "ru": "гора",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Berge"
+    },
+    "besiedelt": {
+      "ru": "заселённый",
+      "pos": "прил.",
+      "forms": "besiedelt · dünner besiedelt · am dünnsten besiedelt",
+      "note": "dünn besiedelt — малонаселённый"
+    },
+    "bestehen": {
+      "ru": "состоять; существовать; сдать (экзамен)",
+      "pos": "гл.",
+      "forms": "bestand · hat bestanden",
+      "note": "aus etwas bestehen — состоять из чего-то"
+    },
+    "Besucher": {
+      "ru": "посетитель, гость",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Besucher"
+    },
+    "Bezirk": {
+      "ru": "округ (в ГДР); район",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Bezirke"
+    },
+    "Bild": {
+      "ru": "картина, снимок",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Bilder"
+    },
+    "bis": {
+      "ru": "до; пока не",
+      "pos": "союз"
+    },
+    "Brandenburg": {
+      "ru": "Бранденбург",
+      "pos": "геогр."
+    },
+    "Bruttoinlandsprodukt": {
+      "ru": "валовой внутренний продукт, ВВП",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Bruttoinlandsprodukte"
+    },
+    "Bruttolohn": {
+      "ru": "зарплата брутто (до вычетов)",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Bruttolöhne"
+    },
+    "Bundesrepublik": {
+      "ru": "федеративная республика",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Bundesrepubliken",
+      "note": "die Bundesrepublik Deutschland — ФРГ"
+    },
+    "Bäderarchitektur": {
+      "ru": "курортная архитектура (виллы приморских курортов)",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "Bäderregelung": {
+      "ru": "«курортное правило» (магазины по воскресеньям в курортах)",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "Caspar": {
+      "ru": "Каспар (имя)",
+      "pos": "имя собств."
+    },
+    "Charta": {
+      "ru": "хартия",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Charten"
+    },
+    "damals": {
+      "ru": "тогда, в то время",
+      "pos": "нареч."
+    },
+    "danach": {
+      "ru": "затем, после этого",
+      "pos": "нареч."
+    },
+    "David": {
+      "ru": "Давид (имя)",
+      "pos": "имя собств."
+    },
+    "DDR": {
+      "ru": "ГДР, Германская Демократическая Республика (1949–1990)",
+      "pos": "сокр."
+    },
+    "der/die/das": {
+      "ru": "определённый артикль",
+      "pos": "артикль",
+      "note": "Тж. относительное местоимение «который»"
+    },
+    "dessen": {
+      "ru": "чей, которого (род. п. от der/das)",
+      "pos": "мест."
+    },
+    "deutlich": {
+      "ru": "отчётливый, внятный",
+      "pos": "прил."
+    },
+    "deutsch": {
+      "ru": "немецкий",
+      "pos": "прил."
+    },
+    "Deutschland": {
+      "ru": "Германия",
+      "pos": "геогр."
+    },
+    "Deutschland (страна)": {
+      "ru": "Германия",
+      "pos": "геогр."
+    },
+    "Dezember": {
+      "ru": "декабрь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "dieser": {
+      "ru": "этот, эта, это",
+      "pos": "мест."
+    },
+    "dort": {
+      "ru": "там",
+      "pos": "нареч."
+    },
+    "drei": {
+      "ru": "три",
+      "pos": "числ."
+    },
+    "durch": {
+      "ru": "через, сквозь, из-за",
+      "pos": "предл."
+    },
+    "Durchschnitt": {
+      "ru": "среднее значение",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Durchschnitte",
+      "note": "im Durchschnitt — в среднем"
+    },
+    "dünn": {
+      "ru": "тонкий; редкий",
+      "pos": "прил.",
+      "forms": "dünn · dünner · am dünnsten",
+      "note": "dünn besiedelt — редко заселённый"
+    },
+    "ein/eine": {
+      "ru": "неопределённый артикль",
+      "pos": "артикль",
+      "note": "einer — «один, некто»"
+    },
+    "Einbruch": {
+      "ru": "резкое падение; взлом",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Einbrüche"
+    },
+    "Einheit": {
+      "ru": "единство; единое целое",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Einheiten"
+    },
+    "Einwohner": {
+      "ru": "житель",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Einwohner"
+    },
+    "Ende": {
+      "ru": "конец",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Enden"
+    },
+    "Energie": {
+      "ru": "энергия",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Energien"
+    },
+    "entstehen": {
+      "ru": "возникать",
+      "pos": "гл.",
+      "forms": "entstand · ist entstanden"
+    },
+    "er": {
+      "ru": "он",
+      "pos": "мест.",
+      "note": "ihn — его, ihm — ему"
+    },
+    "Erfinder": {
+      "ru": "изобретатель",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Erfinder"
+    },
+    "Erhebung": {
+      "ru": "возвышенность",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Erhebungen"
+    },
+    "Erholungsort": {
+      "ru": "место отдыха, курорт",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Erholungsorte"
+    },
+    "erlauben": {
+      "ru": "разрешать",
+      "pos": "гл.",
+      "forms": "erlaubte · hat erlaubt"
+    },
+    "erneuerbar": {
+      "ru": "возобновляемый",
+      "pos": "прил.",
+      "note": "erneuerbare Energien — возобновляемые источники энергии"
+    },
+    "erst": {
+      "ru": "лишь, только; сначала",
+      "pos": "нареч.",
+      "note": "erst 2010 — лишь в 2010 году"
+    },
+    "erst (первый)": {
+      "ru": "первый",
+      "pos": "прил.",
+      "note": "der erste, erster Ministerpräsident — первый премьер-министр"
+    },
+    "erwirtschaften": {
+      "ru": "зарабатывать, производить (доход)",
+      "pos": "гл.",
+      "forms": "erwirtschaftete · hat erwirtschaftet"
+    },
+    "es": {
+      "ru": "оно; это",
+      "pos": "мест."
+    },
+    "Euro": {
+      "ru": "евро",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Euro"
+    },
+    "europäisch": {
+      "ru": "европейский",
+      "pos": "прил."
+    },
+    "evangelisch": {
+      "ru": "евангелический (протестантский)",
+      "pos": "прил."
+    },
+    "fallen": {
+      "ru": "падать",
+      "pos": "гл.",
+      "forms": "fiel · ist gefallen",
+      "note": "in die Augen fallen — броситься в глаза; schwerfallen — даваться с трудом"
+    },
+    "Feiertag": {
+      "ru": "праздничный (нерабочий) день",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Feiertage"
+    },
+    "fest": {
+      "ru": "твёрдый, прочный",
+      "pos": "прил."
+    },
+    "Fischland-Darß-Zingst": {
+      "ru": "Фишланд-Дарс-Цингст (полуостров)",
+      "pos": "геогр."
+    },
+    "flach": {
+      "ru": "плоский, равнинный",
+      "pos": "прил."
+    },
+    "folgen": {
+      "ru": "следовать; слушаться",
+      "pos": "гл.",
+      "forms": "folgte · ist gefolgt"
+    },
+    "Frauentag": {
+      "ru": "Женский день (8 марта)",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null,
+      "note": "der Internationale Frauentag — Международный женский день"
+    },
+    "Frieden": {
+      "ru": "мир (договор); покой",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "Friedrich": {
+      "ru": "Фридрих (имя, фамилия)",
+      "pos": "имя собств."
+    },
+    "Fritz": {
+      "ru": "Фриц (имя)",
+      "pos": "имя собств."
+    },
+    "für": {
+      "ru": "для, за",
+      "pos": "предл."
+    },
+    "geben": {
+      "ru": "давать",
+      "pos": "гл.",
+      "forms": "gab · hat gegeben"
+    },
+    "Gebiet": {
+      "ru": "территория, область",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Gebiete"
+    },
+    "Geburtenzahl": {
+      "ru": "число рождений",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Geburtenzahlen"
+    },
+    "gehören": {
+      "ru": "принадлежать, относиться",
+      "pos": "гл.",
+      "forms": "gehörte · hat gehört",
+      "note": "zu etwas gehören — относиться к чему-то, входить в"
+    },
+    "gehören / hören": {
+      "ru": "принадлежать; слышать",
+      "pos": "гл.",
+      "forms": "gehörte · hat gehört; hörte · hat gehört",
+      "note": "gehört — и форма gehören «принадлежать», и Partizip II от hören: haben wir gehört"
+    },
+    "gelten": {
+      "ru": "считаться; быть действительным",
+      "pos": "гл.",
+      "forms": "galt · hat gegolten",
+      "note": "als … gelten — считаться кем-то"
+    },
+    "gesetzlich": {
+      "ru": "законный, установленный законом; по закону",
+      "pos": "прил."
+    },
+    "Gipfel": {
+      "ru": "вершина; саммит",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Gipfel"
+    },
+    "Greifswald": {
+      "ru": "Грайфсвальд",
+      "pos": "геогр."
+    },
+    "Grenze": {
+      "ru": "граница",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Grenzen"
+    },
+    "grenzen": {
+      "ru": "граничить",
+      "pos": "гл.",
+      "forms": "grenzte · hat gegrenzt",
+      "note": "an etwas (A) grenzen — граничить с чем-то"
+    },
+    "groß": {
+      "ru": "большой",
+      "pos": "прил.",
+      "forms": "groß · größer · am größten"
+    },
+    "Großstadt": {
+      "ru": "крупный город (более 100 000 жителей)",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Großstädte"
+    },
+    "gründen": {
+      "ru": "основывать",
+      "pos": "гл.",
+      "forms": "gründete · hat gegründet"
+    },
+    "haben": {
+      "ru": "иметь; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "hatte · hat gehabt"
+    },
+    "Handelszentrum": {
+      "ru": "торговый центр (город)",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Handelszentren"
+    },
+    "Hanse": {
+      "ru": "Ганза (торговый союз городов)",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "Hansestadt": {
+      "ru": "ганзейский город",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Hansestädte"
+    },
+    "Heiligendamm": {
+      "ru": "Хайлигендамм (курорт под Ростоком)",
+      "pos": "геогр."
+    },
+    "Helpter Berge": {
+      "ru": "Хельптер-Берге (холмы, 179 м)",
+      "pos": "геогр."
+    },
+    "heute": {
+      "ru": "сегодня",
+      "pos": "нареч."
+    },
+    "heutig": {
+      "ru": "нынешний, сегодняшний",
+      "pos": "прил."
+    },
+    "Hiddensee": {
+      "ru": "Хиддензе (остров)",
+      "pos": "геогр."
+    },
+    "hier": {
+      "ru": "здесь",
+      "pos": "нареч."
+    },
+    "hoch": {
+      "ru": "высокий",
+      "pos": "прил.",
+      "forms": "hoch · höher · am höchsten"
+    },
+    "hoch (высокий праздник)": {
+      "ru": "высокий",
+      "pos": "прил.",
+      "note": "das Hohe Friedensfest — Высокий праздник мира (Аугсбург, 8 августа)"
+    },
+    "Hochdeutsch": {
+      "ru": "литературный немецкий язык",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "hügelig": {
+      "ru": "холмистый",
+      "pos": "прил."
+    },
+    "ihr (их, её)": {
+      "ru": "их; её",
+      "pos": "мест."
+    },
+    "in": {
+      "ru": "в (im = in dem, ins = in das)",
+      "pos": "предл."
+    },
+    "Industriestaat": {
+      "ru": "индустриальное государство",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Industriestaaten"
+    },
+    "Insel": {
+      "ru": "остров",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Inseln"
+    },
+    "international": {
+      "ru": "на международном уровне",
+      "pos": "нареч."
+    },
+    "Jahr": {
+      "ru": "год",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Jahre"
+    },
+    "Jahrhundert": {
+      "ru": "век, столетие",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Jahrhunderte"
+    },
+    "Jasmund": {
+      "ru": "Ясмунд (полуостров на Рюгене)",
+      "pos": "геогр."
+    },
+    "jeder": {
+      "ru": "каждый",
+      "pos": "мест."
+    },
+    "jeweils": {
+      "ru": "каждый раз, соответственно",
+      "pos": "нареч."
+    },
+    "Juli": {
+      "ru": "июль",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Julis"
+    },
+    "jährlich": {
+      "ru": "ежегодно",
+      "pos": "нареч."
+    },
+    "katholisch": {
+      "ru": "католический",
+      "pos": "прил."
+    },
+    "kein": {
+      "ru": "никакой, ни один",
+      "pos": "мест."
+    },
+    "Kirche": {
+      "ru": "церковь",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Kirchen"
+    },
+    "klein": {
+      "ru": "маленький",
+      "pos": "прил."
+    },
+    "knapp": {
+      "ru": "чуть меньше, почти",
+      "pos": "нареч.",
+      "note": "knapp 1,6 Millionen — почти 1,6 миллиона"
+    },
+    "kommen": {
+      "ru": "приходить, приезжать",
+      "pos": "гл.",
+      "forms": "kam · ist gekommen"
+    },
+    "konkurrieren": {
+      "ru": "конкурировать, соперничать",
+      "pos": "гл.",
+      "forms": "konkurrierte · hat konkurriert"
+    },
+    "konzentrieren": {
+      "ru": "сосредоточивать",
+      "pos": "гл.",
+      "forms": "konzentrierte · hat konzentriert",
+      "note": "sich konzentrieren auf — сосредоточиваться на"
+    },
+    "Korb": {
+      "ru": "корзина",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Körbe"
+    },
+    "Korbmacher": {
+      "ru": "корзинщик",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Korbmacher"
+    },
+    "Kreidefelsen": {
+      "ru": "меловая скала",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Kreidefelsen"
+    },
+    "kreisfrei": {
+      "ru": "внерайонный (о городе)",
+      "pos": "прил.",
+      "note": "kreisfreie Stadt — город, не входящий в район"
+    },
+    "Kurland": {
+      "ru": "Курляндия (историческая область на западе Латвии)",
+      "pos": "геогр.",
+      "note": "Kur- und Livland = Kurland und Livland"
+    },
+    "Königsstuhl": {
+      "ru": "Кёнигсштуль (меловая скала, 118 м)",
+      "pos": "геогр."
+    },
+    "können": {
+      "ru": "мочь, уметь",
+      "pos": "гл.",
+      "forms": "konnte · hat gekonnt"
+    },
+    "Land (земля)": {
+      "ru": "земля (федеральная); страна",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Länder",
+      "note": "Bundesland — федеральная земля; in anderen Ländern — в других землях"
+    },
+    "Landeshauptstadt": {
+      "ru": "столица земли",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Landeshauptstädte"
+    },
+    "Landkreis": {
+      "ru": "район (административный)",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Landkreise"
+    },
+    "Landschaft": {
+      "ru": "ландшафт, местность",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Landschaften"
+    },
+    "Landtag": {
+      "ru": "ландтаг (парламент земли)",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Landtage"
+    },
+    "lang": {
+      "ru": "длинный, долгий",
+      "pos": "прил.",
+      "forms": "lang · länger · am längsten"
+    },
+    "leben": {
+      "ru": "жить",
+      "pos": "гл.",
+      "forms": "lebte · hat gelebt"
+    },
+    "liegen": {
+      "ru": "лежать",
+      "pos": "гл.",
+      "forms": "lag · hat gelegen"
+    },
+    "Literatur": {
+      "ru": "литература",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "Lohn": {
+      "ru": "зарплата",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Löhne"
+    },
+    "malen": {
+      "ru": "рисовать, писать (картину)",
+      "pos": "гл.",
+      "forms": "malte · hat gemalt"
+    },
+    "Maler": {
+      "ru": "художник",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Maler"
+    },
+    "manchmal": {
+      "ru": "иногда",
+      "pos": "нареч."
+    },
+    "maritim": {
+      "ru": "морской",
+      "pos": "прил."
+    },
+    "Mecklenburg": {
+      "ru": "Мекленбург",
+      "pos": "геогр."
+    },
+    "Mecklenburg-Vorpommern": {
+      "ru": "Мекленбург — Передняя Померания",
+      "pos": "геогр."
+    },
+    "mecklenburgisch": {
+      "ru": "мекленбургский",
+      "pos": "прил."
+    },
+    "mehr": {
+      "ru": "больше",
+      "pos": "нареч.",
+      "note": "В nicht/kein … mehr — больше не. Формально компаратив от viel"
+    },
+    "Mensch": {
+      "ru": "человек",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Menschen",
+      "decl": "n-Deklination: des Menschen · dem/den Menschen"
+    },
+    "Meter": {
+      "ru": "метр",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Meter",
+      "note": "in 30 Metern Tiefe — на глубине 30 метров"
+    },
+    "Militäradministration": {
+      "ru": "военная администрация",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Militäradministrationen"
+    },
+    "Milliarde": {
+      "ru": "миллиард",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Milliarden"
+    },
+    "Million": {
+      "ru": "миллион",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Millionen"
+    },
+    "Minderheitensprache": {
+      "ru": "язык меньшинства",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Minderheitensprachen"
+    },
+    "mit": {
+      "ru": "с",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: mitgehen «пойти вместе»"
+    },
+    "Mittelalter": {
+      "ru": "Средние века",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "mittler": {
+      "ru": "средний",
+      "pos": "прил.",
+      "note": "der mittlere Bruttolohn — медианная (средняя) зарплата брутто"
+    },
+    "März": {
+      "ru": "март",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Märze"
+    },
+    "Müritz": {
+      "ru": "Мюриц (озеро)",
+      "pos": "геогр."
+    },
+    "müssen": {
+      "ru": "быть вынужденным, должен",
+      "pos": "гл.",
+      "forms": "musste · hat gemusst"
+    },
+    "nach": {
+      "ru": "в, на, после, по",
+      "pos": "предл."
+    },
+    "Nationalpark": {
+      "ru": "национальный парк",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Nationalparks"
+    },
+    "neben": {
+      "pos": "предл.",
+      "ru": "рядом с, возле"
+    },
+    "neu": {
+      "ru": "новый",
+      "pos": "прил."
+    },
+    "Neubrandenburg": {
+      "ru": "Нойбранденбург",
+      "pos": "геогр."
+    },
+    "neuer": {
+      "ru": "новый (более новый)",
+      "pos": "прил.",
+      "note": "die neuere Literatur — новая литература"
+    },
+    "neunziger": {
+      "ru": "девяностые",
+      "pos": "прил.",
+      "note": "in den neunziger Jahren — в девяностые годы"
+    },
+    "Niederdeutsch": {
+      "ru": "нижненемецкий язык",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null,
+      "note": "das Niederdeutsche — то же с артиклем"
+    },
+    "niederdeutsch": {
+      "ru": "нижненемецкий",
+      "pos": "прил."
+    },
+    "Niedersachsen": {
+      "ru": "Нижняя Саксония",
+      "pos": "геогр."
+    },
+    "niedrig": {
+      "ru": "низкий",
+      "pos": "прил."
+    },
+    "noch": {
+      "ru": "ещё",
+      "pos": "нареч."
+    },
+    "Nordosten": {
+      "ru": "северо-восток",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "nur": {
+      "ru": "только, лишь",
+      "pos": "частица"
+    },
+    "oder": {
+      "ru": "или",
+      "pos": "союз"
+    },
+    "ohne": {
+      "ru": "без",
+      "pos": "предл."
+    },
+    "Oktober": {
+      "ru": "октябрь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Oktober"
+    },
+    "ostdeutsch": {
+      "ru": "восточногерманский",
+      "pos": "прил."
+    },
+    "Osten": {
+      "ru": "восток",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "Ostsee": {
+      "ru": "Балтийское море",
+      "pos": "геогр."
+    },
+    "Ostseeraum": {
+      "ru": "регион Балтийского моря",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "Platt": {
+      "ru": "«платт», нижненемецкий говор",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "Polen": {
+      "ru": "Польша",
+      "pos": "геогр."
+    },
+    "politisch": {
+      "ru": "политический",
+      "pos": "прил."
+    },
+    "Preußen": {
+      "ru": "Пруссия",
+      "pos": "геогр."
+    },
+    "pro": {
+      "ru": "в, за (на единицу)",
+      "pos": "предл.",
+      "note": "3,5 Kilometer pro Sekunde — 3,5 км в секунду"
+    },
+    "Prozent": {
+      "ru": "процент",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Prozente",
+      "note": "после числа не изменяется: 1,3 Prozent"
+    },
+    "Quadratkilometer": {
+      "ru": "квадратный километр",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Quadratkilometer",
+      "note": "сокращённо km²"
+    },
+    "Ralswiek": {
+      "ru": "Ральсвик (на Рюгене)",
+      "pos": "геогр."
+    },
+    "Reformationstag": {
+      "ru": "День Реформации (31 октября)",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "regional": {
+      "ru": "региональный",
+      "pos": "прил.",
+      "note": "Regional- oder Minderheitensprachen — региональные языки или языки меньшинств"
+    },
+    "Residenzensemble": {
+      "ru": "резиденционный ансамбль (замки, сады)",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Residenzensembles"
+    },
+    "Reuter": {
+      "ru": "Ройтер (фамилия)",
+      "pos": "имя собств.",
+      "note": "Fritz Reuter (1810–1874) — писатель на нижненемецком"
+    },
+    "Romantik": {
+      "ru": "романтизм",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "Rostock": {
+      "ru": "Росток",
+      "pos": "геогр."
+    },
+    "Rostock-Warnemünde": {
+      "ru": "Росток-Варнемюнде",
+      "pos": "геогр."
+    },
+    "Rostocker": {
+      "ru": "ростокский",
+      "pos": "прил."
+    },
+    "rund": {
+      "ru": "около, примерно; круглый",
+      "pos": "нареч./прил.",
+      "note": "rund 550.000 — около 550 000"
+    },
+    "Rügen": {
+      "ru": "Рюген (самый большой остров Германии)",
+      "pos": "геогр."
+    },
+    "Sail": {
+      "ru": "«Сейл» (в названии Hanse Sail — фестиваль парусников)",
+      "pos": "имя собств."
+    },
+    "Saison": {
+      "ru": "сезон",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Saisons"
+    },
+    "Schleswig-Holstein": {
+      "ru": "Шлезвиг-Гольштейн",
+      "pos": "геогр."
+    },
+    "Schloss": {
+      "art": "das",
+      "pl": "die Schlösser",
+      "pos": "сущ.",
+      "ru": "замок (строение)"
+    },
+    "Schulfach": {
+      "ru": "школьный предмет",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Schulfächer"
+    },
+    "Schweden": {
+      "ru": "Швеция",
+      "pos": "геогр."
+    },
+    "Schwedisch-Pommern": {
+      "ru": "Шведская Померания (1648–1815)",
+      "pos": "геогр."
+    },
+    "Schwerin": {
+      "ru": "Шверин",
+      "pos": "геогр."
+    },
+    "Schweriner": {
+      "ru": "шверинский",
+      "pos": "прил.",
+      "note": "das Schweriner Schloss — Шверинский замок"
+    },
+    "sechs": {
+      "ru": "шесть",
+      "pos": "числ."
+    },
+    "See": {
+      "ru": "озеро",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Seen",
+      "note": "der See — озеро; die See — море"
+    },
+    "Seebad": {
+      "ru": "морской курорт",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Seebäder"
+    },
+    "Segelschiff": {
+      "ru": "парусник",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Segelschiffe"
+    },
+    "sein": {
+      "ru": "быть; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "war · ist gewesen"
+    },
+    "sein (его, свой)": {
+      "ru": "его, свой",
+      "pos": "мест."
+    },
+    "seit": {
+      "ru": "с (какого-то времени)",
+      "pos": "предл."
+    },
+    "seitdem": {
+      "ru": "с тех пор",
+      "pos": "нареч."
+    },
+    "setzen": {
+      "ru": "сажать, ставить",
+      "pos": "гл.",
+      "forms": "setzte · hat gesetzt",
+      "note": "auf etwas setzen — делать ставку на что-то"
+    },
+    "sich": {
+      "ru": "себя, себе",
+      "pos": "мест.",
+      "note": "Возвратное местоимение, часть возвратного глагола: sich auf den Weg machen, sich setzen, sich legen, sich nähern, sich gefallen lassen, sich getrauen, sich umsehen"
+    },
+    "sie": {
+      "ru": "она; они; Вы",
+      "pos": "мест."
+    },
+    "siedeln": {
+      "ru": "селиться, жить (о народе)",
+      "pos": "гл.",
+      "forms": "siedelte · hat gesiedelt"
+    },
+    "Sitz": {
+      "ru": "штаб-квартира; место",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Sitze",
+      "note": "seinen Sitz haben — находиться (о фирме); im Landtag — место"
+    },
+    "slawisch": {
+      "ru": "славянский",
+      "pos": "прил."
+    },
+    "sogenannt": {
+      "ru": "так называемый",
+      "pos": "прил."
+    },
+    "Sommer": {
+      "ru": "лето",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Sommer"
+    },
+    "sondern": {
+      "ru": "а, но (после отрицания)",
+      "pos": "союз"
+    },
+    "Sonntagsöffnung": {
+      "ru": "работа магазинов в воскресенье",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Sonntagsöffnungen"
+    },
+    "sowjetisch": {
+      "ru": "советский",
+      "pos": "прил."
+    },
+    "spielen": {
+      "ru": "играть",
+      "pos": "гл.",
+      "forms": "spielte · hat gespielt"
+    },
+    "Spitzenreiter": {
+      "ru": "лидер (рейтинга)",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Spitzenreiter"
+    },
+    "sprechen": {
+      "ru": "говорить, сказать",
+      "pos": "гл.",
+      "forms": "sprach · hat gesprochen",
+      "old": "здесь sprach в значении «сказал» — книжно и устарело; в совр. речи sagte"
+    },
+    "Stadt": {
+      "ru": "город",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Städte"
+    },
+    "stark": {
+      "ru": "сильный",
+      "pos": "прил.",
+      "forms": "stark · stärker · am stärksten"
+    },
+    "stattfinden": {
+      "ru": "иметь место, быть",
+      "pos": "гл.",
+      "forms": "fand statt · hat stattgefunden",
+      "note": "ein Zusammenhang findet statt — связь существует"
+    },
+    "Stavenhagen": {
+      "ru": "Ставенхаген",
+      "pos": "геогр."
+    },
+    "stehen": {
+      "ru": "стоять",
+      "pos": "гл.",
+      "forms": "stand · hat gestanden"
+    },
+    "steigen": {
+      "forms": "stieg · ist gestiegen",
+      "note": "im Zimmer auf und ab steigen — шагать по комнате взад-вперёд",
+      "pos": "гл.",
+      "ru": "подниматься; слезать"
+    },
+    "Stettin": {
+      "ru": "Штеттин (сегодня Щецин, Польша)",
+      "pos": "геогр."
+    },
+    "Stralsund": {
+      "ru": "Штральзунд",
+      "pos": "геогр."
+    },
+    "Strandkorb": {
+      "ru": "пляжное кресло-корзина",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Strandkörbe"
+    },
+    "Störtebeker-Festspiele": {
+      "ru": "фестиваль «Штёртебекер» (Рюген)",
+      "pos": "имя собств.",
+      "note": "спектакли под открытым небом в Ральсвике, с 1993 года"
+    },
+    "tagen": {
+      "ru": "заседать",
+      "pos": "гл.",
+      "forms": "tagte · hat getagt"
+    },
+    "Teil": {
+      "ru": "часть; доля",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Teile",
+      "note": "sein Teil haben — получить своё"
+    },
+    "Tourismus": {
+      "ru": "туризм",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "traditionell": {
+      "ru": "традиционный",
+      "pos": "прил."
+    },
+    "Treffen": {
+      "ru": "встреча",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Treffen"
+    },
+    "Trend": {
+      "ru": "тенденция",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Trends"
+    },
+    "um": {
+      "ru": "вокруг, в (о времени)",
+      "pos": "предл.",
+      "note": "um … zu — чтобы. Тж. отделяемая приставка: sich umsehen «оглядеться»"
+    },
+    "Umbruch": {
+      "ru": "перелом, резкая перемена",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Umbrüche"
+    },
+    "und": {
+      "ru": "и, а",
+      "pos": "союз"
+    },
+    "UNESCO-Welterbe": {
+      "ru": "Всемирное наследие ЮНЕСКО",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "Universität": {
+      "ru": "университет",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Universitäten"
+    },
+    "Unternehmen": {
+      "ru": "предприятие, компания",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Unternehmen"
+    },
+    "unterzeichnen": {
+      "ru": "подписывать",
+      "pos": "гл.",
+      "forms": "unterzeichnete · hat unterzeichnet"
+    },
+    "Usedom": {
+      "ru": "Узедом (остров)",
+      "pos": "геогр.",
+      "note": "Usedoms — Узедома"
+    },
+    "verbleiben": {
+      "ru": "оставаться",
+      "pos": "гл.",
+      "forms": "verblieb · ist verblieben"
+    },
+    "vereinen": {
+      "ru": "объединять",
+      "pos": "гл.",
+      "forms": "vereinte · hat vereint"
+    },
+    "verlangsamen": {
+      "ru": "замедлять; sich verlangsamen — замедляться",
+      "pos": "гл.",
+      "forms": "verlangsamte · hat verlangsamt"
+    },
+    "verlieren": {
+      "forms": "verlor · hat verloren",
+      "pos": "гл.",
+      "ru": "терять"
+    },
+    "verstehen": {
+      "ru": "понимать",
+      "pos": "гл.",
+      "forms": "verstand · hat verstanden",
+      "note": "sich verstehen auf — знать толк в чём-л."
+    },
+    "verwalten": {
+      "ru": "управлять, администрировать",
+      "pos": "гл.",
+      "forms": "verwaltete · hat verwaltet"
+    },
+    "vollständig": {
+      "ru": "полностью, целиком",
+      "pos": "нареч."
+    },
+    "von": {
+      "ru": "от, из, о (vom = von dem)",
+      "pos": "предл."
+    },
+    "vor": {
+      "ru": "перед, до; от (страха)",
+      "pos": "предл."
+    },
+    "Vorpommern": {
+      "ru": "Передняя Померания",
+      "pos": "геогр.",
+      "note": "des Vorpommerns — Передней Померании"
+    },
+    "vorpommersch": {
+      "ru": "переднепомеранский",
+      "pos": "прил."
+    },
+    "völlig": {
+      "ru": "полностью, совсем",
+      "pos": "нареч."
+    },
+    "wachsen": {
+      "ru": "расти",
+      "pos": "гл.",
+      "forms": "wuchs · ist gewachsen",
+      "note": "er wächst — с умлаутом в 2-м и 3-м л."
+    },
+    "Warnemünde": {
+      "ru": "Варнемюнде (район Ростока)",
+      "pos": "геогр."
+    },
+    "Warnemünder": {
+      "ru": "варнемюндский",
+      "pos": "прил.",
+      "note": "die Warnemünder Woche — Варнемюндская неделя (парусная регата)"
+    },
+    "weit": {
+      "ru": "далёкий, далеко",
+      "pos": "прил.",
+      "forms": "weit · weiter · am weitesten",
+      "note": "weiter — дальше, далее; von weitem — издали"
+    },
+    "weiter": {
+      "ru": "дальнейший; ещё (weitere — ещё, другие)",
+      "pos": "прил.",
+      "note": "30 weitere Sparkassen — ещё 30 сберкасс"
+    },
+    "Welt": {
+      "art": "die",
+      "pl": "die Welten",
+      "pos": "сущ.",
+      "ru": "мир, свет"
+    },
+    "werden": {
+      "ru": "становиться",
+      "pos": "гл.",
+      "forms": "wurde · ist geworden",
+      "note": "Вспомогательный глагол будущего времени и пассива"
+    },
+    "Werft": {
+      "ru": "верфь",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Werften"
+    },
+    "westdeutsch": {
+      "ru": "западногерманский",
+      "pos": "прил."
+    },
+    "Westen": {
+      "ru": "запад",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "westfälisch": {
+      "ru": "вестфальский",
+      "pos": "прил.",
+      "note": "der Westfälische Frieden (1648) — Вестфальский мир"
+    },
+    "wichtig": {
+      "ru": "важный",
+      "pos": "прил."
+    },
+    "wie": {
+      "ru": "как; какой",
+      "pos": "союз"
+    },
+    "wieder": {
+      "ru": "снова",
+      "pos": "нареч."
+    },
+    "Wiedervereinigung": {
+      "ru": "воссоединение (Германии, 1990)",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "Wilhelm": {
+      "ru": "Вильгельм (имя)",
+      "pos": "имя собств."
+    },
+    "Windkraft": {
+      "ru": "энергия ветра, ветроэнергетика",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "Wirtschaft": {
+      "ru": "экономика, хозяйство",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Wirtschaften"
+    },
+    "Wismar": {
+      "ru": "Висмар",
+      "pos": "геогр."
+    },
+    "Woche": {
+      "ru": "неделя",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Wochen"
+    },
+    "Wolgast": {
+      "ru": "Вольгаст",
+      "pos": "геогр."
+    },
+    "Zahl": {
+      "ru": "число, цифра",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Zahlen"
+    },
+    "Zentrum": {
+      "ru": "центр",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Zentren"
+    },
+    "ziehen": {
+      "ru": "двигаться, отправляться; тянуть",
+      "pos": "гл.",
+      "forms": "zog · ist gezogen (двигаться) / hat gezogen (тянуть)"
+    },
+    "zu": {
+      "ru": "к, в; слишком",
+      "pos": "предл.",
+      "note": "zur = zu der, zum = zu dem"
+    },
+    "zudem": {
+      "ru": "кроме того",
+      "pos": "нареч."
+    },
+    "zusammen": {
+      "ru": "вместе",
+      "pos": "нареч."
+    },
+    "zwei": {
+      "ru": "два",
+      "pos": "числ."
+    },
+    "zweitgrößt": {
+      "ru": "второй по величине",
+      "pos": "прил."
+    },
+    "zwischen": {
+      "pos": "предл.",
+      "ru": "между"
+    },
+    "ältere (пожилые)": {
+      "ru": "пожилые (люди)",
+      "pos": "субст. прил.",
+      "decl": "der Ältere / ein Älterer / die Älteren"
+    },
+    "über": {
+      "ru": "над, через, о",
+      "pos": "предл."
+    },
+    "Übergang": {
+      "ru": "переход",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Übergänge"
+    },
+    "Übernachtungsgast": {
+      "ru": "гость с ночёвкой",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Übernachtungsgäste"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "id": "mecklenburg-vorpommern-b1",
+  "kind": "land",
+  "land": "mecklenburg-vorpommern",
+  "title": "Mecklenburg-Vorpommern",
+  "titleRu": "Мекленбург — Передняя Померания",
+  "author": "German Morning",
+  "level": "B1",
+  "levelNote": "B1: короткие предложения, Präsens и Präteritum, основные слова о стране.",
+  "year": "2026",
+  "chapters": 7,
+  "words": 416,
+  "minutes": 4,
+  "photos": 0,
+  "cover": "⚓",
+  "flag": "data/laender/flags/mecklenburg-vorpommern.png",
+  "source": "Википедия (de): «Mecklenburg-Vorpommern» и связанные статьи (история, университеты, острова, курорты, нижненемецкий, праздники)",
+  "sourceUrl": "https://de.wikipedia.org/wiki/Mecklenburg-Vorpommern",
+  "checked": "2026-10-20",
+  "license": "текст курса German Morning"
+}
