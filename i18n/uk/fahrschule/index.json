@@ -98,6 +98,15 @@
     "p-09",
     "r-09"
    ]
+  },
+  {
+   "id": "unfall",
+   "emoji": "🚑",
+   "title": "Unfall und Erste Hilfe",
+   "titleTr": "Аварія і перша допомога",
+   "units": [
+    "t-10"
+   ]
   }
  ],
  "units": [
@@ -343,6 +352,15 @@
    "title": "Kontrollleuchten und Reifen",
    "titleTr": "Контрольні лампи і шини",
    "count": 6
+  },
+  {
+   "id": "t-10",
+   "kind": "theory",
+   "emoji": "🚑",
+   "level": "B1",
+   "title": "Unfall und Erste Hilfe",
+   "titleTr": "Аварія і перша допомога",
+   "count": 19
   }
  ]
 }

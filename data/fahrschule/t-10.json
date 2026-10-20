@@ -1,0 +1,828 @@
+{
+ "id": "t-10",
+ "kind": "theory",
+ "emoji": "🚑",
+ "level": "B1",
+ "title": "Unfall und Erste Hilfe",
+ "titleTr": "Авария и первая помощь",
+ "intro": "Что делать после аварии: обезопасить место, вызвать помощь по 112, оказать первую помощь, оформить европротокол — и как освободить коридор для скорой (Rettungsgasse).",
+ "sections": [
+  {
+   "title": "Обезопасить место аварии",
+   "lines": [
+    {
+     "de": "Nach einem Unfall schalten Sie sofort das Warnblinklicht ein.",
+     "tr": "После аварии сразу включите аварийную сигнализацию.",
+     "o": {
+      "ein": "ein>einschalten",
+      "schalten": "schalten>einschalten"
+     }
+    },
+    {
+     "de": "Ziehen Sie die Warnweste an, bevor Sie aussteigen.",
+     "tr": "Наденьте светоотражающий жилет, прежде чем выйти из машины.",
+     "o": {
+      "an": "an>anziehen",
+      "ziehen": "ziehen>anziehen"
+     }
+    },
+    {
+     "de": "Das Warndreieck stellen Sie innerorts etwa 50 Meter hinter die Unfallstelle.",
+     "tr": "В населённом пункте знак аварийной остановки ставят примерно в 50 метрах позади места аварии."
+    },
+    {
+     "de": "Auf der Landstraße sind es etwa 100 Meter, auf der Autobahn 150 bis 200 Meter.",
+     "tr": "На загородной дороге — около 100 метров, на автобане — 150–200 метров."
+    },
+    {
+     "de": "Auf der Autobahn warten Sie hinter der Schutzplanke, nicht im Auto.",
+     "tr": "На автобане ждите за отбойником, а не в машине."
+    }
+   ]
+  },
+  {
+   "title": "Вызвать помощь: 112",
+   "lines": [
+    {
+     "de": "Den Notruf erreichen Sie unter 112, auch ohne Guthaben auf dem Handy.",
+     "tr": "Экстренную службу можно вызвать по 112, даже без денег на телефоне."
+    },
+    {
+     "de": "Sagen Sie: Wo ist der Unfall? Was ist passiert? Wie viele Verletzte gibt es?",
+     "tr": "Скажите: где авария? Что случилось? Сколько пострадавших?"
+    },
+    {
+     "de": "Legen Sie nicht auf, sondern warten Sie auf Rückfragen.",
+     "tr": "Не кладите трубку, а ждите уточняющих вопросов.",
+     "o": {
+      "auf": "auf>auflegen",
+      "legen": "legen>auflegen"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Первая помощь",
+   "lines": [
+    {
+     "de": "Erste Hilfe ist Pflicht. Wer nicht hilft, macht sich strafbar.",
+     "tr": "Первая помощь обязательна. Кто не помогает, совершает преступление."
+    },
+    {
+     "de": "Für den Führerschein brauchen Sie einen Kurs in Erster Hilfe.",
+     "tr": "Для получения прав нужен курс первой помощи."
+    },
+    {
+     "de": "Atmet ein Verletzter, aber reagiert nicht, legen Sie ihn in die stabile Seitenlage.",
+     "tr": "Если пострадавший дышит, но не реагирует, уложите его в стабильное боковое положение."
+    },
+    {
+     "de": "Atmet er nicht, beginnen Sie sofort mit der Herzdruckmassage.",
+     "tr": "Если он не дышит, сразу начинайте непрямой массаж сердца."
+    }
+   ]
+  },
+  {
+   "title": "Мелкая авария",
+   "lines": [
+    {
+     "de": "Bei einem kleinen Blechschaden machen Sie Fotos und fahren die Autos an den Rand.",
+     "tr": "При небольшой вмятине сделайте фото и уберите машины к краю дороги."
+    },
+    {
+     "de": "Tauschen Sie Namen, Adresse, Kennzeichen und Versicherung aus.",
+     "tr": "Обменяйтесь именами, адресами, номерами машин и данными страховки.",
+     "o": {
+      "aus": "aus>austauschen",
+      "tauschen": "tauschen>austauschen"
+     }
+    },
+    {
+     "de": "Dafür gibt es den Europäischen Unfallbericht.",
+     "tr": "Для этого есть европейский протокол аварии (европротокол)."
+    },
+    {
+     "de": "Wer einfach wegfährt, begeht Unfallflucht. Das ist eine Straftat.",
+     "tr": "Кто просто уезжает, скрывается с места аварии. Это уголовное преступление."
+    }
+   ]
+  },
+  {
+   "title": "Коридор для спасателей",
+   "lines": [
+    {
+     "de": "Stockt der Verkehr auf der Autobahn, bilden Sie sofort eine Rettungsgasse.",
+     "tr": "Если на автобане движение встаёт, сразу освободите коридор для спасателей."
+    },
+    {
+     "de": "Wer ganz links fährt, fährt nach links. Alle anderen fahren nach rechts.",
+     "tr": "Кто едет в крайнем левом ряду, смещается влево. Все остальные — вправо."
+    },
+    {
+     "de": "Keine Rettungsgasse kostet mindestens 200 Euro, zwei Punkte und einen Monat Fahrverbot.",
+     "tr": "Отсутствие коридора стоит минимум 200 евро, два балла и месяц лишения прав."
+    }
+   ]
+  }
+ ],
+ "quiz": [],
+ "signs": {},
+ "gloss": {
+  "w": {
+   "aber": "aber",
+   "adresse": "Adresse",
+   "alle": "alle",
+   "an": "an",
+   "an>anziehen": "anziehen",
+   "anderen": "andere",
+   "atmet": "atmen",
+   "auch": "auch",
+   "auf": "auf",
+   "auf>auflegen": "auflegen",
+   "aus>austauschen": "austauschen",
+   "aussteigen": "aussteigen",
+   "auto": "Auto",
+   "autobahn": "Autobahn",
+   "autos": "Auto",
+   "begeht": "begehen",
+   "beginnen": "beginnen",
+   "bei": "bei",
+   "bevor": "bevor",
+   "bilden": "bilden",
+   "bis": "bis",
+   "blechschaden": "Blechschaden",
+   "brauchen": "brauchen",
+   "dafür": "dafür",
+   "das": "der/die/das",
+   "dem": "der/die/das",
+   "den": "der/die/das",
+   "der": "der/die/das",
+   "die": "der/die/das",
+   "ein": "ein/eine",
+   "ein>einschalten": "einschalten",
+   "eine": "ein/eine",
+   "einem": "ein/eine",
+   "einen": "ein/eine",
+   "einfach": "einfach",
+   "er": "er",
+   "erreichen": "erreichen",
+   "erste": "erste",
+   "erster": "erster",
+   "es": "es",
+   "etwa": "etwa",
+   "euro": "Euro",
+   "europäischen": "europäisch",
+   "fahren": "fahren",
+   "fahrverbot": "Fahrverbot",
+   "fotos": "Foto",
+   "fährt": "fahren",
+   "führerschein": "Führerschein",
+   "für": "für",
+   "ganz": "ganz",
+   "gibt": "es gibt",
+   "guthaben": "Guthaben",
+   "handy": "Handy",
+   "herzdruckmassage": "Herzdruckmassage",
+   "hilfe": "Hilfe",
+   "hilft": "helfen",
+   "hinter": "hinter",
+   "ihn": "er",
+   "im": "in",
+   "in": "in",
+   "innerorts": "innerorts",
+   "ist": "sein",
+   "keine": "kein",
+   "kennzeichen": "Kennzeichen",
+   "kleinen": "klein",
+   "kostet": "kosten",
+   "kurs": "Kurs",
+   "landstraße": "Landstraße",
+   "legen": "legen",
+   "legen>auflegen": "auflegen",
+   "links": "links",
+   "machen": "machen",
+   "macht": "machen",
+   "meter": "Meter",
+   "mindestens": "mindestens",
+   "mit": "mit",
+   "monat": "Monat",
+   "nach": "nach",
+   "namen": "Name",
+   "nicht": "nicht",
+   "notruf": "Notruf",
+   "ohne": "ohne",
+   "passiert": "passieren",
+   "pflicht": "Pflicht",
+   "punkte": "Punkt",
+   "rand": "Rand",
+   "reagiert": "reagieren",
+   "rechts": "rechts",
+   "rettungsgasse": "Rettungsgasse",
+   "rückfragen": "Rückfrage",
+   "sagen": "sagen",
+   "schalten>einschalten": "einschalten",
+   "schutzplanke": "Schutzplanke",
+   "seitenlage": "Seitenlage",
+   "sich": "sich",
+   "sie": "Sie",
+   "sind": "sein",
+   "sofort": "sofort",
+   "sondern": "sondern",
+   "stabile": "stabil",
+   "stellen": "Stelle",
+   "stockt": "stocken",
+   "strafbar": "strafbar",
+   "straftat": "Straftat",
+   "tauschen>austauschen": "austauschen",
+   "und": "und",
+   "unfall": "Unfall",
+   "unfallbericht": "Unfallbericht",
+   "unfallflucht": "Unfallflucht",
+   "unfallstelle": "Unfallstelle",
+   "unter": "unter",
+   "verkehr": "Verkehr",
+   "verletzte": "Verletzte",
+   "verletzter": "Verletzte",
+   "versicherung": "Versicherung",
+   "viele": "viele",
+   "warnblinklicht": "Warnblinklicht",
+   "warndreieck": "Warndreieck",
+   "warnweste": "Warnweste",
+   "warten": "warten",
+   "was": "was",
+   "wegfährt": "wegfahren",
+   "wer": "wer",
+   "wie": "wie",
+   "wo": "wo",
+   "ziehen>anziehen": "anziehen",
+   "zwei": "zwei"
+  },
+  "l": {
+   "Adresse": {
+    "ru": "адрес",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Adressen"
+   },
+   "Auto": {
+    "ru": "машина, автомобиль",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Autos"
+   },
+   "Autobahn": {
+    "ru": "автобан, автомагистраль",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Autobahnen"
+   },
+   "Blechschaden": {
+    "ru": "повреждение кузова (вмятина)",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Blechschäden"
+   },
+   "Euro": {
+    "ru": "евро",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Euro"
+   },
+   "Fahrverbot": {
+    "ru": "временное лишение права управления",
+    "pos": "сущ.",
+    "note": "обычно от одного до трёх месяцев; права сдают на хранение",
+    "art": "das",
+    "pl": "die Fahrverbote"
+   },
+   "Foto": {
+    "ru": "фото",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Fotos"
+   },
+   "Führerschein": {
+    "ru": "водительские права",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Führerscheine"
+   },
+   "Guthaben": {
+    "ru": "баланс (на счёте)",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Guthaben"
+   },
+   "Handy": {
+    "ru": "мобильный телефон",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Handys"
+   },
+   "Herzdruckmassage": {
+    "ru": "непрямой массаж сердца",
+    "pos": "сущ.",
+    "note": "100–120 нажатий в минуту, 30 : 2 с дыханием",
+    "art": "die",
+    "pl": null
+   },
+   "Hilfe": {
+    "ru": "помощь",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": null
+   },
+   "Kennzeichen": {
+    "ru": "номерной знак",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Kennzeichen"
+   },
+   "Kurs": {
+    "ru": "курс",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Kurse"
+   },
+   "Landstraße": {
+    "ru": "загородная дорога",
+    "pos": "сущ.",
+    "note": "вне населённого пункта: для легковых обычно до 100 км/ч",
+    "art": "die",
+    "pl": "die Landstraßen"
+   },
+   "Meter": {
+    "ru": "метр",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Meter"
+   },
+   "Monat": {
+    "ru": "месяц",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Monate"
+   },
+   "Name": {
+    "ru": "имя, название",
+    "pos": "сущ.",
+    "note": "n-склонение: den/dem/des Namen(s)",
+    "art": "der",
+    "pl": "die Namen"
+   },
+   "Notruf": {
+    "ru": "экстренный вызов",
+    "pos": "сущ.",
+    "note": "112 — скорая и пожарные, 110 — полиция",
+    "art": "der",
+    "pl": "die Notrufe"
+   },
+   "Pflicht": {
+    "ru": "обязанность",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Pflichten"
+   },
+   "Punkt": {
+    "ru": "балл; точка",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Punkte"
+   },
+   "Rand": {
+    "ru": "край, кайма",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Ränder"
+   },
+   "Rettungsgasse": {
+    "ru": "коридор для экстренных служб",
+    "pos": "сущ.",
+    "note": "левая полоса — влево, все остальные — вправо; образовать сразу, как только движение встало",
+    "art": "die",
+    "pl": "die Rettungsgassen"
+   },
+   "Rückfrage": {
+    "ru": "уточняющий вопрос",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Rückfragen"
+   },
+   "Schutzplanke": {
+    "ru": "отбойник",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Schutzplanken"
+   },
+   "Seitenlage": {
+    "ru": "положение на боку",
+    "pos": "сущ.",
+    "note": "stabile Seitenlage — стабильное боковое положение",
+    "art": "die",
+    "pl": null
+   },
+   "Sie": {
+    "ru": "вы (вежливо)",
+    "pos": "мест.",
+    "note": "Ihnen — вам (дательный): vor Ihnen — перед вами"
+   },
+   "Stelle": {
+    "ru": "место, участок",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Stellen"
+   },
+   "Straftat": {
+    "ru": "уголовное преступление",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Straftaten"
+   },
+   "Unfall": {
+    "ru": "авария, ДТП",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Unfälle"
+   },
+   "Unfallbericht": {
+    "ru": "протокол аварии (европротокол)",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Unfallberichte"
+   },
+   "Unfallflucht": {
+    "ru": "бегство с места аварии",
+    "pos": "сущ.",
+    "note": "§ 142 StGB — уголовное преступление",
+    "art": "die",
+    "pl": null
+   },
+   "Unfallstelle": {
+    "ru": "место аварии",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Unfallstellen"
+   },
+   "Verkehr": {
+    "ru": "движение, транспорт",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": null
+   },
+   "Verletzte": {
+    "ru": "пострадавший",
+    "pos": "сущ.",
+    "note": "der/die Verletzte — склоняется как прилагательное",
+    "art": "der",
+    "pl": "die Verletzten"
+   },
+   "Versicherung": {
+    "ru": "страховка, страховая",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Versicherungen"
+   },
+   "Warnblinklicht": {
+    "ru": "аварийный сигнал (мигают все поворотники)",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": null
+   },
+   "Warndreieck": {
+    "ru": "знак аварийной остановки",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Warndreiecke"
+   },
+   "Warnweste": {
+    "ru": "светоотражающий жилет",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Warnwesten"
+   },
+   "aber": {
+    "ru": "но",
+    "pos": "союз"
+   },
+   "alle": {
+    "ru": "все; всё",
+    "pos": "мест."
+   },
+   "an": {
+    "ru": "у, на, при",
+    "pos": "предл.",
+    "note": "am = an dem; an der Kreuzung — на перекрёстке"
+   },
+   "andere": {
+    "ru": "другой",
+    "pos": "прил."
+   },
+   "anziehen": {
+    "ru": "надевать",
+    "pos": "гл.",
+    "note": "отделяемая приставка: ziehen … an",
+    "forms": "zog an · hat angezogen"
+   },
+   "atmen": {
+    "ru": "дышать",
+    "pos": "гл.",
+    "forms": "atmete · hat geatmet"
+   },
+   "auch": {
+    "ru": "тоже; даже (auch wenn)",
+    "pos": "нареч."
+   },
+   "auf": {
+    "ru": "на, по",
+    "pos": "предл.",
+    "note": "auf der Straße — на дороге; achten auf — следить за"
+   },
+   "auflegen": {
+    "ru": "класть трубку",
+    "pos": "гл.",
+    "note": "отделяемая приставка: legen … auf",
+    "forms": "legte auf · hat aufgelegt"
+   },
+   "aussteigen": {
+    "ru": "выходить (из машины)",
+    "pos": "гл.",
+    "forms": "stieg aus · ist ausgestiegen"
+   },
+   "austauschen": {
+    "ru": "обмениваться",
+    "pos": "гл.",
+    "note": "отделяемая приставка: tauschen … aus",
+    "forms": "tauschte aus · hat ausgetauscht"
+   },
+   "begehen": {
+    "ru": "совершать (проступок)",
+    "pos": "гл.",
+    "forms": "beging · hat begangen"
+   },
+   "beginnen": {
+    "ru": "начинаться, начинать",
+    "pos": "гл.",
+    "forms": "begann · hat begonnen"
+   },
+   "bei": {
+    "ru": "при, у; на (о сигнале)",
+    "pos": "предл.",
+    "note": "beim = bei dem: beim Fahren — во время езды; bei Rot — на красный"
+   },
+   "bevor": {
+    "ru": "прежде чем",
+    "pos": "союз"
+   },
+   "bilden": {
+    "ru": "образовывать, создавать",
+    "pos": "гл.",
+    "note": "eine Rettungsgasse bilden — освободить коридор для спасателей",
+    "forms": "bildete · hat gebildet"
+   },
+   "bis": {
+    "ru": "пока не; до",
+    "pos": "союз"
+   },
+   "brauchen": {
+    "ru": "нуждаться, требоваться",
+    "pos": "гл.",
+    "forms": "brauchte · hat gebraucht"
+   },
+   "dafür": {
+    "ru": "для этого",
+    "pos": "нареч."
+   },
+   "der/die/das": {
+    "ru": "определённый артикль",
+    "pos": "артикль",
+    "note": "der — м. р., die — ж. р. и мн. ч., das — ср. р.; den — м. р. в винительном, dem — м. и ср. р. в дательном; das ещё значит «это»"
+   },
+   "ein/eine": {
+    "ru": "неопределённый артикль; один",
+    "pos": "артикль",
+    "note": "an einer Kreuzung — на (каком-то) перекрёстке"
+   },
+   "einfach": {
+    "ru": "простой; просто",
+    "pos": "прил.",
+    "forms": "einfach · einfacher · am einfachsten"
+   },
+   "einschalten": {
+    "ru": "включать",
+    "pos": "гл.",
+    "note": "отделяемая приставка: schalten … ein",
+    "forms": "schaltete ein · hat eingeschaltet"
+   },
+   "er": {
+    "ru": "он",
+    "pos": "мест.",
+    "note": "ihn — его (вин. п.); здесь — о грузовике или скорой: der Lkw, der Krankenwagen"
+   },
+   "erreichen": {
+    "ru": "достигать; дозвониться",
+    "pos": "гл.",
+    "forms": "erreichte · hat erreicht"
+   },
+   "erste": {
+    "ru": "первый",
+    "pos": "прил."
+   },
+   "erster": {
+    "ru": "первый",
+    "pos": "прил.",
+    "note": "Erste Hilfe — первая помощь"
+   },
+   "es": {
+    "ru": "оно; это",
+    "pos": "мест.",
+    "note": "здесь — о машине: das Auto"
+   },
+   "es gibt": {
+    "ru": "есть, имеется",
+    "pos": "выраж."
+   },
+   "etwa": {
+    "ru": "примерно, около",
+    "pos": "нареч."
+   },
+   "europäisch": {
+    "ru": "европейский",
+    "pos": "прил."
+   },
+   "fahren": {
+    "ru": "ехать; водить машину",
+    "pos": "гл.",
+    "forms": "fuhr · ist gefahren"
+   },
+   "für": {
+    "ru": "для",
+    "pos": "предл."
+   },
+   "ganz": {
+    "ru": "совсем, вполне",
+    "pos": "нареч."
+   },
+   "helfen": {
+    "ru": "помогать",
+    "pos": "гл.",
+    "forms": "half · hat geholfen"
+   },
+   "hinter": {
+    "ru": "за, позади",
+    "pos": "предл."
+   },
+   "in": {
+    "ru": "в",
+    "pos": "предл.",
+    "note": "im = in dem: im Bereich — в зоне"
+   },
+   "innerorts": {
+    "ru": "в населённом пункте",
+    "pos": "нареч.",
+    "note": "здесь обычно не больше 50 км/ч"
+   },
+   "kein": {
+    "ru": "никакой; не (отрицание при существительном)",
+    "pos": "мест."
+   },
+   "klein": {
+    "ru": "маленький",
+    "pos": "прил."
+   },
+   "kosten": {
+    "ru": "стоить",
+    "pos": "гл.",
+    "forms": "kostete · hat gekostet"
+   },
+   "legen": {
+    "ru": "класть",
+    "pos": "гл.",
+    "forms": "legte · hat gelegt"
+   },
+   "links": {
+    "ru": "слева; налево",
+    "pos": "нареч."
+   },
+   "machen": {
+    "ru": "делать",
+    "pos": "гл.",
+    "note": "den Schulterblick machen — оглянуться через плечо; Gut gemacht! — Молодец!",
+    "forms": "machte · hat gemacht"
+   },
+   "mindestens": {
+    "ru": "по меньшей мере, не меньше",
+    "pos": "нареч."
+   },
+   "mit": {
+    "ru": "с",
+    "pos": "предл."
+   },
+   "nach": {
+    "ru": "после; в, на (направление)",
+    "pos": "предл."
+   },
+   "nicht": {
+    "ru": "не",
+    "pos": "частица"
+   },
+   "ohne": {
+    "ru": "без",
+    "pos": "предл."
+   },
+   "passieren": {
+    "ru": "происходить, случаться",
+    "pos": "гл.",
+    "forms": "passierte · ist passiert"
+   },
+   "reagieren": {
+    "ru": "реагировать",
+    "pos": "гл.",
+    "forms": "reagierte · hat reagiert"
+   },
+   "rechts": {
+    "ru": "справа; направо",
+    "pos": "нареч."
+   },
+   "sagen": {
+    "ru": "говорить, сказать",
+    "pos": "гл.",
+    "forms": "sagte · hat gesagt"
+   },
+   "sein": {
+    "ru": "быть",
+    "pos": "гл.",
+    "forms": "war · ist gewesen"
+   },
+   "sich": {
+    "ru": "себя, -ся",
+    "pos": "мест."
+   },
+   "sofort": {
+    "ru": "сразу, немедленно",
+    "pos": "нареч."
+   },
+   "sondern": {
+    "ru": "а (после отрицания)",
+    "pos": "союз"
+   },
+   "stabil": {
+    "ru": "устойчивый, стабильный",
+    "pos": "прил."
+   },
+   "stocken": {
+    "ru": "застопориться, вставать (о движении)",
+    "pos": "гл.",
+    "forms": "stockte · hat gestockt"
+   },
+   "strafbar": {
+    "ru": "наказуемый",
+    "pos": "прил.",
+    "note": "sich strafbar machen — совершить наказуемое деяние"
+   },
+   "und": {
+    "ru": "и",
+    "pos": "союз"
+   },
+   "unter": {
+    "ru": "под; меньше",
+    "pos": "предл."
+   },
+   "viele": {
+    "ru": "многие, много",
+    "pos": "мест."
+   },
+   "warten": {
+    "ru": "ждать",
+    "pos": "гл.",
+    "note": "warten auf — ждать (кого-то)",
+    "forms": "wartete · hat gewartet"
+   },
+   "was": {
+    "ru": "что",
+    "pos": "мест."
+   },
+   "wegfahren": {
+    "ru": "уезжать",
+    "pos": "гл.",
+    "forms": "fuhr weg · ist weggefahren"
+   },
+   "wer": {
+    "ru": "кто",
+    "pos": "мест."
+   },
+   "wie": {
+    "ru": "как",
+    "pos": "нареч.",
+    "note": "wie schnell — с какой скоростью"
+   },
+   "wo": {
+    "ru": "где",
+    "pos": "нареч."
+   },
+   "zwei": {
+    "ru": "два",
+    "pos": "числ."
+   }
+  }
+ }
+}

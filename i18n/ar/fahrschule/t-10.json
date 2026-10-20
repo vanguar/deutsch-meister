@@ -1,0 +1,790 @@
+{
+ "id": "t-10",
+ "kind": "theory",
+ "emoji": "🚑",
+ "level": "B1",
+ "title": "Unfall und Erste Hilfe",
+ "titleTr": "الحادث والإسعافات الأولية",
+ "intro": "ماذا تفعل بعد حادث: تأمين المكان، والاتصال بالرقم 112، وتقديم الإسعافات الأولية، وملء تقرير الحادث الأوروبي — وكيف تفتح ممرًّا لسيارة الإسعاف (Rettungsgasse).",
+ "sections": [
+  {
+   "title": "تأمين مكان الحادث",
+   "lines": [
+    {
+     "de": "Nach einem Unfall schalten Sie sofort das Warnblinklicht ein.",
+     "tr": "بعد الحادث شغّل فورًا أضواء التحذير.",
+     "o": {
+      "ein": "ein>einschalten",
+      "schalten": "schalten>einschalten"
+     }
+    },
+    {
+     "de": "Ziehen Sie die Warnweste an, bevor Sie aussteigen.",
+     "tr": "البس السترة العاكسة قبل أن تنزل من السيارة.",
+     "o": {
+      "an": "an>anziehen",
+      "ziehen": "ziehen>anziehen"
+     }
+    },
+    {
+     "de": "Das Warndreieck stellen Sie innerorts etwa 50 Meter hinter die Unfallstelle.",
+     "tr": "داخل البلدة تضع مثلث التحذير على بعد نحو 50 مترًا خلف مكان الحادث."
+    },
+    {
+     "de": "Auf der Landstraße sind es etwa 100 Meter, auf der Autobahn 150 bis 200 Meter.",
+     "tr": "على الطريق الريفي نحو 100 متر، وعلى الطريق السريع من 150 إلى 200 متر."
+    },
+    {
+     "de": "Auf der Autobahn warten Sie hinter der Schutzplanke, nicht im Auto.",
+     "tr": "على الطريق السريع انتظر خلف الحاجز الواقي، لا داخل السيارة."
+    }
+   ]
+  },
+  {
+   "title": "طلب المساعدة: 112",
+   "lines": [
+    {
+     "de": "Den Notruf erreichen Sie unter 112, auch ohne Guthaben auf dem Handy.",
+     "tr": "تصل إلى خدمة الطوارئ عبر الرقم 112، حتى من دون رصيد في الهاتف."
+    },
+    {
+     "de": "Sagen Sie: Wo ist der Unfall? Was ist passiert? Wie viele Verletzte gibt es?",
+     "tr": "قل: أين الحادث؟ ماذا حدث؟ كم عدد المصابين؟"
+    },
+    {
+     "de": "Legen Sie nicht auf, sondern warten Sie auf Rückfragen.",
+     "tr": "لا تُنهِ المكالمة، بل انتظر أسئلة الاستفسار.",
+     "o": {
+      "auf": "auf>auflegen",
+      "legen": "legen>auflegen"
+     }
+    }
+   ]
+  },
+  {
+   "title": "الإسعافات الأولية",
+   "lines": [
+    {
+     "de": "Erste Hilfe ist Pflicht. Wer nicht hilft, macht sich strafbar.",
+     "tr": "الإسعافات الأولية واجب. ومن لا يساعد يرتكب جريمة."
+    },
+    {
+     "de": "Für den Führerschein brauchen Sie einen Kurs in Erster Hilfe.",
+     "tr": "للحصول على رخصة القيادة تحتاج إلى دورة في الإسعافات الأولية."
+    },
+    {
+     "de": "Atmet ein Verletzter, aber reagiert nicht, legen Sie ihn in die stabile Seitenlage.",
+     "tr": "إذا كان المصاب يتنفس لكنه لا يستجيب، فضعه في وضعية الإفاقة الجانبية."
+    },
+    {
+     "de": "Atmet er nicht, beginnen Sie sofort mit der Herzdruckmassage.",
+     "tr": "إذا لم يتنفس فابدأ فورًا بتدليك القلب."
+    }
+   ]
+  },
+  {
+   "title": "حادث بسيط",
+   "lines": [
+    {
+     "de": "Bei einem kleinen Blechschaden machen Sie Fotos und fahren die Autos an den Rand.",
+     "tr": "في حادث بسيط بأضرار في الهيكل التقط صورًا وانقل السيارتين إلى حافة الطريق."
+    },
+    {
+     "de": "Tauschen Sie Namen, Adresse, Kennzeichen und Versicherung aus.",
+     "tr": "تبادلوا الأسماء والعناوين وأرقام اللوحات وبيانات التأمين.",
+     "o": {
+      "aus": "aus>austauschen",
+      "tauschen": "tauschen>austauschen"
+     }
+    },
+    {
+     "de": "Dafür gibt es den Europäischen Unfallbericht.",
+     "tr": "لهذا يوجد تقرير الحادث الأوروبي."
+    },
+    {
+     "de": "Wer einfach wegfährt, begeht Unfallflucht. Das ist eine Straftat.",
+     "tr": "من يغادر ببساطة يرتكب جريمة الفرار من مكان الحادث."
+    }
+   ]
+  },
+  {
+   "title": "ممر الإنقاذ",
+   "lines": [
+    {
+     "de": "Stockt der Verkehr auf der Autobahn, bilden Sie sofort eine Rettungsgasse.",
+     "tr": "إذا تباطأت حركة السير على الطريق السريع فافتح فورًا ممر الإنقاذ."
+    },
+    {
+     "de": "Wer ganz links fährt, fährt nach links. Alle anderen fahren nach rechts.",
+     "tr": "من يسير في أقصى اليسار يتحرك إلى اليسار. والجميع الآخرون إلى اليمين."
+    },
+    {
+     "de": "Keine Rettungsgasse kostet mindestens 200 Euro, zwei Punkte und einen Monat Fahrverbot.",
+     "tr": "عدم فتح ممر الإنقاذ يكلّف 200 يورو على الأقل ونقطتين وشهرًا من منع القيادة."
+    }
+   ]
+  }
+ ],
+ "quiz": [],
+ "signs": {},
+ "gloss": {
+  "w": {
+   "aber": "aber",
+   "adresse": "Adresse",
+   "alle": "alle",
+   "an": "an",
+   "an>anziehen": "anziehen",
+   "anderen": "andere",
+   "atmet": "atmen",
+   "auch": "auch",
+   "auf": "auf",
+   "auf>auflegen": "auflegen",
+   "aus>austauschen": "austauschen",
+   "aussteigen": "aussteigen",
+   "auto": "Auto",
+   "autobahn": "Autobahn",
+   "autos": "Auto",
+   "begeht": "begehen",
+   "beginnen": "beginnen",
+   "bei": "bei",
+   "bevor": "bevor",
+   "bilden": "bilden",
+   "bis": "bis",
+   "blechschaden": "Blechschaden",
+   "brauchen": "brauchen",
+   "dafür": "dafür",
+   "das": "der/die/das",
+   "dem": "der/die/das",
+   "den": "der/die/das",
+   "der": "der/die/das",
+   "die": "der/die/das",
+   "ein": "ein/eine",
+   "ein>einschalten": "einschalten",
+   "eine": "ein/eine",
+   "einem": "ein/eine",
+   "einen": "ein/eine",
+   "einfach": "einfach",
+   "er": "er",
+   "erreichen": "erreichen",
+   "erste": "erste",
+   "erster": "erster",
+   "es": "es",
+   "etwa": "etwa",
+   "euro": "Euro",
+   "europäischen": "europäisch",
+   "fahren": "fahren",
+   "fahrverbot": "Fahrverbot",
+   "fotos": "Foto",
+   "fährt": "fahren",
+   "führerschein": "Führerschein",
+   "für": "für",
+   "ganz": "ganz",
+   "gibt": "es gibt",
+   "guthaben": "Guthaben",
+   "handy": "Handy",
+   "herzdruckmassage": "Herzdruckmassage",
+   "hilfe": "Hilfe",
+   "hilft": "helfen",
+   "hinter": "hinter",
+   "ihn": "er",
+   "im": "in",
+   "in": "in",
+   "innerorts": "innerorts",
+   "ist": "sein",
+   "keine": "kein",
+   "kennzeichen": "Kennzeichen",
+   "kleinen": "klein",
+   "kostet": "kosten",
+   "kurs": "Kurs",
+   "landstraße": "Landstraße",
+   "legen": "legen",
+   "legen>auflegen": "auflegen",
+   "links": "links",
+   "machen": "machen",
+   "macht": "machen",
+   "meter": "Meter",
+   "mindestens": "mindestens",
+   "mit": "mit",
+   "monat": "Monat",
+   "nach": "nach",
+   "namen": "Name",
+   "nicht": "nicht",
+   "notruf": "Notruf",
+   "ohne": "ohne",
+   "passiert": "passieren",
+   "pflicht": "Pflicht",
+   "punkte": "Punkt",
+   "rand": "Rand",
+   "reagiert": "reagieren",
+   "rechts": "rechts",
+   "rettungsgasse": "Rettungsgasse",
+   "rückfragen": "Rückfrage",
+   "sagen": "sagen",
+   "schalten>einschalten": "einschalten",
+   "schutzplanke": "Schutzplanke",
+   "seitenlage": "Seitenlage",
+   "sich": "sich",
+   "sie": "Sie",
+   "sind": "sein",
+   "sofort": "sofort",
+   "sondern": "sondern",
+   "stabile": "stabil",
+   "stellen": "Stelle",
+   "stockt": "stocken",
+   "strafbar": "strafbar",
+   "straftat": "Straftat",
+   "tauschen>austauschen": "austauschen",
+   "und": "und",
+   "unfall": "Unfall",
+   "unfallbericht": "Unfallbericht",
+   "unfallflucht": "Unfallflucht",
+   "unfallstelle": "Unfallstelle",
+   "unter": "unter",
+   "verkehr": "Verkehr",
+   "verletzte": "Verletzte",
+   "verletzter": "Verletzte",
+   "versicherung": "Versicherung",
+   "viele": "viele",
+   "warnblinklicht": "Warnblinklicht",
+   "warndreieck": "Warndreieck",
+   "warnweste": "Warnweste",
+   "warten": "warten",
+   "was": "was",
+   "wegfährt": "wegfahren",
+   "wer": "wer",
+   "wie": "wie",
+   "wo": "wo",
+   "ziehen>anziehen": "anziehen",
+   "zwei": "zwei"
+  },
+  "l": {
+   "Adresse": {
+    "ru": "عنوان",
+    "pos": "اسم",
+    "decl": "die Adresse · الجمع: die Adressen"
+   },
+   "Auto": {
+    "ru": "سيارة",
+    "pos": "اسم",
+    "decl": "das Auto · الجمع: die Autos"
+   },
+   "Autobahn": {
+    "ru": "الطريق السريع (أوتوبان)",
+    "pos": "اسم",
+    "decl": "die Autobahn · الجمع: die Autobahnen"
+   },
+   "Blechschaden": {
+    "ru": "ضرر في هيكل السيارة",
+    "pos": "اسم",
+    "decl": "der Blechschaden · الجمع: die Blechschäden"
+   },
+   "Euro": {
+    "ru": "يورو",
+    "pos": "اسم",
+    "decl": "der Euro · الجمع: die Euro"
+   },
+   "Fahrverbot": {
+    "ru": "منع مؤقت من القيادة",
+    "pos": "اسم",
+    "note": "عادةً من شهر إلى ثلاثة أشهر؛ وتُسلَّم الرخصة",
+    "decl": "das Fahrverbot · الجمع: die Fahrverbote"
+   },
+   "Foto": {
+    "ru": "صورة",
+    "pos": "اسم",
+    "decl": "das Foto · الجمع: die Fotos"
+   },
+   "Führerschein": {
+    "ru": "رخصة القيادة",
+    "pos": "اسم",
+    "decl": "der Führerschein · الجمع: die Führerscheine"
+   },
+   "Guthaben": {
+    "ru": "رصيد",
+    "pos": "اسم",
+    "decl": "das Guthaben · الجمع: die Guthaben"
+   },
+   "Handy": {
+    "ru": "هاتف محمول",
+    "pos": "اسم",
+    "decl": "das Handy · الجمع: die Handys"
+   },
+   "Herzdruckmassage": {
+    "ru": "تدليك القلب",
+    "pos": "اسم",
+    "note": "100–120 ضغطة في الدقيقة، 30 : 2 مع التنفس",
+    "decl": "die Herzdruckmassage · لا جمع له"
+   },
+   "Hilfe": {
+    "ru": "مساعدة",
+    "pos": "اسم",
+    "decl": "die Hilfe · لا جمع له"
+   },
+   "Kennzeichen": {
+    "ru": "لوحة الأرقام",
+    "pos": "اسم",
+    "decl": "das Kennzeichen · الجمع: die Kennzeichen"
+   },
+   "Kurs": {
+    "ru": "دورة",
+    "pos": "اسم",
+    "decl": "der Kurs · الجمع: die Kurse"
+   },
+   "Landstraße": {
+    "ru": "طريق ريفي",
+    "pos": "اسم",
+    "note": "خارج البلدات: للسيارات عادةً حتى 100 كم/س",
+    "decl": "die Landstraße · الجمع: die Landstraßen"
+   },
+   "Meter": {
+    "ru": "متر",
+    "pos": "اسم",
+    "decl": "der Meter · الجمع: die Meter"
+   },
+   "Monat": {
+    "ru": "شهر",
+    "pos": "اسم",
+    "decl": "der Monat · الجمع: die Monate"
+   },
+   "Name": {
+    "ru": "اسم",
+    "pos": "اسم",
+    "note": "تصريف n: den/dem/des Namen(s)",
+    "decl": "der Name · الجمع: die Namen"
+   },
+   "Notruf": {
+    "ru": "اتصال الطوارئ",
+    "pos": "اسم",
+    "note": "112 للإسعاف والإطفاء، 110 للشرطة",
+    "decl": "der Notruf · الجمع: die Notrufe"
+   },
+   "Pflicht": {
+    "ru": "واجب، إلزام",
+    "pos": "اسم",
+    "decl": "die Pflicht · الجمع: die Pflichten"
+   },
+   "Punkt": {
+    "ru": "نقطة",
+    "pos": "اسم",
+    "decl": "der Punkt · الجمع: die Punkte"
+   },
+   "Rand": {
+    "ru": "حافة",
+    "pos": "اسم",
+    "decl": "der Rand · الجمع: die Ränder"
+   },
+   "Rettungsgasse": {
+    "ru": "ممر الطوارئ",
+    "pos": "اسم",
+    "note": "المسار الأيسر إلى اليسار وكل الباقي إلى اليمين؛ فورًا حين تتوقف الحركة",
+    "decl": "die Rettungsgasse · الجمع: die Rettungsgassen"
+   },
+   "Rückfrage": {
+    "ru": "سؤال استفسار",
+    "pos": "اسم",
+    "decl": "die Rückfrage · الجمع: die Rückfragen"
+   },
+   "Schutzplanke": {
+    "ru": "الحاجز الواقي",
+    "pos": "اسم",
+    "decl": "die Schutzplanke · الجمع: die Schutzplanken"
+   },
+   "Seitenlage": {
+    "ru": "الوضعية الجانبية",
+    "pos": "اسم",
+    "note": "stabile Seitenlage — وضعية الإفاقة",
+    "decl": "die Seitenlage · لا جمع له"
+   },
+   "Sie": {
+    "ru": "حضرتك (صيغة الاحترام)",
+    "pos": "ضمير",
+    "note": "Ihnen — لكم (حالة الجر): vor Ihnen — أمامك"
+   },
+   "Stelle": {
+    "ru": "مكان، موضع",
+    "pos": "اسم",
+    "decl": "die Stelle · الجمع: die Stellen"
+   },
+   "Straftat": {
+    "ru": "جريمة جنائية",
+    "pos": "اسم",
+    "decl": "die Straftat · الجمع: die Straftaten"
+   },
+   "Unfall": {
+    "ru": "حادث",
+    "pos": "اسم",
+    "decl": "der Unfall · الجمع: die Unfälle"
+   },
+   "Unfallbericht": {
+    "ru": "تقرير الحادث",
+    "pos": "اسم",
+    "decl": "der Unfallbericht · الجمع: die Unfallberichte"
+   },
+   "Unfallflucht": {
+    "ru": "الفرار من مكان الحادث",
+    "pos": "اسم",
+    "note": "المادة 142 من قانون العقوبات",
+    "decl": "die Unfallflucht · لا جمع له"
+   },
+   "Unfallstelle": {
+    "ru": "مكان الحادث",
+    "pos": "اسم",
+    "decl": "die Unfallstelle · الجمع: die Unfallstellen"
+   },
+   "Verkehr": {
+    "ru": "حركة المرور",
+    "pos": "اسم",
+    "decl": "der Verkehr · لا جمع له"
+   },
+   "Verletzte": {
+    "ru": "مصاب",
+    "pos": "اسم",
+    "note": "يُصرَّف كالصفة",
+    "decl": "der Verletzte · الجمع: die Verletzten"
+   },
+   "Versicherung": {
+    "ru": "تأمين",
+    "pos": "اسم",
+    "decl": "die Versicherung · الجمع: die Versicherungen"
+   },
+   "Warnblinklicht": {
+    "ru": "ضوء التحذير الوامض",
+    "pos": "اسم",
+    "decl": "das Warnblinklicht · لا جمع له"
+   },
+   "Warndreieck": {
+    "ru": "مثلث التحذير",
+    "pos": "اسم",
+    "decl": "das Warndreieck · الجمع: die Warndreiecke"
+   },
+   "Warnweste": {
+    "ru": "سترة عاكسة",
+    "pos": "اسم",
+    "decl": "die Warnweste · الجمع: die Warnwesten"
+   },
+   "aber": {
+    "ru": "لكن",
+    "pos": "أداة ربط"
+   },
+   "alle": {
+    "ru": "كل؛ كل شيء",
+    "pos": "ضمير"
+   },
+   "an": {
+    "ru": "عند، على",
+    "pos": "حرف جر",
+    "note": "am = an dem؛ an der Kreuzung — عند التقاطع"
+   },
+   "andere": {
+    "ru": "آخر",
+    "pos": "صفة"
+   },
+   "anziehen": {
+    "ru": "يرتدي",
+    "pos": "فعل",
+    "note": "سابقة منفصلة: ziehen … an",
+    "forms": "zog an · hat angezogen"
+   },
+   "atmen": {
+    "ru": "يتنفس",
+    "pos": "فعل",
+    "forms": "atmete · hat geatmet"
+   },
+   "auch": {
+    "ru": "أيضًا؛ حتى (auch wenn)",
+    "pos": "ظرف"
+   },
+   "auf": {
+    "ru": "على",
+    "pos": "حرف جر",
+    "note": "auf der Straße — على الطريق؛ achten auf — ينتبه لـ"
+   },
+   "auflegen": {
+    "ru": "يُنهي المكالمة",
+    "pos": "فعل",
+    "note": "سابقة منفصلة: legen … auf",
+    "forms": "legte auf · hat aufgelegt"
+   },
+   "aussteigen": {
+    "ru": "ينزل (من السيارة)",
+    "pos": "فعل",
+    "forms": "stieg aus · ist ausgestiegen"
+   },
+   "austauschen": {
+    "ru": "يتبادل",
+    "pos": "فعل",
+    "note": "سابقة منفصلة: tauschen … aus",
+    "forms": "tauschte aus · hat ausgetauscht"
+   },
+   "begehen": {
+    "ru": "يرتكب",
+    "pos": "فعل",
+    "forms": "beging · hat begangen"
+   },
+   "beginnen": {
+    "ru": "يبدأ",
+    "pos": "فعل",
+    "forms": "begann · hat begonnen"
+   },
+   "bei": {
+    "ru": "عند",
+    "pos": "حرف جر",
+    "note": "beim = bei dem: beim Fahren — أثناء القيادة؛ bei Rot — عند الأحمر"
+   },
+   "bevor": {
+    "ru": "قبل أن",
+    "pos": "أداة ربط"
+   },
+   "bilden": {
+    "ru": "يشكّل",
+    "pos": "فعل",
+    "note": "eine Rettungsgasse bilden — يفتح ممر الطوارئ",
+    "forms": "bildete · hat gebildet"
+   },
+   "bis": {
+    "ru": "حتى",
+    "pos": "أداة ربط"
+   },
+   "brauchen": {
+    "ru": "يحتاج",
+    "pos": "فعل",
+    "forms": "brauchte · hat gebraucht"
+   },
+   "dafür": {
+    "ru": "لذلك، لهذا",
+    "pos": "ظرف"
+   },
+   "der/die/das": {
+    "ru": "أداة التعريف",
+    "pos": "أداة تعريف",
+    "note": "der للمذكر، die للمؤنث والجمع، das للمحايد؛ den للمذكر في حالة النصب، dem للمذكر والمحايد في حالة الجر؛ وdas تعني أيضًا «هذا»"
+   },
+   "ein/eine": {
+    "ru": "أداة النكرة؛ واحد",
+    "pos": "أداة تعريف",
+    "note": "an einer Kreuzung — عند تقاطعٍ ما"
+   },
+   "einfach": {
+    "ru": "بسيط؛ ببساطة",
+    "pos": "صفة",
+    "forms": "einfach · einfacher · am einfachsten"
+   },
+   "einschalten": {
+    "ru": "يشغّل",
+    "pos": "فعل",
+    "note": "سابقة منفصلة: schalten … ein",
+    "forms": "schaltete ein · hat eingeschaltet"
+   },
+   "er": {
+    "ru": "هو",
+    "pos": "ضمير",
+    "note": "ihn — ـه (مفعول)؛ هنا عن الشاحنة أو الإسعاف"
+   },
+   "erreichen": {
+    "ru": "يصل إلى",
+    "pos": "فعل",
+    "forms": "erreichte · hat erreicht"
+   },
+   "erste": {
+    "ru": "الأول",
+    "pos": "صفة"
+   },
+   "erster": {
+    "ru": "أول",
+    "pos": "صفة",
+    "note": "Erste Hilfe — الإسعافات الأولية"
+   },
+   "es": {
+    "ru": "هو، هي (لغير العاقل)",
+    "pos": "ضمير",
+    "note": "هنا: السيارة (das Auto)"
+   },
+   "es gibt": {
+    "ru": "يوجد",
+    "pos": "تعبير"
+   },
+   "etwa": {
+    "ru": "تقريبًا، نحو",
+    "pos": "ظرف"
+   },
+   "europäisch": {
+    "ru": "أوروبي",
+    "pos": "صفة"
+   },
+   "fahren": {
+    "ru": "يسير بالسيارة؛ يقود",
+    "pos": "فعل",
+    "forms": "fuhr · ist gefahren"
+   },
+   "für": {
+    "ru": "لـ، من أجل",
+    "pos": "حرف جر"
+   },
+   "ganz": {
+    "ru": "تمامًا",
+    "pos": "ظرف"
+   },
+   "helfen": {
+    "ru": "يساعد، يفيد",
+    "pos": "فعل",
+    "forms": "half · hat geholfen"
+   },
+   "hinter": {
+    "ru": "خلف",
+    "pos": "حرف جر"
+   },
+   "in": {
+    "ru": "في",
+    "pos": "حرف جر",
+    "note": "im = in dem: im Bereich — في المنطقة"
+   },
+   "innerorts": {
+    "ru": "داخل المدن والبلدات",
+    "pos": "ظرف",
+    "note": "الحد الأقصى هنا عادةً 50 كم/س"
+   },
+   "kein": {
+    "ru": "لا (نفي الاسم)",
+    "pos": "ضمير"
+   },
+   "klein": {
+    "ru": "صغير",
+    "pos": "صفة"
+   },
+   "kosten": {
+    "ru": "يكلّف",
+    "pos": "فعل",
+    "forms": "kostete · hat gekostet"
+   },
+   "legen": {
+    "ru": "يضع",
+    "pos": "فعل",
+    "forms": "legte · hat gelegt"
+   },
+   "links": {
+    "ru": "يسارًا، على اليسار",
+    "pos": "ظرف"
+   },
+   "machen": {
+    "ru": "يفعل",
+    "pos": "فعل",
+    "note": "den Schulterblick machen — يلتفت فوق كتفه؛ Gut gemacht! — أحسنت!",
+    "forms": "machte · hat gemacht"
+   },
+   "mindestens": {
+    "ru": "على الأقل",
+    "pos": "ظرف"
+   },
+   "mit": {
+    "ru": "مع",
+    "pos": "حرف جر"
+   },
+   "nach": {
+    "ru": "بعد؛ إلى",
+    "pos": "حرف جر"
+   },
+   "nicht": {
+    "ru": "لا، ليس",
+    "pos": "أداة"
+   },
+   "ohne": {
+    "ru": "بدون",
+    "pos": "حرف جر"
+   },
+   "passieren": {
+    "ru": "يحدث",
+    "pos": "فعل",
+    "forms": "passierte · ist passiert"
+   },
+   "reagieren": {
+    "ru": "يستجيب",
+    "pos": "فعل",
+    "forms": "reagierte · hat reagiert"
+   },
+   "rechts": {
+    "ru": "يمينًا، على اليمين",
+    "pos": "ظرف"
+   },
+   "sagen": {
+    "ru": "يقول",
+    "pos": "فعل",
+    "forms": "sagte · hat gesagt"
+   },
+   "sein": {
+    "ru": "يكون",
+    "pos": "فعل",
+    "forms": "war · ist gewesen"
+   },
+   "sich": {
+    "ru": "نفسه (ضمير انعكاسي)",
+    "pos": "ضمير"
+   },
+   "sofort": {
+    "ru": "فورًا",
+    "pos": "ظرف"
+   },
+   "sondern": {
+    "ru": "بل",
+    "pos": "أداة ربط"
+   },
+   "stabil": {
+    "ru": "ثابت",
+    "pos": "صفة"
+   },
+   "stocken": {
+    "ru": "يتعثر، يتوقف",
+    "pos": "فعل",
+    "forms": "stockte · hat gestockt"
+   },
+   "strafbar": {
+    "ru": "يعاقب عليه القانون",
+    "pos": "صفة",
+    "note": "sich strafbar machen — يرتكب فعلًا يعاقب عليه"
+   },
+   "und": {
+    "ru": "و",
+    "pos": "أداة ربط"
+   },
+   "unter": {
+    "ru": "تحت؛ أقل من",
+    "pos": "حرف جر"
+   },
+   "viele": {
+    "ru": "كثير من",
+    "pos": "ضمير"
+   },
+   "warten": {
+    "ru": "ينتظر",
+    "pos": "فعل",
+    "note": "warten auf — ينتظر (أحدًا)",
+    "forms": "wartete · hat gewartet"
+   },
+   "was": {
+    "ru": "ماذا",
+    "pos": "ضمير"
+   },
+   "wegfahren": {
+    "ru": "يغادر بالسيارة",
+    "pos": "فعل",
+    "forms": "fuhr weg · ist weggefahren"
+   },
+   "wer": {
+    "ru": "مَن",
+    "pos": "ضمير"
+   },
+   "wie": {
+    "ru": "كيف",
+    "pos": "ظرف",
+    "note": "wie schnell — بأي سرعة"
+   },
+   "wo": {
+    "ru": "أين",
+    "pos": "ظرف"
+   },
+   "zwei": {
+    "ru": "اثنان",
+    "pos": "عدد"
+   }
+  }
+ }
+}

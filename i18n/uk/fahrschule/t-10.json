@@ -1,0 +1,790 @@
+{
+ "id": "t-10",
+ "kind": "theory",
+ "emoji": "🚑",
+ "level": "B1",
+ "title": "Unfall und Erste Hilfe",
+ "titleTr": "Аварія і перша допомога",
+ "intro": "Що робити після аварії: убезпечити місце, викликати допомогу за номером 112, надати першу допомогу, оформити європротокол — і як звільнити коридор для швидкої (Rettungsgasse).",
+ "sections": [
+  {
+   "title": "Убезпечити місце аварії",
+   "lines": [
+    {
+     "de": "Nach einem Unfall schalten Sie sofort das Warnblinklicht ein.",
+     "tr": "Після аварії одразу ввімкніть аварійну сигналізацію.",
+     "o": {
+      "ein": "ein>einschalten",
+      "schalten": "schalten>einschalten"
+     }
+    },
+    {
+     "de": "Ziehen Sie die Warnweste an, bevor Sie aussteigen.",
+     "tr": "Одягніть світловідбивний жилет, перш ніж вийти з машини.",
+     "o": {
+      "an": "an>anziehen",
+      "ziehen": "ziehen>anziehen"
+     }
+    },
+    {
+     "de": "Das Warndreieck stellen Sie innerorts etwa 50 Meter hinter die Unfallstelle.",
+     "tr": "У населеному пункті знак аварійної зупинки ставлять приблизно за 50 метрів позаду місця аварії."
+    },
+    {
+     "de": "Auf der Landstraße sind es etwa 100 Meter, auf der Autobahn 150 bis 200 Meter.",
+     "tr": "На заміській дорозі — близько 100 метрів, на автобані — 150–200 метрів."
+    },
+    {
+     "de": "Auf der Autobahn warten Sie hinter der Schutzplanke, nicht im Auto.",
+     "tr": "На автобані чекайте за відбійником, а не в машині."
+    }
+   ]
+  },
+  {
+   "title": "Викликати допомогу: 112",
+   "lines": [
+    {
+     "de": "Den Notruf erreichen Sie unter 112, auch ohne Guthaben auf dem Handy.",
+     "tr": "Екстрену службу можна викликати за номером 112, навіть без грошей на телефоні."
+    },
+    {
+     "de": "Sagen Sie: Wo ist der Unfall? Was ist passiert? Wie viele Verletzte gibt es?",
+     "tr": "Скажіть: де аварія? Що сталося? Скільки постраждалих?"
+    },
+    {
+     "de": "Legen Sie nicht auf, sondern warten Sie auf Rückfragen.",
+     "tr": "Не кладіть слухавку, а чекайте уточнювальних запитань.",
+     "o": {
+      "auf": "auf>auflegen",
+      "legen": "legen>auflegen"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Перша допомога",
+   "lines": [
+    {
+     "de": "Erste Hilfe ist Pflicht. Wer nicht hilft, macht sich strafbar.",
+     "tr": "Перша допомога обов'язкова. Хто не допомагає, вчиняє злочин."
+    },
+    {
+     "de": "Für den Führerschein brauchen Sie einen Kurs in Erster Hilfe.",
+     "tr": "Для отримання прав потрібен курс першої допомоги."
+    },
+    {
+     "de": "Atmet ein Verletzter, aber reagiert nicht, legen Sie ihn in die stabile Seitenlage.",
+     "tr": "Якщо постраждалий дихає, але не реагує, покладіть його в стабільне бокове положення."
+    },
+    {
+     "de": "Atmet er nicht, beginnen Sie sofort mit der Herzdruckmassage.",
+     "tr": "Якщо він не дихає, одразу починайте непрямий масаж серця."
+    }
+   ]
+  },
+  {
+   "title": "Дрібна аварія",
+   "lines": [
+    {
+     "de": "Bei einem kleinen Blechschaden machen Sie Fotos und fahren die Autos an den Rand.",
+     "tr": "За невеликої вм'ятини зробіть фото й приберіть машини до краю дороги."
+    },
+    {
+     "de": "Tauschen Sie Namen, Adresse, Kennzeichen und Versicherung aus.",
+     "tr": "Обміняйтеся іменами, адресами, номерами машин і даними страховки.",
+     "o": {
+      "aus": "aus>austauschen",
+      "tauschen": "tauschen>austauschen"
+     }
+    },
+    {
+     "de": "Dafür gibt es den Europäischen Unfallbericht.",
+     "tr": "Для цього є європейський протокол аварії (європротокол)."
+    },
+    {
+     "de": "Wer einfach wegfährt, begeht Unfallflucht. Das ist eine Straftat.",
+     "tr": "Хто просто їде геть, утікає з місця аварії. Це кримінальний злочин."
+    }
+   ]
+  },
+  {
+   "title": "Коридор для рятувальників",
+   "lines": [
+    {
+     "de": "Stockt der Verkehr auf der Autobahn, bilden Sie sofort eine Rettungsgasse.",
+     "tr": "Якщо на автобані рух зупиняється, одразу звільніть коридор для рятувальників."
+    },
+    {
+     "de": "Wer ganz links fährt, fährt nach links. Alle anderen fahren nach rechts.",
+     "tr": "Хто їде в крайньому лівому ряду, зміщується ліворуч. Усі інші — праворуч."
+    },
+    {
+     "de": "Keine Rettungsgasse kostet mindestens 200 Euro, zwei Punkte und einen Monat Fahrverbot.",
+     "tr": "Відсутність коридору коштує щонайменше 200 євро, два бали й місяць позбавлення прав."
+    }
+   ]
+  }
+ ],
+ "quiz": [],
+ "signs": {},
+ "gloss": {
+  "w": {
+   "aber": "aber",
+   "adresse": "Adresse",
+   "alle": "alle",
+   "an": "an",
+   "an>anziehen": "anziehen",
+   "anderen": "andere",
+   "atmet": "atmen",
+   "auch": "auch",
+   "auf": "auf",
+   "auf>auflegen": "auflegen",
+   "aus>austauschen": "austauschen",
+   "aussteigen": "aussteigen",
+   "auto": "Auto",
+   "autobahn": "Autobahn",
+   "autos": "Auto",
+   "begeht": "begehen",
+   "beginnen": "beginnen",
+   "bei": "bei",
+   "bevor": "bevor",
+   "bilden": "bilden",
+   "bis": "bis",
+   "blechschaden": "Blechschaden",
+   "brauchen": "brauchen",
+   "dafür": "dafür",
+   "das": "der/die/das",
+   "dem": "der/die/das",
+   "den": "der/die/das",
+   "der": "der/die/das",
+   "die": "der/die/das",
+   "ein": "ein/eine",
+   "ein>einschalten": "einschalten",
+   "eine": "ein/eine",
+   "einem": "ein/eine",
+   "einen": "ein/eine",
+   "einfach": "einfach",
+   "er": "er",
+   "erreichen": "erreichen",
+   "erste": "erste",
+   "erster": "erster",
+   "es": "es",
+   "etwa": "etwa",
+   "euro": "Euro",
+   "europäischen": "europäisch",
+   "fahren": "fahren",
+   "fahrverbot": "Fahrverbot",
+   "fotos": "Foto",
+   "fährt": "fahren",
+   "führerschein": "Führerschein",
+   "für": "für",
+   "ganz": "ganz",
+   "gibt": "es gibt",
+   "guthaben": "Guthaben",
+   "handy": "Handy",
+   "herzdruckmassage": "Herzdruckmassage",
+   "hilfe": "Hilfe",
+   "hilft": "helfen",
+   "hinter": "hinter",
+   "ihn": "er",
+   "im": "in",
+   "in": "in",
+   "innerorts": "innerorts",
+   "ist": "sein",
+   "keine": "kein",
+   "kennzeichen": "Kennzeichen",
+   "kleinen": "klein",
+   "kostet": "kosten",
+   "kurs": "Kurs",
+   "landstraße": "Landstraße",
+   "legen": "legen",
+   "legen>auflegen": "auflegen",
+   "links": "links",
+   "machen": "machen",
+   "macht": "machen",
+   "meter": "Meter",
+   "mindestens": "mindestens",
+   "mit": "mit",
+   "monat": "Monat",
+   "nach": "nach",
+   "namen": "Name",
+   "nicht": "nicht",
+   "notruf": "Notruf",
+   "ohne": "ohne",
+   "passiert": "passieren",
+   "pflicht": "Pflicht",
+   "punkte": "Punkt",
+   "rand": "Rand",
+   "reagiert": "reagieren",
+   "rechts": "rechts",
+   "rettungsgasse": "Rettungsgasse",
+   "rückfragen": "Rückfrage",
+   "sagen": "sagen",
+   "schalten>einschalten": "einschalten",
+   "schutzplanke": "Schutzplanke",
+   "seitenlage": "Seitenlage",
+   "sich": "sich",
+   "sie": "Sie",
+   "sind": "sein",
+   "sofort": "sofort",
+   "sondern": "sondern",
+   "stabile": "stabil",
+   "stellen": "Stelle",
+   "stockt": "stocken",
+   "strafbar": "strafbar",
+   "straftat": "Straftat",
+   "tauschen>austauschen": "austauschen",
+   "und": "und",
+   "unfall": "Unfall",
+   "unfallbericht": "Unfallbericht",
+   "unfallflucht": "Unfallflucht",
+   "unfallstelle": "Unfallstelle",
+   "unter": "unter",
+   "verkehr": "Verkehr",
+   "verletzte": "Verletzte",
+   "verletzter": "Verletzte",
+   "versicherung": "Versicherung",
+   "viele": "viele",
+   "warnblinklicht": "Warnblinklicht",
+   "warndreieck": "Warndreieck",
+   "warnweste": "Warnweste",
+   "warten": "warten",
+   "was": "was",
+   "wegfährt": "wegfahren",
+   "wer": "wer",
+   "wie": "wie",
+   "wo": "wo",
+   "ziehen>anziehen": "anziehen",
+   "zwei": "zwei"
+  },
+  "l": {
+   "Adresse": {
+    "ru": "адреса",
+    "pos": "ім.",
+    "decl": "die Adresse · мн.: die Adressen"
+   },
+   "Auto": {
+    "ru": "машина, автомобіль",
+    "pos": "ім.",
+    "decl": "das Auto · мн.: die Autos"
+   },
+   "Autobahn": {
+    "ru": "автобан, автомагістраль",
+    "pos": "ім.",
+    "decl": "die Autobahn · мн.: die Autobahnen"
+   },
+   "Blechschaden": {
+    "ru": "пошкодження кузова (вм'ятина)",
+    "pos": "ім.",
+    "decl": "der Blechschaden · мн.: die Blechschäden"
+   },
+   "Euro": {
+    "ru": "євро",
+    "pos": "ім.",
+    "decl": "der Euro · мн.: die Euro"
+   },
+   "Fahrverbot": {
+    "ru": "тимчасове позбавлення права керування",
+    "pos": "ім.",
+    "note": "зазвичай від одного до трьох місяців; права здають на зберігання",
+    "decl": "das Fahrverbot · мн.: die Fahrverbote"
+   },
+   "Foto": {
+    "ru": "фото",
+    "pos": "ім.",
+    "decl": "das Foto · мн.: die Fotos"
+   },
+   "Führerschein": {
+    "ru": "посвідчення водія",
+    "pos": "ім.",
+    "decl": "der Führerschein · мн.: die Führerscheine"
+   },
+   "Guthaben": {
+    "ru": "баланс (на рахунку)",
+    "pos": "ім.",
+    "decl": "das Guthaben · мн.: die Guthaben"
+   },
+   "Handy": {
+    "ru": "мобільний телефон",
+    "pos": "ім.",
+    "decl": "das Handy · мн.: die Handys"
+   },
+   "Herzdruckmassage": {
+    "ru": "непрямий масаж серця",
+    "pos": "ім.",
+    "note": "100–120 натискань на хвилину, 30 : 2 з диханням",
+    "decl": "die Herzdruckmassage · мн. немає"
+   },
+   "Hilfe": {
+    "ru": "допомога",
+    "pos": "ім.",
+    "decl": "die Hilfe · мн. немає"
+   },
+   "Kennzeichen": {
+    "ru": "номерний знак",
+    "pos": "ім.",
+    "decl": "das Kennzeichen · мн.: die Kennzeichen"
+   },
+   "Kurs": {
+    "ru": "курс",
+    "pos": "ім.",
+    "decl": "der Kurs · мн.: die Kurse"
+   },
+   "Landstraße": {
+    "ru": "заміська дорога",
+    "pos": "ім.",
+    "note": "поза населеним пунктом: для легкових зазвичай до 100 км/год",
+    "decl": "die Landstraße · мн.: die Landstraßen"
+   },
+   "Meter": {
+    "ru": "метр",
+    "pos": "ім.",
+    "decl": "der Meter · мн.: die Meter"
+   },
+   "Monat": {
+    "ru": "місяць",
+    "pos": "ім.",
+    "decl": "der Monat · мн.: die Monate"
+   },
+   "Name": {
+    "ru": "ім'я, назва",
+    "pos": "ім.",
+    "note": "n-відміна: den/dem/des Namen(s)",
+    "decl": "der Name · мн.: die Namen"
+   },
+   "Notruf": {
+    "ru": "екстрений виклик",
+    "pos": "ім.",
+    "note": "112 — швидка й пожежні, 110 — поліція",
+    "decl": "der Notruf · мн.: die Notrufe"
+   },
+   "Pflicht": {
+    "ru": "обов'язок",
+    "pos": "ім.",
+    "decl": "die Pflicht · мн.: die Pflichten"
+   },
+   "Punkt": {
+    "ru": "бал; точка",
+    "pos": "ім.",
+    "decl": "der Punkt · мн.: die Punkte"
+   },
+   "Rand": {
+    "ru": "край, облямівка",
+    "pos": "ім.",
+    "decl": "der Rand · мн.: die Ränder"
+   },
+   "Rettungsgasse": {
+    "ru": "коридор для екстрених служб",
+    "pos": "ім.",
+    "note": "ліва смуга — ліворуч, усі інші — праворуч; утворити одразу, щойно рух зупинився",
+    "decl": "die Rettungsgasse · мн.: die Rettungsgassen"
+   },
+   "Rückfrage": {
+    "ru": "уточнювальне запитання",
+    "pos": "ім.",
+    "decl": "die Rückfrage · мн.: die Rückfragen"
+   },
+   "Schutzplanke": {
+    "ru": "відбійник",
+    "pos": "ім.",
+    "decl": "die Schutzplanke · мн.: die Schutzplanken"
+   },
+   "Seitenlage": {
+    "ru": "положення на боці",
+    "pos": "ім.",
+    "note": "stabile Seitenlage — стабільне бокове положення",
+    "decl": "die Seitenlage · мн. немає"
+   },
+   "Sie": {
+    "ru": "ви (ввічливо)",
+    "pos": "займ.",
+    "note": "Ihnen — вам (давальний): vor Ihnen — перед вами"
+   },
+   "Stelle": {
+    "ru": "місце, ділянка",
+    "pos": "ім.",
+    "decl": "die Stelle · мн.: die Stellen"
+   },
+   "Straftat": {
+    "ru": "кримінальний злочин",
+    "pos": "ім.",
+    "decl": "die Straftat · мн.: die Straftaten"
+   },
+   "Unfall": {
+    "ru": "аварія, ДТП",
+    "pos": "ім.",
+    "decl": "der Unfall · мн.: die Unfälle"
+   },
+   "Unfallbericht": {
+    "ru": "протокол аварії (європротокол)",
+    "pos": "ім.",
+    "decl": "der Unfallbericht · мн.: die Unfallberichte"
+   },
+   "Unfallflucht": {
+    "ru": "втеча з місця аварії",
+    "pos": "ім.",
+    "note": "§ 142 StGB — кримінальний злочин",
+    "decl": "die Unfallflucht · мн. немає"
+   },
+   "Unfallstelle": {
+    "ru": "місце аварії",
+    "pos": "ім.",
+    "decl": "die Unfallstelle · мн.: die Unfallstellen"
+   },
+   "Verkehr": {
+    "ru": "рух, транспорт",
+    "pos": "ім.",
+    "decl": "der Verkehr · мн. немає"
+   },
+   "Verletzte": {
+    "ru": "постраждалий",
+    "pos": "ім.",
+    "note": "der/die Verletzte — відмінюється як прикметник",
+    "decl": "der Verletzte · мн.: die Verletzten"
+   },
+   "Versicherung": {
+    "ru": "страховка, страхова",
+    "pos": "ім.",
+    "decl": "die Versicherung · мн.: die Versicherungen"
+   },
+   "Warnblinklicht": {
+    "ru": "аварійний сигнал (блимають усі поворотники)",
+    "pos": "ім.",
+    "decl": "das Warnblinklicht · мн. немає"
+   },
+   "Warndreieck": {
+    "ru": "знак аварійної зупинки",
+    "pos": "ім.",
+    "decl": "das Warndreieck · мн.: die Warndreiecke"
+   },
+   "Warnweste": {
+    "ru": "світловідбивний жилет",
+    "pos": "ім.",
+    "decl": "die Warnweste · мн.: die Warnwesten"
+   },
+   "aber": {
+    "ru": "але",
+    "pos": "спол."
+   },
+   "alle": {
+    "ru": "всі; все",
+    "pos": "займ."
+   },
+   "an": {
+    "ru": "біля, на, при",
+    "pos": "прийм.",
+    "note": "am = an dem; an der Kreuzung — на перехресті"
+   },
+   "andere": {
+    "ru": "інший",
+    "pos": "прикм."
+   },
+   "anziehen": {
+    "ru": "одягати",
+    "pos": "дієсл.",
+    "note": "відокремлюваний префікс: ziehen … an",
+    "forms": "zog an · hat angezogen"
+   },
+   "atmen": {
+    "ru": "дихати",
+    "pos": "дієсл.",
+    "forms": "atmete · hat geatmet"
+   },
+   "auch": {
+    "ru": "теж; навіть (auch wenn)",
+    "pos": "присл."
+   },
+   "auf": {
+    "ru": "на, по",
+    "pos": "прийм.",
+    "note": "auf der Straße — на дорозі; achten auf — стежити за"
+   },
+   "auflegen": {
+    "ru": "класти слухавку",
+    "pos": "дієсл.",
+    "note": "відокремлюваний префікс: legen … auf",
+    "forms": "legte auf · hat aufgelegt"
+   },
+   "aussteigen": {
+    "ru": "виходити (з машини)",
+    "pos": "дієсл.",
+    "forms": "stieg aus · ist ausgestiegen"
+   },
+   "austauschen": {
+    "ru": "обмінюватися",
+    "pos": "дієсл.",
+    "note": "відокремлюваний префікс: tauschen … aus",
+    "forms": "tauschte aus · hat ausgetauscht"
+   },
+   "begehen": {
+    "ru": "скоювати (проступок)",
+    "pos": "дієсл.",
+    "forms": "beging · hat begangen"
+   },
+   "beginnen": {
+    "ru": "починатися, починати",
+    "pos": "дієсл.",
+    "forms": "begann · hat begonnen"
+   },
+   "bei": {
+    "ru": "при, біля; на (про сигнал)",
+    "pos": "прийм.",
+    "note": "beim = bei dem: beim Fahren — під час їзди; bei Rot — на червоний"
+   },
+   "bevor": {
+    "ru": "перш ніж",
+    "pos": "спол."
+   },
+   "bilden": {
+    "ru": "утворювати, створювати",
+    "pos": "дієсл.",
+    "note": "eine Rettungsgasse bilden — звільнити коридор для рятувальників",
+    "forms": "bildete · hat gebildet"
+   },
+   "bis": {
+    "ru": "поки не; до",
+    "pos": "спол."
+   },
+   "brauchen": {
+    "ru": "потребувати, бути потрібним",
+    "pos": "дієсл.",
+    "forms": "brauchte · hat gebraucht"
+   },
+   "dafür": {
+    "ru": "для цього",
+    "pos": "присл."
+   },
+   "der/die/das": {
+    "ru": "означений артикль",
+    "pos": "артикль",
+    "note": "der — ч. р., die — ж. р. і мн., das — с. р.; den — ч. р. у знахідному, dem — ч. і с. р. у давальному; das ще означає «це»"
+   },
+   "ein/eine": {
+    "ru": "неозначений артикль; один",
+    "pos": "артикль",
+    "note": "an einer Kreuzung — на (якомусь) перехресті"
+   },
+   "einfach": {
+    "ru": "простий; просто",
+    "pos": "прикм.",
+    "forms": "einfach · einfacher · am einfachsten"
+   },
+   "einschalten": {
+    "ru": "вмикати",
+    "pos": "дієсл.",
+    "note": "відокремлюваний префікс: schalten … ein",
+    "forms": "schaltete ein · hat eingeschaltet"
+   },
+   "er": {
+    "ru": "він",
+    "pos": "займ.",
+    "note": "ihn — його (знах.); тут — про вантажівку чи швидку: der Lkw, der Krankenwagen"
+   },
+   "erreichen": {
+    "ru": "досягати; додзвонитися",
+    "pos": "дієсл.",
+    "forms": "erreichte · hat erreicht"
+   },
+   "erste": {
+    "ru": "перший",
+    "pos": "прикм."
+   },
+   "erster": {
+    "ru": "перший",
+    "pos": "прикм.",
+    "note": "Erste Hilfe — перша допомога"
+   },
+   "es": {
+    "ru": "воно; це",
+    "pos": "займ.",
+    "note": "тут — про машину: das Auto"
+   },
+   "es gibt": {
+    "ru": "є, існує",
+    "pos": "вираз"
+   },
+   "etwa": {
+    "ru": "приблизно, близько",
+    "pos": "присл."
+   },
+   "europäisch": {
+    "ru": "європейський",
+    "pos": "прикм."
+   },
+   "fahren": {
+    "ru": "їхати; кермувати машиною",
+    "pos": "дієсл.",
+    "forms": "fuhr · ist gefahren"
+   },
+   "für": {
+    "ru": "для",
+    "pos": "прийм."
+   },
+   "ganz": {
+    "ru": "цілком, зовсім",
+    "pos": "присл."
+   },
+   "helfen": {
+    "ru": "допомагати",
+    "pos": "дієсл.",
+    "forms": "half · hat geholfen"
+   },
+   "hinter": {
+    "ru": "за, позаду",
+    "pos": "прийм."
+   },
+   "in": {
+    "ru": "в",
+    "pos": "прийм.",
+    "note": "im = in dem: im Bereich — у зоні"
+   },
+   "innerorts": {
+    "ru": "у населеному пункті",
+    "pos": "присл.",
+    "note": "тут зазвичай не більше 50 км/год"
+   },
+   "kein": {
+    "ru": "жодний; не (заперечення при іменнику)",
+    "pos": "займ."
+   },
+   "klein": {
+    "ru": "маленький",
+    "pos": "прикм."
+   },
+   "kosten": {
+    "ru": "коштувати",
+    "pos": "дієсл.",
+    "forms": "kostete · hat gekostet"
+   },
+   "legen": {
+    "ru": "класти",
+    "pos": "дієсл.",
+    "forms": "legte · hat gelegt"
+   },
+   "links": {
+    "ru": "ліворуч",
+    "pos": "присл."
+   },
+   "machen": {
+    "ru": "робити",
+    "pos": "дієсл.",
+    "note": "den Schulterblick machen — озирнутися через плече; Gut gemacht! — Молодець!",
+    "forms": "machte · hat gemacht"
+   },
+   "mindestens": {
+    "ru": "щонайменше, не менше",
+    "pos": "присл."
+   },
+   "mit": {
+    "ru": "з",
+    "pos": "прийм."
+   },
+   "nach": {
+    "ru": "після; до (напрямок)",
+    "pos": "прийм."
+   },
+   "nicht": {
+    "ru": "не",
+    "pos": "частка"
+   },
+   "ohne": {
+    "ru": "без",
+    "pos": "прийм."
+   },
+   "passieren": {
+    "ru": "відбуватися, траплятися",
+    "pos": "дієсл.",
+    "forms": "passierte · ist passiert"
+   },
+   "reagieren": {
+    "ru": "реагувати",
+    "pos": "дієсл.",
+    "forms": "reagierte · hat reagiert"
+   },
+   "rechts": {
+    "ru": "праворуч",
+    "pos": "присл."
+   },
+   "sagen": {
+    "ru": "казати, сказати",
+    "pos": "дієсл.",
+    "forms": "sagte · hat gesagt"
+   },
+   "sein": {
+    "ru": "бути",
+    "pos": "дієсл.",
+    "forms": "war · ist gewesen"
+   },
+   "sich": {
+    "ru": "себе, -ся",
+    "pos": "займ."
+   },
+   "sofort": {
+    "ru": "одразу, негайно",
+    "pos": "присл."
+   },
+   "sondern": {
+    "ru": "а (після заперечення)",
+    "pos": "спол."
+   },
+   "stabil": {
+    "ru": "стійкий, стабільний",
+    "pos": "прикм."
+   },
+   "stocken": {
+    "ru": "зупинятися (про рух)",
+    "pos": "дієсл.",
+    "forms": "stockte · hat gestockt"
+   },
+   "strafbar": {
+    "ru": "караний",
+    "pos": "прикм.",
+    "note": "sich strafbar machen — вчинити кароване діяння"
+   },
+   "und": {
+    "ru": "і, та",
+    "pos": "спол."
+   },
+   "unter": {
+    "ru": "під; менше",
+    "pos": "прийм."
+   },
+   "viele": {
+    "ru": "багато, чимало",
+    "pos": "займ."
+   },
+   "warten": {
+    "ru": "чекати",
+    "pos": "дієсл.",
+    "note": "warten auf — чекати на (когось)",
+    "forms": "wartete · hat gewartet"
+   },
+   "was": {
+    "ru": "що",
+    "pos": "займ."
+   },
+   "wegfahren": {
+    "ru": "від'їжджати",
+    "pos": "дієсл.",
+    "forms": "fuhr weg · ist weggefahren"
+   },
+   "wer": {
+    "ru": "хто",
+    "pos": "займ."
+   },
+   "wie": {
+    "ru": "як",
+    "pos": "присл.",
+    "note": "wie schnell — з якою швидкістю"
+   },
+   "wo": {
+    "ru": "де",
+    "pos": "присл."
+   },
+   "zwei": {
+    "ru": "два",
+    "pos": "числ."
+   }
+  }
+ }
+}
