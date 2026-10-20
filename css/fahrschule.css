@@ -540,3 +540,60 @@ html[dir="rtl"] .fs-tr { text-align: right; }
 .fs-sticker path { stroke: #e0484f; stroke-width: 2; }
 .fs-pr { font: 800 16px 'DM Sans', system-ui, sans-serif; fill: #2f7fd8; text-anchor: middle; }
 @media (prefers-reduced-motion: reduce) { .is-exhaust .fs-puffs circle { animation: none; opacity: .6; } }
+
+/* ── Пробный экзамен (x-01) ── */
+.fs-exam-tile {
+  display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 14px;
+  margin-bottom: 26px; padding: 18px; border-radius: 20px; text-decoration: none;
+  background: var(--fs-cta-bg); border: 1px solid var(--border); color: #fff;
+  -webkit-tap-highlight-color: transparent;
+}
+[data-theme="light"] .fs-exam-tile { border-color: transparent; }
+.fs-exam-tile:active { transform: scale(.99); }
+.fs-exam-tile .fs-cont-k, .fs-exam-tile .fs-cont-meta { color: rgba(255, 255, 255, .78); }
+.fs-exam-tile .fs-row-chev { color: rgba(255, 255, 255, .78); }
+html[dir="rtl"] .fs-exam-tile .fs-row-chev { transform: scaleX(-1); }
+.fs-exam-ico {
+  width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  background: #fff; color: #12161f;
+}
+.fs-page .fs-exam-ico .ico { width: 24px; height: 24px; }
+.fs-exam { margin-top: 18px; }
+.fs-exam-rules { margin: 8px 0 4px; padding-inline-start: 20px; font-size: 14px; line-height: 1.5; color: rgba(255, 255, 255, .88); }
+.fs-exam-rules b { font-weight: 700; color: #fff; }
+.fs-exam-rules li { list-style: disc; }
+.fs-exam-rules li::marker { color: rgba(255, 255, 255, .6); }
+.fs-exam-pts {
+  display: inline-block; padding: 1px 8px; border-radius: var(--r-full);
+  background: var(--fs-dialog-bg); color: var(--fs-dialog); white-space: nowrap;
+}
+.fs-exam-pts b { font-weight: 800; }
+.fs-exam-card > .fs-track { margin: 10px 0 14px; }
+.fs-exam-sit { margin: 4px 0 10px; text-align: start; cursor: pointer; }
+.fs-exam-sit .fs-de { margin: 0; font-size: 16px; line-height: 1.5; color: var(--text-strong); }
+.fs-exam-pic { margin-bottom: 12px; }
+.fs-exam-card .fs-quiz-q, .fs-exam-review .fs-quiz-q { text-align: start; }
+.fs-exam-card .fs-sign-img, .fs-exam-review .fs-sign-img { display: block; margin: 4px auto 12px; }
+.fs-opt.is-picked { border-color: var(--accent2); background: color-mix(in srgb, var(--accent2) 14%, var(--surface)); }
+.fs-exam-nav { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: 16px; }
+.fs-exam-next:disabled { opacity: .45; cursor: default; box-shadow: none; }
+.fs-exam-result {
+  display: flex; flex-direction: column; align-items: center; padding: 22px 18px; border-radius: 20px;
+  text-align: center; background: var(--fs-card); box-shadow: var(--fs-shadow);
+  border: 2px solid var(--border);
+}
+.fs-exam-result.is-pass { border-color: var(--correct); }
+.fs-exam-result.is-fail { border-color: var(--wrong); }
+.fs-exam-result.is-pass .fs-result-big { color: var(--correct); }
+.fs-exam-result.is-fail .fs-result-big { color: var(--wrong); }
+.fs-exam-verdict { margin: 6px 0 0; font-family: 'DM Sans', sans-serif; font-size: 24px; font-weight: 800; color: var(--text-strong); }
+.fs-exam-result .fs-result-text { margin: 6px 0 4px; }
+.fs-exam-result .fs-quiz-go { background: var(--accent2); color: var(--text-on-btn); }
+.fs-exam-why { margin: 6px 0 0; font-size: 14px; line-height: 1.5; color: var(--text-muted); text-align: center; }
+.fs-exam-result + .fs-sec-title { margin-top: 26px; }
+.fs-exam-list { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
+.fs-exam-review .fs-explain { margin-top: 12px; text-align: start; }
+.fs-exam-src {
+  display: inline-block; margin-top: 12px; font-size: 14px; font-weight: 700;
+  color: var(--accent2-text); text-decoration: none;
+}

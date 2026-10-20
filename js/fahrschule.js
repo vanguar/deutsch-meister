@@ -18,6 +18,8 @@
      dialog   — разговор с инструктором, вид «пузырей» из css/dialogs.css;
      junction — перекрёсток в SVG: нажать на машины в порядке проезда,
                 потом машины едут, объяснение озвучивается.
+   Отдельно — пробный экзамен (x-01, index.json: exam): 30 вопросов из
+   тестов по знакам и ситуаций «На дороге», штрафные баллы, разбор в конце.
 
    Каждое немецкое слово — <span class="bw fs-w">: тултип перевода тот же,
    что в книгах и новостях (js/reader-tip.js, глоссарий урока в gloss).
@@ -40,6 +42,7 @@ const Fahrschule = (() => {
   const OPEN_KEY  = 'dm_fs_open';    // раскрытые темы: JSON-массив id
   const LAST_KEY  = 'dm_fs_last';    // последний открытый урок
   const PROG_KEY  = 'dm_fs_progress';// прогресс: { id: { n — сколько строк/сцен пройдено, done } }
+  const EXAM_KEY  = 'dm_fs_exam';    // пробный экзамен: { tries, passed, best, last }
   const HOME_URL  = 'index.html';
   const GAP_MS    = 380;             // пауза между фразами
   const RATE      = 0.9;
@@ -53,6 +56,8 @@ const Fahrschule = (() => {
     junction: { label: 'Перекрёсток', icon: 'i-cross', forms: ['ситуация', 'ситуации', 'ситуаций'] },
     road:     { label: 'На дороге',   icon: 'i-route', forms: ['ситуация', 'ситуации', 'ситуаций'] }
   };
+  // Пробный экзамен — не урок темы: в списке своя карточка, в прогресс не входит
+  const EXAM_KIND = { label: 'Экзамен', icon: 'i-cap', forms: ['вопрос', 'вопроса', 'вопросов'] };
   // Иконка темы (topics.json: id). Новая тема без своей иконки — машина.
   const TOPIC_ICONS = {
     'vorfahrt': 'i-light', 'zeichen-ampeln': 'i-warn', 'tempo-abstand': 'i-gauge', 'ueberholen': 'i-updown',
@@ -96,6 +101,8 @@ const Fahrschule = (() => {
   let sentences = [];       // фразы на экране: [{ de, tr }], индекс = data-s
   let quiz  = null;         // { i, score, answered, opts, base, tr — перевод вопроса и вариантов открыт }
   let scene = null;         // { i, pick, done }
+  let exam  = null;         // { qs, i, picks, opts, started, done, tr }
+  let examInfo = null;      // index.json: exam — { id, title, titleTr, count }
   let sceneTr = false;      // перевод ситуации, вопроса и вариантов в сценах урока
   let anims = [];           // requestAnimationFrame машин
   let timers = [];
@@ -172,9 +179,16 @@ const Fahrschule = (() => {
 
   // Сколько строк (реплик, ситуаций) в уроке — из оглавления: в <id>.json числа нет
   function unitCount(id) {
-    const u = units.find(x => x.id === id);
+    const u = metaOf(id);
     return u ? u.count : 0;
   }
+
+  // Строка оглавления урока или экзамена
+  function metaOf(id) {
+    return units.find(x => x.id === id) || (examInfo && examInfo.id === id ? examInfo : null);
+  }
+
+  function kindOf(kind) { return kind === 'exam' ? EXAM_KIND : KINDS[kind]; }
 
   function saveProgress(id, n, done, seen) {
     const all = readProgress();
@@ -275,7 +289,7 @@ const Fahrschule = (() => {
 
   function show(v) {
     stopAll();
-    if (loaded && v.name === 'unit' && !units.some(u => u.id === v.id)) {
+    if (loaded && v.name === 'unit' && !metaOf(v.id)) {
       v = { name: 'hub' };      // старая ссылка на убранный урок
       setUrl(v, 'replace');
     }
@@ -406,7 +420,7 @@ const Fahrschule = (() => {
     const byId = Object.fromEntries(units.map(u => [u.id, u]));
     const prog = readProgress();
     const open = openTopic();
-    el.cont.innerHTML = continueHtml(byId, prog);
+    el.cont.innerHTML = continueHtml(byId, prog) + examCardHtml();
     el.done.innerHTML = `<span>Пройдено</span>: ${ofHtml(units.filter(u => progressOf(u.id, prog).done).length, units.length)}`;
     el.listHead.hidden = false;
     el.list.innerHTML = topics.map((t, k) => topicHtml(t, k + 1, byId, t.id === open, prog)).join('');
@@ -474,10 +488,12 @@ const Fahrschule = (() => {
   }
 
   function openUnit(id) {
-    writeStore(LAST_KEY, id);
-    // вернёмся в список — будет раскрыта тема этого урока
+    // вернёмся в список — будет раскрыта тема этого урока (экзамен — не урок темы)
     const ti = topicOf(id);
-    if (topics[ti]) writeStore(OPEN_KEY, JSON.stringify([topics[ti].id]));
+    if (topics[ti]) {
+      writeStore(LAST_KEY, id);
+      writeStore(OPEN_KEY, JSON.stringify([topics[ti].id]));
+    }
     const seq = ++loadSeq;
     unit = null;
     el.body.innerHTML = '<div class="news-loading"><span class="rd-spinner"></span><span>Загружаем урок</span></div>';
@@ -501,8 +517,9 @@ const Fahrschule = (() => {
     sentences = [];
     quiz = null;
     scene = null;
+    exam = null;
     sceneTr = trOn();
-    const k = KINDS[u.kind];
+    const k = kindOf(u.kind);
     // Заголовок урока — фраза 0 (сцены перерегистрируют свои фразы после неё)
     el.heading.innerHTML = `
       <div class="fs-hero-top">
@@ -515,12 +532,14 @@ const Fahrschule = (() => {
     document.title = u.title + ' | German Morning';
     if (u.kind === 'theory') el.body.innerHTML = theoryHtml(u);
     else if (u.kind === 'dialog') el.body.innerHTML = dialogHtml(u);
+    else if (u.kind === 'exam') el.body.innerHTML = '<section class="fs-exam" id="fsExam" aria-live="polite"></section>';
     else el.body.innerHTML = '<div class="fs-junction" id="fsJunction"></div>';
     paintTr();
     paintPlay();
     paintBar();
     if (u.kind === 'theory' && u.quiz && u.quiz.length) startQuiz();
     if (u.kind === 'junction' || u.kind === 'road') openScene(0);
+    else if (u.kind === 'exam') startExam(false);
     else watchSeen();
     prefetchAround(u.id);
   }
@@ -722,6 +741,206 @@ const Fahrschule = (() => {
     renderQuiz();
     // правильный ответ звучит сразу: так название знака запоминается
     speak([unit.signs[q.sign].de], 'quiz');
+  }
+
+  /* ── Пробный экзамен (x-01) ──
+     Как Theorieprüfung: rules.n вопросов (rules.signs — по знакам, остальные —
+     ситуации «На дороге» с картинкой до ответа) из всех тем, у вопроса
+     штрафные баллы 2–5. Во время экзамена правильность не показывается:
+     выбрал → «Дальше» (можно вернуться назад). В конце — сдано / не сдано
+     (не больше rules.max баллов и не больше одной ошибки на 5 баллов) и
+     разбор ошибок с пояснением и ссылкой на урок. Лучший результат —
+     EXAM_KEY: { tries, passed, best — наименьшие баллы, last }. */
+
+  function readExam() {
+    try {
+      const r = JSON.parse(readStore(EXAM_KEY) || '{}');
+      return r && typeof r === 'object' && !Array.isArray(r) ? r : {};
+    } catch (e) { return {}; }
+  }
+
+  function examTr() { return exam && exam.tr !== null ? exam.tr : trOn(); }
+
+  function examCardHtml() {
+    if (!examInfo) return '';
+    const r = readExam();
+    const meta = r.tries
+      ? `<span>Лучший результат</span>: ${countHtml(r.best, ['штрафной балл', 'штрафных балла', 'штрафных баллов'])}${r.passed ? ' · <span>сдано</span> ✓' : ''}`
+      : `${countHtml(examInfo.count, ['вопрос', 'вопроса', 'вопросов'])} · <span>как на настоящем экзамене</span>`;
+    return `<a class="fs-exam-tile" href="#u=${esc(examInfo.id)}" data-unit="${esc(examInfo.id)}">
+      <span class="fs-exam-ico" aria-hidden="true">${icon('i-cap')}</span>
+      <span class="fs-cont-text">
+        <span class="fs-cont-k">Пробный экзамен</span>
+        <span class="fs-cont-de" lang="de" dir="ltr">${esc(examInfo.title)}</span>
+        <span class="fs-cont-meta">${meta}</span>
+      </span>
+      ${icon('i-chev', 'fs-row-chev')}
+    </a>`;
+  }
+
+  // Новый билет: знаки и ситуации вперемешку, варианты в случайном порядке
+  function startExam(started) {
+    const rules = unit.rules;
+    const signs = shuffle(unit.pool.filter(q => q.kind === 'sign')).slice(0, rules.signs);
+    const roads = shuffle(unit.pool.filter(q => q.kind === 'road')).slice(0, rules.n - signs.length);
+    const qs = shuffle(signs.concat(roads));
+    exam = {
+      qs, i: 0, started: !!started, done: false, tr: exam ? exam.tr : null,
+      picks: qs.map(() => null),
+      opts: qs.map(q => q.kind === 'sign'
+        ? shuffle([q.sign].concat(q.wrong)).map(sid => ({ key: sid, label: unit.signs[sid].de, tr: unit.signs[sid].tr }))
+        : shuffle(roadOptions(q.scene)))
+    };
+    renderExam();
+  }
+
+  function examAnswer(q) { return q.kind === 'sign' ? q.sign : String(q.scene.answer); }
+
+  function examScore() {
+    let points = 0, fives = 0, right = 0;
+    exam.qs.forEach((q, k) => {
+      if (exam.picks[k] === examAnswer(q)) { right++; return; }
+      points += q.pts;
+      if (q.pts >= 5) fives++;
+    });
+    const rules = unit.rules;
+    return { points, fives, right, passed: points <= rules.max && fives < 2 };
+  }
+
+  function ptsHtml(n) {
+    return `<span class="fs-exam-pts">${countHtml(n, ['балл', 'балла', 'баллов'])}</span>`;
+  }
+
+  // Текст вопроса: у знака — картинка и «Was bedeutet dieses Schild?»,
+  // у ситуации — описание, вопрос и картинка до ответа
+  function examQuestionHtml(q) {
+    if (q.kind === 'sign') {
+      const qq = unit.quizQuestion;
+      return signHtml(unit.signs[q.sign], true)
+        + (qq ? sentence(qq, 'p', 'fs-quiz-q') + `<p class="fs-tr fs-quiz-q-tr" dir="auto">${esc(qq.tr)}</p>` : '');
+    }
+    const sc = q.scene;
+    return `<div class="fs-exam-sit">${sentence(sc.situation, 'p', 'fs-de')}<p class="fs-tr" dir="auto">${esc(sc.situation.tr)}</p></div>
+      <div class="fs-scene fs-road fs-exam-pic">${roadSvg(sc, false)}</div>
+      ${sentence(sc.question, 'p', 'fs-quiz-q')}<p class="fs-tr fs-quiz-q-tr" dir="auto">${esc(sc.question.tr)}</p>`;
+  }
+
+  function examOptsHtml(k, review) {
+    const q = exam.qs[k];
+    const ans = examAnswer(q);
+    const pick = exam.picks[k];
+    const phrases = q.kind === 'road' && q.scene.options.some(o => typeof o === 'object');
+    return `<div class="fs-opts${q.kind === 'road' ? ' fs-road-opts' : ''}${phrases ? ' is-phrases' : ''}${review ? ' is-answered' : ''}">${exam.opts[k].map(o => {
+      let cls = 'fs-opt' + (q.kind === 'road' ? ' fs-road-opt' : '') + (phrases ? ' is-phrase' : '');
+      if (review) {
+        if (o.key === ans) cls += ' is-right';
+        else if (o.key === pick) cls += ' is-wrong';
+      } else if (o.key === pick) cls += ' is-picked';
+      return `<button class="${cls}" type="button" data-exam-opt="${esc(o.key)}"${review ? ' disabled' : ` aria-pressed="${o.key === pick ? 'true' : 'false'}"`}>
+        <span class="fs-opt-de" lang="de" dir="ltr">${esc(o.label)}</span>${o.tr ? `<span class="fs-opt-tr">${esc(o.tr)}</span>` : ''}</button>`;
+    }).join('')}</div>`;
+  }
+
+  function renderExam() {
+    const box = document.getElementById('fsExam');
+    if (!box || !exam) return;
+    sentences = sentences.slice(0, 1);   // заголовок остаётся, фразы вопроса — заново
+    const rules = unit.rules;
+    paintBar();
+    if (!exam.started) {
+      const r = readExam();
+      box.innerHTML = `<div class="fs-quiz-start">
+          <span class="fs-quiz-k">Пробный экзамен</span>
+          <h2 class="fs-quiz-cta">Как на настоящей Theorieprüfung</h2>
+          <ul class="fs-exam-rules">
+            <li>${countHtml(rules.n, ['вопрос', 'вопроса', 'вопросов'])} <span>из всех тем: знаки и ситуации на дороге</span></li>
+            <li><span>У каждого вопроса от 2 до 5 штрафных баллов</span></li>
+            <li><span>Сдано, если не больше</span> ${countHtml(rules.max, ['балла', 'баллов', 'баллов'])} <span>и не больше одной ошибки на 5 баллов</span></li>
+            <li><span>Правильные ответы и разбор — в конце</span></li>
+          </ul>
+          ${r.tries ? `<span class="fs-quiz-sub"><span>Попыток</span>: ${r.tries} · <span>сдано</span>: ${r.passed || 0} · <span>лучший результат</span>: ${countHtml(r.best, ['балл', 'балла', 'баллов'])}</span>` : ''}
+          <button class="fs-quiz-go" type="button" data-exam-start><span>Начать экзамен</span> ${icon('i-chev', 'flip')}</button>
+        </div>`;
+      return;
+    }
+    if (exam.done) { renderExamResult(box); return; }
+    const k = exam.i;
+    const q = exam.qs[k];
+    const last = k + 1 >= exam.qs.length;
+    const answered = exam.picks.filter(p => p !== null).length;
+    box.innerHTML = `<div class="fs-quiz-card fs-exam-card${trCls(examTr())}">
+        <div class="fs-quiz-top">
+          <span><span>Вопрос</span> <span class="fs-quiz-n">${k + 1} / ${exam.qs.length}</span> · ${ptsHtml(q.pts)}</span>
+          <button class="news-chip fs-quiz-tr" type="button" data-tr-line aria-pressed="${examTr() ? 'true' : 'false'}">${icon('i-translate')}<span>Перевод</span></button>
+        </div>
+        ${trackHtml(answered, exam.qs.length)}
+        ${examQuestionHtml(q)}
+        ${examOptsHtml(k, false)}
+        <div class="fs-exam-nav">
+          ${k > 0 ? `<button class="news-chip" type="button" data-exam-prev>‹ <span>Назад</span></button>` : '<span></span>'}
+          <button class="dlg-play fs-exam-next" type="button" data-exam-next${exam.picks[k] === null ? ' disabled' : ''}>${last ? '<span>Завершить экзамен</span>' : '<span>Дальше</span> ›'}</button>
+        </div>
+      </div>`;
+  }
+
+  function renderExamResult(box) {
+    const s = examScore();
+    const rules = unit.rules;
+    const why = s.passed ? ''
+      : s.points > rules.max
+        ? `<p class="fs-exam-why"><span>Больше</span> ${countHtml(rules.max, ['балла', 'баллов', 'баллов'])} — <span>экзамен не сдан</span></p>`
+        : `<p class="fs-exam-why"><span>Две ошибки на 5 баллов — экзамен не сдан, даже если баллов немного</span></p>`;
+    const wrong = exam.qs.map((q, k) => k).filter(k => exam.picks[k] !== examAnswer(exam.qs[k]));
+    const review = wrong.map(k => {
+      const q = exam.qs[k];
+      const expl = (q.kind === 'sign' ? q.explain : q.scene.explain).map(e => {
+        const n = sentences.length;
+        return `<li class="fs-line" data-line="${n}"><div class="fs-line-row">
+          <div class="fs-line-text">${sentence(e, 'p', 'fs-de')}<p class="fs-tr" dir="auto">${esc(e.tr)}</p></div>
+          ${lineBtns(n)}</div></li>`;
+      }).join('');
+      const title = unit.srcTitles[q.src] || q.src;
+      return `<li class="fs-quiz-card fs-exam-review${trCls(examTr())}">
+        <div class="fs-quiz-top"><span><span>Вопрос</span> <span class="fs-quiz-n">${k + 1}</span> · ${ptsHtml(q.pts)}</span></div>
+        ${examQuestionHtml(q)}
+        ${examOptsHtml(k, true)}
+        ${expl ? `<ol class="fs-lines fs-explain">${expl}</ol>` : ''}
+        <a class="fs-exam-src" href="#u=${esc(q.src)}" data-unit="${esc(q.src)}"><span>Повторить урок</span>: <span lang="de" dir="ltr">${esc(title)}</span> ›</a>
+      </li>`;
+    }).join('');
+    box.innerHTML = `<div class="fs-exam-result ${s.passed ? 'is-pass' : 'is-fail'}">
+        <div class="fs-result-big" aria-hidden="true">${icon(s.passed ? 'i-trophy' : 'i-car')}</div>
+        <h2 class="fs-exam-verdict">${s.passed ? '<span>Сдано!</span>' : '<span>Не сдано</span>'}</h2>
+        <p class="fs-result-text"><span>Штрафные баллы</span>: <b>${s.points}</b> · <span>верно</span>: ${ofHtml(s.right, exam.qs.length)}</p>
+        ${why}
+        <button class="fs-quiz-go" type="button" data-exam-new>↻ <span>Новый экзамен</span></button>
+      </div>
+      ${wrong.length ? `<h2 class="fs-sec-title">Разбор ошибок</h2><ol class="fs-exam-list">${review}</ol>`
+        : '<p class="fs-exam-why"><span>Ни одной ошибки — отлично!</span></p>'}`;
+    paintTr();
+    paintPlay();
+  }
+
+  function finishExam() {
+    exam.done = true;
+    const s = examScore();
+    const r = readExam();
+    const tries = (Number(r.tries) || 0) + 1;
+    writeStore(EXAM_KEY, JSON.stringify({
+      tries, passed: (Number(r.passed) || 0) + (s.passed ? 1 : 0),
+      best: r.tries ? Math.min(Number(r.best) || 0, s.points) : s.points,
+      last: { points: s.points, right: s.right, passed: s.passed }
+    }));
+    renderExam();
+    el.body.scrollIntoView({ block: 'start', behavior: reducedMotion() ? 'auto' : 'smooth' });
+  }
+
+  function examGo(k) {
+    stopSpeech();
+    exam.i = k;
+    renderExam();
+    const card = document.querySelector('#fsExam .fs-exam-card');
+    if (card && card.getBoundingClientRect().top < 0) card.scrollIntoView({ block: 'start' });
   }
 
   /* ── Диалог (вид «Диалогов») ── */
@@ -1937,8 +2156,16 @@ const Fahrschule = (() => {
 
   function paintBar() {
     if (!el.barCount) return;
-    const u = view.name === 'unit' ? units.find(x => x.id === view.id) : null;
+    const u = view.name === 'unit' ? metaOf(view.id) : null;
     if (!u) return;
+    if (u.kind === 'exam') {
+      // экзамен: «‹ Все темы · 12 из 30 вопросов» — сколько отвечено
+      const n = exam && exam.started ? exam.picks.filter(x => x !== null).length : 0;
+      el.barTopic.innerHTML = '<span>Все темы</span>';
+      el.barCount.innerHTML = ofCountHtml(n, u.count, EXAM_KIND.forms);
+      el.barFill.style.width = (u.count > 0 ? Math.round(100 * n / u.count) : 0) + '%';
+      return;
+    }
     const ti = topicOf(u.id);
     el.barTopic.innerHTML = ti >= 0 ? `<span>Тема</span> ${ti + 1}` : '<span>Все уроки</span>';
     const p = progressOf(u.id);
@@ -2153,6 +2380,7 @@ const Fahrschule = (() => {
       el.unit.querySelectorAll('.tr-open, .tr-closed').forEach(h => h.classList.remove('tr-open', 'tr-closed'));
       sceneTr = trOn();
       if (quiz) quiz.tr = null;
+      if (exam) exam.tr = null;
       const box = document.getElementById('fsJunction');
       if (box) paintSceneTr(box);
       paintTr();
@@ -2161,6 +2389,22 @@ const Fahrschule = (() => {
     if (t.closest('[data-tr-line]')) { toggleLineTr(trHolder(t)); return; }
     const ro = t.closest('[data-road-opt]');
     if (ro) { pickRoad(ro.dataset.roadOpt); return; }
+    if (exam) {
+      if (t.closest('[data-exam-start]')) {
+        exam.started = true;
+        renderExam();
+        document.getElementById('fsExam').scrollIntoView({ block: 'start', behavior: reducedMotion() ? 'auto' : 'smooth' });
+        return;
+      }
+      const eo = t.closest('[data-exam-opt]');
+      if (eo && !exam.done) { exam.picks[exam.i] = eo.dataset.examOpt; renderExam(); return; }
+      if (t.closest('[data-exam-prev]')) { examGo(Math.max(0, exam.i - 1)); return; }
+      if (t.closest('[data-exam-next]') && exam.picks[exam.i] !== null) {
+        if (exam.i + 1 < exam.qs.length) examGo(exam.i + 1); else finishExam();
+        return;
+      }
+      if (t.closest('[data-exam-new]')) { stopSpeech(); startExam(true); el.body.scrollIntoView({ block: 'start' }); return; }
+    }
     if (t.closest('[data-quiz-start]') && quiz) {
       quiz.started = true;
       renderQuiz();
@@ -2179,7 +2423,7 @@ const Fahrschule = (() => {
     if (t.closest('[data-scene-again]')) { openScene(scene.i); return; }
     if (t.closest('[data-scene-next]')) { openScene(scene.i + 1); scrollToScene(); return; }
     // нажатие на строку (не на слово и не на кнопку) — тоже перевод фразы
-    if (!t.closest('a, button') && (t.closest('.fs-line, .fs-situation') || t.closest('.fs-quiz-q'))) toggleLineTr(trHolder(t));
+    if (!t.closest('a, button') && (t.closest('.fs-line, .fs-situation, .fs-exam-sit') || t.closest('.fs-quiz-q'))) toggleLineTr(trHolder(t));
   }
 
   // Чей перевод открывает нажатие: строка или карточка теста (её кнопка —
@@ -2216,6 +2460,7 @@ const Fahrschule = (() => {
     holder.querySelectorAll(':scope > .fs-quiz-top > [data-tr-line]')
       .forEach(b => b.setAttribute('aria-pressed', on ? 'true' : 'false'));
     if (quiz && holder.classList.contains('fs-quiz-card')) quiz.tr = on;
+    if (exam && holder.classList.contains('fs-exam-card')) exam.tr = on;
   }
 
   function onKey(e) {
@@ -2233,6 +2478,7 @@ const Fahrschule = (() => {
       .then(data => {
         units = (data && Array.isArray(data.units) ? data.units : []).filter(u => u && u.id && KINDS[u.kind]);
         topics = (data && Array.isArray(data.topics) ? data.topics : []).filter(t => t && Array.isArray(t.units));
+        examInfo = data && data.exam && data.exam.id ? data.exam : null;
         // старое оглавление без тем — одна общая группа
         if (!topics.length && units.length) topics = [{ id: 'all', emoji: '🚗', title: 'Fahrschule', titleTr: '', units: units.map(u => u.id) }];
         loaded = true;
@@ -2280,7 +2526,7 @@ const Fahrschule = (() => {
   return {
     init, up, go, stop: stopAll,
     get view() { return view; }, get unit() { return unit; }, get playing() { return playing; },
-    get scene() { return scene; }, get quiz() { return quiz; },
+    get scene() { return scene; }, get quiz() { return quiz; }, get exam() { return exam; },
     get topics() { return topics; }, get cached() { return Object.keys(cache); },
     wordsHtml, wordKey, WORD_RE
   };

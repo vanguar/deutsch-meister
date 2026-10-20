@@ -484,6 +484,118 @@ def solve_lights(cars, signs, lights):
     return parts[0] + parts[1] + parts[2], len(parts[0]) + len(parts[1])
 
 
+# ── Пробный экзамен (src/exam.json → x-01.json) ──
+# Вопросы — из готовых уроков: тесты по знакам (теория) и ситуации
+# «На дороге». У вопроса штрафные баллы 2–5, как в настоящей
+# Theorieprüfung: самое опасное (приоритет, пешеходы, переезд, алкоголь) — 5.
+# Сдано: не больше maxPoints баллов и не больше одной ошибки на 5 баллов
+# (это считает js/fahrschule.js).
+EXAM_SIGN_POINTS = {
+    5: ('z205', 'z206', 'z301', 'z306', 'z307', 'z102', 'z720', 'z208', 'z215', 'z201', 'z151', 'z350'),
+    4: ('z267', 'z276', 'z283', 'z286', 'z274', 'z2741', 'z3251', 'z275', 'z136', 'z133', 'z142', 'z123',
+        'z10151', 'z114', 'z101', 'z156', 'z2771', 'z295', 'z237', 'z239', 'z240', 'z241', 'z2441', 'z138'),
+    2: ('z2701', 'z2702', 'z380', 'z333', 'z450', 'z318', 'z314', 'z315'),
+}
+EXAM_SIGN_DEFAULT = 3
+EXAM_ROAD_POINTS = {
+    5: ('rightturn', 'zebracross', 'bus', 'railway', 'promille', 'roundabout', 'overtake', 'rescuelane', 'merge', 'wild'),
+    4: ('stop', 'gap', 'side', 'highbeam', 'fog', 'tired', 'lamp', 'parkspot', 'access', 'missed', 'triangle', 'tread'),
+    3: ('zipper', 'parallel', 'yellow'),
+    2: ('shift', 'idle', 'umweltzone'),
+}
+SCENE_TEXT = ('options', 'situation', 'question', 'explain')
+
+
+def exam_points(table, key, default):
+    for pts, keys in table.items():
+        if key in keys:
+            return pts
+    return default
+
+
+def build_exam(units, built, gloss):
+    path = os.path.join(SRC, 'exam.json')
+    if not os.path.isfile(path):
+        return None
+    src = read_json(path)
+    where = 'экзамен'
+    if not re.match(r'^x-\d\d$', src.get('id') or ''):
+        err(f'{where}: id вида x-01')
+    for key in ('emoji', 'level', 'title', 'titleTr', 'intro'):
+        if not src.get(key):
+            err(f'{where}: нет поля {key}')
+    check_de(where + ' название', src.get('title', ''))
+    check_tr(where + ' название', src.get('titleTr'))
+    check_tr(where + ' вступление', src.get('intro'))
+    keys, _ = gloss.resolve(where + ' название', src.get('title', ''), None)
+    rules = {'n': src.get('n'), 'signs': src.get('signs'), 'max': src.get('maxPoints')}
+    if not all(isinstance(v, int) and v > 0 for v in rules.values()) or rules['signs'] >= rules['n']:
+        err(f'{where}: n, signs (< n) и maxPoints — положительные целые')
+        return None
+    by_id = {lang: {u['id']: u for u in built[lang]} for lang in LANGS}
+    pool = {lang: [] for lang in LANGS}
+    seen_signs, seen_scenes = set(), set()
+    n_sign = n_road = 0
+    for u in units:
+        uid = u.get('id')
+        if uid not in by_id['ru']:
+            continue
+        if u.get('kind') == 'theory':
+            for q in u.get('quiz') or []:
+                sid = q['sign']
+                if sid in seen_signs:
+                    continue          # знак уже был в тесте другого урока
+                seen_signs.add(sid)
+                n_sign += 1
+                pts = exam_points(EXAM_SIGN_POINTS, sid, EXAM_SIGN_DEFAULT)
+                for lang in LANGS:
+                    # пояснение — последняя строка теории про этот знак (как в тесте урока)
+                    line = None
+                    for sec in by_id[lang][uid]['sections']:
+                        for ln in sec['lines']:
+                            if ln.get('sign') == sid:
+                                line = ln
+                    pool[lang].append({'kind': 'sign', 'src': uid, 'pts': pts, 'sign': sid,
+                                       'wrong': q['wrong'], 'explain': [line] if line else []})
+        elif u.get('kind') == 'road':
+            for ci, sc in enumerate(u.get('scenes') or []):
+                key = json.dumps({k: v for k, v in sc.items() if k not in SCENE_TEXT}, sort_keys=True)
+                if key in seen_scenes:
+                    continue          # та же ситуация в другом уроке (r-14 повторяет прежние)
+                seen_scenes.add(key)
+                n_road += 1
+                pts = exam_points(EXAM_ROAD_POINTS, sc.get('type'), 0)
+                if not pts:
+                    err(f'{where}: у сцены {sc.get("type")} нет штрафных баллов (EXAM_ROAD_POINTS)')
+                for lang in LANGS:
+                    pool[lang].append({'kind': 'road', 'src': uid, 'pts': pts,
+                                       'scene': by_id[lang][uid]['scenes'][ci]})
+    if n_sign < rules['signs'] or n_road < rules['n'] - rules['signs']:
+        err(f'{where}: в запасе {n_sign} знаков и {n_road} ситуаций — мало для {rules["n"]} вопросов')
+    out = {}
+    for i, lang in enumerate(LANGS):
+        units_l = by_id[lang]
+        used = sorted({q['src'] for q in pool[lang]})
+        signs, gw, gl = {}, {}, {}
+        for uid in used:
+            signs.update(units_l[uid]['signs'])
+            gw.update(units_l[uid]['gloss']['w'])
+            gl.update(units_l[uid]['gloss']['l'])
+        for k, lm in keys.items():
+            gw[k] = lm
+            gl[lm] = entry_for(lm, gloss.lex[lm], lang)
+        quiz_q = next((units_l[x]['quizQuestion'] for x in used if units_l[x].get('quizQuestion')), None)
+        out[lang] = {
+            'id': src['id'], 'kind': 'exam', 'emoji': src['emoji'], 'level': src['level'],
+            'title': src['title'], 'titleTr': src['titleTr'][i], 'intro': src['intro'][i],
+            'rules': rules, 'quizQuestion': quiz_q,
+            'srcTitles': {x: units_l[x]['title'] for x in used},
+            'pool': pool[lang], 'signs': dict(sorted(signs.items())),
+            'gloss': {'w': dict(sorted(gw.items())), 'l': dict(sorted(gl.items()))},
+        }
+    return out
+
+
 def main():
     units = read_json(os.path.join(SRC, 'units.json'))
     topics = read_json(os.path.join(SRC, 'topics.json'))
@@ -771,6 +883,8 @@ def main():
                 'id': uid, 'kind': kind, 'emoji': u.get('emoji'), 'level': u.get('level'),
                 'title': u.get('title'), 'titleTr': unit['titleTr'], 'count': count,
             })
+    exam_out = build_exam(units, built, gloss)
+
     # темы: каждый урок ровно в одной, порядок уроков — как в теме
     topics_out = {lang: [] for lang in LANGS}
     seen = {}
@@ -813,11 +927,19 @@ def main():
     for lang in LANGS:
         d = dirs[lang]
         keep = {u['id'] + '.json' for u in built[lang]} | {'index.json'}
+        if exam_out:
+            keep.add(exam_out[lang]['id'] + '.json')
         if os.path.isdir(d):
             for f in os.listdir(d):
                 if f.endswith('.json') and f not in keep:
                     os.remove(os.path.join(d, f))    # урок убрали из исходника
-        write_json(os.path.join(d, 'index.json'), {'topics': topics_out[lang], 'units': index[lang]})
+        idx = {'topics': topics_out[lang], 'units': index[lang]}
+        if exam_out:
+            e = exam_out[lang]
+            idx['exam'] = {k: e[k] for k in ('id', 'kind', 'emoji', 'level', 'title', 'titleTr')}
+            idx['exam']['count'] = e['rules']['n']
+            write_json(os.path.join(d, e['id'] + '.json'), e)
+        write_json(os.path.join(d, 'index.json'), idx)
         for unit in built[lang]:
             write_json(os.path.join(d, unit['id'] + '.json'), unit)
 

@@ -15,6 +15,8 @@ validate_fahrschule.py — проверка раздела «Автошкола�
     лемме в gloss.l, у леммы есть перевод на языке копии;
   * знаки: SVG лежит в data/fahrschule/signs, лицензия свободная;
   * у перекрёстка порядок — перестановка машин сцены;
+  * пробный экзамен (index.json: exam): в запасе хватает знаков и
+    ситуаций, у вопроса ответ среди вариантов и штрафные баллы 2–5;
   * темы одинаковы во всех копиях и покрывают каждый урок ровно один раз;
   * fahrschule.html подключает tts.js, reader-speak.js, reader-tip.js,
     fahrschule.js и стили тултипа; на главной есть плитка раздела;
@@ -96,6 +98,15 @@ def texts(unit):
             out.append((f'сцена {ci} вопрос', sc['question']))
         for ei, e in enumerate(sc['explain'], 1):
             out.append((f'сцена {ci} пояснение {ei}', e))
+    for qi, q in enumerate(unit.get('pool') or [], 1):
+        for ei, e in enumerate(q.get('explain') or [], 1):
+            out.append((f'вопрос {qi} пояснение {ei}', e))
+        sc = q.get('scene')
+        if sc:
+            out.append((f'вопрос {qi} ситуация', sc['situation']))
+            out.append((f'вопрос {qi} вопрос', sc['question']))
+            for ei, e in enumerate(sc['explain'], 1):
+                out.append((f'вопрос {qi} пояснение {ei}', e))
     for sid, s in (unit.get('signs') or {}).items():
         out.append((f'знак {sid}', {'de': s['de'], 'tr': s['tr']}))
     return out
@@ -141,7 +152,15 @@ def main():
         for t in tops:
             check_tr(f'{lang} тема {t["id"]}', lang, t.get('titleTr'))
 
-    for uid in ids:
+    exam = idx['ru'].get('exam')
+    if exam:
+        for lang in ('uk', 'ar'):
+            e = idx[lang].get('exam') or {}
+            if (e.get('id'), e.get('title'), e.get('count')) != (exam.get('id'), exam.get('title'), exam.get('count')):
+                err(f'{lang}: экзамен в оглавлении отличается от русского')
+            check_tr(f'{lang} экзамен', lang, e.get('titleTr'))
+
+    for uid in ids + ([exam['id']] if exam else []):
         units = {lang: load(f'{d}/{uid}.json') for lang, d in LANGS.items()}
         if not all(units.values()):
             continue
@@ -194,6 +213,28 @@ def main():
                 for sid in [q['sign']] + q['wrong']:
                     if sid not in (u.get('signs') or {}):
                         err(f'{where}: в тесте знак {sid}, которого нет в signs')
+            if u.get('kind') == 'exam':
+                pool = u.get('pool') or []
+                r = u.get('rules') or {}
+                n_sign = sum(1 for q in pool if q.get('kind') == 'sign')
+                if n_sign < r.get('signs', 0) or len(pool) - n_sign < r.get('n', 0) - r.get('signs', 0):
+                    err(f'{where}: в запасе мало вопросов для билета {r}')
+                for qi, q in enumerate(pool, 1):
+                    if not (isinstance(q.get('pts'), int) and 2 <= q['pts'] <= 5):
+                        err(f'{where} вопрос {qi}: штрафные баллы {q.get("pts")!r}, нужны 2–5')
+                    if q.get('src') not in ids:
+                        err(f'{where} вопрос {qi}: урок-источник {q.get("src")} не в оглавлении')
+                    if q.get('kind') == 'sign':
+                        for sid in [q['sign']] + q['wrong']:
+                            if sid not in (u.get('signs') or {}):
+                                err(f'{where} вопрос {qi}: знак {sid}, которого нет в signs')
+                        if not q.get('explain'):
+                            err(f'{where} вопрос {qi}: нет пояснения к знаку')
+                    else:
+                        sc = q.get('scene') or {}
+                        opt_keys = [o['key'] if isinstance(o, dict) else o for o in sc.get('options') or []]
+                        if sc.get('answer') not in opt_keys:
+                            err(f'{where} вопрос {qi}: ответа {sc.get("answer")} нет среди вариантов')
 
     html = read('fahrschule.html')
     for need in ('js/i18n.js', 'js/tts.js', 'js/reader-speak.js', 'js/reader-tip.js', 'js/fahrschule.js',

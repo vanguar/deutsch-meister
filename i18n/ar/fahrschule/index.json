@@ -534,5 +534,14 @@
    "titleTr": "رحلة الامتحان",
    "count": 8
   }
- ]
+ ],
+ "exam": {
+  "id": "x-01",
+  "kind": "exam",
+  "emoji": "🎓",
+  "level": "B1",
+  "title": "Probeprüfung",
+  "titleTr": "امتحان تجريبي",
+  "count": 30
+ }
 }

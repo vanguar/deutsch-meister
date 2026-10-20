@@ -534,5 +534,14 @@
    "titleTr": "Іспитова поїздка",
    "count": 8
   }
- ]
+ ],
+ "exam": {
+  "id": "x-01",
+  "kind": "exam",
+  "emoji": "🎓",
+  "level": "B1",
+  "title": "Probeprüfung",
+  "titleTr": "Пробний іспит",
+  "count": 30
+ }
 }

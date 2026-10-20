@@ -129,7 +129,7 @@ ok(build.road_answer({'type': 'umweltzone', 'sticker': 'none'})['answer'] == 'no
 
 # ── 2. Сборка ловит ошибки и ничего не пишет ──
 SRC = build.SRC
-real = {f: json.load(open(os.path.join(SRC, f), encoding='utf-8')) for f in ('units.json', 'lexicon.json', 'signs.json', 'topics.json')}
+real = {f: json.load(open(os.path.join(SRC, f), encoding='utf-8')) for f in ('units.json', 'lexicon.json', 'signs.json', 'topics.json', 'exam.json')}
 
 
 def run_with(mutate):
@@ -204,6 +204,18 @@ def fog_no_limit(d):
 
 code, errs, written = run_with(fog_no_limit)
 ok(code == 1 and any('предельного расстояния 50' in e for e in errs), 'туман: в пояснении нет 50 — ошибка')
+
+# ── 3. Пробный экзамен: запас из уроков, без повторов, баллы 2–5 ──
+units_ru = {u['id'] for u in build.read_json(os.path.join(build.OUT, 'index.json'))['units']}
+ex = build.read_json(os.path.join(build.OUT, 'x-01.json'))
+road_keys = [json.dumps({k: v for k, v in q['scene'].items() if k not in build.SCENE_TEXT}, sort_keys=True)
+             for q in ex['pool'] if q['kind'] == 'road']
+signs_pool = [q['sign'] for q in ex['pool'] if q['kind'] == 'sign']
+ok(len(road_keys) == len(set(road_keys)) and len(signs_pool) == len(set(signs_pool)), 'экзамен: ситуации и знаки в запасе не повторяются')
+ok(all(2 <= q['pts'] <= 5 for q in ex['pool']), 'экзамен: штрафные баллы 2–5')
+ok(len(signs_pool) >= ex['rules']['signs'] and len(road_keys) >= ex['rules']['n'] - ex['rules']['signs'], 'экзамен: вопросов хватает на билет')
+ok(all(any(t in ks for ks in build.EXAM_ROAD_POINTS.values()) for t in build.ROAD_TYPES), 'экзамен: у каждого типа ситуации есть баллы')
+ok(all(q['src'] in units_ru for q in ex['pool']), 'экзамен: вопросы ссылаются на уроки из оглавления')
 
 print(f'\nFAIL: {fails}' if fails else '\ntest_build: всё ок')
 sys.exit(1 if fails else 0)
