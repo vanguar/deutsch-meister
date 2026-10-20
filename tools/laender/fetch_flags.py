@@ -6,6 +6,9 @@ tools/laender/fetch_flags.py — флаги 16 земель для раздел�
 в общественном достоянии. Скрипт качает SVG по имени файла, проверяет,
 что внутри нет скриптов и внешних ссылок, и пишет лицензию/источник в
 tools/laender/flags.json (их показывает страница и проверяет валидатор).
+Исходный SVG лежит в tools/laender/flags_svg/, на сайт идёт PNG 216×130
+(ImageMagick): тяжёлые SVG с CSS-масками (Саксония-Анхальт, Саар) не все
+WebView рисуют в <img>, а PNG легче и одинаков везде.
 
 Запуск:
   python tools/laender/fetch_flags.py            — скачать недостающие
@@ -15,6 +18,7 @@ tools/laender/flags.json (их показывает страница и пров
 import json
 import os
 import re
+import subprocess
 import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -24,6 +28,8 @@ sys.path.insert(0, os.path.join(BASE, 'tools', 'fahrschule'))
 from fetch_signs import UNSAFE, EXTERNAL, get, info   # noqa: E402  (тот же Commons API)
 
 OUT_DIR = os.path.join(BASE, 'data', 'laender', 'flags')
+SVG_DIR = os.path.join(HERE, 'flags_svg')
+PNG_SIZE = '216x130!'
 META = os.path.join(HERE, 'flags.json')
 
 FLAGS = {
@@ -46,16 +52,25 @@ FLAGS = {
 }
 
 
+def to_png(svg, png):
+    subprocess.run(['magick', '-background', 'none', '-density', '300', svg, '-resize', PNG_SIZE, '-strip', png],
+                   check=True)
+
+
 def main(argv):
     force = '--force' in argv
     os.makedirs(OUT_DIR, exist_ok=True)
+    os.makedirs(SVG_DIR, exist_ok=True)
     meta = {}
     if os.path.isfile(META):
         with open(META, encoding='utf-8') as f:
             meta = json.load(f)
     for lid, title in FLAGS.items():
-        path = os.path.join(OUT_DIR, lid + '.svg')
+        path = os.path.join(SVG_DIR, lid + '.svg')
+        png = os.path.join(OUT_DIR, lid + '.png')
         if os.path.isfile(path) and lid in meta and not force:
+            if not os.path.isfile(png):
+                to_png(path, png)
             continue
         i = info(title)
         if i['mime'] != 'image/svg+xml':
@@ -67,6 +82,7 @@ def main(argv):
             raise RuntimeError(f'{lid}: в SVG скрипт или внешняя ссылка — не берём')
         with open(path, 'w', encoding='utf-8', newline='\n') as f:
             f.write(svg)
+        to_png(path, png)
         meta[lid] = {'title': title[5:], 'license': i['license'], 'author': i['author'], 'source': i['source']}
         print(f'{lid}: {len(svg) // 1024} КБ · {i["license"]}')
         with open(META, 'w', encoding='utf-8', newline='\n') as f:

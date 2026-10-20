@@ -112,7 +112,7 @@ def build_text(tid, land, level, chapters, book_w, book_l):
         'author': 'German Morning', 'level': lv['level'], 'levelNote': lv['note'],
         'year': land['checked'][:4], 'chapters': len(files), 'words': words,
         'minutes': max(1, round(words / WORDS_PER_MIN)), 'photos': figs,
-        'cover': land['emoji'], 'flag': 'data/laender/flags/%s.svg' % land['id'],
+        'cover': land['emoji'], 'flag': 'data/laender/flags/%s.png' % land['id'],
         'source': land['source'], 'sourceUrl': land['sourceUrl'], 'checked': land['checked'],
         'license': 'текст курса German Morning',
     }
@@ -133,7 +133,7 @@ def main():
         lid = land['id']
         if lid not in shape:
             fail('%s: нет контура на карте (python tools/laender/make_map.py)' % lid)
-        if lid not in flags_meta or not os.path.isfile(os.path.join(OUT, 'flags', lid + '.svg')):
+        if lid not in flags_meta or not os.path.isfile(os.path.join(OUT, 'flags', lid + '.png')):
             fail('%s: нет флага (python tools/laender/fetch_flags.py)' % lid)
         texts = {}
         for level in LEVELS:
@@ -149,7 +149,7 @@ def main():
                             'minutes': meta['minutes'],
                             'toc': [{'title': c[0], 'titleRu': c[1], 'icon': c[2]} for c in TEXTS[tid]]}
         out = {'id': lid, 'name': land['name'], 'nameRu': land['nameRu'], 'capital': land['capital'],
-               'emoji': land['emoji'], 'flag': 'data/laender/flags/%s.svg' % lid,
+               'emoji': land['emoji'], 'flag': 'data/laender/flags/%s.png' % lid,
                'flagSource': flags_meta[lid]['source'], 'ready': bool(texts)}
         if texts:
             for k in ('blurb', 'facts', 'source', 'sourceUrl', 'checked'):

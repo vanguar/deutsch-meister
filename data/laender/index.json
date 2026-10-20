@@ -1,4 +1,35 @@
 {
   "version": 1,
-  "items": []
+  "items": [
+    {
+      "id": "bayern-b1",
+      "title": "Bayern",
+      "titleRu": "Бавария",
+      "author": "German Morning",
+      "level": "B1",
+      "year": "2026",
+      "chapters": 7,
+      "words": 545,
+      "minutes": 5,
+      "cover": "🥨",
+      "source": "Википедия (de): «Bayern» и связанные статьи (история, Октоберфест, CSU, диалекты, праздники)",
+      "license": "текст курса German Morning",
+      "land": "bayern"
+    },
+    {
+      "id": "bayern-b2",
+      "title": "Bayern",
+      "titleRu": "Бавария",
+      "author": "German Morning",
+      "level": "B2",
+      "year": "2026",
+      "chapters": 7,
+      "words": 763,
+      "minutes": 7,
+      "cover": "🥨",
+      "source": "Википедия (de): «Bayern» и связанные статьи (история, Октоберфест, CSU, диалекты, праздники)",
+      "license": "текст курса German Morning",
+      "land": "bayern"
+    }
+  ]
 }

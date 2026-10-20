@@ -27,7 +27,7 @@
       "nameRu": "Баден-Вюртемберг",
       "capital": "Stuttgart",
       "emoji": "📍",
-      "flag": "data/laender/flags/baden-wuerttemberg.svg",
+      "flag": "data/laender/flags/baden-wuerttemberg.png",
       "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_Baden-W%C3%BCrttemberg.svg",
       "ready": false
     },
@@ -36,10 +36,209 @@
       "name": "Bayern",
       "nameRu": "Бавария",
       "capital": "München",
-      "emoji": "📍",
-      "flag": "data/laender/flags/bayern.svg",
+      "emoji": "🥨",
+      "flag": "data/laender/flags/bayern.png",
       "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_Bavaria_(lozengy).svg",
-      "ready": false
+      "ready": true,
+      "blurb": "Самая большая земля Германии: Альпы и Мюнхен, Октоберфест и BMW, король Людвиг II и три группы диалектов. И как бывший аграрный край стал одной из самых богатых земель.",
+      "facts": [
+        [
+          "Столица",
+          "München — более 1,5 млн жителей, третий город Германии"
+        ],
+        [
+          "Население",
+          "13 245 503 (31.12.2025) — 2-е место среди земель"
+        ],
+        [
+          "Площадь",
+          "70 541,57 км² — самая большая земля"
+        ],
+        [
+          "Крупнейшие города",
+          "München, Nürnberg, Augsburg"
+        ],
+        [
+          "В составе ФРГ",
+          "с 1949 года"
+        ],
+        [
+          "Деление",
+          "7 административных округов, 71 район, 25 внерайонных городов"
+        ],
+        [
+          "Высшая точка",
+          "Zugspitze, 2962 м — самая высокая гора Германии"
+        ],
+        [
+          "Соседние государства",
+          "Чехия, Австрия, Швейцария (через Боденское озеро)"
+        ],
+        [
+          "ВВП",
+          "768,5 млрд € (2023) — 2-е место среди земель"
+        ],
+        [
+          "Безработица",
+          "4,0 % (декабрь 2025)"
+        ],
+        [
+          "Диалекты",
+          "баварский, восточнофранконский, швабский"
+        ]
+      ],
+      "source": "Википедия (de): «Bayern» и связанные статьи (история, Октоберфест, CSU, диалекты, праздники)",
+      "sourceUrl": "https://de.wikipedia.org/wiki/Bayern",
+      "checked": "2026-10-20",
+      "quiz": [
+        {
+          "q": "Какая гора — самая высокая в Германии?",
+          "opts": [
+            "Zugspitze",
+            "Watzmann",
+            "Brocken"
+          ],
+          "a": 0,
+          "why": "Цугшпитце в Баварских Альпах — 2962 метра."
+        },
+        {
+          "q": "С какого года проходит Октоберфест?",
+          "opts": [
+            "1516",
+            "1810",
+            "1949"
+          ],
+          "a": 1,
+          "why": "Он начался со свадьбы кронпринца Людвига и принцессы Терезы в 1810 году."
+        },
+        {
+          "q": "Где ХСС участвует в выборах?",
+          "opts": [
+            "Только в Баварии",
+            "Во всей Германии",
+            "В Баварии и в Австрии"
+          ],
+          "a": 0,
+          "why": "ХСС выставляется только в Баварии, а ХДС в Баварии не выставляется."
+        },
+        {
+          "q": "Как пишется название баварского диалекта?",
+          "opts": [
+            "Bayerisch",
+            "Bairisch"
+          ],
+          "a": 1,
+          "why": "«Bairisch» через i — диалект; «bayerisch» через y — всё, что относится к земле."
+        },
+        {
+          "q": "Что можно делать во многих баварских пивных садах?",
+          "opts": [
+            "Приносить свою еду",
+            "Не платить за напитки",
+            "Сидеть только в народном костюме"
+          ],
+          "a": 0,
+          "why": "Своя «Brotzeit» — старая традиция, особенно в Верхней Баварии и Франконии; напитки покупают на месте."
+        },
+        {
+          "q": "Какая роль у Баварии в финансовом выравнивании между землями с 2008 года?",
+          "opts": [
+            "Получает больше всех",
+            "Платит больше всех",
+            "Не участвует"
+          ],
+          "a": 1,
+          "why": "До 1985 года Бавария получала деньги, с 1987 года стала донором, а с 2008 года платит больше всех."
+        }
+      ],
+      "texts": {
+        "b1": {
+          "id": "bayern-b1",
+          "chapters": 7,
+          "words": 545,
+          "minutes": 5,
+          "toc": [
+            {
+              "title": "Bayern im Überblick",
+              "titleRu": "Бавария коротко",
+              "icon": "🗺️"
+            },
+            {
+              "title": "Geschichte",
+              "titleRu": "История",
+              "icon": "🏰"
+            },
+            {
+              "title": "Politik",
+              "titleRu": "Политика",
+              "icon": "🏛️"
+            },
+            {
+              "title": "Wirtschaft",
+              "titleRu": "Экономика",
+              "icon": "💶"
+            },
+            {
+              "title": "Gesellschaft und Kultur",
+              "titleRu": "Общество и культура",
+              "icon": "🎭"
+            },
+            {
+              "title": "Sprache und Dialekte",
+              "titleRu": "Язык и диалекты",
+              "icon": "🗣️"
+            },
+            {
+              "title": "Alltag: gut zu wissen",
+              "titleRu": "Повседневность: полезно знать",
+              "icon": "🧭"
+            }
+          ]
+        },
+        "b2": {
+          "id": "bayern-b2",
+          "chapters": 7,
+          "words": 763,
+          "minutes": 7,
+          "toc": [
+            {
+              "title": "Bayern im Überblick",
+              "titleRu": "Бавария коротко",
+              "icon": "🗺️"
+            },
+            {
+              "title": "Geschichte",
+              "titleRu": "История",
+              "icon": "🏰"
+            },
+            {
+              "title": "Politik",
+              "titleRu": "Политика",
+              "icon": "🏛️"
+            },
+            {
+              "title": "Wirtschaft",
+              "titleRu": "Экономика",
+              "icon": "💶"
+            },
+            {
+              "title": "Gesellschaft und Kultur",
+              "titleRu": "Общество и культура",
+              "icon": "🎭"
+            },
+            {
+              "title": "Sprache und Dialekte",
+              "titleRu": "Язык и диалекты",
+              "icon": "🗣️"
+            },
+            {
+              "title": "Alltag: gut zu wissen",
+              "titleRu": "Повседневность: полезно знать",
+              "icon": "🧭"
+            }
+          ]
+        }
+      }
     },
     {
       "id": "berlin",
@@ -47,7 +246,7 @@
       "nameRu": "Берлин",
       "capital": "Berlin",
       "emoji": "📍",
-      "flag": "data/laender/flags/berlin.svg",
+      "flag": "data/laender/flags/berlin.png",
       "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_Berlin.svg",
       "ready": false
     },
@@ -57,7 +256,7 @@
       "nameRu": "Бранденбург",
       "capital": "Potsdam",
       "emoji": "📍",
-      "flag": "data/laender/flags/brandenburg.svg",
+      "flag": "data/laender/flags/brandenburg.png",
       "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_Brandenburg.svg",
       "ready": false
     },
@@ -67,7 +266,7 @@
       "nameRu": "Бремен",
       "capital": "Bremen",
       "emoji": "📍",
-      "flag": "data/laender/flags/bremen.svg",
+      "flag": "data/laender/flags/bremen.png",
       "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_Bremen.svg",
       "ready": false
     },
@@ -77,7 +276,7 @@
       "nameRu": "Гамбург",
       "capital": "Hamburg",
       "emoji": "📍",
-      "flag": "data/laender/flags/hamburg.svg",
+      "flag": "data/laender/flags/hamburg.png",
       "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_Hamburg.svg",
       "ready": false
     },
@@ -87,7 +286,7 @@
       "nameRu": "Гессен",
       "capital": "Wiesbaden",
       "emoji": "📍",
-      "flag": "data/laender/flags/hessen.svg",
+      "flag": "data/laender/flags/hessen.png",
       "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_Hesse.svg",
       "ready": false
     },
@@ -97,7 +296,7 @@
       "nameRu": "Мекленбург — Передняя Померания",
       "capital": "Schwerin",
       "emoji": "📍",
-      "flag": "data/laender/flags/mecklenburg-vorpommern.svg",
+      "flag": "data/laender/flags/mecklenburg-vorpommern.png",
       "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_Mecklenburg-Western_Pomerania.svg",
       "ready": false
     },
@@ -107,7 +306,7 @@
       "nameRu": "Нижняя Саксония",
       "capital": "Hannover",
       "emoji": "📍",
-      "flag": "data/laender/flags/niedersachsen.svg",
+      "flag": "data/laender/flags/niedersachsen.png",
       "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_Lower_Saxony.svg",
       "ready": false
     },
@@ -117,7 +316,7 @@
       "nameRu": "Северный Рейн — Вестфалия",
       "capital": "Düsseldorf",
       "emoji": "📍",
-      "flag": "data/laender/flags/nordrhein-westfalen.svg",
+      "flag": "data/laender/flags/nordrhein-westfalen.png",
       "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_North_Rhine-Westphalia.svg",
       "ready": false
     },
@@ -127,7 +326,7 @@
       "nameRu": "Рейнланд-Пфальц",
       "capital": "Mainz",
       "emoji": "📍",
-      "flag": "data/laender/flags/rheinland-pfalz.svg",
+      "flag": "data/laender/flags/rheinland-pfalz.png",
       "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_Rhineland-Palatinate.svg",
       "ready": false
     },
@@ -137,7 +336,7 @@
       "nameRu": "Саар",
       "capital": "Saarbrücken",
       "emoji": "📍",
-      "flag": "data/laender/flags/saarland.svg",
+      "flag": "data/laender/flags/saarland.png",
       "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_Saarland.svg",
       "ready": false
     },
@@ -147,7 +346,7 @@
       "nameRu": "Саксония",
       "capital": "Dresden",
       "emoji": "📍",
-      "flag": "data/laender/flags/sachsen.svg",
+      "flag": "data/laender/flags/sachsen.png",
       "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_Saxony.svg",
       "ready": false
     },
@@ -157,7 +356,7 @@
       "nameRu": "Саксония-Анхальт",
       "capital": "Magdeburg",
       "emoji": "📍",
-      "flag": "data/laender/flags/sachsen-anhalt.svg",
+      "flag": "data/laender/flags/sachsen-anhalt.png",
       "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_Saxony-Anhalt_(state).svg",
       "ready": false
     },
@@ -167,7 +366,7 @@
       "nameRu": "Шлезвиг-Гольштейн",
       "capital": "Kiel",
       "emoji": "📍",
-      "flag": "data/laender/flags/schleswig-holstein.svg",
+      "flag": "data/laender/flags/schleswig-holstein.png",
       "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_Schleswig-Holstein.svg",
       "ready": false
     },
@@ -177,7 +376,7 @@
       "nameRu": "Тюрингия",
       "capital": "Erfurt",
       "emoji": "📍",
-      "flag": "data/laender/flags/thueringen.svg",
+      "flag": "data/laender/flags/thueringen.png",
       "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_Thuringia.svg",
       "ready": false
     }

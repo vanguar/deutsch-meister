@@ -1,0 +1,1613 @@
+{
+  "version": 1,
+  "w": {
+    "achtung": "Achtung",
+    "adidas": "Adidas",
+    "agrarland": "Agrarland",
+    "allem": "alle/alles",
+    "allerheiligen": "Allerheiligen",
+    "allianz": "Allianz",
+    "alpen": "Alpen",
+    "altbayern": "Altbayern",
+    "am": "an",
+    "an": "an",
+    "anderen": "ander",
+    "anderes": "ander",
+    "anteil": "Anteil",
+    "arbeitslosigkeit": "Arbeitslosigkeit",
+    "auch": "auch",
+    "audi": "Audi",
+    "augsburg": "Augsburg",
+    "august": "August",
+    "aus": "aus",
+    "ausgleich": "Ausgleich",
+    "baiern": "Baier",
+    "bairisch": "Bairisch",
+    "bauen": "einbauen",
+    "bayerisch": "bayerisch",
+    "bayerischen": "bayerisch",
+    "bayerischer": "bayerisch",
+    "bayern": "Bayern",
+    "bedeutet": "bedeuten",
+    "begann": "beginnen",
+    "begrüßung": "Begrüßung",
+    "bei": "bei",
+    "beispiel": "Beispiel",
+    "bekam": "bekommen",
+    "bekannte": "bekannt",
+    "bekannteste": "bekanntest",
+    "berg": "Berg",
+    "besondere": "besonder",
+    "besteht": "bestehen",
+    "besucher": "Besucher",
+    "beträgt": "betragen",
+    "bevölkerung": "Bevölkerung",
+    "bewegung": "Bewegung",
+    "bier": "Bier",
+    "biergärten": "Biergarten",
+    "bilden": "bilden",
+    "bis": "bis",
+    "bmw": "BMW",
+    "bodensee": "Bodensee",
+    "bundesland": "Bundesland",
+    "bundesrepublik": "Bundesrepublik",
+    "bundestag": "Bundestag",
+    "cdu": "CDU",
+    "csu": "CSU",
+    "dachau": "Dachau",
+    "dafür": "dafür",
+    "darf": "dürfen",
+    "das": "der/die/das",
+    "dem": "der/die/das",
+    "den": "der/die/das",
+    "der": "der/die/das",
+    "des": "der/die/das",
+    "deutscher": "deutsch",
+    "deutschland": "Deutschland",
+    "deutschlands": "Deutschland (страна)",
+    "dezember": "Dezember",
+    "dialekt": "Dialekt",
+    "dialekte": "Dialekt",
+    "die": "der/die/das",
+    "dirndl": "Dirndl",
+    "donau": "Donau",
+    "dort": "dort",
+    "drei": "drei",
+    "drittgrößte": "drittgrößt",
+    "eigenes": "eigen",
+    "ein": "ein/eine",
+    "eine": "ein/eine",
+    "eines": "ein/eine",
+    "einwohner": "Einwohner",
+    "einwohnern": "Einwohner",
+    "eisner": "Eisner",
+    "endete": "enden",
+    "entstand": "entstehen",
+    "er": "er",
+    "erließen": "erlassen",
+    "ersten": "erste",
+    "es": "es",
+    "essen": "essen",
+    "etwa": "etwa",
+    "familie": "Familie",
+    "fc": "FC",
+    "feiertag": "Feiertag",
+    "feiertage": "Feiertag",
+    "fest": "Fest",
+    "firmen": "Firma",
+    "fluss": "Fluss",
+    "fläche": "Fläche",
+    "flüchtlinge": "Flüchtling",
+    "fraktion": "Fraktion",
+    "franken": "Franken",
+    "frauen": "Frau",
+    "frei": "frei",
+    "freistaat": "Freistaat",
+    "fronleichnam": "Fronleichnam",
+    "fränkisch": "Fränkisch",
+    "früher": "früher",
+    "fußball": "Fußball",
+    "für": "für",
+    "gab": "geben",
+    "gehört": "gehören",
+    "geld": "Geld",
+    "gemeinden": "Gemeinde",
+    "gemeinsame": "gemeinsam",
+    "genannt": "nennen",
+    "geteilt": "teilen",
+    "getränke": "Getränk",
+    "gott": "Gott",
+    "grenzt": "grenzen",
+    "große": "groß",
+    "größte": "groß",
+    "grüß": "grüßen",
+    "hat": "haben",
+    "hauptstadt": "Hauptstadt",
+    "heilige": "heilig",
+    "heißt": "heißen",
+    "herzogenaurach": "Herzogenaurach",
+    "herzogtum": "Herzogtum",
+    "herzöge": "Herzog",
+    "heute": "heute",
+    "himmelfahrt": "Himmelfahrt",
+    "hoch": "hoch",
+    "hochdeutsch": "Hochdeutsch",
+    "hochzeit": "Hochzeit",
+    "höchsten": "hoch",
+    "höher": "hoch",
+    "hört": "hören",
+    "i": "i (буква)",
+    "ii": "II",
+    "im": "in",
+    "in": "in",
+    "industrie": "Industrie",
+    "ingolstadt": "Ingolstadt",
+    "ist": "sein",
+    "jahrhundert": "Jahrhundert",
+    "januar": "Januar",
+    "kamen": "kommen",
+    "katholisch": "katholisch",
+    "katholischer": "katholisch",
+    "kauft": "kaufen",
+    "kein": "kein",
+    "kennt": "kennen",
+    "konzentrationslager": "Konzentrationslager",
+    "kronprinz": "Kronprinz",
+    "kurt": "Kurt",
+    "könig": "König",
+    "könige": "König",
+    "königreich": "Königreich",
+    "lag": "liegen",
+    "land": "Land (земля)",
+    "landes": "Land (земля)",
+    "landtag": "Landtag",
+    "lange": "lang",
+    "leben": "leben",
+    "lederhose": "Lederhose",
+    "liegen": "liegen",
+    "liegt": "liegen",
+    "ließ": "lassen",
+    "ludwig": "Ludwig",
+    "ländern": "Land (земля)",
+    "man": "man",
+    "mariä": "Mariä",
+    "maximilianeum": "Maximilianeum",
+    "mehr": "mehr",
+    "menschen": "Mensch",
+    "meter": "Meter",
+    "millionen": "Million",
+    "ministerpräsident": "Ministerpräsident",
+    "ministerpräsidenten": "Ministerpräsident",
+    "mit": "mit",
+    "mitbringen": "mitbringen",
+    "monarchie": "Monarchie",
+    "männer": "Mann",
+    "märchenkönig": "Märchenkönig",
+    "münchen": "München",
+    "nach": "nach",
+    "nannten": "nennen",
+    "nationalsozialismus": "Nationalsozialismus",
+    "nazis": "Nazi",
+    "neuschwanstein": "Neuschwanstein",
+    "nicht": "nicht",
+    "nie": "nie",
+    "niedrig": "niedrig",
+    "noch": "noch",
+    "nordrhein-westfalen": "Nordrhein-Westfalen",
+    "november": "November",
+    "nur": "nur",
+    "nürnberg": "Nürnberg",
+    "oder": "oder",
+    "offiziell": "offiziell",
+    "oft": "oft",
+    "ohne": "ohne",
+    "oktoberfest": "Oktoberfest",
+    "parlament": "Parlament",
+    "partei": "Partei",
+    "prinzessin": "Prinzessin",
+    "prozent": "Prozent",
+    "quadratkilometer": "Quadratkilometer",
+    "quote": "Quote",
+    "regierte": "regieren",
+    "regierung": "Regierung",
+    "regierungsbezirke": "Regierungsbezirk",
+    "reichsten": "reich",
+    "reinheitsgebot": "Reinheitsgebot",
+    "rekordmeister": "Rekordmeister",
+    "rief": "rufen",
+    "rund": "rund",
+    "saarland": "Saarland",
+    "sagt": "sagen",
+    "schloss": "Schloss",
+    "schon": "schon",
+    "schwaben": "Schwaben",
+    "schweiz": "Schweiz",
+    "schwäbisch": "Schwäbisch",
+    "see": "See",
+    "sehr": "sehr",
+    "sein": "sein",
+    "seine": "sein (его, свой)",
+    "seinen": "sein (его, свой)",
+    "seit": "seit",
+    "servus": "Servus",
+    "sie": "sie",
+    "sieben": "sieben",
+    "sind": "sein",
+    "sitz": "Sitz",
+    "sitzt": "sitzen",
+    "so": "so",
+    "sondern": "sondern",
+    "spitze": "Spitze",
+    "spricht": "sprechen",
+    "stadt": "Stadt",
+    "standort": "Standort",
+    "starb": "sterben",
+    "starnberger": "Starnberger",
+    "steht": "stehen",
+    "stellt": "anstellen",
+    "städte": "Stadt",
+    "süden": "Süden",
+    "südosten": "Südosten",
+    "südtirol": "Südtirol",
+    "technik": "Technik",
+    "teilen": "Teil",
+    "therese": "Therese",
+    "tourismus": "Tourismus",
+    "tracht": "Tracht",
+    "tradition": "Tradition",
+    "traditionell": "traditionell",
+    "tragen": "tragen",
+    "tritt": "treten",
+    "tschechien": "Tschechien",
+    "und": "und",
+    "unterbrechung": "Unterbrechung",
+    "vertriebene": "Vertriebener",
+    "viel": "viel",
+    "viele": "viel",
+    "vielen": "viel",
+    "volksfest": "Volksfest",
+    "von": "von",
+    "vor": "vor",
+    "wahlen": "Wahl (выборы)",
+    "war": "sein",
+    "weitere": "weiter",
+    "welt": "Welt",
+    "weltkrieg": "Weltkrieg",
+    "wichtig": "wichtig",
+    "wichtiger": "wichtig",
+    "wichtigste": "wichtig",
+    "wie": "wie",
+    "wird": "werden",
+    "wittelsbacher": "Wittelsbacher",
+    "wurde": "werden",
+    "y": "y (буква)",
+    "zahlt": "zahlen",
+    "zeit": "Zeit",
+    "zu": "zu",
+    "zugspitze": "Zugspitze",
+    "zum": "zu",
+    "zur": "zu",
+    "zwei": "zwei",
+    "zweiten": "zweite",
+    "zwischen": "zwischen",
+    "österreich": "Österreich",
+    "über": "über",
+    "überwiegend": "überwiegend"
+  },
+  "l": {
+    "Achtung": {
+      "ru": "внимание",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null,
+      "note": "Achtung! — Внимание!"
+    },
+    "Adidas": {
+      "ru": "Adidas (производитель спортивных товаров)",
+      "pos": "имя собств."
+    },
+    "Agrarland": {
+      "ru": "аграрная страна/земля",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Agrarländer"
+    },
+    "alle/alles": {
+      "ru": "все; всё",
+      "pos": "мест."
+    },
+    "Allerheiligen": {
+      "ru": "День всех святых (1 ноября)",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "Allianz": {
+      "ru": "«Альянц» (страховая компания)",
+      "pos": "имя собств."
+    },
+    "Alpen": {
+      "ru": "Альпы",
+      "pos": "геогр."
+    },
+    "Altbayern": {
+      "ru": "Старая Бавария (Верхняя и Нижняя Бавария, Верхний Пфальц)",
+      "pos": "геогр."
+    },
+    "an": {
+      "ru": "у, к, на",
+      "pos": "предл.",
+      "note": "am = an dem. Тж. отделяемая приставка: anfangen «начинать», annehmen, ansehen, anzünden"
+    },
+    "ander": {
+      "pos": "прил.",
+      "ru": "другой, иной"
+    },
+    "anstellen": {
+      "ru": "предпринимать, устраивать",
+      "pos": "гл.",
+      "forms": "stellte an · hat angestellt",
+      "note": "Betrachtungen anstellen — предаваться размышлениям"
+    },
+    "Anteil": {
+      "ru": "доля, часть",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Anteile",
+      "note": "der Anteil an etwas — доля чего-то"
+    },
+    "Arbeitslosigkeit": {
+      "ru": "безработица",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "auch": {
+      "ru": "тоже, также; даже",
+      "pos": "частица"
+    },
+    "Audi": {
+      "ru": "Audi (автопроизводитель)",
+      "pos": "имя собств."
+    },
+    "Augsburg": {
+      "ru": "Аугсбург",
+      "pos": "геогр."
+    },
+    "August": {
+      "ru": "август",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "aus": {
+      "ru": "из",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: auslöschen «погасить»"
+    },
+    "Ausgleich": {
+      "ru": "выравнивание, компенсация",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Ausgleiche"
+    },
+    "Baier": {
+      "ru": "бавар (член древнего племени)",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Baiern"
+    },
+    "Bairisch": {
+      "ru": "баварский диалект",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null,
+      "note": "das Bairische — то же, с артиклем"
+    },
+    "bayerisch": {
+      "ru": "баварский (относящийся к земле Бавария)",
+      "pos": "прил.",
+      "note": "не путать с Bairisch — диалект"
+    },
+    "Bayern": {
+      "ru": "Бавария",
+      "pos": "геогр."
+    },
+    "bedeuten": {
+      "ru": "означать",
+      "pos": "гл.",
+      "forms": "bedeutete · hat bedeutet"
+    },
+    "beginnen": {
+      "ru": "начинать, начинаться",
+      "pos": "гл.",
+      "forms": "begann · hat begonnen"
+    },
+    "Begrüßung": {
+      "ru": "приветствие (при встрече)",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Begrüßungen",
+      "note": "zur Begrüßung — при встрече"
+    },
+    "bei": {
+      "ru": "у, при, возле",
+      "pos": "предл."
+    },
+    "Beispiel": {
+      "ru": "пример",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Beispiele",
+      "note": "zum Beispiel — например"
+    },
+    "bekannt": {
+      "ru": "известный, знакомый",
+      "pos": "прил."
+    },
+    "bekanntest": {
+      "ru": "самый известный",
+      "pos": "прил."
+    },
+    "bekommen": {
+      "ru": "получать",
+      "pos": "гл.",
+      "forms": "bekam · hat bekommen"
+    },
+    "Berg": {
+      "ru": "гора",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Berge"
+    },
+    "besonder": {
+      "ru": "особый",
+      "pos": "прил.",
+      "note": "in diesem besonderen Fall — в этом особом случае"
+    },
+    "bestehen": {
+      "ru": "состоять; существовать; сдать (экзамен)",
+      "pos": "гл.",
+      "forms": "bestand · hat bestanden",
+      "note": "aus etwas bestehen — состоять из чего-то"
+    },
+    "Besucher": {
+      "ru": "посетитель, гость",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Besucher"
+    },
+    "betragen": {
+      "ru": "составлять (о величине)",
+      "pos": "гл.",
+      "forms": "betrug · hat betragen"
+    },
+    "Bevölkerung": {
+      "ru": "население",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Bevölkerungen"
+    },
+    "Bewegung": {
+      "ru": "движение",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Bewegungen"
+    },
+    "Bier": {
+      "ru": "пиво",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Biere"
+    },
+    "Biergarten": {
+      "ru": "пивной сад (пивная под открытым небом)",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Biergärten"
+    },
+    "bilden": {
+      "ru": "образовывать",
+      "pos": "гл.",
+      "forms": "bildete · hat gebildet"
+    },
+    "bis": {
+      "ru": "до; пока не",
+      "pos": "союз"
+    },
+    "BMW": {
+      "ru": "BMW (немецкий автопроизводитель)",
+      "pos": "имя собств."
+    },
+    "Bodensee": {
+      "ru": "Боденское озеро",
+      "pos": "геогр."
+    },
+    "Bundesland": {
+      "ru": "федеральная земля",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Bundesländer"
+    },
+    "Bundesrepublik": {
+      "ru": "федеративная республика",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Bundesrepubliken",
+      "note": "die Bundesrepublik Deutschland — ФРГ"
+    },
+    "Bundestag": {
+      "ru": "бундестаг (парламент ФРГ)",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "CDU": {
+      "ru": "ХДС, Христианско-демократический союз (партия)",
+      "pos": "сокр."
+    },
+    "CSU": {
+      "ru": "ХСС, Христианско-социальный союз (партия, только в Баварии)",
+      "pos": "сокр."
+    },
+    "Dachau": {
+      "ru": "Дахау",
+      "pos": "геогр."
+    },
+    "dafür": {
+      "ru": "за это, для этого",
+      "pos": "нареч.",
+      "note": "dafür sorgen, dass … — позаботиться, чтобы …"
+    },
+    "der/die/das": {
+      "ru": "определённый артикль",
+      "pos": "артикль",
+      "note": "Тж. относительное местоимение «который»"
+    },
+    "deutsch": {
+      "ru": "немецкий",
+      "pos": "прил."
+    },
+    "Deutschland": {
+      "ru": "Германия",
+      "pos": "геогр."
+    },
+    "Deutschland (страна)": {
+      "ru": "Германия",
+      "pos": "геогр."
+    },
+    "Dezember": {
+      "ru": "декабрь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "Dialekt": {
+      "ru": "диалект",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Dialekte"
+    },
+    "Dirndl": {
+      "ru": "дирндль (женское народное платье)",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Dirndl"
+    },
+    "Donau": {
+      "ru": "Дунай",
+      "pos": "геогр."
+    },
+    "dort": {
+      "ru": "там",
+      "pos": "нареч."
+    },
+    "drei": {
+      "ru": "три",
+      "pos": "числ."
+    },
+    "drittgrößt": {
+      "ru": "третий по величине",
+      "pos": "прил."
+    },
+    "dürfen": {
+      "ru": "сметь, иметь право",
+      "pos": "гл.",
+      "forms": "durfte · hat gedurft"
+    },
+    "eigen": {
+      "ru": "собственный",
+      "pos": "прил."
+    },
+    "ein/eine": {
+      "ru": "неопределённый артикль",
+      "pos": "артикль",
+      "note": "einer — «один, некто»"
+    },
+    "einbauen": {
+      "ru": "встраивать",
+      "pos": "гл.",
+      "forms": "baute ein · hat eingebaut"
+    },
+    "Einwohner": {
+      "ru": "житель",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Einwohner"
+    },
+    "Eisner": {
+      "ru": "Эйснер (фамилия)",
+      "pos": "имя собств."
+    },
+    "enden": {
+      "ru": "заканчиваться",
+      "pos": "гл.",
+      "forms": "endete · hat geendet"
+    },
+    "entstehen": {
+      "ru": "возникать",
+      "pos": "гл.",
+      "forms": "entstand · ist entstanden"
+    },
+    "er": {
+      "ru": "он",
+      "pos": "мест.",
+      "note": "ihn — его, ihm — ему"
+    },
+    "erlassen": {
+      "ru": "издавать (закон, указ)",
+      "pos": "гл.",
+      "forms": "erließ · hat erlassen"
+    },
+    "erste": {
+      "ru": "первый",
+      "pos": "числ."
+    },
+    "es": {
+      "ru": "оно; это",
+      "pos": "мест."
+    },
+    "essen": {
+      "ru": "есть, кушать",
+      "pos": "гл.",
+      "forms": "aß · hat gegessen",
+      "note": "das Essen — еда"
+    },
+    "etwa": {
+      "ru": "примерно, около",
+      "pos": "нареч."
+    },
+    "Familie": {
+      "ru": "семья; семейство (в биологии)",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Familien"
+    },
+    "FC": {
+      "ru": "ФК, футбольный клуб",
+      "pos": "сокр."
+    },
+    "Feiertag": {
+      "ru": "праздничный (нерабочий) день",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Feiertage"
+    },
+    "Fest": {
+      "ru": "праздник",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Feste"
+    },
+    "Firma": {
+      "ru": "фирма",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Firmen"
+    },
+    "Fluss": {
+      "ru": "река",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Flüsse"
+    },
+    "Fläche": {
+      "ru": "поверхность, площадка",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Flächen"
+    },
+    "Flüchtling": {
+      "ru": "беженец",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Flüchtlinge"
+    },
+    "Fraktion": {
+      "ru": "фракция",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Fraktionen"
+    },
+    "Franken": {
+      "ru": "Франкония",
+      "pos": "геогр.",
+      "note": "des Frankens — Франконии"
+    },
+    "Frau": {
+      "ru": "жена; женщина",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Frauen"
+    },
+    "frei": {
+      "ru": "свободный",
+      "pos": "прил.",
+      "note": "unter freiem Himmel — под открытым небом"
+    },
+    "Freistaat": {
+      "ru": "свободное государство",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Freistaaten",
+      "note": "официальное название некоторых земель: Freistaat Bayern, Freistaat Sachsen — по сути «республика»"
+    },
+    "Fronleichnam": {
+      "ru": "праздник Тела и Крови Христовых",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "Fränkisch": {
+      "ru": "франконский диалект",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "früher": {
+      "ru": "раньше, прежде",
+      "pos": "нареч."
+    },
+    "Fußball": {
+      "ru": "футбол; футбольный мяч",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Fußbälle"
+    },
+    "für": {
+      "ru": "для, за",
+      "pos": "предл."
+    },
+    "geben": {
+      "ru": "давать",
+      "pos": "гл.",
+      "forms": "gab · hat gegeben"
+    },
+    "gehören": {
+      "ru": "принадлежать, относиться",
+      "pos": "гл.",
+      "forms": "gehörte · hat gehört",
+      "note": "zu etwas gehören — относиться к чему-то, входить в"
+    },
+    "Geld": {
+      "art": "das",
+      "pl": "die Gelder",
+      "pos": "сущ.",
+      "ru": "деньги"
+    },
+    "Gemeinde": {
+      "ru": "община, сельский мир",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Gemeinden"
+    },
+    "gemeinsam": {
+      "ru": "общий, совместный",
+      "pos": "прил."
+    },
+    "Getränk": {
+      "ru": "напиток",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Getränke"
+    },
+    "Gott": {
+      "ru": "Бог",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Götter"
+    },
+    "grenzen": {
+      "ru": "граничить",
+      "pos": "гл.",
+      "forms": "grenzte · hat gegrenzt",
+      "note": "an etwas (A) grenzen — граничить с чем-то"
+    },
+    "groß": {
+      "ru": "большой",
+      "pos": "прил.",
+      "forms": "groß · größer · am größten"
+    },
+    "grüßen": {
+      "ru": "приветствовать",
+      "pos": "гл.",
+      "forms": "grüßte · hat gegrüßt",
+      "note": "Grüß Gott! — «Здравствуйте!» (на юге Германии)"
+    },
+    "haben": {
+      "ru": "иметь; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "hatte · hat gehabt"
+    },
+    "Hauptstadt": {
+      "ru": "столица",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Hauptstädte"
+    },
+    "heilig": {
+      "ru": "святой",
+      "pos": "прил.",
+      "note": "an heiliger Stätte — в святом месте"
+    },
+    "heißen": {
+      "ru": "называться; велеть",
+      "pos": "гл.",
+      "forms": "hieß · hat geheißen"
+    },
+    "Herzog": {
+      "ru": "герцог",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Herzöge"
+    },
+    "Herzogenaurach": {
+      "ru": "Херцогенаурах (город под Нюрнбергом)",
+      "pos": "геогр."
+    },
+    "Herzogtum": {
+      "ru": "герцогство",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Herzogtümer"
+    },
+    "heute": {
+      "ru": "сегодня",
+      "pos": "нареч."
+    },
+    "Himmelfahrt": {
+      "ru": "вознесение",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null,
+      "note": "Mariä Himmelfahrt (15 августа) — Успение Богородицы"
+    },
+    "hoch": {
+      "ru": "высокий",
+      "pos": "прил.",
+      "forms": "hoch · höher · am höchsten"
+    },
+    "Hochdeutsch": {
+      "ru": "литературный немецкий язык",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "Hochzeit": {
+      "ru": "свадьба",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Hochzeiten"
+    },
+    "hören": {
+      "ru": "слышать",
+      "pos": "гл.",
+      "forms": "hörte · hat gehört"
+    },
+    "i (буква)": {
+      "ru": "буква i",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die i"
+    },
+    "II": {
+      "ru": "второй (римская цифра)",
+      "pos": "числ.",
+      "note": "Ludwig II. — Людвиг Второй"
+    },
+    "in": {
+      "ru": "в (im = in dem, ins = in das)",
+      "pos": "предл."
+    },
+    "Industrie": {
+      "ru": "промышленность",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Industrien"
+    },
+    "Ingolstadt": {
+      "ru": "Ингольштадт",
+      "pos": "геогр."
+    },
+    "Jahrhundert": {
+      "ru": "век, столетие",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Jahrhunderte"
+    },
+    "Januar": {
+      "ru": "январь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Januare"
+    },
+    "katholisch": {
+      "ru": "католический",
+      "pos": "прил."
+    },
+    "kaufen": {
+      "ru": "покупать",
+      "pos": "гл.",
+      "forms": "kaufte · hat gekauft"
+    },
+    "kein": {
+      "ru": "никакой, ни один",
+      "pos": "мест."
+    },
+    "kennen": {
+      "ru": "знать, быть знакомым",
+      "pos": "гл.",
+      "forms": "kannte · hat gekannt"
+    },
+    "kommen": {
+      "ru": "приходить, приезжать",
+      "pos": "гл.",
+      "forms": "kam · ist gekommen"
+    },
+    "Konzentrationslager": {
+      "ru": "концентрационный лагерь",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Konzentrationslager",
+      "note": "сокращённо KZ"
+    },
+    "Kronprinz": {
+      "ru": "кронпринц, наследник престола",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Kronprinzen"
+    },
+    "Kurt": {
+      "ru": "Курт (имя)",
+      "pos": "имя собств."
+    },
+    "König": {
+      "ru": "король",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Könige"
+    },
+    "Königreich": {
+      "ru": "королевство",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Königreiche"
+    },
+    "Land (земля)": {
+      "ru": "земля (федеральная); страна",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Länder",
+      "note": "Bundesland — федеральная земля; in anderen Ländern — в других землях"
+    },
+    "Landtag": {
+      "ru": "ландтаг (парламент земли)",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Landtage"
+    },
+    "lang": {
+      "ru": "длинный, долгий",
+      "pos": "прил.",
+      "forms": "lang · länger · am längsten"
+    },
+    "lassen": {
+      "ru": "позволять, велеть; оставлять",
+      "pos": "гл.",
+      "forms": "ließ · hat gelassen"
+    },
+    "leben": {
+      "ru": "жить",
+      "pos": "гл.",
+      "forms": "lebte · hat gelebt"
+    },
+    "Lederhose": {
+      "ru": "кожаные штаны (баварские)",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Lederhosen"
+    },
+    "liegen": {
+      "ru": "лежать",
+      "pos": "гл.",
+      "forms": "lag · hat gelegen"
+    },
+    "Ludwig": {
+      "ru": "Людвиг (имя)",
+      "pos": "имя собств."
+    },
+    "man": {
+      "ru": "неопределённое «кто-то, люди, мы»",
+      "pos": "мест."
+    },
+    "Mann": {
+      "ru": "мужчина, человек",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Männer"
+    },
+    "Mariä": {
+      "ru": "Марии (в названиях праздников)",
+      "pos": "имя собств.",
+      "note": "Mariä Himmelfahrt — Успение Богородицы"
+    },
+    "Maximilianeum": {
+      "ru": "Максимилианум (здание ландтага в Мюнхене)",
+      "pos": "геогр."
+    },
+    "mehr": {
+      "ru": "больше",
+      "pos": "нареч.",
+      "note": "В nicht/kein … mehr — больше не. Формально компаратив от viel"
+    },
+    "Mensch": {
+      "ru": "человек",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Menschen",
+      "decl": "n-Deklination: des Menschen · dem/den Menschen"
+    },
+    "Meter": {
+      "ru": "метр",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Meter",
+      "note": "in 30 Metern Tiefe — на глубине 30 метров"
+    },
+    "Million": {
+      "ru": "миллион",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Millionen"
+    },
+    "Ministerpräsident": {
+      "ru": "премьер-министр (глава правительства земли)",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Ministerpräsidenten",
+      "note": "слабое склонение: den/dem/des Ministerpräsidenten"
+    },
+    "mit": {
+      "ru": "с",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: mitgehen «пойти вместе»"
+    },
+    "mitbringen": {
+      "ru": "принести с собой",
+      "pos": "гл.",
+      "forms": "brachte mit · hat mitgebracht"
+    },
+    "Monarchie": {
+      "ru": "монархия",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Monarchien"
+    },
+    "Märchenkönig": {
+      "ru": "«сказочный король» (прозвище Людвига II)",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "München": {
+      "ru": "Мюнхен",
+      "pos": "геогр."
+    },
+    "nach": {
+      "ru": "в, на, после, по",
+      "pos": "предл."
+    },
+    "Nationalsozialismus": {
+      "ru": "национал-социализм",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "Nazi": {
+      "ru": "нацист (разг.)",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Nazis"
+    },
+    "nennen": {
+      "ru": "называть",
+      "pos": "гл.",
+      "forms": "nannte · hat genannt"
+    },
+    "Neuschwanstein": {
+      "ru": "Нойшванштайн (замок)",
+      "pos": "геогр."
+    },
+    "nicht": {
+      "ru": "не",
+      "pos": "частица"
+    },
+    "nie": {
+      "ru": "никогда",
+      "pos": "нареч."
+    },
+    "niedrig": {
+      "ru": "низкий",
+      "pos": "прил."
+    },
+    "noch": {
+      "ru": "ещё",
+      "pos": "нареч."
+    },
+    "Nordrhein-Westfalen": {
+      "ru": "Северный Рейн — Вестфалия",
+      "pos": "геогр."
+    },
+    "November": {
+      "ru": "ноябрь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "nur": {
+      "ru": "только, лишь",
+      "pos": "частица"
+    },
+    "Nürnberg": {
+      "ru": "Нюрнберг",
+      "pos": "геогр."
+    },
+    "oder": {
+      "ru": "или",
+      "pos": "союз"
+    },
+    "offiziell": {
+      "ru": "официальный",
+      "pos": "прил."
+    },
+    "oft": {
+      "ru": "часто",
+      "pos": "нареч."
+    },
+    "ohne": {
+      "ru": "без",
+      "pos": "предл."
+    },
+    "Oktoberfest": {
+      "ru": "Октоберфест",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Oktoberfeste"
+    },
+    "Parlament": {
+      "ru": "парламент",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Parlamente"
+    },
+    "Partei": {
+      "ru": "партия",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Parteien"
+    },
+    "Prinzessin": {
+      "ru": "принцесса",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Prinzessinnen"
+    },
+    "Prozent": {
+      "ru": "процент",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Prozente",
+      "note": "после числа не изменяется: 1,3 Prozent"
+    },
+    "Quadratkilometer": {
+      "ru": "квадратный километр",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Quadratkilometer",
+      "note": "сокращённо km²"
+    },
+    "Quote": {
+      "ru": "доля, уровень, квота",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Quoten"
+    },
+    "regieren": {
+      "ru": "править, управлять",
+      "pos": "гл.",
+      "forms": "regierte · hat regiert"
+    },
+    "Regierung": {
+      "ru": "правительство",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Regierungen"
+    },
+    "Regierungsbezirk": {
+      "ru": "административный округ (в земле)",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Regierungsbezirke"
+    },
+    "reich": {
+      "ru": "богатый",
+      "pos": "прил.",
+      "forms": "reich · reicher · am reichsten"
+    },
+    "Reinheitsgebot": {
+      "ru": "«Закон о чистоте пива» (1516)",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "Rekordmeister": {
+      "ru": "рекордный чемпион (по числу титулов)",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Rekordmeister"
+    },
+    "rufen": {
+      "ru": "звать, кричать",
+      "pos": "гл.",
+      "forms": "rief · hat gerufen"
+    },
+    "rund": {
+      "ru": "около, примерно; круглый",
+      "pos": "нареч./прил.",
+      "note": "rund 550.000 — около 550 000"
+    },
+    "Saarland": {
+      "ru": "Саар (земля)",
+      "pos": "геогр."
+    },
+    "sagen": {
+      "ru": "говорить, сказать",
+      "pos": "гл.",
+      "forms": "sagte · hat gesagt"
+    },
+    "Schloss": {
+      "art": "das",
+      "pl": "die Schlösser",
+      "pos": "сущ.",
+      "ru": "замок (строение)"
+    },
+    "schon": {
+      "ru": "уже",
+      "pos": "нареч."
+    },
+    "Schwaben": {
+      "ru": "Швабия",
+      "pos": "геогр.",
+      "note": "des Schwabens — Швабии"
+    },
+    "Schweiz": {
+      "ru": "Швейцария",
+      "pos": "геогр."
+    },
+    "Schwäbisch": {
+      "ru": "швабский диалект",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "See": {
+      "ru": "озеро",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Seen",
+      "note": "der See — озеро; die See — море"
+    },
+    "sehr": {
+      "pos": "нареч.",
+      "ru": "очень"
+    },
+    "sein": {
+      "ru": "быть; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "war · ist gewesen"
+    },
+    "sein (его, свой)": {
+      "ru": "его, свой",
+      "pos": "мест."
+    },
+    "seit": {
+      "ru": "с (какого-то времени)",
+      "pos": "предл."
+    },
+    "Servus": {
+      "ru": "привет; пока (в Баварии и Австрии)",
+      "pos": "межд."
+    },
+    "sie": {
+      "ru": "она; они; Вы",
+      "pos": "мест."
+    },
+    "sieben": {
+      "ru": "семь",
+      "pos": "числ."
+    },
+    "Sitz": {
+      "ru": "штаб-квартира; место",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Sitze",
+      "note": "seinen Sitz haben — находиться (о фирме); im Landtag — место"
+    },
+    "sitzen": {
+      "ru": "сидеть",
+      "pos": "гл.",
+      "forms": "saß · hat gesessen"
+    },
+    "so": {
+      "ru": "так; такой; то (в главном предложении)",
+      "pos": "нареч."
+    },
+    "sondern": {
+      "ru": "а, но (после отрицания)",
+      "pos": "союз"
+    },
+    "Spitze": {
+      "ru": "верхушка, вершина",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Spitzen"
+    },
+    "sprechen": {
+      "ru": "говорить, сказать",
+      "pos": "гл.",
+      "forms": "sprach · hat gesprochen",
+      "old": "здесь sprach в значении «сказал» — книжно и устарело; в совр. речи sagte"
+    },
+    "Stadt": {
+      "ru": "город",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Städte"
+    },
+    "Standort": {
+      "ru": "место размещения, центр (экономический)",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Standorte"
+    },
+    "Starnberger": {
+      "ru": "штарнбергский",
+      "pos": "прил.",
+      "note": "der Starnberger See — Штарнбергское озеро"
+    },
+    "stehen": {
+      "ru": "стоять",
+      "pos": "гл.",
+      "forms": "stand · hat gestanden"
+    },
+    "sterben": {
+      "ru": "умирать",
+      "pos": "гл.",
+      "forms": "starb · ist gestorben"
+    },
+    "Süden": {
+      "ru": "юг",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "Südosten": {
+      "ru": "юго-восток",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "Südtirol": {
+      "ru": "Южный Тироль (провинция Италии)",
+      "pos": "геогр."
+    },
+    "Technik": {
+      "ru": "техника, технология",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Techniken"
+    },
+    "Teil": {
+      "ru": "часть; доля",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Teile",
+      "note": "sein Teil haben — получить своё"
+    },
+    "teilen": {
+      "ru": "делить",
+      "pos": "гл.",
+      "forms": "teilte · hat geteilt"
+    },
+    "Therese": {
+      "ru": "Тереза (имя)",
+      "pos": "имя собств."
+    },
+    "Tourismus": {
+      "ru": "туризм",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "Tracht": {
+      "ru": "народный костюм",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Trachten"
+    },
+    "Tradition": {
+      "ru": "традиция",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Traditionen"
+    },
+    "traditionell": {
+      "ru": "по традиции, традиционно",
+      "pos": "нареч."
+    },
+    "tragen": {
+      "ru": "носить, нести",
+      "pos": "гл.",
+      "forms": "trug · hat getragen"
+    },
+    "treten": {
+      "ru": "ступать, шагать",
+      "pos": "гл.",
+      "forms": "trat · ist getreten"
+    },
+    "Tschechien": {
+      "ru": "Чехия",
+      "pos": "геогр."
+    },
+    "und": {
+      "ru": "и, а",
+      "pos": "союз"
+    },
+    "Unterbrechung": {
+      "ru": "перерыв",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Unterbrechungen",
+      "note": "ohne Unterbrechung — без перерыва"
+    },
+    "Vertriebener": {
+      "ru": "изгнанный, переселённый (после 1945)",
+      "pos": "субст. прил.",
+      "decl": "der Vertriebene / ein Vertriebener / die Vertriebenen"
+    },
+    "viel": {
+      "ru": "много, многое",
+      "pos": "мест."
+    },
+    "Volksfest": {
+      "ru": "народный праздник, гуляние",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Volksfeste"
+    },
+    "von": {
+      "ru": "от, из, о (vom = von dem)",
+      "pos": "предл."
+    },
+    "vor": {
+      "ru": "перед, до; от (страха)",
+      "pos": "предл."
+    },
+    "Wahl (выборы)": {
+      "ru": "выборы; выбор",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Wahlen",
+      "note": "die Wahl zum Kongress — выборы в Конгресс"
+    },
+    "weiter": {
+      "ru": "дальнейший; ещё (weitere — ещё, другие)",
+      "pos": "прил.",
+      "note": "30 weitere Sparkassen — ещё 30 сберкасс"
+    },
+    "Welt": {
+      "art": "die",
+      "pl": "die Welten",
+      "pos": "сущ.",
+      "ru": "мир, свет"
+    },
+    "Weltkrieg": {
+      "ru": "мировая война",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Weltkriege",
+      "note": "der Zweite Weltkrieg — Вторая мировая война"
+    },
+    "werden": {
+      "ru": "становиться",
+      "pos": "гл.",
+      "forms": "wurde · ist geworden",
+      "note": "Вспомогательный глагол будущего времени и пассива"
+    },
+    "wichtig": {
+      "ru": "важный",
+      "pos": "прил."
+    },
+    "wie": {
+      "ru": "как; какой",
+      "pos": "союз"
+    },
+    "Wittelsbacher": {
+      "ru": "Виттельсбах (баварская династия)",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Wittelsbacher"
+    },
+    "y (буква)": {
+      "ru": "буква y (ипсилон)",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die y"
+    },
+    "zahlen": {
+      "ru": "платить",
+      "pos": "гл.",
+      "forms": "zahlte · hat gezahlt"
+    },
+    "Zeit": {
+      "ru": "время",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Zeiten"
+    },
+    "zu": {
+      "ru": "к, в; слишком",
+      "pos": "предл.",
+      "note": "zur = zu der, zum = zu dem"
+    },
+    "Zugspitze": {
+      "ru": "Цугшпитце (высочайшая гора Германии, 2962 м)",
+      "pos": "геогр."
+    },
+    "zwei": {
+      "ru": "два",
+      "pos": "числ."
+    },
+    "zweite": {
+      "ru": "второй",
+      "pos": "числ.",
+      "note": "zum zweiten Mal — во второй раз"
+    },
+    "zwischen": {
+      "pos": "предл.",
+      "ru": "между"
+    },
+    "Österreich": {
+      "ru": "Австрия",
+      "pos": "геогр."
+    },
+    "über": {
+      "ru": "над, через, о",
+      "pos": "предл."
+    },
+    "überwiegend": {
+      "ru": "преимущественно",
+      "pos": "нареч."
+    }
+  }
+}

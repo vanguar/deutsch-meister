@@ -61,6 +61,8 @@ def strings(obj, out, path=''):
             out.append((path, obj))
     elif isinstance(obj, dict):
         for k, v in obj.items():
+            if path == '' and k == 'w':
+                continue      # glossary.w: словоформа → имя леммы (ключ, не перевод)
             strings(v, out, path + '.' + k)
     elif isinstance(obj, list):
         for i, v in enumerate(obj):

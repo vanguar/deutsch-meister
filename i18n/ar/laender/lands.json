@@ -27,7 +27,7 @@
    "nameRu": "بادن-فورتمبيرغ",
    "capital": "Stuttgart",
    "emoji": "📍",
-   "flag": "data/laender/flags/baden-wuerttemberg.svg",
+   "flag": "data/laender/flags/baden-wuerttemberg.png",
    "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_Baden-W%C3%BCrttemberg.svg",
    "ready": false
   },
@@ -36,10 +36,209 @@
    "name": "Bayern",
    "nameRu": "بافاريا",
    "capital": "München",
-   "emoji": "📍",
-   "flag": "data/laender/flags/bayern.svg",
+   "emoji": "🥨",
+   "flag": "data/laender/flags/bayern.png",
    "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_Bavaria_(lozengy).svg",
-   "ready": false
+   "ready": true,
+   "blurb": "أكبر ولاية في ألمانيا: جبال الألب وميونخ، ومهرجان أكتوبر وBMW، والملك لودفيغ الثاني وثلاث مجموعات من اللهجات. وكيف أصبحت منطقة زراعية سابقة من أغنى الولايات.",
+   "facts": [
+    [
+     "العاصمة",
+     "München — أكثر من 1,5 مليون نسمة، ثالث مدينة في ألمانيا"
+    ],
+    [
+     "عدد السكان",
+     "13 245 503 (31.12.2025) — المرتبة الثانية بين الولايات"
+    ],
+    [
+     "المساحة",
+     "70 541,57 كم² — أكبر ولاية"
+    ],
+    [
+     "أكبر المدن",
+     "München, Nürnberg, Augsburg"
+    ],
+    [
+     "ضمن جمهورية ألمانيا الاتحادية",
+     "منذ عام 1949"
+    ],
+    [
+     "التقسيم الإداري",
+     "7 دوائر إدارية، 71 مقاطعة، 25 مدينة مستقلة"
+    ],
+    [
+     "أعلى نقطة",
+     "Zugspitze، 2962 م — أعلى جبل في ألمانيا"
+    ],
+    [
+     "الدول المجاورة",
+     "التشيك والنمسا وسويسرا (عبر بحيرة كونستانس)"
+    ],
+    [
+     "الناتج المحلي الإجمالي",
+     "768,5 مليار € (2023) — المرتبة الثانية بين الولايات"
+    ],
+    [
+     "البطالة",
+     "4,0 % (ديسمبر 2025)"
+    ],
+    [
+     "اللهجات",
+     "البافارية، والفرنكونية الشرقية، والشوابية"
+    ]
+   ],
+   "source": "ويكيبيديا (de): «Bayern» ومقالات ذات صلة (التاريخ، مهرجان أكتوبر، CSU، اللهجات، الأعياد)",
+   "sourceUrl": "https://de.wikipedia.org/wiki/Bayern",
+   "checked": "2026-10-20",
+   "quiz": [
+    {
+     "q": "ما أعلى جبل في ألمانيا؟",
+     "opts": [
+      "Zugspitze",
+      "Watzmann",
+      "Brocken"
+     ],
+     "a": 0,
+     "why": "تسوغشبيتسه في جبال الألب البافارية — 2962 مترًا."
+    },
+    {
+     "q": "منذ أي عام يُقام مهرجان أكتوبر؟",
+     "opts": [
+      "1516",
+      "1810",
+      "1949"
+     ],
+     "a": 1,
+     "why": "بدأ بزفاف ولي العهد لودفيغ والأميرة تيريزا عام 1810."
+    },
+    {
+     "q": "أين يشارك حزب CSU في الانتخابات؟",
+     "opts": [
+      "في بافاريا فقط",
+      "في كل ألمانيا",
+      "في بافاريا والنمسا"
+     ],
+     "a": 0,
+     "why": "يترشح CSU في بافاريا فقط، ولا يترشح CDU في بافاريا."
+    },
+    {
+     "q": "كيف يُكتب اسم اللهجة البافارية؟",
+     "opts": [
+      "Bayerisch",
+      "Bairisch"
+     ],
+     "a": 1,
+     "why": "«Bairisch» بحرف i هي اللهجة؛ «bayerisch» بحرف y هي كل ما يخص الولاية."
+    },
+    {
+     "q": "ماذا يمكن أن تفعل في كثير من حدائق البيرة البافارية؟",
+     "opts": [
+      "أن تحضر طعامك معك",
+      "ألا تدفع ثمن المشروبات",
+      "أن تجلس بالزي الشعبي فقط"
+     ],
+     "a": 0,
+     "why": "إحضار «Brotzeit» الخاصة بك تقليد قديم، خاصة في بافاريا العليا وفرانكونيا؛ أما المشروبات فتُشترى في المكان."
+    },
+    {
+     "q": "ما دور بافاريا في التسوية المالية بين الولايات منذ 2008؟",
+     "opts": [
+      "تحصل على أكثر من الجميع",
+      "تدفع أكثر من الجميع",
+      "لا تشارك"
+     ],
+     "a": 1,
+     "why": "حتى 1985 كانت بافاريا تحصل على المال، ومنذ 1987 أصبحت مانحة، ومنذ 2008 تدفع أكثر من الجميع."
+    }
+   ],
+   "texts": {
+    "b1": {
+     "id": "bayern-b1",
+     "chapters": 7,
+     "words": 545,
+     "minutes": 5,
+     "toc": [
+      {
+       "title": "Bayern im Überblick",
+       "titleRu": "بافاريا باختصار",
+       "icon": "🗺️"
+      },
+      {
+       "title": "Geschichte",
+       "titleRu": "التاريخ",
+       "icon": "🏰"
+      },
+      {
+       "title": "Politik",
+       "titleRu": "السياسة",
+       "icon": "🏛️"
+      },
+      {
+       "title": "Wirtschaft",
+       "titleRu": "الاقتصاد",
+       "icon": "💶"
+      },
+      {
+       "title": "Gesellschaft und Kultur",
+       "titleRu": "المجتمع والثقافة",
+       "icon": "🎭"
+      },
+      {
+       "title": "Sprache und Dialekte",
+       "titleRu": "اللغة واللهجات",
+       "icon": "🗣️"
+      },
+      {
+       "title": "Alltag: gut zu wissen",
+       "titleRu": "الحياة اليومية: من المفيد أن تعرف",
+       "icon": "🧭"
+      }
+     ]
+    },
+    "b2": {
+     "id": "bayern-b2",
+     "chapters": 7,
+     "words": 763,
+     "minutes": 7,
+     "toc": [
+      {
+       "title": "Bayern im Überblick",
+       "titleRu": "بافاريا باختصار",
+       "icon": "🗺️"
+      },
+      {
+       "title": "Geschichte",
+       "titleRu": "التاريخ",
+       "icon": "🏰"
+      },
+      {
+       "title": "Politik",
+       "titleRu": "السياسة",
+       "icon": "🏛️"
+      },
+      {
+       "title": "Wirtschaft",
+       "titleRu": "الاقتصاد",
+       "icon": "💶"
+      },
+      {
+       "title": "Gesellschaft und Kultur",
+       "titleRu": "المجتمع والثقافة",
+       "icon": "🎭"
+      },
+      {
+       "title": "Sprache und Dialekte",
+       "titleRu": "اللغة واللهجات",
+       "icon": "🗣️"
+      },
+      {
+       "title": "Alltag: gut zu wissen",
+       "titleRu": "الحياة اليومية: من المفيد أن تعرف",
+       "icon": "🧭"
+      }
+     ]
+    }
+   }
   },
   {
    "id": "berlin",
@@ -47,7 +246,7 @@
    "nameRu": "برلين",
    "capital": "Berlin",
    "emoji": "📍",
-   "flag": "data/laender/flags/berlin.svg",
+   "flag": "data/laender/flags/berlin.png",
    "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_Berlin.svg",
    "ready": false
   },
@@ -57,7 +256,7 @@
    "nameRu": "براندنبورغ",
    "capital": "Potsdam",
    "emoji": "📍",
-   "flag": "data/laender/flags/brandenburg.svg",
+   "flag": "data/laender/flags/brandenburg.png",
    "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_Brandenburg.svg",
    "ready": false
   },
@@ -67,7 +266,7 @@
    "nameRu": "بريمن",
    "capital": "Bremen",
    "emoji": "📍",
-   "flag": "data/laender/flags/bremen.svg",
+   "flag": "data/laender/flags/bremen.png",
    "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_Bremen.svg",
    "ready": false
   },
@@ -77,7 +276,7 @@
    "nameRu": "هامبورغ",
    "capital": "Hamburg",
    "emoji": "📍",
-   "flag": "data/laender/flags/hamburg.svg",
+   "flag": "data/laender/flags/hamburg.png",
    "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_Hamburg.svg",
    "ready": false
   },
@@ -87,7 +286,7 @@
    "nameRu": "هسن",
    "capital": "Wiesbaden",
    "emoji": "📍",
-   "flag": "data/laender/flags/hessen.svg",
+   "flag": "data/laender/flags/hessen.png",
    "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_Hesse.svg",
    "ready": false
   },
@@ -97,7 +296,7 @@
    "nameRu": "مكلنبورغ-فوربومرن",
    "capital": "Schwerin",
    "emoji": "📍",
-   "flag": "data/laender/flags/mecklenburg-vorpommern.svg",
+   "flag": "data/laender/flags/mecklenburg-vorpommern.png",
    "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_Mecklenburg-Western_Pomerania.svg",
    "ready": false
   },
@@ -107,7 +306,7 @@
    "nameRu": "سكسونيا السفلى",
    "capital": "Hannover",
    "emoji": "📍",
-   "flag": "data/laender/flags/niedersachsen.svg",
+   "flag": "data/laender/flags/niedersachsen.png",
    "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_Lower_Saxony.svg",
    "ready": false
   },
@@ -117,7 +316,7 @@
    "nameRu": "شمال الراين-وستفاليا",
    "capital": "Düsseldorf",
    "emoji": "📍",
-   "flag": "data/laender/flags/nordrhein-westfalen.svg",
+   "flag": "data/laender/flags/nordrhein-westfalen.png",
    "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_North_Rhine-Westphalia.svg",
    "ready": false
   },
@@ -127,7 +326,7 @@
    "nameRu": "راينلاند-بفالز",
    "capital": "Mainz",
    "emoji": "📍",
-   "flag": "data/laender/flags/rheinland-pfalz.svg",
+   "flag": "data/laender/flags/rheinland-pfalz.png",
    "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_Rhineland-Palatinate.svg",
    "ready": false
   },
@@ -137,7 +336,7 @@
    "nameRu": "زارلاند",
    "capital": "Saarbrücken",
    "emoji": "📍",
-   "flag": "data/laender/flags/saarland.svg",
+   "flag": "data/laender/flags/saarland.png",
    "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_Saarland.svg",
    "ready": false
   },
@@ -147,7 +346,7 @@
    "nameRu": "سكسونيا",
    "capital": "Dresden",
    "emoji": "📍",
-   "flag": "data/laender/flags/sachsen.svg",
+   "flag": "data/laender/flags/sachsen.png",
    "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_Saxony.svg",
    "ready": false
   },
@@ -157,7 +356,7 @@
    "nameRu": "سكسونيا-أنهالت",
    "capital": "Magdeburg",
    "emoji": "📍",
-   "flag": "data/laender/flags/sachsen-anhalt.svg",
+   "flag": "data/laender/flags/sachsen-anhalt.png",
    "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_Saxony-Anhalt_(state).svg",
    "ready": false
   },
@@ -167,7 +366,7 @@
    "nameRu": "شليسفيغ-هولشتاين",
    "capital": "Kiel",
    "emoji": "📍",
-   "flag": "data/laender/flags/schleswig-holstein.svg",
+   "flag": "data/laender/flags/schleswig-holstein.png",
    "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_Schleswig-Holstein.svg",
    "ready": false
   },
@@ -177,7 +376,7 @@
    "nameRu": "تورينغن",
    "capital": "Erfurt",
    "emoji": "📍",
-   "flag": "data/laender/flags/thueringen.svg",
+   "flag": "data/laender/flags/thueringen.png",
    "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_Thuringia.svg",
    "ready": false
   }
