@@ -1,0 +1,185 @@
+{
+ "version": 1,
+ "levels": {
+  "b1": {
+   "level": "B1",
+   "label": "أبسط"
+  },
+  "b2": {
+   "level": "B2",
+   "label": "بتفصيل أكثر"
+  }
+ },
+ "sources": [
+  {
+   "name": "حدود الولايات — Natural Earth (public domain)",
+   "url": "https://www.naturalearthdata.com/"
+  },
+  {
+   "name": "أعلام الولايات — Wikimedia Commons (public domain)",
+   "url": "https://commons.wikimedia.org/"
+  }
+ ],
+ "lands": [
+  {
+   "id": "baden-wuerttemberg",
+   "name": "Baden-Württemberg",
+   "nameRu": "بادن-فورتمبيرغ",
+   "capital": "Stuttgart",
+   "emoji": "📍",
+   "flag": "data/laender/flags/baden-wuerttemberg.svg",
+   "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_Baden-W%C3%BCrttemberg.svg",
+   "ready": false
+  },
+  {
+   "id": "bayern",
+   "name": "Bayern",
+   "nameRu": "بافاريا",
+   "capital": "München",
+   "emoji": "📍",
+   "flag": "data/laender/flags/bayern.svg",
+   "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_Bavaria_(lozengy).svg",
+   "ready": false
+  },
+  {
+   "id": "berlin",
+   "name": "Berlin",
+   "nameRu": "برلين",
+   "capital": "Berlin",
+   "emoji": "📍",
+   "flag": "data/laender/flags/berlin.svg",
+   "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_Berlin.svg",
+   "ready": false
+  },
+  {
+   "id": "brandenburg",
+   "name": "Brandenburg",
+   "nameRu": "براندنبورغ",
+   "capital": "Potsdam",
+   "emoji": "📍",
+   "flag": "data/laender/flags/brandenburg.svg",
+   "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_Brandenburg.svg",
+   "ready": false
+  },
+  {
+   "id": "bremen",
+   "name": "Bremen",
+   "nameRu": "بريمن",
+   "capital": "Bremen",
+   "emoji": "📍",
+   "flag": "data/laender/flags/bremen.svg",
+   "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_Bremen.svg",
+   "ready": false
+  },
+  {
+   "id": "hamburg",
+   "name": "Hamburg",
+   "nameRu": "هامبورغ",
+   "capital": "Hamburg",
+   "emoji": "📍",
+   "flag": "data/laender/flags/hamburg.svg",
+   "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_Hamburg.svg",
+   "ready": false
+  },
+  {
+   "id": "hessen",
+   "name": "Hessen",
+   "nameRu": "هسن",
+   "capital": "Wiesbaden",
+   "emoji": "📍",
+   "flag": "data/laender/flags/hessen.svg",
+   "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_Hesse.svg",
+   "ready": false
+  },
+  {
+   "id": "mecklenburg-vorpommern",
+   "name": "Mecklenburg-Vorpommern",
+   "nameRu": "مكلنبورغ-فوربومرن",
+   "capital": "Schwerin",
+   "emoji": "📍",
+   "flag": "data/laender/flags/mecklenburg-vorpommern.svg",
+   "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_Mecklenburg-Western_Pomerania.svg",
+   "ready": false
+  },
+  {
+   "id": "niedersachsen",
+   "name": "Niedersachsen",
+   "nameRu": "سكسونيا السفلى",
+   "capital": "Hannover",
+   "emoji": "📍",
+   "flag": "data/laender/flags/niedersachsen.svg",
+   "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_Lower_Saxony.svg",
+   "ready": false
+  },
+  {
+   "id": "nordrhein-westfalen",
+   "name": "Nordrhein-Westfalen",
+   "nameRu": "شمال الراين-وستفاليا",
+   "capital": "Düsseldorf",
+   "emoji": "📍",
+   "flag": "data/laender/flags/nordrhein-westfalen.svg",
+   "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_North_Rhine-Westphalia.svg",
+   "ready": false
+  },
+  {
+   "id": "rheinland-pfalz",
+   "name": "Rheinland-Pfalz",
+   "nameRu": "راينلاند-بفالز",
+   "capital": "Mainz",
+   "emoji": "📍",
+   "flag": "data/laender/flags/rheinland-pfalz.svg",
+   "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_Rhineland-Palatinate.svg",
+   "ready": false
+  },
+  {
+   "id": "saarland",
+   "name": "Saarland",
+   "nameRu": "زارلاند",
+   "capital": "Saarbrücken",
+   "emoji": "📍",
+   "flag": "data/laender/flags/saarland.svg",
+   "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_Saarland.svg",
+   "ready": false
+  },
+  {
+   "id": "sachsen",
+   "name": "Sachsen",
+   "nameRu": "سكسونيا",
+   "capital": "Dresden",
+   "emoji": "📍",
+   "flag": "data/laender/flags/sachsen.svg",
+   "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_Saxony.svg",
+   "ready": false
+  },
+  {
+   "id": "sachsen-anhalt",
+   "name": "Sachsen-Anhalt",
+   "nameRu": "سكسونيا-أنهالت",
+   "capital": "Magdeburg",
+   "emoji": "📍",
+   "flag": "data/laender/flags/sachsen-anhalt.svg",
+   "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_Saxony-Anhalt_(state).svg",
+   "ready": false
+  },
+  {
+   "id": "schleswig-holstein",
+   "name": "Schleswig-Holstein",
+   "nameRu": "شليسفيغ-هولشتاين",
+   "capital": "Kiel",
+   "emoji": "📍",
+   "flag": "data/laender/flags/schleswig-holstein.svg",
+   "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_Schleswig-Holstein.svg",
+   "ready": false
+  },
+  {
+   "id": "thueringen",
+   "name": "Thüringen",
+   "nameRu": "تورينغن",
+   "capital": "Erfurt",
+   "emoji": "📍",
+   "flag": "data/laender/flags/thueringen.svg",
+   "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_Thuringia.svg",
+   "ready": false
+  }
+ ]
+}

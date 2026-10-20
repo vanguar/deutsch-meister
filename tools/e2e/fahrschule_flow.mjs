@@ -66,11 +66,12 @@ await c.go(B + '/index.html', 800);
 // плитка зовёт openFahrschulePage из js/support.js (подключён в конце страницы)
 ok(await waitFor(`!!document.getElementById('readFahrschule') && typeof openFahrschulePage === 'function'`, 20000), 'главная: плитка «Автошкола» есть');
 ok(await c.ev(`/Автошкола/.test(document.getElementById('readFahrschule').textContent)`), 'главная: подпись плитки');
-// «Читать и слушать» — сетка 2×2: Книги | Автошкола, Новости | Диалоги
-const grid = JSON.parse(await c.ev(`JSON.stringify(['readBooks', 'readFahrschule', 'readNews', 'readDialogs'].map(id => {
+// «Читать и слушать»: Диалоги | Земли, Книги | Новости, Автошкола — на всю ширину
+const grid = JSON.parse(await c.ev(`JSON.stringify(['readDialogs', 'readLaender', 'readBooks', 'readNews', 'readFahrschule'].map(id => {
   const r = document.getElementById(id).getBoundingClientRect(); return { t: Math.round(r.top), l: Math.round(r.left), w: Math.round(r.width) }; }))`));
-ok(grid[0].t === grid[1].t && grid[2].t === grid[3].t && grid[0].t < grid[2].t && grid[0].l < grid[1].l && grid[2].l < grid[3].l
-  && new Set(grid.map(g => g.w)).size === 1, `главная: плитки 2×2 одинаковой ширины ${JSON.stringify(grid)}`);
+ok(grid[0].t === grid[1].t && grid[2].t === grid[3].t && grid[0].t < grid[2].t && grid[2].t < grid[4].t
+  && grid[0].l < grid[1].l && grid[2].l < grid[3].l && new Set(grid.slice(0, 4).map(g => g.w)).size === 1
+  && grid[4].w > grid[0].w * 1.8, `главная: плитки по порядку, «Автошкола» на всю ширину ${JSON.stringify(grid)}`);
 await c.shot('fs_home_grid.png');
 await c.ev(`document.getElementById('readFahrschule').click()`);
 ok(await waitFor(`/fahrschule\\.html/.test(location.pathname)`, 8000), 'главная → fahrschule.html');

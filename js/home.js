@@ -281,7 +281,7 @@ const Home = (() => {
      пока раздел не переведён, и гасит плашки меню (.side-action) —
      плитки главной гасим так же */
   function markLocked() {
-    [['openBooksModal', 'readBooks'], ['openNewsPage', 'readNews'], ['openDialogsPage', 'readDialogs'], ['openFahrschulePage', 'readFahrschule']].forEach(([fn, id]) => {
+    [['openBooksModal', 'readBooks'], ['openNewsPage', 'readNews'], ['openDialogsPage', 'readDialogs'], ['openFahrschulePage', 'readFahrschule'], ['openLaenderPage', 'readLaender']].forEach(([fn, id]) => {
       const el = $(id);
       if (el) el.classList.toggle('ar-soon', !!(window[fn] && window[fn].__arLocked));
     });

@@ -199,7 +199,7 @@ function uiStrings() {
   for (const [file, src] of Object.entries(sources)) {
     for (const s of jsStrings(src)) for (const f of fragments(s.text)) { out.push(f); if (f.includes('{n}')) tplKeys.push(file + ': ' + f); }
   }
-  for (const f of ['index.html', 'books.html', 'news.html', 'dialogs.html', 'fahrschule.html']) htmlStrings(read(f)).forEach(s => out.push(s));
+  for (const f of ['index.html', 'books.html', 'news.html', 'dialogs.html', 'fahrschule.html', 'laender.html']) htmlStrings(read(f)).forEach(s => out.push(s));
   return { out, tplKeys };
 }
 
@@ -216,6 +216,14 @@ function newsIds() {
 }
 function newsFiles(id) {
   return fs.readdirSync(rel('data/news/' + id)).filter(f => f.endsWith('.json')).sort().map(f => `data/news/${id}/${f}`);
+}
+
+// Земли: data/laender/lands.json (витрина) + index.json и тексты <земля>-<b1|b2>/*.json как книги
+function laenderIds() {
+  return exists('data/laender/index.json') ? JSON.parse(read('data/laender/index.json')).items.map(it => it.id) : [];
+}
+function laenderFiles(id) {
+  return fs.readdirSync(rel('data/laender/' + id)).filter(f => f.endsWith('.json')).sort().map(f => `data/laender/${id}/${f}`);
 }
 
 // Диалоги: data/dialogs/index.json + data/dialogs/<id>.json (tools/dialogs/build.py)
@@ -254,6 +262,13 @@ function extract() {
     groups['news-index'] = uniq(walkStrings(JSON.parse(read('data/news/index.json')), []));
     for (const id of newsIds()) {
       groups['news/' + id] = uniq(newsFiles(id).flatMap(f => walkStrings(JSON.parse(read(f)), [])));
+    }
+  }
+  if (exists('data/laender/lands.json')) {
+    groups['laender-index'] = uniq([...walkStrings(JSON.parse(read('data/laender/lands.json')), []),
+      ...walkStrings(JSON.parse(read('data/laender/index.json')), [])]);
+    for (const id of laenderIds()) {
+      groups['laender/' + id] = uniq(laenderFiles(id).flatMap(f => walkStrings(JSON.parse(read(f)), [])));
     }
   }
   if (exists('data/dialogs/index.json')) {
@@ -402,7 +417,8 @@ function trialGroups(groups, lang, tm) {
   const keep = ['ui', ...readyLessons(groups, tm).map(id => 'lessons/' + id),
     'books-index', ...readyBooks(groups, tm).map(id => 'books/' + id),
     ...readyNews(groups, tm).map(id => 'news/' + id),
-    ...Object.keys(groups).filter(g => g === 'dialogs-index' || g.startsWith('dialogs/'))];
+    ...Object.keys(groups).filter(g => g === 'dialogs-index' || g.startsWith('dialogs/')
+      || g === 'laender-index' || g.startsWith('laender/'))];
   return Object.fromEntries(keep.map(g => [g, groups[g]]));
 }
 
@@ -442,6 +458,7 @@ function cmdBuild(lang = 'uk') {
       fs.writeFileSync(rel(dst), JSON.stringify(translateFile(JSON.parse(read(f)), groupTM(tm, files, 'news/' + id))));
     }
   }
+  buildLaender(out, tm, files);
   if (trial) {
     fs.writeFileSync(rel(`${out}/ready.js`), `/* Готовые уроки, книги и новости — сгенерировано tools/i18n.js build, руками не править */
 window.I18N_READY = ${JSON.stringify(ready)};
@@ -454,6 +471,20 @@ window.I18N_NEWS_TOTAL = ${newsIds().length};
     return;
   }
   console.log('build: ok →', out);
+}
+
+// Земли переводятся целиком (как диалоги): витрина, оглавление и тексты в
+// i18n/<lang>/laender/ — их подставляет js/i18n.js вместо data/laender/
+function buildLaender(out, tm, files) {
+  if (!exists('data/laender/lands.json')) return;
+  fs.rmSync(rel(`${out}/laender`), { recursive: true, force: true });
+  writeJson(`${out}/laender/lands.json`, translateObj(JSON.parse(read('data/laender/lands.json')), tm));
+  writeJson(`${out}/laender/index.json`, translateObj(JSON.parse(read('data/laender/index.json')), tm));
+  for (const id of laenderIds()) for (const f of laenderFiles(id)) {
+    const dst = f.replace(/^data\/laender\//, `${out}/laender/`);
+    fs.mkdirSync(path.dirname(rel(dst)), { recursive: true });
+    fs.writeFileSync(rel(dst), JSON.stringify(translateFile(JSON.parse(read(f)), groupTM(tm, files, 'laender/' + id))));
+  }
 }
 
 // Переведённые копии диалогов: i18n/<lang>/dialogs/ — их подставляет

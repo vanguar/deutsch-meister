@@ -186,6 +186,7 @@ html[dir="rtl"] .ico.flip { transform: scaleX(-1); }
 
 /* ── «Читать и слушать» ── */
 .read-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.read.is-wide { grid-column: 1 / -1; }
 .read {
   position: relative; display: flex; flex-direction: column; align-items: flex-start; gap: 4px;
   background: var(--h-card); border: 0; border-radius: 20px; padding: 16px;

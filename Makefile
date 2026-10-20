@@ -1,7 +1,7 @@
 # Deutsch Meister — команды деплоя (см. ДЕПЛОЙ-инструкция.md)
 # Windows: запускать из Git Bash. Без make — прямые команды указаны в целях.
 
-.PHONY: vocab bump validate check-tips check-audience deploy-web deploy-api check-api i18n-check i18n-build test-i18n news dialogs test-dialogs fahrschule fahrschule-signs test-fahrschule
+.PHONY: vocab bump validate check-tips check-audience deploy-web deploy-api check-api i18n-check i18n-build test-i18n news dialogs test-dialogs fahrschule fahrschule-signs test-fahrschule laender
 
 # Поднять ?v=N во всех HTML + CACHE в service-worker.js (обязательно перед
 # пушем любых правок JS/CSS)
@@ -18,6 +18,8 @@ validate:
 	python scripts/validate_lessons.py
 	python scripts/validate_dialogs.py
 	python scripts/validate_fahrschule.py
+	python scripts/validate_laender.py
+	python scripts/validate_books.py --laender
 	node tools/vocab/build.js --check
 
 # Регресс подсказок: у каждого слова фраз всех уроков подсказка обязана
@@ -88,3 +90,10 @@ i18n-build:
 test-i18n:
 	node tools/test_i18n.js
 	python scripts/test_bot_lang.py
+
+# Земли Германии: собрать data/laender из tools/laender/land_*.py, проверить.
+# Переводы uk/ar — через tools/i18n.js (группы laender-index, laender/<текст>)
+laender:
+	python tools/laender/build.py
+	python scripts/validate_books.py --laender
+	python scripts/validate_laender.py

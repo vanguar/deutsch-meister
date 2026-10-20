@@ -44,6 +44,10 @@ const Reader = (() => {
   const BODY_DIR  = document.body && document.body.dataset.readerDir;
   const BOOKS_DIR = BODY_DIR || 'data/books/';
   const IS_NEWS   = BOOKS_DIR.indexOf('news') >= 0;
+  // «Земли Германии» (laender.html, data-reader-dir="data/laender/"): текст
+  // земли — книга из нескольких глав, адрес #land=<земля>-<b1|b2>
+  const IS_LAND   = BOOKS_DIR.indexOf('laender') >= 0;
+  const HASH_KEY  = IS_LAND ? '#land=' : IS_NEWS ? '#news=' : '#book=';
   const POS_KEY   = 'dm_book_pos:';
   const GAP_MIN   = 32;    // px, минимальный зазор между колонками-страницами
   const ANIM_MS   = 180;   // длительность листания, синхронно с css
@@ -685,7 +689,7 @@ const Reader = (() => {
         </p>
         <div class="rd-state-actions">
           <button class="btn btn-primary" id="rdRetry">Повторить</button>
-          <button class="btn btn-ghost" id="rdToLib">${IS_NEWS ? 'К новостям' : 'В библиотеку'}</button>
+          <button class="btn btn-ghost" id="rdToLib">${IS_LAND ? 'К землям' : IS_NEWS ? 'К новостям' : 'В библиотеку'}</button>
         </div>
       </div>`;
     const retry = document.getElementById('rdRetry');
@@ -740,7 +744,7 @@ const Reader = (() => {
   function loadBook(id, startPos) {
     st.bookId = id;
     st.retry  = () => loadBook(id, startPos);
-    showLoading(IS_NEWS ? 'Открываем статью' : 'Открываем книгу');
+    showLoading(IS_LAND ? 'Открываем текст' : IS_NEWS ? 'Открываем статью' : 'Открываем книгу');
 
     // Глоссарий грузим здесь же — в 2C он понадобится сразу, без дозагрузки
     return Promise.all([
@@ -785,7 +789,7 @@ const Reader = (() => {
       .catch(err => {
         console.error('[Reader] книга не открылась:', err);
         showError(err && err.message ? err.message : String(err),
-          IS_NEWS ? 'Статья не открылась' : 'Книга не открылась');
+          IS_LAND ? 'Текст не открылся' : IS_NEWS ? 'Статья не открылась' : 'Книга не открылась');
       });
   }
 
@@ -1704,7 +1708,7 @@ const Reader = (() => {
 
     try {
       history.pushState({ view: 'reader', book: id }, '',
-        (IS_NEWS ? '#news=' : '#book=') + encodeURIComponent(id));
+        HASH_KEY + encodeURIComponent(id));
       st.pushed = true;
     } catch (e) {
       st.pushed = false;
@@ -1746,6 +1750,8 @@ const Reader = (() => {
     if (typeof Library !== 'undefined' && typeof Library.refresh === 'function') Library.refresh();
     // Лента новостей — отметку «прочитано»
     if (typeof NewsFeed !== 'undefined' && typeof NewsFeed.refresh === 'function') NewsFeed.refresh();
+    // Земли — процент прочтения и закрашенная земля на карте
+    if (typeof Laender !== 'undefined' && typeof Laender.refresh === 'function') Laender.refresh();
   }
 
   /* ── Инициализация ── */

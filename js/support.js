@@ -362,6 +362,16 @@ function openFahrschulePage() {
   window.location.href = dmFahrschuleUrl();
 }
 
+/* ── Раздел «Земли Германии» ─────────────────────────────────────
+   laender.html — 16 федеральных земель: карта, история, политика,
+   экономика и общество на немецком (B1/B2). На главной — плитка.     */
+function dmLaenderUrl() { return dmBasePath() + 'laender.html'; }
+
+function openLaenderPage() {
+  dmHaptic('light');
+  window.location.href = dmLaenderUrl();
+}
+
 /* ── Пункт «Связь с автором» ─────────────────────────────────────
    Замечания и предложения — в личные сообщения Telegram. Внутри
    мини-аппа ссылку открывает сам Telegram (иначе WebView уйдёт со

@@ -16,6 +16,8 @@ jobs:
         run: python scripts/validate_dialogs.py
       - name: Fahrschule (word tips, translations, signs)
         run: python scripts/validate_fahrschule.py
+      - name: Validate Laender (Земли Германии)
+        run: python scripts/validate_laender.py && python scripts/validate_books.py --laender
       - name: Fahrschule build checks (junction solver, source errors)
         run: python tools/fahrschule/test_build.py
       - name: Audience wording (Russian UI is not Russia)

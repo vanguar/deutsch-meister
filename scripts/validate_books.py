@@ -4,6 +4,7 @@ validate_books.py — проверка целостности книг чита�
 
 Запуск:  python scripts/validate_books.py            # все книги из index.json
          python scripts/validate_books.py bremer     # только одну
+         python scripts/validate_books.py --laender  # тексты земель data/laender (как книги)
          python scripts/validate_books.py --news     # статьи data/news (формат тот же,
                                                      # плюс абзацы-фото {"fig": …})
 Код возврата: 0 — ок, 1 — есть ошибки.
@@ -61,6 +62,8 @@ INDEX_FIELDS = ('id', 'title', 'titleRu', 'author', 'level', 'year',
 NEWS_INDEX_FIELDS = ('id', 'title', 'titleRu', 'blurb', 'rubric', 'level',
                      'published', 'added', 'source', 'sourceUrl', 'cover',
                      'words', 'minutes', 'photos')
+LAND_INDEX_FIELDS = ('id', 'title', 'titleRu', 'level', 'chapters', 'words', 'minutes',
+                     'source', 'land')
 DATE_RE = re.compile(r'^\d{4}-\d{2}-\d{2}$')
 FIG_FIELDS = ('src', 'w', 'h', 'cap', 'credit')
 
@@ -344,18 +347,22 @@ def main():
     ap = argparse.ArgumentParser(description='Проверить книги читалки')
     ap.add_argument('book_id', nargs='?', help='проверить только одну книгу')
     ap.add_argument('--news', action='store_true', help='проверить статьи data/news')
+    ap.add_argument('--laender', action='store_true', help='проверить тексты земель data/laender')
     args = ap.parse_args()
 
     list_key, fields = 'books', INDEX_FIELDS
     if args.news:
         BOOKS_DIR = os.path.join(BASE, 'data', 'news')
         list_key, fields = 'items', NEWS_INDEX_FIELDS
+    if args.laender:
+        BOOKS_DIR = os.path.join(BASE, 'data', 'laender')
+        list_key, fields = 'items', LAND_INDEX_FIELDS
 
     index, ok = load_json(os.path.join(BOOKS_DIR, 'index.json'), 'books/index.json')
     entries = {}
     if ok:
         books = index.get(list_key)
-        if not isinstance(books, list) or not books:
+        if not isinstance(books, list) or (not books and not args.laender):
             err('index.json: пустой или отсутствующий массив %s' % list_key)
             books = []
         for i, b in enumerate(books):
@@ -385,6 +392,9 @@ def main():
         # папки книг, не перечисленные в каталоге
         if os.path.isdir(BOOKS_DIR):
             for name in sorted(os.listdir(BOOKS_DIR)):
+                # у земель рядом с текстами лежат flags/ и фото <земля>/img — это не книги
+                if args.laender and not os.path.isfile(os.path.join(BOOKS_DIR, name, 'meta.json')):
+                    continue
                 if os.path.isdir(os.path.join(BOOKS_DIR, name)) and name not in entries:
                     err('data/books/%s: папка книги не перечислена в index.json' % name)
 

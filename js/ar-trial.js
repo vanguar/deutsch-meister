@@ -51,9 +51,9 @@
   var path = location.pathname;
   var isLesson = ANY_LESSON.test(path);
   var isTrialLesson = isLesson && isReady(lessonId(path));
-  // Диалоги (dialogs.html) и автошкола (fahrschule.html) переведены
-  // целиком — разделы открыты и без плашек
-  var isDialogs = /(dialogs|fahrschule)\.html$/.test(path);
+  // Диалоги (dialogs.html), автошкола (fahrschule.html) и земли (laender.html)
+  // переведены целиком — разделы открыты и без плашек
+  var isDialogs = /(dialogs|fahrschule|laender)\.html$/.test(path);
   var isBooks = /books\.html$/.test(path);
   var isNews = /news\.html$/.test(path);
   var isHome = !isLesson && !isDialogs && !/(books|news)\.html$/.test(path);

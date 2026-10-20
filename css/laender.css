@@ -1,0 +1,181 @@
+/* ═══════════════════════════════════════════════
+   laender.css — раздел «Земли Германии» (laender.html)
+   Поверх news.css (шапка, кнопки, тосты) и reader.css (ридер).
+   Палитра — общая (base.css); земли на карте: готова — синий,
+   прочитана — зелёный, в разработке — серый.
+   ═══════════════════════════════════════════════ */
+
+.ld-page {
+  --ld-ready: color-mix(in srgb, var(--accent2) 70%, var(--surface));
+  --ld-read:  color-mix(in srgb, var(--correct) 75%, var(--surface));
+  --ld-soon:  var(--surface3);
+  --ld-edge:  var(--bg);
+}
+.ld-hub[hidden], .ld-land[hidden] { display: none; }
+.ld-page .news-chip { gap: 6px; }
+
+/* ── Уровень B1 / B2 ── */
+.ld-levels { display: flex; gap: 8px; margin: 0 0 14px; }
+.ld-level {
+  flex: 1 1 0; display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-height: 44px;
+  padding: 8px 12px; border-radius: var(--r-full); border: 1px solid var(--border); background: var(--surface2);
+  color: var(--text); font: inherit; font-size: 14px; cursor: pointer; -webkit-tap-highlight-color: transparent;
+}
+.ld-level b { font-weight: 800; }
+.ld-level.is-on { background: var(--accent2); border-color: var(--accent2); color: var(--text-on-btn); }
+
+/* ── Карта ── */
+.ld-map-card {
+  padding: 14px; border-radius: var(--r-xl); background: var(--surface2); border: 1px solid var(--border);
+}
+.ld-map-top { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; margin-bottom: 8px; font-size: 13px; color: var(--text-muted); }
+.ld-legend { display: inline-flex; align-items: center; gap: 6px; }
+.ld-sw { display: inline-block; width: 12px; height: 12px; border-radius: 3px; }
+.ld-sw.is-ready { background: var(--ld-ready); }
+.ld-sw.is-read { background: var(--ld-read); }
+.ld-sw.is-soon { background: var(--ld-soon); border: 1px solid var(--border-light); }
+.ld-game-btn { margin-inline-start: auto; }
+.ld-game-btn[hidden] { display: none; }
+.ld-map { max-width: 440px; margin: 0 auto; }
+.ld-svg { display: block; width: 100%; height: auto; touch-action: manipulation; user-select: none; -webkit-user-select: none; }
+.ld-shape {
+  fill: var(--ld-soon); stroke: var(--ld-edge); stroke-width: 1; stroke-linejoin: round; cursor: pointer;
+  transition: fill .2s ease; outline: none; -webkit-tap-highlight-color: transparent;
+}
+.ld-shape.is-ready { fill: var(--ld-ready); }
+.ld-shape.is-read { fill: var(--ld-read); }
+.ld-shape:hover, .ld-shape:focus-visible { fill: color-mix(in srgb, var(--accent2) 40%, var(--ld-soon)); }
+.ld-shape.is-ready:hover, .ld-shape.is-ready:focus-visible { fill: var(--accent2); }
+.ld-shape.is-sel { stroke: var(--accent); stroke-width: 2.4; }
+.ld-map.is-game .ld-shape { fill: var(--surface3); }
+.ld-map.is-game .ld-shape:hover { fill: color-mix(in srgb, var(--accent2) 45%, var(--surface3)); }
+.ld-map .ld-shape.is-ok { fill: var(--correct); }
+.ld-map .ld-shape.is-bad { fill: var(--wrong); }
+.ld-hit { fill: transparent; cursor: pointer; }
+.ld-label {
+  font: 700 10px 'DM Sans', system-ui, sans-serif; text-anchor: middle; dominant-baseline: middle;
+  fill: #fff; paint-order: stroke; stroke: rgba(0, 0, 0, .45); stroke-width: 2.5px; pointer-events: none;
+  opacity: 0; transition: opacity .2s ease;
+}
+.ld-label.is-on { opacity: 1; }
+
+/* карточка выбранной земли под картой */
+.ld-pick:empty { display: none; }
+.ld-pick-card {
+  display: flex; align-items: center; gap: 12px; margin-top: 12px; padding: 12px;
+  border-radius: var(--r-lg); background: var(--surface); border: 1px solid var(--border);
+}
+.ld-pick-card.is-soon { opacity: .85; }
+.ld-pick-text { flex: 1 1 auto; min-width: 0; }
+.ld-pick-blurb { margin-top: 4px; font-size: 13px; line-height: 1.45; color: var(--text-muted); }
+.ld-open {
+  flex: none; display: inline-flex; align-items: center; gap: 4px; min-height: 44px; padding: 0 16px;
+  border: 0; border-radius: var(--r-full); background: var(--accent2); color: var(--text-on-btn);
+  font: inherit; font-size: 14px; font-weight: 800; cursor: pointer; -webkit-tap-highlight-color: transparent;
+}
+
+/* игра «Найди землю» */
+.ld-game[hidden] { display: none; }
+.ld-game {
+  display: grid; gap: 8px; margin-bottom: 10px; padding: 12px; border-radius: var(--r-lg);
+  background: var(--fs-cta-bg, #0c1218); border: 1px solid var(--border); color: #fff;
+}
+[data-theme="light"] .ld-game { background: #12161f; border-color: transparent; }
+.ld-game-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; }
+.ld-game-q { font-size: 18px; font-weight: 700; }
+.ld-game-q b { color: #ffd75e; }
+.ld-game-n, .ld-game-best { font-size: 13px; color: rgba(255, 255, 255, .78); }
+.ld-game-tr { font-size: 14px; color: rgba(255, 255, 255, .85); }
+.ld-game .news-chip { background: rgba(255, 255, 255, .1); border-color: rgba(255, 255, 255, .2); color: #fff; }
+
+/* ── Список ── */
+.ld-list-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; margin: 24px 0 10px; }
+.ld-list-title { margin: 0; font-family: 'DM Sans', sans-serif; font-size: 20px; color: var(--text-strong); }
+.ld-list-done { font-size: 13px; color: var(--text-muted); }
+.ld-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 10px; }
+.ld-card {
+  display: flex; align-items: center; gap: 12px; width: 100%; padding: 12px 14px; border-radius: var(--r-lg);
+  background: var(--surface2); border: 1px solid var(--border); color: var(--text); text-decoration: none;
+  font: inherit; text-align: start; cursor: pointer; -webkit-tap-highlight-color: transparent;
+}
+.ld-card.is-ready { border-color: color-mix(in srgb, var(--accent2) 55%, var(--border)); }
+.ld-card.is-read { border-color: color-mix(in srgb, var(--correct) 60%, var(--border)); }
+.ld-card.is-soon { opacity: .6; filter: grayscale(.7); cursor: default; }
+.ld-card:active:not(.is-soon) { transform: scale(.99); }
+.ld-flag { flex: none; width: 36px; height: 22px; object-fit: cover; border-radius: 3px; box-shadow: 0 0 0 1px var(--border); }
+.ld-flag.is-big { width: 72px; height: 44px; border-radius: 5px; }
+.ld-card-text { display: flex; flex-direction: column; gap: 2px; flex: 1 1 auto; min-width: 0; }
+.ld-card-de { font-size: 16px; font-weight: 800; color: var(--text-strong); overflow-wrap: anywhere; }
+.ld-card-ru { font-size: 13px; color: var(--text-muted); }
+.ld-chips { display: flex; gap: 6px; margin-top: 4px; }
+.ld-chip {
+  padding: 1px 8px; border-radius: var(--r-full); font-size: 12px; font-weight: 700;
+  background: color-mix(in srgb, var(--accent2) 18%, var(--surface)); color: var(--accent2-text);
+}
+.ld-chip.is-done { background: color-mix(in srgb, var(--correct) 18%, var(--surface)); color: var(--correct); }
+.ld-badge {
+  flex: none; padding: 3px 10px; border-radius: var(--r-full); background: var(--surface3);
+  color: var(--text); font-size: 12px; font-weight: 700;
+}
+.ld-go { flex: none; font-size: 22px; color: var(--text-muted); }
+html[dir="rtl"] .ld-go { transform: scaleX(-1); }
+
+/* ── Страница земли ── */
+.ld-land .news-crumb { margin-bottom: 14px; }
+.ld-hero { display: flex; align-items: center; gap: 14px; }
+.ld-hero-de { margin: 0; font-family: 'Playfair Display', serif; font-size: 30px; line-height: 1.15; color: var(--text-strong); overflow-wrap: anywhere; }
+.ld-hero-ru { margin-top: 2px; font-size: 15px; color: var(--text-muted); }
+.ld-blurb { margin: 14px 0; font-size: 15px; line-height: 1.55; color: var(--text); }
+.ld-box { margin-top: 14px; padding: 16px; border-radius: var(--r-xl); background: var(--surface2); border: 1px solid var(--border); }
+.ld-box-title { display: flex; justify-content: space-between; gap: 10px; margin: 0 0 10px; font-family: 'DM Sans', sans-serif; font-size: 17px; color: var(--text-strong); }
+.ld-facts { display: grid; gap: 0; margin: 0; }
+.ld-fact { display: grid; grid-template-columns: minmax(110px, 38%) 1fr; gap: 10px; padding: 8px 0; border-top: 1px solid var(--border); }
+.ld-fact:first-child { border-top: 0; padding-top: 0; }
+.ld-fact dt { font-size: 13px; color: var(--text-muted); }
+.ld-fact dd { margin: 0; font-size: 14px; line-height: 1.45; color: var(--text); }
+.ld-reads { display: grid; gap: 8px; }
+.ld-read {
+  display: flex; align-items: center; gap: 12px; width: 100%; padding: 12px 14px; border-radius: var(--r-lg);
+  border: 1px solid var(--border); background: var(--surface); color: var(--text); font: inherit; text-align: start; cursor: pointer;
+}
+.ld-read.is-cur { border-color: var(--accent2); }
+.ld-read-lv {
+  flex: none; width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  background: var(--accent2); color: var(--text-on-btn); font-weight: 800;
+}
+.ld-read-text { display: flex; flex-direction: column; gap: 2px; flex: 1 1 auto; font-size: 13px; color: var(--text-muted); }
+.ld-read-text b { font-size: 15px; color: var(--text-strong); }
+.ld-read-pct { flex: none; font-size: 14px; font-weight: 800; color: var(--accent2-text); }
+.ld-toc { display: grid; gap: 2px; margin: 12px 0 0; padding: 0; list-style: none; }
+.ld-toc-item {
+  display: flex; align-items: center; gap: 12px; width: 100%; min-height: 48px; padding: 6px 8px; border: 0; border-radius: var(--r-md);
+  background: transparent; color: var(--text); font: inherit; text-align: start; cursor: pointer;
+}
+.ld-toc-item:hover { background: var(--tint); }
+.ld-toc-ico { flex: none; width: 28px; font-size: 20px; text-align: center; }
+.ld-toc-text { display: flex; flex-direction: column; }
+.ld-toc-de { font-size: 15px; font-weight: 700; color: var(--text-strong); }
+.ld-toc-ru { font-size: 13px; color: var(--text-muted); }
+.ld-quiz-sub, .ld-quiz-result { margin: 0 0 12px; font-size: 14px; color: var(--text-muted); }
+.ld-quiz-result { font-size: 18px; color: var(--text); }
+.ld-quiz-n { font-size: 13px; color: var(--text-muted); direction: ltr; unicode-bidi: isolate; }
+.ld-quiz-q { margin: 0 0 12px; font-size: 16px; font-weight: 700; line-height: 1.45; color: var(--text-strong); }
+.ld-opts { display: grid; gap: 8px; }
+.ld-opt {
+  min-height: 46px; padding: 10px 14px; border-radius: var(--r-md); border: 1px solid var(--border); background: var(--surface);
+  color: var(--text); font: inherit; font-size: 15px; text-align: start; cursor: pointer;
+}
+.ld-opt:hover:not(:disabled) { border-color: var(--accent2); }
+.ld-opt:disabled { cursor: default; }
+.ld-opt.is-right { border-color: var(--correct); background: color-mix(in srgb, var(--correct) 14%, var(--surface)); }
+.ld-opt.is-wrong { border-color: var(--wrong); background: color-mix(in srgb, var(--wrong) 12%, var(--surface)); }
+.ld-why { margin: 12px 0; font-size: 14px; line-height: 1.5; }
+.ld-why.is-right { color: var(--correct); }
+.ld-why.is-wrong { color: var(--wrong); }
+.ld-why span { color: var(--text); }
+.ld-src { margin: 14px 0 0; font-size: 12px; line-height: 1.5; color: var(--text-dim); }
+.ld-src a { color: var(--accent2-text); }
+
+@media (prefers-reduced-motion: reduce) {
+  .ld-shape, .ld-label { transition: none; }
+}
