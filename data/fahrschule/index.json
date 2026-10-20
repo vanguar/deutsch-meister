@@ -83,7 +83,8 @@
    "title": "Alkohol, Müdigkeit und Ablenkung",
    "titleTr": "Алкоголь, усталость и отвлечение",
    "units": [
-    "t-08"
+    "t-08",
+    "p-08"
    ]
   }
  ],
@@ -285,6 +286,15 @@
    "title": "Alkohol, Müdigkeit und Ablenkung",
    "titleTr": "Алкоголь, усталость и отвлечение",
    "count": 19
+  },
+  {
+   "id": "p-08",
+   "kind": "dialog",
+   "emoji": "🚕",
+   "level": "B1",
+   "title": "Nach der Party",
+   "titleTr": "После вечеринки",
+   "count": 15
   }
  ]
 }

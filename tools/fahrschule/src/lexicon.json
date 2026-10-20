@@ -70,6 +70,9 @@
    "я",
    "я",
    "أنا"
+  ],
+  "f": [
+   "mich"
   ]
  },
  "Sie": {
@@ -2037,7 +2040,8 @@
    "über die Straße gehen — يعبر الشارع"
   ],
   "f": [
-   "geht"
+   "geht",
+   "gehe"
   ]
  },
  "gleich": {
@@ -2822,7 +2826,10 @@
    "потребувати, бути потрібним",
    "يحتاج"
   ],
-  "forms": "brauchte · hat gebraucht"
+  "forms": "brauchte · hat gebraucht",
+  "f": [
+   "braucht"
+  ]
  },
  "Bremsweg": {
   "pos": "сущ.",
@@ -5231,7 +5238,8 @@
  "nehmen": {
   "pos": "гл.",
   "f": [
-   "nimmt"
+   "nimmt",
+   "nehme"
   ],
   "forms": "nahm · hat genommen",
   "tr": [
@@ -6611,6 +6619,209 @@
    "терять",
    "втрачати",
    "يفقد"
+  ]
+ },
+ "aufmachen": {
+  "pos": "гл.",
+  "forms": "machte auf · hat aufgemacht",
+  "tr": [
+   "открывать",
+   "відчиняти",
+   "يفتح"
+  ]
+ },
+ "Bier": {
+  "pos": "сущ.",
+  "art": "das",
+  "pl": "die Biere",
+  "tr": [
+   "пиво",
+   "пиво",
+   "بيرة"
+  ]
+ },
+ "Frage": {
+  "pos": "сущ.",
+  "art": "die",
+  "pl": "die Fragen",
+  "tr": [
+   "вопрос",
+   "питання",
+   "سؤال"
+  ]
+ },
+ "Freund": {
+  "pos": "сущ.",
+  "art": "der",
+  "pl": "die Freunde",
+  "f": [
+   "freunden"
+  ],
+  "tr": [
+   "друг",
+   "друг",
+   "صديق"
+  ]
+ },
+ "gegen": {
+  "pos": "предл.",
+  "tr": [
+   "против; от (средство)",
+   "проти; від (засіб)",
+   "ضدّ"
+  ]
+ },
+ "klingeln": {
+  "pos": "гл.",
+  "f": [
+   "klingelt"
+  ],
+  "forms": "klingelte · hat geklingelt",
+  "tr": [
+   "звонить (о телефоне)",
+   "дзвонити (про телефон)",
+   "يرنّ"
+  ]
+ },
+ "kontrollieren": {
+  "pos": "гл.",
+  "f": [
+   "kontrolliert"
+  ],
+  "forms": "kontrollierte · hat kontrolliert",
+  "tr": [
+   "проверять, контролировать",
+   "перевіряти, контролювати",
+   "يفتّش، يراقب"
+  ]
+ },
+ "lange": {
+  "pos": "нареч.",
+  "tr": [
+   "долго",
+   "довго",
+   "طويلًا"
+  ],
+  "note": [
+   "wie lange? — как долго?",
+   "wie lange? — як довго?",
+   "wie lange? — كم من الوقت؟"
+  ]
+ },
+ "mein": {
+  "pos": "мест.",
+  "tr": [
+   "мой",
+   "мій",
+   "ـي (ملكي)"
+  ]
+ },
+ "nein": {
+  "pos": "частица",
+  "tr": [
+   "нет",
+   "ні",
+   "لا"
+  ]
+ },
+ "paar": {
+  "pos": "мест.",
+  "tr": [
+   "пара, несколько",
+   "кілька",
+   "بضعة"
+  ],
+  "note": [
+   "ein paar Minuten — пару минут",
+   "ein paar Minuten — кілька хвилин",
+   "ein paar Minuten — بضع دقائق"
+  ]
+ },
+ "Samstag": {
+  "pos": "сущ.",
+  "art": "der",
+  "pl": "die Samstage",
+  "tr": [
+   "суббота",
+   "субота",
+   "السبت"
+  ]
+ },
+ "Schlaf": {
+  "pos": "сущ.",
+  "art": "der",
+  "pl": null,
+  "tr": [
+   "сон",
+   "сон",
+   "النوم"
+  ]
+ },
+ "Tasche": {
+  "pos": "сущ.",
+  "art": "die",
+  "pl": "die Taschen",
+  "tr": [
+   "карман; сумка",
+   "кишеня; сумка",
+   "جيب؛ حقيبة"
+  ]
+ },
+ "Taxi": {
+  "pos": "сущ.",
+  "art": "das",
+  "pl": "die Taxis",
+  "tr": [
+   "такси",
+   "таксі",
+   "سيارة أجرة"
+  ]
+ },
+ "telefonieren": {
+  "pos": "гл.",
+  "forms": "telefonierte · hat telefoniert",
+  "tr": [
+   "говорить по телефону",
+   "розмовляти по телефону",
+   "يتحدث بالهاتف"
+  ]
+ },
+ "trinken": {
+  "pos": "гл.",
+  "forms": "trank · hat getrunken",
+  "tr": [
+   "пить",
+   "пити",
+   "يشرب"
+  ]
+ },
+ "verstehen": {
+  "pos": "гл.",
+  "f": [
+   "verstanden"
+  ],
+  "forms": "verstand · hat verstanden",
+  "tr": [
+   "понимать",
+   "розуміти",
+   "يفهم"
+  ],
+  "note": [
+   "Verstanden! — Понял(а)!",
+   "Verstanden! — Зрозумів(ла)!",
+   "Verstanden! — فهمت!"
+  ]
+ },
+ "dauern": {
+  "pos": "гл.",
+  "f": [
+   "dauert"
+  ],
+  "forms": "dauerte · hat gedauert",
+  "tr": [
+   "длиться",
+   "тривати",
+   "يستغرق، يدوم"
   ]
  }
 }

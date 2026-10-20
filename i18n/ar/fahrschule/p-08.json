@@ -1,0 +1,622 @@
+{
+ "id": "p-08",
+ "kind": "dialog",
+ "emoji": "🚕",
+ "level": "B1",
+ "title": "Nach der Party",
+ "titleTr": "بعد الحفلة",
+ "intro": "دميترو في فترة الاختبار ويسأل مدرّبته عن كأس من البيرة، والصباح بعد الحفلة، والتعب، والهاتف أثناء القيادة.",
+ "speakers": {
+  "A": {
+   "name": "Fahrlehrerin",
+   "g": "f"
+  },
+  "B": {
+   "name": "Dmytro",
+   "g": "m"
+  }
+ },
+ "lines": [
+  {
+   "de": "Am Samstag gehe ich auf eine Party. Darf ich ein Bier trinken und dann fahren?",
+   "tr": "يوم السبت سأذهب إلى حفلة. هل يجوز لي أن أشرب بيرة ثم أقود؟",
+   "s": "B"
+  },
+  {
+   "de": "Nein. Sie sind in der Probezeit. Für Sie gilt 0,0 Promille.",
+   "tr": "لا. أنت في فترة الاختبار. يسري عليك 0,0 في الألف.",
+   "s": "A"
+  },
+  {
+   "de": "Und wenn mich die Polizei kontrolliert?",
+   "tr": "وإذا أوقفتني الشرطة للتفتيش؟",
+   "s": "B"
+  },
+  {
+   "de": "Dann zahlen Sie 250 Euro, bekommen einen Punkt und Ihre Probezeit wird länger.",
+   "tr": "عندها تدفع 250 يورو وتحصل على نقطة وتطول فترة اختبارك.",
+   "s": "A"
+  },
+  {
+   "de": "Dann nehme ich ein Taxi oder fahre mit Freunden.",
+   "tr": "إذن آخذ سيارة أجرة أو أركب مع أصدقائي.",
+   "s": "B"
+  },
+  {
+   "de": "Gut. Aber vorsichtig am nächsten Morgen: Der Körper braucht Zeit.",
+   "tr": "جيد. لكن احذر في الصباح التالي: الجسم يحتاج إلى وقت.",
+   "s": "A"
+  },
+  {
+   "de": "Wie lange dauert das?",
+   "tr": "كم يستغرق ذلك؟",
+   "s": "B"
+  },
+  {
+   "de": "Etwa eine Stunde für 0,1 Promille. Kaffee hilft dabei nicht.",
+   "tr": "نحو ساعة لكل 0,1 في الألف. والقهوة لا تفيد في ذلك.",
+   "s": "A"
+  },
+  {
+   "de": "Und wenn ich auf der Autobahn plötzlich sehr müde bin?",
+   "tr": "وإذا شعرت فجأة بتعب شديد على الطريق السريع؟",
+   "s": "B"
+  },
+  {
+   "de": "Dann fahren Sie auf den nächsten Parkplatz und schlafen 20 Minuten.",
+   "tr": "عندها تدخل أقرب موقف للسيارات وتنام 20 دقيقة.",
+   "s": "A"
+  },
+  {
+   "de": "Das Fenster aufmachen reicht nicht?",
+   "tr": "ألا يكفي فتح النافذة؟",
+   "s": "B"
+  },
+  {
+   "de": "Nur für ein paar Minuten. Gegen Müdigkeit hilft nur Schlaf.",
+   "tr": "لبضع دقائق فقط. لا يفيد ضد التعب إلا النوم.",
+   "s": "A"
+  },
+  {
+   "de": "Noch eine Frage: Mein Handy klingelt oft beim Fahren.",
+   "tr": "سؤال آخر: هاتفي يرنّ كثيرًا أثناء القيادة.",
+   "s": "B"
+  },
+  {
+   "de": "Nehmen Sie es nicht in die Hand. Mit einer Freisprecheinrichtung dürfen Sie telefonieren.",
+   "tr": "لا تمسكه بيدك. يجوز لك التحدث عبر جهاز التحدث دون استخدام اليدين.",
+   "s": "A"
+  },
+  {
+   "de": "Verstanden. Kein Alkohol, genug Schlaf und das Handy bleibt in der Tasche.",
+   "tr": "فهمت. لا كحول، ونوم كافٍ، ويبقى الهاتف في الجيب.",
+   "s": "B"
+  }
+ ],
+ "signs": {},
+ "gloss": {
+  "w": {
+   "aber": "aber",
+   "alkohol": "Alkohol",
+   "am": "an",
+   "auf": "auf",
+   "aufmachen": "aufmachen",
+   "autobahn": "Autobahn",
+   "beim": "bei",
+   "bekommen": "bekommen",
+   "bier": "Bier",
+   "bin": "sein",
+   "bleibt": "bleiben",
+   "braucht": "brauchen",
+   "dabei": "dabei",
+   "dann": "dann",
+   "darf": "dürfen",
+   "das": "der/die/das",
+   "dauert": "dauern",
+   "den": "der/die/das",
+   "der": "der/die/das",
+   "die": "der/die/das",
+   "dürfen": "dürfen",
+   "ein": "ein/eine",
+   "eine": "ein/eine",
+   "einen": "ein/eine",
+   "einer": "ein/eine",
+   "es": "es",
+   "etwa": "etwa",
+   "euro": "Euro",
+   "fahre": "fahren",
+   "fahren": "fahren",
+   "fenster": "Fenster",
+   "frage": "Frage",
+   "freisprecheinrichtung": "Freisprecheinrichtung",
+   "freunden": "Freund",
+   "für": "für",
+   "gegen": "gegen",
+   "gehe": "gehen",
+   "genug": "genug",
+   "gilt": "gelten",
+   "gut": "gut",
+   "hand": "Hand",
+   "handy": "Handy",
+   "hilft": "helfen",
+   "ich": "ich",
+   "ihre": "Ihr",
+   "in": "in",
+   "kaffee": "Kaffee",
+   "kein": "kein",
+   "klingelt": "klingeln",
+   "kontrolliert": "kontrollieren",
+   "körper": "Körper",
+   "lange": "lange",
+   "länger": "lang",
+   "mein": "mein",
+   "mich": "ich",
+   "minuten": "Minute",
+   "mit": "mit",
+   "morgen": "Morgen",
+   "müde": "müde",
+   "müdigkeit": "Müdigkeit",
+   "nach": "nach",
+   "nehme": "nehmen",
+   "nehmen": "nehmen",
+   "nein": "nein",
+   "nicht": "nicht",
+   "noch": "noch",
+   "nur": "nur",
+   "nächsten": "nächste",
+   "oder": "oder",
+   "oft": "oft",
+   "paar": "paar",
+   "parkplatz": "Parkplatz",
+   "party": "Party",
+   "plötzlich": "plötzlich",
+   "polizei": "Polizei",
+   "probezeit": "Probezeit",
+   "promille": "Promille",
+   "punkt": "Punkt",
+   "reicht": "reichen",
+   "samstag": "Samstag",
+   "schlaf": "Schlaf",
+   "schlafen": "schlafen",
+   "sehr": "sehr",
+   "sie": "Sie",
+   "sind": "sein",
+   "stunde": "Stunde",
+   "tasche": "Tasche",
+   "taxi": "Taxi",
+   "telefonieren": "telefonieren",
+   "trinken": "trinken",
+   "und": "und",
+   "verstanden": "verstehen",
+   "vorsichtig": "vorsichtig",
+   "wenn": "wenn",
+   "wie": "wie",
+   "wird": "werden",
+   "zahlen": "zahlen",
+   "zeit": "Zeit"
+  },
+  "l": {
+   "Alkohol": {
+    "ru": "الكحول",
+    "pos": "اسم",
+    "decl": "der Alkohol · لا جمع له"
+   },
+   "Autobahn": {
+    "ru": "الطريق السريع (أوتوبان)",
+    "pos": "اسم",
+    "decl": "die Autobahn · الجمع: die Autobahnen"
+   },
+   "Bier": {
+    "ru": "بيرة",
+    "pos": "اسم",
+    "decl": "das Bier · الجمع: die Biere"
+   },
+   "Euro": {
+    "ru": "يورو",
+    "pos": "اسم",
+    "decl": "der Euro · الجمع: die Euro"
+   },
+   "Fenster": {
+    "ru": "نافذة",
+    "pos": "اسم",
+    "decl": "das Fenster · الجمع: die Fenster"
+   },
+   "Frage": {
+    "ru": "سؤال",
+    "pos": "اسم",
+    "decl": "die Frage · الجمع: die Fragen"
+   },
+   "Freisprecheinrichtung": {
+    "ru": "جهاز التحدث دون استخدام اليدين",
+    "pos": "اسم",
+    "decl": "die Freisprecheinrichtung · الجمع: die Freisprecheinrichtungen"
+   },
+   "Freund": {
+    "ru": "صديق",
+    "pos": "اسم",
+    "decl": "der Freund · الجمع: die Freunde"
+   },
+   "Hand": {
+    "ru": "يد",
+    "pos": "اسم",
+    "note": "in die Hand nehmen — يمسك باليد",
+    "decl": "die Hand · الجمع: die Hände"
+   },
+   "Handy": {
+    "ru": "هاتف محمول",
+    "pos": "اسم",
+    "decl": "das Handy · الجمع: die Handys"
+   },
+   "Ihr": {
+    "ru": "ـكَ، ـكِ (صيغة الاحترام)",
+    "pos": "ضمير"
+   },
+   "Kaffee": {
+    "ru": "قهوة",
+    "pos": "اسم",
+    "decl": "der Kaffee · لا جمع له"
+   },
+   "Körper": {
+    "ru": "الجسم",
+    "pos": "اسم",
+    "decl": "der Körper · الجمع: die Körper"
+   },
+   "Minute": {
+    "ru": "دقيقة",
+    "pos": "اسم",
+    "decl": "die Minute · الجمع: die Minuten"
+   },
+   "Morgen": {
+    "ru": "صباح",
+    "pos": "اسم",
+    "note": "am Morgen — في الصباح",
+    "decl": "der Morgen · الجمع: die Morgen"
+   },
+   "Müdigkeit": {
+    "ru": "التعب، النعاس",
+    "pos": "اسم",
+    "decl": "die Müdigkeit · لا جمع له"
+   },
+   "Parkplatz": {
+    "ru": "موقف سيارات",
+    "pos": "اسم",
+    "decl": "der Parkplatz · الجمع: die Parkplätze"
+   },
+   "Party": {
+    "ru": "حفلة",
+    "pos": "اسم",
+    "decl": "die Party · الجمع: die Partys"
+   },
+   "Polizei": {
+    "ru": "الشرطة",
+    "pos": "اسم",
+    "decl": "die Polizei · لا جمع له"
+   },
+   "Probezeit": {
+    "ru": "فترة الاختبار (للسائقين الجدد)",
+    "pos": "اسم",
+    "note": "سنتان بعد الحصول على الرخصة؛ والأخطاء أغلى ثمنًا",
+    "decl": "die Probezeit · الجمع: die Probezeiten"
+   },
+   "Promille": {
+    "ru": "في الألف (نسبة الكحول في الدم)",
+    "pos": "اسم",
+    "decl": "das Promille · الجمع: die Promille"
+   },
+   "Punkt": {
+    "ru": "نقطة",
+    "pos": "اسم",
+    "decl": "der Punkt · الجمع: die Punkte"
+   },
+   "Samstag": {
+    "ru": "السبت",
+    "pos": "اسم",
+    "decl": "der Samstag · الجمع: die Samstage"
+   },
+   "Schlaf": {
+    "ru": "النوم",
+    "pos": "اسم",
+    "decl": "der Schlaf · لا جمع له"
+   },
+   "Sie": {
+    "ru": "حضرتك (صيغة الاحترام)",
+    "pos": "ضمير",
+    "note": "Ihnen — لكم (حالة الجر): vor Ihnen — أمامك"
+   },
+   "Stunde": {
+    "ru": "ساعة؛ درس",
+    "pos": "اسم",
+    "decl": "die Stunde · الجمع: die Stunden"
+   },
+   "Tasche": {
+    "ru": "جيب؛ حقيبة",
+    "pos": "اسم",
+    "decl": "die Tasche · الجمع: die Taschen"
+   },
+   "Taxi": {
+    "ru": "سيارة أجرة",
+    "pos": "اسم",
+    "decl": "das Taxi · الجمع: die Taxis"
+   },
+   "Zeit": {
+    "ru": "وقت",
+    "pos": "اسم",
+    "decl": "die Zeit · الجمع: die Zeiten"
+   },
+   "aber": {
+    "ru": "لكن",
+    "pos": "أداة ربط"
+   },
+   "an": {
+    "ru": "عند، على",
+    "pos": "حرف جر",
+    "note": "am = an dem؛ an der Kreuzung — عند التقاطع"
+   },
+   "auf": {
+    "ru": "على",
+    "pos": "حرف جر",
+    "note": "auf der Straße — على الطريق؛ achten auf — ينتبه لـ"
+   },
+   "aufmachen": {
+    "ru": "يفتح",
+    "pos": "فعل",
+    "forms": "machte auf · hat aufgemacht"
+   },
+   "bei": {
+    "ru": "عند",
+    "pos": "حرف جر",
+    "note": "beim = bei dem: beim Fahren — أثناء القيادة؛ bei Rot — عند الأحمر"
+   },
+   "bekommen": {
+    "ru": "يحصل على",
+    "pos": "فعل",
+    "forms": "bekam · hat bekommen"
+   },
+   "bleiben": {
+    "ru": "يبقى",
+    "pos": "فعل",
+    "forms": "blieb · ist geblieben"
+   },
+   "brauchen": {
+    "ru": "يحتاج",
+    "pos": "فعل",
+    "forms": "brauchte · hat gebraucht"
+   },
+   "dabei": {
+    "ru": "في أثناء ذلك",
+    "pos": "ظرف"
+   },
+   "dann": {
+    "ru": "إذن؛ ثم",
+    "pos": "ظرف"
+   },
+   "dauern": {
+    "ru": "يستغرق، يدوم",
+    "pos": "فعل",
+    "forms": "dauerte · hat gedauert"
+   },
+   "der/die/das": {
+    "ru": "أداة التعريف",
+    "pos": "أداة تعريف",
+    "note": "der للمذكر، die للمؤنث والجمع، das للمحايد؛ den للمذكر في حالة النصب، dem للمذكر والمحايد في حالة الجر؛ وdas تعني أيضًا «هذا»"
+   },
+   "dürfen": {
+    "ru": "يحق له، يُسمح له",
+    "pos": "فعل",
+    "forms": "durfte · hat gedurft"
+   },
+   "ein/eine": {
+    "ru": "أداة النكرة؛ واحد",
+    "pos": "أداة تعريف",
+    "note": "an einer Kreuzung — عند تقاطعٍ ما"
+   },
+   "es": {
+    "ru": "هو، هي (لغير العاقل)",
+    "pos": "ضمير",
+    "note": "هنا: السيارة (das Auto)"
+   },
+   "etwa": {
+    "ru": "تقريبًا، نحو",
+    "pos": "ظرف"
+   },
+   "fahren": {
+    "ru": "يسير بالسيارة؛ يقود",
+    "pos": "فعل",
+    "forms": "fuhr · ist gefahren"
+   },
+   "für": {
+    "ru": "لـ، من أجل",
+    "pos": "حرف جر"
+   },
+   "gegen": {
+    "ru": "ضدّ",
+    "pos": "حرف جر"
+   },
+   "gehen": {
+    "ru": "يمشي",
+    "pos": "فعل",
+    "note": "über die Straße gehen — يعبر الشارع",
+    "forms": "ging · ist gegangen"
+   },
+   "gelten": {
+    "ru": "يسري، ينطبق",
+    "pos": "فعل",
+    "forms": "galt · hat gegolten"
+   },
+   "genug": {
+    "ru": "بما يكفي",
+    "pos": "ظرف"
+   },
+   "gut": {
+    "ru": "جيد",
+    "pos": "صفة",
+    "note": "am besten — من الأفضل",
+    "forms": "gut · besser · am besten"
+   },
+   "helfen": {
+    "ru": "يساعد، يفيد",
+    "pos": "فعل",
+    "forms": "half · hat geholfen"
+   },
+   "ich": {
+    "ru": "أنا",
+    "pos": "ضمير"
+   },
+   "in": {
+    "ru": "في",
+    "pos": "حرف جر",
+    "note": "im = in dem: im Bereich — في المنطقة"
+   },
+   "kein": {
+    "ru": "لا (نفي الاسم)",
+    "pos": "ضمير"
+   },
+   "klingeln": {
+    "ru": "يرنّ",
+    "pos": "فعل",
+    "forms": "klingelte · hat geklingelt"
+   },
+   "kontrollieren": {
+    "ru": "يفتّش، يراقب",
+    "pos": "فعل",
+    "forms": "kontrollierte · hat kontrolliert"
+   },
+   "lang": {
+    "ru": "طويل",
+    "pos": "صفة",
+    "note": "Wie lang …؟ — كم طول …؟",
+    "forms": "lang · länger · am längsten"
+   },
+   "lange": {
+    "ru": "طويلًا",
+    "pos": "ظرف",
+    "note": "wie lange? — كم من الوقت؟"
+   },
+   "mein": {
+    "ru": "ـي (ملكي)",
+    "pos": "ضمير"
+   },
+   "mit": {
+    "ru": "مع",
+    "pos": "حرف جر"
+   },
+   "müde": {
+    "ru": "متعب، نعسان",
+    "pos": "صفة"
+   },
+   "nach": {
+    "ru": "بعد؛ إلى",
+    "pos": "حرف جر"
+   },
+   "nehmen": {
+    "ru": "يأخذ",
+    "pos": "فعل",
+    "note": "Rücksicht nehmen auf — يراعي",
+    "forms": "nahm · hat genommen"
+   },
+   "nein": {
+    "ru": "لا",
+    "pos": "أداة"
+   },
+   "nicht": {
+    "ru": "لا، ليس",
+    "pos": "أداة"
+   },
+   "noch": {
+    "ru": "بعدُ، لا يزال",
+    "pos": "ظرف",
+    "note": "noch nicht — ليس بعد"
+   },
+   "nur": {
+    "ru": "فقط",
+    "pos": "ظرف"
+   },
+   "nächste": {
+    "ru": "القادم، الأقرب",
+    "pos": "صفة"
+   },
+   "oder": {
+    "ru": "أو",
+    "pos": "أداة ربط",
+    "note": "…, oder? — …، أليس كذلك؟"
+   },
+   "oft": {
+    "ru": "غالبًا",
+    "pos": "ظرف"
+   },
+   "paar": {
+    "ru": "بضعة",
+    "pos": "ضمير",
+    "note": "ein paar Minuten — بضع دقائق"
+   },
+   "plötzlich": {
+    "ru": "فجأة",
+    "pos": "ظرف"
+   },
+   "reichen": {
+    "ru": "يكفي",
+    "pos": "فعل",
+    "forms": "reichte · hat gereicht"
+   },
+   "schlafen": {
+    "ru": "ينام",
+    "pos": "فعل",
+    "forms": "schlief · hat geschlafen"
+   },
+   "sehr": {
+    "ru": "جدًا",
+    "pos": "ظرف"
+   },
+   "sein": {
+    "ru": "يكون",
+    "pos": "فعل",
+    "forms": "war · ist gewesen"
+   },
+   "telefonieren": {
+    "ru": "يتحدث بالهاتف",
+    "pos": "فعل",
+    "forms": "telefonierte · hat telefoniert"
+   },
+   "trinken": {
+    "ru": "يشرب",
+    "pos": "فعل",
+    "forms": "trank · hat getrunken"
+   },
+   "und": {
+    "ru": "و",
+    "pos": "أداة ربط"
+   },
+   "verstehen": {
+    "ru": "يفهم",
+    "pos": "فعل",
+    "note": "Verstanden! — فهمت!",
+    "forms": "verstand · hat verstanden"
+   },
+   "vorsichtig": {
+    "ru": "حذِر",
+    "pos": "صفة"
+   },
+   "wenn": {
+    "ru": "إذا؛ عندما",
+    "pos": "أداة ربط",
+    "note": "auch wenn — حتى لو"
+   },
+   "werden": {
+    "ru": "يصبح",
+    "pos": "فعل",
+    "note": "die Ampel wird gelb — الإشارة تصبح صفراء",
+    "forms": "wurde · ist geworden"
+   },
+   "wie": {
+    "ru": "كيف",
+    "pos": "ظرف",
+    "note": "wie schnell — بأي سرعة"
+   },
+   "zahlen": {
+    "ru": "يدفع",
+    "pos": "فعل",
+    "forms": "zahlte · hat gezahlt"
+   }
+  }
+ }
+}

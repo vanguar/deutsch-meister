@@ -1,0 +1,622 @@
+{
+ "id": "p-08",
+ "kind": "dialog",
+ "emoji": "🚕",
+ "level": "B1",
+ "title": "Nach der Party",
+ "titleTr": "Після вечірки",
+ "intro": "Дмитро на випробувальному терміні й питає інструкторку про келих пива, ранок після вечірки, втому і телефон за кермом.",
+ "speakers": {
+  "A": {
+   "name": "Fahrlehrerin",
+   "g": "f"
+  },
+  "B": {
+   "name": "Dmytro",
+   "g": "m"
+  }
+ },
+ "lines": [
+  {
+   "de": "Am Samstag gehe ich auf eine Party. Darf ich ein Bier trinken und dann fahren?",
+   "tr": "У суботу я йду на вечірку. Чи можна випити пиво і потім сісти за кермо?",
+   "s": "B"
+  },
+  {
+   "de": "Nein. Sie sind in der Probezeit. Für Sie gilt 0,0 Promille.",
+   "tr": "Ні. Ви на випробувальному терміні. Для вас діє 0,0 проміле.",
+   "s": "A"
+  },
+  {
+   "de": "Und wenn mich die Polizei kontrolliert?",
+   "tr": "А якщо мене зупинить поліція?",
+   "s": "B"
+  },
+  {
+   "de": "Dann zahlen Sie 250 Euro, bekommen einen Punkt und Ihre Probezeit wird länger.",
+   "tr": "Тоді ви платите 250 євро, отримуєте бал, і ваш випробувальний термін подовжується.",
+   "s": "A"
+  },
+  {
+   "de": "Dann nehme ich ein Taxi oder fahre mit Freunden.",
+   "tr": "Тоді я візьму таксі або поїду з друзями.",
+   "s": "B"
+  },
+  {
+   "de": "Gut. Aber vorsichtig am nächsten Morgen: Der Körper braucht Zeit.",
+   "tr": "Добре. Але обережно наступного ранку: організму потрібен час.",
+   "s": "A"
+  },
+  {
+   "de": "Wie lange dauert das?",
+   "tr": "А скільки це триває?",
+   "s": "B"
+  },
+  {
+   "de": "Etwa eine Stunde für 0,1 Promille. Kaffee hilft dabei nicht.",
+   "tr": "Приблизно годину на 0,1 проміле. Кава тут не допомагає.",
+   "s": "A"
+  },
+  {
+   "de": "Und wenn ich auf der Autobahn plötzlich sehr müde bin?",
+   "tr": "А якщо я на автобані раптом дуже втомлюся?",
+   "s": "B"
+  },
+  {
+   "de": "Dann fahren Sie auf den nächsten Parkplatz und schlafen 20 Minuten.",
+   "tr": "Тоді заїжджаєте на найближчу парковку і спите 20 хвилин.",
+   "s": "A"
+  },
+  {
+   "de": "Das Fenster aufmachen reicht nicht?",
+   "tr": "Відчинити вікно недостатньо?",
+   "s": "B"
+  },
+  {
+   "de": "Nur für ein paar Minuten. Gegen Müdigkeit hilft nur Schlaf.",
+   "tr": "Лише на кілька хвилин. Від утоми допомагає тільки сон.",
+   "s": "A"
+  },
+  {
+   "de": "Noch eine Frage: Mein Handy klingelt oft beim Fahren.",
+   "tr": "Ще питання: мій телефон часто дзвонить під час їзди.",
+   "s": "B"
+  },
+  {
+   "de": "Nehmen Sie es nicht in die Hand. Mit einer Freisprecheinrichtung dürfen Sie telefonieren.",
+   "tr": "Не беріть його в руку. З гучним зв'язком розмовляти можна.",
+   "s": "A"
+  },
+  {
+   "de": "Verstanden. Kein Alkohol, genug Schlaf und das Handy bleibt in der Tasche.",
+   "tr": "Зрозумів. Жодного алкоголю, достатньо сну, і телефон залишається в кишені.",
+   "s": "B"
+  }
+ ],
+ "signs": {},
+ "gloss": {
+  "w": {
+   "aber": "aber",
+   "alkohol": "Alkohol",
+   "am": "an",
+   "auf": "auf",
+   "aufmachen": "aufmachen",
+   "autobahn": "Autobahn",
+   "beim": "bei",
+   "bekommen": "bekommen",
+   "bier": "Bier",
+   "bin": "sein",
+   "bleibt": "bleiben",
+   "braucht": "brauchen",
+   "dabei": "dabei",
+   "dann": "dann",
+   "darf": "dürfen",
+   "das": "der/die/das",
+   "dauert": "dauern",
+   "den": "der/die/das",
+   "der": "der/die/das",
+   "die": "der/die/das",
+   "dürfen": "dürfen",
+   "ein": "ein/eine",
+   "eine": "ein/eine",
+   "einen": "ein/eine",
+   "einer": "ein/eine",
+   "es": "es",
+   "etwa": "etwa",
+   "euro": "Euro",
+   "fahre": "fahren",
+   "fahren": "fahren",
+   "fenster": "Fenster",
+   "frage": "Frage",
+   "freisprecheinrichtung": "Freisprecheinrichtung",
+   "freunden": "Freund",
+   "für": "für",
+   "gegen": "gegen",
+   "gehe": "gehen",
+   "genug": "genug",
+   "gilt": "gelten",
+   "gut": "gut",
+   "hand": "Hand",
+   "handy": "Handy",
+   "hilft": "helfen",
+   "ich": "ich",
+   "ihre": "Ihr",
+   "in": "in",
+   "kaffee": "Kaffee",
+   "kein": "kein",
+   "klingelt": "klingeln",
+   "kontrolliert": "kontrollieren",
+   "körper": "Körper",
+   "lange": "lange",
+   "länger": "lang",
+   "mein": "mein",
+   "mich": "ich",
+   "minuten": "Minute",
+   "mit": "mit",
+   "morgen": "Morgen",
+   "müde": "müde",
+   "müdigkeit": "Müdigkeit",
+   "nach": "nach",
+   "nehme": "nehmen",
+   "nehmen": "nehmen",
+   "nein": "nein",
+   "nicht": "nicht",
+   "noch": "noch",
+   "nur": "nur",
+   "nächsten": "nächste",
+   "oder": "oder",
+   "oft": "oft",
+   "paar": "paar",
+   "parkplatz": "Parkplatz",
+   "party": "Party",
+   "plötzlich": "plötzlich",
+   "polizei": "Polizei",
+   "probezeit": "Probezeit",
+   "promille": "Promille",
+   "punkt": "Punkt",
+   "reicht": "reichen",
+   "samstag": "Samstag",
+   "schlaf": "Schlaf",
+   "schlafen": "schlafen",
+   "sehr": "sehr",
+   "sie": "Sie",
+   "sind": "sein",
+   "stunde": "Stunde",
+   "tasche": "Tasche",
+   "taxi": "Taxi",
+   "telefonieren": "telefonieren",
+   "trinken": "trinken",
+   "und": "und",
+   "verstanden": "verstehen",
+   "vorsichtig": "vorsichtig",
+   "wenn": "wenn",
+   "wie": "wie",
+   "wird": "werden",
+   "zahlen": "zahlen",
+   "zeit": "Zeit"
+  },
+  "l": {
+   "Alkohol": {
+    "ru": "алкоголь",
+    "pos": "ім.",
+    "decl": "der Alkohol · мн. немає"
+   },
+   "Autobahn": {
+    "ru": "автобан, автомагістраль",
+    "pos": "ім.",
+    "decl": "die Autobahn · мн.: die Autobahnen"
+   },
+   "Bier": {
+    "ru": "пиво",
+    "pos": "ім.",
+    "decl": "das Bier · мн.: die Biere"
+   },
+   "Euro": {
+    "ru": "євро",
+    "pos": "ім.",
+    "decl": "der Euro · мн.: die Euro"
+   },
+   "Fenster": {
+    "ru": "вікно",
+    "pos": "ім.",
+    "decl": "das Fenster · мн.: die Fenster"
+   },
+   "Frage": {
+    "ru": "питання",
+    "pos": "ім.",
+    "decl": "die Frage · мн.: die Fragen"
+   },
+   "Freisprecheinrichtung": {
+    "ru": "гучний зв'язок (без рук)",
+    "pos": "ім.",
+    "decl": "die Freisprecheinrichtung · мн.: die Freisprecheinrichtungen"
+   },
+   "Freund": {
+    "ru": "друг",
+    "pos": "ім.",
+    "decl": "der Freund · мн.: die Freunde"
+   },
+   "Hand": {
+    "ru": "рука (кисть)",
+    "pos": "ім.",
+    "note": "in die Hand nehmen — взяти в руку",
+    "decl": "die Hand · мн.: die Hände"
+   },
+   "Handy": {
+    "ru": "мобільний телефон",
+    "pos": "ім.",
+    "decl": "das Handy · мн.: die Handys"
+   },
+   "Ihr": {
+    "ru": "ваш (ввічливо)",
+    "pos": "займ."
+   },
+   "Kaffee": {
+    "ru": "кава",
+    "pos": "ім.",
+    "decl": "der Kaffee · мн. немає"
+   },
+   "Körper": {
+    "ru": "тіло, організм",
+    "pos": "ім.",
+    "decl": "der Körper · мн.: die Körper"
+   },
+   "Minute": {
+    "ru": "хвилина",
+    "pos": "ім.",
+    "decl": "die Minute · мн.: die Minuten"
+   },
+   "Morgen": {
+    "ru": "ранок",
+    "pos": "ім.",
+    "note": "am Morgen — вранці",
+    "decl": "der Morgen · мн.: die Morgen"
+   },
+   "Müdigkeit": {
+    "ru": "втома, сонливість",
+    "pos": "ім.",
+    "decl": "die Müdigkeit · мн. немає"
+   },
+   "Parkplatz": {
+    "ru": "парковка, місце для стоянки",
+    "pos": "ім.",
+    "decl": "der Parkplatz · мн.: die Parkplätze"
+   },
+   "Party": {
+    "ru": "вечірка",
+    "pos": "ім.",
+    "decl": "die Party · мн.: die Partys"
+   },
+   "Polizei": {
+    "ru": "поліція",
+    "pos": "ім.",
+    "decl": "die Polizei · мн. немає"
+   },
+   "Probezeit": {
+    "ru": "випробувальний термін (для нових водіїв)",
+    "pos": "ім.",
+    "note": "два роки після отримання прав; помилки коштують дорожче",
+    "decl": "die Probezeit · мн.: die Probezeiten"
+   },
+   "Promille": {
+    "ru": "проміле (‰ алкоголю в крові)",
+    "pos": "ім.",
+    "decl": "das Promille · мн.: die Promille"
+   },
+   "Punkt": {
+    "ru": "бал; точка",
+    "pos": "ім.",
+    "decl": "der Punkt · мн.: die Punkte"
+   },
+   "Samstag": {
+    "ru": "субота",
+    "pos": "ім.",
+    "decl": "der Samstag · мн.: die Samstage"
+   },
+   "Schlaf": {
+    "ru": "сон",
+    "pos": "ім.",
+    "decl": "der Schlaf · мн. немає"
+   },
+   "Sie": {
+    "ru": "ви (ввічливо)",
+    "pos": "займ.",
+    "note": "Ihnen — вам (давальний): vor Ihnen — перед вами"
+   },
+   "Stunde": {
+    "ru": "година; урок",
+    "pos": "ім.",
+    "decl": "die Stunde · мн.: die Stunden"
+   },
+   "Tasche": {
+    "ru": "кишеня; сумка",
+    "pos": "ім.",
+    "decl": "die Tasche · мн.: die Taschen"
+   },
+   "Taxi": {
+    "ru": "таксі",
+    "pos": "ім.",
+    "decl": "das Taxi · мн.: die Taxis"
+   },
+   "Zeit": {
+    "ru": "час",
+    "pos": "ім.",
+    "decl": "die Zeit · мн.: die Zeiten"
+   },
+   "aber": {
+    "ru": "але",
+    "pos": "спол."
+   },
+   "an": {
+    "ru": "біля, на, при",
+    "pos": "прийм.",
+    "note": "am = an dem; an der Kreuzung — на перехресті"
+   },
+   "auf": {
+    "ru": "на, по",
+    "pos": "прийм.",
+    "note": "auf der Straße — на дорозі; achten auf — стежити за"
+   },
+   "aufmachen": {
+    "ru": "відчиняти",
+    "pos": "дієсл.",
+    "forms": "machte auf · hat aufgemacht"
+   },
+   "bei": {
+    "ru": "при, біля; на (про сигнал)",
+    "pos": "прийм.",
+    "note": "beim = bei dem: beim Fahren — під час їзди; bei Rot — на червоний"
+   },
+   "bekommen": {
+    "ru": "отримувати",
+    "pos": "дієсл.",
+    "forms": "bekam · hat bekommen"
+   },
+   "bleiben": {
+    "ru": "залишатися",
+    "pos": "дієсл.",
+    "forms": "blieb · ist geblieben"
+   },
+   "brauchen": {
+    "ru": "потребувати, бути потрібним",
+    "pos": "дієсл.",
+    "forms": "brauchte · hat gebraucht"
+   },
+   "dabei": {
+    "ru": "при цьому",
+    "pos": "присл."
+   },
+   "dann": {
+    "ru": "тоді, отже; потім",
+    "pos": "присл."
+   },
+   "dauern": {
+    "ru": "тривати",
+    "pos": "дієсл.",
+    "forms": "dauerte · hat gedauert"
+   },
+   "der/die/das": {
+    "ru": "означений артикль",
+    "pos": "артикль",
+    "note": "der — ч. р., die — ж. р. і мн., das — с. р.; den — ч. р. у знахідному, dem — ч. і с. р. у давальному; das ще означає «це»"
+   },
+   "dürfen": {
+    "ru": "могти, мати право",
+    "pos": "дієсл.",
+    "forms": "durfte · hat gedurft"
+   },
+   "ein/eine": {
+    "ru": "неозначений артикль; один",
+    "pos": "артикль",
+    "note": "an einer Kreuzung — на (якомусь) перехресті"
+   },
+   "es": {
+    "ru": "воно; це",
+    "pos": "займ.",
+    "note": "тут — про машину: das Auto"
+   },
+   "etwa": {
+    "ru": "приблизно, близько",
+    "pos": "присл."
+   },
+   "fahren": {
+    "ru": "їхати; кермувати машиною",
+    "pos": "дієсл.",
+    "forms": "fuhr · ist gefahren"
+   },
+   "für": {
+    "ru": "для",
+    "pos": "прийм."
+   },
+   "gegen": {
+    "ru": "проти; від (засіб)",
+    "pos": "прийм."
+   },
+   "gehen": {
+    "ru": "іти (пішки)",
+    "pos": "дієсл.",
+    "note": "über die Straße gehen — переходити дорогу",
+    "forms": "ging · ist gegangen"
+   },
+   "gelten": {
+    "ru": "діяти (про правило)",
+    "pos": "дієсл.",
+    "forms": "galt · hat gegolten"
+   },
+   "genug": {
+    "ru": "достатньо",
+    "pos": "присл."
+   },
+   "gut": {
+    "ru": "добрий; добре",
+    "pos": "прикм.",
+    "note": "am besten — найкраще",
+    "forms": "gut · besser · am besten"
+   },
+   "helfen": {
+    "ru": "допомагати",
+    "pos": "дієсл.",
+    "forms": "half · hat geholfen"
+   },
+   "ich": {
+    "ru": "я",
+    "pos": "займ."
+   },
+   "in": {
+    "ru": "в",
+    "pos": "прийм.",
+    "note": "im = in dem: im Bereich — у зоні"
+   },
+   "kein": {
+    "ru": "жодний; не (заперечення при іменнику)",
+    "pos": "займ."
+   },
+   "klingeln": {
+    "ru": "дзвонити (про телефон)",
+    "pos": "дієсл.",
+    "forms": "klingelte · hat geklingelt"
+   },
+   "kontrollieren": {
+    "ru": "перевіряти, контролювати",
+    "pos": "дієсл.",
+    "forms": "kontrollierte · hat kontrolliert"
+   },
+   "lang": {
+    "ru": "довгий",
+    "pos": "прикм.",
+    "note": "Wie lang …? — Якої довжини …?",
+    "forms": "lang · länger · am längsten"
+   },
+   "lange": {
+    "ru": "довго",
+    "pos": "присл.",
+    "note": "wie lange? — як довго?"
+   },
+   "mein": {
+    "ru": "мій",
+    "pos": "займ."
+   },
+   "mit": {
+    "ru": "з",
+    "pos": "прийм."
+   },
+   "müde": {
+    "ru": "втомлений, сонний",
+    "pos": "прикм."
+   },
+   "nach": {
+    "ru": "після; до (напрямок)",
+    "pos": "прийм."
+   },
+   "nehmen": {
+    "ru": "брати",
+    "pos": "дієсл.",
+    "note": "Rücksicht nehmen auf — зважати на",
+    "forms": "nahm · hat genommen"
+   },
+   "nein": {
+    "ru": "ні",
+    "pos": "частка"
+   },
+   "nicht": {
+    "ru": "не",
+    "pos": "частка"
+   },
+   "noch": {
+    "ru": "ще",
+    "pos": "присл.",
+    "note": "noch nicht — ще ні"
+   },
+   "nur": {
+    "ru": "лише",
+    "pos": "присл."
+   },
+   "nächste": {
+    "ru": "найближчий, наступний",
+    "pos": "прикм."
+   },
+   "oder": {
+    "ru": "або",
+    "pos": "спол.",
+    "note": "…, oder? — …, правда? / так?"
+   },
+   "oft": {
+    "ru": "часто",
+    "pos": "присл."
+   },
+   "paar": {
+    "ru": "кілька",
+    "pos": "займ.",
+    "note": "ein paar Minuten — кілька хвилин"
+   },
+   "plötzlich": {
+    "ru": "раптом, несподівано",
+    "pos": "присл."
+   },
+   "reichen": {
+    "ru": "вистачати",
+    "pos": "дієсл.",
+    "forms": "reichte · hat gereicht"
+   },
+   "schlafen": {
+    "ru": "спати",
+    "pos": "дієсл.",
+    "forms": "schlief · hat geschlafen"
+   },
+   "sehr": {
+    "ru": "дуже",
+    "pos": "присл."
+   },
+   "sein": {
+    "ru": "бути",
+    "pos": "дієсл.",
+    "forms": "war · ist gewesen"
+   },
+   "telefonieren": {
+    "ru": "розмовляти по телефону",
+    "pos": "дієсл.",
+    "forms": "telefonierte · hat telefoniert"
+   },
+   "trinken": {
+    "ru": "пити",
+    "pos": "дієсл.",
+    "forms": "trank · hat getrunken"
+   },
+   "und": {
+    "ru": "і, та",
+    "pos": "спол."
+   },
+   "verstehen": {
+    "ru": "розуміти",
+    "pos": "дієсл.",
+    "note": "Verstanden! — Зрозумів(ла)!",
+    "forms": "verstand · hat verstanden"
+   },
+   "vorsichtig": {
+    "ru": "обережний",
+    "pos": "прикм."
+   },
+   "wenn": {
+    "ru": "якщо; коли",
+    "pos": "спол.",
+    "note": "auch wenn — навіть якщо"
+   },
+   "werden": {
+    "ru": "ставати",
+    "pos": "дієсл.",
+    "note": "die Ampel wird gelb — світлофор перемикається на жовтий",
+    "forms": "wurde · ist geworden"
+   },
+   "wie": {
+    "ru": "як",
+    "pos": "присл.",
+    "note": "wie schnell — з якою швидкістю"
+   },
+   "zahlen": {
+    "ru": "платити",
+    "pos": "дієсл.",
+    "forms": "zahlte · hat gezahlt"
+   }
+  }
+ }
+}
