@@ -118,6 +118,9 @@
   font-size: 14px; line-height: 1.45; color: var(--text-muted);
 }
 .show-tr .fs-tr, .tr-open .fs-tr, .fs-tr.is-open { display: block; }
+/* сцена: перевод ситуации, вопроса и вариантов одной кнопкой 🌐 */
+.scene-tr > .fs-situation .fs-tr, .scene-tr > .fs-quiz-q-tr, .scene-tr .fs-road-opt .fs-opt-tr { display: block; }
+.fs-junction > .fs-quiz-q { cursor: pointer; }
 
 /* Кнопки строки: 🔊 и 🌐 (перевод фразы) друг под другом */
 .fs-btns { flex: none; display: flex; flex-direction: column; gap: 6px; }

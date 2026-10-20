@@ -271,6 +271,9 @@ const Home = (() => {
   function setTheme(theme) {
     const cur = document.documentElement.getAttribute('data-theme') || 'dark';
     if (theme !== cur && typeof toggleTheme === 'function') toggleTheme();
+    // выбор запоминаем, даже если тема уже такая: иначе схема Telegram
+    // (js/telegram.js) на следующей странице считала бы, что выбора не было
+    try { localStorage.setItem('dm_theme', theme); } catch (e) { /* приватный режим */ }
     paintSettings();
   }
 

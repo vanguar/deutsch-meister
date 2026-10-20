@@ -413,6 +413,15 @@ for (const id of IDX.units.filter(u => u.kind === 'road').map(u => u.id)) {
     const au = JSON.parse(await c.ev(TIP_AUDIT));
     ok(au.bad.length === 0, `${tag}: подсказки у всех слов ${au.bad.slice(0, 4).join(' ')}`);
     ok(await c.ev(NO_HSCROLL), `${tag}: нет горизонтальной прокрутки`);
+    if (i === 0) {
+      // 🌐 у ситуации — перевод ситуации, вопроса и вариантов сразу; повторно — скрыть
+      const tr = () => c.ev(`[document.querySelector('.fs-situation .fs-tr'), document.querySelector('.fs-junction > .fs-quiz-q-tr'), ...document.querySelectorAll('.fs-road-opt .fs-opt-tr')]
+        .map(e => getComputedStyle(e).display !== 'none').join()`);
+      await c.ev(`document.querySelector('.fs-situation [data-tr-line]').click()`);
+      ok(!(await tr()).includes('false'), `${tag}: 🌐 переводит ситуацию, вопрос и варианты`);
+      await c.ev(`document.querySelector('.fs-situation [data-tr-line]').click()`);
+      ok(!(await tr()).includes('true'), `${tag}: повторный 🌐 скрывает перевод`);
+    }
     // первая сцена урока — сначала неверный ответ, потом «Ещё раз» и верный
     const picks = i === 0 ? [keys.find(k => k !== answer), answer] : [answer];
     for (const [k, key] of picks.entries()) {

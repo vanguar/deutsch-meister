@@ -23,9 +23,14 @@ loadTelegramSdk().then(TG => {
   TG.ready();
   TG.expand();
 
-  // Тема Telegram
-  if (TG.colorScheme === 'light') {
+  // Тема Telegram — только по умолчанию, пока человек сам не выбрал тему.
+  // Выбор в приложении (dm_theme: профиль, ☀️/🌙 в шапке) главнее: SDK
+  // грузится асинхронно и раньше перебивал его на каждой странице.
+  let savedTheme = null;
+  try { savedTheme = localStorage.getItem('dm_theme'); } catch (e) { /* приватный режим */ }
+  if (!savedTheme && TG.colorScheme === 'light') {
     document.documentElement.setAttribute('data-theme', 'light');
+    document.querySelectorAll('#themeToggle, #themeToggle2').forEach(b => { b.textContent = '🌙'; });
   }
 
   // Кнопка "назад" (только Telegram 6.1+)
@@ -54,9 +59,10 @@ loadTelegramSdk().then(TG => {
   // Telegram уже вызывает наш onClick выше. На всякий случай гарантируем закрытие
   // приложения с главной по системной кнопке через closingBehavior по умолчанию.
 
-  // Персональное приветствие только на главной (книги грузят telegram.js
-  // ради цветов темы — там приветствие не показываем)
-  const isHome = !isLesson && !/books\.html$/.test(location.pathname);
+  // Персональное приветствие только на главной (index.html). Раньше «главной»
+  // считалось всё, кроме уроков и книг, — и приветствие во весь экран
+  // закрывало автошколу, новости и диалоги, если их открыли первыми.
+  const isHome = !isLesson && /\/(index\.html)?$/.test(location.pathname);
   if (isHome && !localStorage.getItem('tg_welcomed')) {
     localStorage.setItem('tg_welcomed', '1');
     const user = TG.initDataUnsafe?.user;

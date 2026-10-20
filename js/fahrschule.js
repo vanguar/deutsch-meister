@@ -87,6 +87,7 @@ const Fahrschule = (() => {
   let sentences = [];       // фразы на экране: [{ de, tr }], индекс = data-s
   let quiz  = null;         // { i, score, answered, opts, base, tr — перевод вопроса и вариантов открыт }
   let scene = null;         // { i, pick, done }
+  let sceneTr = false;      // перевод ситуации, вопроса и вариантов в сценах урока
   let anims = [];           // requestAnimationFrame машин
   let timers = [];
   const cache = {};
@@ -417,6 +418,7 @@ const Fahrschule = (() => {
     sentences = [];
     quiz = null;
     scene = null;
+    sceneTr = false;
     const k = KINDS[u.kind];
     el.heading.innerHTML = `
       <span class="dlg-level-chip fs-kind-chip kind-${u.kind}">${esc(k.label)}</span>
@@ -685,7 +687,8 @@ const Fahrschule = (() => {
     const sc = list[scene.i];
     sentences = sentences.slice(0, 1);   // заголовок урока остаётся, фразы сцены — заново
     const sit = sentence(sc.situation, 'p', 'fs-de');
-    const q = sentence({ de: unit.title, tr: unit.titleTr }, 'p', 'fs-quiz-q');
+    const q = sentence({ de: unit.title, tr: unit.titleTr }, 'p', 'fs-quiz-q')
+      + `<p class="fs-tr fs-quiz-q-tr" dir="auto">${esc(unit.titleTr)}</p>`;
     const explain = scene.done ? sc.explain.map(e => {
       const n = sentences.length;
       return `<li class="fs-line" data-line="${n}"><div class="fs-line-row">
@@ -707,6 +710,7 @@ const Fahrschule = (() => {
       <div class="fs-scene-actions" id="fsActions"></div>
       ${scene.done ? `<ol class="fs-lines fs-explain">${explain}</ol>` : ''}`;
     paintScene();
+    paintSceneTr(box);
     paintTr();
   }
 
@@ -897,7 +901,8 @@ const Fahrschule = (() => {
     const sc = list[scene.i];
     sentences = sentences.slice(0, 1);   // заголовок урока остаётся, фразы сцены — заново
     const sit = sentence(sc.situation, 'p', 'fs-de');
-    const q = sentence(sc.question, 'p', 'fs-quiz-q');
+    const q = sentence(sc.question, 'p', 'fs-quiz-q')
+      + `<p class="fs-tr fs-quiz-q-tr" dir="auto">${esc(sc.question.tr)}</p>`;
     const answer = String(sc.answer);
     const phrases = sc.options.some(o => typeof o === 'object');
     const opts = roadOptions(sc).map(o => {
@@ -939,6 +944,7 @@ const Fahrschule = (() => {
       <p class="fs-status${scene.done ? (scene.right ? ' is-right' : ' is-wrong') : ''}" id="fsStatus" aria-live="polite">${status}</p>
       <div class="fs-scene-actions" id="fsActions">${actions}</div>
       ${scene.shown ? `<ol class="fs-lines fs-explain">${explain}</ol>` : ''}`;
+    paintSceneTr(box);
     paintTr();
     paintPlay();
   }
@@ -1515,12 +1521,28 @@ const Fahrschule = (() => {
 
   // Чей перевод открывает 🌐 или нажатие: строка, ситуация сцены или
   // карточка теста (там — вопрос и все варианты сразу)
+  // В сцене (перекрёсток, «на дороге») 🌐 у ситуации и тап по вопросу
+  // переводят всё, что нужно для ответа: ситуацию, вопрос и варианты.
+  // Пояснения после ответа — у каждой строки своя 🌐.
   function trHolder(t) {
+    const box = t.closest('.fs-junction');
+    if (box && !t.closest('.fs-explain') && (t.closest('.fs-situation') || t.closest('.fs-quiz-q'))) return box;
     return t.closest('.fs-quiz-card') || t.closest('.fs-line, .fs-situation');
+  }
+
+  function paintSceneTr(box) {
+    box.classList.toggle('scene-tr', sceneTr);
+    const b = box.querySelector('.fs-situation [data-tr-line]');
+    if (b) b.setAttribute('aria-pressed', sceneTr ? 'true' : 'false');
   }
 
   function toggleLineTr(holder, force) {
     if (!holder) return;
+    if (holder.classList.contains('fs-junction')) {
+      sceneTr = force === undefined ? !sceneTr : force;
+      paintSceneTr(holder);
+      return;
+    }
     const on = holder.classList.toggle('tr-open', force);
     holder.querySelectorAll(':scope > [data-tr-line], :scope > .fs-btns > [data-tr-line], :scope > .fs-line-row > .fs-btns > [data-tr-line], :scope > .fs-quiz-top > [data-tr-line]')
       .forEach(b => b.setAttribute('aria-pressed', on ? 'true' : 'false'));
