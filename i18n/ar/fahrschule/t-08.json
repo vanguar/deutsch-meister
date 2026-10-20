@@ -1,0 +1,788 @@
+{
+ "id": "t-08",
+ "kind": "theory",
+ "emoji": "🍺",
+ "level": "B1",
+ "title": "Alkohol, Müdigkeit und Ablenkung",
+ "titleTr": "الكحول والتعب وتشتت الانتباه",
+ "intro": "حدود الكحول في ألمانيا (0,5 ‰ و0,0 ‰ للمبتدئين)، والقنب والأدوية، والتعب أثناء القيادة والهاتف: ما الممنوع وكم يكلّف.",
+ "sections": [
+  {
+   "title": "الكحول: الحدود",
+   "lines": [
+    {
+     "de": "Ab 0,5 Promille ist Autofahren verboten: 500 Euro Bußgeld, zwei Punkte und ein Monat Fahrverbot.",
+     "tr": "ابتداءً من 0,5 في الألف تُمنع القيادة: غرامة 500 يورو ونقطتان وشهر من منع القيادة."
+    },
+    {
+     "de": "Schon ab 0,3 Promille ist es eine Straftat, wenn Sie unsicher fahren oder einen Unfall haben.",
+     "tr": "ابتداءً من 0,3 في الألف تُعدّ جريمة إذا قدت بشكل غير آمن أو تسببت في حادث."
+    },
+    {
+     "de": "Ab 1,1 Promille sind Sie absolut fahruntüchtig und verlieren den Führerschein.",
+     "tr": "ابتداءً من 1,1 في الألف تكون غير قادر على القيادة تمامًا وتفقد رخصتك."
+    },
+    {
+     "de": "In der Probezeit und unter 21 Jahren gilt: 0,0 Promille.",
+     "tr": "في فترة الاختبار وتحت سن 21 عامًا يسري: 0,0 في الألف."
+    }
+   ]
+  },
+  {
+   "title": "الكحول يزول ببطء",
+   "lines": [
+    {
+     "de": "Der Körper baut Alkohol nur langsam ab: etwa 0,1 Promille pro Stunde.",
+     "tr": "يتخلص الجسم من الكحول ببطء: نحو 0,1 في الألف في الساعة.",
+     "o": {
+      "ab": "ab>abbauen",
+      "baut": "baut>abbauen"
+     }
+    },
+    {
+     "de": "Kaffee oder eine kalte Dusche helfen nicht. Nur die Zeit hilft.",
+     "tr": "القهوة أو الدش البارد لا يفيدان. الوقت وحده يفيد."
+    },
+    {
+     "de": "Auch am Morgen nach einer Party kann noch Restalkohol im Blut sein.",
+     "tr": "حتى في الصباح بعد حفلة قد يبقى كحول متبقٍّ في الدم."
+    }
+   ]
+  },
+  {
+   "title": "القنب والأدوية",
+   "lines": [
+    {
+     "de": "Für Cannabis gilt ein Grenzwert von 3,5 Nanogramm THC pro Milliliter Blutserum.",
+     "tr": "للقنب حدّ مسموح هو 3,5 نانوغرام من THC لكل ملليلتر من مصل الدم."
+    },
+    {
+     "de": "In der Probezeit und unter 21 Jahren ist Cannabis am Steuer ganz verboten.",
+     "tr": "في فترة الاختبار وتحت سن 21 عامًا يُمنع القنب أثناء القيادة تمامًا."
+    },
+    {
+     "de": "Cannabis zusammen mit Alkohol ist am Steuer streng verboten.",
+     "tr": "القنب مع الكحول ممنوع منعًا باتًّا أثناء القيادة."
+    },
+    {
+     "de": "Manche Medikamente machen müde. Lesen Sie den Beipackzettel.",
+     "tr": "بعض الأدوية تسبب النعاس. اقرأ النشرة المرفقة بالدواء."
+    }
+   ]
+  },
+  {
+   "title": "التعب",
+   "lines": [
+    {
+     "de": "Zwei Sekunden Sekundenschlaf bei 100 km/h sind über 50 Meter Blindflug.",
+     "tr": "ثانيتان من الغفوة الخاطفة بسرعة 100 كم/س تعنيان أكثر من 50 مترًا دون رؤية."
+    },
+    {
+     "de": "Machen Sie auf langen Fahrten alle zwei Stunden eine Pause.",
+     "tr": "في الرحلات الطويلة خذ استراحة كل ساعتين."
+    },
+    {
+     "de": "Sind Sie müde, schlafen Sie auf einem Parkplatz 15 bis 20 Minuten.",
+     "tr": "إذا كنت متعبًا فنم في موقف للسيارات من 15 إلى 20 دقيقة."
+    },
+    {
+     "de": "Ein offenes Fenster oder laute Musik helfen nur kurz.",
+     "tr": "النافذة المفتوحة أو الموسيقى الصاخبة تفيد لوقت قصير فقط."
+    }
+   ]
+  },
+  {
+   "title": "الهاتف أثناء القيادة",
+   "lines": [
+    {
+     "de": "Beim Fahren dürfen Sie das Handy nicht in die Hand nehmen.",
+     "tr": "لا يجوز لك أثناء القيادة أن تمسك الهاتف بيدك."
+    },
+    {
+     "de": "Das kostet 100 Euro und einen Punkt in Flensburg.",
+     "tr": "هذا يكلّف 100 يورو ونقطة واحدة في فلنسبورغ."
+    },
+    {
+     "de": "Auch an der roten Ampel mit laufendem Motor ist das Handy tabu.",
+     "tr": "حتى عند الإشارة الحمراء والمحرك يعمل يُمنع الهاتف."
+    },
+    {
+     "de": "Eine Freisprecheinrichtung ist erlaubt.",
+     "tr": "جهاز التحدث دون استخدام اليدين مسموح."
+    }
+   ]
+  }
+ ],
+ "quiz": [],
+ "signs": {},
+ "gloss": {
+  "w": {
+   "ab": "ab",
+   "ab>abbauen": "abbauen",
+   "ablenkung": "Ablenkung",
+   "absolut": "absolut",
+   "alkohol": "Alkohol",
+   "alle": "alle",
+   "am": "an",
+   "ampel": "Ampel",
+   "an": "an",
+   "auch": "auch",
+   "auf": "auf",
+   "autofahren": "Autofahren",
+   "baut>abbauen": "abbauen",
+   "bei": "bei",
+   "beim": "bei",
+   "beipackzettel": "Beipackzettel",
+   "bis": "bis",
+   "blindflug": "Blindflug",
+   "blut": "Blut",
+   "blutserum": "Blutserum",
+   "bußgeld": "Bußgeld",
+   "cannabis": "Cannabis",
+   "das": "der/die/das",
+   "den": "der/die/das",
+   "der": "der/die/das",
+   "die": "der/die/das",
+   "dusche": "Dusche",
+   "dürfen": "dürfen",
+   "ein": "ein/eine",
+   "eine": "ein/eine",
+   "einem": "ein/eine",
+   "einen": "ein/eine",
+   "einer": "ein/eine",
+   "erlaubt": "erlauben",
+   "es": "es",
+   "etwa": "etwa",
+   "euro": "Euro",
+   "fahren": "fahren",
+   "fahrten": "Fahrt",
+   "fahruntüchtig": "fahruntüchtig",
+   "fahrverbot": "Fahrverbot",
+   "fenster": "Fenster",
+   "flensburg": "Flensburg",
+   "freisprecheinrichtung": "Freisprecheinrichtung",
+   "führerschein": "Führerschein",
+   "für": "für",
+   "ganz": "ganz",
+   "gilt": "gelten",
+   "grenzwert": "Grenzwert",
+   "haben": "haben",
+   "hand": "Hand",
+   "handy": "Handy",
+   "helfen": "helfen",
+   "hilft": "helfen",
+   "im": "in",
+   "in": "in",
+   "ist": "sein",
+   "jahren": "Jahr",
+   "kaffee": "Kaffee",
+   "kalte": "kalt",
+   "kann": "können",
+   "km/h": "km/h",
+   "kostet": "kosten",
+   "kurz": "kurz",
+   "körper": "Körper",
+   "langen": "lang",
+   "langsam": "langsam",
+   "laufendem": "laufen",
+   "laute": "laut",
+   "lesen": "lesen",
+   "machen": "machen",
+   "manche": "manche",
+   "medikamente": "Medikament",
+   "meter": "Meter",
+   "milliliter": "Milliliter",
+   "minuten": "Minute",
+   "mit": "mit",
+   "monat": "Monat",
+   "morgen": "Morgen",
+   "motor": "Motor",
+   "musik": "Musik",
+   "müde": "müde",
+   "müdigkeit": "Müdigkeit",
+   "nach": "nach",
+   "nanogramm": "Nanogramm",
+   "nehmen": "nehmen",
+   "nicht": "nicht",
+   "noch": "noch",
+   "nur": "nur",
+   "oder": "oder",
+   "offenes": "offen",
+   "parkplatz": "Parkplatz",
+   "party": "Party",
+   "pause": "Pause",
+   "pro": "pro",
+   "probezeit": "Probezeit",
+   "promille": "Promille",
+   "punkt": "Punkt",
+   "punkte": "Punkt",
+   "restalkohol": "Restalkohol",
+   "roten": "rot",
+   "schlafen": "schlafen",
+   "schon": "schon",
+   "sein": "sein",
+   "sekunden": "Sekunde",
+   "sekundenschlaf": "Sekundenschlaf",
+   "sie": "Sie",
+   "sind": "sein",
+   "steuer": "Steuer",
+   "straftat": "Straftat",
+   "streng": "streng",
+   "stunde": "Stunde",
+   "stunden": "Stunde",
+   "tabu": "tabu",
+   "thc": "THC",
+   "und": "und",
+   "unfall": "Unfall",
+   "unsicher": "unsicher",
+   "unter": "unter",
+   "verboten": "verbieten",
+   "verlieren": "verlieren",
+   "von": "von",
+   "wenn": "wenn",
+   "zeit": "Zeit",
+   "zusammen": "zusammen",
+   "zwei": "zwei",
+   "über": "über"
+  },
+  "l": {
+   "Ablenkung": {
+    "ru": "تشتت الانتباه",
+    "pos": "اسم",
+    "decl": "die Ablenkung · الجمع: die Ablenkungen"
+   },
+   "Alkohol": {
+    "ru": "الكحول",
+    "pos": "اسم",
+    "decl": "der Alkohol · لا جمع له"
+   },
+   "Ampel": {
+    "ru": "إشارة ضوئية",
+    "pos": "اسم",
+    "decl": "die Ampel · الجمع: die Ampeln"
+   },
+   "Autofahren": {
+    "ru": "قيادة السيارة",
+    "pos": "اسم",
+    "decl": "das Autofahren · لا جمع له"
+   },
+   "Beipackzettel": {
+    "ru": "النشرة المرفقة بالدواء",
+    "pos": "اسم",
+    "decl": "der Beipackzettel · الجمع: die Beipackzettel"
+   },
+   "Blindflug": {
+    "ru": "طيران أعمى، دون رؤية",
+    "pos": "اسم",
+    "decl": "der Blindflug · لا جمع له"
+   },
+   "Blut": {
+    "ru": "دم",
+    "pos": "اسم",
+    "decl": "das Blut · لا جمع له"
+   },
+   "Blutserum": {
+    "ru": "مصل الدم",
+    "pos": "اسم",
+    "decl": "das Blutserum · لا جمع له"
+   },
+   "Bußgeld": {
+    "ru": "غرامة",
+    "pos": "اسم",
+    "decl": "das Bußgeld · الجمع: die Bußgelder"
+   },
+   "Cannabis": {
+    "ru": "القنب",
+    "pos": "اسم",
+    "note": "قانوني للبالغين منذ 2024 لكن مع حدّ لـ THC أثناء القيادة",
+    "decl": "das Cannabis · لا جمع له"
+   },
+   "Dusche": {
+    "ru": "دش",
+    "pos": "اسم",
+    "decl": "die Dusche · الجمع: die Duschen"
+   },
+   "Euro": {
+    "ru": "يورو",
+    "pos": "اسم",
+    "decl": "der Euro · الجمع: die Euro"
+   },
+   "Fahrt": {
+    "ru": "رحلة، جولة بالسيارة",
+    "pos": "اسم",
+    "decl": "die Fahrt · الجمع: die Fahrten"
+   },
+   "Fahrverbot": {
+    "ru": "منع مؤقت من القيادة",
+    "pos": "اسم",
+    "note": "عادةً من شهر إلى ثلاثة أشهر؛ وتُسلَّم الرخصة",
+    "decl": "das Fahrverbot · الجمع: die Fahrverbote"
+   },
+   "Fenster": {
+    "ru": "نافذة",
+    "pos": "اسم",
+    "decl": "das Fenster · الجمع: die Fenster"
+   },
+   "Flensburg": {
+    "ru": "فلنسبورغ",
+    "pos": "اسم علم",
+    "note": "هناك تسجّل هيئة KBA نقاط مخالفات السائقين؛ «Punkt in Flensburg» نقطة مخالفة"
+   },
+   "Freisprecheinrichtung": {
+    "ru": "جهاز التحدث دون استخدام اليدين",
+    "pos": "اسم",
+    "decl": "die Freisprecheinrichtung · الجمع: die Freisprecheinrichtungen"
+   },
+   "Führerschein": {
+    "ru": "رخصة القيادة",
+    "pos": "اسم",
+    "decl": "der Führerschein · الجمع: die Führerscheine"
+   },
+   "Grenzwert": {
+    "ru": "الحدّ المسموح",
+    "pos": "اسم",
+    "decl": "der Grenzwert · الجمع: die Grenzwerte"
+   },
+   "Hand": {
+    "ru": "يد",
+    "pos": "اسم",
+    "note": "in die Hand nehmen — يمسك باليد",
+    "decl": "die Hand · الجمع: die Hände"
+   },
+   "Handy": {
+    "ru": "هاتف محمول",
+    "pos": "اسم",
+    "decl": "das Handy · الجمع: die Handys"
+   },
+   "Jahr": {
+    "ru": "سنة",
+    "pos": "اسم",
+    "decl": "das Jahr · الجمع: die Jahre"
+   },
+   "Kaffee": {
+    "ru": "قهوة",
+    "pos": "اسم",
+    "decl": "der Kaffee · لا جمع له"
+   },
+   "Körper": {
+    "ru": "الجسم",
+    "pos": "اسم",
+    "decl": "der Körper · الجمع: die Körper"
+   },
+   "Medikament": {
+    "ru": "دواء",
+    "pos": "اسم",
+    "decl": "das Medikament · الجمع: die Medikamente"
+   },
+   "Meter": {
+    "ru": "متر",
+    "pos": "اسم",
+    "decl": "der Meter · الجمع: die Meter"
+   },
+   "Milliliter": {
+    "ru": "ملليلتر",
+    "pos": "اسم",
+    "decl": "der Milliliter · الجمع: die Milliliter"
+   },
+   "Minute": {
+    "ru": "دقيقة",
+    "pos": "اسم",
+    "decl": "die Minute · الجمع: die Minuten"
+   },
+   "Monat": {
+    "ru": "شهر",
+    "pos": "اسم",
+    "decl": "der Monat · الجمع: die Monate"
+   },
+   "Morgen": {
+    "ru": "صباح",
+    "pos": "اسم",
+    "note": "am Morgen — في الصباح",
+    "decl": "der Morgen · الجمع: die Morgen"
+   },
+   "Motor": {
+    "ru": "محرك",
+    "pos": "اسم",
+    "decl": "der Motor · الجمع: die Motoren"
+   },
+   "Musik": {
+    "ru": "موسيقى",
+    "pos": "اسم",
+    "decl": "die Musik · لا جمع له"
+   },
+   "Müdigkeit": {
+    "ru": "التعب، النعاس",
+    "pos": "اسم",
+    "decl": "die Müdigkeit · لا جمع له"
+   },
+   "Nanogramm": {
+    "ru": "نانوغرام",
+    "pos": "اسم",
+    "decl": "das Nanogramm · الجمع: die Nanogramm"
+   },
+   "Parkplatz": {
+    "ru": "موقف سيارات",
+    "pos": "اسم",
+    "decl": "der Parkplatz · الجمع: die Parkplätze"
+   },
+   "Party": {
+    "ru": "حفلة",
+    "pos": "اسم",
+    "decl": "die Party · الجمع: die Partys"
+   },
+   "Pause": {
+    "ru": "استراحة",
+    "pos": "اسم",
+    "decl": "die Pause · الجمع: die Pausen"
+   },
+   "Probezeit": {
+    "ru": "فترة الاختبار (للسائقين الجدد)",
+    "pos": "اسم",
+    "note": "سنتان بعد الحصول على الرخصة؛ والأخطاء أغلى ثمنًا",
+    "decl": "die Probezeit · الجمع: die Probezeiten"
+   },
+   "Promille": {
+    "ru": "في الألف (نسبة الكحول في الدم)",
+    "pos": "اسم",
+    "decl": "das Promille · الجمع: die Promille"
+   },
+   "Punkt": {
+    "ru": "نقطة",
+    "pos": "اسم",
+    "decl": "der Punkt · الجمع: die Punkte"
+   },
+   "Restalkohol": {
+    "ru": "الكحول المتبقي",
+    "pos": "اسم",
+    "decl": "der Restalkohol · لا جمع له"
+   },
+   "Sekunde": {
+    "ru": "ثانية",
+    "pos": "اسم",
+    "decl": "die Sekunde · الجمع: die Sekunden"
+   },
+   "Sekundenschlaf": {
+    "ru": "غفوة خاطفة لثوانٍ",
+    "pos": "اسم",
+    "decl": "der Sekundenschlaf · لا جمع له"
+   },
+   "Sie": {
+    "ru": "حضرتك (صيغة الاحترام)",
+    "pos": "ضمير",
+    "note": "Ihnen — لكم (حالة الجر): vor Ihnen — أمامك"
+   },
+   "Steuer": {
+    "ru": "المقود",
+    "pos": "اسم",
+    "note": "am Steuer — خلف المقود (die Steuer: ضريبة)",
+    "decl": "das Steuer · الجمع: die Steuer"
+   },
+   "Straftat": {
+    "ru": "جريمة جنائية",
+    "pos": "اسم",
+    "decl": "die Straftat · الجمع: die Straftaten"
+   },
+   "Stunde": {
+    "ru": "ساعة؛ درس",
+    "pos": "اسم",
+    "decl": "die Stunde · الجمع: die Stunden"
+   },
+   "THC": {
+    "ru": "THC (المادة الفعالة في القنب)",
+    "pos": "اسم",
+    "decl": "das THC · لا جمع له"
+   },
+   "Unfall": {
+    "ru": "حادث",
+    "pos": "اسم",
+    "decl": "der Unfall · الجمع: die Unfälle"
+   },
+   "Zeit": {
+    "ru": "وقت",
+    "pos": "اسم",
+    "decl": "die Zeit · الجمع: die Zeiten"
+   },
+   "ab": {
+    "ru": "ابتداءً من",
+    "pos": "حرف جر",
+    "note": "ab hier — من هنا"
+   },
+   "abbauen": {
+    "ru": "يفكّك، يتخلص من",
+    "pos": "فعل",
+    "note": "سابقة منفصلة: baut … ab",
+    "forms": "baute ab · hat abgebaut"
+   },
+   "absolut": {
+    "ru": "مطلق، تام",
+    "pos": "صفة"
+   },
+   "alle": {
+    "ru": "كل؛ كل شيء",
+    "pos": "ضمير"
+   },
+   "an": {
+    "ru": "عند، على",
+    "pos": "حرف جر",
+    "note": "am = an dem؛ an der Kreuzung — عند التقاطع"
+   },
+   "auch": {
+    "ru": "أيضًا؛ حتى (auch wenn)",
+    "pos": "ظرف"
+   },
+   "auf": {
+    "ru": "على",
+    "pos": "حرف جر",
+    "note": "auf der Straße — على الطريق؛ achten auf — ينتبه لـ"
+   },
+   "bei": {
+    "ru": "عند",
+    "pos": "حرف جر",
+    "note": "beim = bei dem: beim Fahren — أثناء القيادة؛ bei Rot — عند الأحمر"
+   },
+   "bis": {
+    "ru": "حتى",
+    "pos": "أداة ربط"
+   },
+   "der/die/das": {
+    "ru": "أداة التعريف",
+    "pos": "أداة تعريف",
+    "note": "der للمذكر، die للمؤنث والجمع، das للمحايد؛ den للمذكر في حالة النصب، dem للمذكر والمحايد في حالة الجر؛ وdas تعني أيضًا «هذا»"
+   },
+   "dürfen": {
+    "ru": "يحق له، يُسمح له",
+    "pos": "فعل",
+    "forms": "durfte · hat gedurft"
+   },
+   "ein/eine": {
+    "ru": "أداة النكرة؛ واحد",
+    "pos": "أداة تعريف",
+    "note": "an einer Kreuzung — عند تقاطعٍ ما"
+   },
+   "erlauben": {
+    "ru": "يسمح",
+    "pos": "فعل",
+    "forms": "erlaubte · hat erlaubt"
+   },
+   "es": {
+    "ru": "هو، هي (لغير العاقل)",
+    "pos": "ضمير",
+    "note": "هنا: السيارة (das Auto)"
+   },
+   "etwa": {
+    "ru": "تقريبًا، نحو",
+    "pos": "ظرف"
+   },
+   "fahren": {
+    "ru": "يسير بالسيارة؛ يقود",
+    "pos": "فعل",
+    "forms": "fuhr · ist gefahren"
+   },
+   "fahruntüchtig": {
+    "ru": "غير قادر على القيادة",
+    "pos": "صفة"
+   },
+   "für": {
+    "ru": "لـ، من أجل",
+    "pos": "حرف جر"
+   },
+   "ganz": {
+    "ru": "تمامًا",
+    "pos": "ظرف"
+   },
+   "gelten": {
+    "ru": "يسري، ينطبق",
+    "pos": "فعل",
+    "forms": "galt · hat gegolten"
+   },
+   "haben": {
+    "ru": "يملك، لديه",
+    "pos": "فعل",
+    "note": "Vorfahrt haben — له أولوية المرور",
+    "forms": "hatte · hat gehabt"
+   },
+   "helfen": {
+    "ru": "يساعد، يفيد",
+    "pos": "فعل",
+    "forms": "half · hat geholfen"
+   },
+   "in": {
+    "ru": "في",
+    "pos": "حرف جر",
+    "note": "im = in dem: im Bereich — في المنطقة"
+   },
+   "kalt": {
+    "ru": "بارد",
+    "pos": "صفة"
+   },
+   "km/h": {
+    "ru": "كم/س",
+    "pos": "تعبير",
+    "note": "تُقرأ: Kilometer pro Stunde"
+   },
+   "kosten": {
+    "ru": "يكلّف",
+    "pos": "فعل",
+    "forms": "kostete · hat gekostet"
+   },
+   "kurz": {
+    "ru": "قصير؛ لوقت قصير",
+    "pos": "صفة"
+   },
+   "können": {
+    "ru": "يستطيع",
+    "pos": "فعل",
+    "forms": "konnte · hat gekonnt"
+   },
+   "lang": {
+    "ru": "طويل",
+    "pos": "صفة",
+    "note": "Wie lang …؟ — كم طول …؟",
+    "forms": "lang · länger · am längsten"
+   },
+   "langsam": {
+    "ru": "بطيء؛ ببطء",
+    "pos": "صفة"
+   },
+   "laufen": {
+    "ru": "يجري؛ (المحرك) يعمل",
+    "pos": "فعل",
+    "forms": "lief · ist gelaufen"
+   },
+   "laut": {
+    "ru": "صاخب، عالٍ",
+    "pos": "صفة"
+   },
+   "lesen": {
+    "ru": "يقرأ",
+    "pos": "فعل",
+    "forms": "las · hat gelesen"
+   },
+   "machen": {
+    "ru": "يفعل",
+    "pos": "فعل",
+    "note": "den Schulterblick machen — يلتفت فوق كتفه؛ Gut gemacht! — أحسنت!",
+    "forms": "machte · hat gemacht"
+   },
+   "manche": {
+    "ru": "بعض",
+    "pos": "ضمير"
+   },
+   "mit": {
+    "ru": "مع",
+    "pos": "حرف جر"
+   },
+   "müde": {
+    "ru": "متعب، نعسان",
+    "pos": "صفة"
+   },
+   "nach": {
+    "ru": "بعد؛ إلى",
+    "pos": "حرف جر"
+   },
+   "nehmen": {
+    "ru": "يأخذ",
+    "pos": "فعل",
+    "note": "Rücksicht nehmen auf — يراعي",
+    "forms": "nahm · hat genommen"
+   },
+   "nicht": {
+    "ru": "لا، ليس",
+    "pos": "أداة"
+   },
+   "noch": {
+    "ru": "بعدُ، لا يزال",
+    "pos": "ظرف",
+    "note": "noch nicht — ليس بعد"
+   },
+   "nur": {
+    "ru": "فقط",
+    "pos": "ظرف"
+   },
+   "oder": {
+    "ru": "أو",
+    "pos": "أداة ربط",
+    "note": "…, oder? — …، أليس كذلك؟"
+   },
+   "offen": {
+    "ru": "مفتوح",
+    "pos": "صفة"
+   },
+   "pro": {
+    "ru": "في، لكلّ",
+    "pos": "حرف جر"
+   },
+   "rot": {
+    "ru": "أحمر",
+    "pos": "صفة",
+    "note": "Rot (بحرف كبير) — الإشارة الحمراء: bei Rot — عند الأحمر"
+   },
+   "schlafen": {
+    "ru": "ينام",
+    "pos": "فعل",
+    "forms": "schlief · hat geschlafen"
+   },
+   "schon": {
+    "ru": "بالفعل",
+    "pos": "ظرف"
+   },
+   "sein": {
+    "ru": "يكون",
+    "pos": "فعل",
+    "forms": "war · ist gewesen"
+   },
+   "streng": {
+    "ru": "صارم؛ بصرامة",
+    "pos": "صفة"
+   },
+   "tabu": {
+    "ru": "محظور",
+    "pos": "صفة"
+   },
+   "und": {
+    "ru": "و",
+    "pos": "أداة ربط"
+   },
+   "unsicher": {
+    "ru": "غير آمن، غير واثق",
+    "pos": "صفة"
+   },
+   "unter": {
+    "ru": "تحت؛ أقل من",
+    "pos": "حرف جر"
+   },
+   "verbieten": {
+    "ru": "يمنع",
+    "pos": "فعل",
+    "forms": "verbot · hat verboten"
+   },
+   "verlieren": {
+    "ru": "يفقد",
+    "pos": "فعل",
+    "forms": "verlor · hat verloren"
+   },
+   "von": {
+    "ru": "من",
+    "pos": "حرف جر",
+    "note": "vom = von dem؛ von rechts — من اليمين"
+   },
+   "wenn": {
+    "ru": "إذا؛ عندما",
+    "pos": "أداة ربط",
+    "note": "auch wenn — حتى لو"
+   },
+   "zusammen": {
+    "ru": "معًا",
+    "pos": "ظرف"
+   },
+   "zwei": {
+    "ru": "اثنان",
+    "pos": "عدد"
+   },
+   "über": {
+    "ru": "عبر؛ فوق",
+    "pos": "حرف جر"
+   }
+  }
+ }
+}

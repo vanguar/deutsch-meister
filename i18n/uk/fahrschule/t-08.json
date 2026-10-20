@@ -1,0 +1,788 @@
+{
+ "id": "t-08",
+ "kind": "theory",
+ "emoji": "🍺",
+ "level": "B1",
+ "title": "Alkohol, Müdigkeit und Ablenkung",
+ "titleTr": "Алкоголь, втома і відволікання",
+ "intro": "Межі алкоголю в Німеччині (0,5 ‰ і 0,0 ‰ для новачків), канабіс і ліки, втома за кермом і телефон: що заборонено і скільки коштує.",
+ "sections": [
+  {
+   "title": "Алкоголь: межі",
+   "lines": [
+    {
+     "de": "Ab 0,5 Promille ist Autofahren verboten: 500 Euro Bußgeld, zwei Punkte und ein Monat Fahrverbot.",
+     "tr": "Від 0,5 проміле керувати машиною заборонено: штраф 500 євро, два бали й місяць позбавлення прав."
+    },
+    {
+     "de": "Schon ab 0,3 Promille ist es eine Straftat, wenn Sie unsicher fahren oder einen Unfall haben.",
+     "tr": "Уже від 0,3 проміле це кримінальний злочин, якщо ви їдете невпевнено або потрапляєте в аварію."
+    },
+    {
+     "de": "Ab 1,1 Promille sind Sie absolut fahruntüchtig und verlieren den Führerschein.",
+     "tr": "Від 1,1 проміле ви абсолютно не здатні керувати машиною і втрачаєте права."
+    },
+    {
+     "de": "In der Probezeit und unter 21 Jahren gilt: 0,0 Promille.",
+     "tr": "У випробувальний термін і до 21 року діє 0,0 проміле."
+    }
+   ]
+  },
+  {
+   "title": "Алкоголь виводиться повільно",
+   "lines": [
+    {
+     "de": "Der Körper baut Alkohol nur langsam ab: etwa 0,1 Promille pro Stunde.",
+     "tr": "Організм виводить алкоголь повільно: приблизно 0,1 проміле на годину.",
+     "o": {
+      "ab": "ab>abbauen",
+      "baut": "baut>abbauen"
+     }
+    },
+    {
+     "de": "Kaffee oder eine kalte Dusche helfen nicht. Nur die Zeit hilft.",
+     "tr": "Кава чи холодний душ не допомагають. Допомагає лише час."
+    },
+    {
+     "de": "Auch am Morgen nach einer Party kann noch Restalkohol im Blut sein.",
+     "tr": "І вранці після вечірки в крові ще може бути залишковий алкоголь."
+    }
+   ]
+  },
+  {
+   "title": "Канабіс і ліки",
+   "lines": [
+    {
+     "de": "Für Cannabis gilt ein Grenzwert von 3,5 Nanogramm THC pro Milliliter Blutserum.",
+     "tr": "Для канабісу діє межа 3,5 нанограма ТГК на мілілітр сироватки крові."
+    },
+    {
+     "de": "In der Probezeit und unter 21 Jahren ist Cannabis am Steuer ganz verboten.",
+     "tr": "У випробувальний термін і до 21 року канабіс за кермом заборонено повністю."
+    },
+    {
+     "de": "Cannabis zusammen mit Alkohol ist am Steuer streng verboten.",
+     "tr": "Канабіс разом з алкоголем за кермом суворо заборонено."
+    },
+    {
+     "de": "Manche Medikamente machen müde. Lesen Sie den Beipackzettel.",
+     "tr": "Деякі ліки викликають сонливість. Читайте інструкцію до ліків."
+    }
+   ]
+  },
+  {
+   "title": "Втома",
+   "lines": [
+    {
+     "de": "Zwei Sekunden Sekundenschlaf bei 100 km/h sind über 50 Meter Blindflug.",
+     "tr": "Дві секунди мікросну на швидкості 100 км/год — це понад 50 метрів «наосліп»."
+    },
+    {
+     "de": "Machen Sie auf langen Fahrten alle zwei Stunden eine Pause.",
+     "tr": "У довгих поїздках робіть перерву кожні дві години."
+    },
+    {
+     "de": "Sind Sie müde, schlafen Sie auf einem Parkplatz 15 bis 20 Minuten.",
+     "tr": "Якщо ви втомилися, поспіть на парковці 15–20 хвилин."
+    },
+    {
+     "de": "Ein offenes Fenster oder laute Musik helfen nur kurz.",
+     "tr": "Відчинене вікно чи гучна музика допомагають лише ненадовго."
+    }
+   ]
+  },
+  {
+   "title": "Телефон за кермом",
+   "lines": [
+    {
+     "de": "Beim Fahren dürfen Sie das Handy nicht in die Hand nehmen.",
+     "tr": "Під час їзди брати телефон у руку не можна."
+    },
+    {
+     "de": "Das kostet 100 Euro und einen Punkt in Flensburg.",
+     "tr": "Це коштує 100 євро і один бал у Фленсбурзі."
+    },
+    {
+     "de": "Auch an der roten Ampel mit laufendem Motor ist das Handy tabu.",
+     "tr": "Навіть на червоному світлофорі з працюючим двигуном телефон під забороною."
+    },
+    {
+     "de": "Eine Freisprecheinrichtung ist erlaubt.",
+     "tr": "Гучний зв'язок (без рук) дозволено."
+    }
+   ]
+  }
+ ],
+ "quiz": [],
+ "signs": {},
+ "gloss": {
+  "w": {
+   "ab": "ab",
+   "ab>abbauen": "abbauen",
+   "ablenkung": "Ablenkung",
+   "absolut": "absolut",
+   "alkohol": "Alkohol",
+   "alle": "alle",
+   "am": "an",
+   "ampel": "Ampel",
+   "an": "an",
+   "auch": "auch",
+   "auf": "auf",
+   "autofahren": "Autofahren",
+   "baut>abbauen": "abbauen",
+   "bei": "bei",
+   "beim": "bei",
+   "beipackzettel": "Beipackzettel",
+   "bis": "bis",
+   "blindflug": "Blindflug",
+   "blut": "Blut",
+   "blutserum": "Blutserum",
+   "bußgeld": "Bußgeld",
+   "cannabis": "Cannabis",
+   "das": "der/die/das",
+   "den": "der/die/das",
+   "der": "der/die/das",
+   "die": "der/die/das",
+   "dusche": "Dusche",
+   "dürfen": "dürfen",
+   "ein": "ein/eine",
+   "eine": "ein/eine",
+   "einem": "ein/eine",
+   "einen": "ein/eine",
+   "einer": "ein/eine",
+   "erlaubt": "erlauben",
+   "es": "es",
+   "etwa": "etwa",
+   "euro": "Euro",
+   "fahren": "fahren",
+   "fahrten": "Fahrt",
+   "fahruntüchtig": "fahruntüchtig",
+   "fahrverbot": "Fahrverbot",
+   "fenster": "Fenster",
+   "flensburg": "Flensburg",
+   "freisprecheinrichtung": "Freisprecheinrichtung",
+   "führerschein": "Führerschein",
+   "für": "für",
+   "ganz": "ganz",
+   "gilt": "gelten",
+   "grenzwert": "Grenzwert",
+   "haben": "haben",
+   "hand": "Hand",
+   "handy": "Handy",
+   "helfen": "helfen",
+   "hilft": "helfen",
+   "im": "in",
+   "in": "in",
+   "ist": "sein",
+   "jahren": "Jahr",
+   "kaffee": "Kaffee",
+   "kalte": "kalt",
+   "kann": "können",
+   "km/h": "km/h",
+   "kostet": "kosten",
+   "kurz": "kurz",
+   "körper": "Körper",
+   "langen": "lang",
+   "langsam": "langsam",
+   "laufendem": "laufen",
+   "laute": "laut",
+   "lesen": "lesen",
+   "machen": "machen",
+   "manche": "manche",
+   "medikamente": "Medikament",
+   "meter": "Meter",
+   "milliliter": "Milliliter",
+   "minuten": "Minute",
+   "mit": "mit",
+   "monat": "Monat",
+   "morgen": "Morgen",
+   "motor": "Motor",
+   "musik": "Musik",
+   "müde": "müde",
+   "müdigkeit": "Müdigkeit",
+   "nach": "nach",
+   "nanogramm": "Nanogramm",
+   "nehmen": "nehmen",
+   "nicht": "nicht",
+   "noch": "noch",
+   "nur": "nur",
+   "oder": "oder",
+   "offenes": "offen",
+   "parkplatz": "Parkplatz",
+   "party": "Party",
+   "pause": "Pause",
+   "pro": "pro",
+   "probezeit": "Probezeit",
+   "promille": "Promille",
+   "punkt": "Punkt",
+   "punkte": "Punkt",
+   "restalkohol": "Restalkohol",
+   "roten": "rot",
+   "schlafen": "schlafen",
+   "schon": "schon",
+   "sein": "sein",
+   "sekunden": "Sekunde",
+   "sekundenschlaf": "Sekundenschlaf",
+   "sie": "Sie",
+   "sind": "sein",
+   "steuer": "Steuer",
+   "straftat": "Straftat",
+   "streng": "streng",
+   "stunde": "Stunde",
+   "stunden": "Stunde",
+   "tabu": "tabu",
+   "thc": "THC",
+   "und": "und",
+   "unfall": "Unfall",
+   "unsicher": "unsicher",
+   "unter": "unter",
+   "verboten": "verbieten",
+   "verlieren": "verlieren",
+   "von": "von",
+   "wenn": "wenn",
+   "zeit": "Zeit",
+   "zusammen": "zusammen",
+   "zwei": "zwei",
+   "über": "über"
+  },
+  "l": {
+   "Ablenkung": {
+    "ru": "відволікання",
+    "pos": "ім.",
+    "decl": "die Ablenkung · мн.: die Ablenkungen"
+   },
+   "Alkohol": {
+    "ru": "алкоголь",
+    "pos": "ім.",
+    "decl": "der Alkohol · мн. немає"
+   },
+   "Ampel": {
+    "ru": "світлофор",
+    "pos": "ім.",
+    "decl": "die Ampel · мн.: die Ampeln"
+   },
+   "Autofahren": {
+    "ru": "керування машиною",
+    "pos": "ім.",
+    "decl": "das Autofahren · мн. немає"
+   },
+   "Beipackzettel": {
+    "ru": "інструкція-вкладиш до ліків",
+    "pos": "ім.",
+    "decl": "der Beipackzettel · мн.: die Beipackzettel"
+   },
+   "Blindflug": {
+    "ru": "політ наосліп",
+    "pos": "ім.",
+    "decl": "der Blindflug · мн. немає"
+   },
+   "Blut": {
+    "ru": "кров",
+    "pos": "ім.",
+    "decl": "das Blut · мн. немає"
+   },
+   "Blutserum": {
+    "ru": "сироватка крові",
+    "pos": "ім.",
+    "decl": "das Blutserum · мн. немає"
+   },
+   "Bußgeld": {
+    "ru": "штраф",
+    "pos": "ім.",
+    "decl": "das Bußgeld · мн.: die Bußgelder"
+   },
+   "Cannabis": {
+    "ru": "канабіс",
+    "pos": "ім.",
+    "note": "з 2024 легальний для дорослих, але за кермом — межа THC",
+    "decl": "das Cannabis · мн. немає"
+   },
+   "Dusche": {
+    "ru": "душ",
+    "pos": "ім.",
+    "decl": "die Dusche · мн.: die Duschen"
+   },
+   "Euro": {
+    "ru": "євро",
+    "pos": "ім.",
+    "decl": "der Euro · мн.: die Euro"
+   },
+   "Fahrt": {
+    "ru": "поїздка",
+    "pos": "ім.",
+    "decl": "die Fahrt · мн.: die Fahrten"
+   },
+   "Fahrverbot": {
+    "ru": "тимчасове позбавлення права керування",
+    "pos": "ім.",
+    "note": "зазвичай від одного до трьох місяців; права здають на зберігання",
+    "decl": "das Fahrverbot · мн.: die Fahrverbote"
+   },
+   "Fenster": {
+    "ru": "вікно",
+    "pos": "ім.",
+    "decl": "das Fenster · мн.: die Fenster"
+   },
+   "Flensburg": {
+    "ru": "Фленсбург",
+    "pos": "власна назва",
+    "note": "там відомство KBA веде реєстр штрафних балів водіїв; «Punkt in Flensburg» — штрафний бал"
+   },
+   "Freisprecheinrichtung": {
+    "ru": "гучний зв'язок (без рук)",
+    "pos": "ім.",
+    "decl": "die Freisprecheinrichtung · мн.: die Freisprecheinrichtungen"
+   },
+   "Führerschein": {
+    "ru": "посвідчення водія",
+    "pos": "ім.",
+    "decl": "der Führerschein · мн.: die Führerscheine"
+   },
+   "Grenzwert": {
+    "ru": "граничне значення",
+    "pos": "ім.",
+    "decl": "der Grenzwert · мн.: die Grenzwerte"
+   },
+   "Hand": {
+    "ru": "рука (кисть)",
+    "pos": "ім.",
+    "note": "in die Hand nehmen — взяти в руку",
+    "decl": "die Hand · мн.: die Hände"
+   },
+   "Handy": {
+    "ru": "мобільний телефон",
+    "pos": "ім.",
+    "decl": "das Handy · мн.: die Handys"
+   },
+   "Jahr": {
+    "ru": "рік",
+    "pos": "ім.",
+    "decl": "das Jahr · мн.: die Jahre"
+   },
+   "Kaffee": {
+    "ru": "кава",
+    "pos": "ім.",
+    "decl": "der Kaffee · мн. немає"
+   },
+   "Körper": {
+    "ru": "тіло, організм",
+    "pos": "ім.",
+    "decl": "der Körper · мн.: die Körper"
+   },
+   "Medikament": {
+    "ru": "ліки",
+    "pos": "ім.",
+    "decl": "das Medikament · мн.: die Medikamente"
+   },
+   "Meter": {
+    "ru": "метр",
+    "pos": "ім.",
+    "decl": "der Meter · мн.: die Meter"
+   },
+   "Milliliter": {
+    "ru": "мілілітр",
+    "pos": "ім.",
+    "decl": "der Milliliter · мн.: die Milliliter"
+   },
+   "Minute": {
+    "ru": "хвилина",
+    "pos": "ім.",
+    "decl": "die Minute · мн.: die Minuten"
+   },
+   "Monat": {
+    "ru": "місяць",
+    "pos": "ім.",
+    "decl": "der Monat · мн.: die Monate"
+   },
+   "Morgen": {
+    "ru": "ранок",
+    "pos": "ім.",
+    "note": "am Morgen — вранці",
+    "decl": "der Morgen · мн.: die Morgen"
+   },
+   "Motor": {
+    "ru": "двигун, мотор",
+    "pos": "ім.",
+    "decl": "der Motor · мн.: die Motoren"
+   },
+   "Musik": {
+    "ru": "музика",
+    "pos": "ім.",
+    "decl": "die Musik · мн. немає"
+   },
+   "Müdigkeit": {
+    "ru": "втома, сонливість",
+    "pos": "ім.",
+    "decl": "die Müdigkeit · мн. немає"
+   },
+   "Nanogramm": {
+    "ru": "нанограм",
+    "pos": "ім.",
+    "decl": "das Nanogramm · мн.: die Nanogramm"
+   },
+   "Parkplatz": {
+    "ru": "парковка, місце для стоянки",
+    "pos": "ім.",
+    "decl": "der Parkplatz · мн.: die Parkplätze"
+   },
+   "Party": {
+    "ru": "вечірка",
+    "pos": "ім.",
+    "decl": "die Party · мн.: die Partys"
+   },
+   "Pause": {
+    "ru": "перерва, пауза",
+    "pos": "ім.",
+    "decl": "die Pause · мн.: die Pausen"
+   },
+   "Probezeit": {
+    "ru": "випробувальний термін (для нових водіїв)",
+    "pos": "ім.",
+    "note": "два роки після отримання прав; помилки коштують дорожче",
+    "decl": "die Probezeit · мн.: die Probezeiten"
+   },
+   "Promille": {
+    "ru": "проміле (‰ алкоголю в крові)",
+    "pos": "ім.",
+    "decl": "das Promille · мн.: die Promille"
+   },
+   "Punkt": {
+    "ru": "бал; точка",
+    "pos": "ім.",
+    "decl": "der Punkt · мн.: die Punkte"
+   },
+   "Restalkohol": {
+    "ru": "залишковий алкоголь",
+    "pos": "ім.",
+    "decl": "der Restalkohol · мн. немає"
+   },
+   "Sekunde": {
+    "ru": "секунда",
+    "pos": "ім.",
+    "decl": "die Sekunde · мн.: die Sekunden"
+   },
+   "Sekundenschlaf": {
+    "ru": "мікросон (засинання на секунди)",
+    "pos": "ім.",
+    "decl": "der Sekundenschlaf · мн. немає"
+   },
+   "Sie": {
+    "ru": "ви (ввічливо)",
+    "pos": "займ.",
+    "note": "Ihnen — вам (давальний): vor Ihnen — перед вами"
+   },
+   "Steuer": {
+    "ru": "кермо",
+    "pos": "ім.",
+    "note": "am Steuer — за кермом (die Steuer — податок)",
+    "decl": "das Steuer · мн.: die Steuer"
+   },
+   "Straftat": {
+    "ru": "кримінальний злочин",
+    "pos": "ім.",
+    "decl": "die Straftat · мн.: die Straftaten"
+   },
+   "Stunde": {
+    "ru": "година; урок",
+    "pos": "ім.",
+    "decl": "die Stunde · мн.: die Stunden"
+   },
+   "THC": {
+    "ru": "ТГК (діюча речовина канабісу)",
+    "pos": "ім.",
+    "decl": "das THC · мн. немає"
+   },
+   "Unfall": {
+    "ru": "аварія, ДТП",
+    "pos": "ім.",
+    "decl": "der Unfall · мн.: die Unfälle"
+   },
+   "Zeit": {
+    "ru": "час",
+    "pos": "ім.",
+    "decl": "die Zeit · мн.: die Zeiten"
+   },
+   "ab": {
+    "ru": "з, починаючи з",
+    "pos": "прийм.",
+    "note": "ab hier — звідси; ab dem Schild — від знака"
+   },
+   "abbauen": {
+    "ru": "розщеплювати, виводити (з організму)",
+    "pos": "дієсл.",
+    "note": "відокремлюваний префікс: baut … ab",
+    "forms": "baute ab · hat abgebaut"
+   },
+   "absolut": {
+    "ru": "абсолютний, повний",
+    "pos": "прикм."
+   },
+   "alle": {
+    "ru": "всі; все",
+    "pos": "займ."
+   },
+   "an": {
+    "ru": "біля, на, при",
+    "pos": "прийм.",
+    "note": "am = an dem; an der Kreuzung — на перехресті"
+   },
+   "auch": {
+    "ru": "теж; навіть (auch wenn)",
+    "pos": "присл."
+   },
+   "auf": {
+    "ru": "на, по",
+    "pos": "прийм.",
+    "note": "auf der Straße — на дорозі; achten auf — стежити за"
+   },
+   "bei": {
+    "ru": "при, біля; на (про сигнал)",
+    "pos": "прийм.",
+    "note": "beim = bei dem: beim Fahren — під час їзди; bei Rot — на червоний"
+   },
+   "bis": {
+    "ru": "поки не; до",
+    "pos": "спол."
+   },
+   "der/die/das": {
+    "ru": "означений артикль",
+    "pos": "артикль",
+    "note": "der — ч. р., die — ж. р. і мн., das — с. р.; den — ч. р. у знахідному, dem — ч. і с. р. у давальному; das ще означає «це»"
+   },
+   "dürfen": {
+    "ru": "могти, мати право",
+    "pos": "дієсл.",
+    "forms": "durfte · hat gedurft"
+   },
+   "ein/eine": {
+    "ru": "неозначений артикль; один",
+    "pos": "артикль",
+    "note": "an einer Kreuzung — на (якомусь) перехресті"
+   },
+   "erlauben": {
+    "ru": "дозволяти",
+    "pos": "дієсл.",
+    "forms": "erlaubte · hat erlaubt"
+   },
+   "es": {
+    "ru": "воно; це",
+    "pos": "займ.",
+    "note": "тут — про машину: das Auto"
+   },
+   "etwa": {
+    "ru": "приблизно, близько",
+    "pos": "присл."
+   },
+   "fahren": {
+    "ru": "їхати; кермувати машиною",
+    "pos": "дієсл.",
+    "forms": "fuhr · ist gefahren"
+   },
+   "fahruntüchtig": {
+    "ru": "нездатний керувати машиною",
+    "pos": "прикм."
+   },
+   "für": {
+    "ru": "для",
+    "pos": "прийм."
+   },
+   "ganz": {
+    "ru": "цілком, зовсім",
+    "pos": "присл."
+   },
+   "gelten": {
+    "ru": "діяти (про правило)",
+    "pos": "дієсл.",
+    "forms": "galt · hat gegolten"
+   },
+   "haben": {
+    "ru": "мати",
+    "pos": "дієсл.",
+    "note": "Vorfahrt haben — мати перевагу",
+    "forms": "hatte · hat gehabt"
+   },
+   "helfen": {
+    "ru": "допомагати",
+    "pos": "дієсл.",
+    "forms": "half · hat geholfen"
+   },
+   "in": {
+    "ru": "в",
+    "pos": "прийм.",
+    "note": "im = in dem: im Bereich — у зоні"
+   },
+   "kalt": {
+    "ru": "холодний",
+    "pos": "прикм."
+   },
+   "km/h": {
+    "ru": "км/год",
+    "pos": "вираз",
+    "note": "читається: Kilometer pro Stunde"
+   },
+   "kosten": {
+    "ru": "коштувати",
+    "pos": "дієсл.",
+    "forms": "kostete · hat gekostet"
+   },
+   "kurz": {
+    "ru": "короткий; ненадовго",
+    "pos": "прикм."
+   },
+   "können": {
+    "ru": "могти",
+    "pos": "дієсл.",
+    "forms": "konnte · hat gekonnt"
+   },
+   "lang": {
+    "ru": "довгий",
+    "pos": "прикм.",
+    "note": "Wie lang …? — Якої довжини …?",
+    "forms": "lang · länger · am längsten"
+   },
+   "langsam": {
+    "ru": "повільний; повільно",
+    "pos": "прикм."
+   },
+   "laufen": {
+    "ru": "бігти; (про мотор) працювати",
+    "pos": "дієсл.",
+    "forms": "lief · ist gelaufen"
+   },
+   "laut": {
+    "ru": "гучний",
+    "pos": "прикм."
+   },
+   "lesen": {
+    "ru": "читати",
+    "pos": "дієсл.",
+    "forms": "las · hat gelesen"
+   },
+   "machen": {
+    "ru": "робити",
+    "pos": "дієсл.",
+    "note": "den Schulterblick machen — озирнутися через плече; Gut gemacht! — Молодець!",
+    "forms": "machte · hat gemacht"
+   },
+   "manche": {
+    "ru": "деякі",
+    "pos": "займ."
+   },
+   "mit": {
+    "ru": "з",
+    "pos": "прийм."
+   },
+   "müde": {
+    "ru": "втомлений, сонний",
+    "pos": "прикм."
+   },
+   "nach": {
+    "ru": "після; до (напрямок)",
+    "pos": "прийм."
+   },
+   "nehmen": {
+    "ru": "брати",
+    "pos": "дієсл.",
+    "note": "Rücksicht nehmen auf — зважати на",
+    "forms": "nahm · hat genommen"
+   },
+   "nicht": {
+    "ru": "не",
+    "pos": "частка"
+   },
+   "noch": {
+    "ru": "ще",
+    "pos": "присл.",
+    "note": "noch nicht — ще ні"
+   },
+   "nur": {
+    "ru": "лише",
+    "pos": "присл."
+   },
+   "oder": {
+    "ru": "або",
+    "pos": "спол.",
+    "note": "…, oder? — …, правда? / так?"
+   },
+   "offen": {
+    "ru": "відчинений, відкритий",
+    "pos": "прикм."
+   },
+   "pro": {
+    "ru": "на, за (на одиницю)",
+    "pos": "прийм."
+   },
+   "rot": {
+    "ru": "червоний",
+    "pos": "прикм.",
+    "note": "Rot (з великої) — червоний сигнал: bei Rot — на червоний"
+   },
+   "schlafen": {
+    "ru": "спати",
+    "pos": "дієсл.",
+    "forms": "schlief · hat geschlafen"
+   },
+   "schon": {
+    "ru": "вже",
+    "pos": "присл."
+   },
+   "sein": {
+    "ru": "бути",
+    "pos": "дієсл.",
+    "forms": "war · ist gewesen"
+   },
+   "streng": {
+    "ru": "суворий; суворо",
+    "pos": "прикм."
+   },
+   "tabu": {
+    "ru": "під забороною, табу",
+    "pos": "прикм."
+   },
+   "und": {
+    "ru": "і, та",
+    "pos": "спол."
+   },
+   "unsicher": {
+    "ru": "невпевнений, небезпечний",
+    "pos": "прикм."
+   },
+   "unter": {
+    "ru": "під; менше",
+    "pos": "прийм."
+   },
+   "verbieten": {
+    "ru": "забороняти",
+    "pos": "дієсл.",
+    "forms": "verbot · hat verboten"
+   },
+   "verlieren": {
+    "ru": "втрачати",
+    "pos": "дієсл.",
+    "forms": "verlor · hat verloren"
+   },
+   "von": {
+    "ru": "від, з",
+    "pos": "прийм.",
+    "note": "vom = von dem; von rechts — праворуч"
+   },
+   "wenn": {
+    "ru": "якщо; коли",
+    "pos": "спол.",
+    "note": "auch wenn — навіть якщо"
+   },
+   "zusammen": {
+    "ru": "разом",
+    "pos": "присл."
+   },
+   "zwei": {
+    "ru": "два",
+    "pos": "числ."
+   },
+   "über": {
+    "ru": "через; над",
+    "pos": "прийм."
+   }
+  }
+ }
+}

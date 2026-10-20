@@ -76,6 +76,15 @@
     "p-07",
     "r-07"
    ]
+  },
+  {
+   "id": "alkohol",
+   "emoji": "🍺",
+   "title": "Alkohol, Müdigkeit und Ablenkung",
+   "titleTr": "Алкоголь, усталость и отвлечение",
+   "units": [
+    "t-08"
+   ]
   }
  ],
  "units": [
@@ -267,6 +276,15 @@
    "title": "Nachts und im Nebel",
    "titleTr": "Ночью и в тумане",
    "count": 6
+  },
+  {
+   "id": "t-08",
+   "kind": "theory",
+   "emoji": "🍺",
+   "level": "B1",
+   "title": "Alkohol, Müdigkeit und Ablenkung",
+   "titleTr": "Алкоголь, усталость и отвлечение",
+   "count": 19
   }
  ]
 }

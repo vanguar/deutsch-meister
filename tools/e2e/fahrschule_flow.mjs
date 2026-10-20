@@ -248,20 +248,25 @@ for (const id of IDX.units.filter(u => u.kind === 'theory' && u.id !== 't-01').m
     signs: [...document.querySelectorAll('.fs-sign img')].map(i => i.complete && i.naturalWidth > 0),
     nums: [...document.querySelectorAll('.fs-sign-n')].map(e => e.textContent), hs: ${NO_HSCROLL} })`));
   ok(tv.lines === tv.want && tv.lines > 0, `${id}: строк ${tv.lines}`);
-  ok(tv.signs.length > 0 && tv.signs.every(Boolean), `${id}: все ${tv.signs.length} знаков загрузились`);
+  ok(tv.signs.every(Boolean), `${id}: все ${tv.signs.length} знаков загрузились`);
   ok(tv.nums.every(n => /^Zeichen \d{3}([.-]\d+)?$/.test(n)), `${id}: номера знаков (${[...new Set(tv.nums)].join(', ')})`);
   ok(tv.hs, `${id}: нет горизонтальной прокрутки`);
   const au = JSON.parse(await c.ev(TIP_AUDIT));
   ok(au.bad.length === 0, `${id}: подсказка у каждого из ${au.n} слов ${au.bad.slice(0, 5).join(' ')}`);
-  const qn = await c.ev(`Fahrschule.unit.quiz.length`);
+  // теория без знаков (алкоголь, усталость…) — без теста
+  const qn = await c.ev(`(Fahrschule.unit.quiz || []).length`);
   for (let i = 0; i < qn; i++) {
     await waitFor(`document.querySelectorAll('#fsQuiz [data-opt]').length === 3 && document.querySelector('#fsQuiz .fs-quiz-n').textContent === '${i + 1} / ${qn}'`, 3000);
     await c.ev(`document.querySelector('#fsQuiz [data-opt="' + Fahrschule.unit.quiz[${i}].sign + '"]').click()`);
     ok(await c.ev(`!!document.querySelector('#fsQuiz .fs-verdict.is-right') && !!document.querySelector('#fsQuiz .fs-explain-one .fs-w')`), `${id} тест ${i + 1}: верно, есть пояснение`);
     await c.ev(`ReaderSpeak.stop(); document.querySelector('#fsQuiz [data-quiz-next]').click()`);
   }
-  ok(await waitFor(`!!document.querySelector('#fsQuiz .fs-result-text')`, 2000)
-    && (await c.ev(`document.querySelector('#fsQuiz .fs-result-text').textContent`)).includes(`${qn} из ${qn}`), `${id}: тест ${qn} из ${qn}`);
+  if (qn) {
+    ok(await waitFor(`!!document.querySelector('#fsQuiz .fs-result-text')`, 2000)
+      && (await c.ev(`document.querySelector('#fsQuiz .fs-result-text').textContent`)).includes(`${qn} из ${qn}`), `${id}: тест ${qn} из ${qn}`);
+  } else {
+    ok(await c.ev(`!document.getElementById('fsQuiz')`), `${id}: без знаков — без теста`);
+  }
   await c.ev(`document.querySelector('.fs-sec').scrollIntoView()`);
   await c.shot(`fs_${id}_390.png`);
   collect();
