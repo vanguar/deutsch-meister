@@ -82,6 +82,8 @@ SIGNS = {
     'z156': 'File:Zeichen 156-10 - Bahnübergang mit dreistreifiger Bake, StVO 2013.svg',
     'z123': 'File:Zeichen 123 - Arbeitsstelle, StVO 2013.svg',
     'z208': 'File:Zeichen 208 - Dem Gegenverkehr Vorrang gewähren! StVO 1970.svg',
+    'z2701': 'File:Zeichen 270.1 - Beginn eines Verkehrsverbots zur Verminderung schädlicher Luftverunreinigungen in einer Zone. I, StVO 2007.svg',
+    'z2702': 'File:Zeichen 270.2 - Ende eines Verkehrsverbots zur Verminderung schädlicher Luftverunreinigungen in einer Zone, StVO 2007.svg',
 }
 
 # SVG с Commons встраивается как <img>: скрипты там и так не исполняются,

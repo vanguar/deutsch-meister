@@ -76,7 +76,8 @@ KINDS = ('theory', 'dialog', 'junction', 'road')
 PREFIX = {'theory': 't', 'dialog': 'p', 'junction': 'k', 'road': 'r'}   # t-01, p-01, k-01, r-03
 ROAD_TYPES = ('stop', 'gap', 'side', 'overtake', 'zipper', 'parkspot', 'parallel', 'rightturn', 'zebracross', 'bus',
               'fog', 'highbeam', 'wild', 'promille', 'tired', 'lamp', 'tread', 'triangle', 'rescuelane',
-              'access', 'merge', 'missed', 'roundabout', 'railway', 'yellow')
+              'access', 'merge', 'missed', 'roundabout', 'railway', 'yellow',
+              'shift', 'idle', 'umweltzone')
 NUMERIC_ROAD = ('stop', 'gap', 'side', 'triangle')        # ответ — метры
 HAZARDS = ('ball', 'deer')
 # Боковой интервал при обгоне пешеходов и велосипедистов (§ 5 Abs. 4 StVO, с 2020)
@@ -103,6 +104,11 @@ TRIANGLE = {'innerorts': 50, 'landstrasse': 100, 'autobahn': 150}
 # быстрее 60 км/ч (§ 18 Abs. 1 StVO)
 AUTOBAHN_MIN = 60
 VEHICLES = ('moped', 'car')
+# Экономичная езда (правило автошкол): вверх — примерно с 2000 об/мин;
+# мотор глушить, если ждать примерно 20 секунд и дольше
+SHIFT_RPM = 2000
+IDLE_SEC = 20
+STICKERS = ('green', 'yellow', 'red', 'none')
 CARS = ('blue', 'red', 'green', 'yellow')
 APPROACH = ('S', 'W', 'N', 'E')
 TURNS = ('straight', 'left', 'right')
@@ -416,6 +422,25 @@ def road_answer(sc):
     if t == 'yellow':
         # на ремонте дороги жёлтая разметка главнее белой (Anlage 2 StVO)
         return {'answer': 'yellow'}
+    if t == 'shift':
+        rpm, gear = sc.get('rpm'), sc.get('gear')
+        if not isinstance(rpm, int) or not 600 <= rpm <= 7000:
+            return f'rpm — обороты 600–7000, а не {rpm!r}'
+        if gear not in (1, 2, 3, 4, 5):
+            return 'gear — передача 1–5'
+        return {'answer': 'up' if rpm >= SHIFT_RPM else 'stay', 'limit': SHIFT_RPM}
+    if t == 'idle':
+        w = sc.get('wait')
+        if not isinstance(w, int) or not 1 <= w <= 900:
+            return f'wait — ожидание в секундах (1–900), а не {w!r}'
+        if sc.get('where') not in ('rail', 'zebra'):
+            return 'where — rail или zebra'
+        return {'answer': 'off' if w >= IDLE_SEC else 'on', 'limit': IDLE_SEC}
+    if t == 'umweltzone':
+        # в экологическую зону — только с зелёной наклейкой (Zeichen 270.1)
+        if sc.get('sticker') not in STICKERS:
+            return 'sticker — ' + ', '.join(STICKERS)
+        return {'answer': 'yes' if sc['sticker'] == 'green' else 'no'}
     if t == 'wild':
         # животное на дороге: ближний свет, сигнал, тормоз — не уходить в сторону
         return {'answer': 'brake'}
@@ -705,7 +730,8 @@ def main():
                         scene['hazard'] = sc['hazard']
                         scene['emergency'] = bool(sc.get('emergency'))
                     for k in ('where', 'line', 'oncoming', 'sign', 'near', 'dist', 'who', 'ped', 'state', 'sight', 'p', 'novice', 'symptoms', 'hours', 'tired', 'color', 'lamp', 'depth', 'lanes', 'lane',
-                              'vehicle', 'vmax', 'beside', 'ask', 'inside', 'signal'):
+                              'vehicle', 'vmax', 'beside', 'ask', 'inside', 'signal',
+                              'rpm', 'gear', 'wait', 'sticker'):
                         if k in sc:
                             scene[k] = sc[k]
                     out[lang].append(scene)

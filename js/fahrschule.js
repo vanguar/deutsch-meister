@@ -265,7 +265,7 @@ const Fahrschule = (() => {
         <div class="news-tile-ico fs-kind-ico" aria-hidden="true">🛣️</div>
         <div class="news-tile-head">
           <div class="news-tile-title">Дальше</div>
-          <div class="news-tile-text">Экономичная езда и экзамен — следующие темы</div>
+          <div class="news-tile-text">Экзамен на права — следующая тема</div>
         </div>
       </div>
     </div>`;
@@ -1053,6 +1053,43 @@ const Fahrschule = (() => {
     return keys;
   }
 
+  // Тахометр: центр шкалы и угол стрелки (0 об/мин — влево, 6000 — вправо);
+  // зелёная метка — 2000 об/мин, с них переключаются вверх
+  const TACHO = { x: 160, y: 112, r: 84 };
+  const SHIFT_RPM = 2000;
+  function rpmAngle(rpm) { return 180 + Math.min(rpm, 6000) / 6000 * 180; }
+
+  function tachoHtml(t, final) {
+    const { x, y, r } = TACHO;
+    const pt = (rpm, d) => {
+      const a = rpmAngle(rpm) * Math.PI / 180;
+      return `${(x + d * Math.cos(a)).toFixed(1)} ${(y + d * Math.sin(a)).toFixed(1)}`;
+    };
+    const xy = (rpm, d) => pt(rpm, d).split(' ');
+    let ticks = '';
+    for (let k = 0; k <= 6; k++) {
+      const [tx, ty] = xy(k * 1000, r - 20);
+      ticks += `<path class="fs-tick" d="M${pt(k * 1000, r - 10)} L${pt(k * 1000, r)}"/><text class="fs-tick-n" x="${tx}" y="${(Number(ty) + 4).toFixed(1)}">${k}</text>`;
+    }
+    const [mx, my] = xy(SHIFT_RPM, r + 12);
+    return `<path class="fs-dial" d="M${x - r} ${y} A${r} ${r} 0 0 1 ${x + r} ${y} Z"/>${ticks}
+      <text class="fs-tick-n fs-tacho-unit" x="${x - r - 6}" y="126">× 1000 U/min</text>
+      <g class="fs-lab${final ? ' is-on' : ''}"><path class="fs-shift-mark" d="M${pt(SHIFT_RPM, r - 12)} L${pt(SHIFT_RPM, r + 3)}"/>
+        <text class="fs-lab-text is-ok" x="${mx}" y="${my}">2000</text>
+        <text class="fs-lab-text" x="${x + r + 30}" y="${y - 4}">${t.gear}. Gang</text></g>
+      <circle class="fs-hub" cx="${x}" cy="${y}" r="6"/>`;
+  }
+
+  // Наклейка экологической зоны на стекле (4 — зелёная) и стоянка P+R
+  function stickerHtml(s) {
+    const n = { green: 4, yellow: 3, red: 2 }[s];
+    return `<g class="fs-sticker is-${s}"><circle cx="22" cy="20" r="12"/>${n ? `<text x="22" y="24.5">${n}</text>` : '<path d="M14 28 L30 12"/>'}</g>`;
+  }
+
+  function parkRideHtml() {
+    return `<path class="fs-road" d="M104 90 H176 V130 H104 Z"/><text class="fs-pr" x="164" y="124">P</text>`;
+  }
+
   // Кольцо с четырьмя рукавами, переезд, участок ремонта
   function ringHtml() {
     const { x, y } = RING;
@@ -1066,7 +1103,8 @@ const Fahrschule = (() => {
     let sleepers = '';
     for (let y = 2; y < 130; y += 9) sleepers += `<rect class="fs-sleeper" x="${RAIL_X - 11}" y="${y}" width="22" height="4"/>`;
     return `${sleepers}<path class="fs-rail" d="M${RAIL_X - 6} 0 V130 M${RAIL_X + 6} 0 V130"/>
-      ${r.light ? `<circle class="fs-rail-light" cx="214" cy="105" r="4"/>` : ''}`;
+      ${r.light ? `<circle class="fs-rail-light" cx="214" cy="105" r="4"/>` : ''}
+      ${r.gate ? `<g class="fs-gate"><rect x="${RAIL_X - 26}" y="64" width="6" height="28" rx="2"/></g>` : ''}`;
   }
 
   function worksHtml() {
@@ -1379,6 +1417,45 @@ const Fahrschule = (() => {
         dur: 4200, snap: 0.5, line: 'dashed', works: true, signAt: { x: 8, y: 98, w: 24, h: 24 }
       };
     },
+    // Тахометр: стрелка поднимается до оборотов сцены; с 2000 об/мин —
+    // переключение вверх, и обороты падают
+    shift(sc) {
+      const up = sc.answer === 'up';
+      const at = (t, rpm) => ({ t, x: TACHO.x, y: TACHO.y, r: rpmAngle(rpm) });
+      const keys = up
+        ? [at(0, 800), at(0.45, sc.rpm), at(0.6, sc.rpm), at(0.8, sc.rpm * 0.66), at(1, sc.rpm * 0.66)]
+        : [at(0, 800), at(0.45, sc.rpm), at(1, sc.rpm)];
+      return { actors: [{ id: 'needle', kind: 'needle', keys }], dur: 3000, snap: 1,
+        tacho: { gear: up ? sc.gear + 1 : sc.gear }, badge: `${sc.gear}. Gang` };
+    },
+    // Ожидание у закрытого шлагбаума (идёт товарный поезд) или у «зебры»:
+    // выхлоп показывает, что мотор работает; заглушили — выхлопа нет
+    idle(sc) {
+      const off = sc.answer === 'off';
+      const rail = sc.where === 'rail';
+      const stopX = rail ? 186 : 192;
+      const me = { id: 'me', kind: 'car', fill: CAR.blue.fill, exhaust: true, keys: [{ t: 0, x: 40, y: LANE_DOWN, ex: true },
+        { t: 0.25, x: stopX, y: LANE_DOWN, ex: true, br: true }, { t: 0.4, x: stopX, y: LANE_DOWN, ex: !off }, { t: 1, x: stopX, y: LANE_DOWN, ex: !off }] };
+      const actors = [me];
+      if (rail) actors.push({ id: 'train', kind: 'train', keys: [{ t: 0, x: RAIL_X, y: -12, r: 90 }, { t: 1, x: RAIL_X, y: 300, r: 90 }] });
+      else actors.push({ id: 'ped', kind: 'ped', keys: [{ t: 0, x: 213, y: 101 }, { t: 0.2, x: 213, y: 101 }, { t: 1, x: 213, y: 28 }] });
+      return { actors, dur: 4000, snap: 0.55, line: 'dashed', curb: !rail, zebraX: rail ? 0 : 200,
+        rail: rail ? { gate: true } : null, signAt: { x: 172, y: 96, w: 22, h: 22 },
+        badge: sc.wait >= 60 ? `${Math.round(sc.wait / 60)} min` : `${sc.wait} s` };
+    },
+    // Экологическая зона: с зелёной наклейкой — въезжаем мимо знака 270.1,
+    // без неё — паркуемся перед зоной (P+R)
+    umweltzone(sc) {
+      const yes = sc.answer === 'yes';
+      return {
+        actors: [{ id: 'me', kind: 'car', fill: CAR.blue.fill, keys: yes
+          ? [{ t: 0, x: 20, y: LANE_DOWN }, { t: 1, x: 350, y: LANE_DOWN }]
+          : [{ t: 0, x: 20, y: LANE_DOWN }, { t: 0.4, x: 112, y: LANE_DOWN, b: 'r' }, { t: 0.62, x: 140, y: 100, r: 70, b: 'r' },
+             { t: 0.85, x: 146, y: 122, r: 90 }, { t: 1, x: 146, y: 124, r: 90 }] }],
+        dur: 3600, snap: yes ? 0.72 : 1, line: 'dashed', parkRide: true, sticker: sc.sticker,
+        signAt: { x: 228, y: 94, w: 24, h: 24 }
+      };
+    },
     zipper() {
       return {
         actors: [
@@ -1401,7 +1478,7 @@ const Fahrschule = (() => {
       if (t <= b.t) {
         const k = (t - a.t) / ((b.t - a.t) || 1);
         return { x: a.x + (b.x - a.x) * k, y: a.y + (b.y - a.y) * k, r: (a.r || 0) + ((b.r || 0) - (a.r || 0)) * k,
-          b: a.b, l: a.l, f: a.f, br: a.br, h: a.h, g: a.g };
+          b: a.b, l: a.l, f: a.f, br: a.br, h: a.h, g: a.g, ex: a.ex };
       }
     }
     return keys[keys.length - 1];
@@ -1417,9 +1494,10 @@ const Fahrschule = (() => {
   }
 
   // Свет и звук машины в кадре: l — фары ('low' ближний / 'high' дальний),
-  // f — задний противотуманный фонарь, br — тормоз, h — звуковой сигнал
+  // f — задний противотуманный фонарь, br — тормоз, h — звуковой сигнал,
+  // ex — выхлоп (мотор работает)
   const STATES = { 'is-low': k => k.l === 'low', 'is-high': k => k.l === 'high', 'is-fog': k => !!k.f,
-    'is-braking': k => !!k.br, 'is-horn': k => !!k.h, 'is-gone': k => !!k.g };
+    'is-braking': k => !!k.br, 'is-horn': k => !!k.h, 'is-gone': k => !!k.g, 'is-exhaust': k => !!k.ex };
 
   function stateCls(k) {
     return Object.keys(STATES).filter(c => STATES[c](k)).map(c => ' ' + c).join('');
@@ -1461,6 +1539,9 @@ const Fahrschule = (() => {
     if (a.kind === 'deer') {
       return `<g class="${cls} fs-deer" data-actor="${a.id}" transform="${tr}"><text x="-11" y="7" class="fs-deer-ico">🦌</text></g>`;
     }
+    if (a.kind === 'needle') {
+      return `<g class="${cls} fs-needle" data-actor="${a.id}" transform="${tr}"><path d="M-4 -2 L${TACHO.r - 12} 0 L-4 2 Z"/></g>`;
+    }
     if (a.kind === 'train') {
       return `<g class="${cls} fs-train" data-actor="${a.id}" transform="${tr}">
         <rect x="-118" y="-11" width="56" height="22" rx="4" class="fs-train-car"/><rect x="-60" y="-11" width="60" height="22" rx="8" class="fs-train-car"/>
@@ -1484,7 +1565,9 @@ const Fahrschule = (() => {
     const rear = a.lights ? `<rect class="fs-brake" x="-29.5" y="-8" width="2.5" height="4" rx="1"/>
       <rect class="fs-brake" x="-29.5" y="4" width="2.5" height="4" rx="1"/>
       <rect class="fs-rearfog" x="-30" y="-1.5" width="2.5" height="3" rx="1"/>` : '';
-    return `<g class="${cls}" data-actor="${a.id}" transform="${tr}">${lights}
+    // выхлоп — пока мотор работает (кадр ex)
+    const puffs = a.exhaust ? '<g class="fs-puffs"><circle cx="-34" cy="5" r="3.2"/><circle cx="-42" cy="6" r="4.4"/><circle cx="-52" cy="4" r="5.6"/></g>' : '';
+    return `<g class="${cls}" data-actor="${a.id}" transform="${tr}">${lights}${puffs}
       <rect x="-28" y="-9" width="28" height="18" rx="5" fill="${a.fill}" class="fs-car-shell"/>${rear}
       ${a.taxi ? '<rect class="fs-taxi" x="-19" y="-3.5" width="7" height="7" rx="1.5"/>' : ''}
       <rect class="fs-glass" x="-10" y="-7" width="6" height="14" rx="2"/>
@@ -1528,6 +1611,7 @@ const Fahrschule = (() => {
     const ramps = (plan.ramps || []).map(x => `<path class="fs-road" d="M${x} 90 H${x + 62} L${x + 132} 130 H${x + 70} Z"/>`).join('')
       + (plan.accel ? `<path class="fs-road" d="M0 90 H300 L232 112 H0 Z"/><path class="fs-mark is-block" d="M0 91.5 H232"/>` : '');
     const ground = plan.tyre ? tyreHtml(sc, final)
+      : plan.tacho ? tachoHtml(plan.tacho, final)
       : plan.ring ? ringHtml()
       : plan.lanes3 ? `<rect class="fs-road" x="0" y="28" width="${ROAD_W}" height="78"/>
         <path class="fs-mark" d="M0 54 H${ROAD_W}"/><path class="fs-mark" d="M0 80 H${ROAD_W}"/>`
@@ -1540,10 +1624,10 @@ const Fahrschule = (() => {
     return `<svg class="fs-svg fs-road-svg" viewBox="0 0 ${ROAD_W} 130" role="img" aria-label="${esc(sc.type)}">
       <rect class="fs-grass" x="0" y="0" width="${ROAD_W}" height="130"/>
       ${ramps}${ground}
-      ${plan.rail ? railHtml(plan.rail) : ''}${plan.works ? worksHtml() : ''}
+      ${plan.rail ? railHtml(plan.rail) : ''}${plan.works ? worksHtml() : ''}${plan.parkRide ? parkRideHtml() : ''}
       ${curb}${rest}${ends}${sign}${park}${night}${plan.fog ? fogPosts(plan.fog) : ''}
       ${plan.actors.map(a => actorHtml(a, keyAt(a.keys, t))).join('')}
-      ${plan.fog ? fogHtml(sc, plan.fog, final) : ''}${gap}${zzz}${badge}${measure}
+      ${plan.fog ? fogHtml(sc, plan.fog, final) : ''}${gap}${zzz}${badge}${measure}${plan.sticker ? stickerHtml(plan.sticker) : ''}
     </svg>`;
   }
 

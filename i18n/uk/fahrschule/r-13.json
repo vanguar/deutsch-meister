@@ -1,0 +1,815 @@
+{
+ "id": "r-13",
+ "kind": "road",
+ "emoji": "🍃",
+ "level": "B1",
+ "title": "Sparsam und sauber",
+ "titleTr": "Економно й чисто",
+ "intro": "Коли перемикатися вгору за тахометром, чи глушити мотор під час очікування і чи можна в'їхати в екологічну зону.",
+ "scenes": [
+  {
+   "type": "shift",
+   "options": [
+    {
+     "key": "up",
+     "de": "Ich schalte in den dritten Gang.",
+     "tr": "Перемикаюся на третю передачу."
+    },
+    {
+     "key": "stay",
+     "de": "Ich bleibe im zweiten Gang.",
+     "tr": "Залишаюся на другій передачі."
+    }
+   ],
+   "situation": {
+    "de": "Sie fahren im zweiten Gang. Der Drehzahlmesser zeigt 2500 Umdrehungen.",
+    "tr": "Ви їдете на другій передачі. Тахометр показує 2500 обертів."
+   },
+   "question": {
+    "de": "Was machen Sie?",
+    "tr": "Що ви робите?"
+   },
+   "explain": [
+    {
+     "de": "Schalten Sie schon bei etwa 2000 Umdrehungen hoch.",
+     "tr": "Перемикайтеся вгору вже приблизно при 2000 обертах.",
+     "o": {
+      "hoch": "hoch>hochschalten",
+      "schalten": "schalten>hochschalten"
+     }
+    },
+    {
+     "de": "Hohe Drehzahlen kosten Kraftstoff und machen Lärm.",
+     "tr": "Високі оберти коштують пального й створюють шум."
+    }
+   ],
+   "answer": "up",
+   "limit": 2000,
+   "rpm": 2500,
+   "gear": 2
+  },
+  {
+   "type": "shift",
+   "options": [
+    {
+     "key": "up",
+     "de": "Ich schalte in den vierten Gang.",
+     "tr": "Перемикаюся на четверту передачу."
+    },
+    {
+     "key": "stay",
+     "de": "Ich bleibe im dritten Gang.",
+     "tr": "Залишаюся на третій передачі."
+    }
+   ],
+   "situation": {
+    "de": "Sie haben gerade in den dritten Gang geschaltet. Der Drehzahlmesser zeigt 1500 Umdrehungen.",
+    "tr": "Ви щойно ввімкнули третю передачу. Тахометр показує 1500 обертів."
+   },
+   "question": {
+    "de": "Was machen Sie?",
+    "tr": "Що ви робите?"
+   },
+   "explain": [
+    {
+     "de": "Unter 2000 Umdrehungen schalten Sie noch nicht hoch.",
+     "tr": "Нижче 2000 обертів перемикатися вгору ще зарано.",
+     "o": {
+      "hoch": "hoch>hochschalten",
+      "schalten": "schalten>hochschalten"
+     }
+    },
+    {
+     "de": "Bei sehr niedriger Drehzahl ruckelt der Motor.",
+     "tr": "На дуже низьких обертах мотор смикається."
+    }
+   ],
+   "answer": "stay",
+   "limit": 2000,
+   "rpm": 1500,
+   "gear": 3
+  },
+  {
+   "type": "idle",
+   "options": [
+    {
+     "key": "off",
+     "de": "Ich schalte den Motor aus.",
+     "tr": "Глушу мотор."
+    },
+    {
+     "key": "on",
+     "de": "Ich lasse den Motor laufen.",
+     "tr": "Залишаю мотор працювати."
+    }
+   ],
+   "situation": {
+    "de": "Die Bahnschranke ist geschlossen. Ein langer Güterzug kommt, Sie warten etwa drei Minuten.",
+    "tr": "Шлагбаум закритий. Іде довгий товарний потяг, ви чекаєте близько трьох хвилин."
+   },
+   "question": {
+    "de": "Was machen Sie?",
+    "tr": "Що ви робите?"
+   },
+   "explain": [
+    {
+     "de": "Ab etwa 20 Sekunden Wartezeit lohnt es sich, den Motor auszuschalten.",
+     "tr": "Уже приблизно з 20 секунд очікування варто заглушити мотор."
+    },
+    {
+     "de": "Das spart Kraftstoff und ist leiser.",
+     "tr": "Це заощаджує пальне й тихіше."
+    }
+   ],
+   "answer": "off",
+   "limit": 20,
+   "where": "rail",
+   "sign": "z201",
+   "wait": 180
+  },
+  {
+   "type": "idle",
+   "options": [
+    {
+     "key": "off",
+     "de": "Ich schalte den Motor aus.",
+     "tr": "Глушу мотор."
+    },
+    {
+     "key": "on",
+     "de": "Ich lasse den Motor laufen.",
+     "tr": "Залишаю мотор працювати."
+    }
+   ],
+   "situation": {
+    "de": "Am Zebrastreifen geht ein Fußgänger über die Straße. Sie warten etwa fünf Sekunden.",
+    "tr": "«Зеброю» переходить пішохід. Ви чекаєте близько п'яти секунд."
+   },
+   "question": {
+    "de": "Was machen Sie?",
+    "tr": "Що ви робите?"
+   },
+   "explain": [
+    {
+     "de": "Unter 20 Sekunden lohnt sich das Ausschalten nicht.",
+     "tr": "Якщо менше ніж 20 секунд, глушити мотор не має сенсу."
+    },
+    {
+     "de": "Bei so kurzen Pausen lassen Sie den Motor laufen.",
+     "tr": "За таких коротких пауз залиште мотор працювати."
+    }
+   ],
+   "answer": "on",
+   "limit": 20,
+   "where": "zebra",
+   "wait": 5
+  },
+  {
+   "type": "umweltzone",
+   "options": [
+    {
+     "key": "yes",
+     "de": "Ja, ich darf hineinfahren.",
+     "tr": "Так, мені можна в'їхати."
+    },
+    {
+     "key": "no",
+     "de": "Nein, ich muss vorher parken.",
+     "tr": "Ні, мені треба припаркуватися раніше."
+    }
+   ],
+   "situation": {
+    "de": "Vor Ihnen beginnt eine Umweltzone. Ihr Auto hat eine grüne Plakette.",
+    "tr": "Попереду починається екологічна зона. Ваша машина має зелену наліпку."
+   },
+   "question": {
+    "de": "Dürfen Sie in die Umweltzone fahren?",
+    "tr": "Чи можна вам в'їхати в екологічну зону?"
+   },
+   "explain": [
+    {
+     "de": "Mit einer grünen Plakette dürfen Sie in die Umweltzone fahren.",
+     "tr": "Із зеленою наліпкою в екологічну зону в'їжджати можна."
+    },
+    {
+     "de": "Die Plakette klebt innen an der Windschutzscheibe.",
+     "tr": "Наліпка клеїться зсередини на лобове скло."
+    }
+   ],
+   "answer": "yes",
+   "sign": "z2701",
+   "sticker": "green"
+  },
+  {
+   "type": "umweltzone",
+   "options": [
+    {
+     "key": "yes",
+     "de": "Ja, ich darf hineinfahren.",
+     "tr": "Так, мені можна в'їхати."
+    },
+    {
+     "key": "no",
+     "de": "Nein, ich muss vorher parken.",
+     "tr": "Ні, мені треба припаркуватися раніше."
+    }
+   ],
+   "situation": {
+    "de": "Ein Freund leiht Ihnen sein altes Auto. An der Scheibe ist keine Plakette.",
+    "tr": "Друг позичив вам свою стару машину. На склі немає наліпки."
+   },
+   "question": {
+    "de": "Dürfen Sie in die Umweltzone fahren?",
+    "tr": "Чи можна вам в'їхати в екологічну зону?"
+   },
+   "explain": [
+    {
+     "de": "Ohne Plakette dürfen Sie nicht in die Umweltzone fahren. Das kostet 100 Euro.",
+     "tr": "Без наліпки в'їжджати в екологічну зону не можна. Це коштує 100 євро."
+    },
+    {
+     "de": "Parken Sie vorher und fahren Sie mit Bus oder Bahn weiter.",
+     "tr": "Припаркуйтеся раніше й їдьте далі автобусом або потягом.",
+     "o": {
+      "fahren": "fahren>weiterfahren",
+      "weiter": "weiter>weiterfahren"
+     }
+    }
+   ],
+   "answer": "no",
+   "sign": "z2701",
+   "sticker": "none"
+  }
+ ],
+ "signs": {
+  "z201": {
+   "de": "Andreaskreuz",
+   "tr": "Андріївський хрест (потяг має перевагу)",
+   "src": "data/fahrschule/signs/z201.svg",
+   "n": "201",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Andreaskreuz_(ohne_Ma%C3%9Fe)_1970.svg"
+  },
+  "z2701": {
+   "de": "Umweltzone",
+   "tr": "Екологічна зона",
+   "src": "data/fahrschule/signs/z2701.svg",
+   "n": "270.1",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_270.1_-_Beginn_eines_Verkehrsverbots_zur_Verminderung_sch%C3%A4dlicher_Luftverunreinigungen_in_einer_Zone._I,_StVO_2007.svg"
+  }
+ },
+ "gloss": {
+  "w": {
+   "ab": "ab",
+   "altes": "alt",
+   "am": "an",
+   "an": "an",
+   "andreaskreuz": "Andreaskreuz",
+   "ausschalten": "ausschalten",
+   "auszuschalten": "ausschalten",
+   "auto": "Auto",
+   "bahn": "Bahn",
+   "bahnschranke": "Bahnschranke",
+   "beginnt": "beginnen",
+   "bei": "bei",
+   "bus": "Bus",
+   "das": "der/die/das",
+   "den": "der/die/das",
+   "der": "der/die/das",
+   "die": "der/die/das",
+   "drehzahl": "Drehzahl",
+   "drehzahlen": "Drehzahl",
+   "drehzahlmesser": "Drehzahlmesser",
+   "drei": "drei",
+   "dritten": "dritte",
+   "dürfen": "dürfen",
+   "ein": "ein/eine",
+   "eine": "ein/eine",
+   "einer": "ein/eine",
+   "es": "es",
+   "etwa": "etwa",
+   "euro": "Euro",
+   "fahren": "fahren",
+   "fahren>weiterfahren": "weiterfahren",
+   "freund": "Freund",
+   "fußgänger": "Fußgänger",
+   "fünf": "fünf",
+   "gang": "Gang",
+   "geht": "gehen",
+   "gerade": "gerade",
+   "geschaltet": "schalten",
+   "geschlossen": "geschlossen",
+   "grüne": "grün",
+   "grünen": "grün",
+   "güterzug": "Güterzug",
+   "haben": "haben",
+   "hat": "haben",
+   "hoch>hochschalten": "hochschalten",
+   "hohe": "hoch",
+   "ihnen": "Sie",
+   "ihr": "Ihr",
+   "im": "in",
+   "in": "in",
+   "innen": "innen",
+   "ist": "sein",
+   "keine": "kein",
+   "klebt": "kleben",
+   "kommt": "kommen",
+   "kosten": "kosten",
+   "kostet": "kosten",
+   "kraftstoff": "Kraftstoff",
+   "kurzen": "kurz",
+   "langer": "lang",
+   "lassen": "lassen",
+   "laufen": "laufen",
+   "leiht": "leihen",
+   "leiser": "leise",
+   "lohnt": "lohnen",
+   "lärm": "Lärm",
+   "machen": "machen",
+   "minuten": "Minute",
+   "mit": "mit",
+   "motor": "Motor",
+   "nicht": "nicht",
+   "niedriger": "niedrig",
+   "noch": "noch",
+   "oder": "oder",
+   "ohne": "ohne",
+   "parken": "parken",
+   "pausen": "Pause",
+   "plakette": "Plakette",
+   "ruckelt": "ruckeln",
+   "sauber": "sauber",
+   "schalten>hochschalten": "hochschalten",
+   "scheibe": "Scheibe",
+   "schon": "schon",
+   "sehr": "sehr",
+   "sein": "sein",
+   "sekunden": "Sekunde",
+   "sich": "sich",
+   "sie": "Sie",
+   "so": "so",
+   "sparsam": "sparsam",
+   "spart": "sparen",
+   "straße": "Straße",
+   "umdrehungen": "Umdrehung",
+   "umweltzone": "Umweltzone",
+   "und": "und",
+   "unter": "unter",
+   "vor": "vor",
+   "vorher": "vorher",
+   "warten": "warten",
+   "wartezeit": "Wartezeit",
+   "was": "was",
+   "weiter>weiterfahren": "weiterfahren",
+   "windschutzscheibe": "Windschutzscheibe",
+   "zebrastreifen": "Zebrastreifen",
+   "zeigt": "zeigen",
+   "zweiten": "zweite",
+   "über": "über"
+  },
+  "l": {
+   "Andreaskreuz": {
+    "ru": "андріївський хрест (знак біля переїзду)",
+    "pos": "ім.",
+    "decl": "das Andreaskreuz · мн.: die Andreaskreuze"
+   },
+   "Auto": {
+    "ru": "машина, автомобіль",
+    "pos": "ім.",
+    "decl": "das Auto · мн.: die Autos"
+   },
+   "Bahn": {
+    "ru": "потяг, залізниця",
+    "pos": "ім.",
+    "decl": "die Bahn · мн.: die Bahnen"
+   },
+   "Bahnschranke": {
+    "ru": "шлагбаум на переїзді",
+    "pos": "ім.",
+    "decl": "die Bahnschranke · мн.: die Bahnschranken"
+   },
+   "Bus": {
+    "ru": "автобус",
+    "pos": "ім.",
+    "decl": "der Bus · мн.: die Busse"
+   },
+   "Drehzahl": {
+    "ru": "оберти (мотора)",
+    "pos": "ім.",
+    "decl": "die Drehzahl · мн.: die Drehzahlen"
+   },
+   "Drehzahlmesser": {
+    "ru": "тахометр",
+    "pos": "ім.",
+    "decl": "der Drehzahlmesser · мн.: die Drehzahlmesser"
+   },
+   "Euro": {
+    "ru": "євро",
+    "pos": "ім.",
+    "decl": "der Euro · мн.: die Euro"
+   },
+   "Freund": {
+    "ru": "друг",
+    "pos": "ім.",
+    "decl": "der Freund · мн.: die Freunde"
+   },
+   "Fußgänger": {
+    "ru": "пішохід",
+    "pos": "ім.",
+    "decl": "der Fußgänger · мн.: die Fußgänger"
+   },
+   "Gang": {
+    "ru": "передача (коробки)",
+    "pos": "ім.",
+    "decl": "der Gang · мн.: die Gänge"
+   },
+   "Güterzug": {
+    "ru": "товарний потяг",
+    "pos": "ім.",
+    "decl": "der Güterzug · мн.: die Güterzüge"
+   },
+   "Ihr": {
+    "ru": "ваш (ввічливо)",
+    "pos": "займ."
+   },
+   "Kraftstoff": {
+    "ru": "пальне",
+    "pos": "ім.",
+    "decl": "der Kraftstoff · мн.: die Kraftstoffe"
+   },
+   "Lärm": {
+    "ru": "шум",
+    "pos": "ім.",
+    "decl": "der Lärm · мн. немає"
+   },
+   "Minute": {
+    "ru": "хвилина",
+    "pos": "ім.",
+    "decl": "die Minute · мн.: die Minuten"
+   },
+   "Motor": {
+    "ru": "двигун, мотор",
+    "pos": "ім.",
+    "decl": "der Motor · мн.: die Motoren"
+   },
+   "Pause": {
+    "ru": "перерва, пауза",
+    "pos": "ім.",
+    "decl": "die Pause · мн.: die Pausen"
+   },
+   "Plakette": {
+    "ru": "наліпка (техогляду)",
+    "pos": "ім.",
+    "decl": "die Plakette · мн.: die Plaketten"
+   },
+   "Scheibe": {
+    "ru": "скло (машини)",
+    "pos": "ім.",
+    "decl": "die Scheibe · мн.: die Scheiben"
+   },
+   "Sekunde": {
+    "ru": "секунда",
+    "pos": "ім.",
+    "decl": "die Sekunde · мн.: die Sekunden"
+   },
+   "Sie": {
+    "ru": "ви (ввічливо)",
+    "pos": "займ.",
+    "note": "Ihnen — вам (давальний): vor Ihnen — перед вами"
+   },
+   "Straße": {
+    "ru": "вулиця, дорога",
+    "pos": "ім.",
+    "decl": "die Straße · мн.: die Straßen"
+   },
+   "Umdrehung": {
+    "ru": "оберт (мотора)",
+    "pos": "ім.",
+    "note": "Umdrehungen pro Minute — оберти на хвилину",
+    "decl": "die Umdrehung · мн.: die Umdrehungen"
+   },
+   "Umweltzone": {
+    "ru": "екологічна зона",
+    "pos": "ім.",
+    "note": "в'їзд тільки із зеленою наліпкою (Plakette)",
+    "decl": "die Umweltzone · мн.: die Umweltzonen"
+   },
+   "Wartezeit": {
+    "ru": "час очікування",
+    "pos": "ім.",
+    "decl": "die Wartezeit · мн.: die Wartezeiten"
+   },
+   "Windschutzscheibe": {
+    "ru": "лобове скло",
+    "pos": "ім.",
+    "decl": "die Windschutzscheibe · мн.: die Windschutzscheiben"
+   },
+   "Zebrastreifen": {
+    "ru": "«зебра», пішохідний перехід",
+    "pos": "ім.",
+    "decl": "der Zebrastreifen · мн.: die Zebrastreifen"
+   },
+   "ab": {
+    "ru": "з, починаючи з",
+    "pos": "прийм.",
+    "note": "ab hier — звідси; ab dem Schild — від знака"
+   },
+   "alt": {
+    "ru": "старий; літній",
+    "pos": "прикм.",
+    "note": "ältere Menschen — літні люди"
+   },
+   "an": {
+    "ru": "біля, на, при",
+    "pos": "прийм.",
+    "note": "am = an dem; an der Kreuzung — на перехресті"
+   },
+   "ausschalten": {
+    "ru": "вимикати",
+    "pos": "дієсл.",
+    "note": "відокремлюваний префікс: schalten … aus",
+    "forms": "schaltete aus · hat ausgeschaltet"
+   },
+   "beginnen": {
+    "ru": "починатися, починати",
+    "pos": "дієсл.",
+    "forms": "begann · hat begonnen"
+   },
+   "bei": {
+    "ru": "при, біля; на (про сигнал)",
+    "pos": "прийм.",
+    "note": "beim = bei dem: beim Fahren — під час їзди; bei Rot — на червоний"
+   },
+   "der/die/das": {
+    "ru": "означений артикль",
+    "pos": "артикль",
+    "note": "der — ч. р., die — ж. р. і мн., das — с. р.; den — ч. р. у знахідному, dem — ч. і с. р. у давальному; das ще означає «це»"
+   },
+   "drei": {
+    "ru": "три",
+    "pos": "числ."
+   },
+   "dritte": {
+    "ru": "третій",
+    "pos": "числ."
+   },
+   "dürfen": {
+    "ru": "могти, мати право",
+    "pos": "дієсл.",
+    "forms": "durfte · hat gedurft"
+   },
+   "ein/eine": {
+    "ru": "неозначений артикль; один",
+    "pos": "артикль",
+    "note": "an einer Kreuzung — на (якомусь) перехресті"
+   },
+   "es": {
+    "ru": "воно; це",
+    "pos": "займ.",
+    "note": "тут — про машину: das Auto"
+   },
+   "etwa": {
+    "ru": "приблизно, близько",
+    "pos": "присл."
+   },
+   "fahren": {
+    "ru": "їхати; кермувати машиною",
+    "pos": "дієсл.",
+    "forms": "fuhr · ist gefahren"
+   },
+   "fünf": {
+    "ru": "п'ять",
+    "pos": "числ."
+   },
+   "gehen": {
+    "ru": "іти (пішки)",
+    "pos": "дієсл.",
+    "note": "über die Straße gehen — переходити дорогу",
+    "forms": "ging · ist gegangen"
+   },
+   "gerade": {
+    "ru": "зараз, саме",
+    "pos": "присл."
+   },
+   "geschlossen": {
+    "ru": "закритий",
+    "pos": "прикм."
+   },
+   "grün": {
+    "ru": "зелений",
+    "pos": "прикм.",
+    "note": "Grün (з великої) — зелений сигнал: bei Grün — на зелений"
+   },
+   "haben": {
+    "ru": "мати",
+    "pos": "дієсл.",
+    "note": "Vorfahrt haben — мати перевагу",
+    "forms": "hatte · hat gehabt"
+   },
+   "hoch": {
+    "ru": "високий",
+    "pos": "прикм."
+   },
+   "hochschalten": {
+    "ru": "перемикатися на вищу передачу",
+    "pos": "дієсл.",
+    "note": "відокремлюваний префікс: schalten Sie … hoch",
+    "forms": "schaltete hoch · hat hochgeschaltet"
+   },
+   "in": {
+    "ru": "в",
+    "pos": "прийм.",
+    "note": "im = in dem: im Bereich — у зоні"
+   },
+   "innen": {
+    "ru": "всередині, зсередини",
+    "pos": "присл."
+   },
+   "kein": {
+    "ru": "жодний; не (заперечення при іменнику)",
+    "pos": "займ."
+   },
+   "kleben": {
+    "ru": "клеїтися, бути приклеєним",
+    "pos": "дієсл.",
+    "forms": "klebte · hat geklebt"
+   },
+   "kommen": {
+    "ru": "приходити; їхати (наближатися)",
+    "pos": "дієсл.",
+    "note": "von rechts kommen — їхати праворуч",
+    "forms": "kam · ist gekommen"
+   },
+   "kosten": {
+    "ru": "коштувати",
+    "pos": "дієсл.",
+    "forms": "kostete · hat gekostet"
+   },
+   "kurz": {
+    "ru": "короткий; ненадовго",
+    "pos": "прикм."
+   },
+   "lang": {
+    "ru": "довгий",
+    "pos": "прикм.",
+    "note": "Wie lang …? — Якої довжини …?",
+    "forms": "lang · länger · am längsten"
+   },
+   "lassen": {
+    "ru": "дозволяти; пропускати; залишати",
+    "pos": "дієсл.",
+    "note": "jemanden fahren lassen — пропустити когось уперед",
+    "forms": "ließ · hat gelassen"
+   },
+   "laufen": {
+    "ru": "бігти; (про мотор) працювати",
+    "pos": "дієсл.",
+    "forms": "lief · ist gelaufen"
+   },
+   "leihen": {
+    "ru": "позичати",
+    "pos": "дієсл.",
+    "forms": "lieh · hat geliehen"
+   },
+   "leise": {
+    "ru": "тихий; тихо",
+    "pos": "прикм."
+   },
+   "lohnen": {
+    "ru": "окупатися, мати сенс",
+    "pos": "дієсл.",
+    "note": "es lohnt sich — це має сенс, варто того",
+    "forms": "lohnte · hat gelohnt"
+   },
+   "machen": {
+    "ru": "робити",
+    "pos": "дієсл.",
+    "note": "den Schulterblick machen — озирнутися через плече; Gut gemacht! — Молодець!",
+    "forms": "machte · hat gemacht"
+   },
+   "mit": {
+    "ru": "з",
+    "pos": "прийм."
+   },
+   "nicht": {
+    "ru": "не",
+    "pos": "частка"
+   },
+   "niedrig": {
+    "ru": "низький",
+    "pos": "прикм."
+   },
+   "noch": {
+    "ru": "ще",
+    "pos": "присл.",
+    "note": "noch nicht — ще ні"
+   },
+   "oder": {
+    "ru": "або",
+    "pos": "спол.",
+    "note": "…, oder? — …, правда? / так?"
+   },
+   "ohne": {
+    "ru": "без",
+    "pos": "прийм."
+   },
+   "parken": {
+    "ru": "паркуватися, стояти (про машину)",
+    "pos": "дієсл.",
+    "note": "паркується той, хто стоїть довше 3 хвилин або виходить з машини",
+    "forms": "parkte · hat geparkt"
+   },
+   "ruckeln": {
+    "ru": "смикатися, працювати ривками",
+    "pos": "дієсл.",
+    "forms": "ruckelte · hat geruckelt"
+   },
+   "sauber": {
+    "ru": "чистий",
+    "pos": "прикм."
+   },
+   "schalten": {
+    "ru": "перемикати (передачу)",
+    "pos": "дієсл.",
+    "forms": "schaltete · hat geschaltet"
+   },
+   "schon": {
+    "ru": "вже",
+    "pos": "присл."
+   },
+   "sehr": {
+    "ru": "дуже",
+    "pos": "присл."
+   },
+   "sein": {
+    "ru": "бути",
+    "pos": "дієсл.",
+    "forms": "war · ist gewesen"
+   },
+   "sich": {
+    "ru": "себе, -ся",
+    "pos": "займ."
+   },
+   "so": {
+    "ru": "так; ось (так)",
+    "pos": "присл."
+   },
+   "sparen": {
+    "ru": "заощаджувати",
+    "pos": "дієсл.",
+    "forms": "sparte · hat gespart"
+   },
+   "sparsam": {
+    "ru": "економний; економно",
+    "pos": "прикм."
+   },
+   "und": {
+    "ru": "і, та",
+    "pos": "спол."
+   },
+   "unter": {
+    "ru": "під; менше",
+    "pos": "прийм."
+   },
+   "vor": {
+    "ru": "перед",
+    "pos": "прийм.",
+    "note": "rechts vor links — правий перед лівим"
+   },
+   "vorher": {
+    "ru": "заздалегідь, раніше",
+    "pos": "присл."
+   },
+   "warten": {
+    "ru": "чекати",
+    "pos": "дієсл.",
+    "note": "warten auf — чекати на (когось)",
+    "forms": "wartete · hat gewartet"
+   },
+   "was": {
+    "ru": "що",
+    "pos": "займ."
+   },
+   "weiterfahren": {
+    "ru": "їхати далі",
+    "pos": "дієсл.",
+    "forms": "fuhr weiter · ist weitergefahren"
+   },
+   "zeigen": {
+    "ru": "показувати",
+    "pos": "дієсл.",
+    "forms": "zeigte · hat gezeigt"
+   },
+   "zweite": {
+    "ru": "другий",
+    "pos": "числ."
+   },
+   "über": {
+    "ru": "через; над",
+    "pos": "прийм."
+   }
+  }
+ }
+}

@@ -1,0 +1,887 @@
+{
+ "id": "t-13",
+ "kind": "theory",
+ "emoji": "🌱",
+ "level": "B1",
+ "title": "Umweltbewusst und sparsam fahren",
+ "titleTr": "القيادة الاقتصادية والصديقة للبيئة",
+ "intro": "كيف تستهلك وقودًا أقل: التبديل المبكر إلى غيار أعلى، والانسياب دون ضغط، وإطفاء المحرك عند الانتظار الطويل — وما هي المنطقة البيئية والملصق.",
+ "sections": [
+  {
+   "title": "بهدوء وباقتصاد",
+   "lines": [
+    {
+     "de": "Wer vorausschauend fährt, bremst weniger und spart Kraftstoff.",
+     "tr": "من يقود باستباق يفرمل أقل ويوفّر الوقود."
+    },
+    {
+     "de": "Schalten Sie früh hoch, etwa bei 2000 Umdrehungen pro Minute.",
+     "tr": "بدّل إلى الغيار الأعلى مبكرًا، عند نحو 2000 دورة في الدقيقة.",
+     "o": {
+      "hoch": "hoch>hochschalten",
+      "schalten": "schalten>hochschalten"
+     }
+    },
+    {
+     "de": "Fahren Sie im höchsten möglichen Gang mit niedriger Drehzahl.",
+     "tr": "سِر بأعلى غيار ممكن وبعدد دورات منخفض."
+    },
+    {
+     "de": "Vor einer roten Ampel lassen Sie das Auto einfach ausrollen.",
+     "tr": "قبل الإشارة الحمراء دع السيارة تنساب ببساطة حتى تتوقف."
+    },
+    {
+     "de": "Bei 130 km/h braucht ein Auto viel mehr Kraftstoff als bei 100 km/h.",
+     "tr": "عند 130 كم/س تستهلك السيارة وقودًا أكثر بكثير مما تستهلكه عند 100 كم/س."
+    }
+   ]
+  },
+  {
+   "title": "المحرك أثناء الوقوف",
+   "lines": [
+    {
+     "de": "Lassen Sie den Motor nicht im Stand warmlaufen. Das ist sogar verboten.",
+     "tr": "لا تترك المحرك يسخن والسيارة واقفة. هذا ممنوع أيضًا."
+    },
+    {
+     "de": "Ab etwa 20 Sekunden Wartezeit lohnt es sich, den Motor auszuschalten.",
+     "tr": "بدءًا من نحو 20 ثانية من الانتظار يستحق الأمر إطفاء المحرك."
+    },
+    {
+     "de": "Zum Beispiel an einer geschlossenen Bahnschranke oder im Stau.",
+     "tr": "مثلًا عند حاجز سكة حديدية مغلق أو في الازدحام."
+    },
+    {
+     "de": "Die Start-Stopp-Automatik macht das an der Ampel von selbst.",
+     "tr": "نظام التشغيل والإيقاف التلقائي يفعل ذلك وحده عند الإشارة."
+    }
+   ]
+  },
+  {
+   "title": "الإطارات والحمولة والمكيّف",
+   "lines": [
+    {
+     "de": "Wenig Luft in den Reifen erhöht den Verbrauch. Prüfen Sie den Reifendruck.",
+     "tr": "قلة الهواء في الإطارات تزيد الاستهلاك. افحص ضغط الإطارات."
+    },
+    {
+     "de": "Ein leerer Dachträger kostet viel Kraftstoff. Nehmen Sie ihn ab.",
+     "tr": "حامل السقف الفارغ يستهلك وقودًا كثيرًا. انزعه.",
+     "o": {
+      "ab": "ab>abnehmen",
+      "nehmen": "nehmen>abnehmen"
+     }
+    },
+    {
+     "de": "Nehmen Sie kein schweres Gepäck mit, das Sie nicht brauchen.",
+     "tr": "لا تحمل معك أمتعة ثقيلة لا تحتاج إليها.",
+     "o": {
+      "mit": "mit>mitnehmen",
+      "nehmen": "nehmen>mitnehmen"
+     }
+    },
+    {
+     "de": "Die Klimaanlage braucht Energie. Nutzen Sie sie nur, wenn es nötig ist.",
+     "tr": "المكيّف يستهلك طاقة. استخدمه فقط عند الحاجة."
+    }
+   ]
+  },
+  {
+   "title": "المنطقة البيئية",
+   "lines": [
+    {
+     "de": "In eine Umweltzone dürfen Sie nur mit einer grünen Plakette fahren.",
+     "tr": "لا يجوز لك دخول المنطقة البيئية إلا بملصق أخضر.",
+     "sign": "z2701"
+    },
+    {
+     "de": "Die Plakette klebt innen an der Windschutzscheibe.",
+     "tr": "يُلصق الملصق من الداخل على الزجاج الأمامي."
+    },
+    {
+     "de": "Wer ohne Plakette in die Umweltzone fährt, zahlt 100 Euro.",
+     "tr": "من يدخل المنطقة البيئية دون ملصق يدفع 100 يورو."
+    },
+    {
+     "de": "Hier endet die Umweltzone.",
+     "tr": "هنا تنتهي المنطقة البيئية.",
+     "sign": "z2702"
+    }
+   ]
+  },
+  {
+   "title": "الضجيج",
+   "lines": [
+    {
+     "de": "Unnötiger Lärm ist verboten, zum Beispiel lautes Türenschlagen oder Hupen ohne Grund.",
+     "tr": "الضجيج غير الضروري ممنوع، مثل صفق الأبواب بقوة أو استخدام البوق بلا سبب."
+    },
+    {
+     "de": "Kurze Wege schaffen Sie oft auch mit dem Fahrrad.",
+     "tr": "المسافات القصيرة يمكنك غالبًا قطعها بالدراجة أيضًا."
+    }
+   ]
+  }
+ ],
+ "quiz": [
+  {
+   "sign": "z2701",
+   "wrong": [
+    "z2702",
+    "z267"
+   ]
+  },
+  {
+   "sign": "z2702",
+   "wrong": [
+    "z2701",
+    "z282"
+   ]
+  }
+ ],
+ "quizQuestion": {
+  "de": "Was bedeutet dieses Schild?",
+  "tr": "ماذا تعني هذه اللافتة؟"
+ },
+ "signs": {
+  "z267": {
+   "de": "Verbot der Einfahrt",
+   "tr": "ممنوع الدخول",
+   "src": "data/fahrschule/signs/z267.svg",
+   "n": "267",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_267_-_Verbot_der_Einfahrt,_StVO_1970.svg"
+  },
+  "z2701": {
+   "de": "Umweltzone",
+   "tr": "منطقة بيئية",
+   "src": "data/fahrschule/signs/z2701.svg",
+   "n": "270.1",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_270.1_-_Beginn_eines_Verkehrsverbots_zur_Verminderung_sch%C3%A4dlicher_Luftverunreinigungen_in_einer_Zone._I,_StVO_2007.svg"
+  },
+  "z2702": {
+   "de": "Ende der Umweltzone",
+   "tr": "نهاية المنطقة البيئية",
+   "src": "data/fahrschule/signs/z2702.svg",
+   "n": "270.2",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_270.2_-_Ende_eines_Verkehrsverbots_zur_Verminderung_sch%C3%A4dlicher_Luftverunreinigungen_in_einer_Zone,_StVO_2007.svg"
+  },
+  "z282": {
+   "de": "Ende sämtlicher Streckenverbote",
+   "tr": "نهاية جميع القيود",
+   "src": "data/fahrschule/signs/z282.svg",
+   "n": "282",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_282_-_Ende_s%C3%A4mtlicher_Streckenverbote,_StVO_1970.svg"
+  }
+ },
+ "gloss": {
+  "w": {
+   "ab": "ab",
+   "ab>abnehmen": "abnehmen",
+   "als": "als",
+   "ampel": "Ampel",
+   "an": "an",
+   "auch": "auch",
+   "ausrollen": "ausrollen",
+   "auszuschalten": "ausschalten",
+   "auto": "Auto",
+   "bahnschranke": "Bahnschranke",
+   "bedeutet": "bedeuten",
+   "bei": "bei",
+   "beispiel": "Beispiel",
+   "brauchen": "brauchen",
+   "braucht": "brauchen",
+   "bremst": "bremsen",
+   "dachträger": "Dachträger",
+   "das": "der/die/das",
+   "dem": "der/die/das",
+   "den": "der/die/das",
+   "der": "der/die/das",
+   "die": "der/die/das",
+   "dieses": "dieser",
+   "drehzahl": "Drehzahl",
+   "dürfen": "dürfen",
+   "ein": "ein/eine",
+   "eine": "ein/eine",
+   "einer": "ein/eine",
+   "einfach": "einfach",
+   "einfahrt": "Einfahrt",
+   "ende": "Ende",
+   "endet": "enden",
+   "energie": "Energie",
+   "erhöht": "erhöhen",
+   "es": "es",
+   "etwa": "etwa",
+   "euro": "Euro",
+   "fahren": "fahren",
+   "fahrrad": "Fahrrad",
+   "früh": "früh",
+   "fährt": "fahren",
+   "gang": "Gang",
+   "gepäck": "Gepäck",
+   "geschlossenen": "geschlossen",
+   "grund": "Grund",
+   "grünen": "grün",
+   "hier": "hier",
+   "hoch>hochschalten": "hochschalten",
+   "hupen": "hupen",
+   "höchsten": "hoch",
+   "ihn": "er",
+   "im": "in",
+   "in": "in",
+   "innen": "innen",
+   "ist": "sein",
+   "kein": "kein",
+   "klebt": "kleben",
+   "klimaanlage": "Klimaanlage",
+   "km/h": "km/h",
+   "kostet": "kosten",
+   "kraftstoff": "Kraftstoff",
+   "kurze": "kurz",
+   "lassen": "lassen",
+   "lautes": "laut",
+   "leerer": "leer",
+   "lohnt": "lohnen",
+   "luft": "Luft",
+   "lärm": "Lärm",
+   "macht": "machen",
+   "mehr": "mehr",
+   "minute": "Minute",
+   "mit": "mit",
+   "mit>mitnehmen": "mitnehmen",
+   "motor": "Motor",
+   "möglichen": "möglich",
+   "nehmen>abnehmen": "abnehmen",
+   "nehmen>mitnehmen": "mitnehmen",
+   "nicht": "nicht",
+   "niedriger": "niedrig",
+   "nur": "nur",
+   "nutzen": "nutzen",
+   "nötig": "nötig",
+   "oder": "oder",
+   "oft": "oft",
+   "ohne": "ohne",
+   "plakette": "Plakette",
+   "pro": "pro",
+   "prüfen": "prüfen",
+   "reifen": "Reifen",
+   "reifendruck": "Reifendruck",
+   "roten": "rot",
+   "schaffen": "schaffen",
+   "schalten>hochschalten": "hochschalten",
+   "schild": "Schild",
+   "schweres": "schwer",
+   "sekunden": "Sekunde",
+   "selbst": "selbst",
+   "sich": "sich",
+   "sie": "Sie",
+   "sogar": "sogar",
+   "sparsam": "sparsam",
+   "spart": "sparen",
+   "stand": "Stand",
+   "start-stopp-automatik": "Start-Stopp-Automatik",
+   "stau": "Stau",
+   "streckenverbote": "Streckenverbot",
+   "sämtlicher": "sämtlich",
+   "türenschlagen": "Türenschlagen",
+   "umdrehungen": "Umdrehung",
+   "umweltbewusst": "umweltbewusst",
+   "umweltzone": "Umweltzone",
+   "und": "und",
+   "unnötiger": "unnötig",
+   "verbot": "Verbot",
+   "verboten": "verbieten",
+   "verbrauch": "Verbrauch",
+   "viel": "viel",
+   "von": "von",
+   "vor": "vor",
+   "vorausschauend": "vorausschauend",
+   "warmlaufen": "warmlaufen",
+   "wartezeit": "Wartezeit",
+   "was": "was",
+   "wege": "Weg",
+   "wenig": "wenig",
+   "weniger": "wenig",
+   "wenn": "wenn",
+   "wer": "wer",
+   "windschutzscheibe": "Windschutzscheibe",
+   "zahlt": "zahlen",
+   "zum": "zu"
+  },
+  "l": {
+   "Ampel": {
+    "ru": "إشارة ضوئية",
+    "pos": "اسم",
+    "decl": "die Ampel · الجمع: die Ampeln"
+   },
+   "Auto": {
+    "ru": "سيارة",
+    "pos": "اسم",
+    "decl": "das Auto · الجمع: die Autos"
+   },
+   "Bahnschranke": {
+    "ru": "حاجز السكة الحديدية",
+    "pos": "اسم",
+    "decl": "die Bahnschranke · الجمع: die Bahnschranken"
+   },
+   "Beispiel": {
+    "ru": "مثال",
+    "pos": "اسم",
+    "note": "zum Beispiel — مثلًا",
+    "decl": "das Beispiel · الجمع: die Beispiele"
+   },
+   "Dachträger": {
+    "ru": "حامل السقف",
+    "pos": "اسم",
+    "decl": "der Dachträger · الجمع: die Dachträger"
+   },
+   "Drehzahl": {
+    "ru": "عدد الدورات",
+    "pos": "اسم",
+    "decl": "die Drehzahl · الجمع: die Drehzahlen"
+   },
+   "Einfahrt": {
+    "ru": "مدخل",
+    "pos": "اسم",
+    "decl": "die Einfahrt · الجمع: die Einfahrten"
+   },
+   "Ende": {
+    "ru": "نهاية",
+    "pos": "اسم",
+    "decl": "das Ende · الجمع: die Enden"
+   },
+   "Energie": {
+    "ru": "طاقة",
+    "pos": "اسم",
+    "decl": "die Energie · الجمع: die Energien"
+   },
+   "Euro": {
+    "ru": "يورو",
+    "pos": "اسم",
+    "decl": "der Euro · الجمع: die Euro"
+   },
+   "Fahrrad": {
+    "ru": "دراجة هوائية",
+    "pos": "اسم",
+    "decl": "das Fahrrad · الجمع: die Fahrräder"
+   },
+   "Gang": {
+    "ru": "غيار، سرعة (ناقل الحركة)",
+    "pos": "اسم",
+    "decl": "der Gang · الجمع: die Gänge"
+   },
+   "Gepäck": {
+    "ru": "أمتعة",
+    "pos": "اسم",
+    "decl": "das Gepäck · لا جمع له"
+   },
+   "Grund": {
+    "ru": "سبب",
+    "pos": "اسم",
+    "decl": "der Grund · الجمع: die Gründe"
+   },
+   "Klimaanlage": {
+    "ru": "مكيّف الهواء",
+    "pos": "اسم",
+    "decl": "die Klimaanlage · الجمع: die Klimaanlagen"
+   },
+   "Kraftstoff": {
+    "ru": "وقود",
+    "pos": "اسم",
+    "decl": "der Kraftstoff · الجمع: die Kraftstoffe"
+   },
+   "Luft": {
+    "ru": "هواء",
+    "pos": "اسم",
+    "decl": "die Luft · لا جمع له"
+   },
+   "Lärm": {
+    "ru": "ضجيج",
+    "pos": "اسم",
+    "decl": "der Lärm · لا جمع له"
+   },
+   "Minute": {
+    "ru": "دقيقة",
+    "pos": "اسم",
+    "decl": "die Minute · الجمع: die Minuten"
+   },
+   "Motor": {
+    "ru": "محرك",
+    "pos": "اسم",
+    "decl": "der Motor · الجمع: die Motoren"
+   },
+   "Plakette": {
+    "ru": "ملصق (الفحص الفني)",
+    "pos": "اسم",
+    "decl": "die Plakette · الجمع: die Plaketten"
+   },
+   "Reifen": {
+    "ru": "إطار",
+    "pos": "اسم",
+    "decl": "der Reifen · الجمع: die Reifen"
+   },
+   "Reifendruck": {
+    "ru": "ضغط الإطارات",
+    "pos": "اسم",
+    "decl": "der Reifendruck · لا جمع له"
+   },
+   "Schild": {
+    "ru": "لافتة",
+    "pos": "اسم",
+    "decl": "das Schild · الجمع: die Schilder"
+   },
+   "Sekunde": {
+    "ru": "ثانية",
+    "pos": "اسم",
+    "decl": "die Sekunde · الجمع: die Sekunden"
+   },
+   "Sie": {
+    "ru": "حضرتك (صيغة الاحترام)",
+    "pos": "ضمير",
+    "note": "Ihnen — لكم (حالة الجر): vor Ihnen — أمامك"
+   },
+   "Stand": {
+    "ru": "وقوف، ثبات",
+    "pos": "اسم",
+    "note": "im Stand — في مكانه دون حركة",
+    "decl": "der Stand · لا جمع له"
+   },
+   "Start-Stopp-Automatik": {
+    "ru": "نظام التشغيل والإيقاف التلقائي",
+    "pos": "اسم",
+    "note": "يطفئ المحرك عند التوقف ويشغّله من جديد",
+    "decl": "die Start-Stopp-Automatik · لا جمع له"
+   },
+   "Stau": {
+    "ru": "ازدحام مروري",
+    "pos": "اسم",
+    "decl": "der Stau · الجمع: die Staus"
+   },
+   "Streckenverbot": {
+    "ru": "منع على مقطع الطريق",
+    "pos": "اسم",
+    "decl": "das Streckenverbot · الجمع: die Streckenverbote"
+   },
+   "Türenschlagen": {
+    "ru": "صفق الأبواب",
+    "pos": "اسم",
+    "decl": "das Türenschlagen · لا جمع له"
+   },
+   "Umdrehung": {
+    "ru": "دورة (المحرك)",
+    "pos": "اسم",
+    "note": "Umdrehungen pro Minute — دورة في الدقيقة",
+    "decl": "die Umdrehung · الجمع: die Umdrehungen"
+   },
+   "Umweltzone": {
+    "ru": "منطقة بيئية",
+    "pos": "اسم",
+    "note": "الدخول بالملصق الأخضر فقط (Plakette)",
+    "decl": "die Umweltzone · الجمع: die Umweltzonen"
+   },
+   "Verbot": {
+    "ru": "منع",
+    "pos": "اسم",
+    "decl": "das Verbot · الجمع: die Verbote"
+   },
+   "Verbrauch": {
+    "ru": "استهلاك (الوقود)",
+    "pos": "اسم",
+    "decl": "der Verbrauch · لا جمع له"
+   },
+   "Wartezeit": {
+    "ru": "مدة الانتظار",
+    "pos": "اسم",
+    "decl": "die Wartezeit · الجمع: die Wartezeiten"
+   },
+   "Weg": {
+    "ru": "طريق",
+    "pos": "اسم",
+    "decl": "der Weg · الجمع: die Wege"
+   },
+   "Windschutzscheibe": {
+    "ru": "الزجاج الأمامي",
+    "pos": "اسم",
+    "decl": "die Windschutzscheibe · الجمع: die Windschutzscheiben"
+   },
+   "ab": {
+    "ru": "ابتداءً من",
+    "pos": "حرف جر",
+    "note": "ab hier — من هنا"
+   },
+   "abnehmen": {
+    "ru": "ينزع",
+    "pos": "فعل",
+    "note": "سابقة منفصلة: nehmen Sie … ab",
+    "forms": "nahm ab · hat abgenommen"
+   },
+   "als": {
+    "ru": "من (في المقارنة)؛ كـ",
+    "pos": "أداة ربط"
+   },
+   "an": {
+    "ru": "عند، على",
+    "pos": "حرف جر",
+    "note": "am = an dem؛ an der Kreuzung — عند التقاطع"
+   },
+   "auch": {
+    "ru": "أيضًا؛ حتى (auch wenn)",
+    "pos": "ظرف"
+   },
+   "ausrollen": {
+    "ru": "ينساب دون ضغط على الوقود",
+    "pos": "فعل",
+    "forms": "rollte aus · ist ausgerollt"
+   },
+   "ausschalten": {
+    "ru": "يطفئ",
+    "pos": "فعل",
+    "note": "سابقة منفصلة: schalten … aus",
+    "forms": "schaltete aus · hat ausgeschaltet"
+   },
+   "bedeuten": {
+    "ru": "يعني",
+    "pos": "فعل",
+    "forms": "bedeutete · hat bedeutet"
+   },
+   "bei": {
+    "ru": "عند",
+    "pos": "حرف جر",
+    "note": "beim = bei dem: beim Fahren — أثناء القيادة؛ bei Rot — عند الأحمر"
+   },
+   "brauchen": {
+    "ru": "يحتاج",
+    "pos": "فعل",
+    "forms": "brauchte · hat gebraucht"
+   },
+   "bremsen": {
+    "ru": "يكبح، يفرمل",
+    "pos": "فعل",
+    "forms": "bremste · hat gebremst"
+   },
+   "der/die/das": {
+    "ru": "أداة التعريف",
+    "pos": "أداة تعريف",
+    "note": "der للمذكر، die للمؤنث والجمع، das للمحايد؛ den للمذكر في حالة النصب، dem للمذكر والمحايد في حالة الجر؛ وdas تعني أيضًا «هذا»"
+   },
+   "dieser": {
+    "ru": "هذا، هذه",
+    "pos": "ضمير"
+   },
+   "dürfen": {
+    "ru": "يحق له، يُسمح له",
+    "pos": "فعل",
+    "forms": "durfte · hat gedurft"
+   },
+   "ein/eine": {
+    "ru": "أداة النكرة؛ واحد",
+    "pos": "أداة تعريف",
+    "note": "an einer Kreuzung — عند تقاطعٍ ما"
+   },
+   "einfach": {
+    "ru": "بسيط؛ ببساطة",
+    "pos": "صفة",
+    "forms": "einfach · einfacher · am einfachsten"
+   },
+   "enden": {
+    "ru": "ينتهي",
+    "pos": "فعل",
+    "forms": "endete · hat geendet"
+   },
+   "er": {
+    "ru": "هو",
+    "pos": "ضمير",
+    "note": "ihn — ـه (مفعول)؛ هنا عن الشاحنة أو الإسعاف"
+   },
+   "erhöhen": {
+    "ru": "يرفع، يزيد",
+    "pos": "فعل",
+    "forms": "erhöhte · hat erhöht"
+   },
+   "es": {
+    "ru": "هو، هي (لغير العاقل)",
+    "pos": "ضمير",
+    "note": "هنا: السيارة (das Auto)"
+   },
+   "etwa": {
+    "ru": "تقريبًا، نحو",
+    "pos": "ظرف"
+   },
+   "fahren": {
+    "ru": "يسير بالسيارة؛ يقود",
+    "pos": "فعل",
+    "forms": "fuhr · ist gefahren"
+   },
+   "früh": {
+    "ru": "مبكر؛ مبكرًا",
+    "pos": "صفة",
+    "note": "früher — أبكر"
+   },
+   "geschlossen": {
+    "ru": "مغلق",
+    "pos": "صفة"
+   },
+   "grün": {
+    "ru": "أخضر",
+    "pos": "صفة",
+    "note": "Grün (بحرف كبير) — الإشارة الخضراء: bei Grün — عند الأخضر"
+   },
+   "hier": {
+    "ru": "هنا",
+    "pos": "ظرف"
+   },
+   "hoch": {
+    "ru": "عالٍ",
+    "pos": "صفة"
+   },
+   "hochschalten": {
+    "ru": "يبدّل إلى غيار أعلى",
+    "pos": "فعل",
+    "note": "سابقة منفصلة: schalten Sie … hoch",
+    "forms": "schaltete hoch · hat hochgeschaltet"
+   },
+   "hupen": {
+    "ru": "يستخدم البوق",
+    "pos": "فعل",
+    "forms": "hupte · hat gehupt"
+   },
+   "in": {
+    "ru": "في",
+    "pos": "حرف جر",
+    "note": "im = in dem: im Bereich — في المنطقة"
+   },
+   "innen": {
+    "ru": "من الداخل",
+    "pos": "ظرف"
+   },
+   "kein": {
+    "ru": "لا (نفي الاسم)",
+    "pos": "ضمير"
+   },
+   "kleben": {
+    "ru": "يُلصق",
+    "pos": "فعل",
+    "forms": "klebte · hat geklebt"
+   },
+   "km/h": {
+    "ru": "كم/س",
+    "pos": "تعبير",
+    "note": "تُقرأ: Kilometer pro Stunde"
+   },
+   "kosten": {
+    "ru": "يكلّف",
+    "pos": "فعل",
+    "forms": "kostete · hat gekostet"
+   },
+   "kurz": {
+    "ru": "قصير؛ لوقت قصير",
+    "pos": "صفة"
+   },
+   "lassen": {
+    "ru": "يدع، يترك",
+    "pos": "فعل",
+    "note": "jemanden fahren lassen — يدع أحدًا يمرّ أولًا",
+    "forms": "ließ · hat gelassen"
+   },
+   "laut": {
+    "ru": "صاخب، عالٍ",
+    "pos": "صفة"
+   },
+   "leer": {
+    "ru": "خالٍ، فارغ",
+    "pos": "صفة"
+   },
+   "lohnen": {
+    "ru": "يستحق، يجدي",
+    "pos": "فعل",
+    "note": "es lohnt sich — يستحق العناء",
+    "forms": "lohnte · hat gelohnt"
+   },
+   "machen": {
+    "ru": "يفعل",
+    "pos": "فعل",
+    "note": "den Schulterblick machen — يلتفت فوق كتفه؛ Gut gemacht! — أحسنت!",
+    "forms": "machte · hat gemacht"
+   },
+   "mehr": {
+    "ru": "أكثر",
+    "pos": "ظرف",
+    "note": "mehr als — أكثر من"
+   },
+   "mit": {
+    "ru": "مع",
+    "pos": "حرف جر"
+   },
+   "mitnehmen": {
+    "ru": "يأخذ معه",
+    "pos": "فعل",
+    "note": "سابقة منفصلة: nehmen Sie … mit",
+    "forms": "nahm mit · hat mitgenommen"
+   },
+   "möglich": {
+    "ru": "ممكن",
+    "pos": "صفة"
+   },
+   "nicht": {
+    "ru": "لا، ليس",
+    "pos": "أداة"
+   },
+   "niedrig": {
+    "ru": "منخفض",
+    "pos": "صفة"
+   },
+   "nur": {
+    "ru": "فقط",
+    "pos": "ظرف"
+   },
+   "nutzen": {
+    "ru": "يستخدم",
+    "pos": "فعل",
+    "forms": "nutzte · hat genutzt"
+   },
+   "nötig": {
+    "ru": "ضروري، لازم",
+    "pos": "صفة",
+    "note": "wenn nötig — إذا لزم الأمر"
+   },
+   "oder": {
+    "ru": "أو",
+    "pos": "أداة ربط",
+    "note": "…, oder? — …، أليس كذلك؟"
+   },
+   "oft": {
+    "ru": "غالبًا",
+    "pos": "ظرف"
+   },
+   "ohne": {
+    "ru": "بدون",
+    "pos": "حرف جر"
+   },
+   "pro": {
+    "ru": "في، لكلّ",
+    "pos": "حرف جر"
+   },
+   "prüfen": {
+    "ru": "يفحص",
+    "pos": "فعل",
+    "forms": "prüfte · hat geprüft"
+   },
+   "rot": {
+    "ru": "أحمر",
+    "pos": "صفة",
+    "note": "Rot (بحرف كبير) — الإشارة الحمراء: bei Rot — عند الأحمر"
+   },
+   "schaffen": {
+    "ru": "ينجز، يتمكن من",
+    "pos": "فعل",
+    "forms": "schaffte · hat geschafft"
+   },
+   "schwer": {
+    "ru": "ثقيل؛ جسيم",
+    "pos": "صفة",
+    "forms": "schwer · schwerer · am schwersten"
+   },
+   "sein": {
+    "ru": "يكون",
+    "pos": "فعل",
+    "forms": "war · ist gewesen"
+   },
+   "selbst": {
+    "ru": "نفسه",
+    "pos": "ضمير",
+    "note": "mal sich selbst — مضروبًا في نفسه"
+   },
+   "sich": {
+    "ru": "نفسه (ضمير انعكاسي)",
+    "pos": "ضمير"
+   },
+   "sogar": {
+    "ru": "حتى، بل",
+    "pos": "ظرف"
+   },
+   "sparen": {
+    "ru": "يوفّر",
+    "pos": "فعل",
+    "forms": "sparte · hat gespart"
+   },
+   "sparsam": {
+    "ru": "مقتصد؛ باقتصاد",
+    "pos": "صفة"
+   },
+   "sämtlich": {
+    "ru": "جميع",
+    "pos": "صفة"
+   },
+   "umweltbewusst": {
+    "ru": "صديق للبيئة",
+    "pos": "صفة"
+   },
+   "und": {
+    "ru": "و",
+    "pos": "أداة ربط"
+   },
+   "unnötig": {
+    "ru": "غير ضروري",
+    "pos": "صفة"
+   },
+   "verbieten": {
+    "ru": "يمنع",
+    "pos": "فعل",
+    "forms": "verbot · hat verboten"
+   },
+   "viel": {
+    "ru": "كثير؛ بكثير",
+    "pos": "ظرف"
+   },
+   "von": {
+    "ru": "من",
+    "pos": "حرف جر",
+    "note": "vom = von dem؛ von rechts — من اليمين"
+   },
+   "vor": {
+    "ru": "قبل، أمام",
+    "pos": "حرف جر",
+    "note": "rechts vor links — اليمين قبل اليسار"
+   },
+   "vorausschauend": {
+    "ru": "باستباق، ببعد نظر",
+    "pos": "صفة"
+   },
+   "warmlaufen": {
+    "ru": "يسخن (المحرك)",
+    "pos": "فعل",
+    "forms": "lief warm · ist warmgelaufen"
+   },
+   "was": {
+    "ru": "ماذا",
+    "pos": "ضمير"
+   },
+   "wenig": {
+    "ru": "قليل",
+    "pos": "ضمير"
+   },
+   "wenn": {
+    "ru": "إذا؛ عندما",
+    "pos": "أداة ربط",
+    "note": "auch wenn — حتى لو"
+   },
+   "wer": {
+    "ru": "مَن",
+    "pos": "ضمير"
+   },
+   "zahlen": {
+    "ru": "يدفع",
+    "pos": "فعل",
+    "forms": "zahlte · hat gezahlt"
+   },
+   "zu": {
+    "ru": "إلى؛ لـ",
+    "pos": "حرف جر",
+    "note": "zum = zu dem، zur = zu der: Abstand zur Kreuzung — المسافة عن التقاطع"
+   }
+  }
+ }
+}

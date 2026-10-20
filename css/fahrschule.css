@@ -350,3 +350,28 @@ html[dir="rtl"] .fs-tr { text-align: right; }
 .fs-train-car { fill: #d0d6dc; stroke: #e0484f; stroke-width: 2; }
 .fs-mark.is-yellow { stroke: #f2c200; stroke-opacity: 1; stroke-width: 3; }
 @media (prefers-reduced-motion: reduce) { .fs-rail-light { animation: none; } }
+
+/* Экономичная езда: тахометр, выхлоп, экозона (тема 13) */
+.fs-dial { fill: #1d2733; stroke: #8a929e; stroke-width: 2; }
+.fs-tick { stroke: #e9edf1; stroke-width: 2; }
+.fs-tick-n { font: 700 10px 'DM Sans', system-ui, sans-serif; fill: #e9edf1; text-anchor: middle; }
+.fs-hub { fill: #e9edf1; }
+.fs-tacho-unit { fill: var(--text-muted); }
+.fs-needle path { fill: #ff5a3c; }
+.fs-shift-mark { stroke: #2fa866; stroke-width: 4; }
+.fs-lab-text.is-ok { fill: #2fa866; }
+.fs-puffs circle { fill: #7d8794; opacity: 0; }
+.is-exhaust .fs-puffs circle { animation: fs-puff 1.2s ease-out infinite; }
+.is-exhaust .fs-puffs circle:nth-child(2) { animation-delay: .4s; }
+.is-exhaust .fs-puffs circle:nth-child(3) { animation-delay: .8s; }
+@keyframes fs-puff { from { opacity: .8; transform: translateX(0); } to { opacity: 0; transform: translateX(-10px); } }
+.fs-gate rect { fill: #fff; stroke: #e0484f; stroke-width: 2; stroke-dasharray: 5 4; }
+.fs-sticker circle { stroke: #1a1a1a; stroke-width: 1.5; }
+.fs-sticker.is-green circle { fill: #2fa866; }
+.fs-sticker.is-yellow circle { fill: #e8b923; }
+.fs-sticker.is-red circle { fill: #e0484f; }
+.fs-sticker.is-none circle { fill: var(--surface); stroke: var(--text-muted); stroke-dasharray: 3 2; }
+.fs-sticker text { font: 800 13px 'DM Sans', system-ui, sans-serif; fill: #fff; text-anchor: middle; }
+.fs-sticker path { stroke: #e0484f; stroke-width: 2; }
+.fs-pr { font: 800 16px 'DM Sans', system-ui, sans-serif; fill: #2f7fd8; text-anchor: middle; }
+@media (prefers-reduced-motion: reduce) { .is-exhaust .fs-puffs circle { animation: none; opacity: .6; } }

@@ -117,6 +117,14 @@ ok('inside' in str(build.road_answer({'type': 'roundabout', 'ask': 'yield'})), '
 ok(build.road_answer({'type': 'railway', 'signal': 'red'}) == {'answer': 'stop'}, 'переезд: мигает красный — стоять')
 ok(build.road_answer({'type': 'railway', 'signal': 'none'}) == {'answer': 'go'}, 'переезд: сигнала нет — проезжать без остановки')
 ok(build.road_answer({'type': 'yellow'}) == {'answer': 'yellow'}, 'ремонт дороги: жёлтая разметка главнее')
+ok(build.road_answer({'type': 'shift', 'rpm': 2500, 'gear': 2}) == {'answer': 'up', 'limit': 2000}, 'обороты 2500 — переключаться вверх')
+ok(build.road_answer({'type': 'shift', 'rpm': 1500, 'gear': 3})['answer'] == 'stay', 'обороты 1500 — рано переключаться')
+ok('gear' in str(build.road_answer({'type': 'shift', 'rpm': 1500})), 'без передачи — ошибка сцены')
+ok(build.road_answer({'type': 'idle', 'wait': 180, 'where': 'rail'}) == {'answer': 'off', 'limit': 20}, 'шлагбаум 3 минуты — заглушить мотор')
+ok(build.road_answer({'type': 'idle', 'wait': 5, 'where': 'zebra'})['answer'] == 'on', '«зебра» 5 секунд — мотор не глушить')
+ok(build.road_answer({'type': 'umweltzone', 'sticker': 'green'}) == {'answer': 'yes'}, 'экозона: зелёная наклейка — можно')
+ok(build.road_answer({'type': 'umweltzone', 'sticker': 'yellow'})['answer'] == 'no', 'экозона: жёлтая наклейка — нельзя')
+ok(build.road_answer({'type': 'umweltzone', 'sticker': 'none'})['answer'] == 'no', 'экозона: без наклейки — нельзя')
 
 
 # ── 2. Сборка ловит ошибки и ничего не пишет ──

@@ -131,6 +131,17 @@
     "p-12",
     "r-12"
    ]
+  },
+  {
+   "id": "umwelt",
+   "emoji": "🌱",
+   "title": "Umweltbewusst und sparsam fahren",
+   "titleTr": "Экономичная и экологичная езда",
+   "units": [
+    "t-13",
+    "p-13",
+    "r-13"
+   ]
   }
  ],
  "units": [
@@ -456,6 +467,33 @@
    "level": "B1",
    "title": "Im Kreis und an den Gleisen",
    "titleTr": "На кольце и у путей",
+   "count": 6
+  },
+  {
+   "id": "t-13",
+   "kind": "theory",
+   "emoji": "🌱",
+   "level": "B1",
+   "title": "Umweltbewusst und sparsam fahren",
+   "titleTr": "Экономичная и экологичная езда",
+   "count": 19
+  },
+  {
+   "id": "p-13",
+   "kind": "dialog",
+   "emoji": "🍃",
+   "level": "B1",
+   "title": "Sparsam fahren",
+   "titleTr": "Ездить экономно",
+   "count": 15
+  },
+  {
+   "id": "r-13",
+   "kind": "road",
+   "emoji": "🍃",
+   "level": "B1",
+   "title": "Sparsam und sauber",
+   "titleTr": "Экономно и чисто",
    "count": 6
   }
  ]
