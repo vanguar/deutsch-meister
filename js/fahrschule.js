@@ -1226,6 +1226,37 @@ const Fahrschule = (() => {
         dur: 2400, snap: 1, tyre: true
       };
     },
+    // Знак аварийной остановки: человек в жилете несёт знак назад от машины
+    // с аварийкой; масштаб такой, что расстояние всегда ≈ 200 px
+    triangle(sc) {
+      const x0 = 250, x1 = 52;
+      return {
+        actors: [
+          { id: 'crash', kind: 'car', fill: CAR.red.fill, keys: [{ t: 0, x: 300, y: LANE_DOWN, b: 'both' }] },
+          { id: 'me', kind: 'car', fill: CAR.blue.fill, keys: [{ t: 0, x: 268, y: LANE_DOWN, b: 'both' }] },
+          { id: 'tri', kind: 'triangle', keys: [{ t: 0, x: x0 - 6, y: 104 }, { t: 0.72, x: x1 - 6, y: 104 }, { t: 0.82, x: x1 - 6, y: 88 }, { t: 1, x: x1 - 6, y: 88 }] },
+          { id: 'ped', kind: 'ped', keys: [{ t: 0, x: x0, y: 104 }, { t: 0.72, x: x1, y: 104 }, { t: 0.82, x: x1, y: 100 }, { t: 1, x: x1 + 20, y: 104 }] }
+        ],
+        dur: 4200, snap: 1, line: 'dashed', measure: { x1, x2: 240, y: 116, label: sc.answer + ' m' }
+      };
+    },
+    // Rettungsgasse: машины в пробке разъезжаются — левый ряд влево,
+    // остальные вправо, — и по коридору проезжает скорая
+    rescuelane(sc) {
+      const n = sc.lanes;
+      const ys = n === 3 ? [41, 67, 93] : [LANE_UP, LANE_DOWN];
+      const fills = [CAR.green.fill, CAR.yellow.fill, CAR.red.fill, '#8e98a4'];
+      const actors = [];
+      ys.forEach((y, lane) => [76, 158, 240].forEach((x, i) => {
+        const me = lane === sc.lane && i === 1;
+        const dy = lane === 0 ? -9 : 9;
+        actors.push({ id: me ? 'me' : `c${lane}${i}`, kind: 'car', fill: me ? CAR.blue.fill : fills[(lane + i) % 4],
+          keys: [{ t: 0, x: x + lane * 8, y }, { t: 0.32, x: x + lane * 8 + 4, y: y + dy, b: me ? (dy < 0 ? 'l' : 'r') : undefined }, { t: 1, x: x + lane * 8 + 4, y: y + dy }] });
+      }));
+      const gap = (ys[0] + ys[1]) / 2;
+      actors.push({ id: 'amb', kind: 'ambulance', keys: [{ t: 0, x: -40, y: gap }, { t: 0.38, x: -40, y: gap }, { t: 1, x: 370, y: gap }] });
+      return { actors, dur: 4600, snap: 1, line: 'dashed', lanes3: n === 3 };
+    },
     zipper() {
       return {
         actors: [
@@ -1296,6 +1327,15 @@ const Fahrschule = (() => {
       return `<g class="${cls} fs-gauge" data-actor="${a.id}" transform="${tr}">
         <rect x="-14" y="-34" width="28" height="12" rx="3" class="fs-gauge-head"/><rect x="-2" y="-22" width="4" height="22" class="fs-gauge-pin"/></g>`;
     }
+    if (a.kind === 'triangle') {
+      return `<g class="${cls}" data-actor="${a.id}" transform="${tr}"><path class="fs-tri" d="M0 -9 L8 5 H-8 Z"/></g>`;
+    }
+    if (a.kind === 'ambulance') {
+      return `<g class="${cls} fs-amb" data-actor="${a.id}" transform="${tr}">
+        <rect x="-34" y="-10" width="34" height="20" rx="4" class="fs-amb-box"/>
+        <rect x="-22" y="-2" width="10" height="4" class="fs-amb-cross"/><rect x="-19" y="-5" width="4" height="10" class="fs-amb-cross"/>
+        <circle cx="-6" cy="-6" r="2.6" class="fs-amb-blue"/><circle cx="-6" cy="6" r="2.6" class="fs-amb-blue is-b"/></g>`;
+    }
     if (a.kind === 'deer') {
       return `<g class="${cls} fs-deer" data-actor="${a.id}" transform="${tr}"><text x="-11" y="7" class="fs-deer-ico">🦌</text></g>`;
     }
@@ -1349,14 +1389,21 @@ const Fahrschule = (() => {
     const gap = plan.gapLabel ? `<g class="fs-lab${final ? ' is-on' : ''}">
         <path class="fs-bracket" d="M182 60 H192 M187 60 V75 M182 75 H192"/><path class="fs-leader" d="M192 68 H232 V104"/>
         <text class="fs-lab-text" x="232" y="117">${String(sc.answer).replace('.', ',')} m</text></g>` : '';
-    const ground = plan.tyre ? tyreHtml(sc, final) : `<rect class="fs-road" x="0" y="40" width="${ROAD_W}" height="52"/>
+    const ground = plan.tyre ? tyreHtml(sc, final)
+      : plan.lanes3 ? `<rect class="fs-road" x="0" y="28" width="${ROAD_W}" height="78"/>
+        <path class="fs-mark" d="M0 54 H${ROAD_W}"/><path class="fs-mark" d="M0 80 H${ROAD_W}"/>`
+      : `<rect class="fs-road" x="0" y="40" width="${ROAD_W}" height="52"/>
       <path class="fs-mark${solid ? ' is-solid' : ''}" d="M0 66 H${plan.laneEnds ? 222 : ROAD_W}"/>`;
+    // скобка с расстоянием (знак аварийной остановки)
+    const measure = plan.measure ? `<g class="fs-lab${final ? ' is-on' : ''}">
+        <path class="fs-bracket" d="M${plan.measure.x1} ${plan.measure.y - 6} V${plan.measure.y} H${plan.measure.x2} V${plan.measure.y - 6}"/>
+        <text class="fs-lab-text" x="${(plan.measure.x1 + plan.measure.x2) / 2}" y="${plan.measure.y + 12}">${esc(plan.measure.label)}</text></g>` : '';
     return `<svg class="fs-svg fs-road-svg" viewBox="0 0 ${ROAD_W} 130" role="img" aria-label="${esc(sc.type)}">
       <rect class="fs-grass" x="0" y="0" width="${ROAD_W}" height="130"/>
       ${ground}
       ${curb}${rest}${ends}${sign}${park}${night}${plan.fog ? fogPosts(plan.fog) : ''}
       ${plan.actors.map(a => actorHtml(a, keyAt(a.keys, t))).join('')}
-      ${plan.fog ? fogHtml(sc, plan.fog, final) : ''}${gap}${zzz}${badge}
+      ${plan.fog ? fogHtml(sc, plan.fog, final) : ''}${gap}${zzz}${badge}${measure}
     </svg>`;
   }
 

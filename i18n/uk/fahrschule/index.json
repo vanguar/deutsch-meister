@@ -106,7 +106,8 @@
    "titleTr": "Аварія і перша допомога",
    "units": [
     "t-10",
-    "p-10"
+    "p-10",
+    "r-10"
    ]
   }
  ],
@@ -371,6 +372,15 @@
    "title": "Ein kleiner Unfall",
    "titleTr": "Невелика аварія",
    "count": 15
+  },
+  {
+   "id": "r-10",
+   "kind": "road",
+   "emoji": "🔺",
+   "level": "B1",
+   "title": "Warndreieck und Rettungsgasse",
+   "titleTr": "Знак аварійної зупинки й коридор для рятувальників",
+   "count": 6
   }
  ]
 }

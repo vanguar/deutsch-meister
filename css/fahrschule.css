@@ -323,3 +323,11 @@ html[dir="rtl"] .fs-tr { text-align: right; }
 .fs-tread-val { fill: #fff; }
 .fs-gauge-head { fill: #c9ced6; stroke: rgba(0, 0, 0, .35); }
 .fs-gauge-pin { fill: #e8eaee; }
+
+/* Авария: знак аварийной остановки, скорая (тема 10) */
+.fs-tri { fill: #fff; stroke: #e0484f; stroke-width: 2.4; stroke-linejoin: round; }
+.fs-amb-box { fill: #f4f4f4; stroke: rgba(0, 0, 0, .35); stroke-width: 1; }
+.fs-amb-cross { fill: #e0484f; }
+.fs-amb-blue { fill: #2f7fff; animation: fs-blink .5s steps(2, jump-none) infinite; }
+.fs-amb-blue.is-b { animation-delay: .25s; }
+@media (prefers-reduced-motion: reduce) { .fs-amb-blue { animation: none; } }

@@ -1,0 +1,732 @@
+{
+ "id": "r-10",
+ "kind": "road",
+ "emoji": "🔺",
+ "level": "B1",
+ "title": "Warndreieck und Rettungsgasse",
+ "titleTr": "Знак аварийной остановки и коридор для спасателей",
+ "intro": "Как далеко ставить знак аварийной остановки в городе, за городом и на автобане — и в какую сторону уходить, когда в пробке нужен коридор для скорой.",
+ "scenes": [
+  {
+   "type": "triangle",
+   "options": [
+    15,
+    50,
+    150
+   ],
+   "situation": {
+    "de": "Unfall in der Stadt: Niemand ist verletzt. Sie sichern die Unfallstelle.",
+    "tr": "Авария в городе: никто не пострадал. Вы обезопасиваете место аварии."
+   },
+   "question": {
+    "de": "Wie weit hinter der Unfallstelle stellen Sie das Warndreieck auf?",
+    "tr": "На каком расстоянии позади места аварии вы ставите знак аварийной остановки?",
+    "o": {
+     "auf": "auf>aufstellen",
+     "stellen": "stellen>aufstellen"
+    }
+   },
+   "explain": [
+    {
+     "de": "Innerorts stellen Sie das Warndreieck etwa 50 Meter hinter die Unfallstelle.",
+     "tr": "В населённом пункте знак ставят примерно в 50 метрах позади места аварии."
+    },
+    {
+     "de": "Gehen Sie am Rand und tragen Sie die Warnweste.",
+     "tr": "Идите по краю дороги и будьте в жилете."
+    }
+   ],
+   "answer": 50,
+   "where": "innerorts",
+   "sign": "z310"
+  },
+  {
+   "type": "triangle",
+   "options": [
+    50,
+    100,
+    250
+   ],
+   "situation": {
+    "de": "Unfall auf der Landstraße hinter einer Kurve. Sie sichern die Unfallstelle.",
+    "tr": "Авария на загородной дороге за поворотом. Вы обезопасиваете место аварии."
+   },
+   "question": {
+    "de": "Wie weit hinter der Unfallstelle stellen Sie das Warndreieck auf?",
+    "tr": "На каком расстоянии позади места аварии вы ставите знак аварийной остановки?",
+    "o": {
+     "auf": "auf>aufstellen",
+     "stellen": "stellen>aufstellen"
+    }
+   },
+   "explain": [
+    {
+     "de": "Auf der Landstraße stellen Sie das Warndreieck etwa 100 Meter hinter die Unfallstelle.",
+     "tr": "На загородной дороге знак ставят примерно в 100 метрах позади места аварии."
+    },
+    {
+     "de": "Vor einer Kurve stellen Sie es so auf, dass andere es früh sehen.",
+     "tr": "Перед поворотом ставьте его так, чтобы другие увидели его заранее.",
+     "o": {
+      "auf": "auf>aufstellen",
+      "stellen": "stellen>aufstellen"
+     }
+    }
+   ],
+   "answer": 100,
+   "where": "landstrasse"
+  },
+  {
+   "type": "triangle",
+   "options": [
+    50,
+    100,
+    150
+   ],
+   "situation": {
+    "de": "Panne auf der Autobahn: Ihr Auto steht auf dem Seitenstreifen.",
+    "tr": "Поломка на автобане: ваша машина стоит на обочине."
+   },
+   "question": {
+    "de": "Wie weit hinter der Unfallstelle stellen Sie das Warndreieck auf?",
+    "tr": "На каком расстоянии позади места аварии вы ставите знак аварийной остановки?",
+    "o": {
+     "auf": "auf>aufstellen",
+     "stellen": "stellen>aufstellen"
+    }
+   },
+   "explain": [
+    {
+     "de": "Auf der Autobahn sind es mindestens 150 Meter, besser 200 Meter.",
+     "tr": "На автобане — минимум 150 метров, лучше 200 метров."
+    },
+    {
+     "de": "Danach warten Sie hinter der Schutzplanke.",
+     "tr": "Потом ждите за отбойником."
+    }
+   ],
+   "answer": 150,
+   "where": "autobahn",
+   "sign": "z3301"
+  },
+  {
+   "type": "rescuelane",
+   "options": [
+    {
+     "key": "left",
+     "de": "Ich fahre etwas nach links.",
+     "tr": "Смещаюсь немного влево."
+    },
+    {
+     "key": "right",
+     "de": "Ich fahre etwas nach rechts.",
+     "tr": "Смещаюсь немного вправо."
+    }
+   ],
+   "situation": {
+    "de": "Stau auf der Autobahn mit zwei Fahrstreifen. Sie fahren rechts. Hinten hören Sie ein Martinshorn.",
+    "tr": "Пробка на автобане с двумя полосами. Вы едете справа. Сзади слышна сирена."
+   },
+   "question": {
+    "de": "In welche Richtung fahren Sie?",
+    "tr": "В какую сторону вы смещаетесь?"
+   },
+   "explain": [
+    {
+     "de": "Die Rettungsgasse ist zwischen dem linken Fahrstreifen und dem Fahrstreifen daneben.",
+     "tr": "Коридор — между крайней левой полосой и полосой рядом с ней."
+    },
+    {
+     "de": "Rechts fahren alle nach rechts.",
+     "tr": "Все справа смещаются вправо."
+    }
+   ],
+   "answer": "right",
+   "lanes": 2,
+   "lane": 1
+  },
+  {
+   "type": "rescuelane",
+   "options": [
+    {
+     "key": "left",
+     "de": "Ich fahre etwas nach links.",
+     "tr": "Смещаюсь немного влево."
+    },
+    {
+     "key": "right",
+     "de": "Ich fahre etwas nach rechts.",
+     "tr": "Смещаюсь немного вправо."
+    }
+   ],
+   "situation": {
+    "de": "Stau auf drei Fahrstreifen. Sie fahren in der Mitte.",
+    "tr": "Пробка на трёх полосах. Вы едете посередине."
+   },
+   "question": {
+    "de": "In welche Richtung fahren Sie?",
+    "tr": "В какую сторону вы смещаетесь?"
+   },
+   "explain": [
+    {
+     "de": "Nur der linke Fahrstreifen fährt nach links. Die Mitte fährt nach rechts.",
+     "tr": "Влево смещается только левая полоса. Средняя — вправо."
+    },
+    {
+     "de": "Bilden Sie die Gasse sofort, nicht erst, wenn Sie das Martinshorn hören.",
+     "tr": "Освобождайте коридор сразу, а не только когда услышите сирену."
+    }
+   ],
+   "answer": "right",
+   "lanes": 3,
+   "lane": 1
+  },
+  {
+   "type": "rescuelane",
+   "options": [
+    {
+     "key": "left",
+     "de": "Ich fahre etwas nach links.",
+     "tr": "Смещаюсь немного влево."
+    },
+    {
+     "key": "right",
+     "de": "Ich fahre etwas nach rechts.",
+     "tr": "Смещаюсь немного вправо."
+    }
+   ],
+   "situation": {
+    "de": "Stau auf drei Fahrstreifen. Sie fahren ganz links.",
+    "tr": "Пробка на трёх полосах. Вы едете в крайней левой."
+   },
+   "question": {
+    "de": "In welche Richtung fahren Sie?",
+    "tr": "В какую сторону вы смещаетесь?"
+   },
+   "explain": [
+    {
+     "de": "Wer ganz links fährt, fährt nach links.",
+     "tr": "Кто едет в крайней левой полосе, смещается влево."
+    },
+    {
+     "de": "Dann haben Rettungswagen und Polizei genug Platz.",
+     "tr": "Тогда скорой и полиции хватит места."
+    }
+   ],
+   "answer": "left",
+   "lanes": 3,
+   "lane": 0
+  }
+ ],
+ "signs": {},
+ "gloss": {
+  "w": {
+   "alle": "alle",
+   "am": "an",
+   "andere": "andere",
+   "auf": "auf",
+   "auf>aufstellen": "aufstellen",
+   "auto": "Auto",
+   "autobahn": "Autobahn",
+   "besser": "gut",
+   "bilden": "bilden",
+   "danach": "danach",
+   "daneben": "daneben",
+   "dann": "dann",
+   "das": "der/die/das",
+   "dass": "dass",
+   "dem": "der/die/das",
+   "der": "der/die/das",
+   "die": "der/die/das",
+   "drei": "drei",
+   "ein": "ein/eine",
+   "einer": "ein/eine",
+   "erst": "erst",
+   "es": "es",
+   "etwa": "etwa",
+   "fahren": "fahren",
+   "fahrstreifen": "Fahrstreifen",
+   "früh": "früh",
+   "fährt": "fahren",
+   "ganz": "ganz",
+   "gasse": "Gasse",
+   "gehen": "gehen",
+   "genug": "genug",
+   "haben": "haben",
+   "hinten": "hinten",
+   "hinter": "hinter",
+   "hören": "hören",
+   "ihr": "Ihr",
+   "in": "in",
+   "innerorts": "innerorts",
+   "ist": "sein",
+   "kurve": "Kurve",
+   "landstraße": "Landstraße",
+   "linke": "link",
+   "linken": "link",
+   "links": "links",
+   "martinshorn": "Martinshorn",
+   "meter": "Meter",
+   "mindestens": "mindestens",
+   "mit": "mit",
+   "mitte": "Mitte",
+   "nach": "nach",
+   "nicht": "nicht",
+   "niemand": "niemand",
+   "nur": "nur",
+   "panne": "Panne",
+   "platz": "Platz",
+   "polizei": "Polizei",
+   "rand": "Rand",
+   "rechts": "rechts",
+   "rettungsgasse": "Rettungsgasse",
+   "rettungswagen": "Rettungswagen",
+   "richtung": "Richtung",
+   "schutzplanke": "Schutzplanke",
+   "sehen": "sehen",
+   "seitenstreifen": "Seitenstreifen",
+   "sichern": "sichern",
+   "sie": "Sie",
+   "sind": "sein",
+   "so": "so",
+   "sofort": "sofort",
+   "stadt": "Stadt",
+   "stau": "Stau",
+   "steht": "stehen",
+   "stellen": "Stelle",
+   "stellen>aufstellen": "aufstellen",
+   "tragen": "tragen",
+   "und": "und",
+   "unfall": "Unfall",
+   "unfallstelle": "Unfallstelle",
+   "verletzt": "verletzt",
+   "vor": "vor",
+   "warndreieck": "Warndreieck",
+   "warnweste": "Warnweste",
+   "warten": "warten",
+   "weit": "weit",
+   "welche": "welcher",
+   "wenn": "wenn",
+   "wer": "wer",
+   "wie": "wie",
+   "zwei": "zwei",
+   "zwischen": "zwischen"
+  },
+  "l": {
+   "Auto": {
+    "ru": "машина, автомобиль",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Autos"
+   },
+   "Autobahn": {
+    "ru": "автобан, автомагистраль",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Autobahnen"
+   },
+   "Fahrstreifen": {
+    "ru": "полоса движения",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Fahrstreifen"
+   },
+   "Gasse": {
+    "ru": "проход, коридор; переулок",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Gassen"
+   },
+   "Ihr": {
+    "ru": "ваш (вежливо)",
+    "pos": "мест."
+   },
+   "Kurve": {
+    "ru": "поворот, изгиб дороги",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Kurven"
+   },
+   "Landstraße": {
+    "ru": "загородная дорога",
+    "pos": "сущ.",
+    "note": "вне населённого пункта: для легковых обычно до 100 км/ч",
+    "art": "die",
+    "pl": "die Landstraßen"
+   },
+   "Martinshorn": {
+    "ru": "сирена (спецмашины)",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": null
+   },
+   "Meter": {
+    "ru": "метр",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Meter"
+   },
+   "Mitte": {
+    "ru": "середина",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": null
+   },
+   "Panne": {
+    "ru": "поломка (машины)",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Pannen"
+   },
+   "Platz": {
+    "ru": "место; площадь",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Plätze"
+   },
+   "Polizei": {
+    "ru": "полиция",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": null
+   },
+   "Rand": {
+    "ru": "край, кайма",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Ränder"
+   },
+   "Rettungsgasse": {
+    "ru": "коридор для экстренных служб",
+    "pos": "сущ.",
+    "note": "левая полоса — влево, все остальные — вправо; образовать сразу, как только движение встало",
+    "art": "die",
+    "pl": "die Rettungsgassen"
+   },
+   "Rettungswagen": {
+    "ru": "машина скорой помощи",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Rettungswagen"
+   },
+   "Richtung": {
+    "ru": "направление",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Richtungen"
+   },
+   "Schutzplanke": {
+    "ru": "отбойник",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Schutzplanken"
+   },
+   "Seitenstreifen": {
+    "ru": "обочина (полоса)",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Seitenstreifen"
+   },
+   "Sie": {
+    "ru": "вы (вежливо)",
+    "pos": "мест.",
+    "note": "Ihnen — вам (дательный): vor Ihnen — перед вами"
+   },
+   "Stadt": {
+    "ru": "город",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Städte"
+   },
+   "Stau": {
+    "ru": "пробка, затор",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Staus"
+   },
+   "Stelle": {
+    "ru": "место, участок",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Stellen"
+   },
+   "Unfall": {
+    "ru": "авария, ДТП",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Unfälle"
+   },
+   "Unfallstelle": {
+    "ru": "место аварии",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Unfallstellen"
+   },
+   "Warndreieck": {
+    "ru": "знак аварийной остановки",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Warndreiecke"
+   },
+   "Warnweste": {
+    "ru": "светоотражающий жилет",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Warnwesten"
+   },
+   "alle": {
+    "ru": "все; всё",
+    "pos": "мест."
+   },
+   "an": {
+    "ru": "у, на, при",
+    "pos": "предл.",
+    "note": "am = an dem; an der Kreuzung — на перекрёстке"
+   },
+   "andere": {
+    "ru": "другой",
+    "pos": "прил."
+   },
+   "auf": {
+    "ru": "на, по",
+    "pos": "предл.",
+    "note": "auf der Straße — на дороге; achten auf — следить за"
+   },
+   "aufstellen": {
+    "ru": "ставить, устанавливать",
+    "pos": "гл.",
+    "note": "отделяемая приставка: stellen … auf",
+    "forms": "stellte auf · hat aufgestellt"
+   },
+   "bilden": {
+    "ru": "образовывать, создавать",
+    "pos": "гл.",
+    "note": "eine Rettungsgasse bilden — освободить коридор для спасателей",
+    "forms": "bildete · hat gebildet"
+   },
+   "danach": {
+    "ru": "после этого, потом",
+    "pos": "нареч."
+   },
+   "daneben": {
+    "ru": "рядом",
+    "pos": "нареч."
+   },
+   "dann": {
+    "ru": "тогда, значит; потом",
+    "pos": "нареч."
+   },
+   "dass": {
+    "ru": "что (союз)",
+    "pos": "союз"
+   },
+   "der/die/das": {
+    "ru": "определённый артикль",
+    "pos": "артикль",
+    "note": "der — м. р., die — ж. р. и мн. ч., das — ср. р.; den — м. р. в винительном, dem — м. и ср. р. в дательном; das ещё значит «это»"
+   },
+   "drei": {
+    "ru": "три",
+    "pos": "числ."
+   },
+   "ein/eine": {
+    "ru": "неопределённый артикль; один",
+    "pos": "артикль",
+    "note": "an einer Kreuzung — на (каком-то) перекрёстке"
+   },
+   "erst": {
+    "ru": "только (не раньше чем)",
+    "pos": "нареч."
+   },
+   "es": {
+    "ru": "оно; это",
+    "pos": "мест.",
+    "note": "здесь — о машине: das Auto"
+   },
+   "etwa": {
+    "ru": "примерно, около",
+    "pos": "нареч."
+   },
+   "fahren": {
+    "ru": "ехать; водить машину",
+    "pos": "гл.",
+    "forms": "fuhr · ist gefahren"
+   },
+   "früh": {
+    "ru": "ранний; рано",
+    "pos": "прил.",
+    "note": "früher — раньше"
+   },
+   "ganz": {
+    "ru": "совсем, вполне",
+    "pos": "нареч."
+   },
+   "gehen": {
+    "ru": "идти (пешком)",
+    "pos": "гл.",
+    "note": "über die Straße gehen — переходить дорогу",
+    "forms": "ging · ist gegangen"
+   },
+   "genug": {
+    "ru": "достаточно",
+    "pos": "нареч."
+   },
+   "gut": {
+    "ru": "хороший; хорошо",
+    "pos": "прил.",
+    "note": "am besten — лучше всего",
+    "forms": "gut · besser · am besten"
+   },
+   "haben": {
+    "ru": "иметь",
+    "pos": "гл.",
+    "note": "Vorfahrt haben — иметь преимущество",
+    "forms": "hatte · hat gehabt"
+   },
+   "hinten": {
+    "ru": "сзади",
+    "pos": "нареч."
+   },
+   "hinter": {
+    "ru": "за, позади",
+    "pos": "предл."
+   },
+   "hören": {
+    "ru": "слышать, слушать",
+    "pos": "гл.",
+    "forms": "hörte · hat gehört"
+   },
+   "in": {
+    "ru": "в",
+    "pos": "предл.",
+    "note": "im = in dem: im Bereich — в зоне"
+   },
+   "innerorts": {
+    "ru": "в населённом пункте",
+    "pos": "нареч.",
+    "note": "здесь обычно не больше 50 км/ч"
+   },
+   "link": {
+    "ru": "левый",
+    "pos": "прил."
+   },
+   "links": {
+    "ru": "слева; налево",
+    "pos": "нареч."
+   },
+   "mindestens": {
+    "ru": "по меньшей мере, не меньше",
+    "pos": "нареч."
+   },
+   "mit": {
+    "ru": "с",
+    "pos": "предл."
+   },
+   "nach": {
+    "ru": "после; в, на (направление)",
+    "pos": "предл."
+   },
+   "nicht": {
+    "ru": "не",
+    "pos": "частица"
+   },
+   "niemand": {
+    "ru": "никто",
+    "pos": "мест."
+   },
+   "nur": {
+    "ru": "только",
+    "pos": "нареч."
+   },
+   "rechts": {
+    "ru": "справа; направо",
+    "pos": "нареч."
+   },
+   "sehen": {
+    "ru": "видеть",
+    "pos": "гл.",
+    "forms": "sah · hat gesehen"
+   },
+   "sein": {
+    "ru": "быть",
+    "pos": "гл.",
+    "forms": "war · ist gewesen"
+   },
+   "sichern": {
+    "ru": "обезопасить, обозначить",
+    "pos": "гл.",
+    "note": "Unfallstelle sichern: аварийка, жилет, знак аварийной остановки",
+    "forms": "sicherte · hat gesichert"
+   },
+   "so": {
+    "ru": "так; вот (так)",
+    "pos": "нареч."
+   },
+   "sofort": {
+    "ru": "сразу, немедленно",
+    "pos": "нареч."
+   },
+   "stehen": {
+    "ru": "стоять",
+    "pos": "гл.",
+    "note": "Schilder stehen — стоят знаки",
+    "forms": "stand · hat gestanden"
+   },
+   "tragen": {
+    "ru": "носить; нести",
+    "pos": "гл.",
+    "forms": "trug · hat getragen"
+   },
+   "und": {
+    "ru": "и",
+    "pos": "союз"
+   },
+   "verletzt": {
+    "ru": "раненый, пострадавший",
+    "pos": "прил."
+   },
+   "vor": {
+    "ru": "перед",
+    "pos": "предл.",
+    "note": "rechts vor links — правый перед левым"
+   },
+   "warten": {
+    "ru": "ждать",
+    "pos": "гл.",
+    "note": "warten auf — ждать (кого-то)",
+    "forms": "wartete · hat gewartet"
+   },
+   "weit": {
+    "ru": "далеко; широкий",
+    "pos": "прил.",
+    "note": "weit genug — достаточно далеко"
+   },
+   "welcher": {
+    "ru": "какой, который",
+    "pos": "мест."
+   },
+   "wenn": {
+    "ru": "если; когда",
+    "pos": "союз",
+    "note": "auch wenn — даже если"
+   },
+   "wer": {
+    "ru": "кто",
+    "pos": "мест."
+   },
+   "wie": {
+    "ru": "как",
+    "pos": "нареч.",
+    "note": "wie schnell — с какой скоростью"
+   },
+   "zwei": {
+    "ru": "два",
+    "pos": "числ."
+   },
+   "zwischen": {
+    "ru": "между",
+    "pos": "предл."
+   }
+  }
+ }
+}

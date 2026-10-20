@@ -106,7 +106,8 @@
    "titleTr": "الحادث والإسعافات الأولية",
    "units": [
     "t-10",
-    "p-10"
+    "p-10",
+    "r-10"
    ]
   }
  ],
@@ -371,6 +372,15 @@
    "title": "Ein kleiner Unfall",
    "titleTr": "حادث صغير",
    "count": 15
+  },
+  {
+   "id": "r-10",
+   "kind": "road",
+   "emoji": "🔺",
+   "level": "B1",
+   "title": "Warndreieck und Rettungsgasse",
+   "titleTr": "مثلث التحذير وممر الإنقاذ",
+   "count": 6
   }
  ]
 }

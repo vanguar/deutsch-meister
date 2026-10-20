@@ -1356,7 +1356,8 @@
    "guten",
    "gute",
    "besten",
-   "guter"
+   "guter",
+   "besser"
   ],
   "forms": "gut · besser · am besten",
   "tr": [
@@ -8361,6 +8362,96 @@
    "in Zukunft — в будущем, впредь",
    "in Zukunft — надалі",
    "in Zukunft — في المستقبل"
+  ]
+ },
+ "daneben": {
+  "pos": "нареч.",
+  "tr": [
+   "рядом",
+   "поруч",
+   "بجانبه"
+  ]
+ },
+ "Fahrstreifen": {
+  "pos": "сущ.",
+  "art": "der",
+  "pl": "die Fahrstreifen",
+  "tr": [
+   "полоса движения",
+   "смуга руху",
+   "مسار"
+  ]
+ },
+ "Martinshorn": {
+  "pos": "сущ.",
+  "art": "das",
+  "pl": null,
+  "tr": [
+   "сирена (спецмашины)",
+   "сирена (спецмашини)",
+   "صفارة الإنذار"
+  ]
+ },
+ "Mitte": {
+  "pos": "сущ.",
+  "art": "die",
+  "pl": null,
+  "tr": [
+   "середина",
+   "середина",
+   "الوسط"
+  ]
+ },
+ "Panne": {
+  "pos": "сущ.",
+  "art": "die",
+  "pl": "die Pannen",
+  "tr": [
+   "поломка (машины)",
+   "поломка (машини)",
+   "عطل"
+  ]
+ },
+ "Rettungswagen": {
+  "pos": "сущ.",
+  "art": "der",
+  "pl": "die Rettungswagen",
+  "tr": [
+   "машина скорой помощи",
+   "машина швидкої допомоги",
+   "سيارة إسعاف"
+  ]
+ },
+ "Richtung": {
+  "pos": "сущ.",
+  "art": "die",
+  "pl": "die Richtungen",
+  "tr": [
+   "направление",
+   "напрямок",
+   "اتجاه"
+  ]
+ },
+ "Seitenstreifen": {
+  "pos": "сущ.",
+  "art": "der",
+  "pl": "die Seitenstreifen",
+  "tr": [
+   "обочина (полоса)",
+   "узбіччя (смуга)",
+   "كتف الطريق"
+  ]
+ },
+ "tragen": {
+  "pos": "гл.",
+  "f": [
+   "trägt"
+  ],
+  "forms": "trug · hat getragen",
+  "tr": [
+   "носить; нести",
+   "носити; нести",
+   "يرتدي؛ يحمل"
   ]
  }
 }

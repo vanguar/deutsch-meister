@@ -75,8 +75,8 @@ PLURAL = {'uk': ('мн.:', 'мн. немає'), 'ar': ('الجمع:', 'لا جم
 KINDS = ('theory', 'dialog', 'junction', 'road')
 PREFIX = {'theory': 't', 'dialog': 'p', 'junction': 'k', 'road': 'r'}   # t-01, p-01, k-01, r-03
 ROAD_TYPES = ('stop', 'gap', 'side', 'overtake', 'zipper', 'parkspot', 'parallel', 'rightturn', 'zebracross', 'bus',
-              'fog', 'highbeam', 'wild', 'promille', 'tired', 'lamp', 'tread')
-NUMERIC_ROAD = ('stop', 'gap', 'side')        # ответ — метры
+              'fog', 'highbeam', 'wild', 'promille', 'tired', 'lamp', 'tread', 'triangle', 'rescuelane')
+NUMERIC_ROAD = ('stop', 'gap', 'side', 'triangle')        # ответ — метры
 HAZARDS = ('ball', 'deer')
 # Боковой интервал при обгоне пешеходов и велосипедистов (§ 5 Abs. 4 StVO, с 2020)
 SIDE_GAP = {'innerorts': 1.5, 'außerorts': 2}
@@ -95,6 +95,9 @@ PROMILLE_SYMPTOMS = 0.3
 REST_HOURS = 2
 # Протектор: не меньше 1,6 мм (§ 36 Abs. 2 StVZO)
 TREAD_MIN = 1.6
+# Знак аварийной остановки позади места аварии, метры (правило автошкол):
+# в городе ~50, на загородной ~100, на автобане 150–200 (берём минимум)
+TRIANGLE = {'innerorts': 50, 'landstrasse': 100, 'autobahn': 150}
 CARS = ('blue', 'red', 'green', 'yellow')
 APPROACH = ('S', 'W', 'N', 'E')
 TURNS = ('straight', 'left', 'right')
@@ -363,6 +366,16 @@ def road_answer(sc):
         if not isinstance(d, (int, float)) or not 0.5 <= d <= 6:
             return f'depth — глубина протектора 0,5–6 мм, а не {d!r}'
         return {'answer': 'ok' if d >= TREAD_MIN else 'no'}
+    if t == 'triangle':
+        if sc.get('where') not in TRIANGLE:
+            return 'where — ' + ', '.join(TRIANGLE)
+        return {'answer': TRIANGLE[sc['where']]}
+    if t == 'rescuelane':
+        # Rettungsgasse (§ 11 Abs. 2 StVO): крайний левый ряд — влево, остальные — вправо
+        n, k = sc.get('lanes'), sc.get('lane')
+        if n not in (2, 3) or not isinstance(k, int) or not 0 <= k < n:
+            return 'lanes — 2 или 3, lane — номер ряда слева (0…lanes-1)'
+        return {'answer': 'left' if k == 0 else 'right'}
     if t == 'wild':
         # животное на дороге: ближний свет, сигнал, тормоз — не уходить в сторону
         return {'answer': 'brake'}
@@ -651,7 +664,7 @@ def main():
                     if sc['type'] == 'stop':
                         scene['hazard'] = sc['hazard']
                         scene['emergency'] = bool(sc.get('emergency'))
-                    for k in ('where', 'line', 'oncoming', 'sign', 'near', 'dist', 'who', 'ped', 'state', 'sight', 'p', 'novice', 'symptoms', 'hours', 'tired', 'color', 'lamp', 'depth'):
+                    for k in ('where', 'line', 'oncoming', 'sign', 'near', 'dist', 'who', 'ped', 'state', 'sight', 'p', 'novice', 'symptoms', 'hours', 'tired', 'color', 'lamp', 'depth', 'lanes', 'lane'):
                         if k in sc:
                             scene[k] = sc[k]
                     out[lang].append(scene)
