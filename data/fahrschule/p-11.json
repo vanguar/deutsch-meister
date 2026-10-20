@@ -1,0 +1,665 @@
+{
+ "id": "p-11",
+ "kind": "dialog",
+ "emoji": "🧭",
+ "level": "B1",
+ "title": "Die Ausfahrt verpasst",
+ "titleTr": "Пропустили съезд",
+ "intro": "Богдан едет по автобану в средней полосе и не успевает перестроиться к своему съезду. Инструктор объясняет, что делать — и чего делать нельзя.",
+ "speakers": {
+  "A": {
+   "name": "Fahrlehrerin",
+   "g": "f"
+  },
+  "B": {
+   "name": "Bohdan",
+   "g": "m"
+  }
+ },
+ "lines": [
+  {
+   "de": "Wir bleiben noch zehn Kilometer auf der Autobahn. Dann nehmen wir die Ausfahrt zum Flughafen.",
+   "tr": "Ещё десять километров едем по автобану. Потом съезжаем в сторону аэропорта.",
+   "s": "A"
+  },
+  {
+   "de": "Gut. Woran erkenne ich die Ausfahrt rechtzeitig?",
+   "tr": "Хорошо. Как мне вовремя узнать съезд?",
+   "s": "B"
+  },
+  {
+   "de": "Zuerst kommt ein großes blaues Schild. Danach sehen Sie die Baken: 300, 200 und 100 Meter.",
+   "tr": "Сначала будет большой синий указатель. Потом вы увидите знаки расстояния: 300, 200 и 100 метров.",
+   "s": "A"
+  },
+  {
+   "de": "Da ist schon das Schild. Aber ich bin noch auf dem mittleren Fahrstreifen.",
+   "tr": "Вот уже указатель. Но я ещё в средней полосе.",
+   "s": "B"
+  },
+  {
+   "de": "Dann blinken Sie rechts, schauen in den Spiegel und über die Schulter.",
+   "tr": "Тогда включите правый поворотник, посмотрите в зеркало и через плечо.",
+   "s": "A"
+  },
+  {
+   "de": "Rechts fährt ein langer Lkw. Ich kann nicht wechseln!",
+   "tr": "Справа едет длинный грузовик. Я не могу перестроиться!",
+   "s": "B"
+  },
+  {
+   "de": "Dann bleiben Sie, wo Sie sind. Keine gefährlichen Manöver!",
+   "tr": "Тогда оставайтесь, где вы есть. Никаких опасных манёвров!",
+   "s": "A"
+  },
+  {
+   "de": "Oh nein, jetzt haben wir die Ausfahrt verpasst! Kann ich kurz auf dem Seitenstreifen zurückfahren?",
+   "tr": "О нет, мы пропустили съезд! Можно я немного проеду назад по обочине?",
+   "s": "B"
+  },
+  {
+   "de": "Auf keinen Fall! Rückwärtsfahren und Wenden sind auf der Autobahn streng verboten.",
+   "tr": "Ни в коем случае! Ехать задним ходом и разворачиваться на автобане строго запрещено.",
+   "s": "A"
+  },
+  {
+   "de": "Und was machen wir jetzt?",
+   "tr": "И что нам теперь делать?",
+   "s": "B"
+  },
+  {
+   "de": "Wir fahren einfach bis zur nächsten Ausfahrt weiter. Das sind nur fünf Kilometer.",
+   "tr": "Просто едем дальше до следующего съезда. Это всего пять километров.",
+   "o": {
+    "fahren": "fahren>weiterfahren",
+    "weiter": "weiter>weiterfahren"
+   },
+   "s": "A"
+  },
+  {
+   "de": "Und dort fahren wir auf der anderen Seite zurück?",
+   "tr": "А там поедем обратно по другой стороне?",
+   "o": {
+    "fahren": "fahren>zurückfahren",
+    "zurück": "zurück>zurückfahren"
+   },
+   "s": "B"
+  },
+  {
+   "de": "Genau. Das kostet ein paar Minuten, aber es ist sicher.",
+   "tr": "Именно. Это займёт несколько минут, зато безопасно.",
+   "s": "A"
+  },
+  {
+   "de": "Nächstes Mal wechsle ich früher auf den rechten Fahrstreifen.",
+   "tr": "В следующий раз перестроюсь в правую полосу раньше.",
+   "s": "B"
+  },
+  {
+   "de": "Richtig. Schon beim ersten Schild sollten Sie rechts fahren.",
+   "tr": "Правильно. Уже у первого указателя лучше ехать справа.",
+   "s": "A"
+  }
+ ],
+ "signs": {},
+ "gloss": {
+  "w": {
+   "aber": "aber",
+   "anderen": "andere",
+   "auf": "auf",
+   "ausfahrt": "Ausfahrt",
+   "autobahn": "Autobahn",
+   "baken": "Bake",
+   "beim": "bei",
+   "bin": "sein",
+   "bis": "bis",
+   "blaues": "blau",
+   "bleiben": "bleiben",
+   "blinken": "blinken",
+   "da": "da",
+   "danach": "danach",
+   "dann": "dann",
+   "das": "der/die/das",
+   "dem": "der/die/das",
+   "den": "der/die/das",
+   "der": "der/die/das",
+   "die": "der/die/das",
+   "dort": "dort",
+   "ein": "ein/eine",
+   "einfach": "einfach",
+   "erkenne": "erkennen",
+   "ersten": "erster",
+   "es": "es",
+   "fahren": "fahren",
+   "fahren>weiterfahren": "weiterfahren",
+   "fahren>zurückfahren": "zurückfahren",
+   "fahrstreifen": "Fahrstreifen",
+   "fall": "Fall",
+   "flughafen": "Flughafen",
+   "früher": "früh",
+   "fährt": "fahren",
+   "fünf": "fünf",
+   "gefährlichen": "gefährlich",
+   "genau": "genau",
+   "großes": "groß",
+   "gut": "gut",
+   "haben": "haben",
+   "ich": "ich",
+   "in": "in",
+   "ist": "sein",
+   "jetzt": "jetzt",
+   "kann": "können",
+   "keine": "kein",
+   "keinen": "kein",
+   "kilometer": "Kilometer",
+   "kommt": "kommen",
+   "kostet": "kosten",
+   "kurz": "kurz",
+   "langer": "lang",
+   "lkw": "Lkw",
+   "machen": "machen",
+   "mal": "mal",
+   "manöver": "Manöver",
+   "meter": "Meter",
+   "minuten": "Minute",
+   "mittleren": "mittler",
+   "nehmen": "nehmen",
+   "nein": "nein",
+   "nicht": "nicht",
+   "noch": "noch",
+   "nur": "nur",
+   "nächsten": "nächste",
+   "nächstes": "nächste",
+   "oh": "oh",
+   "paar": "paar",
+   "rechten": "recht",
+   "rechts": "rechts",
+   "rechtzeitig": "rechtzeitig",
+   "richtig": "richtig",
+   "rückwärtsfahren": "Rückwärtsfahren",
+   "schauen": "schauen",
+   "schild": "Schild",
+   "schon": "schon",
+   "schulter": "Schulter",
+   "sehen": "sehen",
+   "seite": "Seite",
+   "seitenstreifen": "Seitenstreifen",
+   "sicher": "sicher",
+   "sie": "Sie",
+   "sind": "sein",
+   "sollten": "sollen",
+   "spiegel": "Spiegel",
+   "streng": "streng",
+   "und": "und",
+   "verboten": "verbieten",
+   "verpasst": "verpassen",
+   "was": "was",
+   "wechseln": "wechseln",
+   "wechsle": "wechseln",
+   "weiter>weiterfahren": "weiterfahren",
+   "wenden": "wenden",
+   "wir": "wir",
+   "wo": "wo",
+   "woran": "woran",
+   "zehn": "zehn",
+   "zuerst": "zuerst",
+   "zum": "zu",
+   "zur": "zu",
+   "zurück>zurückfahren": "zurückfahren",
+   "zurückfahren": "zurückfahren",
+   "über": "über"
+  },
+  "l": {
+   "Ausfahrt": {
+    "ru": "съезд, выезд (с автобана)",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Ausfahrten"
+   },
+   "Autobahn": {
+    "ru": "автобан, автомагистраль",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Autobahnen"
+   },
+   "Bake": {
+    "ru": "указатель расстояния (полосатый знак)",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Baken"
+   },
+   "Fahrstreifen": {
+    "ru": "полоса движения",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Fahrstreifen"
+   },
+   "Fall": {
+    "ru": "случай",
+    "pos": "сущ.",
+    "note": "auf keinen Fall — ни в коем случае",
+    "art": "der",
+    "pl": "die Fälle"
+   },
+   "Flughafen": {
+    "ru": "аэропорт",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Flughäfen"
+   },
+   "Kilometer": {
+    "ru": "километр",
+    "pos": "сущ.",
+    "note": "Kilometer pro Stunde — километров в час (km/h)",
+    "art": "der",
+    "pl": "die Kilometer"
+   },
+   "Lkw": {
+    "ru": "грузовик",
+    "pos": "сущ.",
+    "note": "сокращение от der Lastkraftwagen",
+    "art": "der",
+    "pl": "die Lkw"
+   },
+   "Manöver": {
+    "ru": "манёвр",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Manöver"
+   },
+   "Meter": {
+    "ru": "метр",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Meter"
+   },
+   "Minute": {
+    "ru": "минута",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Minuten"
+   },
+   "Rückwärtsfahren": {
+    "ru": "езда задним ходом",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": null
+   },
+   "Schild": {
+    "ru": "знак, табличка",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Schilder"
+   },
+   "Schulter": {
+    "ru": "плечо",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Schultern"
+   },
+   "Seite": {
+    "ru": "сторона",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Seiten"
+   },
+   "Seitenstreifen": {
+    "ru": "обочина (полоса)",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Seitenstreifen"
+   },
+   "Sie": {
+    "ru": "вы (вежливо)",
+    "pos": "мест.",
+    "note": "Ihnen — вам (дательный): vor Ihnen — перед вами"
+   },
+   "Spiegel": {
+    "ru": "зеркало",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Spiegel"
+   },
+   "aber": {
+    "ru": "но",
+    "pos": "союз"
+   },
+   "andere": {
+    "ru": "другой",
+    "pos": "прил."
+   },
+   "auf": {
+    "ru": "на, по",
+    "pos": "предл.",
+    "note": "auf der Straße — на дороге; achten auf — следить за"
+   },
+   "bei": {
+    "ru": "при, у; на (о сигнале)",
+    "pos": "предл.",
+    "note": "beim = bei dem: beim Fahren — во время езды; bei Rot — на красный"
+   },
+   "bis": {
+    "ru": "пока не; до",
+    "pos": "союз"
+   },
+   "blau": {
+    "ru": "синий",
+    "pos": "прил."
+   },
+   "bleiben": {
+    "ru": "оставаться",
+    "pos": "гл.",
+    "forms": "blieb · ist geblieben"
+   },
+   "blinken": {
+    "ru": "включать поворотник, мигать",
+    "pos": "гл.",
+    "forms": "blinkte · hat geblinkt"
+   },
+   "da": {
+    "ru": "там, вон; тогда",
+    "pos": "нареч.",
+    "note": "da vorne — вон там впереди"
+   },
+   "danach": {
+    "ru": "после этого, потом",
+    "pos": "нареч."
+   },
+   "dann": {
+    "ru": "тогда, значит; потом",
+    "pos": "нареч."
+   },
+   "der/die/das": {
+    "ru": "определённый артикль",
+    "pos": "артикль",
+    "note": "der — м. р., die — ж. р. и мн. ч., das — ср. р.; den — м. р. в винительном, dem — м. и ср. р. в дательном; das ещё значит «это»"
+   },
+   "dort": {
+    "ru": "там",
+    "pos": "нареч."
+   },
+   "ein/eine": {
+    "ru": "неопределённый артикль; один",
+    "pos": "артикль",
+    "note": "an einer Kreuzung — на (каком-то) перекрёстке"
+   },
+   "einfach": {
+    "ru": "простой; просто",
+    "pos": "прил.",
+    "forms": "einfach · einfacher · am einfachsten"
+   },
+   "erkennen": {
+    "ru": "узнавать, распознавать",
+    "pos": "гл.",
+    "forms": "erkannte · hat erkannt"
+   },
+   "erster": {
+    "ru": "первый",
+    "pos": "прил.",
+    "note": "Erste Hilfe — первая помощь"
+   },
+   "es": {
+    "ru": "оно; это",
+    "pos": "мест.",
+    "note": "здесь — о машине: das Auto"
+   },
+   "fahren": {
+    "ru": "ехать; водить машину",
+    "pos": "гл.",
+    "forms": "fuhr · ist gefahren"
+   },
+   "früh": {
+    "ru": "ранний; рано",
+    "pos": "прил.",
+    "note": "früher — раньше"
+   },
+   "fünf": {
+    "ru": "пять",
+    "pos": "числ."
+   },
+   "gefährlich": {
+    "ru": "опасный",
+    "pos": "прил."
+   },
+   "genau": {
+    "ru": "точно, именно так",
+    "pos": "нареч.",
+    "note": "genau hundert — ровно сто"
+   },
+   "groß": {
+    "ru": "большой",
+    "pos": "прил.",
+    "note": "Wie groß …? — Какой величины …?",
+    "forms": "groß · größer · am größten"
+   },
+   "gut": {
+    "ru": "хороший; хорошо",
+    "pos": "прил.",
+    "note": "am besten — лучше всего",
+    "forms": "gut · besser · am besten"
+   },
+   "haben": {
+    "ru": "иметь",
+    "pos": "гл.",
+    "note": "Vorfahrt haben — иметь преимущество",
+    "forms": "hatte · hat gehabt"
+   },
+   "ich": {
+    "ru": "я",
+    "pos": "мест."
+   },
+   "in": {
+    "ru": "в",
+    "pos": "предл.",
+    "note": "im = in dem: im Bereich — в зоне"
+   },
+   "jetzt": {
+    "ru": "сейчас, теперь",
+    "pos": "нареч."
+   },
+   "kein": {
+    "ru": "никакой; не (отрицание при существительном)",
+    "pos": "мест."
+   },
+   "kommen": {
+    "ru": "приходить; ехать (приближаться)",
+    "pos": "гл.",
+    "note": "von rechts kommen — ехать справа",
+    "forms": "kam · ist gekommen"
+   },
+   "kosten": {
+    "ru": "стоить",
+    "pos": "гл.",
+    "forms": "kostete · hat gekostet"
+   },
+   "kurz": {
+    "ru": "короткий; ненадолго",
+    "pos": "прил."
+   },
+   "können": {
+    "ru": "мочь",
+    "pos": "гл.",
+    "forms": "konnte · hat gekonnt"
+   },
+   "lang": {
+    "ru": "длинный",
+    "pos": "прил.",
+    "note": "Wie lang …? — Какой длины …?",
+    "forms": "lang · länger · am längsten"
+   },
+   "machen": {
+    "ru": "делать",
+    "pos": "гл.",
+    "note": "den Schulterblick machen — оглянуться через плечо; Gut gemacht! — Молодец!",
+    "forms": "machte · hat gemacht"
+   },
+   "mal": {
+    "ru": "умножить на; раз",
+    "pos": "нареч.",
+    "note": "das Mal — раз: bis zum nächsten Mal — до следующего раза"
+   },
+   "mittler": {
+    "ru": "средний",
+    "pos": "прил."
+   },
+   "nehmen": {
+    "ru": "брать",
+    "pos": "гл.",
+    "note": "Rücksicht nehmen auf — быть внимательным к",
+    "forms": "nahm · hat genommen"
+   },
+   "nein": {
+    "ru": "нет",
+    "pos": "частица"
+   },
+   "nicht": {
+    "ru": "не",
+    "pos": "частица"
+   },
+   "noch": {
+    "ru": "ещё",
+    "pos": "нареч.",
+    "note": "noch nicht — ещё нет"
+   },
+   "nur": {
+    "ru": "только",
+    "pos": "нареч."
+   },
+   "nächste": {
+    "ru": "ближайший, следующий",
+    "pos": "прил."
+   },
+   "oh": {
+    "ru": "ох, о",
+    "pos": "межд."
+   },
+   "paar": {
+    "ru": "пара, несколько",
+    "pos": "мест.",
+    "note": "ein paar Minuten — пару минут"
+   },
+   "recht": {
+    "ru": "правый",
+    "pos": "прил."
+   },
+   "rechts": {
+    "ru": "справа; направо",
+    "pos": "нареч."
+   },
+   "rechtzeitig": {
+    "ru": "вовремя, заранее",
+    "pos": "нареч."
+   },
+   "richtig": {
+    "ru": "правильный; правильно",
+    "pos": "прил.",
+    "note": "…, richtig? — …, правильно? / да?"
+   },
+   "schauen": {
+    "ru": "смотреть",
+    "pos": "гл.",
+    "forms": "schaute · hat geschaut"
+   },
+   "schon": {
+    "ru": "уже",
+    "pos": "нареч."
+   },
+   "sehen": {
+    "ru": "видеть",
+    "pos": "гл.",
+    "forms": "sah · hat gesehen"
+   },
+   "sein": {
+    "ru": "быть",
+    "pos": "гл.",
+    "forms": "war · ist gewesen"
+   },
+   "sicher": {
+    "ru": "безопасный; уверенный",
+    "pos": "прил."
+   },
+   "sollen": {
+    "ru": "быть должным; следует",
+    "pos": "гл.",
+    "note": "Sie sollten … — вам лучше бы …, следует …",
+    "forms": "sollte · hat gesollt"
+   },
+   "streng": {
+    "ru": "строгий; строго",
+    "pos": "прил."
+   },
+   "und": {
+    "ru": "и",
+    "pos": "союз"
+   },
+   "verbieten": {
+    "ru": "запрещать",
+    "pos": "гл.",
+    "forms": "verbot · hat verboten"
+   },
+   "verpassen": {
+    "ru": "пропускать, упускать",
+    "pos": "гл.",
+    "forms": "verpasste · hat verpasst"
+   },
+   "was": {
+    "ru": "что",
+    "pos": "мест."
+   },
+   "wechseln": {
+    "ru": "менять; перестраиваться",
+    "pos": "гл.",
+    "note": "auf die linke Spur wechseln — перестроиться в левую полосу",
+    "forms": "wechselte · hat gewechselt"
+   },
+   "weiterfahren": {
+    "ru": "ехать дальше",
+    "pos": "гл.",
+    "forms": "fuhr weiter · ist weitergefahren"
+   },
+   "wenden": {
+    "ru": "разворачиваться (на машине)",
+    "pos": "гл.",
+    "note": "das Wenden — разворот",
+    "forms": "wendete · hat gewendet"
+   },
+   "wir": {
+    "ru": "мы",
+    "pos": "мест.",
+    "note": "uns — нас, нам: vor uns — перед нами"
+   },
+   "wo": {
+    "ru": "где",
+    "pos": "нареч."
+   },
+   "woran": {
+    "ru": "по чему, о чём",
+    "pos": "нареч.",
+    "note": "Woran erkenne ich …? — По чему я узнаю …?"
+   },
+   "zehn": {
+    "ru": "десять",
+    "pos": "числ."
+   },
+   "zu": {
+    "ru": "к; для",
+    "pos": "предл.",
+    "note": "zum = zu dem, zur = zu der: Abstand zur Kreuzung — расстояние до перекрёстка"
+   },
+   "zuerst": {
+    "ru": "сначала, первым",
+    "pos": "нареч."
+   },
+   "zurückfahren": {
+    "ru": "возвращаться (на машине)",
+    "pos": "гл.",
+    "note": "отделяемая приставка: fahre … zurück",
+    "forms": "fuhr zurück · ist zurückgefahren"
+   },
+   "über": {
+    "ru": "через; над",
+    "pos": "предл."
+   }
+  }
+ }
+}

@@ -109,6 +109,17 @@
     "p-10",
     "r-10"
    ]
+  },
+  {
+   "id": "autobahn",
+   "emoji": "🛣️",
+   "title": "Autobahn und Kraftfahrstraße",
+   "titleTr": "الطريق السريع وطريق السيارات",
+   "units": [
+    "t-11",
+    "p-11",
+    "r-11"
+   ]
   }
  ],
  "units": [
@@ -381,6 +392,33 @@
    "title": "Warndreieck und Rettungsgasse",
    "titleTr": "مثلث التحذير وممر الإنقاذ",
    "count": 6
+  },
+  {
+   "id": "t-11",
+   "kind": "theory",
+   "emoji": "🛣️",
+   "level": "B1",
+   "title": "Autobahn und Kraftfahrstraße",
+   "titleTr": "الطريق السريع وطريق السيارات",
+   "count": 21
+  },
+  {
+   "id": "p-11",
+   "kind": "dialog",
+   "emoji": "🧭",
+   "level": "B1",
+   "title": "Die Ausfahrt verpasst",
+   "titleTr": "فاتنا المخرج",
+   "count": 15
+  },
+  {
+   "id": "r-11",
+   "kind": "road",
+   "emoji": "🛣️",
+   "level": "B1",
+   "title": "Auffahren und Abfahren",
+   "titleTr": "الدخول والخروج",
+   "count": 5
   }
  ]
 }

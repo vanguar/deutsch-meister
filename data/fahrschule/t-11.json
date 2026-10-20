@@ -1,0 +1,1028 @@
+{
+ "id": "t-11",
+ "kind": "theory",
+ "emoji": "🛣️",
+ "level": "B1",
+ "title": "Autobahn und Kraftfahrstraße",
+ "titleTr": "Автобан и дорога для автомобилей",
+ "intro": "Кому можно на автобан, как въехать и съехать, что там запрещено и что делать, если пропустили свой съезд.",
+ "sections": [
+  {
+   "title": "Кому можно на автобан",
+   "lines": [
+    {
+     "de": "Auf der Autobahn dürfen nur Kraftfahrzeuge fahren, die schneller als 60 km/h fahren können.",
+     "tr": "По автобану можно ездить только на транспорте, который может ехать быстрее 60 км/ч.",
+     "sign": "z3301"
+    },
+    {
+     "de": "Fußgänger, Radfahrer und Mofas sind auf der Autobahn verboten.",
+     "tr": "Пешеходам, велосипедистам и мопедам на автобане нельзя."
+    },
+    {
+     "de": "Dieses Schild zeigt eine Kraftfahrstraße. Dort gelten fast dieselben Regeln wie auf der Autobahn.",
+     "tr": "Этот знак обозначает дорогу для автомобилей. Там действуют почти те же правила, что на автобане.",
+     "sign": "z3311"
+    },
+    {
+     "de": "Hier endet die Autobahn. Danach gelten wieder die normalen Tempolimits.",
+     "tr": "Здесь автобан заканчивается. Дальше снова действуют обычные ограничения скорости.",
+     "sign": "z3302"
+    }
+   ]
+  },
+  {
+   "title": "Въезд на автобан",
+   "lines": [
+    {
+     "de": "Auf dem Beschleunigungsstreifen beschleunigen Sie auf die Geschwindigkeit des Verkehrs.",
+     "tr": "На полосе разгона разгоняйтесь до скорости потока."
+    },
+    {
+     "de": "Der Verkehr auf der Autobahn hat Vorfahrt.",
+     "tr": "Транспорт на автобане имеет преимущество."
+    },
+    {
+     "de": "Blinken Sie links und fädeln Sie in eine passende Lücke ein.",
+     "tr": "Включите левый поворотник и встройтесь в подходящий промежуток.",
+     "o": {
+      "ein": "ein>einfädeln",
+      "fädeln": "fädeln>einfädeln"
+     }
+    },
+    {
+     "de": "Fährt neben Ihnen ein Lkw, bremsen Sie leicht ab und fahren hinter ihm auf.",
+     "tr": "Если рядом с вами едет грузовик, слегка притормозите и въезжайте за ним.",
+     "o": {
+      "ab": "ab>abbremsen",
+      "auf": "auf>auffahren",
+      "bremsen": "bremsen>abbremsen",
+      "fahren": "fahren>auffahren"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Что на автобане запрещено",
+   "lines": [
+    {
+     "de": "Wenden und Rückwärtsfahren sind auf der Autobahn streng verboten.",
+     "tr": "Разворачиваться и ехать задним ходом на автобане строго запрещено."
+    },
+    {
+     "de": "Haben Sie die Ausfahrt verpasst, fahren Sie bis zur nächsten Ausfahrt weiter.",
+     "tr": "Если вы пропустили съезд, езжайте дальше до следующего съезда.",
+     "o": {
+      "fahren": "fahren>weiterfahren",
+      "weiter": "weiter>weiterfahren"
+     }
+    },
+    {
+     "de": "Halten und Parken sind verboten, auch auf dem Seitenstreifen.",
+     "tr": "Останавливаться и парковаться запрещено, в том числе на обочине."
+    },
+    {
+     "de": "Nur bei einer Panne dürfen Sie auf dem Seitenstreifen halten.",
+     "tr": "Только при поломке можно остановиться на обочине."
+    },
+    {
+     "de": "Dieses Schild schreibt eine Mindestgeschwindigkeit vor. Langsamer dürfen Sie hier nicht fahren.",
+     "tr": "Этот знак предписывает минимальную скорость. Медленнее здесь ехать нельзя.",
+     "o": {
+      "schreibt": "schreibt>vorschreiben",
+      "vor": "vor>vorschreiben"
+     },
+     "sign": "z275"
+    }
+   ]
+  },
+  {
+   "title": "Съезд с автобана",
+   "lines": [
+    {
+     "de": "Diese Baken stehen 300, 200 und 100 Meter vor der Ausfahrt.",
+     "tr": "Такие указатели стоят за 300, 200 и 100 метров до съезда.",
+     "sign": "z450"
+    },
+    {
+     "de": "Wechseln Sie rechtzeitig auf den rechten Fahrstreifen und blinken Sie rechts.",
+     "tr": "Заранее перестройтесь в правую полосу и включите правый поворотник."
+    },
+    {
+     "de": "Bremsen Sie erst auf dem Verzögerungsstreifen.",
+     "tr": "Тормозите только на полосе торможения."
+    },
+    {
+     "de": "Dieses Schild zeigt, wo die Ausfahrt beginnt.",
+     "tr": "Этот знак показывает, где начинается съезд.",
+     "sign": "z333"
+    },
+    {
+     "de": "Nach der Autobahn wirken 80 km/h oft sehr langsam. Schauen Sie auf den Tacho.",
+     "tr": "После автобана 80 км/ч часто кажутся очень медленными. Смотрите на спидометр."
+    }
+   ]
+  },
+  {
+   "title": "Грузовики, пробки, отдых",
+   "lines": [
+    {
+     "de": "Lkw über 3,5 Tonnen dürfen auf der Autobahn höchstens 80 km/h fahren.",
+     "tr": "Грузовики тяжелее 3,5 тонны едут по автобану не быстрее 80 км/ч."
+    },
+    {
+     "de": "Am Stauende dürfen Sie das Warnblinklicht einschalten, um den Verkehr hinter sich zu warnen.",
+     "tr": "В конце пробки можно включить аварийку, чтобы предупредить тех, кто едет сзади."
+    },
+    {
+     "de": "Auf langen Fahrten machen Sie Pause auf einem Rastplatz oder an einer Raststätte.",
+     "tr": "В долгой поездке отдыхайте на площадке для отдыха или на станции обслуживания."
+    }
+   ]
+  }
+ ],
+ "quiz": [
+  {
+   "sign": "z3301",
+   "wrong": [
+    "z3311",
+    "z3302"
+   ]
+  },
+  {
+   "sign": "z3302",
+   "wrong": [
+    "z3301",
+    "z307"
+   ]
+  },
+  {
+   "sign": "z3311",
+   "wrong": [
+    "z3301",
+    "z314"
+   ]
+  },
+  {
+   "sign": "z275",
+   "wrong": [
+    "z274",
+    "z380"
+   ]
+  },
+  {
+   "sign": "z450",
+   "wrong": [
+    "z333",
+    "z3302"
+   ]
+  },
+  {
+   "sign": "z333",
+   "wrong": [
+    "z450",
+    "z3311"
+   ]
+  }
+ ],
+ "quizQuestion": {
+  "de": "Was bedeutet dieses Schild?",
+  "tr": "Что означает этот знак?"
+ },
+ "signs": {
+  "z274": {
+   "de": "Zulässige Höchstgeschwindigkeit",
+   "tr": "Ограничение максимальной скорости",
+   "src": "data/fahrschule/signs/z274.svg",
+   "n": "274",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_274-30_-_Zul%C3%A4ssige_H%C3%B6chstgeschwindigkeit,_StVO_2017.svg"
+  },
+  "z275": {
+   "de": "Mindestgeschwindigkeit",
+   "tr": "Минимальная скорость",
+   "src": "data/fahrschule/signs/z275.svg",
+   "n": "275",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_275-30_-_Vorgeschriebene_Mindestgeschwindigkeit,_StVO_2017.svg"
+  },
+  "z307": {
+   "de": "Ende der Vorfahrtstraße",
+   "tr": "Конец главной дороги",
+   "src": "data/fahrschule/signs/z307.svg",
+   "n": "307",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_307_-_Ende_der_Vorfahrtstra%C3%9Fe,_StVO_1970.svg"
+  },
+  "z314": {
+   "de": "Parken",
+   "tr": "Место для стоянки",
+   "src": "data/fahrschule/signs/z314.svg",
+   "n": "314",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_314_-_Parken,_StVO_2017.svg"
+  },
+  "z3301": {
+   "de": "Autobahn",
+   "tr": "Автобан (автомагистраль)",
+   "src": "data/fahrschule/signs/z3301.svg",
+   "n": "330.1",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_330.1_-_Autobahn,_StVO_2013.svg"
+  },
+  "z3302": {
+   "de": "Ende der Autobahn",
+   "tr": "Конец автобана",
+   "src": "data/fahrschule/signs/z3302.svg",
+   "n": "330.2",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_330.2_-_Ende_der_Autobahn,_StVO_2013.svg"
+  },
+  "z3311": {
+   "de": "Kraftfahrstraße",
+   "tr": "Дорога для автомобилей",
+   "src": "data/fahrschule/signs/z3311.svg",
+   "n": "331.1",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_331.1_-_Kraftfahrstra%C3%9Fe,_StVO_2013.svg"
+  },
+  "z333": {
+   "de": "Ausfahrt",
+   "tr": "Съезд с автобана",
+   "src": "data/fahrschule/signs/z333.svg",
+   "n": "333",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_333_-_Pfeilschild_-_Ausfahrt_von_der_Autobahn,_StVO_1980.svg"
+  },
+  "z380": {
+   "de": "Richtgeschwindigkeit",
+   "tr": "Рекомендуемая скорость",
+   "src": "data/fahrschule/signs/z380.svg",
+   "n": "380",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_380_-_Richtgeschwindigkeit,_StVO_1988.svg"
+  },
+  "z450": {
+   "de": "Ankündigungsbake",
+   "tr": "Указатель расстояния до съезда",
+   "src": "data/fahrschule/signs/z450.svg",
+   "n": "450",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_450-51_-_Ank%C3%BCndigungsbake_zweistreifig_(200_m),_StVO_2013.svg"
+  }
+ },
+ "gloss": {
+  "w": {
+   "ab>abbremsen": "abbremsen",
+   "als": "als",
+   "am": "an",
+   "an": "an",
+   "ankündigungsbake": "Ankündigungsbake",
+   "auch": "auch",
+   "auf": "auf",
+   "auf>auffahren": "auffahren",
+   "ausfahrt": "Ausfahrt",
+   "autobahn": "Autobahn",
+   "baken": "Bake",
+   "bedeutet": "bedeuten",
+   "beginnt": "beginnen",
+   "bei": "bei",
+   "beschleunigen": "beschleunigen",
+   "beschleunigungsstreifen": "Beschleunigungsstreifen",
+   "bis": "bis",
+   "blinken": "blinken",
+   "bremsen": "bremsen",
+   "bremsen>abbremsen": "abbremsen",
+   "danach": "danach",
+   "das": "der/die/das",
+   "dem": "der/die/das",
+   "den": "der/die/das",
+   "der": "der/die/das",
+   "des": "der/die/das",
+   "die": "der/die/das",
+   "diese": "dieser",
+   "dieselben": "derselbe",
+   "dieses": "dieser",
+   "dort": "dort",
+   "dürfen": "dürfen",
+   "ein": "ein/eine",
+   "ein>einfädeln": "einfädeln",
+   "eine": "ein/eine",
+   "einem": "ein/eine",
+   "einer": "ein/eine",
+   "einschalten": "einschalten",
+   "ende": "Ende",
+   "endet": "enden",
+   "erst": "erst",
+   "fahren": "fahren",
+   "fahren>auffahren": "auffahren",
+   "fahren>weiterfahren": "weiterfahren",
+   "fahrstreifen": "Fahrstreifen",
+   "fahrten": "Fahrt",
+   "fast": "fast",
+   "fußgänger": "Fußgänger",
+   "fädeln>einfädeln": "einfädeln",
+   "fährt": "fahren",
+   "gelten": "gelten",
+   "geschwindigkeit": "Geschwindigkeit",
+   "haben": "haben",
+   "halten": "halten",
+   "hat": "haben",
+   "hier": "hier",
+   "hinter": "hinter",
+   "höchstens": "höchstens",
+   "höchstgeschwindigkeit": "Höchstgeschwindigkeit",
+   "ihm": "er",
+   "ihnen": "Sie",
+   "in": "in",
+   "km/h": "km/h",
+   "kraftfahrstraße": "Kraftfahrstraße",
+   "kraftfahrzeuge": "Kraftfahrzeug",
+   "können": "können",
+   "langen": "lang",
+   "langsam": "langsam",
+   "langsamer": "langsam",
+   "leicht": "leicht",
+   "links": "links",
+   "lkw": "Lkw",
+   "lücke": "Lücke",
+   "machen": "machen",
+   "meter": "Meter",
+   "mindestgeschwindigkeit": "Mindestgeschwindigkeit",
+   "mofas": "Mofa",
+   "nach": "nach",
+   "neben": "neben",
+   "nicht": "nicht",
+   "normalen": "normal",
+   "nur": "nur",
+   "nächsten": "nächste",
+   "oder": "oder",
+   "oft": "oft",
+   "panne": "Panne",
+   "parken": "parken",
+   "passende": "passend",
+   "pause": "Pause",
+   "radfahrer": "Radfahrer",
+   "rastplatz": "Rastplatz",
+   "raststätte": "Raststätte",
+   "rechten": "recht",
+   "rechts": "rechts",
+   "rechtzeitig": "rechtzeitig",
+   "regeln": "Regel",
+   "richtgeschwindigkeit": "Richtgeschwindigkeit",
+   "rückwärtsfahren": "Rückwärtsfahren",
+   "schauen": "schauen",
+   "schild": "Schild",
+   "schneller": "schnell",
+   "schreibt>vorschreiben": "vorschreiben",
+   "sehr": "sehr",
+   "seitenstreifen": "Seitenstreifen",
+   "sich": "sich",
+   "sie": "Sie",
+   "sind": "sein",
+   "stauende": "Stauende",
+   "stehen": "stehen",
+   "streng": "streng",
+   "tacho": "Tacho",
+   "tempolimits": "Tempolimit",
+   "tonnen": "Tonne",
+   "um": "um",
+   "und": "und",
+   "verboten": "verbieten",
+   "verkehr": "Verkehr",
+   "verkehrs": "Verkehr",
+   "verpasst": "verpassen",
+   "verzögerungsstreifen": "Verzögerungsstreifen",
+   "vor": "vor",
+   "vor>vorschreiben": "vorschreiben",
+   "vorfahrt": "Vorfahrt",
+   "vorfahrtstraße": "Vorfahrtstraße",
+   "warnblinklicht": "Warnblinklicht",
+   "warnen": "warnen",
+   "was": "was",
+   "wechseln": "wechseln",
+   "weiter>weiterfahren": "weiterfahren",
+   "wenden": "wenden",
+   "wie": "wie",
+   "wieder": "wieder",
+   "wirken": "wirken",
+   "wo": "wo",
+   "zeigt": "zeigen",
+   "zu": "zu",
+   "zulässige": "zulässig",
+   "zur": "zu",
+   "über": "über"
+  },
+  "l": {
+   "Ankündigungsbake": {
+    "ru": "указатель расстояния до съезда",
+    "pos": "сущ.",
+    "note": "три полосы — 300 м, две — 200 м, одна — 100 м",
+    "art": "die",
+    "pl": "die Ankündigungsbaken"
+   },
+   "Ausfahrt": {
+    "ru": "съезд, выезд (с автобана)",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Ausfahrten"
+   },
+   "Autobahn": {
+    "ru": "автобан, автомагистраль",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Autobahnen"
+   },
+   "Bake": {
+    "ru": "указатель расстояния (полосатый знак)",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Baken"
+   },
+   "Beschleunigungsstreifen": {
+    "ru": "полоса разгона",
+    "pos": "сущ.",
+    "note": "на ней разгоняются до скорости потока и только потом перестраиваются",
+    "art": "der",
+    "pl": "die Beschleunigungsstreifen"
+   },
+   "Ende": {
+    "ru": "конец",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Enden"
+   },
+   "Fahrstreifen": {
+    "ru": "полоса движения",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Fahrstreifen"
+   },
+   "Fahrt": {
+    "ru": "поездка",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Fahrten"
+   },
+   "Fußgänger": {
+    "ru": "пешеход",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Fußgänger"
+   },
+   "Geschwindigkeit": {
+    "ru": "скорость",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Geschwindigkeiten"
+   },
+   "Höchstgeschwindigkeit": {
+    "ru": "максимальная скорость",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Höchstgeschwindigkeiten"
+   },
+   "Kraftfahrstraße": {
+    "ru": "дорога для автомобилей",
+    "pos": "сущ.",
+    "note": "синий знак с белой машиной; правила почти как на автобане",
+    "art": "die",
+    "pl": "die Kraftfahrstraßen"
+   },
+   "Kraftfahrzeug": {
+    "ru": "механическое транспортное средство",
+    "pos": "сущ.",
+    "note": "сокращённо Kfz: машина с двигателем",
+    "art": "das",
+    "pl": "die Kraftfahrzeuge"
+   },
+   "Lkw": {
+    "ru": "грузовик",
+    "pos": "сущ.",
+    "note": "сокращение от der Lastkraftwagen",
+    "art": "der",
+    "pl": "die Lkw"
+   },
+   "Lücke": {
+    "ru": "свободное место, промежуток",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Lücken"
+   },
+   "Meter": {
+    "ru": "метр",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Meter"
+   },
+   "Mindestgeschwindigkeit": {
+    "ru": "минимальная скорость",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Mindestgeschwindigkeiten"
+   },
+   "Mofa": {
+    "ru": "мопед (до 25 км/ч)",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Mofas"
+   },
+   "Panne": {
+    "ru": "поломка (машины)",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Pannen"
+   },
+   "Pause": {
+    "ru": "перерыв, пауза",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Pausen"
+   },
+   "Radfahrer": {
+    "ru": "велосипедист",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Radfahrer"
+   },
+   "Rastplatz": {
+    "ru": "площадка для отдыха (у автобана)",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Rastplätze"
+   },
+   "Raststätte": {
+    "ru": "станция обслуживания (кафе, заправка)",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Raststätten"
+   },
+   "Regel": {
+    "ru": "правило",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Regeln"
+   },
+   "Richtgeschwindigkeit": {
+    "ru": "рекомендуемая скорость",
+    "pos": "сущ.",
+    "note": "на автобане 130 км/ч — не закон, а рекомендация; при аварии на большей скорости может быть частичная вина",
+    "art": "die",
+    "pl": "die Richtgeschwindigkeiten"
+   },
+   "Rückwärtsfahren": {
+    "ru": "езда задним ходом",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": null
+   },
+   "Schild": {
+    "ru": "знак, табличка",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Schilder"
+   },
+   "Seitenstreifen": {
+    "ru": "обочина (полоса)",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Seitenstreifen"
+   },
+   "Sie": {
+    "ru": "вы (вежливо)",
+    "pos": "мест.",
+    "note": "Ihnen — вам (дательный): vor Ihnen — перед вами"
+   },
+   "Stauende": {
+    "ru": "конец пробки",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Stauenden"
+   },
+   "Tacho": {
+    "ru": "спидометр",
+    "pos": "сущ.",
+    "note": "halber Tacho — половина показаний спидометра (в метрах)",
+    "art": "der",
+    "pl": "die Tachos"
+   },
+   "Tempolimit": {
+    "ru": "ограничение скорости",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Tempolimits"
+   },
+   "Tonne": {
+    "ru": "тонна",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Tonnen"
+   },
+   "Verkehr": {
+    "ru": "движение, транспорт",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": null
+   },
+   "Verzögerungsstreifen": {
+    "ru": "полоса торможения (на съезде)",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Verzögerungsstreifen"
+   },
+   "Vorfahrt": {
+    "ru": "преимущество (право проехать первым)",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": null
+   },
+   "Vorfahrtstraße": {
+    "ru": "главная дорога",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Vorfahrtstraßen"
+   },
+   "Warnblinklicht": {
+    "ru": "аварийный сигнал (мигают все поворотники)",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": null
+   },
+   "abbremsen": {
+    "ru": "притормаживать",
+    "pos": "гл.",
+    "note": "отделяемая приставка: bremsen Sie … ab",
+    "forms": "bremste ab · hat abgebremst"
+   },
+   "als": {
+    "ru": "чем (при сравнении); как",
+    "pos": "союз"
+   },
+   "an": {
+    "ru": "у, на, при",
+    "pos": "предл.",
+    "note": "am = an dem; an der Kreuzung — на перекрёстке"
+   },
+   "auch": {
+    "ru": "тоже; даже (auch wenn)",
+    "pos": "нареч."
+   },
+   "auf": {
+    "ru": "на, по",
+    "pos": "предл.",
+    "note": "auf der Straße — на дороге; achten auf — следить за"
+   },
+   "auffahren": {
+    "ru": "въезжать (на автобан)",
+    "pos": "гл.",
+    "note": "auf die Autobahn auffahren — въехать на автобан; отделяемая приставка: fahren … auf",
+    "forms": "fuhr auf · ist aufgefahren"
+   },
+   "bedeuten": {
+    "ru": "означать",
+    "pos": "гл.",
+    "forms": "bedeutete · hat bedeutet"
+   },
+   "beginnen": {
+    "ru": "начинаться, начинать",
+    "pos": "гл.",
+    "forms": "begann · hat begonnen"
+   },
+   "bei": {
+    "ru": "при, у; на (о сигнале)",
+    "pos": "предл.",
+    "note": "beim = bei dem: beim Fahren — во время езды; bei Rot — на красный"
+   },
+   "beschleunigen": {
+    "ru": "разгоняться, ускоряться",
+    "pos": "гл.",
+    "forms": "beschleunigte · hat beschleunigt"
+   },
+   "bis": {
+    "ru": "пока не; до",
+    "pos": "союз"
+   },
+   "blinken": {
+    "ru": "включать поворотник, мигать",
+    "pos": "гл.",
+    "forms": "blinkte · hat geblinkt"
+   },
+   "bremsen": {
+    "ru": "тормозить",
+    "pos": "гл.",
+    "forms": "bremste · hat gebremst"
+   },
+   "danach": {
+    "ru": "после этого, потом",
+    "pos": "нареч."
+   },
+   "der/die/das": {
+    "ru": "определённый артикль",
+    "pos": "артикль",
+    "note": "der — м. р., die — ж. р. и мн. ч., das — ср. р.; den — м. р. в винительном, dem — м. и ср. р. в дательном; das ещё значит «это»"
+   },
+   "derselbe": {
+    "ru": "тот же самый",
+    "pos": "мест."
+   },
+   "dieser": {
+    "ru": "этот, эта, это",
+    "pos": "мест."
+   },
+   "dort": {
+    "ru": "там",
+    "pos": "нареч."
+   },
+   "dürfen": {
+    "ru": "мочь, иметь право",
+    "pos": "гл.",
+    "forms": "durfte · hat gedurft"
+   },
+   "ein/eine": {
+    "ru": "неопределённый артикль; один",
+    "pos": "артикль",
+    "note": "an einer Kreuzung — на (каком-то) перекрёстке"
+   },
+   "einfädeln": {
+    "ru": "встраиваться в поток",
+    "pos": "гл.",
+    "note": "отделяемая приставка: fädeln Sie … ein",
+    "forms": "fädelte ein · hat eingefädelt"
+   },
+   "einschalten": {
+    "ru": "включать",
+    "pos": "гл.",
+    "note": "отделяемая приставка: schalten … ein",
+    "forms": "schaltete ein · hat eingeschaltet"
+   },
+   "enden": {
+    "ru": "заканчиваться",
+    "pos": "гл.",
+    "forms": "endete · hat geendet"
+   },
+   "er": {
+    "ru": "он",
+    "pos": "мест.",
+    "note": "ihn — его (вин. п.); здесь — о грузовике или скорой: der Lkw, der Krankenwagen"
+   },
+   "erst": {
+    "ru": "только (не раньше чем)",
+    "pos": "нареч."
+   },
+   "fahren": {
+    "ru": "ехать; водить машину",
+    "pos": "гл.",
+    "forms": "fuhr · ist gefahren"
+   },
+   "fast": {
+    "ru": "почти",
+    "pos": "нареч."
+   },
+   "gelten": {
+    "ru": "действовать (о правиле)",
+    "pos": "гл.",
+    "forms": "galt · hat gegolten"
+   },
+   "haben": {
+    "ru": "иметь",
+    "pos": "гл.",
+    "note": "Vorfahrt haben — иметь преимущество",
+    "forms": "hatte · hat gehabt"
+   },
+   "halten": {
+    "ru": "останавливаться (ненадолго); держать",
+    "pos": "гл.",
+    "forms": "hielt · hat gehalten"
+   },
+   "hier": {
+    "ru": "здесь",
+    "pos": "нареч."
+   },
+   "hinter": {
+    "ru": "за, позади",
+    "pos": "предл."
+   },
+   "höchstens": {
+    "ru": "самое большее, не больше",
+    "pos": "нареч."
+   },
+   "in": {
+    "ru": "в",
+    "pos": "предл.",
+    "note": "im = in dem: im Bereich — в зоне"
+   },
+   "km/h": {
+    "ru": "км/ч",
+    "pos": "выраж.",
+    "note": "читается: Kilometer pro Stunde"
+   },
+   "können": {
+    "ru": "мочь",
+    "pos": "гл.",
+    "forms": "konnte · hat gekonnt"
+   },
+   "lang": {
+    "ru": "длинный",
+    "pos": "прил.",
+    "note": "Wie lang …? — Какой длины …?",
+    "forms": "lang · länger · am längsten"
+   },
+   "langsam": {
+    "ru": "медленный; медленно",
+    "pos": "прил."
+   },
+   "leicht": {
+    "ru": "лёгкий",
+    "pos": "прил."
+   },
+   "links": {
+    "ru": "слева; налево",
+    "pos": "нареч."
+   },
+   "machen": {
+    "ru": "делать",
+    "pos": "гл.",
+    "note": "den Schulterblick machen — оглянуться через плечо; Gut gemacht! — Молодец!",
+    "forms": "machte · hat gemacht"
+   },
+   "nach": {
+    "ru": "после; в, на (направление)",
+    "pos": "предл."
+   },
+   "neben": {
+    "ru": "рядом с, возле",
+    "pos": "предл."
+   },
+   "nicht": {
+    "ru": "не",
+    "pos": "частица"
+   },
+   "normal": {
+    "ru": "нормальный",
+    "pos": "прил."
+   },
+   "nur": {
+    "ru": "только",
+    "pos": "нареч."
+   },
+   "nächste": {
+    "ru": "ближайший, следующий",
+    "pos": "прил."
+   },
+   "oder": {
+    "ru": "или",
+    "pos": "союз",
+    "note": "…, oder? — …, правда? / да?"
+   },
+   "oft": {
+    "ru": "часто",
+    "pos": "нареч."
+   },
+   "parken": {
+    "ru": "парковаться, стоять (о машине)",
+    "pos": "гл.",
+    "note": "паркует тот, кто стоит дольше 3 минут или выходит из машины",
+    "forms": "parkte · hat geparkt"
+   },
+   "passend": {
+    "ru": "подходящий",
+    "pos": "прил."
+   },
+   "recht": {
+    "ru": "правый",
+    "pos": "прил."
+   },
+   "rechts": {
+    "ru": "справа; направо",
+    "pos": "нареч."
+   },
+   "rechtzeitig": {
+    "ru": "вовремя, заранее",
+    "pos": "нареч."
+   },
+   "schauen": {
+    "ru": "смотреть",
+    "pos": "гл.",
+    "forms": "schaute · hat geschaut"
+   },
+   "schnell": {
+    "ru": "быстрый; быстро",
+    "pos": "прил."
+   },
+   "sehr": {
+    "ru": "очень",
+    "pos": "нареч."
+   },
+   "sein": {
+    "ru": "быть",
+    "pos": "гл.",
+    "forms": "war · ist gewesen"
+   },
+   "sich": {
+    "ru": "себя, -ся",
+    "pos": "мест."
+   },
+   "stehen": {
+    "ru": "стоять",
+    "pos": "гл.",
+    "note": "Schilder stehen — стоят знаки",
+    "forms": "stand · hat gestanden"
+   },
+   "streng": {
+    "ru": "строгий; строго",
+    "pos": "прил."
+   },
+   "um": {
+    "ru": "в (о времени); вокруг",
+    "pos": "предл.",
+    "note": "um 23 Uhr — в 23 часа"
+   },
+   "und": {
+    "ru": "и",
+    "pos": "союз"
+   },
+   "verbieten": {
+    "ru": "запрещать",
+    "pos": "гл.",
+    "forms": "verbot · hat verboten"
+   },
+   "verpassen": {
+    "ru": "пропускать, упускать",
+    "pos": "гл.",
+    "forms": "verpasste · hat verpasst"
+   },
+   "vor": {
+    "ru": "перед",
+    "pos": "предл.",
+    "note": "rechts vor links — правый перед левым"
+   },
+   "vorschreiben": {
+    "ru": "предписывать, устанавливать",
+    "pos": "гл.",
+    "forms": "schrieb vor · hat vorgeschrieben"
+   },
+   "warnen": {
+    "ru": "предупреждать",
+    "pos": "гл.",
+    "forms": "warnte · hat gewarnt"
+   },
+   "was": {
+    "ru": "что",
+    "pos": "мест."
+   },
+   "wechseln": {
+    "ru": "менять; перестраиваться",
+    "pos": "гл.",
+    "note": "auf die linke Spur wechseln — перестроиться в левую полосу",
+    "forms": "wechselte · hat gewechselt"
+   },
+   "weiterfahren": {
+    "ru": "ехать дальше",
+    "pos": "гл.",
+    "forms": "fuhr weiter · ist weitergefahren"
+   },
+   "wenden": {
+    "ru": "разворачиваться (на машине)",
+    "pos": "гл.",
+    "note": "das Wenden — разворот",
+    "forms": "wendete · hat gewendet"
+   },
+   "wie": {
+    "ru": "как",
+    "pos": "нареч.",
+    "note": "wie schnell — с какой скоростью"
+   },
+   "wieder": {
+    "ru": "снова",
+    "pos": "нареч."
+   },
+   "wirken": {
+    "ru": "казаться; действовать",
+    "pos": "гл.",
+    "forms": "wirkte · hat gewirkt"
+   },
+   "wo": {
+    "ru": "где",
+    "pos": "нареч."
+   },
+   "zeigen": {
+    "ru": "показывать",
+    "pos": "гл.",
+    "forms": "zeigte · hat gezeigt"
+   },
+   "zu": {
+    "ru": "к; для",
+    "pos": "предл.",
+    "note": "zum = zu dem, zur = zu der: Abstand zur Kreuzung — расстояние до перекрёстка"
+   },
+   "zulässig": {
+    "ru": "допустимый, разрешённый",
+    "pos": "прил."
+   },
+   "über": {
+    "ru": "через; над",
+    "pos": "предл."
+   }
+  }
+ }
+}

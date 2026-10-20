@@ -1,0 +1,684 @@
+{
+ "id": "r-11",
+ "kind": "road",
+ "emoji": "🛣️",
+ "level": "B1",
+ "title": "Auffahren und Abfahren",
+ "titleTr": "В'їзд і з'їзд",
+ "intro": "Кому можна на автобан, як вбудуватися зі смуги розгону поруч із вантажівкою і що робити, якщо з'їзд залишився позаду.",
+ "scenes": [
+  {
+   "type": "access",
+   "options": [
+    {
+     "key": "yes",
+     "de": "Ja, er darf auf der Autobahn fahren.",
+     "tr": "Так, йому можна їхати автобаном."
+    },
+    {
+     "key": "no",
+     "de": "Nein, er muss auf der Landstraße bleiben.",
+     "tr": "Ні, він має залишитися на заміській дорозі."
+    }
+   ],
+   "situation": {
+    "de": "Vor Ihnen fährt ein Roller. Er fährt höchstens 45 km/h. Gleich kommt die Auffahrt zur Autobahn.",
+    "tr": "Перед вами їде скутер. Він їде щонайбільше 45 км/год. Зараз буде в'їзд на автобан."
+   },
+   "question": {
+    "de": "Darf der Roller auf der Autobahn fahren?",
+    "tr": "Чи можна скутеру їхати автобаном?"
+   },
+   "explain": [
+    {
+     "de": "Auf der Autobahn dürfen nur Fahrzeuge fahren, die schneller als 60 km/h fahren können.",
+     "tr": "Автобаном можна їздити тільки транспортом, який може їхати швидше ніж 60 км/год."
+    },
+    {
+     "de": "Ein Roller mit 45 km/h ist dafür nicht schnell genug.",
+     "tr": "Скутер із 45 км/год для цього недостатньо швидкий."
+    }
+   ],
+   "answer": "no",
+   "limit": 60,
+   "sign": "z3301",
+   "vehicle": "moped",
+   "vmax": 45
+  },
+  {
+   "type": "access",
+   "options": [
+    {
+     "key": "yes",
+     "de": "Ja, ich darf auf der Autobahn fahren.",
+     "tr": "Так, мені можна їхати автобаном."
+    },
+    {
+     "key": "no",
+     "de": "Nein, ich muss auf der Landstraße bleiben.",
+     "tr": "Ні, я маю залишитися на заміській дорозі."
+    }
+   ],
+   "situation": {
+    "de": "Sie fahren einen kleinen Wagen. Er fährt höchstens 160 km/h. Vorne ist die Auffahrt zur Autobahn.",
+    "tr": "Ви їдете маленькою машиною. Вона їде щонайбільше 160 км/год. Попереду в'їзд на автобан."
+   },
+   "question": {
+    "de": "Dürfen Sie auf der Autobahn fahren?",
+    "tr": "Чи можна вам їхати автобаном?"
+   },
+   "explain": [
+    {
+     "de": "Ihr Auto kann schneller als 60 km/h fahren. Sie dürfen auf die Autobahn.",
+     "tr": "Ваша машина може їхати швидше ніж 60 км/год. Вам можна на автобан."
+    },
+    {
+     "de": "Blinken Sie rechts und fahren Sie auf die Auffahrt.",
+     "tr": "Увімкніть правий покажчик повороту й повертайте на в'їзд."
+    }
+   ],
+   "answer": "yes",
+   "limit": 60,
+   "sign": "z3301",
+   "vehicle": "car",
+   "vmax": 160
+  },
+  {
+   "type": "merge",
+   "options": [
+    {
+     "key": "merge",
+     "de": "Ich beschleunige, blinke links und fahre in die Lücke.",
+     "tr": "Розганяюся, вмикаю лівий покажчик повороту й вбудовуюся в проміжок."
+    },
+    {
+     "key": "stop",
+     "de": "Ich halte am Ende des Streifens an und warte.",
+     "tr": "Зупиняюся в кінці смуги й чекаю."
+    },
+    {
+     "key": "behind",
+     "de": "Ich werde etwas langsamer und fahre hinter dem Lkw auf.",
+     "tr": "Трохи зменшую швидкість і в'їжджаю за вантажівкою."
+    }
+   ],
+   "situation": {
+    "de": "Sie sind auf dem Beschleunigungsstreifen. Auf dem rechten Fahrstreifen ist eine große Lücke.",
+    "tr": "Ви на смузі розгону. У правій смузі великий проміжок."
+   },
+   "question": {
+    "de": "Was machen Sie?",
+    "tr": "Що ви робите?"
+   },
+   "explain": [
+    {
+     "de": "Beschleunigen Sie auf die Geschwindigkeit des Verkehrs und fahren Sie in die Lücke.",
+     "tr": "Розженіться до швидкості потоку й вбудуйтеся в проміжок."
+    },
+    {
+     "de": "Anhalten auf dem Beschleunigungsstreifen ist gefährlich: Dann fehlt Ihnen der Schwung.",
+     "tr": "Зупинятися на смузі розгону небезпечно: потім забракне розгону."
+    }
+   ],
+   "answer": "merge",
+   "beside": false
+  },
+  {
+   "type": "merge",
+   "options": [
+    {
+     "key": "merge",
+     "de": "Ich beschleunige, blinke links und fahre in die Lücke.",
+     "tr": "Розганяюся, вмикаю лівий покажчик повороту й вбудовуюся в проміжок."
+    },
+    {
+     "key": "stop",
+     "de": "Ich halte am Ende des Streifens an und warte.",
+     "tr": "Зупиняюся в кінці смуги й чекаю."
+    },
+    {
+     "key": "behind",
+     "de": "Ich werde etwas langsamer und fahre hinter dem Lkw auf.",
+     "tr": "Трохи зменшую швидкість і в'їжджаю за вантажівкою."
+    }
+   ],
+   "situation": {
+    "de": "Sie sind auf dem Beschleunigungsstreifen. Auf dem rechten Fahrstreifen fährt ein Lkw genau neben Ihnen.",
+    "tr": "Ви на смузі розгону. У правій смузі прямо поруч із вами їде вантажівка."
+   },
+   "question": {
+    "de": "Was machen Sie?",
+    "tr": "Що ви робите?"
+   },
+   "explain": [
+    {
+     "de": "Der Verkehr auf der Autobahn hat Vorfahrt. Der Lkw muss nicht bremsen.",
+     "tr": "Транспорт на автобані має перевагу. Вантажівка не зобов'язана гальмувати."
+    },
+    {
+     "de": "Werden Sie etwas langsamer und fahren Sie hinter dem Lkw auf.",
+     "tr": "Трохи зменште швидкість і в'їжджайте за вантажівкою."
+    }
+   ],
+   "answer": "behind",
+   "beside": true
+  },
+  {
+   "type": "missed",
+   "options": [
+    {
+     "key": "back",
+     "de": "Ich fahre auf dem Seitenstreifen rückwärts zurück.",
+     "tr": "Їду заднім ходом назад узбіччям."
+    },
+    {
+     "key": "turn",
+     "de": "Ich wende an der nächsten Lücke in der Mitte.",
+     "tr": "Розвертаюся в найближчому розриві посередині."
+    },
+    {
+     "key": "next",
+     "de": "Ich fahre bis zur nächsten Ausfahrt weiter.",
+     "tr": "Їду далі до наступного з'їзду."
+    }
+   ],
+   "situation": {
+    "de": "Sie haben die Ausfahrt verpasst. Die nächste Ausfahrt ist in acht Kilometern.",
+    "tr": "Ви проґавили з'їзд. Наступний з'їзд за вісім кілометрів."
+   },
+   "question": {
+    "de": "Was machen Sie?",
+    "tr": "Що ви робите?"
+   },
+   "explain": [
+    {
+     "de": "Wenden und Rückwärtsfahren sind auf der Autobahn streng verboten.",
+     "tr": "Розвертатися та їхати заднім ходом на автобані суворо заборонено."
+    },
+    {
+     "de": "Fahren Sie ruhig weiter und nehmen Sie die nächste Ausfahrt.",
+     "tr": "Спокійно їдьте далі й з'їжджайте на наступному з'їзді.",
+     "o": {
+      "fahren": "fahren>weiterfahren",
+      "weiter": "weiter>weiterfahren"
+     }
+    }
+   ],
+   "answer": "next",
+   "sign": "z333"
+  }
+ ],
+ "signs": {
+  "z3301": {
+   "de": "Autobahn",
+   "tr": "Автобан (автомагістраль)",
+   "src": "data/fahrschule/signs/z3301.svg",
+   "n": "330.1",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_330.1_-_Autobahn,_StVO_2013.svg"
+  },
+  "z333": {
+   "de": "Ausfahrt",
+   "tr": "З'їзд з автобану",
+   "src": "data/fahrschule/signs/z333.svg",
+   "n": "333",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_333_-_Pfeilschild_-_Ausfahrt_von_der_Autobahn,_StVO_1980.svg"
+  }
+ },
+ "gloss": {
+  "w": {
+   "abfahren": "abfahren",
+   "acht": "acht",
+   "als": "als",
+   "anhalten": "anhalten",
+   "auf": "auf",
+   "auffahren": "auffahren",
+   "auffahrt": "Auffahrt",
+   "ausfahrt": "Ausfahrt",
+   "auto": "Auto",
+   "autobahn": "Autobahn",
+   "beschleunigen": "beschleunigen",
+   "beschleunigungsstreifen": "Beschleunigungsstreifen",
+   "blinken": "blinken",
+   "bremsen": "bremsen",
+   "dafür": "dafür",
+   "dann": "dann",
+   "darf": "dürfen",
+   "dem": "der/die/das",
+   "der": "der/die/das",
+   "des": "der/die/das",
+   "die": "der/die/das",
+   "dürfen": "dürfen",
+   "ein": "ein/eine",
+   "eine": "ein/eine",
+   "einen": "ein/eine",
+   "er": "er",
+   "etwas": "etwas",
+   "fahren": "fahren",
+   "fahren>weiterfahren": "weiterfahren",
+   "fahrstreifen": "Fahrstreifen",
+   "fahrzeuge": "Fahrzeug",
+   "fehlt": "fehlen",
+   "fährt": "fahren",
+   "gefährlich": "gefährlich",
+   "genau": "genau",
+   "genug": "genug",
+   "geschwindigkeit": "Geschwindigkeit",
+   "gleich": "gleich",
+   "große": "groß",
+   "haben": "haben",
+   "hat": "haben",
+   "hinter": "hinter",
+   "höchstens": "höchstens",
+   "ihnen": "Sie",
+   "ihr": "Ihr",
+   "in": "in",
+   "ist": "sein",
+   "kann": "können",
+   "kilometern": "Kilometer",
+   "kleinen": "klein",
+   "km/h": "km/h",
+   "kommt": "kommen",
+   "können": "können",
+   "langsamer": "langsam",
+   "lkw": "Lkw",
+   "lücke": "Lücke",
+   "machen": "machen",
+   "mit": "mit",
+   "muss": "müssen",
+   "neben": "neben",
+   "nehmen": "nehmen",
+   "nicht": "nicht",
+   "nur": "nur",
+   "nächste": "nächste",
+   "rechten": "recht",
+   "rechts": "rechts",
+   "roller": "Roller",
+   "ruhig": "ruhig",
+   "rückwärtsfahren": "Rückwärtsfahren",
+   "schnell": "schnell",
+   "schneller": "schnell",
+   "schwung": "Schwung",
+   "sie": "Sie",
+   "sind": "sein",
+   "streng": "streng",
+   "und": "und",
+   "verboten": "verbieten",
+   "verkehr": "Verkehr",
+   "verkehrs": "Verkehr",
+   "verpasst": "verpassen",
+   "vor": "vor",
+   "vorfahrt": "Vorfahrt",
+   "vorne": "vorne",
+   "wagen": "Wagen",
+   "was": "was",
+   "weiter>weiterfahren": "weiterfahren",
+   "wenden": "wenden",
+   "werden": "werden",
+   "zur": "zu"
+  },
+  "l": {
+   "Auffahrt": {
+    "ru": "в'їзд (на автобан)",
+    "pos": "ім.",
+    "decl": "die Auffahrt · мн.: die Auffahrten"
+   },
+   "Ausfahrt": {
+    "ru": "з'їзд, виїзд (з автобану)",
+    "pos": "ім.",
+    "decl": "die Ausfahrt · мн.: die Ausfahrten"
+   },
+   "Auto": {
+    "ru": "машина, автомобіль",
+    "pos": "ім.",
+    "decl": "das Auto · мн.: die Autos"
+   },
+   "Autobahn": {
+    "ru": "автобан, автомагістраль",
+    "pos": "ім.",
+    "decl": "die Autobahn · мн.: die Autobahnen"
+   },
+   "Beschleunigungsstreifen": {
+    "ru": "смуга розгону",
+    "pos": "ім.",
+    "note": "на ній розганяються до швидкості потоку й лише потім перестроюються",
+    "decl": "der Beschleunigungsstreifen · мн.: die Beschleunigungsstreifen"
+   },
+   "Fahrstreifen": {
+    "ru": "смуга руху",
+    "pos": "ім.",
+    "decl": "der Fahrstreifen · мн.: die Fahrstreifen"
+   },
+   "Fahrzeug": {
+    "ru": "транспортний засіб, машина",
+    "pos": "ім.",
+    "decl": "das Fahrzeug · мн.: die Fahrzeuge"
+   },
+   "Geschwindigkeit": {
+    "ru": "швидкість",
+    "pos": "ім.",
+    "decl": "die Geschwindigkeit · мн.: die Geschwindigkeiten"
+   },
+   "Ihr": {
+    "ru": "ваш (ввічливо)",
+    "pos": "займ."
+   },
+   "Kilometer": {
+    "ru": "кілометр",
+    "pos": "ім.",
+    "note": "Kilometer pro Stunde — кілометрів на годину (km/h)",
+    "decl": "der Kilometer · мн.: die Kilometer"
+   },
+   "Lkw": {
+    "ru": "вантажівка",
+    "pos": "ім.",
+    "note": "скорочення від der Lastkraftwagen",
+    "decl": "der Lkw · мн.: die Lkw"
+   },
+   "Lücke": {
+    "ru": "вільне місце, проміжок",
+    "pos": "ім.",
+    "decl": "die Lücke · мн.: die Lücken"
+   },
+   "Roller": {
+    "ru": "скутер",
+    "pos": "ім.",
+    "decl": "der Roller · мн.: die Roller"
+   },
+   "Rückwärtsfahren": {
+    "ru": "їзда заднім ходом",
+    "pos": "ім.",
+    "decl": "das Rückwärtsfahren · мн. немає"
+   },
+   "Schwung": {
+    "ru": "розгін, інерція",
+    "pos": "ім.",
+    "decl": "der Schwung · мн. немає"
+   },
+   "Sie": {
+    "ru": "ви (ввічливо)",
+    "pos": "займ.",
+    "note": "Ihnen — вам (давальний): vor Ihnen — перед вами"
+   },
+   "Verkehr": {
+    "ru": "рух, транспорт",
+    "pos": "ім.",
+    "decl": "der Verkehr · мн. немає"
+   },
+   "Vorfahrt": {
+    "ru": "перевага (право проїхати першим)",
+    "pos": "ім.",
+    "decl": "die Vorfahrt · мн. немає"
+   },
+   "Wagen": {
+    "ru": "машина, автомобіль",
+    "pos": "ім.",
+    "decl": "der Wagen · мн.: die Wagen"
+   },
+   "abfahren": {
+    "ru": "від'їжджати, вирушати",
+    "pos": "дієсл.",
+    "forms": "fuhr ab · ist abgefahren"
+   },
+   "acht": {
+    "ru": "вісім",
+    "pos": "числ."
+   },
+   "als": {
+    "ru": "ніж (при порівнянні); як",
+    "pos": "спол."
+   },
+   "anhalten": {
+    "ru": "зупинятися",
+    "pos": "дієсл.",
+    "forms": "hielt an · hat angehalten"
+   },
+   "auf": {
+    "ru": "на, по",
+    "pos": "прийм.",
+    "note": "auf der Straße — на дорозі; achten auf — стежити за"
+   },
+   "auffahren": {
+    "ru": "в'їжджати (на автобан)",
+    "pos": "дієсл.",
+    "note": "auf die Autobahn auffahren — в'їхати на автобан; відокремлюваний префікс: fahren … auf",
+    "forms": "fuhr auf · ist aufgefahren"
+   },
+   "beschleunigen": {
+    "ru": "розганятися, прискорюватися",
+    "pos": "дієсл.",
+    "forms": "beschleunigte · hat beschleunigt"
+   },
+   "blinken": {
+    "ru": "вмикати поворотник, блимати",
+    "pos": "дієсл.",
+    "forms": "blinkte · hat geblinkt"
+   },
+   "bremsen": {
+    "ru": "гальмувати",
+    "pos": "дієсл.",
+    "forms": "bremste · hat gebremst"
+   },
+   "dafür": {
+    "ru": "для цього",
+    "pos": "присл."
+   },
+   "dann": {
+    "ru": "тоді, отже; потім",
+    "pos": "присл."
+   },
+   "der/die/das": {
+    "ru": "означений артикль",
+    "pos": "артикль",
+    "note": "der — ч. р., die — ж. р. і мн., das — с. р.; den — ч. р. у знахідному, dem — ч. і с. р. у давальному; das ще означає «це»"
+   },
+   "dürfen": {
+    "ru": "могти, мати право",
+    "pos": "дієсл.",
+    "forms": "durfte · hat gedurft"
+   },
+   "ein/eine": {
+    "ru": "неозначений артикль; один",
+    "pos": "артикль",
+    "note": "an einer Kreuzung — на (якомусь) перехресті"
+   },
+   "er": {
+    "ru": "він",
+    "pos": "займ.",
+    "note": "ihn — його (знах.); тут — про вантажівку чи швидку: der Lkw, der Krankenwagen"
+   },
+   "etwas": {
+    "ru": "трохи; щось",
+    "pos": "присл."
+   },
+   "fahren": {
+    "ru": "їхати; кермувати машиною",
+    "pos": "дієсл.",
+    "forms": "fuhr · ist gefahren"
+   },
+   "fehlen": {
+    "ru": "бракувати, бути відсутнім",
+    "pos": "дієсл.",
+    "forms": "fehlte · hat gefehlt"
+   },
+   "gefährlich": {
+    "ru": "небезпечний",
+    "pos": "прикм."
+   },
+   "genau": {
+    "ru": "саме так, точно",
+    "pos": "присл.",
+    "note": "genau hundert — рівно сто"
+   },
+   "genug": {
+    "ru": "достатньо",
+    "pos": "присл."
+   },
+   "gleich": {
+    "ru": "зараз, одразу",
+    "pos": "присл."
+   },
+   "groß": {
+    "ru": "великий",
+    "pos": "прикм.",
+    "note": "Wie groß …? — Якої величини …?",
+    "forms": "groß · größer · am größten"
+   },
+   "haben": {
+    "ru": "мати",
+    "pos": "дієсл.",
+    "note": "Vorfahrt haben — мати перевагу",
+    "forms": "hatte · hat gehabt"
+   },
+   "hinter": {
+    "ru": "за, позаду",
+    "pos": "прийм."
+   },
+   "höchstens": {
+    "ru": "щонайбільше, не більше",
+    "pos": "присл."
+   },
+   "in": {
+    "ru": "в",
+    "pos": "прийм.",
+    "note": "im = in dem: im Bereich — у зоні"
+   },
+   "klein": {
+    "ru": "маленький",
+    "pos": "прикм."
+   },
+   "km/h": {
+    "ru": "км/год",
+    "pos": "вираз",
+    "note": "читається: Kilometer pro Stunde"
+   },
+   "kommen": {
+    "ru": "приходити; їхати (наближатися)",
+    "pos": "дієсл.",
+    "note": "von rechts kommen — їхати праворуч",
+    "forms": "kam · ist gekommen"
+   },
+   "können": {
+    "ru": "могти",
+    "pos": "дієсл.",
+    "forms": "konnte · hat gekonnt"
+   },
+   "langsam": {
+    "ru": "повільний; повільно",
+    "pos": "прикм."
+   },
+   "machen": {
+    "ru": "робити",
+    "pos": "дієсл.",
+    "note": "den Schulterblick machen — озирнутися через плече; Gut gemacht! — Молодець!",
+    "forms": "machte · hat gemacht"
+   },
+   "mit": {
+    "ru": "з",
+    "pos": "прийм."
+   },
+   "müssen": {
+    "ru": "мусити, бути повинним",
+    "pos": "дієсл.",
+    "forms": "musste · hat gemusst"
+   },
+   "neben": {
+    "ru": "поруч із, біля",
+    "pos": "прийм."
+   },
+   "nehmen": {
+    "ru": "брати",
+    "pos": "дієсл.",
+    "note": "Rücksicht nehmen auf — зважати на",
+    "forms": "nahm · hat genommen"
+   },
+   "nicht": {
+    "ru": "не",
+    "pos": "частка"
+   },
+   "nur": {
+    "ru": "лише",
+    "pos": "присл."
+   },
+   "nächste": {
+    "ru": "найближчий, наступний",
+    "pos": "прикм."
+   },
+   "recht": {
+    "ru": "правий",
+    "pos": "прикм."
+   },
+   "rechts": {
+    "ru": "праворуч",
+    "pos": "присл."
+   },
+   "ruhig": {
+    "ru": "спокійний; спокійно",
+    "pos": "прикм."
+   },
+   "schnell": {
+    "ru": "швидкий; швидко",
+    "pos": "прикм."
+   },
+   "sein": {
+    "ru": "бути",
+    "pos": "дієсл.",
+    "forms": "war · ist gewesen"
+   },
+   "streng": {
+    "ru": "суворий; суворо",
+    "pos": "прикм."
+   },
+   "und": {
+    "ru": "і, та",
+    "pos": "спол."
+   },
+   "verbieten": {
+    "ru": "забороняти",
+    "pos": "дієсл.",
+    "forms": "verbot · hat verboten"
+   },
+   "verpassen": {
+    "ru": "пропускати, проґавити",
+    "pos": "дієсл.",
+    "forms": "verpasste · hat verpasst"
+   },
+   "vor": {
+    "ru": "перед",
+    "pos": "прийм.",
+    "note": "rechts vor links — правий перед лівим"
+   },
+   "vorne": {
+    "ru": "попереду",
+    "pos": "присл."
+   },
+   "was": {
+    "ru": "що",
+    "pos": "займ."
+   },
+   "weiterfahren": {
+    "ru": "їхати далі",
+    "pos": "дієсл.",
+    "forms": "fuhr weiter · ist weitergefahren"
+   },
+   "wenden": {
+    "ru": "розвертатися (машиною)",
+    "pos": "дієсл.",
+    "note": "das Wenden — розворот",
+    "forms": "wendete · hat gewendet"
+   },
+   "werden": {
+    "ru": "ставати",
+    "pos": "дієсл.",
+    "note": "die Ampel wird gelb — світлофор перемикається на жовтий",
+    "forms": "wurde · ist geworden"
+   },
+   "zu": {
+    "ru": "до; для",
+    "pos": "прийм.",
+    "note": "zum = zu dem, zur = zu der: Abstand zur Kreuzung — відстань до перехрестя"
+   }
+  }
+ }
+}

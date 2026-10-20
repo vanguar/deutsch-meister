@@ -102,6 +102,13 @@ ok(build.road_answer({'type': 'rightturn', 'who': 'none'}) == {'answer': 'go'}, 
 ok(build.road_answer({'type': 'zebracross', 'ped': 'waiting'}) == {'answer': 'stop'}, '«зебра»: пешеход ждёт — остановиться')
 ok(build.road_answer({'type': 'bus', 'state': 'stopped'}) == {'answer': 'walk'}, 'автобус с аварийкой на остановке — шагом')
 ok(build.road_answer({'type': 'bus', 'state': 'approaching'}) == {'answer': 'stay'}, 'автобус с аварийкой подъезжает — не обгонять')
+ok(build.road_answer({'type': 'access', 'vehicle': 'moped', 'vmax': 45}) == {'answer': 'no', 'limit': 60}, 'автобан: скутер 45 км/ч — нельзя')
+ok(build.road_answer({'type': 'access', 'vehicle': 'moped', 'vmax': 60})['answer'] == 'no', 'автобан: ровно 60 км/ч — нельзя (нужно быстрее 60)')
+ok(build.road_answer({'type': 'access', 'vehicle': 'car', 'vmax': 160})['answer'] == 'yes', 'автобан: машина 160 км/ч — можно')
+ok('vehicle' in str(build.road_answer({'type': 'access', 'vehicle': 'tank', 'vmax': 60})), 'автобан: неизвестный транспорт — ошибка сцены')
+ok(build.road_answer({'type': 'merge', 'beside': True}) == {'answer': 'behind'}, 'полоса разгона: грузовик рядом — встать за ним')
+ok(build.road_answer({'type': 'merge'}) == {'answer': 'merge'}, 'полоса разгона: промежуток свободен — встраиваться')
+ok(build.road_answer({'type': 'missed'}) == {'answer': 'next'}, 'пропущенный съезд — до следующего, без разворота')
 
 
 # ── 2. Сборка ловит ошибки и ничего не пишет ──

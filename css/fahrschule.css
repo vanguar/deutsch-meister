@@ -337,3 +337,7 @@ html[dir="rtl"] .fs-tr { text-align: right; }
 .show-tr .dlg-line.tr-closed .dlg-tr,
 .show-tr .scene-tr-off > .fs-situation .fs-tr, .show-tr .scene-tr-off > .fs-quiz-q-tr,
 .show-tr .scene-tr-off .fs-road-opt .fs-opt-tr, .show-tr .scene-tr-off .fs-opts:not(.is-answered) .fs-opt-tr { display: none; }
+
+/* Автобан: въезд, полоса разгона, съезд (тема 11) */
+.fs-mark.is-block { stroke-dasharray: 5 4; stroke-width: 2.5; }
+.fs-moped-body { fill: none; stroke: #e0484f; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }

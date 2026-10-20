@@ -75,7 +75,8 @@ PLURAL = {'uk': ('мн.:', 'мн. немає'), 'ar': ('الجمع:', 'لا جم
 KINDS = ('theory', 'dialog', 'junction', 'road')
 PREFIX = {'theory': 't', 'dialog': 'p', 'junction': 'k', 'road': 'r'}   # t-01, p-01, k-01, r-03
 ROAD_TYPES = ('stop', 'gap', 'side', 'overtake', 'zipper', 'parkspot', 'parallel', 'rightturn', 'zebracross', 'bus',
-              'fog', 'highbeam', 'wild', 'promille', 'tired', 'lamp', 'tread', 'triangle', 'rescuelane')
+              'fog', 'highbeam', 'wild', 'promille', 'tired', 'lamp', 'tread', 'triangle', 'rescuelane',
+              'access', 'merge', 'missed')
 NUMERIC_ROAD = ('stop', 'gap', 'side', 'triangle')        # ответ — метры
 HAZARDS = ('ball', 'deer')
 # Боковой интервал при обгоне пешеходов и велосипедистов (§ 5 Abs. 4 StVO, с 2020)
@@ -98,6 +99,10 @@ TREAD_MIN = 1.6
 # Знак аварийной остановки позади места аварии, метры (правило автошкол):
 # в городе ~50, на загородной ~100, на автобане 150–200 (берём минимум)
 TRIANGLE = {'innerorts': 50, 'landstrasse': 100, 'autobahn': 150}
+# На автобан и Kraftfahrstraße — только транспорт, который может ехать
+# быстрее 60 км/ч (§ 18 Abs. 1 StVO)
+AUTOBAHN_MIN = 60
+VEHICLES = ('moped', 'car')
 CARS = ('blue', 'red', 'green', 'yellow')
 APPROACH = ('S', 'W', 'N', 'E')
 TURNS = ('straight', 'left', 'right')
@@ -376,6 +381,22 @@ def road_answer(sc):
         if n not in (2, 3) or not isinstance(k, int) or not 0 <= k < n:
             return 'lanes — 2 или 3, lane — номер ряда слева (0…lanes-1)'
         return {'answer': 'left' if k == 0 else 'right'}
+    if t == 'access':
+        if sc.get('vehicle') not in VEHICLES:
+            return 'vehicle — ' + ', '.join(VEHICLES)
+        v = sc.get('vmax')
+        if not isinstance(v, int) or not 6 <= v <= 250:
+            return f'vmax — наибольшая скорость машины, км/ч (6–250), а не {v!r}'
+        return {'answer': 'yes' if v > AUTOBAHN_MIN else 'no', 'limit': AUTOBAHN_MIN}
+    if t == 'merge':
+        # въезд с полосы разгона: у транспорта на автобане преимущество
+        # (§ 18 Abs. 3 StVO) — грузовик рядом пропустить и встать за ним
+        if not isinstance(sc.get('beside', False), bool):
+            return 'beside — true/false (грузовик рядом)'
+        return {'answer': 'behind' if sc.get('beside') else 'merge'}
+    if t == 'missed':
+        # пропустили съезд: разворот и задний ход запрещены (§ 18 Abs. 7)
+        return {'answer': 'next'}
     if t == 'wild':
         # животное на дороге: ближний свет, сигнал, тормоз — не уходить в сторону
         return {'answer': 'brake'}
@@ -664,7 +685,8 @@ def main():
                     if sc['type'] == 'stop':
                         scene['hazard'] = sc['hazard']
                         scene['emergency'] = bool(sc.get('emergency'))
-                    for k in ('where', 'line', 'oncoming', 'sign', 'near', 'dist', 'who', 'ped', 'state', 'sight', 'p', 'novice', 'symptoms', 'hours', 'tired', 'color', 'lamp', 'depth', 'lanes', 'lane'):
+                    for k in ('where', 'line', 'oncoming', 'sign', 'near', 'dist', 'who', 'ped', 'state', 'sight', 'p', 'novice', 'symptoms', 'hours', 'tired', 'color', 'lamp', 'depth', 'lanes', 'lane',
+                              'vehicle', 'vmax', 'beside'):
                         if k in sc:
                             scene[k] = sc[k]
                     out[lang].append(scene)

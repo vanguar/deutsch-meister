@@ -265,7 +265,7 @@ const Fahrschule = (() => {
         <div class="news-tile-ico fs-kind-ico" aria-hidden="true">🛣️</div>
         <div class="news-tile-head">
           <div class="news-tile-title">Дальше</div>
-          <div class="news-tile-text">Скорость, обгон, парковка, автобан и экзамен — следующие темы</div>
+          <div class="news-tile-text">Кольцо, переезд, экономичная езда и экзамен — следующие темы</div>
         </div>
       </div>
     </div>`;
@@ -1258,6 +1258,41 @@ const Fahrschule = (() => {
       actors.push({ id: 'amb', kind: 'ambulance', keys: [{ t: 0, x: -40, y: gap }, { t: 0.38, x: -40, y: gap }, { t: 1, x: 370, y: gap }] });
       return { actors, dur: 4600, snap: 1, line: 'dashed', lanes3: n === 3 };
     },
+    // Въезд на автобан: у развилки знак 330.1. Скутер (до 60 км/ч) едет
+    // дальше по загородной дороге, машина сворачивает на въезд
+    access(sc) {
+      const yes = sc.answer === 'yes';
+      const me = { id: 'me', kind: sc.vehicle === 'moped' ? 'moped' : 'car', fill: CAR.blue.fill, keys: yes
+        ? [{ t: 0, x: 30, y: LANE_DOWN }, { t: 0.45, x: 160, y: LANE_DOWN, b: 'r' }, { t: 0.62, x: 204, y: 96, r: 28, b: 'r' },
+           { t: 0.82, x: 244, y: 117, r: 28 }, { t: 1, x: 290, y: 142, r: 28 }]
+        : [{ t: 0, x: 30, y: LANE_DOWN }, { t: 1, x: 350, y: LANE_DOWN }] };
+      return { actors: [me], dur: 3600, snap: yes ? 0.72 : 0.62, line: 'dashed', ramps: [150],
+        signAt: { x: 236, y: 98, w: 22, h: 22 }, badge: `max. ${sc.vmax} km/h` };
+    },
+    // С полосы разгона: промежуток свободен — разгон и встраивание; рядом
+    // едет грузовик — чуть сбросить скорость и встать за ним
+    merge(sc) {
+      const behind = sc.answer === 'behind';
+      const actors = behind ? [
+        { id: 'truck', kind: 'truck', keys: [{ t: 0, x: 130, y: LANE_DOWN }, { t: 1, x: 410, y: LANE_DOWN }] },
+        { id: 'me', kind: 'car', fill: CAR.blue.fill, keys: [{ t: 0, x: 100, y: 101 }, { t: 0.3, x: 146, y: 101, b: 'l', br: true },
+          { t: 0.5, x: 178, y: 101, b: 'l' }, { t: 0.76, x: 226, y: LANE_DOWN, b: 'l' }, { t: 1, x: 300, y: LANE_DOWN }] }
+      ] : [
+        { id: 'left', kind: 'car', fill: CAR.red.fill, keys: [{ t: 0, x: 70, y: LANE_UP }, { t: 1, x: 390, y: LANE_UP }] },
+        { id: 'me', kind: 'car', fill: CAR.blue.fill, keys: [{ t: 0, x: 40, y: 101 }, { t: 0.32, x: 136, y: 101, b: 'l' },
+          { t: 0.58, x: 214, y: LANE_DOWN, b: 'l' }, { t: 0.66, x: 236, y: LANE_DOWN }, { t: 1, x: 330, y: LANE_DOWN }] }
+      ];
+      return { actors, dur: 4000, snap: behind ? 0.62 : 0.6, line: 'dashed', accel: true };
+    },
+    // Съезд остался позади (слева, со знаком 333): едем до следующего
+    // и сворачиваем на него
+    missed() {
+      return {
+        actors: [{ id: 'me', kind: 'car', fill: CAR.blue.fill, keys: [{ t: 0, x: 70, y: LANE_DOWN }, { t: 0.42, x: 210, y: LANE_DOWN, b: 'r' },
+          { t: 0.62, x: 262, y: 100, r: 28, b: 'r' }, { t: 0.82, x: 298, y: 120, r: 28 }, { t: 1, x: 334, y: 140, r: 28 }] }],
+        dur: 3600, snap: 0.56, line: 'dashed', ramps: [-40, 200], signAt: { x: 38, y: 112, w: 52, h: 12 }, badge: 'Ausfahrt: 8 km'
+      };
+    },
     zipper() {
       return {
         actors: [
@@ -1340,6 +1375,11 @@ const Fahrschule = (() => {
     if (a.kind === 'deer') {
       return `<g class="${cls} fs-deer" data-actor="${a.id}" transform="${tr}"><text x="-11" y="7" class="fs-deer-ico">🦌</text></g>`;
     }
+    if (a.kind === 'moped') {
+      return `<g class="${cls} fs-moped" data-actor="${a.id}" transform="${tr}">
+        <circle cx="-17" cy="5" r="4.2" class="fs-wheel"/><circle cx="-3" cy="5" r="4.2" class="fs-wheel"/>
+        <path d="M-19 2 H-8 L-4 -5" class="fs-moped-body"/><circle cx="-12" cy="-6" r="3" class="fs-rider"/></g>`;
+    }
     if (a.kind === 'bike') {
       return `<g class="${cls} fs-bike" data-actor="${a.id}" transform="${tr}">
         <circle cx="-15" cy="0" r="4.5" class="fs-wheel"/><circle cx="-2" cy="0" r="4.5" class="fs-wheel"/>
@@ -1371,8 +1411,10 @@ const Fahrschule = (() => {
          <path d="M222 73 L236 67 M222 81 L236 73 M222 89 L236 81 M226 91 L236 87" class="fs-barrier-stripe"/></g>`
       : '';
     // знак сцены — в углу; у остановки он уже стоит у тротуара (stopSign)
+    // (у развилки автобана — рядом со съездом: signAt)
+    const at = plan.signAt || { x: 286, y: 8, w: 26, h: 26 };
     const sign = sc.sign && unit.signs[sc.sign] && !plan.stopSign
-      ? `<image href="${esc(unit.signs[sc.sign].src)}" x="286" y="8" width="26" height="26"/>` : '';
+      ? `<image href="${esc(unit.signs[sc.sign].src)}" x="${at.x}" y="${at.y}" width="${at.w}" height="${at.h}"/>` : '';
     const curb = (plan.park || plan.curb ? `<rect class="fs-sidewalk" x="0" y="92" width="${ROAD_W}" height="12"/>` : '')
       + (plan.bikeLane ? `<rect class="fs-bikelane" x="0" y="84" width="${ROAD_W}" height="9"/>` : '')
       + (plan.sideStreet ? `<rect class="fs-road" x="200" y="84" width="42" height="46"/>` : '')
@@ -1390,6 +1432,9 @@ const Fahrschule = (() => {
     const gap = plan.gapLabel ? `<g class="fs-lab${final ? ' is-on' : ''}">
         <path class="fs-bracket" d="M182 60 H192 M187 60 V75 M182 75 H192"/><path class="fs-leader" d="M192 68 H232 V104"/>
         <text class="fs-lab-text" x="232" y="117">${String(sc.answer).replace('.', ',')} m</text></g>` : '';
+    // съезд / въезд вправо-вниз от проезжей части и полоса разгона
+    const ramps = (plan.ramps || []).map(x => `<path class="fs-road" d="M${x} 90 H${x + 62} L${x + 132} 130 H${x + 70} Z"/>`).join('')
+      + (plan.accel ? `<path class="fs-road" d="M0 90 H300 L232 112 H0 Z"/><path class="fs-mark is-block" d="M0 91.5 H232"/>` : '');
     const ground = plan.tyre ? tyreHtml(sc, final)
       : plan.lanes3 ? `<rect class="fs-road" x="0" y="28" width="${ROAD_W}" height="78"/>
         <path class="fs-mark" d="M0 54 H${ROAD_W}"/><path class="fs-mark" d="M0 80 H${ROAD_W}"/>`
@@ -1401,7 +1446,7 @@ const Fahrschule = (() => {
         <text class="fs-lab-text" x="${(plan.measure.x1 + plan.measure.x2) / 2}" y="${plan.measure.y + 12}">${esc(plan.measure.label)}</text></g>` : '';
     return `<svg class="fs-svg fs-road-svg" viewBox="0 0 ${ROAD_W} 130" role="img" aria-label="${esc(sc.type)}">
       <rect class="fs-grass" x="0" y="0" width="${ROAD_W}" height="130"/>
-      ${ground}
+      ${ramps}${ground}
       ${curb}${rest}${ends}${sign}${park}${night}${plan.fog ? fogPosts(plan.fog) : ''}
       ${plan.actors.map(a => actorHtml(a, keyAt(a.keys, t))).join('')}
       ${plan.fog ? fogHtml(sc, plan.fog, final) : ''}${gap}${zzz}${badge}${measure}

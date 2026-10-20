@@ -109,6 +109,17 @@
     "p-10",
     "r-10"
    ]
+  },
+  {
+   "id": "autobahn",
+   "emoji": "🛣️",
+   "title": "Autobahn und Kraftfahrstraße",
+   "titleTr": "Автобан и дорога для автомобилей",
+   "units": [
+    "t-11",
+    "p-11",
+    "r-11"
+   ]
   }
  ],
  "units": [
@@ -381,6 +392,33 @@
    "title": "Warndreieck und Rettungsgasse",
    "titleTr": "Знак аварийной остановки и коридор для спасателей",
    "count": 6
+  },
+  {
+   "id": "t-11",
+   "kind": "theory",
+   "emoji": "🛣️",
+   "level": "B1",
+   "title": "Autobahn und Kraftfahrstraße",
+   "titleTr": "Автобан и дорога для автомобилей",
+   "count": 21
+  },
+  {
+   "id": "p-11",
+   "kind": "dialog",
+   "emoji": "🧭",
+   "level": "B1",
+   "title": "Die Ausfahrt verpasst",
+   "titleTr": "Пропустили съезд",
+   "count": 15
+  },
+  {
+   "id": "r-11",
+   "kind": "road",
+   "emoji": "🛣️",
+   "level": "B1",
+   "title": "Auffahren und Abfahren",
+   "titleTr": "Въезд и съезд",
+   "count": 5
   }
  ]
 }

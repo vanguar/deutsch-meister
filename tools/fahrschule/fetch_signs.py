@@ -71,6 +71,11 @@ SIGNS = {
     'z10151': 'File:Zeichen 101-51 - Schnee- oder Eisglätte, StVO 2017.svg',
     'z114': 'File:Zeichen 114 - Schleuder- oder Rutschgefahr, StVO 2013.svg',
     'z142': 'File:Zeichen 142-10 - Wildwechsel, Aufstellung rechts, StVO 1992.svg',
+    'z3302': 'File:Zeichen 330.2 - Ende der Autobahn, StVO 2013.svg',
+    'z3311': 'File:Zeichen 331.1 - Kraftfahrstraße, StVO 2013.svg',
+    'z275': 'File:Zeichen 275-30 - Vorgeschriebene Mindestgeschwindigkeit, StVO 2017.svg',
+    'z333': 'File:Zeichen 333 - Pfeilschild - Ausfahrt von der Autobahn, StVO 1980.svg',
+    'z450': 'File:Zeichen 450-51 - Ankündigungsbake zweistreifig (200 m), StVO 2013.svg',
 }
 
 # SVG с Commons встраивается как <img>: скрипты там и так не исполняются,

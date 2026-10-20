@@ -1,0 +1,991 @@
+{
+ "id": "t-11",
+ "kind": "theory",
+ "emoji": "🛣️",
+ "level": "B1",
+ "title": "Autobahn und Kraftfahrstraße",
+ "titleTr": "الطريق السريع وطريق السيارات",
+ "intro": "من يُسمح له بدخول الطريق السريع، وكيف تدخله وتخرج منه، وما الممنوع عليه، وماذا تفعل إذا فاتك المخرج.",
+ "sections": [
+  {
+   "title": "من يُسمح له بدخول الطريق السريع",
+   "lines": [
+    {
+     "de": "Auf der Autobahn dürfen nur Kraftfahrzeuge fahren, die schneller als 60 km/h fahren können.",
+     "tr": "لا يُسمح على الطريق السريع إلا للمركبات التي تستطيع السير بأسرع من 60 كم/س.",
+     "sign": "z3301"
+    },
+    {
+     "de": "Fußgänger, Radfahrer und Mofas sind auf der Autobahn verboten.",
+     "tr": "يُمنع المشاة وراكبو الدراجات والدراجات النارية الصغيرة من الطريق السريع."
+    },
+    {
+     "de": "Dieses Schild zeigt eine Kraftfahrstraße. Dort gelten fast dieselben Regeln wie auf der Autobahn.",
+     "tr": "هذه اللافتة تدل على طريق مخصص للسيارات. تسري عليه تقريبًا قواعد الطريق السريع نفسها.",
+     "sign": "z3311"
+    },
+    {
+     "de": "Hier endet die Autobahn. Danach gelten wieder die normalen Tempolimits.",
+     "tr": "هنا ينتهي الطريق السريع. بعده تعود حدود السرعة العادية.",
+     "sign": "z3302"
+    }
+   ]
+  },
+  {
+   "title": "الدخول إلى الطريق السريع",
+   "lines": [
+    {
+     "de": "Auf dem Beschleunigungsstreifen beschleunigen Sie auf die Geschwindigkeit des Verkehrs.",
+     "tr": "على مسار التسارع زِد سرعتك حتى تصل إلى سرعة حركة السير."
+    },
+    {
+     "de": "Der Verkehr auf der Autobahn hat Vorfahrt.",
+     "tr": "حركة السير على الطريق السريع لها الأولوية."
+    },
+    {
+     "de": "Blinken Sie links und fädeln Sie in eine passende Lücke ein.",
+     "tr": "شغّل إشارة اليسار وادخل في فراغ مناسب بين السيارات.",
+     "o": {
+      "ein": "ein>einfädeln",
+      "fädeln": "fädeln>einfädeln"
+     }
+    },
+    {
+     "de": "Fährt neben Ihnen ein Lkw, bremsen Sie leicht ab und fahren hinter ihm auf.",
+     "tr": "إذا كانت شاحنة تسير بجانبك فخفّف السرعة قليلًا وادخل خلفها.",
+     "o": {
+      "ab": "ab>abbremsen",
+      "auf": "auf>auffahren",
+      "bremsen": "bremsen>abbremsen",
+      "fahren": "fahren>auffahren"
+     }
+    }
+   ]
+  },
+  {
+   "title": "ما الممنوع على الطريق السريع",
+   "lines": [
+    {
+     "de": "Wenden und Rückwärtsfahren sind auf der Autobahn streng verboten.",
+     "tr": "الالتفاف والرجوع إلى الخلف ممنوعان منعًا باتًّا على الطريق السريع."
+    },
+    {
+     "de": "Haben Sie die Ausfahrt verpasst, fahren Sie bis zur nächsten Ausfahrt weiter.",
+     "tr": "إذا فاتك المخرج فتابع القيادة حتى المخرج التالي.",
+     "o": {
+      "fahren": "fahren>weiterfahren",
+      "weiter": "weiter>weiterfahren"
+     }
+    },
+    {
+     "de": "Halten und Parken sind verboten, auch auf dem Seitenstreifen.",
+     "tr": "التوقف والركن ممنوعان، حتى على كتف الطريق."
+    },
+    {
+     "de": "Nur bei einer Panne dürfen Sie auf dem Seitenstreifen halten.",
+     "tr": "لا يجوز لك التوقف على كتف الطريق إلا عند حدوث عطل."
+    },
+    {
+     "de": "Dieses Schild schreibt eine Mindestgeschwindigkeit vor. Langsamer dürfen Sie hier nicht fahren.",
+     "tr": "هذه اللافتة تفرض حدًّا أدنى للسرعة. لا يجوز لك هنا أن تسير أبطأ منه.",
+     "o": {
+      "schreibt": "schreibt>vorschreiben",
+      "vor": "vor>vorschreiben"
+     },
+     "sign": "z275"
+    }
+   ]
+  },
+  {
+   "title": "الخروج من الطريق السريع",
+   "lines": [
+    {
+     "de": "Diese Baken stehen 300, 200 und 100 Meter vor der Ausfahrt.",
+     "tr": "هذه اللوحات توضع قبل المخرج بـ300 و200 و100 متر.",
+     "sign": "z450"
+    },
+    {
+     "de": "Wechseln Sie rechtzeitig auf den rechten Fahrstreifen und blinken Sie rechts.",
+     "tr": "انتقل مبكرًا إلى المسار الأيمن وشغّل إشارة اليمين."
+    },
+    {
+     "de": "Bremsen Sie erst auf dem Verzögerungsstreifen.",
+     "tr": "لا تفرمل إلا على مسار التباطؤ."
+    },
+    {
+     "de": "Dieses Schild zeigt, wo die Ausfahrt beginnt.",
+     "tr": "هذه اللافتة تبيّن أين يبدأ المخرج.",
+     "sign": "z333"
+    },
+    {
+     "de": "Nach der Autobahn wirken 80 km/h oft sehr langsam. Schauen Sie auf den Tacho.",
+     "tr": "بعد الطريق السريع تبدو سرعة 80 كم/س غالبًا بطيئة جدًّا. انظر إلى عداد السرعة."
+    }
+   ]
+  },
+  {
+   "title": "الشاحنات والازدحام والاستراحة",
+   "lines": [
+    {
+     "de": "Lkw über 3,5 Tonnen dürfen auf der Autobahn höchstens 80 km/h fahren.",
+     "tr": "الشاحنات التي يزيد وزنها على 3,5 طن لا يجوز لها على الطريق السريع تجاوز 80 كم/س."
+    },
+    {
+     "de": "Am Stauende dürfen Sie das Warnblinklicht einschalten, um den Verkehr hinter sich zu warnen.",
+     "tr": "عند نهاية الازدحام يجوز لك تشغيل أضواء التحذير لتنبيه السيارات خلفك."
+    },
+    {
+     "de": "Auf langen Fahrten machen Sie Pause auf einem Rastplatz oder an einer Raststätte.",
+     "tr": "في الرحلات الطويلة خذ استراحة في موقف استراحة أو في محطة خدمة."
+    }
+   ]
+  }
+ ],
+ "quiz": [
+  {
+   "sign": "z3301",
+   "wrong": [
+    "z3311",
+    "z3302"
+   ]
+  },
+  {
+   "sign": "z3302",
+   "wrong": [
+    "z3301",
+    "z307"
+   ]
+  },
+  {
+   "sign": "z3311",
+   "wrong": [
+    "z3301",
+    "z314"
+   ]
+  },
+  {
+   "sign": "z275",
+   "wrong": [
+    "z274",
+    "z380"
+   ]
+  },
+  {
+   "sign": "z450",
+   "wrong": [
+    "z333",
+    "z3302"
+   ]
+  },
+  {
+   "sign": "z333",
+   "wrong": [
+    "z450",
+    "z3311"
+   ]
+  }
+ ],
+ "quizQuestion": {
+  "de": "Was bedeutet dieses Schild?",
+  "tr": "ماذا تعني هذه اللافتة؟"
+ },
+ "signs": {
+  "z274": {
+   "de": "Zulässige Höchstgeschwindigkeit",
+   "tr": "الحد الأقصى المسموح للسرعة",
+   "src": "data/fahrschule/signs/z274.svg",
+   "n": "274",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_274-30_-_Zul%C3%A4ssige_H%C3%B6chstgeschwindigkeit,_StVO_2017.svg"
+  },
+  "z275": {
+   "de": "Mindestgeschwindigkeit",
+   "tr": "الحد الأدنى للسرعة",
+   "src": "data/fahrschule/signs/z275.svg",
+   "n": "275",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_275-30_-_Vorgeschriebene_Mindestgeschwindigkeit,_StVO_2017.svg"
+  },
+  "z307": {
+   "de": "Ende der Vorfahrtstraße",
+   "tr": "نهاية الطريق ذي الأولوية",
+   "src": "data/fahrschule/signs/z307.svg",
+   "n": "307",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_307_-_Ende_der_Vorfahrtstra%C3%9Fe,_StVO_1970.svg"
+  },
+  "z314": {
+   "de": "Parken",
+   "tr": "موقف سيارات",
+   "src": "data/fahrschule/signs/z314.svg",
+   "n": "314",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_314_-_Parken,_StVO_2017.svg"
+  },
+  "z3301": {
+   "de": "Autobahn",
+   "tr": "الطريق السريع (أوتوبان)",
+   "src": "data/fahrschule/signs/z3301.svg",
+   "n": "330.1",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_330.1_-_Autobahn,_StVO_2013.svg"
+  },
+  "z3302": {
+   "de": "Ende der Autobahn",
+   "tr": "نهاية الطريق السريع",
+   "src": "data/fahrschule/signs/z3302.svg",
+   "n": "330.2",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_330.2_-_Ende_der_Autobahn,_StVO_2013.svg"
+  },
+  "z3311": {
+   "de": "Kraftfahrstraße",
+   "tr": "طريق مخصص للسيارات",
+   "src": "data/fahrschule/signs/z3311.svg",
+   "n": "331.1",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_331.1_-_Kraftfahrstra%C3%9Fe,_StVO_2013.svg"
+  },
+  "z333": {
+   "de": "Ausfahrt",
+   "tr": "مخرج الطريق السريع",
+   "src": "data/fahrschule/signs/z333.svg",
+   "n": "333",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_333_-_Pfeilschild_-_Ausfahrt_von_der_Autobahn,_StVO_1980.svg"
+  },
+  "z380": {
+   "de": "Richtgeschwindigkeit",
+   "tr": "السرعة الموصى بها",
+   "src": "data/fahrschule/signs/z380.svg",
+   "n": "380",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_380_-_Richtgeschwindigkeit,_StVO_1988.svg"
+  },
+  "z450": {
+   "de": "Ankündigungsbake",
+   "tr": "لوحة المسافة إلى المخرج",
+   "src": "data/fahrschule/signs/z450.svg",
+   "n": "450",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Zeichen_450-51_-_Ank%C3%BCndigungsbake_zweistreifig_(200_m),_StVO_2013.svg"
+  }
+ },
+ "gloss": {
+  "w": {
+   "ab>abbremsen": "abbremsen",
+   "als": "als",
+   "am": "an",
+   "an": "an",
+   "ankündigungsbake": "Ankündigungsbake",
+   "auch": "auch",
+   "auf": "auf",
+   "auf>auffahren": "auffahren",
+   "ausfahrt": "Ausfahrt",
+   "autobahn": "Autobahn",
+   "baken": "Bake",
+   "bedeutet": "bedeuten",
+   "beginnt": "beginnen",
+   "bei": "bei",
+   "beschleunigen": "beschleunigen",
+   "beschleunigungsstreifen": "Beschleunigungsstreifen",
+   "bis": "bis",
+   "blinken": "blinken",
+   "bremsen": "bremsen",
+   "bremsen>abbremsen": "abbremsen",
+   "danach": "danach",
+   "das": "der/die/das",
+   "dem": "der/die/das",
+   "den": "der/die/das",
+   "der": "der/die/das",
+   "des": "der/die/das",
+   "die": "der/die/das",
+   "diese": "dieser",
+   "dieselben": "derselbe",
+   "dieses": "dieser",
+   "dort": "dort",
+   "dürfen": "dürfen",
+   "ein": "ein/eine",
+   "ein>einfädeln": "einfädeln",
+   "eine": "ein/eine",
+   "einem": "ein/eine",
+   "einer": "ein/eine",
+   "einschalten": "einschalten",
+   "ende": "Ende",
+   "endet": "enden",
+   "erst": "erst",
+   "fahren": "fahren",
+   "fahren>auffahren": "auffahren",
+   "fahren>weiterfahren": "weiterfahren",
+   "fahrstreifen": "Fahrstreifen",
+   "fahrten": "Fahrt",
+   "fast": "fast",
+   "fußgänger": "Fußgänger",
+   "fädeln>einfädeln": "einfädeln",
+   "fährt": "fahren",
+   "gelten": "gelten",
+   "geschwindigkeit": "Geschwindigkeit",
+   "haben": "haben",
+   "halten": "halten",
+   "hat": "haben",
+   "hier": "hier",
+   "hinter": "hinter",
+   "höchstens": "höchstens",
+   "höchstgeschwindigkeit": "Höchstgeschwindigkeit",
+   "ihm": "er",
+   "ihnen": "Sie",
+   "in": "in",
+   "km/h": "km/h",
+   "kraftfahrstraße": "Kraftfahrstraße",
+   "kraftfahrzeuge": "Kraftfahrzeug",
+   "können": "können",
+   "langen": "lang",
+   "langsam": "langsam",
+   "langsamer": "langsam",
+   "leicht": "leicht",
+   "links": "links",
+   "lkw": "Lkw",
+   "lücke": "Lücke",
+   "machen": "machen",
+   "meter": "Meter",
+   "mindestgeschwindigkeit": "Mindestgeschwindigkeit",
+   "mofas": "Mofa",
+   "nach": "nach",
+   "neben": "neben",
+   "nicht": "nicht",
+   "normalen": "normal",
+   "nur": "nur",
+   "nächsten": "nächste",
+   "oder": "oder",
+   "oft": "oft",
+   "panne": "Panne",
+   "parken": "parken",
+   "passende": "passend",
+   "pause": "Pause",
+   "radfahrer": "Radfahrer",
+   "rastplatz": "Rastplatz",
+   "raststätte": "Raststätte",
+   "rechten": "recht",
+   "rechts": "rechts",
+   "rechtzeitig": "rechtzeitig",
+   "regeln": "Regel",
+   "richtgeschwindigkeit": "Richtgeschwindigkeit",
+   "rückwärtsfahren": "Rückwärtsfahren",
+   "schauen": "schauen",
+   "schild": "Schild",
+   "schneller": "schnell",
+   "schreibt>vorschreiben": "vorschreiben",
+   "sehr": "sehr",
+   "seitenstreifen": "Seitenstreifen",
+   "sich": "sich",
+   "sie": "Sie",
+   "sind": "sein",
+   "stauende": "Stauende",
+   "stehen": "stehen",
+   "streng": "streng",
+   "tacho": "Tacho",
+   "tempolimits": "Tempolimit",
+   "tonnen": "Tonne",
+   "um": "um",
+   "und": "und",
+   "verboten": "verbieten",
+   "verkehr": "Verkehr",
+   "verkehrs": "Verkehr",
+   "verpasst": "verpassen",
+   "verzögerungsstreifen": "Verzögerungsstreifen",
+   "vor": "vor",
+   "vor>vorschreiben": "vorschreiben",
+   "vorfahrt": "Vorfahrt",
+   "vorfahrtstraße": "Vorfahrtstraße",
+   "warnblinklicht": "Warnblinklicht",
+   "warnen": "warnen",
+   "was": "was",
+   "wechseln": "wechseln",
+   "weiter>weiterfahren": "weiterfahren",
+   "wenden": "wenden",
+   "wie": "wie",
+   "wieder": "wieder",
+   "wirken": "wirken",
+   "wo": "wo",
+   "zeigt": "zeigen",
+   "zu": "zu",
+   "zulässige": "zulässig",
+   "zur": "zu",
+   "über": "über"
+  },
+  "l": {
+   "Ankündigungsbake": {
+    "ru": "لوحة المسافة إلى المخرج",
+    "pos": "اسم",
+    "note": "ثلاثة خطوط — 300 م، خطان — 200 م، خط واحد — 100 م",
+    "decl": "die Ankündigungsbake · الجمع: die Ankündigungsbaken"
+   },
+   "Ausfahrt": {
+    "ru": "مخرج (من الطريق السريع)",
+    "pos": "اسم",
+    "decl": "die Ausfahrt · الجمع: die Ausfahrten"
+   },
+   "Autobahn": {
+    "ru": "الطريق السريع (أوتوبان)",
+    "pos": "اسم",
+    "decl": "die Autobahn · الجمع: die Autobahnen"
+   },
+   "Bake": {
+    "ru": "لوحة مسافة مخططة",
+    "pos": "اسم",
+    "decl": "die Bake · الجمع: die Baken"
+   },
+   "Beschleunigungsstreifen": {
+    "ru": "مسار التسارع",
+    "pos": "اسم",
+    "note": "عليه تصل إلى سرعة السير ثم تنتقل",
+    "decl": "der Beschleunigungsstreifen · الجمع: die Beschleunigungsstreifen"
+   },
+   "Ende": {
+    "ru": "نهاية",
+    "pos": "اسم",
+    "decl": "das Ende · الجمع: die Enden"
+   },
+   "Fahrstreifen": {
+    "ru": "مسار",
+    "pos": "اسم",
+    "decl": "der Fahrstreifen · الجمع: die Fahrstreifen"
+   },
+   "Fahrt": {
+    "ru": "رحلة، جولة بالسيارة",
+    "pos": "اسم",
+    "decl": "die Fahrt · الجمع: die Fahrten"
+   },
+   "Fußgänger": {
+    "ru": "ماشٍ، المشاة",
+    "pos": "اسم",
+    "decl": "der Fußgänger · الجمع: die Fußgänger"
+   },
+   "Geschwindigkeit": {
+    "ru": "السرعة",
+    "pos": "اسم",
+    "decl": "die Geschwindigkeit · الجمع: die Geschwindigkeiten"
+   },
+   "Höchstgeschwindigkeit": {
+    "ru": "السرعة القصوى",
+    "pos": "اسم",
+    "decl": "die Höchstgeschwindigkeit · الجمع: die Höchstgeschwindigkeiten"
+   },
+   "Kraftfahrstraße": {
+    "ru": "طريق مخصص للسيارات",
+    "pos": "اسم",
+    "note": "لافتة زرقاء عليها سيارة بيضاء؛ قواعدها تقريبًا كالطريق السريع",
+    "decl": "die Kraftfahrstraße · الجمع: die Kraftfahrstraßen"
+   },
+   "Kraftfahrzeug": {
+    "ru": "مركبة آلية",
+    "pos": "اسم",
+    "note": "اختصارًا Kfz: مركبة بمحرك",
+    "decl": "das Kraftfahrzeug · الجمع: die Kraftfahrzeuge"
+   },
+   "Lkw": {
+    "ru": "شاحنة",
+    "pos": "اسم",
+    "note": "اختصار لـ der Lastkraftwagen",
+    "decl": "der Lkw · الجمع: die Lkw"
+   },
+   "Lücke": {
+    "ru": "فراغ، مكان فارغ",
+    "pos": "اسم",
+    "decl": "die Lücke · الجمع: die Lücken"
+   },
+   "Meter": {
+    "ru": "متر",
+    "pos": "اسم",
+    "decl": "der Meter · الجمع: die Meter"
+   },
+   "Mindestgeschwindigkeit": {
+    "ru": "الحد الأدنى للسرعة",
+    "pos": "اسم",
+    "decl": "die Mindestgeschwindigkeit · الجمع: die Mindestgeschwindigkeiten"
+   },
+   "Mofa": {
+    "ru": "دراجة نارية صغيرة (حتى 25 كم/س)",
+    "pos": "اسم",
+    "decl": "das Mofa · الجمع: die Mofas"
+   },
+   "Panne": {
+    "ru": "عطل",
+    "pos": "اسم",
+    "decl": "die Panne · الجمع: die Pannen"
+   },
+   "Pause": {
+    "ru": "استراحة",
+    "pos": "اسم",
+    "decl": "die Pause · الجمع: die Pausen"
+   },
+   "Radfahrer": {
+    "ru": "راكب دراجة",
+    "pos": "اسم",
+    "decl": "der Radfahrer · الجمع: die Radfahrer"
+   },
+   "Rastplatz": {
+    "ru": "موقف استراحة",
+    "pos": "اسم",
+    "decl": "der Rastplatz · الجمع: die Rastplätze"
+   },
+   "Raststätte": {
+    "ru": "محطة خدمة واستراحة",
+    "pos": "اسم",
+    "decl": "die Raststätte · الجمع: die Raststätten"
+   },
+   "Regel": {
+    "ru": "قاعدة",
+    "pos": "اسم",
+    "decl": "die Regel · الجمع: die Regeln"
+   },
+   "Richtgeschwindigkeit": {
+    "ru": "السرعة الموصى بها",
+    "pos": "اسم",
+    "note": "على الأوتوبان 130 كم/س — توصية لا قانون؛ وعند حادث بسرعة أعلى قد تتحمل جزءًا من المسؤولية",
+    "decl": "die Richtgeschwindigkeit · الجمع: die Richtgeschwindigkeiten"
+   },
+   "Rückwärtsfahren": {
+    "ru": "القيادة إلى الخلف",
+    "pos": "اسم",
+    "decl": "das Rückwärtsfahren · لا جمع له"
+   },
+   "Schild": {
+    "ru": "لافتة",
+    "pos": "اسم",
+    "decl": "das Schild · الجمع: die Schilder"
+   },
+   "Seitenstreifen": {
+    "ru": "كتف الطريق",
+    "pos": "اسم",
+    "decl": "der Seitenstreifen · الجمع: die Seitenstreifen"
+   },
+   "Sie": {
+    "ru": "حضرتك (صيغة الاحترام)",
+    "pos": "ضمير",
+    "note": "Ihnen — لكم (حالة الجر): vor Ihnen — أمامك"
+   },
+   "Stauende": {
+    "ru": "نهاية الازدحام",
+    "pos": "اسم",
+    "decl": "das Stauende · الجمع: die Stauenden"
+   },
+   "Tacho": {
+    "ru": "عداد السرعة",
+    "pos": "اسم",
+    "note": "halber Tacho — نصف قراءة العداد (بالأمتار)",
+    "decl": "der Tacho · الجمع: die Tachos"
+   },
+   "Tempolimit": {
+    "ru": "حدّ السرعة",
+    "pos": "اسم",
+    "decl": "das Tempolimit · الجمع: die Tempolimits"
+   },
+   "Tonne": {
+    "ru": "طن",
+    "pos": "اسم",
+    "decl": "die Tonne · الجمع: die Tonnen"
+   },
+   "Verkehr": {
+    "ru": "حركة المرور",
+    "pos": "اسم",
+    "decl": "der Verkehr · لا جمع له"
+   },
+   "Verzögerungsstreifen": {
+    "ru": "مسار التباطؤ",
+    "pos": "اسم",
+    "decl": "der Verzögerungsstreifen · الجمع: die Verzögerungsstreifen"
+   },
+   "Vorfahrt": {
+    "ru": "أولوية المرور",
+    "pos": "اسم",
+    "decl": "die Vorfahrt · لا جمع له"
+   },
+   "Vorfahrtstraße": {
+    "ru": "طريق ذو أولوية",
+    "pos": "اسم",
+    "decl": "die Vorfahrtstraße · الجمع: die Vorfahrtstraßen"
+   },
+   "Warnblinklicht": {
+    "ru": "ضوء التحذير الوامض",
+    "pos": "اسم",
+    "decl": "das Warnblinklicht · لا جمع له"
+   },
+   "abbremsen": {
+    "ru": "يخفّف السرعة بالفرامل",
+    "pos": "فعل",
+    "note": "سابقة منفصلة: bremsen Sie … ab",
+    "forms": "bremste ab · hat abgebremst"
+   },
+   "als": {
+    "ru": "من (في المقارنة)؛ كـ",
+    "pos": "أداة ربط"
+   },
+   "an": {
+    "ru": "عند، على",
+    "pos": "حرف جر",
+    "note": "am = an dem؛ an der Kreuzung — عند التقاطع"
+   },
+   "auch": {
+    "ru": "أيضًا؛ حتى (auch wenn)",
+    "pos": "ظرف"
+   },
+   "auf": {
+    "ru": "على",
+    "pos": "حرف جر",
+    "note": "auf der Straße — على الطريق؛ achten auf — ينتبه لـ"
+   },
+   "auffahren": {
+    "ru": "يدخل (إلى الطريق السريع)",
+    "pos": "فعل",
+    "note": "auf die Autobahn auffahren — يدخل الطريق السريع؛ سابقة منفصلة",
+    "forms": "fuhr auf · ist aufgefahren"
+   },
+   "bedeuten": {
+    "ru": "يعني",
+    "pos": "فعل",
+    "forms": "bedeutete · hat bedeutet"
+   },
+   "beginnen": {
+    "ru": "يبدأ",
+    "pos": "فعل",
+    "forms": "begann · hat begonnen"
+   },
+   "bei": {
+    "ru": "عند",
+    "pos": "حرف جر",
+    "note": "beim = bei dem: beim Fahren — أثناء القيادة؛ bei Rot — عند الأحمر"
+   },
+   "beschleunigen": {
+    "ru": "يتسارع",
+    "pos": "فعل",
+    "forms": "beschleunigte · hat beschleunigt"
+   },
+   "bis": {
+    "ru": "حتى",
+    "pos": "أداة ربط"
+   },
+   "blinken": {
+    "ru": "يشغّل إشارة الانعطاف",
+    "pos": "فعل",
+    "forms": "blinkte · hat geblinkt"
+   },
+   "bremsen": {
+    "ru": "يكبح، يفرمل",
+    "pos": "فعل",
+    "forms": "bremste · hat gebremst"
+   },
+   "danach": {
+    "ru": "بعد ذلك",
+    "pos": "ظرف"
+   },
+   "der/die/das": {
+    "ru": "أداة التعريف",
+    "pos": "أداة تعريف",
+    "note": "der للمذكر، die للمؤنث والجمع، das للمحايد؛ den للمذكر في حالة النصب، dem للمذكر والمحايد في حالة الجر؛ وdas تعني أيضًا «هذا»"
+   },
+   "derselbe": {
+    "ru": "نفسه",
+    "pos": "ضمير"
+   },
+   "dieser": {
+    "ru": "هذا، هذه",
+    "pos": "ضمير"
+   },
+   "dort": {
+    "ru": "هناك",
+    "pos": "ظرف"
+   },
+   "dürfen": {
+    "ru": "يحق له، يُسمح له",
+    "pos": "فعل",
+    "forms": "durfte · hat gedurft"
+   },
+   "ein/eine": {
+    "ru": "أداة النكرة؛ واحد",
+    "pos": "أداة تعريف",
+    "note": "an einer Kreuzung — عند تقاطعٍ ما"
+   },
+   "einfädeln": {
+    "ru": "يندمج في حركة السير",
+    "pos": "فعل",
+    "note": "سابقة منفصلة: fädeln Sie … ein",
+    "forms": "fädelte ein · hat eingefädelt"
+   },
+   "einschalten": {
+    "ru": "يشغّل",
+    "pos": "فعل",
+    "note": "سابقة منفصلة: schalten … ein",
+    "forms": "schaltete ein · hat eingeschaltet"
+   },
+   "enden": {
+    "ru": "ينتهي",
+    "pos": "فعل",
+    "forms": "endete · hat geendet"
+   },
+   "er": {
+    "ru": "هو",
+    "pos": "ضمير",
+    "note": "ihn — ـه (مفعول)؛ هنا عن الشاحنة أو الإسعاف"
+   },
+   "erst": {
+    "ru": "لا … إلا (ليس قبل)",
+    "pos": "ظرف"
+   },
+   "fahren": {
+    "ru": "يسير بالسيارة؛ يقود",
+    "pos": "فعل",
+    "forms": "fuhr · ist gefahren"
+   },
+   "fast": {
+    "ru": "تقريبًا",
+    "pos": "ظرف"
+   },
+   "gelten": {
+    "ru": "يسري، ينطبق",
+    "pos": "فعل",
+    "forms": "galt · hat gegolten"
+   },
+   "haben": {
+    "ru": "يملك، لديه",
+    "pos": "فعل",
+    "note": "Vorfahrt haben — له أولوية المرور",
+    "forms": "hatte · hat gehabt"
+   },
+   "halten": {
+    "ru": "يتوقف (لوقت قصير)؛ يمسك",
+    "pos": "فعل",
+    "forms": "hielt · hat gehalten"
+   },
+   "hier": {
+    "ru": "هنا",
+    "pos": "ظرف"
+   },
+   "hinter": {
+    "ru": "خلف",
+    "pos": "حرف جر"
+   },
+   "höchstens": {
+    "ru": "كحدّ أقصى",
+    "pos": "ظرف"
+   },
+   "in": {
+    "ru": "في",
+    "pos": "حرف جر",
+    "note": "im = in dem: im Bereich — في المنطقة"
+   },
+   "km/h": {
+    "ru": "كم/س",
+    "pos": "تعبير",
+    "note": "تُقرأ: Kilometer pro Stunde"
+   },
+   "können": {
+    "ru": "يستطيع",
+    "pos": "فعل",
+    "forms": "konnte · hat gekonnt"
+   },
+   "lang": {
+    "ru": "طويل",
+    "pos": "صفة",
+    "note": "Wie lang …؟ — كم طول …؟",
+    "forms": "lang · länger · am längsten"
+   },
+   "langsam": {
+    "ru": "بطيء؛ ببطء",
+    "pos": "صفة"
+   },
+   "leicht": {
+    "ru": "خفيف",
+    "pos": "صفة"
+   },
+   "links": {
+    "ru": "يسارًا، على اليسار",
+    "pos": "ظرف"
+   },
+   "machen": {
+    "ru": "يفعل",
+    "pos": "فعل",
+    "note": "den Schulterblick machen — يلتفت فوق كتفه؛ Gut gemacht! — أحسنت!",
+    "forms": "machte · hat gemacht"
+   },
+   "nach": {
+    "ru": "بعد؛ إلى",
+    "pos": "حرف جر"
+   },
+   "neben": {
+    "ru": "بجانب",
+    "pos": "حرف جر"
+   },
+   "nicht": {
+    "ru": "لا، ليس",
+    "pos": "أداة"
+   },
+   "normal": {
+    "ru": "طبيعي",
+    "pos": "صفة"
+   },
+   "nur": {
+    "ru": "فقط",
+    "pos": "ظرف"
+   },
+   "nächste": {
+    "ru": "القادم، الأقرب",
+    "pos": "صفة"
+   },
+   "oder": {
+    "ru": "أو",
+    "pos": "أداة ربط",
+    "note": "…, oder? — …، أليس كذلك؟"
+   },
+   "oft": {
+    "ru": "غالبًا",
+    "pos": "ظرف"
+   },
+   "parken": {
+    "ru": "يركن",
+    "pos": "فعل",
+    "note": "يُعدّ راكنًا من يتوقف أكثر من 3 دقائق أو يترك السيارة",
+    "forms": "parkte · hat geparkt"
+   },
+   "passend": {
+    "ru": "مناسب",
+    "pos": "صفة"
+   },
+   "recht": {
+    "ru": "أيمن",
+    "pos": "صفة"
+   },
+   "rechts": {
+    "ru": "يمينًا، على اليمين",
+    "pos": "ظرف"
+   },
+   "rechtzeitig": {
+    "ru": "في الوقت المناسب، مبكرًا",
+    "pos": "ظرف"
+   },
+   "schauen": {
+    "ru": "ينظر",
+    "pos": "فعل",
+    "forms": "schaute · hat geschaut"
+   },
+   "schnell": {
+    "ru": "سريع؛ بسرعة",
+    "pos": "صفة"
+   },
+   "sehr": {
+    "ru": "جدًا",
+    "pos": "ظرف"
+   },
+   "sein": {
+    "ru": "يكون",
+    "pos": "فعل",
+    "forms": "war · ist gewesen"
+   },
+   "sich": {
+    "ru": "نفسه (ضمير انعكاسي)",
+    "pos": "ضمير"
+   },
+   "stehen": {
+    "ru": "يقف؛ يوجد",
+    "pos": "فعل",
+    "note": "Schilder stehen — توجد لافتات",
+    "forms": "stand · hat gestanden"
+   },
+   "streng": {
+    "ru": "صارم؛ بصرامة",
+    "pos": "صفة"
+   },
+   "um": {
+    "ru": "في (الساعة)؛ حول",
+    "pos": "حرف جر",
+    "note": "um 23 Uhr — في الساعة 23"
+   },
+   "und": {
+    "ru": "و",
+    "pos": "أداة ربط"
+   },
+   "verbieten": {
+    "ru": "يمنع",
+    "pos": "فعل",
+    "forms": "verbot · hat verboten"
+   },
+   "verpassen": {
+    "ru": "يفوّت",
+    "pos": "فعل",
+    "forms": "verpasste · hat verpasst"
+   },
+   "vor": {
+    "ru": "قبل، أمام",
+    "pos": "حرف جر",
+    "note": "rechts vor links — اليمين قبل اليسار"
+   },
+   "vorschreiben": {
+    "ru": "يفرض",
+    "pos": "فعل",
+    "forms": "schrieb vor · hat vorgeschrieben"
+   },
+   "warnen": {
+    "ru": "يحذّر",
+    "pos": "فعل",
+    "forms": "warnte · hat gewarnt"
+   },
+   "was": {
+    "ru": "ماذا",
+    "pos": "ضمير"
+   },
+   "wechseln": {
+    "ru": "يغيّر؛ ينتقل",
+    "pos": "فعل",
+    "note": "auf die linke Spur wechseln — ينتقل إلى المسار الأيسر",
+    "forms": "wechselte · hat gewechselt"
+   },
+   "weiterfahren": {
+    "ru": "يواصل القيادة",
+    "pos": "فعل",
+    "forms": "fuhr weiter · ist weitergefahren"
+   },
+   "wenden": {
+    "ru": "يلتف بالسيارة",
+    "pos": "فعل",
+    "note": "das Wenden — الالتفاف",
+    "forms": "wendete · hat gewendet"
+   },
+   "wie": {
+    "ru": "كيف",
+    "pos": "ظرف",
+    "note": "wie schnell — بأي سرعة"
+   },
+   "wieder": {
+    "ru": "من جديد",
+    "pos": "ظرف"
+   },
+   "wirken": {
+    "ru": "يبدو؛ يؤثّر",
+    "pos": "فعل",
+    "forms": "wirkte · hat gewirkt"
+   },
+   "wo": {
+    "ru": "أين",
+    "pos": "ظرف"
+   },
+   "zeigen": {
+    "ru": "يُظهر، يعرض",
+    "pos": "فعل",
+    "forms": "zeigte · hat gezeigt"
+   },
+   "zu": {
+    "ru": "إلى؛ لـ",
+    "pos": "حرف جر",
+    "note": "zum = zu dem، zur = zu der: Abstand zur Kreuzung — المسافة عن التقاطع"
+   },
+   "zulässig": {
+    "ru": "مسموح به",
+    "pos": "صفة"
+   },
+   "über": {
+    "ru": "عبر؛ فوق",
+    "pos": "حرف جر"
+   }
+  }
+ }
+}
