@@ -1,0 +1,579 @@
+{
+ "id": "p-10",
+ "kind": "dialog",
+ "emoji": "📋",
+ "level": "B1",
+ "title": "Ein kleiner Unfall",
+ "titleTr": "Невелика аварія",
+ "intro": "Ольга в'їхала ззаду в машину пана Ваґнера. Ніхто не постраждав: аварійка, жилет, знак, фото і європротокол з іншим водієм.",
+ "speakers": {
+  "A": {
+   "name": "Herr Wagner",
+   "g": "m"
+  },
+  "B": {
+   "name": "Olha",
+   "g": "f"
+  }
+ },
+ "lines": [
+  {
+   "de": "Haben Sie mich nicht gesehen? Sie sind mir hinten reingefahren!",
+   "tr": "Ви мене не бачили? Ви в'їхали мені ззаду!",
+   "s": "A"
+  },
+  {
+   "de": "Entschuldigung! Sind Sie verletzt?",
+   "tr": "Вибачте! Ви не поранені?",
+   "s": "B"
+  },
+  {
+   "de": "Nein, mir geht es gut. Nur das Auto hat eine Delle.",
+   "tr": "Ні, зі мною все гаразд. Тільки на машині вм'ятина.",
+   "s": "A"
+  },
+  {
+   "de": "Gut. Ich schalte das Warnblinklicht ein und ziehe die Warnweste an.",
+   "tr": "Добре. Я вмикаю аварійку й одягаю жилет.",
+   "o": {
+    "an": "an>anziehen",
+    "ein": "ein>einschalten",
+    "schalte": "schalte>einschalten",
+    "ziehe": "ziehe>anziehen"
+   },
+   "s": "B"
+  },
+  {
+   "de": "Stellen Sie auch das Warndreieck auf. Die Straße ist hier unübersichtlich.",
+   "tr": "Поставте й знак аварійної зупинки. Дорогу тут погано видно.",
+   "o": {
+    "auf": "auf>aufstellen",
+    "stellen": "stellen>aufstellen"
+   },
+   "s": "A"
+  },
+  {
+   "de": "Mache ich. Etwa 50 Meter hinter den Autos, richtig?",
+   "tr": "Зроблю. Приблизно за 50 метрів позаду машин, правильно?",
+   "s": "B"
+  },
+  {
+   "de": "Ja. Dann machen wir Fotos und fahren die Autos an den Rand.",
+   "tr": "Так. Потім зробимо фото й приберемо машини до краю.",
+   "s": "A"
+  },
+  {
+   "de": "Müssen wir die Polizei rufen?",
+   "tr": "Нам треба викликати поліцію?",
+   "s": "B"
+  },
+  {
+   "de": "Bei einem kleinen Blechschaden nicht unbedingt. Wir füllen den Unfallbericht aus.",
+   "tr": "За невеликої вм'ятини не обов'язково. Ми заповнимо європротокол.",
+   "o": {
+    "aus": "aus>ausfüllen",
+    "füllen": "füllen>ausfüllen"
+   },
+   "s": "A"
+  },
+  {
+   "de": "Ich habe einen im Handschuhfach. Was muss ich eintragen?",
+   "tr": "У мене є бланк у бардачку. Що мені треба вписати?",
+   "s": "B"
+  },
+  {
+   "de": "Name, Adresse, Kennzeichen und Ihre Versicherung.",
+   "tr": "Ім'я, адресу, номер машини й вашу страховку.",
+   "s": "A"
+  },
+  {
+   "de": "Und muss ich unterschreiben, dass ich schuld bin?",
+   "tr": "А мені треба підписати, що я винна?",
+   "s": "B"
+  },
+  {
+   "de": "Nein. Sie beschreiben nur, was passiert ist. Den Rest klärt die Versicherung.",
+   "tr": "Ні. Ви лише описуєте, що сталося. Решту вирішить страхова.",
+   "s": "A"
+  },
+  {
+   "de": "Gut. Dann machen wir das jetzt zusammen.",
+   "tr": "Добре. Тоді зробимо це разом.",
+   "s": "B"
+  },
+  {
+   "de": "Einverstanden. Und fahren Sie in Zukunft mit mehr Abstand!",
+   "tr": "Домовилися. І надалі тримайте дистанцію більшу!",
+   "s": "A"
+  }
+ ],
+ "signs": {},
+ "gloss": {
+  "w": {
+   "abstand": "Abstand",
+   "adresse": "Adresse",
+   "an": "an",
+   "an>anziehen": "anziehen",
+   "auch": "auch",
+   "auf>aufstellen": "aufstellen",
+   "aus>ausfüllen": "ausfüllen",
+   "auto": "Auto",
+   "autos": "Auto",
+   "bei": "bei",
+   "beschreiben": "beschreiben",
+   "bin": "sein",
+   "blechschaden": "Blechschaden",
+   "dann": "dann",
+   "das": "der/die/das",
+   "dass": "dass",
+   "delle": "Delle",
+   "den": "der/die/das",
+   "die": "der/die/das",
+   "ein": "ein/eine",
+   "ein>einschalten": "einschalten",
+   "eine": "ein/eine",
+   "einem": "ein/eine",
+   "einen": "ein/eine",
+   "eintragen": "eintragen",
+   "einverstanden": "einverstanden",
+   "entschuldigung": "Entschuldigung",
+   "es": "es",
+   "etwa": "etwa",
+   "fahren": "fahren",
+   "fotos": "Foto",
+   "füllen>ausfüllen": "ausfüllen",
+   "geht": "gehen",
+   "gesehen": "sehen",
+   "gut": "gut",
+   "habe": "haben",
+   "haben": "haben",
+   "handschuhfach": "Handschuhfach",
+   "hat": "haben",
+   "hier": "hier",
+   "hinten": "hinten",
+   "hinter": "hinter",
+   "ich": "ich",
+   "ihre": "Ihr",
+   "im": "in",
+   "in": "in",
+   "ist": "sein",
+   "ja": "ja",
+   "jetzt": "jetzt",
+   "kennzeichen": "Kennzeichen",
+   "kleinen": "klein",
+   "kleiner": "klein",
+   "klärt": "klären",
+   "mache": "machen",
+   "machen": "machen",
+   "mehr": "mehr",
+   "meter": "Meter",
+   "mich": "ich",
+   "mir": "mir",
+   "mit": "mit",
+   "muss": "müssen",
+   "müssen": "müssen",
+   "name": "Name",
+   "nein": "nein",
+   "nicht": "nicht",
+   "nur": "nur",
+   "passiert": "passieren",
+   "polizei": "Polizei",
+   "rand": "Rand",
+   "reingefahren": "reinfahren",
+   "rest": "Rest",
+   "richtig": "richtig",
+   "rufen": "rufen",
+   "schalte>einschalten": "einschalten",
+   "schuld": "schuld",
+   "sie": "Sie",
+   "sind": "sein",
+   "stellen>aufstellen": "aufstellen",
+   "straße": "Straße",
+   "unbedingt": "unbedingt",
+   "und": "und",
+   "unfall": "Unfall",
+   "unfallbericht": "Unfallbericht",
+   "unterschreiben": "unterschreiben",
+   "unübersichtlich": "unübersichtlich",
+   "verletzt": "verletzt",
+   "versicherung": "Versicherung",
+   "warnblinklicht": "Warnblinklicht",
+   "warndreieck": "Warndreieck",
+   "warnweste": "Warnweste",
+   "was": "was",
+   "wir": "wir",
+   "ziehe>anziehen": "anziehen",
+   "zukunft": "Zukunft",
+   "zusammen": "zusammen"
+  },
+  "l": {
+   "Abstand": {
+    "ru": "дистанція, відстань",
+    "pos": "ім.",
+    "decl": "der Abstand · мн.: die Abstände"
+   },
+   "Adresse": {
+    "ru": "адреса",
+    "pos": "ім.",
+    "decl": "die Adresse · мн.: die Adressen"
+   },
+   "Auto": {
+    "ru": "машина, автомобіль",
+    "pos": "ім.",
+    "decl": "das Auto · мн.: die Autos"
+   },
+   "Blechschaden": {
+    "ru": "пошкодження кузова (вм'ятина)",
+    "pos": "ім.",
+    "decl": "der Blechschaden · мн.: die Blechschäden"
+   },
+   "Delle": {
+    "ru": "вм'ятина",
+    "pos": "ім.",
+    "decl": "die Delle · мн.: die Dellen"
+   },
+   "Entschuldigung": {
+    "ru": "вибачте; вибачення",
+    "pos": "ім.",
+    "decl": "die Entschuldigung · мн.: die Entschuldigungen"
+   },
+   "Foto": {
+    "ru": "фото",
+    "pos": "ім.",
+    "decl": "das Foto · мн.: die Fotos"
+   },
+   "Handschuhfach": {
+    "ru": "бардачок",
+    "pos": "ім.",
+    "decl": "das Handschuhfach · мн.: die Handschuhfächer"
+   },
+   "Ihr": {
+    "ru": "ваш (ввічливо)",
+    "pos": "займ."
+   },
+   "Kennzeichen": {
+    "ru": "номерний знак",
+    "pos": "ім.",
+    "decl": "das Kennzeichen · мн.: die Kennzeichen"
+   },
+   "Meter": {
+    "ru": "метр",
+    "pos": "ім.",
+    "decl": "der Meter · мн.: die Meter"
+   },
+   "Name": {
+    "ru": "ім'я, назва",
+    "pos": "ім.",
+    "note": "n-відміна: den/dem/des Namen(s)",
+    "decl": "der Name · мн.: die Namen"
+   },
+   "Polizei": {
+    "ru": "поліція",
+    "pos": "ім.",
+    "decl": "die Polizei · мн. немає"
+   },
+   "Rand": {
+    "ru": "край, облямівка",
+    "pos": "ім.",
+    "decl": "der Rand · мн.: die Ränder"
+   },
+   "Rest": {
+    "ru": "решта, залишок",
+    "pos": "ім.",
+    "decl": "der Rest · мн.: die Reste"
+   },
+   "Sie": {
+    "ru": "ви (ввічливо)",
+    "pos": "займ.",
+    "note": "Ihnen — вам (давальний): vor Ihnen — перед вами"
+   },
+   "Straße": {
+    "ru": "вулиця, дорога",
+    "pos": "ім.",
+    "decl": "die Straße · мн.: die Straßen"
+   },
+   "Unfall": {
+    "ru": "аварія, ДТП",
+    "pos": "ім.",
+    "decl": "der Unfall · мн.: die Unfälle"
+   },
+   "Unfallbericht": {
+    "ru": "протокол аварії (європротокол)",
+    "pos": "ім.",
+    "decl": "der Unfallbericht · мн.: die Unfallberichte"
+   },
+   "Versicherung": {
+    "ru": "страховка, страхова",
+    "pos": "ім.",
+    "decl": "die Versicherung · мн.: die Versicherungen"
+   },
+   "Warnblinklicht": {
+    "ru": "аварійний сигнал (блимають усі поворотники)",
+    "pos": "ім.",
+    "decl": "das Warnblinklicht · мн. немає"
+   },
+   "Warndreieck": {
+    "ru": "знак аварійної зупинки",
+    "pos": "ім.",
+    "decl": "das Warndreieck · мн.: die Warndreiecke"
+   },
+   "Warnweste": {
+    "ru": "світловідбивний жилет",
+    "pos": "ім.",
+    "decl": "die Warnweste · мн.: die Warnwesten"
+   },
+   "Zukunft": {
+    "ru": "майбутнє",
+    "pos": "ім.",
+    "note": "in Zukunft — надалі",
+    "decl": "die Zukunft · мн. немає"
+   },
+   "an": {
+    "ru": "біля, на, при",
+    "pos": "прийм.",
+    "note": "am = an dem; an der Kreuzung — на перехресті"
+   },
+   "anziehen": {
+    "ru": "одягати",
+    "pos": "дієсл.",
+    "note": "відокремлюваний префікс: ziehen … an",
+    "forms": "zog an · hat angezogen"
+   },
+   "auch": {
+    "ru": "теж; навіть (auch wenn)",
+    "pos": "присл."
+   },
+   "aufstellen": {
+    "ru": "ставити, встановлювати",
+    "pos": "дієсл.",
+    "note": "відокремлюваний префікс: stellen … auf",
+    "forms": "stellte auf · hat aufgestellt"
+   },
+   "ausfüllen": {
+    "ru": "заповнювати (бланк)",
+    "pos": "дієсл.",
+    "note": "відокремлюваний префікс: füllen … aus",
+    "forms": "füllte aus · hat ausgefüllt"
+   },
+   "bei": {
+    "ru": "при, біля; на (про сигнал)",
+    "pos": "прийм.",
+    "note": "beim = bei dem: beim Fahren — під час їзди; bei Rot — на червоний"
+   },
+   "beschreiben": {
+    "ru": "описувати",
+    "pos": "дієсл.",
+    "forms": "beschrieb · hat beschrieben"
+   },
+   "dann": {
+    "ru": "тоді, отже; потім",
+    "pos": "присл."
+   },
+   "dass": {
+    "ru": "що (сполучник)",
+    "pos": "спол."
+   },
+   "der/die/das": {
+    "ru": "означений артикль",
+    "pos": "артикль",
+    "note": "der — ч. р., die — ж. р. і мн., das — с. р.; den — ч. р. у знахідному, dem — ч. і с. р. у давальному; das ще означає «це»"
+   },
+   "ein/eine": {
+    "ru": "неозначений артикль; один",
+    "pos": "артикль",
+    "note": "an einer Kreuzung — на (якомусь) перехресті"
+   },
+   "einschalten": {
+    "ru": "вмикати",
+    "pos": "дієсл.",
+    "note": "відокремлюваний префікс: schalten … ein",
+    "forms": "schaltete ein · hat eingeschaltet"
+   },
+   "eintragen": {
+    "ru": "вписувати",
+    "pos": "дієсл.",
+    "forms": "trug ein · hat eingetragen"
+   },
+   "einverstanden": {
+    "ru": "згоден; домовилися",
+    "pos": "прикм."
+   },
+   "es": {
+    "ru": "воно; це",
+    "pos": "займ.",
+    "note": "тут — про машину: das Auto"
+   },
+   "etwa": {
+    "ru": "приблизно, близько",
+    "pos": "присл."
+   },
+   "fahren": {
+    "ru": "їхати; кермувати машиною",
+    "pos": "дієсл.",
+    "forms": "fuhr · ist gefahren"
+   },
+   "gehen": {
+    "ru": "іти (пішки)",
+    "pos": "дієсл.",
+    "note": "über die Straße gehen — переходити дорогу",
+    "forms": "ging · ist gegangen"
+   },
+   "gut": {
+    "ru": "добрий; добре",
+    "pos": "прикм.",
+    "note": "am besten — найкраще",
+    "forms": "gut · besser · am besten"
+   },
+   "haben": {
+    "ru": "мати",
+    "pos": "дієсл.",
+    "note": "Vorfahrt haben — мати перевагу",
+    "forms": "hatte · hat gehabt"
+   },
+   "hier": {
+    "ru": "тут",
+    "pos": "присл."
+   },
+   "hinten": {
+    "ru": "позаду",
+    "pos": "присл."
+   },
+   "hinter": {
+    "ru": "за, позаду",
+    "pos": "прийм."
+   },
+   "ich": {
+    "ru": "я",
+    "pos": "займ."
+   },
+   "in": {
+    "ru": "в",
+    "pos": "прийм.",
+    "note": "im = in dem: im Bereich — у зоні"
+   },
+   "ja": {
+    "ru": "так",
+    "pos": "частка"
+   },
+   "jetzt": {
+    "ru": "зараз, тепер",
+    "pos": "присл."
+   },
+   "klein": {
+    "ru": "маленький",
+    "pos": "прикм."
+   },
+   "klären": {
+    "ru": "з'ясовувати, вирішувати",
+    "pos": "дієсл.",
+    "forms": "klärte · hat geklärt"
+   },
+   "machen": {
+    "ru": "робити",
+    "pos": "дієсл.",
+    "note": "den Schulterblick machen — озирнутися через плече; Gut gemacht! — Молодець!",
+    "forms": "machte · hat gemacht"
+   },
+   "mehr": {
+    "ru": "більше",
+    "pos": "присл.",
+    "note": "mehr als — більше ніж"
+   },
+   "mir": {
+    "ru": "мені",
+    "pos": "займ."
+   },
+   "mit": {
+    "ru": "з",
+    "pos": "прийм."
+   },
+   "müssen": {
+    "ru": "мусити, бути повинним",
+    "pos": "дієсл.",
+    "forms": "musste · hat gemusst"
+   },
+   "nein": {
+    "ru": "ні",
+    "pos": "частка"
+   },
+   "nicht": {
+    "ru": "не",
+    "pos": "частка"
+   },
+   "nur": {
+    "ru": "лише",
+    "pos": "присл."
+   },
+   "passieren": {
+    "ru": "відбуватися, траплятися",
+    "pos": "дієсл.",
+    "forms": "passierte · ist passiert"
+   },
+   "reinfahren": {
+    "ru": "в'їхати (в когось)",
+    "pos": "дієсл.",
+    "note": "розм. = hineinfahren; jemandem hinten reinfahren — в'їхати ззаду",
+    "forms": "fuhr rein · ist reingefahren"
+   },
+   "richtig": {
+    "ru": "правильний; правильно",
+    "pos": "прикм.",
+    "note": "…, richtig? — …, правильно? / так?"
+   },
+   "rufen": {
+    "ru": "кликати, викликати",
+    "pos": "дієсл.",
+    "forms": "rief · hat gerufen"
+   },
+   "schuld": {
+    "ru": "винен (винна)",
+    "pos": "прикм.",
+    "note": "schuld sein — бути винним"
+   },
+   "sehen": {
+    "ru": "бачити",
+    "pos": "дієсл.",
+    "forms": "sah · hat gesehen"
+   },
+   "sein": {
+    "ru": "бути",
+    "pos": "дієсл.",
+    "forms": "war · ist gewesen"
+   },
+   "unbedingt": {
+    "ru": "обов'язково",
+    "pos": "присл."
+   },
+   "und": {
+    "ru": "і, та",
+    "pos": "спол."
+   },
+   "unterschreiben": {
+    "ru": "підписувати",
+    "pos": "дієсл.",
+    "forms": "unterschrieb · hat unterschrieben"
+   },
+   "unübersichtlich": {
+    "ru": "з поганим оглядом",
+    "pos": "прикм."
+   },
+   "verletzt": {
+    "ru": "поранений, постраждалий",
+    "pos": "прикм."
+   },
+   "was": {
+    "ru": "що",
+    "pos": "займ."
+   },
+   "wir": {
+    "ru": "ми",
+    "pos": "займ.",
+    "note": "uns — нас, нам: vor uns — перед нами"
+   },
+   "zusammen": {
+    "ru": "разом",
+    "pos": "присл."
+   }
+  }
+ }
+}

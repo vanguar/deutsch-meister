@@ -1,0 +1,601 @@
+{
+ "id": "p-10",
+ "kind": "dialog",
+ "emoji": "📋",
+ "level": "B1",
+ "title": "Ein kleiner Unfall",
+ "titleTr": "Небольшая авария",
+ "intro": "Ольга въехала сзади в машину господина Вагнера. Никто не пострадал: аварийка, жилет, знак, фото и европротокол с другим водителем.",
+ "speakers": {
+  "A": {
+   "name": "Herr Wagner",
+   "g": "m"
+  },
+  "B": {
+   "name": "Olha",
+   "g": "f"
+  }
+ },
+ "lines": [
+  {
+   "de": "Haben Sie mich nicht gesehen? Sie sind mir hinten reingefahren!",
+   "tr": "Вы меня не видели? Вы въехали мне в зад!",
+   "s": "A"
+  },
+  {
+   "de": "Entschuldigung! Sind Sie verletzt?",
+   "tr": "Извините! Вы не ранены?",
+   "s": "B"
+  },
+  {
+   "de": "Nein, mir geht es gut. Nur das Auto hat eine Delle.",
+   "tr": "Нет, со мной всё в порядке. Только на машине вмятина.",
+   "s": "A"
+  },
+  {
+   "de": "Gut. Ich schalte das Warnblinklicht ein und ziehe die Warnweste an.",
+   "tr": "Хорошо. Я включаю аварийку и надеваю жилет.",
+   "o": {
+    "an": "an>anziehen",
+    "ein": "ein>einschalten",
+    "schalte": "schalte>einschalten",
+    "ziehe": "ziehe>anziehen"
+   },
+   "s": "B"
+  },
+  {
+   "de": "Stellen Sie auch das Warndreieck auf. Die Straße ist hier unübersichtlich.",
+   "tr": "Поставьте и знак аварийной остановки. Дорогу здесь плохо видно.",
+   "o": {
+    "auf": "auf>aufstellen",
+    "stellen": "stellen>aufstellen"
+   },
+   "s": "A"
+  },
+  {
+   "de": "Mache ich. Etwa 50 Meter hinter den Autos, richtig?",
+   "tr": "Сделаю. Примерно в 50 метрах позади машин, правильно?",
+   "s": "B"
+  },
+  {
+   "de": "Ja. Dann machen wir Fotos und fahren die Autos an den Rand.",
+   "tr": "Да. Потом сделаем фото и уберём машины к краю.",
+   "s": "A"
+  },
+  {
+   "de": "Müssen wir die Polizei rufen?",
+   "tr": "Нам нужно вызывать полицию?",
+   "s": "B"
+  },
+  {
+   "de": "Bei einem kleinen Blechschaden nicht unbedingt. Wir füllen den Unfallbericht aus.",
+   "tr": "При небольшой вмятине не обязательно. Мы заполним европротокол.",
+   "o": {
+    "aus": "aus>ausfüllen",
+    "füllen": "füllen>ausfüllen"
+   },
+   "s": "A"
+  },
+  {
+   "de": "Ich habe einen im Handschuhfach. Was muss ich eintragen?",
+   "tr": "У меня есть бланк в бардачке. Что мне нужно вписать?",
+   "s": "B"
+  },
+  {
+   "de": "Name, Adresse, Kennzeichen und Ihre Versicherung.",
+   "tr": "Имя, адрес, номер машины и вашу страховку.",
+   "s": "A"
+  },
+  {
+   "de": "Und muss ich unterschreiben, dass ich schuld bin?",
+   "tr": "А мне нужно подписать, что я виновата?",
+   "s": "B"
+  },
+  {
+   "de": "Nein. Sie beschreiben nur, was passiert ist. Den Rest klärt die Versicherung.",
+   "tr": "Нет. Вы только описываете, что произошло. Остальное решит страховая.",
+   "s": "A"
+  },
+  {
+   "de": "Gut. Dann machen wir das jetzt zusammen.",
+   "tr": "Хорошо. Тогда давайте сделаем это вместе.",
+   "s": "B"
+  },
+  {
+   "de": "Einverstanden. Und fahren Sie in Zukunft mit mehr Abstand!",
+   "tr": "Договорились. И в будущем держите дистанцию побольше!",
+   "s": "A"
+  }
+ ],
+ "signs": {},
+ "gloss": {
+  "w": {
+   "abstand": "Abstand",
+   "adresse": "Adresse",
+   "an": "an",
+   "an>anziehen": "anziehen",
+   "auch": "auch",
+   "auf>aufstellen": "aufstellen",
+   "aus>ausfüllen": "ausfüllen",
+   "auto": "Auto",
+   "autos": "Auto",
+   "bei": "bei",
+   "beschreiben": "beschreiben",
+   "bin": "sein",
+   "blechschaden": "Blechschaden",
+   "dann": "dann",
+   "das": "der/die/das",
+   "dass": "dass",
+   "delle": "Delle",
+   "den": "der/die/das",
+   "die": "der/die/das",
+   "ein": "ein/eine",
+   "ein>einschalten": "einschalten",
+   "eine": "ein/eine",
+   "einem": "ein/eine",
+   "einen": "ein/eine",
+   "eintragen": "eintragen",
+   "einverstanden": "einverstanden",
+   "entschuldigung": "Entschuldigung",
+   "es": "es",
+   "etwa": "etwa",
+   "fahren": "fahren",
+   "fotos": "Foto",
+   "füllen>ausfüllen": "ausfüllen",
+   "geht": "gehen",
+   "gesehen": "sehen",
+   "gut": "gut",
+   "habe": "haben",
+   "haben": "haben",
+   "handschuhfach": "Handschuhfach",
+   "hat": "haben",
+   "hier": "hier",
+   "hinten": "hinten",
+   "hinter": "hinter",
+   "ich": "ich",
+   "ihre": "Ihr",
+   "im": "in",
+   "in": "in",
+   "ist": "sein",
+   "ja": "ja",
+   "jetzt": "jetzt",
+   "kennzeichen": "Kennzeichen",
+   "kleinen": "klein",
+   "kleiner": "klein",
+   "klärt": "klären",
+   "mache": "machen",
+   "machen": "machen",
+   "mehr": "mehr",
+   "meter": "Meter",
+   "mich": "ich",
+   "mir": "mir",
+   "mit": "mit",
+   "muss": "müssen",
+   "müssen": "müssen",
+   "name": "Name",
+   "nein": "nein",
+   "nicht": "nicht",
+   "nur": "nur",
+   "passiert": "passieren",
+   "polizei": "Polizei",
+   "rand": "Rand",
+   "reingefahren": "reinfahren",
+   "rest": "Rest",
+   "richtig": "richtig",
+   "rufen": "rufen",
+   "schalte>einschalten": "einschalten",
+   "schuld": "schuld",
+   "sie": "Sie",
+   "sind": "sein",
+   "stellen>aufstellen": "aufstellen",
+   "straße": "Straße",
+   "unbedingt": "unbedingt",
+   "und": "und",
+   "unfall": "Unfall",
+   "unfallbericht": "Unfallbericht",
+   "unterschreiben": "unterschreiben",
+   "unübersichtlich": "unübersichtlich",
+   "verletzt": "verletzt",
+   "versicherung": "Versicherung",
+   "warnblinklicht": "Warnblinklicht",
+   "warndreieck": "Warndreieck",
+   "warnweste": "Warnweste",
+   "was": "was",
+   "wir": "wir",
+   "ziehe>anziehen": "anziehen",
+   "zukunft": "Zukunft",
+   "zusammen": "zusammen"
+  },
+  "l": {
+   "Abstand": {
+    "ru": "дистанция, расстояние",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Abstände"
+   },
+   "Adresse": {
+    "ru": "адрес",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Adressen"
+   },
+   "Auto": {
+    "ru": "машина, автомобиль",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Autos"
+   },
+   "Blechschaden": {
+    "ru": "повреждение кузова (вмятина)",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Blechschäden"
+   },
+   "Delle": {
+    "ru": "вмятина",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Dellen"
+   },
+   "Entschuldigung": {
+    "ru": "извините; извинение",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Entschuldigungen"
+   },
+   "Foto": {
+    "ru": "фото",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Fotos"
+   },
+   "Handschuhfach": {
+    "ru": "бардачок",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Handschuhfächer"
+   },
+   "Ihr": {
+    "ru": "ваш (вежливо)",
+    "pos": "мест."
+   },
+   "Kennzeichen": {
+    "ru": "номерной знак",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Kennzeichen"
+   },
+   "Meter": {
+    "ru": "метр",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Meter"
+   },
+   "Name": {
+    "ru": "имя, название",
+    "pos": "сущ.",
+    "note": "n-склонение: den/dem/des Namen(s)",
+    "art": "der",
+    "pl": "die Namen"
+   },
+   "Polizei": {
+    "ru": "полиция",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": null
+   },
+   "Rand": {
+    "ru": "край, кайма",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Ränder"
+   },
+   "Rest": {
+    "ru": "остальное, остаток",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Reste"
+   },
+   "Sie": {
+    "ru": "вы (вежливо)",
+    "pos": "мест.",
+    "note": "Ihnen — вам (дательный): vor Ihnen — перед вами"
+   },
+   "Straße": {
+    "ru": "улица, дорога",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Straßen"
+   },
+   "Unfall": {
+    "ru": "авария, ДТП",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Unfälle"
+   },
+   "Unfallbericht": {
+    "ru": "протокол аварии (европротокол)",
+    "pos": "сущ.",
+    "art": "der",
+    "pl": "die Unfallberichte"
+   },
+   "Versicherung": {
+    "ru": "страховка, страховая",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Versicherungen"
+   },
+   "Warnblinklicht": {
+    "ru": "аварийный сигнал (мигают все поворотники)",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": null
+   },
+   "Warndreieck": {
+    "ru": "знак аварийной остановки",
+    "pos": "сущ.",
+    "art": "das",
+    "pl": "die Warndreiecke"
+   },
+   "Warnweste": {
+    "ru": "светоотражающий жилет",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Warnwesten"
+   },
+   "Zukunft": {
+    "ru": "будущее",
+    "pos": "сущ.",
+    "note": "in Zukunft — в будущем, впредь",
+    "art": "die",
+    "pl": null
+   },
+   "an": {
+    "ru": "у, на, при",
+    "pos": "предл.",
+    "note": "am = an dem; an der Kreuzung — на перекрёстке"
+   },
+   "anziehen": {
+    "ru": "надевать",
+    "pos": "гл.",
+    "note": "отделяемая приставка: ziehen … an",
+    "forms": "zog an · hat angezogen"
+   },
+   "auch": {
+    "ru": "тоже; даже (auch wenn)",
+    "pos": "нареч."
+   },
+   "aufstellen": {
+    "ru": "ставить, устанавливать",
+    "pos": "гл.",
+    "note": "отделяемая приставка: stellen … auf",
+    "forms": "stellte auf · hat aufgestellt"
+   },
+   "ausfüllen": {
+    "ru": "заполнять (бланк)",
+    "pos": "гл.",
+    "note": "отделяемая приставка: füllen … aus",
+    "forms": "füllte aus · hat ausgefüllt"
+   },
+   "bei": {
+    "ru": "при, у; на (о сигнале)",
+    "pos": "предл.",
+    "note": "beim = bei dem: beim Fahren — во время езды; bei Rot — на красный"
+   },
+   "beschreiben": {
+    "ru": "описывать",
+    "pos": "гл.",
+    "forms": "beschrieb · hat beschrieben"
+   },
+   "dann": {
+    "ru": "тогда, значит; потом",
+    "pos": "нареч."
+   },
+   "dass": {
+    "ru": "что (союз)",
+    "pos": "союз"
+   },
+   "der/die/das": {
+    "ru": "определённый артикль",
+    "pos": "артикль",
+    "note": "der — м. р., die — ж. р. и мн. ч., das — ср. р.; den — м. р. в винительном, dem — м. и ср. р. в дательном; das ещё значит «это»"
+   },
+   "ein/eine": {
+    "ru": "неопределённый артикль; один",
+    "pos": "артикль",
+    "note": "an einer Kreuzung — на (каком-то) перекрёстке"
+   },
+   "einschalten": {
+    "ru": "включать",
+    "pos": "гл.",
+    "note": "отделяемая приставка: schalten … ein",
+    "forms": "schaltete ein · hat eingeschaltet"
+   },
+   "eintragen": {
+    "ru": "вписывать",
+    "pos": "гл.",
+    "forms": "trug ein · hat eingetragen"
+   },
+   "einverstanden": {
+    "ru": "согласен; договорились",
+    "pos": "прил."
+   },
+   "es": {
+    "ru": "оно; это",
+    "pos": "мест.",
+    "note": "здесь — о машине: das Auto"
+   },
+   "etwa": {
+    "ru": "примерно, около",
+    "pos": "нареч."
+   },
+   "fahren": {
+    "ru": "ехать; водить машину",
+    "pos": "гл.",
+    "forms": "fuhr · ist gefahren"
+   },
+   "gehen": {
+    "ru": "идти (пешком)",
+    "pos": "гл.",
+    "note": "über die Straße gehen — переходить дорогу",
+    "forms": "ging · ist gegangen"
+   },
+   "gut": {
+    "ru": "хороший; хорошо",
+    "pos": "прил.",
+    "note": "am besten — лучше всего",
+    "forms": "gut · besser · am besten"
+   },
+   "haben": {
+    "ru": "иметь",
+    "pos": "гл.",
+    "note": "Vorfahrt haben — иметь преимущество",
+    "forms": "hatte · hat gehabt"
+   },
+   "hier": {
+    "ru": "здесь",
+    "pos": "нареч."
+   },
+   "hinten": {
+    "ru": "сзади",
+    "pos": "нареч."
+   },
+   "hinter": {
+    "ru": "за, позади",
+    "pos": "предл."
+   },
+   "ich": {
+    "ru": "я",
+    "pos": "мест."
+   },
+   "in": {
+    "ru": "в",
+    "pos": "предл.",
+    "note": "im = in dem: im Bereich — в зоне"
+   },
+   "ja": {
+    "ru": "да",
+    "pos": "частица"
+   },
+   "jetzt": {
+    "ru": "сейчас, теперь",
+    "pos": "нареч."
+   },
+   "klein": {
+    "ru": "маленький",
+    "pos": "прил."
+   },
+   "klären": {
+    "ru": "выяснять, решать",
+    "pos": "гл.",
+    "forms": "klärte · hat geklärt"
+   },
+   "machen": {
+    "ru": "делать",
+    "pos": "гл.",
+    "note": "den Schulterblick machen — оглянуться через плечо; Gut gemacht! — Молодец!",
+    "forms": "machte · hat gemacht"
+   },
+   "mehr": {
+    "ru": "больше",
+    "pos": "нареч.",
+    "note": "mehr als — больше чем"
+   },
+   "mir": {
+    "ru": "мне",
+    "pos": "мест."
+   },
+   "mit": {
+    "ru": "с",
+    "pos": "предл."
+   },
+   "müssen": {
+    "ru": "быть должным",
+    "pos": "гл.",
+    "forms": "musste · hat gemusst"
+   },
+   "nein": {
+    "ru": "нет",
+    "pos": "частица"
+   },
+   "nicht": {
+    "ru": "не",
+    "pos": "частица"
+   },
+   "nur": {
+    "ru": "только",
+    "pos": "нареч."
+   },
+   "passieren": {
+    "ru": "происходить, случаться",
+    "pos": "гл.",
+    "forms": "passierte · ist passiert"
+   },
+   "reinfahren": {
+    "ru": "въехать (в кого-то)",
+    "pos": "гл.",
+    "note": "разг. = hineinfahren; jemandem hinten reinfahren — въехать сзади",
+    "forms": "fuhr rein · ist reingefahren"
+   },
+   "richtig": {
+    "ru": "правильный; правильно",
+    "pos": "прил.",
+    "note": "…, richtig? — …, правильно? / да?"
+   },
+   "rufen": {
+    "ru": "звать, вызывать",
+    "pos": "гл.",
+    "forms": "rief · hat gerufen"
+   },
+   "schuld": {
+    "ru": "виноват(а)",
+    "pos": "прил.",
+    "note": "schuld sein — быть виноватым"
+   },
+   "sehen": {
+    "ru": "видеть",
+    "pos": "гл.",
+    "forms": "sah · hat gesehen"
+   },
+   "sein": {
+    "ru": "быть",
+    "pos": "гл.",
+    "forms": "war · ist gewesen"
+   },
+   "unbedingt": {
+    "ru": "обязательно",
+    "pos": "нареч."
+   },
+   "und": {
+    "ru": "и",
+    "pos": "союз"
+   },
+   "unterschreiben": {
+    "ru": "подписывать",
+    "pos": "гл.",
+    "forms": "unterschrieb · hat unterschrieben"
+   },
+   "unübersichtlich": {
+    "ru": "с плохим обзором",
+    "pos": "прил."
+   },
+   "verletzt": {
+    "ru": "раненый, пострадавший",
+    "pos": "прил."
+   },
+   "was": {
+    "ru": "что",
+    "pos": "мест."
+   },
+   "wir": {
+    "ru": "мы",
+    "pos": "мест.",
+    "note": "uns — нас, нам: vor uns — перед нами"
+   },
+   "zusammen": {
+    "ru": "вместе",
+    "pos": "нареч."
+   }
+  }
+ }
+}

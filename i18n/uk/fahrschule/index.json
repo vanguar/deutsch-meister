@@ -105,7 +105,8 @@
    "title": "Unfall und Erste Hilfe",
    "titleTr": "Аварія і перша допомога",
    "units": [
-    "t-10"
+    "t-10",
+    "p-10"
    ]
   }
  ],
@@ -361,6 +362,15 @@
    "title": "Unfall und Erste Hilfe",
    "titleTr": "Аварія і перша допомога",
    "count": 19
+  },
+  {
+   "id": "p-10",
+   "kind": "dialog",
+   "emoji": "📋",
+   "level": "B1",
+   "title": "Ein kleiner Unfall",
+   "titleTr": "Невелика аварія",
+   "count": 15
   }
  ]
 }

@@ -1,0 +1,579 @@
+{
+ "id": "p-10",
+ "kind": "dialog",
+ "emoji": "📋",
+ "level": "B1",
+ "title": "Ein kleiner Unfall",
+ "titleTr": "حادث صغير",
+ "intro": "صدمت أولغا سيارة السيد فاغنر من الخلف. لم يُصب أحد: أضواء التحذير والسترة والمثلث والصور وتقرير الحادث الأوروبي مع السائق الآخر.",
+ "speakers": {
+  "A": {
+   "name": "Herr Wagner",
+   "g": "m"
+  },
+  "B": {
+   "name": "Olha",
+   "g": "f"
+  }
+ },
+ "lines": [
+  {
+   "de": "Haben Sie mich nicht gesehen? Sie sind mir hinten reingefahren!",
+   "tr": "ألم تريني؟ لقد صدمتِ سيارتي من الخلف!",
+   "s": "A"
+  },
+  {
+   "de": "Entschuldigung! Sind Sie verletzt?",
+   "tr": "آسفة! هل أنت مصاب؟",
+   "s": "B"
+  },
+  {
+   "de": "Nein, mir geht es gut. Nur das Auto hat eine Delle.",
+   "tr": "لا، أنا بخير. فقط في السيارة انبعاج.",
+   "s": "A"
+  },
+  {
+   "de": "Gut. Ich schalte das Warnblinklicht ein und ziehe die Warnweste an.",
+   "tr": "حسنًا. أشغّل أضواء التحذير وألبس السترة العاكسة.",
+   "o": {
+    "an": "an>anziehen",
+    "ein": "ein>einschalten",
+    "schalte": "schalte>einschalten",
+    "ziehe": "ziehe>anziehen"
+   },
+   "s": "B"
+  },
+  {
+   "de": "Stellen Sie auch das Warndreieck auf. Die Straße ist hier unübersichtlich.",
+   "tr": "ضعي أيضًا مثلث التحذير. الطريق هنا غير مكشوف.",
+   "o": {
+    "auf": "auf>aufstellen",
+    "stellen": "stellen>aufstellen"
+   },
+   "s": "A"
+  },
+  {
+   "de": "Mache ich. Etwa 50 Meter hinter den Autos, richtig?",
+   "tr": "سأفعل. على بعد نحو 50 مترًا خلف السيارتين، صحيح؟",
+   "s": "B"
+  },
+  {
+   "de": "Ja. Dann machen wir Fotos und fahren die Autos an den Rand.",
+   "tr": "نعم. ثم نلتقط صورًا وننقل السيارتين إلى الحافة.",
+   "s": "A"
+  },
+  {
+   "de": "Müssen wir die Polizei rufen?",
+   "tr": "هل يجب أن نتصل بالشرطة؟",
+   "s": "B"
+  },
+  {
+   "de": "Bei einem kleinen Blechschaden nicht unbedingt. Wir füllen den Unfallbericht aus.",
+   "tr": "في حادث بسيط بأضرار في الهيكل ليس بالضرورة. سنملأ تقرير الحادث.",
+   "o": {
+    "aus": "aus>ausfüllen",
+    "füllen": "füllen>ausfüllen"
+   },
+   "s": "A"
+  },
+  {
+   "de": "Ich habe einen im Handschuhfach. Was muss ich eintragen?",
+   "tr": "عندي واحد في درج السيارة. ماذا يجب أن أكتب؟",
+   "s": "B"
+  },
+  {
+   "de": "Name, Adresse, Kennzeichen und Ihre Versicherung.",
+   "tr": "الاسم والعنوان ورقم اللوحة وتأمينك.",
+   "s": "A"
+  },
+  {
+   "de": "Und muss ich unterschreiben, dass ich schuld bin?",
+   "tr": "وهل يجب أن أوقّع أنني المذنبة؟",
+   "s": "B"
+  },
+  {
+   "de": "Nein. Sie beschreiben nur, was passiert ist. Den Rest klärt die Versicherung.",
+   "tr": "لا. أنتِ تصفين فقط ما حدث. والباقي تحسمه شركة التأمين.",
+   "s": "A"
+  },
+  {
+   "de": "Gut. Dann machen wir das jetzt zusammen.",
+   "tr": "حسنًا. إذن نفعل ذلك معًا الآن.",
+   "s": "B"
+  },
+  {
+   "de": "Einverstanden. Und fahren Sie in Zukunft mit mehr Abstand!",
+   "tr": "اتفقنا. وفي المستقبل قودي بمسافة أكبر!",
+   "s": "A"
+  }
+ ],
+ "signs": {},
+ "gloss": {
+  "w": {
+   "abstand": "Abstand",
+   "adresse": "Adresse",
+   "an": "an",
+   "an>anziehen": "anziehen",
+   "auch": "auch",
+   "auf>aufstellen": "aufstellen",
+   "aus>ausfüllen": "ausfüllen",
+   "auto": "Auto",
+   "autos": "Auto",
+   "bei": "bei",
+   "beschreiben": "beschreiben",
+   "bin": "sein",
+   "blechschaden": "Blechschaden",
+   "dann": "dann",
+   "das": "der/die/das",
+   "dass": "dass",
+   "delle": "Delle",
+   "den": "der/die/das",
+   "die": "der/die/das",
+   "ein": "ein/eine",
+   "ein>einschalten": "einschalten",
+   "eine": "ein/eine",
+   "einem": "ein/eine",
+   "einen": "ein/eine",
+   "eintragen": "eintragen",
+   "einverstanden": "einverstanden",
+   "entschuldigung": "Entschuldigung",
+   "es": "es",
+   "etwa": "etwa",
+   "fahren": "fahren",
+   "fotos": "Foto",
+   "füllen>ausfüllen": "ausfüllen",
+   "geht": "gehen",
+   "gesehen": "sehen",
+   "gut": "gut",
+   "habe": "haben",
+   "haben": "haben",
+   "handschuhfach": "Handschuhfach",
+   "hat": "haben",
+   "hier": "hier",
+   "hinten": "hinten",
+   "hinter": "hinter",
+   "ich": "ich",
+   "ihre": "Ihr",
+   "im": "in",
+   "in": "in",
+   "ist": "sein",
+   "ja": "ja",
+   "jetzt": "jetzt",
+   "kennzeichen": "Kennzeichen",
+   "kleinen": "klein",
+   "kleiner": "klein",
+   "klärt": "klären",
+   "mache": "machen",
+   "machen": "machen",
+   "mehr": "mehr",
+   "meter": "Meter",
+   "mich": "ich",
+   "mir": "mir",
+   "mit": "mit",
+   "muss": "müssen",
+   "müssen": "müssen",
+   "name": "Name",
+   "nein": "nein",
+   "nicht": "nicht",
+   "nur": "nur",
+   "passiert": "passieren",
+   "polizei": "Polizei",
+   "rand": "Rand",
+   "reingefahren": "reinfahren",
+   "rest": "Rest",
+   "richtig": "richtig",
+   "rufen": "rufen",
+   "schalte>einschalten": "einschalten",
+   "schuld": "schuld",
+   "sie": "Sie",
+   "sind": "sein",
+   "stellen>aufstellen": "aufstellen",
+   "straße": "Straße",
+   "unbedingt": "unbedingt",
+   "und": "und",
+   "unfall": "Unfall",
+   "unfallbericht": "Unfallbericht",
+   "unterschreiben": "unterschreiben",
+   "unübersichtlich": "unübersichtlich",
+   "verletzt": "verletzt",
+   "versicherung": "Versicherung",
+   "warnblinklicht": "Warnblinklicht",
+   "warndreieck": "Warndreieck",
+   "warnweste": "Warnweste",
+   "was": "was",
+   "wir": "wir",
+   "ziehe>anziehen": "anziehen",
+   "zukunft": "Zukunft",
+   "zusammen": "zusammen"
+  },
+  "l": {
+   "Abstand": {
+    "ru": "المسافة (بين السيارات)",
+    "pos": "اسم",
+    "decl": "der Abstand · الجمع: die Abstände"
+   },
+   "Adresse": {
+    "ru": "عنوان",
+    "pos": "اسم",
+    "decl": "die Adresse · الجمع: die Adressen"
+   },
+   "Auto": {
+    "ru": "سيارة",
+    "pos": "اسم",
+    "decl": "das Auto · الجمع: die Autos"
+   },
+   "Blechschaden": {
+    "ru": "ضرر في هيكل السيارة",
+    "pos": "اسم",
+    "decl": "der Blechschaden · الجمع: die Blechschäden"
+   },
+   "Delle": {
+    "ru": "انبعاج",
+    "pos": "اسم",
+    "decl": "die Delle · الجمع: die Dellen"
+   },
+   "Entschuldigung": {
+    "ru": "عذرًا؛ اعتذار",
+    "pos": "اسم",
+    "decl": "die Entschuldigung · الجمع: die Entschuldigungen"
+   },
+   "Foto": {
+    "ru": "صورة",
+    "pos": "اسم",
+    "decl": "das Foto · الجمع: die Fotos"
+   },
+   "Handschuhfach": {
+    "ru": "درج السيارة",
+    "pos": "اسم",
+    "decl": "das Handschuhfach · الجمع: die Handschuhfächer"
+   },
+   "Ihr": {
+    "ru": "ـكَ، ـكِ (صيغة الاحترام)",
+    "pos": "ضمير"
+   },
+   "Kennzeichen": {
+    "ru": "لوحة الأرقام",
+    "pos": "اسم",
+    "decl": "das Kennzeichen · الجمع: die Kennzeichen"
+   },
+   "Meter": {
+    "ru": "متر",
+    "pos": "اسم",
+    "decl": "der Meter · الجمع: die Meter"
+   },
+   "Name": {
+    "ru": "اسم",
+    "pos": "اسم",
+    "note": "تصريف n: den/dem/des Namen(s)",
+    "decl": "der Name · الجمع: die Namen"
+   },
+   "Polizei": {
+    "ru": "الشرطة",
+    "pos": "اسم",
+    "decl": "die Polizei · لا جمع له"
+   },
+   "Rand": {
+    "ru": "حافة",
+    "pos": "اسم",
+    "decl": "der Rand · الجمع: die Ränder"
+   },
+   "Rest": {
+    "ru": "الباقي",
+    "pos": "اسم",
+    "decl": "der Rest · الجمع: die Reste"
+   },
+   "Sie": {
+    "ru": "حضرتك (صيغة الاحترام)",
+    "pos": "ضمير",
+    "note": "Ihnen — لكم (حالة الجر): vor Ihnen — أمامك"
+   },
+   "Straße": {
+    "ru": "شارع، طريق",
+    "pos": "اسم",
+    "decl": "die Straße · الجمع: die Straßen"
+   },
+   "Unfall": {
+    "ru": "حادث",
+    "pos": "اسم",
+    "decl": "der Unfall · الجمع: die Unfälle"
+   },
+   "Unfallbericht": {
+    "ru": "تقرير الحادث",
+    "pos": "اسم",
+    "decl": "der Unfallbericht · الجمع: die Unfallberichte"
+   },
+   "Versicherung": {
+    "ru": "تأمين",
+    "pos": "اسم",
+    "decl": "die Versicherung · الجمع: die Versicherungen"
+   },
+   "Warnblinklicht": {
+    "ru": "ضوء التحذير الوامض",
+    "pos": "اسم",
+    "decl": "das Warnblinklicht · لا جمع له"
+   },
+   "Warndreieck": {
+    "ru": "مثلث التحذير",
+    "pos": "اسم",
+    "decl": "das Warndreieck · الجمع: die Warndreiecke"
+   },
+   "Warnweste": {
+    "ru": "سترة عاكسة",
+    "pos": "اسم",
+    "decl": "die Warnweste · الجمع: die Warnwesten"
+   },
+   "Zukunft": {
+    "ru": "المستقبل",
+    "pos": "اسم",
+    "note": "in Zukunft — في المستقبل",
+    "decl": "die Zukunft · لا جمع له"
+   },
+   "an": {
+    "ru": "عند، على",
+    "pos": "حرف جر",
+    "note": "am = an dem؛ an der Kreuzung — عند التقاطع"
+   },
+   "anziehen": {
+    "ru": "يرتدي",
+    "pos": "فعل",
+    "note": "سابقة منفصلة: ziehen … an",
+    "forms": "zog an · hat angezogen"
+   },
+   "auch": {
+    "ru": "أيضًا؛ حتى (auch wenn)",
+    "pos": "ظرف"
+   },
+   "aufstellen": {
+    "ru": "ينصب، يضع",
+    "pos": "فعل",
+    "note": "سابقة منفصلة: stellen … auf",
+    "forms": "stellte auf · hat aufgestellt"
+   },
+   "ausfüllen": {
+    "ru": "يملأ (استمارة)",
+    "pos": "فعل",
+    "note": "سابقة منفصلة: füllen … aus",
+    "forms": "füllte aus · hat ausgefüllt"
+   },
+   "bei": {
+    "ru": "عند",
+    "pos": "حرف جر",
+    "note": "beim = bei dem: beim Fahren — أثناء القيادة؛ bei Rot — عند الأحمر"
+   },
+   "beschreiben": {
+    "ru": "يصف",
+    "pos": "فعل",
+    "forms": "beschrieb · hat beschrieben"
+   },
+   "dann": {
+    "ru": "إذن؛ ثم",
+    "pos": "ظرف"
+   },
+   "dass": {
+    "ru": "أنّ",
+    "pos": "أداة ربط"
+   },
+   "der/die/das": {
+    "ru": "أداة التعريف",
+    "pos": "أداة تعريف",
+    "note": "der للمذكر، die للمؤنث والجمع، das للمحايد؛ den للمذكر في حالة النصب، dem للمذكر والمحايد في حالة الجر؛ وdas تعني أيضًا «هذا»"
+   },
+   "ein/eine": {
+    "ru": "أداة النكرة؛ واحد",
+    "pos": "أداة تعريف",
+    "note": "an einer Kreuzung — عند تقاطعٍ ما"
+   },
+   "einschalten": {
+    "ru": "يشغّل",
+    "pos": "فعل",
+    "note": "سابقة منفصلة: schalten … ein",
+    "forms": "schaltete ein · hat eingeschaltet"
+   },
+   "eintragen": {
+    "ru": "يدوّن",
+    "pos": "فعل",
+    "forms": "trug ein · hat eingetragen"
+   },
+   "einverstanden": {
+    "ru": "موافق",
+    "pos": "صفة"
+   },
+   "es": {
+    "ru": "هو، هي (لغير العاقل)",
+    "pos": "ضمير",
+    "note": "هنا: السيارة (das Auto)"
+   },
+   "etwa": {
+    "ru": "تقريبًا، نحو",
+    "pos": "ظرف"
+   },
+   "fahren": {
+    "ru": "يسير بالسيارة؛ يقود",
+    "pos": "فعل",
+    "forms": "fuhr · ist gefahren"
+   },
+   "gehen": {
+    "ru": "يمشي",
+    "pos": "فعل",
+    "note": "über die Straße gehen — يعبر الشارع",
+    "forms": "ging · ist gegangen"
+   },
+   "gut": {
+    "ru": "جيد",
+    "pos": "صفة",
+    "note": "am besten — من الأفضل",
+    "forms": "gut · besser · am besten"
+   },
+   "haben": {
+    "ru": "يملك، لديه",
+    "pos": "فعل",
+    "note": "Vorfahrt haben — له أولوية المرور",
+    "forms": "hatte · hat gehabt"
+   },
+   "hier": {
+    "ru": "هنا",
+    "pos": "ظرف"
+   },
+   "hinten": {
+    "ru": "في الخلف",
+    "pos": "ظرف"
+   },
+   "hinter": {
+    "ru": "خلف",
+    "pos": "حرف جر"
+   },
+   "ich": {
+    "ru": "أنا",
+    "pos": "ضمير"
+   },
+   "in": {
+    "ru": "في",
+    "pos": "حرف جر",
+    "note": "im = in dem: im Bereich — في المنطقة"
+   },
+   "ja": {
+    "ru": "نعم",
+    "pos": "أداة"
+   },
+   "jetzt": {
+    "ru": "الآن",
+    "pos": "ظرف"
+   },
+   "klein": {
+    "ru": "صغير",
+    "pos": "صفة"
+   },
+   "klären": {
+    "ru": "يوضّح، يحسم",
+    "pos": "فعل",
+    "forms": "klärte · hat geklärt"
+   },
+   "machen": {
+    "ru": "يفعل",
+    "pos": "فعل",
+    "note": "den Schulterblick machen — يلتفت فوق كتفه؛ Gut gemacht! — أحسنت!",
+    "forms": "machte · hat gemacht"
+   },
+   "mehr": {
+    "ru": "أكثر",
+    "pos": "ظرف",
+    "note": "mehr als — أكثر من"
+   },
+   "mir": {
+    "ru": "لي",
+    "pos": "ضمير"
+   },
+   "mit": {
+    "ru": "مع",
+    "pos": "حرف جر"
+   },
+   "müssen": {
+    "ru": "يجب عليه",
+    "pos": "فعل",
+    "forms": "musste · hat gemusst"
+   },
+   "nein": {
+    "ru": "لا",
+    "pos": "أداة"
+   },
+   "nicht": {
+    "ru": "لا، ليس",
+    "pos": "أداة"
+   },
+   "nur": {
+    "ru": "فقط",
+    "pos": "ظرف"
+   },
+   "passieren": {
+    "ru": "يحدث",
+    "pos": "فعل",
+    "forms": "passierte · ist passiert"
+   },
+   "reinfahren": {
+    "ru": "يصدم (بالسيارة)",
+    "pos": "فعل",
+    "note": "عامية: يصدم أحدًا من الخلف",
+    "forms": "fuhr rein · ist reingefahren"
+   },
+   "richtig": {
+    "ru": "صحيح",
+    "pos": "صفة",
+    "note": "…, richtig? — …، صحيح؟"
+   },
+   "rufen": {
+    "ru": "ينادي، يستدعي",
+    "pos": "فعل",
+    "forms": "rief · hat gerufen"
+   },
+   "schuld": {
+    "ru": "مذنب",
+    "pos": "صفة",
+    "note": "schuld sein — يكون مذنبًا"
+   },
+   "sehen": {
+    "ru": "يرى",
+    "pos": "فعل",
+    "forms": "sah · hat gesehen"
+   },
+   "sein": {
+    "ru": "يكون",
+    "pos": "فعل",
+    "forms": "war · ist gewesen"
+   },
+   "unbedingt": {
+    "ru": "بالضرورة",
+    "pos": "ظرف"
+   },
+   "und": {
+    "ru": "و",
+    "pos": "أداة ربط"
+   },
+   "unterschreiben": {
+    "ru": "يوقّع",
+    "pos": "فعل",
+    "forms": "unterschrieb · hat unterschrieben"
+   },
+   "unübersichtlich": {
+    "ru": "لا يُرى جيدًا",
+    "pos": "صفة"
+   },
+   "verletzt": {
+    "ru": "مصاب",
+    "pos": "صفة"
+   },
+   "was": {
+    "ru": "ماذا",
+    "pos": "ضمير"
+   },
+   "wir": {
+    "ru": "نحن",
+    "pos": "ضمير",
+    "note": "uns — نا: vor uns — أمامنا"
+   },
+   "zusammen": {
+    "ru": "معًا",
+    "pos": "ظرف"
+   }
+  }
+ }
+}

@@ -737,7 +737,8 @@
  "sehen": {
   "pos": "гл.",
   "f": [
-   "sehe"
+   "sehe",
+   "gesehen"
   ],
   "forms": "sah · hat gesehen",
   "tr": [
@@ -6927,7 +6928,8 @@
   "pos": "прил.",
   "f": [
    "kleinen",
-   "kleines"
+   "kleines",
+   "kleiner"
   ],
   "tr": [
    "маленький",
@@ -8175,6 +8177,190 @@
    "уезжать",
    "від'їжджати",
    "يغادر بالسيارة"
+  ]
+ },
+ "aufstellen": {
+  "pos": "гл.",
+  "forms": "stellte auf · hat aufgestellt",
+  "tr": [
+   "ставить, устанавливать",
+   "ставити, встановлювати",
+   "ينصب، يضع"
+  ],
+  "note": [
+   "отделяемая приставка: stellen … auf",
+   "відокремлюваний префікс: stellen … auf",
+   "سابقة منفصلة: stellen … auf"
+  ]
+ },
+ "ausfüllen": {
+  "pos": "гл.",
+  "forms": "füllte aus · hat ausgefüllt",
+  "tr": [
+   "заполнять (бланк)",
+   "заповнювати (бланк)",
+   "يملأ (استمارة)"
+  ],
+  "note": [
+   "отделяемая приставка: füllen … aus",
+   "відокремлюваний префікс: füllen … aus",
+   "سابقة منفصلة: füllen … aus"
+  ]
+ },
+ "beschreiben": {
+  "pos": "гл.",
+  "forms": "beschrieb · hat beschrieben",
+  "tr": [
+   "описывать",
+   "описувати",
+   "يصف"
+  ]
+ },
+ "dass": {
+  "pos": "союз",
+  "tr": [
+   "что (союз)",
+   "що (сполучник)",
+   "أنّ"
+  ]
+ },
+ "Delle": {
+  "pos": "сущ.",
+  "art": "die",
+  "pl": "die Dellen",
+  "tr": [
+   "вмятина",
+   "вм'ятина",
+   "انبعاج"
+  ]
+ },
+ "eintragen": {
+  "pos": "гл.",
+  "forms": "trug ein · hat eingetragen",
+  "tr": [
+   "вписывать",
+   "вписувати",
+   "يدوّن"
+  ]
+ },
+ "einverstanden": {
+  "pos": "прил.",
+  "tr": [
+   "согласен; договорились",
+   "згоден; домовилися",
+   "موافق"
+  ]
+ },
+ "Entschuldigung": {
+  "pos": "сущ.",
+  "art": "die",
+  "pl": "die Entschuldigungen",
+  "tr": [
+   "извините; извинение",
+   "вибачте; вибачення",
+   "عذرًا؛ اعتذار"
+  ]
+ },
+ "Handschuhfach": {
+  "pos": "сущ.",
+  "art": "das",
+  "pl": "die Handschuhfächer",
+  "tr": [
+   "бардачок",
+   "бардачок",
+   "درج السيارة"
+  ]
+ },
+ "klären": {
+  "pos": "гл.",
+  "f": [
+   "klärt"
+  ],
+  "forms": "klärte · hat geklärt",
+  "tr": [
+   "выяснять, решать",
+   "з'ясовувати, вирішувати",
+   "يوضّح، يحسم"
+  ]
+ },
+ "reinfahren": {
+  "pos": "гл.",
+  "f": [
+   "reingefahren"
+  ],
+  "forms": "fuhr rein · ist reingefahren",
+  "tr": [
+   "въехать (в кого-то)",
+   "в'їхати (в когось)",
+   "يصدم (بالسيارة)"
+  ],
+  "note": [
+   "разг. = hineinfahren; jemandem hinten reinfahren — въехать сзади",
+   "розм. = hineinfahren; jemandem hinten reinfahren — в'їхати ззаду",
+   "عامية: يصدم أحدًا من الخلف"
+  ]
+ },
+ "Rest": {
+  "pos": "сущ.",
+  "art": "der",
+  "pl": "die Reste",
+  "tr": [
+   "остальное, остаток",
+   "решта, залишок",
+   "الباقي"
+  ]
+ },
+ "schuld": {
+  "pos": "прил.",
+  "tr": [
+   "виноват(а)",
+   "винен (винна)",
+   "مذنب"
+  ],
+  "note": [
+   "schuld sein — быть виноватым",
+   "schuld sein — бути винним",
+   "schuld sein — يكون مذنبًا"
+  ]
+ },
+ "unbedingt": {
+  "pos": "нареч.",
+  "tr": [
+   "обязательно",
+   "обов'язково",
+   "بالضرورة"
+  ]
+ },
+ "unterschreiben": {
+  "pos": "гл.",
+  "forms": "unterschrieb · hat unterschrieben",
+  "tr": [
+   "подписывать",
+   "підписувати",
+   "يوقّع"
+  ]
+ },
+ "verletzt": {
+  "pos": "прил.",
+  "tr": [
+   "раненый, пострадавший",
+   "поранений, постраждалий",
+   "مصاب"
+  ]
+ },
+ "Zukunft": {
+  "pos": "сущ.",
+  "art": "die",
+  "pl": null,
+  "tr": [
+   "будущее",
+   "майбутнє",
+   "المستقبل"
+  ],
+  "note": [
+   "in Zukunft — в будущем, впредь",
+   "in Zukunft — надалі",
+   "in Zukunft — في المستقبل"
   ]
  }
 }
