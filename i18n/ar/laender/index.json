@@ -62,6 +62,36 @@
    "land": "berlin"
   },
   {
+   "id": "brandenburg-b1",
+   "title": "Brandenburg",
+   "titleRu": "براندنبورغ",
+   "author": "German Morning",
+   "level": "B1",
+   "year": "2026",
+   "chapters": 7,
+   "words": 459,
+   "minutes": 4,
+   "cover": "🦅",
+   "source": "ويكيبيديا (de): «Brandenburg» ومقالات ذات صلة (بوتسدام، سانسوسي، شبريفالد، الصوربيون، اللغة الصوربية السفلى، Tesla Gigafactory، مطار BER، فونتانه)",
+   "license": "نص من دورة German Morning",
+   "land": "brandenburg"
+  },
+  {
+   "id": "brandenburg-b2",
+   "title": "Brandenburg",
+   "titleRu": "براندنبورغ",
+   "author": "German Morning",
+   "level": "B2",
+   "year": "2026",
+   "chapters": 7,
+   "words": 705,
+   "minutes": 6,
+   "cover": "🦅",
+   "source": "ويكيبيديا (de): «Brandenburg» ومقالات ذات صلة (بوتسدام، سانسوسي، شبريفالد، الصوربيون، اللغة الصوربية السفلى، Tesla Gigafactory، مطار BER، فونتانه)",
+   "license": "نص من دورة German Morning",
+   "land": "brandenburg"
+  },
+  {
    "id": "bremen-b1",
    "title": "Bremen",
    "titleRu": "بريمن",

@@ -1,0 +1,21 @@
+{
+  "id": "brandenburg-b1",
+  "kind": "land",
+  "land": "brandenburg",
+  "title": "Brandenburg",
+  "titleRu": "Бранденбург",
+  "author": "German Morning",
+  "level": "B1",
+  "levelNote": "B1: короткие предложения, Präsens и Präteritum, основные слова о стране.",
+  "year": "2026",
+  "chapters": 7,
+  "words": 459,
+  "minutes": 4,
+  "photos": 6,
+  "cover": "🦅",
+  "flag": "data/laender/flags/brandenburg.png",
+  "source": "Википедия (de): «Brandenburg» и связанные статьи (Потсдам, Сан-Суси, Шпревальд, сорбы, нижнелужицкий язык, Tesla Gigafactory, аэропорт BER, Фонтане)",
+  "sourceUrl": "https://de.wikipedia.org/wiki/Brandenburg",
+  "checked": "2026-10-21",
+  "license": "текст курса German Morning"
+}

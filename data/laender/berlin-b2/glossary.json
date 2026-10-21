@@ -1168,7 +1168,7 @@
       "pos": "прил."
     },
     "gesetzlich": {
-      "ru": "законный, установленный законом; по закону",
+      "ru": "законный, официальный",
       "pos": "прил."
     },
     "Gesundheitswirtschaft": {
@@ -2109,10 +2109,9 @@
       "note": "Berlin, Hamburg и Bremen — города со статусом федеральной земли"
     },
     "stammen": {
-      "ru": "происходить, быть родом",
+      "ru": "происходить",
       "pos": "гл.",
-      "forms": "stammte · hat gestammt",
-      "note": "aus etwas stammen — быть родом из, относиться к"
+      "forms": "stammte · hat gestammt"
     },
     "Start-up": {
       "ru": "стартап",
@@ -2514,8 +2513,9 @@
       "pl": "die Öffnungszeiten"
     },
     "östlich": {
-      "ru": "восточный",
-      "pos": "прил."
+      "ru": "восточный; к востоку",
+      "pos": "прил.",
+      "note": "östlich von — к востоку от"
     },
     "über": {
       "ru": "над, через, о",
