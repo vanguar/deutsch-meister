@@ -1,0 +1,2565 @@
+{
+  "version": 1,
+  "w": {
+    "a": "a",
+    "ab": "ab",
+    "aber": "aber",
+    "abgeordneten": "Abgeordnete",
+    "airbus-werk": "Airbus-Werk",
+    "aller": "alle/alles",
+    "alltagssprache": "Alltagssprache",
+    "als": "als",
+    "alster": "Alster",
+    "alten": "alt",
+    "alter": "alt",
+    "altona": "Altona",
+    "altonaer": "Altonaer",
+    "am": "an",
+    "amtliche": "amtlich",
+    "amtsträger": "Amtsträger",
+    "an": "an",
+    "andere": "ander",
+    "anderen": "ander",
+    "angeblich": "angeblich",
+    "antwerpen": "Antwerpen",
+    "antwort": "Antwort",
+    "arbeitslosenquote": "Arbeitslosenquote",
+    "auch": "auch",
+    "auf": "auf",
+    "aufgaben": "Aufgabe",
+    "aufgestaut": "aufstauen",
+    "aus": "aus",
+    "außenalster": "Außenalster",
+    "außerdem": "außerdem",
+    "außerhalb": "außerhalb",
+    "barbarossa": "Barbarossa",
+    "beginn": "Beginn",
+    "behörde": "Behörde",
+    "bei": "bei",
+    "beider": "beide",
+    "beiersdorf": "Beiersdorf",
+    "beim": "bei",
+    "bekannten": "bekannt",
+    "belegt": "belegt",
+    "berlin": "Berlin",
+    "besteht": "bestehen",
+    "besucher": "Besucher",
+    "betroffen": "betroffen",
+    "betrug": "betragen",
+    "bezirke": "Bezirk",
+    "binnenalster": "Binnenalster",
+    "bis": "bis",
+    "bistum": "Bistum",
+    "brachen": "brechen",
+    "brand": "Brand",
+    "britische": "britisch",
+    "bruttoinlandsprodukt": "Bruttoinlandsprodukt",
+    "brücken": "Brücke",
+    "bundeskanzler": "Bundeskanzler",
+    "bundesland": "Bundesland",
+    "bundesrat": "Bundesrat",
+    "bundesrepublik": "Bundesrepublik",
+    "bundesverdienstkreuz": "Bundesverdienstkreuz",
+    "burg": "Burg",
+    "busse": "Bus",
+    "börse": "Börse",
+    "bürgermeister": "Bürgermeister",
+    "bürgerschaft": "Bürgerschaft",
+    "chilehaus": "Chilehaus",
+    "containern": "Container",
+    "containerschiffe": "Containerschiff",
+    "damit": "damit",
+    "dann": "dann",
+    "das": "der/die/das",
+    "dazu": "dazu",
+    "deiche": "Deich",
+    "dem": "der/die/das",
+    "den": "der/die/das",
+    "der": "der/die/das",
+    "des": "der/die/das",
+    "deutschen": "deutsch",
+    "deutschland": "Deutschland",
+    "deutschlands": "Deutschland (страна)",
+    "dezember": "Dezember",
+    "die": "der/die/das",
+    "diente": "dienen",
+    "doch": "doch",
+    "drei": "drei",
+    "drittgrößte": "drittgrößt",
+    "durch": "durch",
+    "edeka": "Edeka",
+    "ehemaligen": "ehemalig",
+    "ein": "ein/eine",
+    "eine": "ein/eine",
+    "einem": "ein/eine",
+    "einen": "ein/eine",
+    "einer": "ein/eine",
+    "eines": "ein/eine",
+    "einwohner": "Einwohner",
+    "einwohnern": "Einwohner",
+    "elbe": "Elbe",
+    "elbphilharmonie": "Elbphilharmonie",
+    "ende": "Ende",
+    "england": "England",
+    "entspricht": "entsprechen",
+    "entstand": "entstehen",
+    "entsteht": "entstehen",
+    "entwickelte": "entwickeln",
+    "er": "er",
+    "erinnert": "erinnern",
+    "erreichen": "erreichen",
+    "erste": "erste",
+    "ersten": "erste",
+    "erster": "erst (первый)",
+    "eröffnet": "eröffnen",
+    "es": "es",
+    "etwa": "etwa",
+    "euro": "Euro",
+    "europas": "Europa (континент)",
+    "evangelisch": "evangelisch",
+    "evangelischen": "evangelisch",
+    "fahrkarten": "Fahrkarte",
+    "fast": "fast",
+    "februar": "Februar",
+    "feiertag": "Feiertag",
+    "fertiggestellt": "fertigstellen",
+    "finkenwerder": "Finkenwerder",
+    "fischbrötchen": "Fischbrötchen",
+    "fischmarkt": "Fischmarkt",
+    "fleete": "Fleet",
+    "flächenländern": "Flächenland",
+    "flächenmäßig": "flächenmäßig",
+    "flüsse": "Fluss",
+    "franzbrötchen": "Franzbrötchen",
+    "franzosenzeit": "Franzosenzeit",
+    "freie": "frei",
+    "freihafen": "Freihafen",
+    "fremder": "fremd",
+    "friedrich": "Friedrich",
+    "früh": "früh",
+    "frühen": "früh",
+    "früher": "früher",
+    "fährt": "fahren",
+    "führender": "führend",
+    "für": "für",
+    "gebäck": "Gebäck",
+    "gegründet": "gründen",
+    "gehandelt": "handeln",
+    "geht": "gehen",
+    "gehören": "gehören",
+    "gehört": "gehören",
+    "gemeinde": "Gemeinde",
+    "gemeinsame": "gemeinsam",
+    "geplanten": "planen",
+    "geprägt": "prägen",
+    "geschichte": "Geschichte",
+    "geschützt": "schützen",
+    "gesetzlicher": "gesetzlich",
+    "getrennt": "trennen",
+    "gilt": "gelten",
+    "glas": "Glas",
+    "glass": "Glass",
+    "gliedert": "gliedern",
+    "group": "Group",
+    "groß-hamburg-gesetz": "Groß-Hamburg-Gesetz",
+    "große": "groß",
+    "großen": "groß",
+    "gruß": "Gruß",
+    "größte": "groß",
+    "größten": "groß",
+    "gründungsdatum": "Gründungsdatum",
+    "guinness-buch": "Guinness-Buch",
+    "gänsemarkt": "Gänsemarkt",
+    "haben": "haben",
+    "hafen": "Hafen",
+    "hafencity": "HafenCity",
+    "hafenflächen": "Hafenfläche",
+    "hafenfähren": "Hafenfähre",
+    "hafengeburtstag": "Hafengeburtstag",
+    "hafenrecht": "Hafenrecht",
+    "hafens": "Hafen",
+    "hafenstadt": "Hafenstadt",
+    "hamburg": "Hamburg",
+    "hamburger": "Hamburger",
+    "hamburgische": "hamburgisch",
+    "hammaburg": "Hammaburg",
+    "handelskammer": "Handelskammer",
+    "hanse": "Hanse",
+    "hansestadt": "Hansestadt",
+    "hansezeit": "Hansezeit",
+    "hapag-lloyd": "Hapag-Lloyd",
+    "harburg-wilhelmsburg": "Harburg-Wilhelmsburg",
+    "hat": "haben",
+    "hatten": "haben",
+    "helmut": "Helmut",
+    "herren": "Herr",
+    "heute": "heute",
+    "hier": "hier",
+    "historische": "historisch",
+    "hochdeutsch": "Hochdeutsch",
+    "hochdeutsche": "Hochdeutsch",
+    "hochdeutschen": "Hochdeutsch",
+    "hohes": "hoch",
+    "hummel": "Hummel",
+    "häfen": "Hafen",
+    "hälfte": "Hälfte",
+    "häuser": "Haus",
+    "höher": "hoch",
+    "ihren": "ihr (её, их)",
+    "im": "in",
+    "in": "in",
+    "innenstadt": "Innenstadt",
+    "ins": "in",
+    "inselgruppe": "Inselgruppe",
+    "insgesamt": "insgesamt",
+    "internationale": "international",
+    "ist": "sein",
+    "jahr": "Jahr",
+    "jahrhundert": "Jahrhundert",
+    "jahrhunderts": "Jahrhundert",
+    "januar": "Januar",
+    "jedem": "jeder",
+    "jeder": "jeder",
+    "jedes": "jeder",
+    "kaiser": "Kaiser",
+    "kaispeicher": "Kaispeicher",
+    "kamen": "kommen",
+    "kampflos": "kampflos",
+    "kann": "können",
+    "kanäle": "Kanal",
+    "katholischen": "katholisch",
+    "keine": "kein",
+    "kennt": "kennen",
+    "kilometer": "Kilometer",
+    "kirche": "Kirche",
+    "knapp": "knapp",
+    "konfessionen": "Konfession",
+    "kontorhausviertel": "Kontorhausviertel",
+    "konzerthaus": "Konzerthaus",
+    "kostete": "kosten",
+    "kurz": "kurz",
+    "könig": "König",
+    "kühle": {
+      "l": "kühl",
+      "old": "старое наречие на -e; сегодня kühl"
+    },
+    "lag": "liegen",
+    "lagerhauskomplex": "Lagerhauskomplex",
+    "land": "Land (земля)",
+    "landes": "Land (земля)",
+    "landesparlament": "Landesparlament",
+    "landesverfassung": "Landesverfassung",
+    "langes": "lang",
+    "laut": "laut (согласно)",
+    "leben": "leben",
+    "lehnte": "ablehnen",
+    "leitet": "leiten",
+    "liegt": "liegen",
+    "lockt": "locken",
+    "london": "London",
+    "luftangriffe": "Luftangriff",
+    "luftfahrtindustrie": "Luftfahrtindustrie",
+    "ländern": "Land (земля)",
+    "läuft": "laufen",
+    "löwen": "Löwe",
+    "macht": "machen",
+    "mai": "Mai",
+    "man": "man",
+    "medienstandort": "Medienstandort",
+    "meer": "Meer",
+    "mehr": "mehr",
+    "mehrfach": "mehrfach",
+    "menschen": "Mensch",
+    "meter": "Meter",
+    "metropolregion": "Metropolregion",
+    "migrationshintergrund": "Migrationshintergrund",
+    "milde": "mild",
+    "milliarden": "Milliarde",
+    "million": "Million",
+    "millionen": "Million",
+    "miniatur": "Miniatur",
+    "ministerium": "Ministerium",
+    "mischung": "Mischung",
+    "missingsch": "Missingsch",
+    "mit": "mit",
+    "mitglied": "Mitglied",
+    "mitglieder": "Mitglied",
+    "mittelalter": "Mittelalter",
+    "modelleisenbahn": "Modelleisenbahn",
+    "moin": "moin",
+    "morgenstunden": "Morgenstunde",
+    "mors": "Mors",
+    "musicalstandort": "Musicalstandort",
+    "mündet": "münden",
+    "nach": "nach",
+    "nacht": "Nacht",
+    "name": "Name",
+    "ndr": "NDR",
+    "nehmen": "nehmen",
+    "neuenfelde": "Neuenfelde",
+    "neunmal": "neunmal",
+    "neuwerk": "Neuwerk",
+    "new": "New",
+    "nicht": "nicht",
+    "niederdeutsch": "Niederdeutsch",
+    "niederdeutschem": "Niederdeutsch",
+    "noch": "noch",
+    "nord": "Nord-",
+    "nordsee": "Nordsee",
+    "nordwestlich": "nordwestlich",
+    "nur": "nur",
+    "nutzen": "nutzen",
+    "obdachlos": "obdachlos",
+    "offen": "offen",
+    "oft": "oft",
+    "ohnsorg-theater": "Ohnsorg-Theater",
+    "oktober": "Oktober",
+    "oper": "Oper",
+    "opernhaus": "Opernhaus",
+    "orden": "Orden",
+    "ostsee": "Ostsee",
+    "otto": "Otto",
+    "platt": "Platt",
+    "presseprodukte": "Presseprodukt",
+    "pro": "pro",
+    "produziert": "produzieren",
+    "prozent": "Prozent",
+    "präsident": "Präsident",
+    "quadratkilometern": "Quadratkilometer",
+    "rathaus": "Rathaus",
+    "reederei": "Reederei",
+    "reformation": "Reformation",
+    "reformationstag": "Reformationstag",
+    "regen": "Regen",
+    "regierung": "Regierung",
+    "regionalsprache": "Regionalsprache",
+    "reichsstadt": "Reichsstadt",
+    "rotterdam": "Rotterdam",
+    "rund": "rund",
+    "russland": "Russland",
+    "s-bahn": "S-Bahn",
+    "satzbau": "Satzbau",
+    "schietwedder": "Schietwedder",
+    "schmidt": "Schmidt",
+    "schon": "schon",
+    "schwersten": "schwer",
+    "seattle": "Seattle",
+    "sechs": "sechs",
+    "see": "See",
+    "seegerichtshof": "Seegerichtshof",
+    "seehafen": "Seehafen",
+    "sehr": "sehr",
+    "sein": "sein (его, свой)",
+    "seinen": "sein (его, свой)",
+    "seit": "seit",
+    "senat": "Senat",
+    "senator": "Senator",
+    "sich": "sich",
+    "sicher": "sicher (точно)",
+    "sie": "sie",
+    "sieben": "sieben",
+    "siedlung": "Siedlung",
+    "sitz": "Sitz",
+    "so": "so",
+    "sogar": "sogar",
+    "soll": "sollen",
+    "sommer": "Sommer",
+    "sonntags": "sonntags",
+    "speicherstadt": "Speicherstadt",
+    "spezialitäten": "Spezialität",
+    "spielt": "spielen",
+    "sprachen": "Sprache",
+    "sprechen": "sprechen",
+    "sprichwörtliche": "sprichwörtlich",
+    "später": "später",
+    "staatsoper": "Staatsoper",
+    "stadt": "Stadt",
+    "stadtgebiet": "Stadtgebiet",
+    "stadtstaat": "Stadtstaat",
+    "stadtteile": "Stadtteil",
+    "standort": "Standort",
+    "starben": "sterben",
+    "statt": "statt",
+    "stellen": "Stelle",
+    "stimmen": "Stimme",
+    "sturmflut": "Sturmflut",
+    "stücke": "Stück",
+    "süßes": "süß",
+    "tach": "Tach",
+    "tag": "Tag",
+    "tagen": "Tag",
+    "tagesschau": "Tagesschau",
+    "tageszeit": "Tageszeit",
+    "teile": "Teil",
+    "toulouse": "Toulouse",
+    "tradition": "Tradition",
+    "truppen": "Truppe",
+    "u-bahn": "U-Bahn",
+    "um": "um",
+    "ums": "um",
+    "umsatz": "Umsatz",
+    "umschlagplatz": "Umschlagplatz",
+    "und": "und",
+    "unesco-welterbe": "UNESCO-Welterbe",
+    "unterelbe": "Unterelbe",
+    "unternehmen": "Unternehmen",
+    "verbunden": "verbinden",
+    "verdrängt": "verdrängen",
+    "verfügt": "verfügen",
+    "vergrößern": "vergrößern",
+    "verkehrssprache": "Verkehrssprache",
+    "verkehrsverbund": "Verkehrsverbund",
+    "verlieh": "verleihen",
+    "vermutlich": "vermutlich",
+    "vertieft": "vertiefen",
+    "vielen": "viel",
+    "vom": "von",
+    "von": "von",
+    "wandsbek": "Wandsbek",
+    "war": "sein",
+    "waren": "sein",
+    "weit": "weit",
+    "weiter": "weit",
+    "welt": "Welt",
+    "weltkrieg": "Weltkrieg",
+    "weltweit": "weltweit",
+    "werden": "werden",
+    "wetter": "Wetter",
+    "wichtigsten": "wichtig",
+    "wilhelmsburg": "Wilhelmsburg",
+    "winter": "Winter",
+    "wird": "werden",
+    "wo": "wo",
+    "wunderland": "Wunderland",
+    "wurde": "werden",
+    "wurden": "werden",
+    "wählt": "wählen",
+    "wörter": "Wort",
+    "york": "York",
+    "zahlreiche": "zahlreich",
+    "zentrum": "Zentrum",
+    "zerstört": "zerstören",
+    "zerstörten": "zerstören",
+    "zimt": "Zimt",
+    "zu": "zu",
+    "zucker": "Zucker",
+    "zugleich": "zugleich",
+    "zuletzt": "zuletzt",
+    "zum": "zu",
+    "zurück": "zurück",
+    "zurückgeht": "zurückgehen (восходить)",
+    "zusammen": "zusammen",
+    "zuwanderer": "Zuwanderer",
+    "zweiten": "zweite",
+    "zweitgrößte": "zweitgrößt",
+    "zwischen": "zwischen",
+    "älteste": "alt",
+    "öffentliche": "öffentlich",
+    "über": "über",
+    "übergeben": "übergeben",
+    "überregionalen": "überregional",
+    "überspannt": "überspannen"
+  },
+  "l": {
+    "a": {
+      "ru": "буква «a», звук «a»",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "ab": {
+      "note": "Тж. отделяемая приставка: absteigen «слезать», abnehmen",
+      "pos": "предл.",
+      "ru": "от, с; прочь"
+    },
+    "aber": {
+      "ru": "но, однако",
+      "pos": "союз"
+    },
+    "Abgeordnete": {
+      "ru": "депутат",
+      "pos": "субст. прил.",
+      "decl": "der Abgeordnete / ein Abgeordneter / die Abgeordneten"
+    },
+    "ablehnen": {
+      "ru": "отклонять, отвергать",
+      "pos": "гл.",
+      "forms": "lehnte ab · hat abgelehnt"
+    },
+    "Airbus-Werk": {
+      "ru": "завод Airbus",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Airbus-Werke"
+    },
+    "alle/alles": {
+      "ru": "все; всё",
+      "pos": "мест."
+    },
+    "Alltagssprache": {
+      "ru": "повседневный язык",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "als": {
+      "ru": "когда; как; чем",
+      "pos": "союз"
+    },
+    "Alster": {
+      "ru": "Альстер (река и озеро в Гамбурге)",
+      "pos": "геогр."
+    },
+    "alt": {
+      "ru": "старый",
+      "pos": "прил.",
+      "forms": "alt · älter · am ältesten"
+    },
+    "Altona": {
+      "ru": "Альтона (район Гамбурга)",
+      "pos": "геогр."
+    },
+    "Altonaer": {
+      "ru": "альтонский",
+      "pos": "прил.",
+      "note": "неизменяемое: der Altonaer Fischmarkt"
+    },
+    "amtlich": {
+      "ru": "официальный",
+      "pos": "прил."
+    },
+    "Amtsträger": {
+      "ru": "должностное лицо",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Amtsträger"
+    },
+    "an": {
+      "ru": "у, к, на",
+      "pos": "предл.",
+      "note": "am = an dem. Тж. отделяемая приставка: anfangen «начинать», annehmen, ansehen, anzünden"
+    },
+    "ander": {
+      "pos": "прил.",
+      "ru": "другой, иной"
+    },
+    "angeblich": {
+      "ru": "якобы, будто бы",
+      "pos": "нареч."
+    },
+    "Antwerpen": {
+      "ru": "Антверпен",
+      "pos": "геогр."
+    },
+    "Antwort": {
+      "ru": "ответ",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Antworten"
+    },
+    "Arbeitslosenquote": {
+      "ru": "уровень безработицы",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Arbeitslosenquoten"
+    },
+    "auch": {
+      "ru": "тоже, также; даже",
+      "pos": "частица"
+    },
+    "auf": {
+      "ru": "на, в",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: aufspringen «вскочить», sich aufmachen"
+    },
+    "Aufgabe": {
+      "ru": "задача, задание",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Aufgaben"
+    },
+    "aufstauen": {
+      "ru": "запруживать",
+      "pos": "гл.",
+      "forms": "staute auf · hat aufgestaut"
+    },
+    "aus": {
+      "ru": "из",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: auslöschen «погасить»"
+    },
+    "Außenalster": {
+      "ru": "Внешний Альстер (озеро)",
+      "pos": "геогр."
+    },
+    "außerdem": {
+      "ru": "кроме того",
+      "pos": "нареч."
+    },
+    "außerhalb": {
+      "ru": "вне, за пределами",
+      "pos": "предл."
+    },
+    "Barbarossa": {
+      "ru": "Барбаросса (прозвище императора Фридриха I)",
+      "pos": "имя собств."
+    },
+    "Beginn": {
+      "ru": "начало",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null,
+      "note": "zu Beginn — в начале"
+    },
+    "Behörde": {
+      "ru": "ведомство, орган власти",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Behörden"
+    },
+    "bei": {
+      "ru": "у, при, возле",
+      "pos": "предл."
+    },
+    "beide": {
+      "ru": "оба",
+      "pos": "мест."
+    },
+    "Beiersdorf": {
+      "ru": "Beiersdorf (концерн, марка Nivea)",
+      "pos": "имя собств."
+    },
+    "bekannt": {
+      "ru": "известный, знакомый",
+      "pos": "прил."
+    },
+    "belegt": {
+      "ru": "засвидетельствованный, подтверждённый (источниками)",
+      "pos": "прил."
+    },
+    "Berlin": {
+      "ru": "Берлин",
+      "pos": "геогр."
+    },
+    "bestehen": {
+      "ru": "состоять; существовать; сдать (экзамен)",
+      "pos": "гл.",
+      "forms": "bestand · hat bestanden",
+      "note": "aus etwas bestehen — состоять из чего-то"
+    },
+    "Besucher": {
+      "ru": "посетитель, гость",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Besucher"
+    },
+    "betragen": {
+      "ru": "составлять (о величине)",
+      "pos": "гл.",
+      "forms": "betrug · hat betragen"
+    },
+    "betroffen": {
+      "ru": "затронутый, касающийся; пострадавший",
+      "pos": "прил.",
+      "note": "betroffen sein — быть затронутым"
+    },
+    "Bezirk": {
+      "ru": "округ (в ГДР); район",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Bezirke"
+    },
+    "Binnenalster": {
+      "ru": "Внутренний Альстер (озеро)",
+      "pos": "геогр."
+    },
+    "bis": {
+      "ru": "до; пока не",
+      "pos": "союз"
+    },
+    "Bistum": {
+      "ru": "епископство",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Bistümer"
+    },
+    "Brand": {
+      "ru": "пожар",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Brände",
+      "note": "der Große Brand — Большой пожар (Гамбург, 1842)"
+    },
+    "brechen": {
+      "ru": "ломать(ся); пробиваться",
+      "pos": "гл.",
+      "forms": "brach · hat/ist gebrochen"
+    },
+    "britisch": {
+      "ru": "британский",
+      "pos": "прил."
+    },
+    "Bruttoinlandsprodukt": {
+      "ru": "валовой внутренний продукт, ВВП",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Bruttoinlandsprodukte"
+    },
+    "Brücke": {
+      "ru": "мост, мостки",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Brücken"
+    },
+    "Bundeskanzler": {
+      "ru": "федеральный канцлер",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Bundeskanzler"
+    },
+    "Bundesland": {
+      "ru": "федеральная земля",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Bundesländer"
+    },
+    "Bundesrat": {
+      "ru": "бундесрат (палата земель)",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "Bundesrepublik": {
+      "ru": "федеративная республика",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Bundesrepubliken",
+      "note": "die Bundesrepublik Deutschland — ФРГ"
+    },
+    "Bundesverdienstkreuz": {
+      "ru": "орден «За заслуги перед ФРГ»",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "Burg": {
+      "ru": "крепость, замок",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Burgen"
+    },
+    "Bus": {
+      "ru": "автобус",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Busse"
+    },
+    "Börse": {
+      "ru": "биржа",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Börsen"
+    },
+    "Bürgermeister": {
+      "ru": "бургомистр, мэр",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Bürgermeister"
+    },
+    "Bürgerschaft": {
+      "ru": "Бюргершафт (парламент Гамбурга и Бремена)",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "Chilehaus": {
+      "ru": "Чилихаус (конторское здание в Гамбурге)",
+      "pos": "имя собств."
+    },
+    "Container": {
+      "ru": "контейнер",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Container"
+    },
+    "Containerschiff": {
+      "ru": "контейнеровоз",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Containerschiffe"
+    },
+    "damit": {
+      "ru": "чтобы; тем самым",
+      "pos": "союз"
+    },
+    "dann": {
+      "ru": "потом, затем",
+      "pos": "нареч."
+    },
+    "dazu": {
+      "ru": "к этому, туда же",
+      "pos": "нареч."
+    },
+    "Deich": {
+      "ru": "дамба",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Deiche"
+    },
+    "der/die/das": {
+      "ru": "определённый артикль",
+      "pos": "артикль",
+      "note": "Тж. относительное местоимение «который»"
+    },
+    "deutsch": {
+      "ru": "немецкий",
+      "pos": "прил."
+    },
+    "Deutschland": {
+      "ru": "Германия",
+      "pos": "геогр."
+    },
+    "Deutschland (страна)": {
+      "ru": "Германия",
+      "pos": "геогр."
+    },
+    "Dezember": {
+      "ru": "декабрь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "dienen": {
+      "ru": "служить",
+      "pos": "гл.",
+      "forms": "diente · hat gedient"
+    },
+    "doch": {
+      "ru": "всё же, всё-таки; ведь",
+      "pos": "частица"
+    },
+    "drei": {
+      "ru": "три",
+      "pos": "числ."
+    },
+    "drittgrößt": {
+      "ru": "третий по величине",
+      "pos": "прил."
+    },
+    "durch": {
+      "ru": "через, сквозь, из-за",
+      "pos": "предл."
+    },
+    "Edeka": {
+      "ru": "Edeka (сеть супермаркетов)",
+      "pos": "имя собств."
+    },
+    "ehemalig": {
+      "ru": "прежний, былой",
+      "pos": "прил."
+    },
+    "ein/eine": {
+      "ru": "неопределённый артикль",
+      "pos": "артикль",
+      "note": "einer — «один, некто»"
+    },
+    "Einwohner": {
+      "ru": "житель",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Einwohner"
+    },
+    "Elbe": {
+      "ru": "Эльба (река)",
+      "pos": "геогр."
+    },
+    "Elbphilharmonie": {
+      "ru": "Эльбская филармония (концертный зал)",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null,
+      "note": "разг. die Elphi"
+    },
+    "Ende": {
+      "ru": "конец",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Enden"
+    },
+    "England": {
+      "ru": "Англия",
+      "pos": "геогр."
+    },
+    "entsprechen": {
+      "ru": "соответствовать",
+      "pos": "гл.",
+      "forms": "entsprach · hat entsprochen",
+      "note": "entsprechen + Dat."
+    },
+    "entstehen": {
+      "ru": "возникать",
+      "pos": "гл.",
+      "forms": "entstand · ist entstanden"
+    },
+    "entwickeln": {
+      "ru": "развивать",
+      "pos": "гл.",
+      "forms": "entwickelte · hat entwickelt",
+      "note": "sich entwickeln — развиваться"
+    },
+    "er": {
+      "ru": "он",
+      "pos": "мест.",
+      "note": "ihn — его, ihm — ему"
+    },
+    "erinnern": {
+      "ru": "напоминать",
+      "pos": "гл.",
+      "forms": "erinnerte · hat erinnert"
+    },
+    "erreichen": {
+      "ru": "достигать",
+      "pos": "гл.",
+      "forms": "erreichte · hat erreicht"
+    },
+    "erst (первый)": {
+      "ru": "первый",
+      "pos": "прил.",
+      "note": "der erste, erster Ministerpräsident — первый премьер-министр"
+    },
+    "erste": {
+      "ru": "первый",
+      "pos": "числ."
+    },
+    "eröffnen": {
+      "ru": "открывать (счёт, магазин)",
+      "pos": "гл.",
+      "forms": "eröffnete · hat eröffnet"
+    },
+    "es": {
+      "ru": "оно; это",
+      "pos": "мест."
+    },
+    "etwa": {
+      "ru": "примерно, около",
+      "pos": "нареч."
+    },
+    "Euro": {
+      "ru": "евро",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Euro"
+    },
+    "Europa (континент)": {
+      "ru": "Европа",
+      "pos": "геогр."
+    },
+    "evangelisch": {
+      "ru": "евангелический (протестантский)",
+      "pos": "прил."
+    },
+    "fahren": {
+      "ru": "ехать",
+      "pos": "гл.",
+      "forms": "fuhr · ist gefahren",
+      "note": "in die Höhe fahren — подскочить"
+    },
+    "Fahrkarte": {
+      "ru": "билет (на проезд)",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Fahrkarten"
+    },
+    "fast": {
+      "ru": "почти",
+      "pos": "нареч."
+    },
+    "Februar": {
+      "ru": "февраль",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null,
+      "note": "am 28. Februar — 28 февраля"
+    },
+    "Feiertag": {
+      "ru": "праздничный (нерабочий) день",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Feiertage"
+    },
+    "fertigstellen": {
+      "ru": "завершать (постройку)",
+      "pos": "гл.",
+      "forms": "stellte fertig · hat fertiggestellt"
+    },
+    "Finkenwerder": {
+      "ru": "Финкенвердер (часть Гамбурга)",
+      "pos": "геогр."
+    },
+    "Fischbrötchen": {
+      "ru": "булочка с рыбой",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Fischbrötchen"
+    },
+    "Fischmarkt": {
+      "ru": "рыбный рынок",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Fischmärkte"
+    },
+    "Fleet": {
+      "ru": "канал, проток (в Гамбурге)",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Fleete"
+    },
+    "Fluss": {
+      "ru": "река",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Flüsse"
+    },
+    "Flächenland": {
+      "ru": "земля-территория (не город-земля)",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Flächenländer",
+      "note": "в отличие от городов-земель Berlin, Hamburg, Bremen"
+    },
+    "flächenmäßig": {
+      "ru": "по площади",
+      "pos": "нареч."
+    },
+    "Franzbrötchen": {
+      "ru": "франц-булочка (выпечка с корицей и сахаром)",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Franzbrötchen"
+    },
+    "Franzosenzeit": {
+      "ru": "французское время (Гамбург под властью Франции, 1806–1814)",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "frei": {
+      "ru": "свободный",
+      "pos": "прил.",
+      "note": "unter freiem Himmel — под открытым небом"
+    },
+    "Freihafen": {
+      "ru": "вольная гавань (беспошлинная зона порта)",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Freihäfen"
+    },
+    "fremd": {
+      "ru": "чужой",
+      "pos": "прил."
+    },
+    "Friedrich": {
+      "ru": "Фридрих (имя, фамилия)",
+      "pos": "имя собств."
+    },
+    "früh": {
+      "ru": "ранний; рано",
+      "pos": "прил."
+    },
+    "früher": {
+      "ru": "раньше, прежде",
+      "pos": "нареч."
+    },
+    "führend": {
+      "ru": "ведущий",
+      "pos": "прил."
+    },
+    "für": {
+      "ru": "для, за",
+      "pos": "предл."
+    },
+    "Gebäck": {
+      "ru": "выпечка",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "gehen": {
+      "ru": "идти, ходить",
+      "pos": "гл.",
+      "forms": "ging · ist gegangen"
+    },
+    "gehören": {
+      "ru": "принадлежать, относиться",
+      "pos": "гл.",
+      "forms": "gehörte · hat gehört",
+      "note": "zu etwas gehören — относиться к чему-то, входить в"
+    },
+    "gelten": {
+      "ru": "считаться; быть действительным",
+      "pos": "гл.",
+      "forms": "galt · hat gegolten",
+      "note": "als … gelten — считаться кем-то"
+    },
+    "Gemeinde": {
+      "ru": "община, сельский мир",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Gemeinden"
+    },
+    "gemeinsam": {
+      "ru": "общий, совместный",
+      "pos": "прил."
+    },
+    "Geschichte": {
+      "ru": "история",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Geschichten"
+    },
+    "gesetzlich": {
+      "ru": "законный, установленный законом; по закону",
+      "pos": "прил."
+    },
+    "Glas": {
+      "ru": "стакан; стекло",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Gläser"
+    },
+    "Glass": {
+      "ru": "стакан (по-гамбургски)",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null,
+      "note": "гамб. вместо Glas"
+    },
+    "gliedern": {
+      "ru": "делить, членить",
+      "pos": "гл.",
+      "forms": "gliederte · hat gegliedert",
+      "note": "sich gliedern in — делиться на"
+    },
+    "Group": {
+      "ru": "Group (англ. «группа» в названии компании)",
+      "pos": "имя собств."
+    },
+    "groß": {
+      "ru": "большой",
+      "pos": "прил.",
+      "forms": "groß · größer · am größten"
+    },
+    "Groß-Hamburg-Gesetz": {
+      "ru": "закон о Большом Гамбурге (1937)",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "Gruß": {
+      "ru": "привет, приветствие",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Grüße"
+    },
+    "gründen": {
+      "ru": "основывать",
+      "pos": "гл.",
+      "forms": "gründete · hat gegründet"
+    },
+    "Gründungsdatum": {
+      "ru": "дата основания",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Gründungsdaten"
+    },
+    "Guinness-Buch": {
+      "ru": "Книга рекордов Гиннесса",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "Gänsemarkt": {
+      "ru": "Генземаркт (площадь в Гамбурге)",
+      "pos": "геогр."
+    },
+    "haben": {
+      "ru": "иметь; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "hatte · hat gehabt"
+    },
+    "Hafen": {
+      "ru": "порт, гавань",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Häfen"
+    },
+    "HafenCity": {
+      "ru": "ХафенСити (новый район Гамбурга)",
+      "pos": "геогр."
+    },
+    "Hafenfläche": {
+      "ru": "портовая территория",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Hafenflächen"
+    },
+    "Hafenfähre": {
+      "ru": "портовый паром",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Hafenfähren"
+    },
+    "Hafengeburtstag": {
+      "ru": "день рождения порта (праздник в Гамбурге)",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "Hafenrecht": {
+      "ru": "портовое право",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "Hafenstadt": {
+      "ru": "портовый город",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Hafenstädte"
+    },
+    "Hamburg": {
+      "ru": "Гамбург",
+      "pos": "геогр."
+    },
+    "Hamburger": {
+      "ru": "гамбуржец; гамбургский",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Hamburger",
+      "note": "как прилагательное не изменяется: der Hamburger Hafen"
+    },
+    "hamburgisch": {
+      "ru": "гамбургский",
+      "pos": "прил."
+    },
+    "Hammaburg": {
+      "ru": "Хаммабург (крепость, от которой название Гамбурга)",
+      "pos": "имя собств."
+    },
+    "handeln": {
+      "ru": "торговать; действовать",
+      "pos": "гл.",
+      "forms": "handelte · hat gehandelt",
+      "note": "mit Aktien handeln — торговать акциями"
+    },
+    "Handelskammer": {
+      "ru": "торговая палата",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Handelskammern"
+    },
+    "Hanse": {
+      "ru": "Ганза (торговый союз городов)",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "Hansestadt": {
+      "ru": "ганзейский город",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Hansestädte"
+    },
+    "Hansezeit": {
+      "ru": "эпоха Ганзы",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "Hapag-Lloyd": {
+      "ru": "Hapag-Lloyd (судоходная компания)",
+      "pos": "имя собств."
+    },
+    "Harburg-Wilhelmsburg": {
+      "ru": "Харбург-Вильгельмсбург",
+      "pos": "геогр.",
+      "note": "бывший город, с 1938 года — часть Гамбурга"
+    },
+    "Haus": {
+      "ru": "дом",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Häuser"
+    },
+    "Helmut": {
+      "ru": "Гельмут (имя)",
+      "pos": "имя собств."
+    },
+    "Herr": {
+      "ru": "господин, хозяин",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Herren",
+      "decl": "n-Deklination: der Herr / des Herrn / dem Herrn / den Herrn / мн. die Herren"
+    },
+    "heute": {
+      "ru": "сегодня",
+      "pos": "нареч."
+    },
+    "hier": {
+      "ru": "здесь",
+      "pos": "нареч."
+    },
+    "historisch": {
+      "ru": "исторический",
+      "pos": "прил."
+    },
+    "hoch": {
+      "ru": "высокий",
+      "pos": "прил.",
+      "forms": "hoch · höher · am höchsten"
+    },
+    "Hochdeutsch": {
+      "ru": "литературный немецкий язык",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "Hummel": {
+      "ru": "шмель",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Hummeln",
+      "note": "»Hummel, Hummel« — »Mors, Mors«: гамбургское приветствие"
+    },
+    "Hälfte": {
+      "ru": "половина",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Hälften"
+    },
+    "ihr (её, их)": {
+      "ru": "её; их",
+      "pos": "мест."
+    },
+    "in": {
+      "ru": "в (im = in dem, ins = in das)",
+      "pos": "предл."
+    },
+    "Innenstadt": {
+      "ru": "центр города",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Innenstädte"
+    },
+    "Inselgruppe": {
+      "ru": "группа островов",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Inselgruppen"
+    },
+    "insgesamt": {
+      "ru": "все вместе, в общей сложности",
+      "pos": "нареч."
+    },
+    "international": {
+      "ru": "на международном уровне",
+      "pos": "нареч."
+    },
+    "Jahr": {
+      "ru": "год",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Jahre"
+    },
+    "Jahrhundert": {
+      "ru": "век, столетие",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Jahrhunderte"
+    },
+    "Januar": {
+      "ru": "январь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Januare"
+    },
+    "jeder": {
+      "ru": "каждый",
+      "pos": "мест."
+    },
+    "Kaiser": {
+      "ru": "император",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Kaiser"
+    },
+    "Kaispeicher": {
+      "ru": "портовый склад на причале",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Kaispeicher"
+    },
+    "kampflos": {
+      "ru": "без боя",
+      "pos": "прил."
+    },
+    "Kanal": {
+      "ru": "канал",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Kanäle"
+    },
+    "katholisch": {
+      "ru": "католический",
+      "pos": "прил."
+    },
+    "kein": {
+      "ru": "никакой, ни один",
+      "pos": "мест."
+    },
+    "kennen": {
+      "ru": "знать, быть знакомым",
+      "pos": "гл.",
+      "forms": "kannte · hat gekannt"
+    },
+    "Kilometer": {
+      "ru": "километр",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Kilometer"
+    },
+    "Kirche": {
+      "ru": "церковь",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Kirchen"
+    },
+    "knapp": {
+      "ru": "чуть меньше, почти",
+      "pos": "нареч.",
+      "note": "knapp 1,6 Millionen — почти 1,6 миллиона"
+    },
+    "kommen": {
+      "ru": "приходить, приезжать",
+      "pos": "гл.",
+      "forms": "kam · ist gekommen"
+    },
+    "Konfession": {
+      "ru": "конфессия, вероисповедание",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Konfessionen"
+    },
+    "Kontorhausviertel": {
+      "ru": "квартал конторских зданий (в Гамбурге)",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "Konzerthaus": {
+      "ru": "концертный зал",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Konzerthäuser"
+    },
+    "kosten": {
+      "ru": "стоить",
+      "pos": "гл.",
+      "forms": "kostete · hat gekostet",
+      "note": "es koste, was es wolle — чего бы это ни стоило"
+    },
+    "kurz": {
+      "ru": "короткий",
+      "pos": "прил."
+    },
+    "König": {
+      "ru": "король",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Könige"
+    },
+    "können": {
+      "ru": "мочь, уметь",
+      "pos": "гл.",
+      "forms": "konnte · hat gekonnt"
+    },
+    "kühl": {
+      "ru": "прохладный",
+      "pos": "прил."
+    },
+    "Lagerhauskomplex": {
+      "ru": "комплекс складов",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Lagerhauskomplexe"
+    },
+    "Land (земля)": {
+      "ru": "земля (федеральная); страна",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Länder",
+      "note": "Bundesland — федеральная земля; in anderen Ländern — в других землях"
+    },
+    "Landesparlament": {
+      "ru": "парламент земли",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Landesparlamente"
+    },
+    "Landesverfassung": {
+      "ru": "конституция земли",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Landesverfassungen"
+    },
+    "lang": {
+      "ru": "длинный, долгий",
+      "pos": "прил.",
+      "forms": "lang · länger · am längsten"
+    },
+    "laufen": {
+      "ru": "бежать, бегать",
+      "pos": "гл.",
+      "forms": "lief · ist gelaufen"
+    },
+    "laut (согласно)": {
+      "ru": "согласно, по данным",
+      "pos": "предлог",
+      "note": "laut einer Umfrage — согласно опросу; laut — также «громко»"
+    },
+    "leben": {
+      "ru": "жить",
+      "pos": "гл.",
+      "forms": "lebte · hat gelebt"
+    },
+    "leiten": {
+      "ru": "вести, руководить",
+      "pos": "гл.",
+      "forms": "leitete · hat geleitet"
+    },
+    "liegen": {
+      "ru": "лежать",
+      "pos": "гл.",
+      "forms": "lag · hat gelegen"
+    },
+    "locken": {
+      "ru": "манить, приманивать",
+      "pos": "гл.",
+      "forms": "lockte · hat gelockt"
+    },
+    "London": {
+      "ru": "Лондон",
+      "pos": "геогр."
+    },
+    "Luftangriff": {
+      "ru": "воздушный налёт",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Luftangriffe"
+    },
+    "Luftfahrtindustrie": {
+      "ru": "авиационная промышленность",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "Löwe": {
+      "ru": "лев",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Löwen",
+      "note": "Der König der Löwen — «Король Лев»"
+    },
+    "machen": {
+      "ru": "делать",
+      "pos": "гл.",
+      "forms": "machte · hat gemacht",
+      "note": "sich auf den Weg machen — отправиться в путь"
+    },
+    "Mai": {
+      "ru": "май",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "man": {
+      "ru": "неопределённое «кто-то, люди, мы»",
+      "pos": "мест."
+    },
+    "Medienstandort": {
+      "ru": "медиацентр (место, где много СМИ)",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Medienstandorte"
+    },
+    "Meer": {
+      "ru": "море",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Meere"
+    },
+    "mehr": {
+      "ru": "больше",
+      "pos": "нареч.",
+      "note": "В nicht/kein … mehr — больше не. Формально компаратив от viel"
+    },
+    "mehrfach": {
+      "ru": "многократно, несколько раз",
+      "pos": "нареч."
+    },
+    "Mensch": {
+      "ru": "человек",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Menschen",
+      "decl": "n-Deklination: des Menschen · dem/den Menschen"
+    },
+    "Meter": {
+      "ru": "метр",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Meter",
+      "note": "in 30 Metern Tiefe — на глубине 30 метров"
+    },
+    "Metropolregion": {
+      "ru": "метрополитенский регион (город с окрестностями)",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Metropolregionen"
+    },
+    "Migrationshintergrund": {
+      "ru": "миграционное происхождение",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null,
+      "note": "mit Migrationshintergrund — с миграционными корнями"
+    },
+    "mild": {
+      "ru": "кроткий, мягкий",
+      "pos": "прил."
+    },
+    "Milliarde": {
+      "ru": "миллиард",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Milliarden"
+    },
+    "Million": {
+      "ru": "миллион",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Millionen"
+    },
+    "Miniatur": {
+      "ru": "миниатюра",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Miniaturen",
+      "note": "Miniatur Wunderland — музей моделей в Гамбурге"
+    },
+    "Ministerium": {
+      "ru": "министерство",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Ministerien"
+    },
+    "Mischung": {
+      "ru": "смесь",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Mischungen"
+    },
+    "Missingsch": {
+      "ru": "миссинг (смесь литературного немецкого и нижненемецкого)",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "mit": {
+      "ru": "с",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: mitgehen «пойти вместе»"
+    },
+    "Mitglied": {
+      "ru": "член (общества)",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Mitglieder"
+    },
+    "Mittelalter": {
+      "ru": "Средние века",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "Modelleisenbahn": {
+      "ru": "модель железной дороги",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Modelleisenbahnen"
+    },
+    "moin": {
+      "ru": "привет (северное приветствие)",
+      "pos": "межд.",
+      "note": "говорят в любое время суток"
+    },
+    "Morgenstunde": {
+      "ru": "утренний час",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Morgenstunden"
+    },
+    "Mors": {
+      "ru": "зад (нижненем.)",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null,
+      "note": "ответ на »Hummel, Hummel«"
+    },
+    "Musicalstandort": {
+      "ru": "центр мюзиклов",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Musicalstandorte"
+    },
+    "münden": {
+      "ru": "впадать (о реке)",
+      "pos": "гл.",
+      "forms": "mündete · ist gemündet",
+      "note": "münden in + Akk."
+    },
+    "nach": {
+      "ru": "в, на, после, по",
+      "pos": "предл."
+    },
+    "Nacht": {
+      "art": "die",
+      "pl": "die Nächte",
+      "pos": "сущ.",
+      "ru": "ночь"
+    },
+    "Name": {
+      "ru": "имя",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Namen",
+      "decl": "des Namens · dem/den Namen (особое склонение)"
+    },
+    "NDR": {
+      "ru": "NDR (Северогерманское радио и ТВ)",
+      "pos": "сокр.",
+      "note": "Norddeutscher Rundfunk"
+    },
+    "nehmen": {
+      "ru": "брать",
+      "pos": "гл.",
+      "forms": "nahm · hat genommen"
+    },
+    "Neuenfelde": {
+      "ru": "Нойенфельде (часть Гамбурга)",
+      "pos": "геогр."
+    },
+    "neunmal": {
+      "ru": "девять раз",
+      "pos": "нареч."
+    },
+    "Neuwerk": {
+      "ru": "Нойверк (остров в Северном море, часть Гамбурга)",
+      "pos": "геогр."
+    },
+    "New": {
+      "ru": "Нью-",
+      "pos": "геогр.",
+      "note": "New York — Нью-Йорк"
+    },
+    "nicht": {
+      "ru": "не",
+      "pos": "частица"
+    },
+    "Niederdeutsch": {
+      "ru": "нижненемецкий язык",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null,
+      "note": "das Niederdeutsche — то же с артиклем"
+    },
+    "noch": {
+      "ru": "ещё",
+      "pos": "нареч."
+    },
+    "Nord-": {
+      "ru": "Северное (в сочетании Nord- und Ostsee)",
+      "pos": "часть слова",
+      "note": "Nord- und Ostsee = Nordsee und Ostsee"
+    },
+    "Nordsee": {
+      "ru": "Северное море",
+      "pos": "геогр."
+    },
+    "nordwestlich": {
+      "ru": "северо-западный; к северо-западу",
+      "pos": "прил."
+    },
+    "nur": {
+      "ru": "только, лишь",
+      "pos": "частица"
+    },
+    "nutzen": {
+      "ru": "использовать",
+      "pos": "гл.",
+      "forms": "nutzte · hat genutzt"
+    },
+    "obdachlos": {
+      "ru": "бездомный, без крова",
+      "pos": "прил."
+    },
+    "offen": {
+      "ru": "открытый",
+      "pos": "прил."
+    },
+    "oft": {
+      "ru": "часто",
+      "pos": "нареч."
+    },
+    "Ohnsorg-Theater": {
+      "ru": "театр Онзорг (нижненемецкий театр в Гамбурге)",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "Oktober": {
+      "ru": "октябрь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Oktober"
+    },
+    "Oper": {
+      "ru": "опера; оперный театр",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Opern"
+    },
+    "Opernhaus": {
+      "ru": "оперный театр",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Opernhäuser"
+    },
+    "Orden": {
+      "ru": "орден (награда)",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Orden"
+    },
+    "Ostsee": {
+      "ru": "Балтийское море",
+      "pos": "геогр."
+    },
+    "Otto": {
+      "ru": "Otto (Otto Group — торговый концерн)",
+      "pos": "имя собств."
+    },
+    "planen": {
+      "ru": "планировать",
+      "pos": "гл.",
+      "forms": "plante · hat geplant"
+    },
+    "Platt": {
+      "ru": "«платт», нижненемецкий говор",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "Presseprodukt": {
+      "ru": "печатное издание",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Presseprodukte"
+    },
+    "pro": {
+      "ru": "в, за (на единицу)",
+      "pos": "предл.",
+      "note": "3,5 Kilometer pro Sekunde — 3,5 км в секунду"
+    },
+    "produzieren": {
+      "ru": "производить",
+      "pos": "гл.",
+      "forms": "produzierte · hat produziert"
+    },
+    "Prozent": {
+      "ru": "процент",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Prozente",
+      "note": "после числа не изменяется: 1,3 Prozent"
+    },
+    "prägen": {
+      "ru": "определять облик, формировать",
+      "pos": "гл.",
+      "forms": "prägte · hat geprägt"
+    },
+    "Präsident": {
+      "ru": "президент",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Präsidenten",
+      "note": "слабое склонение: den Präsidenten"
+    },
+    "Quadratkilometer": {
+      "ru": "квадратный километр",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Quadratkilometer",
+      "note": "сокращённо km²"
+    },
+    "Rathaus": {
+      "ru": "ратуша",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Rathäuser"
+    },
+    "Reederei": {
+      "ru": "судоходная компания",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Reedereien"
+    },
+    "Reformation": {
+      "ru": "Реформация",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "Reformationstag": {
+      "ru": "День Реформации (31 октября)",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "Regen": {
+      "ru": "дождь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "Regierung": {
+      "ru": "правительство",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Regierungen"
+    },
+    "Regionalsprache": {
+      "ru": "региональный язык",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Regionalsprachen"
+    },
+    "Reichsstadt": {
+      "ru": "имперский город",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Reichsstädte",
+      "note": "freie Reichsstadt — вольный имперский город (подчинялся только императору)"
+    },
+    "Rotterdam": {
+      "ru": "Роттердам",
+      "pos": "геогр."
+    },
+    "rund": {
+      "ru": "около, примерно; круглый",
+      "pos": "нареч./прил.",
+      "note": "rund 550.000 — около 550 000"
+    },
+    "Russland": {
+      "ru": "Россия",
+      "pos": "геогр."
+    },
+    "S-Bahn": {
+      "ru": "городская электричка",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die S-Bahnen"
+    },
+    "Satzbau": {
+      "ru": "строй предложения",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "Schietwedder": {
+      "ru": "паршивая погода (нижненем.)",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "Schmidt": {
+      "ru": "Шмидт (фамилия)",
+      "pos": "имя собств.",
+      "note": "Helmut Schmidt (1918–2015) — федеральный канцлер в 1974–1982"
+    },
+    "schon": {
+      "ru": "уже",
+      "pos": "нареч."
+    },
+    "schwer": {
+      "ru": "тяжёлый, трудный",
+      "pos": "прил.",
+      "note": "schwerfallen — даваться с трудом; schwer ums Herz — тяжело на сердце"
+    },
+    "schützen": {
+      "ru": "защищать",
+      "pos": "гл.",
+      "forms": "schützte · hat geschützt"
+    },
+    "Seattle": {
+      "ru": "Сиэтл",
+      "pos": "геогр."
+    },
+    "sechs": {
+      "ru": "шесть",
+      "pos": "числ."
+    },
+    "See": {
+      "ru": "озеро",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Seen",
+      "note": "der See — озеро; die See — море"
+    },
+    "Seegerichtshof": {
+      "ru": "морской трибунал",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null,
+      "note": "der Internationale Seegerichtshof — Международный трибунал по морскому праву"
+    },
+    "Seehafen": {
+      "ru": "морской порт",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Seehäfen"
+    },
+    "sehr": {
+      "pos": "нареч.",
+      "ru": "очень"
+    },
+    "sein": {
+      "ru": "быть; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "war · ist gewesen"
+    },
+    "sein (его, свой)": {
+      "ru": "его, свой",
+      "pos": "мест."
+    },
+    "seit": {
+      "ru": "с (какого-то времени)",
+      "pos": "предл."
+    },
+    "Senat": {
+      "ru": "сенат (правительство Берлина)",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Senate"
+    },
+    "Senator": {
+      "ru": "сенатор (министр в Берлине)",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Senatoren"
+    },
+    "sich": {
+      "ru": "себя, себе",
+      "pos": "мест.",
+      "note": "Возвратное местоимение, часть возвратного глагола: sich auf den Weg machen, sich setzen, sich legen, sich nähern, sich gefallen lassen, sich getrauen, sich umsehen"
+    },
+    "sicher (точно)": {
+      "ru": "точно, наверняка",
+      "pos": "нареч."
+    },
+    "sie": {
+      "ru": "она; они; Вы",
+      "pos": "мест."
+    },
+    "sieben": {
+      "ru": "семь",
+      "pos": "числ."
+    },
+    "Siedlung": {
+      "ru": "посёлок, жилой комплекс",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Siedlungen"
+    },
+    "Sitz": {
+      "ru": "штаб-квартира; место",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Sitze",
+      "note": "seinen Sitz haben — находиться (о фирме); im Landtag — место"
+    },
+    "so": {
+      "ru": "так; такой; то (в главном предложении)",
+      "pos": "нареч."
+    },
+    "sogar": {
+      "ru": "даже",
+      "pos": "частица"
+    },
+    "sollen": {
+      "ru": "быть должным, следует",
+      "pos": "гл.",
+      "forms": "sollte · hat gesollt"
+    },
+    "Sommer": {
+      "ru": "лето",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Sommer"
+    },
+    "sonntags": {
+      "ru": "по воскресеньям",
+      "pos": "нареч."
+    },
+    "Speicherstadt": {
+      "ru": "Шпайхерштадт («город складов» в Гамбурге)",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "Spezialität": {
+      "ru": "фирменное блюдо, специалитет",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Spezialitäten"
+    },
+    "spielen": {
+      "ru": "играть",
+      "pos": "гл.",
+      "forms": "spielte · hat gespielt"
+    },
+    "Sprache": {
+      "art": "die",
+      "pl": "die Sprachen",
+      "pos": "сущ.",
+      "ru": "язык, речь"
+    },
+    "sprechen": {
+      "ru": "говорить, сказать",
+      "pos": "гл.",
+      "forms": "sprach · hat gesprochen",
+      "old": "здесь sprach в значении «сказал» — книжно и устарело; в совр. речи sagte"
+    },
+    "sprichwörtlich": {
+      "ru": "вошедший в поговорку",
+      "pos": "прил."
+    },
+    "später": {
+      "ru": "позже, потом",
+      "pos": "нареч."
+    },
+    "Staatsoper": {
+      "ru": "государственная опера",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Staatsopern"
+    },
+    "Stadt": {
+      "ru": "город",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Städte"
+    },
+    "Stadtgebiet": {
+      "ru": "территория города",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Stadtgebiete"
+    },
+    "Stadtstaat": {
+      "ru": "город-земля",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Stadtstaaten",
+      "note": "Berlin, Hamburg и Bremen — города со статусом федеральной земли"
+    },
+    "Stadtteil": {
+      "ru": "часть города, городской район",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Stadtteile"
+    },
+    "Standort": {
+      "ru": "место размещения, центр (экономический)",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Standorte"
+    },
+    "statt": {
+      "ru": "вместо",
+      "pos": "предлог",
+      "note": "statt der Arbeit — вместо работы (родит.)"
+    },
+    "Stelle": {
+      "ru": "место",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Stellen",
+      "note": "an Ort und Stelle — на своё место"
+    },
+    "sterben": {
+      "ru": "умирать",
+      "pos": "гл.",
+      "forms": "starb · ist gestorben"
+    },
+    "Stimme": {
+      "ru": "голос",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Stimmen"
+    },
+    "Sturmflut": {
+      "ru": "штормовой нагон воды, наводнение",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Sturmfluten"
+    },
+    "Stück": {
+      "ru": "кусок, штука",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Stücke"
+    },
+    "süß": {
+      "ru": "сладкий",
+      "pos": "прил."
+    },
+    "Tach": {
+      "ru": "день (по-гамбургски)",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null,
+      "note": "гамб. вместо Tag: долгое a звучит кратко; »Tach!« — «Добрый день!»"
+    },
+    "Tag": {
+      "ru": "день",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Tage"
+    },
+    "Tagesschau": {
+      "ru": "«Тагесшау» (главная программа новостей ARD)",
+      "pos": "имя собств."
+    },
+    "Tageszeit": {
+      "ru": "время суток",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Tageszeiten"
+    },
+    "Teil": {
+      "ru": "часть; доля",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Teile",
+      "note": "sein Teil haben — получить своё"
+    },
+    "Toulouse": {
+      "ru": "Тулуза",
+      "pos": "геогр."
+    },
+    "Tradition": {
+      "ru": "традиция",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Traditionen"
+    },
+    "trennen": {
+      "ru": "разделять",
+      "pos": "гл.",
+      "forms": "trennte · hat getrennt"
+    },
+    "Truppe": {
+      "ru": "отряд, войско",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Truppen"
+    },
+    "U-Bahn": {
+      "ru": "метро",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die U-Bahnen"
+    },
+    "um": {
+      "ru": "вокруг, в (о времени)",
+      "pos": "предл.",
+      "note": "um … zu — чтобы. Тж. отделяемая приставка: sich umsehen «оглядеться»"
+    },
+    "Umsatz": {
+      "ru": "оборот, выручка",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Umsätze",
+      "note": "Umsatz machen — получать выручку"
+    },
+    "Umschlagplatz": {
+      "ru": "перевалочный пункт",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Umschlagplätze"
+    },
+    "und": {
+      "ru": "и, а",
+      "pos": "союз"
+    },
+    "UNESCO-Welterbe": {
+      "ru": "Всемирное наследие ЮНЕСКО",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "Unterelbe": {
+      "ru": "нижняя Эльба",
+      "pos": "геогр."
+    },
+    "Unternehmen": {
+      "ru": "предприятие, компания",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Unternehmen"
+    },
+    "verbinden": {
+      "ru": "перевязывать (рану); соединять",
+      "pos": "гл.",
+      "forms": "verband · hat verbunden",
+      "note": "sich verbinden lassen — дать себя перевязать"
+    },
+    "verdrängen": {
+      "ru": "вытеснять",
+      "pos": "гл.",
+      "forms": "verdrängte · hat verdrängt"
+    },
+    "verfügen": {
+      "ru": "перебраться (sich); распоряжаться",
+      "pos": "гл.",
+      "forms": "verfügte · hat verfügt",
+      "old": "sich verfügen «проследовать» — книжное и устаревшее"
+    },
+    "vergrößern": {
+      "ru": "увеличивать",
+      "pos": "гл.",
+      "forms": "vergrößerte · hat vergrößert"
+    },
+    "Verkehrssprache": {
+      "ru": "язык межнационального общения",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Verkehrssprachen"
+    },
+    "Verkehrsverbund": {
+      "ru": "транспортный союз (общий тариф)",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Verkehrsverbünde"
+    },
+    "verleihen": {
+      "ru": "даровать, присваивать",
+      "pos": "гл.",
+      "forms": "verlieh · hat verliehen"
+    },
+    "vermutlich": {
+      "ru": "вероятно, видимо",
+      "pos": "нареч."
+    },
+    "vertiefen": {
+      "ru": "углублять",
+      "pos": "гл.",
+      "forms": "vertiefte · hat vertieft"
+    },
+    "viel": {
+      "ru": "много, многое",
+      "pos": "мест."
+    },
+    "von": {
+      "ru": "от, из, о (vom = von dem)",
+      "pos": "предл."
+    },
+    "Wandsbek": {
+      "ru": "Вандсбек (район Гамбурга)",
+      "pos": "геогр."
+    },
+    "weit": {
+      "ru": "далёкий, далеко",
+      "pos": "прил.",
+      "forms": "weit · weiter · am weitesten",
+      "note": "weiter — дальше, далее; von weitem — издали"
+    },
+    "Welt": {
+      "art": "die",
+      "pl": "die Welten",
+      "pos": "сущ.",
+      "ru": "мир, свет"
+    },
+    "Weltkrieg": {
+      "ru": "мировая война",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Weltkriege",
+      "note": "der Zweite Weltkrieg — Вторая мировая война"
+    },
+    "weltweit": {
+      "ru": "по всему миру",
+      "pos": "нареч."
+    },
+    "werden": {
+      "ru": "становиться",
+      "pos": "гл.",
+      "forms": "wurde · ist geworden",
+      "note": "Вспомогательный глагол будущего времени и пассива"
+    },
+    "Wetter": {
+      "ru": "погода",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "wichtig": {
+      "ru": "важный",
+      "pos": "прил."
+    },
+    "Wilhelmsburg": {
+      "ru": "Вильгельмсбург (часть Гамбурга на острове)",
+      "pos": "геогр."
+    },
+    "Winter": {
+      "ru": "зима",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Winter"
+    },
+    "wo": {
+      "ru": "где; куда; когда (в придаточном)",
+      "pos": "нареч."
+    },
+    "Wort": {
+      "ru": "слово",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Worte (связная речь) / die Wörter (отдельные слова)"
+    },
+    "Wunderland": {
+      "ru": "страна чудес",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "wählen": {
+      "ru": "выбирать",
+      "pos": "гл.",
+      "forms": "wählte · hat gewählt"
+    },
+    "York": {
+      "ru": "Йорк",
+      "pos": "геогр.",
+      "note": "New York — Нью-Йорк"
+    },
+    "zahlreich": {
+      "ru": "многочисленный",
+      "pos": "прил."
+    },
+    "Zentrum": {
+      "ru": "центр",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Zentren"
+    },
+    "zerstören": {
+      "ru": "разрушать, уничтожать",
+      "pos": "гл.",
+      "forms": "zerstörte · hat zerstört"
+    },
+    "Zimt": {
+      "ru": "корица",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "zu": {
+      "ru": "к, в; слишком",
+      "pos": "предл.",
+      "note": "zur = zu der, zum = zu dem"
+    },
+    "Zucker": {
+      "ru": "сахар",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "zugleich": {
+      "ru": "одновременно, заодно",
+      "pos": "нареч."
+    },
+    "zuletzt": {
+      "ru": "напоследок, последним",
+      "pos": "нареч."
+    },
+    "zurück": {
+      "ru": "назад",
+      "pos": "нареч.",
+      "note": "Тж. отделяемая приставка: zurücklaufen «побежать назад»"
+    },
+    "zurückgehen (восходить)": {
+      "ru": "восходить (к чему-то)",
+      "pos": "гл.",
+      "forms": "ging zurück · ist zurückgegangen",
+      "note": "zurückgehen auf + Akk. — восходить к"
+    },
+    "zusammen": {
+      "ru": "вместе",
+      "pos": "нареч."
+    },
+    "Zuwanderer": {
+      "ru": "переселенец, иммигрант",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Zuwanderer"
+    },
+    "zweite": {
+      "ru": "второй",
+      "pos": "числ.",
+      "note": "zum zweiten Mal — во второй раз"
+    },
+    "zweitgrößt": {
+      "ru": "второй по величине",
+      "pos": "прил."
+    },
+    "zwischen": {
+      "pos": "предл.",
+      "ru": "между"
+    },
+    "öffentlich": {
+      "ru": "общественный, публичный",
+      "pos": "прил."
+    },
+    "über": {
+      "ru": "над, через, о",
+      "pos": "предл."
+    },
+    "übergeben": {
+      "ru": "передавать, сдавать",
+      "pos": "гл.",
+      "forms": "übergab · hat übergeben"
+    },
+    "überregional": {
+      "ru": "надрегиональный, общенациональный",
+      "pos": "прил."
+    },
+    "überspannen": {
+      "ru": "перекрывать (мостом)",
+      "pos": "гл.",
+      "forms": "überspannte · hat überspannt"
+    }
+  }
+}

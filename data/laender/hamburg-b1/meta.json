@@ -1,0 +1,21 @@
+{
+  "id": "hamburg-b1",
+  "kind": "land",
+  "land": "hamburg",
+  "title": "Hamburg",
+  "titleRu": "Гамбург",
+  "author": "German Morning",
+  "level": "B1",
+  "levelNote": "B1: короткие предложения, Präsens и Präteritum, основные слова о стране.",
+  "year": "2026",
+  "chapters": 7,
+  "words": 494,
+  "minutes": 4,
+  "photos": 6,
+  "cover": "🚢",
+  "flag": "data/laender/flags/hamburg.png",
+  "source": "Википедия (de): «Hamburg» и связанные статьи (порт, Большой пожар, наводнение 1962 года, Шпайхерштадт, Эльбская филармония, гамбургский диалект, Moin, рыбный рынок, транспорт)",
+  "sourceUrl": "https://de.wikipedia.org/wiki/Hamburg",
+  "checked": "2026-10-21",
+  "license": "текст курса German Morning"
+}

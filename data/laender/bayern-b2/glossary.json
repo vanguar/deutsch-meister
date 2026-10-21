@@ -249,10 +249,7 @@
     "länderfinanzausgleich": "Länderfinanzausgleich",
     "ländern": "Land (земля)",
     "macht": "machen",
-    "mai": {
-      "l": "Maikäfer",
-      "old": "слово разорвано переносом ради рифмы: Mai- / Käfer"
-    },
+    "mai": "Mai",
     "man": "man",
     "mariä": "Mariä",
     "mehr": "mehr",
@@ -1499,11 +1496,11 @@
       "forms": "machte · hat gemacht",
       "note": "sich auf den Weg machen — отправиться в путь"
     },
-    "Maikäfer": {
-      "ru": "майский жук",
+    "Mai": {
+      "ru": "май",
       "pos": "сущ.",
       "art": "der",
-      "pl": "die Maikäfer"
+      "pl": null
     },
     "man": {
       "ru": "неопределённое «кто-то, люди, мы»",

@@ -62,6 +62,36 @@
    "land": "berlin"
   },
   {
+   "id": "hamburg-b1",
+   "title": "Hamburg",
+   "titleRu": "هامبورغ",
+   "author": "German Morning",
+   "level": "B1",
+   "year": "2026",
+   "chapters": 7,
+   "words": 494,
+   "minutes": 4,
+   "cover": "🚢",
+   "source": "ويكيبيديا (de): «Hamburg» ومقالات ذات صلة (الميناء، الحريق الكبير، فيضان عام 1962، شبايشرشتات، إلبفيلهارموني، لهجة هامبورغ، Moin، سوق السمك، المواصلات)",
+   "license": "نص من دورة German Morning",
+   "land": "hamburg"
+  },
+  {
+   "id": "hamburg-b2",
+   "title": "Hamburg",
+   "titleRu": "هامبورغ",
+   "author": "German Morning",
+   "level": "B2",
+   "year": "2026",
+   "chapters": 7,
+   "words": 884,
+   "minutes": 8,
+   "cover": "🚢",
+   "source": "ويكيبيديا (de): «Hamburg» ومقالات ذات صلة (الميناء، الحريق الكبير، فيضان عام 1962، شبايشرشتات، إلبفيلهارموني، لهجة هامبورغ، Moin، سوق السمك، المواصلات)",
+   "license": "نص من دورة German Morning",
+   "land": "hamburg"
+  },
+  {
    "id": "mecklenburg-vorpommern-b1",
    "title": "Mecklenburg-Vorpommern",
    "titleRu": "مكلنبورغ-فوربومرن",
