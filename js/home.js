@@ -119,6 +119,49 @@ const Home = (() => {
     setText($('lvlCount'), `${done} / ${list.length}`);
     const bar = $('lvlBar');
     if (bar) bar.style.width = (list.length ? Math.round(done / list.length * 100) : 0) + '%';
+    const nx = document.querySelector(`.path[data-level="${lv}"] .lvl-next`);
+    if (nx) nx.classList.toggle('is-ready', list.length > 0 && done === list.length);
+  }
+
+  /* ── «Дальше — следующий уровень» в конце пути уровня ──
+     Без него после A1-20 путь просто обрывается: что уровни
+     переключаются сегментом наверху, видно не всем. */
+  const LEVEL_ORDER = ['a1', 'a2', 'b1', 'b2'];
+  const LEVEL_TEASER = {
+    a2: 'Präteritum, сравнение, планы на будущее — и жизненные темы: врач, работа, жильё',
+    b1: 'Konjunktiv II, пассив, придаточные — и тексты о работе, СМИ и экологии',
+    b2: 'Причастия, номинализация, научный стиль и деловое общение'
+  };
+  function buildLevelNext() {
+    document.querySelectorAll('.path[data-level]').forEach(path => {
+      if (path.querySelector('.lvl-next')) return;
+      const lv = path.dataset.level;
+      const nx = LEVEL_ORDER[LEVEL_ORDER.indexOf(lv) + 1];
+      const el = document.createElement('div');
+      el.className = 'lvl-next' + (nx ? '' : ' is-final');
+      el.innerHTML = nx
+        ? `<span class="ln-dot" aria-hidden="true"><svg class="ico"><use href="#i-flag"/></svg></span>
+           <div class="ln-body">
+             <div class="ln-kicker"><span>Конец уровня</span> <b>${lv.toUpperCase()}</b></div>
+             <div class="ln-title"><span>Дальше —</span> <b>${nx.toUpperCase()}</b> · <span>${LEVEL_NAMES[nx]}</span></div>
+             <div class="ln-sub">${LEVEL_TEASER[nx]}</div>
+             <button type="button" class="ln-btn" data-level-go="${nx}"><span>Перейти к уровню</span> <b>${nx.toUpperCase()}</b><svg class="ico sm flip"><use href="#i-arrow"/></svg></button>
+           </div>`
+        : `<span class="ln-dot" aria-hidden="true"><svg class="ico"><use href="#i-check"/></svg></span>
+           <div class="ln-body">
+             <div class="ln-kicker"><span>Конец курса</span></div>
+             <div class="ln-title">Это последний уровень</div>
+             <div class="ln-sub">Закрепляйте немецкий на живом материале: диалоги, книги, новости, земли Германии и автошкола</div>
+             <button type="button" class="ln-btn" data-tab-go="home">Читать и слушать</button>
+           </div>`;
+      path.appendChild(el);
+    });
+    document.querySelectorAll('[data-level-go]').forEach(b => b.addEventListener('click', () => {
+      try { window.Telegram?.WebApp?.HapticFeedback?.selectionChanged?.(); } catch (e) {}
+      pickLevel(b.dataset.levelGo);
+      window.scrollTo(0, 0);
+    }));
+    document.querySelectorAll('[data-tab-go]').forEach(b => b.addEventListener('click', () => go(b.dataset.tabGo)));
   }
 
   function scrollToCurrent() {
@@ -290,6 +333,7 @@ const Home = (() => {
   function init() {
     document.querySelectorAll('[data-tab-btn]').forEach(b => b.addEventListener('click', () => go(b.dataset.tabBtn)));
     document.querySelectorAll('[data-level-btn]').forEach(b => b.addEventListener('click', () => pickLevel(b.dataset.levelBtn)));
+    buildLevelNext();
     document.querySelectorAll('[data-set-lang]').forEach(b => b.addEventListener('click', () => setLang(b.dataset.setLang)));
     document.querySelectorAll('[data-set-theme]').forEach(b => b.addEventListener('click', () => setTheme(b.dataset.setTheme)));
 

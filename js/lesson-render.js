@@ -2427,3 +2427,53 @@ function toggleLevel(id) { document.getElementById(id)?.classList.toggle('collap
     if (!ticking) { ticking = true; requestAnimationFrame(update); }
   }, { passive: true });
 })();
+
+/* ── Конец уровня: переход к следующему ──
+   В последнем уроке уровня (A1-20, A2-20, B1-14, B2-14) внизу страницы
+   и в плашке «Урок завершён» — кнопка к первому уроку следующего
+   уровня: иначе после A1-20 непонятно, куда идти дальше. После B2 —
+   приглашение закреплять материал в книгах, новостях и диалогах. */
+(function initLevelNext() {
+  const LAST = { a1: 20, a2: 20, b1: 14, b2: 14 };
+  const NEXT = { a1: 'a2', a2: 'b1', b1: 'b2' };
+  const NAMES = { a2: 'Элементарный', b1: 'Средний', b2: 'Выше среднего' };
+  function run() {
+    const lv = typeof CURRENT_LESSON_LEVEL !== 'undefined' ? CURRENT_LESSON_LEVEL : null;
+    const num = typeof CURRENT_LESSON_NUM !== 'undefined' ? CURRENT_LESSON_NUM : 0;
+    const content = document.querySelector('.lesson-content');
+    if (!lv || LAST[lv] !== num || !content || content.querySelector('.level-next')) return;
+    let base = '';
+    try {
+      const href = document.querySelector('link[rel="manifest"]')?.getAttribute('href') || '';
+      if (/manifest\.json/.test(href)) base = href.replace(/manifest\.json(?:\?.*)?$/, '');
+    } catch (e) {}
+    const nx = NEXT[lv];
+    const LV = lv.toUpperCase();
+    const box = document.createElement('section');
+    box.className = 'level-next' + (nx ? '' : ' is-final');
+    box.innerHTML = nx
+      ? `<div class="lvn-kicker"><span>Это последний урок уровня</span> <b>${LV}</b></div>
+         <h2 class="lvn-title"><span>Дальше —</span> <b>${nx.toUpperCase()}</b> · <span>${NAMES[nx]}</span></h2>
+         <p class="lvn-sub">Пройдите этот урок до конца и переходите к следующему уровню.</p>
+         <a class="btn btn-primary lvn-btn" href="${base}lessons/${nx}/lesson-01/index.html"><span>Начать уровень</span> <b>${nx.toUpperCase()}</b> →</a>`
+      : `<div class="lvn-kicker"><span>Это последний урок курса</span></div>
+         <h2 class="lvn-title">Весь курс A1–B2 позади</h2>
+         <p class="lvn-sub">Закрепляйте немецкий на живом материале: диалоги, книги, новости, земли Германии и автошкола.</p>
+         <a class="btn btn-primary lvn-btn" href="${base}index.html">Читать и слушать →</a>`;
+    content.appendChild(box);
+    // та же кнопка в плашке «Урок завершён» — рядом с «На главную»
+    // (после B2 она и так ведёт на главную — второй не нужно)
+    const done = nx && document.getElementById('lessonComplete');
+    if (done && !done.querySelector('.lvn-btn')) {
+      const home = done.querySelector('a.btn');
+      const b = box.querySelector('.lvn-btn').cloneNode(true);
+      if (home) {
+        home.classList.remove('btn-primary');
+        home.classList.add('btn-ghost');
+        home.before(b);
+      } else done.appendChild(b);
+    }
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run);
+  else run();
+})();

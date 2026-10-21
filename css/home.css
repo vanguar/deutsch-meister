@@ -311,6 +311,45 @@ html[dir="rtl"] .lesson-card { padding: 10px 0 10px 12px; }
 }
 @media (hover: hover) { .lesson-card:not(.ar-soon):hover .lc-body { background: var(--h-card); } }
 
+/* финиш уровня: последний узел пути и переход к следующему уровню */
+.lvl-next { position: relative; display: flex; align-items: flex-start; gap: 14px; padding-top: 10px; }
+.ln-dot {
+  position: relative; z-index: 1; flex: none;
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 48px; height: 48px; border-radius: 50%; margin-top: 14px;
+  background: var(--h-bg); border: 2px dashed var(--h-accent); color: var(--h-accent);
+}
+.lvl-next.is-ready .ln-dot { background: var(--h-btn); border: 2px solid var(--h-btn); color: var(--h-btn-text); }
+.ln-body {
+  flex: 1; min-width: 0; margin-inline-start: -6px;
+  padding: 16px 16px 16px; border-radius: 20px;
+  background: var(--h-card); box-shadow: var(--h-shadow);
+  border: 1px solid var(--h-line);
+}
+.lvl-next.is-ready .ln-body { border-color: var(--h-accent); }
+.ln-kicker {
+  font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--h-hint);
+}
+.ln-title {
+  font-family: var(--h-display); font-size: 18px; font-weight: 700; line-height: 1.25;
+  color: var(--h-text); margin-top: 6px;
+}
+.ln-title b { color: var(--h-accent); }
+.ln-sub { font-size: 14px; line-height: 1.45; color: var(--h-hint); margin-top: 6px; }
+.ln-btn {
+  display: flex; align-items: center; justify-content: center; gap: 6px;
+  width: 100%; min-height: 46px; margin-top: 14px; padding: 10px 16px;
+  border: 0; border-radius: 14px; cursor: pointer;
+  background: var(--h-card2); color: var(--h-text);
+  font: inherit; font-size: 16px; font-weight: 700;
+  transition: filter .15s ease, transform .15s ease;
+}
+.lvl-next.is-ready .ln-btn { background: var(--h-btn); color: var(--h-btn-text); }
+.ln-btn:active { transform: scale(.985); }
+@media (hover: hover) { .ln-btn:hover { filter: brightness(1.08); } }
+.ln-btn:focus-visible { outline: 2px solid var(--h-accent); outline-offset: 2px; }
+
 /* ── профиль ── */
 .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
 .stat {
