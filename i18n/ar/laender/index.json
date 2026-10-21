@@ -32,6 +32,36 @@
    "land": "bayern"
   },
   {
+   "id": "berlin-b1",
+   "title": "Berlin",
+   "titleRu": "برلين",
+   "author": "German Morning",
+   "level": "B1",
+   "year": "2026",
+   "chapters": 7,
+   "words": 537,
+   "minutes": 5,
+   "cover": "🐻",
+   "source": "ويكيبيديا (de): «Berlin» ومقالات ذات صلة (جدار برلين، اللهجة البرلينية، الكاريفورست، Späti، يوم المرأة، مترو برلين)",
+   "license": "نص من دورة German Morning",
+   "land": "berlin"
+  },
+  {
+   "id": "berlin-b2",
+   "title": "Berlin",
+   "titleRu": "برلين",
+   "author": "German Morning",
+   "level": "B2",
+   "year": "2026",
+   "chapters": 7,
+   "words": 850,
+   "minutes": 8,
+   "cover": "🐻",
+   "source": "ويكيبيديا (de): «Berlin» ومقالات ذات صلة (جدار برلين، اللهجة البرلينية، الكاريفورست، Späti، يوم المرأة، مترو برلين)",
+   "license": "نص من دورة German Morning",
+   "land": "berlin"
+  },
+  {
    "id": "mecklenburg-vorpommern-b1",
    "title": "Mecklenburg-Vorpommern",
    "titleRu": "مكلنبورغ-فوربومرن",

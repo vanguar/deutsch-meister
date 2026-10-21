@@ -1,0 +1,140 @@
+{
+  "id": "ch-04",
+  "title": "Wirtschaft",
+  "titleRu": "Экономика",
+  "icon": "💶",
+  "paragraphs": [
+    {
+      "s": [
+        {
+          "de": "Gemessen am Bruttoinlandsprodukt ist Berlin die größte städtische Wirtschaft Deutschlands; 2024 betrug es rund 207 Milliarden Euro.",
+          "ru": "По валовому внутреннему продукту Берлин — крупнейшая городская экономика Германии; в 2024 году ВВП составил около 207 миллиардов евро.",
+          "g": {
+            "0": "измеряя",
+            "2": "валовой внутренний продукт",
+            "6": "крупнейшая",
+            "7": "городская",
+            "8": "экономика",
+            "10": "составлял",
+            "13": "миллиардов"
+          }
+        },
+        {
+          "de": "Über 80 Prozent der Wirtschaftsleistung entfallen auf Dienstleistungen.",
+          "ru": "Более 80 процентов экономики приходится на сферу услуг.",
+          "g": {
+            "0": "более",
+            "3": "экономического продукта",
+            "4+5": "приходятся на",
+            "6": "услуги"
+          }
+        },
+        {
+          "de": "Zu den wichtigsten Branchen zählen Tourismus, Kreativwirtschaft, Gesundheitswirtschaft, Medien und IT.",
+          "ru": "К важнейшим отраслям относятся туризм, креативная индустрия, здравоохранение, СМИ и IT.",
+          "g": {
+            "2": "важнейшим",
+            "3": "отраслям",
+            "4": "относятся",
+            "5": "туризм",
+            "6": "креативная индустрия",
+            "7": "здравоохранение",
+            "8": "СМИ"
+          }
+        },
+        {
+          "de": "2024 zählte die Stadt über 12,7 Millionen Gäste mit etwa 30,5 Millionen Übernachtungen.",
+          "ru": "В 2024 году город насчитал более 12,7 миллиона гостей и около 30,5 миллиона ночёвок.",
+          "g": {
+            "0": "насчитал",
+            "5": "гостей",
+            "9": "ночёвок"
+          }
+        }
+      ]
+    },
+    {
+      "fig": {
+        "w": 1200,
+        "h": 675,
+        "cap": "Потсдамская площадь: после 1990 года здесь вырос новый деловой квартал.",
+        "credit": "Ansgar Koreng / Wikimedia Commons · CC BY-SA 3.0 DE",
+        "src": "data/laender/berlin/img/potsdamer.jpg"
+      }
+    },
+    {
+      "s": [
+        {
+          "de": "Seit 2000 hat sich Berlin zu einem der wichtigsten Gründerstandorte Europas entwickelt.",
+          "ru": "С 2000 года Берлин стал одним из важнейших мест для основания компаний в Европе.",
+          "g": {
+            "1+10": "развился",
+            "5-6": "одним из",
+            "8": "мест для стартапов",
+            "9": "Европы"
+          }
+        },
+        {
+          "de": "Etwa die Hälfte des Risikokapitals, das in Deutschland in Start-ups fließt, landet hier.",
+          "ru": "Около половины венчурного капитала, который в Германии идёт в стартапы, оказывается здесь.",
+          "g": {
+            "2": "половина",
+            "4": "венчурного капитала",
+            "9": "стартапы",
+            "10": "течёт",
+            "11": "оказывается"
+          }
+        },
+        {
+          "de": "Siemens und Zalando sind im DAX vertreten und haben ihren Sitz in Berlin, Siemens zugleich in München; auch die Deutsche Bahn hat hier ihren Hauptsitz.",
+          "ru": "Siemens и Zalando входят в индекс DAX и имеют штаб-квартиры в Берлине, Siemens — одновременно и в Мюнхене; Deutsche Bahn тоже базируется здесь.",
+          "g": {
+            "5": "DAX (биржевой индекс)",
+            "6": "представлены",
+            "10": "штаб-квартиру",
+            "14": "одновременно",
+            "24": "главный офис"
+          }
+        },
+        {
+          "de": "Industrie gibt es weiterhin: In Haselhorst baut BMW Motorräder, in Marienfelde produziert Mercedes-Benz.",
+          "ru": "Промышленность по-прежнему есть: в Хазельхорсте BMW выпускает мотоциклы, в Мариенфельде производит Mercedes-Benz.",
+          "g": {
+            "0": "промышленность",
+            "1+2": "есть",
+            "3": "по-прежнему",
+            "6": "строит",
+            "8": "мотоциклы",
+            "11": "производит"
+          }
+        },
+        {
+          "de": "Probleme sind der Mangel an Wohnungen und an Fachkräften; im Dezember 2025 lag die Arbeitslosenquote bei 10,1 Prozent.",
+          "ru": "Проблемы — нехватка жилья и квалифицированных кадров; в декабре 2025 года уровень безработицы составлял 10,1 процента.",
+          "g": {
+            "0": "проблемы",
+            "3+4": "нехватка",
+            "5": "жилья",
+            "8": "специалистов",
+            "10": "декабре",
+            "11+14": "составляла",
+            "13": "уровень безработицы"
+          }
+        },
+        {
+          "de": "Aus dem Finanzausgleich zwischen den Ländern erhielt Berlin 2022 rund 3,6 Milliarden Euro, mehr als jedes andere Land.",
+          "ru": "Из финансового выравнивания между землями Берлин в 2022 году получил около 3,6 миллиарда евро — больше любой другой земли.",
+          "g": {
+            "2": "финансового выравнивания",
+            "3": "между",
+            "5": "землями",
+            "6": "получил",
+            "9": "миллиарда",
+            "11-12": "больше, чем",
+            "13-14": "любая другая"
+          }
+        }
+      ]
+    }
+  ]
+}

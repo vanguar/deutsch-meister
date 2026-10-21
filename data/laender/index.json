@@ -32,6 +32,36 @@
       "land": "bayern"
     },
     {
+      "id": "berlin-b1",
+      "title": "Berlin",
+      "titleRu": "Берлин",
+      "author": "German Morning",
+      "level": "B1",
+      "year": "2026",
+      "chapters": 7,
+      "words": 537,
+      "minutes": 5,
+      "cover": "🐻",
+      "source": "Википедия (de): «Berlin» и связанные статьи (Берлинская стена, берлинский говор, карривурст, Späti, Женский день, берлинское метро)",
+      "license": "текст курса German Morning",
+      "land": "berlin"
+    },
+    {
+      "id": "berlin-b2",
+      "title": "Berlin",
+      "titleRu": "Берлин",
+      "author": "German Morning",
+      "level": "B2",
+      "year": "2026",
+      "chapters": 7,
+      "words": 850,
+      "minutes": 8,
+      "cover": "🐻",
+      "source": "Википедия (de): «Berlin» и связанные статьи (Берлинская стена, берлинский говор, карривурст, Späti, Женский день, берлинское метро)",
+      "license": "текст курса German Morning",
+      "land": "berlin"
+    },
+    {
       "id": "mecklenburg-vorpommern-b1",
       "title": "Mecklenburg-Vorpommern",
       "titleRu": "Мекленбург — Передняя Померания",

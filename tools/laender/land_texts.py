@@ -9,7 +9,8 @@ tools/news/articles.py: "Wort", "Wort#2", "zwei Wörter", "trennbar+Präfix", ""
 
 from texts_bayern import TEXTS as _bayern
 from texts_mecklenburg_vorpommern import TEXTS as _mv
+from texts_berlin import TEXTS as _berlin
 
 TEXTS = {}
-for _part in (_bayern, _mv):
+for _part in (_bayern, _mv, _berlin):
     TEXTS.update(_part)
