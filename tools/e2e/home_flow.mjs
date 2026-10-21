@@ -91,11 +91,11 @@ const outline = await c.ev(`getComputedStyle(document.querySelector('.lesson-car
 ok(outline === 'none', `у текущего урока нет старой фиолетовой обводки (${outline})`);
 // плитки и панель не наезжают друг на друга
 const lay = await J(`(() => {
-  scrollTo(0, document.body.scrollHeight);
+  scrollTo({ top: document.body.scrollHeight, behavior: 'instant' });
   const bar = document.querySelector('.tabbar').getBoundingClientRect();
   const last = [...document.querySelectorAll('[data-tab="home"] .read')].pop().getBoundingClientRect();
-  const hits = [...document.querySelectorAll('[data-tab="home"] .read, #continueBtn')].every(e => { e.scrollIntoView({block:'center'}); const r = e.getBoundingClientRect(); const h = document.elementFromPoint(r.left + r.width/2, r.top + r.height/2); return e.contains(h); });
-  scrollTo(0, document.body.scrollHeight);
+  const hits = [...document.querySelectorAll('[data-tab="home"] .read, #continueBtn')].every(e => { e.scrollIntoView({ block: 'center', behavior: 'instant' }); const r = e.getBoundingClientRect(); const h = document.elementFromPoint(r.left + r.width/2, r.top + r.height/2); return e.contains(h); });
+  scrollTo({ top: document.body.scrollHeight, behavior: 'instant' });
   const last2 = [...document.querySelectorAll('[data-tab="home"] .read')].pop().getBoundingClientRect();
   return { gap: Math.round(bar.top - last2.bottom), hits };
 })()`);
