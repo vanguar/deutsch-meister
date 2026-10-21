@@ -1,0 +1,117 @@
+{
+  "id": "ch-04",
+  "title": "Wirtschaft",
+  "titleRu": "Экономика",
+  "icon": "💶",
+  "paragraphs": [
+    {
+      "s": [
+        {
+          "de": "Dank der Häfen in Bremen und Bremerhaven ist das Land nach Hamburg der zweitwichtigste Außenhandelsstandort Deutschlands.",
+          "ru": "Благодаря портам Бремена и Бремерхафена земля после Гамбурга — второй по значению центр внешней торговли Германии.",
+          "g": {
+            "0": "благодаря",
+            "2": "портам",
+            "9": "земля",
+            "10": "после",
+            "13": "второй по значению",
+            "14": "центр внешней торговли"
+          }
+        },
+        {
+          "de": "Bremerhaven ist der größte Umschlagplatz für Autos in Deutschland: 2011 wurden hier über zwei Millionen Fahrzeuge umgeschlagen.",
+          "ru": "Бремерхафен — крупнейший в Германии перевалочный пункт для автомобилей: в 2011 году здесь перегрузили более двух миллионов машин.",
+          "g": {
+            "3": "крупнейший",
+            "4": "перевалочный пункт",
+            "5": "для",
+            "6": "автомобилей",
+            "9+15": "были перегружены",
+            "11": "более",
+            "13": "миллионов",
+            "14": "транспортных средств"
+          }
+        },
+        {
+          "de": "Besonders wichtig ist Bremen außerdem für den Import von Kaffee.",
+          "ru": "Кроме того, Бремен особенно важен для импорта кофе.",
+          "g": {
+            "0": "особенно",
+            "1": "важен",
+            "4": "кроме того",
+            "5": "для",
+            "7": "импорта",
+            "9": "кофе"
+          }
+        }
+      ]
+    },
+    {
+      "fig": {
+        "w": 1200,
+        "h": 800,
+        "cap": "Автомобильный терминал в порту Бремерхафена у выхода в море.",
+        "credit": "Federal Waterways Engineering and Research Institute / Wikimedia Commons · CC BY 2.0",
+        "src": "data/laender/bremen/img/hafen.jpg"
+      }
+    },
+    {
+      "s": [
+        {
+          "de": "Der größte private Arbeitgeber der Stadt ist das Mercedes-Benz-Werk in Sebaldsbrück.",
+          "ru": "Крупнейший частный работодатель города — завод Mercedes-Benz в Зебальдсбрюке.",
+          "g": {
+            "1": "крупнейший",
+            "2": "частный",
+            "3": "работодатель",
+            "5": "города",
+            "8": "завод Mercedes-Benz",
+            "10": "Зебальдсбрюк"
+          }
+        },
+        {
+          "de": "Daneben gibt es Luft- und Raumfahrt mit Airbus und OHB sowie Lebensmittelindustrie, etwa die Brauerei Beck.",
+          "ru": "Кроме того, здесь есть авиакосмическая отрасль с Airbus и OHB, а также пищевая промышленность, например пивоварня Beck.",
+          "g": {
+            "0": "кроме того",
+            "1+2": "есть",
+            "3": "авиационная",
+            "5": "космонавтика",
+            "10": "а также",
+            "11": "пищевая промышленность",
+            "12": "например",
+            "14": "пивоварня"
+          }
+        },
+        {
+          "de": "Seit den Siebzigerjahren musste sich die Wirtschaft umstellen, weil der Schiffbau und die Bedeutung der Häfen in der Stadt Bremen zurückgingen.",
+          "ru": "С семидесятых годов экономике пришлось перестраиваться, потому что судостроение и значение портов в самом Бремене пошли на спад.",
+          "g": {
+            "2": "семидесятых годов",
+            "3+7": "пришлось перестроиться",
+            "4": "себя",
+            "6": "экономика",
+            "8": "потому что",
+            "10": "судостроение",
+            "13": "значение",
+            "15": "портов",
+            "18": "городе",
+            "20": "сократились"
+          }
+        },
+        {
+          "de": "2025 betrug das Bruttoinlandsprodukt rund 43 Milliarden Euro, die Arbeitslosenquote lag im Dezember 2025 bei 11,2 Prozent.",
+          "ru": "В 2025 году валовой внутренний продукт составил около 43 миллиардов евро, уровень безработицы в декабре 2025 года — 11,2 процента.",
+          "g": {
+            "0": "составлял",
+            "2": "валовой внутренний продукт",
+            "4": "миллиардов",
+            "7": "уровень безработицы",
+            "8+11": "составлял",
+            "10": "декабре"
+          }
+        }
+      ]
+    }
+  ]
+}

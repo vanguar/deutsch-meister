@@ -62,6 +62,36 @@
       "land": "berlin"
     },
     {
+      "id": "bremen-b1",
+      "title": "Bremen",
+      "titleRu": "Бремен",
+      "author": "German Morning",
+      "level": "B1",
+      "year": "2026",
+      "chapters": 7,
+      "words": 520,
+      "minutes": 5,
+      "cover": "🐓",
+      "source": "Википедия (de): «Freie Hansestadt Bremen», «Bremen», «Bremerhaven» и связанные статьи (Роланд, ратуша, Бременские музыканты, Фраймаркт, диалект, Domtreppenfegen, Schaffermahlzeit)",
+      "license": "текст курса German Morning",
+      "land": "bremen"
+    },
+    {
+      "id": "bremen-b2",
+      "title": "Bremen",
+      "titleRu": "Бремен",
+      "author": "German Morning",
+      "level": "B2",
+      "year": "2026",
+      "chapters": 7,
+      "words": 764,
+      "minutes": 7,
+      "cover": "🐓",
+      "source": "Википедия (de): «Freie Hansestadt Bremen», «Bremen», «Bremerhaven» и связанные статьи (Роланд, ратуша, Бременские музыканты, Фраймаркт, диалект, Domtreppenfegen, Schaffermahlzeit)",
+      "license": "текст курса German Morning",
+      "land": "bremen"
+    },
+    {
       "id": "hamburg-b1",
       "title": "Hamburg",
       "titleRu": "Гамбург",

@@ -62,6 +62,36 @@
    "land": "berlin"
   },
   {
+   "id": "bremen-b1",
+   "title": "Bremen",
+   "titleRu": "بريمن",
+   "author": "German Morning",
+   "level": "B1",
+   "year": "2026",
+   "chapters": 7,
+   "words": 520,
+   "minutes": 5,
+   "cover": "🐓",
+   "source": "ويكيبيديا (de): «Freie Hansestadt Bremen» و«Bremen» و«Bremerhaven» ومقالات ذات صلة (رولاند، مبنى البلدية، موسيقيو بريمن، فرايماركت، اللهجة، Domtreppenfegen، Schaffermahlzeit)",
+   "license": "نص من دورة German Morning",
+   "land": "bremen"
+  },
+  {
+   "id": "bremen-b2",
+   "title": "Bremen",
+   "titleRu": "بريمن",
+   "author": "German Morning",
+   "level": "B2",
+   "year": "2026",
+   "chapters": 7,
+   "words": 764,
+   "minutes": 7,
+   "cover": "🐓",
+   "source": "ويكيبيديا (de): «Freie Hansestadt Bremen» و«Bremen» و«Bremerhaven» ومقالات ذات صلة (رولاند، مبنى البلدية، موسيقيو بريمن، فرايماركت، اللهجة، Domtreppenfegen، Schaffermahlzeit)",
+   "license": "نص من دورة German Morning",
+   "land": "bremen"
+  },
+  {
    "id": "hamburg-b1",
    "title": "Hamburg",
    "titleRu": "هامبورغ",

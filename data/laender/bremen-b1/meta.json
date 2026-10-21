@@ -1,0 +1,21 @@
+{
+  "id": "bremen-b1",
+  "kind": "land",
+  "land": "bremen",
+  "title": "Bremen",
+  "titleRu": "Бремен",
+  "author": "German Morning",
+  "level": "B1",
+  "levelNote": "B1: короткие предложения, Präsens и Präteritum, основные слова о стране.",
+  "year": "2026",
+  "chapters": 7,
+  "words": 520,
+  "minutes": 5,
+  "photos": 6,
+  "cover": "🐓",
+  "flag": "data/laender/flags/bremen.png",
+  "source": "Википедия (de): «Freie Hansestadt Bremen», «Bremen», «Bremerhaven» и связанные статьи (Роланд, ратуша, Бременские музыканты, Фраймаркт, диалект, Domtreppenfegen, Schaffermahlzeit)",
+  "sourceUrl": "https://de.wikipedia.org/wiki/Freie_Hansestadt_Bremen",
+  "checked": "2026-10-21",
+  "license": "текст курса German Morning"
+}

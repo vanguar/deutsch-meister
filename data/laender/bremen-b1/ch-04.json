@@ -1,0 +1,113 @@
+{
+  "id": "ch-04",
+  "title": "Wirtschaft",
+  "titleRu": "Экономика",
+  "icon": "💶",
+  "paragraphs": [
+    {
+      "s": [
+        {
+          "de": "Die Häfen von Bremen und Bremerhaven sind sehr wichtig.",
+          "ru": "Порты Бремена и Бремерхафена очень важны.",
+          "g": {
+            "1": "порты",
+            "7": "очень",
+            "8": "важны"
+          }
+        },
+        {
+          "de": "Zusammen sind sie der zweitgrößte Seehafen in Deutschland.",
+          "ru": "Вместе они — второй по величине морской порт Германии.",
+          "g": {
+            "0": "вместе",
+            "4": "второй по величине",
+            "5": "морской порт"
+          }
+        },
+        {
+          "de": "Über Bremerhaven kommen besonders viele Autos ins Land oder gehen ins Ausland.",
+          "ru": "Через Бремерхафен особенно много машин ввозят в страну или вывозят за границу.",
+          "g": {
+            "0": "через",
+            "2": "приходят",
+            "3": "особенно",
+            "4": "много",
+            "5": "машин",
+            "6-7": "в страну",
+            "9": "уходят",
+            "10-11": "за границу"
+          }
+        },
+        {
+          "de": "Bremen ist auch wichtig für Kaffee: Viel Kaffee kommt hier an.",
+          "ru": "Бремен важен и для кофе: сюда прибывает много кофе.",
+          "g": {
+            "2": "и",
+            "3": "важен",
+            "4": "для",
+            "5": "кофе",
+            "6": "много",
+            "7": "кофе",
+            "8+10": "прибывает",
+            "9": "здесь"
+          }
+        }
+      ]
+    },
+    {
+      "fig": {
+        "w": 1200,
+        "h": 800,
+        "cap": "Автомобильный терминал в порту Бремерхафена у выхода в море.",
+        "credit": "Federal Waterways Engineering and Research Institute / Wikimedia Commons · CC BY 2.0",
+        "src": "data/laender/bremen/img/hafen.jpg"
+      }
+    },
+    {
+      "s": [
+        {
+          "de": "In Bremen baut Mercedes-Benz Autos, und Airbus baut Teile für Flugzeuge.",
+          "ru": "В Бремене Mercedes-Benz собирает машины, а Airbus делает детали для самолётов.",
+          "g": {
+            "2": "строит",
+            "4": "машины",
+            "7": "строит",
+            "8": "детали",
+            "9": "для",
+            "10": "самолётов"
+          }
+        },
+        {
+          "de": "Auch die Raumfahrt ist in Bremen wichtig.",
+          "ru": "В Бремене важна и космонавтика.",
+          "g": {
+            "0": "и",
+            "2": "космонавтика",
+            "6": "важна"
+          }
+        },
+        {
+          "de": "Bekannt ist auch das Bier der Brauerei Beck's.",
+          "ru": "Известно и пиво пивоварни Beck's.",
+          "g": {
+            "0": "известно",
+            "2": "и",
+            "4": "пиво",
+            "6": "пивоварни"
+          }
+        },
+        {
+          "de": "Die Arbeitslosigkeit ist hoch: Im Dezember 2025 lag sie bei 11,2 Prozent.",
+          "ru": "Безработица высокая: в декабре 2025 года она составляла 11,2 процента.",
+          "g": {
+            "1": "безработица",
+            "3": "высокая",
+            "5": "декабре",
+            "6+8": "составляла",
+            "9": "процента"
+          }
+        }
+      ]
+    }
+  ]
+}
