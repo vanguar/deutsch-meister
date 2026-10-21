@@ -11,7 +11,8 @@
   facts              — паспорт: [(подпись, значение)], русский (переводится
                        общей памятью i18n);
   quiz               — тест после чтения: {q, opts, a (номер верного), why};
-  figs               — фото глав: {имя: {w, h, cap, credit}} (data/laender/<id>/img).
+  figs               — фото глав: {имя: {ch, w, h, cap, credit}} (data/laender/<id>/img);
+                       ch — номер главы, фото встаёт после её первого абзаца (в B1 и B2).
 """
 
 LEVELS = {
@@ -87,7 +88,27 @@ READY = {
              'opts': ['Получает больше всех', 'Платит больше всех', 'Не участвует'], 'a': 1,
              'why': 'До 1985 года Бавария получала деньги, с 1987 года стала донором, а с 2008 года платит больше всех.'},
         ],
-        'figs': {},
+        'figs': {
+            # ch — номер главы: фото встаёт после её первого абзаца (B1 и B2)
+            'muenchen': {'ch': 1, 'w': 1200, 'h': 681,
+                         'cap': 'Мюнхен с Олимпийской башни: в центре — башни Фрауэнкирхе, на горизонте — Альпы.',
+                         'credit': 'Diego Delso / Wikimedia Commons · CC BY-SA 3.0'},
+            'neuschwanstein': {'ch': 2, 'w': 1200, 'h': 800,
+                               'cap': 'Замок Нойшванштайн — его велел построить король Людвиг II.',
+                               'credit': 'AuHaidhausen / Wikimedia Commons · CC BY 4.0'},
+            'maximilianeum': {'ch': 3, 'w': 1200, 'h': 537,
+                              'cap': 'Максимилианеум в Мюнхене: здесь заседает Баварский ландтаг.',
+                              'credit': 'Guido Radig / Wikimedia Commons · CC BY 3.0'},
+            'bmw': {'ch': 4, 'w': 1200, 'h': 823,
+                    'cap': 'Штаб-квартира BMW в Мюнхене — башня «Четыре цилиндра» — и музей BMW.',
+                    'credit': 'Diego Delso / Wikimedia Commons · CC BY-SA 3.0'},
+            'oktoberfest': {'ch': 5, 'w': 1200, 'h': 937,
+                            'cap': 'Пивной шатёр Hacker-Festzelt на Октоберфесте 2025 года.',
+                            'credit': 'kallerna / Wikimedia Commons · CC BY-SA 4.0'},
+            'biergarten': {'ch': 7, 'w': 1200, 'h': 704,
+                           'cap': 'Вечер в Taxisgarten — традиционном пивном саду Мюнхена.',
+                           'credit': 'Martin Falbisoner / Wikimedia Commons · CC BY-SA 3.0'},
+        },
     },
     'mecklenburg-vorpommern': {
         'emoji': '⚓',
@@ -131,7 +152,26 @@ READY = {
             {'q': 'Как в быту называют нижненемецкий язык?', 'opts': ['Plattdeutsch', 'Bairisch', 'Schwäbisch'], 'a': 0,
              'why': 'Нижненемецкий называют Plattdeutsch; с 2016 года его можно изучать в школе.'},
         ],
-        'figs': {},
+        'figs': {
+            'ruegen': {'ch': 1, 'w': 1200, 'h': 800,
+                       'cap': 'Меловые скалы национального парка Ясмунд на острове Рюген.',
+                       'credit': 'Moahim / Wikimedia Commons · CC BY-SA 4.0'},
+            'stralsund': {'ch': 2, 'w': 1200, 'h': 798,
+                          'cap': 'Ратуша Штральзунда на площади Alter Markt — ганзейская кирпичная готика.',
+                          'credit': 'Pixelteufel / Wikimedia Commons · CC BY 2.0'},
+            'schloss': {'ch': 3, 'w': 1200, 'h': 833,
+                        'cap': 'Шверинский замок на острове в озере: здесь заседает ландтаг земли.',
+                        'credit': 'Moahim / Wikimedia Commons · CC BY-SA 4.0'},
+            'warnemuende': {'ch': 4, 'w': 1200, 'h': 734,
+                            'cap': 'Варнемюнде, район Ростока: маяк, павильон «Теепотт» и выход в Балтийское море.',
+                            'credit': 'Moahim / Wikimedia Commons · CC BY-SA 4.0'},
+            'heiligendamm': {'ch': 5, 'w': 1200, 'h': 800,
+                             'cap': 'Хайлигендамм — старейший морской курорт Германии, основан в 1793 году.',
+                             'credit': 'W. Bulach / Wikimedia Commons · CC BY-SA 4.0'},
+            'strandkorb': {'ch': 7, 'w': 1200, 'h': 675,
+                           'cap': 'Пляжные корзины-кресла (Strandkorb) на пляже Кюлунгсборна.',
+                           'credit': 'Dietmar Rabich / Wikimedia Commons · CC BY-SA 4.0'},
+        },
     },
 }
 

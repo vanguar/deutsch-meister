@@ -58,6 +58,15 @@
           }
         }
       ]
+    },
+    {
+      "fig": {
+        "w": 1200,
+        "h": 675,
+        "cap": "Пляжные корзины-кресла (Strandkorb) на пляже Кюлунгсборна.",
+        "credit": "Dietmar Rabich / Wikimedia Commons · CC BY-SA 4.0",
+        "src": "data/laender/mecklenburg-vorpommern/img/strandkorb.jpg"
+      }
     }
   ]
 }

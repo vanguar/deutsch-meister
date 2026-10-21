@@ -53,13 +53,20 @@ def build_text(tid, land, level, chapters, book_w, book_l):
     forms, words, figs = {}, 0, 0
     own = W_TEXT.get(tid, {})
     files = []
+    # фото из land_meta (ch — номер главы) встают после первого абзаца главы
+    by_ch = {}
+    for fid, fig in land['figs'].items():
+        if 'ch' in fig:
+            by_ch.setdefault(fig['ch'], []).append(fid)
     for ci, ch in enumerate(chapters, 1):
         title, title_ru, icon, paras = ch
+        if by_ch.get(ci):
+            paras = paras[:1] + [('fig', fid) for fid in by_ch[ci]] + paras[1:]
         out_paras = []
         for pi, para in enumerate(paras):
             if isinstance(para, tuple):
                 _, fid = para
-                fig = dict(land['figs'][fid])
+                fig = {k: v for k, v in land['figs'][fid].items() if k != 'ch'}
                 fig['src'] = 'data/laender/%s/img/%s.jpg' % (land['id'], fid)
                 if not os.path.isfile(os.path.join(BASE, fig['src'])):
                     fail('%s: нет фото %s' % (tid, fig['src']))
