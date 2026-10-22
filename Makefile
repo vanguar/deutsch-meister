@@ -90,6 +90,7 @@ i18n-build:
 test-i18n:
 	node tools/test_i18n.js
 	python scripts/test_bot_lang.py
+	python scripts/test_progress_merge.py
 
 # Земли Германии: собрать data/laender из tools/laender/land_*.py, проверить.
 # Переводы uk/ar — через tools/i18n.js (группы laender-index, laender/<текст>)

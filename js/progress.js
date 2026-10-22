@@ -223,6 +223,7 @@ const Progress = (() => {
 
     renderSectionProgress();
     tryFinishLesson();
+    _notify();   // сданная секция — сразу в облако, не дожидаясь XP
   }
 
   function isLessonFullyDone() {
@@ -697,6 +698,24 @@ const Progress = (() => {
       });
       try { localStorage.setItem(SECTIONS_KEY_PREFIX + id, JSON.stringify({ done, scores })); } catch {}
     });
+
+    // Все секции сданы (может быть, на разных устройствах), а урок не
+    // засчитан — засчитываем: иначе на главной он висит недоделанным,
+    // пока его снова не откроешь
+    const st = load();
+    let finished = false;
+    Object.keys(localStorage).forEach(k => {
+      if (!k.startsWith(SECTIONS_KEY_PREFIX)) return;
+      const id = k.slice(SECTIONS_KEY_PREFIX.length);
+      if (st.completedLessons.includes(id)) return;
+      const sec = _loadSections(id);
+      if (!REQUIRED_SECTIONS.every(s => sec.done.includes(s))) return;
+      st.completedLessons.push(id);
+      const vals = REQUIRED_SECTIONS.map(s => sec.scores[s]).filter(v => typeof v === 'number');
+      st.lessonScores[id] = vals.length ? Math.round(vals.reduce((a, b) => a + b, 0) / vals.length) : 100;
+      finished = true;
+    });
+    if (finished) save(st);
 
     if (cloud.lastLesson && !getLastLesson()) setLastLesson(cloud.lastLesson);
 

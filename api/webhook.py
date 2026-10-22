@@ -1156,12 +1156,85 @@ def _merge_books(old, new):
     return out
 
 
+def _int_or_float(v):
+    v = _num(v)
+    return int(v) if v == int(v) else v
+
+
+def _merge_global(old, new):
+    """dm_progress: как Progress._mergeGlobal в js/progress.js — xp и серия
+    максимум, пройденные уроки объединением, оценки максимум."""
+    old = old if isinstance(old, dict) else {}
+    new = new if isinstance(new, dict) else {}
+    out = dict(old)
+    out.update(new)
+    out["xp"] = _int_or_float(max(_num(old.get("xp")), _num(new.get("xp"))))
+    out["streak"] = _int_or_float(max(_num(old.get("streak")), _num(new.get("streak"))))
+    days = [d for d in (old.get("lastActive"), new.get("lastActive")) if isinstance(d, str) and d]
+    out["lastActive"] = max(days) if days else None
+    done = []
+    for lid in list(old.get("completedLessons") or []) + list(new.get("completedLessons") or []):
+        if lid not in done:
+            done.append(lid)
+    out["completedLessons"] = done
+    so = old.get("lessonScores") if isinstance(old.get("lessonScores"), dict) else {}
+    sn = new.get("lessonScores") if isinstance(new.get("lessonScores"), dict) else {}
+    out["lessonScores"] = {k: _int_or_float(max(_num(so.get(k)), _num(sn.get(k))))
+                           for k in set(so) | set(sn)}
+    return out
+
+
+def _merge_sections(old, new):
+    """Секции уроков: сданные — объединением, оценки — максимум."""
+    old = old if isinstance(old, dict) else {}
+    new = new if isinstance(new, dict) else {}
+    out = {}
+    for lid in set(old) | set(new):
+        lo = old.get(lid) if isinstance(old.get(lid), dict) else {}
+        ln = new.get(lid) if isinstance(new.get(lid), dict) else {}
+        done = []
+        for s in list(lo.get("done") or []) + list(ln.get("done") or []):
+            if s not in done:
+                done.append(s)
+        so = lo.get("scores") if isinstance(lo.get("scores"), dict) else {}
+        sn = ln.get("scores") if isinstance(ln.get("scores"), dict) else {}
+        scores = {k: _int_or_float(max(_num(so.get(k)), _num(sn.get(k)))) for k in set(so) | set(sn)}
+        out[lid] = {"done": done, "scores": scores}
+    return out
+
+
+def _merge_lesson_pos(old, new):
+    """Место в уроке: свежее по ts, прочитанная доля теории — максимум."""
+    old = old if isinstance(old, dict) else {}
+    new = new if isinstance(new, dict) else {}
+    out = {}
+    for lid in set(old) | set(new):
+        a, b = old.get(lid), new.get(lid)
+        if not isinstance(a, dict) or not isinstance(b, dict):
+            out[lid] = b if isinstance(b, dict) else a
+            continue
+        rec = dict(b if _num(b.get("ts")) > _num(a.get("ts")) else a)
+        rec["read"] = max(_num(a.get("read")), _num(b.get("read")))
+        out[lid] = rec
+    return out
+
+
 def write_progress(uid, data):
-    # Всё, кроме books, перезаписывается входящим снимком — как и раньше.
-    # books сливаем с сохранённым: иначе клиент без этого поля (старая версия)
-    # или с частичными данными стёр бы чтение, накопленное на другом устройстве.
+    # Снимок сливаем с сохранённым, а не перезаписываем: устройство со
+    # старыми данными (Telegram Desktop, открытый с утра) иначе стёрло бы
+    # упражнения, сданные на телефоне. Слияние — как Progress.importAll
+    # на клиенте: прогресс только растёт. Клиент без books (старая версия)
+    # чтение с других устройств тоже не стирает.
     if isinstance(data, dict):
         stored = read_progress(uid)
+        if isinstance(stored, dict):
+            data = dict(data)
+            data["progress"] = _merge_global(stored.get("progress"), data.get("progress"))
+            data["sections"] = _merge_sections(stored.get("sections"), data.get("sections"))
+            if stored.get("lessonPos") or data.get("lessonPos"):
+                data["lessonPos"] = _merge_lesson_pos(stored.get("lessonPos"), data.get("lessonPos"))
+            if not data.get("lastLesson") and stored.get("lastLesson"):
+                data["lastLesson"] = stored["lastLesson"]
         if isinstance(stored, dict) and (stored.get("books") or data.get("books")):
             data = dict(data)
             merged = _merge_books(stored.get("books"), data.get("books"))

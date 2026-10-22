@@ -22,3 +22,5 @@ jobs:
         run: python tools/fahrschule/test_build.py
       - name: Audience wording (Russian UI is not Russia)
         run: python scripts/test_audience_wording.py
+      - name: Cloud progress merge (server never loses progress)
+        run: python scripts/test_progress_merge.py

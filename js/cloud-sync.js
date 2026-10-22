@@ -42,19 +42,25 @@
 
   let pushTimer = null;
   let pushing = false;
+  let again = false;   // изменения, пришедшие во время выгрузки
   function schedulePush(id) {
     clearTimeout(pushTimer);
     pushTimer = setTimeout(() => push(id), 1500);
   }
   function push(id) {
-    if (pushing) return Promise.resolve();
+    // Выгрузка уже идёт — не теряем новые изменения, а выгружаем их следом
+    if (pushing) { again = true; return Promise.resolve(); }
     pushing = true;
+    again = false;
     return fetch(API, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ initData: id, data: Progress.exportAll() }),
       keepalive: true,
-    }).catch(() => {}).finally(() => { pushing = false; });
+    }).catch(() => {}).finally(() => {
+      pushing = false;
+      if (again) schedulePush(id);
+    });
   }
 
   function flush(id) {
@@ -81,9 +87,14 @@
 
     // 3) финальный флаш при уходе
     window.addEventListener('pagehide', () => flush(id));
+    // Вернулись в приложение (Telegram Desktop держат открытым часами) —
+    // подтягиваем то, что успели сделать на другом устройстве
+    let hiddenAt = 0;
     document.addEventListener('visibilitychange', () => {
-      if (document.visibilityState === 'hidden') flush(id);
+      if (document.visibilityState === 'hidden') { hiddenAt = Date.now(); flush(id); }
+      else if (hiddenAt && Date.now() - hiddenAt > 30000) pull(id);
     });
+    window.addEventListener('pageshow', e => { if (e.persisted) pull(id); });
   }
 
   // Telegram SDK грузится асинхронно — дождёмся initData (до ~3 сек)
