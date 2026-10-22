@@ -18,6 +18,7 @@ const Progress = (() => {
   const LAST_LESSON_KEY        = 'dm_last_lesson'; // id последнего открытого урока
   const BOOK_POS_PREFIX        = 'dm_book_pos:';   // dm_book_pos:bremer
   const BOOK_WORDS_PREFIX      = 'dm_book_words:'; // dm_book_words:bremer
+  const LESSON_POS_PREFIX      = 'dm_lesson_pos:'; // dm_lesson_pos:a1-01
   const XP_PER_LEVEL           = 200;
 
   /* Подписчики на изменение прогресса (для облачной синхронизации) */
@@ -81,6 +82,63 @@ const Progress = (() => {
   }
   function getLastLesson() {
     try { return localStorage.getItem(LAST_LESSON_KEY) || null; } catch { return null; }
+  }
+
+  /* ════════════════════════════════════
+     Место в уроке (для «Продолжить урок»)
+     { i, f, tab, read, ts }: i — номер блока-якоря у верха экрана
+     (js/lesson-render.js, initLessonResume), f — доля его высоты над
+     верхом экрана, tab — открытая вкладка упражнений, read — какая доля
+     теории (фразы, словарь, грамматика) прочитана, 0…1, только растёт.
+     Подписчиков не будим: позиция меняется на каждой прокрутке, в облако
+     она уходит вместе с остальным снимком (и при уходе со страницы).
+     ════════════════════════════════════ */
+  function _cleanPos(p) {
+    if (!p || typeof p !== 'object') return null;
+    const out = {
+      read: Math.max(0, Math.min(1, Number(p.read) || 0)),
+      ts:   Number(p.ts) || 0
+    };
+    if (Number.isInteger(p.i) && p.i >= 0) {
+      out.i = p.i;
+      out.f = Math.max(0, Math.min(1, Number(p.f) || 0));
+    }
+    if (typeof p.tab === 'string' && /^[a-z]{1,20}$/.test(p.tab)) out.tab = p.tab;
+    return out;
+  }
+
+  function getLessonPos(lessonId) {
+    return lessonId ? _cleanPos(_readJson(LESSON_POS_PREFIX + lessonId)) : null;
+  }
+
+  function saveLessonPos(lessonId, pos) {
+    if (!lessonId) return;
+    const prev = getLessonPos(lessonId);
+    const next = _cleanPos({ ...pos, ts: Date.now() });
+    if (!next) return;
+    next.read = Math.max(next.read, prev ? prev.read : 0);
+    try { localStorage.setItem(LESSON_POS_PREFIX + lessonId, JSON.stringify(next)); } catch {}
+  }
+
+  function _loadLessonPos() {
+    const out = {};
+    try {
+      Object.keys(localStorage).forEach(k => {
+        if (!k.startsWith(LESSON_POS_PREFIX)) return;
+        const pos = getLessonPos(k.slice(LESSON_POS_PREFIX.length));
+        if (pos) out[k.slice(LESSON_POS_PREFIX.length)] = pos;
+      });
+    } catch {}
+    return out;
+  }
+
+  // Место — по свежести (ts), прочитанная доля — максимум
+  function _mergeLessonPos(a, b) {
+    a = _cleanPos(a); b = _cleanPos(b);
+    if (!a || !b) return a || b;
+    const rec = { ...(b.ts > a.ts ? b : a) };
+    rec.read = Math.max(a.read, b.read);
+    return rec;
   }
 
   /* ════════════════════════════════════
@@ -201,6 +259,7 @@ const Progress = (() => {
   function resetLessonProgress(lessonId) {
     if (lessonId) {
       try { localStorage.removeItem(SECTIONS_KEY_PREFIX + lessonId); } catch {}
+      try { localStorage.removeItem(LESSON_POS_PREFIX + lessonId); } catch {}
       const state = load();
       state.completedLessons = state.completedLessons.filter(id => id !== lessonId);
       delete state.lessonScores[lessonId];
@@ -214,7 +273,7 @@ const Progress = (() => {
       // Reset everything (use with care)
       try {
         Object.keys(localStorage)
-          .filter(k => k === STORAGE_KEY || k.startsWith(SECTIONS_KEY_PREFIX))
+          .filter(k => k === STORAGE_KEY || k.startsWith(SECTIONS_KEY_PREFIX) || k.startsWith(LESSON_POS_PREFIX))
           .forEach(k => localStorage.removeItem(k));
       } catch {}
       _doneSections  = new Set();
@@ -492,6 +551,7 @@ const Progress = (() => {
     } catch {}
     // Читалка: собственное поле верхнего уровня, dm_progress не трогаем
     out.books = _loadBooks();
+    out.lessonPos = _loadLessonPos();
     return out;
   }
 
@@ -643,6 +703,14 @@ const Progress = (() => {
     // Читалка: снимок без books ничего не меняет — _mergeBooks вернёт локальное
     _saveBooks(_mergeBooks(_loadBooks(), cloud.books));
 
+    // Место в уроках: снимок без lessonPos (старый клиент) ничего не меняет
+    const lp = (cloud.lessonPos && typeof cloud.lessonPos === 'object') ? cloud.lessonPos : {};
+    Object.entries(lp).forEach(([id, val]) => {
+      if (!/^[a-z0-9]+-\d+$/.test(id)) return;
+      const rec = _mergeLessonPos(getLessonPos(id), val);
+      if (rec) { try { localStorage.setItem(LESSON_POS_PREFIX + id, JSON.stringify(rec)); } catch {} }
+    });
+
     return JSON.stringify(exportAll()) !== before;
   }
 
@@ -697,6 +765,8 @@ const Progress = (() => {
     resetLessonProgress,
 
     // ✦ «Продолжить» + главная
+    getLessonPos,
+    saveLessonPos,
     setLastLesson,
     getLastLesson,
     renderHomeProgress,

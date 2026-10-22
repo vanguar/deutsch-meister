@@ -22,7 +22,10 @@ const Home = (() => {
   const TOTAL = 68;
   const XP_PER_LEVEL = 200;
   const SECTIONS = ['flashcards', 'fill', 'choice', 'match', 'dict'];
-  const SECTION_SHORT = ['Карточки', 'Пропуски', 'Выбор', 'Пары', 'Диктант'];
+  // Шаги полосы над «Продолжить урок» — в порядке страницы урока:
+  // теория (фразы, словарь, грамматика), четыре упражнения, флэшкарты
+  const STEPS = ['theory', 'fill', 'choice', 'match', 'dict', 'flashcards'];
+  const STEP_NAMES = { theory: 'Теория', fill: 'Пропуски', choice: 'Выбор', match: 'Пары', dict: 'Диктант', flashcards: 'Карточки' };
   const LEVEL_NAMES = { a1: 'Начинающий', a2: 'Элементарный', b1: 'Средний', b2: 'Выше среднего' };
   const TABS = ['home', 'course', 'dict', 'more'];
 
@@ -49,6 +52,25 @@ const Home = (() => {
       const done = (raw && Array.isArray(raw.done)) ? raw.done : [];
       return SECTIONS.filter(s => done.includes(s));
     } catch (e) { return []; }
+  }
+
+  /* Сколько пройдено в уроке, по шагам STEPS: 0…1 у каждого. Теория —
+     доля прочитанного (js/lesson-render.js, initLessonResume); если уже
+     сдано хоть одно упражнение, теория позади — они ниже на странице
+     (и у прогресса, накопленного до этого счётчика, теория не нулевая). */
+  function lessonSteps(id, isDone) {
+    if (isDone) return STEPS.map(() => 1);
+    const secs = sectionsDone(id);
+    let read = 0;
+    try { read = (Progress.getLessonPos(id) || {}).read || 0; } catch (e) {}
+    if (secs.length) read = 1;
+    return STEPS.map(s => s === 'theory' ? read : (secs.includes(s) ? 1 : 0));
+  }
+
+  // Процент урока; 100 — только у пройденного (все упражнения сданы)
+  function lessonPct(steps, isDone) {
+    if (isDone) return 100;
+    return Math.min(99, Math.round(steps.reduce((a, b) => a + b, 0) / steps.length * 100));
   }
 
   function plural(n, one, few, many) {
@@ -196,7 +218,7 @@ const Home = (() => {
     if (card) {
       const id = idFromHref(card.getAttribute('href')) || 'a1-01';
       const isDone = card.classList.contains('done');
-      const secs = isDone ? SECTIONS.slice() : sectionsDone(id);
+      const steps = lessonSteps(id, isDone);
       setText($('nowLvl'), id.slice(0, 2).toUpperCase());
       setText($('nowNum'), id.slice(3));
       setText($('nowTitle'), (card.querySelector('.lc-title')?.textContent || '').trim());
@@ -205,13 +227,19 @@ const Home = (() => {
       const nowCard = $('nowCard');
       if (nowCard) nowCard.classList.toggle('is-new', !started);
       setText($('nowSub'), started
-        ? (isDone ? 'Урок пройден' : `Пройдено ${secs.length} из ${SECTIONS.length}`)
+        ? (isDone ? 'Урок пройден' : `Пройдено ${lessonPct(steps, false)}%`)
         : `${TOTAL} уроков — от нуля до B2`);
-      const next = SECTIONS.find(s => !secs.includes(s));
+      const nextI = steps.findIndex(v => v < 1);
       document.querySelectorAll('#nowSteps .step').forEach((st, i) => {
-        st.classList.toggle('on', secs.includes(SECTIONS[i]));
-        st.classList.toggle('next', SECTIONS[i] === next);
+        const v = steps[i] || 0;
+        st.classList.toggle('on', v >= 1);
+        st.classList.toggle('next', i === nextI);
+        const w = Math.round(v * 100) + '%';
+        if (st.style.getPropertyValue('--p') !== w) st.style.setProperty('--p', w);
       });
+      setText($('nowNextName'), nextI < 0 ? '' : STEP_NAMES[STEPS[nextI]]);
+      const cap = $('nowNext');
+      if (cap) cap.hidden = nextI < 0;
     }
     // progress.js и ar-trial.js пишут в кнопку свой текст — у новой
     // карточки название урока стоит выше, на кнопке только действие
@@ -236,9 +264,9 @@ const Home = (() => {
       const st = c.querySelector('.lc-state');
       let state = '', text = '';
       if (isCur) {
-        const n = sectionsDone(id).length;
+        const pct = lessonPct(lessonSteps(id, isDone), isDone);
         state = 'cur';
-        text = isDone ? 'Пройден' : (n ? `Пройдено ${n} из ${SECTIONS.length}` : '');
+        text = isDone ? 'Пройден' : (pct ? `Пройдено ${pct}%` : '');
       } else if (isDone) {
         state = 'done';
         text = 'Пройден';
@@ -336,6 +364,14 @@ const Home = (() => {
     buildLevelNext();
     document.querySelectorAll('[data-set-lang]').forEach(b => b.addEventListener('click', () => setLang(b.dataset.setLang)));
     document.querySelectorAll('[data-set-theme]').forEach(b => b.addEventListener('click', () => setTheme(b.dataset.setTheme)));
+    // «Продолжить урок» возвращает на место, где остановились: урок
+    // прокрутится сам, если увидит свой id (js/lesson-render.js,
+    // initLessonResume). href читаем в момент нажатия — его правят
+    // progress.js и ar-trial.js
+    $('continueBtn')?.addEventListener('click', e => {
+      const id = idFromHref(e.currentTarget.getAttribute('href'));
+      try { if (id) sessionStorage.setItem('dm_resume', id); } catch (err) {}
+    });
 
     // cloud-sync.js после слияния облака зовёт Progress.renderHomeProgress() —
     // дорисовываем и свою часть

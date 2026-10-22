@@ -31,6 +31,7 @@ const SNAP = `(() => {
     stepsOn: document.querySelectorAll('#nowSteps .step.on').length,
     stepNext: [...document.querySelectorAll('#nowSteps .step')].findIndex(s => s.classList.contains('next')),
     stepsShown: getComputedStyle(document.getElementById('nowSteps')).display !== 'none',
+    nextName: t('nowNextName'),
     xpLevel: t('xpLevel'), xpNow: t('xpNow'), streak: t('streakNum'), streakWord: t('streakWord'),
     cards: document.querySelectorAll('.lesson-card[href]').length,
     done: [...document.querySelectorAll('.lesson-card[data-state="done"]')].map(c => c.getAttribute('href').match(/(\\w\\d)\\/lesson-(\\d+)/).slice(1).join('-')),
@@ -78,14 +79,16 @@ s = await J(SNAP);
 ok(/^(Доброе утро|Добрый день|Добрый вечер)$/.test(s.greet) && /^Guten (Morgen|Tag|Abend)!$/.test(s.greetDe), `приветствие по времени: ${s.greet} / ${s.greetDe}`);
 ok(s.btn === 'Продолжить урок' && /lessons\/a1\/lesson-04\//.test(s.href), `«Продолжить урок» → ${s.href}`);
 ok(s.nowTitle === 'Семья' && s.nowNum === '04' && s.nowBg === 'Familie', `карточка: ${s.nowNum} ${s.nowTitle} (${s.nowBg})`);
-ok(s.stepsShown && s.stepsOn === 2 && s.stepNext === 2 && s.nowSub === 'Пройдено 2 из 5', `шаги: ${s.stepsOn}/5, дальше №${s.stepNext + 1}, «${s.nowSub}»`);
+// шаги в порядке урока: теория (позади — упражнения уже сданы), пропуски ✓,
+// выбор, пары, диктант, карточки ✓ → 3 из 6, дальше «Выбор», 50 %
+ok(s.stepsShown && s.stepsOn === 3 && s.stepNext === 2 && s.nowSub === 'Пройдено 50%' && s.nextName === 'Выбор', `шаги: ${s.stepsOn}/6, дальше №${s.stepNext + 1} «${s.nextName}», «${s.nowSub}»`);
 ok(s.xpLevel === '2' && s.xpNow === '120', `уровень ${s.xpLevel}, ${s.xpNow} / 200 XP`);
 ok(s.streak === '5' && s.streakWord === 'дней подряд', `серия: ${s.streak} ${s.streakWord}`);
 ok(s.done.join() === 'a1-01,a1-02,a1-03' && s.cur.join() === 'a1-04', `путь: пройдены ${s.done}, текущий ${s.cur}`);
 ok(s.courseCount === '3 из 68 уроков' && s.lvlCount === '3 / 20' && s.lvlName === 'Начинающий', `курс: ${s.courseCount}, ${s.lvlName} ${s.lvlCount}`);
 ok(s.statStreak === '5' && s.statXp === '320' && s.statDone === '3', `профиль: ${s.statStreak} / ${s.statXp} / ${s.statDone}`);
 const curState = await c.ev(`document.querySelector('.lesson-card[data-state="cur"] .lc-state').textContent`);
-ok(curState === 'Пройдено 2 из 5', `у текущего урока в пути: «${curState}»`);
+ok(curState === 'Пройдено 50%', `у текущего урока в пути: «${curState}»`);
 // старый дизайн progress.js (inline outline) не должен просвечивать
 const outline = await c.ev(`getComputedStyle(document.querySelector('.lesson-card.continue')).outlineStyle`);
 ok(outline === 'none', `у текущего урока нет старой фиолетовой обводки (${outline})`);
@@ -353,7 +356,7 @@ const CONTRAST = `(() => {
   const lum = ([r, g, b]) => { const f = v => { v /= 255; return v <= .03928 ? v / 12.92 : Math.pow((v + .055) / 1.055, 2.4); }; return .2126 * f(r) + .7152 * f(g) + .0722 * f(b); };
   const bgOf = el => { while (el) { const c = rgb(getComputedStyle(el).backgroundColor); if (c[3] === undefined || c[3] > .5) return c; el = el.parentElement; } return [255,255,255]; };
   const ratio = (a, b) => { const x = lum(a), y = lum(b); return (Math.max(x, y) + .05) / (Math.min(x, y) + .05); };
-  const sel = ['#continueBtn', '.now-sub', '.now-num', '.step span', '.tile-head', '.tile-big small', '.tile-big .word', '.tile-hint', '#streakNum',
+  const sel = ['#continueBtn', '.now-sub', '.now-num', '.steps-cap', '.steps-cap b', '.tile-head', '.tile-big small', '.tile-big .word', '.tile-hint', '#streakNum',
     '.read-title', '.read-sub', '.fresh', '.tab-btn', '.tab-btn.on', '.lvl-count', '.lc-title', '.lc-words', '.lesson-card[data-state="done"] .lc-state',
     '.lesson-card[data-state="cur"] .lc-state', '.lc-go', '.row-title', '.row-sub', '.stat span', '.seg button.on', '.seg button:not(.on)', '.page-aside', '.group-title'];
   const out = [];
@@ -431,7 +434,7 @@ const ukV = await J(`({ ph: document.getElementById('vocabQuery').placeholder, r
   cnt: document.getElementById('vocabCount').textContent })`);
 ok(/українською/.test(ukV.ph) && ukV.rows.includes('Hund — собака') && /слів$/.test(ukV.cnt), `uk словник: «${ukV.ph}», ${ukV.rows.join('; ')}, ${ukV.cnt}`);
 await c.shot('home-uk-dict.png');
-ok(s.btn === 'Продовжити урок' && s.nowSub === 'Пройдено 2 з 5' && s.nowTitle === "Сім'я", `uk: ${s.btn} · ${s.nowSub} · ${s.nowTitle}`);
+ok(s.btn === 'Продовжити урок' && s.nowSub === 'Пройдено 50%' && s.nextName === 'Вибір' && s.nowTitle === "Сім'я", `uk: ${s.btn} · ${s.nowSub} · ${s.nowTitle}`);
 ok(s.courseCount === '3 з 68 уроків' && s.streakWord === 'днів поспіль', `uk: ${s.courseCount} · ${s.streakWord}`);
 await c.shot('home-uk.png');
 // переключатель языка в профиле
@@ -474,7 +477,7 @@ await fresh(PROG);
 await phone(360, 640);
 await c.go(B + '/index.html', 1500);
 s = await J(SNAP);
-const clip = await J(`[...document.querySelectorAll('.home-main *')].filter(e => e.offsetParent && e.scrollWidth > e.clientWidth + 1 && getComputedStyle(e).overflow !== 'visible' && !e.matches('.now-card, .now-bg, .lc-sub, .step span, .lc-num, .lc-status')).map(e => e.className).slice(0, 5)`);
+const clip = await J(`[...document.querySelectorAll('.home-main *')].filter(e => e.offsetParent && e.scrollWidth > e.clientWidth + 1 && getComputedStyle(e).overflow !== 'visible' && !e.matches('.now-card, .now-bg, .lc-sub, .steps-cap, .lc-num, .lc-status')).map(e => e.className).slice(0, 5)`);
 ok(!s.hscroll && clip.length === 0, '360px: без прокрутки и обрезанного текста', clip);
 await c.shot('home-360.png');
 await phone(1280, 800);

@@ -150,21 +150,24 @@ html[dir="rtl"] .ico.flip { transform: scaleX(-1); }
 }
 .now-sub { position: relative; font-size: 15px; color: var(--h-hint); }
 
-.steps { position: relative; display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; margin: 16px 0 4px; }
-.step { min-width: 0; }
-.step::before {
-  content: ''; display: block; height: 5px; border-radius: 3px;
+.steps { position: relative; display: grid; grid-template-columns: repeat(6, 1fr); gap: 6px; margin: 16px 0 4px; }
+/* --p — доля шага (home.js): теория заполняется по мере чтения */
+.step {
+  position: relative; min-width: 0; height: 5px; border-radius: 3px; overflow: hidden;
   background: var(--h-card2);
 }
-.step.on::before { background: var(--h-btn); }
-.step.next::before { background: var(--h-accent); opacity: .55; }
-.step span {
-  display: block; margin-top: 7px; text-align: center;
+.step::before, .step::after { content: ''; position: absolute; top: 0; bottom: 0; inset-inline-start: 0; border-radius: inherit; }
+.step.next::before { width: 100%; background: var(--h-accent); opacity: .3; }
+.step::after { width: var(--p, 0%); background: var(--h-btn); transition: width .4s ease; }
+.step.on::after { width: 100%; }
+.steps-cap {
+  position: relative; margin-top: 8px;
   font-size: 12px; color: var(--h-hint);
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
-.step.next span { color: var(--h-text); font-weight: 700; }
-.now-card.is-new .steps { display: none; }
+.steps-cap[hidden] { display: none; }
+.steps-cap b { color: var(--h-text); font-weight: 700; }
+.now-card.is-new .steps, .now-card.is-new .steps-cap { display: none; }
 
 .now-btn {
   position: relative;
@@ -415,7 +418,6 @@ body.home .ar-trial { margin: 0 0 14px; border-radius: 20px; }
 @media (max-width: 360px) {
   .greet, .page-title { font-size: 24px; }
   .now-title { font-size: 26px; }
-  .step span { font-size: 11px; }
   .tile { padding: 14px; }
   .tile-big b { font-size: 23px; }
   .xp-tile .tile-big b { font-size: 21px; }

@@ -2477,3 +2477,107 @@ function toggleLevel(id) { document.getElementById(id)?.classList.toggle('collap
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run);
   else run();
 })();
+
+/* ── «Продолжить урок»: место в уроке ──
+   При прокрутке запоминаем, где остановились (Progress.saveLessonPos):
+   блок у верха экрана — по номеру среди LR_ANCHORS, а не в пикселях,
+   потому что высота урока меняется с шириной экрана, шрифтами и
+   переводом. Заодно — какая доля теории прочитана (полоса на главной)
+   и открытая вкладка упражнений.
+   Возвращаем на это место, только когда урок открыт кнопкой
+   «Продолжить урок» на главной: она кладёт id урока в sessionStorage
+   (dm_resume, js/home.js). Из «Курса» и меню урок открывается сначала. */
+(function initLessonResume() {
+  if (typeof Progress === 'undefined' || !Progress.saveLessonPos) return;
+  const ANCHORS = '.lesson-section, .lesson-section > *, #phraseGrid > *, #vocabTableBody > *, ' +
+    '#grammarBoxes > *, #grammarBoxes > * > *, #fillContainer > *, #mcContainer > *, #dictationContainer > *';
+  const lessonId = () => (typeof LESSON_DATA !== 'undefined' && LESSON_DATA && LESSON_DATA.id) || null;
+
+  // Доля теории над серединой экрана: всё, что выше блока упражнений
+  function theoryRead() {
+    const first = document.querySelector('.lesson-section');
+    const ex = document.querySelector('.exercise-tabs')?.closest('.lesson-section');
+    if (!first || !ex) return 0;
+    const top = first.getBoundingClientRect().top;
+    const span = ex.getBoundingClientRect().top - top;
+    if (span <= 0) return 0;
+    return Math.max(0, Math.min(1, (window.innerHeight * 0.6 - top) / span));
+  }
+
+  // Самый глубокий блок, который пересекает верх экрана
+  function anchor() {
+    if (window.scrollY < 40) return null;   // в самом начале — без якоря
+    const els = document.querySelectorAll(ANCHORS);
+    let idx = -1, box = null;
+    for (let i = 0; i < els.length; i++) {
+      const r = els[i].getBoundingClientRect();
+      if (r.height > 0 && r.top <= 0 && r.bottom > 0) { idx = i; box = r; }
+    }
+    return idx < 0 ? null : { i: idx, f: Math.round(-box.top / box.height * 1e4) / 1e4 };
+  }
+
+  let restoring = false;   // пока возвращаем на место — не записываем
+  function save() {
+    const id = lessonId();
+    if (!id || restoring) return;
+    const a = anchor();
+    const tab = document.querySelector('.ex-tab.active')?.dataset.panel;
+    Progress.saveLessonPos(id, { i: a ? a.i : null, f: a ? a.f : 0, tab, read: theoryRead() });
+  }
+
+  let timer = null;
+  window.addEventListener('scroll', () => {
+    clearTimeout(timer);
+    timer = setTimeout(save, 250);
+  }, { passive: true });
+  window.addEventListener('pagehide', save);
+  document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden') save(); });
+  document.addEventListener('click', e => { if (e.target.closest?.('.ex-tab')) setTimeout(save, 0); });
+
+  function scrollToPos(pos) {
+    const el = document.querySelectorAll(ANCHORS)[pos.i];
+    if (!el) return;
+    const r = el.getBoundingClientRect();
+    const y = Math.max(0, Math.round(window.scrollY + r.top + pos.f * r.height));
+    if (Math.abs(y - window.scrollY) > 1) window.scrollTo({ top: y, behavior: 'instant' });
+  }
+
+  function resume() {
+    const id = lessonId();
+    let want = null;
+    try { want = sessionStorage.getItem('dm_resume'); sessionStorage.removeItem('dm_resume'); } catch (e) {}
+    if (!id || want !== id) return;
+    const pos = Progress.getLessonPos(id);
+    if (!pos) return;
+    if (pos.tab) {
+      const tab = document.querySelector(`.ex-tab[data-panel="${pos.tab}"]`);
+      if (tab && !tab.classList.contains('active')) tab.click();
+    }
+    if (!Number.isInteger(pos.i)) return;
+    // Перевод (i18n), шрифты и картинки догружаются после первого
+    // рендера и сдвигают блоки (бывает и плавно, переходами) — держим
+    // якорь на месте каждый кадр, пока страница не устоится, но сразу
+    // отпускаем, как только человек сам листает
+    restoring = true;
+    const until = Date.now() + 2500;
+    const GESTURES = ['wheel', 'touchstart', 'keydown', 'pointerdown'];
+    const stop = () => {
+      restoring = false;
+      GESTURES.forEach(t => window.removeEventListener(t, stop, true));
+    };
+    GESTURES.forEach(t => window.addEventListener(t, stop, { capture: true, passive: true }));
+    setTimeout(stop, 2600);   // в скрытой вкладке кадров нет — не зависнуть
+    (function hold() {
+      if (!restoring) return;
+      if (Date.now() > until) { stop(); return; }
+      scrollToPos(pos);
+      requestAnimationFrame(hold);
+    })();
+  }
+
+  // Урок рисуется в DOMContentLoaded инлайн-скриптом оболочки, он
+  // подписан позже нас — ждём его, иначе якорей ещё нет
+  const run = () => setTimeout(resume, 0);
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run);
+  else run();
+})();
