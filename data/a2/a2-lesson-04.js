@@ -36,7 +36,7 @@ const LESSON_DATA = {
     { de: 'Ich habe deutsches Bier getrunken.',    ru: 'Я пил немецкое пиво.',                      note: 'trinken → getrunken (неправильный)', audio: 'Ich habe deutsches Bier getrunken' },
     { de: 'Wir haben viel gegessen.',              ru: 'Мы много ели.',                             note: 'essen → gegessen — двойная ge-!', audio: 'Wir haben viel gegessen' },
     { de: 'Ich bin durch die Altstadt gelaufen.',  ru: 'Я гулял по старому городу.',                note: 'durch + Akk. = через. laufen с sein', audio: 'Ich bin durch die Altstadt gelaufen' },
-    { de: 'Wir haben einen Museum besichtigt.',    ru: 'Мы осматривали музей.',                     note: 'besichtigen → besichtigt (без ge-)', audio: 'Wir haben ein Museum besichtigt' },
+    { de: 'Wir haben ein Museum besichtigt.',    ru: 'Мы осматривали музей.',                     note: 'besichtigen → besichtigt (без ge-)', audio: 'Wir haben ein Museum besichtigt' },
     { de: 'Hast du gut geschlafen?',               ru: 'Ты хорошо спал?',                           note: 'schlafen → geschlafen (с haben)', audio: 'Hast du gut geschlafen' },
     { de: 'Wann seid ihr zurückgekommen?',         ru: 'Когда вы вернулись?',                       note: 'zurückkommen — приставка ge- между!', audio: 'Wann seid ihr zurückgekommen' },
     { de: 'Wir sind am Sonntag angekommen.',       ru: 'Мы прибыли в воскресенье.',                 note: 'ankommen → angekommen (с sein)', audio: 'Wir sind am Sonntag angekommen' },

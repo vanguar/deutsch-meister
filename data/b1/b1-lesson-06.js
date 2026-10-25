@@ -32,8 +32,8 @@ const LESSON_DATA = {
     { de: 'Ich habe mich auf Ihre Stellenanzeige beworben.',     ru: 'Я откликнулся на ваше объявление о вакансии.',     note: 'die Stellenanzeige — объявление о вакансии', audio: 'Ich habe mich auf Ihre Stellenanzeige beworben' },
     { de: 'Das Vorstellungsgespräch findet am Montag statt.',    ru: 'Собеседование состоится в понедельник.',           note: 'das Vorstellungsgespräch — собеседование', audio: 'Das Vorstellungsgespräch findet am Montag statt' },
     { de: 'Wir bieten 30 Urlaubstage pro Jahr.',                 ru: 'Мы предоставляем 30 дней отпуска в год.',          note: 'der Urlaub — отпуск; Urlaubstag — день отпуска', audio: 'Wir bieten 30 Urlaubstage pro Jahr' },
-    { de: 'Die Stelle ist ab sofort zu besetzen.',               ru: 'Должность свободна с немедленного вступления.',    note: 'ab sofort — с немедленного вступления', audio: 'Die Stelle ist ab sofort zu besetzen' },
-    { de: 'Ich kündige meinen Job, weil ich eine bessere Stelle gefunden habe.', ru: 'Я увольняюсь, потому что нашёл лучшую работу.', note: 'kündigen — увольняться/увольнять', audio: 'Ich kündige meinen Job' },
+    { de: 'Die Stelle ist ab sofort zu besetzen.',               ru: 'На эту должность можно выйти уже сейчас.',    note: 'ab sofort — немедленно, начиная с этого момента', audio: 'Die Stelle ist ab sofort zu besetzen' },
+    { de: 'Ich kündige meinen Job, weil ich eine bessere Stelle gefunden habe.', ru: 'Я увольняюсь, потому что нашёл лучшую работу.', note: 'kündigen — увольняться/увольнять', audio: 'Ich kündige meinen Job, weil ich eine bessere Stelle gefunden habe' },
     { de: 'Er wurde eingestellt.',                               ru: 'Его приняли на работу.',                          note: 'einstellen — принимать на работу (Passiv)', audio: 'Er wurde eingestellt' },
     { de: 'Die Firma sucht einen erfahrenen Buchhalter.',        ru: 'Фирма ищет опытного бухгалтера.',                 note: 'erfahren — опытный; der Buchhalter — бухгалтер', audio: 'Die Firma sucht einen erfahrenen Buchhalter' },
     { de: 'Ich arbeite in Vollzeit / Teilzeit.',                 ru: 'Я работаю полный / неполный день.',                note: 'Vollzeit / Teilzeit — полная / частичная занятость', audio: 'Ich arbeite in Vollzeit oder Teilzeit' },
@@ -111,7 +111,7 @@ const LESSON_DATA = {
       { before: '— Ich bin',             blank: 'bereit',        after: ', Überstunden zu machen.', translation: '— Я готов работать сверхурочно.',       hintWord: 'bereit',       hintRule: 'bereit sein + zu + Infinitiv' },
       { before: '— Bitte schicken Sie',  blank: 'Ihren',         after: 'Lebenslauf per E-Mail.',   translation: '— Пришлите ваше резюме по почте.',      hintWord: 'Ihren',        hintRule: 'Ihren Lebenslauf — Akk. от Ihr' },
       { before: '— Ich mache ein',       blank: 'Praktikum',     after: 'bei der Firma.',           translation: '— Я на стажировке в фирме.',            hintWord: 'Praktikum',    hintRule: 'das Praktikum — стажировка' },
-      { before: '— Die Stelle ist ab',   blank: 'sofort',        after: 'zu besetzen.',             translation: '— Должность свободна с немедленного.',  hintWord: 'sofort',       hintRule: 'ab sofort — с немедленного вступления' }
+      { before: '— Die Stelle ist ab',   blank: 'sofort',        after: 'zu besetzen.',             translation: '— На эту должность можно выйти уже сейчас.',  hintWord: 'sofort',       hintRule: 'ab sofort — немедленно, начиная с этого момента' }
     ],
 
     multipleChoice: [

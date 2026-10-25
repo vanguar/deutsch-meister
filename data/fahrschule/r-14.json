@@ -272,6 +272,14 @@
      }
     },
     {
+     "de": "Bremsweg bei einer normalen Bremsung: 40 geteilt durch 10, mal 40 geteilt durch 10. Das ist 4 mal 4, also 16 Meter.",
+     "tr": "Тормозной путь при обычном торможении: (40 / 10) × (40 / 10) = 4 × 4 = 16 метров.",
+     "o": {
+      "durch": "durch>geteilt durch",
+      "geteilt": "geteilt>geteilt durch"
+     }
+    },
+    {
      "de": "Bei einer Gefahrbremsung ist der Bremsweg nur halb so lang: 16 geteilt durch 2, also 8 Meter.",
      "tr": "При экстренном торможении тормозной путь вдвое короче: 16 разделить на 2, то есть 8 метров.",
      "o": {
@@ -373,6 +381,7 @@
    "blinken": "blinken",
    "blinkt": "blinken",
    "bordstein": "Bordstein",
+   "bremsung": "Bremsung",
    "bremsweg": "Bremsweg",
    "dann": "dann",
    "das": "der/die/das",
@@ -448,6 +457,7 @@
    "nicht": "nicht",
    "nichts": "nichts",
    "niemand": "niemand",
+   "normalen": "normal",
    "nur": "nur",
    "nächsten": "nächste",
    "oft": "oft",
@@ -564,6 +574,12 @@
     "pos": "сущ.",
     "art": "der",
     "pl": "die Bordsteine"
+   },
+   "Bremsung": {
+    "ru": "торможение",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Bremsungen"
    },
    "Bremsweg": {
     "ru": "тормозной путь",
@@ -1071,6 +1087,10 @@
    "niemand": {
     "ru": "никто",
     "pos": "мест."
+   },
+   "normal": {
+    "ru": "нормальный",
+    "pos": "прил."
    },
    "nur": {
     "ru": "только",

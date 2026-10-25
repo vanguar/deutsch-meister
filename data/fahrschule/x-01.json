@@ -456,6 +456,14 @@
       }
      },
      {
+      "de": "Bremsweg bei einer normalen Bremsung: 60 geteilt durch 10, mal 60 geteilt durch 10. Das ist 6 mal 6, also 36 Meter.",
+      "tr": "Тормозной путь при обычном торможении: (60 / 10) × (60 / 10) = 6 × 6 = 36 метров.",
+      "o": {
+       "durch": "durch>geteilt durch",
+       "geteilt": "geteilt>geteilt durch"
+      }
+     },
+     {
       "de": "Bei einer Gefahrbremsung ist der Bremsweg nur halb so lang: 36 geteilt durch 2, also 18 Meter.",
       "tr": "При экстренном торможении тормозной путь вдвое короче: 36 разделить на 2, то есть 18 метров.",
       "o": {
@@ -3456,6 +3464,14 @@
       }
      },
      {
+      "de": "Bremsweg bei einer normalen Bremsung: 40 geteilt durch 10, mal 40 geteilt durch 10. Das ist 4 mal 4, also 16 Meter.",
+      "tr": "Тормозной путь при обычном торможении: (40 / 10) × (40 / 10) = 4 × 4 = 16 метров.",
+      "o": {
+       "durch": "durch>geteilt durch",
+       "geteilt": "geteilt>geteilt durch"
+      }
+     },
+     {
       "de": "Bei einer Gefahrbremsung ist der Bremsweg nur halb so lang: 16 geteilt durch 2, also 8 Meter.",
       "tr": "При экстренном торможении тормозной путь вдвое короче: 16 разделить на 2, то есть 8 метров.",
       "o": {
@@ -4069,6 +4085,7 @@
    "bremsen>abbremsen": "abbremsen",
    "bremsflüssigkeit": "Bremsflüssigkeit",
    "bremst": "bremsen",
+   "bremsung": "Bremsung",
    "bremsweg": "Bremsweg",
    "brennen": "brennen",
    "brennende": "brennen",
@@ -5062,6 +5079,12 @@
     "pos": "сущ.",
     "art": "die",
     "pl": null
+   },
+   "Bremsung": {
+    "ru": "торможение",
+    "pos": "сущ.",
+    "art": "die",
+    "pl": "die Bremsungen"
    },
    "Bremsweg": {
     "ru": "тормозной путь",

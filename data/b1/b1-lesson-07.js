@@ -31,7 +31,7 @@ const LESSON_DATA = {
     { de: 'Das halte ich für übertrieben.',          ru: 'Я считаю это преувеличением.',                  note: 'halten für + Akk. — считать чем-то', audio: 'Das halte ich für übertrieben' },
     { de: 'Einerseits …, andererseits …',           ru: 'С одной стороны …, с другой стороны …',         note: 'структура аргументации «за и против»', audio: 'Einerseits andererseits' },
     { de: 'Zum einen …, zum anderen …',             ru: 'Во-первых …, во-вторых …',                      note: 'также: erstens, zweitens', audio: 'Zum einen zum anderen' },
-    { de: 'Hinzu kommt, dass…',                     ru: 'К тому же, что…',                               note: 'добавление аргумента', audio: 'Hinzu kommt, dass' },
+    { de: 'Hinzu kommt, dass…',                     ru: 'К этому добавляется то, что…',                               note: 'добавление аргумента', audio: 'Hinzu kommt, dass' },
     { de: 'Das Hauptargument ist, dass…',            ru: 'Главный аргумент состоит в том, что…',          note: 'das Hauptargument — главный аргумент', audio: 'Das Hauptargument ist, dass' },
     { de: 'Im Großen und Ganzen bin ich dafür.',     ru: 'В целом я за.',                                 note: 'im Großen und Ganzen — в целом', audio: 'Im Großen und Ganzen bin ich dafür' },
     { de: 'Ich bin dagegen, weil…',                 ru: 'Я против, потому что…',                         note: 'dagegen sein — быть против', audio: 'Ich bin dagegen, weil' },

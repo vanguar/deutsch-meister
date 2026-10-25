@@ -272,6 +272,14 @@
      }
     },
     {
+     "de": "Bremsweg bei einer normalen Bremsung: 40 geteilt durch 10, mal 40 geteilt durch 10. Das ist 4 mal 4, also 16 Meter.",
+     "tr": "مسافة الكبح العادي: (40 ÷ 10) × (40 ÷ 10) = 4 × 4 = 16 مترًا.",
+     "o": {
+      "durch": "durch>geteilt durch",
+      "geteilt": "geteilt>geteilt durch"
+     }
+    },
+    {
      "de": "Bei einer Gefahrbremsung ist der Bremsweg nur halb so lang: 16 geteilt durch 2, also 8 Meter.",
      "tr": "عند الكبح الطارئ تكون مسافة الكبح نصف الطول فقط: 16 مقسومة على 2، أي 8 أمتار.",
      "o": {
@@ -373,6 +381,7 @@
    "blinken": "blinken",
    "blinkt": "blinken",
    "bordstein": "Bordstein",
+   "bremsung": "Bremsung",
    "bremsweg": "Bremsweg",
    "dann": "dann",
    "das": "der/die/das",
@@ -448,6 +457,7 @@
    "nicht": "nicht",
    "nichts": "nichts",
    "niemand": "niemand",
+   "normalen": "normal",
    "nur": "nur",
    "nächsten": "nächste",
    "oft": "oft",
@@ -556,6 +566,11 @@
     "ru": "حافة الرصيف",
     "pos": "اسم",
     "decl": "der Bordstein · الجمع: die Bordsteine"
+   },
+   "Bremsung": {
+    "ru": "كبح",
+    "pos": "اسم",
+    "decl": "die Bremsung · الجمع: die Bremsungen"
    },
    "Bremsweg": {
     "ru": "مسافة الكبح",
@@ -1027,6 +1042,10 @@
    "niemand": {
     "ru": "لا أحد",
     "pos": "ضمير"
+   },
+   "normal": {
+    "ru": "طبيعي",
+    "pos": "صفة"
    },
    "nur": {
     "ru": "فقط",

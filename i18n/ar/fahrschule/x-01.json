@@ -456,6 +456,14 @@
       }
      },
      {
+      "de": "Bremsweg bei einer normalen Bremsung: 60 geteilt durch 10, mal 60 geteilt durch 10. Das ist 6 mal 6, also 36 Meter.",
+      "tr": "مسافة الكبح العادي: (60 ÷ 10) × (60 ÷ 10) = 6 × 6 = 36 مترًا.",
+      "o": {
+       "durch": "durch>geteilt durch",
+       "geteilt": "geteilt>geteilt durch"
+      }
+     },
+     {
       "de": "Bei einer Gefahrbremsung ist der Bremsweg nur halb so lang: 36 geteilt durch 2, also 18 Meter.",
       "tr": "عند الكبح الطارئ تكون مسافة الكبح نصف الطول فقط: 36 مقسومة على 2، أي 18 مترًا.",
       "o": {
@@ -3456,6 +3464,14 @@
       }
      },
      {
+      "de": "Bremsweg bei einer normalen Bremsung: 40 geteilt durch 10, mal 40 geteilt durch 10. Das ist 4 mal 4, also 16 Meter.",
+      "tr": "مسافة الكبح العادي: (40 ÷ 10) × (40 ÷ 10) = 4 × 4 = 16 مترًا.",
+      "o": {
+       "durch": "durch>geteilt durch",
+       "geteilt": "geteilt>geteilt durch"
+      }
+     },
+     {
       "de": "Bei einer Gefahrbremsung ist der Bremsweg nur halb so lang: 16 geteilt durch 2, also 8 Meter.",
       "tr": "عند الكبح الطارئ تكون مسافة الكبح نصف الطول فقط: 16 مقسومة على 2، أي 8 أمتار.",
       "o": {
@@ -4069,6 +4085,7 @@
    "bremsen>abbremsen": "abbremsen",
    "bremsflüssigkeit": "Bremsflüssigkeit",
    "bremst": "bremsen",
+   "bremsung": "Bremsung",
    "bremsweg": "Bremsweg",
    "brennen": "brennen",
    "brennende": "brennen",
@@ -5023,6 +5040,11 @@
     "ru": "سائل الفرامل",
     "pos": "اسم",
     "decl": "die Bremsflüssigkeit · لا جمع له"
+   },
+   "Bremsung": {
+    "ru": "كبح",
+    "pos": "اسم",
+    "decl": "die Bremsung · الجمع: die Bremsungen"
    },
    "Bremsweg": {
     "ru": "مسافة الكبح",

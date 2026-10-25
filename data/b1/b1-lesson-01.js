@@ -25,7 +25,7 @@ const LESSON_DATA = {
     { de: 'Ich wäre froh, wenn du käm­est.',               ru: 'Я бы обрадовался, если бы ты пришёл.',             note: 'wäre + käme — оба глагола в Konj. II', audio: 'Ich wäre froh, wenn du kämest' },
     { de: 'Das wäre schön!',                               ru: 'Это было бы прекрасно!',                           note: 'wäre = sein в сослагательном', audio: 'Das wäre schön' },
     { de: 'Wenn ich du wäre, würde ich das nicht tun.',    ru: 'На твоём месте я бы этого не делал.',              note: 'устойчивая конструкция «на твоём месте»', audio: 'Wenn ich du wäre, würde ich das nicht tun' },
-    { de: 'Hätte ich gewusst, dass…',                      ru: 'Знал бы я, что…',                                  note: 'hätte + Partizip II — Konj. II Vergangenheit', audio: 'Hätte ich gewusst' },
+    { de: 'Hätte ich gewusst, dass…',                      ru: 'Знал бы я, что…',                                  note: 'hätte + Partizip II — Konj. II Vergangenheit', audio: 'Hätte ich gewusst, dass' },
     { de: 'Ich wünschte, ich hätte mehr Geld.',            ru: 'Я бы хотел иметь больше денег.',                   note: 'wünschen + Konj. II — нереальное желание', audio: 'Ich wünschte, ich hätte mehr Geld' },
     { de: 'Wenn das Wetter besser wäre, gingen wir spazieren.', ru: 'Если бы погода была лучше, мы бы пошли гулять.', note: 'gingen — Konj. II от gehen (без würde)', audio: 'Wenn das Wetter besser wäre, gingen wir spazieren' },
     { de: 'Würdest du mir bitte die Tür aufmachen?',       ru: 'Не мог бы ты открыть мне дверь?',                  note: 'würdest + Inf. — вежливая просьба', audio: 'Würdest du mir bitte die Tür aufmachen' },

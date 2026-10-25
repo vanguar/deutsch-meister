@@ -1,7 +1,7 @@
 # Deutsch Meister — команды деплоя (см. ДЕПЛОЙ-инструкция.md)
 # Windows: запускать из Git Bash. Без make — прямые команды указаны в целях.
 
-.PHONY: vocab bump validate check-tips check-audience deploy-web deploy-api check-api i18n-check i18n-build test-i18n news dialogs test-dialogs fahrschule fahrschule-signs test-fahrschule laender
+.PHONY: vocab bump validate check-tips check-audio check-audience deploy-web deploy-api check-api i18n-check i18n-build test-i18n news dialogs test-dialogs fahrschule fahrschule-signs test-fahrschule laender
 
 # Поднять ?v=N во всех HTML + CACHE в service-worker.js (обязательно перед
 # пушем любых правок JS/CSS)
@@ -26,6 +26,11 @@ validate:
 # содержать русский перевод (кириллицу). Падает, если нет.
 check-tips:
 	node tools/check_tips.js
+
+# Озвучка должна содержать всю фразу карточки; числа и даты читаются словами.
+check-audio:
+	node tools/test_phrase_audio.js
+	node tools/check_phrase_audio.js
 
 # Регресс аудитории: русский интерфейс ≠ Россия. Падает на «РФ», «у нас в
 # России», рублях, флаге 🇷🇺 и т.п. в пользовательском контенте.

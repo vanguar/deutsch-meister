@@ -1964,6 +1964,18 @@
       ]
      },
      {
+      "de": "Bremsweg bei einer normalen Bremsung: 60 geteilt durch 10, mal 60 geteilt durch 10. Das ist 6 mal 6, also 36 Meter.",
+      "w": {
+       "geteilt": "geteilt durch",
+       "durch": "geteilt durch"
+      },
+      "tr": [
+       "Тормозной путь при обычном торможении: (60 / 10) × (60 / 10) = 6 × 6 = 36 метров.",
+       "Гальмівний шлях під час звичайного гальмування: (60 / 10) × (60 / 10) = 6 × 6 = 36 метрів.",
+       "مسافة الكبح العادي: (60 ÷ 10) × (60 ÷ 10) = 6 × 6 = 36 مترًا."
+      ]
+     },
+     {
       "de": "Bei einer Gefahrbremsung ist der Bremsweg nur halb so lang: 36 geteilt durch 2, also 18 Meter.",
       "w": {
        "geteilt": "geteilt durch",
@@ -10824,6 +10836,18 @@
        "geteilt": "geteilt durch",
        "durch": "geteilt durch"
       }
+     },
+     {
+      "de": "Bremsweg bei einer normalen Bremsung: 40 geteilt durch 10, mal 40 geteilt durch 10. Das ist 4 mal 4, also 16 Meter.",
+      "w": {
+       "geteilt": "geteilt durch",
+       "durch": "geteilt durch"
+      },
+      "tr": [
+       "Тормозной путь при обычном торможении: (40 / 10) × (40 / 10) = 4 × 4 = 16 метров.",
+       "Гальмівний шлях під час звичайного гальмування: (40 / 10) × (40 / 10) = 4 × 4 = 16 метрів.",
+       "مسافة الكبح العادي: (40 ÷ 10) × (40 ÷ 10) = 4 × 4 = 16 مترًا."
+      ]
      },
      {
       "de": "Bei einer Gefahrbremsung ist der Bremsweg nur halb so lang: 16 geteilt durch 2, also 8 Meter.",

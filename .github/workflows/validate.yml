@@ -10,6 +10,13 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Course phrases match their spoken text
+        run: |
+          node tools/test_phrase_audio.js
+          node tools/check_phrase_audio.js
       - name: Validate lesson data, shells and cache versions
         run: python scripts/validate_lessons.py
       - name: Dialogs (data, translations, photos)

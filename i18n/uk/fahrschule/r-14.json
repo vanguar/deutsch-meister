@@ -272,6 +272,14 @@
      }
     },
     {
+     "de": "Bremsweg bei einer normalen Bremsung: 40 geteilt durch 10, mal 40 geteilt durch 10. Das ist 4 mal 4, also 16 Meter.",
+     "tr": "Гальмівний шлях під час звичайного гальмування: (40 / 10) × (40 / 10) = 4 × 4 = 16 метрів.",
+     "o": {
+      "durch": "durch>geteilt durch",
+      "geteilt": "geteilt>geteilt durch"
+     }
+    },
+    {
      "de": "Bei einer Gefahrbremsung ist der Bremsweg nur halb so lang: 16 geteilt durch 2, also 8 Meter.",
      "tr": "Під час екстреного гальмування гальмівний шлях удвічі коротший: 16 поділити на 2, тобто 8 метрів.",
      "o": {
@@ -373,6 +381,7 @@
    "blinken": "blinken",
    "blinkt": "blinken",
    "bordstein": "Bordstein",
+   "bremsung": "Bremsung",
    "bremsweg": "Bremsweg",
    "dann": "dann",
    "das": "der/die/das",
@@ -448,6 +457,7 @@
    "nicht": "nicht",
    "nichts": "nichts",
    "niemand": "niemand",
+   "normalen": "normal",
    "nur": "nur",
    "nächsten": "nächste",
    "oft": "oft",
@@ -556,6 +566,11 @@
     "ru": "бордюр",
     "pos": "ім.",
     "decl": "der Bordstein · мн.: die Bordsteine"
+   },
+   "Bremsung": {
+    "ru": "гальмування",
+    "pos": "ім.",
+    "decl": "die Bremsung · мн.: die Bremsungen"
    },
    "Bremsweg": {
     "ru": "гальмівний шлях",
@@ -1027,6 +1042,10 @@
    "niemand": {
     "ru": "ніхто",
     "pos": "займ."
+   },
+   "normal": {
+    "ru": "нормальний",
+    "pos": "прикм."
    },
    "nur": {
     "ru": "лише",
