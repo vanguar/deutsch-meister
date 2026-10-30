@@ -1,0 +1,21 @@
+{
+  "id": "sachsen-anhalt-b1",
+  "kind": "land",
+  "land": "sachsen-anhalt",
+  "title": "Sachsen-Anhalt",
+  "titleRu": "Саксония-Анхальт",
+  "author": "German Morning",
+  "level": "B1",
+  "levelNote": "B1: короткие предложения, Präsens и Präteritum, основные слова о стране.",
+  "year": "2026",
+  "chapters": 7,
+  "words": 354,
+  "minutes": 3,
+  "photos": 0,
+  "cover": "🍰",
+  "flag": "data/laender/flags/sachsen-anhalt.png",
+  "source": "Официальный портал и статистическое ведомство Саксонии-Анхальт; ландтаг; Stiftung Bauhaus Dessau; UNESCO; земельные порталы культуры и экологии.",
+  "sourceUrl": "https://sachsen-anhalt.de/land-sachsenanhalt/land-und-leute/page/geschichte",
+  "checked": "2026-10-30",
+  "license": "текст курса German Morning"
+}

@@ -1,0 +1,46 @@
+{
+  "id": "ch-02",
+  "title": "Vom Harz bis zur Börde",
+  "titleRu": "От Гарца до Бёрде",
+  "icon": "🏞️",
+  "paragraphs": [
+    {
+      "s": [
+        {
+          "de": "Im Westen des Landes liegt ein Teil des Harzes.",
+          "ru": "На западе земли лежит часть Гарца.",
+          "g": {}
+        },
+        {
+          "de": "Der Brocken ist mit 1141 Metern der höchste Berg des Landes.",
+          "ru": "Броккен высотой 1141 метр — самая высокая гора земли.",
+          "g": {}
+        },
+        {
+          "de": "Viele Menschen besuchen die Region zum Wandern.",
+          "ru": "Многие приезжают в регион ради пеших походов.",
+          "g": {}
+        }
+      ]
+    },
+    {
+      "s": [
+        {
+          "de": "Die Magdeburger Börde hat besonders fruchtbare Böden.",
+          "ru": "Магдебургская Бёрде отличается особенно плодородными почвами.",
+          "g": {}
+        },
+        {
+          "de": "Deshalb ist die Landwirtschaft dort sehr wichtig.",
+          "ru": "Поэтому сельское хозяйство там очень важно.",
+          "g": {}
+        },
+        {
+          "de": "Flüsse, Felder und Wälder machen die Landschaft abwechslungsreich.",
+          "ru": "Реки, поля и леса делают ландшафт разнообразным.",
+          "g": {}
+        }
+      ]
+    }
+  ]
+}

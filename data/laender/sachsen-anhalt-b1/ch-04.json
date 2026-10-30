@@ -1,0 +1,48 @@
+{
+  "id": "ch-04",
+  "title": "Ein junges Bundesland",
+  "titleRu": "Молодая федеральная земля",
+  "icon": "🏛️",
+  "paragraphs": [
+    {
+      "s": [
+        {
+          "de": "Unter dem Namen Sachsen-Anhalt bestand schon von 1947 bis 1952 ein Land.",
+          "ru": "Под названием Саксония-Анхальт земля существовала уже с 1947 по 1952 год.",
+          "g": {}
+        },
+        {
+          "de": "Die DDR löste das Land 1952 auf und bildete Bezirke.",
+          "ru": "В 1952 году ГДР упразднила землю и создала округа.",
+          "g": {
+            "2+5": "упразднила"
+          }
+        },
+        {
+          "de": "Am 3. Oktober 1990 wurde Sachsen-Anhalt neu gegründet.",
+          "ru": "3 октября 1990 года Саксония-Анхальт была создана заново.",
+          "g": {}
+        }
+      ]
+    },
+    {
+      "s": [
+        {
+          "de": "Der Landtag sitzt in Magdeburg und beschließt Gesetze.",
+          "ru": "Ландтаг заседает в Магдебурге и принимает законы.",
+          "g": {}
+        },
+        {
+          "de": "Er kontrolliert außerdem die Arbeit der Landesregierung.",
+          "ru": "Кроме того, он контролирует работу правительства земли.",
+          "g": {}
+        },
+        {
+          "de": "Bei Landtagswahlen entscheiden die Bürger über die Zusammensetzung des Parlaments.",
+          "ru": "На выборах в ландтаг граждане решают, каким будет состав парламента.",
+          "g": {}
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "id": "ch-01",
+  "title": "Ein eigener Raum zwischen Elbe und Saale",
+  "titleRu": "Самостоятельный регион между Эльбой и Зале",
+  "icon": "🗺️",
+  "paragraphs": [
+    {
+      "s": [
+        {
+          "de": "Sachsen-Anhalt ist trotz seines Namens kein Teil Sachsens, sondern ein eigenständiges Bundesland mit der Hauptstadt Magdeburg.",
+          "ru": "Несмотря на название, Саксония-Анхальт не часть Саксонии, а самостоятельная федеральная земля со столицей в Магдебурге.",
+          "g": {}
+        },
+        {
+          "de": "Magdeburg an der Elbe und Halle an der Saale bilden wichtige städtische Zentren, daneben steht Dessau-Roßlau für weitere kulturelle Traditionen.",
+          "ru": "Магдебург на Эльбе и Галле на Зале образуют важные городские центры; Дессау-Рослау представляет и другие культурные традиции.",
+          "g": {}
+        }
+      ]
+    },
+    {
+      "s": [
+        {
+          "de": "Nach Angaben des Statistischen Landesamtes lebten Ende 2025 rund 2,12 Millionen Menschen im Land; solche Zahlen benötigen immer einen Zeitbezug.",
+          "ru": "По данным статистического ведомства земли, на конец 2025 года в ней жили около 2,12 миллиона человек; таким цифрам всегда нужна привязка ко времени.",
+          "g": {}
+        },
+        {
+          "de": "Eine gemeinsame Landesgrenze bedeutet dabei nicht, dass alle Regionen dieselbe Geschichte oder dieselben wirtschaftlichen Voraussetzungen haben.",
+          "ru": "Общие границы земли при этом не означают, что у всех регионов одинаковая история или одинаковые экономические предпосылки.",
+          "g": {}
+        }
+      ]
+    }
+  ]
+}

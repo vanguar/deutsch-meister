@@ -1526,7 +1526,7 @@
     "b2": {
      "id": "sachsen-b2",
      "chapters": 7,
-     "words": 421,
+     "words": 420,
      "minutes": 4,
      "toc": [
       {
@@ -1573,10 +1573,188 @@
    "name": "Sachsen-Anhalt",
    "nameRu": "Саксонія-Ангальт",
    "capital": "Magdeburg",
-   "emoji": "📍",
+   "emoji": "🍰",
    "flag": "data/laender/flags/sachsen-anhalt.png",
    "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_Saxony-Anhalt_(state).svg",
-   "ready": false
+   "ready": true,
+   "blurb": "Магдебург і Галле, Гарц і родюча Берде, Реформація у Віттенберзі, Баугаус у Дессау та баумкухен.",
+   "facts": [
+    [
+     "Столиця",
+     "Magdeburg"
+    ],
+    [
+     "Найбільші міста",
+     "Magdeburg, Halle (Saale), Dessau-Roßlau"
+    ],
+    [
+     "Населення",
+     "2 120 252 (31.12.2025)"
+    ],
+    [
+     "Площа",
+     "близько 20 550 км²"
+    ],
+    [
+     "У складі ФРН",
+     "з 3 жовтня 1990 року"
+    ],
+    [
+     "Найвища точка",
+     "Брокен, 1141 м"
+    ],
+    [
+     "Головні річки",
+     "Ельба, Заале"
+    ],
+    [
+     "Економіка",
+     "хімічна промисловість, сільське господарство, послуги"
+    ]
+   ],
+   "source": "Офіційний портал і статистичне відомство Саксонії-Ангальту; ландтаг; Stiftung Bauhaus Dessau; UNESCO; земельні портали культури й екології.",
+   "sourceUrl": "https://sachsen-anhalt.de/land-sachsenanhalt/land-und-leute/page/geschichte",
+   "checked": "2026-10-30",
+   "quiz": [
+    {
+     "q": "Яке місто — столиця Саксонії-Ангальту?",
+     "opts": [
+      "Halle (Saale)",
+      "Magdeburg",
+      "Dresden"
+     ],
+     "a": 1,
+     "why": "Столиця землі — Магдебург на Ельбі; Дрезден — столиця Саксонії."
+    },
+    {
+     "q": "Яка гора — найвища в землі?",
+     "opts": [
+      "Zugspitze",
+      "Brocken",
+      "Fichtelberg"
+     ],
+     "a": 1,
+     "why": "Брокен у Гарці має висоту 1141 метр."
+    },
+    {
+     "q": "З якою подією пов’язаний Віттенберг у 1517 році?",
+     "opts": [
+      "Публікація 95 тез Лютера",
+      "Заснування Баугаусу",
+      "Відновлення землі"
+     ],
+     "a": 0,
+     "why": "Тези проти торгівлі індульгенціями стали важливою подією початку Реформації."
+    },
+    {
+     "q": "До якого міста Баугаус переїхав із Веймара у 1925 році?",
+     "opts": [
+      "Dessau",
+      "Leipzig",
+      "Erfurt"
+     ],
+     "a": 0,
+     "why": "Із 1925 року школа продовжила роботу в Дессау."
+    },
+    {
+     "q": "Як роблять традиційний баумкухен?",
+     "opts": [
+      "Випікають шар за шаром на рожні",
+      "Варять у солоній воді",
+      "Готують лише з картоплі"
+     ],
+     "a": 0,
+     "why": "Шари тіста на зрізі нагадують річні кільця дерева."
+    }
+   ],
+   "texts": {
+    "b1": {
+     "id": "sachsen-anhalt-b1",
+     "chapters": 7,
+     "words": 354,
+     "minutes": 3,
+     "toc": [
+      {
+       "title": "Ein Land an Elbe und Saale",
+       "titleRu": "Земля на Ельбі й Заале",
+       "icon": "🗺️"
+      },
+      {
+       "title": "Vom Harz bis zur Börde",
+       "titleRu": "Від Гарцу до Берде",
+       "icon": "🏞️"
+      },
+      {
+       "title": "Luther und die Reformation",
+       "titleRu": "Лютер і Реформація",
+       "icon": "📜"
+      },
+      {
+       "title": "Ein junges Bundesland",
+       "titleRu": "Молода федеральна земля",
+       "icon": "🏛️"
+      },
+      {
+       "title": "Bauhaus und alte Städte",
+       "titleRu": "Баугаус і старовинні міста",
+       "icon": "🎨"
+      },
+      {
+       "title": "Arbeit und Wandel",
+       "titleRu": "Робота й зміни",
+       "icon": "🏭"
+      },
+      {
+       "title": "Sprache und Spezialitäten",
+       "titleRu": "Мова й місцеві страви",
+       "icon": "🍰"
+      }
+     ]
+    },
+    "b2": {
+     "id": "sachsen-anhalt-b2",
+     "chapters": 7,
+     "words": 470,
+     "minutes": 4,
+     "toc": [
+      {
+       "title": "Ein eigener Raum zwischen Elbe und Saale",
+       "titleRu": "Самостійний регіон між Ельбою й Заале",
+       "icon": "🗺️"
+      },
+      {
+       "title": "Landschaft, Boden und Nutzung",
+       "titleRu": "Ландшафт, ґрунт і використання",
+       "icon": "🏞️"
+      },
+      {
+       "title": "Reformation und historische Quellen",
+       "titleRu": "Реформація й історичні джерела",
+       "icon": "📜"
+      },
+      {
+       "title": "Landesgeschichte und Demokratie",
+       "titleRu": "Історія землі й демократія",
+       "icon": "🏛️"
+      },
+      {
+       "title": "Vom Fachwerk zur Moderne",
+       "titleRu": "Від фахверку до модернізму",
+       "icon": "🎨"
+      },
+      {
+       "title": "Chemie und wirtschaftlicher Umbau",
+       "titleRu": "Хімія й економічна перебудова",
+       "icon": "🏭"
+      },
+      {
+       "title": "Sprache und handwerkliche Tradition",
+       "titleRu": "Мова й реміснича традиція",
+       "icon": "🍰"
+      }
+     ]
+    }
+   }
   },
   {
    "id": "schleswig-holstein",

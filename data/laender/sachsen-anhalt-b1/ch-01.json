@@ -1,0 +1,46 @@
+{
+  "id": "ch-01",
+  "title": "Ein Land an Elbe und Saale",
+  "titleRu": "Земля на Эльбе и Зале",
+  "icon": "🗺️",
+  "paragraphs": [
+    {
+      "s": [
+        {
+          "de": "Sachsen-Anhalt liegt in der Mitte und im Osten Deutschlands.",
+          "ru": "Саксония-Анхальт расположена в средней и восточной части Германии.",
+          "g": {}
+        },
+        {
+          "de": "Die Hauptstadt Magdeburg liegt an der Elbe.",
+          "ru": "Столица Магдебург стоит на Эльбе.",
+          "g": {}
+        },
+        {
+          "de": "Halle an der Saale ist eine weitere große Stadt.",
+          "ru": "Галле на Зале — ещё один большой город.",
+          "g": {}
+        }
+      ]
+    },
+    {
+      "s": [
+        {
+          "de": "Auch Dessau-Roßlau ist ein wichtiges Zentrum des Landes.",
+          "ru": "Дессау-Рослау тоже является важным центром земли.",
+          "g": {}
+        },
+        {
+          "de": "Ende 2025 lebten hier rund 2,12 Millionen Menschen.",
+          "ru": "На конец 2025 года здесь жили около 2,12 миллиона человек.",
+          "g": {}
+        },
+        {
+          "de": "Sachsen-Anhalt und Sachsen sind zwei verschiedene Bundesländer.",
+          "ru": "Саксония-Анхальт и Саксония — две разные федеральные земли.",
+          "g": {}
+        }
+      ]
+    }
+  ]
+}

@@ -311,7 +311,7 @@ TEXTS = {'sachsen-b1': [('Sachsen im Überblick',
                     'Исторические здания и коллекции в Дрездене, а также мейсенский фарфор показывают разные '
                     'стороны культурной истории Саксонии.',
                     {}),
-                   ('Im Erzgebirge gehören Bergbautraditionen und kunstvolle Arbeiten aus Holz eng zur regionalen '
+                   ('Im Erzgebirge gehören Bergbautraditionen und Kunst aus Holz eng zur regionalen '
                     'Identität.',
                     'В Рудных горах горняцкие традиции и искусные изделия из дерева тесно связаны с региональной '
                     'идентичностью.',

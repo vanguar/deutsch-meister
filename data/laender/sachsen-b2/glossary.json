@@ -130,7 +130,7 @@
     "kulturelle": "kulturell",
     "kulturgeschichte": "Kulturgeschichte",
     "kulturräume": "Kulturraum",
-    "kunstvolle": "kunstvoll",
+    "kunst": "Kunst",
     "land": "Land (земля)",
     "landes": "Land (земля)",
     "landesgesetze": "Landesgesetz",
@@ -828,9 +828,12 @@
       "art": "der",
       "pl": "die Kulturräume"
     },
-    "kunstvoll": {
-      "ru": "искусный",
-      "pos": "прил."
+    "Kunst": {
+      "ru": "искусство, умение",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Künste",
+      "note": "in geheimen Künsten — в тайных искусствах"
     },
     "Land (земля)": {
       "ru": "земля (федеральная); страна",

@@ -1526,7 +1526,7 @@
     "b2": {
      "id": "sachsen-b2",
      "chapters": 7,
-     "words": 421,
+     "words": 420,
      "minutes": 4,
      "toc": [
       {
@@ -1573,10 +1573,188 @@
    "name": "Sachsen-Anhalt",
    "nameRu": "سكسونيا-أنهالت",
    "capital": "Magdeburg",
-   "emoji": "📍",
+   "emoji": "🍰",
    "flag": "data/laender/flags/sachsen-anhalt.png",
    "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_Saxony-Anhalt_(state).svg",
-   "ready": false
+   "ready": true,
+   "blurb": "ماغديبورغ وهاله، هارتس وبورده الخصبة، الإصلاح في فيتنبرغ، الباوهاوس في ديساو وباومكوخن.",
+   "facts": [
+    [
+     "العاصمة",
+     "Magdeburg"
+    ],
+    [
+     "أكبر المدن",
+     "Magdeburg, Halle (Saale), Dessau-Roßlau"
+    ],
+    [
+     "عدد السكان",
+     "2 120 252 (31.12.2025)"
+    ],
+    [
+     "المساحة",
+     "نحو 20 550 كم²"
+    ],
+    [
+     "ضمن جمهورية ألمانيا الاتحادية",
+     "منذ 3 أكتوبر 1990"
+    ],
+    [
+     "أعلى نقطة",
+     "بروكن، 1141 م"
+    ],
+    [
+     "الأنهار الرئيسية",
+     "إلبه، زاله"
+    ],
+    [
+     "الاقتصاد",
+     "الصناعة الكيميائية والزراعة والخدمات"
+    ]
+   ],
+   "source": "البوابة الرسمية والمكتب الإحصائي لساكسونيا أنهالت؛ برلمان الولاية؛ Stiftung Bauhaus Dessau؛ UNESCO؛ بوابات الثقافة والبيئة في الولاية.",
+   "sourceUrl": "https://sachsen-anhalt.de/land-sachsenanhalt/land-und-leute/page/geschichte",
+   "checked": "2026-10-30",
+   "quiz": [
+    {
+     "q": "ما عاصمة ساكسونيا أنهالت؟",
+     "opts": [
+      "Halle (Saale)",
+      "Magdeburg",
+      "Dresden"
+     ],
+     "a": 1,
+     "why": "عاصمة الولاية ماغديبورغ على إلبه؛ أما دريسدن فهي عاصمة ساكسونيا."
+    },
+    {
+     "q": "ما أعلى جبل في الولاية؟",
+     "opts": [
+      "Zugspitze",
+      "Brocken",
+      "Fichtelberg"
+     ],
+     "a": 1,
+     "why": "يبلغ ارتفاع بروكن في هارتس 1141 مترا."
+    },
+    {
+     "q": "بأي حدث ارتبطت فيتنبرغ عام 1517؟",
+     "opts": [
+      "نشر أطروحات لوثر الـ95",
+      "تأسيس الباوهاوس",
+      "إعادة تأسيس الولاية"
+     ],
+     "a": 0,
+     "why": "أصبحت الأطروحات ضد تجارة صكوك الغفران حدثا مهما في بدايات الإصلاح الديني."
+    },
+    {
+     "q": "إلى أي مدينة انتقل الباوهاوس من فايمار عام 1925؟",
+     "opts": [
+      "Dessau",
+      "Leipzig",
+      "Erfurt"
+     ],
+     "a": 0,
+     "why": "واصلت المدرسة عملها في ديساو منذ 1925."
+    },
+    {
+     "q": "كيف تصنع كعكة باومكوخن التقليدية؟",
+     "opts": [
+      "تخبز طبقة بعد طبقة على سيخ",
+      "تسلق في ماء مالح",
+      "تصنع من البطاطس فقط"
+     ],
+     "a": 0,
+     "why": "تشبه طبقات العجين عند تقطيعها حلقات جذع الشجرة."
+    }
+   ],
+   "texts": {
+    "b1": {
+     "id": "sachsen-anhalt-b1",
+     "chapters": 7,
+     "words": 354,
+     "minutes": 3,
+     "toc": [
+      {
+       "title": "Ein Land an Elbe und Saale",
+       "titleRu": "ولاية على نهري إلبه وزاله",
+       "icon": "🗺️"
+      },
+      {
+       "title": "Vom Harz bis zur Börde",
+       "titleRu": "من هارتس إلى بورده",
+       "icon": "🏞️"
+      },
+      {
+       "title": "Luther und die Reformation",
+       "titleRu": "لوثر والإصلاح الديني",
+       "icon": "📜"
+      },
+      {
+       "title": "Ein junges Bundesland",
+       "titleRu": "ولاية اتحادية حديثة",
+       "icon": "🏛️"
+      },
+      {
+       "title": "Bauhaus und alte Städte",
+       "titleRu": "الباوهاوس والمدن القديمة",
+       "icon": "🎨"
+      },
+      {
+       "title": "Arbeit und Wandel",
+       "titleRu": "العمل والتحول",
+       "icon": "🏭"
+      },
+      {
+       "title": "Sprache und Spezialitäten",
+       "titleRu": "اللغة والأطباق المحلية",
+       "icon": "🍰"
+      }
+     ]
+    },
+    "b2": {
+     "id": "sachsen-anhalt-b2",
+     "chapters": 7,
+     "words": 470,
+     "minutes": 4,
+     "toc": [
+      {
+       "title": "Ein eigener Raum zwischen Elbe und Saale",
+       "titleRu": "منطقة مميزة بين إلبه وزاله",
+       "icon": "🗺️"
+      },
+      {
+       "title": "Landschaft, Boden und Nutzung",
+       "titleRu": "المناظر الطبيعية والتربة واستخدامها",
+       "icon": "🏞️"
+      },
+      {
+       "title": "Reformation und historische Quellen",
+       "titleRu": "الإصلاح الديني والمصادر التاريخية",
+       "icon": "📜"
+      },
+      {
+       "title": "Landesgeschichte und Demokratie",
+       "titleRu": "تاريخ الولاية والديمقراطية",
+       "icon": "🏛️"
+      },
+      {
+       "title": "Vom Fachwerk zur Moderne",
+       "titleRu": "من العمارة الخشبية إلى الحداثة",
+       "icon": "🎨"
+      },
+      {
+       "title": "Chemie und wirtschaftlicher Umbau",
+       "titleRu": "الكيمياء والتحول الاقتصادي",
+       "icon": "🏭"
+      },
+      {
+       "title": "Sprache und handwerkliche Tradition",
+       "titleRu": "اللغة والتقاليد الحرفية",
+       "icon": "🍰"
+      }
+     ]
+    }
+   }
   },
   {
    "id": "schleswig-holstein",

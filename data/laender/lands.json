@@ -1526,7 +1526,7 @@
         "b2": {
           "id": "sachsen-b2",
           "chapters": 7,
-          "words": 421,
+          "words": 420,
           "minutes": 4,
           "toc": [
             {
@@ -1573,10 +1573,188 @@
       "name": "Sachsen-Anhalt",
       "nameRu": "Саксония-Анхальт",
       "capital": "Magdeburg",
-      "emoji": "📍",
+      "emoji": "🍰",
       "flag": "data/laender/flags/sachsen-anhalt.png",
       "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_Saxony-Anhalt_(state).svg",
-      "ready": false
+      "ready": true,
+      "blurb": "Магдебург и Галле, Гарц и плодородная Бёрде, Реформация в Виттенберге, Баухаус в Дессау и баумкухен.",
+      "facts": [
+        [
+          "Столица",
+          "Magdeburg"
+        ],
+        [
+          "Крупнейшие города",
+          "Magdeburg, Halle (Saale), Dessau-Roßlau"
+        ],
+        [
+          "Население",
+          "2 120 252 (31.12.2025)"
+        ],
+        [
+          "Площадь",
+          "около 20 550 км²"
+        ],
+        [
+          "В составе ФРГ",
+          "с 3 октября 1990 года"
+        ],
+        [
+          "Высшая точка",
+          "Броккен, 1141 м"
+        ],
+        [
+          "Главные реки",
+          "Эльба, Зале"
+        ],
+        [
+          "Экономика",
+          "химическая промышленность, сельское хозяйство, услуги"
+        ]
+      ],
+      "source": "Официальный портал и статистическое ведомство Саксонии-Анхальт; ландтаг; Stiftung Bauhaus Dessau; UNESCO; земельные порталы культуры и экологии.",
+      "sourceUrl": "https://sachsen-anhalt.de/land-sachsenanhalt/land-und-leute/page/geschichte",
+      "checked": "2026-10-30",
+      "quiz": [
+        {
+          "q": "Какой город — столица Саксонии-Анхальт?",
+          "opts": [
+            "Halle (Saale)",
+            "Magdeburg",
+            "Dresden"
+          ],
+          "a": 1,
+          "why": "Столица земли — Магдебург на Эльбе; Дрезден — столица Саксонии."
+        },
+        {
+          "q": "Какая гора — самая высокая в земле?",
+          "opts": [
+            "Zugspitze",
+            "Brocken",
+            "Fichtelberg"
+          ],
+          "a": 1,
+          "why": "Броккен в Гарце имеет высоту 1141 метр."
+        },
+        {
+          "q": "С каким событием связан Виттенберг в 1517 году?",
+          "opts": [
+            "Публикация 95 тезисов Лютера",
+            "Основание Баухауса",
+            "Воссоздание земли"
+          ],
+          "a": 0,
+          "why": "Тезисы против торговли индульгенциями стали важным событием начала Реформации."
+        },
+        {
+          "q": "В какой город Баухаус переехал из Веймара в 1925 году?",
+          "opts": [
+            "Dessau",
+            "Leipzig",
+            "Erfurt"
+          ],
+          "a": 0,
+          "why": "С 1925 года школа продолжила работу в Дессау."
+        },
+        {
+          "q": "Как делают традиционный баумкухен?",
+          "opts": [
+            "Выпекают слой за слоем на вертеле",
+            "Варят в солёной воде",
+            "Готовят только из картофеля"
+          ],
+          "a": 0,
+          "why": "Слои теста на срезе напоминают годичные кольца дерева."
+        }
+      ],
+      "texts": {
+        "b1": {
+          "id": "sachsen-anhalt-b1",
+          "chapters": 7,
+          "words": 354,
+          "minutes": 3,
+          "toc": [
+            {
+              "title": "Ein Land an Elbe und Saale",
+              "titleRu": "Земля на Эльбе и Зале",
+              "icon": "🗺️"
+            },
+            {
+              "title": "Vom Harz bis zur Börde",
+              "titleRu": "От Гарца до Бёрде",
+              "icon": "🏞️"
+            },
+            {
+              "title": "Luther und die Reformation",
+              "titleRu": "Лютер и Реформация",
+              "icon": "📜"
+            },
+            {
+              "title": "Ein junges Bundesland",
+              "titleRu": "Молодая федеральная земля",
+              "icon": "🏛️"
+            },
+            {
+              "title": "Bauhaus und alte Städte",
+              "titleRu": "Баухаус и старинные города",
+              "icon": "🎨"
+            },
+            {
+              "title": "Arbeit und Wandel",
+              "titleRu": "Работа и перемены",
+              "icon": "🏭"
+            },
+            {
+              "title": "Sprache und Spezialitäten",
+              "titleRu": "Язык и местные блюда",
+              "icon": "🍰"
+            }
+          ]
+        },
+        "b2": {
+          "id": "sachsen-anhalt-b2",
+          "chapters": 7,
+          "words": 470,
+          "minutes": 4,
+          "toc": [
+            {
+              "title": "Ein eigener Raum zwischen Elbe und Saale",
+              "titleRu": "Самостоятельный регион между Эльбой и Зале",
+              "icon": "🗺️"
+            },
+            {
+              "title": "Landschaft, Boden und Nutzung",
+              "titleRu": "Ландшафт, почва и использование",
+              "icon": "🏞️"
+            },
+            {
+              "title": "Reformation und historische Quellen",
+              "titleRu": "Реформация и исторические источники",
+              "icon": "📜"
+            },
+            {
+              "title": "Landesgeschichte und Demokratie",
+              "titleRu": "История земли и демократия",
+              "icon": "🏛️"
+            },
+            {
+              "title": "Vom Fachwerk zur Moderne",
+              "titleRu": "От фахверка к модернизму",
+              "icon": "🎨"
+            },
+            {
+              "title": "Chemie und wirtschaftlicher Umbau",
+              "titleRu": "Химия и экономическая перестройка",
+              "icon": "🏭"
+            },
+            {
+              "title": "Sprache und handwerkliche Tradition",
+              "titleRu": "Язык и ремесленная традиция",
+              "icon": "🍰"
+            }
+          ]
+        }
+      }
     },
     {
       "id": "schleswig-holstein",
