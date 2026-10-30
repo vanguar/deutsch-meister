@@ -52,12 +52,15 @@
 .ld-map .ld-shape.is-ok { fill: var(--correct); }
 .ld-map .ld-shape.is-bad { fill: var(--wrong); }
 .ld-hit { fill: transparent; cursor: pointer; }
+.ld-leader {
+  stroke: var(--text-muted); stroke-width: 1; pointer-events: none; opacity: 0;
+}
 .ld-label {
   font: 700 10px 'DM Sans', system-ui, sans-serif; text-anchor: middle; dominant-baseline: middle;
   fill: #fff; paint-order: stroke; stroke: rgba(0, 0, 0, .45); stroke-width: 2.5px; pointer-events: none;
   opacity: 0; transition: opacity .2s ease;
 }
-.ld-label.is-on { opacity: 1; }
+.ld-label.is-on, .ld-leader.is-on { opacity: 1; }
 
 /* карточка выбранной земли под картой: всё во всю ширину, текст не сжимается */
 .ld-pick:empty { display: none; }

@@ -244,7 +244,7 @@ const Laender = (() => {
       labels += `<text class="ld-label" data-for="${esc(land.id)}" x="${s.c[0]}" y="${s.c[1]}">${esc(land.name)}</text>`;
     });
     // города-земли — поверх соседей, иначе их закрывает окружающая земля
-    svg.innerHTML = `<g class="ld-shapes">${paths}</g><g class="ld-hits">${hits}</g><g class="ld-labels" aria-hidden="true">${labels}</g>`;
+    svg.innerHTML = `<g class="ld-shapes">${paths}</g><g class="ld-hits">${hits}</g><g class="ld-leaders" aria-hidden="true"></g><g class="ld-labels" lang="de" dir="ltr" aria-hidden="true">${labels}</g>`;
     const g = svg.querySelector('.ld-shapes');
     ['berlin', 'hamburg', 'bremen'].forEach(id => {
       const p = g.querySelector(`[data-land="${id}"]`);
@@ -253,6 +253,81 @@ const Laender = (() => {
     el.map.innerHTML = '';
     el.map.appendChild(svg);
     el.map.setAttribute('aria-busy', 'false');
+    layoutMapLabels();
+    // После загрузки шрифта реальные размеры текста могут измениться.
+    if (document.fonts) document.fonts.ready.then(() => layoutMapLabels(true));
+  }
+
+
+  // Раскладываем ВСЕ 16 подписей, включая пока неготовые земли: готовность,
+  // выбор и игра меняют только видимость, а соседние названия не прыгают.
+  // Размеры и зазоры — в единицах viewBox: масштабируются вместе с картой.
+  function layoutMapLabels(force = false) {
+    const svg = el.map.querySelector('svg');
+    if (!svg || (!force && svg.dataset.labelsReady) || !svg.getBoundingClientRect().width) return;
+    const [vx, vy, width, height] = shapes.viewBox;
+    const gap = 4;
+    const occupied = Object.entries(HIT_R).filter(([id]) => shapes.lands[id]).map(([id, r]) => {
+      const [x, y] = shapes.lands[id].c;
+      return { x: x - r, y: y - r, width: r * 2, height: r * 2 };
+    });
+    const overlaps = (a, b) => a.x < b.x + b.width + gap && a.x + a.width + gap > b.x
+      && a.y < b.y + b.height + gap && a.y + a.height + gap > b.y;
+    const labels = [...svg.querySelectorAll('.ld-label')].sort((a, b) => {
+      const ai = a.dataset.for, bi = b.dataset.for;
+      return Number(!!HIT_R[bi]) - Number(!!HIT_R[ai])
+        || shapes.lands[ai].area - shapes.lands[bi].area;
+    });
+    const leaders = svg.querySelector('.ld-leaders');
+    leaders.innerHTML = '';
+    labels.forEach(label => {
+      const id = label.dataset.for, shape = shapes.lands[id];
+      const [cx, cy] = shape.c;
+      label.setAttribute('x', cx);
+      label.setAttribute('y', cy);
+      const bounds = label.getBBox();
+      // Включаем обводку в габариты, иначе соприкасаются края букв.
+      const boxAt = (x, y) => ({ x: bounds.x + x - cx - 1.5, y: bounds.y + y - cy - 1.5,
+        width: bounds.width + 3, height: bounds.height + 3 });
+      const fits = box => box.x >= vx + gap && box.y >= vy + gap
+        && box.x + box.width <= vx + width - gap && box.y + box.height <= vy + height - gap
+        && !occupied.some(other => overlaps(box, other));
+      const path = svg.querySelector(`.ld-shape[data-land="${id}"]`);
+      const inside = (x, y) => path.isPointInFill(new DOMPoint(x, y));
+      const candidates = [];
+      if (HIT_R[id]) {
+        const offset = HIT_R[id] + bounds.width / 2 + gap + 2;
+        candidates.push([cx + offset, cy], [cx - offset, cy]);
+      }
+      // Сначала ближайшая свободная точка внутри своей земли. Если для
+      // названия места нет — выносим его с линией к географическому центру.
+      const grid = [[cx, cy]];
+      for (let y = vy + gap; y < vy + height; y += 6) {
+        for (let x = vx + gap; x < vx + width; x += 6) grid.push([x, y]);
+      }
+      const distance = ([x, y]) => (x - cx) ** 2 + (y - cy) ** 2;
+      grid.sort((a, b) => distance(a) - distance(b));
+      let point = candidates.find(([x, y]) => fits(boxAt(x, y)));
+      if (!point) point = grid.find(([x, y]) => fits(boxAt(x, y)) && inside(x, y));
+      if (!point) point = grid.find(([x, y]) => fits(boxAt(x, y)));
+      if (!point) return;
+      const [x, y] = point, box = boxAt(x, y);
+      occupied.push(box);
+      label.setAttribute('x', x);
+      label.setAttribute('y', y);
+      if (!inside(x, y)) {
+        const line = document.createElementNS(SVG_NS, 'line');
+        line.setAttribute('class', 'ld-leader');
+        line.dataset.for = id;
+        line.setAttribute('x1', cx);
+        line.setAttribute('y1', cy);
+        line.setAttribute('x2', Math.max(box.x, Math.min(cx, box.x + box.width)));
+        line.setAttribute('y2', Math.max(box.y, Math.min(cy, box.y + box.height)));
+        line.classList.toggle('is-on', label.classList.contains('is-on'));
+        leaders.appendChild(line);
+      }
+    });
+    svg.dataset.labelsReady = 'true';
   }
 
   function paintMap() {
@@ -266,11 +341,12 @@ const Laender = (() => {
       p.classList.toggle('is-sel', !game && picked === land.id);
     });
     // подписи — у готовых и выбранной (во время игры подписей нет)
-    el.map.querySelectorAll('.ld-label').forEach(t => {
+    el.map.querySelectorAll('.ld-label, .ld-leader').forEach(t => {
       const land = byId[t.dataset.for];
       t.classList.toggle('is-on', !game && (land.ready || picked === land.id));
     });
     el.map.classList.toggle('is-game', !!game);
+    layoutMapLabels();
   }
 
   // Ключевые цифры для карточки под картой — из паспорта земли
