@@ -1,0 +1,57 @@
+{
+  "id": "ch-01",
+  "title": "Sachsen im Überblick",
+  "titleRu": "Саксония коротко",
+  "icon": "🗺️",
+  "paragraphs": [
+    {
+      "s": [
+        {
+          "de": "Sachsen liegt im Osten von Deutschland.",
+          "ru": "Саксония находится на востоке Германии.",
+          "g": {}
+        },
+        {
+          "de": "Die Hauptstadt heißt Dresden und liegt an der Elbe.",
+          "ru": "Столица называется Дрезден и стоит на Эльбе.",
+          "g": {}
+        }
+      ]
+    },
+    {
+      "s": [
+        {
+          "de": "Leipzig und Chemnitz sind weitere wichtige Städte.",
+          "ru": "Лейпциг и Хемниц — другие важные города.",
+          "g": {}
+        },
+        {
+          "de": "Im Osten grenzt das Land an Polen, im Süden an Tschechien.",
+          "ru": "На востоке земля граничит с Польшей, на юге — с Чехией.",
+          "g": {
+            "2+5": "граничит с"
+          }
+        },
+        {
+          "de": "Sachsen ist nicht dasselbe Bundesland wie Niedersachsen oder Sachsen-Anhalt.",
+          "ru": "Саксония — другая федеральная земля, чем Нижняя Саксония или Саксония-Анхальт.",
+          "g": {}
+        }
+      ]
+    },
+    {
+      "s": [
+        {
+          "de": "Jedes dieser drei Länder hat eine eigene Regierung und einen eigenen Landtag.",
+          "ru": "У каждой из этих трёх земель своё правительство и свой ландтаг.",
+          "g": {}
+        },
+        {
+          "de": "Die Grenzen auf der Karte helfen dabei, die Länder zu unterscheiden.",
+          "ru": "Границы на карте помогают различать земли.",
+          "g": {}
+        }
+      ]
+    }
+  ]
+}

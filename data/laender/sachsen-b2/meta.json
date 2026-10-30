@@ -1,0 +1,21 @@
+{
+  "id": "sachsen-b2",
+  "kind": "land",
+  "land": "sachsen",
+  "title": "Sachsen",
+  "titleRu": "Саксония",
+  "author": "German Morning",
+  "level": "B2",
+  "levelNote": "B2: длиннее и подробнее, придаточные, пассив, лексика политики и экономики.",
+  "year": "2026",
+  "chapters": 7,
+  "words": 421,
+  "minutes": 4,
+  "photos": 0,
+  "cover": "🏞️",
+  "flag": "data/laender/flags/sachsen.png",
+  "source": "Официальные порталы Саксонии и ландтага; Федеральное правительство: Мирная революция; Umweltbundesamt: география.",
+  "sourceUrl": "https://www.landtag.sachsen.de/de/parlament/zusammensetzung-und-rechtsgrundlagen/verfassung-9196.cshtml",
+  "checked": "2026-10-30",
+  "license": "текст курса German Morning"
+}

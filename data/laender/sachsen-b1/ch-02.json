@@ -1,0 +1,55 @@
+{
+  "id": "ch-02",
+  "title": "Berge und Flüsse",
+  "titleRu": "Горы и реки",
+  "icon": "🏞️",
+  "paragraphs": [
+    {
+      "s": [
+        {
+          "de": "Im Süden liegt das Erzgebirge an der Grenze zu Tschechien.",
+          "ru": "На юге у границы с Чехией лежат Рудные горы.",
+          "g": {}
+        },
+        {
+          "de": "Die Sächsische Schweiz ist ein Gebiet mit hohen Felsen.",
+          "ru": "Саксонская Швейцария — местность с высокими скалами.",
+          "g": {}
+        }
+      ]
+    },
+    {
+      "s": [
+        {
+          "de": "Sie liegt in Deutschland, nicht in der Schweiz.",
+          "ru": "Она находится в Германии, а не в Швейцарии.",
+          "g": {}
+        },
+        {
+          "de": "Die Elbe fließt durch Dresden und weiter nach Norden.",
+          "ru": "Эльба течёт через Дрезден и дальше на север.",
+          "g": {}
+        },
+        {
+          "de": "Im Norden ist die Landschaft flacher als im Süden.",
+          "ru": "На севере местность более равнинная, чем на юге.",
+          "g": {}
+        }
+      ]
+    },
+    {
+      "s": [
+        {
+          "de": "Viele Menschen kommen zum Wandern und Klettern in die Region.",
+          "ru": "Многие приезжают в регион ради походов и скалолазания.",
+          "g": {}
+        },
+        {
+          "de": "Dabei ist es wichtig, die Natur zu schützen und auf den Wegen zu bleiben.",
+          "ru": "При этом важно защищать природу и оставаться на тропах.",
+          "g": {}
+        }
+      ]
+    }
+  ]
+}

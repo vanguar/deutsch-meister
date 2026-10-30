@@ -1,0 +1,36 @@
+{
+  "id": "ch-01",
+  "title": "Lage und regionale Vielfalt",
+  "titleRu": "Расположение и разнообразие регионов",
+  "icon": "🗺️",
+  "paragraphs": [
+    {
+      "s": [
+        {
+          "de": "Sachsen liegt im Osten Deutschlands und verbindet durch seine Grenzen zu Polen und Tschechien mehrere europäische Regionen.",
+          "ru": "Саксония расположена на востоке Германии и благодаря границам с Польшей и Чехией связывает несколько европейских регионов.",
+          "g": {}
+        },
+        {
+          "de": "Während Dresden die Landeshauptstadt ist, bilden Leipzig und Chemnitz weitere wichtige wirtschaftliche und kulturelle Zentren.",
+          "ru": "Дрезден является столицей земли, а Лейпциг и Хемниц образуют другие важные экономические и культурные центры.",
+          "g": {}
+        }
+      ]
+    },
+    {
+      "s": [
+        {
+          "de": "Trotz ähnlicher Namen sind Sachsen, Sachsen-Anhalt und Niedersachsen drei eigenständige Bundesländer mit unterschiedlichen Hauptstädten.",
+          "ru": "Несмотря на похожие названия, Саксония, Саксония-Анхальт и Нижняя Саксония — три самостоятельные земли с разными столицами.",
+          "g": {}
+        },
+        {
+          "de": "Wer das Land kennenlernen möchte, findet deshalb sowohl große Städte als auch ländliche Räume mit eigener Geschichte.",
+          "ru": "Поэтому тот, кто хочет познакомиться с землёй, найдёт и большие города, и сельские территории со своей историей.",
+          "g": {}
+        }
+      ]
+    }
+  ]
+}

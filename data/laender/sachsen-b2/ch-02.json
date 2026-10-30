@@ -1,0 +1,36 @@
+{
+  "id": "ch-02",
+  "title": "Landschaft und Natur",
+  "titleRu": "Ландшафт и природа",
+  "icon": "🏞️",
+  "paragraphs": [
+    {
+      "s": [
+        {
+          "de": "Die Landschaft verändert sich vom flacheren Norden bis zu den Mittelgebirgen an der tschechischen Grenze deutlich.",
+          "ru": "Ландшафт заметно меняется от более равнинного севера до средневысотных гор у чешской границы.",
+          "g": {}
+        },
+        {
+          "de": "Das Erzgebirge ist eine grenzüberschreitende Region, deren Geschichte eng mit dem Bergbau verbunden ist.",
+          "ru": "Рудные горы — трансграничный регион, история которого тесно связана с горным делом.",
+          "g": {}
+        }
+      ]
+    },
+    {
+      "s": [
+        {
+          "de": "Die Felsen der Sächsischen Schweiz gehören zum Elbsandsteingebirge; der Name bezeichnet keinen Teil des Staates Schweiz.",
+          "ru": "Скалы Саксонской Швейцарии относятся к Эльбским Песчаниковым горам; название не обозначает часть государства Швейцария.",
+          "g": {}
+        },
+        {
+          "de": "Die Elbe prägt nicht nur die Landschaft, sondern verbindet auch Städte und Kulturräume miteinander.",
+          "ru": "Эльба не только формирует ландшафт, но и соединяет города и культурные пространства.",
+          "g": {}
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "id": "ch-03",
+  "title": "Von Meißen zur Friedlichen Revolution",
+  "titleRu": "От Мейсена до Мирной революции",
+  "icon": "📜",
+  "paragraphs": [
+    {
+      "s": [
+        {
+          "de": "Die Gründung der Mark Meißen im Jahr 929 gilt als ein wichtiger Ausgangspunkt der sächsischen Geschichte.",
+          "ru": "Основание Мейсенской марки в 929 году считается важной отправной точкой саксонской истории.",
+          "g": {
+            "7+8": "считается"
+          }
+        },
+        {
+          "de": "Viele Jahrhunderte später gehörten die Leipziger Montagsdemonstrationen zu den entscheidenden Ereignissen der Friedlichen Revolution von 1989.",
+          "ru": "Много веков спустя лейпцигские демонстрации по понедельникам стали одними из решающих событий Мирной революции 1989 года.",
+          "g": {}
+        }
+      ]
+    },
+    {
+      "s": [
+        {
+          "de": "Am 9. Oktober forderten dort Zehntausende Menschen politische Freiheit, ohne dass die Demonstration gewaltsam aufgelöst wurde.",
+          "ru": "9 октября десятки тысяч людей требовали там политической свободы, и демонстрация не была разогнана силой.",
+          "g": {}
+        },
+        {
+          "de": "Mit der deutschen Wiedervereinigung am 3. Oktober 1990 wurde Sachsen als Bundesland neu gegründet.",
+          "ru": "С объединением Германии 3 октября 1990 года Саксония была заново создана как федеральная земля.",
+          "g": {}
+        }
+      ]
+    }
+  ]
+}

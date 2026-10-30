@@ -1,0 +1,55 @@
+{
+  "id": "ch-06",
+  "title": "Sprachen und Menschen",
+  "titleRu": "Языки и люди",
+  "icon": "🗣️",
+  "paragraphs": [
+    {
+      "s": [
+        {
+          "de": "Nicht alle Menschen in Sachsen sprechen gleich.",
+          "ru": "Не все люди в Саксонии говорят одинаково.",
+          "g": {}
+        },
+        {
+          "de": "Es gibt verschiedene regionale Dialekte.",
+          "ru": "Существуют разные региональные диалекты.",
+          "g": {}
+        }
+      ]
+    },
+    {
+      "s": [
+        {
+          "de": "In der Oberlausitz lebt die sorbische Minderheit.",
+          "ru": "В Верхней Лужице живёт лужицкое меньшинство.",
+          "g": {}
+        },
+        {
+          "de": "Obersorbisch ist eine slawische Sprache und kein deutscher Dialekt.",
+          "ru": "Верхнелужицкий — славянский язык, а не немецкий диалект.",
+          "g": {}
+        },
+        {
+          "de": "In manchen Orten stehen die Namen auf Schildern in beiden Sprachen.",
+          "ru": "В некоторых населённых пунктах названия на указателях даны на двух языках.",
+          "g": {}
+        }
+      ]
+    },
+    {
+      "s": [
+        {
+          "de": "Sprache kann für Menschen ein wichtiger Teil ihrer Identität sein.",
+          "ru": "Язык может быть для людей важной частью их идентичности.",
+          "g": {}
+        },
+        {
+          "de": "Der Schutz kleiner Sprachen hilft, kulturelle Vielfalt zu erhalten.",
+          "ru": "Защита малых языков помогает сохранять культурное разнообразие.",
+          "g": {}
+        }
+      ]
+    }
+  ]
+}

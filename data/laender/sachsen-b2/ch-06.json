@@ -1,0 +1,36 @@
+{
+  "id": "ch-06",
+  "title": "Mehr als ein Dialekt",
+  "titleRu": "Больше, чем один диалект",
+  "icon": "🗣️",
+  "paragraphs": [
+    {
+      "s": [
+        {
+          "de": "Die Vorstellung, alle Menschen in Sachsen sprächen denselben Dialekt, wird der sprachlichen Vielfalt des Landes nicht gerecht.",
+          "ru": "Представление, будто все жители Саксонии говорят на одном диалекте, не отражает языкового разнообразия земли.",
+          "g": {}
+        },
+        {
+          "de": "Neben regionalen deutschen Mundarten wird in Teilen der Oberlausitz Obersorbisch gesprochen, eine eigenständige westslawische Sprache.",
+          "ru": "Наряду с региональными немецкими говорами в части Верхней Лужицы говорят на верхнелужицком — самостоятельном западнославянском языке.",
+          "g": {}
+        }
+      ]
+    },
+    {
+      "s": [
+        {
+          "de": "Die Rechte der sorbischen Minderheit sind rechtlich geschützt; dazu gehört auch die Pflege ihrer Sprache und Kultur.",
+          "ru": "Права лужицкого меньшинства защищены законом; к ним относится и сохранение его языка и культуры.",
+          "g": {}
+        },
+        {
+          "de": "Zweisprachige Ortsnamen machen diese Geschichte im öffentlichen Raum sichtbar und sind mehr als eine touristische Besonderheit.",
+          "ru": "Двуязычные названия населённых пунктов делают эту историю видимой в общественном пространстве и представляют собой нечто большее, чем туристическая особенность.",
+          "g": {}
+        }
+      ]
+    }
+  ]
+}

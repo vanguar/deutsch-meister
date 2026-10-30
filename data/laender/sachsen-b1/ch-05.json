@@ -1,0 +1,61 @@
+{
+  "id": "ch-05",
+  "title": "Arbeit und Forschung",
+  "titleRu": "Работа и исследования",
+  "icon": "🔬",
+  "paragraphs": [
+    {
+      "s": [
+        {
+          "de": "Sachsen hat eine lange industrielle Tradition.",
+          "ru": "У Саксонии давняя промышленная традиция.",
+          "g": {}
+        },
+        {
+          "de": "Heute werden hier Autos, Maschinen und elektronische Bauteile hergestellt.",
+          "ru": "Сегодня здесь производят автомобили, машины и электронные компоненты.",
+          "g": {
+            "1+8": "производятся"
+          }
+        }
+      ]
+    },
+    {
+      "s": [
+        {
+          "de": "Die Region Dresden ist besonders für Mikroelektronik bekannt.",
+          "ru": "Регион Дрездена особенно известен микроэлектроникой.",
+          "g": {}
+        },
+        {
+          "de": "Universitäten und Unternehmen arbeiten in der Forschung zusammen.",
+          "ru": "Университеты и предприятия сотрудничают в исследованиях.",
+          "g": {
+            "3+7": "сотрудничают"
+          }
+        },
+        {
+          "de": "Auch kleine Betriebe und das Handwerk sind wichtig.",
+          "ru": "Важны также небольшие предприятия и ремесло.",
+          "g": {}
+        }
+      ]
+    },
+    {
+      "s": [
+        {
+          "de": "Neue Technik braucht Menschen mit guten beruflichen Kenntnissen.",
+          "ru": "Новая техника требует людей с хорошими профессиональными знаниями.",
+          "g": {}
+        },
+        {
+          "de": "Deshalb lernen viele Beschäftigte auch nach ihrer Ausbildung weiter.",
+          "ru": "Поэтому многие работники продолжают учиться и после профессионального обучения.",
+          "g": {
+            "1+8": "продолжают учиться"
+          }
+        }
+      ]
+    }
+  ]
+}

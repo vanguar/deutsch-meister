@@ -1,0 +1,57 @@
+{
+  "id": "ch-07",
+  "title": "Kultur und Küche",
+  "titleRu": "Культура и кухня",
+  "icon": "🎭",
+  "paragraphs": [
+    {
+      "s": [
+        {
+          "de": "Dresden ist für seine Museen und historischen Gebäude bekannt.",
+          "ru": "Дрезден известен музеями и историческими зданиями.",
+          "g": {}
+        },
+        {
+          "de": "Meißen ist mit der Herstellung von Porzellan verbunden.",
+          "ru": "Мейсен связан с производством фарфора.",
+          "g": {}
+        }
+      ]
+    },
+    {
+      "s": [
+        {
+          "de": "Im Erzgebirge hat auch die Kunst aus Holz eine lange Tradition.",
+          "ru": "В Рудных горах давние традиции есть и у деревянных художественных изделий.",
+          "g": {}
+        },
+        {
+          "de": "Zu Weihnachten essen viele Menschen Dresdner Stollen.",
+          "ru": "На Рождество многие едят дрезденский штоллен.",
+          "g": {}
+        },
+        {
+          "de": "Das ist ein süßes Gebäck, meist mit Rosinen und Puderzucker.",
+          "ru": "Это сладкая выпечка, обычно с изюмом и сахарной пудрой.",
+          "g": {}
+        }
+      ]
+    },
+    {
+      "s": [
+        {
+          "de": "Viele Familien verbinden mit solchen Speisen Erinnerungen an ihre Kindheit.",
+          "ru": "Многие семьи связывают с такими блюдами воспоминания о детстве.",
+          "g": {}
+        },
+        {
+          "de": "Kultur findet deshalb nicht nur auf großen Bühnen, sondern auch im Alltag statt.",
+          "ru": "Поэтому культура существует не только на больших сценах, но и в повседневной жизни.",
+          "g": {
+            "1+12": "происходит"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,328 @@
+"""sachsen: тексты B1/B2. Сверено 2026-10-30.
+Источники (география, история, экономика, языки, культура):
+https://www.landtag.sachsen.de/de/parlament/zusammensetzung-und-rechtsgrundlagen/verfassung-9196.cshtml
+https://www.geschichte.sachsen.de/wende-und-wiedervereinigung-6816.html
+https://www.umweltbundesamt.de/sites/default/files/medien/421/dokumente/13_sachsen.pdf
+https://www.wirtschaft.sachsen.de/branchen-3975.html
+https://www.sorben.sachsen.de/sprache-und-geschichte-3903.html
+https://www.bundesregierung.de/breg-de/schwerpunkte/deutsche-einheit/sieg-ueber-die-sed-diktatur-353726
+https://www.regionales.sachsen.de/spezialitaeten/details/dresdner-stollen
+https://www.freistaat.sachsen.de/index.html
+"""
+
+TEXTS = {'sachsen-b1': [('Sachsen im Überblick',
+                 'Саксония коротко',
+                 '🗺️',
+                 [[('Sachsen liegt im Osten von Deutschland.', 'Саксония находится на востоке Германии.', {}),
+                   ('Die Hauptstadt heißt Dresden und liegt an der Elbe.',
+                    'Столица называется Дрезден и стоит на Эльбе.',
+                    {})],
+                  [('Leipzig und Chemnitz sind weitere wichtige Städte.',
+                    'Лейпциг и Хемниц — другие важные города.',
+                    {}),
+                   ('Im Osten grenzt das Land an Polen, im Süden an Tschechien.',
+                    'На востоке земля граничит с Польшей, на юге — с Чехией.',
+                    {'grenzt+an': 'граничит с'}),
+                   ('Sachsen ist nicht dasselbe Bundesland wie Niedersachsen oder Sachsen-Anhalt.',
+                    'Саксония — другая федеральная земля, чем Нижняя Саксония или Саксония-Анхальт.',
+                    {})],
+                  [('Jedes dieser drei Länder hat eine eigene Regierung und einen eigenen Landtag.',
+                    'У каждой из этих трёх земель своё правительство и свой ландтаг.',
+                    {}),
+                   ('Die Grenzen auf der Karte helfen dabei, die Länder zu unterscheiden.',
+                    'Границы на карте помогают различать земли.',
+                    {})]]),
+                ('Berge und Flüsse',
+                 'Горы и реки',
+                 '🏞️',
+                 [[('Im Süden liegt das Erzgebirge an der Grenze zu Tschechien.',
+                    'На юге у границы с Чехией лежат Рудные горы.',
+                    {}),
+                   ('Die Sächsische Schweiz ist ein Gebiet mit hohen Felsen.',
+                    'Саксонская Швейцария — местность с высокими скалами.',
+                    {})],
+                  [('Sie liegt in Deutschland, nicht in der Schweiz.',
+                    'Она находится в Германии, а не в Швейцарии.',
+                    {}),
+                   ('Die Elbe fließt durch Dresden und weiter nach Norden.',
+                    'Эльба течёт через Дрезден и дальше на север.',
+                    {}),
+                   ('Im Norden ist die Landschaft flacher als im Süden.',
+                    'На севере местность более равнинная, чем на юге.',
+                    {})],
+                  [('Viele Menschen kommen zum Wandern und Klettern in die Region.',
+                    'Многие приезжают в регион ради походов и скалолазания.',
+                    {}),
+                   ('Dabei ist es wichtig, die Natur zu schützen und auf den Wegen zu bleiben.',
+                    'При этом важно защищать природу и оставаться на тропах.',
+                    {})]]),
+                ('Geschichte und Neubeginn',
+                 'История и новое начало',
+                 '📜',
+                 [[('Die Geschichte Sachsens ist eng mit Meißen verbunden.',
+                    'История Саксонии тесно связана с Мейсеном.',
+                    {'ist+verbunden': 'связана'}),
+                   ('Im Jahr 929 entstand dort die Mark Meißen.',
+                    'В 929 году там возникла Мейсенская марка.',
+                    {})],
+                  [('1989 demonstrierten viele Menschen in Leipzig für Freiheit.',
+                    'В 1989 году многие люди в Лейпциге демонстрировали за свободу.',
+                    {}),
+                   ('Diese Proteste waren ein wichtiger Teil der Friedlichen Revolution.',
+                    'Эти протесты были важной частью Мирной революции.',
+                    {}),
+                   ('Am 3. Oktober 1990 wurde das Land Sachsen neu gegründet.',
+                    '3 октября 1990 года земля Саксония была создана заново.',
+                    {'wurde+gegründet': 'была создана'})],
+                  [('Vor der Wiedervereinigung gehörte dieses Gebiet zur DDR.',
+                    'До объединения Германии эта территория относилась к ГДР.',
+                    {}),
+                   ('Der Weg zur Demokratie veränderte das Leben vieler Familien.',
+                    'Путь к демократии изменил жизнь многих семей.',
+                    {})]]),
+                ('Ein Freistaat',
+                 'Свободное государство',
+                 '🏛️',
+                 [[('Der offizielle Name lautet Freistaat Sachsen.',
+                    'Официальное название — Свободное государство Саксония.',
+                    {}),
+                   ('Freistaat bedeutet hier Republik.', 'Слово Freistaat здесь означает республику.', {})],
+                  [('Sachsen hat keine besonderen Rechte gegenüber anderen Bundesländern.',
+                    'У Саксонии нет особых прав по сравнению с другими землями.',
+                    {}),
+                   ('Der Landtag in Dresden beschließt Gesetze für das Land.',
+                    'Ландтаг в Дрездене принимает законы земли.',
+                    {}),
+                   ('Die Landesfarben sind Weiß und Grün.', 'Цвета земли — белый и зелёный.', {})],
+                  [('Bei Wahlen entscheiden die Bürger, wer im Landtag sitzt.',
+                    'На выборах граждане решают, кто заседает в ландтаге.',
+                    {}),
+                   ('Die Regierung muss dem Parlament ihre Arbeit erklären.',
+                    'Правительство должно объяснять парламенту свою работу.',
+                    {})]]),
+                ('Arbeit und Forschung',
+                 'Работа и исследования',
+                 '🔬',
+                 [[('Sachsen hat eine lange industrielle Tradition.',
+                    'У Саксонии давняя промышленная традиция.',
+                    {}),
+                   ('Heute werden hier Autos, Maschinen und elektronische Bauteile hergestellt.',
+                    'Сегодня здесь производят автомобили, машины и электронные компоненты.',
+                    {'werden+hergestellt': 'производятся'})],
+                  [('Die Region Dresden ist besonders für Mikroelektronik bekannt.',
+                    'Регион Дрездена особенно известен микроэлектроникой.',
+                    {}),
+                   ('Universitäten und Unternehmen arbeiten in der Forschung zusammen.',
+                    'Университеты и предприятия сотрудничают в исследованиях.',
+                    {'arbeiten+zusammen': 'сотрудничают'}),
+                   ('Auch kleine Betriebe und das Handwerk sind wichtig.',
+                    'Важны также небольшие предприятия и ремесло.',
+                    {})],
+                  [('Neue Technik braucht Menschen mit guten beruflichen Kenntnissen.',
+                    'Новая техника требует людей с хорошими профессиональными знаниями.',
+                    {}),
+                   ('Deshalb lernen viele Beschäftigte auch nach ihrer Ausbildung weiter.',
+                    'Поэтому многие работники продолжают учиться и после профессионального обучения.',
+                    {'lernen+weiter': 'продолжают учиться'})]]),
+                ('Sprachen und Menschen',
+                 'Языки и люди',
+                 '🗣️',
+                 [[('Nicht alle Menschen in Sachsen sprechen gleich.',
+                    'Не все люди в Саксонии говорят одинаково.',
+                    {}),
+                   ('Es gibt verschiedene regionale Dialekte.', 'Существуют разные региональные диалекты.', {})],
+                  [('In der Oberlausitz lebt die sorbische Minderheit.',
+                    'В Верхней Лужице живёт лужицкое меньшинство.',
+                    {}),
+                   ('Obersorbisch ist eine slawische Sprache und kein deutscher Dialekt.',
+                    'Верхнелужицкий — славянский язык, а не немецкий диалект.',
+                    {}),
+                   ('In manchen Orten stehen die Namen auf Schildern in beiden Sprachen.',
+                    'В некоторых населённых пунктах названия на указателях даны на двух языках.',
+                    {})],
+                  [('Sprache kann für Menschen ein wichtiger Teil ihrer Identität sein.',
+                    'Язык может быть для людей важной частью их идентичности.',
+                    {}),
+                   ('Der Schutz kleiner Sprachen hilft, kulturelle Vielfalt zu erhalten.',
+                    'Защита малых языков помогает сохранять культурное разнообразие.',
+                    {})]]),
+                ('Kultur und Küche',
+                 'Культура и кухня',
+                 '🎭',
+                 [[('Dresden ist für seine Museen und historischen Gebäude bekannt.',
+                    'Дрезден известен музеями и историческими зданиями.',
+                    {}),
+                   ('Meißen ist mit der Herstellung von Porzellan verbunden.',
+                    'Мейсен связан с производством фарфора.',
+                    {})],
+                  [('Im Erzgebirge hat auch die Kunst aus Holz eine lange Tradition.',
+                    'В Рудных горах давние традиции есть и у деревянных художественных изделий.',
+                    {}),
+                   ('Zu Weihnachten essen viele Menschen Dresdner Stollen.',
+                    'На Рождество многие едят дрезденский штоллен.',
+                    {}),
+                   ('Das ist ein süßes Gebäck, meist mit Rosinen und Puderzucker.',
+                    'Это сладкая выпечка, обычно с изюмом и сахарной пудрой.',
+                    {})],
+                  [('Viele Familien verbinden mit solchen Speisen Erinnerungen an ihre Kindheit.',
+                    'Многие семьи связывают с такими блюдами воспоминания о детстве.',
+                    {}),
+                   ('Kultur findet deshalb nicht nur auf großen Bühnen, sondern auch im Alltag statt.',
+                    'Поэтому культура существует не только на больших сценах, но и в повседневной жизни.',
+                    {'findet+statt': 'происходит'})]])],
+ 'sachsen-b2': [('Lage und regionale Vielfalt',
+                 'Расположение и разнообразие регионов',
+                 '🗺️',
+                 [[('Sachsen liegt im Osten Deutschlands und verbindet durch seine Grenzen zu Polen und '
+                    'Tschechien mehrere europäische Regionen.',
+                    'Саксония расположена на востоке Германии и благодаря границам с Польшей и Чехией связывает '
+                    'несколько европейских регионов.',
+                    {}),
+                   ('Während Dresden die Landeshauptstadt ist, bilden Leipzig und Chemnitz weitere wichtige '
+                    'wirtschaftliche und kulturelle Zentren.',
+                    'Дрезден является столицей земли, а Лейпциг и Хемниц образуют другие важные экономические и '
+                    'культурные центры.',
+                    {})],
+                  [('Trotz ähnlicher Namen sind Sachsen, Sachsen-Anhalt und Niedersachsen drei eigenständige '
+                    'Bundesländer mit unterschiedlichen Hauptstädten.',
+                    'Несмотря на похожие названия, Саксония, Саксония-Анхальт и Нижняя Саксония — три '
+                    'самостоятельные земли с разными столицами.',
+                    {}),
+                   ('Wer das Land kennenlernen möchte, findet deshalb sowohl große Städte als auch ländliche '
+                    'Räume mit eigener Geschichte.',
+                    'Поэтому тот, кто хочет познакомиться с землёй, найдёт и большие города, и сельские '
+                    'территории со своей историей.',
+                    {})]]),
+                ('Landschaft und Natur',
+                 'Ландшафт и природа',
+                 '🏞️',
+                 [[('Die Landschaft verändert sich vom flacheren Norden bis zu den Mittelgebirgen an der '
+                    'tschechischen Grenze deutlich.',
+                    'Ландшафт заметно меняется от более равнинного севера до средневысотных гор у чешской '
+                    'границы.',
+                    {}),
+                   ('Das Erzgebirge ist eine grenzüberschreitende Region, deren Geschichte eng mit dem Bergbau '
+                    'verbunden ist.',
+                    'Рудные горы — трансграничный регион, история которого тесно связана с горным делом.',
+                    {})],
+                  [('Die Felsen der Sächsischen Schweiz gehören zum Elbsandsteingebirge; der Name bezeichnet '
+                    'keinen Teil des Staates Schweiz.',
+                    'Скалы Саксонской Швейцарии относятся к Эльбским Песчаниковым горам; название не обозначает '
+                    'часть государства Швейцария.',
+                    {}),
+                   ('Die Elbe prägt nicht nur die Landschaft, sondern verbindet auch Städte und Kulturräume '
+                    'miteinander.',
+                    'Эльба не только формирует ландшафт, но и соединяет города и культурные пространства.',
+                    {})]]),
+                ('Von Meißen zur Friedlichen Revolution',
+                 'От Мейсена до Мирной революции',
+                 '📜',
+                 [[('Die Gründung der Mark Meißen im Jahr 929 gilt als ein wichtiger Ausgangspunkt der '
+                    'sächsischen Geschichte.',
+                    'Основание Мейсенской марки в 929 году считается важной отправной точкой саксонской истории.',
+                    {'gilt+als': 'считается'}),
+                   ('Viele Jahrhunderte später gehörten die Leipziger Montagsdemonstrationen zu den '
+                    'entscheidenden Ereignissen der Friedlichen Revolution von 1989.',
+                    'Много веков спустя лейпцигские демонстрации по понедельникам стали одними из решающих '
+                    'событий Мирной революции 1989 года.',
+                    {})],
+                  [('Am 9. Oktober forderten dort Zehntausende Menschen politische Freiheit, ohne dass die '
+                    'Demonstration gewaltsam aufgelöst wurde.',
+                    '9 октября десятки тысяч людей требовали там политической свободы, и демонстрация не была '
+                    'разогнана силой.',
+                    {}),
+                   ('Mit der deutschen Wiedervereinigung am 3. Oktober 1990 wurde Sachsen als Bundesland neu '
+                    'gegründet.',
+                    'С объединением Германии 3 октября 1990 года Саксония была заново создана как федеральная '
+                    'земля.',
+                    {})]]),
+                ('Verfassung und politische Verantwortung',
+                 'Конституция и политическая ответственность',
+                 '🏛️',
+                 [[('Die Bezeichnung Freistaat verweist auf die republikanische Staatsform und verleiht Sachsen '
+                    'keine Sonderstellung im Bundesstaat.',
+                    'Обозначение Freistaat указывает на республиканскую форму правления и не даёт Саксонии '
+                    'особого статуса в федерации.',
+                    {}),
+                   ('Die Landesverfassung nennt Dresden als Hauptstadt und verpflichtet den Staat zum Schutz von '
+                    'Kultur und natürlichen Lebensgrundlagen.',
+                    'Конституция земли называет Дрезден столицей и обязывает государство защищать культуру и '
+                    'природные основы жизни.',
+                    {})],
+                  [('Der gewählte Landtag beschließt Landesgesetze und kontrolliert die Arbeit der '
+                    'Landesregierung.',
+                    'Избранный ландтаг принимает законы земли и контролирует работу её правительства.',
+                    {}),
+                   ('Politische Zuständigkeiten werden zwischen Bund und Ländern verteilt; diese Ordnung nennt '
+                    'man Föderalismus.',
+                    'Политические полномочия распределены между федерацией и землями; такой порядок называют '
+                    'федерализмом.',
+                    {})]]),
+                ('Industrie im Wandel',
+                 'Промышленность в процессе перемен',
+                 '🔬',
+                 [[('Sachsens Wirtschaft verbindet eine lange Tradition im Maschinenbau mit der Herstellung von '
+                    'Fahrzeugen und moderner Mikroelektronik.',
+                    'Экономика Саксонии соединяет давние машиностроительные традиции с производством автомобилей '
+                    'и современной микроэлектроникой.',
+                    {}),
+                   ('Rund um Dresden arbeiten Unternehmen und Forschungseinrichtungen an elektronischen '
+                    'Bauteilen, die für viele andere Branchen benötigt werden.',
+                    'Вокруг Дрездена предприятия и исследовательские учреждения работают над электронными '
+                    'компонентами, необходимыми многим другим отраслям.',
+                    {})],
+                  [('Der Übergang zu neuen Technologien verändert jedoch die Anforderungen an Beschäftigte und '
+                    'Betriebe.',
+                    'Однако переход к новым технологиям меняет требования к работникам и предприятиям.',
+                    {}),
+                   ('Berufliche Ausbildung und Weiterbildung sind deshalb ebenso wichtig wie Investitionen in '
+                    'Maschinen und Forschung.',
+                    'Поэтому профессиональное обучение и повышение квалификации так же важны, как инвестиции в '
+                    'оборудование и исследования.',
+                    {})]]),
+                ('Mehr als ein Dialekt',
+                 'Больше, чем один диалект',
+                 '🗣️',
+                 [[('Die Vorstellung, alle Menschen in Sachsen sprächen denselben Dialekt, wird der sprachlichen '
+                    'Vielfalt des Landes nicht gerecht.',
+                    'Представление, будто все жители Саксонии говорят на одном диалекте, не отражает языкового '
+                    'разнообразия земли.',
+                    {}),
+                   ('Neben regionalen deutschen Mundarten wird in Teilen der Oberlausitz Obersorbisch gesprochen, '
+                    'eine eigenständige westslawische Sprache.',
+                    'Наряду с региональными немецкими говорами в части Верхней Лужицы говорят на верхнелужицком — '
+                    'самостоятельном западнославянском языке.',
+                    {})],
+                  [('Die Rechte der sorbischen Minderheit sind rechtlich geschützt; dazu gehört auch die Pflege '
+                    'ihrer Sprache und Kultur.',
+                    'Права лужицкого меньшинства защищены законом; к ним относится и сохранение его языка и '
+                    'культуры.',
+                    {}),
+                   ('Zweisprachige Ortsnamen machen diese Geschichte im öffentlichen Raum sichtbar und sind mehr '
+                    'als eine touristische Besonderheit.',
+                    'Двуязычные названия населённых пунктов делают эту историю видимой в общественном '
+                    'пространстве и представляют собой нечто большее, чем туристическая особенность.',
+                    {})]]),
+                ('Kulturelles Erbe und Alltag',
+                 'Культурное наследие и повседневность',
+                 '🎭',
+                 [[('Historische Bauten und Sammlungen in Dresden sowie das Porzellan aus Meißen zeigen '
+                    'unterschiedliche Seiten sächsischer Kulturgeschichte.',
+                    'Исторические здания и коллекции в Дрездене, а также мейсенский фарфор показывают разные '
+                    'стороны культурной истории Саксонии.',
+                    {}),
+                   ('Im Erzgebirge gehören Bergbautraditionen und kunstvolle Arbeiten aus Holz eng zur regionalen '
+                    'Identität.',
+                    'В Рудных горах горняцкие традиции и искусные изделия из дерева тесно связаны с региональной '
+                    'идентичностью.',
+                    {})],
+                  [('Der Dresdner Christstollen ist ein Weihnachtsgebäck, dessen geschützte Herkunftsbezeichnung '
+                    'an ein bestimmtes Herstellungsgebiet gebunden ist.',
+                    'Дрезденский рождественский штоллен — выпечка, чьё защищённое географическое указание связано '
+                    'с определённой территорией производства.',
+                    {}),
+                   ('Solche Traditionen leben nicht nur in Museen weiter, sondern werden auch in Familien und '
+                    'Handwerksbetrieben gepflegt.',
+                    'Такие традиции продолжают жить не только в музеях: их поддерживают также в семьях и '
+                    'ремесленных предприятиях.',
+                    {})]])]}

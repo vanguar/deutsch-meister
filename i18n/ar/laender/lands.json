@@ -1385,10 +1385,188 @@
    "name": "Sachsen",
    "nameRu": "سكسونيا",
    "capital": "Dresden",
-   "emoji": "📍",
+   "emoji": "🏞️",
    "flag": "data/laender/flags/sachsen.png",
    "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_Saxony.svg",
-   "ready": false
+   "ready": true,
+   "blurb": "دريسدن ولايبزيغ، جبال إرتس والإلكترونيات الدقيقة، الثورة السلمية واللغة الصوربية العليا.",
+   "facts": [
+    [
+     "العاصمة",
+     "Dresden"
+    ],
+    [
+     "أكبر المدن",
+     "Leipzig, Dresden, Chemnitz"
+    ],
+    [
+     "المساحة",
+     "نحو 18 450 كم²"
+    ],
+    [
+     "ضمن جمهورية ألمانيا الاتحادية",
+     "منذ 3 أكتوبر 1990"
+    ],
+    [
+     "الدول المجاورة",
+     "بولندا، التشيك"
+    ],
+    [
+     "النهر الرئيسي",
+     "الإلبه"
+    ],
+    [
+     "الاقتصاد",
+     "السيارات وصناعة الآلات والإلكترونيات الدقيقة"
+    ],
+    [
+     "اللغات",
+     "الألمانية؛ والصوربية العليا في جزء من لوساتيا العليا"
+    ]
+   ],
+   "source": "البوابات الرسمية لساكسونيا وبرلمانها؛ الحكومة الاتحادية: الثورة السلمية؛ Umweltbundesamt: الجغرافيا.",
+   "sourceUrl": "https://www.landtag.sachsen.de/de/parlament/zusammensetzung-und-rechtsgrundlagen/verfassung-9196.cshtml",
+   "checked": "2026-10-30",
+   "quiz": [
+    {
+     "q": "ما عاصمة ساكسونيا؟",
+     "opts": [
+      "Leipzig",
+      "Dresden",
+      "Chemnitz"
+     ],
+     "a": 1,
+     "why": "عاصمة الولاية دريسدن؛ أما لايبزيغ وكمنيتس فمدينتان مهمتان أخريان."
+    },
+    {
+     "q": "ماذا تعني كلمة Freistaat في اسم الولاية؟",
+     "opts": [
+      "جمهورية",
+      "دولة مستقلة خارج ألمانيا",
+      "ولاية بلا برلمان"
+     ],
+     "a": 0,
+     "why": "Freistaat تسمية تاريخية للجمهورية، ولا تمنح حقوقا خاصة مقارنة بالولايات الأخرى."
+    },
+    {
+     "q": "بأي حدث ارتبطت لايبزيغ في خريف 1989؟",
+     "opts": [
+      "مظاهرات الاثنين السلمية",
+      "تأسيس مارغرافية مايسن",
+      "بداية أكتوبرفست"
+     ],
+     "a": 0,
+     "why": "أصبحت مظاهرات لايبزيغ جزءا مهما من الثورة السلمية في ألمانيا الشرقية."
+    },
+    {
+     "q": "ما اللغة الصوربية العليا؟",
+     "opts": [
+      "لهجة ألمانية",
+      "لغة سلافية غربية",
+      "اسم آخر للألمانية السويسرية"
+     ],
+     "a": 1,
+     "why": "هي لغة مستقلة للأقلية الصوربية وليست لهجة ألمانية."
+    },
+    {
+     "q": "أي قطاع يرتبط خصوصا بمنطقة دريسدن؟",
+     "opts": [
+      "الإلكترونيات الدقيقة",
+      "الصيد البحري",
+      "زراعة الزيتون"
+     ],
+     "a": 0,
+     "why": "تعمل في منطقة دريسدن شركات ومؤسسات بحث في الإلكترونيات الدقيقة."
+    }
+   ],
+   "texts": {
+    "b1": {
+     "id": "sachsen-b1",
+     "chapters": 7,
+     "words": 422,
+     "minutes": 4,
+     "toc": [
+      {
+       "title": "Sachsen im Überblick",
+       "titleRu": "لمحة عن ساكسونيا",
+       "icon": "🗺️"
+      },
+      {
+       "title": "Berge und Flüsse",
+       "titleRu": "الجبال والأنهار",
+       "icon": "🏞️"
+      },
+      {
+       "title": "Geschichte und Neubeginn",
+       "titleRu": "التاريخ والبداية الجديدة",
+       "icon": "📜"
+      },
+      {
+       "title": "Ein Freistaat",
+       "titleRu": "الدولة الحرة",
+       "icon": "🏛️"
+      },
+      {
+       "title": "Arbeit und Forschung",
+       "titleRu": "العمل والبحث العلمي",
+       "icon": "🔬"
+      },
+      {
+       "title": "Sprachen und Menschen",
+       "titleRu": "اللغات والناس",
+       "icon": "🗣️"
+      },
+      {
+       "title": "Kultur und Küche",
+       "titleRu": "الثقافة والمطبخ",
+       "icon": "🎭"
+      }
+     ]
+    },
+    "b2": {
+     "id": "sachsen-b2",
+     "chapters": 7,
+     "words": 421,
+     "minutes": 4,
+     "toc": [
+      {
+       "title": "Lage und regionale Vielfalt",
+       "titleRu": "الموقع والتنوع الإقليمي",
+       "icon": "🗺️"
+      },
+      {
+       "title": "Landschaft und Natur",
+       "titleRu": "المناظر الطبيعية والطبيعة",
+       "icon": "🏞️"
+      },
+      {
+       "title": "Von Meißen zur Friedlichen Revolution",
+       "titleRu": "من مايسن إلى الثورة السلمية",
+       "icon": "📜"
+      },
+      {
+       "title": "Verfassung und politische Verantwortung",
+       "titleRu": "الدستور والمسؤولية السياسية",
+       "icon": "🏛️"
+      },
+      {
+       "title": "Industrie im Wandel",
+       "titleRu": "صناعة في طور التحول",
+       "icon": "🔬"
+      },
+      {
+       "title": "Mehr als ein Dialekt",
+       "titleRu": "أكثر من لهجة واحدة",
+       "icon": "🗣️"
+      },
+      {
+       "title": "Kulturelles Erbe und Alltag",
+       "titleRu": "التراث الثقافي والحياة اليومية",
+       "icon": "🎭"
+      }
+     ]
+    }
+   }
   },
   {
    "id": "sachsen-anhalt",

@@ -180,6 +180,36 @@
    "source": "Вікіпедія (de): «Mecklenburg-Vorpommern» і пов'язані статті (історія, університети, острови, курорти, нижньонімецька, свята)",
    "license": "текст курсу German Morning",
    "land": "mecklenburg-vorpommern"
+  },
+  {
+   "id": "sachsen-b1",
+   "title": "Sachsen",
+   "titleRu": "Саксонія",
+   "author": "German Morning",
+   "level": "B1",
+   "year": "2026",
+   "chapters": 7,
+   "words": 422,
+   "minutes": 4,
+   "cover": "🏞️",
+   "source": "Офіційні портали Саксонії та ландтагу; Федеральний уряд: Мирна революція; Umweltbundesamt: географія.",
+   "license": "текст курсу German Morning",
+   "land": "sachsen"
+  },
+  {
+   "id": "sachsen-b2",
+   "title": "Sachsen",
+   "titleRu": "Саксонія",
+   "author": "German Morning",
+   "level": "B2",
+   "year": "2026",
+   "chapters": 7,
+   "words": 421,
+   "minutes": 4,
+   "cover": "🏞️",
+   "source": "Офіційні портали Саксонії та ландтагу; Федеральний уряд: Мирна революція; Umweltbundesamt: географія.",
+   "license": "текст курсу German Morning",
+   "land": "sachsen"
   }
  ]
 }

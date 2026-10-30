@@ -1,0 +1,59 @@
+{
+  "id": "ch-03",
+  "title": "Geschichte und Neubeginn",
+  "titleRu": "История и новое начало",
+  "icon": "📜",
+  "paragraphs": [
+    {
+      "s": [
+        {
+          "de": "Die Geschichte Sachsens ist eng mit Meißen verbunden.",
+          "ru": "История Саксонии тесно связана с Мейсеном.",
+          "g": {
+            "3+7": "связана"
+          }
+        },
+        {
+          "de": "Im Jahr 929 entstand dort die Mark Meißen.",
+          "ru": "В 929 году там возникла Мейсенская марка.",
+          "g": {}
+        }
+      ]
+    },
+    {
+      "s": [
+        {
+          "de": "1989 demonstrierten viele Menschen in Leipzig für Freiheit.",
+          "ru": "В 1989 году многие люди в Лейпциге демонстрировали за свободу.",
+          "g": {}
+        },
+        {
+          "de": "Diese Proteste waren ein wichtiger Teil der Friedlichen Revolution.",
+          "ru": "Эти протесты были важной частью Мирной революции.",
+          "g": {}
+        },
+        {
+          "de": "Am 3. Oktober 1990 wurde das Land Sachsen neu gegründet.",
+          "ru": "3 октября 1990 года земля Саксония была создана заново.",
+          "g": {
+            "2+7": "была создана"
+          }
+        }
+      ]
+    },
+    {
+      "s": [
+        {
+          "de": "Vor der Wiedervereinigung gehörte dieses Gebiet zur DDR.",
+          "ru": "До объединения Германии эта территория относилась к ГДР.",
+          "g": {}
+        },
+        {
+          "de": "Der Weg zur Demokratie veränderte das Leben vieler Familien.",
+          "ru": "Путь к демократии изменил жизнь многих семей.",
+          "g": {}
+        }
+      ]
+    }
+  ]
+}

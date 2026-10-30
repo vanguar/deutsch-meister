@@ -17,3 +17,6 @@ from texts_brandenburg import TEXTS as _brandenburg
 TEXTS = {}
 for _part in (_bayern, _mv, _berlin, _hamburg, _bremen, _brandenburg):
     TEXTS.update(_part)
+
+from texts_sachsen import TEXTS as _sachsen
+TEXTS.update(_sachsen)
