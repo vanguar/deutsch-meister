@@ -1593,10 +1593,184 @@
    "name": "Thüringen",
    "nameRu": "Тюрингія",
    "capital": "Erfurt",
-   "emoji": "📍",
+   "emoji": "🌲",
    "flag": "data/laender/flags/thueringen.png",
    "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_Thuringia.svg",
-   "ready": false
+   "ready": true,
+   "blurb": "Ерфурт і Веймар, Реннштайг і Вартбург, Ґете й Баугаус, оптика Єни та місцеві діалекти.",
+   "facts": [
+    [
+     "Столиця",
+     "Erfurt"
+    ],
+    [
+     "Найбільші міста",
+     "Erfurt, Jena, Gera"
+    ],
+    [
+     "Площа",
+     "близько 16 200 км²"
+    ],
+    [
+     "У складі ФРН",
+     "з 3 жовтня 1990 року"
+    ],
+    [
+     "Сусідні держави",
+     "немає — кордони лише з німецькими землями"
+    ],
+    [
+     "Економіка",
+     "оптика й фотоніка, промисловість, туризм"
+    ],
+    [
+     "Культура",
+     "Веймарська класика, Баугаус, Вартбург"
+    ]
+   ],
+   "source": "Ландтаг Тюрингії; земельний геопортал; місто Єна; Вартбург; Веймар; меморіал Бухенвальд; Das ist Thüringen.",
+   "sourceUrl": "https://www.thueringer-landtag.de/landtag/geschichte/landesverfassung/",
+   "checked": "2026-10-30",
+   "quiz": [
+    {
+     "q": "Яке місто — столиця Тюрингії?",
+     "opts": [
+      "Weimar",
+      "Erfurt",
+      "Jena"
+     ],
+     "a": 1,
+     "why": "Столиця й місце засідань ландтагу — Ерфурт."
+    },
+    {
+     "q": "Що таке Реннштайг?",
+     "opts": [
+      "Гірська туристична стежка",
+      "Річка в Єні",
+      "Будівля ландтагу"
+     ],
+     "a": 0,
+     "why": "Реннштайг — відомий маршрут через гірські ландшафти Тюрингії."
+    },
+    {
+     "q": "Що Лютер переклав у Вартбурзі?",
+     "opts": [
+      "Новий Завіт",
+      "Усю Біблію цілком",
+      "Конституцію землі"
+     ],
+     "a": 0,
+     "why": "У 1521–1522 роках він переклав там Новий Завіт із грецької німецькою."
+    },
+    {
+     "q": "Де у 1919 році було засновано Баугаус?",
+     "opts": [
+      "Erfurt",
+      "Eisenach",
+      "Weimar"
+     ],
+     "a": 2,
+     "why": "Школа виникла у Веймарі та поєднувала мистецтво, ремесло й дизайн."
+    },
+    {
+     "q": "З якою галуззю особливо пов’язана Єна?",
+     "opts": [
+      "Морське суднобудування",
+      "Оптика й фотоніка",
+      "Морське рибальство"
+     ],
+     "a": 1,
+     "why": "Єна — важливий центр технологій, пов’язаних зі світлом."
+    }
+   ],
+   "texts": {
+    "b1": {
+     "id": "thueringen-b1",
+     "chapters": 7,
+     "words": 360,
+     "minutes": 3,
+     "toc": [
+      {
+       "title": "In der Mitte Deutschlands",
+       "titleRu": "Посередині Німеччини",
+       "icon": "🗺️"
+      },
+      {
+       "title": "Wald und Wanderwege",
+       "titleRu": "Ліс і туристичні стежки",
+       "icon": "🌲"
+      },
+      {
+       "title": "Geschichte auf engem Raum",
+       "titleRu": "Історія на невеликій території",
+       "icon": "📜"
+      },
+      {
+       "title": "Freistaat und Parlament",
+       "titleRu": "Вільна держава й парламент",
+       "icon": "🏛️"
+      },
+      {
+       "title": "Weimar und die Wartburg",
+       "titleRu": "Веймар і Вартбург",
+       "icon": "🎭"
+      },
+      {
+       "title": "Wissenschaft und Arbeit",
+       "titleRu": "Наука й робота",
+       "icon": "🔬"
+      },
+      {
+       "title": "Dialekte und regionale Küche",
+       "titleRu": "Діалекти й регіональна кухня",
+       "icon": "🌭"
+      }
+     ]
+    },
+    "b2": {
+     "id": "thueringen-b2",
+     "chapters": 7,
+     "words": 453,
+     "minutes": 4,
+     "toc": [
+      {
+       "title": "Ein Binnenland mit vielen Zentren",
+       "titleRu": "Земля всередині країни з багатьма центрами",
+       "icon": "🗺️"
+      },
+      {
+       "title": "Naturraum und Verantwortung",
+       "titleRu": "Природний простір і відповідальність",
+       "icon": "🌲"
+      },
+      {
+       "title": "Landesbildung und Erinnerung",
+       "titleRu": "Створення землі й історична пам’ять",
+       "icon": "📜"
+      },
+      {
+       "title": "Verfassung und Mitbestimmung",
+       "titleRu": "Конституція й участь в ухваленні рішень",
+       "icon": "🏛️"
+      },
+      {
+       "title": "Klassik, Bauhaus und Reformation",
+       "titleRu": "Класика, Баугаус і Реформація",
+       "icon": "🎭"
+      },
+      {
+       "title": "Optik als Zukunftsbranche",
+       "titleRu": "Оптика як перспективна галузь",
+       "icon": "🔬"
+      },
+      {
+       "title": "Regionale Identität im Alltag",
+       "titleRu": "Регіональна ідентичність у повсякденні",
+       "icon": "🌭"
+      }
+     ]
+    }
+   }
   }
  ]
 }

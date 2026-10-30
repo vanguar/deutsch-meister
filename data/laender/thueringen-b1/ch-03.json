@@ -1,0 +1,48 @@
+{
+  "id": "ch-03",
+  "title": "Geschichte auf engem Raum",
+  "titleRu": "История на небольшой территории",
+  "icon": "📜",
+  "paragraphs": [
+    {
+      "s": [
+        {
+          "de": "Früher bestand die Region aus vielen kleinen Staaten.",
+          "ru": "Раньше регион состоял из многих небольших государств.",
+          "g": {}
+        },
+        {
+          "de": "1920 schlossen sich mehrere dieser Staaten zum Land Thüringen zusammen.",
+          "ru": "В 1920 году несколько этих государств объединились в землю Тюрингия.",
+          "g": {
+            "0+8": "объединились"
+          }
+        },
+        {
+          "de": "Das damalige Land hatte noch andere Grenzen als heute.",
+          "ru": "У тогдашней земли были другие границы, чем сегодня.",
+          "g": {}
+        }
+      ]
+    },
+    {
+      "s": [
+        {
+          "de": "Am 3. Oktober 1990 wurde Thüringen als Bundesland neu gegründet.",
+          "ru": "3 октября 1990 года Тюрингия была заново создана как федеральная земля.",
+          "g": {}
+        },
+        {
+          "de": "Zur Geschichte gehört auch das Konzentrationslager Buchenwald bei Weimar.",
+          "ru": "К истории относится и концлагерь Бухенвальд под Веймаром.",
+          "g": {}
+        },
+        {
+          "de": "Die heutige Gedenkstätte erinnert an die Opfer der nationalsozialistischen Verbrechen.",
+          "ru": "Сегодняшний мемориал напоминает о жертвах преступлений национал-социализма.",
+          "g": {}
+        }
+      ]
+    }
+  ]
+}

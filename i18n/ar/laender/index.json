@@ -210,6 +210,36 @@
    "source": "البوابات الرسمية لساكسونيا وبرلمانها؛ الحكومة الاتحادية: الثورة السلمية؛ Umweltbundesamt: الجغرافيا.",
    "license": "نص من دورة German Morning",
    "land": "sachsen"
+  },
+  {
+   "id": "thueringen-b1",
+   "title": "Thüringen",
+   "titleRu": "تورينغن",
+   "author": "German Morning",
+   "level": "B1",
+   "year": "2026",
+   "chapters": 7,
+   "words": 360,
+   "minutes": 3,
+   "cover": "🌲",
+   "source": "برلمان تورينغن؛ البوابة الجغرافية للولاية؛ مدينة يينا؛ فارتبورغ؛ فايمار؛ نصب بوخنفالد التذكاري؛ Das ist Thüringen.",
+   "license": "نص من دورة German Morning",
+   "land": "thueringen"
+  },
+  {
+   "id": "thueringen-b2",
+   "title": "Thüringen",
+   "titleRu": "تورينغن",
+   "author": "German Morning",
+   "level": "B2",
+   "year": "2026",
+   "chapters": 7,
+   "words": 453,
+   "minutes": 4,
+   "cover": "🌲",
+   "source": "برلمان تورينغن؛ البوابة الجغرافية للولاية؛ مدينة يينا؛ فارتبورغ؛ فايمار؛ نصب بوخنفالد التذكاري؛ Das ist Thüringen.",
+   "license": "نص من دورة German Morning",
+   "land": "thueringen"
   }
  ]
 }

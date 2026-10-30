@@ -1,0 +1,1718 @@
+{
+  "version": 1,
+  "w": {
+    "aber": "aber",
+    "abgeordneten": "Abgeordnete",
+    "achtung": "Achtung",
+    "allein": "allein",
+    "allerdings": "allerdings",
+    "als": "als",
+    "also": "also",
+    "an": "an",
+    "anderen": "ander",
+    "angabe": "Angabe (указание)",
+    "anwendungen": "Anwendung",
+    "arbeit": "Arbeit",
+    "arbeitsplätze": "Arbeitsplatz",
+    "auch": "auch",
+    "auf": "auf",
+    "aufenthalts": "Aufenthalt",
+    "aus": "aus",
+    "auseinandersetzung": "Auseinandersetzung",
+    "ausgebildete": "ausbilden",
+    "ausländischen": "ausländisch",
+    "ausschließen": "ausschließen",
+    "ausschließlich": "ausschließlich",
+    "außerhalb": "außerhalb",
+    "bauhaus": "Bauhaus",
+    "bauhauses": "Bauhaus",
+    "bauwerken": "Bauwerk",
+    "beachten": "beachten",
+    "bedeutender": "bedeutend",
+    "bedeutet": "bedeuten",
+    "bei": "bei",
+    "beispiel": "Beispiel",
+    "bekannte": "bekannt",
+    "benötigen": "benötigen",
+    "beobachten": "beobachten",
+    "bereit": "bereit",
+    "berufslebens": "Berufsleben",
+    "beschließen": "beschließen",
+    "beschloss": "beschließen",
+    "beschreiben": "beschreiben",
+    "beschäftigen": "beschäftigen",
+    "beschäftigung": "Beschäftigung",
+    "besitzt": "besitzen",
+    "bestand": "bestehen",
+    "bestandteil": "Bestandteil",
+    "bestätigt": "bestätigen",
+    "bevölkerung": "Bevölkerung",
+    "bezeichnung": "Bezeichnung",
+    "bibel": "Bibel",
+    "bild": "Bild",
+    "bildung": "Bildung",
+    "bis": "bis",
+    "branchen": "Branche",
+    "buchenwald": "Buchenwald",
+    "bundeslandes": "Bundesland",
+    "bundesrepublik": "Bundesrepublik",
+    "dabei": "dabei",
+    "daher": "daher",
+    "damals": "damals",
+    "das": "der/die/das",
+    "dass": "dass",
+    "dem": "der/die/das",
+    "demokratische": "demokratisch",
+    "demokratischer": "demokratisch",
+    "den": "der/die/das",
+    "der": "der/die/das",
+    "des": "der/die/das",
+    "deshalb": "deshalb",
+    "deutsche": "deutsch",
+    "deutschen": "deutsch",
+    "deutschlands": "Deutschland (страна)",
+    "dialekte": "Dialekt",
+    "die": "der/die/das",
+    "diese": "dieser",
+    "diskussion": "Diskussion",
+    "durch": "durch",
+    "ebenso": "ebenso",
+    "ein": "ein/eine",
+    "einem": "ein/eine",
+    "einen": "ein/eine",
+    "einflussreich": "einflussreich",
+    "eisenach": "Eisenach",
+    "empfindliche": "empfindlich",
+    "entstand": "entstehen",
+    "erfurt": "Erfurt",
+    "erfüllen": "erfüllen",
+    "erholung": "Erholung",
+    "erinnerung": "Erinnerung",
+    "erkennen": "erkennen",
+    "ermöglicht": "ermöglichen",
+    "es": "es",
+    "fachkräfte": "Fachkraft",
+    "familie": "Familie",
+    "familien": "Familie",
+    "forschungseinrichtungen": "Forschungseinrichtung",
+    "freistaat": "Freistaat",
+    "funktionen": "Funktion",
+    "für": "für",
+    "gedenkstätte": "Gedenkstätte",
+    "gegensatz": "Gegensatz",
+    "gegründet": "gründen",
+    "geht": "gehen",
+    "gehören": "gehören",
+    "gehört": "gehören",
+    "gemeinschaften": "Gemeinschaft",
+    "geografische": "geografisch",
+    "geprägter": "prägen",
+    "gera": "Gera",
+    "gesamte": "gesamt",
+    "geschützt": "schützen",
+    "gestalt": "Gestalt",
+    "gestaltung": "Gestaltung",
+    "gewalt": "Gewalt",
+    "gleich": "gleich",
+    "goethe": "Goethe (Dichter)",
+    "grenze": "Grenze",
+    "grenzen": "Grenze",
+    "griechischen": "griechisch",
+    "gut": "gut",
+    "handelte": "handeln",
+    "handwerk": "Handwerk",
+    "hauptstadt": "Hauptstadt",
+    "herkunft": "Herkunft",
+    "heute": "heute",
+    "heutige": "heutig",
+    "hinaus": "hinaus",
+    "historisch": "historisch",
+    "historische": "historisch",
+    "historischer": "historisch",
+    "hochschulen": "Hochschule",
+    "höhenwanderweg": "Höhenwanderweg",
+    "ideen": "Idee",
+    "identität": "Identität",
+    "ihr": "ihr",
+    "ihren": "ihr (её, их)",
+    "ihres": "ihr (её, их)",
+    "im": "in",
+    "in": "in",
+    "industrieller": "industriell",
+    "information": "Information",
+    "ins": "in",
+    "interessen": "Interesse",
+    "international": "international",
+    "ist": "sein",
+    "je": "je (nach)",
+    "jena": "Jena",
+    "jeweiligen": "jeweilig",
+    "kann": "können",
+    "kartoffelklöße": "Kartoffelkloß",
+    "keine": "kein",
+    "kleinen": "klein",
+    "kleiner": "klein",
+    "klingt": "klingen",
+    "konkurrieren": "konkurrieren",
+    "kontakt": "Kontakt",
+    "kontrollieren": "kontrollieren",
+    "konzentrationslager": "Konzentrationslager",
+    "kulturelle": "kulturell",
+    "künstlerischer": "künstlerisch",
+    "land": "Land (земля)",
+    "landes": "Land (земля)",
+    "landeshauptstadt": "Landeshauptstadt",
+    "landeshaushalt": "Landeshaushalt",
+    "landesregierung": "Landesregierung",
+    "landesverfassung": "Landesverfassung",
+    "landtag": "Landtag",
+    "langfristiger": "langfristig",
+    "lebensmittel": "Lebensmittel",
+    "lebensräume": "Lebensraum",
+    "licht": "Licht",
+    "liegt": "liegen",
+    "lokalen": "lokal",
+    "luther": "Luther",
+    "lässt": "lassen",
+    "macht": "machen",
+    "machte": "machen",
+    "manchmal": "manchmal",
+    "martin": "Martin (Vorname)",
+    "medizin": "Medizin",
+    "mehreren": "mehrere",
+    "meinungen": "Meinung",
+    "menschen": "Mensch",
+    "mit": "mit",
+    "mitbestimmung": "Mitbestimmung",
+    "miteinander": "miteinander",
+    "moderne": "Moderne",
+    "moderner": "modern",
+    "mundarten": "Mundart",
+    "möchte": "mögen",
+    "nach": "nach",
+    "nationalsozialistisches": "nationalsozialistisch",
+    "natur": "Natur",
+    "nehmen": "nehmen",
+    "neue": "neu",
+    "neugründung": "Neugründung",
+    "nicht": "nicht",
+    "noch": "noch",
+    "nur": "nur",
+    "nutzung": "Nutzung",
+    "oder": "oder",
+    "ohne": "ohne",
+    "optik": "Optik",
+    "ort": "Ort",
+    "pflanzen": "Pflanze",
+    "photonik": "Photonik",
+    "praktischer": "praktisch",
+    "preußische": "preußisch",
+    "produktion": "Produktion",
+    "prägen": "prägen",
+    "regeln": "Regel",
+    "regionale": "regional",
+    "regionaler": "regional",
+    "rennsteig": "Rennsteig",
+    "residenzstädten": "Residenzstadt",
+    "rezepte": "Rezept",
+    "rostbratwurst": "Rostbratwurst",
+    "rücksicht": "Rücksicht",
+    "sachsen": "Sachsen",
+    "schaffen": "schaffen",
+    "schiller": "Schiller",
+    "schule": "Schule",
+    "schutz": "Schutz",
+    "schutzgebiete": "Schutzgebiet",
+    "seine": "sein (его, свой)",
+    "seiner": "sein (его, свой)",
+    "seines": "sein",
+    "setzt": "setzen",
+    "sich": "sich",
+    "sie": "sie",
+    "sind": "sein",
+    "solche": "solch",
+    "sollte": "sollen",
+    "sondern": "sondern",
+    "speisen": "Speise",
+    "sprechweisen": "Sprechweise",
+    "staat": "Staat",
+    "staaten": "Staat",
+    "stadt": "Stadt",
+    "standort": "Standort",
+    "technologien": "Technologie",
+    "technologiestandort": "Technologiestandort",
+    "teil": "Teil",
+    "territorien": "Territorium",
+    "testament": "Testament",
+    "thüringen": "Thüringen",
+    "thüringer": "Thüringer",
+    "thüringischen": "thüringisch",
+    "tiere": "Tier",
+    "tradition": "Tradition",
+    "um": "um",
+    "und": "und",
+    "unternehmen": "Unternehmen",
+    "unterscheidung": "Unterscheidung",
+    "unterschiedliche": "unterschiedlich",
+    "unterschiedlicher": "unterschiedlich",
+    "variieren": "variieren",
+    "verantwortung": "Verantwortung",
+    "verbindet": "verbinden",
+    "verbindung": "Verbindung",
+    "verfolgung": "Verfolgung",
+    "vergangenheit": "Vergangenheit",
+    "verschiedenen": "verschieden",
+    "verständnis": "Verständnis",
+    "vertreten": "vertreten",
+    "verändern": "verändern",
+    "vielfalt": "Vielfalt",
+    "volksentscheid": "Volksentscheid",
+    "von": "von",
+    "voraus": "voraus",
+    "wald": "Wald",
+    "wandertourismus": "Wandertourismus",
+    "wartburg": "Wartburg",
+    "weder": "weder",
+    "wege": {
+      "l": "Weg",
+      "old": "старый дательный с -e (auf dem Wege, an dem Wege); сегодня auf dem Weg"
+    },
+    "weimar": "Weimar",
+    "weit": "weit",
+    "weitergegeben": "weitergeben (Tradition)",
+    "weiterzubilden": "weiterbilden",
+    "wenig": "wenig",
+    "wenn": "wenn",
+    "wer": "wer",
+    "werden": "werden",
+    "wichtig": "wichtig",
+    "wichtiger": "wichtig",
+    "wie": "wie",
+    "wiedervereinigung": "Wiedervereinigung",
+    "wirtschaftliche": "wirtschaftlich",
+    "wo": "wo",
+    "wobei": "wobei",
+    "wurde": "werden",
+    "wählen": "wählen",
+    "während": "während",
+    "wälder": "Wald",
+    "zahlreichen": "zahlreich",
+    "zeigen": "zeigen",
+    "zeigt": "zeigen",
+    "zentrum": "Zentrum",
+    "zu": "zu",
+    "zur": "zu",
+    "zurück": "zurück",
+    "zusammen": "zusammen",
+    "zusammenarbeit": "Zusammenarbeit",
+    "zusammenhang": "Zusammenhang",
+    "zwischen": "zwischen",
+    "über": "über",
+    "überall": "überall",
+    "übersetzte": "übersetzen"
+  },
+  "l": {
+    "aber": {
+      "ru": "но, однако",
+      "pos": "союз"
+    },
+    "Abgeordnete": {
+      "ru": "депутат",
+      "pos": "субст. прил.",
+      "decl": "der Abgeordnete / ein Abgeordneter / die Abgeordneten"
+    },
+    "Achtung": {
+      "ru": "внимание",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null,
+      "note": "Achtung! — Внимание!"
+    },
+    "allein": {
+      "ru": "один, в одиночку; только",
+      "pos": "нареч."
+    },
+    "allerdings": {
+      "ru": "впрочем, правда",
+      "pos": "нареч."
+    },
+    "als": {
+      "ru": "когда; как; чем",
+      "pos": "союз"
+    },
+    "also": {
+      "ru": "итак, стало быть",
+      "pos": "нареч."
+    },
+    "an": {
+      "ru": "у, к, на",
+      "pos": "предл.",
+      "note": "am = an dem. Тж. отделяемая приставка: anfangen «начинать», annehmen, ansehen, anzünden"
+    },
+    "ander": {
+      "pos": "прил.",
+      "ru": "другой, иной"
+    },
+    "Angabe (указание)": {
+      "ru": "указание",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Angaben",
+      "note": "geschützte geografische Angabe — защищённое географическое указание"
+    },
+    "Anwendung": {
+      "ru": "применение",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Anwendungen"
+    },
+    "Arbeit": {
+      "ru": "работа",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Arbeiten"
+    },
+    "Arbeitsplatz": {
+      "ru": "рабочее место",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Arbeitsplätze"
+    },
+    "auch": {
+      "ru": "тоже, также; даже",
+      "pos": "частица"
+    },
+    "auf": {
+      "ru": "на, в",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: aufspringen «вскочить», sich aufmachen"
+    },
+    "Aufenthalt": {
+      "ru": "пребывание",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Aufenthalte"
+    },
+    "aus": {
+      "ru": "из",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: auslöschen «погасить»"
+    },
+    "ausbilden": {
+      "ru": "обучать профессии",
+      "pos": "гл.",
+      "forms": "bildet aus, bildete aus, hat ausgebildet"
+    },
+    "Auseinandersetzung": {
+      "ru": "осмысление; спор",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Auseinandersetzungen"
+    },
+    "ausländisch": {
+      "ru": "иностранный",
+      "pos": "прил."
+    },
+    "ausschließen": {
+      "ru": "исключать",
+      "pos": "гл.",
+      "forms": "schließt aus, schloss aus, hat ausgeschlossen"
+    },
+    "ausschließlich": {
+      "ru": "исключительно",
+      "pos": "нареч."
+    },
+    "außerhalb": {
+      "ru": "вне, за пределами",
+      "pos": "предл."
+    },
+    "Bauhaus": {
+      "ru": "Баухаус",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "Bauwerk": {
+      "ru": "сооружение",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Bauwerke"
+    },
+    "beachten": {
+      "ru": "соблюдать, учитывать",
+      "pos": "гл.",
+      "forms": "beachtet, beachtete, hat beachtet"
+    },
+    "bedeuten": {
+      "ru": "означать",
+      "pos": "гл.",
+      "forms": "bedeutete · hat bedeutet"
+    },
+    "bedeutend": {
+      "ru": "значительный, важный",
+      "pos": "прил.",
+      "note": "die bedeutendsten Städte — важнейшие города"
+    },
+    "bei": {
+      "ru": "у, при, возле",
+      "pos": "предл."
+    },
+    "Beispiel": {
+      "ru": "пример",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Beispiele",
+      "note": "zum Beispiel — например"
+    },
+    "bekannt": {
+      "ru": "известный, знакомый",
+      "pos": "прил."
+    },
+    "benötigen": {
+      "ru": "нуждаться в",
+      "pos": "гл.",
+      "forms": "benötigt, benötigte, hat benötigt"
+    },
+    "beobachten": {
+      "ru": "наблюдать",
+      "pos": "гл.",
+      "forms": "beobachtete · hat beobachtet"
+    },
+    "bereit": {
+      "ru": "готовый",
+      "pos": "прил."
+    },
+    "Berufsleben": {
+      "ru": "трудовая жизнь",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "beschließen": {
+      "ru": "решать, постановлять",
+      "pos": "гл.",
+      "forms": "beschloss · hat beschlossen"
+    },
+    "beschreiben": {
+      "ru": "описывать",
+      "pos": "гл.",
+      "forms": "beschrieb · hat beschrieben"
+    },
+    "beschäftigen": {
+      "ru": "занимать; заниматься",
+      "pos": "гл.",
+      "forms": "beschäftigt, beschäftigte, hat beschäftigt"
+    },
+    "Beschäftigung": {
+      "ru": "занятие; изучение",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Beschäftigungen"
+    },
+    "besitzen": {
+      "ru": "владеть, иметь",
+      "pos": "гл.",
+      "forms": "besaß · hat besessen"
+    },
+    "Bestandteil": {
+      "ru": "составная часть",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Bestandteile"
+    },
+    "bestehen": {
+      "ru": "состоять; существовать; сдать (экзамен)",
+      "pos": "гл.",
+      "forms": "bestand · hat bestanden",
+      "note": "aus etwas bestehen — состоять из чего-то"
+    },
+    "bestätigen": {
+      "ru": "подтверждать, утверждать",
+      "pos": "гл.",
+      "forms": "bestätigte · hat bestätigt"
+    },
+    "Bevölkerung": {
+      "ru": "население",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Bevölkerungen"
+    },
+    "Bezeichnung": {
+      "ru": "обозначение",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Bezeichnungen"
+    },
+    "Bibel": {
+      "ru": "Библия",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Bibeln"
+    },
+    "Bild": {
+      "ru": "картина, снимок",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Bilder"
+    },
+    "Bildung": {
+      "ru": "образование (создание); образование (учёба)",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Bildungen"
+    },
+    "bis": {
+      "ru": "до; пока не",
+      "pos": "союз"
+    },
+    "Branche": {
+      "ru": "отрасль",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Branchen"
+    },
+    "Buchenwald": {
+      "ru": "буковый лес",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Buchenwälder"
+    },
+    "Bundesland": {
+      "ru": "федеральная земля",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Bundesländer"
+    },
+    "Bundesrepublik": {
+      "ru": "федеративная республика",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Bundesrepubliken",
+      "note": "die Bundesrepublik Deutschland — ФРГ"
+    },
+    "dabei": {
+      "ru": "при этом, при том",
+      "pos": "нареч."
+    },
+    "daher": {
+      "pos": "нареч.",
+      "ru": "поэтому; оттуда"
+    },
+    "damals": {
+      "ru": "тогда, в то время",
+      "pos": "нареч."
+    },
+    "dass": {
+      "ru": "что; чтобы",
+      "pos": "союз"
+    },
+    "demokratisch": {
+      "ru": "демократический",
+      "pos": "прил."
+    },
+    "der/die/das": {
+      "ru": "определённый артикль",
+      "pos": "артикль",
+      "note": "Тж. относительное местоимение «который»"
+    },
+    "deshalb": {
+      "ru": "поэтому",
+      "pos": "нареч."
+    },
+    "deutsch": {
+      "ru": "немецкий",
+      "pos": "прил."
+    },
+    "Deutschland (страна)": {
+      "ru": "Германия",
+      "pos": "геогр."
+    },
+    "Dialekt": {
+      "ru": "диалект",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Dialekte"
+    },
+    "dieser": {
+      "ru": "этот, эта, это",
+      "pos": "мест."
+    },
+    "Diskussion": {
+      "ru": "обсуждение",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Diskussionen"
+    },
+    "durch": {
+      "ru": "через, сквозь, из-за",
+      "pos": "предл."
+    },
+    "ebenso": {
+      "ru": "так же",
+      "pos": "нареч.",
+      "note": "ebenso wenig — так же мало"
+    },
+    "ein/eine": {
+      "ru": "неопределённый артикль",
+      "pos": "артикль",
+      "note": "einer — «один, некто»"
+    },
+    "einflussreich": {
+      "ru": "влиятельный",
+      "pos": "прил."
+    },
+    "Eisenach": {
+      "ru": "Айзенах",
+      "pos": "геогр."
+    },
+    "empfindlich": {
+      "ru": "чувствительный, уязвимый",
+      "pos": "прил."
+    },
+    "entstehen": {
+      "ru": "возникать",
+      "pos": "гл.",
+      "forms": "entstand · ist entstanden"
+    },
+    "Erfurt": {
+      "ru": "Эрфурт",
+      "pos": "геогр."
+    },
+    "erfüllen": {
+      "ru": "исполнять",
+      "pos": "гл.",
+      "forms": "erfüllte · hat erfüllt"
+    },
+    "Erholung": {
+      "ru": "отдых, восстановление сил",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "Erinnerung": {
+      "ru": "воспоминание, память",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Erinnerungen"
+    },
+    "erkennen": {
+      "ru": "узнавать; распознавать",
+      "pos": "гл.",
+      "forms": "erkannte · hat erkannt",
+      "note": "sich zu erkennen geben — открыться, назвать себя"
+    },
+    "ermöglichen": {
+      "ru": "делать возможным",
+      "pos": "гл.",
+      "forms": "ermöglicht, ermöglichte, hat ermöglicht"
+    },
+    "es": {
+      "ru": "оно; это",
+      "pos": "мест."
+    },
+    "Fachkraft": {
+      "ru": "специалист, квалифицированный работник",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Fachkräfte"
+    },
+    "Familie": {
+      "ru": "семья; семейство (в биологии)",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Familien"
+    },
+    "Forschungseinrichtung": {
+      "ru": "исследовательское учреждение",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Forschungseinrichtungen"
+    },
+    "Freistaat": {
+      "ru": "свободное государство",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Freistaaten",
+      "note": "официальное название некоторых земель: Freistaat Bayern, Freistaat Sachsen — по сути «республика»"
+    },
+    "Funktion": {
+      "ru": "функция",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Funktionen"
+    },
+    "für": {
+      "ru": "для, за",
+      "pos": "предл."
+    },
+    "Gedenkstätte": {
+      "ru": "мемориал",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Gedenkstätten"
+    },
+    "Gegensatz": {
+      "ru": "противоположность",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Gegensätze"
+    },
+    "gehen": {
+      "ru": "идти, ходить",
+      "pos": "гл.",
+      "forms": "ging · ist gegangen"
+    },
+    "gehören": {
+      "ru": "принадлежать, относиться",
+      "pos": "гл.",
+      "forms": "gehörte · hat gehört",
+      "note": "zu etwas gehören — относиться к чему-то, входить в"
+    },
+    "Gemeinschaft": {
+      "ru": "сообщество",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Gemeinschaften"
+    },
+    "geografisch": {
+      "ru": "географический",
+      "pos": "прил."
+    },
+    "Gera": {
+      "ru": "Гера",
+      "pos": "геогр."
+    },
+    "gesamt": {
+      "ru": "весь, общий, совокупный",
+      "pos": "прил."
+    },
+    "Gestalt": {
+      "ru": "облик, образ",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Gestalten",
+      "note": "in menschliche Gestalt zurückkehren — вернуться в человеческий облик"
+    },
+    "Gestaltung": {
+      "ru": "оформление, дизайн",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Gestaltungen"
+    },
+    "Gewalt": {
+      "ru": "сила, мощь",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Gewalten"
+    },
+    "gleich": {
+      "ru": "одинаковый, тот же; сразу",
+      "pos": "прил."
+    },
+    "Goethe (Dichter)": {
+      "ru": "Гёте",
+      "pos": "имя собств."
+    },
+    "Grenze": {
+      "ru": "граница",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Grenzen"
+    },
+    "griechisch": {
+      "ru": "греческий",
+      "pos": "прил."
+    },
+    "gründen": {
+      "ru": "основывать",
+      "pos": "гл.",
+      "forms": "gründete · hat gegründet"
+    },
+    "gut": {
+      "ru": "хороший, добрый",
+      "pos": "прил.",
+      "forms": "gut · besser · am besten",
+      "note": "besser — лучше"
+    },
+    "handeln": {
+      "ru": "торговать; действовать",
+      "pos": "гл.",
+      "forms": "handelte · hat gehandelt",
+      "note": "mit Aktien handeln — торговать акциями"
+    },
+    "Handwerk": {
+      "ru": "ремесло",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Handwerke"
+    },
+    "Hauptstadt": {
+      "ru": "столица",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Hauptstädte"
+    },
+    "Herkunft": {
+      "ru": "происхождение",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "heute": {
+      "ru": "сегодня",
+      "pos": "нареч."
+    },
+    "heutig": {
+      "ru": "нынешний, сегодняшний",
+      "pos": "прил."
+    },
+    "hinaus": {
+      "ru": "наружу (туда)",
+      "pos": "нареч.",
+      "note": "Тж. отделяемая приставка: hinauswollen, hinausjagen"
+    },
+    "historisch": {
+      "ru": "исторический",
+      "pos": "прил."
+    },
+    "Hochschule": {
+      "ru": "высшее учебное заведение",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Hochschulen"
+    },
+    "Höhenwanderweg": {
+      "ru": "горная туристическая тропа",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Höhenwanderwege"
+    },
+    "Idee": {
+      "ru": "идея",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Ideen"
+    },
+    "Identität": {
+      "ru": "идентичность",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Identitäten"
+    },
+    "ihr": {
+      "ru": "вы",
+      "pos": "мест.",
+      "note": "Ihr с большой буквы — старое вежливое обращение к одному; сегодня Sie"
+    },
+    "ihr (её, их)": {
+      "ru": "её; их",
+      "pos": "мест."
+    },
+    "in": {
+      "ru": "в (im = in dem, ins = in das)",
+      "pos": "предл."
+    },
+    "industriell": {
+      "ru": "промышленный",
+      "pos": "прил."
+    },
+    "Information": {
+      "ru": "информация, сведения",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Informationen",
+      "note": "nach Informationen (G) — по данным (кого-то)"
+    },
+    "Interesse": {
+      "ru": "интерес",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Interessen"
+    },
+    "international": {
+      "ru": "на международном уровне",
+      "pos": "нареч."
+    },
+    "je (nach)": {
+      "ru": "в зависимости от",
+      "pos": "предл."
+    },
+    "Jena": {
+      "ru": "Йена",
+      "pos": "геогр.",
+      "note": "под Йеной Наполеон разбил прусскую армию 14 октября 1806 года — это и есть та Schlacht, после которой происходит анекдот"
+    },
+    "jeweilig": {
+      "ru": "соответствующий",
+      "pos": "прил."
+    },
+    "Kartoffelkloß": {
+      "ru": "картофельная клёцка",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Kartoffelklöße"
+    },
+    "kein": {
+      "ru": "никакой, ни один",
+      "pos": "мест."
+    },
+    "klein": {
+      "ru": "маленький",
+      "pos": "прил."
+    },
+    "klingen": {
+      "ru": "звучать",
+      "pos": "гл.",
+      "forms": "klang · hat geklungen"
+    },
+    "konkurrieren": {
+      "ru": "конкурировать, соперничать",
+      "pos": "гл.",
+      "forms": "konkurrierte · hat konkurriert"
+    },
+    "Kontakt": {
+      "ru": "контакт",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Kontakte"
+    },
+    "kontrollieren": {
+      "ru": "контролировать",
+      "pos": "гл.",
+      "forms": "kontrolliert, kontrollierte, hat kontrolliert"
+    },
+    "Konzentrationslager": {
+      "ru": "концентрационный лагерь",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Konzentrationslager",
+      "note": "сокращённо KZ"
+    },
+    "kulturell": {
+      "ru": "культурно; в культурном отношении",
+      "pos": "нареч."
+    },
+    "können": {
+      "ru": "мочь, уметь",
+      "pos": "гл.",
+      "forms": "konnte · hat gekonnt"
+    },
+    "künstlerisch": {
+      "ru": "художественный",
+      "pos": "прил."
+    },
+    "Land (земля)": {
+      "ru": "земля (федеральная); страна",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Länder",
+      "note": "Bundesland — федеральная земля; in anderen Ländern — в других землях"
+    },
+    "Landeshauptstadt": {
+      "ru": "столица земли",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Landeshauptstädte"
+    },
+    "Landeshaushalt": {
+      "ru": "бюджет земли",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Landeshaushalte"
+    },
+    "Landesregierung": {
+      "ru": "правительство земли (государства)",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Landesregierungen"
+    },
+    "Landesverfassung": {
+      "ru": "конституция земли",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Landesverfassungen"
+    },
+    "Landtag": {
+      "ru": "ландтаг (парламент земли)",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Landtage"
+    },
+    "langfristig": {
+      "ru": "долгосрочный",
+      "pos": "прил."
+    },
+    "lassen": {
+      "ru": "позволять, велеть; оставлять",
+      "pos": "гл.",
+      "forms": "ließ · hat gelassen"
+    },
+    "Lebensmittel": {
+      "ru": "продукт питания",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Lebensmittel"
+    },
+    "Lebensraum": {
+      "ru": "местообитание",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Lebensräume"
+    },
+    "Licht": {
+      "ru": "свет; огонёк",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Lichter"
+    },
+    "liegen": {
+      "ru": "лежать",
+      "pos": "гл.",
+      "forms": "lag · hat gelegen"
+    },
+    "lokal": {
+      "ru": "местный",
+      "pos": "прил."
+    },
+    "Luther": {
+      "ru": "Лютер",
+      "pos": "имя собств."
+    },
+    "machen": {
+      "ru": "делать",
+      "pos": "гл.",
+      "forms": "machte · hat gemacht",
+      "note": "sich auf den Weg machen — отправиться в путь"
+    },
+    "manchmal": {
+      "ru": "иногда",
+      "pos": "нареч."
+    },
+    "Martin (Vorname)": {
+      "ru": "Мартин (имя)",
+      "pos": "имя собств."
+    },
+    "Medizin": {
+      "ru": "медицина",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "mehrere": {
+      "pos": "мест.",
+      "ru": "несколько"
+    },
+    "Meinung": {
+      "ru": "мнение",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Meinungen",
+      "note": "meiner Meinung nach — по-моему"
+    },
+    "Mensch": {
+      "ru": "человек",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Menschen",
+      "decl": "n-Deklination: des Menschen · dem/den Menschen"
+    },
+    "mit": {
+      "ru": "с",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: mitgehen «пойти вместе»"
+    },
+    "Mitbestimmung": {
+      "ru": "участие в принятии решений",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "miteinander": {
+      "ru": "вместе, друг с другом",
+      "pos": "нареч."
+    },
+    "modern": {
+      "ru": "современный",
+      "pos": "прил."
+    },
+    "Moderne": {
+      "ru": "модерн (эпоха, стиль)",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "Mundart": {
+      "ru": "говор, диалект",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Mundarten"
+    },
+    "mögen": {
+      "ru": "любить; хотеть",
+      "pos": "гл.",
+      "forms": "mochte · hat gemocht",
+      "note": "leiden mögen — выносить, терпеть"
+    },
+    "nach": {
+      "ru": "в, на, после, по",
+      "pos": "предл."
+    },
+    "nationalsozialistisch": {
+      "ru": "национал-социалистический",
+      "pos": "прил."
+    },
+    "Natur": {
+      "ru": "природа, натура",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Naturen"
+    },
+    "nehmen": {
+      "ru": "брать",
+      "pos": "гл.",
+      "forms": "nahm · hat genommen"
+    },
+    "neu": {
+      "ru": "новый",
+      "pos": "прил."
+    },
+    "Neugründung": {
+      "ru": "воссоздание; новое основание",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Neugründungen"
+    },
+    "nicht": {
+      "ru": "не",
+      "pos": "частица"
+    },
+    "noch": {
+      "ru": "ещё",
+      "pos": "нареч."
+    },
+    "nur": {
+      "ru": "только, лишь",
+      "pos": "частица"
+    },
+    "Nutzung": {
+      "ru": "использование",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "oder": {
+      "ru": "или",
+      "pos": "союз"
+    },
+    "ohne": {
+      "ru": "без",
+      "pos": "предл."
+    },
+    "Optik": {
+      "ru": "оптика",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "Ort": {
+      "ru": "место; селение",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Orte"
+    },
+    "Pflanze": {
+      "ru": "растение",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Pflanzen"
+    },
+    "Photonik": {
+      "ru": "фотоника",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "praktisch": {
+      "ru": "практический",
+      "pos": "прил."
+    },
+    "preußisch": {
+      "ru": "прусский",
+      "pos": "прил."
+    },
+    "Produktion": {
+      "ru": "производство",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Produktionen"
+    },
+    "prägen": {
+      "ru": "определять облик, формировать",
+      "pos": "гл.",
+      "forms": "prägte · hat geprägt"
+    },
+    "Regel": {
+      "ru": "правило",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Regeln"
+    },
+    "regional": {
+      "ru": "региональный",
+      "pos": "прил.",
+      "note": "Regional- oder Minderheitensprachen — региональные языки или языки меньшинств"
+    },
+    "Rennsteig": {
+      "ru": "Реннштайг",
+      "pos": "геогр."
+    },
+    "Residenzstadt": {
+      "ru": "город-резиденция правителя",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Residenzstädte"
+    },
+    "Rezept": {
+      "ru": "рецепт",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Rezepte"
+    },
+    "Rostbratwurst": {
+      "ru": "колбаска для жарки на решётке",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Rostbratwürste"
+    },
+    "Rücksicht": {
+      "ru": "внимательное отношение",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "Sachsen": {
+      "ru": "Саксония",
+      "pos": "геогр."
+    },
+    "schaffen": {
+      "ru": "убрать, избавиться",
+      "pos": "гл.",
+      "forms": "schaffte · hat geschafft",
+      "note": "Здесь — в обороте aus dem Futter schaffen"
+    },
+    "Schiller": {
+      "ru": "Шиллер",
+      "pos": "имя",
+      "note": "Фридрих Шиллер, автор «Истории отпадения Нидерландов» (1788)"
+    },
+    "Schule": {
+      "ru": "школа",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Schulen"
+    },
+    "Schutz": {
+      "ru": "защита",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null,
+      "note": "zu seinem Schutz — ради его защиты"
+    },
+    "Schutzgebiet": {
+      "ru": "охраняемая территория",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Schutzgebiete"
+    },
+    "schützen": {
+      "ru": "защищать",
+      "pos": "гл.",
+      "forms": "schützte · hat geschützt"
+    },
+    "sein": {
+      "ru": "быть; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "war · ist gewesen"
+    },
+    "sein (его, свой)": {
+      "ru": "его, свой",
+      "pos": "мест."
+    },
+    "setzen": {
+      "ru": "сажать, ставить",
+      "pos": "гл.",
+      "forms": "setzte · hat gesetzt",
+      "note": "auf etwas setzen — делать ставку на что-то"
+    },
+    "sich": {
+      "ru": "себя, себе",
+      "pos": "мест.",
+      "note": "Возвратное местоимение, часть возвратного глагола: sich auf den Weg machen, sich setzen, sich legen, sich nähern, sich gefallen lassen, sich getrauen, sich umsehen"
+    },
+    "sie": {
+      "ru": "она; они; Вы",
+      "pos": "мест."
+    },
+    "solch": {
+      "ru": "такой",
+      "pos": "мест.",
+      "note": "ein solcher Vorbeiflug — такой пролёт"
+    },
+    "sollen": {
+      "ru": "быть должным, следует",
+      "pos": "гл.",
+      "forms": "sollte · hat gesollt"
+    },
+    "sondern": {
+      "ru": "а, но (после отрицания)",
+      "pos": "союз"
+    },
+    "Speise": {
+      "ru": "еда, блюдо",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Speisen"
+    },
+    "Sprechweise": {
+      "ru": "манера речи",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Sprechweisen"
+    },
+    "Staat": {
+      "ru": "государство",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Staaten"
+    },
+    "Stadt": {
+      "ru": "город",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Städte"
+    },
+    "Standort": {
+      "ru": "место размещения, центр (экономический)",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Standorte"
+    },
+    "Technologie": {
+      "ru": "технология",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Technologien"
+    },
+    "Technologiestandort": {
+      "ru": "технологический центр",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Technologiestandorte"
+    },
+    "Teil": {
+      "ru": "часть; доля",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Teile",
+      "note": "sein Teil haben — получить своё"
+    },
+    "Territorium": {
+      "ru": "территория",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Territorien"
+    },
+    "Testament": {
+      "ru": "завет; завещание",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Testamente"
+    },
+    "Thüringen": {
+      "ru": "Тюрингия (федеральная земля Германии)",
+      "pos": "геогр."
+    },
+    "Thüringer": {
+      "ru": "тюрингский",
+      "pos": "прил."
+    },
+    "thüringisch": {
+      "ru": "тюрингский",
+      "pos": "прил."
+    },
+    "Tier": {
+      "ru": "животное, зверь",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Tiere"
+    },
+    "Tradition": {
+      "ru": "традиция",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Traditionen"
+    },
+    "um": {
+      "ru": "вокруг, в (о времени)",
+      "pos": "предл.",
+      "note": "um … zu — чтобы. Тж. отделяемая приставка: sich umsehen «оглядеться»"
+    },
+    "und": {
+      "ru": "и, а",
+      "pos": "союз"
+    },
+    "Unternehmen": {
+      "ru": "предприятие, компания",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Unternehmen"
+    },
+    "Unterscheidung": {
+      "ru": "различие, различение",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Unterscheidungen"
+    },
+    "unterschiedlich": {
+      "ru": "различный",
+      "pos": "прил."
+    },
+    "variieren": {
+      "ru": "различаться, варьироваться",
+      "pos": "гл.",
+      "forms": "variiert, variierte, hat variiert"
+    },
+    "Verantwortung": {
+      "ru": "ответственность",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "verbinden": {
+      "ru": "перевязывать (рану); соединять",
+      "pos": "гл.",
+      "forms": "verband · hat verbunden",
+      "note": "sich verbinden lassen — дать себя перевязать"
+    },
+    "Verbindung": {
+      "ru": "связь, соединение",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Verbindungen"
+    },
+    "Verfolgung": {
+      "ru": "преследование",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Verfolgungen"
+    },
+    "Vergangenheit": {
+      "ru": "прошлое",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "verschieden": {
+      "ru": "разный",
+      "pos": "прил."
+    },
+    "Verständnis": {
+      "ru": "понимание",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "vertreten": {
+      "ru": "представлять",
+      "pos": "гл.",
+      "forms": "vertrat · hat vertreten",
+      "note": "vertreten sein — быть представленным"
+    },
+    "verändern": {
+      "ru": "изменять(ся)",
+      "pos": "гл.",
+      "forms": "veränderte · hat verändert"
+    },
+    "Vielfalt": {
+      "ru": "разнообразие",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "Volksentscheid": {
+      "ru": "референдум",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Volksentscheide"
+    },
+    "von": {
+      "ru": "от, из, о (vom = von dem)",
+      "pos": "предл."
+    },
+    "voraus": {
+      "ru": "вперёд, заранее",
+      "pos": "нареч.",
+      "note": "zum Voraus — наперёд; сегодня im Voraus"
+    },
+    "Wald": {
+      "ru": "лес",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Wälder"
+    },
+    "Wandertourismus": {
+      "ru": "пеший туризм",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "Wartburg": {
+      "ru": "Вартбург",
+      "pos": "геогр."
+    },
+    "weder": {
+      "note": "weder … noch — ни … ни",
+      "pos": "союз",
+      "ru": "ни"
+    },
+    "Weg": {
+      "ru": "путь, дорога",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Wege"
+    },
+    "Weimar": {
+      "ru": "Веймар (город в Тюрингии)",
+      "pos": "геогр."
+    },
+    "weit": {
+      "ru": "далёкий, далеко",
+      "pos": "прил.",
+      "forms": "weit · weiter · am weitesten",
+      "note": "weiter — дальше, далее; von weitem — издали"
+    },
+    "weiterbilden": {
+      "ru": "повышать квалификацию",
+      "pos": "гл.",
+      "forms": "bildet weiter, bildete weiter, hat weitergebildet"
+    },
+    "weitergeben (Tradition)": {
+      "ru": "передавать",
+      "pos": "гл.",
+      "forms": "gibt weiter, gab weiter, hat weitergegeben"
+    },
+    "wenig": {
+      "ru": "мало; немного",
+      "pos": "мест.",
+      "note": "ein wenig — немножко; etwas Weniges — самую малость"
+    },
+    "wenn": {
+      "ru": "если; когда",
+      "pos": "союз"
+    },
+    "wer": {
+      "ru": "кто",
+      "pos": "мест."
+    },
+    "werden": {
+      "ru": "становиться",
+      "pos": "гл.",
+      "forms": "wurde · ist geworden",
+      "note": "Вспомогательный глагол будущего времени и пассива"
+    },
+    "wichtig": {
+      "ru": "важный",
+      "pos": "прил."
+    },
+    "wie": {
+      "ru": "как; какой",
+      "pos": "союз"
+    },
+    "Wiedervereinigung": {
+      "ru": "воссоединение (Германии, 1990)",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "wirtschaftlich": {
+      "ru": "экономически",
+      "pos": "нареч."
+    },
+    "wo": {
+      "ru": "где; куда; когда (в придаточном)",
+      "pos": "нареч."
+    },
+    "wobei": {
+      "ru": "причём",
+      "pos": "союз"
+    },
+    "wählen": {
+      "ru": "выбирать",
+      "pos": "гл.",
+      "forms": "wählte · hat gewählt"
+    },
+    "während": {
+      "pos": "предлог",
+      "ru": "в течение, во время"
+    },
+    "zahlreich": {
+      "ru": "многочисленный",
+      "pos": "прил."
+    },
+    "zeigen": {
+      "ru": "показывать; sich zeigen — появиться",
+      "pos": "гл.",
+      "forms": "zeigte · hat gezeigt"
+    },
+    "Zentrum": {
+      "ru": "центр",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Zentren"
+    },
+    "zu": {
+      "ru": "к, в; слишком",
+      "pos": "предл.",
+      "note": "zur = zu der, zum = zu dem"
+    },
+    "zurück": {
+      "ru": "назад",
+      "pos": "нареч.",
+      "note": "Тж. отделяемая приставка: zurücklaufen «побежать назад»"
+    },
+    "zusammen": {
+      "ru": "вместе",
+      "pos": "нареч."
+    },
+    "Zusammenarbeit": {
+      "ru": "сотрудничество",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "Zusammenhang": {
+      "ru": "связь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Zusammenhänge",
+      "note": "ein geheimer Zusammenhang — тайная связь"
+    },
+    "zwischen": {
+      "pos": "предл.",
+      "ru": "между"
+    },
+    "über": {
+      "ru": "над, через, о",
+      "pos": "предл."
+    },
+    "überall": {
+      "ru": "везде, повсюду",
+      "pos": "нареч."
+    },
+    "übersetzen": {
+      "ru": "переводить",
+      "pos": "гл.",
+      "forms": "übersetzte · hat übersetzt"
+    }
+  }
+}

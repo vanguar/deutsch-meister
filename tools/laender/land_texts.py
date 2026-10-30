@@ -20,3 +20,6 @@ for _part in (_bayern, _mv, _berlin, _hamburg, _bremen, _brandenburg):
 
 from texts_sachsen import TEXTS as _sachsen
 TEXTS.update(_sachsen)
+
+from texts_thueringen import TEXTS as _thueringen
+TEXTS.update(_thueringen)

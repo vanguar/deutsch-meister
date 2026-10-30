@@ -1,0 +1,38 @@
+{
+  "id": "ch-05",
+  "title": "Klassik, Bauhaus und Reformation",
+  "titleRu": "Классика, Баухаус и Реформация",
+  "icon": "🎭",
+  "paragraphs": [
+    {
+      "s": [
+        {
+          "de": "Weimar verbindet die Erinnerung an Goethe und Schiller mit dem Bauhaus, das 1919 als Schule für moderne Gestaltung gegründet wurde.",
+          "ru": "Веймар соединяет память о Гёте и Шиллере с Баухаусом, основанным в 1919 году как школа современного дизайна.",
+          "g": {}
+        },
+        {
+          "de": "Die Verbindung von künstlerischer Arbeit, Handwerk und praktischer Nutzung machte die Ideen des Bauhauses international einflussreich.",
+          "ru": "Связь художественного труда, ремесла и практического использования сделала идеи Баухауса влиятельными во всём мире.",
+          "g": {}
+        }
+      ]
+    },
+    {
+      "s": [
+        {
+          "de": "Auf der Wartburg übersetzte Martin Luther während seines Aufenthalts 1521 und 1522 das Neue Testament aus dem Griechischen ins Deutsche.",
+          "ru": "Во время пребывания в Вартбурге в 1521 и 1522 годах Мартин Лютер перевёл Новый Завет с греческого на немецкий.",
+          "g": {}
+        },
+        {
+          "de": "Dabei handelte es sich nicht um die gesamte Bibel; diese Unterscheidung ist für das Verständnis seiner Arbeit wichtig.",
+          "ru": "Речь шла не обо всей Библии; это различие важно для понимания его работы.",
+          "g": {
+            "1-3": "речь шла"
+          }
+        }
+      ]
+    }
+  ]
+}

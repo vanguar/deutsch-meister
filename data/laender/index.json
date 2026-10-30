@@ -210,6 +210,36 @@
       "source": "Официальные порталы Саксонии и ландтага; Федеральное правительство: Мирная революция; Umweltbundesamt: география.",
       "license": "текст курса German Morning",
       "land": "sachsen"
+    },
+    {
+      "id": "thueringen-b1",
+      "title": "Thüringen",
+      "titleRu": "Тюрингия",
+      "author": "German Morning",
+      "level": "B1",
+      "year": "2026",
+      "chapters": 7,
+      "words": 360,
+      "minutes": 3,
+      "cover": "🌲",
+      "source": "Ландтаг Тюрингии; земельный геопортал; город Йена; Вартбург; Веймар; мемориал Бухенвальд; Das ist Thüringen.",
+      "license": "текст курса German Morning",
+      "land": "thueringen"
+    },
+    {
+      "id": "thueringen-b2",
+      "title": "Thüringen",
+      "titleRu": "Тюрингия",
+      "author": "German Morning",
+      "level": "B2",
+      "year": "2026",
+      "chapters": 7,
+      "words": 453,
+      "minutes": 4,
+      "cover": "🌲",
+      "source": "Ландтаг Тюрингии; земельный геопортал; город Йена; Вартбург; Веймар; мемориал Бухенвальд; Das ist Thüringen.",
+      "license": "текст курса German Morning",
+      "land": "thueringen"
     }
   ]
 }

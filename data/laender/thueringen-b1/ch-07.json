@@ -1,0 +1,48 @@
+{
+  "id": "ch-07",
+  "title": "Dialekte und regionale Küche",
+  "titleRu": "Диалекты и региональная кухня",
+  "icon": "🌭",
+  "paragraphs": [
+    {
+      "s": [
+        {
+          "de": "In Thüringen gibt es nicht nur einen einzigen Dialekt.",
+          "ru": "В Тюрингии существует не один-единственный диалект.",
+          "g": {}
+        },
+        {
+          "de": "Die Sprache klingt von Region zu Region anders.",
+          "ru": "Речь звучит по-разному в разных регионах.",
+          "g": {}
+        },
+        {
+          "de": "Auch beim Essen gibt es lokale Traditionen.",
+          "ru": "В еде тоже есть местные традиции.",
+          "g": {}
+        }
+      ]
+    },
+    {
+      "s": [
+        {
+          "de": "Bekannt sind die Thüringer Rostbratwurst und die Thüringer Klöße.",
+          "ru": "Известны тюрингские жареные колбаски и тюрингские клёцки.",
+          "g": {}
+        },
+        {
+          "de": "Die Klöße werden aus Kartoffeln gemacht.",
+          "ru": "Клёцки делают из картофеля.",
+          "g": {}
+        },
+        {
+          "de": "Viele Familien haben eigene Rezepte und geben sie an die nächste Generation weiter.",
+          "ru": "У многих семей есть свои рецепты, которые они передают следующему поколению.",
+          "g": {
+            "6+12": "передают"
+          }
+        }
+      ]
+    }
+  ]
+}

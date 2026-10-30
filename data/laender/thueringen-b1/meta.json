@@ -1,0 +1,21 @@
+{
+  "id": "thueringen-b1",
+  "kind": "land",
+  "land": "thueringen",
+  "title": "Thüringen",
+  "titleRu": "Тюрингия",
+  "author": "German Morning",
+  "level": "B1",
+  "levelNote": "B1: короткие предложения, Präsens и Präteritum, основные слова о стране.",
+  "year": "2026",
+  "chapters": 7,
+  "words": 360,
+  "minutes": 3,
+  "photos": 0,
+  "cover": "🌲",
+  "flag": "data/laender/flags/thueringen.png",
+  "source": "Ландтаг Тюрингии; земельный геопортал; город Йена; Вартбург; Веймар; мемориал Бухенвальд; Das ist Thüringen.",
+  "sourceUrl": "https://www.thueringer-landtag.de/landtag/geschichte/landesverfassung/",
+  "checked": "2026-10-30",
+  "license": "текст курса German Morning"
+}

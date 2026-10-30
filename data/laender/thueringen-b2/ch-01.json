@@ -1,0 +1,36 @@
+{
+  "id": "ch-01",
+  "title": "Ein Binnenland mit vielen Zentren",
+  "titleRu": "Земля внутри страны со многими центрами",
+  "icon": "🗺️",
+  "paragraphs": [
+    {
+      "s": [
+        {
+          "de": "Thüringen liegt im Zentrum Deutschlands und besitzt im Gegensatz zu Sachsen keine Grenze zu einem ausländischen Staat.",
+          "ru": "Тюрингия находится в центре Германии и, в отличие от Саксонии, не имеет границы с иностранным государством.",
+          "g": {}
+        },
+        {
+          "de": "Erfurt ist die Landeshauptstadt, während Jena, Weimar, Gera und Eisenach unterschiedliche wirtschaftliche und kulturelle Funktionen erfüllen.",
+          "ru": "Эрфурт — столица земли, а Йена, Веймар, Гера и Айзенах выполняют разные экономические и культурные функции.",
+          "g": {}
+        }
+      ]
+    },
+    {
+      "s": [
+        {
+          "de": "Die historische Vielfalt kleiner Territorien lässt sich noch heute an zahlreichen Residenzstädten und ihren Bauwerken erkennen.",
+          "ru": "Историческое разнообразие небольших территорий и сегодня заметно по многочисленным бывшим резиденциям правителей и их зданиям.",
+          "g": {}
+        },
+        {
+          "de": "Das Land lässt sich daher weder allein durch seine Hauptstadt noch ausschließlich durch seine Wälder beschreiben.",
+          "ru": "Поэтому землю нельзя описать ни одной лишь столицей, ни исключительно её лесами.",
+          "g": {}
+        }
+      ]
+    }
+  ]
+}

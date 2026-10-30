@@ -1593,10 +1593,184 @@
    "name": "Thüringen",
    "nameRu": "تورينغن",
    "capital": "Erfurt",
-   "emoji": "📍",
+   "emoji": "🌲",
    "flag": "data/laender/flags/thueringen.png",
    "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_Thuringia.svg",
-   "ready": false
+   "ready": true,
+   "blurb": "إرفورت وفايمار، رنشتايغ وفارتبورغ، غوته والباوهاوس، بصريات يينا واللهجات المحلية.",
+   "facts": [
+    [
+     "العاصمة",
+     "Erfurt"
+    ],
+    [
+     "أكبر المدن",
+     "Erfurt, Jena, Gera"
+    ],
+    [
+     "المساحة",
+     "نحو 16 200 كم²"
+    ],
+    [
+     "ضمن جمهورية ألمانيا الاتحادية",
+     "منذ 3 أكتوبر 1990"
+    ],
+    [
+     "الدول المجاورة",
+     "لا توجد؛ حدودها مع ولايات ألمانية فقط"
+    ],
+    [
+     "الاقتصاد",
+     "البصريات والفوتونيات والصناعة والسياحة"
+    ],
+    [
+     "الثقافة",
+     "كلاسيكية فايمار والباوهاوس وفارتبورغ"
+    ]
+   ],
+   "source": "برلمان تورينغن؛ البوابة الجغرافية للولاية؛ مدينة يينا؛ فارتبورغ؛ فايمار؛ نصب بوخنفالد التذكاري؛ Das ist Thüringen.",
+   "sourceUrl": "https://www.thueringer-landtag.de/landtag/geschichte/landesverfassung/",
+   "checked": "2026-10-30",
+   "quiz": [
+    {
+     "q": "ما عاصمة تورينغن؟",
+     "opts": [
+      "Weimar",
+      "Erfurt",
+      "Jena"
+     ],
+     "a": 1,
+     "why": "إرفورت هي العاصمة ومقر برلمان الولاية."
+    },
+    {
+     "q": "ما رنشتايغ؟",
+     "opts": [
+      "مسار مشي جبلي",
+      "نهر في يينا",
+      "مبنى برلمان الولاية"
+     ],
+     "a": 0,
+     "why": "رنشتايغ مسار معروف عبر المناظر الجبلية في تورينغن."
+    },
+    {
+     "q": "ماذا ترجم لوثر في فارتبورغ؟",
+     "opts": [
+      "العهد الجديد",
+      "الكتاب المقدس كاملا",
+      "دستور الولاية"
+     ],
+     "a": 0,
+     "why": "ترجم هناك العهد الجديد من اليونانية إلى الألمانية في 1521–1522."
+    },
+    {
+     "q": "أين تأسس الباوهاوس عام 1919؟",
+     "opts": [
+      "Erfurt",
+      "Eisenach",
+      "Weimar"
+     ],
+     "a": 2,
+     "why": "نشأت المدرسة في فايمار وجمعت الفن والحرف والتصميم."
+    },
+    {
+     "q": "بأي قطاع ترتبط يينا خصوصا؟",
+     "opts": [
+      "بناء السفن البحرية",
+      "البصريات والفوتونيات",
+      "الصيد البحري"
+     ],
+     "a": 1,
+     "why": "يينا مركز مهم للتقنيات المرتبطة بالضوء."
+    }
+   ],
+   "texts": {
+    "b1": {
+     "id": "thueringen-b1",
+     "chapters": 7,
+     "words": 360,
+     "minutes": 3,
+     "toc": [
+      {
+       "title": "In der Mitte Deutschlands",
+       "titleRu": "في وسط ألمانيا",
+       "icon": "🗺️"
+      },
+      {
+       "title": "Wald und Wanderwege",
+       "titleRu": "الغابة ومسارات المشي",
+       "icon": "🌲"
+      },
+      {
+       "title": "Geschichte auf engem Raum",
+       "titleRu": "تاريخ في رقعة صغيرة",
+       "icon": "📜"
+      },
+      {
+       "title": "Freistaat und Parlament",
+       "titleRu": "الدولة الحرة والبرلمان",
+       "icon": "🏛️"
+      },
+      {
+       "title": "Weimar und die Wartburg",
+       "titleRu": "فايمار وفارتبورغ",
+       "icon": "🎭"
+      },
+      {
+       "title": "Wissenschaft und Arbeit",
+       "titleRu": "العلم والعمل",
+       "icon": "🔬"
+      },
+      {
+       "title": "Dialekte und regionale Küche",
+       "titleRu": "اللهجات والمطبخ الإقليمي",
+       "icon": "🌭"
+      }
+     ]
+    },
+    "b2": {
+     "id": "thueringen-b2",
+     "chapters": 7,
+     "words": 453,
+     "minutes": 4,
+     "toc": [
+      {
+       "title": "Ein Binnenland mit vielen Zentren",
+       "titleRu": "ولاية داخلية متعددة المراكز",
+       "icon": "🗺️"
+      },
+      {
+       "title": "Naturraum und Verantwortung",
+       "titleRu": "المجال الطبيعي والمسؤولية",
+       "icon": "🌲"
+      },
+      {
+       "title": "Landesbildung und Erinnerung",
+       "titleRu": "تأسيس الولاية والذاكرة",
+       "icon": "📜"
+      },
+      {
+       "title": "Verfassung und Mitbestimmung",
+       "titleRu": "الدستور والمشاركة في القرار",
+       "icon": "🏛️"
+      },
+      {
+       "title": "Klassik, Bauhaus und Reformation",
+       "titleRu": "الكلاسيكية والباوهاوس والإصلاح الديني",
+       "icon": "🎭"
+      },
+      {
+       "title": "Optik als Zukunftsbranche",
+       "titleRu": "البصريات قطاع للمستقبل",
+       "icon": "🔬"
+      },
+      {
+       "title": "Regionale Identität im Alltag",
+       "titleRu": "الهوية الإقليمية في الحياة اليومية",
+       "icon": "🌭"
+      }
+     ]
+    }
+   }
   }
  ]
 }

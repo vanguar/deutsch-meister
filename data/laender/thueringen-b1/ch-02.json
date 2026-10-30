@@ -1,0 +1,48 @@
+{
+  "id": "ch-02",
+  "title": "Wald und Wanderwege",
+  "titleRu": "Лес и туристические тропы",
+  "icon": "🌲",
+  "paragraphs": [
+    {
+      "s": [
+        {
+          "de": "Der Thüringer Wald ist ein bekanntes Mittelgebirge.",
+          "ru": "Тюрингский Лес — известное средневысотное горное образование.",
+          "g": {}
+        },
+        {
+          "de": "Hier kann man wandern und viele verschiedene Landschaften sehen.",
+          "ru": "Здесь можно ходить в походы и видеть самые разные ландшафты.",
+          "g": {}
+        },
+        {
+          "de": "Der Rennsteig ist ein bekannter Weg durch die Berge.",
+          "ru": "Реннштайг — известная тропа через горы.",
+          "g": {}
+        }
+      ]
+    },
+    {
+      "s": [
+        {
+          "de": "Viele Gäste kommen, um sich in der Natur zu erholen.",
+          "ru": "Многие гости приезжают, чтобы отдохнуть на природе.",
+          "g": {
+            "4+9": "отдохнуть"
+          }
+        },
+        {
+          "de": "Auch in den Wäldern gibt es Regeln zum Schutz von Tieren und Pflanzen.",
+          "ru": "В лесах тоже действуют правила защиты животных и растений.",
+          "g": {}
+        },
+        {
+          "de": "Wer auf den Wegen bleibt, hilft beim Schutz dieser Landschaft.",
+          "ru": "Тот, кто остаётся на тропах, помогает защищать этот ландшафт.",
+          "g": {}
+        }
+      ]
+    }
+  ]
+}

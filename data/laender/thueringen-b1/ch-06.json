@@ -1,0 +1,48 @@
+{
+  "id": "ch-06",
+  "title": "Wissenschaft und Arbeit",
+  "titleRu": "Наука и работа",
+  "icon": "🔬",
+  "paragraphs": [
+    {
+      "s": [
+        {
+          "de": "Jena ist für seine Universität und die optische Industrie bekannt.",
+          "ru": "Йена известна университетом и оптической промышленностью.",
+          "g": {}
+        },
+        {
+          "de": "Optik beschäftigt sich mit Licht und seinen Eigenschaften.",
+          "ru": "Оптика изучает свет и его свойства.",
+          "g": {
+            "1+2": "занимается"
+          }
+        },
+        {
+          "de": "Unternehmen entwickeln zum Beispiel Geräte mit Linsen und Lasern.",
+          "ru": "Предприятия разрабатывают, например, приборы с линзами и лазерами.",
+          "g": {}
+        }
+      ]
+    },
+    {
+      "s": [
+        {
+          "de": "Solche Technik wird in der Medizin und in Fabriken gebraucht.",
+          "ru": "Такая техника нужна в медицине и на заводах.",
+          "g": {}
+        },
+        {
+          "de": "Forschung und berufliche Ausbildung sind deshalb wichtige Aufgaben.",
+          "ru": "Поэтому исследования и профессиональное обучение — важные задачи.",
+          "g": {}
+        },
+        {
+          "de": "Thüringen bietet also nicht nur historische Orte, sondern auch moderne Arbeitsplätze.",
+          "ru": "Таким образом, в Тюрингии есть не только исторические места, но и современные рабочие места.",
+          "g": {}
+        }
+      ]
+    }
+  ]
+}

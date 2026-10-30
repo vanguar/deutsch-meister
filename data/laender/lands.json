@@ -1593,10 +1593,184 @@
       "name": "Thüringen",
       "nameRu": "Тюрингия",
       "capital": "Erfurt",
-      "emoji": "📍",
+      "emoji": "🌲",
       "flag": "data/laender/flags/thueringen.png",
       "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_Thuringia.svg",
-      "ready": false
+      "ready": true,
+      "blurb": "Эрфурт и Веймар, Реннштайг и Вартбург, Гёте и Баухаус, оптика Йены и местные диалекты.",
+      "facts": [
+        [
+          "Столица",
+          "Erfurt"
+        ],
+        [
+          "Крупнейшие города",
+          "Erfurt, Jena, Gera"
+        ],
+        [
+          "Площадь",
+          "около 16 200 км²"
+        ],
+        [
+          "В составе ФРГ",
+          "с 3 октября 1990 года"
+        ],
+        [
+          "Соседние государства",
+          "нет — границы только с немецкими землями"
+        ],
+        [
+          "Экономика",
+          "оптика и фотоника, промышленность, туризм"
+        ],
+        [
+          "Культура",
+          "Веймарская классика, Баухаус, Вартбург"
+        ]
+      ],
+      "source": "Ландтаг Тюрингии; земельный геопортал; город Йена; Вартбург; Веймар; мемориал Бухенвальд; Das ist Thüringen.",
+      "sourceUrl": "https://www.thueringer-landtag.de/landtag/geschichte/landesverfassung/",
+      "checked": "2026-10-30",
+      "quiz": [
+        {
+          "q": "Какой город — столица Тюрингии?",
+          "opts": [
+            "Weimar",
+            "Erfurt",
+            "Jena"
+          ],
+          "a": 1,
+          "why": "Столица и место заседаний ландтага — Эрфурт."
+        },
+        {
+          "q": "Что такое Реннштайг?",
+          "opts": [
+            "Горная туристическая тропа",
+            "Река в Йене",
+            "Здание ландтага"
+          ],
+          "a": 0,
+          "why": "Реннштайг — известный маршрут через горные ландшафты Тюрингии."
+        },
+        {
+          "q": "Что Лютер перевёл в Вартбурге?",
+          "opts": [
+            "Новый Завет",
+            "Всю Библию целиком",
+            "Конституцию земли"
+          ],
+          "a": 0,
+          "why": "В 1521–1522 годах он перевёл там Новый Завет с греческого на немецкий."
+        },
+        {
+          "q": "Где в 1919 году был основан Баухаус?",
+          "opts": [
+            "Erfurt",
+            "Eisenach",
+            "Weimar"
+          ],
+          "a": 2,
+          "why": "Школа возникла в Веймаре и соединяла искусство, ремесло и дизайн."
+        },
+        {
+          "q": "С какой отраслью особенно связана Йена?",
+          "opts": [
+            "Морское судостроение",
+            "Оптика и фотоника",
+            "Морское рыболовство"
+          ],
+          "a": 1,
+          "why": "Йена — важный центр технологий, связанных со светом."
+        }
+      ],
+      "texts": {
+        "b1": {
+          "id": "thueringen-b1",
+          "chapters": 7,
+          "words": 360,
+          "minutes": 3,
+          "toc": [
+            {
+              "title": "In der Mitte Deutschlands",
+              "titleRu": "В середине Германии",
+              "icon": "🗺️"
+            },
+            {
+              "title": "Wald und Wanderwege",
+              "titleRu": "Лес и туристические тропы",
+              "icon": "🌲"
+            },
+            {
+              "title": "Geschichte auf engem Raum",
+              "titleRu": "История на небольшой территории",
+              "icon": "📜"
+            },
+            {
+              "title": "Freistaat und Parlament",
+              "titleRu": "Свободное государство и парламент",
+              "icon": "🏛️"
+            },
+            {
+              "title": "Weimar und die Wartburg",
+              "titleRu": "Веймар и Вартбург",
+              "icon": "🎭"
+            },
+            {
+              "title": "Wissenschaft und Arbeit",
+              "titleRu": "Наука и работа",
+              "icon": "🔬"
+            },
+            {
+              "title": "Dialekte und regionale Küche",
+              "titleRu": "Диалекты и региональная кухня",
+              "icon": "🌭"
+            }
+          ]
+        },
+        "b2": {
+          "id": "thueringen-b2",
+          "chapters": 7,
+          "words": 453,
+          "minutes": 4,
+          "toc": [
+            {
+              "title": "Ein Binnenland mit vielen Zentren",
+              "titleRu": "Земля внутри страны со многими центрами",
+              "icon": "🗺️"
+            },
+            {
+              "title": "Naturraum und Verantwortung",
+              "titleRu": "Природное пространство и ответственность",
+              "icon": "🌲"
+            },
+            {
+              "title": "Landesbildung und Erinnerung",
+              "titleRu": "Создание земли и историческая память",
+              "icon": "📜"
+            },
+            {
+              "title": "Verfassung und Mitbestimmung",
+              "titleRu": "Конституция и участие в решениях",
+              "icon": "🏛️"
+            },
+            {
+              "title": "Klassik, Bauhaus und Reformation",
+              "titleRu": "Классика, Баухаус и Реформация",
+              "icon": "🎭"
+            },
+            {
+              "title": "Optik als Zukunftsbranche",
+              "titleRu": "Оптика как перспективная отрасль",
+              "icon": "🔬"
+            },
+            {
+              "title": "Regionale Identität im Alltag",
+              "titleRu": "Региональная идентичность в повседневности",
+              "icon": "🌭"
+            }
+          ]
+        }
+      }
     }
   ]
 }

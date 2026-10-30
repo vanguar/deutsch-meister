@@ -1,0 +1,46 @@
+{
+  "id": "ch-01",
+  "title": "In der Mitte Deutschlands",
+  "titleRu": "В середине Германии",
+  "icon": "🗺️",
+  "paragraphs": [
+    {
+      "s": [
+        {
+          "de": "Thüringen liegt in der Mitte von Deutschland.",
+          "ru": "Тюрингия расположена в середине Германии.",
+          "g": {}
+        },
+        {
+          "de": "Die Hauptstadt ist Erfurt mit seiner historischen Altstadt.",
+          "ru": "Столица — Эрфурт с его историческим старым городом.",
+          "g": {}
+        },
+        {
+          "de": "Weitere bekannte Städte sind Jena, Weimar, Gera und Eisenach.",
+          "ru": "Другие известные города — Йена, Веймар, Гера и Айзенах.",
+          "g": {}
+        }
+      ]
+    },
+    {
+      "s": [
+        {
+          "de": "Das Land hat keine Grenze zu einem anderen Staat.",
+          "ru": "У земли нет границы с другим государством.",
+          "g": {}
+        },
+        {
+          "de": "Es grenzt nur an andere deutsche Bundesländer.",
+          "ru": "Она граничит только с другими немецкими землями.",
+          "g": {}
+        },
+        {
+          "de": "Städte, kleine Orte und Wälder liegen hier oft nah beieinander.",
+          "ru": "Города, небольшие поселения и леса здесь часто находятся рядом.",
+          "g": {}
+        }
+      ]
+    }
+  ]
+}

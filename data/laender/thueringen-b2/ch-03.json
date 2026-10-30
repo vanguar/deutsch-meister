@@ -1,0 +1,38 @@
+{
+  "id": "ch-03",
+  "title": "Landesbildung und Erinnerung",
+  "titleRu": "Создание земли и историческая память",
+  "icon": "📜",
+  "paragraphs": [
+    {
+      "s": [
+        {
+          "de": "1920 entstand das Land Thüringen aus mehreren kleinen Staaten, allerdings noch ohne die damals preußische Stadt Erfurt.",
+          "ru": "В 1920 году земля Тюрингия возникла из нескольких небольших государств, однако ещё без тогдашнего прусского Эрфурта.",
+          "g": {}
+        },
+        {
+          "de": "Die heutige Gestalt des Bundeslandes geht auf seine Neugründung im Zusammenhang mit der deutschen Wiedervereinigung von 1990 zurück.",
+          "ru": "Современный облик федеральной земли восходит к её воссозданию в связи с объединением Германии в 1990 году.",
+          "g": {
+            "5+16": "восходит"
+          }
+        }
+      ]
+    },
+    {
+      "s": [
+        {
+          "de": "Zur Auseinandersetzung mit der Vergangenheit gehört die Gedenkstätte Buchenwald bei Weimar, wo von 1937 bis 1945 ein nationalsozialistisches Konzentrationslager bestand.",
+          "ru": "Осмысление прошлого включает мемориал Бухенвальд под Веймаром, где с 1937 по 1945 год существовал нацистский концлагерь.",
+          "g": {}
+        },
+        {
+          "de": "Die Beschäftigung mit Verfolgung und Gewalt ist ein wichtiger Bestandteil historischer Bildung und demokratischer Verantwortung.",
+          "ru": "Изучение преследований и насилия — важная составляющая исторического образования и демократической ответственности.",
+          "g": {}
+        }
+      ]
+    }
+  ]
+}
