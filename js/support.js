@@ -66,6 +66,70 @@ function dmClose() {
   setTimeout(() => el.remove(), 300);
 }
 
+/* ── Ненавязчивая поддержка после урока ── */
+const dmSupportReminder = (() => {
+  const key = 'dm_support_reminder';
+  const delay = 30 * 24 * 60 * 60 * 1000;
+
+  function read() {
+    try { return JSON.parse(localStorage.getItem(key)); } catch { return null; }
+  }
+
+  function save(state) {
+    try {
+      localStorage.setItem(key, JSON.stringify(state));
+      return true;
+    } catch {
+      return false;
+    }
+  }
+
+  function markSupported() {
+    save({ stage: 'supported' });
+    document.getElementById('lessonSupport')?.remove();
+  }
+
+  function show(banner, lessonId, completedCount) {
+    if (completedCount < 2 || document.getElementById('lessonSupport')) return;
+
+    const state = read();
+    const repeat = state?.stage === 'later' && state.lessonId !== lessonId && Date.now() >= state.until;
+    if (state && !repeat) return;
+
+    // Запоминаем показ сразу: уход со страницы без «Позже» не назначает повтор.
+    if (!save(repeat ? { stage: 'closed' } : { stage: 'shown', lessonId })) return;
+
+    const card = document.createElement('section');
+    card.className = 'lesson-support';
+    card.id = 'lessonSupport';
+    card.setAttribute('aria-labelledby', 'lessonSupportTitle');
+    card.innerHTML = `
+      <h3 id="lessonSupportTitle">German Morning — бесплатный курс немецкого</h3>
+      <p>Если уроки вам помогают, вы можете поддержать проект. Ваша поддержка помогает выпускать новые уроки и озвучку.</p>
+      <button type="button" class="btn btn-ghost" data-support-open><span aria-hidden="true">♡</span> <span>Поддержать проект</span></button>
+      <div class="lesson-support-actions">
+        <button type="button" data-support-paid>Уже поддержал</button>
+        <button type="button" data-support-dismiss>${repeat ? 'Закрыть' : 'Позже'}</button>
+      </div>
+    `;
+    card.querySelector('[data-support-open]').addEventListener('click', openDonateModal);
+    card.querySelector('[data-support-paid]').addEventListener('click', () => {
+      markSupported();
+      banner.querySelector('a.btn')?.focus({ preventScroll: true });
+    });
+    card.querySelector('[data-support-dismiss]').addEventListener('click', () => {
+      if (!repeat && read()?.stage === 'shown') {
+        save({ stage: 'later', lessonId, until: Date.now() + delay });
+      }
+      card.remove();
+      banner.querySelector('a.btn')?.focus({ preventScroll: true });
+    });
+    banner.appendChild(card);
+  }
+
+  return { show, markSupported };
+})();
+
 /* ── Экран 1: выбор способа ── */
 function openDonateModal() {
   dmHaptic('light');
@@ -144,6 +208,7 @@ function dmPayStars(stars) {
   if (TG && typeof TG.openInvoice === 'function') {
     TG.openInvoice(tier.url, status => {
       if (status === 'paid') {
+        dmSupportReminder.markSupported();
         dmClose();
         dmToast('Спасибо за поддержку! ⭐');
       } else if (status === 'failed') {

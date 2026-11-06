@@ -547,6 +547,30 @@
 }
 .lesson-complete.show { display: block; }
 
+.lesson-support {
+  max-width: 36rem;
+  margin: 24px auto 0;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 14px;
+}
+.lesson-support h3 { margin: 0 0 6px; color: var(--text); font-size: 16px; }
+.lesson-support p { margin: 0 0 12px; }
+.lesson-support-actions { display: flex; flex-wrap: wrap; justify-content: center; }
+.lesson-support-actions button {
+  min-height: 44px;
+  padding: 0 10px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--text-muted);
+  font: inherit;
+  cursor: pointer;
+}
+.lesson-support-actions button:hover { color: var(--text); }
+.lesson-support button:focus-visible { outline: 2px solid var(--accent2-text); outline-offset: 2px; }
+
 .complete-emoji { font-size: 56px; margin-bottom: 14px; }
 .complete-title {
   font-family: 'Playfair Display', serif;

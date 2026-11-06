@@ -222,7 +222,7 @@ const Progress = (() => {
     if (_currentLessonId) _saveSections(_currentLessonId);
 
     renderSectionProgress();
-    tryFinishLesson();
+    tryFinishLesson(true);
     _notify();   // сданная секция — сразу в облако, не дожидаясь XP
   }
 
@@ -293,7 +293,7 @@ const Progress = (() => {
    * If all required sections are done: show banner, award reward XP
    * the first time only, persist completion. Idempotent.
    */
-  function tryFinishLesson() {
+  function tryFinishLesson(fromExercise = false) {
     if (!isLessonFullyDone()) return;
     const id = (typeof LESSON_DATA !== 'undefined') ? LESSON_DATA?.id : null;
     if (!id) return;
@@ -316,6 +316,9 @@ const Progress = (() => {
       addXP(reward);
     }
     completeLesson(id, _averageScore());
+    if (fromExercise && !alreadyCompleted && banner && typeof dmSupportReminder !== 'undefined') {
+      dmSupportReminder.show(banner, id, load().completedLessons.length);
+    }
   }
 
   /* ════════════════════════════════════
