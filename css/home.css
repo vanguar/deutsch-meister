@@ -74,19 +74,24 @@ html[dir="rtl"] .ico.flip { transform: scaleX(-1); }
 .home-support {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
-  margin: 12px auto 0;
+  margin: 16px auto 0;
+  max-width: 100%;
   min-height: 44px;
-  padding: 4px 12px;
-  border: 0;
-  border-radius: 8px;
-  background: transparent;
-  color: var(--h-hint);
+  padding: 8px 16px;
+  border: 1px solid var(--h-line);
+  border-radius: 14px;
+  background: var(--h-card);
+  color: var(--h-text);
   font: inherit;
-  font-size: 13px;
+  font-size: 14px;
+  font-weight: 700;
   cursor: pointer;
 }
-.home-support:hover { color: var(--h-accent); }
+.home-support .ico { color: var(--accent3); }
+@media (hover: hover) { .home-support:hover { background: var(--h-card2); } }
+.home-support:active { background: var(--h-card2); }
 .home-support:focus-visible { outline: 2px solid var(--h-accent); outline-offset: 2px; }
 
 /* ── заголовки ── */
