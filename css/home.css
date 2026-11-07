@@ -75,9 +75,9 @@ html[dir="rtl"] .ico.flip { transform: scaleX(-1); }
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  margin: 16px auto 0;
-  max-width: 100%;
+  gap: 10px;
+  margin: 16px 0 0;
+  width: 100%;
   min-height: 44px;
   padding: 8px 16px;
   border: 1px solid var(--h-line);
@@ -89,7 +89,7 @@ html[dir="rtl"] .ico.flip { transform: scaleX(-1); }
   font-weight: 700;
   cursor: pointer;
 }
-.home-support .ico { color: var(--accent3); }
+.home-support .ico { width: 24px; height: 24px; color: var(--accent3); stroke-width: 1.5; }
 @media (hover: hover) { .home-support:hover { background: var(--h-card2); } }
 .home-support:active { background: var(--h-card2); }
 .home-support:focus-visible { outline: 2px solid var(--h-accent); outline-offset: 2px; }
