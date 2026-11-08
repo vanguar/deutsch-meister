@@ -2210,27 +2210,30 @@ Kraft|сила|Существительное|in Kraft treten — вступат
   const ARTICLE_RE = /^(der|die|das)\s+(?=[A-ZÄÖÜ])/;
 
   const GRAMMAR_NOTATION = [
-    [/\+\s*A\b|\bAkk\b/, '+A / Akk.', 'Akkusativ', 'винительный падеж', 'warten auf den Bus'],
-    [/\+\s*D\b|\bDat\b/, '+D / Dat.', 'Dativ', 'дательный падеж', 'träumen von einer Reise'],
-    [/\bNom\b/, 'Nom.', 'Nominativ', 'именительный падеж', 'Der Bus kommt.'],
-    [/\bGen\b/, 'Gen.', 'Genitiv', 'родительный падеж', 'die Tür des Hauses'],
-    [/\bKonj\.\s*II\b/, 'Konj. II', 'Konjunktiv II', 'сослагательное наклонение для гипотез, желаний и вежливых просьб', 'Ich hätte gern einen Kaffee.'],
-    [/\bKonj\.\s*I\b/, 'Konj. I', 'Konjunktiv I', 'форма сослагательного наклонения, часто используемая в косвенной речи', 'Er sagt, er sei müde.'],
-    [/\bInf\./, 'Inf.', 'Infinitiv', 'начальная форма глагола', 'lernen'],
-    [/\bPart\.\s*II\b/, 'Part. II', 'Partizip II', 'причастие, которое используется, например, в Perfekt и в пассиве', 'gelernt'],
-    [/\bPrät\./, 'Prät.', 'Präteritum', 'простое прошедшее время', 'Ich lernte Deutsch.'],
-    [/\bPl\./, 'Pl.', 'Plural', 'множественное число', 'die Bücher'],
-    [/\bMask\.|\b(?:Akk(?:usativ)?|Dativ|Nominativ|Genitiv)\.? m\b|\bder \+ m\b/, 'm / Mask.', 'Maskulinum', 'мужской род', 'der Mann'],
-    [/\bFem\.|\b(?:Akkusativ|Dativ|Nominativ|Genitiv) f\b|\bdie \+ f\b/, 'f / Fem.', 'Femininum', 'женский род', 'die Frau'],
-    [/\bNeutr\.|\b(?:Akkusativ|Dativ|Nominativ|Genitiv) n\b|\bdas \+ n\b/, 'n', 'Neutrum', 'средний род', 'das Kind'],
-    [/\bjdn\./, 'jdn.', 'jemanden', 'кого-то в винительном падеже', 'jemanden um Hilfe bitten'],
+    [{'+A': /\+\s*A\b/, 'Akk.': /\bAkk\b/}, 'Akkusativ', 'винительный падеж', 'warten auf den Bus'],
+    [{'+D': /\+\s*D\b/, 'Dat.': /\bDat\b/}, 'Dativ', 'дательный падеж', 'träumen von einer Reise'],
+    [{'Nom.': /\bNom\b/}, 'Nominativ', 'именительный падеж', 'Der Bus kommt.'],
+    [{'Gen.': /\bGen\b/}, 'Genitiv', 'родительный падеж', 'die Tür des Hauses'],
+    [{'Konj. II': /\bKonj\.\s*II\b/}, 'Konjunktiv II', 'сослагательное наклонение для гипотез, желаний и вежливых просьб', 'Ich hätte gern einen Kaffee.'],
+    [{'Konj. I': /\bKonj\.\s*I\b/}, 'Konjunktiv I', 'форма сослагательного наклонения, часто используемая в косвенной речи', 'Er sagt, er sei müde.'],
+    [{'Inf.': /\bInf\./}, 'Infinitiv', 'начальная форма глагола', 'lernen'],
+    [{'Part. II': /\bPart\.\s*II\b/}, 'Partizip II', 'причастие, которое используется, например, в Perfekt и в пассиве', 'gelernt'],
+    [{'Prät.': /\bPrät\./}, 'Präteritum', 'простое прошедшее время', 'Ich lernte Deutsch.'],
+    [{'Pl.': /\bPl\./}, 'Plural', 'множественное число', 'die Bücher'],
+    [{m: /\b(?:Akk(?:usativ)?|Dativ|Nominativ|Genitiv)\.? m\b|\bder \+ m\b/, 'Mask.': /\bMask\./}, 'Maskulinum', 'мужской род', 'der Mann'],
+    [{f: /\b(?:Akkusativ|Dativ|Nominativ|Genitiv) f\b|\bdie \+ f\b/, 'Fem.': /\bFem\./}, 'Femininum', 'женский род', 'die Frau'],
+    [{n: /\b(?:Akkusativ|Dativ|Nominativ|Genitiv) n\b|\bdas \+ n\b/, 'Neutr.': /\bNeutr\./}, 'Neutrum', 'средний род', 'das Kind'],
+    [{'jdn.': /\bjdn\./}, 'jemanden', 'кого-то в винительном падеже', 'jemanden um Hilfe bitten'],
   ];
 
   function renderGrammarNotation(data, before, id) {
     if (!before) return;
     document.getElementById(id)?.remove();
     const text = JSON.stringify(data).replace(/<[^>]+>/g, '');
-    const rows = GRAMMAR_NOTATION.filter(([pattern]) => pattern.test(text));
+    const rows = GRAMMAR_NOTATION.map(([patterns, ...definition]) => {
+      const labels = Object.entries(patterns).filter(([, pattern]) => pattern.test(text));
+      return [labels.map(([label]) => label).join(' / '), ...definition];
+    }).filter(([label]) => label);
     if (!rows.length) return;
 
     const heading = 'Обозначения в этом уроке';
@@ -2239,7 +2242,7 @@ Kraft|сила|Существительное|in Kraft treten — вступат
     note.className = 'grammar-box notation-note';
     note.innerHTML = `
       <div class="grammar-box-title">${heading}</div>
-      <ul class="grammar-rule">${rows.map(([, label, name, explanation, example]) =>
+      <ul class="grammar-rule">${rows.map(([label, name, explanation, example]) =>
         `<li><strong><bdi>${label}</bdi></strong> — <bdi lang="de">${name}</bdi>
           (<span>${explanation}</span>). <bdi lang="de">${example}</bdi></li>`
       ).join('')}</ul>
