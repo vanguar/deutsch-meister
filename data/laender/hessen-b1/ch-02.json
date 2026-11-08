@@ -1,0 +1,29 @@
+{
+  "id": "ch-02",
+  "title": "Frankfurt am Main",
+  "titleRu": "Франкфурт-на-Майне",
+  "icon": "🏦",
+  "paragraphs": [
+    {
+      "s": [
+        {
+          "de": "Der Main fließt durch Frankfurt.",
+          "ru": "Майн протекает через Франкфурт.",
+          "g": {}
+        },
+        {
+          "de": "Die Stadt ist ein wichtiges Finanzzentrum.",
+          "ru": "Город является крупным финансовым центром.",
+          "g": {}
+        },
+        {
+          "de": "Hier hat die Europäische Zentralbank ihren Sitz.",
+          "ru": "Здесь находится Европейский центральный банк.",
+          "g": {
+            "1+6": "имеет штаб-квартиру"
+          }
+        }
+      ]
+    }
+  ]
+}

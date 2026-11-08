@@ -1,0 +1,372 @@
+{
+  "version": 1,
+  "w": {
+    "ab": "ab",
+    "am": "an",
+    "anderen": "ander",
+    "auf": "auf",
+    "bekannt": "bekannt",
+    "bergpark": "Bergpark",
+    "das": "der/die/das",
+    "dem": "der/die/das",
+    "der": "der/die/das",
+    "des": "der/die/das",
+    "deutschlands": "Deutschland (страна)",
+    "dezember": "Dezember",
+    "die": "der/die/das",
+    "durch": "durch",
+    "ein": "ein/eine",
+    "entstand": "entstehen",
+    "europäische": "europäisch",
+    "fand": "stattfinden",
+    "finanzzentrum": "Finanzzentrum",
+    "fließt": "fließen",
+    "flusses": "Fluss",
+    "fossilien": "Fossil",
+    "frankfurt": "Frankfurt",
+    "für": "für",
+    "groß-hessen": "Groß-Hessen",
+    "grube": "Grube",
+    "hat": "haben",
+    "hauptstadt": "Hauptstadt",
+    "hessen": "Hessen",
+    "hier": "hier",
+    "ihren": "ihr (её, их)",
+    "im": "in",
+    "in": "in",
+    "ist": "sein",
+    "kassel": "Kassel",
+    "land": "Land (земля)",
+    "landeshauptstadt": "Landeshauptstadt",
+    "landesverfassung": "Landesverfassung",
+    "liegt": "liegen",
+    "main": "Main",
+    "mainz": "Mainz",
+    "man": "man",
+    "menschen": "Mensch",
+    "messel": "Messel",
+    "mitte": "Mitte",
+    "nach": "nach",
+    "park": "Park",
+    "rhein": "Rhein",
+    "rheinland-pfalz": "Rheinland-Pfalz",
+    "seine": "sein (его, свой)",
+    "seite": "Seite",
+    "september": "September",
+    "sitz": "Sitz",
+    "stadt": "Stadt",
+    "stimmten": "stimmen",
+    "viele": "viel",
+    "von": "von",
+    "war": "sein",
+    "wasserspiele": "Wasserspiel",
+    "weltkrieg": "Weltkrieg",
+    "wichtiges": "wichtig",
+    "wiesbaden": "Wiesbaden",
+    "wilhelmshöhe": "Wilhelmshöhe",
+    "zentralbank": "Zentralbank",
+    "zweiten": "zweite",
+    "über": "über"
+  },
+  "l": {
+    "ab": {
+      "note": "Тж. отделяемая приставка: absteigen «слезать», abnehmen",
+      "pos": "предл.",
+      "ru": "от, с; прочь"
+    },
+    "an": {
+      "ru": "у, к, на",
+      "pos": "предл.",
+      "note": "am = an dem. Тж. отделяемая приставка: anfangen «начинать», annehmen, ansehen, anzünden"
+    },
+    "ander": {
+      "pos": "прил.",
+      "ru": "другой, иной"
+    },
+    "auf": {
+      "ru": "на, в",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: aufspringen «вскочить», sich aufmachen"
+    },
+    "bekannt": {
+      "ru": "известный, знакомый",
+      "pos": "прил."
+    },
+    "Bergpark": {
+      "ru": "горный парк",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Bergparks"
+    },
+    "der/die/das": {
+      "ru": "определённый артикль",
+      "pos": "артикль",
+      "note": "Тж. относительное местоимение «который»"
+    },
+    "Deutschland (страна)": {
+      "ru": "Германия",
+      "pos": "геогр."
+    },
+    "Dezember": {
+      "ru": "декабрь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "durch": {
+      "ru": "через, сквозь, из-за",
+      "pos": "предл."
+    },
+    "ein/eine": {
+      "ru": "неопределённый артикль",
+      "pos": "артикль",
+      "note": "einer — «один, некто»"
+    },
+    "entstehen": {
+      "ru": "возникать",
+      "pos": "гл.",
+      "forms": "entstand · ist entstanden"
+    },
+    "europäisch": {
+      "ru": "европейский",
+      "pos": "прил."
+    },
+    "Finanzzentrum": {
+      "ru": "финансовый центр",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Finanzzentren"
+    },
+    "fließen": {
+      "ru": "течь",
+      "pos": "гл.",
+      "forms": "floss · ist geflossen"
+    },
+    "Fluss": {
+      "ru": "река",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Flüsse"
+    },
+    "Fossil": {
+      "ru": "ископаемое, окаменелость",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Fossilien"
+    },
+    "Frankfurt": {
+      "ru": "Франкфурт",
+      "pos": "геогр."
+    },
+    "für": {
+      "ru": "для, за",
+      "pos": "предл."
+    },
+    "Groß-Hessen": {
+      "ru": "Большой Гессен",
+      "pos": "геогр."
+    },
+    "Grube": {
+      "ru": "карьер, яма",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Gruben"
+    },
+    "haben": {
+      "ru": "иметь; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "hatte · hat gehabt"
+    },
+    "Hauptstadt": {
+      "ru": "столица",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Hauptstädte"
+    },
+    "Hessen": {
+      "ru": "Гессен",
+      "pos": "геогр."
+    },
+    "hier": {
+      "ru": "здесь",
+      "pos": "нареч."
+    },
+    "ihr (её, их)": {
+      "ru": "её; их",
+      "pos": "мест."
+    },
+    "in": {
+      "ru": "в (im = in dem, ins = in das)",
+      "pos": "предл."
+    },
+    "Kassel": {
+      "ru": "Кассель",
+      "pos": "геогр."
+    },
+    "Land (земля)": {
+      "ru": "земля (федеральная); страна",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Länder",
+      "note": "Bundesland — федеральная земля; in anderen Ländern — в других землях"
+    },
+    "Landeshauptstadt": {
+      "ru": "столица земли",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Landeshauptstädte"
+    },
+    "Landesverfassung": {
+      "ru": "конституция земли",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Landesverfassungen"
+    },
+    "liegen": {
+      "ru": "лежать",
+      "pos": "гл.",
+      "forms": "lag · hat gelegen"
+    },
+    "Main": {
+      "ru": "Майн (река)",
+      "pos": "геогр."
+    },
+    "Mainz": {
+      "ru": "Майнц",
+      "pos": "геогр."
+    },
+    "man": {
+      "ru": "неопределённое «кто-то, люди, мы»",
+      "pos": "мест."
+    },
+    "Mensch": {
+      "ru": "человек",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Menschen",
+      "decl": "n-Deklination: des Menschen · dem/den Menschen"
+    },
+    "Messel": {
+      "ru": "Мессель",
+      "pos": "геогр."
+    },
+    "Mitte": {
+      "art": "die",
+      "pl": null,
+      "pos": "сущ.",
+      "ru": "середина"
+    },
+    "nach": {
+      "ru": "в, на, после, по",
+      "pos": "предл."
+    },
+    "Park": {
+      "ru": "парк",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Parks"
+    },
+    "Rhein": {
+      "ru": "Рейн (река)",
+      "pos": "геогр."
+    },
+    "Rheinland-Pfalz": {
+      "ru": "Рейнланд-Пфальц",
+      "pos": "геогр."
+    },
+    "sein": {
+      "ru": "быть; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "war · ist gewesen"
+    },
+    "sein (его, свой)": {
+      "ru": "его, свой",
+      "pos": "мест."
+    },
+    "Seite": {
+      "ru": "сторона; страница, сайт",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Seiten"
+    },
+    "September": {
+      "ru": "сентябрь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die September"
+    },
+    "Sitz": {
+      "ru": "штаб-квартира; место",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Sitze",
+      "note": "seinen Sitz haben — находиться (о фирме); im Landtag — место"
+    },
+    "Stadt": {
+      "ru": "город",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Städte"
+    },
+    "stattfinden": {
+      "ru": "иметь место, быть",
+      "pos": "гл.",
+      "forms": "fand statt · hat stattgefunden",
+      "note": "ein Zusammenhang findet statt — связь существует"
+    },
+    "stimmen": {
+      "ru": "голосовать; быть верным",
+      "pos": "гл.",
+      "forms": "stimmte · hat gestimmt",
+      "note": "für etwas stimmen / dafür stimmen — голосовать за; das stimmt — это верно"
+    },
+    "viel": {
+      "ru": "много, многое",
+      "pos": "мест."
+    },
+    "von": {
+      "ru": "от, из, о (vom = von dem)",
+      "pos": "предл."
+    },
+    "Wasserspiel": {
+      "ru": "водное представление, каскад фонтанов",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Wasserspiele"
+    },
+    "Weltkrieg": {
+      "ru": "мировая война",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Weltkriege",
+      "note": "der Zweite Weltkrieg — Вторая мировая война"
+    },
+    "wichtig": {
+      "ru": "важный",
+      "pos": "прил."
+    },
+    "Wiesbaden": {
+      "ru": "Висбаден",
+      "pos": "геогр."
+    },
+    "Wilhelmshöhe": {
+      "ru": "Вильгельмсхёэ",
+      "pos": "имя собств."
+    },
+    "Zentralbank": {
+      "ru": "центральный банк",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Zentralbanken"
+    },
+    "zweite": {
+      "ru": "второй",
+      "pos": "числ.",
+      "note": "zum zweiten Mal — во второй раз"
+    },
+    "über": {
+      "ru": "над, через, о",
+      "pos": "предл."
+    }
+  }
+}

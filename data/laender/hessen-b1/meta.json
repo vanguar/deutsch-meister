@@ -1,0 +1,21 @@
+{
+  "id": "hessen-b1",
+  "kind": "land",
+  "land": "hessen",
+  "title": "Hessen",
+  "titleRu": "Гессен",
+  "author": "German Morning",
+  "level": "B1",
+  "levelNote": "B1: короткие предложения, Präsens и Präteritum, основные слова о стране.",
+  "year": "2026",
+  "chapters": 4,
+  "words": 84,
+  "minutes": 1,
+  "photos": 0,
+  "cover": "🌳",
+  "flag": "data/laender/flags/hessen.png",
+  "source": "Правительство Гессена, Европейский центральный банк и Центр всемирного наследия UNESCO",
+  "sourceUrl": "https://hbc.hessen.de/Wissen/Geschichte-des-Landes/Aufbauzeit-nach-dem-zweiten-Weltkrieg",
+  "checked": "2026-11-08",
+  "license": "текст курса German Morning"
+}

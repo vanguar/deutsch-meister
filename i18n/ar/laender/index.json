@@ -152,6 +152,36 @@
    "land": "hamburg"
   },
   {
+   "id": "hessen-b1",
+   "title": "Hessen",
+   "titleRu": "هسن",
+   "author": "German Morning",
+   "level": "B1",
+   "year": "2026",
+   "chapters": 4,
+   "words": 84,
+   "minutes": 1,
+   "cover": "🌳",
+   "source": "حكومة هِسّن والبنك المركزي الأوروبي ومركز التراث العالمي لليونسكو",
+   "license": "نص من دورة German Morning",
+   "land": "hessen"
+  },
+  {
+   "id": "hessen-b2",
+   "title": "Hessen",
+   "titleRu": "هسن",
+   "author": "German Morning",
+   "level": "B2",
+   "year": "2026",
+   "chapters": 4,
+   "words": 132,
+   "minutes": 1,
+   "cover": "🌳",
+   "source": "حكومة هِسّن والبنك المركزي الأوروبي ومركز التراث العالمي لليونسكو",
+   "license": "نص من دورة German Morning",
+   "land": "hessen"
+  },
+  {
    "id": "mecklenburg-vorpommern-b1",
    "title": "Mecklenburg-Vorpommern",
    "titleRu": "مكلنبورغ-فوربومرن",

@@ -1,0 +1,29 @@
+{
+  "id": "ch-02",
+  "title": "Frankfurt als Finanzplatz",
+  "titleRu": "Франкфурт как финансовый центр",
+  "icon": "💶",
+  "paragraphs": [
+    {
+      "s": [
+        {
+          "de": "Frankfurt entwickelte sich in der Bundesrepublik zu einem bedeutenden Finanzplatz.",
+          "ru": "Во времена ФРГ Франкфурт превратился в крупный финансовый центр.",
+          "g": {}
+        },
+        {
+          "de": "Die Europäische Zentralbank, die ihren Sitz in Frankfurt hat, ist für die Geldpolitik im Euroraum zuständig.",
+          "ru": "Европейский центральный банк, расположенный во Франкфурте, отвечает за денежно-кредитную политику еврозоны.",
+          "g": {
+            "10+15": "отвечает за"
+          }
+        },
+        {
+          "de": "Der Name Frankfurt am Main hilft, die Stadt von Frankfurt an der Oder zu unterscheiden.",
+          "ru": "Название Франкфурт-на-Майне помогает отличить город от Франкфурта-на-Одере.",
+          "g": {}
+        }
+      ]
+    }
+  ]
+}

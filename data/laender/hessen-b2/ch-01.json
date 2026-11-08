@@ -1,0 +1,27 @@
+{
+  "id": "ch-01",
+  "title": "Zwei Hauptstädte am selben Fluss",
+  "titleRu": "Две столицы на одной реке",
+  "icon": "🧭",
+  "paragraphs": [
+    {
+      "s": [
+        {
+          "de": "Zwischen Wiesbaden und Mainz verläuft im Rhein die Grenze von Hessen und Rheinland-Pfalz.",
+          "ru": "Между Висбаденом и Майнцем граница Гессена и Рейнланд-Пфальца проходит по Рейну.",
+          "g": {}
+        },
+        {
+          "de": "Beide Städte sind Landeshauptstädte, obwohl sie so nahe beieinanderliegen.",
+          "ru": "Оба города — столицы земель, хотя расположены так близко друг к другу.",
+          "g": {}
+        },
+        {
+          "de": "Wer dem Main nach Osten folgt, gelangt nach Frankfurt.",
+          "ru": "Если идти вдоль Майна на восток, попадёшь во Франкфурт.",
+          "g": {}
+        }
+      ]
+    }
+  ]
+}

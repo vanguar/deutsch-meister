@@ -1117,10 +1117,136 @@
    "name": "Hessen",
    "nameRu": "Гессен",
    "capital": "Wiesbaden",
-   "emoji": "📍",
+   "emoji": "🌳",
    "flag": "data/laender/flags/hessen.png",
    "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_Hesse.svg",
-   "ready": false
+   "ready": true,
+   "blurb": "Вісбаден і Франкфурт, утворення землі після війни, парк у Касселі й скам’янілості Месселя.",
+   "facts": [
+    [
+     "Столиця",
+     "Wiesbaden"
+    ],
+    [
+     "Заснування",
+     "19 вересня 1945 року"
+    ],
+    [
+     "Річки",
+     "Rhein, Main, Fulda, Lahn"
+    ],
+    [
+     "Фінансовий центр",
+     "Frankfurt am Main"
+    ],
+    [
+     "Всесвітня спадщина",
+     "Парк Вільгельмсгее та кар’єр Мессель"
+    ]
+   ],
+   "source": "Уряд Гессену, Європейський центральний банк і Центр всесвітньої спадщини UNESCO",
+   "sourceUrl": "https://hbc.hessen.de/Wissen/Geschichte-des-Landes/Aufbauzeit-nach-dem-zweiten-Weltkrieg",
+   "checked": "2026-11-08",
+   "quiz": [
+    {
+     "q": "Яке місто є столицею Гессену?",
+     "opts": [
+      "Frankfurt am Main",
+      "Kassel",
+      "Wiesbaden"
+     ],
+     "a": 2,
+     "why": "Вісбаден став столицею 1945 року."
+    },
+    {
+     "q": "У якому місті розташований Європейський центральний банк?",
+     "opts": [
+      "Frankfurt am Main",
+      "Mainz",
+      "Darmstadt"
+     ],
+     "a": 0,
+     "why": "Європейський центральний банк розташований у Франкфурті-на-Майні."
+    },
+    {
+     "q": "Як спочатку називалася земля, утворена 1945 року?",
+     "opts": [
+      "Rheinhessen",
+      "Groß-Hessen",
+      "Hessen-Nassau"
+     ],
+     "a": 1,
+     "why": "Американська військова адміністрація утворила землю під назвою Groß-Hessen."
+    },
+    {
+     "q": "Чим відомий кар’єр Мессель?",
+     "opts": [
+      "Скам’янілими рештками тварин і рослин",
+      "Бароковими садами",
+      "Покладом солі"
+     ],
+     "a": 0,
+     "why": "Добре збережені скам’янілості допомагають вивчати давні екосистеми."
+    }
+   ],
+   "texts": {
+    "b1": {
+     "id": "hessen-b1",
+     "chapters": 4,
+     "words": 84,
+     "minutes": 1,
+     "toc": [
+      {
+       "title": "Wiesbaden und der Rhein",
+       "titleRu": "Вісбаден і Рейн",
+       "icon": "🗺️"
+      },
+      {
+       "title": "Frankfurt am Main",
+       "titleRu": "Франкфурт-на-Майні",
+       "icon": "🏦"
+      },
+      {
+       "title": "Ein neues Land nach dem Krieg",
+       "titleRu": "Нова земля після війни",
+       "icon": "📜"
+      },
+      {
+       "title": "Ein Park und alte Fossilien",
+       "titleRu": "Парк і давні скам’янілості",
+       "icon": "🏞️"
+      }
+     ]
+    },
+    "b2": {
+     "id": "hessen-b2",
+     "chapters": 4,
+     "words": 132,
+     "minutes": 1,
+     "toc": [
+      {
+       "title": "Zwei Hauptstädte am selben Fluss",
+       "titleRu": "Дві столиці на одній річці",
+       "icon": "🧭"
+      },
+      {
+       "title": "Frankfurt als Finanzplatz",
+       "titleRu": "Франкфурт як фінансовий центр",
+       "icon": "💶"
+      },
+      {
+       "title": "Von Groß-Hessen zur Verfassung",
+       "titleRu": "Від Великого Гессену до конституції",
+       "icon": "🗳️"
+      },
+      {
+       "title": "Was die Grube Messel erzählt",
+       "titleRu": "Про що розповідає кар’єр Мессель",
+       "icon": "🦴"
+      }
+     ]
+    }
+   }
   },
   {
    "id": "mecklenburg-vorpommern",

@@ -1,0 +1,529 @@
+{
+  "version": 1,
+  "w": {
+    "am": "an",
+    "amerikanischen": "amerikanisch",
+    "an": "an",
+    "angenommen": "annehmen",
+    "anhand": "anhand",
+    "aufgenommen": "aufnehmen",
+    "außergewöhnlich": "außergewöhnlich",
+    "bedeutenden": "bedeutend",
+    "beide": "beide",
+    "beieinanderliegen": "beieinanderliegen",
+    "bestimmt": "bestimmen",
+    "bundesrepublik": "Bundesrepublik",
+    "dem": "der/die/das",
+    "der": "der/die/das",
+    "die": "der/die/das",
+    "dieser": "dieser",
+    "dort": "dort",
+    "durch": "durch",
+    "eine": "ein/eine",
+    "einem": "ein/eine",
+    "entdeckt": "entdecken",
+    "entwickelte": "entwickeln",
+    "erhaltene": "erhalten (сохранение)",
+    "europäische": "europäisch",
+    "euroraum": "Euroraum",
+    "finanzplatz": "Finanzplatz",
+    "folgt": "folgen",
+    "fossilien": "Fossil",
+    "frankfurt": "Frankfurt",
+    "funde": "Fund",
+    "fundstätte": "Fundstätte",
+    "für": "für",
+    "gebildet": "bilden",
+    "gelangt": "gelangen",
+    "geldpolitik": "Geldpolitik",
+    "grenze": "Grenze",
+    "groß-hessen": "Groß-Hessen",
+    "grube": "Grube",
+    "gut": "gut",
+    "hat": "haben",
+    "hauptstadt": "Hauptstadt",
+    "hessen": "Hessen",
+    "hilft": "helfen",
+    "ihren": "ihr (её, их)",
+    "im": "in",
+    "in": "in",
+    "ist": "sein",
+    "jahren": "Jahr",
+    "landeshauptstädte": "Landeshauptstadt",
+    "lebten": "leben",
+    "lässt": "lassen",
+    "main": "Main",
+    "mainz": "Mainz",
+    "messel": "Messel",
+    "militärregierung": "Militärregierung",
+    "millionen": "Million",
+    "nach": "nach",
+    "nahe": "nahe",
+    "name": "Name",
+    "obwohl": "obwohl",
+    "oder": "oder",
+    "oktober": "Oktober",
+    "osten": "Osten",
+    "pflanzen": "Pflanze",
+    "rhein": "Rhein",
+    "rheinland-pfalz": "Rheinland-Pfalz",
+    "september": "September",
+    "sich": "sich",
+    "sie": "sie",
+    "sind": "sein",
+    "sitz": "Sitz",
+    "so": "so",
+    "stadt": "Stadt",
+    "städte": "Stadt",
+    "tiere": "Tier",
+    "und": "und",
+    "unesco-welterbeliste": "Welterbeliste",
+    "unterscheiden": "unterscheiden",
+    "untersuchen": "untersuchen",
+    "verfassung": "Verfassung",
+    "verläuft": "verlaufen",
+    "vielen": "viel",
+    "volksabstimmung": "Volksabstimmung",
+    "von": "von",
+    "vor": "vor",
+    "welche": "welcher",
+    "wer": "wer",
+    "wiesbaden": "Wiesbaden",
+    "wurde": "werden",
+    "wurden": "werden",
+    "zentralbank": "Zentralbank",
+    "zu": "zu",
+    "zur": "zu",
+    "zuständig": "zuständig",
+    "zwischen": "zwischen"
+  },
+  "l": {
+    "amerikanisch": {
+      "ru": "американский",
+      "pos": "прил."
+    },
+    "an": {
+      "ru": "у, к, на",
+      "pos": "предл.",
+      "note": "am = an dem. Тж. отделяемая приставка: anfangen «начинать», annehmen, ansehen, anzünden"
+    },
+    "anhand": {
+      "ru": "на основании, с помощью",
+      "pos": "предл."
+    },
+    "annehmen": {
+      "ru": "принимать, брать на работу",
+      "pos": "гл.",
+      "forms": "nahm an · hat angenommen"
+    },
+    "aufnehmen": {
+      "ru": "снимать (на камеру); принимать",
+      "pos": "гл.",
+      "forms": "nahm auf · hat aufgenommen"
+    },
+    "außergewöhnlich": {
+      "ru": "необычный, исключительный",
+      "pos": "прил."
+    },
+    "bedeutend": {
+      "ru": "значительный, важный",
+      "pos": "прил.",
+      "note": "die bedeutendsten Städte — важнейшие города"
+    },
+    "beide": {
+      "ru": "оба",
+      "pos": "мест."
+    },
+    "beieinanderliegen": {
+      "ru": "находиться рядом",
+      "pos": "гл.",
+      "forms": "lag beieinander · hat beieinandergelegen"
+    },
+    "bestimmen": {
+      "ru": "определять; предназначать",
+      "pos": "гл.",
+      "forms": "bestimmte · hat bestimmt"
+    },
+    "bilden": {
+      "ru": "образовывать",
+      "pos": "гл.",
+      "forms": "bildete · hat gebildet"
+    },
+    "Bundesrepublik": {
+      "ru": "федеративная республика",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Bundesrepubliken",
+      "note": "die Bundesrepublik Deutschland — ФРГ"
+    },
+    "der/die/das": {
+      "ru": "определённый артикль",
+      "pos": "артикль",
+      "note": "Тж. относительное местоимение «который»"
+    },
+    "dieser": {
+      "ru": "этот, эта, это",
+      "pos": "мест."
+    },
+    "dort": {
+      "ru": "там",
+      "pos": "нареч."
+    },
+    "durch": {
+      "ru": "через, сквозь, из-за",
+      "pos": "предл."
+    },
+    "ein/eine": {
+      "ru": "неопределённый артикль",
+      "pos": "артикль",
+      "note": "einer — «один, некто»"
+    },
+    "entdecken": {
+      "ru": "обнаруживать",
+      "pos": "гл.",
+      "forms": "entdeckte · hat entdeckt"
+    },
+    "entwickeln": {
+      "ru": "развивать",
+      "pos": "гл.",
+      "forms": "entwickelte · hat entwickelt",
+      "note": "sich entwickeln — развиваться"
+    },
+    "erhalten (сохранение)": {
+      "ru": "сохранившийся",
+      "pos": "прил."
+    },
+    "europäisch": {
+      "ru": "европейский",
+      "pos": "прил."
+    },
+    "Euroraum": {
+      "ru": "еврозона",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "Finanzplatz": {
+      "ru": "финансовый узел",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Finanzplätze"
+    },
+    "folgen": {
+      "ru": "следовать; слушаться",
+      "pos": "гл.",
+      "forms": "folgte · ist gefolgt"
+    },
+    "Fossil": {
+      "ru": "ископаемое, окаменелость",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Fossilien"
+    },
+    "Frankfurt": {
+      "ru": "Франкфурт",
+      "pos": "геогр."
+    },
+    "Fund": {
+      "ru": "находка",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Funde"
+    },
+    "Fundstätte": {
+      "ru": "место находок",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Fundstätten"
+    },
+    "für": {
+      "ru": "для, за",
+      "pos": "предл."
+    },
+    "gelangen": {
+      "ru": "добираться, попадать",
+      "pos": "гл.",
+      "forms": "gelangte · ist gelangt"
+    },
+    "Geldpolitik": {
+      "ru": "денежно-кредитная политика",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "Grenze": {
+      "ru": "граница",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Grenzen"
+    },
+    "Groß-Hessen": {
+      "ru": "Большой Гессен",
+      "pos": "геогр."
+    },
+    "Grube": {
+      "ru": "карьер, яма",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Gruben"
+    },
+    "gut": {
+      "ru": "хороший, добрый",
+      "pos": "прил.",
+      "forms": "gut · besser · am besten",
+      "note": "besser — лучше"
+    },
+    "haben": {
+      "ru": "иметь; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "hatte · hat gehabt"
+    },
+    "Hauptstadt": {
+      "ru": "столица",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Hauptstädte"
+    },
+    "helfen": {
+      "ru": "помогать",
+      "pos": "гл.",
+      "forms": "half · hat geholfen"
+    },
+    "Hessen": {
+      "ru": "Гессен",
+      "pos": "геогр."
+    },
+    "ihr (её, их)": {
+      "ru": "её; их",
+      "pos": "мест."
+    },
+    "in": {
+      "ru": "в (im = in dem, ins = in das)",
+      "pos": "предл."
+    },
+    "Jahr": {
+      "ru": "год",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Jahre"
+    },
+    "Landeshauptstadt": {
+      "ru": "столица земли",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Landeshauptstädte"
+    },
+    "lassen": {
+      "ru": "позволять, велеть; оставлять",
+      "pos": "гл.",
+      "forms": "ließ · hat gelassen"
+    },
+    "leben": {
+      "ru": "жить",
+      "pos": "гл.",
+      "forms": "lebte · hat gelebt"
+    },
+    "Main": {
+      "ru": "Майн (река)",
+      "pos": "геогр."
+    },
+    "Mainz": {
+      "ru": "Майнц",
+      "pos": "геогр."
+    },
+    "Messel": {
+      "ru": "Мессель",
+      "pos": "геогр."
+    },
+    "Militärregierung": {
+      "ru": "военная администрация",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Militärregierungen"
+    },
+    "Million": {
+      "ru": "миллион",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Millionen"
+    },
+    "nach": {
+      "ru": "в, на, после, по",
+      "pos": "предл."
+    },
+    "nahe": {
+      "ru": "вблизи, около",
+      "pos": "предл."
+    },
+    "Name": {
+      "ru": "имя",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Namen",
+      "decl": "des Namens · dem/den Namen (особое склонение)"
+    },
+    "obwohl": {
+      "ru": "хотя",
+      "pos": "союз"
+    },
+    "oder": {
+      "ru": "или",
+      "pos": "союз"
+    },
+    "Oktober": {
+      "ru": "октябрь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Oktober"
+    },
+    "Osten": {
+      "ru": "восток",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "Pflanze": {
+      "ru": "растение",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Pflanzen"
+    },
+    "Rhein": {
+      "ru": "Рейн (река)",
+      "pos": "геогр."
+    },
+    "Rheinland-Pfalz": {
+      "ru": "Рейнланд-Пфальц",
+      "pos": "геогр."
+    },
+    "sein": {
+      "ru": "быть; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "war · ist gewesen"
+    },
+    "September": {
+      "ru": "сентябрь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die September"
+    },
+    "sich": {
+      "ru": "себя, себе",
+      "pos": "мест.",
+      "note": "Возвратное местоимение, часть возвратного глагола: sich auf den Weg machen, sich setzen, sich legen, sich nähern, sich gefallen lassen, sich getrauen, sich umsehen"
+    },
+    "sie": {
+      "ru": "она; они; Вы",
+      "pos": "мест."
+    },
+    "Sitz": {
+      "ru": "штаб-квартира; место",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Sitze",
+      "note": "seinen Sitz haben — находиться (о фирме); im Landtag — место"
+    },
+    "so": {
+      "ru": "так; такой; то (в главном предложении)",
+      "pos": "нареч."
+    },
+    "Stadt": {
+      "ru": "город",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Städte"
+    },
+    "Tier": {
+      "ru": "животное, зверь",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Tiere"
+    },
+    "und": {
+      "ru": "и, а",
+      "pos": "союз"
+    },
+    "unterscheiden": {
+      "ru": "различать",
+      "pos": "гл.",
+      "forms": "unterschied · hat unterschieden"
+    },
+    "untersuchen": {
+      "ru": "исследовать, изучать",
+      "pos": "гл.",
+      "forms": "untersuchte · hat untersucht"
+    },
+    "Verfassung": {
+      "ru": "конституция",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Verfassungen"
+    },
+    "verlaufen": {
+      "ru": "проходить, пролегать",
+      "pos": "гл.",
+      "forms": "verlief · ist verlaufen"
+    },
+    "viel": {
+      "ru": "много, многое",
+      "pos": "мест."
+    },
+    "Volksabstimmung": {
+      "ru": "народное голосование, референдум",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Volksabstimmungen"
+    },
+    "von": {
+      "ru": "от, из, о (vom = von dem)",
+      "pos": "предл."
+    },
+    "vor": {
+      "ru": "перед, до; от (страха)",
+      "pos": "предл."
+    },
+    "welcher": {
+      "ru": "который; какой",
+      "pos": "мест."
+    },
+    "Welterbeliste": {
+      "ru": "список всемирного наследия",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Welterbelisten"
+    },
+    "wer": {
+      "ru": "кто",
+      "pos": "мест."
+    },
+    "werden": {
+      "ru": "становиться",
+      "pos": "гл.",
+      "forms": "wurde · ist geworden",
+      "note": "Вспомогательный глагол будущего времени и пассива"
+    },
+    "Wiesbaden": {
+      "ru": "Висбаден",
+      "pos": "геогр."
+    },
+    "Zentralbank": {
+      "ru": "центральный банк",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Zentralbanken"
+    },
+    "zu": {
+      "ru": "к, в; слишком",
+      "pos": "предл.",
+      "note": "zur = zu der, zum = zu dem"
+    },
+    "zuständig": {
+      "ru": "ответственный, ведающий",
+      "pos": "прил."
+    },
+    "zwischen": {
+      "pos": "предл.",
+      "ru": "между"
+    }
+  }
+}

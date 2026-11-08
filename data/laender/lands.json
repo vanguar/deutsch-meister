@@ -1117,10 +1117,136 @@
       "name": "Hessen",
       "nameRu": "Гессен",
       "capital": "Wiesbaden",
-      "emoji": "📍",
+      "emoji": "🌳",
       "flag": "data/laender/flags/hessen.png",
       "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_Hesse.svg",
-      "ready": false
+      "ready": true,
+      "blurb": "Висбаден и Франкфурт, образование земли после войны, парк в Касселе и ископаемые Месселя.",
+      "facts": [
+        [
+          "Столица",
+          "Wiesbaden"
+        ],
+        [
+          "Основание",
+          "19 сентября 1945 года"
+        ],
+        [
+          "Реки",
+          "Rhein, Main, Fulda, Lahn"
+        ],
+        [
+          "Финансовый центр",
+          "Frankfurt am Main"
+        ],
+        [
+          "Всемирное наследие",
+          "Парк Вильгельмсхёэ и карьер Мессель"
+        ]
+      ],
+      "source": "Правительство Гессена, Европейский центральный банк и Центр всемирного наследия UNESCO",
+      "sourceUrl": "https://hbc.hessen.de/Wissen/Geschichte-des-Landes/Aufbauzeit-nach-dem-zweiten-Weltkrieg",
+      "checked": "2026-11-08",
+      "quiz": [
+        {
+          "q": "Какой город является столицей Гессена?",
+          "opts": [
+            "Frankfurt am Main",
+            "Kassel",
+            "Wiesbaden"
+          ],
+          "a": 2,
+          "why": "Висбаден стал столицей в 1945 году."
+        },
+        {
+          "q": "В каком городе находится Европейский центральный банк?",
+          "opts": [
+            "Frankfurt am Main",
+            "Mainz",
+            "Darmstadt"
+          ],
+          "a": 0,
+          "why": "Европейский центральный банк находится во Франкфурте-на-Майне."
+        },
+        {
+          "q": "Как первоначально называлась земля, образованная в 1945 году?",
+          "opts": [
+            "Rheinhessen",
+            "Groß-Hessen",
+            "Hessen-Nassau"
+          ],
+          "a": 1,
+          "why": "Американская военная администрация образовала землю под названием Groß-Hessen."
+        },
+        {
+          "q": "Чем известен карьер Мессель?",
+          "opts": [
+            "Ископаемыми остатками животных и растений",
+            "Барочными садами",
+            "Месторождением соли"
+          ],
+          "a": 0,
+          "why": "Хорошо сохранившиеся ископаемые помогают изучать древние экосистемы."
+        }
+      ],
+      "texts": {
+        "b1": {
+          "id": "hessen-b1",
+          "chapters": 4,
+          "words": 84,
+          "minutes": 1,
+          "toc": [
+            {
+              "title": "Wiesbaden und der Rhein",
+              "titleRu": "Висбаден и Рейн",
+              "icon": "🗺️"
+            },
+            {
+              "title": "Frankfurt am Main",
+              "titleRu": "Франкфурт-на-Майне",
+              "icon": "🏦"
+            },
+            {
+              "title": "Ein neues Land nach dem Krieg",
+              "titleRu": "Новая земля после войны",
+              "icon": "📜"
+            },
+            {
+              "title": "Ein Park und alte Fossilien",
+              "titleRu": "Парк и древние ископаемые",
+              "icon": "🏞️"
+            }
+          ]
+        },
+        "b2": {
+          "id": "hessen-b2",
+          "chapters": 4,
+          "words": 132,
+          "minutes": 1,
+          "toc": [
+            {
+              "title": "Zwei Hauptstädte am selben Fluss",
+              "titleRu": "Две столицы на одной реке",
+              "icon": "🧭"
+            },
+            {
+              "title": "Frankfurt als Finanzplatz",
+              "titleRu": "Франкфурт как финансовый центр",
+              "icon": "💶"
+            },
+            {
+              "title": "Von Groß-Hessen zur Verfassung",
+              "titleRu": "От Большого Гессена к конституции",
+              "icon": "🗳️"
+            },
+            {
+              "title": "Was die Grube Messel erzählt",
+              "titleRu": "О чём рассказывает карьер Мессель",
+              "icon": "🦴"
+            }
+          ]
+        }
+      }
     },
     {
       "id": "mecklenburg-vorpommern",

@@ -1117,10 +1117,136 @@
    "name": "Hessen",
    "nameRu": "هسن",
    "capital": "Wiesbaden",
-   "emoji": "📍",
+   "emoji": "🌳",
    "flag": "data/laender/flags/hessen.png",
    "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_Hesse.svg",
-   "ready": false
+   "ready": true,
+   "blurb": "فيسبادن وفرانكفورت، وتأسيس الولاية بعد الحرب، وحديقة كاسل وأحافير ميسل.",
+   "facts": [
+    [
+     "العاصمة",
+     "Wiesbaden"
+    ],
+    [
+     "التأسيس",
+     "19 سبتمبر 1945"
+    ],
+    [
+     "الأنهار",
+     "Rhein, Main, Fulda, Lahn"
+    ],
+    [
+     "المركز المالي",
+     "Frankfurt am Main"
+    ],
+    [
+     "التراث العالمي",
+     "حديقة فيلهلمسهوهه وحفرة ميسل"
+    ]
+   ],
+   "source": "حكومة هِسّن والبنك المركزي الأوروبي ومركز التراث العالمي لليونسكو",
+   "sourceUrl": "https://hbc.hessen.de/Wissen/Geschichte-des-Landes/Aufbauzeit-nach-dem-zweiten-Weltkrieg",
+   "checked": "2026-11-08",
+   "quiz": [
+    {
+     "q": "ما عاصمة هِسّن؟",
+     "opts": [
+      "Frankfurt am Main",
+      "Kassel",
+      "Wiesbaden"
+     ],
+     "a": 2,
+     "why": "أصبحت فيسبادن العاصمة عام 1945."
+    },
+    {
+     "q": "في أي مدينة يقع البنك المركزي الأوروبي؟",
+     "opts": [
+      "Frankfurt am Main",
+      "Mainz",
+      "Darmstadt"
+     ],
+     "a": 0,
+     "why": "يقع البنك المركزي الأوروبي في فرانكفورت على نهر الماين."
+    },
+    {
+     "q": "ما الاسم الأول للولاية التي تأسست عام 1945؟",
+     "opts": [
+      "Rheinhessen",
+      "Groß-Hessen",
+      "Hessen-Nassau"
+     ],
+     "a": 1,
+     "why": "أسست الإدارة العسكرية الأمريكية الولاية باسم هِسّن الكبرى."
+    },
+    {
+     "q": "بماذا تشتهر حفرة ميسل؟",
+     "opts": [
+      "بأحافير حيوانات ونباتات",
+      "بحدائق باروكية",
+      "برواسب الملح"
+     ],
+     "a": 0,
+     "why": "تساعد الأحافير المحفوظة جيدًا على دراسة النظم البيئية القديمة."
+    }
+   ],
+   "texts": {
+    "b1": {
+     "id": "hessen-b1",
+     "chapters": 4,
+     "words": 84,
+     "minutes": 1,
+     "toc": [
+      {
+       "title": "Wiesbaden und der Rhein",
+       "titleRu": "فيسبادن ونهر الراين",
+       "icon": "🗺️"
+      },
+      {
+       "title": "Frankfurt am Main",
+       "titleRu": "فرانكفورت على الماين",
+       "icon": "🏦"
+      },
+      {
+       "title": "Ein neues Land nach dem Krieg",
+       "titleRu": "ولاية جديدة بعد الحرب",
+       "icon": "📜"
+      },
+      {
+       "title": "Ein Park und alte Fossilien",
+       "titleRu": "حديقة وأحافير قديمة",
+       "icon": "🏞️"
+      }
+     ]
+    },
+    "b2": {
+     "id": "hessen-b2",
+     "chapters": 4,
+     "words": 132,
+     "minutes": 1,
+     "toc": [
+      {
+       "title": "Zwei Hauptstädte am selben Fluss",
+       "titleRu": "عاصمتان على نهر واحد",
+       "icon": "🧭"
+      },
+      {
+       "title": "Frankfurt als Finanzplatz",
+       "titleRu": "فرانكفورت بوصفها مركزًا ماليًا",
+       "icon": "💶"
+      },
+      {
+       "title": "Von Groß-Hessen zur Verfassung",
+       "titleRu": "من هِسّن الكبرى إلى الدستور",
+       "icon": "🗳️"
+      },
+      {
+       "title": "Was die Grube Messel erzählt",
+       "titleRu": "ما الذي ترويه حفرة ميسل؟",
+       "icon": "🦴"
+      }
+     ]
+    }
+   }
   },
   {
    "id": "mecklenburg-vorpommern",

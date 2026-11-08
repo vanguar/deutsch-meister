@@ -1,0 +1,29 @@
+{
+  "id": "ch-04",
+  "title": "Was die Grube Messel erzählt",
+  "titleRu": "О чём рассказывает карьер Мессель",
+  "icon": "🦴",
+  "paragraphs": [
+    {
+      "s": [
+        {
+          "de": "Die Grube Messel ist eine Fundstätte, in der außergewöhnlich gut erhaltene Fossilien entdeckt wurden.",
+          "ru": "Карьер Мессель — место, где обнаружили исключительно хорошо сохранившиеся окаменелости.",
+          "g": {}
+        },
+        {
+          "de": "Anhand dieser Funde lässt sich untersuchen, welche Tiere und Pflanzen vor vielen Millionen Jahren dort lebten.",
+          "ru": "По этим находкам можно изучать, какие животные и растения жили там много миллионов лет назад.",
+          "g": {
+            "0": "на основании"
+          }
+        },
+        {
+          "de": "Die Fundstätte wurde 1995 in die UNESCO-Welterbeliste aufgenommen.",
+          "ru": "В 1995 году это место внесли в список всемирного наследия UNESCO.",
+          "g": {}
+        }
+      ]
+    }
+  ]
+}
