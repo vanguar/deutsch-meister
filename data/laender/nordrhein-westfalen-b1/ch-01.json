@@ -1,0 +1,27 @@
+{
+  "id": "ch-01",
+  "title": "Städte am Rhein",
+  "titleRu": "Города на Рейне",
+  "icon": "🗺️",
+  "paragraphs": [
+    {
+      "s": [
+        {
+          "de": "Nordrhein-Westfalen liegt im Westen Deutschlands.",
+          "ru": "Северный Рейн — Вестфалия находится на западе Германии.",
+          "g": {}
+        },
+        {
+          "de": "Der Rhein fließt durch Köln und Düsseldorf.",
+          "ru": "Рейн протекает через Кёльн и Дюссельдорф.",
+          "g": {}
+        },
+        {
+          "de": "Düsseldorf ist die Hauptstadt des Landes.",
+          "ru": "Дюссельдорф — столица земли.",
+          "g": {}
+        }
+      ]
+    }
+  ]
+}

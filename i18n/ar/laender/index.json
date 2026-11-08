@@ -212,6 +212,36 @@
    "land": "niedersachsen"
   },
   {
+   "id": "nordrhein-westfalen-b1",
+   "title": "Nordrhein-Westfalen",
+   "titleRu": "شمال الراين-وستفاليا",
+   "author": "German Morning",
+   "level": "B1",
+   "year": "2026",
+   "chapters": 4,
+   "words": 80,
+   "minutes": 1,
+   "cover": "🏗️",
+   "source": "برلمان شمال الراين وستفاليا ومركز التراث العالمي لليونسكو",
+   "license": "نص من دورة German Morning",
+   "land": "nordrhein-westfalen"
+  },
+  {
+   "id": "nordrhein-westfalen-b2",
+   "title": "Nordrhein-Westfalen",
+   "titleRu": "شمال الراين-وستفاليا",
+   "author": "German Morning",
+   "level": "B2",
+   "year": "2026",
+   "chapters": 4,
+   "words": 134,
+   "minutes": 1,
+   "cover": "🏗️",
+   "source": "برلمان شمال الراين وستفاليا ومركز التراث العالمي لليونسكو",
+   "license": "نص من دورة German Morning",
+   "land": "nordrhein-westfalen"
+  },
+  {
    "id": "sachsen-b1",
    "title": "Sachsen",
    "titleRu": "سكسونيا",

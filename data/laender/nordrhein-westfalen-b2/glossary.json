@@ -1,0 +1,547 @@
+{
+  "version": 1,
+  "w": {
+    "abgeordneten": "Abgeordnete",
+    "als": "als",
+    "anlage": "Anlage (комплекс)",
+    "auf": "auf",
+    "august": "August",
+    "bahnstrecken": "Bahnstrecke",
+    "bau": "Bau (стройка)",
+    "baukunst": "Baukunst",
+    "baus": "Bau (стройка)",
+    "beginn": "Beginn",
+    "begonnen": "beginnen",
+    "besatzungsmacht": "Besatzungsmacht",
+    "besatzungszone": "Besatzungszone",
+    "bewahrt": "bewahren",
+    "britische": "britisch",
+    "britischen": "britisch",
+    "bürger": "Bürger",
+    "bürgerinnen": "Bürgerin",
+    "charakter": "Charakter",
+    "der": "der/die/das",
+    "des": "der/die/das",
+    "die": "der/die/das",
+    "dom": "Dom",
+    "doms": "Dom",
+    "düsseldorfer": "Düsseldorfer",
+    "ebenso": "ebenso",
+    "eine": "ein/eine",
+    "einem": "ein/eine",
+    "entstand": "entstehen",
+    "ernannt": "ernennen",
+    "erst": "erst",
+    "ersten": "erste",
+    "erzählt": "erzählen",
+    "gefördert": "fördern (добыча)",
+    "gehörten": "gehören",
+    "gotische": "gotisch",
+    "grenzen": "Grenze",
+    "ihre": "ihr (её, их)",
+    "ihrer": "ihr (их, её)",
+    "im": "in",
+    "in": "in",
+    "jahrhundert": "Jahrhundert",
+    "jahrhunderte": "Jahrhundert",
+    "jahrhunderten": "Jahrhundert",
+    "januar": "Januar",
+    "kohle": "Kohle",
+    "kokerei": "Kokerei",
+    "komplex": "Komplex",
+    "konnten": "können",
+    "kölner": "Kölner",
+    "lagen": "liegen",
+    "land": "Land (земля)",
+    "landes": "Land (земля)",
+    "landtag": "Landtag",
+    "lippe": "Lippe",
+    "mal": "Mal",
+    "mehrere": "mehrere",
+    "militärregierung": "Militärregierung",
+    "mitglieder": "Mitglied",
+    "mittelalter": "Mittelalter",
+    "mittelalterlicher": "mittelalterlich",
+    "neu": {
+      "l": "neu",
+      "old": "в обороте aufs neu — снова; сегодня aufs Neue"
+    },
+    "neuen": "neu",
+    "nordrhein-westfalen": "Nordrhein-Westfalen",
+    "nördliche": "nördlich",
+    "obwohl": "obwohl",
+    "oktober": "Oktober",
+    "opernhaus": "Opernhaus",
+    "ordnete": "anordnen",
+    "rheinprovinz": "Rheinprovinz",
+    "seine": "sein (его, свой)",
+    "seit": "seit",
+    "selbst": "selbst",
+    "so": "so",
+    "späteren": "spät",
+    "steht": "stehen",
+    "tagte": "tagen",
+    "teil": "Teil",
+    "transportiert": "transportieren",
+    "und": "und",
+    "verarbeitet": "verarbeiten",
+    "viele": "viel",
+    "vollendet": "vollenden",
+    "vollendung": "Vollendung",
+    "von": "von",
+    "waren": "sein",
+    "welterbeliste": "Welterbeliste",
+    "westfalen": "Westfalen",
+    "wie": "wie",
+    "worden": "werden",
+    "wurde": "werden",
+    "wurden": "werden",
+    "wählen": "wählen",
+    "zeigt": "zeigen",
+    "zollverein": "Zollverein",
+    "zu": "zu",
+    "zum": "zu",
+    "zunächst": "zunächst",
+    "zur": "zu",
+    "zusammengefasst": "zusammenfassen",
+    "zwischen": "zwischen"
+  },
+  "l": {
+    "Abgeordnete": {
+      "ru": "депутат",
+      "pos": "субст. прил.",
+      "decl": "der Abgeordnete / ein Abgeordneter / die Abgeordneten"
+    },
+    "als": {
+      "ru": "когда; как; чем",
+      "pos": "союз"
+    },
+    "Anlage (комплекс)": {
+      "ru": "сооружение, комплекс",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Anlagen"
+    },
+    "anordnen": {
+      "ru": "распоряжаться",
+      "pos": "гл.",
+      "forms": "ordnete an · hat angeordnet"
+    },
+    "auf": {
+      "ru": "на, в",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: aufspringen «вскочить», sich aufmachen"
+    },
+    "August": {
+      "ru": "август",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "Bahnstrecke": {
+      "ru": "железнодорожная линия",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Bahnstrecken"
+    },
+    "Bau (стройка)": {
+      "ru": "строительство; постройка",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Bauten",
+      "note": "der Bau der Mauer — строительство стены"
+    },
+    "Baukunst": {
+      "ru": "архитектура",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "Beginn": {
+      "ru": "начало",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null,
+      "note": "zu Beginn — в начале"
+    },
+    "beginnen": {
+      "ru": "начинать, начинаться",
+      "pos": "гл.",
+      "forms": "begann · hat begonnen"
+    },
+    "Besatzungsmacht": {
+      "ru": "оккупационная власть",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Besatzungsmächte"
+    },
+    "Besatzungszone": {
+      "ru": "зона оккупации",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Besatzungszonen"
+    },
+    "bewahren": {
+      "ru": "сохранять",
+      "pos": "гл.",
+      "forms": "bewahrte · hat bewahrt"
+    },
+    "britisch": {
+      "ru": "британский",
+      "pos": "прил."
+    },
+    "Bürger": {
+      "ru": "горожанин, гражданин",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Bürger"
+    },
+    "Bürgerin": {
+      "ru": "гражданка",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Bürgerinnen"
+    },
+    "Charakter": {
+      "ru": "характер, облик",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Charaktere"
+    },
+    "der/die/das": {
+      "ru": "определённый артикль",
+      "pos": "артикль",
+      "note": "Тж. относительное местоимение «который»"
+    },
+    "Dom": {
+      "ru": "собор",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Dome"
+    },
+    "Düsseldorfer": {
+      "ru": "дюссельдорфский",
+      "pos": "прил."
+    },
+    "ebenso": {
+      "ru": "так же",
+      "pos": "нареч.",
+      "note": "ebenso wenig — так же мало"
+    },
+    "ein/eine": {
+      "ru": "неопределённый артикль",
+      "pos": "артикль",
+      "note": "einer — «один, некто»"
+    },
+    "entstehen": {
+      "ru": "возникать",
+      "pos": "гл.",
+      "forms": "entstand · ist entstanden"
+    },
+    "ernennen": {
+      "ru": "назначать на должность",
+      "pos": "гл.",
+      "forms": "ernannte · hat ernannt"
+    },
+    "erst": {
+      "ru": "лишь, только; сначала",
+      "pos": "нареч.",
+      "note": "erst 2010 — лишь в 2010 году"
+    },
+    "erste": {
+      "ru": "первый",
+      "pos": "числ."
+    },
+    "erzählen": {
+      "ru": "рассказывать",
+      "pos": "гл.",
+      "forms": "erzählte · hat erzählt"
+    },
+    "fördern (добыча)": {
+      "ru": "добывать (полезные ископаемые)",
+      "pos": "гл.",
+      "forms": "förderte · hat gefördert"
+    },
+    "gehören": {
+      "ru": "принадлежать, относиться",
+      "pos": "гл.",
+      "forms": "gehörte · hat gehört",
+      "note": "zu etwas gehören — относиться к чему-то, входить в"
+    },
+    "gotisch": {
+      "ru": "готический",
+      "pos": "прил."
+    },
+    "Grenze": {
+      "ru": "граница",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Grenzen"
+    },
+    "ihr (её, их)": {
+      "ru": "её; их",
+      "pos": "мест."
+    },
+    "ihr (их, её)": {
+      "ru": "их; её",
+      "pos": "мест."
+    },
+    "in": {
+      "ru": "в (im = in dem, ins = in das)",
+      "pos": "предл."
+    },
+    "Jahrhundert": {
+      "ru": "век, столетие",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Jahrhunderte"
+    },
+    "Januar": {
+      "ru": "январь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Januare"
+    },
+    "Kohle": {
+      "ru": "уголь",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Kohlen"
+    },
+    "Kokerei": {
+      "ru": "коксохимический завод",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Kokereien"
+    },
+    "Komplex": {
+      "ru": "комплекс",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Komplexe"
+    },
+    "Kölner": {
+      "ru": "кёльнский",
+      "pos": "прил."
+    },
+    "können": {
+      "ru": "мочь, уметь",
+      "pos": "гл.",
+      "forms": "konnte · hat gekonnt"
+    },
+    "Land (земля)": {
+      "ru": "земля (федеральная); страна",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Länder",
+      "note": "Bundesland — федеральная земля; in anderen Ländern — в других землях"
+    },
+    "Landtag": {
+      "ru": "ландтаг (парламент земли)",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Landtage"
+    },
+    "liegen": {
+      "ru": "лежать",
+      "pos": "гл.",
+      "forms": "lag · hat gelegen"
+    },
+    "Lippe": {
+      "ru": "Липпе",
+      "pos": "геогр."
+    },
+    "Mal": {
+      "ru": "раз",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Male",
+      "note": "zu wiederholten Malen — неоднократно"
+    },
+    "mehrere": {
+      "pos": "мест.",
+      "ru": "несколько"
+    },
+    "Militärregierung": {
+      "ru": "военная администрация",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Militärregierungen"
+    },
+    "Mitglied": {
+      "ru": "член (общества)",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Mitglieder"
+    },
+    "Mittelalter": {
+      "ru": "Средние века",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "mittelalterlich": {
+      "ru": "средневековый",
+      "pos": "прил."
+    },
+    "neu": {
+      "ru": "новый",
+      "pos": "прил."
+    },
+    "Nordrhein-Westfalen": {
+      "ru": "Северный Рейн — Вестфалия",
+      "pos": "геогр."
+    },
+    "nördlich": {
+      "ru": "северный",
+      "pos": "прил."
+    },
+    "obwohl": {
+      "ru": "хотя",
+      "pos": "союз"
+    },
+    "Oktober": {
+      "ru": "октябрь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Oktober"
+    },
+    "Opernhaus": {
+      "ru": "оперный театр",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Opernhäuser"
+    },
+    "Rheinprovinz": {
+      "ru": "Рейнская провинция",
+      "pos": "геогр."
+    },
+    "sein": {
+      "ru": "быть; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "war · ist gewesen"
+    },
+    "sein (его, свой)": {
+      "ru": "его, свой",
+      "pos": "мест."
+    },
+    "seit": {
+      "ru": "с (какого-то времени)",
+      "pos": "предл."
+    },
+    "selbst": {
+      "ru": "сам; даже",
+      "pos": "мест."
+    },
+    "so": {
+      "ru": "так; такой; то (в главном предложении)",
+      "pos": "нареч."
+    },
+    "spät": {
+      "ru": "поздний; spätero — позже",
+      "pos": "прил."
+    },
+    "stehen": {
+      "ru": "стоять",
+      "pos": "гл.",
+      "forms": "stand · hat gestanden"
+    },
+    "tagen": {
+      "ru": "заседать",
+      "pos": "гл.",
+      "forms": "tagte · hat getagt"
+    },
+    "Teil": {
+      "ru": "часть; доля",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Teile",
+      "note": "sein Teil haben — получить своё"
+    },
+    "transportieren": {
+      "ru": "перевозить",
+      "pos": "гл.",
+      "forms": "transportierte · hat transportiert"
+    },
+    "und": {
+      "ru": "и, а",
+      "pos": "союз"
+    },
+    "verarbeiten": {
+      "ru": "обрабатывать, изготавливать",
+      "pos": "гл.",
+      "forms": "verarbeitete · hat verarbeitet"
+    },
+    "viel": {
+      "ru": "много, многое",
+      "pos": "мест."
+    },
+    "vollenden": {
+      "ru": "завершать",
+      "pos": "гл.",
+      "forms": "vollendete · hat vollendet"
+    },
+    "Vollendung": {
+      "ru": "завершение",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "von": {
+      "ru": "от, из, о (vom = von dem)",
+      "pos": "предл."
+    },
+    "Welterbeliste": {
+      "ru": "список всемирного наследия",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Welterbelisten"
+    },
+    "werden": {
+      "ru": "становиться",
+      "pos": "гл.",
+      "forms": "wurde · ist geworden",
+      "note": "Вспомогательный глагол будущего времени и пассива"
+    },
+    "Westfalen": {
+      "ru": "Вестфалия",
+      "pos": "геогр."
+    },
+    "wie": {
+      "ru": "как; какой",
+      "pos": "союз"
+    },
+    "wählen": {
+      "ru": "выбирать",
+      "pos": "гл.",
+      "forms": "wählte · hat gewählt"
+    },
+    "zeigen": {
+      "ru": "показывать; sich zeigen — появиться",
+      "pos": "гл.",
+      "forms": "zeigte · hat gezeigt"
+    },
+    "Zollverein": {
+      "ru": "Цольферайн (промышленный комплекс)",
+      "pos": "имя собств."
+    },
+    "zu": {
+      "ru": "к, в; слишком",
+      "pos": "предл.",
+      "note": "zur = zu der, zum = zu dem"
+    },
+    "zunächst": {
+      "ru": "сначала",
+      "pos": "нареч."
+    },
+    "zusammenfassen": {
+      "ru": "объединять, обобщать",
+      "pos": "гл.",
+      "forms": "fasste zusammen · hat zusammengefasst"
+    },
+    "zwischen": {
+      "pos": "предл.",
+      "ru": "между"
+    }
+  }
+}

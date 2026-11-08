@@ -1,0 +1,27 @@
+{
+  "id": "ch-04",
+  "title": "Der Kölner Dom",
+  "titleRu": "Кёльнский собор",
+  "icon": "⛪",
+  "paragraphs": [
+    {
+      "s": [
+        {
+          "de": "Der Kölner Dom ist eine gotische Kirche.",
+          "ru": "Кёльнский собор — готический храм.",
+          "g": {}
+        },
+        {
+          "de": "Der Bau begann 1248 und dauerte mit langen Pausen bis 1880.",
+          "ru": "Строительство началось в 1248 году и с долгими перерывами продолжалось до 1880 года.",
+          "g": {}
+        },
+        {
+          "de": "Auch dieser Dom gehört zum UNESCO-Welterbe.",
+          "ru": "Этот собор тоже входит в список всемирного наследия UNESCO.",
+          "g": {}
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "ch-03",
+  "title": "Das Ruhrgebiet",
+  "titleRu": "Рурская область",
+  "icon": "⛏️",
+  "paragraphs": [
+    {
+      "s": [
+        {
+          "de": "Essen liegt im Ruhrgebiet.",
+          "ru": "Эссен находится в Рурской области.",
+          "g": {}
+        },
+        {
+          "de": "Dort wurde lange Kohle gefördert.",
+          "ru": "Там долгое время добывали уголь.",
+          "g": {}
+        },
+        {
+          "de": "Die Zeche Zollverein ist heute Teil des UNESCO-Welterbes.",
+          "ru": "Шахта Цольферайн сегодня входит в список всемирного наследия UNESCO.",
+          "g": {}
+        }
+      ]
+    }
+  ]
+}

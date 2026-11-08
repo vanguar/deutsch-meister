@@ -1,0 +1,356 @@
+{
+  "version": 1,
+  "w": {
+    "auch": "auch",
+    "bau": "Bau (стройка)",
+    "begann": "beginnen",
+    "besatzungsmacht": "Besatzungsmacht",
+    "bis": "bis",
+    "britische": "britisch",
+    "das": "der/die/das",
+    "dauerte": "dauern",
+    "dazu": "dazu",
+    "dem": "der/die/das",
+    "den": "der/die/das",
+    "der": "der/die/das",
+    "des": "der/die/das",
+    "deutschlands": "Deutschland (страна)",
+    "die": "der/die/das",
+    "dieser": "dieser",
+    "dom": "Dom",
+    "dort": "dort",
+    "durch": "durch",
+    "düsseldorf": "Düsseldorf",
+    "ein": "ein/eine",
+    "eine": "ein/eine",
+    "entstand": "entstehen",
+    "essen": "essen",
+    "fließt": "fließen",
+    "gefördert": "fördern (добыча)",
+    "gehört": "gehören",
+    "gotische": "gotisch",
+    "hauptstadt": "Hauptstadt",
+    "heute": "heute",
+    "im": "in",
+    "ist": "sein",
+    "jahr": "Jahr",
+    "kam": "kommen",
+    "kirche": "Kirche",
+    "kohle": "Kohle",
+    "köln": "Köln",
+    "kölner": "Kölner",
+    "land": "Land (земля)",
+    "landes": "Land (земля)",
+    "lange": "lang",
+    "langen": "lang",
+    "liegt": "liegen",
+    "lippe": "Lippe",
+    "mit": "mit",
+    "nach": "nach",
+    "norden": "Norden",
+    "nordrhein-westfalen": "Nordrhein-Westfalen",
+    "pausen": "Pause",
+    "rhein": "Rhein",
+    "rheinprovinz": "Rheinprovinz",
+    "ruhrgebiet": "Ruhrgebiet",
+    "später": "später",
+    "teil": "Teil",
+    "und": "und",
+    "unesco-welterbe": "UNESCO-Welterbe",
+    "unesco-welterbes": "UNESCO-Welterbe",
+    "vereinte": "vereinen",
+    "weltkrieg": "Weltkrieg",
+    "westen": "Westen",
+    "westfalen": "Westfalen",
+    "wurde": "werden",
+    "zeche": "Zeche",
+    "zollverein": "Zollverein",
+    "zum": "zu",
+    "zweiten": "zweite"
+  },
+  "l": {
+    "auch": {
+      "ru": "тоже, также; даже",
+      "pos": "частица"
+    },
+    "Bau (стройка)": {
+      "ru": "строительство; постройка",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Bauten",
+      "note": "der Bau der Mauer — строительство стены"
+    },
+    "beginnen": {
+      "ru": "начинать, начинаться",
+      "pos": "гл.",
+      "forms": "begann · hat begonnen"
+    },
+    "Besatzungsmacht": {
+      "ru": "оккупационная власть",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Besatzungsmächte"
+    },
+    "bis": {
+      "ru": "до; пока не",
+      "pos": "союз"
+    },
+    "britisch": {
+      "ru": "британский",
+      "pos": "прил."
+    },
+    "dauern": {
+      "ru": "длиться, продолжаться",
+      "pos": "гл.",
+      "forms": "dauerte · hat gedauert"
+    },
+    "dazu": {
+      "ru": "к этому, туда же",
+      "pos": "нареч."
+    },
+    "der/die/das": {
+      "ru": "определённый артикль",
+      "pos": "артикль",
+      "note": "Тж. относительное местоимение «который»"
+    },
+    "Deutschland (страна)": {
+      "ru": "Германия",
+      "pos": "геогр."
+    },
+    "dieser": {
+      "ru": "этот, эта, это",
+      "pos": "мест."
+    },
+    "Dom": {
+      "ru": "собор",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Dome"
+    },
+    "dort": {
+      "ru": "там",
+      "pos": "нареч."
+    },
+    "durch": {
+      "ru": "через, сквозь, из-за",
+      "pos": "предл."
+    },
+    "Düsseldorf": {
+      "ru": "Дюссельдорф",
+      "pos": "геогр."
+    },
+    "ein/eine": {
+      "ru": "неопределённый артикль",
+      "pos": "артикль",
+      "note": "einer — «один, некто»"
+    },
+    "entstehen": {
+      "ru": "возникать",
+      "pos": "гл.",
+      "forms": "entstand · ist entstanden"
+    },
+    "essen": {
+      "ru": "есть, кушать",
+      "pos": "гл.",
+      "forms": "aß · hat gegessen",
+      "note": "das Essen — еда"
+    },
+    "fließen": {
+      "ru": "течь",
+      "pos": "гл.",
+      "forms": "floss · ist geflossen"
+    },
+    "fördern (добыча)": {
+      "ru": "добывать (полезные ископаемые)",
+      "pos": "гл.",
+      "forms": "förderte · hat gefördert"
+    },
+    "gehören": {
+      "ru": "принадлежать, относиться",
+      "pos": "гл.",
+      "forms": "gehörte · hat gehört",
+      "note": "zu etwas gehören — относиться к чему-то, входить в"
+    },
+    "gotisch": {
+      "ru": "готический",
+      "pos": "прил."
+    },
+    "Hauptstadt": {
+      "ru": "столица",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Hauptstädte"
+    },
+    "heute": {
+      "ru": "сегодня",
+      "pos": "нареч."
+    },
+    "in": {
+      "ru": "в (im = in dem, ins = in das)",
+      "pos": "предл."
+    },
+    "Jahr": {
+      "ru": "год",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Jahre"
+    },
+    "Kirche": {
+      "ru": "церковь",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Kirchen"
+    },
+    "Kohle": {
+      "ru": "уголь",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Kohlen"
+    },
+    "kommen": {
+      "ru": "приходить, приезжать",
+      "pos": "гл.",
+      "forms": "kam · ist gekommen"
+    },
+    "Köln": {
+      "ru": "Кёльн",
+      "pos": "геогр."
+    },
+    "Kölner": {
+      "ru": "кёльнский",
+      "pos": "прил."
+    },
+    "Land (земля)": {
+      "ru": "земля (федеральная); страна",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Länder",
+      "note": "Bundesland — федеральная земля; in anderen Ländern — в других землях"
+    },
+    "lang": {
+      "ru": "длинный, долгий",
+      "pos": "прил.",
+      "forms": "lang · länger · am längsten"
+    },
+    "liegen": {
+      "ru": "лежать",
+      "pos": "гл.",
+      "forms": "lag · hat gelegen"
+    },
+    "Lippe": {
+      "ru": "Липпе",
+      "pos": "геогр."
+    },
+    "mit": {
+      "ru": "с",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: mitgehen «пойти вместе»"
+    },
+    "nach": {
+      "ru": "в, на, после, по",
+      "pos": "предл."
+    },
+    "Norden": {
+      "ru": "север",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "Nordrhein-Westfalen": {
+      "ru": "Северный Рейн — Вестфалия",
+      "pos": "геогр."
+    },
+    "Pause": {
+      "ru": "перерыв",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Pausen"
+    },
+    "Rhein": {
+      "ru": "Рейн (река)",
+      "pos": "геогр."
+    },
+    "Rheinprovinz": {
+      "ru": "Рейнская провинция",
+      "pos": "геогр."
+    },
+    "Ruhrgebiet": {
+      "ru": "Рурская область",
+      "pos": "геогр."
+    },
+    "sein": {
+      "ru": "быть; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "war · ist gewesen"
+    },
+    "später": {
+      "ru": "позже, потом",
+      "pos": "нареч."
+    },
+    "Teil": {
+      "ru": "часть; доля",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Teile",
+      "note": "sein Teil haben — получить своё"
+    },
+    "und": {
+      "ru": "и, а",
+      "pos": "союз"
+    },
+    "UNESCO-Welterbe": {
+      "ru": "Всемирное наследие ЮНЕСКО",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "vereinen": {
+      "ru": "объединять",
+      "pos": "гл.",
+      "forms": "vereinte · hat vereint"
+    },
+    "Weltkrieg": {
+      "ru": "мировая война",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Weltkriege",
+      "note": "der Zweite Weltkrieg — Вторая мировая война"
+    },
+    "werden": {
+      "ru": "становиться",
+      "pos": "гл.",
+      "forms": "wurde · ist geworden",
+      "note": "Вспомогательный глагол будущего времени и пассива"
+    },
+    "Westen": {
+      "ru": "запад",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "Westfalen": {
+      "ru": "Вестфалия",
+      "pos": "геогр."
+    },
+    "Zeche": {
+      "ru": "угольная шахта",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Zechen"
+    },
+    "Zollverein": {
+      "ru": "Цольферайн (промышленный комплекс)",
+      "pos": "имя собств."
+    },
+    "zu": {
+      "ru": "к, в; слишком",
+      "pos": "предл.",
+      "note": "zur = zu der, zum = zu dem"
+    },
+    "zweite": {
+      "ru": "второй",
+      "pos": "числ.",
+      "note": "zum zweiten Mal — во второй раз"
+    }
+  }
+}

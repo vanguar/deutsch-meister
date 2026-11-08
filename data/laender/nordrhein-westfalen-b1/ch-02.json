@@ -1,0 +1,29 @@
+{
+  "id": "ch-02",
+  "title": "Die Gründung des Landes",
+  "titleRu": "Образование земли",
+  "icon": "📜",
+  "paragraphs": [
+    {
+      "s": [
+        {
+          "de": "Das Land entstand 1946 nach dem Zweiten Weltkrieg.",
+          "ru": "Земля появилась в 1946 году после Второй мировой войны.",
+          "g": {}
+        },
+        {
+          "de": "Die britische Besatzungsmacht vereinte den Norden der Rheinprovinz mit Westfalen.",
+          "ru": "Британская оккупационная администрация объединила север Рейнской провинции с Вестфалией.",
+          "g": {}
+        },
+        {
+          "de": "Ein Jahr später kam Lippe dazu.",
+          "ru": "Годом позже присоединилась Липпе.",
+          "g": {
+            "3+5": "присоединилась"
+          }
+        }
+      ]
+    }
+  ]
+}

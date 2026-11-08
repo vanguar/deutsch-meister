@@ -1481,10 +1481,136 @@
       "name": "Nordrhein-Westfalen",
       "nameRu": "Северный Рейн — Вестфалия",
       "capital": "Düsseldorf",
-      "emoji": "📍",
+      "emoji": "🏗️",
       "flag": "data/laender/flags/nordrhein-westfalen.png",
       "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_North_Rhine-Westphalia.svg",
-      "ready": false
+      "ready": true,
+      "blurb": "Дюссельдорф и Кёльн на Рейне, история Рурской области и шахта Цольферайн в Эссене.",
+      "facts": [
+        [
+          "Столица",
+          "Düsseldorf"
+        ],
+        [
+          "Основание",
+          "23 августа 1946 года"
+        ],
+        [
+          "Река",
+          "Rhein"
+        ],
+        [
+          "Промышленный регион",
+          "Рурская область"
+        ],
+        [
+          "Всемирное наследие",
+          "Кёльнский собор и шахта Цольферайн"
+        ]
+      ],
+      "source": "Ландтаг Северного Рейна — Вестфалии и Центр всемирного наследия UNESCO",
+      "sourceUrl": "https://www.landtag.nrw.de/home/der-landtag/geschichte-des-landtags/zur-geschichte-des-landes-nrw/zeitleiste-zur-landesgeschich-1.html",
+      "checked": "2026-11-08",
+      "quiz": [
+        {
+          "q": "Какой город — столица Северного Рейна — Вестфалии?",
+          "opts": [
+            "Köln",
+            "Düsseldorf",
+            "Essen"
+          ],
+          "a": 1,
+          "why": "Столица земли и место заседаний ландтага — Дюссельдорф."
+        },
+        {
+          "q": "Какой регион присоединился к земле в 1947 году?",
+          "opts": [
+            "Lippe",
+            "Saarland",
+            "Hessen"
+          ],
+          "a": 0,
+          "why": "Липпе присоединилась уже после образования земли в 1946 году."
+        },
+        {
+          "q": "Что добывали на шахте Цольферайн?",
+          "opts": [
+            "Соль",
+            "Железную руду",
+            "Уголь"
+          ],
+          "a": 2,
+          "why": "Цольферайн был угольной шахтой в Эссене."
+        },
+        {
+          "q": "Где находится знаменитый готический собор?",
+          "opts": [
+            "Bonn",
+            "Köln",
+            "Duisburg"
+          ],
+          "a": 1,
+          "why": "Кёльнский собор стоит в центре Кёльна недалеко от Рейна."
+        }
+      ],
+      "texts": {
+        "b1": {
+          "id": "nordrhein-westfalen-b1",
+          "chapters": 4,
+          "words": 80,
+          "minutes": 1,
+          "toc": [
+            {
+              "title": "Städte am Rhein",
+              "titleRu": "Города на Рейне",
+              "icon": "🗺️"
+            },
+            {
+              "title": "Die Gründung des Landes",
+              "titleRu": "Образование земли",
+              "icon": "📜"
+            },
+            {
+              "title": "Das Ruhrgebiet",
+              "titleRu": "Рурская область",
+              "icon": "⛏️"
+            },
+            {
+              "title": "Der Kölner Dom",
+              "titleRu": "Кёльнский собор",
+              "icon": "⛪"
+            }
+          ]
+        },
+        "b2": {
+          "id": "nordrhein-westfalen-b2",
+          "chapters": 4,
+          "words": 134,
+          "minutes": 1,
+          "toc": [
+            {
+              "title": "Von der Besatzungszone zum Land",
+              "titleRu": "От зоны оккупации к федеральной земле",
+              "icon": "🏛️"
+            },
+            {
+              "title": "Ein Parlament in Düsseldorf",
+              "titleRu": "Парламент в Дюссельдорфе",
+              "icon": "🗳️"
+            },
+            {
+              "title": "Industrie als Kulturerbe",
+              "titleRu": "Промышленность как культурное наследие",
+              "icon": "🏭"
+            },
+            {
+              "title": "Ein Bau über Jahrhunderte",
+              "titleRu": "Строительство длиной в века",
+              "icon": "🧱"
+            }
+          ]
+        }
+      }
     },
     {
       "id": "rheinland-pfalz",

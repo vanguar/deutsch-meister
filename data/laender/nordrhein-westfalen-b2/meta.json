@@ -1,0 +1,21 @@
+{
+  "id": "nordrhein-westfalen-b2",
+  "kind": "land",
+  "land": "nordrhein-westfalen",
+  "title": "Nordrhein-Westfalen",
+  "titleRu": "Северный Рейн — Вестфалия",
+  "author": "German Morning",
+  "level": "B2",
+  "levelNote": "B2: длиннее и подробнее, придаточные, пассив, лексика политики и экономики.",
+  "year": "2026",
+  "chapters": 4,
+  "words": 134,
+  "minutes": 1,
+  "photos": 0,
+  "cover": "🏗️",
+  "flag": "data/laender/flags/nordrhein-westfalen.png",
+  "source": "Ландтаг Северного Рейна — Вестфалии и Центр всемирного наследия UNESCO",
+  "sourceUrl": "https://www.landtag.nrw.de/home/der-landtag/geschichte-des-landtags/zur-geschichte-des-landes-nrw/zeitleiste-zur-landesgeschich-1.html",
+  "checked": "2026-11-08",
+  "license": "текст курса German Morning"
+}

@@ -1481,10 +1481,136 @@
    "name": "Nordrhein-Westfalen",
    "nameRu": "شمال الراين-وستفاليا",
    "capital": "Düsseldorf",
-   "emoji": "📍",
+   "emoji": "🏗️",
    "flag": "data/laender/flags/nordrhein-westfalen.png",
    "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_North_Rhine-Westphalia.svg",
-   "ready": false
+   "ready": true,
+   "blurb": "دوسلدورف وكولونيا على الراين، وتاريخ منطقة الرور ومنجم تسولفراين في إيسن.",
+   "facts": [
+    [
+     "العاصمة",
+     "Düsseldorf"
+    ],
+    [
+     "التأسيس",
+     "23 أغسطس 1946"
+    ],
+    [
+     "النهر",
+     "Rhein"
+    ],
+    [
+     "المنطقة الصناعية",
+     "منطقة الرور"
+    ],
+    [
+     "التراث العالمي",
+     "كاتدرائية كولونيا ومنجم تسولفراين"
+    ]
+   ],
+   "source": "برلمان شمال الراين وستفاليا ومركز التراث العالمي لليونسكو",
+   "sourceUrl": "https://www.landtag.nrw.de/home/der-landtag/geschichte-des-landtags/zur-geschichte-des-landes-nrw/zeitleiste-zur-landesgeschich-1.html",
+   "checked": "2026-11-08",
+   "quiz": [
+    {
+     "q": "ما عاصمة شمال الراين وستفاليا؟",
+     "opts": [
+      "Köln",
+      "Düsseldorf",
+      "Essen"
+     ],
+     "a": 1,
+     "why": "دوسلدورف هي عاصمة الولاية ومقر جلسات برلمانها."
+    },
+    {
+     "q": "ما المنطقة التي انضمت إلى الولاية عام 1947؟",
+     "opts": [
+      "Lippe",
+      "Saarland",
+      "Hessen"
+     ],
+     "a": 0,
+     "why": "انضمت ليبه بعد تأسيس الولاية عام 1946."
+    },
+    {
+     "q": "ماذا كان يُستخرج من منجم تسولفراين؟",
+     "opts": [
+      "الملح",
+      "خام الحديد",
+      "الفحم"
+     ],
+     "a": 2,
+     "why": "كان تسولفراين منجم فحم في إيسن."
+    },
+    {
+     "q": "أين تقع الكاتدرائية القوطية الشهيرة؟",
+     "opts": [
+      "Bonn",
+      "Köln",
+      "Duisburg"
+     ],
+     "a": 1,
+     "why": "تقع كاتدرائية كولونيا في وسط المدينة قرب الراين."
+    }
+   ],
+   "texts": {
+    "b1": {
+     "id": "nordrhein-westfalen-b1",
+     "chapters": 4,
+     "words": 80,
+     "minutes": 1,
+     "toc": [
+      {
+       "title": "Städte am Rhein",
+       "titleRu": "مدن على الراين",
+       "icon": "🗺️"
+      },
+      {
+       "title": "Die Gründung des Landes",
+       "titleRu": "تأسيس الولاية",
+       "icon": "📜"
+      },
+      {
+       "title": "Das Ruhrgebiet",
+       "titleRu": "منطقة الرور",
+       "icon": "⛏️"
+      },
+      {
+       "title": "Der Kölner Dom",
+       "titleRu": "كاتدرائية كولونيا",
+       "icon": "⛪"
+      }
+     ]
+    },
+    "b2": {
+     "id": "nordrhein-westfalen-b2",
+     "chapters": 4,
+     "words": 134,
+     "minutes": 1,
+     "toc": [
+      {
+       "title": "Von der Besatzungszone zum Land",
+       "titleRu": "من منطقة احتلال إلى ولاية اتحادية",
+       "icon": "🏛️"
+      },
+      {
+       "title": "Ein Parlament in Düsseldorf",
+       "titleRu": "برلمان في دوسلدورف",
+       "icon": "🗳️"
+      },
+      {
+       "title": "Industrie als Kulturerbe",
+       "titleRu": "الصناعة بوصفها تراثًا ثقافيًا",
+       "icon": "🏭"
+      },
+      {
+       "title": "Ein Bau über Jahrhunderte",
+       "titleRu": "بناء امتد عبر القرون",
+       "icon": "🧱"
+      }
+     ]
+    }
+   }
   },
   {
    "id": "rheinland-pfalz",

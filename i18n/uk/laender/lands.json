@@ -1481,10 +1481,136 @@
    "name": "Nordrhein-Westfalen",
    "nameRu": "Північний Рейн — Вестфалія",
    "capital": "Düsseldorf",
-   "emoji": "📍",
+   "emoji": "🏗️",
    "flag": "data/laender/flags/nordrhein-westfalen.png",
    "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_North_Rhine-Westphalia.svg",
-   "ready": false
+   "ready": true,
+   "blurb": "Дюссельдорф і Кельн на Рейні, історія Рурської області й шахта Цольферайн в Ессені.",
+   "facts": [
+    [
+     "Столиця",
+     "Düsseldorf"
+    ],
+    [
+     "Заснування",
+     "23 серпня 1946 року"
+    ],
+    [
+     "Річка",
+     "Rhein"
+    ],
+    [
+     "Промисловий регіон",
+     "Рурська область"
+    ],
+    [
+     "Всесвітня спадщина",
+     "Кельнський собор і шахта Цольферайн"
+    ]
+   ],
+   "source": "Ландтаг Північного Рейну — Вестфалії й Центр всесвітньої спадщини UNESCO",
+   "sourceUrl": "https://www.landtag.nrw.de/home/der-landtag/geschichte-des-landtags/zur-geschichte-des-landes-nrw/zeitleiste-zur-landesgeschich-1.html",
+   "checked": "2026-11-08",
+   "quiz": [
+    {
+     "q": "Яке місто є столицею Північного Рейну — Вестфалії?",
+     "opts": [
+      "Köln",
+      "Düsseldorf",
+      "Essen"
+     ],
+     "a": 1,
+     "why": "Столиця землі й місце засідань ландтагу — Дюссельдорф."
+    },
+    {
+     "q": "Який регіон приєднався до землі 1947 року?",
+     "opts": [
+      "Lippe",
+      "Saarland",
+      "Hessen"
+     ],
+     "a": 0,
+     "why": "Ліппе приєдналася вже після утворення землі 1946 року."
+    },
+    {
+     "q": "Що видобували на шахті Цольферайн?",
+     "opts": [
+      "Сіль",
+      "Залізну руду",
+      "Вугілля"
+     ],
+     "a": 2,
+     "why": "Цольферайн був вугільною шахтою в Ессені."
+    },
+    {
+     "q": "Де розташований знаменитий готичний собор?",
+     "opts": [
+      "Bonn",
+      "Köln",
+      "Duisburg"
+     ],
+     "a": 1,
+     "why": "Кельнський собор стоїть у центрі Кельна неподалік від Рейну."
+    }
+   ],
+   "texts": {
+    "b1": {
+     "id": "nordrhein-westfalen-b1",
+     "chapters": 4,
+     "words": 80,
+     "minutes": 1,
+     "toc": [
+      {
+       "title": "Städte am Rhein",
+       "titleRu": "Міста на Рейні",
+       "icon": "🗺️"
+      },
+      {
+       "title": "Die Gründung des Landes",
+       "titleRu": "Утворення землі",
+       "icon": "📜"
+      },
+      {
+       "title": "Das Ruhrgebiet",
+       "titleRu": "Рурська область",
+       "icon": "⛏️"
+      },
+      {
+       "title": "Der Kölner Dom",
+       "titleRu": "Кельнський собор",
+       "icon": "⛪"
+      }
+     ]
+    },
+    "b2": {
+     "id": "nordrhein-westfalen-b2",
+     "chapters": 4,
+     "words": 134,
+     "minutes": 1,
+     "toc": [
+      {
+       "title": "Von der Besatzungszone zum Land",
+       "titleRu": "Від окупаційної зони до федеральної землі",
+       "icon": "🏛️"
+      },
+      {
+       "title": "Ein Parlament in Düsseldorf",
+       "titleRu": "Парламент у Дюссельдорфі",
+       "icon": "🗳️"
+      },
+      {
+       "title": "Industrie als Kulturerbe",
+       "titleRu": "Промисловість як культурна спадщина",
+       "icon": "🏭"
+      },
+      {
+       "title": "Ein Bau über Jahrhunderte",
+       "titleRu": "Будівництво завдовжки в століття",
+       "icon": "🧱"
+      }
+     ]
+    }
+   }
   },
   {
    "id": "rheinland-pfalz",

@@ -32,3 +32,6 @@ TEXTS.update(_niedersachsen)
 
 from texts_schleswig_holstein import TEXTS as _schleswig_holstein
 TEXTS.update(_schleswig_holstein)
+
+from texts_nordrhein_westfalen import TEXTS as _nordrhein_westfalen
+TEXTS.update(_nordrhein_westfalen)

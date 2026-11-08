@@ -1,0 +1,27 @@
+{
+  "id": "ch-04",
+  "title": "Ein Bau über Jahrhunderte",
+  "titleRu": "Строительство длиной в века",
+  "icon": "🧱",
+  "paragraphs": [
+    {
+      "s": [
+        {
+          "de": "Der Bau des Kölner Doms wurde im Mittelalter begonnen und erst im 19. Jahrhundert vollendet.",
+          "ru": "Кёльнский собор начали строить в Средние века и завершили лишь в XIX веке.",
+          "g": {}
+        },
+        {
+          "de": "Obwohl zwischen Beginn und Vollendung viele Jahrhunderte lagen, wurde der gotische Charakter des Baus bewahrt.",
+          "ru": "Хотя между началом и завершением работ прошли века, готический характер здания сохранился.",
+          "g": {}
+        },
+        {
+          "de": "So erzählt der Dom von mittelalterlicher Baukunst ebenso wie von späteren Jahrhunderten.",
+          "ru": "Так собор рассказывает и о средневековом зодчестве, и о более поздних эпохах.",
+          "g": {}
+        }
+      ]
+    }
+  ]
+}
