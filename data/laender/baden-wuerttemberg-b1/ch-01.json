@@ -1,0 +1,27 @@
+{
+  "id": "ch-01",
+  "title": "Im Südwesten",
+  "titleRu": "На юго-западе",
+  "icon": "🗺️",
+  "paragraphs": [
+    {
+      "s": [
+        {
+          "de": "Baden-Württemberg liegt im Südwesten Deutschlands.",
+          "ru": "Баден-Вюртемберг расположен на юго-западе Германии.",
+          "g": {}
+        },
+        {
+          "de": "Im Westen liegt der Schwarzwald.",
+          "ru": "На западе находится Шварцвальд.",
+          "g": {}
+        },
+        {
+          "de": "Im Süden liegt der Bodensee.",
+          "ru": "На юге находится Боденское озеро.",
+          "g": {}
+        }
+      ]
+    }
+  ]
+}

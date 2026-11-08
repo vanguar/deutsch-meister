@@ -1,0 +1,29 @@
+{
+  "id": "ch-02",
+  "title": "Die Abstimmung von 1951",
+  "titleRu": "Голосование 1951 года",
+  "icon": "🗳️",
+  "paragraphs": [
+    {
+      "s": [
+        {
+          "de": "1951 stimmte die Bevölkerung über die Bildung eines gemeinsamen Landes ab.",
+          "ru": "В 1951 году жители голосовали по вопросу образования единой земли.",
+          "g": {}
+        },
+        {
+          "de": "In drei der vier Abstimmungsbezirke sprach sich die Mehrheit für die Vereinigung aus.",
+          "ru": "В трёх из четырёх округов большинство высказалось за объединение.",
+          "g": {
+            "5+12": "высказалось"
+          }
+        },
+        {
+          "de": "Obwohl die Mehrheit in Südbaden dagegen stimmte, wurde das neue Land im April 1952 gegründet.",
+          "ru": "Хотя большинство в Южном Бадене проголосовало против, в апреле 1952 года новую землю основали.",
+          "g": {}
+        }
+      ]
+    }
+  ]
+}

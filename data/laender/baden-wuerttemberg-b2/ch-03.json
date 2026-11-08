@@ -1,0 +1,27 @@
+{
+  "id": "ch-03",
+  "title": "Fahrzeuge und Maschinen",
+  "titleRu": "Автомобили и машины",
+  "icon": "🛠️",
+  "paragraphs": [
+    {
+      "s": [
+        {
+          "de": "Neben dem Fahrzeugbau gehört der Maschinenbau zu den prägenden Branchen des Landes.",
+          "ru": "Наряду с производством автомобилей машиностроение относится к ключевым отраслям земли.",
+          "g": {}
+        },
+        {
+          "de": "Große Hersteller und spezialisierte Zulieferer arbeiten in diesen Branchen zusammen.",
+          "ru": "В этих отраслях сотрудничают крупные производители и специализированные поставщики.",
+          "g": {}
+        },
+        {
+          "de": "Das Museum in Stuttgart zeigt, wie sich das Auto im Laufe der Zeit verändert hat.",
+          "ru": "Музей в Штутгарте показывает, как автомобиль менялся со временем.",
+          "g": {}
+        }
+      ]
+    }
+  ]
+}

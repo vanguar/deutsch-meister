@@ -1,0 +1,27 @@
+{
+  "id": "ch-03",
+  "title": "Stuttgart und das Auto",
+  "titleRu": "Штутгарт и автомобиль",
+  "icon": "🚗",
+  "paragraphs": [
+    {
+      "s": [
+        {
+          "de": "Stuttgart ist die Hauptstadt des Landes.",
+          "ru": "Штутгарт — столица земли.",
+          "g": {}
+        },
+        {
+          "de": "Der Automobilbau ist für die Wirtschaft des Landes wichtig.",
+          "ru": "Автомобилестроение важно для экономики земли.",
+          "g": {}
+        },
+        {
+          "de": "In Stuttgart kann man im Mercedes-Benz Museum etwas über die Geschichte des Autos lernen.",
+          "ru": "В штутгартском музее Mercedes-Benz можно узнать об истории автомобиля.",
+          "g": {}
+        }
+      ]
+    }
+  ]
+}

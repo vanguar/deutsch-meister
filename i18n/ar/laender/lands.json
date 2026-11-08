@@ -26,10 +26,136 @@
    "name": "Baden-Württemberg",
    "nameRu": "بادن-فورتمبيرغ",
    "capital": "Stuttgart",
-   "emoji": "📍",
+   "emoji": "🌲",
    "flag": "data/laender/flags/baden-wuerttemberg.png",
    "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_Baden-W%C3%BCrttemberg.svg",
-   "ready": false
+   "ready": true,
+   "blurb": "شتوتغارت والغابة السوداء وبحيرة كونستانس وتأسيس الولاية وفن العصر الجليدي.",
+   "facts": [
+    [
+     "العاصمة",
+     "Stuttgart"
+    ],
+    [
+     "التأسيس",
+     "25 أبريل 1952"
+    ],
+    [
+     "المناظر الطبيعية",
+     "الغابة السوداء وجبال الألب الشوابية وبحيرة كونستانس"
+    ],
+    [
+     "الاقتصاد",
+     "صناعة السيارات والآلات"
+    ],
+    [
+     "التراث العالمي",
+     "كهوف وفن العصر الجليدي في جبال الألب الشوابية"
+    ]
+   ],
+   "source": "حكومة بادن فورتمبيرغ ومدينة شتوتغارت ومركز التراث العالمي لليونسكو",
+   "sourceUrl": "https://www.baden-wuerttemberg.de/de/unser-land/geschichte/entstehung-des-suedweststaats",
+   "checked": "2026-11-08",
+   "quiz": [
+    {
+     "q": "ما عاصمة بادن فورتمبيرغ؟",
+     "opts": [
+      "Stuttgart",
+      "Freiburg",
+      "Ulm"
+     ],
+     "a": 0,
+     "why": "شتوتغارت هي عاصمة الولاية."
+    },
+    {
+     "q": "في أي عام تأسست بادن فورتمبيرغ؟",
+     "opts": [
+      "1946",
+      "1949",
+      "1952"
+     ],
+     "a": 2,
+     "why": "اتحدت الولايات الثلاث السابقة في 25 أبريل 1952."
+    },
+    {
+     "q": "ما السلسلة الجبلية الواقعة في غرب الولاية؟",
+     "opts": [
+      "Harz",
+      "Schwarzwald",
+      "Erzgebirge"
+     ],
+     "a": 1,
+     "why": "تقع الغابة السوداء في غرب بادن فورتمبيرغ."
+    },
+    {
+     "q": "ما الأشياء التي عُثر عليها في كهوف جبال الألب الشوابية؟",
+     "opts": [
+      "تماثيل صغيرة ومزامير",
+      "نوافذ قوطية",
+      "كتب مطبوعة"
+     ],
+     "a": 0,
+     "why": "من بين المكتشفات تماثيل صغيرة وآلات موسيقية من العصر الجليدي."
+    }
+   ],
+   "texts": {
+    "b1": {
+     "id": "baden-wuerttemberg-b1",
+     "chapters": 4,
+     "words": 95,
+     "minutes": 1,
+     "toc": [
+      {
+       "title": "Im Südwesten",
+       "titleRu": "في الجنوب الغربي",
+       "icon": "🗺️"
+      },
+      {
+       "title": "Drei Länder werden eins",
+       "titleRu": "اتحاد ثلاث ولايات",
+       "icon": "📜"
+      },
+      {
+       "title": "Stuttgart und das Auto",
+       "titleRu": "شتوتغارت والسيارة",
+       "icon": "🚗"
+      },
+      {
+       "title": "Kunst aus der Eiszeit",
+       "titleRu": "فن العصر الجليدي",
+       "icon": "🪈"
+      }
+     ]
+    },
+    "b2": {
+     "id": "baden-wuerttemberg-b2",
+     "chapters": 4,
+     "words": 148,
+     "minutes": 1,
+     "toc": [
+      {
+       "title": "Landschaften zwischen Rhein und Bodensee",
+       "titleRu": "مناظر بين الراين وبحيرة كونستانس",
+       "icon": "🧭"
+      },
+      {
+       "title": "Die Abstimmung von 1951",
+       "titleRu": "تصويت عام 1951",
+       "icon": "🗳️"
+      },
+      {
+       "title": "Fahrzeuge und Maschinen",
+       "titleRu": "المركبات والآلات",
+       "icon": "🛠️"
+      },
+      {
+       "title": "Was die Höhlen bewahren",
+       "titleRu": "ما حفظته الكهوف",
+       "icon": "🦴"
+      }
+     ]
+    }
+   }
   },
   {
    "id": "bayern",

@@ -2,6 +2,36 @@
  "version": 1,
  "items": [
   {
+   "id": "baden-wuerttemberg-b1",
+   "title": "Baden-Württemberg",
+   "titleRu": "Баден-Вюртемберг",
+   "author": "German Morning",
+   "level": "B1",
+   "year": "2026",
+   "chapters": 4,
+   "words": 95,
+   "minutes": 1,
+   "cover": "🌲",
+   "source": "Уряд Баден-Вюртембергу, місто Штутгарт і Центр всесвітньої спадщини UNESCO",
+   "license": "текст курсу German Morning",
+   "land": "baden-wuerttemberg"
+  },
+  {
+   "id": "baden-wuerttemberg-b2",
+   "title": "Baden-Württemberg",
+   "titleRu": "Баден-Вюртемберг",
+   "author": "German Morning",
+   "level": "B2",
+   "year": "2026",
+   "chapters": 4,
+   "words": 148,
+   "minutes": 1,
+   "cover": "🌲",
+   "source": "Уряд Баден-Вюртембергу, місто Штутгарт і Центр всесвітньої спадщини UNESCO",
+   "license": "текст курсу German Morning",
+   "land": "baden-wuerttemberg"
+  },
+  {
    "id": "bayern-b1",
    "title": "Bayern",
    "titleRu": "Баварія",

@@ -1,0 +1,557 @@
+{
+  "version": 1,
+  "w": {
+    "ab": "ab",
+    "abstimmungsbezirke": "Abstimmungsbezirk",
+    "alb": "Alb",
+    "april": "April",
+    "arbeiten": "arbeiten",
+    "aufgenommen": "aufnehmen",
+    "aus": "aus",
+    "auto": "Auto",
+    "bestimmt": "bestimmen",
+    "bevölkerung": "Bevölkerung",
+    "bildet": "bilden",
+    "bildung": "Bildung",
+    "bodensee": "Bodensee",
+    "branchen": "Branche",
+    "dagegen": "dagegen",
+    "das": "der/die/das",
+    "dem": "der/die/das",
+    "den": "der/die/das",
+    "der": "der/die/das",
+    "des": "der/die/das",
+    "die": "der/die/das",
+    "diesen": "dieser",
+    "drei": "drei",
+    "eines": "ein/eine",
+    "elfenbein": "Elfenbein",
+    "entdeckt": "entdecken",
+    "fahrzeugbau": "Fahrzeugbau",
+    "flöten": "Flöte",
+    "frankreich": "Frankreich",
+    "früher": "früher",
+    "funden": "Fund",
+    "fundorte": "Fundort",
+    "für": "für",
+    "gefertigt": "fertigen",
+    "gegründet": "gründen",
+    "gehören": "gehören",
+    "gehört": "gehören",
+    "gemeinsamen": "gemeinsam",
+    "grenze": "Grenze",
+    "große": "groß",
+    "hat": "haben",
+    "hersteller": "Hersteller",
+    "höhlen": "Höhle",
+    "im": "in",
+    "in": "in",
+    "knochen": "Knochen",
+    "kunst": "Kunst",
+    "land": "Land (земля)",
+    "landes": "Land (земля)",
+    "landesgrenze": "Landesgrenze",
+    "landschaft": "Landschaft",
+    "laufe": "laufen",
+    "liegt": "liegen",
+    "maschinenbau": "Maschinenbau",
+    "mehrheit": "Mehrheit",
+    "museum": "Museum",
+    "musik": "Musik",
+    "neben": "neben",
+    "neue": "neu",
+    "obwohl": "obwohl",
+    "oder": "oder",
+    "prägenden": "prägend",
+    "prägt": "prägen",
+    "rhein": "Rhein",
+    "schwarzwald": "Schwarzwald",
+    "schwäbische": "schwäbisch",
+    "schwäbischen": "schwäbisch",
+    "sechs": "sechs",
+    "sich": "sich",
+    "spezialisierte": "spezialisiert",
+    "sprach": "sprechen",
+    "spuren": "Spur",
+    "stimmte": "stimmen",
+    "strecken": "Strecke",
+    "stuttgart": "Stuttgart",
+    "südbaden": "Südbaden",
+    "süden": "Süden",
+    "teile": "Teil",
+    "tierfiguren": "Tierfigur",
+    "und": "und",
+    "vereinigung": "Vereinigung",
+    "verändert": "verändern",
+    "vier": "vier",
+    "weite": "weit (обширный)",
+    "welterbeliste": "Welterbeliste",
+    "westen": "Westen",
+    "wie": "wie",
+    "wurde": "werden",
+    "wurden": "werden",
+    "während": "während",
+    "zeigt": "zeigen",
+    "zeit": "Zeit",
+    "zu": "zu",
+    "zulieferer": "Zulieferer",
+    "zusammen": "zusammen",
+    "zwischen": "zwischen",
+    "östlichen": "östlich",
+    "über": "über"
+  },
+  "l": {
+    "ab": {
+      "note": "Тж. отделяемая приставка: absteigen «слезать», abnehmen",
+      "pos": "предл.",
+      "ru": "от, с; прочь"
+    },
+    "Abstimmungsbezirk": {
+      "ru": "округ для голосования",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Abstimmungsbezirke"
+    },
+    "Alb": {
+      "ru": "Альб (здесь: Швабский Альб)",
+      "pos": "геогр."
+    },
+    "April": {
+      "ru": "апрель",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Aprile"
+    },
+    "arbeiten": {
+      "ru": "работать",
+      "pos": "гл.",
+      "forms": "arbeitete · hat gearbeitet",
+      "note": "daran arbeiten, etwas zu tun — добиваться чего-л."
+    },
+    "aufnehmen": {
+      "ru": "снимать (на камеру); принимать",
+      "pos": "гл.",
+      "forms": "nahm auf · hat aufgenommen"
+    },
+    "aus": {
+      "ru": "из",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: auslöschen «погасить»"
+    },
+    "Auto": {
+      "ru": "автомобиль, машина",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Autos"
+    },
+    "bestimmen": {
+      "ru": "определять; предназначать",
+      "pos": "гл.",
+      "forms": "bestimmte · hat bestimmt"
+    },
+    "Bevölkerung": {
+      "ru": "население",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Bevölkerungen"
+    },
+    "bilden": {
+      "ru": "образовывать",
+      "pos": "гл.",
+      "forms": "bildete · hat gebildet"
+    },
+    "Bildung": {
+      "ru": "образование (создание); образование (учёба)",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Bildungen"
+    },
+    "Bodensee": {
+      "ru": "Боденское озеро",
+      "pos": "геогр."
+    },
+    "Branche": {
+      "ru": "отрасль",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Branchen"
+    },
+    "dagegen": {
+      "ru": "напротив, зато",
+      "pos": "нареч."
+    },
+    "der/die/das": {
+      "ru": "определённый артикль",
+      "pos": "артикль",
+      "note": "Тж. относительное местоимение «который»"
+    },
+    "dieser": {
+      "ru": "этот, эта, это",
+      "pos": "мест."
+    },
+    "drei": {
+      "ru": "три",
+      "pos": "числ."
+    },
+    "ein/eine": {
+      "ru": "неопределённый артикль",
+      "pos": "артикль",
+      "note": "einer — «один, некто»"
+    },
+    "Elfenbein": {
+      "ru": "кость из бивня, слоновая кость",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "entdecken": {
+      "ru": "обнаруживать",
+      "pos": "гл.",
+      "forms": "entdeckte · hat entdeckt"
+    },
+    "Fahrzeugbau": {
+      "ru": "производство транспортных средств",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "fertigen": {
+      "ru": "изготавливать",
+      "pos": "гл.",
+      "forms": "fertigte · hat gefertigt"
+    },
+    "Flöte": {
+      "ru": "флейта",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Flöten"
+    },
+    "Frankreich": {
+      "ru": "Франция",
+      "pos": "геогр."
+    },
+    "früher": {
+      "ru": "раньше, прежде",
+      "pos": "нареч."
+    },
+    "Fund": {
+      "ru": "находка",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Funde"
+    },
+    "Fundort": {
+      "ru": "место находки",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Fundorte"
+    },
+    "für": {
+      "ru": "для, за",
+      "pos": "предл."
+    },
+    "gehören": {
+      "ru": "принадлежать, относиться",
+      "pos": "гл.",
+      "forms": "gehörte · hat gehört",
+      "note": "zu etwas gehören — относиться к чему-то, входить в"
+    },
+    "gemeinsam": {
+      "ru": "общий, совместный",
+      "pos": "прил."
+    },
+    "Grenze": {
+      "ru": "граница",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Grenzen"
+    },
+    "groß": {
+      "ru": "большой",
+      "pos": "прил.",
+      "forms": "groß · größer · am größten"
+    },
+    "gründen": {
+      "ru": "основывать",
+      "pos": "гл.",
+      "forms": "gründete · hat gegründet"
+    },
+    "haben": {
+      "ru": "иметь; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "hatte · hat gehabt"
+    },
+    "Hersteller": {
+      "ru": "производитель",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Hersteller"
+    },
+    "Höhle": {
+      "ru": "пещера",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Höhlen"
+    },
+    "in": {
+      "ru": "в (im = in dem, ins = in das)",
+      "pos": "предл."
+    },
+    "Knochen": {
+      "ru": "кость",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Knochen"
+    },
+    "Kunst": {
+      "ru": "искусство, умение",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Künste",
+      "note": "in geheimen Künsten — в тайных искусствах"
+    },
+    "Land (земля)": {
+      "ru": "земля (федеральная); страна",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Länder",
+      "note": "Bundesland — федеральная земля; in anderen Ländern — в других землях"
+    },
+    "Landesgrenze": {
+      "ru": "граница земли",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Landesgrenzen"
+    },
+    "Landschaft": {
+      "ru": "ландшафт, местность",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Landschaften"
+    },
+    "laufen": {
+      "ru": "бежать, бегать",
+      "pos": "гл.",
+      "forms": "lief · ist gelaufen"
+    },
+    "liegen": {
+      "ru": "лежать",
+      "pos": "гл.",
+      "forms": "lag · hat gelegen"
+    },
+    "Maschinenbau": {
+      "ru": "машиностроение",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "Mehrheit": {
+      "ru": "большинство",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Mehrheiten"
+    },
+    "Museum": {
+      "ru": "музей",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Museen"
+    },
+    "Musik": {
+      "ru": "музыка",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "neben": {
+      "pos": "предл.",
+      "ru": "рядом с, возле"
+    },
+    "neu": {
+      "ru": "новый",
+      "pos": "прил."
+    },
+    "obwohl": {
+      "ru": "хотя",
+      "pos": "союз"
+    },
+    "oder": {
+      "ru": "или",
+      "pos": "союз"
+    },
+    "prägen": {
+      "ru": "определять облик, формировать",
+      "pos": "гл.",
+      "forms": "prägte · hat geprägt"
+    },
+    "prägend": {
+      "ru": "определяющий, формирующий",
+      "pos": "прил."
+    },
+    "Rhein": {
+      "ru": "Рейн (река)",
+      "pos": "геогр."
+    },
+    "Schwarzwald": {
+      "ru": "Шварцвальд",
+      "pos": "геогр."
+    },
+    "schwäbisch": {
+      "ru": "швабский",
+      "pos": "прил."
+    },
+    "sechs": {
+      "ru": "шесть",
+      "pos": "числ."
+    },
+    "sich": {
+      "ru": "себя, себе",
+      "pos": "мест.",
+      "note": "Возвратное местоимение, часть возвратного глагола: sich auf den Weg machen, sich setzen, sich legen, sich nähern, sich gefallen lassen, sich getrauen, sich umsehen"
+    },
+    "spezialisiert": {
+      "ru": "специализированный",
+      "pos": "прил."
+    },
+    "sprechen": {
+      "ru": "говорить, сказать",
+      "pos": "гл.",
+      "forms": "sprach · hat gesprochen",
+      "old": "здесь sprach в значении «сказал» — книжно и устарело; в совр. речи sagte"
+    },
+    "Spur": {
+      "ru": "след",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Spuren",
+      "note": "keine Spur — ни следа, ничуть"
+    },
+    "stimmen": {
+      "ru": "голосовать; быть верным",
+      "pos": "гл.",
+      "forms": "stimmte · hat gestimmt",
+      "note": "für etwas stimmen / dafür stimmen — голосовать за; das stimmt — это верно"
+    },
+    "Strecke": {
+      "ru": "отрезок пути",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Strecken"
+    },
+    "Stuttgart": {
+      "ru": "Штутгарт (столица Баден-Вюртемберга)",
+      "pos": "геогр."
+    },
+    "Südbaden": {
+      "ru": "Южный Баден",
+      "pos": "геогр."
+    },
+    "Süden": {
+      "ru": "юг",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "Teil": {
+      "ru": "часть; доля",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Teile",
+      "note": "sein Teil haben — получить своё"
+    },
+    "Tierfigur": {
+      "ru": "фигурка животного",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Tierfiguren"
+    },
+    "und": {
+      "ru": "и, а",
+      "pos": "союз"
+    },
+    "Vereinigung": {
+      "ru": "объединение",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Vereinigungen"
+    },
+    "verändern": {
+      "ru": "изменять(ся)",
+      "pos": "гл.",
+      "forms": "veränderte · hat verändert"
+    },
+    "vier": {
+      "ru": "четыре",
+      "pos": "числ."
+    },
+    "weit (обширный)": {
+      "ru": "обширный, широкий",
+      "pos": "прил."
+    },
+    "Welterbeliste": {
+      "ru": "список всемирного наследия",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Welterbelisten"
+    },
+    "werden": {
+      "ru": "становиться",
+      "pos": "гл.",
+      "forms": "wurde · ist geworden",
+      "note": "Вспомогательный глагол будущего времени и пассива"
+    },
+    "Westen": {
+      "ru": "запад",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "wie": {
+      "ru": "как; какой",
+      "pos": "союз"
+    },
+    "während": {
+      "pos": "предлог",
+      "ru": "в течение, во время"
+    },
+    "zeigen": {
+      "ru": "показывать; sich zeigen — появиться",
+      "pos": "гл.",
+      "forms": "zeigte · hat gezeigt"
+    },
+    "Zeit": {
+      "ru": "время",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Zeiten"
+    },
+    "zu": {
+      "ru": "к, в; слишком",
+      "pos": "предл.",
+      "note": "zur = zu der, zum = zu dem"
+    },
+    "Zulieferer": {
+      "ru": "поставщик комплектующих",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Zulieferer"
+    },
+    "zusammen": {
+      "ru": "вместе",
+      "pos": "нареч."
+    },
+    "zwischen": {
+      "pos": "предл.",
+      "ru": "между"
+    },
+    "östlich": {
+      "ru": "восточный; к востоку",
+      "pos": "прил.",
+      "note": "östlich von — к востоку от"
+    },
+    "über": {
+      "ru": "над, через, о",
+      "pos": "предл."
+    }
+  }
+}

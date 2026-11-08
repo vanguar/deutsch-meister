@@ -26,10 +26,136 @@
    "name": "Baden-Württemberg",
    "nameRu": "Баден-Вюртемберг",
    "capital": "Stuttgart",
-   "emoji": "📍",
+   "emoji": "🌲",
    "flag": "data/laender/flags/baden-wuerttemberg.png",
    "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_Baden-W%C3%BCrttemberg.svg",
-   "ready": false
+   "ready": true,
+   "blurb": "Штутгарт, Шварцвальд, Боденське озеро, утворення землі й мистецтво льодовикового періоду.",
+   "facts": [
+    [
+     "Столиця",
+     "Stuttgart"
+    ],
+    [
+     "Заснування",
+     "25 квітня 1952 року"
+    ],
+    [
+     "Ландшафти",
+     "Шварцвальд, Швабський Альб і Боденське озеро"
+    ],
+    [
+     "Економіка",
+     "Автомобілебудування й машинобудування"
+    ],
+    [
+     "Всесвітня спадщина",
+     "Печери й мистецтво льодовикового періоду Швабського Альба"
+    ]
+   ],
+   "source": "Уряд Баден-Вюртембергу, місто Штутгарт і Центр всесвітньої спадщини UNESCO",
+   "sourceUrl": "https://www.baden-wuerttemberg.de/de/unser-land/geschichte/entstehung-des-suedweststaats",
+   "checked": "2026-11-08",
+   "quiz": [
+    {
+     "q": "Яке місто є столицею Баден-Вюртембергу?",
+     "opts": [
+      "Stuttgart",
+      "Freiburg",
+      "Ulm"
+     ],
+     "a": 0,
+     "why": "Столиця землі — Штутгарт."
+    },
+    {
+     "q": "У якому році утворився Баден-Вюртемберг?",
+     "opts": [
+      "1946",
+      "1949",
+      "1952"
+     ],
+     "a": 2,
+     "why": "Три колишні землі об’єдналися 25 квітня 1952 року."
+    },
+    {
+     "q": "Який гірський масив розташований на заході землі?",
+     "opts": [
+      "Harz",
+      "Schwarzwald",
+      "Erzgebirge"
+     ],
+     "a": 1,
+     "why": "Шварцвальд розташований на заході Баден-Вюртембергу."
+    },
+    {
+     "q": "Які предмети знайшли в печерах Швабського Альба?",
+     "opts": [
+      "Фігурки й флейти",
+      "Готичні вікна",
+      "Друковані книжки"
+     ],
+     "a": 0,
+     "why": "Серед знахідок — фігурки й музичні інструменти льодовикового періоду."
+    }
+   ],
+   "texts": {
+    "b1": {
+     "id": "baden-wuerttemberg-b1",
+     "chapters": 4,
+     "words": 95,
+     "minutes": 1,
+     "toc": [
+      {
+       "title": "Im Südwesten",
+       "titleRu": "На південному заході",
+       "icon": "🗺️"
+      },
+      {
+       "title": "Drei Länder werden eins",
+       "titleRu": "Три землі об’єднуються",
+       "icon": "📜"
+      },
+      {
+       "title": "Stuttgart und das Auto",
+       "titleRu": "Штутгарт і автомобіль",
+       "icon": "🚗"
+      },
+      {
+       "title": "Kunst aus der Eiszeit",
+       "titleRu": "Мистецтво льодовикового періоду",
+       "icon": "🪈"
+      }
+     ]
+    },
+    "b2": {
+     "id": "baden-wuerttemberg-b2",
+     "chapters": 4,
+     "words": 148,
+     "minutes": 1,
+     "toc": [
+      {
+       "title": "Landschaften zwischen Rhein und Bodensee",
+       "titleRu": "Ландшафти між Рейном і Боденським озером",
+       "icon": "🧭"
+      },
+      {
+       "title": "Die Abstimmung von 1951",
+       "titleRu": "Голосування 1951 року",
+       "icon": "🗳️"
+      },
+      {
+       "title": "Fahrzeuge und Maschinen",
+       "titleRu": "Автомобілі й машини",
+       "icon": "🛠️"
+      },
+      {
+       "title": "Was die Höhlen bewahren",
+       "titleRu": "Що зберегли печери",
+       "icon": "🦴"
+      }
+     ]
+    }
+   }
   },
   {
    "id": "bayern",

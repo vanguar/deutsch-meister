@@ -1,0 +1,384 @@
+{
+  "version": 1,
+  "w": {
+    "alb": "Alb",
+    "alten": "alt",
+    "auf": "auf",
+    "aus": "aus",
+    "automobilbau": "Automobilbau",
+    "autos": "Auto",
+    "baden": "Baden",
+    "baden-württemberg": "Baden-Württemberg",
+    "bodensee": "Bodensee",
+    "bundesland": "Bundesland",
+    "das": "der/die/das",
+    "dem": "der/die/das",
+    "der": "der/die/das",
+    "des": "der/die/das",
+    "deutschlands": "Deutschland (страна)",
+    "die": "der/die/das",
+    "dort": "dort",
+    "eiszeit": "Eiszeit",
+    "entstand": "entstehen",
+    "es": "es",
+    "etwas": "etwas",
+    "fand": "stattfinden",
+    "figuren": "Figur",
+    "flöten": "Flöte",
+    "funden": "Fund",
+    "für": "für",
+    "gab": "geben",
+    "gehören": "gehören",
+    "geschichte": "Geschichte",
+    "gibt": "geben",
+    "hauptstadt": "Hauptstadt",
+    "höhlen": "Höhle",
+    "im": "in",
+    "in": "in",
+    "ist": "sein",
+    "kann": "können",
+    "kunstwerke": "Kunstwerk",
+    "landes": "Land (земля)",
+    "lernen": "lernen",
+    "liegt": "liegen",
+    "länder": "Land (земля)",
+    "man": "man",
+    "mehrere": "mehrere",
+    "mercedes-benz": "Mercedes-Benz",
+    "mit": "mit",
+    "museum": "Museum",
+    "nach": "nach",
+    "neue": "neu",
+    "schlossen": "schließen",
+    "schwarzwald": "Schwarzwald",
+    "schwäbischen": "schwäbisch",
+    "sehr": "sehr",
+    "sich": "sich",
+    "so": "so",
+    "stuttgart": "Stuttgart",
+    "süden": "Süden",
+    "südwesten": "Südwesten",
+    "und": "und",
+    "unesco-welterbe": "UNESCO-Welterbe",
+    "weltkrieg": "Weltkrieg",
+    "westen": "Westen",
+    "wichtig": "wichtig",
+    "wirtschaft": "Wirtschaft",
+    "württemberg-baden": "Württemberg-Baden",
+    "württemberg-hohenzollern": "Württemberg-Hohenzollern",
+    "zum": "zu",
+    "zusammen": "zusammen",
+    "zweiten": "zweite",
+    "über": "über"
+  },
+  "l": {
+    "Alb": {
+      "ru": "Альб (здесь: Швабский Альб)",
+      "pos": "геогр."
+    },
+    "alt": {
+      "ru": "старый",
+      "pos": "прил.",
+      "forms": "alt · älter · am ältesten"
+    },
+    "auf": {
+      "ru": "на, в",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: aufspringen «вскочить», sich aufmachen"
+    },
+    "aus": {
+      "ru": "из",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: auslöschen «погасить»"
+    },
+    "Auto": {
+      "ru": "автомобиль, машина",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Autos"
+    },
+    "Automobilbau": {
+      "ru": "автомобилестроение",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "Baden": {
+      "ru": "Баден",
+      "pos": "геогр."
+    },
+    "Baden-Württemberg": {
+      "ru": "Баден-Вюртемберг",
+      "pos": "геогр."
+    },
+    "Bodensee": {
+      "ru": "Боденское озеро",
+      "pos": "геогр."
+    },
+    "Bundesland": {
+      "ru": "федеральная земля",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Bundesländer"
+    },
+    "der/die/das": {
+      "ru": "определённый артикль",
+      "pos": "артикль",
+      "note": "Тж. относительное местоимение «который»"
+    },
+    "Deutschland (страна)": {
+      "ru": "Германия",
+      "pos": "геогр."
+    },
+    "dort": {
+      "ru": "там",
+      "pos": "нареч."
+    },
+    "Eiszeit": {
+      "ru": "ледниковый период",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Eiszeiten"
+    },
+    "entstehen": {
+      "ru": "возникать",
+      "pos": "гл.",
+      "forms": "entstand · ist entstanden"
+    },
+    "es": {
+      "ru": "оно; это",
+      "pos": "мест."
+    },
+    "etwas": {
+      "ru": "что-то, нечто; немного",
+      "pos": "мест."
+    },
+    "Figur": {
+      "ru": "фигура, фигурка",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Figuren"
+    },
+    "Flöte": {
+      "ru": "флейта",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Flöten"
+    },
+    "Fund": {
+      "ru": "находка",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Funde"
+    },
+    "für": {
+      "ru": "для, за",
+      "pos": "предл."
+    },
+    "geben": {
+      "ru": "давать",
+      "pos": "гл.",
+      "forms": "gab · hat gegeben"
+    },
+    "gehören": {
+      "ru": "принадлежать, относиться",
+      "pos": "гл.",
+      "forms": "gehörte · hat gehört",
+      "note": "zu etwas gehören — относиться к чему-то, входить в"
+    },
+    "Geschichte": {
+      "ru": "история",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Geschichten"
+    },
+    "Hauptstadt": {
+      "ru": "столица",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Hauptstädte"
+    },
+    "Höhle": {
+      "ru": "пещера",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Höhlen"
+    },
+    "in": {
+      "ru": "в (im = in dem, ins = in das)",
+      "pos": "предл."
+    },
+    "Kunstwerk": {
+      "ru": "произведение искусства",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Kunstwerke"
+    },
+    "können": {
+      "ru": "мочь, уметь",
+      "pos": "гл.",
+      "forms": "konnte · hat gekonnt"
+    },
+    "Land (земля)": {
+      "ru": "земля (федеральная); страна",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Länder",
+      "note": "Bundesland — федеральная земля; in anderen Ländern — в других землях"
+    },
+    "lernen": {
+      "ru": "учиться",
+      "pos": "гл.",
+      "forms": "lernte · hat gelernt"
+    },
+    "liegen": {
+      "ru": "лежать",
+      "pos": "гл.",
+      "forms": "lag · hat gelegen"
+    },
+    "man": {
+      "ru": "неопределённое «кто-то, люди, мы»",
+      "pos": "мест."
+    },
+    "mehrere": {
+      "pos": "мест.",
+      "ru": "несколько"
+    },
+    "Mercedes-Benz": {
+      "ru": "Mercedes-Benz",
+      "pos": "имя собств."
+    },
+    "mit": {
+      "ru": "с",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: mitgehen «пойти вместе»"
+    },
+    "Museum": {
+      "ru": "музей",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Museen"
+    },
+    "nach": {
+      "ru": "в, на, после, по",
+      "pos": "предл."
+    },
+    "neu": {
+      "ru": "новый",
+      "pos": "прил."
+    },
+    "schließen": {
+      "ru": "закрывать, запирать",
+      "pos": "гл.",
+      "forms": "schloss · hat geschlossen"
+    },
+    "Schwarzwald": {
+      "ru": "Шварцвальд",
+      "pos": "геогр."
+    },
+    "schwäbisch": {
+      "ru": "швабский",
+      "pos": "прил."
+    },
+    "sehr": {
+      "pos": "нареч.",
+      "ru": "очень"
+    },
+    "sein": {
+      "ru": "быть; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "war · ist gewesen"
+    },
+    "sich": {
+      "ru": "себя, себе",
+      "pos": "мест.",
+      "note": "Возвратное местоимение, часть возвратного глагола: sich auf den Weg machen, sich setzen, sich legen, sich nähern, sich gefallen lassen, sich getrauen, sich umsehen"
+    },
+    "so": {
+      "ru": "так; такой; то (в главном предложении)",
+      "pos": "нареч."
+    },
+    "stattfinden": {
+      "ru": "иметь место, быть",
+      "pos": "гл.",
+      "forms": "fand statt · hat stattgefunden",
+      "note": "ein Zusammenhang findet statt — связь существует"
+    },
+    "Stuttgart": {
+      "ru": "Штутгарт (столица Баден-Вюртемберга)",
+      "pos": "геогр."
+    },
+    "Süden": {
+      "ru": "юг",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "Südwesten": {
+      "ru": "юго-запад",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null,
+      "note": "im Südwesten Chinas — на юго-западе Китая"
+    },
+    "und": {
+      "ru": "и, а",
+      "pos": "союз"
+    },
+    "UNESCO-Welterbe": {
+      "ru": "Всемирное наследие ЮНЕСКО",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "Weltkrieg": {
+      "ru": "мировая война",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Weltkriege",
+      "note": "der Zweite Weltkrieg — Вторая мировая война"
+    },
+    "Westen": {
+      "ru": "запад",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "wichtig": {
+      "ru": "важный",
+      "pos": "прил."
+    },
+    "Wirtschaft": {
+      "ru": "экономика, хозяйство",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Wirtschaften"
+    },
+    "Württemberg-Baden": {
+      "ru": "Вюртемберг-Баден",
+      "pos": "геогр."
+    },
+    "Württemberg-Hohenzollern": {
+      "ru": "Вюртемберг-Гогенцоллерн",
+      "pos": "геогр."
+    },
+    "zu": {
+      "ru": "к, в; слишком",
+      "pos": "предл.",
+      "note": "zur = zu der, zum = zu dem"
+    },
+    "zusammen": {
+      "ru": "вместе",
+      "pos": "нареч."
+    },
+    "zweite": {
+      "ru": "второй",
+      "pos": "числ.",
+      "note": "zum zweiten Mal — во второй раз"
+    },
+    "über": {
+      "ru": "над, через, о",
+      "pos": "предл."
+    }
+  }
+}

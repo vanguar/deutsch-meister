@@ -44,3 +44,6 @@ TEXTS.update(_rheinland_pfalz)
 
 from texts_saarland import TEXTS as _saarland
 TEXTS.update(_saarland)
+
+from texts_baden_wuerttemberg import TEXTS as _baden_wuerttemberg
+TEXTS.update(_baden_wuerttemberg)

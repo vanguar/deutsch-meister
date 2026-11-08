@@ -1,0 +1,27 @@
+{
+  "id": "ch-01",
+  "title": "Landschaften zwischen Rhein und Bodensee",
+  "titleRu": "Ландшафты между Рейном и Боденским озером",
+  "icon": "🧭",
+  "paragraphs": [
+    {
+      "s": [
+        {
+          "de": "Im Westen prägt der Schwarzwald weite Teile des Landes, während im Süden der Bodensee die Landschaft bestimmt.",
+          "ru": "На западе обширные районы земли занимает Шварцвальд, а на юге облик местности определяет Боденское озеро.",
+          "g": {}
+        },
+        {
+          "de": "Zwischen dem Schwarzwald und der östlichen Landesgrenze liegt die Schwäbische Alb.",
+          "ru": "Между Шварцвальдом и восточной границей земли лежит Швабский Альб.",
+          "g": {}
+        },
+        {
+          "de": "Der Rhein bildet im Westen über weite Strecken die Grenze zu Frankreich.",
+          "ru": "На западе Рейн на значительном протяжении образует границу с Францией.",
+          "g": {}
+        }
+      ]
+    }
+  ]
+}

@@ -26,10 +26,136 @@
       "name": "Baden-Württemberg",
       "nameRu": "Баден-Вюртемберг",
       "capital": "Stuttgart",
-      "emoji": "📍",
+      "emoji": "🌲",
       "flag": "data/laender/flags/baden-wuerttemberg.png",
       "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_Baden-W%C3%BCrttemberg.svg",
-      "ready": false
+      "ready": true,
+      "blurb": "Штутгарт, Шварцвальд, Боденское озеро, образование земли и искусство ледникового периода.",
+      "facts": [
+        [
+          "Столица",
+          "Stuttgart"
+        ],
+        [
+          "Основание",
+          "25 апреля 1952 года"
+        ],
+        [
+          "Ландшафты",
+          "Шварцвальд, Швабский Альб и Боденское озеро"
+        ],
+        [
+          "Экономика",
+          "Автомобилестроение и машиностроение"
+        ],
+        [
+          "Всемирное наследие",
+          "Пещеры и искусство ледникового периода Швабского Альба"
+        ]
+      ],
+      "source": "Правительство Баден-Вюртемберга, город Штутгарт и Центр всемирного наследия UNESCO",
+      "sourceUrl": "https://www.baden-wuerttemberg.de/de/unser-land/geschichte/entstehung-des-suedweststaats",
+      "checked": "2026-11-08",
+      "quiz": [
+        {
+          "q": "Какой город является столицей Баден-Вюртемберга?",
+          "opts": [
+            "Stuttgart",
+            "Freiburg",
+            "Ulm"
+          ],
+          "a": 0,
+          "why": "Столица земли — Штутгарт."
+        },
+        {
+          "q": "В каком году возник Баден-Вюртемберг?",
+          "opts": [
+            "1946",
+            "1949",
+            "1952"
+          ],
+          "a": 2,
+          "why": "Три прежние земли объединились 25 апреля 1952 года."
+        },
+        {
+          "q": "Какой горный массив находится на западе земли?",
+          "opts": [
+            "Harz",
+            "Schwarzwald",
+            "Erzgebirge"
+          ],
+          "a": 1,
+          "why": "Шварцвальд расположен на западе Баден-Вюртемберга."
+        },
+        {
+          "q": "Какие предметы нашли в пещерах Швабского Альба?",
+          "opts": [
+            "Фигурки и флейты",
+            "Готические окна",
+            "Печатные книги"
+          ],
+          "a": 0,
+          "why": "Среди находок — фигурки и музыкальные инструменты ледникового периода."
+        }
+      ],
+      "texts": {
+        "b1": {
+          "id": "baden-wuerttemberg-b1",
+          "chapters": 4,
+          "words": 95,
+          "minutes": 1,
+          "toc": [
+            {
+              "title": "Im Südwesten",
+              "titleRu": "На юго-западе",
+              "icon": "🗺️"
+            },
+            {
+              "title": "Drei Länder werden eins",
+              "titleRu": "Три земли объединяются",
+              "icon": "📜"
+            },
+            {
+              "title": "Stuttgart und das Auto",
+              "titleRu": "Штутгарт и автомобиль",
+              "icon": "🚗"
+            },
+            {
+              "title": "Kunst aus der Eiszeit",
+              "titleRu": "Искусство ледникового периода",
+              "icon": "🪈"
+            }
+          ]
+        },
+        "b2": {
+          "id": "baden-wuerttemberg-b2",
+          "chapters": 4,
+          "words": 148,
+          "minutes": 1,
+          "toc": [
+            {
+              "title": "Landschaften zwischen Rhein und Bodensee",
+              "titleRu": "Ландшафты между Рейном и Боденским озером",
+              "icon": "🧭"
+            },
+            {
+              "title": "Die Abstimmung von 1951",
+              "titleRu": "Голосование 1951 года",
+              "icon": "🗳️"
+            },
+            {
+              "title": "Fahrzeuge und Maschinen",
+              "titleRu": "Автомобили и машины",
+              "icon": "🛠️"
+            },
+            {
+              "title": "Was die Höhlen bewahren",
+              "titleRu": "Что сохранили пещеры",
+              "icon": "🦴"
+            }
+          ]
+        }
+      }
     },
     {
       "id": "bayern",

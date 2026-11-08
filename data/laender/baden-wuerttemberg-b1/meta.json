@@ -1,0 +1,21 @@
+{
+  "id": "baden-wuerttemberg-b1",
+  "kind": "land",
+  "land": "baden-wuerttemberg",
+  "title": "Baden-Württemberg",
+  "titleRu": "Баден-Вюртемберг",
+  "author": "German Morning",
+  "level": "B1",
+  "levelNote": "B1: короткие предложения, Präsens и Präteritum, основные слова о стране.",
+  "year": "2026",
+  "chapters": 4,
+  "words": 95,
+  "minutes": 1,
+  "photos": 0,
+  "cover": "🌲",
+  "flag": "data/laender/flags/baden-wuerttemberg.png",
+  "source": "Правительство Баден-Вюртемберга, город Штутгарт и Центр всемирного наследия UNESCO",
+  "sourceUrl": "https://www.baden-wuerttemberg.de/de/unser-land/geschichte/entstehung-des-suedweststaats",
+  "checked": "2026-11-08",
+  "license": "текст курса German Morning"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "ch-02",
+  "title": "Drei Länder werden eins",
+  "titleRu": "Три земли объединяются",
+  "icon": "📜",
+  "paragraphs": [
+    {
+      "s": [
+        {
+          "de": "Nach dem Zweiten Weltkrieg gab es im Südwesten mehrere Länder.",
+          "ru": "После Второй мировой войны на юго-западе существовало несколько земель.",
+          "g": {}
+        },
+        {
+          "de": "Baden, Württemberg-Baden und Württemberg-Hohenzollern schlossen sich 1952 zusammen.",
+          "ru": "Баден, Вюртемберг-Баден и Вюртемберг-Гогенцоллерн объединились в 1952 году.",
+          "g": {
+            "4+6": "объединились"
+          }
+        },
+        {
+          "de": "So entstand das neue Bundesland Baden-Württemberg.",
+          "ru": "Так возникла новая федеральная земля Баден-Вюртемберг.",
+          "g": {}
+        }
+      ]
+    }
+  ]
+}
