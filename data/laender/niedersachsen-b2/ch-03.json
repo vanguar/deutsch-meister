@@ -1,0 +1,38 @@
+{
+  "id": "ch-03",
+  "title": "Vier Länder werden eins",
+  "titleRu": "Четыре земли объединяются",
+  "icon": "📜",
+  "paragraphs": [
+    {
+      "s": [
+        {
+          "de": "Die britische Militärregierung ordnete ihre Besatzungszone nach dem Krieg neu.",
+          "ru": "После войны британская военная администрация реорганизовала свою зону оккупации.",
+          "g": {
+            "3+9": "реорганизовала"
+          }
+        },
+        {
+          "de": "Aus vier Ländern wurde am 1. November 1946 Niedersachsen gebildet.",
+          "ru": "1 ноября 1946 года из четырёх земель образовали Нижнюю Саксонию.",
+          "g": {}
+        }
+      ]
+    },
+    {
+      "s": [
+        {
+          "de": "Die Mitglieder des ersten Landtags waren von der Besatzungsregierung ernannt worden.",
+          "ru": "Членов первого ландтага назначила оккупационная администрация.",
+          "g": {}
+        },
+        {
+          "de": "Erst im April 1947 wurde ein Landtag frei gewählt.",
+          "ru": "Первые свободные выборы в ландтаг прошли только в апреле 1947 года.",
+          "g": {}
+        }
+      ]
+    }
+  ]
+}

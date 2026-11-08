@@ -26,3 +26,6 @@ TEXTS.update(_thueringen)
 
 from texts_sachsen_anhalt import TEXTS as _sachsen_anhalt
 TEXTS.update(_sachsen_anhalt)
+
+from texts_niedersachsen import TEXTS as _niedersachsen
+TEXTS.update(_niedersachsen)

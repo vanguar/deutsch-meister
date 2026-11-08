@@ -1,0 +1,45 @@
+{
+  "id": "ch-01",
+  "title": "Von der Küste bis zum Harz",
+  "titleRu": "От побережья до Гарца",
+  "icon": "🗺️",
+  "paragraphs": [
+    {
+      "s": [
+        {
+          "de": "Niedersachsen liegt im Nordwesten Deutschlands.",
+          "ru": "Нижняя Саксония находится на северо-западе Германии.",
+          "g": {
+            "2-3": "на северо-западе"
+          }
+        },
+        {
+          "de": "Im Norden liegt die Nordsee.",
+          "ru": "На севере находится Северное море.",
+          "g": {}
+        },
+        {
+          "de": "Im Süden reicht das Land bis in den Harz.",
+          "ru": "На юге территория земли доходит до Гарца.",
+          "g": {}
+        }
+      ]
+    },
+    {
+      "s": [
+        {
+          "de": "Zwischen der Küste und den Bergen liegt die Lüneburger Heide.",
+          "ru": "Между побережьем и горами лежит Люнебургская пустошь.",
+          "g": {}
+        },
+        {
+          "de": "Die Landschaft sieht also je nach Region ganz anders aus.",
+          "ru": "Таким образом, в разных частях земли пейзаж выглядит совсем по-разному.",
+          "g": {
+            "4-5": "в зависимости от"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "id": "ch-02",
+  "title": "Ebbe und Flut",
+  "titleRu": "Отлив и прилив",
+  "icon": "🌊",
+  "paragraphs": [
+    {
+      "s": [
+        {
+          "de": "Bei Ebbe zieht sich das Wasser zurück.",
+          "ru": "Во время отлива вода отступает.",
+          "g": {
+            "2+6": "отступает"
+          }
+        },
+        {
+          "de": "Dann kann man den Boden sehen, der bei Flut unter Wasser liegt.",
+          "ru": "Тогда виден грунт, который во время прилива находится под водой.",
+          "g": {}
+        }
+      ]
+    },
+    {
+      "s": [
+        {
+          "de": "Viele Zugvögel finden dort Nahrung.",
+          "ru": "Многие перелётные птицы находят там корм.",
+          "g": {}
+        },
+        {
+          "de": "Deshalb ist das Wattenmeer für diese Vögel besonders wichtig.",
+          "ru": "Поэтому Ваттовое море особенно важно для этих птиц.",
+          "g": {}
+        }
+      ]
+    }
+  ]
+}

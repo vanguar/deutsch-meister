@@ -1,0 +1,21 @@
+{
+  "id": "niedersachsen-b2",
+  "kind": "land",
+  "land": "niedersachsen",
+  "title": "Niedersachsen",
+  "titleRu": "Нижняя Саксония",
+  "author": "German Morning",
+  "level": "B2",
+  "levelNote": "B2: длиннее и подробнее, придаточные, пассив, лексика политики и экономики.",
+  "year": "2026",
+  "chapters": 4,
+  "words": 180,
+  "minutes": 2,
+  "photos": 0,
+  "cover": "🐎",
+  "flag": "data/laender/flags/niedersachsen.png",
+  "source": "Портал Нижней Саксонии, администрация национального парка, город Ганновер и Volkswagen",
+  "sourceUrl": "https://www.niedersachsen.de/startseite/land_leute/die_geschichte/geschichte_des_landes_niedersachsen/themen_ereignisse/-19880.html",
+  "checked": "2026-11-08",
+  "license": "текст курса German Morning"
+}

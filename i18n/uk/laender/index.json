@@ -182,6 +182,36 @@
    "land": "mecklenburg-vorpommern"
   },
   {
+   "id": "niedersachsen-b1",
+   "title": "Niedersachsen",
+   "titleRu": "Нижня Саксонія",
+   "author": "German Morning",
+   "level": "B1",
+   "year": "2026",
+   "chapters": 4,
+   "words": 137,
+   "minutes": 1,
+   "cover": "🐎",
+   "source": "Портал Нижньої Саксонії, адміністрація національного парку, місто Ганновер і Volkswagen",
+   "license": "текст курсу German Morning",
+   "land": "niedersachsen"
+  },
+  {
+   "id": "niedersachsen-b2",
+   "title": "Niedersachsen",
+   "titleRu": "Нижня Саксонія",
+   "author": "German Morning",
+   "level": "B2",
+   "year": "2026",
+   "chapters": 4,
+   "words": 180,
+   "minutes": 2,
+   "cover": "🐎",
+   "source": "Портал Нижньої Саксонії, адміністрація національного парку, місто Ганновер і Volkswagen",
+   "license": "текст курсу German Morning",
+   "land": "niedersachsen"
+  },
+  {
    "id": "sachsen-b1",
    "title": "Sachsen",
    "titleRu": "Саксонія",

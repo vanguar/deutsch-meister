@@ -1345,10 +1345,136 @@
    "name": "Niedersachsen",
    "nameRu": "سكسونيا السفلى",
    "capital": "Hannover",
-   "emoji": "📍",
+   "emoji": "🐎",
    "flag": "data/laender/flags/niedersachsen.png",
    "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_Lower_Saxony.svg",
-   "ready": false
+   "ready": true,
+   "blurb": "من الجَزْر على ساحل بحر الشمال إلى جبال هارتس، مرورًا بهانوفر وتأسيس الولاية عام 1946 ومصنع فولكسفاغن في فولفسبورغ.",
+   "facts": [
+    [
+     "العاصمة",
+     "Hannover"
+    ],
+    [
+     "التأسيس",
+     "1 نوفمبر 1946"
+    ],
+    [
+     "البحر",
+     "بحر الشمال"
+    ],
+    [
+     "المناظر الطبيعية",
+     "بحر وادن ولونيبورغ هيث وجبال هارتس"
+    ],
+    [
+     "الاقتصاد",
+     "صناعة السيارات والزراعة"
+    ]
+   ],
+   "source": "بوابة ساكسونيا السفلى وإدارة الحديقة الوطنية ومدينة هانوفر وفولكسفاغن",
+   "sourceUrl": "https://www.niedersachsen.de/startseite/land_leute/die_geschichte/geschichte_des_landes_niedersachsen/themen_ereignisse/-19880.html",
+   "checked": "2026-11-08",
+   "quiz": [
+    {
+     "q": "ما عاصمة ساكسونيا السفلى؟",
+     "opts": [
+      "Wolfsburg",
+      "Hannover",
+      "Oldenburg"
+     ],
+     "a": 1,
+     "why": "أصبحت هانوفر العاصمة عند تأسيس الولاية عام 1946."
+    },
+    {
+     "q": "لماذا يُعد بحر وادن مهمًا للطيور المهاجرة؟",
+     "opts": [
+      "تستريح فيه وتجد غذاءها",
+      "تحتمي فيه من حر الصيف",
+      "تعيش فيه طوال العام"
+     ],
+     "a": 0,
+     "why": "تتوقف الطيور هنا أثناء هجرتها لتستعيد طاقتها."
+    },
+    {
+     "q": "ما المدينة التي يقع فيها المصنع الرئيسي لفولكسفاغن؟",
+     "opts": [
+      "Celle",
+      "Göttingen",
+      "Wolfsburg"
+     ],
+     "a": 2,
+     "why": "يقع المصنع في فولفسبورغ على القناة الألمانية الوسطى."
+    },
+    {
+     "q": "ماذا يمكن أن ترى في هيرنهاوزن؟",
+     "opts": [
+      "حديقة باروكية",
+      "مسطحات المد والجَزْر",
+      "ممرًا جبليًا"
+     ],
+     "a": 0,
+     "why": "حافظت الحديقة الكبرى في هانوفر على تصميمها الباروكي."
+    }
+   ],
+   "texts": {
+    "b1": {
+     "id": "niedersachsen-b1",
+     "chapters": 4,
+     "words": 137,
+     "minutes": 1,
+     "toc": [
+      {
+       "title": "Von der Küste bis zum Harz",
+       "titleRu": "من الساحل إلى جبال هارتس",
+       "icon": "🗺️"
+      },
+      {
+       "title": "Ebbe und Flut",
+       "titleRu": "الجَزْر والمد",
+       "icon": "🌊"
+      },
+      {
+       "title": "Wie das Land entstand",
+       "titleRu": "كيف تأسست الولاية",
+       "icon": "🏛️"
+      },
+      {
+       "title": "Hannover und Wolfsburg",
+       "titleRu": "هانوفر وفولفسبورغ",
+       "icon": "🏭"
+      }
+     ]
+    },
+    "b2": {
+     "id": "niedersachsen-b2",
+     "chapters": 4,
+     "words": 180,
+     "minutes": 2,
+     "toc": [
+      {
+       "title": "Landschaften und Landwirtschaft",
+       "titleRu": "المناظر الطبيعية والزراعة",
+       "icon": "🗺️"
+      },
+      {
+       "title": "Ein Rastplatz für Zugvögel",
+       "titleRu": "محطة استراحة للطيور المهاجرة",
+       "icon": "🐦"
+      },
+      {
+       "title": "Vier Länder werden eins",
+       "titleRu": "اتحاد أربع ولايات",
+       "icon": "📜"
+      },
+      {
+       "title": "Barockgarten und Industriestandort",
+       "titleRu": "حديقة باروكية ومركز صناعي",
+       "icon": "🏭"
+      }
+     ]
+    }
+   }
   },
   {
    "id": "nordrhein-westfalen",

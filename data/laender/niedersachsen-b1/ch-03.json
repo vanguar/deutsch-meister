@@ -1,0 +1,38 @@
+{
+  "id": "ch-03",
+  "title": "Wie das Land entstand",
+  "titleRu": "Как появилась земля",
+  "icon": "🏛️",
+  "paragraphs": [
+    {
+      "s": [
+        {
+          "de": "Nach dem Zweiten Weltkrieg gehörte die Region zur britischen Besatzungszone.",
+          "ru": "После Второй мировой войны регион входил в британскую зону оккупации.",
+          "g": {}
+        },
+        {
+          "de": "Aus Hannover, Oldenburg, Braunschweig und Schaumburg-Lippe entstand 1946 das neue Bundesland Niedersachsen.",
+          "ru": "В 1946 году из Ганновера, Ольденбурга, Брауншвейга и Шаумбург-Липпе образовали новую федеральную землю Нижняя Саксония.",
+          "g": {}
+        }
+      ]
+    },
+    {
+      "s": [
+        {
+          "de": "Die Stadt Hannover wurde Landeshauptstadt.",
+          "ru": "Город Ганновер стал столицей земли.",
+          "g": {}
+        },
+        {
+          "de": "Dort kam auch der erste Landtag zusammen.",
+          "ru": "Там же собрался первый ландтаг.",
+          "g": {
+            "1+6": "собрался"
+          }
+        }
+      ]
+    }
+  ]
+}

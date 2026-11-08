@@ -1,0 +1,38 @@
+{
+  "id": "ch-04",
+  "title": "Barockgarten und Industriestandort",
+  "titleRu": "Барочный сад и промышленный центр",
+  "icon": "🏭",
+  "paragraphs": [
+    {
+      "s": [
+        {
+          "de": "Der Große Garten in Herrenhausen behielt seine barocke Form, obwohl viele andere Gärten später nach einem anderen Stil gestaltet wurden.",
+          "ru": "Большой сад в Херренхаузене сохранил барочную форму, хотя многие другие сады позднее перепланировали в другом стиле.",
+          "g": {}
+        },
+        {
+          "de": "Die Geschichte des Gartens zeigt, wie sich der Geschmack der Zeit an Parks und Gärten ablesen lässt.",
+          "ru": "История сада показывает, как по паркам и садам можно судить о вкусах эпохи.",
+          "g": {
+            "15-16": "можно судить"
+          }
+        }
+      ]
+    },
+    {
+      "s": [
+        {
+          "de": "Wolfsburg steht dagegen vor allem für den Automobilbau, der das wirtschaftliche Profil der Stadt prägt.",
+          "ru": "Вольфсбург же известен прежде всего автомобилестроением, которое определяет экономический профиль города.",
+          "g": {}
+        },
+        {
+          "de": "Das Volkswagen-Werk am Mittellandkanal ist der Stammsitz der Marke Volkswagen Pkw.",
+          "ru": "Завод Volkswagen на Среднегерманском канале — главная площадка марки легковых автомобилей Volkswagen.",
+          "g": {}
+        }
+      ]
+    }
+  ]
+}

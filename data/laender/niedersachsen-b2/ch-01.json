@@ -1,0 +1,33 @@
+{
+  "id": "ch-01",
+  "title": "Landschaften und Landwirtschaft",
+  "titleRu": "Ландшафты и сельское хозяйство",
+  "icon": "🗺️",
+  "paragraphs": [
+    {
+      "s": [
+        {
+          "de": "Wer von der Nordseeküste nach Süden fährt, kommt durch ganz unterschiedliche Landschaften.",
+          "ru": "По дороге с побережья Северного моря на юг проезжаешь через совершенно разные ландшафты.",
+          "g": {}
+        },
+        {
+          "de": "Während im Norden Inseln und flache Küsten das Bild bestimmen, beginnt im Süden das Bergland.",
+          "ru": "На севере пейзаж определяют острова и низкие берега, а на юге начинается гористая местность.",
+          "g": {}
+        }
+      ]
+    },
+    {
+      "s": [
+        {
+          "de": "Ein großer Teil der Fläche wird landwirtschaftlich genutzt.",
+          "ru": "Значительная часть территории используется для сельского хозяйства.",
+          "g": {
+            "6-7": "используется для сельского хозяйства"
+          }
+        }
+      ]
+    }
+  ]
+}

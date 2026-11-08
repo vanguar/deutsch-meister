@@ -1,0 +1,36 @@
+{
+  "id": "ch-04",
+  "title": "Hannover und Wolfsburg",
+  "titleRu": "Ганновер и Вольфсбург",
+  "icon": "🏭",
+  "paragraphs": [
+    {
+      "s": [
+        {
+          "de": "In Hannover kann man die Herrenhäuser Gärten besuchen.",
+          "ru": "В Ганновере можно посетить сады Херренхаузен.",
+          "g": {}
+        },
+        {
+          "de": "Der Große Garten ist ein Beispiel für die Gartenkunst des Barock.",
+          "ru": "Большой сад — пример садового искусства барокко.",
+          "g": {}
+        }
+      ]
+    },
+    {
+      "s": [
+        {
+          "de": "In Wolfsburg steht ein großes Werk von Volkswagen.",
+          "ru": "В Вольфсбурге находится крупный завод Volkswagen.",
+          "g": {}
+        },
+        {
+          "de": "Das Werk liegt am Mittellandkanal.",
+          "ru": "Завод расположен на Среднегерманском канале.",
+          "g": {}
+        }
+      ]
+    }
+  ]
+}

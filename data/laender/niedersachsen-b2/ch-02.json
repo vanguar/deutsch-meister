@@ -1,0 +1,33 @@
+{
+  "id": "ch-02",
+  "title": "Ein Rastplatz für Zugvögel",
+  "titleRu": "Место отдыха перелётных птиц",
+  "icon": "🐦",
+  "paragraphs": [
+    {
+      "s": [
+        {
+          "de": "Das Wattenmeer verändert sich im Rhythmus der Gezeiten, da große Flächen abwechselnd trockenfallen und überflutet werden.",
+          "ru": "Ваттовое море меняется в ритме приливов и отливов: большие участки поочерёдно осушаются и снова уходят под воду.",
+          "g": {}
+        },
+        {
+          "de": "Bei Niedrigwasser suchen Zugvögel im Watt nach Nahrung, bevor sie ihren Flug fortsetzen.",
+          "ru": "При низкой воде перелётные птицы ищут корм на отмелях, прежде чем продолжить перелёт.",
+          "g": {
+            "10-12": "продолжают перелёт"
+          }
+        }
+      ]
+    },
+    {
+      "s": [
+        {
+          "de": "Der Nationalpark schützt diesen Lebensraum und bietet zugleich Möglichkeiten, die Natur auf ausgewiesenen Wegen zu erleben.",
+          "ru": "Национальный парк охраняет эту среду обитания и даёт возможность знакомиться с природой на обозначенных маршрутах.",
+          "g": {}
+        }
+      ]
+    }
+  ]
+}

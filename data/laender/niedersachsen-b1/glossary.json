@@ -1,0 +1,544 @@
+{
+  "version": 1,
+  "w": {
+    "also": "also",
+    "am": "an",
+    "anders": "anders",
+    "auch": "auch",
+    "aus": "aus",
+    "barock": "Barock",
+    "bei": "bei",
+    "beispiel": "Beispiel",
+    "bergen": "Berg",
+    "besatzungszone": "Besatzungszone",
+    "besonders": "besonders",
+    "besuchen": "besuchen",
+    "bis": "bis",
+    "boden": "Boden",
+    "braunschweig": "Braunschweig",
+    "britischen": "britisch",
+    "bundesland": "Bundesland",
+    "dann": "dann",
+    "das": "der/die/das",
+    "dem": "der/die/das",
+    "den": "der/die/das",
+    "der": "der/die/das",
+    "des": "der/die/das",
+    "deshalb": "deshalb",
+    "deutschlands": "Deutschland (страна)",
+    "die": "der/die/das",
+    "diese": "dieser",
+    "dort": "dort",
+    "ebbe": "Ebbe",
+    "ein": "ein/eine",
+    "entstand": "entstehen",
+    "erste": "erste",
+    "finden": "finden",
+    "flut": "Flut",
+    "für": "für",
+    "ganz": "ganz",
+    "garten": "Garten",
+    "gartenkunst": "Gartenkunst",
+    "gehörte": "gehören / hören",
+    "große": "groß",
+    "großes": "groß",
+    "gärten": "Garten",
+    "hannover": "Hannover",
+    "harz": "Harz",
+    "heide": "Heide",
+    "herrenhäuser": "Herrenhäuser",
+    "im": "in",
+    "in": "in",
+    "ist": "sein",
+    "je": "je … desto",
+    "kam": "kommen",
+    "kann": "können",
+    "küste": "Küste",
+    "land": "Land (земля)",
+    "landeshauptstadt": "Landeshauptstadt",
+    "landschaft": "Landschaft",
+    "landtag": "Landtag",
+    "liegt": "liegen",
+    "lüneburger": "Lüneburger",
+    "man": "man",
+    "mittellandkanal": "Mittellandkanal",
+    "nach": "nach",
+    "nahrung": "Nahrung",
+    "neue": "neu",
+    "niedersachsen": "Niedersachsen",
+    "norden": "Norden",
+    "nordsee": "Nordsee",
+    "nordwesten": "Nordwesten",
+    "oldenburg": "Oldenburg",
+    "region": "Region",
+    "reicht": "reichen",
+    "schaumburg-lippe": "Schaumburg-Lippe",
+    "sehen": "sehen",
+    "sich": "sich",
+    "sieht": "sehen",
+    "stadt": "Stadt",
+    "steht": "stehen",
+    "süden": "Süden",
+    "und": "und",
+    "unter": "unter",
+    "viele": "viel",
+    "volkswagen": "Volkswagen",
+    "von": "von",
+    "vögel": "Vogel",
+    "wasser": "Wasser",
+    "wattenmeer": "Wattenmeer",
+    "weltkrieg": "Weltkrieg",
+    "werk": "Werk (завод)",
+    "wichtig": "wichtig",
+    "wolfsburg": "Wolfsburg",
+    "wurde": "werden",
+    "zieht": "ziehen",
+    "zugvögel": "Zugvogel",
+    "zur": "zu",
+    "zurück": "zurück",
+    "zusammen": "zusammen",
+    "zweiten": "zweite",
+    "zwischen": "zwischen"
+  },
+  "l": {
+    "also": {
+      "ru": "итак, стало быть",
+      "pos": "нареч."
+    },
+    "an": {
+      "ru": "у, к, на",
+      "pos": "предл.",
+      "note": "am = an dem. Тж. отделяемая приставка: anfangen «начинать», annehmen, ansehen, anzünden"
+    },
+    "anders": {
+      "ru": "иначе, по-другому",
+      "pos": "нареч."
+    },
+    "auch": {
+      "ru": "тоже, также; даже",
+      "pos": "частица"
+    },
+    "aus": {
+      "ru": "из",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: auslöschen «погасить»"
+    },
+    "Barock": {
+      "ru": "барокко",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "bei": {
+      "ru": "у, при, возле",
+      "pos": "предл."
+    },
+    "Beispiel": {
+      "ru": "пример",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Beispiele",
+      "note": "zum Beispiel — например"
+    },
+    "Berg": {
+      "ru": "гора",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Berge"
+    },
+    "Besatzungszone": {
+      "ru": "зона оккупации",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Besatzungszonen"
+    },
+    "besonders": {
+      "ru": "особенно",
+      "pos": "нареч."
+    },
+    "besuchen": {
+      "ru": "посещать, навещать",
+      "pos": "гл.",
+      "forms": "besuchte · hat besucht"
+    },
+    "bis": {
+      "ru": "до; пока не",
+      "pos": "союз"
+    },
+    "Boden": {
+      "art": "der",
+      "pl": "die Böden",
+      "pos": "сущ.",
+      "ru": "пол; земля"
+    },
+    "Braunschweig": {
+      "ru": "Брауншвейг",
+      "pos": "геогр."
+    },
+    "britisch": {
+      "ru": "британский",
+      "pos": "прил."
+    },
+    "Bundesland": {
+      "ru": "федеральная земля",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Bundesländer"
+    },
+    "dann": {
+      "ru": "потом, затем",
+      "pos": "нареч."
+    },
+    "der/die/das": {
+      "ru": "определённый артикль",
+      "pos": "артикль",
+      "note": "Тж. относительное местоимение «который»"
+    },
+    "deshalb": {
+      "ru": "поэтому",
+      "pos": "нареч."
+    },
+    "Deutschland (страна)": {
+      "ru": "Германия",
+      "pos": "геогр."
+    },
+    "dieser": {
+      "ru": "этот, эта, это",
+      "pos": "мест."
+    },
+    "dort": {
+      "ru": "там",
+      "pos": "нареч."
+    },
+    "Ebbe": {
+      "ru": "отлив",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "ein/eine": {
+      "ru": "неопределённый артикль",
+      "pos": "артикль",
+      "note": "einer — «один, некто»"
+    },
+    "entstehen": {
+      "ru": "возникать",
+      "pos": "гл.",
+      "forms": "entstand · ist entstanden"
+    },
+    "erste": {
+      "ru": "первый",
+      "pos": "числ."
+    },
+    "finden": {
+      "ru": "находить",
+      "pos": "гл.",
+      "forms": "fand · hat gefunden"
+    },
+    "Flut": {
+      "ru": "прилив",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Fluten"
+    },
+    "für": {
+      "ru": "для, за",
+      "pos": "предл."
+    },
+    "ganz": {
+      "ru": "весь, целый; совсем",
+      "pos": "прил."
+    },
+    "Garten": {
+      "ru": "сад",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Gärten"
+    },
+    "Gartenkunst": {
+      "ru": "садовое искусство",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "gehören / hören": {
+      "ru": "принадлежать; слышать",
+      "pos": "гл.",
+      "forms": "gehörte · hat gehört; hörte · hat gehört",
+      "note": "gehört — и форма gehören «принадлежать», и Partizip II от hören: haben wir gehört"
+    },
+    "groß": {
+      "ru": "большой",
+      "pos": "прил.",
+      "forms": "groß · größer · am größten"
+    },
+    "Hannover": {
+      "ru": "Ганновер",
+      "pos": "геогр."
+    },
+    "Harz": {
+      "ru": "Гарц",
+      "pos": "геогр."
+    },
+    "Heide": {
+      "ru": "пустошь, вересковая степь",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Heiden"
+    },
+    "Herrenhäuser": {
+      "ru": "херренхаузенский",
+      "pos": "прил."
+    },
+    "in": {
+      "ru": "в (im = in dem, ins = in das)",
+      "pos": "предл."
+    },
+    "je … desto": {
+      "ru": "чем …, тем …",
+      "pos": "союз",
+      "note": "je früher, desto mehr Zeit — чем раньше, тем больше времени"
+    },
+    "kommen": {
+      "ru": "приходить, приезжать",
+      "pos": "гл.",
+      "forms": "kam · ist gekommen"
+    },
+    "können": {
+      "ru": "мочь, уметь",
+      "pos": "гл.",
+      "forms": "konnte · hat gekonnt"
+    },
+    "Küste": {
+      "ru": "побережье",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Küsten"
+    },
+    "Land (земля)": {
+      "ru": "земля (федеральная); страна",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Länder",
+      "note": "Bundesland — федеральная земля; in anderen Ländern — в других землях"
+    },
+    "Landeshauptstadt": {
+      "ru": "столица земли",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Landeshauptstädte"
+    },
+    "Landschaft": {
+      "ru": "ландшафт, местность",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Landschaften"
+    },
+    "Landtag": {
+      "ru": "ландтаг (парламент земли)",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Landtage"
+    },
+    "liegen": {
+      "ru": "лежать",
+      "pos": "гл.",
+      "forms": "lag · hat gelegen"
+    },
+    "Lüneburger": {
+      "ru": "люнебургский",
+      "pos": "прил."
+    },
+    "man": {
+      "ru": "неопределённое «кто-то, люди, мы»",
+      "pos": "мест."
+    },
+    "Mittellandkanal": {
+      "ru": "Среднегерманский канал",
+      "pos": "геогр."
+    },
+    "nach": {
+      "ru": "в, на, после, по",
+      "pos": "предл."
+    },
+    "Nahrung": {
+      "ru": "пища, корм",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "neu": {
+      "ru": "новый",
+      "pos": "прил."
+    },
+    "Niedersachsen": {
+      "ru": "Нижняя Саксония",
+      "pos": "геогр."
+    },
+    "Norden": {
+      "ru": "север",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "Nordsee": {
+      "ru": "Северное море",
+      "pos": "геогр."
+    },
+    "Nordwesten": {
+      "ru": "северо-запад",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "Oldenburg": {
+      "ru": "Ольденбург",
+      "pos": "геогр."
+    },
+    "Region": {
+      "ru": "регион",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Regionen"
+    },
+    "reichen": {
+      "ru": "подавать, протягивать",
+      "pos": "гл.",
+      "forms": "reichte · hat gereicht",
+      "note": "die Hand reichen — подать руку"
+    },
+    "Schaumburg-Lippe": {
+      "ru": "Шаумбург-Липпе",
+      "pos": "геогр."
+    },
+    "sehen": {
+      "ru": "видеть",
+      "pos": "гл.",
+      "forms": "sah · hat gesehen"
+    },
+    "sein": {
+      "ru": "быть; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "war · ist gewesen"
+    },
+    "sich": {
+      "ru": "себя, себе",
+      "pos": "мест.",
+      "note": "Возвратное местоимение, часть возвратного глагола: sich auf den Weg machen, sich setzen, sich legen, sich nähern, sich gefallen lassen, sich getrauen, sich umsehen"
+    },
+    "Stadt": {
+      "ru": "город",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Städte"
+    },
+    "stehen": {
+      "ru": "стоять",
+      "pos": "гл.",
+      "forms": "stand · hat gestanden"
+    },
+    "Süden": {
+      "ru": "юг",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "und": {
+      "ru": "и, а",
+      "pos": "союз"
+    },
+    "unter": {
+      "ru": "под, среди",
+      "pos": "предл."
+    },
+    "viel": {
+      "ru": "много, многое",
+      "pos": "мест."
+    },
+    "Vogel": {
+      "ru": "птица",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Vögel"
+    },
+    "Volkswagen": {
+      "ru": "компания Volkswagen",
+      "pos": "имя собств."
+    },
+    "von": {
+      "ru": "от, из, о (vom = von dem)",
+      "pos": "предл."
+    },
+    "Wasser": {
+      "ru": "вода",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Wasser"
+    },
+    "Wattenmeer": {
+      "ru": "Ваттовое море",
+      "pos": "геогр."
+    },
+    "Weltkrieg": {
+      "ru": "мировая война",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Weltkriege",
+      "note": "der Zweite Weltkrieg — Вторая мировая война"
+    },
+    "werden": {
+      "ru": "становиться",
+      "pos": "гл.",
+      "forms": "wurde · ist geworden",
+      "note": "Вспомогательный глагол будущего времени и пассива"
+    },
+    "Werk (завод)": {
+      "ru": "завод",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Werke"
+    },
+    "wichtig": {
+      "ru": "важный",
+      "pos": "прил."
+    },
+    "Wolfsburg": {
+      "ru": "Вольфсбург",
+      "pos": "геогр."
+    },
+    "ziehen": {
+      "ru": "двигаться, отправляться; тянуть",
+      "pos": "гл.",
+      "forms": "zog · ist gezogen (двигаться) / hat gezogen (тянуть)"
+    },
+    "zu": {
+      "ru": "к, в; слишком",
+      "pos": "предл.",
+      "note": "zur = zu der, zum = zu dem"
+    },
+    "Zugvogel": {
+      "ru": "перелётная птица",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Zugvögel"
+    },
+    "zurück": {
+      "ru": "назад",
+      "pos": "нареч.",
+      "note": "Тж. отделяемая приставка: zurücklaufen «побежать назад»"
+    },
+    "zusammen": {
+      "ru": "вместе",
+      "pos": "нареч."
+    },
+    "zweite": {
+      "ru": "второй",
+      "pos": "числ.",
+      "note": "zum zweiten Mal — во второй раз"
+    },
+    "zwischen": {
+      "pos": "предл.",
+      "ru": "между"
+    }
+  }
+}

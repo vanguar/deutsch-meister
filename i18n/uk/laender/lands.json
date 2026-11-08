@@ -1345,10 +1345,136 @@
    "name": "Niedersachsen",
    "nameRu": "Нижня Саксонія",
    "capital": "Hannover",
-   "emoji": "📍",
+   "emoji": "🐎",
    "flag": "data/laender/flags/niedersachsen.png",
    "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_Lower_Saxony.svg",
-   "ready": false
+   "ready": true,
+   "blurb": "Від відпливів на Північному морі до Гарцу. Ганновер, утворення землі 1946 року та завод Volkswagen у Вольфсбурзі.",
+   "facts": [
+    [
+     "Столиця",
+     "Hannover"
+    ],
+    [
+     "Заснування",
+     "1 листопада 1946 року"
+    ],
+    [
+     "Море",
+     "Північне море"
+    ],
+    [
+     "Ландшафти",
+     "Ватове море, Люнебурзька пустка, Гарц"
+    ],
+    [
+     "Економіка",
+     "Автомобільна промисловість і сільське господарство"
+    ]
+   ],
+   "source": "Портал Нижньої Саксонії, адміністрація національного парку, місто Ганновер і Volkswagen",
+   "sourceUrl": "https://www.niedersachsen.de/startseite/land_leute/die_geschichte/geschichte_des_landes_niedersachsen/themen_ereignisse/-19880.html",
+   "checked": "2026-11-08",
+   "quiz": [
+    {
+     "q": "Яке місто є столицею Нижньої Саксонії?",
+     "opts": [
+      "Wolfsburg",
+      "Hannover",
+      "Oldenburg"
+     ],
+     "a": 1,
+     "why": "Ганновер став столицею під час утворення землі 1946 року."
+    },
+    {
+     "q": "Чому Ватове море важливе для перелітних птахів?",
+     "opts": [
+      "Там вони відпочивають і знаходять їжу",
+      "Там вони перечікують літню спеку",
+      "Там вони живуть цілий рік"
+     ],
+     "a": 0,
+     "why": "Під час міграції птахи зупиняються тут, щоб відновити сили."
+    },
+    {
+     "q": "Яке місто пов’язане з головним заводом Volkswagen?",
+     "opts": [
+      "Celle",
+      "Göttingen",
+      "Wolfsburg"
+     ],
+     "a": 2,
+     "why": "Завод розташований у Вольфсбурзі на Середньонімецькому каналі."
+    },
+    {
+     "q": "Що можна побачити в Герренгаузені?",
+     "opts": [
+      "Бароковий сад",
+      "Припливні мілини",
+      "Гірський перевал"
+     ],
+     "a": 0,
+     "why": "Великий сад у Ганновері зберіг барокове планування."
+    }
+   ],
+   "texts": {
+    "b1": {
+     "id": "niedersachsen-b1",
+     "chapters": 4,
+     "words": 137,
+     "minutes": 1,
+     "toc": [
+      {
+       "title": "Von der Küste bis zum Harz",
+       "titleRu": "Від узбережжя до Гарцу",
+       "icon": "🗺️"
+      },
+      {
+       "title": "Ebbe und Flut",
+       "titleRu": "Відплив і приплив",
+       "icon": "🌊"
+      },
+      {
+       "title": "Wie das Land entstand",
+       "titleRu": "Як утворилася земля",
+       "icon": "🏛️"
+      },
+      {
+       "title": "Hannover und Wolfsburg",
+       "titleRu": "Ганновер і Вольфсбург",
+       "icon": "🏭"
+      }
+     ]
+    },
+    "b2": {
+     "id": "niedersachsen-b2",
+     "chapters": 4,
+     "words": 180,
+     "minutes": 2,
+     "toc": [
+      {
+       "title": "Landschaften und Landwirtschaft",
+       "titleRu": "Ландшафти й сільське господарство",
+       "icon": "🗺️"
+      },
+      {
+       "title": "Ein Rastplatz für Zugvögel",
+       "titleRu": "Місце відпочинку перелітних птахів",
+       "icon": "🐦"
+      },
+      {
+       "title": "Vier Länder werden eins",
+       "titleRu": "Чотири землі об’єднуються",
+       "icon": "📜"
+      },
+      {
+       "title": "Barockgarten und Industriestandort",
+       "titleRu": "Бароковий сад і промисловий центр",
+       "icon": "🏭"
+      }
+     ]
+    }
+   }
   },
   {
    "id": "nordrhein-westfalen",

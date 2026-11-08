@@ -1,0 +1,775 @@
+{
+  "version": 1,
+  "w": {
+    "ablesen": "ablesen",
+    "abwechselnd": "abwechselnd",
+    "allem": "alle/alles",
+    "am": "an",
+    "an": "an",
+    "andere": "ander",
+    "anderen": "ander",
+    "april": "April",
+    "auf": "auf",
+    "aus": "aus",
+    "ausgewiesenen": "ausgewiesen",
+    "automobilbau": "Automobilbau",
+    "barocke": "barock",
+    "beginnt": "beginnen",
+    "behielt": "behalten",
+    "bei": "bei",
+    "bergland": "Bergland",
+    "besatzungsregierung": "Besatzungsregierung",
+    "besatzungszone": "Besatzungszone",
+    "bestimmen": "bestimmen",
+    "bevor": "bevor",
+    "bietet": "bieten",
+    "bild": "Bild",
+    "britische": "britisch",
+    "da": "da",
+    "dagegen": "dagegen",
+    "das": "der/die/das",
+    "dem": "der/die/das",
+    "den": "der/die/das",
+    "der": "der/die/das",
+    "des": "der/die/das",
+    "die": "der/die/das",
+    "diesen": "dieser",
+    "durch": "durch",
+    "ein": "ein/eine",
+    "einem": "ein/eine",
+    "erleben": "erleben",
+    "ernannt": "ernennen",
+    "erst": "erst",
+    "ersten": "erste",
+    "flache": "flach",
+    "flug": "Flug",
+    "fläche": "Fläche",
+    "flächen": "Fläche",
+    "form": "Form",
+    "fortsetzen": "fortsetzen",
+    "frei": "frei",
+    "fährt": "fahren",
+    "für": "für",
+    "ganz": "ganz",
+    "garten": "Garten",
+    "gartens": "Garten",
+    "gebildet": "bilden",
+    "genutzt": "nutzen",
+    "geschichte": "Geschichte",
+    "geschmack": "Geschmack",
+    "gestaltet": "gestalten",
+    "gewählt": "wählen",
+    "gezeiten": "Gezeiten",
+    "große": "groß",
+    "großer": "groß",
+    "gärten": "Garten",
+    "herrenhausen": "Herrenhausen",
+    "ihre": "ihr (её, их)",
+    "ihren": "ihr (её, их)",
+    "im": "in",
+    "in": "in",
+    "inseln": "Insel",
+    "ist": "sein",
+    "kommt": "kommen",
+    "krieg": "Krieg",
+    "küsten": "Küste",
+    "landschaften": "Landschaft",
+    "landtag": "Landtag",
+    "landtags": "Landtag",
+    "landwirtschaftlich": "landwirtschaftlich",
+    "lebensraum": "Lebensraum",
+    "ländern": "Land (земля)",
+    "lässt": "lassen",
+    "marke": "Marke",
+    "militärregierung": "Militärregierung",
+    "mitglieder": "Mitglied",
+    "mittellandkanal": "Mittellandkanal",
+    "möglichkeiten": "Möglichkeit",
+    "nach": "nach",
+    "nahrung": "Nahrung",
+    "nationalpark": "Nationalpark",
+    "natur": "Natur",
+    "neu": {
+      "l": "neu",
+      "old": "в обороте aufs neu — снова; сегодня aufs Neue"
+    },
+    "niedersachsen": "Niedersachsen",
+    "niedrigwasser": "Niedrigwasser",
+    "norden": "Norden",
+    "nordseeküste": "Nordseeküste",
+    "november": "November",
+    "obwohl": "obwohl",
+    "ordnete": "anordnen",
+    "parks": "Park",
+    "pkw": "Pkw",
+    "profil": "Profil",
+    "prägt": "prägen",
+    "rhythmus": "Rhythmus",
+    "schützt": "schützen",
+    "seine": "sein (его, свой)",
+    "sich": "sich",
+    "sie": "sie",
+    "später": "später",
+    "stadt": "Stadt",
+    "stammsitz": "Stammsitz",
+    "steht": "stehen",
+    "stil": "Stil",
+    "suchen": "suchen",
+    "süden": "Süden",
+    "teil": "Teil",
+    "trockenfallen": "trockenfallen",
+    "und": "und",
+    "unterschiedliche": "unterschiedlich",
+    "verändert": "verändern",
+    "viele": "viel",
+    "vier": "vier",
+    "volkswagen": "Volkswagen",
+    "volkswagen-werk": "Volkswagen-Werk",
+    "von": "von",
+    "vor": "vor",
+    "waren": "sein",
+    "watt": "Watt",
+    "wattenmeer": "Wattenmeer",
+    "wegen": "wegen",
+    "wer": "wer",
+    "werden": "werden",
+    "wie": "wie",
+    "wird": "werden",
+    "wirtschaftliche": "wirtschaftlich",
+    "wolfsburg": "Wolfsburg",
+    "worden": "werden",
+    "wurde": "werden",
+    "wurden": "werden",
+    "während": "während",
+    "zeigt": "zeigen",
+    "zeit": "Zeit",
+    "zu": "zu",
+    "zugleich": "zugleich",
+    "zugvögel": "Zugvogel",
+    "überflutet": "überfluten"
+  },
+  "l": {
+    "ablesen": {
+      "ru": "считывать, судить по чему-либо",
+      "pos": "гл.",
+      "forms": "las ab · hat abgelesen"
+    },
+    "abwechselnd": {
+      "ru": "поочерёдно",
+      "pos": "нареч."
+    },
+    "alle/alles": {
+      "ru": "все; всё",
+      "pos": "мест."
+    },
+    "an": {
+      "ru": "у, к, на",
+      "pos": "предл.",
+      "note": "am = an dem. Тж. отделяемая приставка: anfangen «начинать», annehmen, ansehen, anzünden"
+    },
+    "ander": {
+      "pos": "прил.",
+      "ru": "другой, иной"
+    },
+    "anordnen": {
+      "ru": "распоряжаться",
+      "pos": "гл.",
+      "forms": "ordnete an · hat angeordnet"
+    },
+    "April": {
+      "ru": "апрель",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Aprile"
+    },
+    "auf": {
+      "ru": "на, в",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: aufspringen «вскочить», sich aufmachen"
+    },
+    "aus": {
+      "ru": "из",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: auslöschen «погасить»"
+    },
+    "ausgewiesen": {
+      "ru": "обозначенный, отведённый",
+      "pos": "прил."
+    },
+    "Automobilbau": {
+      "ru": "автомобилестроение",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "barock": {
+      "ru": "барочный",
+      "pos": "прил."
+    },
+    "beginnen": {
+      "ru": "начинать, начинаться",
+      "pos": "гл.",
+      "forms": "begann · hat begonnen"
+    },
+    "behalten": {
+      "ru": "сохранять, оставлять у себя",
+      "pos": "гл.",
+      "forms": "behielt · hat behalten"
+    },
+    "bei": {
+      "ru": "у, при, возле",
+      "pos": "предл."
+    },
+    "Bergland": {
+      "ru": "гористая местность",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Bergländer"
+    },
+    "Besatzungsregierung": {
+      "ru": "оккупационная администрация",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Besatzungsregierungen"
+    },
+    "Besatzungszone": {
+      "ru": "зона оккупации",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Besatzungszonen"
+    },
+    "bestimmen": {
+      "ru": "определять; предназначать",
+      "pos": "гл.",
+      "forms": "bestimmte · hat bestimmt"
+    },
+    "bevor": {
+      "ru": "прежде чем",
+      "pos": "союз"
+    },
+    "bieten": {
+      "ru": "предлагать, предоставлять",
+      "pos": "гл.",
+      "forms": "bot · hat geboten",
+      "note": "böte — предоставил бы (Konjunktiv II)"
+    },
+    "Bild": {
+      "ru": "картина, снимок",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Bilder"
+    },
+    "bilden": {
+      "ru": "образовывать",
+      "pos": "гл.",
+      "forms": "bildete · hat gebildet"
+    },
+    "britisch": {
+      "ru": "британский",
+      "pos": "прил."
+    },
+    "da": {
+      "ru": "тут, там; тогда",
+      "pos": "нареч."
+    },
+    "dagegen": {
+      "ru": "напротив, зато",
+      "pos": "нареч."
+    },
+    "der/die/das": {
+      "ru": "определённый артикль",
+      "pos": "артикль",
+      "note": "Тж. относительное местоимение «который»"
+    },
+    "dieser": {
+      "ru": "этот, эта, это",
+      "pos": "мест."
+    },
+    "durch": {
+      "ru": "через, сквозь, из-за",
+      "pos": "предл."
+    },
+    "ein/eine": {
+      "ru": "неопределённый артикль",
+      "pos": "артикль",
+      "note": "einer — «один, некто»"
+    },
+    "erleben": {
+      "ru": "видеть, переживать",
+      "pos": "гл.",
+      "forms": "erlebte · hat erlebt"
+    },
+    "ernennen": {
+      "ru": "назначать на должность",
+      "pos": "гл.",
+      "forms": "ernannte · hat ernannt"
+    },
+    "erst": {
+      "ru": "лишь, только; сначала",
+      "pos": "нареч.",
+      "note": "erst 2010 — лишь в 2010 году"
+    },
+    "erste": {
+      "ru": "первый",
+      "pos": "числ."
+    },
+    "fahren": {
+      "ru": "ехать",
+      "pos": "гл.",
+      "forms": "fuhr · ist gefahren",
+      "note": "in die Höhe fahren — подскочить"
+    },
+    "flach": {
+      "ru": "плоский, равнинный",
+      "pos": "прил."
+    },
+    "Flug": {
+      "ru": "полёт",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Flüge"
+    },
+    "Fläche": {
+      "ru": "поверхность, площадка",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Flächen"
+    },
+    "Form": {
+      "ru": "форма",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Formen"
+    },
+    "fortsetzen": {
+      "ru": "продолжать",
+      "pos": "гл.",
+      "forms": "setzte fort · hat fortgesetzt"
+    },
+    "frei": {
+      "ru": "свободный",
+      "pos": "прил.",
+      "note": "unter freiem Himmel — под открытым небом"
+    },
+    "für": {
+      "ru": "для, за",
+      "pos": "предл."
+    },
+    "ganz": {
+      "ru": "весь, целый; совсем",
+      "pos": "прил."
+    },
+    "Garten": {
+      "ru": "сад",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Gärten"
+    },
+    "Geschichte": {
+      "ru": "история",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Geschichten"
+    },
+    "Geschmack": {
+      "ru": "вкус",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Geschmäcker"
+    },
+    "gestalten": {
+      "ru": "оформлять, проектировать",
+      "pos": "гл.",
+      "forms": "gestaltete · hat gestaltet"
+    },
+    "Gezeiten": {
+      "ru": "приливы и отливы",
+      "pos": "сущ.",
+      "art": "die (Pl.)",
+      "pl": null
+    },
+    "groß": {
+      "ru": "большой",
+      "pos": "прил.",
+      "forms": "groß · größer · am größten"
+    },
+    "Herrenhausen": {
+      "ru": "Херренхаузен",
+      "pos": "геогр."
+    },
+    "ihr (её, их)": {
+      "ru": "её; их",
+      "pos": "мест."
+    },
+    "in": {
+      "ru": "в (im = in dem, ins = in das)",
+      "pos": "предл."
+    },
+    "Insel": {
+      "ru": "остров",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Inseln"
+    },
+    "kommen": {
+      "ru": "приходить, приезжать",
+      "pos": "гл.",
+      "forms": "kam · ist gekommen"
+    },
+    "Krieg": {
+      "ru": "война",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Kriege"
+    },
+    "Küste": {
+      "ru": "побережье",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Küsten"
+    },
+    "Land (земля)": {
+      "ru": "земля (федеральная); страна",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Länder",
+      "note": "Bundesland — федеральная земля; in anderen Ländern — в других землях"
+    },
+    "Landschaft": {
+      "ru": "ландшафт, местность",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Landschaften"
+    },
+    "Landtag": {
+      "ru": "ландтаг (парламент земли)",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Landtage"
+    },
+    "landwirtschaftlich": {
+      "ru": "сельскохозяйственный, в сельском хозяйстве",
+      "pos": "прил."
+    },
+    "lassen": {
+      "ru": "позволять, велеть; оставлять",
+      "pos": "гл.",
+      "forms": "ließ · hat gelassen"
+    },
+    "Lebensraum": {
+      "ru": "местообитание",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Lebensräume"
+    },
+    "Marke": {
+      "ru": "марка, бренд",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Marken"
+    },
+    "Militärregierung": {
+      "ru": "военная администрация",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Militärregierungen"
+    },
+    "Mitglied": {
+      "ru": "член (общества)",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Mitglieder"
+    },
+    "Mittellandkanal": {
+      "ru": "Среднегерманский канал",
+      "pos": "геогр."
+    },
+    "Möglichkeit": {
+      "ru": "возможность",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Möglichkeiten"
+    },
+    "nach": {
+      "ru": "в, на, после, по",
+      "pos": "предл."
+    },
+    "Nahrung": {
+      "ru": "пища, корм",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "Nationalpark": {
+      "ru": "национальный парк",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Nationalparks"
+    },
+    "Natur": {
+      "ru": "природа, натура",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Naturen"
+    },
+    "neu": {
+      "ru": "новый",
+      "pos": "прил."
+    },
+    "Niedersachsen": {
+      "ru": "Нижняя Саксония",
+      "pos": "геогр."
+    },
+    "Niedrigwasser": {
+      "ru": "низкий уровень воды",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "Norden": {
+      "ru": "север",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "Nordseeküste": {
+      "ru": "побережье Северного моря",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Nordseeküsten"
+    },
+    "November": {
+      "ru": "ноябрь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "nutzen": {
+      "ru": "использовать",
+      "pos": "гл.",
+      "forms": "nutzte · hat genutzt"
+    },
+    "obwohl": {
+      "ru": "хотя",
+      "pos": "союз"
+    },
+    "Park": {
+      "ru": "парк",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Parks"
+    },
+    "Pkw": {
+      "ru": "легковой автомобиль",
+      "pos": "сокр."
+    },
+    "Profil": {
+      "ru": "профиль, характерные черты",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Profile"
+    },
+    "prägen": {
+      "ru": "определять облик, формировать",
+      "pos": "гл.",
+      "forms": "prägte · hat geprägt"
+    },
+    "Rhythmus": {
+      "ru": "ритм",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Rhythmen"
+    },
+    "schützen": {
+      "ru": "защищать",
+      "pos": "гл.",
+      "forms": "schützte · hat geschützt"
+    },
+    "sein": {
+      "ru": "быть; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "war · ist gewesen"
+    },
+    "sein (его, свой)": {
+      "ru": "его, свой",
+      "pos": "мест."
+    },
+    "sich": {
+      "ru": "себя, себе",
+      "pos": "мест.",
+      "note": "Возвратное местоимение, часть возвратного глагола: sich auf den Weg machen, sich setzen, sich legen, sich nähern, sich gefallen lassen, sich getrauen, sich umsehen"
+    },
+    "sie": {
+      "ru": "она; они; Вы",
+      "pos": "мест."
+    },
+    "später": {
+      "ru": "позже, потом",
+      "pos": "нареч."
+    },
+    "Stadt": {
+      "ru": "город",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Städte"
+    },
+    "Stammsitz": {
+      "ru": "главная площадка, штаб-квартира",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Stammsitze"
+    },
+    "stehen": {
+      "ru": "стоять",
+      "pos": "гл.",
+      "forms": "stand · hat gestanden"
+    },
+    "Stil": {
+      "ru": "стиль",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Stile",
+      "note": "in großem Stil — с размахом"
+    },
+    "suchen": {
+      "ru": "искать",
+      "pos": "гл.",
+      "forms": "suchte · hat gesucht",
+      "note": "sich etwas suchen — подыскать себе"
+    },
+    "Süden": {
+      "ru": "юг",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "Teil": {
+      "ru": "часть; доля",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Teile",
+      "note": "sein Teil haben — получить своё"
+    },
+    "trockenfallen": {
+      "ru": "обнажаться при отливе",
+      "pos": "гл.",
+      "forms": "fiel trocken · ist trockengefallen"
+    },
+    "und": {
+      "ru": "и, а",
+      "pos": "союз"
+    },
+    "unterschiedlich": {
+      "ru": "различный",
+      "pos": "прил."
+    },
+    "verändern": {
+      "ru": "изменять(ся)",
+      "pos": "гл.",
+      "forms": "veränderte · hat verändert"
+    },
+    "viel": {
+      "ru": "много, многое",
+      "pos": "мест."
+    },
+    "vier": {
+      "ru": "четыре",
+      "pos": "числ."
+    },
+    "Volkswagen": {
+      "ru": "компания Volkswagen",
+      "pos": "имя собств."
+    },
+    "Volkswagen-Werk": {
+      "ru": "завод Volkswagen",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Volkswagen-Werke"
+    },
+    "von": {
+      "ru": "от, из, о (vom = von dem)",
+      "pos": "предл."
+    },
+    "vor": {
+      "ru": "перед, до; от (страха)",
+      "pos": "предл."
+    },
+    "Watt": {
+      "ru": "приливная отмель",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Watten"
+    },
+    "Wattenmeer": {
+      "ru": "Ваттовое море",
+      "pos": "геогр."
+    },
+    "wegen": {
+      "ru": "из-за, ради",
+      "pos": "предл.",
+      "note": "der Eier wegen — ради яиц; может стоять после существительного"
+    },
+    "wer": {
+      "ru": "кто",
+      "pos": "мест."
+    },
+    "werden": {
+      "ru": "становиться",
+      "pos": "гл.",
+      "forms": "wurde · ist geworden",
+      "note": "Вспомогательный глагол будущего времени и пассива"
+    },
+    "wie": {
+      "ru": "как; какой",
+      "pos": "союз"
+    },
+    "wirtschaftlich": {
+      "ru": "экономически",
+      "pos": "нареч."
+    },
+    "Wolfsburg": {
+      "ru": "Вольфсбург",
+      "pos": "геогр."
+    },
+    "wählen": {
+      "ru": "выбирать",
+      "pos": "гл.",
+      "forms": "wählte · hat gewählt"
+    },
+    "während": {
+      "pos": "предлог",
+      "ru": "в течение, во время"
+    },
+    "zeigen": {
+      "ru": "показывать; sich zeigen — появиться",
+      "pos": "гл.",
+      "forms": "zeigte · hat gezeigt"
+    },
+    "Zeit": {
+      "ru": "время",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Zeiten"
+    },
+    "zu": {
+      "ru": "к, в; слишком",
+      "pos": "предл.",
+      "note": "zur = zu der, zum = zu dem"
+    },
+    "zugleich": {
+      "ru": "одновременно, заодно",
+      "pos": "нареч."
+    },
+    "Zugvogel": {
+      "ru": "перелётная птица",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Zugvögel"
+    },
+    "überfluten": {
+      "ru": "затапливать",
+      "pos": "гл.",
+      "forms": "überflutete · hat überflutet"
+    }
+  }
+}

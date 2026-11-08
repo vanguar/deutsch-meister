@@ -1345,10 +1345,136 @@
       "name": "Niedersachsen",
       "nameRu": "Нижняя Саксония",
       "capital": "Hannover",
-      "emoji": "📍",
+      "emoji": "🐎",
       "flag": "data/laender/flags/niedersachsen.png",
       "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_Lower_Saxony.svg",
-      "ready": false
+      "ready": true,
+      "blurb": "От отливов на Северном море до Гарца. Ганновер, рождение земли в 1946 году и завод Volkswagen в Вольфсбурге.",
+      "facts": [
+        [
+          "Столица",
+          "Hannover"
+        ],
+        [
+          "Основание",
+          "1 ноября 1946 года"
+        ],
+        [
+          "Море",
+          "Северное море"
+        ],
+        [
+          "Ландшафты",
+          "Ваттовое море, Люнебургская пустошь, Гарц"
+        ],
+        [
+          "Экономика",
+          "Автомобильная промышленность и сельское хозяйство"
+        ]
+      ],
+      "source": "Портал Нижней Саксонии, администрация национального парка, город Ганновер и Volkswagen",
+      "sourceUrl": "https://www.niedersachsen.de/startseite/land_leute/die_geschichte/geschichte_des_landes_niedersachsen/themen_ereignisse/-19880.html",
+      "checked": "2026-11-08",
+      "quiz": [
+        {
+          "q": "Какой город является столицей Нижней Саксонии?",
+          "opts": [
+            "Wolfsburg",
+            "Hannover",
+            "Oldenburg"
+          ],
+          "a": 1,
+          "why": "Ганновер стал столицей при образовании земли в 1946 году."
+        },
+        {
+          "q": "Почему Ваттовое море важно для перелётных птиц?",
+          "opts": [
+            "Там они отдыхают и находят корм",
+            "Там они пережидают летнюю жару",
+            "Там они живут круглый год"
+          ],
+          "a": 0,
+          "why": "Во время миграции птицы останавливаются здесь, чтобы восстановить силы."
+        },
+        {
+          "q": "Какой город связан с главным заводом Volkswagen?",
+          "opts": [
+            "Celle",
+            "Göttingen",
+            "Wolfsburg"
+          ],
+          "a": 2,
+          "why": "Завод находится в Вольфсбурге на Среднегерманском канале."
+        },
+        {
+          "q": "Что можно увидеть в Херренхаузене?",
+          "opts": [
+            "Барочный сад",
+            "Приливные отмели",
+            "Горный перевал"
+          ],
+          "a": 0,
+          "why": "Большой сад в Ганновере сохранил барочную планировку."
+        }
+      ],
+      "texts": {
+        "b1": {
+          "id": "niedersachsen-b1",
+          "chapters": 4,
+          "words": 137,
+          "minutes": 1,
+          "toc": [
+            {
+              "title": "Von der Küste bis zum Harz",
+              "titleRu": "От побережья до Гарца",
+              "icon": "🗺️"
+            },
+            {
+              "title": "Ebbe und Flut",
+              "titleRu": "Отлив и прилив",
+              "icon": "🌊"
+            },
+            {
+              "title": "Wie das Land entstand",
+              "titleRu": "Как появилась земля",
+              "icon": "🏛️"
+            },
+            {
+              "title": "Hannover und Wolfsburg",
+              "titleRu": "Ганновер и Вольфсбург",
+              "icon": "🏭"
+            }
+          ]
+        },
+        "b2": {
+          "id": "niedersachsen-b2",
+          "chapters": 4,
+          "words": 180,
+          "minutes": 2,
+          "toc": [
+            {
+              "title": "Landschaften und Landwirtschaft",
+              "titleRu": "Ландшафты и сельское хозяйство",
+              "icon": "🗺️"
+            },
+            {
+              "title": "Ein Rastplatz für Zugvögel",
+              "titleRu": "Место отдыха перелётных птиц",
+              "icon": "🐦"
+            },
+            {
+              "title": "Vier Länder werden eins",
+              "titleRu": "Четыре земли объединяются",
+              "icon": "📜"
+            },
+            {
+              "title": "Barockgarten und Industriestandort",
+              "titleRu": "Барочный сад и промышленный центр",
+              "icon": "🏭"
+            }
+          ]
+        }
+      }
     },
     {
       "id": "nordrhein-westfalen",
