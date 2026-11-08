@@ -1,0 +1,27 @@
+{
+  "id": "ch-03",
+  "title": "Wein an der Mosel",
+  "titleRu": "Вино на Мозеле",
+  "icon": "🍇",
+  "paragraphs": [
+    {
+      "s": [
+        {
+          "de": "An der Mosel gibt es viele Weinberge.",
+          "ru": "Вдоль Мозеля много виноградников.",
+          "g": {}
+        },
+        {
+          "de": "Einige Weinberge liegen an steilen Hängen.",
+          "ru": "Некоторые виноградники находятся на крутых склонах.",
+          "g": {}
+        },
+        {
+          "de": "Eine bekannte Rebsorte der Region ist der Riesling.",
+          "ru": "Известный сорт винограда этого региона — рислинг.",
+          "g": {}
+        }
+      ]
+    }
+  ]
+}

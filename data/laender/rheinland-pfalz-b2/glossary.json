@@ -1,0 +1,529 @@
+{
+  "version": 1,
+  "w": {
+    "aber": "aber",
+    "als": "als",
+    "an": "an",
+    "angebaut": "anbauen",
+    "arbeit": "Arbeit",
+    "auch": "auch",
+    "auf": "auf",
+    "aus": "aus",
+    "bauten": "aufbauen",
+    "bedeutenden": "bedeutend",
+    "bedeutung": "Bedeutung",
+    "bereits": "bereits",
+    "beschädigt": "beschädigen",
+    "bestattet": "bestatten",
+    "bingen": "Bingen",
+    "bis": "bis",
+    "burgen": "Burg",
+    "das": "der/die/das",
+    "den": "der/die/das",
+    "der": "der/die/das",
+    "des": "der/die/das",
+    "die": "der/die/das",
+    "diente": "dienen",
+    "dom": "Dom",
+    "erinnern": "erinnern",
+    "erschweren": "erschweren",
+    "erstreckt": "sich erstrecken",
+    "flächen": "Fläche",
+    "für": "für",
+    "gegründet": "gründen",
+    "gehört": "gehören",
+    "geschichte": "Geschichte",
+    "hauptstadt": "Hauptstadt",
+    "heiligen": "heilig",
+    "herrscher": "Herrscher",
+    "hängen": "hängen",
+    "im": "in",
+    "in": "in",
+    "ins": "in",
+    "jahrhundert": "Jahrhundert",
+    "koblenz": "Koblenz",
+    "krieg": "Krieg",
+    "lagen": "liegen",
+    "land": "Land (земля)",
+    "landschaftsbild": "Landschaftsbild",
+    "landtag": "Landtag",
+    "mainz": "Mainz",
+    "mehrere": "mehrere",
+    "mittelrheintal": "Mittelrheintal",
+    "mosel": "Mosel",
+    "nach": "nach",
+    "nahm": "nehmen",
+    "obere": "ober",
+    "prägen": "prägen",
+    "reben": "Rebe",
+    "regierung": "Regierung",
+    "regierungssitz": "Regierungssitz",
+    "region": "Region",
+    "reiches": "reich",
+    "reicht": "reichen",
+    "rheins": "Rhein",
+    "riesling": "Riesling",
+    "romanik": "Romanik",
+    "römischen": "römisch",
+    "rüdesheim": "Rüdesheim",
+    "sehr": "sehr",
+    "seine": "sein (его, свой)",
+    "sich": "sich",
+    "solche": "solch",
+    "speyer": "Speyer",
+    "stark": "stark",
+    "steilen": "steil",
+    "tal": "Tal",
+    "um": "um",
+    "und": "und",
+    "unesco": "UNESCO",
+    "verkehrsweg": "Verkehrsweg",
+    "verwendet": "verwenden",
+    "viele": "viel",
+    "von": "von",
+    "vorgesehen": "vorsehen",
+    "vorübergehend": "vorübergehend",
+    "war": "sein",
+    "weil": "weil",
+    "weinberg": "Weinberg",
+    "weine": "Wein",
+    "welterbeliste": "Welterbeliste",
+    "werden": "werden",
+    "wird": "werden",
+    "worden": "werden",
+    "wurde": "werden",
+    "wurden": "werden",
+    "zogen": "ziehen",
+    "zu": "zu",
+    "zurück": "zurück"
+  },
+  "l": {
+    "aber": {
+      "ru": "но, однако",
+      "pos": "союз"
+    },
+    "als": {
+      "ru": "когда; как; чем",
+      "pos": "союз"
+    },
+    "an": {
+      "ru": "у, к, на",
+      "pos": "предл.",
+      "note": "am = an dem. Тж. отделяемая приставка: anfangen «начинать», annehmen, ansehen, anzünden"
+    },
+    "anbauen": {
+      "ru": "выращивать (растения)",
+      "pos": "гл.",
+      "forms": "baute an · hat angebaut"
+    },
+    "Arbeit": {
+      "ru": "работа",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Arbeiten"
+    },
+    "auch": {
+      "ru": "тоже, также; даже",
+      "pos": "частица"
+    },
+    "auf": {
+      "ru": "на, в",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: aufspringen «вскочить», sich aufmachen"
+    },
+    "aufbauen": {
+      "ru": "строить, устанавливать",
+      "pos": "гл.",
+      "forms": "baute auf · hat aufgebaut"
+    },
+    "aus": {
+      "ru": "из",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: auslöschen «погасить»"
+    },
+    "bedeutend": {
+      "ru": "значительный, важный",
+      "pos": "прил.",
+      "note": "die bedeutendsten Städte — важнейшие города"
+    },
+    "Bedeutung": {
+      "ru": "значение",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Bedeutungen"
+    },
+    "bereits": {
+      "pos": "нареч.",
+      "ru": "уже"
+    },
+    "beschädigen": {
+      "ru": "повреждать",
+      "pos": "гл.",
+      "forms": "beschädigte · hat beschädigt",
+      "note": "sich das Kreuz beschädigen — повредить себе спину"
+    },
+    "bestatten": {
+      "ru": "хоронить",
+      "pos": "гл.",
+      "forms": "bestattete · hat bestattet"
+    },
+    "Bingen": {
+      "ru": "Бинген",
+      "pos": "геогр."
+    },
+    "bis": {
+      "ru": "до; пока не",
+      "pos": "союз"
+    },
+    "Burg": {
+      "ru": "крепость, замок",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Burgen"
+    },
+    "der/die/das": {
+      "ru": "определённый артикль",
+      "pos": "артикль",
+      "note": "Тж. относительное местоимение «который»"
+    },
+    "dienen": {
+      "ru": "служить",
+      "pos": "гл.",
+      "forms": "diente · hat gedient"
+    },
+    "Dom": {
+      "ru": "собор",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Dome"
+    },
+    "erinnern": {
+      "ru": "напоминать",
+      "pos": "гл.",
+      "forms": "erinnerte · hat erinnert"
+    },
+    "erschweren": {
+      "ru": "затруднять",
+      "pos": "гл.",
+      "forms": "erschwerte · hat erschwert"
+    },
+    "Fläche": {
+      "ru": "поверхность, площадка",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Flächen"
+    },
+    "für": {
+      "ru": "для, за",
+      "pos": "предл."
+    },
+    "gehören": {
+      "ru": "принадлежать, относиться",
+      "pos": "гл.",
+      "forms": "gehörte · hat gehört",
+      "note": "zu etwas gehören — относиться к чему-то, входить в"
+    },
+    "Geschichte": {
+      "ru": "история",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Geschichten"
+    },
+    "gründen": {
+      "ru": "основывать",
+      "pos": "гл.",
+      "forms": "gründete · hat gegründet"
+    },
+    "Hauptstadt": {
+      "ru": "столица",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Hauptstädte"
+    },
+    "heilig": {
+      "ru": "святой",
+      "pos": "прил.",
+      "note": "an heiliger Stätte — в святом месте"
+    },
+    "Herrscher": {
+      "ru": "властитель, государь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Herrscher"
+    },
+    "hängen": {
+      "ru": "висеть",
+      "pos": "гл.",
+      "forms": "hing · hat gehangen",
+      "note": "переходное hängen «вешать» слабое: hängte · hat gehängt"
+    },
+    "in": {
+      "ru": "в (im = in dem, ins = in das)",
+      "pos": "предл."
+    },
+    "Jahrhundert": {
+      "ru": "век, столетие",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Jahrhunderte"
+    },
+    "Koblenz": {
+      "ru": "Кобленц",
+      "pos": "геогр."
+    },
+    "Krieg": {
+      "ru": "война",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Kriege"
+    },
+    "Land (земля)": {
+      "ru": "земля (федеральная); страна",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Länder",
+      "note": "Bundesland — федеральная земля; in anderen Ländern — в других землях"
+    },
+    "Landschaftsbild": {
+      "ru": "облик местности",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Landschaftsbilder"
+    },
+    "Landtag": {
+      "ru": "ландтаг (парламент земли)",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Landtage"
+    },
+    "liegen": {
+      "ru": "лежать",
+      "pos": "гл.",
+      "forms": "lag · hat gelegen"
+    },
+    "Mainz": {
+      "ru": "Майнц",
+      "pos": "геогр."
+    },
+    "mehrere": {
+      "pos": "мест.",
+      "ru": "несколько"
+    },
+    "Mittelrheintal": {
+      "ru": "долина Среднего Рейна",
+      "pos": "геогр."
+    },
+    "Mosel": {
+      "ru": "Мозель (река)",
+      "pos": "геогр."
+    },
+    "nach": {
+      "ru": "в, на, после, по",
+      "pos": "предл."
+    },
+    "nehmen": {
+      "ru": "брать",
+      "pos": "гл.",
+      "forms": "nahm · hat genommen"
+    },
+    "ober": {
+      "ru": "верхний",
+      "pos": "прил."
+    },
+    "prägen": {
+      "ru": "определять облик, формировать",
+      "pos": "гл.",
+      "forms": "prägte · hat geprägt"
+    },
+    "Rebe": {
+      "ru": "виноградная лоза",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Reben"
+    },
+    "Regierung": {
+      "ru": "правительство",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Regierungen"
+    },
+    "Regierungssitz": {
+      "ru": "местопребывание правительства",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Regierungssitze"
+    },
+    "Region": {
+      "ru": "регион",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Regionen"
+    },
+    "reich": {
+      "ru": "богатый",
+      "pos": "прил.",
+      "forms": "reich · reicher · am reichsten"
+    },
+    "reichen": {
+      "ru": "подавать, протягивать",
+      "pos": "гл.",
+      "forms": "reichte · hat gereicht",
+      "note": "die Hand reichen — подать руку"
+    },
+    "Rhein": {
+      "ru": "Рейн (река)",
+      "pos": "геогр."
+    },
+    "Riesling": {
+      "ru": "рислинг (сорт винограда и вино)",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "Romanik": {
+      "ru": "романский стиль",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "römisch": {
+      "ru": "римский",
+      "pos": "прил."
+    },
+    "Rüdesheim": {
+      "ru": "Рюдесхайм",
+      "pos": "геогр."
+    },
+    "sehr": {
+      "pos": "нареч.",
+      "ru": "очень"
+    },
+    "sein": {
+      "ru": "быть; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "war · ist gewesen"
+    },
+    "sein (его, свой)": {
+      "ru": "его, свой",
+      "pos": "мест."
+    },
+    "sich": {
+      "ru": "себя, себе",
+      "pos": "мест.",
+      "note": "Возвратное местоимение, часть возвратного глагола: sich auf den Weg machen, sich setzen, sich legen, sich nähern, sich gefallen lassen, sich getrauen, sich umsehen"
+    },
+    "sich erstrecken": {
+      "ru": "простираться",
+      "pos": "гл.",
+      "forms": "erstreckte sich · hat sich erstreckt"
+    },
+    "solch": {
+      "ru": "такой",
+      "pos": "мест.",
+      "note": "ein solcher Vorbeiflug — такой пролёт"
+    },
+    "Speyer": {
+      "ru": "Шпайер",
+      "pos": "геогр."
+    },
+    "stark": {
+      "ru": "сильный",
+      "pos": "прил.",
+      "forms": "stark · stärker · am stärksten"
+    },
+    "steil": {
+      "ru": "крутой, обрывистый",
+      "pos": "прил."
+    },
+    "Tal": {
+      "ru": "долина",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Täler"
+    },
+    "um": {
+      "ru": "вокруг, в (о времени)",
+      "pos": "предл.",
+      "note": "um … zu — чтобы. Тж. отделяемая приставка: sich umsehen «оглядеться»"
+    },
+    "und": {
+      "ru": "и, а",
+      "pos": "союз"
+    },
+    "UNESCO": {
+      "ru": "ЮНЕСКО",
+      "pos": "имя собств."
+    },
+    "Verkehrsweg": {
+      "ru": "транспортный путь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Verkehrswege"
+    },
+    "verwenden": {
+      "ru": "употреблять, тратить",
+      "pos": "гл.",
+      "forms": "verwendete · hat verwendet"
+    },
+    "viel": {
+      "ru": "много, многое",
+      "pos": "мест."
+    },
+    "von": {
+      "ru": "от, из, о (vom = von dem)",
+      "pos": "предл."
+    },
+    "vorsehen": {
+      "ru": "предусматривать, намечать",
+      "pos": "гл.",
+      "forms": "sah vor · hat vorgesehen"
+    },
+    "vorübergehend": {
+      "ru": "временно",
+      "pos": "нареч."
+    },
+    "weil": {
+      "ru": "потому что",
+      "pos": "союз"
+    },
+    "Wein": {
+      "ru": "вино",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Weine"
+    },
+    "Weinberg": {
+      "ru": "виноградник",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Weinberge"
+    },
+    "Welterbeliste": {
+      "ru": "список всемирного наследия",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Welterbelisten"
+    },
+    "werden": {
+      "ru": "становиться",
+      "pos": "гл.",
+      "forms": "wurde · ist geworden",
+      "note": "Вспомогательный глагол будущего времени и пассива"
+    },
+    "ziehen": {
+      "ru": "двигаться, отправляться; тянуть",
+      "pos": "гл.",
+      "forms": "zog · ist gezogen (двигаться) / hat gezogen (тянуть)"
+    },
+    "zu": {
+      "ru": "к, в; слишком",
+      "pos": "предл.",
+      "note": "zur = zu der, zum = zu dem"
+    },
+    "zurück": {
+      "ru": "назад",
+      "pos": "нареч.",
+      "note": "Тж. отделяемая приставка: zurücklaufen «побежать назад»"
+    }
+  }
+}

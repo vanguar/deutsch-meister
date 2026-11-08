@@ -1,0 +1,29 @@
+{
+  "id": "ch-01",
+  "title": "Warum Koblenz zuerst wichtig war",
+  "titleRu": "Почему сначала важную роль играл Кобленц",
+  "icon": "📜",
+  "paragraphs": [
+    {
+      "s": [
+        {
+          "de": "Als das Land 1946 gegründet wurde, war Mainz bereits als Hauptstadt vorgesehen.",
+          "ru": "При основании земли в 1946 году столицей уже назначили Майнц.",
+          "g": {}
+        },
+        {
+          "de": "Weil Mainz im Krieg stark beschädigt worden war, diente Koblenz vorübergehend als Regierungssitz.",
+          "ru": "Поскольку Майнц сильно пострадал в войну, Кобленц временно стал местом работы правительства.",
+          "g": {}
+        },
+        {
+          "de": "1951 zogen Regierung und Landtag nach Mainz um.",
+          "ru": "В 1951 году правительство и ландтаг переехали в Майнц.",
+          "g": {
+            "0+6": "переехали"
+          }
+        }
+      ]
+    }
+  ]
+}

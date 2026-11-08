@@ -38,3 +38,6 @@ TEXTS.update(_nordrhein_westfalen)
 
 from texts_hessen import TEXTS as _hessen
 TEXTS.update(_hessen)
+
+from texts_rheinland_pfalz import TEXTS as _rheinland_pfalz
+TEXTS.update(_rheinland_pfalz)

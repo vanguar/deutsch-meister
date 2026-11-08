@@ -1,0 +1,21 @@
+{
+  "id": "rheinland-pfalz-b1",
+  "kind": "land",
+  "land": "rheinland-pfalz",
+  "title": "Rheinland-Pfalz",
+  "titleRu": "Рейнланд-Пфальц",
+  "author": "German Morning",
+  "level": "B1",
+  "levelNote": "B1: короткие предложения, Präsens и Präteritum, основные слова о стране.",
+  "year": "2026",
+  "chapters": 4,
+  "words": 97,
+  "minutes": 1,
+  "photos": 0,
+  "cover": "🍇",
+  "flag": "data/laender/flags/rheinland-pfalz.png",
+  "source": "Архив земли Рейнланд-Пфальц, город Кобленц, Mosellandtouristik и UNESCO",
+  "sourceUrl": "https://lav.rlp.de/geschichte-entdecken/landesgeschichte/land-rheinland-pfalz",
+  "checked": "2026-11-08",
+  "license": "текст курса German Morning"
+}

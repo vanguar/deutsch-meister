@@ -272,6 +272,36 @@
       "land": "nordrhein-westfalen"
     },
     {
+      "id": "rheinland-pfalz-b1",
+      "title": "Rheinland-Pfalz",
+      "titleRu": "Рейнланд-Пфальц",
+      "author": "German Morning",
+      "level": "B1",
+      "year": "2026",
+      "chapters": 4,
+      "words": 97,
+      "minutes": 1,
+      "cover": "🍇",
+      "source": "Архив земли Рейнланд-Пфальц, город Кобленц, Mosellandtouristik и UNESCO",
+      "license": "текст курса German Morning",
+      "land": "rheinland-pfalz"
+    },
+    {
+      "id": "rheinland-pfalz-b2",
+      "title": "Rheinland-Pfalz",
+      "titleRu": "Рейнланд-Пфальц",
+      "author": "German Morning",
+      "level": "B2",
+      "year": "2026",
+      "chapters": 4,
+      "words": 124,
+      "minutes": 1,
+      "cover": "🍇",
+      "source": "Архив земли Рейнланд-Пфальц, город Кобленц, Mosellandtouristik и UNESCO",
+      "license": "текст курса German Morning",
+      "land": "rheinland-pfalz"
+    },
+    {
       "id": "sachsen-b1",
       "title": "Sachsen",
       "titleRu": "Саксония",

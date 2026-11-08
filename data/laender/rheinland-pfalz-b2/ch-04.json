@@ -1,0 +1,29 @@
+{
+  "id": "ch-04",
+  "title": "Romanische Baukunst in Speyer",
+  "titleRu": "Романская архитектура в Шпайере",
+  "icon": "⛪",
+  "paragraphs": [
+    {
+      "s": [
+        {
+          "de": "Der Dom zu Speyer gehört zu den bedeutenden Bauten der Romanik.",
+          "ru": "Шпайерский собор — один из значительных памятников романской архитектуры.",
+          "g": {}
+        },
+        {
+          "de": "Seine Geschichte reicht bis ins 11. Jahrhundert zurück.",
+          "ru": "Его история восходит к XI веку.",
+          "g": {
+            "2+6": "восходит"
+          }
+        },
+        {
+          "de": "Im Dom wurden mehrere Herrscher des Heiligen Römischen Reiches bestattet.",
+          "ru": "В соборе похоронено несколько правителей Священной Римской империи.",
+          "g": {}
+        }
+      ]
+    }
+  ]
+}

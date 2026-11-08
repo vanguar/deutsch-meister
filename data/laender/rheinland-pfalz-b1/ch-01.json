@@ -1,0 +1,34 @@
+{
+  "id": "ch-01",
+  "title": "Mainz und Koblenz",
+  "titleRu": "Майнц и Кобленц",
+  "icon": "🏛️",
+  "paragraphs": [
+    {
+      "s": [
+        {
+          "de": "Mainz ist die Hauptstadt von Rheinland-Pfalz.",
+          "ru": "Майнц — столица Рейнланд-Пфальца.",
+          "g": {}
+        },
+        {
+          "de": "Die Stadt liegt am Rhein.",
+          "ru": "Город находится на Рейне.",
+          "g": {}
+        },
+        {
+          "de": "Weiter nördlich liegt Koblenz, wo die Mosel in den Rhein mündet.",
+          "ru": "Севернее лежит Кобленц, где Мозель впадает в Рейн.",
+          "g": {
+            "10": "впадает"
+          }
+        },
+        {
+          "de": "Diesen Ort nennt man das Deutsche Eck.",
+          "ru": "Это место называют Немецким углом.",
+          "g": {}
+        }
+      ]
+    }
+  ]
+}

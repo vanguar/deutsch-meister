@@ -1,0 +1,381 @@
+{
+  "version": 1,
+  "w": {
+    "am": "an",
+    "an": "an",
+    "arbeiteten": "arbeiten",
+    "bekannte": "bekannt",
+    "besatzungszone": "Besatzungszone",
+    "burgen": "Burg",
+    "das": "der/die/das",
+    "dem": "der/die/das",
+    "den": "der/die/das",
+    "der": "der/die/das",
+    "deshalb": "deshalb",
+    "deutsche": "deutsch",
+    "die": "der/die/das",
+    "diesen": "dieser",
+    "dom": "Dom",
+    "eck": "Eck",
+    "ein": "ein/eine",
+    "eine": "ein/eine",
+    "einige": "einige",
+    "entstand": "entstehen",
+    "es": "es",
+    "fluss": "Fluss",
+    "französischen": "französisch",
+    "gehören": "gehören",
+    "gibt": "geben",
+    "großer": "groß",
+    "hauptstadt": "Hauptstadt",
+    "hängen": "hängen",
+    "in": "in",
+    "ist": "sein",
+    "koblenz": "Koblenz",
+    "krieg": "Krieg",
+    "landesregierung": "Landesregierung",
+    "landtag": "Landtag",
+    "liegen": "liegen",
+    "liegt": "liegen",
+    "mainz": "Mainz",
+    "man": "man",
+    "mittelrhein": "Mittelrhein",
+    "mittelrheintal": "Mittelrheintal",
+    "mosel": "Mosel",
+    "mündet": "münden",
+    "nach": "nach",
+    "nennt": "nennen",
+    "nördlich": "nördlich",
+    "obere": "ober",
+    "ort": "Ort",
+    "rebsorte": "Rebsorte",
+    "region": "Region",
+    "rhein": "Rhein",
+    "rheinland-pfalz": "Rheinland-Pfalz",
+    "riesling": "Riesling",
+    "romanischer": "romanisch",
+    "speyer": "Speyer",
+    "stadt": "Stadt",
+    "stark": "stark",
+    "stehen": "stehen",
+    "steht": "stehen",
+    "steilen": "steil",
+    "und": "und",
+    "unesco-welterbe": "UNESCO-Welterbe",
+    "viele": "viel",
+    "von": "von",
+    "war": "sein",
+    "weinberge": "Weinberg",
+    "weiter": "weit",
+    "wo": "wo",
+    "zerstört": "zerstören",
+    "zuerst": "zuerst",
+    "zum": "zu",
+    "über": "über"
+  },
+  "l": {
+    "an": {
+      "ru": "у, к, на",
+      "pos": "предл.",
+      "note": "am = an dem. Тж. отделяемая приставка: anfangen «начинать», annehmen, ansehen, anzünden"
+    },
+    "arbeiten": {
+      "ru": "работать",
+      "pos": "гл.",
+      "forms": "arbeitete · hat gearbeitet",
+      "note": "daran arbeiten, etwas zu tun — добиваться чего-л."
+    },
+    "bekannt": {
+      "ru": "известный, знакомый",
+      "pos": "прил."
+    },
+    "Besatzungszone": {
+      "ru": "зона оккупации",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Besatzungszonen"
+    },
+    "Burg": {
+      "ru": "крепость, замок",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Burgen"
+    },
+    "der/die/das": {
+      "ru": "определённый артикль",
+      "pos": "артикль",
+      "note": "Тж. относительное местоимение «который»"
+    },
+    "deshalb": {
+      "ru": "поэтому",
+      "pos": "нареч."
+    },
+    "deutsch": {
+      "ru": "немецкий",
+      "pos": "прил."
+    },
+    "dieser": {
+      "ru": "этот, эта, это",
+      "pos": "мест."
+    },
+    "Dom": {
+      "ru": "собор",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Dome"
+    },
+    "Eck": {
+      "ru": "угол",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Ecken"
+    },
+    "ein/eine": {
+      "ru": "неопределённый артикль",
+      "pos": "артикль",
+      "note": "einer — «один, некто»"
+    },
+    "einige": {
+      "ru": "несколько, некоторые",
+      "pos": "мест."
+    },
+    "entstehen": {
+      "ru": "возникать",
+      "pos": "гл.",
+      "forms": "entstand · ist entstanden"
+    },
+    "es": {
+      "ru": "оно; это",
+      "pos": "мест."
+    },
+    "Fluss": {
+      "ru": "река",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Flüsse"
+    },
+    "französisch": {
+      "ru": "французский",
+      "pos": "прил."
+    },
+    "geben": {
+      "ru": "давать",
+      "pos": "гл.",
+      "forms": "gab · hat gegeben"
+    },
+    "gehören": {
+      "ru": "принадлежать, относиться",
+      "pos": "гл.",
+      "forms": "gehörte · hat gehört",
+      "note": "zu etwas gehören — относиться к чему-то, входить в"
+    },
+    "groß": {
+      "ru": "большой",
+      "pos": "прил.",
+      "forms": "groß · größer · am größten"
+    },
+    "Hauptstadt": {
+      "ru": "столица",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Hauptstädte"
+    },
+    "hängen": {
+      "ru": "висеть",
+      "pos": "гл.",
+      "forms": "hing · hat gehangen",
+      "note": "переходное hängen «вешать» слабое: hängte · hat gehängt"
+    },
+    "in": {
+      "ru": "в (im = in dem, ins = in das)",
+      "pos": "предл."
+    },
+    "Koblenz": {
+      "ru": "Кобленц",
+      "pos": "геогр."
+    },
+    "Krieg": {
+      "ru": "война",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Kriege"
+    },
+    "Landesregierung": {
+      "ru": "правительство земли (государства)",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Landesregierungen"
+    },
+    "Landtag": {
+      "ru": "ландтаг (парламент земли)",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Landtage"
+    },
+    "liegen": {
+      "ru": "лежать",
+      "pos": "гл.",
+      "forms": "lag · hat gelegen"
+    },
+    "Mainz": {
+      "ru": "Майнц",
+      "pos": "геогр."
+    },
+    "man": {
+      "ru": "неопределённое «кто-то, люди, мы»",
+      "pos": "мест."
+    },
+    "Mittelrhein": {
+      "ru": "Средний Рейн",
+      "pos": "геогр."
+    },
+    "Mittelrheintal": {
+      "ru": "долина Среднего Рейна",
+      "pos": "геогр."
+    },
+    "Mosel": {
+      "ru": "Мозель (река)",
+      "pos": "геогр."
+    },
+    "münden": {
+      "ru": "впадать (о реке)",
+      "pos": "гл.",
+      "forms": "mündete · ist gemündet",
+      "note": "münden in + Akk."
+    },
+    "nach": {
+      "ru": "в, на, после, по",
+      "pos": "предл."
+    },
+    "nennen": {
+      "ru": "называть",
+      "pos": "гл.",
+      "forms": "nannte · hat genannt"
+    },
+    "nördlich": {
+      "ru": "северный",
+      "pos": "прил."
+    },
+    "ober": {
+      "ru": "верхний",
+      "pos": "прил."
+    },
+    "Ort": {
+      "ru": "место; селение",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Orte"
+    },
+    "Rebsorte": {
+      "ru": "сорт винограда",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Rebsorten"
+    },
+    "Region": {
+      "ru": "регион",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Regionen"
+    },
+    "Rhein": {
+      "ru": "Рейн (река)",
+      "pos": "геогр."
+    },
+    "Rheinland-Pfalz": {
+      "ru": "Рейнланд-Пфальц",
+      "pos": "геогр."
+    },
+    "Riesling": {
+      "ru": "рислинг (сорт винограда и вино)",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "romanisch": {
+      "ru": "романский (стиль)",
+      "pos": "прил."
+    },
+    "sein": {
+      "ru": "быть; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "war · ist gewesen"
+    },
+    "Speyer": {
+      "ru": "Шпайер",
+      "pos": "геогр."
+    },
+    "Stadt": {
+      "ru": "город",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Städte"
+    },
+    "stark": {
+      "ru": "сильный",
+      "pos": "прил.",
+      "forms": "stark · stärker · am stärksten"
+    },
+    "stehen": {
+      "ru": "стоять",
+      "pos": "гл.",
+      "forms": "stand · hat gestanden"
+    },
+    "steil": {
+      "ru": "крутой, обрывистый",
+      "pos": "прил."
+    },
+    "und": {
+      "ru": "и, а",
+      "pos": "союз"
+    },
+    "UNESCO-Welterbe": {
+      "ru": "Всемирное наследие ЮНЕСКО",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "viel": {
+      "ru": "много, многое",
+      "pos": "мест."
+    },
+    "von": {
+      "ru": "от, из, о (vom = von dem)",
+      "pos": "предл."
+    },
+    "Weinberg": {
+      "ru": "виноградник",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Weinberge"
+    },
+    "weit": {
+      "ru": "далёкий, далеко",
+      "pos": "прил.",
+      "forms": "weit · weiter · am weitesten",
+      "note": "weiter — дальше, далее; von weitem — издали"
+    },
+    "wo": {
+      "ru": "где; куда; когда (в придаточном)",
+      "pos": "нареч."
+    },
+    "zerstören": {
+      "ru": "разрушать, уничтожать",
+      "pos": "гл.",
+      "forms": "zerstörte · hat zerstört"
+    },
+    "zu": {
+      "ru": "к, в; слишком",
+      "pos": "предл.",
+      "note": "zur = zu der, zum = zu dem"
+    },
+    "zuerst": {
+      "pos": "нареч.",
+      "ru": "сначала, сперва"
+    },
+    "über": {
+      "ru": "над, через, о",
+      "pos": "предл."
+    }
+  }
+}

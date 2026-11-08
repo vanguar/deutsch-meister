@@ -1743,10 +1743,136 @@
    "name": "Rheinland-Pfalz",
    "nameRu": "Рейнланд-Пфальц",
    "capital": "Mainz",
-   "emoji": "📍",
+   "emoji": "🍇",
    "flag": "data/laender/flags/rheinland-pfalz.png",
    "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_Rhineland-Palatinate.svg",
-   "ready": false
+   "ready": true,
+   "blurb": "Майнц і Кобленц, виноградники Мозеля, замки Середнього Рейну й собор Шпаєра.",
+   "facts": [
+    [
+     "Столиця",
+     "Mainz"
+    ],
+    [
+     "Заснування",
+     "30 серпня 1946 року"
+    ],
+    [
+     "Річки",
+     "Rhein, Mosel"
+    ],
+    [
+     "Виноградарство",
+     "Мозель і рислінг"
+    ],
+    [
+     "Всесвітня спадщина",
+     "Долина Верхнього Середнього Рейну й Шпаєрський собор"
+    ]
+   ],
+   "source": "Архів землі Рейнланд-Пфальц, місто Кобленц, Mosellandtouristik та UNESCO",
+   "sourceUrl": "https://lav.rlp.de/geschichte-entdecken/landesgeschichte/land-rheinland-pfalz",
+   "checked": "2026-11-08",
+   "quiz": [
+    {
+     "q": "Яке місто є столицею Рейнланд-Пфальцу?",
+     "opts": [
+      "Koblenz",
+      "Mainz",
+      "Trier"
+     ],
+     "a": 1,
+     "why": "Майнц визначили столицею під час заснування землі."
+    },
+    {
+     "q": "Які річки зливаються біля Німецького кута?",
+     "opts": [
+      "Рейн і Мозель",
+      "Рейн і Ельба",
+      "Майн і Дунай"
+     ],
+     "a": 0,
+     "why": "Мозель впадає в Рейн у Кобленці."
+    },
+    {
+     "q": "Де тимчасово перебували уряд і ландтаг після заснування землі?",
+     "opts": [
+      "Speyer",
+      "Trier",
+      "Koblenz"
+     ],
+     "a": 2,
+     "why": "Майнц сильно постраждав під час війни, тому Кобленц тимчасово став місцем роботи уряду й ландтагу."
+    },
+    {
+     "q": "Який сорт винограду особливо характерний для Мозеля?",
+     "opts": [
+      "Merlot",
+      "Riesling",
+      "Syrah"
+     ],
+     "a": 1,
+     "why": "Рислінг характерний для виноградників долини Мозеля."
+    }
+   ],
+   "texts": {
+    "b1": {
+     "id": "rheinland-pfalz-b1",
+     "chapters": 4,
+     "words": 97,
+     "minutes": 1,
+     "toc": [
+      {
+       "title": "Mainz und Koblenz",
+       "titleRu": "Майнц і Кобленц",
+       "icon": "🏛️"
+      },
+      {
+       "title": "Ein Land seit 1946",
+       "titleRu": "Земля з 1946 року",
+       "icon": "📜"
+      },
+      {
+       "title": "Wein an der Mosel",
+       "titleRu": "Вино на Мозелі",
+       "icon": "🍇"
+      },
+      {
+       "title": "Burgen und ein Dom",
+       "titleRu": "Замки й собор",
+       "icon": "🏰"
+      }
+     ]
+    },
+    "b2": {
+     "id": "rheinland-pfalz-b2",
+     "chapters": 4,
+     "words": 124,
+     "minutes": 1,
+     "toc": [
+      {
+       "title": "Warum Koblenz zuerst wichtig war",
+       "titleRu": "Чому спочатку важливу роль відігравав Кобленц",
+       "icon": "📜"
+      },
+      {
+       "title": "Eine Landschaft am Fluss",
+       "titleRu": "Краєвид уздовж річки",
+       "icon": "🏞️"
+      },
+      {
+       "title": "Weinbau am Hang",
+       "titleRu": "Виноградарство на схилах",
+       "icon": "🍇"
+      },
+      {
+       "title": "Romanische Baukunst in Speyer",
+       "titleRu": "Романська архітектура у Шпаєрі",
+       "icon": "⛪"
+      }
+     ]
+    }
+   }
   },
   {
    "id": "saarland",

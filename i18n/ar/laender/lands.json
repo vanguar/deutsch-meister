@@ -1743,10 +1743,136 @@
    "name": "Rheinland-Pfalz",
    "nameRu": "راينلاند-بفالز",
    "capital": "Mainz",
-   "emoji": "📍",
+   "emoji": "🍇",
    "flag": "data/laender/flags/rheinland-pfalz.png",
    "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_Rhineland-Palatinate.svg",
-   "ready": false
+   "ready": true,
+   "blurb": "ماينتس وكوبلنتس، وكروم موزيل، وقلاع الراين الأوسط وكاتدرائية شباير.",
+   "facts": [
+    [
+     "العاصمة",
+     "Mainz"
+    ],
+    [
+     "التأسيس",
+     "30 أغسطس 1946"
+    ],
+    [
+     "الأنهار",
+     "Rhein, Mosel"
+    ],
+    [
+     "زراعة الكروم",
+     "موزيل وعنب ريسلينغ"
+    ],
+    [
+     "التراث العالمي",
+     "وادي الراين الأوسط الأعلى وكاتدرائية شباير"
+    ]
+   ],
+   "source": "أرشيف راينلاند بالاتينات ومدينة كوبلنتس وهيئة السياحة في موزيل واليونسكو",
+   "sourceUrl": "https://lav.rlp.de/geschichte-entdecken/landesgeschichte/land-rheinland-pfalz",
+   "checked": "2026-11-08",
+   "quiz": [
+    {
+     "q": "ما عاصمة راينلاند بالاتينات؟",
+     "opts": [
+      "Koblenz",
+      "Mainz",
+      "Trier"
+     ],
+     "a": 1,
+     "why": "اختيرت ماينتس عاصمة عند تأسيس الولاية."
+    },
+    {
+     "q": "أي نهرين يلتقيان عند الركن الألماني؟",
+     "opts": [
+      "الراين وموزيل",
+      "الراين وإلبه",
+      "الماين والدانوب"
+     ],
+     "a": 0,
+     "why": "يصب نهر موزيل في الراين عند كوبلنتس."
+    },
+    {
+     "q": "أين كان المقر المؤقت لحكومة الولاية وبرلمانها بعد التأسيس؟",
+     "opts": [
+      "Speyer",
+      "Trier",
+      "Koblenz"
+     ],
+     "a": 2,
+     "why": "تضررت ماينتس بشدة خلال الحرب، فاتخذت الحكومة والبرلمان من كوبلنتس مقرًا مؤقتًا."
+    },
+    {
+     "q": "أي صنف من العنب تشتهر به منطقة موزيل خاصة؟",
+     "opts": [
+      "Merlot",
+      "Riesling",
+      "Syrah"
+     ],
+     "a": 1,
+     "why": "يُعد ريسلينغ من الأصناف المميزة لكروم وادي موزيل."
+    }
+   ],
+   "texts": {
+    "b1": {
+     "id": "rheinland-pfalz-b1",
+     "chapters": 4,
+     "words": 97,
+     "minutes": 1,
+     "toc": [
+      {
+       "title": "Mainz und Koblenz",
+       "titleRu": "ماينتس وكوبلنتس",
+       "icon": "🏛️"
+      },
+      {
+       "title": "Ein Land seit 1946",
+       "titleRu": "ولاية منذ عام 1946",
+       "icon": "📜"
+      },
+      {
+       "title": "Wein an der Mosel",
+       "titleRu": "النبيذ على ضفاف موزيل",
+       "icon": "🍇"
+      },
+      {
+       "title": "Burgen und ein Dom",
+       "titleRu": "قلاع وكاتدرائية",
+       "icon": "🏰"
+      }
+     ]
+    },
+    "b2": {
+     "id": "rheinland-pfalz-b2",
+     "chapters": 4,
+     "words": 124,
+     "minutes": 1,
+     "toc": [
+      {
+       "title": "Warum Koblenz zuerst wichtig war",
+       "titleRu": "لماذا برز دور كوبلنتس في البداية؟",
+       "icon": "📜"
+      },
+      {
+       "title": "Eine Landschaft am Fluss",
+       "titleRu": "مناظر على ضفاف النهر",
+       "icon": "🏞️"
+      },
+      {
+       "title": "Weinbau am Hang",
+       "titleRu": "زراعة الكروم على المنحدرات",
+       "icon": "🍇"
+      },
+      {
+       "title": "Romanische Baukunst in Speyer",
+       "titleRu": "العمارة الرومانسكية في شباير",
+       "icon": "⛪"
+      }
+     ]
+    }
+   }
   },
   {
    "id": "saarland",
