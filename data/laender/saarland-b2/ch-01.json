@@ -1,0 +1,29 @@
+{
+  "id": "ch-01",
+  "title": "Vom Saarstatut zum Beitritt",
+  "titleRu": "От Саарского статута к присоединению",
+  "icon": "🗳️",
+  "paragraphs": [
+    {
+      "s": [
+        {
+          "de": "1955 lehnte die Mehrheit der Abstimmenden das vorgeschlagene Saarstatut ab.",
+          "ru": "В 1955 году большинство участников голосования отвергло предложенный Саарский статут.",
+          "g": {
+            "0+8": "отвергло"
+          }
+        },
+        {
+          "de": "Daraufhin verhandelten Frankreich und die Bundesrepublik über die Zukunft des Saarlandes.",
+          "ru": "После этого Франция и ФРГ провели переговоры о будущем Саара.",
+          "g": {}
+        },
+        {
+          "de": "Am 1. Januar 1957 wurde das Saarland ein Bundesland der Bundesrepublik.",
+          "ru": "1 января 1957 года Саар стал федеральной землёй ФРГ.",
+          "g": {}
+        }
+      ]
+    }
+  ]
+}

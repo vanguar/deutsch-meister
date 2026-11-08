@@ -1879,10 +1879,136 @@
       "name": "Saarland",
       "nameRu": "Саар",
       "capital": "Saarbrücken",
-      "emoji": "📍",
+      "emoji": "🏭",
       "flag": "data/laender/flags/saarland.png",
       "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_Saarland.svg",
-      "ready": false
+      "ready": true,
+      "blurb": "Саарбрюккен, петля Саара, чугун в Фёльклингене и история присоединения к ФРГ.",
+      "facts": [
+        [
+          "Столица",
+          "Saarbrücken"
+        ],
+        [
+          "Соседние страны",
+          "Франция и Люксембург"
+        ],
+        [
+          "Река",
+          "Saar"
+        ],
+        [
+          "В составе ФРГ",
+          "с 1 января 1957 года"
+        ],
+        [
+          "Всемирное наследие",
+          "Металлургический комплекс Фёльклингена"
+        ]
+      ],
+      "source": "Правительство Саара, город Саарбрюккен, музей Фёльклингенского завода и UNESCO",
+      "sourceUrl": "https://www.saarland.de/stk/DE/service/publikationen/_documents/Die_Geschichte_des_Saarlandes.pdf?__blob=publicationFile&v=13",
+      "checked": "2026-11-08",
+      "quiz": [
+        {
+          "q": "Какие страны граничат с Сааром?",
+          "opts": [
+            "Франция и Люксембург",
+            "Австрия и Швейцария",
+            "Бельгия и Нидерланды"
+          ],
+          "a": 0,
+          "why": "Саар находится на юго-западе Германии, рядом с Францией и Люксембургом."
+        },
+        {
+          "q": "Когда Саар вошёл в состав ФРГ?",
+          "opts": [
+            "1949",
+            "1955",
+            "1957"
+          ],
+          "a": 2,
+          "why": "Присоединение вступило в силу 1 января 1957 года."
+        },
+        {
+          "q": "Для чего служили доменные печи в Фёльклингене?",
+          "opts": [
+            "Для обжига кирпича",
+            "Для выплавки чугуна",
+            "Для сушки древесины"
+          ],
+          "a": 1,
+          "why": "Доменное производство превращало железную руду в чугун."
+        },
+        {
+          "q": "Что называют петлёй Саара?",
+          "opts": [
+            "Изгиб реки",
+            "Пешеходный мост",
+            "Железнодорожный тоннель"
+          ],
+          "a": 0,
+          "why": "У Метлаха река Саар делает широкую петлю."
+        }
+      ],
+      "texts": {
+        "b1": {
+          "id": "saarland-b1",
+          "chapters": 4,
+          "words": 86,
+          "minutes": 1,
+          "toc": [
+            {
+              "title": "Im Südwesten Deutschlands",
+              "titleRu": "На юго-западе Германии",
+              "icon": "🗺️"
+            },
+            {
+              "title": "Ein Teil der Bundesrepublik",
+              "titleRu": "В составе ФРГ",
+              "icon": "📜"
+            },
+            {
+              "title": "Die Völklinger Hütte",
+              "titleRu": "Фёльклингенский завод",
+              "icon": "🏭"
+            },
+            {
+              "title": "Eine Schleife im Fluss",
+              "titleRu": "Петля реки",
+              "icon": "🌳"
+            }
+          ]
+        },
+        "b2": {
+          "id": "saarland-b2",
+          "chapters": 4,
+          "words": 142,
+          "minutes": 1,
+          "toc": [
+            {
+              "title": "Vom Saarstatut zum Beitritt",
+              "titleRu": "От Саарского статута к присоединению",
+              "icon": "🗳️"
+            },
+            {
+              "title": "Vom Erz zum Roheisen",
+              "titleRu": "От руды к чугуну",
+              "icon": "🔥"
+            },
+            {
+              "title": "Die Saar in der Landschaft",
+              "titleRu": "Саар в ландшафте",
+              "icon": "🌊"
+            },
+            {
+              "title": "Zusammenarbeit über die Grenze",
+              "titleRu": "Сотрудничество через границу",
+              "icon": "🤝"
+            }
+          ]
+        }
+      }
     },
     {
       "id": "sachsen",

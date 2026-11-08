@@ -1,0 +1,368 @@
+{
+  "version": 1,
+  "w": {
+    "abstimmung": "Abstimmung",
+    "altes": "alt",
+    "an": "an",
+    "aussichtspunkt": "Aussichtspunkt",
+    "bei": "bei",
+    "beziehungen": "Beziehung",
+    "bogen": "Bogen",
+    "bundesrepublik": "Bundesrepublik",
+    "das": "der/die/das",
+    "dem": "der/die/das",
+    "den": "der/die/das",
+    "der": "der/die/das",
+    "des": "der/die/das",
+    "deutschland": "Deutschland",
+    "deutschlands": "Deutschland (страна)",
+    "die": "der/die/das",
+    "diese": "dieser",
+    "dort": "dort",
+    "ein": "ein/eine",
+    "eine": "ein/eine",
+    "einem": "ein/eine",
+    "einen": "ein/eine",
+    "eisenwerk": "Eisenwerk",
+    "enge": "eng",
+    "es": "es",
+    "frankreich": "Frankreich",
+    "gab": "geben",
+    "gehört": "gehören",
+    "grenzt": "grenzen",
+    "großen": "groß",
+    "gut": "gut",
+    "hatte": "haben",
+    "hauptstadt": "Hauptstadt",
+    "heißt": "heißen",
+    "her": "her",
+    "heute": "heute",
+    "hochöfen": "Hochofen",
+    "im": "in",
+    "in": "in",
+    "kann": "können",
+    "liegt": "liegen",
+    "luxemburg": "Luxemburg",
+    "macht": "machen",
+    "man": "man",
+    "mettlach": "Mettlach",
+    "nach": "nach",
+    "roheisen": "Roheisen",
+    "saar": "Saar",
+    "saarbrücken": "Saarbrücken",
+    "saarland": "Saarland",
+    "saarlandes": "Saarland",
+    "saarschleife": "Saarschleife",
+    "sehen": "sehen",
+    "seit": "seit",
+    "steht": "stehen",
+    "stelle": "Stelle",
+    "stellte": "anstellen",
+    "südwesten": "Südwesten",
+    "und": "und",
+    "unesco-welterbe": "UNESCO-Welterbe",
+    "von": "von",
+    "völklingen": "Völklingen",
+    "weltkrieg": "Weltkrieg",
+    "werk": "Werk (завод)",
+    "zu": "zu",
+    "zukunft": "Zukunft",
+    "zum": "zu",
+    "zur": "zu",
+    "zweiten": "zweite",
+    "über": "über"
+  },
+  "l": {
+    "Abstimmung": {
+      "ru": "голосование",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Abstimmungen"
+    },
+    "alt": {
+      "ru": "старый",
+      "pos": "прил.",
+      "forms": "alt · älter · am ältesten"
+    },
+    "an": {
+      "ru": "у, к, на",
+      "pos": "предл.",
+      "note": "am = an dem. Тж. отделяемая приставка: anfangen «начинать», annehmen, ansehen, anzünden"
+    },
+    "anstellen": {
+      "ru": "предпринимать, устраивать",
+      "pos": "гл.",
+      "forms": "stellte an · hat angestellt",
+      "note": "Betrachtungen anstellen — предаваться размышлениям"
+    },
+    "Aussichtspunkt": {
+      "ru": "смотровая площадка",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Aussichtspunkte"
+    },
+    "bei": {
+      "ru": "у, при, возле",
+      "pos": "предл."
+    },
+    "Beziehung": {
+      "ru": "отношение, связь",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Beziehungen"
+    },
+    "Bogen": {
+      "ru": "дуга",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Bögen",
+      "note": "также «лук» (оружие) и «лист бумаги»"
+    },
+    "Bundesrepublik": {
+      "ru": "федеративная республика",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Bundesrepubliken",
+      "note": "die Bundesrepublik Deutschland — ФРГ"
+    },
+    "der/die/das": {
+      "ru": "определённый артикль",
+      "pos": "артикль",
+      "note": "Тж. относительное местоимение «который»"
+    },
+    "Deutschland": {
+      "ru": "Германия",
+      "pos": "геогр."
+    },
+    "Deutschland (страна)": {
+      "ru": "Германия",
+      "pos": "геогр."
+    },
+    "dieser": {
+      "ru": "этот, эта, это",
+      "pos": "мест."
+    },
+    "dort": {
+      "ru": "там",
+      "pos": "нареч."
+    },
+    "ein/eine": {
+      "ru": "неопределённый артикль",
+      "pos": "артикль",
+      "note": "einer — «один, некто»"
+    },
+    "Eisenwerk": {
+      "ru": "металлургический завод",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Eisenwerke"
+    },
+    "eng": {
+      "ru": "тесный, узкий; тесно",
+      "pos": "прил."
+    },
+    "es": {
+      "ru": "оно; это",
+      "pos": "мест."
+    },
+    "Frankreich": {
+      "ru": "Франция",
+      "pos": "геогр."
+    },
+    "geben": {
+      "ru": "давать",
+      "pos": "гл.",
+      "forms": "gab · hat gegeben"
+    },
+    "gehören": {
+      "ru": "принадлежать, относиться",
+      "pos": "гл.",
+      "forms": "gehörte · hat gehört",
+      "note": "zu etwas gehören — относиться к чему-то, входить в"
+    },
+    "grenzen": {
+      "ru": "граничить",
+      "pos": "гл.",
+      "forms": "grenzte · hat gegrenzt",
+      "note": "an etwas (A) grenzen — граничить с чем-то"
+    },
+    "groß": {
+      "ru": "большой",
+      "pos": "прил.",
+      "forms": "groß · größer · am größten"
+    },
+    "gut": {
+      "ru": "хороший, добрый",
+      "pos": "прил.",
+      "forms": "gut · besser · am besten",
+      "note": "besser — лучше"
+    },
+    "haben": {
+      "ru": "иметь; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "hatte · hat gehabt"
+    },
+    "Hauptstadt": {
+      "ru": "столица",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Hauptstädte"
+    },
+    "heißen": {
+      "ru": "называться; велеть",
+      "pos": "гл.",
+      "forms": "hieß · hat geheißen"
+    },
+    "her": {
+      "ru": "сюда",
+      "pos": "нареч."
+    },
+    "heute": {
+      "ru": "сегодня",
+      "pos": "нареч."
+    },
+    "Hochofen": {
+      "ru": "доменная печь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Hochöfen"
+    },
+    "in": {
+      "ru": "в (im = in dem, ins = in das)",
+      "pos": "предл."
+    },
+    "können": {
+      "ru": "мочь, уметь",
+      "pos": "гл.",
+      "forms": "konnte · hat gekonnt"
+    },
+    "liegen": {
+      "ru": "лежать",
+      "pos": "гл.",
+      "forms": "lag · hat gelegen"
+    },
+    "Luxemburg": {
+      "ru": "Люксембург",
+      "pos": "геогр."
+    },
+    "machen": {
+      "ru": "делать",
+      "pos": "гл.",
+      "forms": "machte · hat gemacht",
+      "note": "sich auf den Weg machen — отправиться в путь"
+    },
+    "man": {
+      "ru": "неопределённое «кто-то, люди, мы»",
+      "pos": "мест."
+    },
+    "Mettlach": {
+      "ru": "Метлах",
+      "pos": "геогр."
+    },
+    "nach": {
+      "ru": "в, на, после, по",
+      "pos": "предл."
+    },
+    "Roheisen": {
+      "ru": "чугун",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "Saar": {
+      "ru": "Саар (река)",
+      "pos": "геогр."
+    },
+    "Saarbrücken": {
+      "ru": "Саарбрюккен",
+      "pos": "геогр."
+    },
+    "Saarland": {
+      "ru": "Саар (земля)",
+      "pos": "геогр."
+    },
+    "Saarschleife": {
+      "ru": "петля Саара",
+      "pos": "геогр."
+    },
+    "sehen": {
+      "ru": "видеть",
+      "pos": "гл.",
+      "forms": "sah · hat gesehen"
+    },
+    "seit": {
+      "ru": "с (какого-то времени)",
+      "pos": "предл."
+    },
+    "stehen": {
+      "ru": "стоять",
+      "pos": "гл.",
+      "forms": "stand · hat gestanden"
+    },
+    "Stelle": {
+      "ru": "место",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Stellen",
+      "note": "an Ort und Stelle — на своё место"
+    },
+    "Südwesten": {
+      "ru": "юго-запад",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null,
+      "note": "im Südwesten Chinas — на юго-западе Китая"
+    },
+    "und": {
+      "ru": "и, а",
+      "pos": "союз"
+    },
+    "UNESCO-Welterbe": {
+      "ru": "Всемирное наследие ЮНЕСКО",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "von": {
+      "ru": "от, из, о (vom = von dem)",
+      "pos": "предл."
+    },
+    "Völklingen": {
+      "ru": "Фёльклинген",
+      "pos": "геогр."
+    },
+    "Weltkrieg": {
+      "ru": "мировая война",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Weltkriege",
+      "note": "der Zweite Weltkrieg — Вторая мировая война"
+    },
+    "Werk (завод)": {
+      "ru": "завод",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Werke"
+    },
+    "zu": {
+      "ru": "к, в; слишком",
+      "pos": "предл.",
+      "note": "zur = zu der, zum = zu dem"
+    },
+    "Zukunft": {
+      "ru": "будущее",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "zweite": {
+      "ru": "второй",
+      "pos": "числ.",
+      "note": "zum zweiten Mal — во второй раз"
+    },
+    "über": {
+      "ru": "над, через, о",
+      "pos": "предл."
+    }
+  }
+}

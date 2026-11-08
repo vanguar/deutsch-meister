@@ -1879,10 +1879,136 @@
    "name": "Saarland",
    "nameRu": "Саар",
    "capital": "Saarbrücken",
-   "emoji": "📍",
+   "emoji": "🏭",
    "flag": "data/laender/flags/saarland.png",
    "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_Saarland.svg",
-   "ready": false
+   "ready": true,
+   "blurb": "Саарбрюкен, петля Саару, чавун у Фельклінгені й історія приєднання до ФРН.",
+   "facts": [
+    [
+     "Столиця",
+     "Saarbrücken"
+    ],
+    [
+     "Сусідні країни",
+     "Франція й Люксембург"
+    ],
+    [
+     "Річка",
+     "Saar"
+    ],
+    [
+     "У складі ФРН",
+     "з 1 січня 1957 року"
+    ],
+    [
+     "Всесвітня спадщина",
+     "Металургійний комплекс Фельклінгена"
+    ]
+   ],
+   "source": "Уряд Саару, місто Саарбрюкен, Фельклінгенський металургійний комплекс і UNESCO",
+   "sourceUrl": "https://www.saarland.de/stk/DE/service/publikationen/_documents/Die_Geschichte_des_Saarlandes.pdf?__blob=publicationFile&v=13",
+   "checked": "2026-11-08",
+   "quiz": [
+    {
+     "q": "Які країни межують із Сааром?",
+     "opts": [
+      "Франція й Люксембург",
+      "Австрія і Швейцарія",
+      "Бельгія й Нідерланди"
+     ],
+     "a": 0,
+     "why": "Саар розташований на південному заході Німеччини, поруч із Францією та Люксембургом."
+    },
+    {
+     "q": "Коли Саар увійшов до складу ФРН?",
+     "opts": [
+      "1949",
+      "1955",
+      "1957"
+     ],
+     "a": 2,
+     "why": "Приєднання набуло чинності 1 січня 1957 року."
+    },
+    {
+     "q": "Для чого використовували доменні печі у Фельклінгені?",
+     "opts": [
+      "Для випалювання цегли",
+      "Для виплавляння чавуну",
+      "Для сушіння деревини"
+     ],
+     "a": 1,
+     "why": "У доменних печах із залізної руди виплавляли чавун."
+    },
+    {
+     "q": "Що називають петлею Саару?",
+     "opts": [
+      "Вигин річки",
+      "Пішохідний міст",
+      "Залізничний тунель"
+     ],
+     "a": 0,
+     "why": "Біля Метлаха річка Саар утворює широку петлю."
+    }
+   ],
+   "texts": {
+    "b1": {
+     "id": "saarland-b1",
+     "chapters": 4,
+     "words": 86,
+     "minutes": 1,
+     "toc": [
+      {
+       "title": "Im Südwesten Deutschlands",
+       "titleRu": "На південному заході Німеччини",
+       "icon": "🗺️"
+      },
+      {
+       "title": "Ein Teil der Bundesrepublik",
+       "titleRu": "У складі ФРН",
+       "icon": "📜"
+      },
+      {
+       "title": "Die Völklinger Hütte",
+       "titleRu": "Фельклінгенський завод",
+       "icon": "🏭"
+      },
+      {
+       "title": "Eine Schleife im Fluss",
+       "titleRu": "Петля річки",
+       "icon": "🌳"
+      }
+     ]
+    },
+    "b2": {
+     "id": "saarland-b2",
+     "chapters": 4,
+     "words": 142,
+     "minutes": 1,
+     "toc": [
+      {
+       "title": "Vom Saarstatut zum Beitritt",
+       "titleRu": "Від Саарського статуту до приєднання",
+       "icon": "🗳️"
+      },
+      {
+       "title": "Vom Erz zum Roheisen",
+       "titleRu": "Від руди до чавуну",
+       "icon": "🔥"
+      },
+      {
+       "title": "Die Saar in der Landschaft",
+       "titleRu": "Саар у краєвиді",
+       "icon": "🌊"
+      },
+      {
+       "title": "Zusammenarbeit über die Grenze",
+       "titleRu": "Співпраця через кордон",
+       "icon": "🤝"
+      }
+     ]
+    }
+   }
   },
   {
    "id": "sachsen",

@@ -1879,10 +1879,136 @@
    "name": "Saarland",
    "nameRu": "زارلاند",
    "capital": "Saarbrücken",
-   "emoji": "📍",
+   "emoji": "🏭",
    "flag": "data/laender/flags/saarland.png",
    "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_Saarland.svg",
-   "ready": false
+   "ready": true,
+   "blurb": "ساربروكن ومنعطف نهر سار وإنتاج الحديد في فولكلينغن وتاريخ الانضمام إلى ألمانيا الاتحادية.",
+   "facts": [
+    [
+     "العاصمة",
+     "Saarbrücken"
+    ],
+    [
+     "الدول المجاورة",
+     "فرنسا ولوكسمبورغ"
+    ],
+    [
+     "النهر",
+     "Saar"
+    ],
+    [
+     "ضمن جمهورية ألمانيا الاتحادية",
+     "منذ 1 يناير 1957"
+    ],
+    [
+     "التراث العالمي",
+     "مجمع فولكلينغن للحديد"
+    ]
+   ],
+   "source": "حكومة سارلاند ومدينة ساربروكن ومجمع فولكلينغن للحديد واليونسكو",
+   "sourceUrl": "https://www.saarland.de/stk/DE/service/publikationen/_documents/Die_Geschichte_des_Saarlandes.pdf?__blob=publicationFile&v=13",
+   "checked": "2026-11-08",
+   "quiz": [
+    {
+     "q": "ما الدولتان اللتان تحدان سارلاند؟",
+     "opts": [
+      "فرنسا ولوكسمبورغ",
+      "النمسا وسويسرا",
+      "بلجيكا وهولندا"
+     ],
+     "a": 0,
+     "why": "تقع سارلاند في جنوب غرب ألمانيا بجوار فرنسا ولوكسمبورغ."
+    },
+    {
+     "q": "متى انضمت سارلاند إلى ألمانيا الاتحادية؟",
+     "opts": [
+      "1949",
+      "1955",
+      "1957"
+     ],
+     "a": 2,
+     "why": "أصبح الانضمام نافذًا في 1 يناير 1957."
+    },
+    {
+     "q": "فيمَ استُخدمت الأفران العالية في فولكلينغن؟",
+     "opts": [
+      "لحرق الطوب",
+      "لصهر الحديد الغُفل",
+      "لتجفيف الخشب"
+     ],
+     "a": 1,
+     "why": "كانت الأفران العالية تحوّل خام الحديد إلى حديد غُفل."
+    },
+    {
+     "q": "ما المقصود بمنعطف نهر سار؟",
+     "opts": [
+      "انحناءة في النهر",
+      "جسر للمشاة",
+      "نفق للسكك الحديدية"
+     ],
+     "a": 0,
+     "why": "يشكّل نهر سار منعطفًا واسعًا قرب ميتلاخ."
+    }
+   ],
+   "texts": {
+    "b1": {
+     "id": "saarland-b1",
+     "chapters": 4,
+     "words": 86,
+     "minutes": 1,
+     "toc": [
+      {
+       "title": "Im Südwesten Deutschlands",
+       "titleRu": "في جنوب غرب ألمانيا",
+       "icon": "🗺️"
+      },
+      {
+       "title": "Ein Teil der Bundesrepublik",
+       "titleRu": "ضمن جمهورية ألمانيا الاتحادية",
+       "icon": "📜"
+      },
+      {
+       "title": "Die Völklinger Hütte",
+       "titleRu": "مصنع الحديد في فولكلينغن",
+       "icon": "🏭"
+      },
+      {
+       "title": "Eine Schleife im Fluss",
+       "titleRu": "منعطف في النهر",
+       "icon": "🌳"
+      }
+     ]
+    },
+    "b2": {
+     "id": "saarland-b2",
+     "chapters": 4,
+     "words": 142,
+     "minutes": 1,
+     "toc": [
+      {
+       "title": "Vom Saarstatut zum Beitritt",
+       "titleRu": "من نظام سار الأساسي إلى الانضمام",
+       "icon": "🗳️"
+      },
+      {
+       "title": "Vom Erz zum Roheisen",
+       "titleRu": "من الخام إلى الحديد الغُفل",
+       "icon": "🔥"
+      },
+      {
+       "title": "Die Saar in der Landschaft",
+       "titleRu": "نهر سار في المشهد الطبيعي",
+       "icon": "🌊"
+      },
+      {
+       "title": "Zusammenarbeit über die Grenze",
+       "titleRu": "التعاون عبر الحدود",
+       "icon": "🤝"
+      }
+     ]
+    }
+   }
   },
   {
    "id": "sachsen",

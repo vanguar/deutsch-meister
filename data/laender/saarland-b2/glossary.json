@@ -1,0 +1,550 @@
+{
+  "version": 1,
+  "w": {
+    "ab": "ab",
+    "abstimmenden": "Abstimmende",
+    "alltag": "Alltag",
+    "am": "an",
+    "anlage": "Anlage (комплекс)",
+    "auch": "auch",
+    "auf": "auf",
+    "aus": "aus",
+    "aussichtspunkt": "Aussichtspunkt",
+    "bei": "bei",
+    "beitritt": "Beitritt",
+    "bewaldete": "bewaldet",
+    "blieben": "bleiben",
+    "bundesland": "Bundesland",
+    "bundesrepublik": "Bundesrepublik",
+    "cloef": "Cloef",
+    "daraufhin": "daraufhin",
+    "das": "der/die/das",
+    "dazu": "dazu",
+    "dem": "der/die/das",
+    "der": "der/die/das",
+    "des": "der/die/das",
+    "die": "der/die/das",
+    "dienten": "dienen",
+    "durch": "durch",
+    "ein": "ein/eine",
+    "eine": "ein/eine",
+    "einem": "ein/eine",
+    "einer": "ein/eine",
+    "eingestellt": "einstellen (прекращать)",
+    "erhalten": "erhalten (сохранение)",
+    "erkennen": "erkennen",
+    "erz": "Erz",
+    "form": "Form",
+    "frankreich": "Frankreich",
+    "französischen": "französisch",
+    "fördert": "fördern",
+    "für": "für",
+    "geht": "gehen",
+    "gewinnen": "gewinnen",
+    "grenze": "Grenze",
+    "hinweg": "hinweg",
+    "hochöfen": "Hochofen",
+    "hütte": "Hütte",
+    "im": "in",
+    "in": "in",
+    "januar": "Januar",
+    "kann": "können",
+    "landesregierung": "Landesregierung",
+    "landschaft": "Landschaft",
+    "lehnte": "ablehnen",
+    "leichter": "leicht",
+    "lernen": "lernen",
+    "liegt": "liegen",
+    "mehrheit": "Mehrheit",
+    "mettlach": "Mettlach",
+    "mit": "mit",
+    "nach": "nach",
+    "nachbarlandes": "Nachbarland",
+    "nachdem": "nachdem",
+    "nahm": "nehmen",
+    "nähe": "Nähe",
+    "oben": "oben",
+    "orscholz": "Orscholz",
+    "ortsteil": "Ortsteil",
+    "produktion": "Produktion",
+    "roheisen": "Roheisen",
+    "rolle": "Rolle",
+    "saar": "Saar",
+    "saarland": "Saarland",
+    "saarlandes": "Saarland",
+    "saarstatut": "Saarstatut",
+    "schleife": "Schleife",
+    "sich": "sich",
+    "spielt": "spielen",
+    "sprache": "Sprache",
+    "teile": "Teil",
+    "und": "und",
+    "unesco": "UNESCO",
+    "verhandelten": "verhandeln (переговоры)",
+    "versteht": "verstehen",
+    "verständigen": "sich verständigen",
+    "von": "von",
+    "vorgeschlagene": "vorschlagen",
+    "völklinger": "Völklinger",
+    "war": "sein",
+    "weiten": "weit",
+    "welterbeliste": "Welterbeliste",
+    "wer": "wer",
+    "wichtige": "wichtig",
+    "windet": "sich winden",
+    "worden": "werden",
+    "wurde": "werden",
+    "zu": "zu",
+    "zukunft": "Zukunft",
+    "zur": "zu",
+    "zusammenarbeit": "Zusammenarbeit",
+    "über": "über"
+  },
+  "l": {
+    "ab": {
+      "note": "Тж. отделяемая приставка: absteigen «слезать», abnehmen",
+      "pos": "предл.",
+      "ru": "от, с; прочь"
+    },
+    "ablehnen": {
+      "ru": "отклонять",
+      "pos": "гл.",
+      "forms": "lehnte ab · hat abgelehnt"
+    },
+    "Abstimmende": {
+      "ru": "участник голосования",
+      "pos": "сущ.",
+      "art": "der / die",
+      "pl": "die Abstimmenden"
+    },
+    "Alltag": {
+      "ru": "будни, повседневная жизнь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null,
+      "note": "im Alltag — в быту"
+    },
+    "an": {
+      "ru": "у, к, на",
+      "pos": "предл.",
+      "note": "am = an dem. Тж. отделяемая приставка: anfangen «начинать», annehmen, ansehen, anzünden"
+    },
+    "Anlage (комплекс)": {
+      "ru": "сооружение, комплекс",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Anlagen"
+    },
+    "auch": {
+      "ru": "тоже, также; даже",
+      "pos": "частица"
+    },
+    "auf": {
+      "ru": "на, в",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: aufspringen «вскочить», sich aufmachen"
+    },
+    "aus": {
+      "ru": "из",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: auslöschen «погасить»"
+    },
+    "Aussichtspunkt": {
+      "ru": "смотровая площадка",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Aussichtspunkte"
+    },
+    "bei": {
+      "ru": "у, при, возле",
+      "pos": "предл."
+    },
+    "Beitritt": {
+      "ru": "вступление, присоединение",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Beitritte"
+    },
+    "bewaldet": {
+      "ru": "покрытый лесом",
+      "pos": "прил."
+    },
+    "bleiben": {
+      "ru": "оставаться",
+      "pos": "гл.",
+      "forms": "blieb · ist geblieben"
+    },
+    "Bundesland": {
+      "ru": "федеральная земля",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Bundesländer"
+    },
+    "Bundesrepublik": {
+      "ru": "федеративная республика",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Bundesrepubliken",
+      "note": "die Bundesrepublik Deutschland — ФРГ"
+    },
+    "Cloef": {
+      "ru": "Клёф (смотровая площадка)",
+      "pos": "геогр."
+    },
+    "daraufhin": {
+      "ru": "на это, на него",
+      "pos": "нареч."
+    },
+    "dazu": {
+      "ru": "к этому, туда же",
+      "pos": "нареч."
+    },
+    "der/die/das": {
+      "ru": "определённый артикль",
+      "pos": "артикль",
+      "note": "Тж. относительное местоимение «который»"
+    },
+    "dienen": {
+      "ru": "служить",
+      "pos": "гл.",
+      "forms": "diente · hat gedient"
+    },
+    "durch": {
+      "ru": "через, сквозь, из-за",
+      "pos": "предл."
+    },
+    "ein/eine": {
+      "ru": "неопределённый артикль",
+      "pos": "артикль",
+      "note": "einer — «один, некто»"
+    },
+    "einstellen (прекращать)": {
+      "ru": "прекращать (работу, производство)",
+      "pos": "гл.",
+      "forms": "stellte ein · hat eingestellt"
+    },
+    "erhalten (сохранение)": {
+      "ru": "сохранившийся",
+      "pos": "прил."
+    },
+    "erkennen": {
+      "ru": "узнавать; распознавать",
+      "pos": "гл.",
+      "forms": "erkannte · hat erkannt",
+      "note": "sich zu erkennen geben — открыться, назвать себя"
+    },
+    "Erz": {
+      "ru": "руда",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Erze"
+    },
+    "Form": {
+      "ru": "форма",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Formen"
+    },
+    "Frankreich": {
+      "ru": "Франция",
+      "pos": "геогр."
+    },
+    "französisch": {
+      "ru": "французский",
+      "pos": "прил."
+    },
+    "fördern": {
+      "ru": "поддерживать, содействовать",
+      "pos": "гл.",
+      "forms": "förderte · hat gefördert"
+    },
+    "für": {
+      "ru": "для, за",
+      "pos": "предл."
+    },
+    "gehen": {
+      "ru": "идти, ходить",
+      "pos": "гл.",
+      "forms": "ging · ist gegangen"
+    },
+    "gewinnen": {
+      "ru": "выигрывать, побеждать",
+      "pos": "гл.",
+      "forms": "gewann · hat gewonnen"
+    },
+    "Grenze": {
+      "ru": "граница",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Grenzen"
+    },
+    "hinweg": {
+      "ru": "прочь; über … hinweg — через",
+      "pos": "нареч."
+    },
+    "Hochofen": {
+      "ru": "доменная печь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Hochöfen"
+    },
+    "Hütte": {
+      "ru": "хижина, домик",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Hütten"
+    },
+    "in": {
+      "ru": "в (im = in dem, ins = in das)",
+      "pos": "предл."
+    },
+    "Januar": {
+      "ru": "январь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Januare"
+    },
+    "können": {
+      "ru": "мочь, уметь",
+      "pos": "гл.",
+      "forms": "konnte · hat gekonnt"
+    },
+    "Landesregierung": {
+      "ru": "правительство земли (государства)",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Landesregierungen"
+    },
+    "Landschaft": {
+      "ru": "ландшафт, местность",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Landschaften"
+    },
+    "leicht": {
+      "ru": "лёгкий, легко",
+      "pos": "прил."
+    },
+    "lernen": {
+      "ru": "учиться",
+      "pos": "гл.",
+      "forms": "lernte · hat gelernt"
+    },
+    "liegen": {
+      "ru": "лежать",
+      "pos": "гл.",
+      "forms": "lag · hat gelegen"
+    },
+    "Mehrheit": {
+      "ru": "большинство",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Mehrheiten"
+    },
+    "Mettlach": {
+      "ru": "Метлах",
+      "pos": "геогр."
+    },
+    "mit": {
+      "ru": "с",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: mitgehen «пойти вместе»"
+    },
+    "nach": {
+      "ru": "в, на, после, по",
+      "pos": "предл."
+    },
+    "Nachbarland": {
+      "ru": "соседняя страна",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Nachbarländer"
+    },
+    "nachdem": {
+      "pos": "союз",
+      "ru": "после того как"
+    },
+    "nehmen": {
+      "ru": "брать",
+      "pos": "гл.",
+      "forms": "nahm · hat genommen"
+    },
+    "Nähe": {
+      "art": "die",
+      "note": "in dessen Nähe — поблизости от которого",
+      "pl": null,
+      "pos": "сущ.",
+      "ru": "близость, окрестность"
+    },
+    "oben": {
+      "ru": "наверху",
+      "pos": "нареч."
+    },
+    "Orscholz": {
+      "ru": "Оршольц",
+      "pos": "геогр."
+    },
+    "Ortsteil": {
+      "ru": "часть города, район",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Ortsteile"
+    },
+    "Produktion": {
+      "ru": "производство",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Produktionen"
+    },
+    "Roheisen": {
+      "ru": "чугун",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "Rolle": {
+      "ru": "роль",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Rollen",
+      "note": "eine große Rolle spielen — играть большую роль"
+    },
+    "Saar": {
+      "ru": "Саар (река)",
+      "pos": "геогр."
+    },
+    "Saarland": {
+      "ru": "Саар (земля)",
+      "pos": "геогр."
+    },
+    "Saarstatut": {
+      "ru": "Саарский статут",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "Schleife": {
+      "ru": "петля, изгиб",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Schleifen"
+    },
+    "sein": {
+      "ru": "быть; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "war · ist gewesen"
+    },
+    "sich": {
+      "ru": "себя, себе",
+      "pos": "мест.",
+      "note": "Возвратное местоимение, часть возвратного глагола: sich auf den Weg machen, sich setzen, sich legen, sich nähern, sich gefallen lassen, sich getrauen, sich umsehen"
+    },
+    "sich verständigen": {
+      "ru": "объясняться, общаться",
+      "pos": "гл.",
+      "forms": "verständigte sich · hat sich verständigt"
+    },
+    "sich winden": {
+      "ru": "извиваться",
+      "pos": "гл.",
+      "forms": "wand sich · hat sich gewunden"
+    },
+    "spielen": {
+      "ru": "играть",
+      "pos": "гл.",
+      "forms": "spielte · hat gespielt"
+    },
+    "Sprache": {
+      "art": "die",
+      "pl": "die Sprachen",
+      "pos": "сущ.",
+      "ru": "язык, речь"
+    },
+    "Teil": {
+      "ru": "часть; доля",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Teile",
+      "note": "sein Teil haben — получить своё"
+    },
+    "und": {
+      "ru": "и, а",
+      "pos": "союз"
+    },
+    "UNESCO": {
+      "ru": "ЮНЕСКО",
+      "pos": "имя собств."
+    },
+    "verhandeln (переговоры)": {
+      "ru": "вести переговоры",
+      "pos": "гл.",
+      "forms": "verhandelte · hat verhandelt"
+    },
+    "verstehen": {
+      "ru": "понимать",
+      "pos": "гл.",
+      "forms": "verstand · hat verstanden",
+      "note": "sich verstehen auf — знать толк в чём-л."
+    },
+    "von": {
+      "ru": "от, из, о (vom = von dem)",
+      "pos": "предл."
+    },
+    "vorschlagen": {
+      "ru": "предлагать",
+      "pos": "гл.",
+      "forms": "schlug vor · hat vorgeschlagen"
+    },
+    "Völklinger": {
+      "ru": "фёльклингенский",
+      "pos": "прил."
+    },
+    "weit": {
+      "ru": "далёкий, далеко",
+      "pos": "прил.",
+      "forms": "weit · weiter · am weitesten",
+      "note": "weiter — дальше, далее; von weitem — издали"
+    },
+    "Welterbeliste": {
+      "ru": "список всемирного наследия",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Welterbelisten"
+    },
+    "wer": {
+      "ru": "кто",
+      "pos": "мест."
+    },
+    "werden": {
+      "ru": "становиться",
+      "pos": "гл.",
+      "forms": "wurde · ist geworden",
+      "note": "Вспомогательный глагол будущего времени и пассива"
+    },
+    "wichtig": {
+      "ru": "важный",
+      "pos": "прил."
+    },
+    "zu": {
+      "ru": "к, в; слишком",
+      "pos": "предл.",
+      "note": "zur = zu der, zum = zu dem"
+    },
+    "Zukunft": {
+      "ru": "будущее",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "Zusammenarbeit": {
+      "ru": "сотрудничество",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "über": {
+      "ru": "над, через, о",
+      "pos": "предл."
+    }
+  }
+}

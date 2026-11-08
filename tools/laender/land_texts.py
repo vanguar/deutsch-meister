@@ -41,3 +41,6 @@ TEXTS.update(_hessen)
 
 from texts_rheinland_pfalz import TEXTS as _rheinland_pfalz
 TEXTS.update(_rheinland_pfalz)
+
+from texts_saarland import TEXTS as _saarland
+TEXTS.update(_saarland)

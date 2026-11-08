@@ -1,0 +1,27 @@
+{
+  "id": "ch-02",
+  "title": "Ein Teil der Bundesrepublik",
+  "titleRu": "В составе ФРГ",
+  "icon": "📜",
+  "paragraphs": [
+    {
+      "s": [
+        {
+          "de": "Nach dem Zweiten Weltkrieg hatte das Saarland enge Beziehungen zu Frankreich.",
+          "ru": "После Второй мировой войны у Саара были тесные связи с Францией.",
+          "g": {}
+        },
+        {
+          "de": "1955 gab es eine Abstimmung über die Zukunft des Saarlandes.",
+          "ru": "В 1955 году прошло голосование о будущем Саара.",
+          "g": {}
+        },
+        {
+          "de": "Seit 1957 gehört das Saarland zur Bundesrepublik Deutschland.",
+          "ru": "С 1957 года Саар входит в состав Федеративной Республики Германия.",
+          "g": {}
+        }
+      ]
+    }
+  ]
+}

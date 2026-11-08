@@ -1,0 +1,27 @@
+{
+  "id": "ch-01",
+  "title": "Im Südwesten Deutschlands",
+  "titleRu": "На юго-западе Германии",
+  "icon": "🗺️",
+  "paragraphs": [
+    {
+      "s": [
+        {
+          "de": "Das Saarland liegt im Südwesten Deutschlands.",
+          "ru": "Саар расположен на юго-западе Германии.",
+          "g": {}
+        },
+        {
+          "de": "Es grenzt an Frankreich und Luxemburg.",
+          "ru": "Он граничит с Францией и Люксембургом.",
+          "g": {}
+        },
+        {
+          "de": "Die Hauptstadt Saarbrücken liegt an der Saar.",
+          "ru": "Столица Саарбрюккен стоит на реке Саар.",
+          "g": {}
+        }
+      ]
+    }
+  ]
+}

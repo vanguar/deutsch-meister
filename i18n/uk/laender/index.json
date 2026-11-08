@@ -302,6 +302,36 @@
    "land": "rheinland-pfalz"
   },
   {
+   "id": "saarland-b1",
+   "title": "Saarland",
+   "titleRu": "Саар",
+   "author": "German Morning",
+   "level": "B1",
+   "year": "2026",
+   "chapters": 4,
+   "words": 86,
+   "minutes": 1,
+   "cover": "🏭",
+   "source": "Уряд Саару, місто Саарбрюкен, Фельклінгенський металургійний комплекс і UNESCO",
+   "license": "текст курсу German Morning",
+   "land": "saarland"
+  },
+  {
+   "id": "saarland-b2",
+   "title": "Saarland",
+   "titleRu": "Саар",
+   "author": "German Morning",
+   "level": "B2",
+   "year": "2026",
+   "chapters": 4,
+   "words": 142,
+   "minutes": 1,
+   "cover": "🏭",
+   "source": "Уряд Саару, місто Саарбрюкен, Фельклінгенський металургійний комплекс і UNESCO",
+   "license": "текст курсу German Morning",
+   "land": "saarland"
+  },
+  {
    "id": "sachsen-b1",
    "title": "Sachsen",
    "titleRu": "Саксонія",

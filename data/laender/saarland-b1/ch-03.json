@@ -1,0 +1,29 @@
+{
+  "id": "ch-03",
+  "title": "Die Völklinger Hütte",
+  "titleRu": "Фёльклингенский завод",
+  "icon": "🏭",
+  "paragraphs": [
+    {
+      "s": [
+        {
+          "de": "In Völklingen steht ein altes Eisenwerk.",
+          "ru": "В Фёльклингене находится старый металлургический завод.",
+          "g": {}
+        },
+        {
+          "de": "Dort stellte man in Hochöfen Roheisen her.",
+          "ru": "Там в доменных печах выплавляли чугун.",
+          "g": {
+            "1+6": "производили"
+          }
+        },
+        {
+          "de": "Heute gehört das Werk zum UNESCO-Welterbe.",
+          "ru": "Сегодня завод входит в список всемирного наследия UNESCO.",
+          "g": {}
+        }
+      ]
+    }
+  ]
+}

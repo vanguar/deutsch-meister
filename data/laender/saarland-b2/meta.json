@@ -1,0 +1,21 @@
+{
+  "id": "saarland-b2",
+  "kind": "land",
+  "land": "saarland",
+  "title": "Saarland",
+  "titleRu": "Саар",
+  "author": "German Morning",
+  "level": "B2",
+  "levelNote": "B2: длиннее и подробнее, придаточные, пассив, лексика политики и экономики.",
+  "year": "2026",
+  "chapters": 4,
+  "words": 142,
+  "minutes": 1,
+  "photos": 0,
+  "cover": "🏭",
+  "flag": "data/laender/flags/saarland.png",
+  "source": "Правительство Саара, город Саарбрюккен, музей Фёльклингенского завода и UNESCO",
+  "sourceUrl": "https://www.saarland.de/stk/DE/service/publikationen/_documents/Die_Geschichte_des_Saarlandes.pdf?__blob=publicationFile&v=13",
+  "checked": "2026-11-08",
+  "license": "текст курса German Morning"
+}
