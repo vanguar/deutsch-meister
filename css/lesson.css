@@ -486,6 +486,18 @@
 .grammar-rule strong { color: var(--accent);  font-weight: 600; }
 .grammar-rule em     { color: var(--accent2-text); font-style: normal; }
 
+.notation-note {
+  margin-block-end: 16px;
+}
+.notation-note ul {
+  margin: 0;
+  padding-inline-start: 1.25em;
+}
+.notation-note li + li,
+.notation-note p {
+  margin-block-start: 6px;
+}
+
 /* Conjugation word with speaker icon */
 .conj-word {
   display: inline-flex;

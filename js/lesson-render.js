@@ -2209,6 +2209,45 @@ Kraft|сила|Существительное|in Kraft treten — вступат
      (der / die / das различаются цветом и самим словом). */
   const ARTICLE_RE = /^(der|die|das)\s+(?=[A-ZÄÖÜ])/;
 
+  const GRAMMAR_NOTATION = [
+    [/\+\s*A\b|\bAkk\b/, '+A / Akk.', 'Akkusativ', 'винительный падеж', 'warten auf den Bus'],
+    [/\+\s*D\b|\bDat\b/, '+D / Dat.', 'Dativ', 'дательный падеж', 'träumen von einer Reise'],
+    [/\bNom\b/, 'Nom.', 'Nominativ', 'именительный падеж', 'Der Bus kommt.'],
+    [/\bGen\b/, 'Gen.', 'Genitiv', 'родительный падеж', 'die Tür des Hauses'],
+    [/\bKonj\.\s*II\b/, 'Konj. II', 'Konjunktiv II', 'сослагательное наклонение для гипотез, желаний и вежливых просьб', 'Ich hätte gern einen Kaffee.'],
+    [/\bKonj\.\s*I\b/, 'Konj. I', 'Konjunktiv I', 'форма сослагательного наклонения, часто используемая в косвенной речи', 'Er sagt, er sei müde.'],
+    [/\bInf\./, 'Inf.', 'Infinitiv', 'начальная форма глагола', 'lernen'],
+    [/\bPart\.\s*II\b/, 'Part. II', 'Partizip II', 'причастие, которое используется, например, в Perfekt и в пассиве', 'gelernt'],
+    [/\bPrät\./, 'Prät.', 'Präteritum', 'простое прошедшее время', 'Ich lernte Deutsch.'],
+    [/\bPl\./, 'Pl.', 'Plural', 'множественное число', 'die Bücher'],
+    [/\bMask\.|\b(?:Akk(?:usativ)?|Dativ|Nominativ|Genitiv)\.? m\b|\bder \+ m\b/, 'm / Mask.', 'Maskulinum', 'мужской род', 'der Mann'],
+    [/\bFem\.|\b(?:Akkusativ|Dativ|Nominativ|Genitiv) f\b|\bdie \+ f\b/, 'f / Fem.', 'Femininum', 'женский род', 'die Frau'],
+    [/\bNeutr\.|\b(?:Akkusativ|Dativ|Nominativ|Genitiv) n\b|\bdas \+ n\b/, 'n', 'Neutrum', 'средний род', 'das Kind'],
+    [/\bjdn\./, 'jdn.', 'jemanden', 'кого-то в винительном падеже', 'jemanden um Hilfe bitten'],
+  ];
+
+  function renderGrammarNotation(data, before, id) {
+    if (!before) return;
+    document.getElementById(id)?.remove();
+    const text = JSON.stringify(data).replace(/<[^>]+>/g, '');
+    const rows = GRAMMAR_NOTATION.filter(([pattern]) => pattern.test(text));
+    if (!rows.length) return;
+
+    const heading = 'Обозначения в этом уроке';
+    const note = document.createElement('aside');
+    note.id = id;
+    note.className = 'grammar-box notation-note';
+    note.innerHTML = `
+      <div class="grammar-box-title">${heading}</div>
+      <ul class="grammar-rule">${rows.map(([, label, name, explanation, example]) =>
+        `<li><strong><bdi>${label}</bdi></strong> — <bdi lang="de">${name}</bdi>
+          (<span>${explanation}</span>). <bdi lang="de">${example}</bdi></li>`
+      ).join('')}</ul>
+      ${/\+\s*[AD]\b/.test(text) ? '<p class="grammar-rule">Знак «+» показывает, в каком падеже должно стоять слово после предлога в этой связке.</p>' : ''}
+    `;
+    before.before(note);
+  }
+
   function splitArticle(w) {
     const de = String(w.de || '');
     const m = de.match(ARTICLE_RE);
@@ -2220,6 +2259,7 @@ Kraft|сила|Существительное|in Kraft treten — вступат
   function renderVocab() {
     const list = document.getElementById('vocabTableBody');
     if (!list || !LESSON_DATA?.vocabulary) return;
+    renderGrammarNotation(LESSON_DATA.vocabulary, list, 'vocab-notation');
     list.innerHTML = '';
 
     LESSON_DATA.vocabulary.forEach(w => {
@@ -2326,6 +2366,7 @@ Kraft|сила|Существительное|in Kraft treten — вступат
     wordLexicon = null;
     renderNav();
     renderHeader();
+    renderGrammarNotation(LESSON_DATA, document.querySelector('.lesson-content > .lesson-section'), 'lesson-notation');
     if (typeof Progress !== 'undefined' && Progress.renderSectionProgress) {
       Progress.renderSectionProgress();
     }
