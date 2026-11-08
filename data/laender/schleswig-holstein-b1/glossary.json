@@ -1,0 +1,333 @@
+{
+  "version": 1,
+  "w": {
+    "als": "als",
+    "altstadt": "Altstadt",
+    "an": "an",
+    "anderen": "ander",
+    "auch": "auch",
+    "bis": "bis",
+    "brunsbüttel": "Brunsbüttel",
+    "das": "der/die/das",
+    "den": "der/die/das",
+    "der": "der/die/das",
+    "deutschlands": "Deutschland (страна)",
+    "die": "der/die/das",
+    "durch": "durch",
+    "dänemark": "Dänemark",
+    "dänisch": "dänisch",
+    "dänische": "dänisch",
+    "ein": "ein/eine",
+    "eine": "ein/eine",
+    "einem": "ein/eine",
+    "führt": "führen",
+    "ganz": "ganz",
+    "gehört": "gehören",
+    "geschützt": "schützen",
+    "gesprochen": "sprechen",
+    "grenzt": "grenzen",
+    "handel": "Handel",
+    "hanse": "Hanse",
+    "hauptstadt": "Hauptstadt",
+    "im": "in",
+    "in": "in",
+    "ist": "sein",
+    "kanal": "Kanal",
+    "kiel": "Kiel",
+    "kürzer": "kurz",
+    "land": "Land (земля)",
+    "lebt": "leben",
+    "liegt": "liegen",
+    "lübeck": "Lübeck",
+    "meer": "Meer",
+    "minderheit": "Minderheit",
+    "minderheitensprachen": "Minderheitensprache",
+    "nord-ostsee-kanal": "Nord-Ostsee-Kanal",
+    "norden": "Norden",
+    "nordfriesisch": "Nordfriesisch",
+    "nordsee": "Nordsee",
+    "osten": "Osten",
+    "ostsee": "Ostsee",
+    "schleswig-holstein": "Schleswig-Holstein",
+    "städte": "Stadt",
+    "und": "und",
+    "unesco-welterbe": "UNESCO-Welterbe",
+    "verband": "verbinden",
+    "von": "von",
+    "war": "sein",
+    "weg": "Weg",
+    "werden": "werden",
+    "westen": "Westen",
+    "wichtiges": "wichtig",
+    "wird": "werden",
+    "zentrum": "Zentrum",
+    "zum": "zu"
+  },
+  "l": {
+    "als": {
+      "ru": "когда; как; чем",
+      "pos": "союз"
+    },
+    "Altstadt": {
+      "ru": "старый город, исторический центр",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Altstädte"
+    },
+    "an": {
+      "ru": "у, к, на",
+      "pos": "предл.",
+      "note": "am = an dem. Тж. отделяемая приставка: anfangen «начинать», annehmen, ansehen, anzünden"
+    },
+    "ander": {
+      "pos": "прил.",
+      "ru": "другой, иной"
+    },
+    "auch": {
+      "ru": "тоже, также; даже",
+      "pos": "частица"
+    },
+    "bis": {
+      "ru": "до; пока не",
+      "pos": "союз"
+    },
+    "Brunsbüttel": {
+      "ru": "Брунсбюттель",
+      "pos": "геогр."
+    },
+    "der/die/das": {
+      "ru": "определённый артикль",
+      "pos": "артикль",
+      "note": "Тж. относительное местоимение «который»"
+    },
+    "Deutschland (страна)": {
+      "ru": "Германия",
+      "pos": "геогр."
+    },
+    "durch": {
+      "ru": "через, сквозь, из-за",
+      "pos": "предл."
+    },
+    "Dänemark": {
+      "ru": "Дания",
+      "pos": "геогр."
+    },
+    "dänisch": {
+      "ru": "датский, датский язык",
+      "pos": "прил."
+    },
+    "ein/eine": {
+      "ru": "неопределённый артикль",
+      "pos": "артикль",
+      "note": "einer — «один, некто»"
+    },
+    "führen": {
+      "ru": "вести",
+      "pos": "гл.",
+      "forms": "führte · hat geführt",
+      "note": "einen Beweis führen — привести доказательство"
+    },
+    "ganz": {
+      "ru": "весь, целый; совсем",
+      "pos": "прил."
+    },
+    "gehören": {
+      "ru": "принадлежать, относиться",
+      "pos": "гл.",
+      "forms": "gehörte · hat gehört",
+      "note": "zu etwas gehören — относиться к чему-то, входить в"
+    },
+    "grenzen": {
+      "ru": "граничить",
+      "pos": "гл.",
+      "forms": "grenzte · hat gegrenzt",
+      "note": "an etwas (A) grenzen — граничить с чем-то"
+    },
+    "Handel": {
+      "art": "der",
+      "note": "an dem Handel war ihm viel gelegen — сделка была ему очень нужна",
+      "pl": null,
+      "pos": "сущ.",
+      "ru": "сделка; торговля"
+    },
+    "Hanse": {
+      "ru": "Ганза (торговый союз городов)",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "Hauptstadt": {
+      "ru": "столица",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Hauptstädte"
+    },
+    "in": {
+      "ru": "в (im = in dem, ins = in das)",
+      "pos": "предл."
+    },
+    "Kanal": {
+      "ru": "канал",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Kanäle"
+    },
+    "Kiel": {
+      "ru": "Киль",
+      "pos": "геогр."
+    },
+    "kurz": {
+      "ru": "короткий",
+      "pos": "прил."
+    },
+    "Land (земля)": {
+      "ru": "земля (федеральная); страна",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Länder",
+      "note": "Bundesland — федеральная земля; in anderen Ländern — в других землях"
+    },
+    "leben": {
+      "ru": "жить",
+      "pos": "гл.",
+      "forms": "lebte · hat gelebt"
+    },
+    "liegen": {
+      "ru": "лежать",
+      "pos": "гл.",
+      "forms": "lag · hat gelegen"
+    },
+    "Lübeck": {
+      "ru": "Любек",
+      "pos": "геогр."
+    },
+    "Meer": {
+      "ru": "море",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Meere"
+    },
+    "Minderheit": {
+      "ru": "меньшинство",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Minderheiten",
+      "note": "Minderheitensprache — язык меньшинства"
+    },
+    "Minderheitensprache": {
+      "ru": "язык меньшинства",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Minderheitensprachen"
+    },
+    "Nord-Ostsee-Kanal": {
+      "ru": "Кильский канал",
+      "pos": "геогр."
+    },
+    "Norden": {
+      "ru": "север",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "Nordfriesisch": {
+      "ru": "севернофризский язык",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "Nordsee": {
+      "ru": "Северное море",
+      "pos": "геогр."
+    },
+    "Osten": {
+      "ru": "восток",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "Ostsee": {
+      "ru": "Балтийское море",
+      "pos": "геогр."
+    },
+    "Schleswig-Holstein": {
+      "ru": "Шлезвиг-Гольштейн",
+      "pos": "геогр."
+    },
+    "schützen": {
+      "ru": "защищать",
+      "pos": "гл.",
+      "forms": "schützte · hat geschützt"
+    },
+    "sein": {
+      "ru": "быть; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "war · ist gewesen"
+    },
+    "sprechen": {
+      "ru": "говорить, сказать",
+      "pos": "гл.",
+      "forms": "sprach · hat gesprochen",
+      "old": "здесь sprach в значении «сказал» — книжно и устарело; в совр. речи sagte"
+    },
+    "Stadt": {
+      "ru": "город",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Städte"
+    },
+    "und": {
+      "ru": "и, а",
+      "pos": "союз"
+    },
+    "UNESCO-Welterbe": {
+      "ru": "Всемирное наследие ЮНЕСКО",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "verbinden": {
+      "ru": "перевязывать (рану); соединять",
+      "pos": "гл.",
+      "forms": "verband · hat verbunden",
+      "note": "sich verbinden lassen — дать себя перевязать"
+    },
+    "von": {
+      "ru": "от, из, о (vom = von dem)",
+      "pos": "предл."
+    },
+    "Weg": {
+      "ru": "путь, дорога",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Wege"
+    },
+    "werden": {
+      "ru": "становиться",
+      "pos": "гл.",
+      "forms": "wurde · ist geworden",
+      "note": "Вспомогательный глагол будущего времени и пассива"
+    },
+    "Westen": {
+      "ru": "запад",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "wichtig": {
+      "ru": "важный",
+      "pos": "прил."
+    },
+    "Zentrum": {
+      "ru": "центр",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Zentren"
+    },
+    "zu": {
+      "ru": "к, в; слишком",
+      "pos": "предл.",
+      "note": "zur = zu der, zum = zu dem"
+    }
+  }
+}

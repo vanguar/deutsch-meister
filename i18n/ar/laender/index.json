@@ -272,6 +272,36 @@
    "land": "sachsen-anhalt"
   },
   {
+   "id": "schleswig-holstein-b1",
+   "title": "Schleswig-Holstein",
+   "titleRu": "شليسفيغ-هولشتاين",
+   "author": "German Morning",
+   "level": "B1",
+   "year": "2026",
+   "chapters": 4,
+   "words": 90,
+   "minutes": 1,
+   "cover": "⚓",
+   "source": "حكومة شليسفيغ هولشتاين ومركز التراث العالمي لليونسكو",
+   "license": "نص من دورة German Morning",
+   "land": "schleswig-holstein"
+  },
+  {
+   "id": "schleswig-holstein-b2",
+   "title": "Schleswig-Holstein",
+   "titleRu": "شليسفيغ-هولشتاين",
+   "author": "German Morning",
+   "level": "B2",
+   "year": "2026",
+   "chapters": 4,
+   "words": 148,
+   "minutes": 1,
+   "cover": "⚓",
+   "source": "حكومة شليسفيغ هولشتاين ومركز التراث العالمي لليونسكو",
+   "license": "نص من دورة German Morning",
+   "land": "schleswig-holstein"
+  },
+  {
    "id": "thueringen-b1",
    "title": "Thüringen",
    "titleRu": "تورينغن",

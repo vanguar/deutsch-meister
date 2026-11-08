@@ -1887,10 +1887,136 @@
    "name": "Schleswig-Holstein",
    "nameRu": "شليسفيغ-هولشتاين",
    "capital": "Kiel",
-   "emoji": "📍",
+   "emoji": "⚓",
    "flag": "data/laender/flags/schleswig-holstein.png",
    "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_Schleswig-Holstein.svg",
-   "ready": false
+   "ready": true,
+   "blurb": "بحران وقناة كيل ومدينة لوبيك الهانزية والحياة قرب الحدود مع الدنمارك.",
+   "facts": [
+    [
+     "العاصمة",
+     "Kiel"
+    ],
+    [
+     "البحار",
+     "بحر الشمال وبحر البلطيق"
+    ],
+    [
+     "الدولة المجاورة",
+     "الدنمارك"
+    ],
+    [
+     "الممر المائي",
+     "قناة كيل"
+    ],
+    [
+     "التراث العالمي",
+     "البلدة القديمة في لوبيك"
+    ]
+   ],
+   "source": "حكومة شليسفيغ هولشتاين ومركز التراث العالمي لليونسكو",
+   "sourceUrl": "https://www.schleswig-holstein.de/DE/landesregierung/themen/kultur/landesgeschichte",
+   "checked": "2026-11-08",
+   "quiz": [
+    {
+     "q": "ما عاصمة شليسفيغ هولشتاين؟",
+     "opts": [
+      "Lübeck",
+      "Flensburg",
+      "Kiel"
+     ],
+     "a": 2,
+     "why": "تقع كيل على بحر البلطيق."
+    },
+    {
+     "q": "أي بحرين تربط قناة كيل؟",
+     "opts": [
+      "بحر الشمال وبحر البلطيق",
+      "بحر الشمال والبحر المتوسط",
+      "بحر البلطيق والبحر الأسود"
+     ],
+     "a": 0,
+     "why": "تختصر القناة الطريق بين البحرين، فلا تحتاج السفن إلى الالتفاف حول يوتلاند."
+    },
+    {
+     "q": "أي مدينة كانت مركز الرابطة الهانزية؟",
+     "opts": [
+      "Kiel",
+      "Lübeck",
+      "Brunsbüttel"
+     ],
+     "a": 1,
+     "why": "كانت لوبيك مركزًا تجاريًا مهمًا للرابطة الهانزية."
+    },
+    {
+     "q": "ما الدولة التي تحد الولاية من الشمال؟",
+     "opts": [
+      "هولندا (الأراضي المنخفضة)",
+      "بولندا",
+      "الدنمارك"
+     ],
+     "a": 2,
+     "why": "يمكن الوصول إلى الدنمارك عبر الحدود الشمالية للولاية."
+    }
+   ],
+   "texts": {
+    "b1": {
+     "id": "schleswig-holstein-b1",
+     "chapters": 4,
+     "words": 90,
+     "minutes": 1,
+     "toc": [
+      {
+       "title": "Zwischen zwei Meeren",
+       "titleRu": "بين بحرين",
+       "icon": "🌊"
+      },
+      {
+       "title": "Kiel und der Kanal",
+       "titleRu": "كيل والقناة",
+       "icon": "⚓"
+      },
+      {
+       "title": "Lübeck und die Hanse",
+       "titleRu": "لوبيك والرابطة الهانزية",
+       "icon": "🏰"
+      },
+      {
+       "title": "Sprachen an der Grenze",
+       "titleRu": "اللغات عند الحدود",
+       "icon": "🗣️"
+      }
+     ]
+    },
+    "b2": {
+     "id": "schleswig-holstein-b2",
+     "chapters": 4,
+     "words": 148,
+     "minutes": 1,
+     "toc": [
+      {
+       "title": "Eine Lage, zwei Küsten",
+       "titleRu": "ولاية واحدة وساحلان",
+       "icon": "🧭"
+      },
+      {
+       "title": "Eine Abkürzung für Schiffe",
+       "titleRu": "طريق مختصر للسفن",
+       "icon": "🚢"
+      },
+      {
+       "title": "Handel und Stadtbild",
+       "titleRu": "التجارة وطابع المدينة",
+       "icon": "🧱"
+      },
+      {
+       "title": "Minderheiten im Grenzland",
+       "titleRu": "الأقليات في المنطقة الحدودية",
+       "icon": "🤝"
+      }
+     ]
+    }
+   }
   },
   {
    "id": "thueringen",

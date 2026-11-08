@@ -1,0 +1,562 @@
+{
+  "version": 1,
+  "w": {
+    "als": "als",
+    "altstadt": "Altstadt",
+    "an": "an",
+    "anderen": "ander",
+    "auch": "auch",
+    "auf": "auf",
+    "aus": "aus",
+    "bedeutenden": "bedeutend",
+    "bei": "bei",
+    "beiden": "beide",
+    "bekennt": "sich bekennen",
+    "bonn-kopenhagener": "Bonn-Kopenhagener",
+    "brunsbüttel": "Brunsbüttel",
+    "bundesland": "Bundesland",
+    "darf": "dürfen",
+    "das": "der/die/das",
+    "dem": "der/die/das",
+    "den": "der/die/das",
+    "der": "der/die/das",
+    "des": "der/die/das",
+    "deutsch-dänischen": "deutsch-dänisch",
+    "deutsche": "deutsch",
+    "die": "der/die/das",
+    "diese": "dieser",
+    "einem": "ein/eine",
+    "einer": "ein/eine",
+    "einzige": "einzig",
+    "elbe": "Elbe",
+    "entscheiden": "entscheiden",
+    "er": "er",
+    "erinnern": "erinnern",
+    "erklärungen": "Erklärung (декларация)",
+    "erreicht": "erreichen",
+    "fahren": "fahren",
+    "fließt": "fließen",
+    "gehört": "gehören",
+    "geschäfte": "Geschäft",
+    "grenze": "Grenze",
+    "halbinsel": "Halbinsel",
+    "handelszentrum": "Handelszentrum",
+    "hanse": "Hanse",
+    "heute": "heute",
+    "historische": "historisch",
+    "holstentor": "Holstentor",
+    "häfen": "Hafen",
+    "ihre": "ihr (её, их)",
+    "in": "in",
+    "ist": "sein",
+    "jeder": "jeder",
+    "jütland": "Jütland",
+    "kanal": "Kanal",
+    "kiel": "Kiel",
+    "lage": "Lage",
+    "landes": "Land (земля)",
+    "landesverfassung": "Landesverfassung",
+    "landschaft": "Landschaft",
+    "liegt": "liegen",
+    "lübeck": "Lübeck",
+    "meeren": "Meer",
+    "mensch": "Mensch",
+    "minderheit": "Minderheit",
+    "minderheiten": "Minderheit",
+    "muss": "müssen",
+    "mündet": "münden",
+    "nationalen": "national",
+    "nicht": "nicht",
+    "nord-ostsee-kanal": "Nord-Ostsee-Kanal",
+    "nordsee": "Nordsee",
+    "nutzt": "nutzen",
+    "ob": "ob",
+    "organisierte": "organisieren",
+    "ostküste": "Ostküste",
+    "ostsee": "Ostsee",
+    "prägt": "prägen",
+    "schiffsverkehr": "Schiffsverkehr",
+    "schleswig-holstein": "Schleswig-Holstein",
+    "schutz": "Schutz",
+    "seit": "seit",
+    "seite": "Seite",
+    "seiten": "Seite",
+    "selbst": "selbst",
+    "sich": "sich",
+    "sowohl": "sowohl",
+    "um": "um",
+    "und": "und",
+    "verankert": "verankern",
+    "verbesserten": "verbessern",
+    "von": "von",
+    "wattenmeer": "Wattenmeer",
+    "weiter": "weit",
+    "weltkulturerbe": "Weltkulturerbe",
+    "wer": "wer",
+    "westküste": "Westküste",
+    "wurde": "werden",
+    "während": "während",
+    "zeit": "Zeit",
+    "zu": "zu",
+    "zum": "zu",
+    "zur": "zu",
+    "zwischen": "zwischen",
+    "öffnet": "öffnen"
+  },
+  "l": {
+    "als": {
+      "ru": "когда; как; чем",
+      "pos": "союз"
+    },
+    "Altstadt": {
+      "ru": "старый город, исторический центр",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Altstädte"
+    },
+    "an": {
+      "ru": "у, к, на",
+      "pos": "предл.",
+      "note": "am = an dem. Тж. отделяемая приставка: anfangen «начинать», annehmen, ansehen, anzünden"
+    },
+    "ander": {
+      "pos": "прил.",
+      "ru": "другой, иной"
+    },
+    "auch": {
+      "ru": "тоже, также; даже",
+      "pos": "частица"
+    },
+    "auf": {
+      "ru": "на, в",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: aufspringen «вскочить», sich aufmachen"
+    },
+    "aus": {
+      "ru": "из",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: auslöschen «погасить»"
+    },
+    "bedeutend": {
+      "ru": "значительный, важный",
+      "pos": "прил.",
+      "note": "die bedeutendsten Städte — важнейшие города"
+    },
+    "bei": {
+      "ru": "у, при, возле",
+      "pos": "предл."
+    },
+    "beide": {
+      "ru": "оба",
+      "pos": "мест."
+    },
+    "Bonn-Kopenhagener": {
+      "ru": "боннско-копенгагенский",
+      "pos": "прил."
+    },
+    "Brunsbüttel": {
+      "ru": "Брунсбюттель",
+      "pos": "геогр."
+    },
+    "Bundesland": {
+      "ru": "федеральная земля",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Bundesländer"
+    },
+    "der/die/das": {
+      "ru": "определённый артикль",
+      "pos": "артикль",
+      "note": "Тж. относительное местоимение «который»"
+    },
+    "deutsch": {
+      "ru": "немецкий",
+      "pos": "прил."
+    },
+    "deutsch-dänisch": {
+      "ru": "немецко-датский",
+      "pos": "прил."
+    },
+    "dieser": {
+      "ru": "этот, эта, это",
+      "pos": "мест."
+    },
+    "dürfen": {
+      "ru": "сметь, иметь право",
+      "pos": "гл.",
+      "forms": "durfte · hat gedurft"
+    },
+    "ein/eine": {
+      "ru": "неопределённый артикль",
+      "pos": "артикль",
+      "note": "einer — «один, некто»"
+    },
+    "einzig": {
+      "ru": "единственный",
+      "pos": "прил."
+    },
+    "Elbe": {
+      "ru": "Эльба (река)",
+      "pos": "геогр."
+    },
+    "entscheiden": {
+      "ru": "решать",
+      "pos": "гл.",
+      "forms": "entschied · hat entschieden"
+    },
+    "er": {
+      "ru": "он",
+      "pos": "мест.",
+      "note": "ihn — его, ihm — ему"
+    },
+    "erinnern": {
+      "ru": "напоминать",
+      "pos": "гл.",
+      "forms": "erinnerte · hat erinnert"
+    },
+    "Erklärung (декларация)": {
+      "ru": "заявление, декларация",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Erklärungen"
+    },
+    "erreichen": {
+      "ru": "достигать",
+      "pos": "гл.",
+      "forms": "erreichte · hat erreicht"
+    },
+    "fahren": {
+      "ru": "ехать",
+      "pos": "гл.",
+      "forms": "fuhr · ist gefahren",
+      "note": "in die Höhe fahren — подскочить"
+    },
+    "fließen": {
+      "ru": "течь",
+      "pos": "гл.",
+      "forms": "floss · ist geflossen"
+    },
+    "gehören": {
+      "ru": "принадлежать, относиться",
+      "pos": "гл.",
+      "forms": "gehörte · hat gehört",
+      "note": "zu etwas gehören — относиться к чему-то, входить в"
+    },
+    "Geschäft": {
+      "ru": "магазин; дело",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Geschäfte"
+    },
+    "Grenze": {
+      "ru": "граница",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Grenzen"
+    },
+    "Hafen": {
+      "ru": "порт, гавань",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Häfen"
+    },
+    "Halbinsel": {
+      "ru": "полуостров",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Halbinseln"
+    },
+    "Handelszentrum": {
+      "ru": "торговый центр (город)",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Handelszentren"
+    },
+    "Hanse": {
+      "ru": "Ганза (торговый союз городов)",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "heute": {
+      "ru": "сегодня",
+      "pos": "нареч."
+    },
+    "historisch": {
+      "ru": "исторический",
+      "pos": "прил."
+    },
+    "Holstentor": {
+      "ru": "ворота Хольстентор",
+      "pos": "имя собств."
+    },
+    "ihr (её, их)": {
+      "ru": "её; их",
+      "pos": "мест."
+    },
+    "in": {
+      "ru": "в (im = in dem, ins = in das)",
+      "pos": "предл."
+    },
+    "jeder": {
+      "ru": "каждый",
+      "pos": "мест."
+    },
+    "Jütland": {
+      "ru": "Ютландия",
+      "pos": "геогр."
+    },
+    "Kanal": {
+      "ru": "канал",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Kanäle"
+    },
+    "Kiel": {
+      "ru": "Киль",
+      "pos": "геогр."
+    },
+    "Lage": {
+      "art": "die",
+      "note": "seiner schönen Lage wegen — из-за красивого расположения",
+      "pl": "die Lagen",
+      "pos": "сущ.",
+      "ru": "расположение; положение"
+    },
+    "Land (земля)": {
+      "ru": "земля (федеральная); страна",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Länder",
+      "note": "Bundesland — федеральная земля; in anderen Ländern — в других землях"
+    },
+    "Landesverfassung": {
+      "ru": "конституция земли",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Landesverfassungen"
+    },
+    "Landschaft": {
+      "ru": "ландшафт, местность",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Landschaften"
+    },
+    "liegen": {
+      "ru": "лежать",
+      "pos": "гл.",
+      "forms": "lag · hat gelegen"
+    },
+    "Lübeck": {
+      "ru": "Любек",
+      "pos": "геогр."
+    },
+    "Meer": {
+      "ru": "море",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Meere"
+    },
+    "Mensch": {
+      "ru": "человек",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Menschen",
+      "decl": "n-Deklination: des Menschen · dem/den Menschen"
+    },
+    "Minderheit": {
+      "ru": "меньшинство",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Minderheiten",
+      "note": "Minderheitensprache — язык меньшинства"
+    },
+    "münden": {
+      "ru": "впадать (о реке)",
+      "pos": "гл.",
+      "forms": "mündete · ist gemündet",
+      "note": "münden in + Akk."
+    },
+    "müssen": {
+      "ru": "быть вынужденным, должен",
+      "pos": "гл.",
+      "forms": "musste · hat gemusst"
+    },
+    "national": {
+      "ru": "национальный",
+      "pos": "прил."
+    },
+    "nicht": {
+      "ru": "не",
+      "pos": "частица"
+    },
+    "Nord-Ostsee-Kanal": {
+      "ru": "Кильский канал",
+      "pos": "геогр."
+    },
+    "Nordsee": {
+      "ru": "Северное море",
+      "pos": "геогр."
+    },
+    "nutzen": {
+      "ru": "использовать",
+      "pos": "гл.",
+      "forms": "nutzte · hat genutzt"
+    },
+    "ob": {
+      "ru": "ли (в косвенном вопросе)",
+      "pos": "союз"
+    },
+    "organisieren": {
+      "ru": "организовывать",
+      "pos": "гл.",
+      "forms": "organisierte · hat organisiert"
+    },
+    "Ostküste": {
+      "ru": "восточное побережье",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Ostküsten"
+    },
+    "Ostsee": {
+      "ru": "Балтийское море",
+      "pos": "геогр."
+    },
+    "prägen": {
+      "ru": "определять облик, формировать",
+      "pos": "гл.",
+      "forms": "prägte · hat geprägt"
+    },
+    "Schiffsverkehr": {
+      "ru": "движение судов",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "Schleswig-Holstein": {
+      "ru": "Шлезвиг-Гольштейн",
+      "pos": "геогр."
+    },
+    "Schutz": {
+      "ru": "защита",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null,
+      "note": "zu seinem Schutz — ради его защиты"
+    },
+    "sein": {
+      "ru": "быть; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "war · ist gewesen"
+    },
+    "seit": {
+      "ru": "с (какого-то времени)",
+      "pos": "предл."
+    },
+    "Seite": {
+      "ru": "сторона; страница, сайт",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Seiten"
+    },
+    "selbst": {
+      "ru": "сам; даже",
+      "pos": "мест."
+    },
+    "sich": {
+      "ru": "себя, себе",
+      "pos": "мест.",
+      "note": "Возвратное местоимение, часть возвратного глагола: sich auf den Weg machen, sich setzen, sich legen, sich nähern, sich gefallen lassen, sich getrauen, sich umsehen"
+    },
+    "sich bekennen": {
+      "ru": "признавать свою принадлежность",
+      "pos": "гл.",
+      "forms": "bekannte sich · hat sich bekannt"
+    },
+    "sowohl": {
+      "ru": "как … так и",
+      "pos": "союз",
+      "note": "sowohl … wie (auch) — как …, так и"
+    },
+    "um": {
+      "ru": "вокруг, в (о времени)",
+      "pos": "предл.",
+      "note": "um … zu — чтобы. Тж. отделяемая приставка: sich umsehen «оглядеться»"
+    },
+    "und": {
+      "ru": "и, а",
+      "pos": "союз"
+    },
+    "verankern": {
+      "ru": "закреплять",
+      "pos": "гл.",
+      "forms": "verankerte · hat verankert"
+    },
+    "verbessern": {
+      "ru": "улучшать",
+      "pos": "гл.",
+      "forms": "verbesserte · hat verbessert"
+    },
+    "von": {
+      "ru": "от, из, о (vom = von dem)",
+      "pos": "предл."
+    },
+    "Wattenmeer": {
+      "ru": "Ваттовое море",
+      "pos": "геогр."
+    },
+    "weit": {
+      "ru": "далёкий, далеко",
+      "pos": "прил.",
+      "forms": "weit · weiter · am weitesten",
+      "note": "weiter — дальше, далее; von weitem — издали"
+    },
+    "Weltkulturerbe": {
+      "ru": "всемирное культурное наследие",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "wer": {
+      "ru": "кто",
+      "pos": "мест."
+    },
+    "werden": {
+      "ru": "становиться",
+      "pos": "гл.",
+      "forms": "wurde · ist geworden",
+      "note": "Вспомогательный глагол будущего времени и пассива"
+    },
+    "Westküste": {
+      "ru": "западное побережье",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Westküsten"
+    },
+    "während": {
+      "pos": "предлог",
+      "ru": "в течение, во время"
+    },
+    "Zeit": {
+      "ru": "время",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Zeiten"
+    },
+    "zu": {
+      "ru": "к, в; слишком",
+      "pos": "предл.",
+      "note": "zur = zu der, zum = zu dem"
+    },
+    "zwischen": {
+      "pos": "предл.",
+      "ru": "между"
+    },
+    "öffnen": {
+      "ru": "открывать",
+      "pos": "гл.",
+      "forms": "öffnete · hat geöffnet",
+      "note": "sich öffnen — открываться, раскрываться"
+    }
+  }
+}

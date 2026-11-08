@@ -1,0 +1,27 @@
+{
+  "id": "ch-02",
+  "title": "Kiel und der Kanal",
+  "titleRu": "Киль и канал",
+  "icon": "⚓",
+  "paragraphs": [
+    {
+      "s": [
+        {
+          "de": "Kiel ist die Hauptstadt und liegt an der Ostsee.",
+          "ru": "Киль — столица земли на Балтийском море.",
+          "g": {}
+        },
+        {
+          "de": "Von Kiel bis Brunsbüttel führt der Nord-Ostsee-Kanal.",
+          "ru": "От Киля до Брунсбюттеля проходит Кильский канал.",
+          "g": {}
+        },
+        {
+          "de": "Durch den Kanal ist der Weg von einem Meer zum anderen kürzer.",
+          "ru": "Благодаря каналу путь из одного моря в другое короче.",
+          "g": {}
+        }
+      ]
+    }
+  ]
+}

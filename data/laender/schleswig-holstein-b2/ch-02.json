@@ -1,0 +1,29 @@
+{
+  "id": "ch-02",
+  "title": "Eine Abkürzung für Schiffe",
+  "titleRu": "Короткий путь для судов",
+  "icon": "🚢",
+  "paragraphs": [
+    {
+      "s": [
+        {
+          "de": "Wer den Nord-Ostsee-Kanal nutzt, muss nicht um die Halbinsel Jütland fahren.",
+          "ru": "Судам, которые идут по Кильскому каналу, не нужно огибать полуостров Ютландия.",
+          "g": {}
+        },
+        {
+          "de": "Bei Brunsbüttel erreicht der Kanal die Elbe, die weiter in die Nordsee fließt.",
+          "ru": "У Брунсбюттеля канал выходит в Эльбу, которая далее впадает в Северное море.",
+          "g": {}
+        },
+        {
+          "de": "Auf der anderen Seite mündet er bei Kiel in die Ostsee.",
+          "ru": "На другом конце он выходит в Балтийское море у Киля.",
+          "g": {
+            "4+8": "выходит в"
+          }
+        }
+      ]
+    }
+  ]
+}

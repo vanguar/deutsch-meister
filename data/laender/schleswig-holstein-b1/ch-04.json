@@ -1,0 +1,27 @@
+{
+  "id": "ch-04",
+  "title": "Sprachen an der Grenze",
+  "titleRu": "Языки у границы",
+  "icon": "🗣️",
+  "paragraphs": [
+    {
+      "s": [
+        {
+          "de": "In Schleswig-Holstein lebt eine dänische Minderheit.",
+          "ru": "В Шлезвиг-Гольштейне живёт датское меньшинство.",
+          "g": {}
+        },
+        {
+          "de": "Auch Nordfriesisch wird im Land gesprochen.",
+          "ru": "В земле также говорят на севернофризском языке.",
+          "g": {}
+        },
+        {
+          "de": "Dänisch und Nordfriesisch werden als Minderheitensprachen geschützt.",
+          "ru": "Датский и севернофризский охраняются как языки меньшинств.",
+          "g": {}
+        }
+      ]
+    }
+  ]
+}

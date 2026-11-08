@@ -1,0 +1,29 @@
+{
+  "id": "ch-04",
+  "title": "Minderheiten im Grenzland",
+  "titleRu": "Меньшинства в приграничье",
+  "icon": "🤝",
+  "paragraphs": [
+    {
+      "s": [
+        {
+          "de": "Die Bonn-Kopenhagener Erklärungen von 1955 verbesserten die Lage der Minderheiten auf beiden Seiten der deutsch-dänischen Grenze.",
+          "ru": "Боннско-Копенгагенские декларации 1955 года улучшили положение меньшинств по обе стороны немецко-датской границы.",
+          "g": {}
+        },
+        {
+          "de": "Jeder Mensch darf selbst entscheiden, ob er sich zu einer nationalen Minderheit bekennt.",
+          "ru": "Каждый человек вправе сам решать, относит ли он себя к национальному меньшинству.",
+          "g": {}
+        },
+        {
+          "de": "Der Schutz von Minderheiten ist heute in der Landesverfassung verankert.",
+          "ru": "Сегодня защита меньшинств закреплена в конституции земли.",
+          "g": {
+            "4+9": "закреплена"
+          }
+        }
+      ]
+    }
+  ]
+}

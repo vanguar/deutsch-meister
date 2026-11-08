@@ -1,0 +1,29 @@
+{
+  "id": "ch-01",
+  "title": "Zwischen zwei Meeren",
+  "titleRu": "Между двумя морями",
+  "icon": "🌊",
+  "paragraphs": [
+    {
+      "s": [
+        {
+          "de": "Schleswig-Holstein liegt ganz im Norden Deutschlands.",
+          "ru": "Шлезвиг-Гольштейн находится на самом севере Германии.",
+          "g": {}
+        },
+        {
+          "de": "Im Westen liegt die Nordsee, im Osten die Ostsee.",
+          "ru": "На западе находится Северное море, на востоке — Балтийское.",
+          "g": {}
+        },
+        {
+          "de": "Im Norden grenzt das Land an Dänemark.",
+          "ru": "На севере земля граничит с Данией.",
+          "g": {
+            "2+5": "граничит с"
+          }
+        }
+      ]
+    }
+  ]
+}

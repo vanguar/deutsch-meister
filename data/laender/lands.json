@@ -1887,10 +1887,136 @@
       "name": "Schleswig-Holstein",
       "nameRu": "Шлезвиг-Гольштейн",
       "capital": "Kiel",
-      "emoji": "📍",
+      "emoji": "⚓",
       "flag": "data/laender/flags/schleswig-holstein.png",
       "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_Schleswig-Holstein.svg",
-      "ready": false
+      "ready": true,
+      "blurb": "Два моря, Кильский канал, ганзейский Любек и жизнь у границы с Данией.",
+      "facts": [
+        [
+          "Столица",
+          "Kiel"
+        ],
+        [
+          "Моря",
+          "Северное и Балтийское моря"
+        ],
+        [
+          "Соседняя страна",
+          "Дания"
+        ],
+        [
+          "Водный путь",
+          "Кильский канал"
+        ],
+        [
+          "Всемирное наследие",
+          "Старый город Любека"
+        ]
+      ],
+      "source": "Правительство Шлезвиг-Гольштейна и Центр всемирного наследия UNESCO",
+      "sourceUrl": "https://www.schleswig-holstein.de/DE/landesregierung/themen/kultur/landesgeschichte",
+      "checked": "2026-11-08",
+      "quiz": [
+        {
+          "q": "Какой город является столицей Шлезвиг-Гольштейна?",
+          "opts": [
+            "Lübeck",
+            "Flensburg",
+            "Kiel"
+          ],
+          "a": 2,
+          "why": "Киль расположен на Балтийском море."
+        },
+        {
+          "q": "Какие моря соединяет Кильский канал?",
+          "opts": [
+            "Северное и Балтийское моря",
+            "Северное и Средиземное моря",
+            "Балтийское и Чёрное моря"
+          ],
+          "a": 0,
+          "why": "Канал сокращает путь между двумя морями: кораблям не нужно огибать Ютландию."
+        },
+        {
+          "q": "Какой город был центром Ганзы?",
+          "opts": [
+            "Kiel",
+            "Lübeck",
+            "Brunsbüttel"
+          ],
+          "a": 1,
+          "why": "Любек был важным торговым центром Ганзейского союза."
+        },
+        {
+          "q": "С какой страной граничит земля на севере?",
+          "opts": [
+            "Нидерланды",
+            "Польша",
+            "Дания"
+          ],
+          "a": 2,
+          "why": "Через северную границу земли можно попасть в Данию."
+        }
+      ],
+      "texts": {
+        "b1": {
+          "id": "schleswig-holstein-b1",
+          "chapters": 4,
+          "words": 90,
+          "minutes": 1,
+          "toc": [
+            {
+              "title": "Zwischen zwei Meeren",
+              "titleRu": "Между двумя морями",
+              "icon": "🌊"
+            },
+            {
+              "title": "Kiel und der Kanal",
+              "titleRu": "Киль и канал",
+              "icon": "⚓"
+            },
+            {
+              "title": "Lübeck und die Hanse",
+              "titleRu": "Любек и Ганза",
+              "icon": "🏰"
+            },
+            {
+              "title": "Sprachen an der Grenze",
+              "titleRu": "Языки у границы",
+              "icon": "🗣️"
+            }
+          ]
+        },
+        "b2": {
+          "id": "schleswig-holstein-b2",
+          "chapters": 4,
+          "words": 148,
+          "minutes": 1,
+          "toc": [
+            {
+              "title": "Eine Lage, zwei Küsten",
+              "titleRu": "Одна земля, два побережья",
+              "icon": "🧭"
+            },
+            {
+              "title": "Eine Abkürzung für Schiffe",
+              "titleRu": "Короткий путь для судов",
+              "icon": "🚢"
+            },
+            {
+              "title": "Handel und Stadtbild",
+              "titleRu": "Торговля и облик города",
+              "icon": "🧱"
+            },
+            {
+              "title": "Minderheiten im Grenzland",
+              "titleRu": "Меньшинства в приграничье",
+              "icon": "🤝"
+            }
+          ]
+        }
+      }
     },
     {
       "id": "thueringen",

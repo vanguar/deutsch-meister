@@ -1887,10 +1887,136 @@
    "name": "Schleswig-Holstein",
    "nameRu": "Шлезвіг-Гольштейн",
    "capital": "Kiel",
-   "emoji": "📍",
+   "emoji": "⚓",
    "flag": "data/laender/flags/schleswig-holstein.png",
    "flagSource": "https://commons.wikimedia.org/wiki/File:Flag_of_Schleswig-Holstein.svg",
-   "ready": false
+   "ready": true,
+   "blurb": "Два моря, Кільський канал, ганзейський Любек і життя біля кордону з Данією.",
+   "facts": [
+    [
+     "Столиця",
+     "Kiel"
+    ],
+    [
+     "Моря",
+     "Північне й Балтійське моря"
+    ],
+    [
+     "Сусідня країна",
+     "Данія"
+    ],
+    [
+     "Водний шлях",
+     "Кільський канал"
+    ],
+    [
+     "Всесвітня спадщина",
+     "Старе місто Любека"
+    ]
+   ],
+   "source": "Уряд Шлезвіг-Гольштейну й Центр всесвітньої спадщини UNESCO",
+   "sourceUrl": "https://www.schleswig-holstein.de/DE/landesregierung/themen/kultur/landesgeschichte",
+   "checked": "2026-11-08",
+   "quiz": [
+    {
+     "q": "Яке місто є столицею Шлезвіг-Гольштейну?",
+     "opts": [
+      "Lübeck",
+      "Flensburg",
+      "Kiel"
+     ],
+     "a": 2,
+     "why": "Кіль розташований на Балтійському морі."
+    },
+    {
+     "q": "Які моря з’єднує Кільський канал?",
+     "opts": [
+      "Північне й Балтійське моря",
+      "Північне й Середземне моря",
+      "Балтійське й Чорне моря"
+     ],
+     "a": 0,
+     "why": "Канал скорочує шлях між двома морями: кораблям не потрібно огинати Ютландію."
+    },
+    {
+     "q": "Яке місто було центром Ганзи?",
+     "opts": [
+      "Kiel",
+      "Lübeck",
+      "Brunsbüttel"
+     ],
+     "a": 1,
+     "why": "Любек був важливим торговельним центром Ганзейського союзу."
+    },
+    {
+     "q": "З якою країною межує земля на півночі?",
+     "opts": [
+      "Нідерланди",
+      "Польща",
+      "Данія"
+     ],
+     "a": 2,
+     "why": "Через північний кордон землі можна потрапити до Данії."
+    }
+   ],
+   "texts": {
+    "b1": {
+     "id": "schleswig-holstein-b1",
+     "chapters": 4,
+     "words": 90,
+     "minutes": 1,
+     "toc": [
+      {
+       "title": "Zwischen zwei Meeren",
+       "titleRu": "Між двома морями",
+       "icon": "🌊"
+      },
+      {
+       "title": "Kiel und der Kanal",
+       "titleRu": "Кіль і канал",
+       "icon": "⚓"
+      },
+      {
+       "title": "Lübeck und die Hanse",
+       "titleRu": "Любек і Ганза",
+       "icon": "🏰"
+      },
+      {
+       "title": "Sprachen an der Grenze",
+       "titleRu": "Мови біля кордону",
+       "icon": "🗣️"
+      }
+     ]
+    },
+    "b2": {
+     "id": "schleswig-holstein-b2",
+     "chapters": 4,
+     "words": 148,
+     "minutes": 1,
+     "toc": [
+      {
+       "title": "Eine Lage, zwei Küsten",
+       "titleRu": "Одна земля, два узбережжя",
+       "icon": "🧭"
+      },
+      {
+       "title": "Eine Abkürzung für Schiffe",
+       "titleRu": "Короткий шлях для суден",
+       "icon": "🚢"
+      },
+      {
+       "title": "Handel und Stadtbild",
+       "titleRu": "Торгівля й вигляд міста",
+       "icon": "🧱"
+      },
+      {
+       "title": "Minderheiten im Grenzland",
+       "titleRu": "Меншини в прикордонні",
+       "icon": "🤝"
+      }
+     ]
+    }
+   }
   },
   {
    "id": "thueringen",

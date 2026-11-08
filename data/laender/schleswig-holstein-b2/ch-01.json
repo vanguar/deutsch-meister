@@ -1,0 +1,30 @@
+{
+  "id": "ch-01",
+  "title": "Eine Lage, zwei Küsten",
+  "titleRu": "Одна земля, два побережья",
+  "icon": "🧭",
+  "paragraphs": [
+    {
+      "s": [
+        {
+          "de": "Schleswig-Holstein ist das einzige deutsche Bundesland, das sowohl an der Nordsee als auch an der Ostsee liegt.",
+          "ru": "Шлезвиг-Гольштейн — единственная немецкая земля, которая выходит и к Северному, и к Балтийскому морю.",
+          "g": {
+            "7+12": "как …, так и …",
+            "11": ""
+          }
+        },
+        {
+          "de": "Während an der Westküste das Wattenmeer die Landschaft prägt, öffnet sich die Ostküste zur Ostsee.",
+          "ru": "На западе ландшафт определяет Ваттовое море, а восточное побережье выходит к Балтийскому морю.",
+          "g": {}
+        },
+        {
+          "de": "Die Lage zwischen den Meeren prägt die Häfen und den Schiffsverkehr des Landes.",
+          "ru": "Положение между морями определяет развитие портов и судоходства земли.",
+          "g": {}
+        }
+      ]
+    }
+  ]
+}
