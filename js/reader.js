@@ -427,6 +427,7 @@ const Reader = (() => {
   function renderChapter(ch) {
     elContent.innerHTML = chapterHtml(ch, st.chIndex);
     watchFigures();
+    ImageReveal.show(elContent);
     elContent.lang = st.fullTranslation ? TR_LANG : 'de';
     elContent.classList.toggle('rd-interlinear', st.interlinear && !st.fullTranslation);
     elContent.classList.toggle('rd-full-translation', st.fullTranslation);
@@ -1658,7 +1659,7 @@ const Reader = (() => {
 
   function openFig(figEl) {
     const img = figEl.querySelector('img');
-    if (!img) return;
+    if (!img || !img.naturalWidth || img.classList.contains('dm-image-hidden')) return;
     if (!elFig) {
       elFig = document.createElement('div');
       elFig.className = 'rd-lightbox';

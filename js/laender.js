@@ -192,6 +192,7 @@ const Laender = (() => {
     renderPick();
     const order = lands.slice().sort((a, b) => (b.ready - a.ready) || a.name.localeCompare(b.name, 'de'));
     el.list.innerHTML = order.map(cardHtml).join('');
+    ImageReveal.show(el.list);
     el.list.setAttribute('aria-busy', 'false');
     const ready = lands.filter(l => l.ready);
     el.done.innerHTML = `<span>Готово</span>: <b>${ready.length}</b> <span>из</span> <b>${lands.length}</b>`
@@ -369,6 +370,7 @@ const Laender = (() => {
     if (!land.ready) {
       el.pick.innerHTML = `<div class="ld-pick-card is-soon">${head}
         <p class="ld-pick-blurb"><span>Эта земля пока в разработке</span> 🚧</p></div>`;
+      ImageReveal.show(el.pick);
       return;
     }
     const facts = (land.facts || []).filter(([k]) => PICK_FACTS.includes(k) && k !== 'Столица')
@@ -384,6 +386,7 @@ const Laender = (() => {
         <button class="news-chip ld-pick-more" type="button" data-open="${esc(land.id)}"><span>Паспорт и тест</span> ›</button>
       </div>
     </div>`;
+    ImageReveal.show(el.pick);
   }
 
   function pickOnMap(id) {
@@ -504,6 +507,7 @@ const Laender = (() => {
       <section class="ld-box ld-quiz" id="ldQuiz" aria-live="polite"></section>
       <p class="ld-src"><span>Источник</span>: <a href="${esc(land.sourceUrl)}" target="_blank" rel="noopener">${esc(land.source)}</a>
         · <span>сверено</span> ${esc(land.checked)}</p>`;
+    ImageReveal.show(el.landBody);
     document.title = land.name + ' | German Morning';
     renderQuiz();
   }

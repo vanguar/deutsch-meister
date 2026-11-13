@@ -145,7 +145,7 @@ const NewsFeed = (() => {
         </div>
       </div>
       <div class="news-tile-last">
-        <img src="${esc(last.cover)}" alt="" width="640" height="360" loading="lazy" decoding="async">
+        <span class="ntl-cover"><img src="${esc(last.cover)}" alt="" width="640" height="360" loading="lazy" decoding="async"></span>
         <div class="ntl-body">
           <div class="ntl-label"><span>Последняя</span> · ${agoHtml(ageDays(last.published))}</div>
           <div class="ntl-title" lang="de">${esc(last.title)}</div>
@@ -162,6 +162,7 @@ const NewsFeed = (() => {
   function renderHub() {
     elRubrics.setAttribute('aria-busy', 'false');
     elRubrics.innerHTML = RUBRICS.map(tileHtml).join('');
+    ImageReveal.show(elRubrics);
   }
 
   /* ── Страница рубрики ── */
@@ -217,6 +218,7 @@ const NewsFeed = (() => {
     elFeed.innerHTML = list.length
       ? list.map(cardHtml).join('')
       : '<p class="news-empty">В этой рубрике статей пока нет.</p>';
+    ImageReveal.show(elFeed);
   }
 
   /* ── Вид: витрина или рубрика ── */

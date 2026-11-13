@@ -534,6 +534,7 @@ const Fahrschule = (() => {
     else if (u.kind === 'dialog') el.body.innerHTML = dialogHtml(u);
     else if (u.kind === 'exam') el.body.innerHTML = '<section class="fs-exam" id="fsExam" aria-live="polite"></section>';
     else el.body.innerHTML = '<div class="fs-junction" id="fsJunction"></div>';
+    ImageReveal.show(el.body);
     paintTr();
     paintPlay();
     paintBar();
@@ -917,6 +918,7 @@ const Fahrschule = (() => {
       </div>
       ${wrong.length ? `<h2 class="fs-sec-title">Разбор ошибок</h2><ol class="fs-exam-list">${review}</ol>`
         : '<p class="fs-exam-why"><span>Ни одной ошибки — отлично!</span></p>'}`;
+    ImageReveal.show(box);
     paintTr();
     paintPlay();
   }

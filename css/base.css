@@ -720,3 +720,12 @@ h1, h2, h3 {
   pointer-events: none;
 }
 .dm-toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+.dm-image-hidden { visibility: hidden; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .dm-image-reveal { animation: dm-image-reveal 700ms ease-in-out; }
+  @keyframes dm-image-reveal {
+    from { opacity: 0; }
+  }
+}

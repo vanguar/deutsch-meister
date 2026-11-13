@@ -243,6 +243,7 @@ const Dialogs = (() => {
   function renderHub() {
     el.levels.setAttribute('aria-busy', 'false');
     el.levels.innerHTML = LEVELS.map(levelTileHtml).join('');
+    ImageReveal.show(el.levels);
   }
 
   /* ── Картинка: локальный файл, без сети — заглушка с эмодзи ── */
@@ -283,6 +284,7 @@ const Dialogs = (() => {
         <span class="dlg-item-go" aria-hidden="true">›</span>
       </a></li>`).join('')
       : '<li class="news-empty">Диалоги этого уровня скоро появятся.</li>';
+    ImageReveal.show(el.list);
   }
 
   /* ── Диалог ── */
@@ -335,6 +337,7 @@ const Dialogs = (() => {
     const pos = list.findIndex(it => it.id === d.id);
     el.counter.textContent = (pos >= 0 ? pos + 1 : d.n) + ' / ' + (list.length || 10);
     el.figure.innerHTML = figureHtml(d);
+    ImageReveal.show(el.figure);
     el.levelChip.textContent = LEVEL[d.level] ? LEVEL[d.level].code : d.level.toUpperCase();
     el.levelChip.className = 'dlg-level-chip lv-' + d.level;
     el.title.textContent = d.title;
