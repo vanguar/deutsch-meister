@@ -9,7 +9,7 @@ bump:
 	python bump_version.py
 
 # Словарь курса (вкладка «Словарь»): data/vocab + i18n/uk|ar/vocab из
-# слов уроков. После правки слов в уроках — make vocab (validate проверит)
+# слов уроков и выбранных лемм из новостей. После правки — make vocab.
 vocab:
 	node tools/vocab/build.js
 

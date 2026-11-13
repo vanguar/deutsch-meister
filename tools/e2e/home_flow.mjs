@@ -176,9 +176,9 @@ const VSNAP = `({ hash: location.hash, n: document.querySelectorAll('.v-item').l
   empty: !document.getElementById('vocabEmpty').hidden })`;
 let v = await J(VSNAP);
 const VOC = JSON.parse(await c.ev(`fetch('data/vocab/index.json').then(r => r.text())`));
-const inLv = lv => VOC.items.filter(i => i.l.startsWith(lv + '-')).length;
+const inLv = lv => VOC.items.filter(i => (i.lv || i.l.slice(0, 2)) === lv).length;
 ok(v.hash === '#dict' && v.lvl === 'a1' && v.n === inLv('a1'), `уровень текущего урока (A1): ${v.n} слов из ${inLv('a1')}`, v);
-ok(v.cnt === `${VOC.items.length} слов` && v.head === `Знаю 0 из ${inLv('a1')}` && v.first === 'Hallo', `шапка: ${v.cnt}, ${v.head}, первое слово ${v.first}`);
+ok(parseInt(v.cnt, 10) === VOC.items.length && v.head === `Знаю 0 из ${inLv('a1')}` && v.first === 'Hallo', `шапка: ${v.cnt}, ${v.head}, первое слово ${v.first}`);
 ok(!v.hscroll, 'словарь без горизонтальной прокрутки');
 await c.shot('home-dict-dark.png');
 // озвучка и «знаю»
@@ -206,6 +206,15 @@ let found = await search('schon');
 ok(found.includes('schön'), `«schon» находит «schön» (${found.slice(0, 5)})`);
 found = await search('собака');
 ok(found.includes('der Hund'), `«собака» находит «der Hund» (${found.slice(0, 5)})`);
+found = await search('gebardensprache');
+ok(found.includes('die Gebärdensprache'), 'поиск без умлаута находит слово из новости');
+const newsLink = 'news.html#news=apple-tv-gebaerdensprache-2026';
+ok(await c.ev(`document.querySelector('.v-item .v-lesson').getAttribute('href')`) === newsLink,
+  'ссылка в списке ведёт в статью');
+await c.ev(`document.querySelector('.v-item .v-main').click()`);
+ok(await c.ev(`document.querySelector('#vsLesson').getAttribute('href')`) === newsLink,
+  'ссылка в карточке ведёт в статью');
+await c.ev('Vocab.closeCard()');
 ok(await c.ev(`getComputedStyle(document.querySelector('.v-levels')).display === 'none'`), 'при поиске уровни скрыты — ищем по всем');
 found = await search('qqqzzz');
 ok(found.length === 0 && (await J(VSNAP)).empty, 'ничего не найдено — пишем об этом');
@@ -223,7 +232,7 @@ console.log('3в. Анимации слов');
 await c.go(B + '/index.html?r=4#dict', 1500);
 await waitFor(`document.querySelectorAll('.v-item').length > 0`);
 await c.ev(`window.__said = []; TTS.speak = t => window.__said.push(t)`);
-const withX = VOC.items.filter(i => i.l.startsWith('a1-') && i.x).length;
+const withX = VOC.items.filter(i => i.l?.startsWith('a1-') && i.x).length;
 const col = await J(`(() => { const xs = [...document.querySelectorAll('.v-item')].slice(0, 80).map(li => Math.round(li.querySelector('.v-term').getBoundingClientRect().left));
   return { lefts: [...new Set(xs)], emo: document.querySelectorAll('.v-item .v-emo, .v-item img, .v-item svg.lottie').length,
     pics: [...document.querySelectorAll('.v-item .v-main')].filter(b => /\\p{Extended_Pictographic}/u.test(b.textContent)).length }; })()`);

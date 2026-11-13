@@ -7,6 +7,9 @@
    русский перевод и урок, где слово встретилось впервые. Повторы
    убираются — слово остаётся в самом раннем уроке.
 
+   Из tools/vocab/news.json берём выбранные леммы и IPA. Артикли,
+   переводы и уровень берём из глоссариев и метаданных статей.
+
    Анимации (A1–A2): tools/vocab/anim.json — какое слово чем показать.
    В словаре это поле x: «n:1f985» — анимированный эмодзи Google Noto
    (Lottie, data/vocab/anim/1f985.json, CC BY 4.0) или «e:🚶:walk» —
@@ -77,6 +80,36 @@ function collect() {
   return items;
 }
 
+const readJson = file => JSON.parse(fs.readFileSync(rel(file), 'utf8'));
+
+function collectNews(courseItems) {
+  const selected = readJson('tools/vocab/news.json');
+  const { items: catalog } = readJson('data/news/index.json');
+  const levels = new Map(catalog.map(article => [article.id, article.level.toLowerCase()]));
+  const seen = new Set(courseItems.map(it => it.w.toLowerCase()));
+  const words = [];
+  for (const [id, entries] of Object.entries(selected)) {
+    const lv = levels.get(id);
+    if (!LEVELS.includes(lv)) throw new Error('news.json: нет статьи с уровнем A1–B2: ' + id);
+    const glossaries = {
+      ru: readJson(`data/news/${id}/glossary.json`).l,
+      ...Object.fromEntries(LANGS.map(lang => [lang, readJson(`i18n/${lang}/news/${id}/glossary.json`).l])),
+    };
+    for (const [w, ipa] of entries) {
+      const key = w.toLowerCase();
+      if (seen.has(key)) throw new Error('news.json: повтор слова «' + w + '»');
+      const word = glossaries.ru[w];
+      if (!word || !ipa) throw new Error('news.json: нет леммы или IPA для «' + w + '» в ' + id);
+      const a = word.art || '';
+      const item = { de: a ? a + ' ' + w : w, w, a, ipa, ru: word.ru, lv, news: id };
+      const translations = Object.fromEntries(LANGS.map(lang => [lang, glossaries[lang][w]?.ru]));
+      words.push({ item, translations });
+      seen.add(key);
+    }
+  }
+  return words;
+}
+
 // память переводов: все src/*.json, кроме перекрытий ридера (как в tools/i18n.js)
 function loadTM(lang) {
   const tm = Object.create(null);
@@ -93,17 +126,26 @@ function loadTM(lang) {
 const json = o => JSON.stringify(o) + '\n';
 
 function build() {
-  const items = collect();
+  const course = collect();
+  const news = collectNews(course);
+  const items = course.concat(news.map(({ item }) => item));
   const out = { 'data/vocab/index.json': json({ count: items.length, items }) };
   const missing = {};
   for (const lang of LANGS) {
     const tm = loadTM(lang);
     missing[lang] = [];
-    const tr = items.map(it => {
+    const tr = course.map(it => {
       const t = tm[it.ru];
       if (t === undefined) { missing[lang].push(it.ru); return it; }
       return Object.assign({}, it, { ru: t });
     });
+    for (const { item, translations } of news) {
+      const t = translations[lang];
+      if (!t || (lang === 'ar' && !/\p{Script=Arabic}/u.test(t))) {
+        missing[lang].push(item.ru);
+      }
+      tr.push({ ...item, ru: t || item.ru });
+    }
     out[`i18n/${lang}/vocab/index.json`] = json({ count: tr.length, items: tr });
   }
   return { out, items, missing };
@@ -132,6 +174,6 @@ for (const [file, text] of Object.entries(out)) {
 for (const lang of LANGS) {
   if (missing[lang].length) { console.log(`✗ ${lang}: нет перевода у ${missing[lang].length}: ${missing[lang].slice(0, 8).join(' | ')}`); bad++; }
 }
-const by = LEVELS.map(lv => lv + ': ' + items.filter(i => i.l.startsWith(lv)).length).join(', ');
+const by = LEVELS.map(lv => lv + ': ' + items.filter(i => (i.lv || i.l.slice(0, 2)) === lv).length).join(', ');
 console.log(`${check ? 'check' : 'build'}: ${items.length} слов (${by}), с анимацией ${items.filter(i => i.x).length}${bad ? '' : ' — ok'}`);
 process.exitCode = bad ? 1 : 0;

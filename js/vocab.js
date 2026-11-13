@@ -1,8 +1,8 @@
 /* ═══════════════════════════════════════════════
    js/vocab.js — вкладка «Словарь» на главной (index.html#dict)
 
-   Все слова курса из data/vocab/index.json (собирает
-   tools/vocab/build.js из уроков; js/i18n.js подменяет путь на
+   Слова курса и выбранная лексика новостей из data/vocab/index.json
+   (собирает tools/vocab/build.js; js/i18n.js подменяет путь на
    i18n/<lang>/vocab/ — перевод уже на языке интерфейса).
    Грузится при первом открытии вкладки, не раньше.
 
@@ -13,7 +13,7 @@
    • 🔊 — озвучка тем же js/tts.js, что в уроках;
    • ✓ «знаю» хранится на устройстве: localStorage dm_vocab_known
      ({ «der Montag»: 1, … });
-   • ссылка «A1·05» открывает урок, где слово встретилось;
+   • ссылка открывает урок или статью, где слово встретилось;
    • нажатие на слово — карточка: крупно слово, IPA, перевод, 🔊, «знаю»
      и анимация (у 220 слов A1–A2, поле x из tools/vocab/anim.json):
        n:<код> — анимированный эмодзи Google Noto (Lottie, CC BY 4.0),
@@ -30,7 +30,7 @@ const Vocab = (() => {
   const LEVEL_NAMES = { a1: 'Начинающий', a2: 'Элементарный', b1: 'Средний', b2: 'Выше среднего' };
   const MAX_FOUND = 200;
 
-  let items = null;          // [{ de, w, a, ipa, ru, l, f }]
+  let items = null;
   let loading = null;
   let level = null;
   let filter = 'all';
@@ -75,9 +75,18 @@ const Vocab = (() => {
     return loading;
   }
 
-  function lessonHref(id) {
-    const [lv, n] = id.split('-');
-    return `lessons/${lv}/lesson-${n}/index.html`;
+  function sourceHref(it) {
+    if (it.news) return 'news.html#news=' + encodeURIComponent(it.news);
+    const [lv, lesson] = it.l.split('-');
+    return `lessons/${lv}/lesson-${lesson}/index.html`;
+  }
+
+  function sourceTag(it) {
+    return it.l.slice(0, 2).toUpperCase() + '·' + it.l.slice(3);
+  }
+
+  function levelItems() {
+    return items.filter(it => (it.lv || it.l.slice(0, 2)) === level);
   }
 
   // «n:1f642_200d_2195_fe0f» → 🙂‍↕️ (заглушка в карточке, пока грузится Lottie)
@@ -93,7 +102,7 @@ const Vocab = (() => {
 
   function row(it, i, showLevel) {
     const isKnown = !!known[it.de];
-    const tag = it.l.slice(0, 2).toUpperCase() + '·' + it.l.slice(3);
+    const tag = it.news ? '<span>Новости</span>' : sourceTag(it);
     return `<li class="v-item${isKnown ? ' known' : ''}" data-i="${i}">` +
       `<button type="button" class="v-main" data-act="open">` +
         `<span class="v-txt">` +
@@ -101,7 +110,7 @@ const Vocab = (() => {
           `<span class="v-tr">${esc(it.ru)}</span>` +
         `</span>` +
       `</button>` +
-      `<a class="v-lesson${showLevel ? ' lv' : ''}" href="${lessonHref(it.l)}" dir="ltr">${tag}</a>` +
+      `<a class="v-lesson${showLevel ? ' lv' : ''}" href="${sourceHref(it)}" dir="${it.news ? 'auto' : 'ltr'}">${tag}</a>` +
       `<button type="button" class="v-btn v-say" data-act="say" aria-label="Озвучить" title="Озвучить">${SVG_SAY}</button>` +
       `<button type="button" class="v-btn v-know" data-act="know" aria-pressed="${isKnown}" aria-label="Знаю" title="Знаю">${SVG_OK}</button>` +
       `</li>`;
@@ -111,7 +120,7 @@ const Vocab = (() => {
     const list = $('vocabList');
     if (!list || !items) return;
     const q = fold(query.trim());
-    let pool = q ? items.filter(it => it.f.includes(q)) : items.filter(it => it.l.startsWith(level + '-'));
+    let pool = q ? items.filter(it => it.f.includes(q)) : levelItems();
     if (filter === 'known') pool = pool.filter(it => known[it.de]);
     else if (filter === 'learn') pool = pool.filter(it => !known[it.de]);
     const shown = q ? pool.slice(0, MAX_FOUND) : pool;
@@ -128,7 +137,7 @@ const Vocab = (() => {
     const n = items.length;
     const cnt = $('vocabCount');
     if (cnt) cnt.textContent = plural(n, `${n} слово`, `${n} слова`, `${n} слов`);
-    const lv = items.filter(it => it.l.startsWith(level + '-'));
+    const lv = levelItems();
     const k = lv.filter(it => known[it.de]).length;
     $('vLvlCode').textContent = level.toUpperCase();
     $('vLvlName').textContent = LEVEL_NAMES[level];
@@ -223,7 +232,7 @@ const Vocab = (() => {
           `<button type="button" class="v-sheet-btn" data-sheet="say">${SVG_SAY}<span>Слушать</span></button>` +
           `<button type="button" class="v-sheet-btn" id="vsKnow" data-sheet="know" aria-pressed="false">${SVG_OK}<span>Знаю</span></button>` +
         '</div>' +
-        '<a class="v-sheet-lesson" id="vsLesson"><span>Открыть урок</span> <b dir="ltr" id="vsTag"></b></a>' +
+        '<a class="v-sheet-lesson" id="vsLesson"></a>' +
         '<div class="v-sheet-credit" id="vsCredit" hidden>Анимация: Noto Emoji, Google · CC BY 4.0</div>' +
       '</div>';
     bg.addEventListener('click', e => {
@@ -281,8 +290,11 @@ const Vocab = (() => {
     $('vsWord').innerHTML = (it.a ? `<span class="v-art art-${esc(it.a)}">${esc(it.a)}</span> ` : '') + esc(it.w);
     $('vsIpa').textContent = it.ipa || '';
     $('vsTr').textContent = it.ru;
-    $('vsTag').textContent = it.l.slice(0, 2).toUpperCase() + '·' + it.l.slice(3);
-    $('vsLesson').setAttribute('href', lessonHref(it.l));
+    const source = $('vsLesson');
+    source.innerHTML = it.news
+      ? '<span>Читать статью</span>'
+      : `<span>Открыть урок</span> <b dir="ltr">${sourceTag(it)}</b>`;
+    source.setAttribute('href', sourceHref(it));
     const kb = $('vsKnow');
     kb.classList.toggle('on', !!known[it.de]);
     kb.setAttribute('aria-pressed', known[it.de] ? 'true' : 'false');

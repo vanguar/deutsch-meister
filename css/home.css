@@ -518,7 +518,7 @@ html[dir="rtl"] .v-term { text-align: right; }
   background: none; border: 0; padding: 0; margin: 0; font: inherit; color: inherit; cursor: pointer;
 }
 .v-txt { flex: 1; min-width: 0; }
-.v-term, .v-tr { display: block; }
+.v-term, .v-tr { display: block; overflow-wrap: anywhere; }
 
 /* ── карточка слова (js/vocab.js) ── */
 .v-sheet-bg {
