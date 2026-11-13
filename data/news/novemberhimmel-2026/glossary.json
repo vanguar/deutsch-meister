@@ -1,0 +1,467 @@
+{
+  "version": 1,
+  "w": {
+    "allerdings": "allerdings",
+    "als": "als",
+    "am": "an",
+    "auf": "auf",
+    "auge": "Auge",
+    "bedingungen": "Bedingung",
+    "bei": "bei",
+    "beieinander": "beieinander",
+    "besten": "am besten",
+    "bloßem": "bloß",
+    "chancen": "Chance",
+    "dann": "dann",
+    "den": "der/die/das",
+    "der": "der/die/das",
+    "dicht": "dicht",
+    "die": "der/die/das",
+    "ein": "ein/eine",
+    "er": "er",
+    "erde": "Erde",
+    "erkennt": "erkennen",
+    "erreichen": "erreichen",
+    "etwa": "etwa",
+    "etwas": "etwas",
+    "folgen": "folgen",
+    "fünf": "fünf",
+    "für": "für",
+    "geht": "aufgehen",
+    "größer": "groß",
+    "guten": "gut",
+    "hat": "haben",
+    "heller": "hell",
+    "höhepunkt": "Höhepunkt",
+    "ihre": "ihr (её, их)",
+    "ihren": "ihr (её, их)",
+    "im": "in",
+    "immer": "immer",
+    "in": "in",
+    "ist": "sein",
+    "jupiter": "Jupiter",
+    "kann": "können",
+    "leoniden": "Leoniden",
+    "man": "man",
+    "mars": "Mars",
+    "meteore": "Meteor",
+    "mit": "mit",
+    "mond": "Mond",
+    "morgendämmerung": "Morgendämmerung",
+    "nacht": "Nacht",
+    "nahe": "nahe",
+    "nasa": "NASA",
+    "nicht": "nicht",
+    "november": "November",
+    "novemberhimmel": "Novemberhimmel",
+    "nördlichen": "nördlich",
+    "osten": "Osten",
+    "pro": "pro",
+    "recht": "recht",
+    "scheinbar": "scheinbar",
+    "schon": "schon",
+    "sehen": "sehen",
+    "sehr": "sehr",
+    "sind": "sein",
+    "sonnenaufgang": "Sonnenaufgang",
+    "sonst": "sonst",
+    "stehen": "stehen",
+    "stunde": "Stunde",
+    "supermond": "Supermond",
+    "tauriden": "Tauriden",
+    "tipps": "Tipp",
+    "um": "um",
+    "und": "und",
+    "untergegangen": "untergehen",
+    "unterschied": "Unterschied",
+    "veröffentlicht": "veröffentlichen",
+    "vollmond": "Vollmond",
+    "vom": "von",
+    "vor": "vor",
+    "weil": "weil",
+    "wenn": "wenn",
+    "wirken": "wirken",
+    "zu": "zu"
+  },
+  "l": {
+    "allerdings": {
+      "ru": "впрочем, правда",
+      "pos": "нареч."
+    },
+    "als": {
+      "ru": "когда; как; чем",
+      "pos": "союз"
+    },
+    "am besten": {
+      "ru": "лучше всего",
+      "pos": "нареч."
+    },
+    "an": {
+      "ru": "у, к, на",
+      "pos": "предл.",
+      "note": "am = an dem. Тж. отделяемая приставка: anfangen «начинать», annehmen, ansehen, anzünden"
+    },
+    "auf": {
+      "ru": "на, в",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: aufspringen «вскочить», sich aufmachen"
+    },
+    "aufgehen": {
+      "ru": "восходить (о светиле)",
+      "pos": "гл.",
+      "forms": "ging auf · ist aufgegangen"
+    },
+    "Auge": {
+      "ru": "глаз",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Augen"
+    },
+    "Bedingung": {
+      "ru": "условие",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Bedingungen"
+    },
+    "bei": {
+      "ru": "у, при, возле",
+      "pos": "предл."
+    },
+    "beieinander": {
+      "ru": "рядом, вместе",
+      "pos": "нареч.",
+      "note": "nah beieinander — близко друг к другу"
+    },
+    "bloß": {
+      "ru": "голый; простой",
+      "pos": "прил.",
+      "note": "mit bloßem Auge — невооружённым глазом"
+    },
+    "Chance": {
+      "ru": "шанс",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Chancen"
+    },
+    "dann": {
+      "ru": "потом, затем",
+      "pos": "нареч."
+    },
+    "der/die/das": {
+      "ru": "определённый артикль",
+      "pos": "артикль",
+      "note": "Тж. относительное местоимение «который»"
+    },
+    "dicht": {
+      "ru": "плотно; совсем близко",
+      "pos": "нареч.",
+      "note": "dicht vor dem Dorf — прямо перед деревней"
+    },
+    "ein/eine": {
+      "ru": "неопределённый артикль",
+      "pos": "артикль",
+      "note": "einer — «один, некто»"
+    },
+    "er": {
+      "ru": "он",
+      "pos": "мест.",
+      "note": "ihn — его, ihm — ему"
+    },
+    "Erde": {
+      "ru": "Земля (планета); земля, почва",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "erkennen": {
+      "ru": "узнавать; распознавать",
+      "pos": "гл.",
+      "forms": "erkannte · hat erkannt",
+      "note": "sich zu erkennen geben — открыться, назвать себя"
+    },
+    "erreichen": {
+      "ru": "достигать",
+      "pos": "гл.",
+      "forms": "erreichte · hat erreicht"
+    },
+    "etwa": {
+      "ru": "примерно, около",
+      "pos": "нареч."
+    },
+    "etwas": {
+      "ru": "что-то, нечто; немного",
+      "pos": "мест."
+    },
+    "folgen": {
+      "ru": "следовать; слушаться",
+      "pos": "гл.",
+      "forms": "folgte · ist gefolgt"
+    },
+    "fünf": {
+      "ru": "пять",
+      "pos": "числ."
+    },
+    "für": {
+      "ru": "для, за",
+      "pos": "предл."
+    },
+    "groß": {
+      "ru": "большой",
+      "pos": "прил.",
+      "forms": "groß · größer · am größten"
+    },
+    "gut": {
+      "ru": "хороший, добрый",
+      "pos": "прил.",
+      "forms": "gut · besser · am besten",
+      "note": "besser — лучше"
+    },
+    "haben": {
+      "ru": "иметь; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "hatte · hat gehabt"
+    },
+    "hell": {
+      "ru": "светлый, яркий",
+      "pos": "прил.",
+      "forms": "hell · heller · am hellsten"
+    },
+    "Höhepunkt": {
+      "ru": "пик",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Höhepunkte"
+    },
+    "ihr (её, их)": {
+      "ru": "её; их",
+      "pos": "мест."
+    },
+    "immer": {
+      "ru": "всегда, всё",
+      "pos": "нареч.",
+      "note": "immer größer — всё больше"
+    },
+    "in": {
+      "ru": "в (im = in dem, ins = in das)",
+      "pos": "предл."
+    },
+    "Jupiter": {
+      "ru": "Юпитер",
+      "pos": "имя собств.",
+      "note": "с артиклем: der Jupiter"
+    },
+    "können": {
+      "ru": "мочь, уметь",
+      "pos": "гл.",
+      "forms": "konnte · hat gekonnt"
+    },
+    "Leoniden": {
+      "ru": "Леониды",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Leoniden"
+    },
+    "man": {
+      "ru": "неопределённое «кто-то, люди, мы»",
+      "pos": "мест."
+    },
+    "Mars": {
+      "ru": "Марс (планета)",
+      "pos": "имя собств.",
+      "note": "der Mars — с артиклем"
+    },
+    "Meteor": {
+      "ru": "метеор",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Meteore"
+    },
+    "mit": {
+      "ru": "с",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: mitgehen «пойти вместе»"
+    },
+    "Mond": {
+      "ru": "Луна; спутник планеты",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Monde"
+    },
+    "Morgendämmerung": {
+      "ru": "рассвет",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "Nacht": {
+      "art": "die",
+      "pl": "die Nächte",
+      "pos": "сущ.",
+      "ru": "ночь"
+    },
+    "nahe": {
+      "ru": "вблизи, около",
+      "pos": "предл."
+    },
+    "NASA": {
+      "ru": "НАСА, космическое агентство США",
+      "pos": "сокр."
+    },
+    "nicht": {
+      "ru": "не",
+      "pos": "частица"
+    },
+    "November": {
+      "ru": "ноябрь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "Novemberhimmel": {
+      "ru": "ноябрьское небо",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "nördlich": {
+      "ru": "северный",
+      "pos": "прил."
+    },
+    "Osten": {
+      "ru": "восток",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null,
+      "note": "gen Osten — на восток (в сторону Мекки)"
+    },
+    "pro": {
+      "ru": "в, за (на единицу)",
+      "pos": "предл.",
+      "note": "3,5 Kilometer pro Sekunde — 3,5 км в секунду"
+    },
+    "recht": {
+      "ru": "правильный; весьма",
+      "pos": "прил.",
+      "note": "das ist nicht recht — это неправильно; es allen recht machen — всем угодить"
+    },
+    "scheinbar": {
+      "ru": "кажущийся; на вид, только кажется",
+      "pos": "нареч."
+    },
+    "schon": {
+      "ru": "уже",
+      "pos": "нареч."
+    },
+    "sehen": {
+      "ru": "видеть",
+      "pos": "гл.",
+      "forms": "sah · hat gesehen"
+    },
+    "sehr": {
+      "pos": "нареч.",
+      "ru": "очень"
+    },
+    "sein": {
+      "ru": "быть; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "war · ist gewesen"
+    },
+    "Sonnenaufgang": {
+      "ru": "восход солнца",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Sonnenaufgänge"
+    },
+    "sonst": {
+      "pos": "нареч.",
+      "ru": "иначе; помимо этого"
+    },
+    "stehen": {
+      "ru": "стоять",
+      "pos": "гл.",
+      "forms": "stand · hat gestanden"
+    },
+    "Stunde": {
+      "art": "die",
+      "note": "eine halbe Stunde — тж. о расстоянии: полчаса ходу",
+      "pl": "die Stunden",
+      "pos": "сущ.",
+      "ru": "час"
+    },
+    "Supermond": {
+      "ru": "суперлуние",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Supermonde"
+    },
+    "Tauriden": {
+      "ru": "Тауриды",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Tauriden"
+    },
+    "Tipp": {
+      "ru": "совет",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Tipps"
+    },
+    "um": {
+      "ru": "вокруг, в (о времени)",
+      "pos": "предл.",
+      "note": "um … zu — чтобы. Тж. отделяемая приставка: sich umsehen «оглядеться»"
+    },
+    "und": {
+      "ru": "и, а",
+      "pos": "союз"
+    },
+    "untergehen": {
+      "ru": "заходить (о светиле)",
+      "pos": "гл.",
+      "forms": "ging unter · ist untergegangen"
+    },
+    "Unterschied": {
+      "ru": "различие",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Unterschiede"
+    },
+    "veröffentlichen": {
+      "ru": "публиковать",
+      "pos": "гл.",
+      "forms": "veröffentlichte · hat veröffentlicht"
+    },
+    "Vollmond": {
+      "ru": "полнолуние",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Vollmonde"
+    },
+    "von": {
+      "ru": "от, из, о (vom = von dem)",
+      "pos": "предл."
+    },
+    "vor": {
+      "ru": "перед, до; от (страха)",
+      "pos": "предл."
+    },
+    "weil": {
+      "ru": "потому что",
+      "pos": "союз"
+    },
+    "wenn": {
+      "ru": "если; когда",
+      "pos": "союз"
+    },
+    "wirken": {
+      "ru": "казаться",
+      "pos": "гл.",
+      "forms": "wirkte · hat gewirkt"
+    },
+    "zu": {
+      "ru": "к, в; слишком",
+      "pos": "предл.",
+      "note": "zur = zu der, zum = zu dem"
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "id": "ch-01",
+  "title": "Köln feiert den Beginn der Karnevalssaison",
+  "titleRu": "В Кёльне открыли карнавальный сезон",
+  "paragraphs": [
+    {
+      "fig": {
+        "w": 675,
+        "h": 900,
+        "cap": "Открытие карнавального сезона в Кёльне 11 ноября 2022 года. Архивный снимок.",
+        "credit": "Khald1992.. · CC BY-SA 4.0 · Wikimedia Commons",
+        "src": "data/news/koeln-karnevalsauftakt-2026/img/bild.jpg"
+      }
+    },
+    {
+      "s": [
+        {
+          "de": "Am 11. November hat in Köln die neue Karnevalssaison begonnen.",
+          "ru": "11 ноября в Кёльне начался новый карнавальный сезон.",
+          "g": {
+            "7": "карнавальный сезон",
+            "8": "начался"
+          }
+        },
+        {
+          "de": "Nach Angaben der Stadt kamen Tausende Menschen aus Köln und von außerhalb.",
+          "ru": "По данным города, на праздник пришли тысячи жителей Кёльна и гостей.",
+          "g": {
+            "0-3": "по данным города",
+            "10-11": "из других мест"
+          }
+        },
+        {
+          "de": "Trotz Regen und Kälte wurde in der Altstadt, in der Südstadt und im Kwartier Latäng gefeiert.",
+          "ru": "Несмотря на дождь и холод, гулянья прошли в Старом городе, Зюдштадте и квартале Латенг.",
+          "g": {
+            "0-3": "несмотря на дождь и холод",
+            "4+15": "праздновали"
+          }
+        }
+      ]
+    },
+    {
+      "s": [
+        {
+          "de": "Viele gingen zum Feiern in die Kneipen, wo es wärmer und trocken war.",
+          "ru": "Многие отправились праздновать в пабы, где было теплее и сухо.",
+          "g": {
+            "4-6": "в пабы",
+            "9": "теплее"
+          }
+        },
+        {
+          "de": "Zum Karneval gehört in Köln auch das Schunkeln.",
+          "ru": "Часть кёльнского карнавала — традиция качаться в такт музыке.",
+          "g": {
+            "2": "относится",
+            "7": "качание в такт музыке"
+          }
+        },
+        {
+          "de": "Dabei bewegen sich die Feiernden im Takt der Musik von einer Seite zur anderen.",
+          "ru": "Празднующие при этом покачиваются из стороны в сторону в такт музыке.",
+          "g": {
+            "5-8": "в такт музыке",
+            "9-13": "из стороны в сторону"
+          }
+        }
+      ]
+    },
+    {
+      "s": [
+        {
+          "de": "Wegen des Andrangs plante die Stadt Sperrungen rund um die Plätze Alter Markt und Heumarkt.",
+          "ru": "Из-за наплыва людей город запланировал перекрытия вокруг площадей Альтер-Маркт и Хоймаркт.",
+          "g": {
+            "0-2": "из-за наплыва людей",
+            "6": "перекрытия"
+          }
+        },
+        {
+          "de": "In Köln nennt man die Karnevalssaison traditionell die „fünfte Jahreszeit“.",
+          "ru": "В Кёльне карнавальный сезон традиционно называют «пятым временем года».",
+          "g": {
+            "2-3": "называют",
+            "8-9": "пятое время года"
+          }
+        }
+      ]
+    }
+  ]
+}

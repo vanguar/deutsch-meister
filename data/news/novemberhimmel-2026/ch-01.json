@@ -1,0 +1,101 @@
+{
+  "id": "ch-01",
+  "title": "Der Novemberhimmel: Sternschnuppen und ein Supermond",
+  "titleRu": "Ноябрьское небо: падающие звёзды и суперлуние",
+  "paragraphs": [
+    {
+      "fig": {
+        "w": 1100,
+        "h": 668,
+        "cap": "Суперлуние у мемориала Линкольна в Вашингтоне в 2016 году. Архивный снимок.",
+        "credit": "NASA/Joel Kowsky · Public domain",
+        "src": "data/news/novemberhimmel-2026/img/bild.jpg"
+      }
+    },
+    {
+      "s": [
+        {
+          "de": "Die NASA hat ihre Tipps für den Novemberhimmel veröffentlicht.",
+          "ru": "NASA опубликовало советы по наблюдению за ноябрьским небом.",
+          "g": {
+            "4": "советы",
+            "8": "опубликовало"
+          }
+        },
+        {
+          "de": "Um den 12. November erreichen die nördlichen Tauriden ihren Höhepunkt.",
+          "ru": "Около 12 ноября Северные Тауриды достигают максимума.",
+          "g": {
+            "5-6": "Северные Тауриды",
+            "8": "максимум"
+          }
+        },
+        {
+          "de": "Bei sehr guten Bedingungen sind etwa fünf Meteore pro Stunde zu sehen.",
+          "ru": "При очень хороших условиях можно увидеть около пяти метеоров в час.",
+          "g": {
+            "0-3": "при очень хороших условиях",
+            "8-9": "в час"
+          }
+        }
+      ]
+    },
+    {
+      "s": [
+        {
+          "de": "Am 15. und 16. November stehen Mars und Jupiter vor Sonnenaufgang scheinbar dicht beieinander.",
+          "ru": "15 и 16 ноября перед восходом Солнца Марс и Юпитер будут казаться очень близкими друг к другу.",
+          "g": {
+            "7-8": "перед восходом Солнца",
+            "9-11": "на вид близко друг к другу"
+          }
+        },
+        {
+          "de": "In der Nacht vom 17. auf den 18. November folgen die Leoniden.",
+          "ru": "В ночь с 17 на 18 ноября наступит максимум Леонид.",
+          "g": {
+            "0-2": "ночью",
+            "9": "Леониды"
+          }
+        },
+        {
+          "de": "Die besten Chancen hat man vor der Morgendämmerung, wenn der Mond schon untergegangen ist.",
+          "ru": "Лучше всего наблюдать перед рассветом, когда Луна уже зайдёт.",
+          "g": {
+            "5-7": "перед рассветом",
+            "12": "зашла"
+          }
+        }
+      ]
+    },
+    {
+      "s": [
+        {
+          "de": "Am 24. November geht im Osten ein Supermond auf.",
+          "ru": "24 ноября на востоке взойдёт суперлуна.",
+          "g": {
+            "2+7": "взойдёт",
+            "3-4": "на востоке"
+          }
+        },
+        {
+          "de": "Weil der Vollmond der Erde dann recht nahe ist, kann er etwas größer und heller wirken als sonst.",
+          "ru": "Поскольку в этот момент полная Луна находится довольно близко к Земле, она может казаться чуть больше и ярче обычного.",
+          "g": {
+            "2": "полная Луна",
+            "12-14": "больше и ярче",
+            "16-17": "чем обычно"
+          }
+        },
+        {
+          "de": "Den Unterschied erkennt man mit bloßem Auge allerdings nicht immer.",
+          "ru": "Впрочем, разница не всегда заметна невооружённым глазом.",
+          "g": {
+            "1": "разница",
+            "4-6": "невооружённым глазом"
+          }
+        }
+      ]
+    }
+  ]
+}

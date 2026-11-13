@@ -1,0 +1,96 @@
+{
+  "id": "ch-01",
+  "title": "Die Inflation in Deutschland sinkt im Oktober auf 2,8 Prozent",
+  "titleRu": "Инфляция в Германии в октябре снизилась до 2,8 процента",
+  "paragraphs": [
+    {
+      "fig": {
+        "w": 960,
+        "h": 540,
+        "cap": "Годовая инфляция в Германии: 3,3 процента в сентябре и 2,8 процента в октябре 2026 года.",
+        "credit": "Deutsch Meister · Destatis",
+        "src": "data/news/inflation-oktober-2026/img/bild.jpg"
+      }
+    },
+    {
+      "s": [
+        {
+          "de": "Im Oktober 2026 waren die Verbraucherpreise in Deutschland um 2,8 Prozent höher als ein Jahr zuvor.",
+          "ru": "В октябре 2026 года потребительские цены в Германии были на 2,8 процента выше, чем годом ранее.",
+          "g": {
+            "4": "потребительские цены",
+            "11-13": "годом ранее"
+          }
+        },
+        {
+          "de": "Im September hatte die Inflationsrate noch bei 3,3 Prozent gelegen.",
+          "ru": "В сентябре инфляция ещё составляла 3,3 процента.",
+          "g": {
+            "4": "уровень инфляции",
+            "8": "составлял"
+          }
+        },
+        {
+          "de": "Energie blieb der wichtigste Grund für die höheren Preise.",
+          "ru": "Энергия оставалась главной причиной роста цен.",
+          "g": {
+            "1": "оставалась",
+            "2-4": "главная причина"
+          }
+        }
+      ]
+    },
+    {
+      "s": [
+        {
+          "de": "Energieprodukte kosteten 12,2 Prozent mehr als im Oktober 2025.",
+          "ru": "Энергоносители стоили на 12,2 процента дороже, чем в октябре 2025 года.",
+          "g": {
+            "0": "энергоносители",
+            "1": "стоили"
+          }
+        },
+        {
+          "de": "Im Vergleich zum September sanken die Preise insgesamt aber um 0,2 Prozent.",
+          "ru": "Однако по сравнению с сентябрём цены в целом снизились на 0,2 процента.",
+          "g": {
+            "0-3": "по сравнению с сентябрём",
+            "4": "снизились",
+            "7": "в целом"
+          }
+        },
+        {
+          "de": "Kraftstoffe waren im selben Zeitraum 5,5 Prozent günstiger.",
+          "ru": "Топливо за тот же период подешевело на 5,5 процента.",
+          "g": {
+            "0": "топливо",
+            "2-4": "за тот же период",
+            "6": "дешевле"
+          }
+        }
+      ]
+    },
+    {
+      "s": [
+        {
+          "de": "Seit dem 1. Oktober gibt es wieder einen Tankrabatt durch eine niedrigere Energiesteuer.",
+          "ru": "С 1 октября в Германии снова действует пониженный налог на топливо.",
+          "g": {
+            "3-5": "снова действует",
+            "7": "льгота на топливо",
+            "11": "налог на энергоносители"
+          }
+        },
+        {
+          "de": "Ohne Energie und Lebensmittel lag die Teuerung gegenüber dem Vorjahr bei 2,1 Prozent.",
+          "ru": "Без учёта энергии и продуктов цены выросли на 2,1 процента к прошлому году.",
+          "g": {
+            "3": "продукты питания",
+            "6": "рост цен",
+            "7-9": "по сравнению с прошлым годом"
+          }
+        }
+      ]
+    }
+  ]
+}

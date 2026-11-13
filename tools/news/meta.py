@@ -999,3 +999,108 @@ META.update({
 })
 
 ORDER = ['autosalon-paris-2026'] + ORDER
+
+
+META['novemberhimmel-2026'] = {
+    'title': 'Der Novemberhimmel: Sternschnuppen und ein Supermond',
+    'titleRu': 'Ноябрьское небо: падающие звёзды и суперлуние',
+    'rubric': 'astronomy',
+    'level': 'B1',
+    'levelNote': 'Сравнения с als, придаточные с wenn и weil, лексика наблюдений за небом.',
+    'published': '2026-11-02',
+    'added': '2026-11-13',
+    'source': 'NASA',
+    'sourceUrl': 'https://science.nasa.gov/solar-system/skywatching/whats-up-november-2026-skywatching-tips-from-nasa/',
+    'blurb': 'В середине ноября Марс и Юпитер видны рядом, затем наступает максимум Леонид. 24 ноября можно наблюдать суперлуние.',
+    'license': 'Текст — адаптированный пересказ; фото и кадрированная обложка — NASA/Joel Kowsky · Public domain · https://commons.wikimedia.org/wiki/File:Supermoon_(NHQ201611140009).jpg',
+    'figs': {
+        'bild': {'w': 1100, 'h': 668,
+                 'cap': 'Суперлуние у мемориала Линкольна в Вашингтоне в 2016 году. Архивный снимок.',
+                 'credit': 'NASA/Joel Kowsky · Public domain'},
+    },
+}
+ORDER.append('novemberhimmel-2026')
+
+
+META['messel-eule-2026'] = {
+    'title': 'Ein Fossil aus Messel: Diese Eule jagte wohl am Tag',
+    'titleRu': 'Ископаемая сова из Месселя, вероятно, охотилась днём',
+    'rubric': 'science',
+    'level': 'B1',
+    'levelNote': 'Претерит (war, lebte, fand), перфект и косвенный вопрос с wann.',
+    'published': '2026-11-03',
+    'added': '2026-11-13',
+    'source': 'Senckenberg · Current Biology',
+    'sourceUrl': 'https://www.senckenberg.de/de/pressemeldungen/noch-keine-nachteule-aussergewoehnliches-vogelfossil-aus-der-grube-messel-beschrieben/',
+    'blurb': 'В карьере Мессель нашли небольшую сову возрастом около 47 миллионов лет. Крылья птицы и остатки еды в желудке помогли учёным понять, когда она охотилась.',
+    'license': 'Текст — адаптированный пересказ; фото и кадрированная обложка — René Schröder · CC BY-SA 4.0 · Wikimedia Commons · https://commons.wikimedia.org/wiki/File:Wiki_DSC06007_UNESCO-Weltnaturerbe_Grube-Messel.jpg · https://creativecommons.org/licenses/by-sa/4.0/',
+    'figs': {
+        'bild': {'w': 1100, 'h': 733,
+                 'cap': 'Смотровая площадка карьера Мессель в Гессене. Именно в этом карьере нашли ископаемую сову.',
+                 'credit': 'René Schröder · CC BY-SA 4.0 · Wikimedia Commons'},
+    },
+}
+ORDER.append('messel-eule-2026')
+
+
+META['apple-tv-gebaerdensprache-2026'] = {
+    'title': 'Apple TV bietet Filme mit Gebärdensprache an',
+    'titleRu': 'В Apple TV появился перевод фильмов на жестовый язык',
+    'rubric': 'tech',
+    'level': 'B1',
+    'levelNote': 'Отделяемые глаголы (bietet … an, schaltet … ein), придаточные с dass, лексика цифровой доступности.',
+    'published': '2026-11-10',
+    'added': '2026-11-13',
+    'source': 'Apple Newsroom',
+    'sourceUrl': 'https://www.apple.com/newsroom/2026/11/apple-tv-introduces-new-sign-language-interpretation-feature/',
+    'blurb': 'С 13 ноября некоторые фильмы в Apple TV можно смотреть с переводом на жестовый язык. Одним из первых стал фильм о Джуди Хьюманн.',
+    'license': 'Текст — адаптированный пересказ; фото и кадрированная обложка — Dillan Payne · CC BY-SA 4.0 · Wikimedia Commons · https://commons.wikimedia.org/wiki/File:Apple_TV_4K_(3rd_Generation,_2022)_with_Siri_Remote_(cropped).jpg · https://creativecommons.org/licenses/by-sa/4.0/',
+    'figs': {
+        'bild': {'w': 1100, 'h': 616,
+                 'cap': 'Приставка Apple TV 4K образца 2022 года и пульт Siri Remote. Иллюстрация к статье.',
+                 'credit': 'Dillan Payne · CC BY-SA 4.0 · Wikimedia Commons'},
+    },
+}
+ORDER.append('apple-tv-gebaerdensprache-2026')
+
+
+META['inflation-oktober-2026'] = {
+    'title': 'Die Inflation in Deutschland sinkt im Oktober auf 2,8 Prozent',
+    'titleRu': 'Инфляция в Германии в октябре снизилась до 2,8 процента',
+    'rubric': 'economy',
+    'level': 'B1',
+    'levelNote': 'Сравнения с als, разница между auf и um при изменении величины, лексика цен и статистики.',
+    'published': '2026-11-11',
+    'added': '2026-11-13',
+    'source': 'Statistisches Bundesamt (Destatis)',
+    'sourceUrl': 'https://www.destatis.de/DE/Presse/Pressemitteilungen/2026/11/PD26_392_611.html',
+    'blurb': 'В октябре цены в Германии выросли на 2,8 процента к прошлому году. Энергия оставалась главным фактором роста, хотя за месяц топливо подешевело.',
+    'license': 'Текст — адаптированный пересказ; график — Deutsch Meister по данным Destatis.',
+    'figs': {
+        'bild': {'w': 960, 'h': 540,
+                 'cap': 'Годовая инфляция в Германии: 3,3 процента в сентябре и 2,8 процента в октябре 2026 года.',
+                 'credit': 'Deutsch Meister · Destatis'},
+    },
+}
+ORDER.append('inflation-oktober-2026')
+
+
+META['koeln-karnevalsauftakt-2026'] = {
+    'title': 'Köln feiert den Beginn der Karnevalssaison',
+    'titleRu': 'В Кёльне открыли карнавальный сезон',
+    'rubric': 'events',
+    'level': 'B1',
+    'levelNote': 'Претерит и перфект, предлог trotz с родительным падежом, лексика городских праздников.',
+    'published': '2026-11-11',
+    'added': '2026-11-13',
+    'source': 'Stadt Köln',
+    'sourceUrl': 'https://www.stadt-koeln.de/politik-und-verwaltung/presse/mitteilungen/28769/index.html',
+    'blurb': '11 ноября тысячи человек отметили начало карнавального сезона в Кёльне. Из-за дождя и холода многие праздновали в пабах.',
+    'license': 'Текст — адаптированный пересказ; фото и кадрированная обложка — Khald1992.. · CC BY-SA 4.0 · Wikimedia Commons · https://commons.wikimedia.org/wiki/File:Karneval,_K%C3%B6ln,_Germany.jpg · https://creativecommons.org/licenses/by-sa/4.0/',
+    'figs': {
+        'bild': {'w': 675, 'h': 900,
+                 'cap': 'Открытие карнавального сезона в Кёльне 11 ноября 2022 года. Архивный снимок.',
+                 'credit': 'Khald1992.. · CC BY-SA 4.0 · Wikimedia Commons'},
+    },
+}
+ORDER.append('koeln-karnevalsauftakt-2026')

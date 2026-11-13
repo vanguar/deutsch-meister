@@ -4,12 +4,14 @@
 // Проверяет витрину рубрик (счётчики, последняя статья, свежесть), страницы
 // рубрик (только свои статьи, порядок, уровень, даты, «назад»), статью в
 // ридере (фото целиком на странице, подписи, подсказки, перевод), язык uk.
+import { readFileSync } from 'node:fs';
 import { start, SP } from './cdp.mjs';
 
 const B = 'http://127.0.0.1:8765';
 const RUBRICS = ['astronomy', 'science', 'tech', 'economy', 'events'];
 const READY = `document.querySelectorAll('.news-tile.is-live').length > 0`;
 const CARDS = `document.querySelectorAll('.news-card').length > 0`;
+const catalog = JSON.parse(readFileSync(new URL('../../data/news/index.json', import.meta.url), 'utf8')).items;
 const c = await start();
 let fail = 0;
 const ok = (cond, msg) => { console.log((cond ? '  ok   ' : '  FAIL ') + msg); if (!cond) fail++; };
@@ -44,7 +46,8 @@ async function checkArticle(id, width, height) {
       level: (ct.querySelector('.rd-news-level') || {}).textContent });
   })()`));
   ok(r.lastCol <= r.pages - 1, `${id}: последнее слово на странице ${r.lastCol + 1} из ${r.pages} — текст не теряется`);
-  ok(r.figs.length >= 3, `${id}: фото в статье: ${r.figs.length}`);
+  const expectedPhotos = catalog.find(item => item.id === id).photos;
+  ok(r.figs.length === expectedPhotos, `${id}: фото в статье: ${r.figs.length} из ${expectedPhotos}`);
   ok(r.figs.every(f => f.img > 0), `${id}: все фото загрузились`);
   ok(r.figs.every(f => f.h <= r.h + 1 && f.rects === 1), `${id}: каждое фото целиком на одной странице (стр. ${Math.round(r.h)}px)`);
   ok(r.figs.every(f => f.cap > 10), `${id}: у всех фото есть подписи`);
@@ -85,7 +88,7 @@ const hub = JSON.parse(await c.ev(`JSON.stringify({
   rubricHidden: document.getElementById('newsRubric').hidden,
   scrollX: document.documentElement.scrollWidth > innerWidth
 })`));
-ok(idx.length === 29, `статей в индексе: ${idx.length}`);
+ok(idx.length === catalog.length, `статей в индексе: ${idx.length} из ${catalog.length}`);
 ok(hub.tiles.map(t => t.id).join() === RUBRICS.join(), 'рубрики: ' + hub.tiles.map(t => t.id).join(', '));
 ok(hub.tiles.every(t => t.live), 'во всех рубриках есть статьи');
 ok(hub.cards === 0 && hub.rubricHidden, 'на витрине нет «простыни» статей — только рубрики');
@@ -93,7 +96,14 @@ for (const t of hub.tiles) {
   const list = idx.filter(it => it.rubric === t.id).sort(byDate);
   ok(t.count === list.length && t.last === list[0].title, `${t.id}: ${t.count} шт., последняя — ${t.last}`);
 }
-ok(hub.tiles.some(t => t.fresh), 'рубрики со свежим подсвечены: ' + hub.tiles.filter(t => t.fresh).map(t => t.id));
+const today = await c.ev('new Date().setHours(0, 0, 0, 0)');
+for (const t of hub.tiles) {
+  const fresh = idx.filter(it => it.rubric === t.id).some(it => {
+    const [year, month, day] = it.published.split('-').map(Number);
+    return Math.round((today - new Date(year, month - 1, day)) / 86_400_000) <= 3;
+  });
+  ok(t.fresh === fresh, `${t.id}: отметка свежести соответствует дате публикации`);
+}
 ok(!hub.scrollX, 'витрина: нет горизонтальной прокрутки на 390px');
 await c.shot('news_hub_390.png');
 

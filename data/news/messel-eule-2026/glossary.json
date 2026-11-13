@@ -1,0 +1,412 @@
+{
+  "version": 1,
+  "w": {
+    "aktiv": "aktiv",
+    "am": "an",
+    "auch": "auch",
+    "bei": "bei",
+    "beschrieben": "beschreiben",
+    "besser": "gut",
+    "dabei": "dabei",
+    "das": "der/die/das",
+    "den": "der/die/das",
+    "der": "der/die/das",
+    "die": "der/die/das",
+    "eher": "eher",
+    "ein": "ein/eine",
+    "einem": "ein/eine",
+    "einer": "ein/eine",
+    "erhalten": "erhalten",
+    "etwa": "etwa",
+    "eule": "Eule",
+    "eulen": "Eule",
+    "eulenfossil": "Eulenfossil",
+    "fachzeitschrift": "Fachzeitschrift",
+    "fand": "finden",
+    "fast": "fast",
+    "federn": "Feder",
+    "flügeln": "Flügel",
+    "forschende": "Forschende",
+    "fund": "Fund",
+    "ganze": "ganz",
+    "gefunden": "finden",
+    "groß": "groß",
+    "grube": "Grube",
+    "haben": "haben",
+    "hat": "haben",
+    "hessen": "Hessen",
+    "hilft": "helfen",
+    "im": "in",
+    "in": "in",
+    "insekt": "Insekt",
+    "ist": "sein",
+    "jagt": "jagen",
+    "jahren": "Jahr",
+    "jetzt": "jetzt",
+    "jägern": "Jäger",
+    "kleine": "klein",
+    "lebte": "leben",
+    "magen": "Magen",
+    "messel": "Messel",
+    "millionen": "Million",
+    "mit": "mit",
+    "nacht": "Nacht",
+    "passen": "passen",
+    "reste": "Rest",
+    "rund": "rund",
+    "schabe": "Schabe",
+    "schillernden": "schillernd",
+    "seltenes": "selten",
+    "senckenberg": "Senckenberg",
+    "sichtbar": "sichtbar",
+    "sind": "sein",
+    "skelett": "Skelett",
+    "sogar": "sogar",
+    "tag": "Tag",
+    "tageslicht": "Tageslicht",
+    "team": "Team",
+    "und": "und",
+    "verstehen": "verstehen",
+    "vogel": "Vogel",
+    "von": "von",
+    "vor": "vor",
+    "wahrscheinlich": "wahrscheinlich",
+    "wann": "wann",
+    "war": "sein",
+    "wurden": "werden",
+    "zentimeter": "Zentimeter",
+    "zu": "zu",
+    "zwölf": "zwölf"
+  },
+  "l": {
+    "aktiv": {
+      "ru": "активный",
+      "pos": "прил."
+    },
+    "an": {
+      "ru": "у, к, на",
+      "pos": "предл.",
+      "note": "am = an dem. Тж. отделяемая приставка: anfangen «начинать», annehmen, ansehen, anzünden"
+    },
+    "auch": {
+      "ru": "тоже, также; даже",
+      "pos": "частица"
+    },
+    "bei": {
+      "ru": "у, при, возле",
+      "pos": "предл."
+    },
+    "beschreiben": {
+      "ru": "описывать",
+      "pos": "гл.",
+      "forms": "beschrieb · hat beschrieben"
+    },
+    "dabei": {
+      "ru": "при этом, при том",
+      "pos": "нареч."
+    },
+    "der/die/das": {
+      "ru": "определённый артикль",
+      "pos": "артикль",
+      "note": "Тж. относительное местоимение «который»"
+    },
+    "eher": {
+      "ru": "скорее; раньше",
+      "pos": "нареч.",
+      "note": "сравнительная степень от bald; в этом тексте — «скорее»: Ihr könnet eher … die Hand geben"
+    },
+    "ein/eine": {
+      "ru": "неопределённый артикль",
+      "pos": "артикль",
+      "note": "einer — «один, некто»"
+    },
+    "erhalten": {
+      "ru": "получать",
+      "pos": "гл.",
+      "forms": "erhielt · hat erhalten"
+    },
+    "etwa": {
+      "ru": "примерно, около",
+      "pos": "нареч."
+    },
+    "Eule": {
+      "ru": "сова",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Eulen"
+    },
+    "Eulenfossil": {
+      "ru": "окаменелость совы",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Eulenfossilien"
+    },
+    "Fachzeitschrift": {
+      "ru": "научный (специальный) журнал",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Fachzeitschriften"
+    },
+    "fast": {
+      "ru": "почти",
+      "pos": "нареч."
+    },
+    "Feder": {
+      "ru": "перо",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Federn"
+    },
+    "finden": {
+      "ru": "находить",
+      "pos": "гл.",
+      "forms": "fand · hat gefunden"
+    },
+    "Flügel": {
+      "ru": "крыло",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Flügel"
+    },
+    "Forschende": {
+      "ru": "исследователь; исследователи",
+      "pos": "субст. прил.",
+      "decl": "der/die Forschende · ein Forschender / eine Forschende · die Forschenden"
+    },
+    "Fund": {
+      "ru": "находка",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Funde"
+    },
+    "ganz": {
+      "ru": "весь, целый; совсем",
+      "pos": "прил."
+    },
+    "groß": {
+      "ru": "большой",
+      "pos": "прил.",
+      "forms": "groß · größer · am größten"
+    },
+    "Grube": {
+      "ru": "карьер; яма",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Gruben"
+    },
+    "gut": {
+      "ru": "хороший, добрый",
+      "pos": "прил.",
+      "forms": "gut · besser · am besten",
+      "note": "besser — лучше"
+    },
+    "haben": {
+      "ru": "иметь; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "hatte · hat gehabt"
+    },
+    "helfen": {
+      "ru": "помогать",
+      "pos": "гл.",
+      "forms": "half · hat geholfen"
+    },
+    "Hessen": {
+      "ru": "Гессен",
+      "pos": "геогр."
+    },
+    "in": {
+      "ru": "в (im = in dem, ins = in das)",
+      "pos": "предл."
+    },
+    "Insekt": {
+      "ru": "насекомое",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Insekten"
+    },
+    "jagen": {
+      "ru": "охотиться",
+      "pos": "гл.",
+      "forms": "jagte · hat gejagt"
+    },
+    "Jahr": {
+      "ru": "год",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Jahre"
+    },
+    "jetzt": {
+      "ru": "сейчас, теперь",
+      "pos": "нареч."
+    },
+    "Jäger": {
+      "ru": "охотник",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Jäger"
+    },
+    "klein": {
+      "ru": "маленький",
+      "pos": "прил."
+    },
+    "leben": {
+      "ru": "жить",
+      "pos": "гл.",
+      "forms": "lebte · hat gelebt"
+    },
+    "Magen": {
+      "ru": "желудок",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Mägen",
+      "note": "sich den Magen verderben — испортить себе желудок"
+    },
+    "Messel": {
+      "ru": "Мессель",
+      "pos": "геогр."
+    },
+    "Million": {
+      "ru": "миллион",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Millionen"
+    },
+    "mit": {
+      "ru": "с",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: mitgehen «пойти вместе»"
+    },
+    "Nacht": {
+      "art": "die",
+      "pl": "die Nächte",
+      "pos": "сущ.",
+      "ru": "ночь"
+    },
+    "passen": {
+      "ru": "подходить, соответствовать",
+      "pos": "гл.",
+      "forms": "passte · hat gepasst",
+      "note": "passen zu — подходить к, согласоваться с"
+    },
+    "Rest": {
+      "ru": "остаток",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Reste"
+    },
+    "rund": {
+      "ru": "около, примерно; круглый",
+      "pos": "нареч./прил.",
+      "note": "rund 550.000 — около 550 000"
+    },
+    "Schabe": {
+      "ru": "таракан",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Schaben"
+    },
+    "schillernd": {
+      "ru": "переливчатый",
+      "pos": "прил."
+    },
+    "sein": {
+      "ru": "быть; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "war · ist gewesen"
+    },
+    "selten": {
+      "ru": "редкий",
+      "pos": "прил."
+    },
+    "Senckenberg": {
+      "ru": "Зенкенберг (научное общество)",
+      "pos": "имя собств."
+    },
+    "sichtbar": {
+      "ru": "видимый",
+      "pos": "прил."
+    },
+    "Skelett": {
+      "ru": "скелет",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Skelette"
+    },
+    "sogar": {
+      "ru": "даже",
+      "pos": "частица"
+    },
+    "Tag": {
+      "ru": "день",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Tage"
+    },
+    "Tageslicht": {
+      "ru": "дневной свет",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "Team": {
+      "ru": "команда",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Teams"
+    },
+    "und": {
+      "ru": "и, а",
+      "pos": "союз"
+    },
+    "verstehen": {
+      "ru": "понимать",
+      "pos": "гл.",
+      "forms": "verstand · hat verstanden",
+      "note": "sich verstehen auf — знать толк в чём-л."
+    },
+    "Vogel": {
+      "ru": "птица",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Vögel"
+    },
+    "von": {
+      "ru": "от, из, о (vom = von dem)",
+      "pos": "предл."
+    },
+    "vor": {
+      "ru": "перед, до; от (страха)",
+      "pos": "предл."
+    },
+    "wahrscheinlich": {
+      "pos": "прил.",
+      "ru": "вероятный, скорее всего"
+    },
+    "wann": {
+      "ru": "когда",
+      "pos": "нареч.",
+      "note": "dann und wann — время от времени"
+    },
+    "werden": {
+      "ru": "становиться",
+      "pos": "гл.",
+      "forms": "wurde · ist geworden",
+      "note": "Вспомогательный глагол будущего времени и пассива"
+    },
+    "Zentimeter": {
+      "ru": "сантиметр",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Zentimeter"
+    },
+    "zu": {
+      "ru": "к, в; слишком",
+      "pos": "предл.",
+      "note": "zur = zu der, zum = zu dem"
+    },
+    "zwölf": {
+      "ru": "двенадцать",
+      "pos": "числ."
+    }
+  }
+}

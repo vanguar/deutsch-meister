@@ -1,0 +1,380 @@
+{
+  "version": 1,
+  "w": {
+    "ab": "ab",
+    "am": "an",
+    "amerikanische": "amerikanisch",
+    "an": "an",
+    "angebot": "Angebot",
+    "app": "App",
+    "apple": "Apple",
+    "auch": "auch",
+    "aufgewachsen": "aufwachsen",
+    "ausgewählte": "ausgewählt",
+    "behinderungen": "Behinderung",
+    "being": "Being Heumann",
+    "beteiligt": "beteiligt",
+    "bietet": "anbieten",
+    "britische": "britisch",
+    "dass": "dass",
+    "dem": "der/die/das",
+    "den": "der/die/das",
+    "der": "der/die/das",
+    "die": "der/die/das",
+    "ein": "ein/eine",
+    "eine": "ein/eine",
+    "einsetzte": "sich einsetzen",
+    "einstellungen": "Einstellung",
+    "entwicklung": "Entwicklung",
+    "er": "er",
+    "erzählt": "erzählen",
+    "es": "es",
+    "f": "F1",
+    "film": "Film",
+    "filme": "Film",
+    "funktion": "Funktion",
+    "für": "für",
+    "gebärdensprache": "Gebärdensprache",
+    "gehörlose": "gehörlos",
+    "gehört": "gehören",
+    "geschichte": "Geschichte",
+    "gibt": "geben",
+    "hat": "haben",
+    "heumann": "Heumann",
+    "in": "in",
+    "ist": "sein",
+    "judy": "Judy",
+    "menschen": "Mensch",
+    "mit": "mit",
+    "möchte": "mögen",
+    "neue": "neu",
+    "november": "November",
+    "nutzen": "nutzen",
+    "rechte": "Recht",
+    "schaltet": "einschalten",
+    "seine": "sein (его, свой)",
+    "sich": "sich",
+    "sie": "sie",
+    "sind": "sein",
+    "start": "Start",
+    "symbol": "Symbol",
+    "tests": "Test",
+    "tv": "TV",
+    "tv-app": "TV-App",
+    "und": "und",
+    "verfügbar": "verfügbar",
+    "von": "von",
+    "vorgestellt": "vorstellen",
+    "waren": "sein",
+    "wer": "wer",
+    "zeigt": "anzeigen",
+    "zum": "zu",
+    "übersetzungen": "Übersetzung"
+  },
+  "l": {
+    "ab": {
+      "note": "Тж. отделяемая приставка: absteigen «слезать», abnehmen",
+      "pos": "предл.",
+      "ru": "от, с; прочь"
+    },
+    "amerikanisch": {
+      "ru": "американский",
+      "pos": "прил."
+    },
+    "an": {
+      "ru": "у, к, на",
+      "pos": "предл.",
+      "note": "am = an dem. Тж. отделяемая приставка: anfangen «начинать», annehmen, ansehen, anzünden"
+    },
+    "anbieten": {
+      "ru": "предлагать",
+      "pos": "гл.",
+      "forms": "bot an · hat angeboten"
+    },
+    "Angebot": {
+      "ru": "предложение",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Angebote"
+    },
+    "anzeigen": {
+      "ru": "показывать, отображать",
+      "pos": "гл.",
+      "forms": "zeigte an · hat angezeigt"
+    },
+    "App": {
+      "ru": "приложение (для телефона)",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Apps"
+    },
+    "Apple": {
+      "ru": "Apple (американская компания)",
+      "pos": "имя собств."
+    },
+    "auch": {
+      "ru": "тоже, также; даже",
+      "pos": "частица"
+    },
+    "aufwachsen": {
+      "ru": "расти, вырастать",
+      "pos": "гл.",
+      "forms": "wuchs auf · ist aufgewachsen"
+    },
+    "ausgewählt": {
+      "ru": "отобранный",
+      "pos": "прил."
+    },
+    "Behinderung": {
+      "ru": "инвалидность",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Behinderungen"
+    },
+    "Being Heumann": {
+      "ru": "«Being Heumann» (название фильма)",
+      "pos": "имя собств."
+    },
+    "beteiligt": {
+      "ru": "вовлечённый",
+      "pos": "прил."
+    },
+    "britisch": {
+      "ru": "британский",
+      "pos": "прил."
+    },
+    "dass": {
+      "ru": "что; чтобы",
+      "pos": "союз"
+    },
+    "der/die/das": {
+      "ru": "определённый артикль",
+      "pos": "артикль",
+      "note": "Тж. относительное местоимение «который»"
+    },
+    "ein/eine": {
+      "ru": "неопределённый артикль",
+      "pos": "артикль",
+      "note": "einer — «один, некто»"
+    },
+    "einschalten": {
+      "ru": "включать",
+      "pos": "гл.",
+      "forms": "schaltete ein · hat eingeschaltet"
+    },
+    "Einstellung": {
+      "ru": "настройка",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Einstellungen"
+    },
+    "Entwicklung": {
+      "ru": "разработка, развитие",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Entwicklungen"
+    },
+    "er": {
+      "ru": "он",
+      "pos": "мест.",
+      "note": "ihn — его, ihm — ему"
+    },
+    "erzählen": {
+      "ru": "рассказывать",
+      "pos": "гл.",
+      "forms": "erzählte · hat erzählt"
+    },
+    "es": {
+      "ru": "оно; это",
+      "pos": "мест."
+    },
+    "F1": {
+      "ru": "«F1» (название фильма)",
+      "pos": "имя собств."
+    },
+    "Film": {
+      "ru": "фильм",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Filme"
+    },
+    "Funktion": {
+      "ru": "функция",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Funktionen"
+    },
+    "für": {
+      "ru": "для, за",
+      "pos": "предл."
+    },
+    "geben": {
+      "ru": "давать",
+      "pos": "гл.",
+      "forms": "gab · hat gegeben"
+    },
+    "Gebärdensprache": {
+      "ru": "жестовый язык",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Gebärdensprachen"
+    },
+    "gehören": {
+      "ru": "принадлежать, относиться",
+      "pos": "гл.",
+      "forms": "gehörte · hat gehört",
+      "note": "zu etwas gehören — относиться к чему-то, входить в"
+    },
+    "gehörlos": {
+      "ru": "глухой (о человеке)",
+      "pos": "прил."
+    },
+    "Geschichte": {
+      "ru": "история",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Geschichten"
+    },
+    "haben": {
+      "ru": "иметь; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "hatte · hat gehabt"
+    },
+    "Heumann": {
+      "ru": "Хьюманн",
+      "pos": "имя собств."
+    },
+    "in": {
+      "ru": "в (im = in dem, ins = in das)",
+      "pos": "предл."
+    },
+    "Judy": {
+      "ru": "Джуди",
+      "pos": "имя собств."
+    },
+    "Mensch": {
+      "ru": "человек",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Menschen",
+      "decl": "n-Deklination: des Menschen · dem/den Menschen"
+    },
+    "mit": {
+      "ru": "с",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: mitgehen «пойти вместе»"
+    },
+    "mögen": {
+      "ru": "любить; хотеть",
+      "pos": "гл.",
+      "forms": "mochte · hat gemocht",
+      "note": "leiden mögen — выносить, терпеть"
+    },
+    "neu": {
+      "ru": "новый",
+      "pos": "прил."
+    },
+    "November": {
+      "ru": "ноябрь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "nutzen": {
+      "ru": "использовать",
+      "pos": "гл.",
+      "forms": "nutzte · hat genutzt"
+    },
+    "Recht": {
+      "ru": "право",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Rechte"
+    },
+    "sein": {
+      "ru": "быть; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "war · ist gewesen"
+    },
+    "sein (его, свой)": {
+      "ru": "его, свой",
+      "pos": "мест."
+    },
+    "sich": {
+      "ru": "себя, себе",
+      "pos": "мест.",
+      "note": "Возвратное местоимение, часть возвратного глагола: sich auf den Weg machen, sich setzen, sich legen, sich nähern, sich gefallen lassen, sich getrauen, sich umsehen"
+    },
+    "sich einsetzen": {
+      "ru": "выступать в защиту",
+      "pos": "гл.",
+      "forms": "setzte sich ein · hat sich eingesetzt"
+    },
+    "sie": {
+      "ru": "она; они; Вы",
+      "pos": "мест."
+    },
+    "Start": {
+      "ru": "старт, запуск",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Starts"
+    },
+    "Symbol": {
+      "ru": "значок, символ",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Symbole"
+    },
+    "Test": {
+      "ru": "тест",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Tests"
+    },
+    "TV": {
+      "ru": "телевидение",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "TV-App": {
+      "ru": "приложение для просмотра фильмов и передач",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die TV-Apps"
+    },
+    "und": {
+      "ru": "и, а",
+      "pos": "союз"
+    },
+    "verfügbar": {
+      "ru": "доступный",
+      "pos": "прил."
+    },
+    "von": {
+      "ru": "от, из, о (vom = von dem)",
+      "pos": "предл."
+    },
+    "vorstellen": {
+      "ru": "представлять",
+      "pos": "гл.",
+      "forms": "stellte vor · hat vorgestellt"
+    },
+    "wer": {
+      "ru": "кто",
+      "pos": "мест."
+    },
+    "zu": {
+      "ru": "к, в; слишком",
+      "pos": "предл.",
+      "note": "zur = zu der, zum = zu dem"
+    },
+    "Übersetzung": {
+      "ru": "перевод",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Übersetzungen"
+    }
+  }
+}

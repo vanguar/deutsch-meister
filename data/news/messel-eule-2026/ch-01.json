@@ -1,0 +1,96 @@
+{
+  "id": "ch-01",
+  "title": "Ein Fossil aus Messel: Diese Eule jagte wohl am Tag",
+  "titleRu": "Ископаемая сова из Месселя, вероятно, охотилась днём",
+  "paragraphs": [
+    {
+      "fig": {
+        "w": 1100,
+        "h": 733,
+        "cap": "Смотровая площадка карьера Мессель в Гессене. Именно в этом карьере нашли ископаемую сову.",
+        "credit": "René Schröder · CC BY-SA 4.0 · Wikimedia Commons",
+        "src": "data/news/messel-eule-2026/img/bild.jpg"
+      }
+    },
+    {
+      "s": [
+        {
+          "de": "In der Grube Messel in Hessen haben Forschende ein seltenes Eulenfossil gefunden.",
+          "ru": "В карьере Мессель в Гессене исследователи нашли редкую ископаемую сову.",
+          "g": {
+            "2": "карьер",
+            "7": "исследователи",
+            "10": "ископаемая сова"
+          }
+        },
+        {
+          "de": "Das Team von Senckenberg hat den Fund jetzt in einer Fachzeitschrift beschrieben.",
+          "ru": "Команда Зенкенберга описала находку в научном журнале.",
+          "g": {
+            "6": "находка",
+            "10": "научный журнал"
+          }
+        },
+        {
+          "de": "Die kleine Eule lebte vor rund 47 Millionen Jahren und war etwa zwölf Zentimeter groß.",
+          "ru": "Маленькая сова жила около 47 миллионов лет назад, а её размер составлял примерно двенадцать сантиметров.",
+          "g": {
+            "3": "жила",
+            "11-12": "двенадцать сантиметров"
+          }
+        }
+      ]
+    },
+    {
+      "s": [
+        {
+          "de": "Fast das ganze Skelett ist erhalten, sogar Reste von Federn sind sichtbar.",
+          "ru": "Сохранился почти весь скелет, видны даже остатки перьев.",
+          "g": {
+            "3": "скелет",
+            "4-5": "сохранился",
+            "7-9": "остатки перьев"
+          }
+        },
+        {
+          "de": "Im Magen fand das Team die Reste einer Schabe mit schillernden Flügeln.",
+          "ru": "В желудке исследователи нашли остатки таракана с переливающимися крыльями.",
+          "g": {
+            "0-1": "в желудке",
+            "8": "таракан",
+            "10-11": "переливающиеся крылья"
+          }
+        },
+        {
+          "de": "Das Insekt war wahrscheinlich am Tag aktiv.",
+          "ru": "Вероятно, это насекомое было активно днём.",
+          "g": {
+            "1": "насекомое",
+            "4-5": "днём"
+          }
+        }
+      ]
+    },
+    {
+      "s": [
+        {
+          "de": "Auch die Federn der Eule passen eher zu einem Vogel, der bei Tageslicht jagt.",
+          "ru": "Перья совы тоже больше похожи на перья птиц, которые охотятся при дневном свете.",
+          "g": {
+            "6": "скорее",
+            "11-12": "при дневном свете",
+            "13": "охотится"
+          }
+        },
+        {
+          "de": "Der Fund hilft dabei, besser zu verstehen, wann Eulen zu Jägern der Nacht wurden.",
+          "ru": "Находка помогает лучше понять, когда совы стали ночными охотниками.",
+          "g": {
+            "2-3": "помогает",
+            "10-12": "ночными охотниками"
+          }
+        }
+      ]
+    }
+  ]
+}

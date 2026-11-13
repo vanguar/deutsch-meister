@@ -1,0 +1,325 @@
+{
+  "version": 1,
+  "w": {
+    "aber": "aber",
+    "als": "als",
+    "bei": "bei",
+    "blieb": "bleiben",
+    "dem": "der/die/das",
+    "der": "der/die/das",
+    "deutschland": "Deutschland",
+    "die": "der/die/das",
+    "durch": "durch",
+    "ein": "ein/eine",
+    "eine": "ein/eine",
+    "einen": "ein/eine",
+    "energie": "Energie",
+    "energieprodukte": "Energieprodukt",
+    "energiesteuer": "Energiesteuer",
+    "es": "es",
+    "für": "für",
+    "gegenüber": "gegenüber",
+    "gelegen": "liegen",
+    "gibt": "geben",
+    "grund": "Grund",
+    "günstiger": "günstig (цена)",
+    "hatte": "haben",
+    "höher": "hoch",
+    "höheren": "hoch",
+    "im": "in",
+    "in": "in",
+    "inflationsrate": "Inflationsrate",
+    "insgesamt": "insgesamt",
+    "jahr": "Jahr",
+    "kosteten": "kosten",
+    "kraftstoffe": "Kraftstoff",
+    "lag": "liegen",
+    "lebensmittel": "Lebensmittel",
+    "mehr": "mehr",
+    "niedrigere": "niedrig",
+    "noch": "noch",
+    "ohne": "ohne",
+    "oktober": "Oktober",
+    "preise": "Preis",
+    "prozent": "Prozent",
+    "sanken": "sinken",
+    "seit": "seit",
+    "selben": "derselbe",
+    "september": "September",
+    "tankrabatt": "Tankrabatt",
+    "teuerung": "Teuerung",
+    "um": "um",
+    "und": "und",
+    "verbraucherpreise": "Verbraucherpreis",
+    "vergleich": "Vergleich",
+    "vorjahr": "Vorjahr",
+    "waren": "sein",
+    "wichtigste": "wichtig",
+    "wieder": "wieder",
+    "zeitraum": "Zeitraum",
+    "zum": "zu",
+    "zuvor": "zuvor"
+  },
+  "l": {
+    "aber": {
+      "ru": "но, однако",
+      "pos": "союз"
+    },
+    "als": {
+      "ru": "когда; как; чем",
+      "pos": "союз"
+    },
+    "bei": {
+      "ru": "у, при, возле",
+      "pos": "предл."
+    },
+    "bleiben": {
+      "ru": "оставаться",
+      "pos": "гл.",
+      "forms": "blieb · ist geblieben"
+    },
+    "der/die/das": {
+      "ru": "определённый артикль",
+      "pos": "артикль",
+      "note": "Тж. относительное местоимение «который»"
+    },
+    "derselbe": {
+      "note": "склоняется по частям: desselben, derselben, dasselbe",
+      "pos": "мест.",
+      "ru": "тот же самый"
+    },
+    "Deutschland": {
+      "ru": "Германия",
+      "pos": "геогр."
+    },
+    "durch": {
+      "ru": "через, сквозь, из-за",
+      "pos": "предл."
+    },
+    "ein/eine": {
+      "ru": "неопределённый артикль",
+      "pos": "артикль",
+      "note": "einer — «один, некто»"
+    },
+    "Energie": {
+      "ru": "энергия",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Energien"
+    },
+    "Energieprodukt": {
+      "ru": "энергоноситель",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Energieprodukte"
+    },
+    "Energiesteuer": {
+      "ru": "налог на энергоносители",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Energiesteuern"
+    },
+    "es": {
+      "ru": "оно; это",
+      "pos": "мест."
+    },
+    "für": {
+      "ru": "для, за",
+      "pos": "предл."
+    },
+    "geben": {
+      "ru": "давать",
+      "pos": "гл.",
+      "forms": "gab · hat gegeben"
+    },
+    "gegenüber": {
+      "ru": "по отношению к",
+      "pos": "нареч.",
+      "note": "стоит после слова: diesen Mitteln gegenüber — по отношению к этим средствам"
+    },
+    "Grund": {
+      "ru": "основание, дно; причина",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Gründe",
+      "note": "der Sache auf den Grund kommen — дойти до сути дела"
+    },
+    "günstig (цена)": {
+      "ru": "недорогой, выгодный",
+      "pos": "прил."
+    },
+    "haben": {
+      "ru": "иметь; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "hatte · hat gehabt"
+    },
+    "hoch": {
+      "ru": "высокий",
+      "pos": "прил.",
+      "forms": "hoch · höher · am höchsten"
+    },
+    "in": {
+      "ru": "в (im = in dem, ins = in das)",
+      "pos": "предл."
+    },
+    "Inflationsrate": {
+      "ru": "уровень инфляции",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Inflationsraten"
+    },
+    "insgesamt": {
+      "ru": "все вместе, в общей сложности",
+      "pos": "нареч."
+    },
+    "Jahr": {
+      "ru": "год",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Jahre"
+    },
+    "kosten": {
+      "ru": "стоить",
+      "pos": "гл.",
+      "forms": "kostete · hat gekostet",
+      "note": "es koste, was es wolle — чего бы это ни стоило"
+    },
+    "Kraftstoff": {
+      "ru": "топливо",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Kraftstoffe"
+    },
+    "Lebensmittel": {
+      "ru": "продукт питания",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Lebensmittel"
+    },
+    "liegen": {
+      "ru": "лежать",
+      "pos": "гл.",
+      "forms": "lag · hat gelegen"
+    },
+    "mehr": {
+      "ru": "больше",
+      "pos": "нареч.",
+      "note": "В nicht/kein … mehr — больше не. Формально компаратив от viel"
+    },
+    "niedrig": {
+      "ru": "низкий",
+      "pos": "прил."
+    },
+    "noch": {
+      "ru": "ещё",
+      "pos": "нареч."
+    },
+    "ohne": {
+      "ru": "без",
+      "pos": "предл."
+    },
+    "Oktober": {
+      "ru": "октябрь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Oktober"
+    },
+    "Preis": {
+      "ru": "цена; премия, приз",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Preise"
+    },
+    "Prozent": {
+      "ru": "процент",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Prozente",
+      "note": "после числа не изменяется: 1,3 Prozent"
+    },
+    "sein": {
+      "ru": "быть; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "war · ist gewesen"
+    },
+    "seit": {
+      "ru": "с (какого-то времени)",
+      "pos": "предл."
+    },
+    "September": {
+      "ru": "сентябрь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die September"
+    },
+    "sinken": {
+      "ru": "снижаться",
+      "pos": "гл.",
+      "forms": "sank · ist gesunken"
+    },
+    "Tankrabatt": {
+      "ru": "скидка на топливо",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Tankrabatte"
+    },
+    "Teuerung": {
+      "ru": "рост цен, подорожание",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "um": {
+      "ru": "вокруг, в (о времени)",
+      "pos": "предл.",
+      "note": "um … zu — чтобы. Тж. отделяемая приставка: sich umsehen «оглядеться»"
+    },
+    "und": {
+      "ru": "и, а",
+      "pos": "союз"
+    },
+    "Verbraucherpreis": {
+      "ru": "потребительская цена",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Verbraucherpreise"
+    },
+    "Vergleich": {
+      "ru": "сравнение",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Vergleiche",
+      "note": "im Vergleich zu — по сравнению с"
+    },
+    "Vorjahr": {
+      "ru": "предыдущий год",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Vorjahre"
+    },
+    "wichtig": {
+      "ru": "важный",
+      "pos": "прил."
+    },
+    "wieder": {
+      "ru": "снова",
+      "pos": "нареч."
+    },
+    "Zeitraum": {
+      "ru": "период, промежуток времени",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Zeiträume"
+    },
+    "zu": {
+      "ru": "к, в; слишком",
+      "pos": "предл.",
+      "note": "zur = zu der, zum = zu dem"
+    },
+    "zuvor": {
+      "ru": "до того, раньше",
+      "pos": "нареч.",
+      "note": "ein Jahr zuvor — годом раньше"
+    }
+  }
+}

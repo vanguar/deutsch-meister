@@ -2804,3 +2804,181 @@ ARTICLES['autosalon-paris-2026'] = [
          {"Dann": "тогда", "soll+dauern": "должна длиться", "sie": "она", "zwei Wochenenden": "два уик-энда"}),
     ],
 ]
+
+
+ARTICLES['novemberhimmel-2026'] = [
+    ('fig', 'bild'),
+    [
+        ('Die NASA hat ihre Tipps für den Novemberhimmel veröffentlicht.',
+         'NASA опубликовало советы по наблюдению за ноябрьским небом.',
+         {'Tipps': 'советы', 'veröffentlicht': 'опубликовало'}),
+        ('Um den 12. November erreichen die nördlichen Tauriden ihren Höhepunkt.',
+         'Около 12 ноября Северные Тауриды достигают максимума.',
+         {'nördlichen Tauriden': 'Северные Тауриды', 'Höhepunkt': 'максимум'}),
+        ('Bei sehr guten Bedingungen sind etwa fünf Meteore pro Stunde zu sehen.',
+         'При очень хороших условиях можно увидеть около пяти метеоров в час.',
+         {'Bei sehr guten Bedingungen': 'при очень хороших условиях', 'pro Stunde': 'в час'}),
+    ],
+    [
+        ('Am 15. und 16. November stehen Mars und Jupiter vor Sonnenaufgang scheinbar dicht beieinander.',
+         '15 и 16 ноября перед восходом Солнца Марс и Юпитер будут казаться очень близкими друг к другу.',
+         {'vor Sonnenaufgang': 'перед восходом Солнца', 'scheinbar dicht beieinander': 'на вид близко друг к другу'}),
+        ('In der Nacht vom 17. auf den 18. November folgen die Leoniden.',
+         'В ночь с 17 на 18 ноября наступит максимум Леонид.',
+         {'In der Nacht': 'ночью', 'Leoniden': 'Леониды'}),
+        ('Die besten Chancen hat man vor der Morgendämmerung, wenn der Mond schon untergegangen ist.',
+         'Лучше всего наблюдать перед рассветом, когда Луна уже зайдёт.',
+         {'vor der Morgendämmerung': 'перед рассветом', 'untergegangen': 'зашла'}),
+    ],
+    [
+        ('Am 24. November geht im Osten ein Supermond auf.',
+         '24 ноября на востоке взойдёт суперлуна.',
+         {'geht+auf': 'взойдёт', 'im Osten': 'на востоке'}),
+        ('Weil der Vollmond der Erde dann recht nahe ist, kann er etwas größer und heller wirken als sonst.',
+         'Поскольку в этот момент полная Луна находится довольно близко к Земле, она может казаться чуть больше и ярче обычного.',
+         {'Vollmond': 'полная Луна', 'größer und heller': 'больше и ярче', 'als sonst': 'чем обычно'}),
+        ('Den Unterschied erkennt man mit bloßem Auge allerdings nicht immer.',
+         'Впрочем, разница не всегда заметна невооружённым глазом.',
+         {'Unterschied': 'разница', 'mit bloßem Auge': 'невооружённым глазом'}),
+    ],
+]
+
+
+ARTICLES['messel-eule-2026'] = [
+    ('fig', 'bild'),
+    [
+        ('In der Grube Messel in Hessen haben Forschende ein seltenes Eulenfossil gefunden.',
+         'В карьере Мессель в Гессене исследователи нашли редкую ископаемую сову.',
+         {'Grube': 'карьер', 'Forschende': 'исследователи', 'Eulenfossil': 'ископаемая сова'}),
+        ('Das Team von Senckenberg hat den Fund jetzt in einer Fachzeitschrift beschrieben.',
+         'Команда Зенкенберга описала находку в научном журнале.',
+         {'Fund': 'находка', 'Fachzeitschrift': 'научный журнал'}),
+        ('Die kleine Eule lebte vor rund 47 Millionen Jahren und war etwa zwölf Zentimeter groß.',
+         'Маленькая сова жила около 47 миллионов лет назад, а её размер составлял примерно двенадцать сантиметров.',
+         {'lebte': 'жила', 'zwölf Zentimeter': 'двенадцать сантиметров'}),
+    ],
+    [
+        ('Fast das ganze Skelett ist erhalten, sogar Reste von Federn sind sichtbar.',
+         'Сохранился почти весь скелет, видны даже остатки перьев.',
+         {'Skelett': 'скелет', 'ist erhalten': 'сохранился', 'Reste von Federn': 'остатки перьев'}),
+        ('Im Magen fand das Team die Reste einer Schabe mit schillernden Flügeln.',
+         'В желудке исследователи нашли остатки таракана с переливающимися крыльями.',
+         {'Im Magen': 'в желудке', 'Schabe': 'таракан', 'schillernden Flügeln': 'переливающиеся крылья'}),
+        ('Das Insekt war wahrscheinlich am Tag aktiv.',
+         'Вероятно, это насекомое было активно днём.',
+         {'Insekt': 'насекомое', 'am Tag': 'днём'}),
+    ],
+    [
+        ('Auch die Federn der Eule passen eher zu einem Vogel, der bei Tageslicht jagt.',
+         'Перья совы тоже больше похожи на перья птиц, которые охотятся при дневном свете.',
+         {'eher': 'скорее', 'bei Tageslicht': 'при дневном свете', 'jagt': 'охотится'}),
+        ('Der Fund hilft dabei, besser zu verstehen, wann Eulen zu Jägern der Nacht wurden.',
+         'Находка помогает лучше понять, когда совы стали ночными охотниками.',
+         {'hilft dabei': 'помогает', 'Jägern der Nacht': 'ночными охотниками'}),
+    ],
+]
+
+
+ARTICLES['apple-tv-gebaerdensprache-2026'] = [
+    ('fig', 'bild'),
+    [
+        ('Apple hat am 10. November eine neue Funktion für seine TV-App vorgestellt.',
+         '10 ноября Apple представила новую функцию своего приложения для просмотра фильмов.',
+         {'eine neue Funktion': 'новую функцию', 'vorgestellt': 'представила'}),
+        ('Ab dem 13. November bietet Apple TV ausgewählte Filme mit Gebärdensprache an.',
+         'С 13 ноября Apple TV предлагает отдельные фильмы с переводом на жестовый язык.',
+         {'bietet+an': 'предлагает', 'ausgewählte Filme': 'отдельные фильмы', 'Gebärdensprache': 'жестовый язык'}),
+        ('Zum Start gehört der Film „Being Heumann“ zum Angebot.',
+         'При запуске в подборку вошёл фильм «Being Heumann».',
+         {'Zum Start': 'при запуске', 'Angebot': 'предложение'}),
+    ],
+    [
+        ('Er erzählt die Geschichte von Judy Heumann, die sich für die Rechte von Menschen mit Behinderungen einsetzte.',
+         'Он рассказывает о Джуди Хьюманн, которая боролась за права людей с инвалидностью.',
+         {'Menschen mit Behinderungen': 'людей с инвалидностью', 'einsetzte': 'отстаивала'}),
+        ('Auch den Film „F1“ gibt es mit Übersetzungen in amerikanische und britische Gebärdensprache.',
+         'Фильм «F1» также доступен с переводом на американский и британский жестовые языки.',
+         {'gibt es': 'есть в каталоге', 'Übersetzungen': 'переводами'}),
+        ('Wer die Funktion nutzen möchte, schaltet sie in den Einstellungen der App ein.',
+         'Чтобы воспользоваться функцией, её нужно включить в настройках приложения.',
+         {'schaltet+ein': 'включает', 'in den Einstellungen': 'в настройках'}),
+    ],
+    [
+        ('Ein Symbol zeigt an, dass ein Film mit Gebärdensprache verfügbar ist.',
+         'Специальный значок показывает, что фильм доступен с переводом на жестовый язык.',
+         {'zeigt+an': 'показывает', 'verfügbar': 'доступен'}),
+        ('Gehörlose Menschen und Menschen, die mit Gebärdensprache aufgewachsen sind, waren an der Entwicklung und an den Tests beteiligt.',
+         'В разработке и тестировании участвовали глухие люди и люди, для которых жестовый язык родной.',
+         {'aufgewachsen': 'выросли', 'beteiligt': 'участвовали'}),
+    ],
+]
+
+
+ARTICLES['inflation-oktober-2026'] = [
+    ('fig', 'bild'),
+    [
+        ('Im Oktober 2026 waren die Verbraucherpreise in Deutschland um 2,8 Prozent höher als ein Jahr zuvor.',
+         'В октябре 2026 года потребительские цены в Германии были на 2,8 процента выше, чем годом ранее.',
+         {'Verbraucherpreise': 'потребительские цены', 'ein Jahr zuvor': 'годом ранее'}),
+        ('Im September hatte die Inflationsrate noch bei 3,3 Prozent gelegen.',
+         'В сентябре инфляция ещё составляла 3,3 процента.',
+         {'Inflationsrate': 'уровень инфляции', 'gelegen': 'составлял'}),
+        ('Energie blieb der wichtigste Grund für die höheren Preise.',
+         'Энергия оставалась главной причиной роста цен.',
+         {'blieb': 'оставалась', 'der wichtigste Grund': 'главная причина'}),
+    ],
+    [
+        ('Energieprodukte kosteten 12,2 Prozent mehr als im Oktober 2025.',
+         'Энергоносители стоили на 12,2 процента дороже, чем в октябре 2025 года.',
+         {'Energieprodukte': 'энергоносители', 'kosteten': 'стоили'}),
+        ('Im Vergleich zum September sanken die Preise insgesamt aber um 0,2 Prozent.',
+         'Однако по сравнению с сентябрём цены в целом снизились на 0,2 процента.',
+         {'Im Vergleich zum September': 'по сравнению с сентябрём', 'sanken': 'снизились', 'insgesamt': 'в целом'}),
+        ('Kraftstoffe waren im selben Zeitraum 5,5 Prozent günstiger.',
+         'Топливо за тот же период подешевело на 5,5 процента.',
+         {'Kraftstoffe': 'топливо', 'im selben Zeitraum': 'за тот же период', 'günstiger': 'дешевле'}),
+    ],
+    [
+        ('Seit dem 1. Oktober gibt es wieder einen Tankrabatt durch eine niedrigere Energiesteuer.',
+         'С 1 октября в Германии снова действует пониженный налог на топливо.',
+         {'gibt es wieder': 'снова действует', 'Tankrabatt': 'льгота на топливо', 'Energiesteuer': 'налог на энергоносители'}),
+        ('Ohne Energie und Lebensmittel lag die Teuerung gegenüber dem Vorjahr bei 2,1 Prozent.',
+         'Без учёта энергии и продуктов цены выросли на 2,1 процента к прошлому году.',
+         {'Lebensmittel': 'продукты питания', 'Teuerung': 'рост цен', 'gegenüber dem Vorjahr': 'по сравнению с прошлым годом'}),
+    ],
+]
+
+
+ARTICLES['koeln-karnevalsauftakt-2026'] = [
+    ('fig', 'bild'),
+    [
+        ('Am 11. November hat in Köln die neue Karnevalssaison begonnen.',
+         '11 ноября в Кёльне начался новый карнавальный сезон.',
+         {'Karnevalssaison': 'карнавальный сезон', 'begonnen': 'начался'}),
+        ('Nach Angaben der Stadt kamen Tausende Menschen aus Köln und von außerhalb.',
+         'По данным города, на праздник пришли тысячи жителей Кёльна и гостей.',
+         {'Nach Angaben der Stadt': 'по данным города', 'von außerhalb': 'из других мест'}),
+        ('Trotz Regen und Kälte wurde in der Altstadt, in der Südstadt und im Kwartier Latäng gefeiert.',
+         'Несмотря на дождь и холод, гулянья прошли в Старом городе, Зюдштадте и квартале Латенг.',
+         {'Trotz Regen und Kälte': 'несмотря на дождь и холод', 'wurde+gefeiert': 'праздновали'}),
+    ],
+    [
+        ('Viele gingen zum Feiern in die Kneipen, wo es wärmer und trocken war.',
+         'Многие отправились праздновать в пабы, где было теплее и сухо.',
+         {'in die Kneipen': 'в пабы', 'wärmer': 'теплее'}),
+        ('Zum Karneval gehört in Köln auch das Schunkeln.',
+         'Часть кёльнского карнавала — традиция качаться в такт музыке.',
+         {'gehört': 'относится', 'Schunkeln': 'качание в такт музыке'}),
+        ('Dabei bewegen sich die Feiernden im Takt der Musik von einer Seite zur anderen.',
+         'Празднующие при этом покачиваются из стороны в сторону в такт музыке.',
+         {'im Takt der Musik': 'в такт музыке', 'von einer Seite zur anderen': 'из стороны в сторону'}),
+    ],
+    [
+        ('Wegen des Andrangs plante die Stadt Sperrungen rund um die Plätze Alter Markt und Heumarkt.',
+         'Из-за наплыва людей город запланировал перекрытия вокруг площадей Альтер-Маркт и Хоймаркт.',
+         {'Wegen des Andrangs': 'из-за наплыва людей', 'Sperrungen': 'перекрытия'}),
+        ('In Köln nennt man die Karnevalssaison traditionell die „fünfte Jahreszeit“.',
+         'В Кёльне карнавальный сезон традиционно называют «пятым временем года».',
+         {'nennt man': 'называют', 'fünfte Jahreszeit': 'пятое время года'}),
+    ],
+]

@@ -1,0 +1,20 @@
+{
+  "id": "inflation-oktober-2026",
+  "kind": "news",
+  "title": "Die Inflation in Deutschland sinkt im Oktober auf 2,8 Prozent",
+  "titleRu": "Инфляция в Германии в октябре снизилась до 2,8 процента",
+  "rubric": "economy",
+  "level": "B1",
+  "levelNote": "Сравнения с als, разница между auf и um при изменении величины, лексика цен и статистики.",
+  "published": "2026-11-11",
+  "added": "2026-11-13",
+  "source": "Statistisches Bundesamt (Destatis)",
+  "sourceUrl": "https://www.destatis.de/DE/Presse/Pressemitteilungen/2026/11/PD26_392_611.html",
+  "blurb": "В октябре цены в Германии выросли на 2,8 процента к прошлому году. Энергия оставалась главным фактором роста, хотя за месяц топливо подешевело.",
+  "cover": "data/news/inflation-oktober-2026/img/cover.jpg",
+  "chapters": 1,
+  "words": 81,
+  "minutes": 1,
+  "photos": 1,
+  "license": "Текст — адаптированный пересказ; график — Deutsch Meister по данным Destatis."
+}

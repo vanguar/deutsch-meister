@@ -1,0 +1,397 @@
+{
+  "version": 1,
+  "w": {
+    "alter": "Alter Markt",
+    "altstadt": "Altstadt",
+    "am": "an",
+    "anderen": "ander",
+    "andrangs": "Andrang",
+    "angaben": "Angabe",
+    "auch": "auch",
+    "aus": "aus",
+    "außerhalb": "außerhalb",
+    "begonnen": "beginnen",
+    "bewegen": "bewegen",
+    "dabei": "dabei",
+    "das": "der/die/das",
+    "der": "der/die/das",
+    "des": "der/die/das",
+    "die": "der/die/das",
+    "einer": "ein/eine",
+    "es": "es",
+    "feiern": "feiern",
+    "feiernden": "Feiernde",
+    "fünfte": "fünft",
+    "gefeiert": "feiern",
+    "gehört": "gehören",
+    "gingen": "gehen",
+    "hat": "haben",
+    "heumarkt": "Heumarkt",
+    "im": "in",
+    "in": "in",
+    "jahreszeit": "Jahreszeit",
+    "kamen": "kommen",
+    "karneval": "Karneval",
+    "karnevalssaison": "Karnevalssaison",
+    "kneipen": "Kneipe",
+    "kwartier": "Kwartier Latäng",
+    "kälte": "Kälte",
+    "köln": "Köln",
+    "latäng": "Kwartier Latäng",
+    "man": "man",
+    "markt": "Alter Markt",
+    "menschen": "Mensch",
+    "musik": "Musik",
+    "nach": "nach",
+    "nennt": "nennen",
+    "neue": "neu",
+    "november": "November",
+    "plante": "planen",
+    "plätze": "Platz",
+    "regen": "Regen",
+    "rund": "rund",
+    "schunkeln": "Schunkeln",
+    "seite": "Seite",
+    "sich": "sich",
+    "sperrungen": "Sperrung",
+    "stadt": "Stadt",
+    "südstadt": "Südstadt",
+    "takt": "Takt",
+    "tausende": "Tausend",
+    "traditionell": "traditionell",
+    "trocken": "trocken",
+    "trotz": "trotz",
+    "um": "um",
+    "und": "und",
+    "viele": "viel",
+    "von": "von",
+    "war": "sein",
+    "wegen": "wegen",
+    "wo": "wo",
+    "wurde": "werden",
+    "wärmer": "warm",
+    "zum": "zu",
+    "zur": "zu"
+  },
+  "l": {
+    "Alter Markt": {
+      "ru": "Альтер-Маркт (площадь в Кёльне)",
+      "pos": "геогр."
+    },
+    "Altstadt": {
+      "ru": "старый город, исторический центр",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Altstädte"
+    },
+    "an": {
+      "ru": "у, к, на",
+      "pos": "предл.",
+      "note": "am = an dem. Тж. отделяемая приставка: anfangen «начинать», annehmen, ansehen, anzünden"
+    },
+    "ander": {
+      "pos": "прил.",
+      "ru": "другой, иной"
+    },
+    "Andrang": {
+      "ru": "наплыв людей",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "Angabe": {
+      "ru": "данные, сведения",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Angaben",
+      "note": "nach Angaben — по данным"
+    },
+    "auch": {
+      "ru": "тоже, также; даже",
+      "pos": "частица"
+    },
+    "aus": {
+      "ru": "из",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: auslöschen «погасить»"
+    },
+    "außerhalb": {
+      "ru": "вне, за пределами",
+      "pos": "предл."
+    },
+    "beginnen": {
+      "ru": "начинать, начинаться",
+      "pos": "гл.",
+      "forms": "begann · hat begonnen"
+    },
+    "bewegen": {
+      "ru": "двигать",
+      "pos": "гл.",
+      "forms": "bewegte · hat bewegt",
+      "note": "sich bewegen — двигаться"
+    },
+    "dabei": {
+      "ru": "при этом, при том",
+      "pos": "нареч."
+    },
+    "der/die/das": {
+      "ru": "определённый артикль",
+      "pos": "артикль",
+      "note": "Тж. относительное местоимение «который»"
+    },
+    "ein/eine": {
+      "ru": "неопределённый артикль",
+      "pos": "артикль",
+      "note": "einer — «один, некто»"
+    },
+    "es": {
+      "ru": "оно; это",
+      "pos": "мест."
+    },
+    "feiern": {
+      "ru": "праздновать",
+      "pos": "гл.",
+      "forms": "feierte · hat gefeiert"
+    },
+    "Feiernde": {
+      "ru": "участник праздника; участники праздника",
+      "pos": "субст. прил.",
+      "decl": "der/die Feiernde · ein Feiernder / eine Feiernde · die Feiernden"
+    },
+    "fünft": {
+      "ru": "пятый",
+      "pos": "числ."
+    },
+    "gehen": {
+      "ru": "идти, ходить",
+      "pos": "гл.",
+      "forms": "ging · ist gegangen"
+    },
+    "gehören": {
+      "ru": "принадлежать, относиться",
+      "pos": "гл.",
+      "forms": "gehörte · hat gehört",
+      "note": "zu etwas gehören — относиться к чему-то, входить в"
+    },
+    "haben": {
+      "ru": "иметь; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "hatte · hat gehabt"
+    },
+    "Heumarkt": {
+      "ru": "Хоймаркт (площадь в Кёльне)",
+      "pos": "геогр."
+    },
+    "in": {
+      "ru": "в (im = in dem, ins = in das)",
+      "pos": "предл."
+    },
+    "Jahreszeit": {
+      "ru": "время года",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Jahreszeiten"
+    },
+    "Karneval": {
+      "ru": "карнавал",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Karnevale"
+    },
+    "Karnevalssaison": {
+      "ru": "карнавальный сезон",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Karnevalssaisons"
+    },
+    "Kneipe": {
+      "ru": "паб, бар",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Kneipen"
+    },
+    "kommen": {
+      "ru": "приходить, приезжать",
+      "pos": "гл.",
+      "forms": "kam · ist gekommen"
+    },
+    "Kwartier Latäng": {
+      "ru": "Квартир-Латенг (квартал Кёльна)",
+      "pos": "геогр."
+    },
+    "Kälte": {
+      "ru": "холод",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "Köln": {
+      "ru": "Кёльн",
+      "pos": "геогр."
+    },
+    "man": {
+      "ru": "неопределённое «кто-то, люди, мы»",
+      "pos": "мест."
+    },
+    "Mensch": {
+      "ru": "человек",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Menschen",
+      "decl": "n-Deklination: des Menschen · dem/den Menschen"
+    },
+    "Musik": {
+      "ru": "музыка",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "nach": {
+      "ru": "в, на, после, по",
+      "pos": "предл."
+    },
+    "nennen": {
+      "ru": "называть",
+      "pos": "гл.",
+      "forms": "nannte · hat genannt"
+    },
+    "neu": {
+      "ru": "новый",
+      "pos": "прил."
+    },
+    "November": {
+      "ru": "ноябрь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "planen": {
+      "ru": "планировать",
+      "pos": "гл.",
+      "forms": "plante · hat geplant"
+    },
+    "Platz": {
+      "art": "der",
+      "note": "Platz da! — дорогу!, посторонись!",
+      "pl": "die Plätze",
+      "pos": "сущ.",
+      "ru": "место; площадь"
+    },
+    "Regen": {
+      "ru": "дождь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "rund": {
+      "ru": "около, примерно; круглый",
+      "pos": "нареч./прил.",
+      "note": "rund 550.000 — около 550 000"
+    },
+    "Schunkeln": {
+      "ru": "качание в такт музыке",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "sein": {
+      "ru": "быть; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "war · ist gewesen"
+    },
+    "Seite": {
+      "ru": "сторона; страница, сайт",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Seiten"
+    },
+    "sich": {
+      "ru": "себя, себе",
+      "pos": "мест.",
+      "note": "Возвратное местоимение, часть возвратного глагола: sich auf den Weg machen, sich setzen, sich legen, sich nähern, sich gefallen lassen, sich getrauen, sich umsehen"
+    },
+    "Sperrung": {
+      "ru": "перекрытие",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Sperrungen"
+    },
+    "Stadt": {
+      "ru": "город",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Städte"
+    },
+    "Südstadt": {
+      "ru": "Зюдштадт (южный район Кёльна)",
+      "pos": "геогр."
+    },
+    "Takt": {
+      "ru": "такт, ритм",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Takte"
+    },
+    "Tausend": {
+      "ru": "тысяча",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Tausende",
+      "note": "Tausende von … — тысячи …"
+    },
+    "traditionell": {
+      "ru": "по традиции, традиционно",
+      "pos": "нареч."
+    },
+    "trocken": {
+      "ru": "сухой",
+      "pos": "прил."
+    },
+    "trotz": {
+      "ru": "несмотря на",
+      "pos": "предлог"
+    },
+    "um": {
+      "ru": "вокруг, в (о времени)",
+      "pos": "предл.",
+      "note": "um … zu — чтобы. Тж. отделяемая приставка: sich umsehen «оглядеться»"
+    },
+    "und": {
+      "ru": "и, а",
+      "pos": "союз"
+    },
+    "viel": {
+      "ru": "много, многое",
+      "pos": "мест."
+    },
+    "von": {
+      "ru": "от, из, о (vom = von dem)",
+      "pos": "предл."
+    },
+    "warm": {
+      "ru": "тёплый",
+      "pos": "прил.",
+      "forms": "warm · wärmer · am wärmsten"
+    },
+    "wegen": {
+      "ru": "из-за, ради",
+      "pos": "предл.",
+      "note": "der Eier wegen — ради яиц; может стоять после существительного"
+    },
+    "werden": {
+      "ru": "становиться",
+      "pos": "гл.",
+      "forms": "wurde · ist geworden",
+      "note": "Вспомогательный глагол будущего времени и пассива"
+    },
+    "wo": {
+      "ru": "где; куда; когда (в придаточном)",
+      "pos": "нареч."
+    },
+    "zu": {
+      "ru": "к, в; слишком",
+      "pos": "предл.",
+      "note": "zur = zu der, zum = zu dem"
+    }
+  }
+}

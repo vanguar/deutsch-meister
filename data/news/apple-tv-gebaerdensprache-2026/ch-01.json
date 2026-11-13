@@ -1,0 +1,93 @@
+{
+  "id": "ch-01",
+  "title": "Apple TV bietet Filme mit Gebärdensprache an",
+  "titleRu": "В Apple TV появился перевод фильмов на жестовый язык",
+  "paragraphs": [
+    {
+      "fig": {
+        "w": 1100,
+        "h": 616,
+        "cap": "Приставка Apple TV 4K образца 2022 года и пульт Siri Remote. Иллюстрация к статье.",
+        "credit": "Dillan Payne · CC BY-SA 4.0 · Wikimedia Commons",
+        "src": "data/news/apple-tv-gebaerdensprache-2026/img/bild.jpg"
+      }
+    },
+    {
+      "s": [
+        {
+          "de": "Apple hat am 10. November eine neue Funktion für seine TV-App vorgestellt.",
+          "ru": "10 ноября Apple представила новую функцию своего приложения для просмотра фильмов.",
+          "g": {
+            "4-6": "новую функцию",
+            "10": "представила"
+          }
+        },
+        {
+          "de": "Ab dem 13. November bietet Apple TV ausgewählte Filme mit Gebärdensprache an.",
+          "ru": "С 13 ноября Apple TV предлагает отдельные фильмы с переводом на жестовый язык.",
+          "g": {
+            "3+10": "предлагает",
+            "6-7": "отдельные фильмы",
+            "9": "жестовый язык"
+          }
+        },
+        {
+          "de": "Zum Start gehört der Film „Being Heumann“ zum Angebot.",
+          "ru": "При запуске в подборку вошёл фильм «Being Heumann».",
+          "g": {
+            "0-1": "при запуске",
+            "8": "предложение"
+          }
+        }
+      ]
+    },
+    {
+      "s": [
+        {
+          "de": "Er erzählt die Geschichte von Judy Heumann, die sich für die Rechte von Menschen mit Behinderungen einsetzte.",
+          "ru": "Он рассказывает о Джуди Хьюманн, которая боролась за права людей с инвалидностью.",
+          "g": {
+            "13-15": "людей с инвалидностью",
+            "16": "отстаивала"
+          }
+        },
+        {
+          "de": "Auch den Film „F1“ gibt es mit Übersetzungen in amerikanische und britische Gebärdensprache.",
+          "ru": "Фильм «F1» также доступен с переводом на американский и британский жестовые языки.",
+          "g": {
+            "4-5": "есть в каталоге",
+            "7": "переводами"
+          }
+        },
+        {
+          "de": "Wer die Funktion nutzen möchte, schaltet sie in den Einstellungen der App ein.",
+          "ru": "Чтобы воспользоваться функцией, её нужно включить в настройках приложения.",
+          "g": {
+            "5+12": "включает",
+            "7-9": "в настройках"
+          }
+        }
+      ]
+    },
+    {
+      "s": [
+        {
+          "de": "Ein Symbol zeigt an, dass ein Film mit Gebärdensprache verfügbar ist.",
+          "ru": "Специальный значок показывает, что фильм доступен с переводом на жестовый язык.",
+          "g": {
+            "2+3": "показывает",
+            "9": "доступен"
+          }
+        },
+        {
+          "de": "Gehörlose Menschen und Menschen, die mit Gebärdensprache aufgewachsen sind, waren an der Entwicklung und an den Tests beteiligt.",
+          "ru": "В разработке и тестировании участвовали глухие люди и люди, для которых жестовый язык родной.",
+          "g": {
+            "7": "выросли",
+            "17": "участвовали"
+          }
+        }
+      ]
+    }
+  ]
+}
