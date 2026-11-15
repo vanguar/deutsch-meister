@@ -105,17 +105,30 @@ const ReaderSpeak = (() => {
   // gen растёт на каждом старте и остановке: висящие onEnd от прерванной
   // озвучки сравнивают свой token с gen и молча выходят.
   let gen   = 0;
-  let state = null;   // { kind, token, q, k, rate, gap, preload, onItem, onDone }
+  let state = null;
 
   function isPlaying(kind) {
     if (!state) return false;
     return kind ? state.kind === kind : true;
   }
 
+  function setSound(queue, item) {
+    if (queue.sounding === item) return;
+    const previous = queue.sounding;
+    queue.sounding = item;
+    try {
+      if (previous) queue.onSound?.(previous, false);
+      if (item) queue.onSound?.(item, true);
+    } catch (e) {
+      console.warn('[ReaderSpeak] onSound бросил исключение', e);
+    }
+  }
+
   function finish(ok, reason) {
     const prev = state;
     state = null;
     gen++;
+    if (prev) setSound(prev, null);
     if (prev && typeof prev.onDone === 'function') {
       try { prev.onDone({ ok: !!ok, reason: reason || (ok ? 'end' : 'stopped') }); }
       catch (e) { console.warn('[ReaderSpeak] onDone бросил исключение', e); }
@@ -151,10 +164,13 @@ const ReaderSpeak = (() => {
 
     // opts.tts элемента (голос, высота, сдвиг тона) — поверх общей скорости
     const ttsOpts = Object.assign({ rate: state.rate }, cur.item.tts || {});
+    const isCurrent = () => state && state.token === token && token === gen;
     TTS.speak(cur.chunk, Object.assign(ttsOpts, {
+      onStart: () => { if (isCurrent()) setSound(state, cur.item); },
       onEnd: res => {
-        if (!state || state.token !== token || token !== gen) return;   // прервали
-        if (res.reason === 'interrupted') return;                       // остановлены
+        if (!isCurrent()) return;
+        setSound(state, null);
+        if (res.reason === 'interrupted') { finish(false, res.reason); return; }
         if (res.reason === 'empty') { step(); return; }                 // нечего играть
         if (!res.ok) {
           console.warn('[ReaderSpeak] озвучка не удалась: ' + res.reason);
@@ -201,6 +217,8 @@ const ReaderSpeak = (() => {
       gap:    typeof o.gap === 'number' ? o.gap : 0,
       preload: !!o.preload,
       onItem: o.onItem || null,
+      onSound: o.onSound || null,
+      sounding: null,
       onDone: o.onDone || null
     };
     step();

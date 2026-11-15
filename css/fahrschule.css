@@ -267,6 +267,34 @@ html[dir="rtl"] .fs-tr { text-align: right; }
 :is(.fs-say.is-on, .fs-line.is-speaking .fs-say) .fs-say-on { display: none; }
 :is(.fs-say.is-on, .fs-line.is-speaking .fs-say) .fs-say-off { display: block; }
 .fs-dialog .dlg-line.is-speaking .dlg-bubble { border-color: var(--accent2); box-shadow: 0 0 0 1px var(--accent2) inset; }
+.fs-dialog .side-a { --avatar-ink: var(--accent2-text); --avatar-tint: var(--dlg-a-soft); }
+.fs-dialog .side-b { --avatar-ink: var(--dlg-b); --avatar-tint: var(--dlg-b-soft); }
+.fs-page .fs-avatar {
+  position: relative;
+  background: var(--avatar-tint);
+  color: var(--avatar-ink);
+  border: 1px solid var(--border);
+}
+.fs-page .fs-avatar .fs-avatar-role { width: 24px; height: 24px; fill: currentColor; stroke: none; }
+.fs-avatar-sound {
+  position: absolute;
+  inset-inline-end: -2px;
+  inset-block-end: -2px;
+  display: none;
+  place-items: center;
+  width: 17px;
+  height: 17px;
+  border: 2px solid var(--bg);
+  border-radius: 50%;
+  background: var(--avatar-ink);
+  color: var(--bg);
+}
+.fs-page .fs-avatar-sound .ico { width: 10px; height: 10px; stroke-width: 2.5; }
+.fs-page .fs-avatar[aria-pressed="true"] { border-color: var(--avatar-ink); }
+.fs-avatar[aria-pressed="true"] .fs-avatar-sound { display: grid; }
+@media (hover: hover) {
+  .fs-page .fs-avatar:hover { border-color: var(--avatar-ink); }
+}
 .fs-page .fs-tr-btn[aria-pressed="true"] { background: var(--accent2); color: var(--text-on-btn); }
 .fs-quiz-tr[aria-pressed="true"] { border-color: var(--accent2); background: var(--dlg-a-soft); }
 .fs-page .fs-quiz-tr .ico { width: 16px; height: 16px; }

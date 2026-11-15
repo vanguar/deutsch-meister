@@ -207,6 +207,30 @@ function speakAsync(TTS, text, opts) {
 
   console.log('4. Очередь ReaderSpeak');
   {
+    const { RS } = boot({ tg: true, fetchMs: 30 });
+    const events = [];
+    await new Promise(resolve => RS.run([{ text: 'Guten Morgen', idx: 0 }, { text: 'Hallo', idx: 1 }], {
+      gap: 10,
+      onItem: it => events.push(`queued:${it.idx}`),
+      onSound: (it, on) => events.push(`${on ? 'start' : 'end'}:${it.idx}`),
+      onDone: resolve
+    }));
+    check('индикатор речи переключается только с началом звука и гаснет в паузе',
+      events.join() === 'queued:0,start:0,end:0,queued:1,start:1,end:1', events);
+  }
+  {
+    const { RS, TTS } = boot();
+    const events = [];
+    const done = await new Promise(resolve => RS.run([{ text: 'Hallo' }], {
+      onSound: (_, on) => {
+        events.push(on);
+        if (on) TTS.stop();
+      },
+      onDone: resolve
+    }));
+    check('при прерывании озвучки индикатор сбрасывается', done.reason === 'interrupted' && events.join() === 'true,false', { done, events });
+  }
+  {
     const { RS, log } = boot();
     const order = [];
     const done = await new Promise(res => RS.run([

@@ -951,13 +951,18 @@ const Fahrschule = (() => {
     const lines = u.lines.map((ln, k) => {
       const who = sp[ln.s] || { name: ln.s };
       const n = sentences.length;
-      return `<li class="dlg-line side-${ln.s === 'A' ? 'a' : 'b'} fs-line" data-line="${n}" data-k="${k}">
+      const instructor = ln.s === 'A';
+      return `<li class="dlg-line side-${instructor ? 'a' : 'b'} fs-line" data-line="${n}" data-k="${k}">
         <div class="dlg-bubble">
-          <div class="dlg-who" lang="de" dir="ltr">${esc(who.name)}</div>
+          <div class="dlg-who" id="fs-speaker-${n}" lang="de" dir="ltr">${esc(who.name)}</div>
           ${sentence(ln, 'div', 'dlg-de fs-de')}
           <div class="dlg-tr fs-tr" dir="auto">${esc(ln.tr || '')}</div>
         </div>
-        ${lineBtns(n)}
+        <button class="dlg-say fs-avatar" type="button" data-say="${n}" aria-pressed="false"
+          title="Озвучить фразу" aria-label="Озвучить фразу" aria-describedby="fs-speaker-${n}">
+          ${icon(instructor ? 'i-instructor' : 'i-student', 'fs-avatar-role')}
+          <span class="fs-avatar-sound" aria-hidden="true">${icon('i-voice-waves')}</span>
+        </button>
       </li>`;
     }).join('');
     return controlsHtml('Слушать диалог') + `<ol class="dlg-lines fs-dialog">${lines}</ol>`;
@@ -2251,6 +2256,11 @@ const Fahrschule = (() => {
     const started = ReaderSpeak.run(items, {
       kind: 'fahrschule', rate: RATE, gap: GAP_MS, preload: true,
       onItem: item => { if (item.n != null) mark(item.n); },
+      onSound: (item, audible) => {
+        if (unit?.kind === 'dialog' && item.n != null) {
+          el.unit.querySelector(`.fs-avatar[data-say="${item.n}"]`)?.setAttribute('aria-pressed', String(audible));
+        }
+      },
       onDone: () => {
         if (playing !== key) return;   // уже звучит другое
         playing = null;

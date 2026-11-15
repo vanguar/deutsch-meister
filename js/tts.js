@@ -195,7 +195,7 @@ const TTS = (() => {
     getAudio().addEventListener('ended', endedHandler);
   }
 
-  function newSession(text, onEnd) {
+  function newSession(text, onEnd, onStart) {
     const ses = {
       onEnd: (typeof onEnd === 'function') ? onEnd : null,
       detune: 0,     // центы; только аудио-путь (см. speak, opts.detune)
@@ -210,8 +210,17 @@ const TTS = (() => {
       // запас ≈1.8× и на самой короткой фразе, и на самой длинной.
       base: (500 + letterCount(text) * 100) * 2,
       done: false,
+      started: false,
       timer: null,
       ext: 0,        // сколько раз страховка уступила живому звуку
+
+      start() {
+        if (ses.done || ses.started) return;
+        ses.started = true;
+        if (typeof onStart === 'function') {
+          try { onStart(); } catch (e) { diag('onStart: ' + (e && e.message)); }
+        }
+      },
 
       finish(ok, reason) {
         if (ses.done) return;
@@ -359,6 +368,7 @@ const TTS = (() => {
         if (ses) ses.finish(true, 'end');
       };
       s.start(0);
+      if (ses) ses.start();
       const dur = buf.duration / pr;
       hlByDuration(spans, dur);   // точная длительность из буфера
       if (ses) ses.arm(dur * 1000 * 1.6 + 500);
@@ -418,6 +428,7 @@ const TTS = (() => {
       };
       el.onplaying = () => {
         if (stale(my)) return;
+        if (ses) ses.start();
         diag('▶ PLAYING (audio) #' + my);
         hlByDuration(spans, el.duration / pr);
         // Переармируем ВСЕГДА: в WebView el.duration к старту часто ещё NaN,
@@ -525,7 +536,7 @@ const TTS = (() => {
      сдвиг тона в центах для аудио-пути (mp3 Google TTS). Оба необязательны:
      без них поведение прежнее. */
   function speak(text, { rate = 0.85, pitch = 1, fallbackDelay = null, spans = null, onEnd = null,
-                         voiceName = null, detune = 0 } = {}) {
+                         voiceName = null, detune = 0, onStart = null } = {}) {
     text = cleanText(text);
     if (!text) {
       // Озвучивать нечего, но ждущий onEnd не должен зависнуть
@@ -552,7 +563,7 @@ const TTS = (() => {
 
     stopCurrent();   // прерывает предыдущую озвучку и отдаёт её onEnd
 
-    const ses = newSession(text, onEnd);
+    const ses = newSession(text, onEnd, onStart);
     ses.detune = Number(detune) || 0;
     activeSession = ses;
     // До старта звука ждём загрузку, а не «длину текста»: иначе медленный
@@ -590,7 +601,12 @@ const TTS = (() => {
       };
       // Речь пошла — страховку считаем от этого момента, а не от вызова:
       // ожидание голоса в неё больше не входит.
-      u.onstart = () => { settled = true; ses.arm(0); };
+      u.onstart = () => {
+        if (abandoned || ses.done) return;
+        settled = true;
+        ses.arm(0);
+        ses.start();
+      };
       u.onend   = () => { if (!abandoned) ses.finish(true, 'end'); };
       u.onerror = (e) => {
         // Мы уже ушли на аудио-путь: этот error — эхо нашего же cancel()

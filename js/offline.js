@@ -62,16 +62,27 @@
     const box = document.createElement('div');
     box.className = 'offline-control';
     const button = document.createElement('button');
-    button.type = 'button'; button.className = 'btn offline-button';
-    const help = document.createElement('small'); help.className = 'offline-help';
-    help.textContent = tr('Текст и упражнения — без сети. Озвучка в Telegram требует интернета; в браузере нужен немецкий голос на телефоне.');
+    button.type = 'button'; button.className = 'offline-button';
+    button.innerHTML = '<svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 3v9m-3-3 3 3 3-3M4 13v3h12v-3"/></svg>';
+    const iconPath = button.querySelector('path');
+    const buttonText = document.createElement('span'); button.append(buttonText);
+    const help = document.createElement('details'); help.className = 'offline-help';
+    const summary = document.createElement('summary');
+    summary.textContent = tr('Озвучка может требовать интернет');
+    const explanation = document.createElement('p');
+    explanation.textContent = tr('Текст и упражнения — без сети. Озвучка в Telegram требует интернета; в браузере нужен немецкий голос на телефоне.');
+    help.append(summary, explanation);
     const note = document.createElement('span');
     note.className = 'offline-note'; note.setAttribute('role', 'status');
-    box.append(button, note, help); host.append(box);
+    box.append(button, help, note); host.append(box);
     const resized = () => { if (typeof Reader !== 'undefined') Reader.repaginate(); };
     if (typeof ResizeObserver !== 'undefined') { const observer = new ResizeObserver(resized); observer.observe(box); box._observer = observer; }
     let saved = false, busy = false;
-    function label() { button.textContent = tr(saved ? '✓ Скачано · удалить' : '↓ Скачать для офлайн'); }
+    function label() {
+      buttonText.textContent = tr(saved ? 'Скачано · удалить' : 'Сохранить офлайн');
+      button.dataset.saved = String(saved);
+      iconPath.setAttribute('d', saved ? 'm4.5 10 3.5 3.5 7.5-7.5' : 'M10 3v9m-3-3 3 3 3-3M4 13v3h12v-3');
+    }
     label();
     try {
       const packs = await request('OFFLINE_LIST');
@@ -139,13 +150,6 @@
     if (typeof LESSON_DATA !== 'undefined') {
       const lang = window.I18N?.lang || 'ru';
       const page = new URL(location.pathname, location.origin).href;
-      const nav = document.createElement('nav'); nav.className = 'lesson-jump'; nav.setAttribute('aria-label', tr('Разделы урока'));
-      document.querySelectorAll('.lesson-section').forEach((section, i) => {
-        const heading = section.querySelector('h2'); if (!heading) return;
-        section.id ||= 'lesson-part-' + i;
-        const link = document.createElement('a'); link.href = '#' + section.id; link.textContent = heading.textContent; nav.append(link);
-      });
-      document.querySelector('.lesson-meta')?.after(nav);
       mount(document.querySelector('.lesson-meta'), { id: 'lesson:' + LESSON_DATA.id + ':' + lang, lang,
         title: LESSON_DATA.id.toUpperCase() + ' · ' + (LESSON_DATA.title || document.title), page, href: page, files: [] });
     }
