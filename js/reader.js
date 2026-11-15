@@ -300,7 +300,7 @@ const Reader = (() => {
         if (a && a.to != null)   attrs += ` data-gl-to="${a.to}"`;
         if (a && a.link != null) attrs += ` data-gl-link="${a.link}"`;
         const cls = (a && (a.link != null || a.part)) ? 'bw bw--sep' : 'bw';
-        out += `<span class="${cls}" data-w="${i}" data-t="${esc(w.toLowerCase())}"${attrs}>${esc(w)}</span>`;
+        out += `<span class="${cls}" role="button" tabindex="0" data-w="${i}" data-t="${esc(w.toLowerCase())}"${attrs}>${esc(w)}</span>`;
       }
       last = m.index + w.length;
       i++;
@@ -756,6 +756,7 @@ const Reader = (() => {
         st.meta    = meta;
         st.gloss   = gloss;
         st.chTotal = Number(meta.chapters) || 1;
+        if (!IS_NEWS && !IS_LAND && window.Offline) Offline.book(document.getElementById('rdOffline'), id, st.chTotal, meta.title || id);
         // Состав панели зависит от КНИГИ (кнопка «в рифму» есть не у всех),
         // а open() успел отрисовать её до загрузки meta.json — обновляем,
         // как только книга известна.
@@ -1762,6 +1763,7 @@ const Reader = (() => {
     elView     = document.getElementById('rdView');
     elViewport = document.getElementById('rdViewport');
     elContent  = document.getElementById('rdContent');
+    elContent?.addEventListener('keydown', e => { const w = e.target.closest('.bw'); if (w && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); tipOpen(w); } });
     elState    = document.getElementById('rdState');
     elTitle    = document.getElementById('rdChapterTitle');
     elSub      = document.getElementById('rdChapterSub');
@@ -1826,6 +1828,16 @@ const Reader = (() => {
       if (st.open && !isReader) close(true);
     });
     updateTranslationControls();
+    // A downloaded book must open directly from the saved-materials list.
+    if (!IS_NEWS && !IS_LAND && location.hash.startsWith('#book=')) {
+      try {
+        const id = decodeURIComponent(location.hash.slice(6));
+        if (/^[a-z0-9-]+$/.test(id)) {
+          history.replaceState(null, '', location.pathname + location.search);
+          open(id);
+        }
+      } catch (_) {}
+    }
   }
 
   return {

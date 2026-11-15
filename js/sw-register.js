@@ -37,6 +37,8 @@
   // во всех HTML, значит отдельного места для версии заводить не нужно
   // и рассинхрону взяться неоткуда.
   const own = document.currentScript;
+  const swBase = location.pathname.startsWith('/deutsch-meister/')
+    ? '/deutsch-meister/' : '/';
 
   function readVersion() {
     const fromOwn = own && /[?&]v=(\d+)/.exec(own.src || '');
@@ -58,7 +60,7 @@
 
   /* ── Аварийный сброс ── */
 
-  // Снимаем ВСЕ регистрации и сносим ВСЕ кеши, потом перезагружаемся.
+  // Снимаем свою регистрацию и рабочие кеши; скачанные материалы сохраняем, потом перезагружаемся.
   // location.reload(true) не используем: параметр forceGet давно
   // игнорируется, а после unregister + caches.delete отдавать старое
   // уже некому.
@@ -79,14 +81,14 @@
     if ('serviceWorker' in navigator) {
       jobs.push(
         navigator.serviceWorker.getRegistrations()
-          .then(list => Promise.all(list.map(r => r.unregister())))
+          .then(list => Promise.all(list.filter(r => r.scope === new URL(swBase, location.origin).href).map(r => r.unregister())))
           .catch(e => console.warn('[SW] не удалось снять регистрации', e))
       );
     }
     if (window.caches && caches.keys) {
       jobs.push(
         caches.keys()
-          .then(keys => Promise.all(keys.map(k => caches.delete(k))))
+          .then(keys => Promise.all(keys.filter(k => /^deutsch-meister-v\d+$/.test(k) || k === 'deutsch-meister:' + (swBase.replace(/\/$/, '') || '/') + ':runtime').map(k => caches.delete(k))))
           .catch(e => console.warn('[SW] не удалось очистить кеши', e))
       );
     }
@@ -104,8 +106,7 @@
     return;
   }
 
-  const swBase = location.pathname.startsWith('/deutsch-meister/')
-    ? '/deutsch-meister/' : '/';
+
 
   // Смена воркера страницу НЕ перезагружает. Раньше здесь висел
   // location.reload() по controllerchange, и он срабатывал почти при

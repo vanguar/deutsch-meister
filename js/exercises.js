@@ -12,10 +12,34 @@ const Exercises = (() => {
 
   /* ── Shared state ── */
   let score = { correct: 0, total: 0 };
+  const results = new Map();
+  const sessionKey = 'dm_exercise:' + (typeof LESSON_DATA !== 'undefined' ? LESSON_DATA.id : '');
+  const signature = JSON.stringify(typeof LESSON_DATA !== 'undefined' ? LESSON_DATA.exercises : {});
+  let session;
+  try { session = JSON.parse(localStorage.getItem(sessionKey) || 'null'); } catch (_) {}
+  if (!session || session.signature !== signature) session = { signature, answers: {}, order: {}, steps: {} };
+  function saveSession() { try { localStorage.setItem(sessionKey, JSON.stringify(session)); } catch (_) {} }
+  function award(n, task) { Progress.addXP(n, LESSON_DATA.id + ':' + task); }
+  function shuffled(items) {
+    const out = items.slice();
+    for (let i = out.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [out[i], out[j]] = [out[j], out[i]]; }
+    return out;
+  }
+  function rememberInput(input) {
+    input.value = session.answers[input.id] || '';
+    input.addEventListener('input', () => { session.answers[input.id] = input.value; saveSession(); });
+  }
+  function retryButton(host) {
+    if (!host || host.querySelector('.exercise-retry')) return;
+    const b = document.createElement('button'); b.type = 'button'; b.className = 'btn exercise-retry';
+    b.textContent = 'Повторить упражнения';
+    b.addEventListener('click', () => { localStorage.removeItem(sessionKey); location.reload(); }); host.appendChild(b);
+  }
 
-  function addResult(isCorrect) {
-    score.total++;
-    if (isCorrect) score.correct++;
+  function addResult(isCorrect, id) {
+    results.set(id || 'attempt:' + results.size, isCorrect);
+    score.total = results.size;
+    score.correct = [...results.values()].filter(Boolean).length;
     const pct = Math.round(score.correct / score.total * 100);
     Progress.renderLessonProgress(pct);
   }
@@ -76,6 +100,8 @@ const Exercises = (() => {
   function initBlankInput(input, correctAnswer, hintWord, hintRule) {
     const wrap = input.closest('.blank-input-wrap');
     const card = input.closest('.blank-question');
+    rememberInput(input);
+    input.setAttribute('aria-label', (window.I18N ? I18N.t('Пропуск') : 'Пропуск') + ': ' + (card.querySelector('.blank-sentence')?.textContent || card.textContent).trim());
 
     function evaluate() {
       const val = input.value.trim();
@@ -92,18 +118,18 @@ const Exercises = (() => {
       if (isCorrect) {
         input.classList.add('input-correct');
         card.classList.add('correct');
-        addResult(true);
-        Progress.addXP(10);
+        addResult(true, input.id);
+        award(10, 'fill:' + input.id);
       } else {
         input.classList.add('input-wrong');
         card.classList.add('wrong');
-        addResult(false);
+        addResult(false, input.id);
         showHintButton(wrap, hintWord, hintRule);
       }
     }
 
     // Check on Enter key
-    input.addEventListener('keydown', e => { if (e.key === 'Enter') evaluate(); });
+    input.addEventListener('keydown', e => { if (e.key === 'Enter' && !_isMobile()) evaluate(); });
 
     // Store evaluator so the "Check All" button can call it
     input._evaluate = evaluate;
@@ -196,27 +222,34 @@ const Exercises = (() => {
       `;
       const optsEl = div.querySelector('.mc-options');
 
-      q.options.forEach((opt, oi) => {
+      const order = session.order[qi] || shuffled(q.options.map((_, i) => i));
+      session.order[qi] = order; saveSession();
+      order.forEach(oi => {
+        const opt = q.options[oi];
         const btn = document.createElement('button');
         btn.className = 'mc-option';
+        btn.type = 'button'; btn.dataset.option = oi;
         btn.textContent = opt;
         btn.addEventListener('click', () => {
           if (btn.classList.contains('disabled')) return;
 
           // Lock all options
-          optsEl.querySelectorAll('.mc-option').forEach(b => b.classList.add('disabled'));
+          optsEl.querySelectorAll('.mc-option').forEach(b => { b.classList.add('disabled'); b.disabled = true; });
 
           const isCorrect = (oi === q.correctIndex);
+          div.dataset.answered = 'true'; div.dataset.correct = String(isCorrect);
+          session.answers['choice:' + qi] = oi; saveSession();
+          const next = div.querySelector('.step-next-btn'); if (next) next.disabled = false;
           if (isCorrect) {
             btn.classList.add('correct');
             correctCount++;
-            Progress.addXP(8);
+            award(8, 'choice:' + qi);
             addResult(true);
           } else {
             btn.classList.add('wrong');
             addResult(false);
             // Reveal correct answer
-            optsEl.querySelectorAll('.mc-option')[q.correctIndex]?.classList.add('correct');
+            optsEl.querySelector('[data-option="' + q.correctIndex + '"]')?.classList.add('correct');
           }
 
           answeredCount++;
@@ -226,12 +259,15 @@ const Exercises = (() => {
             // ✦ Section finished — every question got an answer.
             const pct = Math.round(correctCount / questions.length * 100);
             Progress.markSectionDone('choice', pct);
+            retryButton(document.getElementById('choiceResult'));
           }
         });
         optsEl.appendChild(btn);
       });
 
       container.appendChild(div);
+      const previous = session.answers['choice:' + qi];
+      if (Number.isInteger(previous)) optsEl.querySelector('[data-option="' + previous + '"]')?.click();
     });
   }
 
@@ -258,14 +294,16 @@ const Exercises = (() => {
     });
 
     // Build right column (Russian, shuffled)
-    const shuffled = [...pairs].sort(() => Math.random() - .5);
-    shuffled.forEach(pair => {
+    const rightOrder = shuffled(pairs);
+    rightOrder.forEach(pair => {
       rightCol.appendChild(createMatchItem(pair.id, 'right', pair.ru));
     });
 
     function createMatchItem(pairId, side, text) {
       const el = document.createElement('div');
       el.className = 'match-item';
+      el.tabIndex = 0; el.setAttribute('role', 'button');
+      el.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); el.click(); } });
       el.dataset.pairId = pairId;
       el.dataset.side   = side;
       el.textContent    = text;
@@ -312,7 +350,7 @@ const Exercises = (() => {
       el.classList.add('matched');
       matchedPairs++;
       addResult(true);
-      Progress.addXP(8);
+      award(8, 'match:' + pairId);
 
       if (matchedPairs === totalPairs) {
         setTimeout(() => {
@@ -359,17 +397,18 @@ const Exercises = (() => {
             Нажмите 🔊 и напишите то, что услышали
           </div>
         </div>
-        <input class="dictation-input" id="dict-${i}"
+        <input class="dictation-input" id="dict-${i}" aria-label="${window.I18N ? I18N.t('Диктант') : 'Диктант'}: ${i + 1}"
                placeholder="${isPhrase ? 'Введите фразу…' : 'Введите слово…'}"
                autocomplete="off" spellcheck="false">
       `;
+      rememberInput(card.querySelector('.dictation-input'));
       // Speak button
       card.querySelector('.big-play-btn').addEventListener('click', () => {
         TTS.speak(item.audio || item.word);
       });
       // Enter key
       card.querySelector('.dictation-input').addEventListener('keydown', e => {
-        if (e.key === 'Enter') checkSingleDict(i, item.word);
+        if (e.key === 'Enter' && !_isMobile()) checkSingleDict(i, item.word);
       });
 
       container.appendChild(card);
@@ -390,7 +429,7 @@ const Exercises = (() => {
         const incomplete = total - answered;
         showBanner('dictResult', correct, total, incomplete);
 
-        if (correct === total) Progress.addXP(20);
+        if (correct === total) award(20, 'dict:perfect');
 
         // ✦ Section is "done" only when every word has been written in.
         if (total > 0 && answered === total) {
@@ -409,6 +448,7 @@ const Exercises = (() => {
     if (!val) return false;
     const ok = (val === correctWord);
     input.classList.add(ok ? 'input-correct' : 'input-wrong');
+    session.answers[input.id] = input.value; saveSession();
     return ok;
   }
 
@@ -522,6 +562,7 @@ const Exercises = (() => {
     function finish() {
       if (done) return;
       done = true;
+      session.steps[inp.id] = inp.classList.contains('input-correct'); saveSession();
       o.onDone(inp.classList.contains('input-correct'));
     }
     function check() {
@@ -572,11 +613,14 @@ const Exercises = (() => {
     const qs = [...cnt.querySelectorAll('.blank-question')];
     if (!qs.length) return;
 
-    let idx = 0, ok = 0;
+    let idx = qs.findIndex(q => !(q.querySelector('input')?.id in session.steps));
+    if (idx < 0) idx = 0;
+    let ok = qs.slice(0, idx).filter(q => session.steps[q.querySelector('input')?.id]).length;
     const total = qs.length;
     const bar = _makeStepBar(total, cnt);
 
-    qs.forEach((q, qi) => { if (qi > 0) q.style.display = 'none'; });
+    qs.forEach((q, qi) => { if (qi !== idx) q.style.display = 'none'; });
+    _updateBar(bar, idx, total);
 
     const checkAllBtn = document.getElementById('checkFillBtn');
     if (checkAllBtn) checkAllBtn.style.display = 'none';
@@ -591,6 +635,8 @@ const Exercises = (() => {
       } else {
         showBanner('fillResult', ok, total);
         Progress.markSectionDone('fill', Math.round(ok / total * 100));
+        qs.forEach(q => { q.style.display = ''; q.querySelector('.step-next-btn').hidden = true; });
+        retryButton(document.getElementById('fillResult'));
       }
     }
 
@@ -613,17 +659,21 @@ const Exercises = (() => {
     const qs = [...cnt.querySelectorAll('.mc-question')];
     if (!qs.length) return;
 
-    let idx = 0;
+    let idx = Math.min(session.steps.choice || 0, qs.length - 1);
     const total = qs.length;
     const bar = _makeStepBar(total, cnt);
 
-    qs.forEach((q, qi) => { if (qi > 0) q.style.display = 'none'; });
+    qs.forEach((q, qi) => { if (qi !== idx) q.style.display = 'none'; });
+    _updateBar(bar, idx, total);
 
     qs.forEach((q, qi) => {
       const btn = _mkNextBtn(qi === total - 1);
       q.appendChild(btn);
+      btn.disabled = q.dataset.answered !== 'true';
 
       btn.addEventListener('click', () => {
+        if (q.dataset.answered !== 'true') return;
+        session.steps.choice = qi + 1; saveSession();
         q.style.display = 'none';
         idx++;
         if (idx < total) {
@@ -632,9 +682,10 @@ const Exercises = (() => {
         } else {
           // Count correct answers from DOM state
           let correct = 0;
-          qs.forEach(q => { if (q.querySelector('.mc-option.correct')) correct++; });
+          qs.forEach(q => { if (q.dataset.correct === 'true') correct++; q.style.display = ''; q.querySelector('.step-next-btn').hidden = true; });
           showBanner('choiceResult', correct, total);
           Progress.markSectionDone('choice', Math.round(correct / total * 100));
+          retryButton(document.getElementById('choiceResult'));
         }
       });
     });
@@ -649,11 +700,14 @@ const Exercises = (() => {
     if (!cards.length) return;
 
     const dictData = normalizeDictation(LESSON_DATA?.exercises?.dictation);
-    let idx = 0, ok = 0;
+    let idx = cards.findIndex(q => !(q.querySelector('input')?.id in session.steps));
+    if (idx < 0) idx = 0;
+    let ok = cards.slice(0, idx).filter(q => session.steps[q.querySelector('input')?.id]).length;
     const total = cards.length;
     const bar = _makeStepBar(total, cnt);
 
-    cards.forEach((c, ci) => { if (ci > 0) c.style.display = 'none'; });
+    cards.forEach((c, ci) => { if (ci !== idx) c.style.display = 'none'; });
+    _updateBar(bar, idx, total);
 
     const checkDictBtn = document.getElementById('checkDictBtn');
     if (checkDictBtn) checkDictBtn.style.display = 'none';
@@ -670,6 +724,9 @@ const Exercises = (() => {
       } else {
         showBanner('dictResult', ok, total);
         Progress.markSectionDone('dict', Math.round(ok / total * 100));
+        if (ok === total) award(20, 'dict:perfect');
+        cards.forEach(c => { c.style.display = ''; c.querySelector('.step-next-btn').hidden = true; });
+        retryButton(document.getElementById('dictResult'));
       }
     }
 

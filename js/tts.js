@@ -532,6 +532,21 @@ const TTS = (() => {
       if (typeof onEnd === 'function') setTimeout(() => onEnd({ ok: false, reason: 'empty' }), 0);
       return;
     }
+    if (navigator.onLine === false) {
+      const message = inTelegram()
+        ? 'Без интернета озвучка в Telegram недоступна. Текст и перевод остаются доступны.'
+        : 'Озвучка без интернета работает только с установленным немецким голосом. Воспроизведение не гарантируется.';
+      let note = document.getElementById('ttsOfflineNotice');
+      if (!note) { note = document.createElement('div'); note.id = 'ttsOfflineNotice'; note.className = 'dm-toast'; note.setAttribute('role', 'status'); document.body.appendChild(note); }
+      note.textContent = window.I18N ? I18N.t(message) : message;
+      note.classList.add('show');
+      clearTimeout(note._timer); note._timer = setTimeout(() => note.classList.remove('show'), 7000);
+      if (mode() === 'audio') {
+        stopCurrent();
+        if (typeof onEnd === 'function') setTimeout(() => onEnd({ ok: false, reason: 'offline' }), 0);
+        return;
+      }
+    }
     const words = wordCount(text);
     const delay = fallbackDelay ?? (words > 1 ? 1800 : 700);
 

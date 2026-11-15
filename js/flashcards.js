@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════
-   js/flashcards.js — Spaced-repetition flashcards
+   js/flashcards.js — Vocabulary review flashcards
 
    Два режима, один движок.
 
@@ -50,6 +50,9 @@ const Flashcards = (() => {
   let flipped = false;
   let totalCards = 0;
   let tally   = null;    // произвольный режим: { known: [], repeat: [] }
+  let missed = new Set();
+  let resumeKey = null;
+  let sourceSignature = '';
   let live    = false;   // сессия идёт — защита от повторной инициализации
 
   /* ── DOM refs (populated in init) ── */
@@ -83,6 +86,7 @@ const Flashcards = (() => {
     totalCards = 0;
     tally = null;
     live = false;
+    missed = new Set(); resumeKey = null;
 
     elCard = elCardDE = elCardRU = elCardIPA = elCardMeta = elCardOld = null;
     elActions = elCounter = elDots = elComplete = null;
@@ -122,24 +126,40 @@ const Flashcards = (() => {
     if (mode === 'lesson') trimUI();   // лишний UI живёт только в оболочках
 
     // Build deck from vocabulary
-    deck = source.map(w => ({ ...w }));
+    deck = source.map((w, i) => ({ ...w, _id: i }));
     totalCards = deck.length;
     tally = { known: [], repeat: [] };
     live = true;
 
+    sourceSignature = JSON.stringify(source);
+    if (mode === 'lesson') {
+      resumeKey = 'dm_cards:' + LESSON_DATA.id;
+      try {
+        const saved = JSON.parse(localStorage.getItem(resumeKey) || 'null');
+        if (saved && saved.signature === sourceSignature && !saved.done) {
+          const cards = deck;
+          if (saved.deck.every(i => Number.isInteger(i) && cards[i])) {
+            deck = saved.deck.map(i => cards[i]); again = saved.again.map(i => cards[i]).filter(Boolean);
+            current = Math.max(0, Math.min(saved.current || 0, deck.length)); missed = new Set(saved.missed || []);
+          }
+        }
+      } catch (_) {}
+    }
     buildDots();
-    showCard(0);
+    showCard(current);
 
     // Flip on click
     onCardTap = () => flip();
     elCard.addEventListener('click', onCardTap);
+    elCard.tabIndex = 0; elCard.setAttribute('role', 'button');
+    elCard.setAttribute('aria-label', 'Перевернуть карточку');
 
     // Keyboard: Space = flip, ← = again, → = good
     onKeyDown = e => {
-      if (!live || !elCard) return;
-      if (e.code === 'Space')       { e.preventDefault(); flip(); }
-      if (e.code === 'ArrowLeft')   handleAgain();
-      if (e.code === 'ArrowRight')  handleGood();
+      if (!live || !elCard || e.target !== elCard || !elCard.getClientRects().length) return;
+      if (e.code === 'Space' || e.code === 'Enter')       { e.preventDefault(); flip(); }
+      if (e.code === 'ArrowLeft' && flipped) { e.preventDefault(); handleAgain(); }
+      if (e.code === 'ArrowRight' && flipped) { e.preventDefault(); handleGood(); }
     };
     document.addEventListener('keydown', onKeyDown);
     return true;
@@ -203,6 +223,7 @@ const Flashcards = (() => {
       return;
     }
     current = idx;
+    saveResume(false);
     flipped = false;
     elCard.classList.remove('flipped');
 
@@ -265,10 +286,11 @@ const Flashcards = (() => {
 
   function handleAgain() {
     const card = deck[current];
-    if (!card) return;
+    if (!card || !flipped || !live) return;
 
     if (mode === 'lesson') {
       again.push(card);
+      missed.add(card._id);
       updateDot(current, 'again');
       nextCard();
       return;
@@ -291,10 +313,10 @@ const Flashcards = (() => {
 
   function handleGood() {
     const card = deck[current];
-    if (!card) return;
+    if (!card || !flipped || !live) return;
 
     if (mode === 'lesson') {
-      Progress.addXP(5);
+      Progress.addXP(5, LESSON_DATA.id + ':card:' + card._id);
       updateDot(current, 'done');
       nextCard();
       return;
@@ -352,7 +374,9 @@ const Flashcards = (() => {
       elActions.style.display = 'none';
       elCounter.style.display = 'none';
 
-      Progress.addXP(25);
+      live = false;
+      saveResume(true);
+      Progress.addXP(25, LESSON_DATA.id + ':cards:complete');
 
       // ✦ Mark this section as done; lesson-completion banner
       //   will only appear once ALL sections are finished.
@@ -398,8 +422,13 @@ const Flashcards = (() => {
   /* ── Simple score ── */
 
   function computeScore() {
-    const correct = totalCards - again.length;
+    const correct = totalCards - missed.size;
     return Math.round(correct / totalCards * 100);
+  }
+
+  function saveResume(done) {
+    if (!resumeKey) return;
+    try { localStorage.setItem(resumeKey, JSON.stringify({ signature: sourceSignature, deck: deck.map(c => c._id), again: again.map(c => c._id), current, missed: [...missed], done })); } catch (_) {}
   }
 
   /* Expose button handlers to HTML onclick */

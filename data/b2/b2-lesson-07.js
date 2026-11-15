@@ -127,7 +127,7 @@ const LESSON_DATA = {
       { question: '«Der Einwand» — это…',                                   options: ['тезис', 'возражение', 'вывод', 'пример'],                             correctIndex: 1 },
       { question: '«Plädieren für» значит…',                                 options: ['возражать', 'выступать за', 'сомневаться', 'отвергать'],              correctIndex: 1 },
       { question: '«Das Fazit» — это…',                                      options: ['введение', 'вывод', 'аргумент', 'пример'],                           correctIndex: 1 },
-      { question: '«Berechtigt» в дискуссии значит…',                        options: ['неверный', 'обоснованный', 'риторический', 'риторический'],         correctIndex: 1 },
+      { question: '«Berechtigt» в дискуссии значит…',                        options: ['неверный', 'обоснованный', 'риторический', 'неуместный'],         correctIndex: 1 },
       { question: '«Übersehen» в аргументации значит…',                      options: ['наблюдать', 'упускать из виду', 'видеть', 'рассматривать'],         correctIndex: 1 },
       { question: '«Im Grundsatz» = …',                                      options: ['в деталях', 'в принципе', 'в заключение', 'в частности'],           correctIndex: 1 },
       { question: '«Nachvollziehbar» = …',                                   options: ['непонятный', 'понятный/прослеживаемый', 'ошибочный', 'риторический'], correctIndex: 1 }

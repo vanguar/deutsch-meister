@@ -126,7 +126,7 @@ const Fahrschule = (() => {
   }
 
   function writeStore(key, value) {
-    try { localStorage.setItem(key, value); } catch (e) { /* приватный режим */ }
+    try { localStorage.setItem(key, value); if (typeof Progress !== 'undefined') Progress.notify(); } catch (e) { /* приватный режим */ }
   }
 
   // Русские и украинские числительные устроены одинаково: 1 / 2–4 / 5+
@@ -492,6 +492,7 @@ const Fahrschule = (() => {
     const ti = topicOf(id);
     if (topics[ti]) {
       writeStore(LAST_KEY, id);
+      writeStore('dm_fs_last_pos', JSON.stringify({ id, ts: Date.now() }));
       writeStore(OPEN_KEY, JSON.stringify([topics[ti].id]));
     }
     const seq = ++loadSeq;
@@ -927,12 +928,10 @@ const Fahrschule = (() => {
     exam.done = true;
     const s = examScore();
     const r = readExam();
-    const tries = (Number(r.tries) || 0) + 1;
-    writeStore(EXAM_KEY, JSON.stringify({
-      tries, passed: (Number(r.passed) || 0) + (s.passed ? 1 : 0),
-      best: r.tries ? Math.min(Number(r.best) || 0, s.points) : s.points,
-      last: { points: s.points, right: s.right, passed: s.passed }
-    }));
+    const merged = ProgressModel.exam(r);
+    const key = Date.now() + ':' + Math.random().toString(36).slice(2);
+    merged.records[key] = { points: s.points, right: s.right, passed: s.passed, ts: Date.now() };
+    writeStore(EXAM_KEY, JSON.stringify(ProgressModel.exam(merged)));
     renderExam();
     el.body.scrollIntoView({ block: 'start', behavior: reducedMotion() ? 'auto' : 'smooth' });
   }

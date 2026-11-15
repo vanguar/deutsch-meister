@@ -1,4 +1,4 @@
-const CACHE = 'deutsch-meister-v226';
+const CACHE = 'deutsch-meister-v227';
 const SCOPE_PATH = new URL(self.registration.scope).pathname.replace(/\/$/, '');
 const BASE = SCOPE_PATH === '' ? '' : SCOPE_PATH;
 
@@ -7,56 +7,60 @@ const STATIC = [
   BASE + '/',
   BASE + '/index.html',
   BASE + '/manifest.json',
-  BASE + '/css/base.css?v=211',
-  BASE + '/css/sidebar.css?v=211',
-  BASE + '/css/home.css?v=211',
-  BASE + '/css/lesson.css?v=211',
-  BASE + '/css/exercises.css?v=211',
-  BASE + '/js/i18n.js?v=211',
-  BASE + '/js/tg-theme.js?v=211',
-  BASE + '/js/progress.js?v=211',
-  BASE + '/js/lesson-render.js?v=211',
-  BASE + '/js/exercises.js?v=211',
-  BASE + '/js/flashcards.js?v=211',
-  BASE + '/js/tts.js?v=211',
-  BASE + '/js/telegram.js?v=211',
-  BASE + '/js/cloud-sync.js?v=211',
-  BASE + '/js/install-app.js?v=211',
-  BASE + '/js/support.js?v=211',
-  BASE + '/js/home.js?v=211',
-  BASE + '/js/vocab.js?v=211',
-  BASE + '/js/sw-register.js?v=211',
+  BASE + '/css/base.css?v=212',
+  BASE + '/css/sidebar.css?v=212',
+  BASE + '/css/home.css?v=212',
+  BASE + '/css/lesson.css?v=212',
+  BASE + '/css/exercises.css?v=212',
+  BASE + '/js/i18n.js?v=212',
+  BASE + '/js/tg-theme.js?v=212',
+  BASE + '/js/theme.js?v=212',
+  BASE + '/js/progress-model.js?v=212',
+  BASE + '/js/progress.js?v=212',
+  BASE + '/js/offline.js?v=212',
+  BASE + '/css/offline.css?v=212',
+  BASE + '/js/lesson-render.js?v=212',
+  BASE + '/js/exercises.js?v=212',
+  BASE + '/js/flashcards.js?v=212',
+  BASE + '/js/tts.js?v=212',
+  BASE + '/js/telegram.js?v=212',
+  BASE + '/js/cloud-sync.js?v=212',
+  BASE + '/js/install-app.js?v=212',
+  BASE + '/js/support.js?v=212',
+  BASE + '/js/home.js?v=212',
+  BASE + '/js/vocab.js?v=212',
+  BASE + '/js/sw-register.js?v=212',
   // Читалка: оболочка библиотеки и её движок. Каталог книг — маленький
   // и нужен сразу, поэтому он в прекеше; ?v= у .json нет намеренно:
   // bump_version.py версионирует только .js/.css, а запросы всё равно
   // идут network-first, так что свежее приходит из сети.
   BASE + '/books.html',
   BASE + '/news.html',
-  BASE + '/css/reader.css?v=211',
-  BASE + '/js/image-reveal.js?v=211',
-  BASE + '/js/library.js?v=211',
-  BASE + '/js/reader.js?v=211',
-  BASE + '/js/reader-tip.js?v=211',
-  BASE + '/js/reader-gloss.js?v=211',
-  BASE + '/js/reader-words.js?v=211',
-  BASE + '/js/reader-speak.js?v=211',
-  BASE + '/js/reader-cards.js?v=211',
-  BASE + '/js/reader-dict.js?v=211',
-  BASE + '/css/news.css?v=211',
-  BASE + '/js/news.js?v=211',
+  BASE + '/css/reader.css?v=212',
+  BASE + '/js/image-reveal.js?v=212',
+  BASE + '/js/library.js?v=212',
+  BASE + '/js/reader.js?v=212',
+  BASE + '/js/reader-tip.js?v=212',
+  BASE + '/js/reader-gloss.js?v=212',
+  BASE + '/js/reader-words.js?v=212',
+  BASE + '/js/reader-speak.js?v=212',
+  BASE + '/js/reader-cards.js?v=212',
+  BASE + '/js/reader-dict.js?v=212',
+  BASE + '/css/news.css?v=212',
+  BASE + '/js/news.js?v=212',
   // Диалоги: оболочка, движок и оглавление; сами диалоги (data/dialogs/*.json)
   // и фото кладутся в кеш при первом открытии, как главы книг
   BASE + '/dialogs.html',
-  BASE + '/css/dialogs.css?v=211',
-  BASE + '/js/dialogs.js?v=211',
+  BASE + '/css/dialogs.css?v=212',
+  BASE + '/js/dialogs.js?v=212',
   // Автошкола: оболочка, движок и оглавление; уроки и знаки — при открытии
   BASE + '/fahrschule.html',
-  BASE + '/css/fahrschule.css?v=211',
-  BASE + '/js/fahrschule.js?v=211',
+  BASE + '/css/fahrschule.css?v=212',
+  BASE + '/js/fahrschule.js?v=212',
   // Земли Германии: оболочка, движок, витрина и карта; тексты — при открытии
   BASE + '/laender.html',
-  BASE + '/css/laender.css?v=211',
-  BASE + '/js/laender.js?v=211',
+  BASE + '/css/laender.css?v=212',
+  BASE + '/js/laender.js?v=212',
   BASE + '/data/laender/lands.json',
   BASE + '/data/laender/map.json',
   BASE + '/data/books/index.json',
@@ -103,62 +107,138 @@ self.addEventListener('install', e => {
   );
 });
 
+// Own namespace only: other GitHub Pages apps share this origin.
+const PREFIX = 'deutsch-meister:' + (BASE || '/') + ':';
+const RUNTIME = PREFIX + 'runtime';
+const PACK_PREFIX = PREFIX + 'pack:';
+const META = new URL(BASE + '/__offline_pack__', self.location.origin).href;
+const busyPacks = new Set();
+
+async function packs() {
+  const out = [];
+  for (const key of await caches.keys()) {
+    if (!key.startsWith(PACK_PREFIX)) continue;
+    const cache = await caches.open(key), meta = await cache.match(META);
+    if (meta) out.push({ key, meta: await meta.json(), cache });
+  }
+  return out;
+}
+
 self.addEventListener('activate', e => {
-  e.waitUntil(
-    caches.keys().then(keys =>
-      Promise.all(keys.filter(k => k !== CACHE).map(k => caches.delete(k)))
-    ).then(() => self.clients.claim())
-  );
+  e.waitUntil((async () => {
+    const runtime = await caches.open(RUNTIME);
+    for (const key of await caches.keys()) {
+      if (!/^deutsch-meister-v\d+$/.test(key) || key === CACHE) continue;
+      const old = await caches.open(key);
+      for (const req of await old.keys()) {
+        const u = new URL(req.url);
+        if (u.origin === self.location.origin && u.pathname.startsWith(BASE + '/') && !(await runtime.match(req))) {
+          await runtime.put(req, await old.match(req));
+        }
+      }
+      await caches.delete(key);
+    }
+    await self.clients.claim();
+  })());
 });
 
-// Страница может попросить ждущий воркер активироваться немедленно.
-// Принимаем и строку, и объект: разные версии страниц шлют по-разному,
-// а старая страница обязана уметь разбудить новый воркер.
+function ownedUrl(raw) {
+  const u = new URL(raw, self.registration.scope);
+  if (u.origin !== self.location.origin || !u.pathname.startsWith(BASE + '/') || isNoStore(u.href)) throw new Error('Invalid offline resource');
+  u.hash = '';
+  // Never persist Telegram initData or other navigation query parameters.
+  if (u.pathname.endsWith('.html') || u.pathname.endsWith('/')) u.search = '';
+  return u.href;
+}
+
+async function savePack(pack, rawUrls, progress) {
+  if (!pack || typeof pack.id !== 'string' || !Array.isArray(rawUrls) || rawUrls.length > 500) throw new Error('Invalid offline pack');
+  if (busyPacks.has(pack.id)) throw new Error('Download already running');
+  busyPacks.add(pack.id);
+  const key = PACK_PREFIX + encodeURIComponent(pack.id) + ':' + Date.now();
+  const cache = await caches.open(key);
+  try {
+    const urls = [...new Set(rawUrls.map(ownedUrl))];
+    const page = ownedUrl(pack.page), href = new URL(pack.href, self.registration.scope);
+    ownedUrl(href.href);
+    if (!urls.includes(page)) throw new Error('Missing page');
+    for (let i = 0; i < urls.length; i++) {
+      const controller = new AbortController();
+      const timer = setTimeout(() => controller.abort(), 20000);
+      let res;
+      try { res = await fetch(urls[i], { cache: 'reload', signal: controller.signal }); }
+      finally { clearTimeout(timer); }
+      if (!res.ok || res.type === 'opaque') throw new Error('HTTP ' + res.status);
+      if (/\.css(?:\?|$)/.test(urls[i])) {
+        const css = await res.clone().text();
+        for (const m of css.matchAll(/url\(\s*['"]?([^)'"\s]+)['"]?\s*\)/g)) {
+          try { const url = ownedUrl(new URL(m[1], urls[i]).href); if (!urls.includes(url)) urls.push(url); } catch (_) { /* external font: use fallback */ }
+        }
+      }
+      await cache.put(urls[i], res);
+      progress({ done: i + 1, total: urls.length });
+    }
+    // Commit marker LAST. A failed/quota-exceeded download is never advertised.
+    await cache.put(META, new Response(JSON.stringify({ id: pack.id, lang: ['ru', 'uk', 'ar'].includes(pack.lang) ? pack.lang : 'ru', title: String(pack.title || pack.id), page, href: href.href, savedAt: Date.now(), count: urls.length }), { headers: { 'Content-Type': 'application/json' } }));
+    for (const old of await packs()) if (old.meta.id === pack.id && old.key !== key) await caches.delete(old.key);
+    return true;
+  } catch (err) { await caches.delete(key); throw err; }
+  finally { busyPacks.delete(pack.id); }
+}
+
 self.addEventListener('message', e => {
   const d = e.data;
-  if (d === 'SKIP_WAITING' || (d && d.type === 'SKIP_WAITING')) self.skipWaiting();
+  if (d === 'SKIP_WAITING' || d?.type === 'SKIP_WAITING') { self.skipWaiting(); return; }
+  const port = e.ports && e.ports[0]; if (!port) return;
+  e.waitUntil((async () => {
+    try {
+      let result;
+      if (d.type === 'OFFLINE_LIST') result = (await packs()).map(p => p.meta);
+      else if (d.type === 'OFFLINE_REMOVE') {
+        if (busyPacks.has(d.id)) throw new Error('Download already running');
+        for (const p of await packs()) if (p.meta.id === d.id) await caches.delete(p.key);
+        result = true;
+      } else if (d.type === 'OFFLINE_SAVE') result = await savePack(d.pack, d.urls, progress => port.postMessage({ progress }));
+      else throw new Error('Unknown offline request');
+      port.postMessage({ result });
+    } catch (err) { port.postMessage({ error: err.message }); }
+  })());
 });
 
-function isHtml(req) {
-  return req.mode === 'navigate' ||
-         (req.headers.get('accept') || '').includes('text/html');
+async function cached(req) {
+  const url = ownedUrl(req.url);
+  const names = [CACHE, RUNTIME, ...(await packs()).sort((a,b) => b.meta.savedAt - a.meta.savedAt).map(p => p.key)];
+  for (const name of names) {
+    const cache = await caches.open(name);
+    const found = await cache.match(url); if (found) return found;
+  }
+  // Older downloaded HTML can reference older asset versions after an update.
+  for (const name of names) {
+    const found = await (await caches.open(name)).match(url, { ignoreSearch: true });
+    if (found) return found;
+  }
+  return null;
 }
 
 self.addEventListener('fetch', e => {
-  const req = e.request;
-  if (req.method !== 'GET') return;
-
-  // Кросс-доменные запросы (озвучка StreamElements/ResponsiveVoice, Telegram SDK,
-  // аудио с Range-заголовками) НЕ трогаем — пусть браузер сам идёт в сеть. Иначе
-  // на iOS перехват медиа-запросов ломает воспроизведение звука.
-  if (new URL(req.url).origin !== self.location.origin) return;
-
-  // HTML / navigations → network-first, so new versions show immediately online
-  if (isHtml(req)) {
-    e.respondWith(
-      fetch(req).then(res => {
-        if (res && res.ok) {
-          const clone = res.clone();
-          caches.open(CACHE).then(c => c.put(req, clone));
-        }
-        return res;
-      }).catch(() =>
-        caches.match(req).then(c => c || caches.match(BASE + '/index.html'))
-      )
-    );
-    return;
-  }
-
-  // Everything else (JS/CSS/JSON глав…) → network-first: всегда берём свежее
-  // из сети, а кэш держим как офлайн-фолбэк и как cache-on-read для глав книг.
-  // Так новые правки видно обычной перезагрузкой — без ручной чистки кэша.
-  e.respondWith(
-    fetch(req).then(res => {
-      if (res && res.ok && !isNoStore(req.url)) {
-        const clone = res.clone();
-        caches.open(CACHE).then(c => c.put(req, clone));
+  const req = e.request, u = new URL(req.url);
+  if (req.method !== 'GET' || u.origin !== self.location.origin || !u.pathname.startsWith(BASE + '/') || isNoStore(req.url)) return;
+  e.respondWith((async () => {
+    try {
+      const res = await fetch(req);
+      if (res.ok) {
+        const cache = await caches.open(RUNTIME);
+        try {
+          await cache.put(ownedUrl(req.url), res.clone());
+          const entries = await cache.keys();
+          for (const old of entries.slice(0, Math.max(0, entries.length - 400))) await cache.delete(old);
+        } catch (_) { /* Storage/quota failures must not break an online page. */ }
       }
       return res;
-    }).catch(() => caches.match(req).then(c => c || caches.match(BASE + '/index.html')))
-  );
+    } catch (_) {
+      const hit = await cached(req); if (hit) return hit;
+      if (req.mode === 'navigate') return new Response('<!doctype html><html lang="ru"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Офлайн</title><body><h1>Материал не скачан</h1><p>Подключитесь к интернету и скачайте этот материал.</p><a href="' + BASE + '/index.html#more">Открыть скачанные материалы</a></body></html>', { status: 503, headers: { 'Content-Type': 'text/html; charset=utf-8' } });
+      return new Response('Offline: resource not downloaded', { status: 503, headers: { 'Content-Type': 'text/plain; charset=utf-8' } });
+    }
+  })());
 });

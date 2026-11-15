@@ -1,0 +1,15 @@
+.offline-control { display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:10px 0; width:100%; }
+.offline-button { font:inherit; color:var(--text); background:var(--surface2); border:1px solid var(--border); border-radius:12px; padding:10px 14px; cursor:pointer; min-height:44px; }
+.offline-button:disabled { opacity:.65; cursor:wait; }
+.offline-note { font-size:12px; line-height:1.5; color:var(--text-muted); max-width:560px; }
+.offline-saved { margin:20px 0; padding:16px; border:1px solid var(--border); border-radius:16px; }
+.offline-saved-row { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:10px 0; }
+.offline-saved-row a { color:var(--accent2-text); overflow-wrap:anywhere; }
+.offline-saved-row button { font:inherit; padding:8px 12px; min-height:44px; cursor:pointer; color:var(--text); background:var(--surface2); border:1px solid var(--border); border-radius:10px; }
+.offline-control :focus-visible, .offline-saved :focus-visible { outline:3px solid var(--accent2); outline-offset:3px; }
+
+.offline-help { flex-basis:100%; font-size:12px; line-height:1.45; color:var(--text-muted); font-weight:400; letter-spacing:normal; text-transform:none; }
+#rdOffline .offline-help { color:var(--rd-muted); }
+
+.lesson-jump { display:flex; flex-wrap:wrap; gap:8px 14px; margin:16px 0; font-size:13px; }
+.lesson-jump a { color:var(--accent2); padding:6px 0; }

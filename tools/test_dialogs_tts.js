@@ -41,7 +41,7 @@ const VOICES = [
 /* Окружение: tg — Telegram WebView (аудио-путь), voices — голоса системы,
    webAudio=false — Web Audio падает и работает <audio> */
 function boot({ tg = false, voices = VOICES, webAudio = true, fetchMs = 5 } = {}) {
-  const log = { utter: [], fetch: [], sources: [], audio: [] };
+  const log = { utter: [], fetch: [], sources: [], audio: [], notices: [] };
   const synth = {
     speaking: false, cur: null,
     getVoices: () => voices,
@@ -99,7 +99,7 @@ function boot({ tg = false, voices = VOICES, webAudio = true, fetchMs = 5 } = {}
     fetch: url => { log.fetch.push(url); return sleep(fetchMs).then(() => ({ ok: true, arrayBuffer: () => Promise.resolve(new ArrayBuffer(8)) })); },
     localStorage: { getItem: () => null, setItem() {} },
     document: { addEventListener() {}, getElementById: () => null,
-      createElement: () => ({ classList: { add() {}, remove() {} } }), body: { appendChild() {} } },
+      createElement: () => ({ setAttribute() {}, classList: { add() {}, remove() {} } }), body: { appendChild(el) { log.notices.push(el); } } },
     setTimeout, clearTimeout, Promise, Math, Object, Array, String, Number, JSON, RegExp, Error, encodeURIComponent, console,
     isFinite
   };
@@ -116,6 +116,21 @@ function speakAsync(TTS, text, opts) {
 }
 
 (async () => {
+  console.log('0. Офлайн: честное предупреждение и локальный голос');
+  {
+    const { ctx, TTS, log } = boot({ tg: true });
+    ctx.navigator.onLine = false;
+    const r = await speakAsync(TTS, 'Hallo');
+    check('Telegram офлайн: явный отказ без запроса', !r.ok && r.reason === 'offline' && log.fetch.length === 0, r);
+    check('Telegram офлайн: предупреждение видно', /Telegram недоступна/.test(log.notices[0]?.textContent));
+  }
+  {
+    const { ctx, TTS, log } = boot();
+    ctx.navigator.onLine = false;
+    const r = await speakAsync(TTS, 'Hallo');
+    check('браузер офлайн: выбран локальный немецкий голос', r.ok && log.utter[0]?.voice.localService === true);
+    check('браузер офлайн: нет запроса, гарантий в подсказке нет', log.fetch.length === 0 && /не гарантируется/.test(log.notices[0]?.textContent));
+  }
   console.log('1. Старые вызовы — прежний путь');
   {
     const { TTS, log } = boot();

@@ -1898,3 +1898,6 @@ body.rd-open { overflow: hidden; }
   cursor: pointer;
 }
 .rd-news-dates a { color: var(--rd-accent); text-decoration: underline; text-underline-offset: 2px; }
+
+.bw:focus-visible { outline:2px solid var(--accent2); outline-offset:2px; }
+#rdOffline { padding:0 12px; flex-shrink:0; }

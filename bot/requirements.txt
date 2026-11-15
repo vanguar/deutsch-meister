@@ -1,0 +1,2 @@
+# Optional local polling bot only; the Vercel backend uses Python stdlib.
+aiogram>=3.7,<4

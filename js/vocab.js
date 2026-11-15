@@ -36,6 +36,7 @@ const Vocab = (() => {
   let filter = 'all';
   let query = '';
   let known = readKnown();
+  window.addEventListener('dm:progress-import', () => { known = readKnown(); if (items) { render(); renderHead(); } });
 
   const $ = id => document.getElementById(id);
   const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
@@ -177,8 +178,15 @@ const Vocab = (() => {
   // а при следующей перерисовке — чтобы промах пальцем можно было отменить
   function toggleKnown(it) {
     haptic();
+    known = readKnown();
     if (known[it.de]) delete known[it.de]; else known[it.de] = 1;
+    try {
+      const statuses = JSON.parse(localStorage.getItem('dm_vocab_status') || '{}');
+      statuses[it.de] = { status: known[it.de] ? 'known' : 'new', statusTs: Date.now() };
+      localStorage.setItem('dm_vocab_status', JSON.stringify(statuses));
+    } catch (_) {}
     saveKnown();
+    if (typeof Progress !== 'undefined') Progress.notify();
     const on = !!known[it.de];
     const li = document.querySelector(`.v-item[data-i="${it.i}"]`);
     if (li) {

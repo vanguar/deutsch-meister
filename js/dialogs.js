@@ -333,6 +333,7 @@ const Dialogs = (() => {
 
   function renderDialog() {
     const d = dialog;
+    if (window.Offline) Offline.dialog(document.querySelector('.dlg-heading'), d.id, d.title, d.img?.src);
     const list = inLevel(d.level);
     const pos = list.findIndex(it => it.id === d.id);
     el.counter.textContent = (pos >= 0 ? pos + 1 : d.n) + ' / ' + (list.length || 10);

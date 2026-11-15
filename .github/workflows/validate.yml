@@ -13,21 +13,5 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Course phrases match their spoken text
-        run: |
-          node tools/test_phrase_audio.js
-          node tools/check_phrase_audio.js
-      - name: Validate lesson data, shells and cache versions
-        run: python scripts/validate_lessons.py
-      - name: Dialogs (data, translations, photos)
-        run: python scripts/validate_dialogs.py
-      - name: Fahrschule (word tips, translations, signs)
-        run: python scripts/validate_fahrschule.py
-      - name: Validate Laender (Земли Германии)
-        run: python scripts/validate_laender.py && python scripts/validate_books.py --laender
-      - name: Fahrschule build checks (junction solver, source errors)
-        run: python tools/fahrschule/test_build.py
-      - name: Audience wording (Russian UI is not Russia)
-        run: python scripts/test_audience_wording.py
-      - name: Cloud progress merge (server never loses progress)
-        run: python scripts/test_progress_merge.py
+      - name: Content, translations, accessibility contracts and regression checks
+        run: python -B -X utf8 scripts/check_all.py

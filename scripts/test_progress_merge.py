@@ -25,6 +25,13 @@ def fake(cmd):
     if cmd[0] == "SET":
         KV[cmd[1]] = cmd[2]
         return {"result": "OK"}
+    if cmd[0] == "EVAL" and cmd[1] == W.PS.CAS:
+        _, _, _, key, kind, expected, payload = cmd
+        current = KV.get(key)
+        if (current is None and kind == "missing") or (kind == "present" and current == expected):
+            KV[key] = payload
+            return {"result": 1}
+        return {"result": 0}
     raise AssertionError(cmd)
 
 
@@ -69,6 +76,6 @@ ok(isinstance(json.dumps(d), str), "снимок сериализуется")
 
 # первый снимок без сохранённого — пишется как есть
 W.write_progress(2, {"progress": {"xp": 5}, "sections": {}})
-ok(W.read_progress(2) == {"progress": {"xp": 5}, "sections": {}}, "первая запись без изменений")
+ok(W.read_progress(2)["progress"]["xp"] == 5 and W.read_progress(2)["sections"] == {}, "первая запись сохраняет значения при миграции формата")
 
 sys.exit(1 if fail else 0)

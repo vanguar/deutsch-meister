@@ -12,7 +12,7 @@
 
 ENV (Vercel → Project → Settings → Environment Variables):
   BOT_TOKEN                 — токен бота от @BotFather
-  WEBHOOK_SECRET            — секрет вебхука (опционально)
+  WEBHOOK_SECRET            — секрет вебхука (обязательно)
   APP_URL                   — URL мини-аппа (по умолчанию GitHub Pages)
   UPSTASH_REDIS_REST_URL    — база Upstash Redis (или KV_REST_API_URL —
   UPSTASH_REDIS_REST_TOKEN    так их называет интеграция Vercel Marketplace)
@@ -28,6 +28,9 @@ import json
 import hmac
 import hashlib
 import time
+import contextvars
+import secrets
+import urllib.error
 import urllib.parse
 import urllib.request
 
@@ -56,9 +59,9 @@ API = "https://api.telegram.org/bot{}/{}"
 #  Telegram Bot
 # ══════════════════════════════════════════════════════
 
-def tg(method, payload):
+def _tg_http(method, payload):
     if not BOT_TOKEN:
-        return {"ok": False, "error": "BOT_TOKEN not set"}
+        return {"ok": False, "retryable": True, "error": "BOT_TOKEN not set"}
     data = json.dumps(payload).encode("utf-8")
     req = urllib.request.Request(
         API.format(BOT_TOKEN, method),
@@ -68,8 +71,78 @@ def tg(method, payload):
     try:
         with urllib.request.urlopen(req, timeout=8) as r:
             return json.loads(r.read().decode("utf-8"))
-    except Exception as e:  # noqa: BLE001
-        return {"ok": False, "error": str(e)}
+    except urllib.error.HTTPError as exc:
+        try:
+            result = json.loads(exc.read().decode("utf-8"))
+            result["error_code"] = exc.code
+            return result
+        except (ValueError, UnicodeError):
+            return {"ok": False, "error_code": exc.code, "error": "Telegram HTTP error"}
+    except Exception:  # noqa: BLE001
+        return {"ok": False, "retryable": True, "error": "Telegram connection failed"}
+
+
+_TG_UPDATE = contextvars.ContextVar("tg_update", default=None)
+
+
+class TelegramRetry(RuntimeError):
+    pass
+
+
+def tg(method, payload):
+    update_id = _TG_UPDATE.get()
+    key = None
+    if update_id is not None and UPSTASH_URL and UPSTASH_TOK and method != "answerPreCheckoutQuery":
+        digest = hashlib.sha256(json.dumps([method, payload], sort_keys=True, ensure_ascii=False).encode()).hexdigest()
+        key = f"dm:delivery:{update_id}:{digest}"
+        cached = _upstash(["GET", key])
+        if not cached or "result" not in cached or "error" in cached:
+            raise TelegramRetry("Delivery state unavailable")
+        if cached["result"]:
+            return json.loads(cached["result"])
+    result = _tg_http(method, payload)
+    code = result.get("error_code", 0)
+    if update_id is not None and (result.get("retryable") or code == 429 or code >= 500):
+        raise TelegramRetry("Telegram temporary failure")
+    if key and result.get("ok"):
+        saved = _upstash(["SET", key, json.dumps(result), "EX", 604800])
+        if not saved or saved.get("result") != "OK":
+            raise TelegramRetry("Delivery receipt not saved")
+    if update_id is not None and not result.get("ok"):
+        print("Telegram rejected method:", method, "code:", code)
+    return result
+
+
+def process_update(update):
+    # Payment acknowledgement must reach Telegram within ten seconds; do not
+    # put storage round trips in front of it.
+    uid = update.get("update_id")
+    token = _TG_UPDATE.set(uid if uid is not None else "unidentified")
+    lock_key = None
+    lock_value = secrets.token_hex(16)
+    try:
+        if "pre_checkout_query" in update or uid is None or not UPSTASH_URL or not UPSTASH_TOK:
+            handle_update(update)
+            return
+        done_key = f"dm:update:{uid}:done"
+        done = _upstash(["GET", done_key])
+        if not done or "result" not in done or "error" in done:
+            raise TelegramRetry("Update state unavailable")
+        if done["result"]:
+            return
+        lock_key = f"dm:update:{uid}:lock"
+        locked = _upstash(["SET", lock_key, lock_value, "NX", "EX", 120])
+        if not locked or locked.get("result") != "OK":
+            lock_key = None
+            raise TelegramRetry("Update is being processed")
+        handle_update(update)
+        saved = _upstash(["SET", done_key, "1", "EX", 604800])
+        if not saved or saved.get("result") != "OK":
+            raise TelegramRetry("Update receipt not saved")
+    finally:
+        _TG_UPDATE.reset(token)
+        if lock_key:
+            _upstash(["EVAL", "if redis.call('GET',KEYS[1]) == ARGV[1] then return redis.call('DEL',KEYS[1]) end return 0", 1, lock_key, lock_value])
 
 
 def _verdict(info):
@@ -91,7 +164,7 @@ def _verdict(info):
         return ("вебхук НЕ зарегистрирован — Telegram некуда слать апдейты. "
                 "Лечение: scripts/bot_doctor.sh")
     if not info["env"]["webhook_secret"]:
-        return "WEBHOOK_SECRET не задан — проверка подписи Telegram отключена"
+        return "WEBHOOK_SECRET не задан — приём webhook отключён"
     if wh.get("last_error"):
         return "Telegram не может достучаться: %s" % wh["last_error"]
     return "всё на месте"
@@ -407,7 +480,7 @@ def send_invoice(chat_id, stars, lang="ru"):
 #    dm:admins          SET  — чаты админов: им приходит «🆕 новый пользователь»
 #    dm:admin:mute      SET  — админы, выключившие уведомления (кнопка 🔔 под /stats)
 #
-#  Админ — ID из ADMIN_IDS или @username из ADMIN_USERNAMES (env). Username
+#  Админ — ID из ADMIN_IDS; если ID не настроены, @username из ADMIN_USERNAMES. Username
 #  в апдейте подставляет сам Telegram, подделать его нельзя; ID надёжнее —
 #  его бот показывает в /stats, чтобы можно было вписать в ADMIN_IDS.
 # ══════════════════════════════════════════════════════
@@ -426,8 +499,8 @@ def _now_ms():
 def is_admin(user):
     if not user or not user.get("id"):
         return False
-    if str(user["id"]) in ADMIN_IDS:
-        return True
+    if ADMIN_IDS:
+        return str(user["id"]) in ADMIN_IDS
     return str(user.get("username") or "").lower() in ADMIN_USERNAMES
 
 
@@ -1034,7 +1107,7 @@ MAX_AUTH_AGE = 24 * 60 * 60
 
 
 def verify_init_data(init_data, bot_token, max_age=MAX_AUTH_AGE):
-    if not init_data or not bot_token:
+    if not isinstance(init_data, str) or not init_data or not bot_token:
         return None
     data = dict(urllib.parse.parse_qsl(init_data, keep_blank_values=True))
     received_hash = data.pop("hash", None)
@@ -1047,12 +1120,13 @@ def verify_init_data(init_data, bot_token, max_age=MAX_AUTH_AGE):
         return None
     try:
         auth_date = int(data.get("auth_date", "0"))
-        if max_age and auth_date and (time.time() - auth_date) > max_age:
+        if auth_date <= 0 or auth_date > time.time() + 60 or (max_age and time.time() - auth_date > max_age):
             return None
     except ValueError:
         return None
     try:
-        return json.loads(data.get("user", "null"))
+        user = json.loads(data.get("user", "null"))
+        return user if isinstance(user, dict) and isinstance(user.get("id"), int) and user["id"] > 0 else None
     except (ValueError, TypeError):
         return None
 
@@ -1073,178 +1147,25 @@ def _upstash(command):
         return None
 
 
+try:
+    from . import progress_state as PS
+except ImportError:
+    import progress_state as PS
+
+_num = PS._num
+_merge_global = PS._merge_global
+_merge_books = PS._merge_books
+_merge_word = PS._merge_word
+_merge_sections = PS._merge_sections
+_merge_lesson_pos = PS._merge_lesson_pos
+
+
 def read_progress(uid):
-    res = _upstash(["GET", f"dm:progress:{uid}"])
-    if not res or res.get("result") in (None, "null"):
-        return None
-    try:
-        return json.loads(res["result"])
-    except (ValueError, TypeError):
-        return None
-
-
-def _num(v):
-    try:
-        return float(v)
-    except (TypeError, ValueError):
-        return 0.0
-
-
-def _merge_book_pos(old, new):
-    """Позиция чтения: last-write-wins по ts (запись без ts считается старой)."""
-    if not isinstance(old, dict):
-        return new if isinstance(new, dict) else None
-    if not isinstance(new, dict):
-        return old
-    return new if _num(new.get("ts")) > _num(old.get("ts")) else old
-
-
-def _merge_word(old, new):
-    """n — максимум, seen — объединение форм, «known» побеждает «new»."""
-    rec = dict(old)
-    rec.update(new)                      # словарные поля одинаковы
-    rec["n"] = max(_num(old.get("n")), _num(new.get("n")))
-    if rec["n"] == int(rec["n"]):
-        rec["n"] = int(rec["n"])
-    rec["ts"] = max(_num(old.get("ts")), _num(new.get("ts")))
-    if rec["ts"] == int(rec["ts"]):
-        rec["ts"] = int(rec["ts"])
-    rec["status"] = ("known"
-                     if "known" in (old.get("status"), new.get("status"))
-                     else (new.get("status") or old.get("status") or "new"))
-    seen, keys = [], set()
-    for form in list(old.get("seen") or []) + list(new.get("seen") or []):
-        key = str(form).lower()
-        if key in keys:
-            continue
-        keys.add(key)
-        seen.append(form)
-    rec["seen"] = seen
-    return rec
-
-
-def _merge_books(old, new):
-    """Узкая ветка для поля books: остальной снимок перезаписывается входящим,
-    а сборники слов и позиции сливаются, чтобы не терять чтение с других
-    устройств. Снимок старого клиента (без books) ничего не стирает."""
-    old = old if isinstance(old, dict) else {}
-    new = new if isinstance(new, dict) else {}
-    out = {}
-    for book_id in set(old) | set(new):
-        lo = old.get(book_id) or {}
-        ln = new.get(book_id) or {}
-        if not isinstance(lo, dict) or not isinstance(ln, dict):
-            out[book_id] = ln or lo
-            continue
-        rec = {}
-        pos = _merge_book_pos(lo.get("pos"), ln.get("pos"))
-        if pos:
-            rec["pos"] = pos
-        wo = lo.get("words") if isinstance(lo.get("words"), dict) else {}
-        wn = ln.get("words") if isinstance(ln.get("words"), dict) else {}
-        words = {}
-        for lemma in set(wo) | set(wn):
-            ro, rn = wo.get(lemma), wn.get(lemma)
-            if isinstance(ro, dict) and isinstance(rn, dict):
-                words[lemma] = _merge_word(ro, rn)
-            else:
-                words[lemma] = rn if isinstance(rn, dict) else ro
-        if words:
-            rec["words"] = words
-        if rec:
-            out[book_id] = rec
-    return out
-
-
-def _int_or_float(v):
-    v = _num(v)
-    return int(v) if v == int(v) else v
-
-
-def _merge_global(old, new):
-    """dm_progress: как Progress._mergeGlobal в js/progress.js — xp и серия
-    максимум, пройденные уроки объединением, оценки максимум."""
-    old = old if isinstance(old, dict) else {}
-    new = new if isinstance(new, dict) else {}
-    out = dict(old)
-    out.update(new)
-    out["xp"] = _int_or_float(max(_num(old.get("xp")), _num(new.get("xp"))))
-    out["streak"] = _int_or_float(max(_num(old.get("streak")), _num(new.get("streak"))))
-    days = [d for d in (old.get("lastActive"), new.get("lastActive")) if isinstance(d, str) and d]
-    out["lastActive"] = max(days) if days else None
-    done = []
-    for lid in list(old.get("completedLessons") or []) + list(new.get("completedLessons") or []):
-        if lid not in done:
-            done.append(lid)
-    out["completedLessons"] = done
-    so = old.get("lessonScores") if isinstance(old.get("lessonScores"), dict) else {}
-    sn = new.get("lessonScores") if isinstance(new.get("lessonScores"), dict) else {}
-    out["lessonScores"] = {k: _int_or_float(max(_num(so.get(k)), _num(sn.get(k))))
-                           for k in set(so) | set(sn)}
-    return out
-
-
-def _merge_sections(old, new):
-    """Секции уроков: сданные — объединением, оценки — максимум."""
-    old = old if isinstance(old, dict) else {}
-    new = new if isinstance(new, dict) else {}
-    out = {}
-    for lid in set(old) | set(new):
-        lo = old.get(lid) if isinstance(old.get(lid), dict) else {}
-        ln = new.get(lid) if isinstance(new.get(lid), dict) else {}
-        done = []
-        for s in list(lo.get("done") or []) + list(ln.get("done") or []):
-            if s not in done:
-                done.append(s)
-        so = lo.get("scores") if isinstance(lo.get("scores"), dict) else {}
-        sn = ln.get("scores") if isinstance(ln.get("scores"), dict) else {}
-        scores = {k: _int_or_float(max(_num(so.get(k)), _num(sn.get(k)))) for k in set(so) | set(sn)}
-        out[lid] = {"done": done, "scores": scores}
-    return out
-
-
-def _merge_lesson_pos(old, new):
-    """Место в уроке: свежее по ts, прочитанная доля теории — максимум."""
-    old = old if isinstance(old, dict) else {}
-    new = new if isinstance(new, dict) else {}
-    out = {}
-    for lid in set(old) | set(new):
-        a, b = old.get(lid), new.get(lid)
-        if not isinstance(a, dict) or not isinstance(b, dict):
-            out[lid] = b if isinstance(b, dict) else a
-            continue
-        rec = dict(b if _num(b.get("ts")) > _num(a.get("ts")) else a)
-        rec["read"] = max(_num(a.get("read")), _num(b.get("read")))
-        out[lid] = rec
-    return out
+    return PS.read_raw(_upstash, f"dm:progress:{uid}")[1]
 
 
 def write_progress(uid, data):
-    # Снимок сливаем с сохранённым, а не перезаписываем: устройство со
-    # старыми данными (Telegram Desktop, открытый с утра) иначе стёрло бы
-    # упражнения, сданные на телефоне. Слияние — как Progress.importAll
-    # на клиенте: прогресс только растёт. Клиент без books (старая версия)
-    # чтение с других устройств тоже не стирает.
-    if isinstance(data, dict):
-        stored = read_progress(uid)
-        if isinstance(stored, dict):
-            data = dict(data)
-            data["progress"] = _merge_global(stored.get("progress"), data.get("progress"))
-            data["sections"] = _merge_sections(stored.get("sections"), data.get("sections"))
-            if stored.get("lessonPos") or data.get("lessonPos"):
-                data["lessonPos"] = _merge_lesson_pos(stored.get("lessonPos"), data.get("lessonPos"))
-            if not data.get("lastLesson") and stored.get("lastLesson"):
-                data["lastLesson"] = stored["lastLesson"]
-        if isinstance(stored, dict) and (stored.get("books") or data.get("books")):
-            data = dict(data)
-            merged = _merge_books(stored.get("books"), data.get("books"))
-            if merged:
-                data["books"] = merged
-            else:
-                data.pop("books", None)
-    payload = json.dumps(data, ensure_ascii=False, separators=(",", ":"))
-    res = _upstash(["SET", f"dm:progress:{uid}", payload])
-    return bool(res and res.get("result") == "OK")
+    return PS.write(_upstash, uid, data)
 
 
 # ══════════════════════════════════════════════════════
@@ -1344,7 +1265,7 @@ class handler(BaseHTTPRequestHandler):
         info = {
             "ok": True,
             "service": "webhook",
-            "build": "dispatch-4-i18n",
+            "build": "dispatch-5-progress-v2",
             "seen_path": self.path,
             "route": route,
             "env": {
@@ -1396,8 +1317,13 @@ class handler(BaseHTTPRequestHandler):
         if route == "progress":
             try:
                 length = int(self.headers.get("content-length", 0) or 0)
+                if length < 0 or length > 2_000_000:
+                    self._json({"ok": False, "error": "payload_too_large"}, 413)
+                    return
                 raw = self.rfile.read(length) if length else b"{}"
                 body = json.loads(raw.decode("utf-8"))
+                if not isinstance(body, dict):
+                    raise ValueError("Expected object")
             except Exception:  # noqa: BLE001
                 self._json({"ok": False, "error": "bad_request"}, 400)
                 return
@@ -1406,13 +1332,18 @@ class handler(BaseHTTPRequestHandler):
                 self._json({"ok": False, "error": "unauthorized"}, 401)
                 return
             uid = user["id"]
-            if "data" in body and body["data"] is not None:
-                ok = write_progress(uid, body["data"])
-                self._json({"ok": ok, "saved": ok, "data": body["data"]})
-            else:
-                # чтение = открытие мини-аппа в Telegram: отмечаем визит
-                track_user(user, "app", "app")
-                self._json({"ok": True, "data": read_progress(uid)})
+            try:
+                if "data" in body and body["data"] is not None:
+                    merged = write_progress(uid, body["data"])
+                    self._json({"ok": True, "saved": True, "data": merged})
+                else:
+                    data = read_progress(uid)
+                    track_user(user, "app", "app")
+                    self._json({"ok": True, "data": data})
+            except PS.ProgressUnavailable:
+                self._json({"ok": False, "saved": False, "error": "storage_unavailable"}, 503)
+            except (ValueError, TypeError, AttributeError):
+                self._json({"ok": False, "error": "invalid_snapshot"}, 400)
             return
 
         if route == "lang":
@@ -1420,8 +1351,13 @@ class handler(BaseHTTPRequestHandler):
             # (last-write-wins по ts) + обновление кнопки меню чата.
             try:
                 length = int(self.headers.get("content-length", 0) or 0)
+                if length < 0 or length > 2_000_000:
+                    self._json({"ok": False, "error": "payload_too_large"}, 413)
+                    return
                 raw = self.rfile.read(length) if length else b"{}"
                 body = json.loads(raw.decode("utf-8"))
+                if not isinstance(body, dict):
+                    raise ValueError("Expected object")
             except Exception:  # noqa: BLE001
                 self._json({"ok": False, "error": "bad_request"}, 400)
                 return
@@ -1449,16 +1385,28 @@ class handler(BaseHTTPRequestHandler):
             return
 
         # webhook (Telegram update)
-        if WEBHOOK_SECRET:
-            got = self.headers.get("X-Telegram-Bot-Api-Secret-Token", "")
-            if got != WEBHOOK_SECRET:
-                self._text(b"forbidden", 403)
-                return
+        if not WEBHOOK_SECRET:
+            self._text(b"webhook not configured", 503)
+            return
+        got = self.headers.get("X-Telegram-Bot-Api-Secret-Token", "")
+        if not hmac.compare_digest(got, WEBHOOK_SECRET):
+            self._text(b"forbidden", 403)
+            return
         try:
             length = int(self.headers.get("content-length", 0) or 0)
-            raw = self.rfile.read(length) if length else b"{}"
-            update = json.loads(raw.decode("utf-8"))
-            handle_update(update)
-        except Exception:  # noqa: BLE001
-            pass
+            if length <= 0 or length > 2_000_000:
+                self._text(b"invalid request size", 400)
+                return
+            update = json.loads(self.rfile.read(length).decode("utf-8"))
+            if not isinstance(update, dict):
+                raise ValueError("Invalid update")
+        except (ValueError, TypeError):
+            self._text(b"bad request", 400)
+            return
+        try:
+            process_update(update)
+        except Exception as exc:  # log type only: never token-bearing URLs/payloads
+            print("webhook failed:", type(exc).__name__)
+            self._text(b"retry later", 503)
+            return
         self._text(b"ok")

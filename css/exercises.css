@@ -551,3 +551,8 @@
 .dict-answer b { color: var(--correct); font-size: 16px; }
 .step-mode .dictation-num,
 .step-mode .dictation-num + br { display: none; }
+
+.match-item:focus-visible, .flashcard:focus-visible { outline:3px solid var(--accent2); outline-offset:3px; }
+.exercise-retry { display:block; margin-top:12px; }
+
+.step-next-btn[hidden] { display:none !important; }

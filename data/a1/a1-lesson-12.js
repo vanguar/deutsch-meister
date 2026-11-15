@@ -117,7 +117,7 @@ const LESSON_DATA = {
     multipleChoice: [
       { question: 'Как спросить «Кто ты по профессии?»',        options: ['Wer bist du?', 'Was bist du von Beruf?', 'Wie heißt du?', 'Wo bist du?'], correctIndex: 1 },
       { question: 'Правильный вариант: «Я учитель»…',           options: ['Ich bin ein Lehrer.', 'Ich bin Lehrer.', 'Ich bin der Lehrer.', 'Ich Lehrer.'], correctIndex: 1 },
-      { question: 'Женская форма от «der Arzt»…',               options: ['die Arztin', 'die Ärztin', 'die Arztin', 'die Ärzte'],       correctIndex: 1 },
+      { question: 'Женская форма от «der Arzt»…',               options: ['die Arztin', 'die Ärztin', 'die Ärztinnen', 'die Ärzte'],       correctIndex: 1 },
       { question: '«Der Verkäufer» работает…',                  options: ['в больнице', 'в магазине', 'в школе', 'в полиции'],          correctIndex: 1 },
       { question: '«Arbeiten als» значит…',                     options: ['работать у', 'работать кем-либо', 'работать с', 'искать работу'], correctIndex: 1 },
       { question: 'Форма arbeiten для «er»…',                   options: ['arbeitt', 'arbeitet', 'arbeitest', 'arbeiten'],              correctIndex: 1 },

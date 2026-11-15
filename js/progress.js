@@ -57,9 +57,9 @@ const Progress = (() => {
   function load() {
     try {
       const raw = localStorage.getItem(STORAGE_KEY);
-      return raw ? { ...defaults, ...JSON.parse(raw) } : { ...defaults };
+      return ProgressModel.global({ ...defaults }, raw ? JSON.parse(raw) : {});
     } catch {
-      return { ...defaults };
+      return ProgressModel.global({ ...defaults });
     }
   }
 
@@ -171,21 +171,10 @@ const Progress = (() => {
      Streak logic
      ════════════════════════════════════ */
   function updateStreak(state) {
-    const today = new Date().toISOString().slice(0, 10);
-    if (!state.lastActive) {
-      state.streak = 1;
-    } else {
-      const last = new Date(state.lastActive);
-      const diff = Math.floor((new Date(today) - last) / 86400000);
-      if (diff === 0) {
-        // already active today — no change
-      } else if (diff === 1) {
-        state.streak += 1;
-      } else {
-        state.streak = 1;
-      }
-    }
-    state.lastActive = today;
+    const now = new Date();
+    const today = [now.getFullYear(), String(now.getMonth() + 1).padStart(2, '0'), String(now.getDate()).padStart(2, '0')].join('-');
+    state.activeDays = [...new Set([...(state.activeDays || []), today])];
+    Object.assign(state, ProgressModel.global(state));
     return state;
   }
 
@@ -217,7 +206,7 @@ const Progress = (() => {
 
     _doneSections.add(name);
     if (typeof scorePct === 'number' && !Number.isNaN(scorePct)) {
-      _sectionScores[name] = Math.max(0, Math.min(100, Math.round(scorePct)));
+      _sectionScores[name] = Math.max(_sectionScores[name] || 0, Math.min(100, Math.round(scorePct)));
     }
     if (_currentLessonId) _saveSections(_currentLessonId);
 
@@ -313,7 +302,7 @@ const Progress = (() => {
     }
 
     if (!alreadyCompleted) {
-      addXP(reward);
+      addXP(reward, 'complete:' + id);
     }
     completeLesson(id, _averageScore());
     if (fromExercise && !alreadyCompleted && banner && typeof dmSupportReminder !== 'undefined') {
@@ -325,10 +314,13 @@ const Progress = (() => {
      Public XP / completion API
      ════════════════════════════════════ */
 
-  function addXP(amount) {
+  function addXP(amount, eventId) {
     const state = load();
     updateStreak(state);
-    state.xp = Math.max(0, state.xp + amount);
+    if (!Number.isFinite(amount) || amount <= 0) return;
+    const id = eventId || 'activity:' + Date.now() + ':' + Math.random().toString(36).slice(2);
+    state.xpEvents[id] = Math.max(state.xpEvents[id] || 0, amount);
+    state.xp = state.xpBase + Object.values(state.xpEvents).reduce((a, b) => a + b, 0);
     save(state);
     renderXP(state.xp);
     renderStreak(state.streak);
@@ -339,7 +331,7 @@ const Progress = (() => {
     if (!state.completedLessons.includes(lessonId)) {
       state.completedLessons.push(lessonId);
     }
-    state.lessonScores[lessonId] = score;
+    state.lessonScores[lessonId] = Math.max(state.lessonScores[lessonId] || 0, score);
     save(state);
   }
 
@@ -544,6 +536,8 @@ const Progress = (() => {
      Экспорт / импорт / слияние (облако)
      ════════════════════════════════════ */
 
+  function lessonReward(id) { return ({"a1-01": 100, "a1-02": 100, "a1-03": 100, "a1-04": 100, "a1-05": 100, "a1-06": 100, "a1-07": 100, "a1-08": 100, "a1-09": 100, "a1-10": 100, "a1-11": 100, "a1-12": 100, "a1-13": 100, "a1-14": 100, "a1-15": 100, "a1-16": 100, "a1-17": 100, "a1-18": 100, "a1-19": 100, "a1-20": 100, "a2-01": 120, "a2-02": 120, "a2-03": 120, "a2-04": 130, "a2-05": 120, "a2-06": 130, "a2-07": 130, "a2-08": 130, "a2-09": 120, "a2-10": 120, "a2-11": 120, "a2-12": 120, "a2-13": 120, "a2-14": 120, "a2-15": 120, "a2-16": 120, "a2-17": 120, "a2-18": 120, "a2-19": 120, "a2-20": 120, "b1-01": 150, "b1-02": 150, "b1-03": 150, "b1-04": 150, "b1-05": 150, "b1-06": 150, "b1-07": 150, "b1-08": 150, "b1-09": 150, "b1-10": 150, "b1-11": 150, "b1-12": 150, "b1-13": 150, "b1-14": 150, "b2-01": 200, "b2-02": 200, "b2-03": 200, "b2-04": 200, "b2-05": 200, "b2-06": 200, "b2-07": 200, "b2-08": 200, "b2-09": 200, "b2-10": 200, "b2-11": 200, "b2-12": 200, "b2-13": 200, "b2-14": 200})[id] || 100; }
+
   function exportAll() {
     const out = { progress: load(), sections: {}, lastLesson: getLastLesson() };
     try {
@@ -556,6 +550,11 @@ const Progress = (() => {
     // Читалка: собственное поле верхнего уровня, dm_progress не трогаем
     out.books = _loadBooks();
     out.lessonPos = _loadLessonPos();
+    out.schema = 2;
+    out.vocab = ProgressModel.vocab(_readJson('dm_vocab_known') || {}, _readJson('dm_vocab_status') || {});
+    out.driving = _readJson('dm_fs_progress') || {};
+    out.exam = ProgressModel.exam(_readJson('dm_fs_exam') || {});
+    out.drivingLast = _readJson('dm_fs_last_pos');
     return out;
   }
 
@@ -607,9 +606,7 @@ const Progress = (() => {
     const rec = Object.assign({}, b, a);
     rec.n  = Math.max(Number(a.n)  || 0, Number(b.n)  || 0);
     rec.ts = Math.max(Number(a.ts) || 0, Number(b.ts) || 0);
-    rec.status = (a.status === 'known' || b.status === 'known')
-      ? 'known'
-      : (a.status || b.status || 'new');
+    Object.assign(rec, ProgressModel.status(a, b));
 
     const seen = [];
     const seenKeys = new Set();
@@ -665,17 +662,7 @@ const Progress = (() => {
   }
 
   function _mergeGlobal(a, b) {
-    a = a || {}; b = b || {};
-    const m = { ...defaults, ...a };
-    m.xp         = Math.max(a.xp || 0, b.xp || 0);
-    m.streak     = Math.max(a.streak || 0, b.streak || 0);
-    m.lastActive = [a.lastActive, b.lastActive].filter(Boolean).sort().pop() || null;
-    m.completedLessons = Array.from(new Set([...(a.completedLessons || []), ...(b.completedLessons || [])]));
-    m.lessonScores = { ...(b.lessonScores || {}) };
-    Object.entries(a.lessonScores || {}).forEach(([k, v]) => {
-      m.lessonScores[k] = Math.max(v, m.lessonScores[k] || 0);
-    });
-    return m;
+    return ProgressModel.global(a || {}, b || {});
   }
 
   /**
@@ -687,6 +674,7 @@ const Progress = (() => {
     if (!cloud || typeof cloud !== 'object') return false;
 
     const before = JSON.stringify(exportAll());
+    const beforeDone = load().completedLessons.slice();
 
     save(_mergeGlobal(load(), cloud.progress));
 
@@ -718,7 +706,10 @@ const Progress = (() => {
       st.lessonScores[id] = vals.length ? Math.round(vals.reduce((a, b) => a + b, 0) / vals.length) : 100;
       finished = true;
     });
-    if (finished) save(st);
+    if (finished) {
+      save(st);
+      st.completedLessons.filter(id => !beforeDone.includes(id)).forEach(id => addXP(lessonReward(id), 'complete:' + id));
+    }
 
     if (cloud.lastLesson && !getLastLesson()) setLastLesson(cloud.lastLesson);
 
@@ -733,7 +724,20 @@ const Progress = (() => {
       if (rec) { try { localStorage.setItem(LESSON_POS_PREFIX + id, JSON.stringify(rec)); } catch {} }
     });
 
-    return JSON.stringify(exportAll()) !== before;
+    const vocab = ProgressModel.vocab(exportAll().vocab, cloud.vocab || {});
+    const driving = ProgressModel.driving(_readJson('dm_fs_progress') || {}, cloud.driving || {});
+    const exam = ProgressModel.exam(_readJson('dm_fs_exam') || {}, cloud.exam || {});
+    try {
+      localStorage.setItem('dm_vocab_status', JSON.stringify(vocab));
+      localStorage.setItem('dm_vocab_known', JSON.stringify(Object.fromEntries(Object.entries(vocab).filter(([,v]) => v.status === 'known').map(([k]) => [k, 1]))));
+      localStorage.setItem('dm_fs_progress', JSON.stringify(driving));
+      localStorage.setItem('dm_fs_exam', JSON.stringify(exam));
+      const last = _mergePos(_readJson('dm_fs_last_pos'), cloud.drivingLast);
+      if (last) { localStorage.setItem('dm_fs_last_pos', JSON.stringify(last)); localStorage.setItem('dm_fs_last', last.id); }
+    } catch {}
+    const changed = JSON.stringify(exportAll()) !== before;
+    if (changed) window.dispatchEvent(new Event('dm:progress-import'));
+    return changed;
   }
 
   /* ════════════════════════════════════
@@ -796,6 +800,7 @@ const Progress = (() => {
 
     // ✦ Облачная синхронизация
     subscribe,
+    notify: _notify,
     exportAll,
     importAll
   };

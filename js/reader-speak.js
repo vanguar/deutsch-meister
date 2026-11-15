@@ -158,7 +158,7 @@ const ReaderSpeak = (() => {
         if (res.reason === 'empty') { step(); return; }                 // нечего играть
         if (!res.ok) {
           console.warn('[ReaderSpeak] озвучка не удалась: ' + res.reason);
-          toast('Озвучка недоступна');
+          if (res.reason !== 'offline') toast('Озвучка недоступна');
           finish(false, res.reason);
           return;
         }

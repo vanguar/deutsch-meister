@@ -2356,13 +2356,7 @@ Kraft|сила|Существительное|in Kraft treten — вступат
   }
 
   /* ── Theme ── */
-  function initThemeGlobal() {
-    const saved = localStorage.getItem('dm_theme') || 'dark';
-    document.documentElement.setAttribute('data-theme', saved);
-    document.querySelectorAll('#themeToggle,#themeToggle2').forEach(b => {
-      if (b) b.textContent = saved === 'dark' ? '☀️' : '🌙';
-    });
-  }
+
 
   /* ── Public init ── */
   function init() {
@@ -2384,22 +2378,8 @@ Kraft|сила|Существительное|in Kraft treten — вступат
 })();
 
 /* ── Global helpers called from inline HTML ── */
-function initTheme() {
-  const saved = localStorage.getItem('dm_theme') || 'dark';
-  document.documentElement.setAttribute('data-theme', saved);
-  document.querySelectorAll('#themeToggle,#themeToggle2').forEach(b => {
-    if (b) b.textContent = saved === 'dark' ? '☀️' : '🌙';
-  });
-}
-function toggleTheme() {
-  const cur  = document.documentElement.getAttribute('data-theme') || 'dark';
-  const next = cur === 'dark' ? 'light' : 'dark';
-  document.documentElement.setAttribute('data-theme', next);
-  localStorage.setItem('dm_theme', next);
-  document.querySelectorAll('#themeToggle,#themeToggle2').forEach(b => {
-    if (b) b.textContent = next === 'dark' ? '☀️' : '🌙';
-  });
-}
+
+
 function openSidebar() {
   document.getElementById('sidebar')?.classList.add('open');
   document.getElementById('sidebarOverlay')?.classList.add('show');

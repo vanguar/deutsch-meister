@@ -71,6 +71,7 @@ const ReaderWords = (() => {
   }
 
   let bookId = null;
+  window.addEventListener('dm:progress-import', () => { if (bookId) load(bookId); });
   let words  = {};   // лемма → запись
 
   /* ── Хранилище ── */
@@ -124,6 +125,7 @@ const ReaderWords = (() => {
     if (!bookId) return;
     try {
       localStorage.setItem(KEY + bookId, JSON.stringify(words));
+      if (typeof Progress !== 'undefined') Progress.notify();
     } catch (e) {
       console.warn('[ReaderWords] не удалось сохранить сборник', e);
     }
@@ -212,7 +214,7 @@ const ReaderWords = (() => {
     const rec = words[lemma];
     if (!rec) return null;
     rec.status = status;
-    rec.ts = Date.now();
+    rec.statusTs = Date.now();
     save();
     return rec;
   }
