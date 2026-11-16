@@ -1,4 +1,4 @@
-const CACHE = 'deutsch-meister-v231';
+const CACHE = 'deutsch-meister-v232';
 const SCOPE_PATH = new URL(self.registration.scope).pathname.replace(/\/$/, '');
 const BASE = SCOPE_PATH === '' ? '' : SCOPE_PATH;
 
@@ -7,60 +7,60 @@ const STATIC = [
   BASE + '/',
   BASE + '/index.html',
   BASE + '/manifest.json',
-  BASE + '/css/base.css?v=216',
-  BASE + '/css/sidebar.css?v=216',
-  BASE + '/css/home.css?v=216',
-  BASE + '/css/lesson.css?v=216',
-  BASE + '/css/exercises.css?v=216',
-  BASE + '/js/i18n.js?v=216',
-  BASE + '/js/tg-theme.js?v=216',
-  BASE + '/js/theme.js?v=216',
-  BASE + '/js/progress-model.js?v=216',
-  BASE + '/js/progress.js?v=216',
-  BASE + '/js/offline.js?v=216',
-  BASE + '/css/offline.css?v=216',
-  BASE + '/js/lesson-render.js?v=216',
-  BASE + '/js/exercises.js?v=216',
-  BASE + '/js/flashcards.js?v=216',
-  BASE + '/js/tts.js?v=216',
-  BASE + '/js/telegram.js?v=216',
-  BASE + '/js/cloud-sync.js?v=216',
-  BASE + '/js/install-app.js?v=216',
-  BASE + '/js/support.js?v=216',
-  BASE + '/js/home.js?v=216',
-  BASE + '/js/vocab.js?v=216',
-  BASE + '/js/sw-register.js?v=216',
+  BASE + '/css/base.css?v=217',
+  BASE + '/css/sidebar.css?v=217',
+  BASE + '/css/home.css?v=217',
+  BASE + '/css/lesson.css?v=217',
+  BASE + '/css/exercises.css?v=217',
+  BASE + '/js/i18n.js?v=217',
+  BASE + '/js/tg-theme.js?v=217',
+  BASE + '/js/theme.js?v=217',
+  BASE + '/js/progress-model.js?v=217',
+  BASE + '/js/progress.js?v=217',
+  BASE + '/js/offline.js?v=217',
+  BASE + '/css/offline.css?v=217',
+  BASE + '/js/lesson-render.js?v=217',
+  BASE + '/js/exercises.js?v=217',
+  BASE + '/js/flashcards.js?v=217',
+  BASE + '/js/tts.js?v=217',
+  BASE + '/js/telegram.js?v=217',
+  BASE + '/js/cloud-sync.js?v=217',
+  BASE + '/js/install-app.js?v=217',
+  BASE + '/js/support.js?v=217',
+  BASE + '/js/home.js?v=217',
+  BASE + '/js/vocab.js?v=217',
+  BASE + '/js/sw-register.js?v=217',
   // Читалка: оболочка библиотеки и её движок. Каталог книг — маленький
   // и нужен сразу, поэтому он в прекеше; ?v= у .json нет намеренно:
   // bump_version.py версионирует только .js/.css, а запросы всё равно
   // идут network-first, так что свежее приходит из сети.
   BASE + '/books.html',
   BASE + '/news.html',
-  BASE + '/css/reader.css?v=216',
-  BASE + '/js/image-reveal.js?v=216',
-  BASE + '/js/library.js?v=216',
-  BASE + '/js/reader.js?v=216',
-  BASE + '/js/reader-tip.js?v=216',
-  BASE + '/js/reader-gloss.js?v=216',
-  BASE + '/js/reader-words.js?v=216',
-  BASE + '/js/reader-speak.js?v=216',
-  BASE + '/js/reader-cards.js?v=216',
-  BASE + '/js/reader-dict.js?v=216',
-  BASE + '/css/news.css?v=216',
-  BASE + '/js/news.js?v=216',
+  BASE + '/css/reader.css?v=217',
+  BASE + '/js/image-reveal.js?v=217',
+  BASE + '/js/library.js?v=217',
+  BASE + '/js/reader.js?v=217',
+  BASE + '/js/reader-tip.js?v=217',
+  BASE + '/js/reader-gloss.js?v=217',
+  BASE + '/js/reader-words.js?v=217',
+  BASE + '/js/reader-speak.js?v=217',
+  BASE + '/js/reader-cards.js?v=217',
+  BASE + '/js/reader-dict.js?v=217',
+  BASE + '/css/news.css?v=217',
+  BASE + '/js/news.js?v=217',
   // Диалоги: оболочка, движок и оглавление; сами диалоги (data/dialogs/*.json)
   // и фото кладутся в кеш при первом открытии, как главы книг
   BASE + '/dialogs.html',
-  BASE + '/css/dialogs.css?v=216',
-  BASE + '/js/dialogs.js?v=216',
+  BASE + '/css/dialogs.css?v=217',
+  BASE + '/js/dialogs.js?v=217',
   // Автошкола: оболочка, движок и оглавление; уроки и знаки — при открытии
   BASE + '/fahrschule.html',
-  BASE + '/css/fahrschule.css?v=216',
-  BASE + '/js/fahrschule.js?v=216',
+  BASE + '/css/fahrschule.css?v=217',
+  BASE + '/js/fahrschule.js?v=217',
   // Земли Германии: оболочка, движок, витрина и карта; тексты — при открытии
   BASE + '/laender.html',
-  BASE + '/css/laender.css?v=216',
-  BASE + '/js/laender.js?v=216',
+  BASE + '/css/laender.css?v=217',
+  BASE + '/js/laender.js?v=217',
   BASE + '/data/laender/lands.json',
   BASE + '/data/laender/map.json',
   BASE + '/data/books/index.json',
@@ -72,6 +72,11 @@ const STATIC = [
   BASE + '/icons/icon.svg',
   BASE + '/icons/icon-192.png',
 ];
+const SHARED_ASSETS = new Map();
+for (const asset of STATIC) {
+  const versioned = /^(.*\.(?:js|css))\?v=(\d+)$/.exec(asset);
+  if (versioned) SHARED_ASSETS.set(versioned[1], { url: asset, version: Number(versioned[2]) });
+}
 
 // Главы (data/books/*/ch-NN.json) и glossary.json НЕ прекешируются:
 // библиотека будет расти, и складывать её целиком в кеш не масштабируется.
@@ -100,7 +105,7 @@ self.addEventListener('install', e => {
   self.skipWaiting();
   e.waitUntil(
     caches.open(CACHE).then(c => Promise.all(
-      STATIC.map(url => c.add(url).catch(err => {
+      STATIC.map(url => c.add(new Request(new URL(url, self.location.origin), { cache: 'reload' })).catch(err => {
         console.warn('[SW] не удалось прекешировать ' + url, err);
       }))
     )).catch(err => console.warn('[SW] прекеш недоступен', err))
@@ -212,7 +217,7 @@ async function cached(req) {
     const cache = await caches.open(name);
     const found = await cache.match(url); if (found) return found;
   }
-  // Older downloaded HTML can reference older asset versions after an update.
+  // Keep downloaded resources readable if they only exist under another version.
   for (const name of names) {
     const found = await (await caches.open(name)).match(url, { ignoreSearch: true });
     if (found) return found;
@@ -225,7 +230,17 @@ self.addEventListener('fetch', e => {
   if (req.method !== 'GET' || u.origin !== self.location.origin || !u.pathname.startsWith(BASE + '/') || isNoStore(req.url)) return;
   e.respondWith((async () => {
     try {
-      const res = await fetch(req);
+      // A saved page may still link to retired shared assets. Prefer this
+      // release's precache over both the HTTP cache and the old saved copy.
+      const requested = /^\?v=(\d+)$/.exec(u.search);
+      const current = SHARED_ASSETS.get(u.pathname);
+      if (current && requested && Number(requested[1]) < current.version) {
+        const fresh = await caches.match(current.url, { cacheName: CACHE }).catch(() => null);
+        if (fresh) return fresh;
+      }
+      // The host caches HTML for ten minutes. Revalidate it on navigation so
+      // an online reopen gets the latest versioned scripts along with the page.
+      const res = await fetch(req, req.mode === 'navigate' ? { cache: 'no-cache' } : undefined);
       if (res.ok) {
         const cache = await caches.open(RUNTIME);
         try {
