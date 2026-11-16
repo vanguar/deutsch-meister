@@ -532,6 +532,46 @@ const TTS = (() => {
     loadBuffer(text).catch(() => {});
   }
 
+  const OFFLINE_NOTICE_KEY = 'dm_tts_offline_notice';
+  let offlineNoticeShown = false;
+
+  function resetOfflineNotice() {
+    offlineNoticeShown = false;
+    try { window.sessionStorage.removeItem(OFFLINE_NOTICE_KEY); } catch (_) {}
+    const note = document.getElementById('ttsOfflineNotice');
+    if (note) {
+      clearTimeout(note._timer);
+      note.classList.remove('show');
+    }
+  }
+
+  function showOfflineNotice(host) {
+    if (offlineNoticeShown) return;
+    offlineNoticeShown = true;
+    try {
+      if (window.sessionStorage.getItem(OFFLINE_NOTICE_KEY)) return;
+      window.sessionStorage.setItem(OFFLINE_NOTICE_KEY, '1');
+    } catch (_) {}
+
+    const message = inTelegram()
+      ? 'Без интернета озвучка в Telegram недоступна. Текст и перевод остаются доступны.'
+      : 'Озвучка без интернета работает только с установленным немецким голосом. Воспроизведение не гарантируется.';
+    let note = document.getElementById('ttsOfflineNotice');
+    if (!note) {
+      note = document.createElement('div');
+      note.id = 'ttsOfflineNotice';
+      note.setAttribute('role', 'status');
+    }
+    note.className = 'dm-toast' + (host ? ' dm-toast-inline' : '');
+    // Flashcard notices go after the answer buttons. Grid hosts put them on a new row.
+    const actions = host?.querySelector('.card-actions');
+    if (actions) actions.after(note);
+    else (host || document.body).appendChild(note);
+    note.textContent = window.I18N ? I18N.t(message) : message;
+    note.classList.add('show');
+    note._timer = setTimeout(() => note.classList.remove('show'), 7000);
+  }
+
   /* opts.voiceName — имя системного голоса (speechSynthesis), opts.detune —
      сдвиг тона в центах для аудио-пути (mp3 Google TTS). Оба необязательны:
      без них поведение прежнее. */
@@ -544,21 +584,8 @@ const TTS = (() => {
       return;
     }
     if (navigator.onLine === false) {
-      const message = inTelegram()
-        ? 'Без интернета озвучка в Telegram недоступна. Текст и перевод остаются доступны.'
-        : 'Озвучка без интернета работает только с установленным немецким голосом. Воспроизведение не гарантируется.';
-      let note = document.getElementById('ttsOfflineNotice');
-      if (!note) { note = document.createElement('div'); note.id = 'ttsOfflineNotice'; note.setAttribute('role', 'status'); }
       const host = noticeHost || document.activeElement?.closest?.('.vocab-item, .phrase-card, .grammar-box, .flashcard-section');
-      note.className = 'dm-toast' + (host ? ' dm-toast-inline' : '');
-      if (host) {
-        // In flashcards keep the notice immediately AFTER the answer controls.
-        const actions = host.querySelector('.card-actions');
-        if (actions) actions.after(note); else host.appendChild(note);
-      } else document.body.appendChild(note);
-      note.textContent = window.I18N ? I18N.t(message) : message;
-      note.classList.add('show');
-      clearTimeout(note._timer); note._timer = setTimeout(() => note.classList.remove('show'), 7000);
+      showOfflineNotice(host);
       if (mode() === 'audio') {
         stopCurrent();
         if (typeof onEnd === 'function') setTimeout(() => onEnd({ ok: false, reason: 'offline' }), 0);
@@ -648,6 +675,8 @@ const TTS = (() => {
   }
 
   function init() {
+    window.addEventListener('online', resetOfflineNotice);
+    if (navigator.onLine !== false) resetOfflineNotice();
     const g = () => unlock();
     document.addEventListener('touchend', g, { passive: true });
     document.addEventListener('click',    g, { passive: true });
@@ -669,10 +698,7 @@ function speakSlow(text) { TTS.speakSlow(text); }
 
 // Озвучка фразы с синхронной подсветкой слов внутри её карточки.
 function speakPhraseEl(btn, text) {
-  let spans = [];
-  try {
-    const card = btn.closest('.phrase-card');
-    if (card) spans = Array.prototype.slice.call(card.querySelectorAll('.phrase-de .word-speak'));
-  } catch (e) {}
-  TTS.speakPhrase(text, spans);
+  const card = btn.closest('.phrase-card');
+  const spans = card ? Array.from(card.querySelectorAll('.phrase-de .word-speak')) : [];
+  TTS.speakPhrase(text, spans, { noticeHost: card });
 }

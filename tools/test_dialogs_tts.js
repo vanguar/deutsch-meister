@@ -40,7 +40,7 @@ const VOICES = [
 
 /* Окружение: tg — Telegram WebView (аудио-путь), voices — голоса системы,
    webAudio=false — Web Audio падает и работает <audio> */
-function boot({ tg = false, voices = VOICES, webAudio = true, fetchMs = 5 } = {}) {
+function boot({ tg = false, voices = VOICES, webAudio = true, fetchMs = 5, online = true, session = new Map() } = {}) {
   const log = { utter: [], fetch: [], sources: [], audio: [], notices: [] };
   const synth = {
     speaking: false, cur: null,
@@ -92,8 +92,11 @@ function boot({ tg = false, voices = VOICES, webAudio = true, fetchMs = 5 } = {}
       return Promise.resolve();
     }
   }
+  const windowListeners = {};
   const ctx = {
-    navigator: { userAgent: tg ? 'Mozilla/5.0 Telegram-Android' : 'Mozilla/5.0 Chrome', onLine: true },
+    navigator: { userAgent: tg ? 'Mozilla/5.0 Telegram-Android' : 'Mozilla/5.0 Chrome', onLine: online },
+    sessionStorage: { getItem: key => session.get(key), setItem: (key, value) => session.set(key, value), removeItem: key => session.delete(key) },
+    addEventListener: (name, fn) => { windowListeners[name] = fn; },
     speechSynthesis: synth, SpeechSynthesisUtterance: Utter,
     AudioContext: Ctx, Audio: AudioEl,
     fetch: url => { log.fetch.push(url); return sleep(fetchMs).then(() => ({ ok: true, arrayBuffer: () => Promise.resolve(new ArrayBuffer(8)) })); },
@@ -108,7 +111,7 @@ function boot({ tg = false, voices = VOICES, webAudio = true, fetchMs = 5 } = {}
   vm.createContext(ctx);
   vm.runInContext(TTS_SRC + '\n;this.TTS = TTS;', ctx);
   vm.runInContext(RS_SRC + '\n;this.ReaderSpeak = ReaderSpeak;', ctx);
-  return { ctx, TTS: ctx.TTS, RS: ctx.ReaderSpeak, log, synth };
+  return { ctx, TTS: ctx.TTS, RS: ctx.ReaderSpeak, log, synth, windowListeners };
 }
 
 function speakAsync(TTS, text, opts) {
@@ -132,18 +135,25 @@ function speakAsync(TTS, text, opts) {
     check('браузер офлайн: нет запроса, гарантий в подсказке нет', log.fetch.length === 0 && /не гарантируется/.test(log.notices[0]?.textContent));
   }
   {
-    const { ctx, TTS, log } = boot({ tg: true });
-    ctx.navigator.onLine = false;
-    let note, position;
+    const session = new Map();
+    const { ctx, TTS, log, windowListeners } = boot({ tg: true, online: false, session });
+    let note, position, wordNotices = 0;
     const actions = { after(el) { note = el; position = 'after-actions'; } };
     const cards = { querySelector: () => actions };
     await speakAsync(TTS, 'Hallo', { noticeHost: cards });
     check('offline notice follows answer buttons in flow', position === 'after-actions' && note.className === 'dm-toast dm-toast-inline');
     ctx.document.getElementById = () => note;
     const first = note;
-    const word = { querySelector: () => null, appendChild(el) { note = el; position = 'vocabulary'; } };
+    const firstTimer = note._timer;
+    const word = { querySelector: () => null, appendChild(el) { note = el; position = 'vocabulary'; wordNotices++; } };
     await speakAsync(TTS, 'Wort', { noticeHost: word });
-    check('same offline notice moves to the active word', note === first && position === 'vocabulary');
+    check('repeat offline speech does not move the notice or extend its timer', wordNotices === 0 && first._timer === firstTimer);
+    const reloaded = boot({ tg: true, online: false, session });
+    await speakAsync(reloaded.TTS, 'Wort', { noticeHost: word });
+    check('already shown warning stays hidden after an offline reload', wordNotices === 0);
+    windowListeners.online();
+    await speakAsync(TTS, 'Wort', { noticeHost: word });
+    check('after reconnect the next offline attempt shows the warning at the active word', wordNotices === 1 && note === first && position === 'vocabulary');
     check('inline notices do not create floating duplicates or network requests', log.notices.length === 0 && log.fetch.length === 0);
   }
   console.log('1. Старые вызовы — прежний путь');

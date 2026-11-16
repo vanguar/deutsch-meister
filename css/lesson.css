@@ -196,8 +196,9 @@
   border: 1px solid var(--border);
   border-radius: var(--r-lg);
   padding: 18px 18px 18px 20px;
-  display: flex;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
   gap: 10px;
   transition: all var(--t-normal);
   position: relative;
@@ -223,7 +224,7 @@
 .phrase-card.word-tip-card-open { z-index: 30; }
 .phrase-card:hover::before { transform: scaleY(1); }
 
-.phrase-body { flex: 1; min-width: 0; }
+.phrase-body { min-width: 0; }
 
 .phrase-de {
   font-size: 16px;

@@ -33,6 +33,12 @@ function states(doc) { return [...doc.querySelectorAll('#cardDots .fc-dot')].map
 function clickCard(doc) { doc.getElementById('flashcard').click(); }
 function rate(doc, again = false) { clickCard(doc); doc.querySelector(again ? '.card-btn.again' : '.card-btn.good').click(); }
 function rect(el) { return el.getBoundingClientRect(); }
+function reconnectAndGoOffline(doc) {
+  const win = doc.defaultView;
+  Object.defineProperty(win.navigator, 'onLine', { configurable: true, value: true });
+  win.dispatchEvent(new win.Event('online'));
+  Object.defineProperty(win.navigator, 'onLine', { configurable: true, value: false });
+}
 async function preview(suffix = false) {
   original = localStorage.getItem(key);
   localStorage.removeItem(key);
@@ -60,6 +66,26 @@ document.getElementById('run').onclick = async () => {
   try {
     localStorage.removeItem(key);
     let doc = await load();
+    const phrase = doc.querySelectorAll('#phraseGrid .phrase-card')[3];
+    const phraseBody = phrase.querySelector('.phrase-body');
+    const phraseSpeak = phrase.querySelector('.speak-btn');
+    for (const width of [320, 390, 1024]) {
+      frame.style.width = width + 'px'; frame.style.maxWidth = 'none';
+      await tick(150);
+      const widthBefore = rect(phraseBody).width;
+      phraseSpeak.click();
+      const warning = doc.getElementById('ttsOfflineNotice');
+      check(warning?.parentElement === phrase && Math.abs(rect(phraseBody).width - widthBefore) < 1 &&
+        rect(warning).top >= Math.max(rect(phraseBody).bottom, rect(phraseSpeak).bottom) &&
+        warning.scrollWidth <= warning.clientWidth, 'phrase warning fits on its own row at ' + width + 'px');
+      const timer = warning._timer;
+      phraseSpeak.click();
+      doc.querySelector('#phraseGrid .speak-btn').click();
+      check(warning.parentElement === phrase && warning._timer === timer, 'more speech attempts do not move or extend the warning at ' + width + 'px');
+      reconnectAndGoOffline(doc);
+    }
+    frame.style.width = '360px'; frame.style.maxWidth = '100%';
+    await tick(350);
     const card = doc.getElementById('flashcard');
     card.scrollIntoView({ block: 'center', behavior: 'instant' });
     const actions = doc.getElementById('cardActions');
@@ -108,9 +134,10 @@ document.getElementById('run').onclick = async () => {
     }
     frame.style.width = '360px'; frame.style.maxWidth = '100%';
     const word = [...doc.querySelectorAll('.vocab-item')].find(el => el.querySelector('.vocab-word').textContent === '-nis');
+    reconnectAndGoOffline(doc);
     word.querySelector('button').click();
     check(doc.getElementById('ttsOfflineNotice').parentElement === word && doc.querySelectorAll('#ttsOfflineNotice').length === 1,
-      'notice moves from flashcards into the active vocabulary row');
+      'first offline attempt after reconnect uses the active vocabulary row');
     check(word.textContent.includes('die Erlaubnis'), 'suffix has a concrete example and both noun genders');
     for (const lang of ['uk', 'ar']) {
       doc = await load(lang);

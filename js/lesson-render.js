@@ -1910,7 +1910,7 @@ Kraft|сила|Существительное|in Kraft treten — вступат
   function renderWord(word, phrase = {}) {
     const tip = renderWordTip(word);
     const classes = `word-speak${tip ? ' word-has-tip' : ''}`;
-    return `<span class="${classes}" tabindex="0" onclick="event.stopPropagation();speak('${jsStr(word)}')">${esc(word)}${tip}</span>`;
+    return `<span class="${classes}" tabindex="0" onclick="event.stopPropagation();speak('${jsStr(word)}', {noticeHost: this.closest('.phrase-card')})">${esc(word)}${tip}</span>`;
   }
 
   function wordTipTarget(target) {
@@ -2033,7 +2033,7 @@ Kraft|сила|Существительное|in Kraft treten — вступат
     document.addEventListener('click', event => {
       if (inOpenTip(event.target)) {
         const play = event.target.closest('.word-tip-play');
-        if (play && typeof speak === 'function') speak(play.dataset.say);
+        if (play && typeof speak === 'function') speak(play.dataset.say, { noticeHost: activeWordTip.el.closest('.phrase-card') });
         wordTipPinned = true;
         return;
       }
