@@ -358,7 +358,62 @@ const Home = (() => {
     });
   }
 
+  function initShare() {
+    const button = $('shareCourseBtn');
+    const canonical = document.querySelector('link[rel="canonical"]')?.href;
+    if (!button || !canonical) return;
+
+    const icon = button.querySelector('svg');
+    const spinner = button.querySelector('.ui-spinner');
+    const status = $('shareCourseStatus');
+    const fallback = $('shareCourseFallback');
+    const link = fallback.querySelector('input');
+    const t = text => window.I18N ? I18N.t(text) : text;
+    let toastTimer;
+
+    button.addEventListener('click', async () => {
+      if (button.getAttribute('aria-busy') === 'true') return;
+      button.setAttribute('aria-busy', 'true');
+      icon.setAttribute('hidden', '');
+      spinner.hidden = false;
+      fallback.hidden = true;
+      try {
+        const telegram = window.Telegram?.WebApp;
+        if (telegram?.openTelegramLink && isTelegramWebView()) {
+          const shareLink = new URL('https://t.me/share/url');
+          shareLink.searchParams.set('url', canonical);
+          shareLink.searchParams.set('text', 'German Morning');
+          try { telegram.openTelegramLink(shareLink.href); return; } catch (_) {}
+        }
+        const data = { title: 'German Morning', url: canonical };
+        if (typeof navigator.share === 'function') {
+          try { await navigator.share(data); return; }
+          catch (error) { if (error?.name === 'AbortError') return; }
+        }
+        if (navigator.clipboard?.writeText) {
+          try {
+            await navigator.clipboard.writeText(canonical);
+            status.textContent = t('Ссылка скопирована');
+            status.classList.add('show');
+            clearTimeout(toastTimer);
+            toastTimer = setTimeout(() => status.classList.remove('show'), 2600);
+            return;
+          } catch (_) {}
+        }
+        link.value = canonical;
+        fallback.hidden = false;
+        link.focus();
+        link.select();
+      } finally {
+        button.removeAttribute('aria-busy');
+        icon.removeAttribute('hidden');
+        spinner.hidden = true;
+      }
+    });
+  }
+
   function init() {
+    initShare();
     document.querySelectorAll('[data-tab-btn]').forEach(b => b.addEventListener('click', () => go(b.dataset.tabBtn)));
     document.querySelectorAll('[data-level-btn]').forEach(b => b.addEventListener('click', () => pickLevel(b.dataset.levelBtn)));
     buildLevelNext();

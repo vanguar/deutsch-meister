@@ -259,7 +259,7 @@ html[dir="rtl"] .fs-tr { text-align: right; }
 .fs-btns { flex: none; display: flex; flex-direction: column; gap: 6px; }
 .fs-page .dlg-say {
   width: 44px; height: 44px; border: 0; background: var(--surface3); color: var(--accent2-text);
-  transition: background-color var(--t-fast), color var(--t-fast);
+  transition: background-color var(--t-fast), color var(--t-fast), var(--t-press);
 }
 .fs-page .dlg-say .ico { width: 20px; height: 20px; }
 .fs-say .fs-say-off { display: none; }
@@ -276,6 +276,14 @@ html[dir="rtl"] .fs-tr { text-align: right; }
   border: 1px solid var(--border);
 }
 .fs-page .fs-avatar .fs-avatar-role { width: 24px; height: 24px; fill: currentColor; stroke: none; }
+.fs-avatar .ui-spinner {
+  display: none;
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  opacity: .65;
+}
+.fs-avatar[aria-busy="true"] .ui-spinner { display: inline-block; }
 .fs-avatar-sound {
   position: absolute;
   inset-inline-end: -2px;

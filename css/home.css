@@ -71,15 +71,20 @@ body.home button { -webkit-appearance: none; appearance: none; }
 .ico.sm { width: 18px; height: 18px; }
 html[dir="rtl"] .ico.flip { transform: scaleX(-1); }
 
-.home-support {
+.home-actions {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+  gap: 8px;
+  margin-top: 16px;
+}
+.home-action {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  margin: 16px 0 0;
-  width: 100%;
+  gap: 7px;
+  min-width: 0;
   min-height: 44px;
-  padding: 8px 16px;
+  padding: 8px 10px;
   border: 1px solid var(--h-line);
   border-radius: 14px;
   background: var(--h-card);
@@ -88,11 +93,30 @@ html[dir="rtl"] .ico.flip { transform: scaleX(-1); }
   font-size: 14px;
   font-weight: 700;
   cursor: pointer;
+  transition: background-color var(--t-fast), border-color var(--t-fast), var(--t-press);
 }
-.home-support .ico { width: 24px; height: 24px; color: var(--accent3); stroke-width: 1.5; }
-@media (hover: hover) { .home-support:hover { background: var(--h-card2); } }
-.home-support:active { background: var(--h-card2); }
-.home-support:focus-visible { outline: 2px solid var(--h-accent); outline-offset: 2px; }
+.home-support .ico { width: 20px; height: 20px; color: var(--accent3); stroke-width: 1.5; }
+.home-share { color: var(--h-accent); background: transparent; }
+.home-share .ico { width: 18px; height: 18px; }
+.home-share[aria-busy="true"] { background: var(--h-ghost); cursor: wait; }
+@media (hover: hover) {
+  .home-action:hover { background: var(--h-card2); }
+  .home-share:hover { border-color: var(--h-accent); }
+}
+.home-action:focus-visible { outline: 2px solid var(--h-accent); outline-offset: 2px; }
+.home-action:active { background: var(--h-card2); }
+.home-share-status { bottom: calc(var(--h-tab-h) + var(--h-safe-b) + 12px); }
+.home-share-link { display: grid; gap: 5px; margin-top: 10px; color: var(--h-hint); font-size: 13px; }
+.home-share-link input {
+  width: 100%;
+  min-height: 40px;
+  padding: 6px 10px;
+  border: 1px solid var(--h-line);
+  border-radius: 10px;
+  background: var(--h-card);
+  color: var(--h-text);
+  font: inherit;
+}
 
 /* ── заголовки ── */
 .home-head { margin: 8px 2px 18px; }
@@ -199,10 +223,9 @@ html[dir="rtl"] .ico.flip { transform: scaleX(-1); }
   border-radius: 16px; border: 0;
   background: var(--h-btn); color: var(--h-btn-text);
   font-size: 17px; font-weight: 700; text-align: center;
-  transition: filter .15s ease, transform .15s ease;
+  transition: var(--t-press);
 }
-.now-btn:active { transform: scale(.985); }
-@media (hover: hover) { .now-btn:hover { filter: brightness(1.08); } }
+@media (hover: hover) { .now-btn:hover:not(:active) { filter: brightness(1.08); } }
 
 /* ── уровень и серия ── */
 .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 12px; }
@@ -235,9 +258,8 @@ html[dir="rtl"] .ico.flip { transform: scaleX(-1); }
   background: var(--h-card); border: 0; border-radius: 20px; padding: 16px;
   color: var(--h-text); font: inherit; text-align: start; cursor: pointer; min-width: 0;
   box-shadow: var(--h-shadow);
-  transition: transform .15s ease, background .15s ease;
+  transition: background .15s ease, var(--t-press);
 }
-.read:active { transform: scale(.985); }
 @media (hover: hover) { .read:hover { background: var(--h-card2); } }
 .read .ico { color: var(--h-accent); }
 .read-title { display: block; font-size: 17px; font-weight: 700; color: var(--h-text); margin-top: 6px; }
@@ -263,6 +285,7 @@ html[dir="rtl"] .ico.flip { transform: scaleX(-1); }
   color: var(--h-hint); font: inherit; font-size: 12px; font-weight: 600;
 }
 .tab-btn.on { color: var(--h-accent); }
+.tab-btn:active { background: var(--h-ghost); }
 .tab-btn:focus-visible, .seg button:focus-visible, .read:focus-visible, .row:focus-visible,
 .now-btn:focus-visible, .lesson-card:focus-visible {
   outline: 2px solid var(--h-accent); outline-offset: 2px;
@@ -386,11 +409,10 @@ html[dir="rtl"] .lesson-card { padding: 10px 0 10px 12px; }
   border: 0; border-radius: 14px; cursor: pointer;
   background: var(--h-card2); color: var(--h-text);
   font: inherit; font-size: 16px; font-weight: 700;
-  transition: filter .15s ease, transform .15s ease;
+  transition: var(--t-press);
 }
 .lvl-next.is-ready .ln-btn { background: var(--h-btn); color: var(--h-btn-text); }
-.ln-btn:active { transform: scale(.985); }
-@media (hover: hover) { .ln-btn:hover { filter: brightness(1.08); } }
+@media (hover: hover) { .ln-btn:hover:not(:active) { filter: brightness(1.08); } }
 .ln-btn:focus-visible { outline: 2px solid var(--h-accent); outline-offset: 2px; }
 
 /* ── профиль ── */

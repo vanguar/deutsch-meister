@@ -131,6 +131,39 @@ body {
 
 a { color: inherit; text-decoration: none; }
 button { font-family: inherit; cursor: pointer; }
+/* Shared press feedback for buttons and links styled as actions. */
+:where(button, div[role="button"], span[role="button"], summary, a.btn, a.now-btn, a.ln-btn, a.tab-btn) {
+  --t-press: scale 145ms ease-out, filter 145ms ease-out;
+  transition: var(--t-press);
+}
+:where(button, div[role="button"], span[role="button"], summary, a.btn, a.now-btn, a.ln-btn, a.tab-btn):active:not(:disabled, [aria-disabled="true"]) {
+  scale: .96;
+  filter: brightness(.86);
+  transition-duration: 65ms;
+}
+@media (prefers-reduced-motion: reduce) {
+  :where(button, div[role="button"], span[role="button"], summary, a.btn, a.now-btn, a.ln-btn, a.tab-btn) {
+    --t-press: scale 0s, filter 0s;
+  }
+  :where(button, div[role="button"], span[role="button"], summary, a.btn, a.now-btn, a.ln-btn, a.tab-btn):active:not(:disabled, [aria-disabled="true"]) {
+    scale: 1;
+    transition-duration: 0s;
+  }
+}
+.ui-spinner {
+  display: inline-block;
+  flex: none;
+  width: 16px;
+  height: 16px;
+  border: 2px solid currentColor;
+  border-inline-end-color: transparent;
+  border-radius: 50%;
+}
+.ui-spinner[hidden] { display: none; }
+@media (prefers-reduced-motion: no-preference) {
+  .ui-spinner { animation: ui-spin .7s linear infinite; }
+}
+@keyframes ui-spin { to { transform: rotate(1turn); } }
 input, textarea { font-family: inherit; }
 ul, ol { list-style: none; }
 img { display: block; max-width: 100%; }
@@ -705,7 +738,7 @@ h1, h2, h3 {
 }
 
 /* Toast */
-.dm-toast {
+:is(.dm-toast, .home-share-status) {
   position: fixed; left: 50%; bottom: 32px;
   transform: translateX(-50%) translateY(20px);
   background: var(--surface3);
@@ -719,7 +752,7 @@ h1, h2, h3 {
   opacity: 0; transition: opacity .25s, transform .25s;
   pointer-events: none;
 }
-.dm-toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+:is(.dm-toast, .home-share-status).show { opacity: 1; transform: translateX(-50%) translateY(0); }
 
 .dm-image-hidden { visibility: hidden; }
 

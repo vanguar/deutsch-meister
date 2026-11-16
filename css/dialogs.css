@@ -120,7 +120,6 @@ html[dir="rtl"] .dlg-item-go { transform: scaleX(-1); }
   background: var(--accent2); color: var(--text-on-btn); font: inherit; font-size: 15px; font-weight: 800;
   box-shadow: 0 4px 16px rgba(47,109,181, .3); -webkit-tap-highlight-color: transparent;
 }
-.dlg-play:active { transform: scale(.98); }
 .dlg-play:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .dlg-play.is-on { background: var(--accent3); box-shadow: 0 4px 16px rgba(240, 107, 107, .3); }
 .dlg-play-ico { font-size: 13px; }

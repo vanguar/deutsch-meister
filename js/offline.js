@@ -65,6 +65,11 @@
     button.type = 'button'; button.className = 'offline-button';
     button.innerHTML = '<svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 3v9m-3-3 3 3 3-3M4 13v3h12v-3"/></svg>';
     const iconPath = button.querySelector('path');
+    const spinner = document.createElement('span');
+    spinner.className = 'ui-spinner';
+    spinner.setAttribute('aria-hidden', 'true');
+    spinner.hidden = true;
+    button.append(spinner);
     const buttonText = document.createElement('span'); button.append(buttonText);
     const help = document.createElement('details'); help.className = 'offline-help';
     const summary = document.createElement('summary');
@@ -91,6 +96,8 @@
     button.addEventListener('click', async () => {
       if (busy) return;
       busy = true; button.disabled = true;
+      button.setAttribute('aria-busy', 'true');
+      spinner.hidden = false;
       try {
         if (saved) {
           await request('OFFLINE_REMOVE', { id: pack.id }); saved = false;
@@ -106,7 +113,13 @@
           if (navigator.storage?.persist) navigator.storage.persist().catch(() => {});
         }
       } catch (e) { note.textContent = tr('Не удалось сохранить. Проверьте сеть и свободное место.') + ' ' + e.message; }
-      finally { busy = false; button.disabled = false; label(); }
+      finally {
+        busy = false;
+        button.disabled = false;
+        button.removeAttribute('aria-busy');
+        spinner.hidden = true;
+        label();
+      }
     });
   }
 

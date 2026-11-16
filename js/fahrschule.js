@@ -961,6 +961,7 @@ const Fahrschule = (() => {
         <button class="dlg-say fs-avatar" type="button" data-say="${n}" aria-pressed="false"
           title="Озвучить фразу" aria-label="Озвучить фразу" aria-describedby="fs-speaker-${n}">
           ${icon(instructor ? 'i-instructor' : 'i-student', 'fs-avatar-role')}
+          <span class="ui-spinner" aria-hidden="true"></span>
           <span class="fs-avatar-sound" aria-hidden="true">${icon('i-voice-waves')}</span>
         </button>
       </li>`;
@@ -2221,10 +2222,12 @@ const Fahrschule = (() => {
 
   function mark(n) {
     el.unit.querySelectorAll('.fs-line.is-speaking').forEach(li => li.classList.remove('is-speaking'));
+    el.unit.querySelectorAll('.fs-avatar[aria-busy="true"]').forEach(b => b.removeAttribute('aria-busy'));
     if (n == null || n < 0) return;
     const li = el.unit.querySelector(`.fs-line[data-line="${n}"]`);
     if (!li) return;
     li.classList.add('is-speaking');
+    li.querySelector('.fs-avatar')?.setAttribute('aria-busy', 'true');
     if (li.dataset.k != null) lineSeen(Number(li.dataset.k));
     if (li.scrollIntoView) {
       try { li.scrollIntoView({ block: 'nearest', behavior: 'smooth' }); } catch (e) { li.scrollIntoView(false); }
@@ -2258,7 +2261,9 @@ const Fahrschule = (() => {
       onItem: item => { if (item.n != null) mark(item.n); },
       onSound: (item, audible) => {
         if (unit?.kind === 'dialog' && item.n != null) {
-          el.unit.querySelector(`.fs-avatar[data-say="${item.n}"]`)?.setAttribute('aria-pressed', String(audible));
+          const avatar = el.unit.querySelector(`.fs-avatar[data-say="${item.n}"]`);
+          avatar?.removeAttribute('aria-busy');
+          avatar?.setAttribute('aria-pressed', String(audible));
         }
       },
       onDone: () => {
