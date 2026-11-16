@@ -44,6 +44,8 @@ const LESSON_DATA = {
     { de: 'Das Ergebnis der Studie ist überraschend.',          ru: 'Результат исследования удивителен.',           note: 'ergeben → das Ergebnis', audio: 'Das Ergebnis der Studie ist überraschend' }
   ],
 
+  vocabularyNote: 'Суффикс — часть слова после корня, с помощью которой образуется новое слово. Дефис в -ung показывает, что это часть слова, а не отдельное слово. Помета fem. означает женский род (die), neut. — средний род (das). Род относится к получившемуся существительному. Ниже указаны значения суффиксов и примеры.',
+
   vocabulary: [
     { de: 'die Nominalisierung', ru: 'номинализация',           ipa: '[nomɪnalɪˈziːʁʊŋ]',  article: 'die' },
     { de: 'die Entscheidung',    ru: 'решение',                 ipa: '[ɛntˈʃaɪ̯dʊŋ]',       article: 'die' },
@@ -63,10 +65,14 @@ const LESSON_DATA = {
     { de: 'die Freiheit',        ru: 'свобода',                 ipa: '[ˈfʁaɪ̯haɪ̯t]',          article: 'die' },
     { de: 'die Möglichkeit',     ru: 'возможность',             ipa: '[ˈmøːklɪçkaɪ̯t]',       article: 'die' },
     { de: 'die Wichtigkeit',     ru: 'важность',                ipa: '[ˈvɪçtɪçkaɪ̯t]',        article: 'die' },
-    { de: '-ung',                ru: 'суффикс fem. (действие)', ipa: '[ʊŋ]',                 article: '' },
-    { de: '-heit / -keit',       ru: 'суффикс fem. (свойство)', ipa: '[haɪ̯t / kaɪ̯t]',       article: '' },
-    { de: '-nis',                ru: 'суффикс neut. (состояние)', ipa: '[nɪs]',              article: '' },
-    { de: '-schaft',             ru: 'суффикс fem. (коллект./свойство)', ipa: '[ʃaft]',       article: '' },
+    { de: '-ung', ru: 'суффикс: действие или результат; женский род (die)', ipa: '[ʊŋ]', article: '',
+      note: 'entwickeln (развивать) → die Entwicklung (развитие)' },
+    { de: '-heit / -keit', ru: 'суффиксы: качество или свойство; женский род (die)', ipa: '[haɪ̯t / kaɪ̯t]', article: '',
+      note: 'schön (красивый) → die Schönheit (красота); möglich (возможный) → die Möglichkeit (возможность)' },
+    { de: '-nis', ru: 'суффикс: состояние или результат; средний (das) или женский род (die)', ipa: '[nɪs]', article: '',
+      note: 'das Ergebnis — результат; die Erlaubnis — разрешение. Артикль нужно запоминать вместе со словом.' },
+    { de: '-schaft', ru: 'суффикс: группа, качество или состояние; женский род (die)', ipa: '[ʃaft]', article: '',
+      note: 'die Mannschaft — команда; bereit (готовый) → die Bereitschaft (готовность)' },
     { de: 'rasant',              ru: 'стремительный',           ipa: '[ʁaˈzant]',             article: '' },
     { de: 'einzigartig',         ru: 'уникальный',              ipa: '[ˈaɪ̯ntsɪçˌʔaːɐ̯tɪç]',  article: '' }
   ],
@@ -89,7 +95,7 @@ const LESSON_DATA = {
         { pronoun: 'Adj. → -heit',     form: 'frei → Freiheit',           audio: 'Freiheit',      translation: 'die' },
         { pronoun: 'Adj. → -keit',     form: 'möglich → Möglichkeit',     audio: 'Möglichkeit',   translation: 'die' },
         { pronoun: 'Adj. → -schaft',   form: 'bereit → Bereitschaft',     audio: 'Bereitschaft',  translation: 'die' },
-        { pronoun: 'Verb → -nis',      form: 'verstehen → Verständnis',   audio: 'Verständnis',   translation: 'das (обычно)' }
+        { pronoun: 'Verb → -nis',      form: 'verstehen → Verständnis',   audio: 'Verständnis',   translation: 'здесь das; бывает и die' }
       ]
     },
     {

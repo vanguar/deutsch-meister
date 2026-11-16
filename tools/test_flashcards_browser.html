@@ -1,0 +1,16 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Deutsch Meister — flashcard browser regression checks</title>
+<style>
+body { font: 14px system-ui; margin: 12px; background: #eee; color: #111; }
+button { padding: 10px; margin: 4px; }
+iframe { display: block; border: 1px solid #aaa; width: 360px; height: 740px; max-width: 100%; }
+pre { white-space: pre-wrap; }
+</style>
+<p>Local QA only. Uses lesson B2-04 and preserves its saved flashcard session after the run.</p>
+<button id="run">Run browser checks</button>
+<button id="notice">Show offline card preview</button>
+<button id="vocab">Show suffix vocabulary preview</button>
+<pre id="results" role="status">Ready</pre>
+<iframe id="lesson" title="Mobile lesson preview"></iframe>
+<script src="test_flashcards_browser.js"></script>

@@ -53,6 +53,7 @@ const Flashcards = (() => {
   let missed = new Set();
   let resumeKey = null;
   let sourceSignature = '';
+  let cardStates = [];  // Indexed by original vocabulary id, across repeat rounds.
   let live    = false;   // сессия идёт — защита от повторной инициализации
 
   /* ── DOM refs (populated in init) ── */
@@ -62,6 +63,7 @@ const Flashcards = (() => {
   /* ── Слушатели: ссылки храним, чтобы снять их в destroy() ── */
   let onKeyDown = null;
   let onCardTap = null;
+  let restartButton = null;
 
   function byId(key) {
     const id = ids[key];
@@ -74,6 +76,8 @@ const Flashcards = (() => {
      странице давал бы два переворота на один Пробел.                  */
 
   function destroy() {
+    if (restartButton) restartButton.remove();
+    restartButton = null;
     if (onKeyDown) document.removeEventListener('keydown', onKeyDown);
     if (onCardTap && elCard) elCard.removeEventListener('click', onCardTap);
     onKeyDown = null;
@@ -87,6 +91,7 @@ const Flashcards = (() => {
     tally = null;
     live = false;
     missed = new Set(); resumeKey = null;
+    cardStates = [];
 
     elCard = elCardDE = elCardRU = elCardIPA = elCardMeta = elCardOld = null;
     elActions = elCounter = elDots = elComplete = null;
@@ -94,7 +99,7 @@ const Flashcards = (() => {
 
   /* ── Init ── */
 
-  function init(options) {
+  function init(options, restart = false) {
     destroy();   // повторная инициализация не должна копить слушатели
 
     mode = (options && typeof options === 'object') ? 'custom' : 'lesson';
@@ -128,24 +133,49 @@ const Flashcards = (() => {
     // Build deck from vocabulary
     deck = source.map((w, i) => ({ ...w, _id: i }));
     totalCards = deck.length;
+    cardStates = Array(totalCards).fill('');
     tally = { known: [], repeat: [] };
     live = true;
 
-    sourceSignature = JSON.stringify(source);
+    // Wording/translation edits must not reset an unfinished session.
+    sourceSignature = JSON.stringify(source.map(w => w.de));
+    let completed = false;
     if (mode === 'lesson') {
       resumeKey = 'dm_cards:' + LESSON_DATA.id;
       try {
-        const saved = JSON.parse(localStorage.getItem(resumeKey) || 'null');
-        if (saved && saved.signature === sourceSignature && !saved.done) {
+        const saved = restart ? null : JSON.parse(localStorage.getItem(resumeKey) || 'null');
+        const signature = saved && JSON.parse(saved.signature);
+        const matches = Array.isArray(signature) && JSON.stringify(signature.map(w => typeof w === 'string' ? w : w.de)) === sourceSignature;
+        if (saved && matches) {
           const cards = deck;
-          if (saved.deck.every(i => Number.isInteger(i) && cards[i])) {
+          if (Array.isArray(saved.deck) && saved.deck.length && saved.deck.every(i => Number.isInteger(i) && cards[i]) &&
+              new Set(saved.deck).size === saved.deck.length && Array.isArray(saved.again) &&
+              saved.again.every(i => Number.isInteger(i) && cards[i])) {
             deck = saved.deck.map(i => cards[i]); again = saved.again.map(i => cards[i]).filter(Boolean);
-            current = Math.max(0, Math.min(saved.current || 0, deck.length)); missed = new Set(saved.missed || []);
+            current = Number.isInteger(saved.current) ? Math.max(0, Math.min(saved.current, deck.length)) : 0;
+            missed = new Set((Array.isArray(saved.missed) ? saved.missed : []).filter(i => Number.isInteger(i) && cards[i]));
+            completed = saved.done === true;
+            if (Array.isArray(saved.states) && saved.states.length === totalCards && saved.states.every(s => ['', 'done', 'again'].includes(s))) {
+              cardStates = saved.states.slice();
+            } else {
+              // Migrate sessions saved before per-card states were persisted.
+              cardStates = cards.map(card => {
+                const idx = deck.findIndex(c => c._id === card._id);
+                if (completed || idx < 0) return 'done';
+                if (again.some(c => c._id === card._id)) return 'again';
+                if (idx < current) return 'done';
+                return deck.length < totalCards ? 'again' : '';
+              });
+            }
           }
         }
       } catch (_) {}
     }
+    elCard.style.display = '';
+    if (elCard.parentElement) elCard.parentElement.style.display = '';
+    if (elCounter) elCounter.style.display = '';
     buildDots();
+    if (completed) { showCompleted(); return true; }
     showCard(current);
 
     // Flip on click
@@ -231,6 +261,15 @@ const Flashcards = (() => {
     elCardDE.textContent  = card.de;
     elCardRU.textContent  = card.ru;
     elCardIPA.textContent = card.ipa || '';
+    if (mode === 'lesson') {
+      let note = elCard.querySelector('.card-note');
+      if (!note && card.note) {
+        note = document.createElement('div');
+        note.className = 'card-note';
+        elCardRU.parentElement.appendChild(note);
+      }
+      if (note) { note.textContent = card.note || ''; note.hidden = !card.note; }
+    }
     fillExtra(card);
 
     // Произвольный режим может подстроиться под конкретную карточку
@@ -240,7 +279,8 @@ const Flashcards = (() => {
     }
 
     updateMeta();
-    elActions.style.display = 'none';
+    syncDots();
+    setActions(false);
 
     // Auto-speak (optional)
     // TTS.speak(card.de);
@@ -269,17 +309,24 @@ const Flashcards = (() => {
   /* ── Flip ── */
 
   function flip() {
-    if (!deck[current]) return;
+    if (!live || !deck[current]) return;
     flipped = !flipped;
     elCard.classList.toggle('flipped', flipped);
     if (flipped) {
-      elActions.style.display = 'flex';
+      setActions(true);
       // Озвучка на перевороте — поведение уроков. В произвольном режиме
       // модуль не озвучивает: там свои кнопки 🔊 у вызывающей стороны.
-      if (mode === 'lesson') TTS.speak(deck[current].de);
+      if (mode === 'lesson') TTS.speak(deck[current].de, { noticeHost: elCard.closest('.flashcard-section') });
     } else {
-      elActions.style.display = 'none';
+      setActions(false);
     }
+  }
+
+  function setActions(visible) {
+    if (!elActions) return;
+    // Reserve the answer row so a tap never changes the page height mid-flip.
+    elActions.style.display = 'flex';
+    elActions.style.visibility = visible ? 'visible' : 'hidden';
   }
 
   /* ── "Again" button ── */
@@ -370,11 +417,7 @@ const Flashcards = (() => {
       showCard(0);
     } else {
       // All cards reviewed — hide the deck UI for this section
-      elCard.style.display    = 'none';
-      elActions.style.display = 'none';
-      elCounter.style.display = 'none';
-
-      live = false;
+      showCompleted();
       saveResume(true);
       Progress.addXP(25, LESSON_DATA.id + ':cards:complete');
 
@@ -384,25 +427,53 @@ const Flashcards = (() => {
     }
   }
 
+  function showCompleted() {
+    live = false;
+    cardStates.fill('done');
+    elCard.style.display = 'none';
+    if (elCard.parentElement) elCard.parentElement.style.display = 'none';
+    if (elActions) elActions.style.display = 'none';
+    if (elActions && !restartButton) {
+      restartButton = document.createElement('button');
+      restartButton.type = 'button';
+      restartButton.className = 'card-btn good flashcard-restart';
+      const label = '↻ Повторить';
+      restartButton.textContent = window.I18N ? I18N.t(label) : label;
+      restartButton.addEventListener('click', () => init(null, true));
+      elActions.before(restartButton);
+    }
+    if (elCounter) {
+      const message = 'Все карточки повторены';
+      elCounter.textContent = window.I18N ? I18N.t(message) : message;
+    }
+    syncDots();
+  }
+
   /* ── Dots ── */
 
   function buildDots() {
     if (!elDots || progressOff()) return;
     elDots.innerHTML = '';
-    deck.forEach((_, i) => {
+    cardStates.forEach((_, i) => {
       const d = document.createElement('div');
-      d.className = 'fc-dot' + (i === 0 ? ' current' : '');
+      d.className = 'fc-dot';
       d.id = `dot-${i}`;
       elDots.appendChild(d);
     });
+    syncDots();
   }
 
   function updateDot(idx, state) {
-    if (progressOff()) return;
-    const d = document.getElementById(`dot-${idx}`);
-    if (d) { d.className = `fc-dot ${state}`; }
-    const next = document.getElementById(`dot-${idx + 1}`);
-    if (next) next.classList.add('current');
+    if (deck[idx]) cardStates[deck[idx]._id] = state;
+    syncDots();
+  }
+
+  function syncDots() {
+    if (!elDots || progressOff()) return;
+    Array.from(elDots.children).forEach((dot, i) => {
+      dot.className = 'fc-dot' + (cardStates[i] ? ' ' + cardStates[i] : '') +
+        (live && deck[current]?._id === i ? ' current' : '');
+    });
   }
 
   // showProgress: false выключает счётчик и точки. По умолчанию они есть,
@@ -428,7 +499,7 @@ const Flashcards = (() => {
 
   function saveResume(done) {
     if (!resumeKey) return;
-    try { localStorage.setItem(resumeKey, JSON.stringify({ signature: sourceSignature, deck: deck.map(c => c._id), again: again.map(c => c._id), current, missed: [...missed], done })); } catch (_) {}
+    try { localStorage.setItem(resumeKey, JSON.stringify({ signature: sourceSignature, deck: deck.map(c => c._id), again: again.map(c => c._id), current, missed: [...missed], states: cardStates, done })); } catch (_) {}
   }
 
   /* Expose button handlers to HTML onclick */

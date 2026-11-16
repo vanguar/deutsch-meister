@@ -536,7 +536,7 @@ const TTS = (() => {
      сдвиг тона в центах для аудио-пути (mp3 Google TTS). Оба необязательны:
      без них поведение прежнее. */
   function speak(text, { rate = 0.85, pitch = 1, fallbackDelay = null, spans = null, onEnd = null,
-                         voiceName = null, detune = 0, onStart = null } = {}) {
+                         voiceName = null, detune = 0, onStart = null, noticeHost = null } = {}) {
     text = cleanText(text);
     if (!text) {
       // Озвучивать нечего, но ждущий onEnd не должен зависнуть
@@ -548,7 +548,14 @@ const TTS = (() => {
         ? 'Без интернета озвучка в Telegram недоступна. Текст и перевод остаются доступны.'
         : 'Озвучка без интернета работает только с установленным немецким голосом. Воспроизведение не гарантируется.';
       let note = document.getElementById('ttsOfflineNotice');
-      if (!note) { note = document.createElement('div'); note.id = 'ttsOfflineNotice'; note.className = 'dm-toast'; note.setAttribute('role', 'status'); document.body.appendChild(note); }
+      if (!note) { note = document.createElement('div'); note.id = 'ttsOfflineNotice'; note.setAttribute('role', 'status'); }
+      const host = noticeHost || document.activeElement?.closest?.('.vocab-item, .phrase-card, .grammar-box, .flashcard-section');
+      note.className = 'dm-toast' + (host ? ' dm-toast-inline' : '');
+      if (host) {
+        // In flashcards keep the notice immediately AFTER the answer controls.
+        const actions = host.querySelector('.card-actions');
+        if (actions) actions.after(note); else host.appendChild(note);
+      } else document.body.appendChild(note);
       note.textContent = window.I18N ? I18N.t(message) : message;
       note.classList.add('show');
       clearTimeout(note._timer); note._timer = setTimeout(() => note.classList.remove('show'), 7000);
@@ -656,7 +663,7 @@ const TTS = (() => {
 })();
 
 TTS.init();
-function speak(text)     { TTS.speak(text); }
+function speak(text, opts) { TTS.speak(text, opts); }
 function speakPhrase(text) { TTS.speakPhrase(text); }
 function speakSlow(text) { TTS.speakSlow(text); }
 

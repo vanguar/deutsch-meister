@@ -174,6 +174,8 @@ python -B -X utf8 scripts/check_all.py
 
 GitHub Actions runs the same command on every push and pull request. It includes content validators, audience wording, translation consistency, bot behavior, progress concurrency and migration, exercise scoring, offline caching and JavaScript syntax. Telegram/Redis are simulated in regression tests; no messages or payments are sent. Browser behavior and physical-device audio still need manual checks when their code changes.
 
+For flashcard browser regressions, serve the project locally and open `tools/test_flashcards_browser.html`. The checks cover animation/layout, offline speech notices, reload and repeat progress, completion, narrow-screen suffix explanations and translations. Offline audio availability is simulated inside the preview iframe; this does not replace a physical-device/PWA offline audio check. The local flashcard save is restored after the run.
+
 ---
 
 ## Adding a New Lesson

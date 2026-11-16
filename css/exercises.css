@@ -350,6 +350,8 @@
 
 .flashcard-meta {
   display: flex;
+  flex-wrap: wrap;
+  gap: 8px 12px;
   justify-content: space-between;
   align-items: center;
   font-size: 13px;
@@ -358,32 +360,43 @@
 }
 .flashcard-dots {
   display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
   gap: 5px;
 }
 .fc-dot {
+  flex: 0 0 7px;
   width: 7px; height: 7px;
   border-radius: 50%;
   background: var(--border);
   transition: background var(--t-normal);
 }
 .fc-dot.done    { background: var(--correct); }
+.fc-dot.again   { background: var(--wrong); }
 .fc-dot.current { background: var(--accent2); }
 
 /* 3-D flip card */
 .flashcard-viewport { perspective: 1000px; margin-bottom: 16px; }
 .flashcard {
   width: 100%;
-  height: 200px;
+  display: grid;
+  min-height: 200px;
   position: relative;
   transform-style: preserve-3d;
   transition: transform .5s cubic-bezier(.4,0,.2,1);
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 .flashcard.flipped { transform: rotateY(180deg); }
+@media (prefers-reduced-motion: reduce) {
+  .flashcard { transition: none; }
+}
 
 .card-face {
-  position: absolute;
-  inset: 0;
+  position: relative;
+  grid-area: 1 / 1;
+  min-width: 0;
   background: var(--surface2);
   border: 1px solid var(--border);
   border-radius: var(--r-lg);
@@ -407,6 +420,8 @@
 .card-hint   { font-size: 12px; color: var(--text-dim); }
 .card-ru     { font-size: 22px; font-weight: 600; color: var(--accent); }
 .card-ipa    { font-family: 'DM Mono', monospace; font-size: 13px; color: var(--text-muted); }
+.card-note   { font-size: 13px; line-height: 1.5; color: var(--text-muted); }
+.card-de, .card-ru, .card-note { text-align: center; overflow-wrap: anywhere; }
 .card-badge  { font-size: 11px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 1px; }
 
 /* Card action buttons — по одной кнопке на пол-ряда, крупные: это
@@ -444,6 +459,9 @@
 
 /* ── Responsive ── */
 @media (max-width: 600px) {
+  .card-face    { padding: 22px 18px; }
+  .card-de      { font-size: 28px; }
+  .card-ru      { font-size: 20px; }
   .mc-options    { grid-template-columns: 1fr; }
   .match-grid    { grid-template-columns: 1fr; }
   .blank-sentence { font-size: 15px; }

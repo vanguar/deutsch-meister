@@ -26,6 +26,7 @@ commands = [
     ['node', 'tools/test_i18n.js'],
     ['node', 'tools/test_dialogs_tts.js'],
     ['node', 'tools/test_exercises.js'],
+    ['node', 'tools/test_flashcards.js'],
     ['node', 'tools/test_progress.js'],
     ['node', 'tools/test_offline.js'],
     ['node', 'tools/vocab/build.js', '--check'],

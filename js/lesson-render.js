@@ -2263,6 +2263,14 @@ Kraft|сила|Существительное|in Kraft treten — вступат
     const list = document.getElementById('vocabTableBody');
     if (!list || !LESSON_DATA?.vocabulary) return;
     renderGrammarNotation(LESSON_DATA.vocabulary, list, 'vocab-notation');
+    document.getElementById('vocab-explanation')?.remove();
+    if (LESSON_DATA.vocabularyNote) {
+      const note = document.createElement('aside');
+      note.id = 'vocab-explanation';
+      note.className = 'grammar-box notation-note';
+      note.textContent = LESSON_DATA.vocabularyNote;
+      list.before(note);
+    }
     list.innerHTML = '';
 
     LESSON_DATA.vocabulary.forEach(w => {
@@ -2277,9 +2285,9 @@ Kraft|сила|Существительное|in Kraft treten — вступат
           </div>
           ${w.ipa ? `<div class="vocab-ipa">${esc(w.ipa)}</div>` : ''}
         </div>
-        <div class="vocab-ru">${esc(w.ru)}</div>
+        <div class="vocab-ru">${esc(w.ru)}${w.note ? `<small class="vocab-note">${esc(w.note)}</small>` : ''}</div>
         <button class="vocab-speak" type="button" title="Озвучить" aria-label="Озвучить"
-          onclick="speak('${jsStr(w.de)}')">🔊</button>
+          onclick="speak('${jsStr(w.de)}', {noticeHost: this.closest('.vocab-item')})">🔊</button>
       `;
       list.appendChild(li);
     });

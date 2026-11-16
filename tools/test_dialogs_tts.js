@@ -131,6 +131,21 @@ function speakAsync(TTS, text, opts) {
     check('браузер офлайн: выбран локальный немецкий голос', r.ok && log.utter[0]?.voice.localService === true);
     check('браузер офлайн: нет запроса, гарантий в подсказке нет', log.fetch.length === 0 && /не гарантируется/.test(log.notices[0]?.textContent));
   }
+  {
+    const { ctx, TTS, log } = boot({ tg: true });
+    ctx.navigator.onLine = false;
+    let note, position;
+    const actions = { after(el) { note = el; position = 'after-actions'; } };
+    const cards = { querySelector: () => actions };
+    await speakAsync(TTS, 'Hallo', { noticeHost: cards });
+    check('offline notice follows answer buttons in flow', position === 'after-actions' && note.className === 'dm-toast dm-toast-inline');
+    ctx.document.getElementById = () => note;
+    const first = note;
+    const word = { querySelector: () => null, appendChild(el) { note = el; position = 'vocabulary'; } };
+    await speakAsync(TTS, 'Wort', { noticeHost: word });
+    check('same offline notice moves to the active word', note === first && position === 'vocabulary');
+    check('inline notices do not create floating duplicates or network requests', log.notices.length === 0 && log.fetch.length === 0);
+  }
   console.log('1. Старые вызовы — прежний путь');
   {
     const { TTS, log } = boot();

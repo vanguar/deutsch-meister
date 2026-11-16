@@ -414,6 +414,7 @@
 }
 .vocab-item:last-child { border-bottom: none; }
 .vocab-main { min-width: 0; }
+.vocab-note { display: block; margin-top: 6px; font-size: 12px; color: var(--text-muted); line-height: 1.5; }
 .vocab-term {
   display: flex;
   align-items: baseline;
