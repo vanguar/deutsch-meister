@@ -412,9 +412,8 @@ const Home = (() => {
     });
   }
 
-  // Russian pilot; other language catalogs and layouts stay unchanged.
+  // The fetch wrapper selects the catalog for the current interface language.
   function initHistory() {
-    if (window.I18N && I18N.lang !== 'ru') return;
     const template = $('historyHomeTemplate');
     const anchor = $('readLaender');
     if (!template || !anchor) return;

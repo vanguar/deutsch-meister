@@ -11,7 +11,7 @@ const published = catalog.chapters.filter(ch => ch.ready);
 const cover = /<img src="([^"]+)"/.exec(read('history.html'))[1];
 assert.ok(fs.existsSync(path.join(root, cover)), 'History cover photograph exists');
 assert.equal(catalog.chapters.length, 14);
-assert.equal(published.length, 1);
+assert.ok(published.length >= 1 && published.length <= catalog.chapters.length);
 assert.equal(new Set(catalog.chapters.map(ch => ch.id)).size, catalog.chapters.length);
 assert.deepEqual(catalog.items.map(ch => ch.id), published.map(ch => ch.id));
 for (const ch of catalog.chapters) {
@@ -20,6 +20,22 @@ for (const ch of catalog.chapters) {
 }
 for (const item of published) {
   const ch = JSON.parse(read(`data/history/${item.id}/ch-01.json`));
+  for (const lang of ['uk','ar']) {
+    const translated = JSON.parse(read(`i18n/${lang}/history/${item.id}/ch-01.json`));
+    const baseSentences = ch.paragraphs.flatMap(p => p.s || []);
+    const translatedSentences = translated.paragraphs.flatMap(p => p.s || []);
+    assert.deepEqual(translatedSentences.map(s => s.de), baseSentences.map(s => s.de));
+    assert.ok(translatedSentences.every(s => s.ru.trim() && (lang !== 'ar' || /[\u0600-\u06ff]/.test(s.ru))));
+    const glossary = JSON.parse(read(`data/history/${item.id}/glossary.json`));
+    const localized = JSON.parse(read(`i18n/${lang}/history/${item.id}/glossary.json`));
+    assert.deepEqual(localized.w, glossary.w, 'German lemma references stay stable');
+    assert.deepEqual(Object.keys(localized.l), Object.keys(glossary.l));
+    if (lang === 'ar') {
+      for (const entry of Object.values(localized.l)) {
+        for (const field of ['ru','note','pos','old']) if (entry[field]) assert.ok(!/[А-Яа-яЁё]/.test(entry[field]), 'Untranslated Arabic dictionary field: ' + entry[field]);
+      }
+    }
+  }
   const sources = new Set(ch.sources.map(s => s.id));
   assert.equal(sources.size, ch.sources.length);
   ch.sources.forEach(s => assert.match(s.url, /^https:\/\//));
@@ -64,16 +80,17 @@ async function boot({ hash = '', telegram = null } = {}) {
 
 (async () => {
   const normal = await boot();
-  assert.equal((normal.elements.hiToc.innerHTML.match(/aria-disabled="true"/g) || []).length, 13);
-  assert.equal((normal.elements.hiToc.innerHTML.match(/<a /g) || []).length, 1);
+  const unpublished = catalog.chapters.find(ch => !ch.ready)?.id || 'not-a-chapter';
+  assert.equal((normal.elements.hiToc.innerHTML.match(/aria-disabled="true"/g) || []).length, catalog.chapters.length - published.length);
+  assert.equal((normal.elements.hiToc.innerHTML.match(/<a /g) || []).length, published.length);
   const click = id => ({ target: { closest: selector => selector === '[data-history-open]' ? { dataset: { historyOpen: id } } : null }, button: 0, preventDefault() {} });
-  normal.docEvents.click(click('frankenreich'));
+  normal.docEvents.click(click(unpublished));
   assert.equal(normal.calls.length, 0, 'Unpublished chapter must never load');
   normal.docEvents.click(click('romer-und-germanen'));
   assert.equal(normal.calls[0].id, 'romer-und-germanen');
   const deep = await boot({ hash: '#history=romer-und-germanen' });
   assert.equal(deep.calls.length, 1, 'Published deep link opens');
-  const blocked = await boot({ hash: '#history=frankenreich' });
+  const blocked = await boot({ hash: '#history=' + unpublished });
   assert.equal(blocked.calls.length, 0, 'Unpublished deep link stays in catalog');
   deep.ctx.Reader.state.open = false;
   deep.ctx.location.hash = '#history=romer-und-germanen';

@@ -53,7 +53,7 @@
   var isTrialLesson = isLesson && isReady(lessonId(path));
   // Диалоги (dialogs.html), автошкола (fahrschule.html) и земли (laender.html)
   // переведены целиком — разделы открыты и без плашек
-  var isDialogs = /(dialogs|fahrschule|laender)\.html$/.test(path);
+  var isDialogs = /(dialogs|fahrschule|laender|history)\.html$/.test(path);
   var isBooks = /books\.html$/.test(path);
   var isNews = /news\.html$/.test(path);
   var isHome = !isLesson && !isDialogs && !/(books|news)\.html$/.test(path);

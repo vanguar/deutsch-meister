@@ -1,0 +1,169 @@
+{
+ "version": 1,
+ "titleRu": "تاريخ موجز لألمانيا",
+ "teaserRu": "من العصور القديمة إلى اليوم · B1",
+ "ui": {
+  "ready": "متاح للقراءة",
+  "soon": "قيد الإعداد",
+  "read": "تمت قراءته",
+  "open": "قراءة الفصل",
+  "contents": "الفهرس",
+  "level": "المستوى B1",
+  "error": "تعذّر تحميل الفهرس.",
+  "retry": "إعادة المحاولة",
+  "counter": "الفصول الجاهزة",
+  "sources": "مصادر القسم",
+  "checked": "تمت مراجعة المعلومات في 17 نوفمبر 2026."
+ },
+ "chapters": [
+  {
+   "id": "romer-und-germanen",
+   "title": "Römer und Germanen",
+   "titleRu": "الرومان والجرمان",
+   "period": "القرن الأول قبل الميلاد–القرن الخامس الميلادي",
+   "summary": "المستوطنات الرومانية والمجتمعات المتنوعة والحياة على الحدود.",
+   "ready": true
+  },
+  {
+   "id": "frankenreich",
+   "title": "Völkerwanderung und Frankenreich",
+   "titleRu": "هجرة الشعوب ومملكة الفرنجة",
+   "period": "القرون الرابع–التاسع",
+   "summary": "ممالك جديدة والمسيحية وشارلمان.",
+   "ready": false
+  },
+  {
+   "id": "mittelalter",
+   "title": "Mittelalter und Heiliges Römisches Reich",
+   "titleRu": "العصور الوسطى والإمبراطورية الرومانية المقدسة",
+   "period": "القرون العاشر–الخامس عشر",
+   "summary": "الأباطرة والأمراء والمدن والرابطة الهانزية والحياة اليومية.",
+   "ready": false
+  },
+  {
+   "id": "reformation",
+   "title": "Reformation und Dreißigjähriger Krieg",
+   "titleRu": "الإصلاح الديني وحرب الثلاثين عامًا",
+   "period": "1517–1648",
+   "summary": "لوثر والانقسام الديني وصلح وستفاليا.",
+   "ready": false
+  },
+  {
+   "id": "preussen-aufklaerung",
+   "title": "Fürstenstaaten, Preußen und Aufklärung",
+   "titleRu": "الإمارات وبروسيا وعصر التنوير",
+   "period": "1648–1789",
+   "summary": "دول متعددة وصعود بروسيا وأفكار جديدة.",
+   "ready": false
+  },
+  {
+   "id": "napoleon",
+   "title": "Napoleon und das Ende des Alten Reiches",
+   "titleRu": "نابليون ونهاية الإمبراطورية القديمة",
+   "period": "1789–1815",
+   "summary": "الثورة الفرنسية والإصلاحات والتحولات على خريطة أوروبا.",
+   "ready": false
+  },
+  {
+   "id": "revolution-industrialisierung",
+   "title": "Deutscher Bund, Revolution und Industrialisierung",
+   "titleRu": "الاتحاد الألماني والثورة والتصنيع",
+   "period": "1815–1871",
+   "summary": "النضال من أجل الحقوق والوحدة والمصانع والمسألة الاجتماعية.",
+   "ready": false
+  },
+  {
+   "id": "kaiserreich",
+   "title": "Kaiserreich und Kolonialismus",
+   "titleRu": "الإمبراطورية الألمانية والاستعمار",
+   "period": "1871–1914",
+   "summary": "توحيد البلاد ومجتمع الإمبراطورية والعنف الاستعماري.",
+   "ready": false
+  },
+  {
+   "id": "erster-weltkrieg",
+   "title": "Erster Weltkrieg und Ende der Monarchie",
+   "titleRu": "الحرب العالمية الأولى ونهاية الملكية",
+   "period": "1914–1918",
+   "summary": "أسباب الحرب والحياة خلالها وثورة عام 1918.",
+   "ready": false
+  },
+  {
+   "id": "weimar",
+   "title": "Die Weimarer Republik",
+   "titleRu": "جمهورية فايمار",
+   "period": "1918–1933",
+   "summary": "أول ديمقراطية ألمانية وإنجازاتها وأزماتها.",
+   "ready": false
+  },
+  {
+   "id": "nationalsozialismus",
+   "title": "NS-Diktatur, Zweiter Weltkrieg und Holocaust",
+   "titleRu": "الديكتاتورية النازية والحرب العالمية الثانية والهولوكوست",
+   "period": "1933–1945",
+   "summary": "القضاء على الديمقراطية والاضطهاد والحرب والإبادة الجماعية.",
+   "ready": false
+  },
+  {
+   "id": "geteiltes-deutschland",
+   "title": "Nachkriegszeit, Bundesrepublik und DDR",
+   "titleRu": "سنوات ما بعد الحرب وألمانيا الاتحادية وألمانيا الشرقية",
+   "period": "1945–1989",
+   "summary": "عواقب الحرب ودولتان والحياة على جانبي الجدار.",
+   "ready": false
+  },
+  {
+   "id": "deutsche-einheit",
+   "title": "Friedliche Revolution und deutsche Einheit",
+   "titleRu": "الثورة السلمية وتوحيد ألمانيا",
+   "period": "1989–1990",
+   "summary": "الاحتجاجات في ألمانيا الشرقية وفتح الحدود والطريق إلى الوحدة.",
+   "ready": false
+  },
+  {
+   "id": "nach-der-einheit",
+   "title": "Deutschland nach der Einheit",
+   "titleRu": "ألمانيا بعد الوحدة",
+   "period": "منذ عام 1990",
+   "summary": "التحولات الاجتماعية وذاكرة الماضي والتكامل الأوروبي.",
+   "ready": false
+  }
+ ],
+ "sources": [
+  {
+   "id": "lemo",
+   "name": "LeMO · تاريخ ألمانيا وفق مواد المتاحف والأرشيفات الاتحادية",
+   "url": "https://www.dhm.de/lemo/projekt"
+  },
+  {
+   "id": "bpb",
+   "name": "bpb · التعليم التاريخي والسياسي",
+   "url": "https://www.bpb.de/lernen/historisch-politische-bildung/"
+  },
+  {
+   "id": "curriculum",
+   "name": "المنهج المدرسي للتاريخ · شمال الراين-وستفاليا",
+   "url": "https://lehrplannavigator.nrw.de/system/files/media/document/file/g9_ge_silp_2020_01_31.pdf"
+  }
+ ],
+ "items": [
+  {
+   "id": "romer-und-germanen",
+   "kind": "history",
+   "title": "Römer und Germanen",
+   "titleRu": "الرومان والجرمان",
+   "author": "German Morning",
+   "level": "B1",
+   "year": "2026",
+   "chapters": 1,
+   "words": 153,
+   "minutes": 3,
+   "cover": "1",
+   "number": 1,
+   "source": "Landesmuseum für Vorgeschichte Halle / bpb / Limesmuseum Aalen / Planet Schule (SWR) / Stadt Trier",
+   "sourceUrl": "https://www.landesmuseum-vorgeschichte.de/dauerausstellung/erfindung-der-germanen",
+   "checked": "2026-11-17",
+   "license": "صياغة تعليمية أعدّها German Morning؛ روابط المواد مذكورة في الفصل."
+  }
+ ]
+}

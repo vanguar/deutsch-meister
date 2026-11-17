@@ -234,7 +234,10 @@ for (const lang of ['uk', 'ar']) {
   })(srcDir);
   // перекрываемая строка должна быть и в общей памяти — иначе урок/книга с ней
   // считались бы готовыми только благодаря перекрытию
-  const orphan = Object.values(overrides).flatMap(o => Object.keys(o)).filter(k => shared[k] === undefined);
+  // History owns complete, scoped memories; its readiness and build both use
+  // those memories. Legacy book/news overrides still require a shared key.
+  const historyGroup = g => g === 'overrides/history-index' || g.startsWith('overrides/history/');
+  const orphan = Object.entries(overrides).filter(([g]) => !historyGroup(g)).flatMap(([,o]) => Object.keys(o)).filter(k => shared[k] === undefined);
   check(lang + ': ключи перекрытий есть в общей памяти', orphan.length === 0, orphan.slice(0, 10));
   const leaked = [];
   const built = ['ui.js', 'lexicon.js', ...fs.readdirSync(path.join(ROOT, 'i18n', lang, 'lessons')).map(f => 'lessons/' + f)];
@@ -243,6 +246,12 @@ for (const lang of ['uk', 'ar']) {
     for (const [k, v] of Object.entries(JSON.parse(m[1]))) if (shared[k] !== undefined && shared[k] !== v) leaked.push(f + ': ' + k);
   }
   check(lang + ': уроки, лексикон и интерфейс собраны из общей памяти', leaked.length === 0, leaked.slice(0, 10));
+  const privateHistoryKeys = new Set(Object.entries(overrides).filter(([g]) => historyGroup(g)).flatMap(([,o]) => Object.keys(o)).filter(k => shared[k] === undefined));
+  const privateLeaks = built.flatMap(f => {
+    const m = fs.readFileSync(path.join(ROOT,'i18n',lang,f),'utf8').match(/I18N\.add\(([\s\S]*)\);/);
+    return Object.keys(JSON.parse(m[1])).filter(k => privateHistoryKeys.has(k));
+  });
+  check(lang + ': отдельные переводы истории не попали в уроки и интерфейс', privateLeaks.length === 0);
 }
 
 

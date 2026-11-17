@@ -1,0 +1,189 @@
+{
+ "id": "ch-01",
+ "title": "Römer und Germanen",
+ "titleRu": "الرومان والجرمان",
+ "icon": "1",
+ "paragraphs": [
+  {
+   "sourceIds": [
+    "bpb"
+   ],
+   "s": [
+    {
+     "de": "Vor etwa 2.000 Jahren gab es Deutschland als Staat noch nicht.",
+     "ru": "قبل نحو 2000 عام لم تكن ألمانيا موجودة بوصفها دولة.",
+     "g": {
+      "0-2": "قبل نحو 2000 عام",
+      "3-4": "وُجد",
+      "6-7": "بوصفها دولة"
+     }
+    },
+    {
+     "de": "Im Süden und Westen des heutigen Deutschlands gehörten große Gebiete zum Römischen Reich.",
+     "ru": "كانت مناطق واسعة في جنوب ألمانيا الحالية وغربها جزءًا من الإمبراطورية الرومانية.",
+     "g": {
+      "10-12": "ضمن الإمبراطورية الرومانية"
+     }
+    },
+    {
+     "de": "Rund um römische Militärlager entstanden Siedlungen, aus denen später Städte wurden.",
+     "ru": "نشأت مستوطنات حول المعسكرات الرومانية، وتحولت لاحقًا إلى مدن.",
+     "g": {
+      "0-1": "حول",
+      "6-7": "التي"
+     }
+    }
+   ]
+  },
+  {
+   "sourceIds": [
+    "trier"
+   ],
+   "s": [
+    {
+     "de": "Die Porta Nigra in Trier erinnert heute noch an die römische Zeit.",
+     "ru": "لا تزال بورتا نيغرا في ترير تذكّر بالعصر الروماني حتى اليوم.",
+     "g": {
+      "5": "يذكّر",
+      "8": "يا"
+     }
+    }
+   ]
+  },
+  {
+   "fig": {
+    "src": "data/history/romer-und-germanen/img/porta-nigra.jpg",
+    "w": 1723,
+    "h": 1136,
+    "cap": "بورتا نيغرا في ترير: بوابة مدينة رومانية محفوظة حتى اليوم. صورة حديثة.",
+    "credit": "Valeri Koshelev / Wikimedia Commons",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:Porta_Nigra_in_Trier.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+   }
+  },
+  {
+   "sourceIds": [
+    "halle"
+   ],
+   "s": [
+    {
+     "de": "Römische Autoren nannten viele Gruppen östlich des Rheins „Germanen“.",
+     "ru": "أطلق الكتّاب الرومان اسم «الجرمان» على مجموعات عديدة شرقي نهر الراين."
+    },
+    {
+     "de": "Diese Gruppen bildeten kein einheitliches Volk.",
+     "ru": "لم تشكّل هذه المجموعات شعبًا موحّدًا."
+    },
+    {
+     "de": "Sie hatten unterschiedliche Lebensweisen und lebten in verschiedenen Gemeinschaften.",
+     "ru": "اختلفت أنماط حياتهم، وعاشوا في مجتمعات متنوعة."
+    }
+   ]
+  },
+  {
+   "sourceIds": [
+    "aalen"
+   ],
+   "s": [
+    {
+     "de": "Im römischen Aalen lebten Menschen aus verschiedenen Regionen zusammen.",
+     "ru": "عاش في مدينة آلن الرومانية أشخاص من مناطق مختلفة."
+    },
+    {
+     "de": "Soldaten bewachten den Limes von Wachtürmen aus.",
+     "ru": "كان الجنود يحرسون الليمس من أبراج المراقبة.",
+     "g": {
+      "4-6": "من أبراج المراقبة"
+     }
+    },
+    {
+     "de": "An bestimmten Stellen gab es Durchgänge für Menschen und Waren.",
+     "ru": "وُجدت في أماكن محددة ممرات للأشخاص والبضائع.",
+     "g": {
+      "3-4": "وُجد"
+     }
+    }
+   ]
+  },
+  {
+   "sourceIds": [
+    "schule"
+   ],
+   "s": [
+    {
+     "de": "Die Grenze bedeutete also nicht nur Trennung.",
+     "ru": "وهكذا لم تكن الحدود تعني الفصل وحده."
+    },
+    {
+     "de": "Die Römer und ihre Nachbarn handelten miteinander.",
+     "ru": "تاجر الرومان وجيرانهم بعضهم مع بعض."
+    },
+    {
+     "de": "Für die Römer spielten Rohstoffe und Waren aus den benachbarten Gebieten eine wichtige Rolle.",
+     "ru": "أدّت المواد الخام والبضائع القادمة من المناطق المجاورة دورًا مهمًا لدى الرومان.",
+     "g": {
+      "3": "عزفوا",
+      "11-13": "دورًا مهمًا"
+     }
+    }
+   ]
+  },
+  {
+   "sourceIds": [
+    "limes"
+   ],
+   "s": [
+    {
+     "de": "Zwischen dem Römischen Reich und den germanischen Gruppen gab es auch Konflikte.",
+     "ru": "وقعت أيضًا نزاعات بين الإمبراطورية الرومانية والمجموعات الجرمانية.",
+     "g": {
+      "8-9": "وُجد"
+     }
+    },
+    {
+     "de": "Doch ihre Kontakte veränderten die Gesellschaften.",
+     "ru": "لكن العلاقات بينهم غيّرت تلك المجتمعات."
+    },
+    {
+     "de": "Diese frühe Geschichte erzählt deshalb von verschiedenen Gemeinschaften und ihren Beziehungen.",
+     "ru": "لذلك يتناول هذا التاريخ المبكر مجتمعات متنوعة والعلاقات بينها."
+    }
+   ]
+  }
+ ],
+ "sourceTitle": "المصادر والتحقق من المعلومات",
+ "sources": [
+  {
+   "id": "halle",
+   "name": "Landesmuseum für Vorgeschichte Halle · «Die Erfindung der Germanen»",
+   "url": "https://www.landesmuseum-vorgeschichte.de/dauerausstellung/erfindung-der-germanen"
+  },
+  {
+   "id": "bpb",
+   "name": "bpb · «Meilensteine der deutschen Geschichte»، قسم «Römer und Germanen»",
+   "url": "https://www.bpb.de/system/files/dokument_pdf/Meilensteine%20der%20deutschen%20Geschichte_Leseprobe.pdf"
+  },
+  {
+   "id": "aalen",
+   "name": "Limesmuseum Aalen · «Das römische Aalen – Militärbasis am Limes»",
+   "url": "https://www.limesmuseum.de/dauerausstellung/das-roemische-aalen-militaerbasis-am-limes"
+  },
+  {
+   "id": "schule",
+   "name": "Planet Schule (SWR) · «Welche Handelswaren standen bei den Römern hoch im Kurs?»",
+   "url": "https://www.planet-schule.de/schwerpunkt/frage-trifft-antwort/welche-handelswaren-standen-bei-den-roemern-hoch-im-kurs-film-100.html"
+  },
+  {
+   "id": "limes",
+   "name": "Limesmuseum Aalen · «Der Limes – Eine Grenze für Rom»",
+   "url": "https://www.limesmuseum.de/dauerausstellung/der-limes-eine-grenze-fuer-rom"
+  },
+  {
+   "id": "trier",
+   "name": "مدينة ترير · المعالم الرومانية وبورتا نيغرا",
+   "url": "https://www.trier.de/leben-in-trier/stadtportrait/geschichte/weltkulturerbe"
+  }
+ ],
+ "checked": "2026-11-17"
+}

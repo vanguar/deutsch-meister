@@ -41,7 +41,8 @@ const ReaderWords = (() => {
                         'мест.', 'межд.', 'числ.'];
 
   function isFunctionPos(pos) {
-    return FUNCTION_POS.indexOf(String(pos || '').trim()) >= 0;
+    const value = String(pos || '').trim();
+    return FUNCTION_POS.some(item => item === value || (window.I18N && I18N.t(item) === value));
   }
 
   // Список исключений ПО ЛЕММЕ, отдельно от pos. Нужен потому, что

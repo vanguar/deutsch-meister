@@ -368,13 +368,13 @@ const Reader = (() => {
       ? ` · <a data-reader-external href="${esc(fig.licenseUrl)}" rel="noopener noreferrer">${esc(fig.license || '')} <span aria-hidden="true">↗</span></a>` : '';
     return `<figure class="rd-fig${p === 0 ? ' rd-fig--lead' : ''}" data-p="${p}">
       <img src="${esc(fig.src)}" alt="${esc(fig.cap || '')}"${size} decoding="async">
-      <figcaption>${esc(fig.cap || '')}${fig.credit ? ` <span class="rd-fig-credit">${credit}${license}</span>` : ''}</figcaption>
+      <figcaption${TR_RTL ? ' dir="rtl"' : ''}>${esc(fig.cap || '')}${fig.credit ? ` <span class="rd-fig-credit">${credit}${license}</span>` : ''}</figcaption>
     </figure>`;
   }
 
   function chapterOpening(ch, chapterIndex) {
     if (st.meta && st.meta.kind === 'news') return newsOpening(ch);
-    const no = Math.max(1, Number(chapterIndex) + 1);
+    const no = IS_HISTORY && st.meta && st.meta.number ? st.meta.number : Math.max(1, Number(chapterIndex) + 1);
     const russian = st.fullTranslation;
     const label = russian ? `Глава ${no}` : `Kapitel ${no}`;
     const title = russian
@@ -412,7 +412,7 @@ const Reader = (() => {
       return `<p class="${cls}"${dir}>${inner}</p>`;
     }).join('');
     const sources = Array.isArray(ch && ch.sources) ? ch.sources.filter(s => /^https:\/\//.test(s.url || '')) : [];
-    const sourceBlock = sources.length ? `<aside class="rd-chapter-sources"><h2>${esc(ch.sourceTitle || '')}</h2><ul>${sources.map((s, i) => `<li><a class="hi-source-link" data-reader-external data-source-index="${i}" href="${esc(s.url)}" rel="noopener noreferrer"><span class="hi-source-name">${esc(s.name)}</span><span class="hi-source-domain">${esc(new URL(s.url).hostname.replace(/^www\./, ''))}${/\.pdf(?:$|[?#])/i.test(s.url) ? ' · PDF' : ''}</span><span class="hi-link-icon" aria-hidden="true">↗</span></a></li>`).join('')}</ul></aside>` : '';
+    const sourceBlock = sources.length ? `<aside class="rd-chapter-sources"${TR_RTL ? ' dir="rtl"' : ''}><h2>${esc(ch.sourceTitle || '')}</h2><ul>${sources.map((s, i) => `<li><a class="hi-source-link" data-reader-external data-source-index="${i}" href="${esc(s.url)}" rel="noopener noreferrer"><span class="hi-source-name">${esc(s.name)}</span><span class="hi-source-domain" dir="ltr">${esc(new URL(s.url).hostname.replace(/^www\./, ''))}${/\.pdf(?:$|[?#])/i.test(s.url) ? ' · PDF' : ''}</span><span class="hi-link-icon" aria-hidden="true">↗</span></a></li>`).join('')}</ul></aside>` : '';
     return chapterOpening(ch || {}, chapterIndex) + prose + sourceBlock;
   }
 
@@ -980,7 +980,7 @@ const Reader = (() => {
       elFullTranslationBtn.classList.toggle('is-active', st.fullTranslation);
       elFullTranslationBtn.setAttribute('aria-pressed', st.fullTranslation ? 'true' : 'false');
       elFullTranslationBtn.title = st.fullTranslation
-        ? 'Показать немецкий текст' : 'Показать художественный перевод';
+        ? 'Показать немецкий текст' : IS_HISTORY ? 'Показать перевод главы' : 'Показать художественный перевод';
       elFullTranslationBtn.setAttribute('aria-label', elFullTranslationBtn.title);
       const icon = elFullTranslationBtn.querySelector('.rd-btn-icon');
       const label = elFullTranslationBtn.querySelector('.rd-btn-label');

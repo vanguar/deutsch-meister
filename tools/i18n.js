@@ -199,7 +199,7 @@ function uiStrings() {
   for (const [file, src] of Object.entries(sources)) {
     for (const s of jsStrings(src)) for (const f of fragments(s.text)) { out.push(f); if (f.includes('{n}')) tplKeys.push(file + ': ' + f); }
   }
-  for (const f of ['index.html', 'books.html', 'news.html', 'dialogs.html', 'fahrschule.html', 'laender.html']) htmlStrings(read(f)).forEach(s => out.push(s));
+  for (const f of ['index.html', 'books.html', 'news.html', 'dialogs.html', 'fahrschule.html', 'laender.html', 'history.html']) htmlStrings(read(f)).forEach(s => out.push(s));
   return { out, tplKeys };
 }
 
@@ -224,6 +224,13 @@ function laenderIds() {
 }
 function laenderFiles(id) {
   return fs.readdirSync(rel('data/laender/' + id)).filter(f => f.endsWith('.json')).sort().map(f => `data/laender/${id}/${f}`);
+}
+
+function historyIds() {
+  return exists('data/history/index.json') ? JSON.parse(read('data/history/index.json')).items.map(it => it.id) : [];
+}
+function historyFiles(id) {
+  return fs.readdirSync(rel('data/history/' + id)).filter(f => f.endsWith('.json')).sort().map(f => `data/history/${id}/${f}`);
 }
 
 // Диалоги: data/dialogs/index.json + data/dialogs/<id>.json (tools/dialogs/build.py)
@@ -270,6 +277,10 @@ function extract() {
     for (const id of laenderIds()) {
       groups['laender/' + id] = uniq(laenderFiles(id).flatMap(f => walkStrings(JSON.parse(read(f)), [])));
     }
+  }
+  if (exists('data/history/index.json')) {
+    groups['history-index'] = uniq(walkStrings(JSON.parse(read('data/history/index.json')), []));
+    for (const id of historyIds()) groups['history/' + id] = uniq(historyFiles(id).flatMap(f => walkStrings(JSON.parse(read(f)), [])));
   }
   if (exists('data/dialogs/index.json')) {
     groups['dialogs-index'] = uniq(walkStrings(JSON.parse(read('data/dialogs/index.json')), []));
@@ -418,7 +429,8 @@ function trialGroups(groups, lang, tm) {
     'books-index', ...readyBooks(groups, tm).map(id => 'books/' + id),
     ...readyNews(groups, tm).map(id => 'news/' + id),
     ...Object.keys(groups).filter(g => g === 'dialogs-index' || g.startsWith('dialogs/')
-      || g === 'laender-index' || g.startsWith('laender/'))];
+      || g === 'laender-index' || g.startsWith('laender/')
+      || g === 'history-index' || g.startsWith('history/'))];
   return Object.fromEntries(keep.map(g => [g, groups[g]]));
 }
 
@@ -459,6 +471,7 @@ function cmdBuild(lang = 'uk') {
     }
   }
   buildLaender(out, tm, files);
+  buildHistory(out, tm, files);
   if (trial) {
     fs.writeFileSync(rel(`${out}/ready.js`), `/* Готовые уроки, книги и новости — сгенерировано tools/i18n.js build, руками не править */
 window.I18N_READY = ${JSON.stringify(ready)};
@@ -487,6 +500,15 @@ function buildLaender(out, tm, files) {
   }
 }
 
+function buildHistory(out, tm, files) {
+  if (!exists('data/history/index.json')) return;
+  writeJson(`${out}/history/index.json`, translateObj(JSON.parse(read('data/history/index.json')), groupTM(tm, files, 'history-index')));
+  for (const id of historyIds()) for (const f of historyFiles(id)) {
+    const dst = f.replace(/^data\/history\//, `${out}/history/`);
+    writeJson(dst, translateFile(JSON.parse(read(f)), groupTM(tm, files, 'history/' + id)));
+  }
+}
+
 // Переведённые копии диалогов: i18n/<lang>/dialogs/ — их подставляет
 // js/i18n.js вместо data/dialogs/ (немецкие реплики не меняются)
 function buildDialogs(out, tm) {
@@ -498,11 +520,12 @@ function buildDialogs(out, tm) {
 }
 
 function cmdCheck(lang = 'uk') {
-  const { tm } = loadTM(lang);
+  const { tm, files } = loadTM(lang);
   const groups = trialGroups(extract().groups, lang, tm);
   let missing = 0;
   for (const [g, keys] of Object.entries(groups)) {
-    const m = keys.filter(k => tm[k] === undefined);
+    const effective = g === 'history-index' || g.startsWith('history/') ? groupTM(tm, files, g) : tm;
+    const m = keys.filter(k => effective[k] === undefined);
     missing += m.length;
     console.log(`${m.length ? '✗' : '✓'} ${g.padEnd(20)} ${keys.length - m.length}/${keys.length}`);
   }

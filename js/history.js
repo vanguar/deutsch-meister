@@ -1,4 +1,4 @@
-/* Russian history pilot. Reader content and UI labels live in its catalog. */
+/* History course: localized catalog and shared reader. */
 const HistoryCourse = (() => {
   let catalog = null;
   const $ = id => document.getElementById(id);
@@ -25,7 +25,7 @@ const HistoryCourse = (() => {
       const body = `<span class="hi-number" aria-hidden="true">${String(i + 1).padStart(2, '0')}</span>
         <span class="hi-chapter-body"><span class="hi-period">${esc(ch.period)}</span>
         <span class="hi-chapter-title">${esc(ch.titleRu)}</span>
-        <span class="hi-chapter-de" lang="de">${esc(ch.title)}</span>
+        <span class="hi-chapter-de" lang="de" dir="ltr">${esc(ch.title)}</span>
         <span class="hi-summary">${esc(ch.summary)}</span></span>
         <span class="hi-status">${esc(ch.ready ? (done ? ui.read : ui.ready) : ui.soon)}</span>`;
       return ch.ready
@@ -36,7 +36,7 @@ const HistoryCourse = (() => {
     $('hiSources').innerHTML = '<ul>' + catalog.sources.filter(s => /^https:\/\//.test(s.url))
       .map(s => `<li><a class="hi-source-link" data-reader-external href="${esc(s.url)}" rel="noopener noreferrer">
         <span class="hi-source-name">${esc(s.name)}</span>
-        <span class="hi-source-domain">${esc(new URL(s.url).hostname.replace(/^www\./, ''))}${/\.pdf(?:$|[?#])/i.test(s.url) ? ' · PDF' : ''}</span>
+        <span class="hi-source-domain" dir="ltr">${esc(new URL(s.url).hostname.replace(/^www\./, ''))}${/\.pdf(?:$|[?#])/i.test(s.url) ? ' · PDF' : ''}</span>
         <span class="hi-link-icon" aria-hidden="true">↗</span></a></li>`).join('') + '</ul>';
   }
 
@@ -83,6 +83,7 @@ const HistoryCourse = (() => {
 
   function init() {
     if (!$('hiToc')) return;
+    if (window.I18N) document.title = I18N.t(document.title);
     document.addEventListener('click', event => {
       const external = event.target.closest('a[data-reader-external]');
       if (external && !event.defaultPrevented && event.button === 0 && !event.ctrlKey && !event.metaKey && !event.shiftKey && !event.altKey) {

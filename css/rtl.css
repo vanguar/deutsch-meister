@@ -78,6 +78,12 @@ html[dir="rtl"] .rd-content,
 html[dir="rtl"] .rd-controls,
 html[dir="rtl"] .rd-bar { direction: ltr; }
 html[dir="rtl"] .rd-content .rd-p[dir="rtl"] { direction: rtl; letter-spacing: 0; }
+/* Translation word spans belong to one Arabic paragraph. Plaintext on every
+   nested span would reset bidi resolution and reverse the order of words. */
+html[dir="rtl"] .rd-content .rd-p[dir="rtl"] :is(.bs, .brw) {
+  unicode-bidi: normal;
+  direction: rtl;
+}
 html[dir="rtl"] .rd-chapter-opening[dir="rtl"] { direction: rtl; }
 /* «‹ رجوع» / «التالي ›»: стрелка указывает, куда листается немецкая страница
    («ف. 1 / 4 · 9%» в шапке держат изоляторы LRI/PDI в самом переводе) */

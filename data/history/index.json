@@ -12,7 +12,7 @@
     "error": "Не удалось загрузить оглавление.",
     "retry": "Повторить",
     "counter": "Готово глав",
-    "sources": "Источники первой главы",
+    "sources": "Источники раздела",
     "checked": "Факты сверены 17 ноября 2026 года."
   },
   "chapters": [
@@ -131,34 +131,19 @@
   ],
   "sources": [
     {
-      "id": "halle",
-      "name": "Landesmuseum für Vorgeschichte Halle · «Die Erfindung der Germanen»",
-      "url": "https://www.landesmuseum-vorgeschichte.de/dauerausstellung/erfindung-der-germanen"
+      "id": "lemo",
+      "name": "LeMO · история Германии по материалам федеральных музеев и архивов",
+      "url": "https://www.dhm.de/lemo/projekt"
     },
     {
       "id": "bpb",
-      "name": "bpb · «Meilensteine der deutschen Geschichte», раздел «Römer und Germanen»",
-      "url": "https://www.bpb.de/system/files/dokument_pdf/Meilensteine%20der%20deutschen%20Geschichte_Leseprobe.pdf"
+      "name": "bpb · историко-политическое образование",
+      "url": "https://www.bpb.de/lernen/historisch-politische-bildung/"
     },
     {
-      "id": "aalen",
-      "name": "Limesmuseum Aalen · «Das römische Aalen – Militärbasis am Limes»",
-      "url": "https://www.limesmuseum.de/dauerausstellung/das-roemische-aalen-militaerbasis-am-limes"
-    },
-    {
-      "id": "schule",
-      "name": "Planet Schule (SWR) · «Welche Handelswaren standen bei den Römern hoch im Kurs?»",
-      "url": "https://www.planet-schule.de/schwerpunkt/frage-trifft-antwort/welche-handelswaren-standen-bei-den-roemern-hoch-im-kurs-film-100.html"
-    },
-    {
-      "id": "limes",
-      "name": "Limesmuseum Aalen · «Der Limes – Eine Grenze für Rom»",
-      "url": "https://www.limesmuseum.de/dauerausstellung/der-limes-eine-grenze-fuer-rom"
-    },
-    {
-      "id": "trier",
-      "name": "Stadt Trier · римские памятники и Порта Нигра",
-      "url": "https://www.trier.de/leben-in-trier/stadtportrait/geschichte/weltkulturerbe"
+      "id": "curriculum",
+      "name": "Школьная программа по истории · Nordrhein-Westfalen",
+      "url": "https://lehrplannavigator.nrw.de/system/files/media/document/file/g9_ge_silp_2020_01_31.pdf"
     }
   ],
   "items": [
@@ -172,9 +157,10 @@
       "year": "2026",
       "chapters": 1,
       "words": 153,
-      "minutes": 4,
-      "cover": "Ⅰ",
-      "source": "Landesmuseum für Vorgeschichte Halle, bpb, Limesmuseum Aalen, Planet Schule (SWR), Stadt Trier",
+      "minutes": 3,
+      "cover": "1",
+      "number": 1,
+      "source": "Landesmuseum für Vorgeschichte Halle / bpb / Limesmuseum Aalen / Planet Schule (SWR) / Stadt Trier",
       "sourceUrl": "https://www.landesmuseum-vorgeschichte.de/dauerausstellung/erfindung-der-germanen",
       "checked": "2026-11-17",
       "license": "Авторская учебная адаптация German Morning; ссылки на материалы — в главе."

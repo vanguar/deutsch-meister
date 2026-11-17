@@ -1,0 +1,688 @@
+{
+  "version": 1,
+  "w": {
+    "aalen": "Aalen",
+    "als": "als",
+    "also": "also",
+    "an": "an",
+    "auch": "auch",
+    "aus": "aus",
+    "autoren": "Autor",
+    "bedeutete": "bedeuten",
+    "benachbarten": "benachbart",
+    "bestimmten": "bestimmt",
+    "bewachten": "bewachen",
+    "beziehungen": "Beziehung",
+    "bildeten": "bilden",
+    "dem": "der/die/das",
+    "den": "der/die/das",
+    "denen": "der/die/das (Relativpronomen)",
+    "des": "der/die/das",
+    "deshalb": "deshalb",
+    "deutschland": "Deutschland",
+    "deutschlands": "Deutschland",
+    "die": "der/die/das",
+    "diese": "dieser",
+    "doch": "doch",
+    "durchgänge": "Durchgang",
+    "eine": "ein/eine",
+    "einheitliches": "einheitlich",
+    "entstanden": "entstehen",
+    "erinnert": "erinnern",
+    "erzählt": "erzählen",
+    "es": "es",
+    "etwa": "etwa",
+    "frühe": "früh",
+    "für": "für",
+    "gab": "geben",
+    "gebiete": "Gebiet",
+    "gebieten": "Gebiet",
+    "gehörten": "gehören",
+    "gemeinschaften": "Gemeinschaft",
+    "germanen": "Germane",
+    "germanischen": "germanisch",
+    "geschichte": "Geschichte",
+    "gesellschaften": "Gesellschaft",
+    "grenze": "Grenze",
+    "große": "groß",
+    "gruppen": "Gruppe",
+    "handelten": "handeln",
+    "hatten": "haben",
+    "heute": "heute",
+    "heutigen": "heutig",
+    "ihre": "ihr (её, их)",
+    "ihren": "ihr (её, их)",
+    "im": "in",
+    "in": "in",
+    "jahren": "Jahr",
+    "kein": "kein",
+    "konflikte": "Konflikt",
+    "kontakte": "Kontakt",
+    "lebensweisen": "Lebensweise",
+    "lebten": "leben",
+    "limes": "Limes",
+    "menschen": "Mensch",
+    "militärlager": "Militärlager",
+    "miteinander": "miteinander",
+    "nachbarn": "Nachbar",
+    "nannten": "nennen",
+    "nicht": "nicht",
+    "nigra": "Porta Nigra",
+    "noch": "noch",
+    "nur": "nur",
+    "porta": "Porta Nigra",
+    "regionen": "Region",
+    "reich": "Reich",
+    "rheins": "Rhein",
+    "rohstoffe": "Rohstoff",
+    "rolle": "Rolle",
+    "rund": "rund",
+    "römer": "Römer",
+    "römische": "römisch",
+    "römischen": "römisch",
+    "sie": "sie",
+    "siedlungen": "Siedlung",
+    "soldaten": "Soldat",
+    "spielten": "spielen",
+    "später": "später",
+    "staat": "Staat",
+    "stellen": "Stelle",
+    "städte": "Stadt",
+    "süden": "Süden",
+    "trennung": "Trennung",
+    "trier": "Trier",
+    "um": "um",
+    "und": "und",
+    "unterschiedliche": "unterschiedlich",
+    "verschiedenen": "verschieden",
+    "veränderten": "verändern",
+    "viele": "viel",
+    "volk": "Volk",
+    "von": "von",
+    "vor": "vor",
+    "wachtürmen": "Wachturm",
+    "waren": "Ware",
+    "westen": "Westen",
+    "wichtige": "wichtig",
+    "wurden": "werden",
+    "zeit": "Zeit",
+    "zum": "zu",
+    "zusammen": "zusammen",
+    "zwischen": "zwischen",
+    "östlich": "östlich"
+  },
+  "l": {
+    "Aalen": {
+      "pos": "геогр.",
+      "ru": "Аален"
+    },
+    "Autor": {
+      "pos": "сущ.",
+      "ru": "автор",
+      "art": "der",
+      "pl": "die Autoren"
+    },
+    "Beziehung": {
+      "pos": "сущ.",
+      "ru": "отношение, связь",
+      "art": "die",
+      "pl": "die Beziehungen"
+    },
+    "Deutschland": {
+      "ru": "Германия",
+      "pos": "геогр."
+    },
+    "Durchgang": {
+      "pos": "сущ.",
+      "ru": "проход",
+      "art": "der",
+      "pl": "die Durchgänge"
+    },
+    "Gebiet": {
+      "pos": "сущ.",
+      "ru": "территория, область",
+      "art": "das",
+      "pl": "die Gebiete"
+    },
+    "Gemeinschaft": {
+      "pos": "сущ.",
+      "ru": "сообщество",
+      "art": "die",
+      "pl": "die Gemeinschaften"
+    },
+    "Germane": {
+      "pos": "сущ.",
+      "ru": "германец",
+      "art": "der",
+      "pl": "die Germanen"
+    },
+    "Geschichte": {
+      "ru": "история",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Geschichten"
+    },
+    "Gesellschaft": {
+      "pos": "сущ.",
+      "ru": "общество",
+      "art": "die",
+      "pl": "die Gesellschaften"
+    },
+    "Grenze": {
+      "ru": "граница",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Grenzen"
+    },
+    "Gruppe": {
+      "pos": "сущ.",
+      "ru": "группа",
+      "art": "die",
+      "pl": "die Gruppen"
+    },
+    "Jahr": {
+      "ru": "год",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Jahre"
+    },
+    "Konflikt": {
+      "pos": "сущ.",
+      "ru": "конфликт",
+      "art": "der",
+      "pl": "die Konflikte"
+    },
+    "Kontakt": {
+      "pos": "сущ.",
+      "ru": "контакт",
+      "art": "der",
+      "pl": "die Kontakte"
+    },
+    "Lebensweise": {
+      "pos": "сущ.",
+      "ru": "уклад жизни",
+      "art": "die",
+      "pl": "die Lebensweisen"
+    },
+    "Limes": {
+      "pos": "сущ.",
+      "ru": "лимес; римская пограничная система",
+      "art": "der",
+      "pl": "die Limites"
+    },
+    "Mensch": {
+      "ru": "человек",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Menschen",
+      "decl": "n-Deklination: des Menschen · dem/den Menschen"
+    },
+    "Militärlager": {
+      "pos": "сущ.",
+      "ru": "военный лагерь",
+      "art": "das",
+      "pl": "die Militärlager"
+    },
+    "Nachbar": {
+      "pos": "сущ.",
+      "ru": "сосед",
+      "art": "der",
+      "pl": "die Nachbarn"
+    },
+    "Porta Nigra": {
+      "pos": "геогр.",
+      "ru": "Порта Нигра, римские ворота в Трире"
+    },
+    "Region": {
+      "ru": "регион",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Regionen"
+    },
+    "Reich": {
+      "pos": "сущ.",
+      "ru": "империя; государство",
+      "art": "das",
+      "pl": "die Reiche"
+    },
+    "Rhein": {
+      "pos": "геогр.",
+      "ru": "Рейн"
+    },
+    "Rohstoff": {
+      "pos": "сущ.",
+      "ru": "сырьё",
+      "art": "der",
+      "pl": "die Rohstoffe"
+    },
+    "Rolle": {
+      "ru": "роль",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Rollen",
+      "note": "eine große Rolle spielen — играть большую роль"
+    },
+    "Römer": {
+      "pos": "сущ.",
+      "ru": "римлянин",
+      "art": "der",
+      "pl": "die Römer"
+    },
+    "Siedlung": {
+      "pos": "сущ.",
+      "ru": "поселение",
+      "art": "die",
+      "pl": "die Siedlungen"
+    },
+    "Soldat": {
+      "pos": "сущ.",
+      "ru": "солдат",
+      "art": "der",
+      "pl": "die Soldaten"
+    },
+    "Staat": {
+      "ru": "государство",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Staaten"
+    },
+    "Stadt": {
+      "ru": "город",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Städte"
+    },
+    "Stelle": {
+      "ru": "место",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Stellen",
+      "note": "an Ort und Stelle — на своё место"
+    },
+    "Süden": {
+      "ru": "юг",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "Trennung": {
+      "pos": "сущ.",
+      "ru": "разделение",
+      "art": "die",
+      "pl": "die Trennungen"
+    },
+    "Trier": {
+      "pos": "геогр.",
+      "ru": "Трир"
+    },
+    "Volk": {
+      "ru": "народ",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Völker"
+    },
+    "Wachturm": {
+      "pos": "сущ.",
+      "ru": "сторожевая башня",
+      "art": "der",
+      "pl": "die Wachtürme"
+    },
+    "Ware": {
+      "pos": "сущ.",
+      "ru": "товар",
+      "art": "die",
+      "pl": "die Waren"
+    },
+    "Westen": {
+      "ru": "запад",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "Zeit": {
+      "ru": "время",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Zeiten"
+    },
+    "als": {
+      "ru": "когда; как; чем",
+      "pos": "союз"
+    },
+    "also": {
+      "ru": "итак, стало быть",
+      "pos": "нареч."
+    },
+    "an": {
+      "ru": "у, к, на",
+      "pos": "предл.",
+      "note": "am = an dem. Тж. отделяемая приставка: anfangen «начинать», annehmen, ansehen, anzünden"
+    },
+    "auch": {
+      "ru": "тоже, также; даже",
+      "pos": "частица"
+    },
+    "aus": {
+      "ru": "из",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: auslöschen «погасить»"
+    },
+    "bedeuten": {
+      "pos": "гл.",
+      "ru": "означать",
+      "forms": "bedeutet · bedeutete · hat bedeutet"
+    },
+    "benachbart": {
+      "pos": "прил.",
+      "ru": "соседний"
+    },
+    "bestimmt": {
+      "pos": "прил.",
+      "ru": "определённый"
+    },
+    "bewachen": {
+      "pos": "гл.",
+      "ru": "охранять",
+      "forms": "bewacht · bewachte · hat bewacht"
+    },
+    "bilden": {
+      "pos": "гл.",
+      "ru": "образовывать, составлять",
+      "forms": "bildet · bildete · hat gebildet"
+    },
+    "der/die/das": {
+      "ru": "определённый артикль",
+      "pos": "артикль",
+      "note": "Тж. относительное местоимение «который»"
+    },
+    "der/die/das (Relativpronomen)": {
+      "pos": "мест.",
+      "ru": "который, которая, которое; которые"
+    },
+    "deshalb": {
+      "ru": "поэтому",
+      "pos": "нареч."
+    },
+    "dieser": {
+      "ru": "этот, эта, это",
+      "pos": "мест."
+    },
+    "doch": {
+      "ru": "всё же, всё-таки; ведь",
+      "pos": "частица"
+    },
+    "ein/eine": {
+      "ru": "неопределённый артикль",
+      "pos": "артикль",
+      "note": "einer — «один, некто»"
+    },
+    "einheitlich": {
+      "pos": "прил.",
+      "ru": "единый, однородный"
+    },
+    "entstehen": {
+      "pos": "гл.",
+      "ru": "возникать",
+      "forms": "entsteht · entstand · ist entstanden"
+    },
+    "erinnern": {
+      "ru": "напоминать",
+      "pos": "гл.",
+      "forms": "erinnerte · hat erinnert"
+    },
+    "erzählen": {
+      "pos": "гл.",
+      "ru": "рассказывать",
+      "forms": "erzählt · erzählte · hat erzählt"
+    },
+    "es": {
+      "ru": "оно; это",
+      "pos": "мест."
+    },
+    "etwa": {
+      "ru": "примерно, около",
+      "pos": "нареч."
+    },
+    "früh": {
+      "pos": "прил.",
+      "ru": "ранний"
+    },
+    "für": {
+      "ru": "для, за",
+      "pos": "предл."
+    },
+    "geben": {
+      "ru": "давать",
+      "pos": "гл.",
+      "forms": "gab · hat gegeben"
+    },
+    "gehören": {
+      "pos": "гл.",
+      "ru": "принадлежать; входить в состав",
+      "forms": "gehört · gehörte · hat gehört"
+    },
+    "germanisch": {
+      "pos": "прил.",
+      "ru": "германский"
+    },
+    "groß": {
+      "ru": "большой",
+      "pos": "прил.",
+      "forms": "groß · größer · am größten"
+    },
+    "haben": {
+      "ru": "иметь; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "hatte · hat gehabt"
+    },
+    "handeln": {
+      "pos": "гл.",
+      "ru": "торговать; действовать",
+      "forms": "handelt · handelte · hat gehandelt"
+    },
+    "heute": {
+      "ru": "сегодня",
+      "pos": "нареч."
+    },
+    "heutig": {
+      "ru": "нынешний, сегодняшний",
+      "pos": "прил."
+    },
+    "ihr (её, их)": {
+      "ru": "её; их",
+      "pos": "мест."
+    },
+    "in": {
+      "ru": "в (im = in dem, ins = in das)",
+      "pos": "предл."
+    },
+    "kein": {
+      "ru": "никакой, ни один",
+      "pos": "мест."
+    },
+    "leben": {
+      "ru": "жить",
+      "pos": "гл.",
+      "forms": "lebte · hat gelebt"
+    },
+    "miteinander": {
+      "pos": "нареч.",
+      "ru": "друг с другом"
+    },
+    "nennen": {
+      "pos": "гл.",
+      "ru": "называть",
+      "forms": "nennt · nannte · hat genannt"
+    },
+    "nicht": {
+      "ru": "не",
+      "pos": "частица"
+    },
+    "noch": {
+      "ru": "ещё",
+      "pos": "нареч."
+    },
+    "nur": {
+      "ru": "только, лишь",
+      "pos": "частица"
+    },
+    "rund": {
+      "pos": "нареч.",
+      "ru": "вокруг; примерно"
+    },
+    "römisch": {
+      "pos": "прил.",
+      "ru": "римский"
+    },
+    "sie": {
+      "ru": "она; они; Вы",
+      "pos": "мест."
+    },
+    "spielen": {
+      "ru": "играть",
+      "pos": "гл.",
+      "forms": "spielte · hat gespielt"
+    },
+    "später": {
+      "ru": "позже, потом",
+      "pos": "нареч."
+    },
+    "um": {
+      "ru": "вокруг, в (о времени)",
+      "pos": "предл.",
+      "note": "um … zu — чтобы. Тж. отделяемая приставка: sich umsehen «оглядеться»"
+    },
+    "und": {
+      "ru": "и, а",
+      "pos": "союз"
+    },
+    "unterschiedlich": {
+      "pos": "прил.",
+      "ru": "разный, различный"
+    },
+    "verschieden": {
+      "ru": "разный",
+      "pos": "прил."
+    },
+    "verändern": {
+      "pos": "гл.",
+      "ru": "менять",
+      "forms": "verändert · veränderte · hat verändert"
+    },
+    "viel": {
+      "ru": "много, многое",
+      "pos": "мест."
+    },
+    "von": {
+      "ru": "от, из, о (vom = von dem)",
+      "pos": "предл."
+    },
+    "vor": {
+      "ru": "перед, до; от (страха)",
+      "pos": "предл."
+    },
+    "werden": {
+      "ru": "становиться",
+      "pos": "гл.",
+      "forms": "wurde · ist geworden",
+      "note": "Вспомогательный глагол будущего времени и пассива"
+    },
+    "wichtig": {
+      "ru": "важный",
+      "pos": "прил."
+    },
+    "zu": {
+      "ru": "к, в; слишком",
+      "pos": "предл.",
+      "note": "zur = zu der, zum = zu dem"
+    },
+    "zusammen": {
+      "ru": "вместе",
+      "pos": "нареч."
+    },
+    "zwischen": {
+      "pos": "предл.",
+      "ru": "между"
+    },
+    "östlich": {
+      "pos": "нареч.",
+      "ru": "к востоку"
+    }
+  },
+  "translations": {
+    "uk": {
+      "Аален": "Аален",
+      "Порта Нигра, римские ворота в Трире": "Порта Нігра, римська брама в Трірі",
+      "Трир": "Трір",
+      "в состав Римской империи": "до складу Римської імперії",
+      "важную роль": "важливу роль",
+      "военный лагерь": "військовий табір",
+      "вокруг; примерно": "навколо; приблизно",
+      "германец": "германець",
+      "германский": "германський",
+      "друг с другом": "одне з одним",
+      "единый, однородный": "єдиний, однорідний",
+      "из которых": "з яких",
+      "империя; государство": "імперія; держава",
+      "как государство": "як держава",
+      "конфликт": "конфлікт",
+      "который, которая, которое; которые": "який, яка, яке; які",
+      "лимес; римская пограничная система": "лімес; римська прикордонна система",
+      "менять": "змінювати",
+      "напоминает": "нагадує",
+      "образовывать, составлять": "утворювати, становити",
+      "около 2000 лет назад": "близько 2000 років тому",
+      "охранять": "охороняти",
+      "поселение": "поселення",
+      "принадлежать; входить в состав": "належати; входити до складу",
+      "проход": "прохід",
+      "разделение": "розділення",
+      "разный, различный": "різний, відмінний",
+      "ранний": "ранній",
+      "римлянин": "римлянин",
+      "со сторожевых башен": "зі сторожових веж",
+      "сторожевая башня": "сторожова вежа",
+      "существовало": "існувало",
+      "сырьё": "сировина",
+      "товар": "товар",
+      "уклад жизни": "спосіб життя"
+    },
+    "ar": {
+      "Аален": "آلن",
+      "Порта Нигра, римские ворота в Трире": "بورتا نيغرا، بوابة رومانية في ترير",
+      "Трир": "ترير",
+      "в состав Римской империи": "ضمن الإمبراطورية الرومانية",
+      "важную роль": "دورًا مهمًا",
+      "военный лагерь": "معسكر عسكري",
+      "вокруг; примерно": "حول؛ تقريبًا",
+      "германец": "جرماني",
+      "германский": "جرماني",
+      "друг с другом": "بعضهم مع بعض",
+      "единый, однородный": "موحّد، متجانس",
+      "из которых": "التي",
+      "империя; государство": "إمبراطورية؛ دولة",
+      "как государство": "بوصفها دولة",
+      "конфликт": "نزاع",
+      "который, которая, которое; которые": "الذي، التي؛ الذين",
+      "лимес; римская пограничная система": "الليمس؛ منظومة الحدود الرومانية",
+      "менять": "يغيّر",
+      "напоминает": "يذكّر",
+      "образовывать, составлять": "يشكّل، يكوّن",
+      "около 2000 лет назад": "قبل نحو 2000 عام",
+      "охранять": "يحرس",
+      "поселение": "مستوطنة",
+      "принадлежать; входить в состав": "ينتمي؛ يكون جزءًا من",
+      "проход": "ممر",
+      "разделение": "فصل",
+      "разный, различный": "مختلف، متنوع",
+      "ранний": "مبكر",
+      "римлянин": "روماني",
+      "со сторожевых башен": "من أبراج المراقبة",
+      "сторожевая башня": "برج مراقبة",
+      "существовало": "وُجد",
+      "сырьё": "مواد خام",
+      "товар": "بضاعة",
+      "уклад жизни": "نمط الحياة"
+    }
+  }
+}

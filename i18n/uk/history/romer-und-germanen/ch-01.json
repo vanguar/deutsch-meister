@@ -1,0 +1,189 @@
+{
+ "id": "ch-01",
+ "title": "Römer und Germanen",
+ "titleRu": "Римляни та германці",
+ "icon": "1",
+ "paragraphs": [
+  {
+   "sourceIds": [
+    "bpb"
+   ],
+   "s": [
+    {
+     "de": "Vor etwa 2.000 Jahren gab es Deutschland als Staat noch nicht.",
+     "ru": "Близько 2000 років тому Німеччини як держави ще не існувало.",
+     "g": {
+      "0-2": "близько 2000 років тому",
+      "3-4": "існувало",
+      "6-7": "як держава"
+     }
+    },
+    {
+     "de": "Im Süden und Westen des heutigen Deutschlands gehörten große Gebiete zum Römischen Reich.",
+     "ru": "На півдні та заході сучасної Німеччини великі території входили до складу Римської імперії.",
+     "g": {
+      "10-12": "до складу Римської імперії"
+     }
+    },
+    {
+     "de": "Rund um römische Militärlager entstanden Siedlungen, aus denen später Städte wurden.",
+     "ru": "Навколо римських військових таборів виникали поселення, які згодом ставали містами.",
+     "g": {
+      "0-1": "навколо",
+      "6-7": "з яких"
+     }
+    }
+   ]
+  },
+  {
+   "sourceIds": [
+    "trier"
+   ],
+   "s": [
+    {
+     "de": "Die Porta Nigra in Trier erinnert heute noch an die römische Zeit.",
+     "ru": "Порта Нігра в Трірі й сьогодні нагадує про римську добу.",
+     "g": {
+      "5": "нагадує",
+      "8": "о"
+     }
+    }
+   ]
+  },
+  {
+   "fig": {
+    "src": "data/history/romer-und-germanen/img/porta-nigra.jpg",
+    "w": 1723,
+    "h": 1136,
+    "cap": "Порта Нігра в Трірі — збережена римська міська брама. Сучасна фотографія.",
+    "credit": "Valeri Koshelev / Wikimedia Commons",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:Porta_Nigra_in_Trier.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+   }
+  },
+  {
+   "sourceIds": [
+    "halle"
+   ],
+   "s": [
+    {
+     "de": "Römische Autoren nannten viele Gruppen östlich des Rheins „Germanen“.",
+     "ru": "Римські автори називали багато груп на схід від Рейну «германцями»."
+    },
+    {
+     "de": "Diese Gruppen bildeten kein einheitliches Volk.",
+     "ru": "Ці групи не становили єдиного народу."
+    },
+    {
+     "de": "Sie hatten unterschiedliche Lebensweisen und lebten in verschiedenen Gemeinschaften.",
+     "ru": "Вони мали різний спосіб життя й жили в різних спільнотах."
+    }
+   ]
+  },
+  {
+   "sourceIds": [
+    "aalen"
+   ],
+   "s": [
+    {
+     "de": "Im römischen Aalen lebten Menschen aus verschiedenen Regionen zusammen.",
+     "ru": "У римському Аалені разом жили люди з різних регіонів."
+    },
+    {
+     "de": "Soldaten bewachten den Limes von Wachtürmen aus.",
+     "ru": "Солдати охороняли лімес зі сторожових веж.",
+     "g": {
+      "4-6": "зі сторожових веж"
+     }
+    },
+    {
+     "de": "An bestimmten Stellen gab es Durchgänge für Menschen und Waren.",
+     "ru": "У певних місцях були проходи для людей і товарів.",
+     "g": {
+      "3-4": "існувало"
+     }
+    }
+   ]
+  },
+  {
+   "sourceIds": [
+    "schule"
+   ],
+   "s": [
+    {
+     "de": "Die Grenze bedeutete also nicht nur Trennung.",
+     "ru": "Отже, кордон означав не лише розділення."
+    },
+    {
+     "de": "Die Römer und ihre Nachbarn handelten miteinander.",
+     "ru": "Римляни та їхні сусіди торгували одне з одним."
+    },
+    {
+     "de": "Für die Römer spielten Rohstoffe und Waren aus den benachbarten Gebieten eine wichtige Rolle.",
+     "ru": "Для римлян сировина й товари із сусідніх областей відігравали важливу роль.",
+     "g": {
+      "3": "грали",
+      "11-13": "важливу роль"
+     }
+    }
+   ]
+  },
+  {
+   "sourceIds": [
+    "limes"
+   ],
+   "s": [
+    {
+     "de": "Zwischen dem Römischen Reich und den germanischen Gruppen gab es auch Konflikte.",
+     "ru": "Між Римською імперією та германськими групами виникали й конфлікти.",
+     "g": {
+      "8-9": "існувало"
+     }
+    },
+    {
+     "de": "Doch ihre Kontakte veränderten die Gesellschaften.",
+     "ru": "Проте контакти між ними змінювали ці суспільства."
+    },
+    {
+     "de": "Diese frühe Geschichte erzählt deshalb von verschiedenen Gemeinschaften und ihren Beziehungen.",
+     "ru": "Тому ця рання історія розповідає про різні спільноти та їхні відносини."
+    }
+   ]
+  }
+ ],
+ "sourceTitle": "Джерела та перевірка фактів",
+ "sources": [
+  {
+   "id": "halle",
+   "name": "Landesmuseum für Vorgeschichte Halle · «Die Erfindung der Germanen»",
+   "url": "https://www.landesmuseum-vorgeschichte.de/dauerausstellung/erfindung-der-germanen"
+  },
+  {
+   "id": "bpb",
+   "name": "bpb · «Meilensteine der deutschen Geschichte», розділ «Römer und Germanen»",
+   "url": "https://www.bpb.de/system/files/dokument_pdf/Meilensteine%20der%20deutschen%20Geschichte_Leseprobe.pdf"
+  },
+  {
+   "id": "aalen",
+   "name": "Limesmuseum Aalen · «Das römische Aalen – Militärbasis am Limes»",
+   "url": "https://www.limesmuseum.de/dauerausstellung/das-roemische-aalen-militaerbasis-am-limes"
+  },
+  {
+   "id": "schule",
+   "name": "Planet Schule (SWR) · «Welche Handelswaren standen bei den Römern hoch im Kurs?»",
+   "url": "https://www.planet-schule.de/schwerpunkt/frage-trifft-antwort/welche-handelswaren-standen-bei-den-roemern-hoch-im-kurs-film-100.html"
+  },
+  {
+   "id": "limes",
+   "name": "Limesmuseum Aalen · «Der Limes – Eine Grenze für Rom»",
+   "url": "https://www.limesmuseum.de/dauerausstellung/der-limes-eine-grenze-fuer-rom"
+  },
+  {
+   "id": "trier",
+   "name": "Stadt Trier · римські пам’ятки та Порта Нігра",
+   "url": "https://www.trier.de/leben-in-trier/stadtportrait/geschichte/weltkulturerbe"
+  }
+ ],
+ "checked": "2026-11-17"
+}

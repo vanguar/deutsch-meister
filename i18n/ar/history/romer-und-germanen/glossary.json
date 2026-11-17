@@ -1,0 +1,612 @@
+{
+ "version": 1,
+ "w": {
+  "aalen": "Aalen",
+  "als": "als",
+  "also": "also",
+  "an": "an",
+  "auch": "auch",
+  "aus": "aus",
+  "autoren": "Autor",
+  "bedeutete": "bedeuten",
+  "benachbarten": "benachbart",
+  "bestimmten": "bestimmt",
+  "bewachten": "bewachen",
+  "beziehungen": "Beziehung",
+  "bildeten": "bilden",
+  "dem": "der/die/das",
+  "den": "der/die/das",
+  "denen": "der/die/das (Relativpronomen)",
+  "des": "der/die/das",
+  "deshalb": "deshalb",
+  "deutschland": "Deutschland",
+  "deutschlands": "Deutschland",
+  "die": "der/die/das",
+  "diese": "dieser",
+  "doch": "doch",
+  "durchgänge": "Durchgang",
+  "eine": "ein/eine",
+  "einheitliches": "einheitlich",
+  "entstanden": "entstehen",
+  "erinnert": "erinnern",
+  "erzählt": "erzählen",
+  "es": "es",
+  "etwa": "etwa",
+  "frühe": "früh",
+  "für": "für",
+  "gab": "geben",
+  "gebiete": "Gebiet",
+  "gebieten": "Gebiet",
+  "gehörten": "gehören",
+  "gemeinschaften": "Gemeinschaft",
+  "germanen": "Germane",
+  "germanischen": "germanisch",
+  "geschichte": "Geschichte",
+  "gesellschaften": "Gesellschaft",
+  "grenze": "Grenze",
+  "große": "groß",
+  "gruppen": "Gruppe",
+  "handelten": "handeln",
+  "hatten": "haben",
+  "heute": "heute",
+  "heutigen": "heutig",
+  "ihre": "ihr (её, их)",
+  "ihren": "ihr (её, их)",
+  "im": "in",
+  "in": "in",
+  "jahren": "Jahr",
+  "kein": "kein",
+  "konflikte": "Konflikt",
+  "kontakte": "Kontakt",
+  "lebensweisen": "Lebensweise",
+  "lebten": "leben",
+  "limes": "Limes",
+  "menschen": "Mensch",
+  "militärlager": "Militärlager",
+  "miteinander": "miteinander",
+  "nachbarn": "Nachbar",
+  "nannten": "nennen",
+  "nicht": "nicht",
+  "nigra": "Porta Nigra",
+  "noch": "noch",
+  "nur": "nur",
+  "porta": "Porta Nigra",
+  "regionen": "Region",
+  "reich": "Reich",
+  "rheins": "Rhein",
+  "rohstoffe": "Rohstoff",
+  "rolle": "Rolle",
+  "rund": "rund",
+  "römer": "Römer",
+  "römische": "römisch",
+  "römischen": "römisch",
+  "sie": "sie",
+  "siedlungen": "Siedlung",
+  "soldaten": "Soldat",
+  "spielten": "spielen",
+  "später": "später",
+  "staat": "Staat",
+  "stellen": "Stelle",
+  "städte": "Stadt",
+  "süden": "Süden",
+  "trennung": "Trennung",
+  "trier": "Trier",
+  "um": "um",
+  "und": "und",
+  "unterschiedliche": "unterschiedlich",
+  "verschiedenen": "verschieden",
+  "veränderten": "verändern",
+  "viele": "viel",
+  "volk": "Volk",
+  "von": "von",
+  "vor": "vor",
+  "wachtürmen": "Wachturm",
+  "waren": "Ware",
+  "westen": "Westen",
+  "wichtige": "wichtig",
+  "wurden": "werden",
+  "zeit": "Zeit",
+  "zum": "zu",
+  "zusammen": "zusammen",
+  "zwischen": "zwischen",
+  "östlich": "östlich"
+ },
+ "l": {
+  "Aalen": {
+   "pos": "جغرافيا",
+   "ru": "آلن"
+  },
+  "Autor": {
+   "pos": "اسم",
+   "ru": "مؤلف",
+   "art": "der",
+   "pl": "die Autoren"
+  },
+  "Beziehung": {
+   "pos": "اسم",
+   "ru": "علاقة",
+   "art": "die",
+   "pl": "die Beziehungen"
+  },
+  "Deutschland": {
+   "ru": "ألمانيا",
+   "pos": "جغرافيا"
+  },
+  "Durchgang": {
+   "pos": "اسم",
+   "ru": "ممر",
+   "art": "der",
+   "pl": "die Durchgänge"
+  },
+  "Gebiet": {
+   "pos": "اسم",
+   "ru": "منطقة، إقليم",
+   "art": "das",
+   "pl": "die Gebiete"
+  },
+  "Gemeinschaft": {
+   "pos": "اسم",
+   "ru": "مجتمع",
+   "art": "die",
+   "pl": "die Gemeinschaften"
+  },
+  "Germane": {
+   "pos": "اسم",
+   "ru": "جرماني",
+   "art": "der",
+   "pl": "die Germanen"
+  },
+  "Geschichte": {
+   "ru": "تاريخ / قصة",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Geschichten"
+  },
+  "Gesellschaft": {
+   "pos": "اسم",
+   "ru": "المجلس",
+   "art": "die",
+   "pl": "die Gesellschaften"
+  },
+  "Grenze": {
+   "ru": "حدود",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Grenzen"
+  },
+  "Gruppe": {
+   "pos": "اسم",
+   "ru": "مجموعة",
+   "art": "die",
+   "pl": "die Gruppen"
+  },
+  "Jahr": {
+   "ru": "سنة",
+   "pos": "اسم",
+   "art": "das",
+   "pl": "die Jahre"
+  },
+  "Konflikt": {
+   "pos": "اسم",
+   "ru": "نزاع",
+   "art": "der",
+   "pl": "die Konflikte"
+  },
+  "Kontakt": {
+   "pos": "اسم",
+   "ru": "اتصال",
+   "art": "der",
+   "pl": "die Kontakte"
+  },
+  "Lebensweise": {
+   "pos": "اسم",
+   "ru": "نمط الحياة",
+   "art": "die",
+   "pl": "die Lebensweisen"
+  },
+  "Limes": {
+   "pos": "اسم",
+   "ru": "الليمس؛ منظومة الحدود الرومانية",
+   "art": "der",
+   "pl": "die Limites"
+  },
+  "Mensch": {
+   "ru": "إنسان",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Menschen",
+   "decl": "n-Deklination: des Menschen · dem/den Menschen"
+  },
+  "Militärlager": {
+   "pos": "اسم",
+   "ru": "معسكر عسكري",
+   "art": "das",
+   "pl": "die Militärlager"
+  },
+  "Nachbar": {
+   "pos": "اسم",
+   "ru": "الجار",
+   "art": "der",
+   "pl": "die Nachbarn"
+  },
+  "Porta Nigra": {
+   "pos": "جغرافيا",
+   "ru": "بورتا نيغرا، بوابة رومانية في ترير"
+  },
+  "Region": {
+   "ru": "منطقة",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Regionen"
+  },
+  "Reich": {
+   "pos": "اسم",
+   "ru": "إمبراطورية؛ دولة",
+   "art": "das",
+   "pl": "die Reiche"
+  },
+  "Rhein": {
+   "pos": "جغرافيا",
+   "ru": "الراين"
+  },
+  "Rohstoff": {
+   "pos": "اسم",
+   "ru": "مواد خام",
+   "art": "der",
+   "pl": "die Rohstoffe"
+  },
+  "Rolle": {
+   "ru": "دور",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Rollen",
+   "note": "eine große Rolle spielen — يؤدي دورًا كبيرًا"
+  },
+  "Römer": {
+   "pos": "اسم",
+   "ru": "روماني",
+   "art": "der",
+   "pl": "die Römer"
+  },
+  "Siedlung": {
+   "pos": "اسم",
+   "ru": "مستوطنة",
+   "art": "die",
+   "pl": "die Siedlungen"
+  },
+  "Soldat": {
+   "pos": "اسم",
+   "ru": "جندي",
+   "art": "der",
+   "pl": "die Soldaten"
+  },
+  "Staat": {
+   "ru": "دولة",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Staaten"
+  },
+  "Stadt": {
+   "ru": "مدينة",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Städte"
+  },
+  "Stelle": {
+   "ru": "مكان",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Stellen",
+   "note": "an Ort und Stelle — في مكانه"
+  },
+  "Süden": {
+   "ru": "الجنوب",
+   "pos": "اسم",
+   "art": "der",
+   "pl": null
+  },
+  "Trennung": {
+   "pos": "اسم",
+   "ru": "فصل",
+   "art": "die",
+   "pl": "die Trennungen"
+  },
+  "Trier": {
+   "pos": "جغرافيا",
+   "ru": "ترير"
+  },
+  "Volk": {
+   "ru": "الشعب",
+   "pos": "اسم",
+   "art": "das",
+   "pl": "die Völker"
+  },
+  "Wachturm": {
+   "pos": "اسم",
+   "ru": "برج مراقبة",
+   "art": "der",
+   "pl": "die Wachtürme"
+  },
+  "Ware": {
+   "pos": "اسم",
+   "ru": "بضاعة",
+   "art": "die",
+   "pl": "die Waren"
+  },
+  "Westen": {
+   "ru": "الغرب",
+   "pos": "اسم",
+   "art": "der",
+   "pl": null
+  },
+  "Zeit": {
+   "ru": "وقت",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Zeiten"
+  },
+  "als": {
+   "ru": "عندما؛ كـ؛ من (في المقارنة)",
+   "pos": "أداة ربط"
+  },
+  "also": {
+   "ru": "إذن، وهكذا",
+   "pos": "ظرف"
+  },
+  "an": {
+   "ru": "عند، إلى، على",
+   "pos": "حرف جر",
+   "note": "am = an dem. وهي أيضًا سابقة منفصلة: anfangen «يبدأ»، annehmen، ansehen، anzünden"
+  },
+  "auch": {
+   "ru": "أيضًا؛ حتى",
+   "pos": "أداة"
+  },
+  "aus": {
+   "ru": "من",
+   "pos": "حرف جر",
+   "note": "وهي أيضًا سابقة منفصلة: auslöschen «يُطفئ»"
+  },
+  "bedeuten": {
+   "pos": "فعل",
+   "ru": "يعني",
+   "forms": "bedeutet · bedeutete · hat bedeutet"
+  },
+  "benachbart": {
+   "pos": "صفة",
+   "ru": "المجاورة"
+  },
+  "bestimmt": {
+   "pos": "صفة",
+   "ru": "محدد"
+  },
+  "bewachen": {
+   "pos": "فعل",
+   "ru": "يحرس",
+   "forms": "bewacht · bewachte · hat bewacht"
+  },
+  "bilden": {
+   "pos": "فعل",
+   "ru": "يشكّل، يكوّن",
+   "forms": "bildet · bildete · hat gebildet"
+  },
+  "der/die/das": {
+   "ru": "أداة التعريف",
+   "pos": "أداة تعريف",
+   "note": "وهي أيضًا اسم موصول بمعنى «الذي»"
+  },
+  "der/die/das (Relativpronomen)": {
+   "pos": "ضمير",
+   "ru": "الذي، التي؛ الذين"
+  },
+  "deshalb": {
+   "ru": "لذلك",
+   "pos": "ظرف"
+  },
+  "dieser": {
+   "ru": "هذا، هذه",
+   "pos": "ضمير"
+  },
+  "doch": {
+   "ru": "ومع ذلك؛ إذن",
+   "pos": "أداة"
+  },
+  "ein/eine": {
+   "ru": "أداة النكرة",
+   "pos": "أداة تعريف",
+   "note": "einer — «واحد، شخص ما»"
+  },
+  "einheitlich": {
+   "pos": "صفة",
+   "ru": "موحّد، متجانس"
+  },
+  "entstehen": {
+   "pos": "فعل",
+   "ru": "ينشأ",
+   "forms": "entsteht · entstand · ist entstanden"
+  },
+  "erinnern": {
+   "ru": "يذكّر",
+   "pos": "فعل",
+   "forms": "erinnerte · hat erinnert"
+  },
+  "erzählen": {
+   "pos": "فعل",
+   "ru": "يحكي",
+   "forms": "erzählt · erzählte · hat erzählt"
+  },
+  "es": {
+   "ru": "هو (للمحايد)؛ هذا",
+   "pos": "ضمير"
+  },
+  "etwa": {
+   "ru": "تقريبًا، حوالي",
+   "pos": "ظرف"
+  },
+  "früh": {
+   "pos": "صفة",
+   "ru": "مبكر"
+  },
+  "für": {
+   "ru": "لـ، من أجل",
+   "pos": "حرف جر"
+  },
+  "geben": {
+   "ru": "يعطي",
+   "pos": "فعل",
+   "forms": "gab · hat gegeben"
+  },
+  "gehören": {
+   "pos": "فعل",
+   "ru": "ينتمي؛ يكون جزءًا من",
+   "forms": "gehört · gehörte · hat gehört"
+  },
+  "germanisch": {
+   "pos": "صفة",
+   "ru": "جرماني"
+  },
+  "groß": {
+   "ru": "كبير",
+   "pos": "صفة",
+   "forms": "groß · größer · am größten"
+  },
+  "haben": {
+   "ru": "يملك؛ فعل مساعد",
+   "pos": "فعل",
+   "forms": "hatte · hat gehabt"
+  },
+  "handeln": {
+   "pos": "فعل",
+   "ru": "يتاجر؛ يتصرّف",
+   "forms": "handelt · handelte · hat gehandelt"
+  },
+  "heute": {
+   "ru": "اليوم",
+   "pos": "ظرف"
+  },
+  "heutig": {
+   "ru": "حالي، معاصر",
+   "pos": "صفة"
+  },
+  "ihr (её, их)": {
+   "ru": "لها؛ لهم",
+   "pos": "ضمير"
+  },
+  "in": {
+   "ru": "في (im = in dem، ins = in das)",
+   "pos": "حرف جر"
+  },
+  "kein": {
+   "ru": "لا أيّ، ولا واحد",
+   "pos": "ضمير"
+  },
+  "leben": {
+   "ru": "يسكن",
+   "pos": "فعل",
+   "forms": "lebte · hat gelebt"
+  },
+  "miteinander": {
+   "pos": "ظرف",
+   "ru": "بعضهم مع بعض"
+  },
+  "nennen": {
+   "pos": "فعل",
+   "ru": "يسمّي",
+   "forms": "nennt · nannte · hat genannt"
+  },
+  "nicht": {
+   "ru": "لا / ليس",
+   "pos": "أداة"
+  },
+  "noch": {
+   "ru": "بعدُ / أيضًا",
+   "pos": "ظرف"
+  },
+  "nur": {
+   "ru": "فقط، لا غير",
+   "pos": "أداة"
+  },
+  "rund": {
+   "pos": "ظرف",
+   "ru": "حول؛ تقريبًا"
+  },
+  "römisch": {
+   "pos": "صفة",
+   "ru": "روماني"
+  },
+  "sie": {
+   "ru": "هي؛ هم؛ حضرتك",
+   "pos": "ضمير"
+  },
+  "spielen": {
+   "ru": "يلعب",
+   "pos": "فعل",
+   "forms": "spielte · hat gespielt"
+  },
+  "später": {
+   "ru": "لاحقًا، فيما بعد",
+   "pos": "ظرف"
+  },
+  "um": {
+   "ru": "حول، في (للوقت)",
+   "pos": "حرف جر",
+   "note": "um … zu — لكي. وهي أيضًا سابقة منفصلة: sich umsehen «يتلفّت حوله»"
+  },
+  "und": {
+   "ru": "و",
+   "pos": "أداة ربط"
+  },
+  "unterschiedlich": {
+   "pos": "صفة",
+   "ru": "مختلف، متنوع"
+  },
+  "verschieden": {
+   "ru": "مختلف",
+   "pos": "صفة"
+  },
+  "verändern": {
+   "pos": "فعل",
+   "ru": "يغيّر",
+   "forms": "verändert · veränderte · hat verändert"
+  },
+  "viel": {
+   "ru": "كثير، الكثير",
+   "pos": "ضمير"
+  },
+  "von": {
+   "ru": "من، عن (vom = von dem)",
+   "pos": "حرف جر"
+  },
+  "vor": {
+   "ru": "أمام، قبل؛ من (الخوف)",
+   "pos": "حرف جر"
+  },
+  "werden": {
+   "ru": "يصبح",
+   "pos": "فعل",
+   "forms": "wurde · ist geworden",
+   "note": "فعل مساعد للمستقبل والمبني للمجهول"
+  },
+  "wichtig": {
+   "ru": "مهم",
+   "pos": "صفة"
+  },
+  "zu": {
+   "ru": "إلى، في؛ أكثر من اللازم",
+   "pos": "حرف جر",
+   "note": "zur = zu der, zum = zu dem"
+  },
+  "zusammen": {
+   "ru": "معًا",
+   "pos": "ظرف"
+  },
+  "zwischen": {
+   "pos": "حرف جر",
+   "ru": "بين"
+  },
+  "östlich": {
+   "pos": "ظرف",
+   "ru": "شرقًا"
+  }
+ }
+}

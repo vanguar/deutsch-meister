@@ -1,0 +1,169 @@
+{
+ "version": 1,
+ "titleRu": "Коротка історія Німеччини",
+ "teaserRu": "Від античності до сьогодення · B1",
+ "ui": {
+  "ready": "Можна читати",
+  "soon": "У роботі",
+  "read": "Прочитано",
+  "open": "Читати розділ",
+  "contents": "Зміст",
+  "level": "Рівень B1",
+  "error": "Не вдалося завантажити зміст.",
+  "retry": "Повторити",
+  "counter": "Готових розділів",
+  "sources": "Джерела розділу",
+  "checked": "Факти звірено 17 листопада 2026 року."
+ },
+ "chapters": [
+  {
+   "id": "romer-und-germanen",
+   "title": "Römer und Germanen",
+   "titleRu": "Римляни та германці",
+   "period": "I століття до н. е. — V століття н. е.",
+   "summary": "Римські поселення, різні спільноти та життя на кордоні.",
+   "ready": true
+  },
+  {
+   "id": "frankenreich",
+   "title": "Völkerwanderung und Frankenreich",
+   "titleRu": "Переселення народів і Франкська держава",
+   "period": "IV–IX століття",
+   "summary": "Нові королівства, християнство та Карл Великий.",
+   "ready": false
+  },
+  {
+   "id": "mittelalter",
+   "title": "Mittelalter und Heiliges Römisches Reich",
+   "titleRu": "Середньовіччя та Священна Римська імперія",
+   "period": "X–XV століття",
+   "summary": "Імператори та князі, міста, Ганза й повсякденне життя.",
+   "ready": false
+  },
+  {
+   "id": "reformation",
+   "title": "Reformation und Dreißigjähriger Krieg",
+   "titleRu": "Реформація та Тридцятилітня війна",
+   "period": "1517–1648",
+   "summary": "Лютер, релігійний розкол і Вестфальський мир.",
+   "ready": false
+  },
+  {
+   "id": "preussen-aufklaerung",
+   "title": "Fürstenstaaten, Preußen und Aufklärung",
+   "titleRu": "Князівства, Пруссія та Просвітництво",
+   "period": "1648–1789",
+   "summary": "Багато держав, посилення Пруссії та нові ідеї.",
+   "ready": false
+  },
+  {
+   "id": "napoleon",
+   "title": "Napoleon und das Ende des Alten Reiches",
+   "titleRu": "Наполеон і кінець старої імперії",
+   "period": "1789–1815",
+   "summary": "Французька революція, реформи та зміни на карті Європи.",
+   "ready": false
+  },
+  {
+   "id": "revolution-industrialisierung",
+   "title": "Deutscher Bund, Revolution und Industrialisierung",
+   "titleRu": "Німецький союз, революція та індустріалізація",
+   "period": "1815–1871",
+   "summary": "Боротьба за права та єдність, фабрики й соціальне питання.",
+   "ready": false
+  },
+  {
+   "id": "kaiserreich",
+   "title": "Kaiserreich und Kolonialismus",
+   "titleRu": "Німецька імперія та колоніалізм",
+   "period": "1871–1914",
+   "summary": "Об’єднання країни, суспільство імперії та колоніальне насильство.",
+   "ready": false
+  },
+  {
+   "id": "erster-weltkrieg",
+   "title": "Erster Weltkrieg und Ende der Monarchie",
+   "titleRu": "Перша світова війна та кінець монархії",
+   "period": "1914–1918",
+   "summary": "Причини війни, життя під час війни та революція 1918 року.",
+   "ready": false
+  },
+  {
+   "id": "weimar",
+   "title": "Die Weimarer Republik",
+   "titleRu": "Веймарська республіка",
+   "period": "1918–1933",
+   "summary": "Перша німецька демократія, її здобутки та кризи.",
+   "ready": false
+  },
+  {
+   "id": "nationalsozialismus",
+   "title": "NS-Diktatur, Zweiter Weltkrieg und Holocaust",
+   "titleRu": "Нацистська диктатура, Друга світова війна та Голокост",
+   "period": "1933–1945",
+   "summary": "Знищення демократії, переслідування, війна та геноцид.",
+   "ready": false
+  },
+  {
+   "id": "geteiltes-deutschland",
+   "title": "Nachkriegszeit, Bundesrepublik und DDR",
+   "titleRu": "Повоєнні роки, ФРН і НДР",
+   "period": "1945–1989",
+   "summary": "Наслідки війни, дві держави та життя по обидва боки муру.",
+   "ready": false
+  },
+  {
+   "id": "deutsche-einheit",
+   "title": "Friedliche Revolution und deutsche Einheit",
+   "titleRu": "Мирна революція та об’єднання Німеччини",
+   "period": "1989–1990",
+   "summary": "Протести в НДР, відкриття кордону та шлях до єдності.",
+   "ready": false
+  },
+  {
+   "id": "nach-der-einheit",
+   "title": "Deutschland nach der Einheit",
+   "titleRu": "Німеччина після об’єднання",
+   "period": "З 1990 року",
+   "summary": "Суспільні зміни, пам’ять про минуле та європейська інтеграція.",
+   "ready": false
+  }
+ ],
+ "sources": [
+  {
+   "id": "lemo",
+   "name": "LeMO · історія Німеччини за матеріалами федеральних музеїв та архівів",
+   "url": "https://www.dhm.de/lemo/projekt"
+  },
+  {
+   "id": "bpb",
+   "name": "bpb · історико-політична освіта",
+   "url": "https://www.bpb.de/lernen/historisch-politische-bildung/"
+  },
+  {
+   "id": "curriculum",
+   "name": "Шкільна програма з історії · Nordrhein-Westfalen",
+   "url": "https://lehrplannavigator.nrw.de/system/files/media/document/file/g9_ge_silp_2020_01_31.pdf"
+  }
+ ],
+ "items": [
+  {
+   "id": "romer-und-germanen",
+   "kind": "history",
+   "title": "Römer und Germanen",
+   "titleRu": "Римляни та германці",
+   "author": "German Morning",
+   "level": "B1",
+   "year": "2026",
+   "chapters": 1,
+   "words": 153,
+   "minutes": 3,
+   "cover": "1",
+   "number": 1,
+   "source": "Landesmuseum für Vorgeschichte Halle / bpb / Limesmuseum Aalen / Planet Schule (SWR) / Stadt Trier",
+   "sourceUrl": "https://www.landesmuseum-vorgeschichte.de/dauerausstellung/erfindung-der-germanen",
+   "checked": "2026-11-17",
+   "license": "Авторська навчальна адаптація German Morning; посилання на матеріали — у розділі."
+  }
+ ]
+}
