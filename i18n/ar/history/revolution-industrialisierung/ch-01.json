@@ -1,0 +1,122 @@
+{
+ "id": "ch-01",
+ "title": "Deutscher Bund, Revolution und Industrialisierung",
+ "titleRu": "الاتحاد الألماني والثورة والتصنيع",
+ "icon": "7",
+ "paragraphs": [
+  {
+   "sourceIds": [
+    "bund"
+   ],
+   "s": [
+    {
+     "de": "1815 entstand der Deutsche Bund, ein Zusammenschluss souveräner Staaten und freier Städte.",
+     "ru": "في عام 1815 نشأ الاتحاد الألماني، وهو تجمع لدول ذات سيادة ومدن حرة."
+    },
+    {
+     "de": "Viele Menschen forderten nationale Einheit und politische Freiheit.",
+     "ru": "طالب كثير من الناس بالوحدة الوطنية والحرية السياسية."
+    },
+    {
+     "de": "Die Regierungen reagierten häufig mit Zensur und Überwachung.",
+     "ru": "ردت الحكومات غالبًا بالرقابة على النشر والمراقبة."
+    }
+   ]
+  },
+  {
+   "sourceIds": [
+    "parlament"
+   ],
+   "s": [
+    {
+     "de": "1848 brachen in vielen europäischen Ländern Revolutionen aus.",
+     "ru": "في عام 1848 اندلعت ثورات في دول أوروبية كثيرة."
+    },
+    {
+     "de": "In der Frankfurter Paulskirche beriet die Nationalversammlung über Grundrechte und eine Verfassung.",
+     "ru": "ناقشت الجمعية الوطنية في كنيسة القديس بولس بفرانكفورت الحقوق الأساسية والدستور."
+    },
+    {
+     "de": "Doch 1849 scheiterte die Revolution am Widerstand der alten Machthaber; ihre Ideen wirkten weiter.",
+     "ru": "لكن الثورة فشلت عام 1849 أمام مقاومة الحكام القدامى، وبقيت أفكارها مؤثرة."
+    }
+   ]
+  },
+  {
+   "fig": {
+    "src": "data/history/revolution-industrialisierung/img/paulskirche.jpg",
+    "w": 611,
+    "h": 1000,
+    "credit": "Dietmar Rabich / Wikimedia Commons",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:Frankfurt_am_Main,_Paulskirche_--_2015_--_6701.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "cap": "كنيسة القديس بولس في فرانكفورت اليوم، حيث اجتمعت الجمعية الوطنية عامي 1848 و1849. صُغرت الصورة."
+   }
+  },
+  {
+   "sourceIds": [
+    "bahn",
+    "arbeit"
+   ],
+   "s": [
+    {
+     "de": "Gleichzeitig veränderte die Industrialisierung das Leben.",
+     "ru": "وفي الوقت نفسه غير التصنيع الحياة."
+    },
+    {
+     "de": "Seit 1835 verbanden Eisenbahnen immer mehr Orte; Fabriken und Bergwerke wuchsen.",
+     "ru": "منذ عام 1835 ربطت السكك الحديدية مزيدًا من الأماكن، ونمت المصانع والمناجم."
+    },
+    {
+     "de": "Viele Arbeiterfamilien litten unter langen Arbeitstagen, niedrigen Löhnen und unsicheren Lebensbedingungen.",
+     "ru": "عانت أسر عمالية كثيرة من أيام عمل طويلة وأجور منخفضة وظروف معيشية غير مستقرة."
+    }
+   ]
+  },
+  {
+   "sourceIds": [
+    "einheit"
+   ],
+   "s": [
+    {
+     "de": "Nach 1849 wurde die nationale Einheit vor allem durch Preußens Machtpolitik vorangetrieben.",
+     "ru": "بعد عام 1849 دفعت سياسة القوة البروسية أساسًا نحو الوحدة الوطنية."
+    },
+    {
+     "de": "Nach mehreren Kriegen entstand 1871 das Deutsche Kaiserreich.",
+     "ru": "بعد حروب عدة تأسست الإمبراطورية الألمانية عام 1871."
+    }
+   ]
+  }
+ ],
+ "sourceTitle": "المصادر والتحقق من المعلومات",
+ "sources": [
+  {
+   "id": "bund",
+   "name": "LeMO · Vormärz und Revolution",
+   "url": "https://www.dhm.de/lemo/kapitel/vormaerz-und-revolution"
+  },
+  {
+   "id": "parlament",
+   "name": "Deutscher Bundestag · Revolution und Paulskirche",
+   "url": "https://www.bundestag.de/parlament/geschichte/paulskirche"
+  },
+  {
+   "id": "bahn",
+   "name": "LeMO · Erste Eisenbahnen in Deutschland",
+   "url": "https://www.dhm.de/lemo/rueckblick/lemo-rueckblick-erste-eisenbahnen-in-deutschland"
+  },
+  {
+   "id": "arbeit",
+   "name": "LeMO · Fabrikproletariat",
+   "url": "https://www.dhm.de/lemo/kapitel/reaktionszeit/industrie/fabrikproletariat"
+  },
+  {
+   "id": "einheit",
+   "name": "Deutschlandmuseum · Deutscher Bund",
+   "url": "https://www.deutschlandmuseum.de/geschichte/deutscher-bund/"
+  }
+ ],
+ "checked": "2026-11-17"
+}

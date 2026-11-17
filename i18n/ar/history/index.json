@@ -70,7 +70,7 @@
    "titleRu": "الاتحاد الألماني والثورة والتصنيع",
    "period": "1815–1871",
    "summary": "النضال من أجل الحقوق والوحدة والمصانع والمسألة الاجتماعية.",
-   "ready": false
+   "ready": true
   },
   {
    "id": "kaiserreich",
@@ -252,6 +252,24 @@
    "number": 6,
    "source": "Deutsches Historisches Museum / Deutscher Bundestag / LeMO / Land Berlin",
    "sourceUrl": "https://www.dhm.de/bildung/ida/revolutionen/1789/",
+   "checked": "2026-11-17",
+   "license": "صياغة تعليمية أعدّها German Morning؛ روابط المواد مذكورة في الفصل."
+  },
+  {
+   "id": "revolution-industrialisierung",
+   "kind": "history",
+   "title": "Deutscher Bund, Revolution und Industrialisierung",
+   "titleRu": "الاتحاد الألماني والثورة والتصنيع",
+   "author": "German Morning",
+   "level": "B1",
+   "year": "2026",
+   "chapters": 1,
+   "words": 104,
+   "minutes": 3,
+   "cover": "7",
+   "number": 7,
+   "source": "LeMO / Deutscher Bundestag / Deutschlandmuseum",
+   "sourceUrl": "https://www.dhm.de/lemo/kapitel/vormaerz-und-revolution",
    "checked": "2026-11-17",
    "license": "صياغة تعليمية أعدّها German Morning؛ روابط المواد مذكورة في الفصل."
   }

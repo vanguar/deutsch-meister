@@ -1,0 +1,122 @@
+{
+ "id": "ch-01",
+ "title": "Deutscher Bund, Revolution und Industrialisierung",
+ "titleRu": "Німецький союз, революція та індустріалізація",
+ "icon": "7",
+ "paragraphs": [
+  {
+   "sourceIds": [
+    "bund"
+   ],
+   "s": [
+    {
+     "de": "1815 entstand der Deutsche Bund, ein Zusammenschluss souveräner Staaten und freier Städte.",
+     "ru": "У 1815 році виник Німецький союз — об’єднання суверенних держав і вільних міст."
+    },
+    {
+     "de": "Viele Menschen forderten nationale Einheit und politische Freiheit.",
+     "ru": "Багато людей вимагали національної єдності й політичної свободи."
+    },
+    {
+     "de": "Die Regierungen reagierten häufig mit Zensur und Überwachung.",
+     "ru": "Уряди часто відповідали цензурою та стеженням."
+    }
+   ]
+  },
+  {
+   "sourceIds": [
+    "parlament"
+   ],
+   "s": [
+    {
+     "de": "1848 brachen in vielen europäischen Ländern Revolutionen aus.",
+     "ru": "У 1848 році в багатьох європейських країнах спалахнули революції."
+    },
+    {
+     "de": "In der Frankfurter Paulskirche beriet die Nationalversammlung über Grundrechte und eine Verfassung.",
+     "ru": "У франкфуртській Паульскірхе Національні збори обговорювали основні права й конституцію."
+    },
+    {
+     "de": "Doch 1849 scheiterte die Revolution am Widerstand der alten Machthaber; ihre Ideen wirkten weiter.",
+     "ru": "Але 1849 року революція зазнала невдачі через опір попередніх правителів; її ідеї продовжували жити."
+    }
+   ]
+  },
+  {
+   "fig": {
+    "src": "data/history/revolution-industrialisierung/img/paulskirche.jpg",
+    "w": 611,
+    "h": 1000,
+    "credit": "Dietmar Rabich / Wikimedia Commons",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:Frankfurt_am_Main,_Paulskirche_--_2015_--_6701.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "cap": "Паульскірхе у Франкфурті сьогодні: тут у 1848–1849 роках засідали Національні збори. Фото зменшено."
+   }
+  },
+  {
+   "sourceIds": [
+    "bahn",
+    "arbeit"
+   ],
+   "s": [
+    {
+     "de": "Gleichzeitig veränderte die Industrialisierung das Leben.",
+     "ru": "Водночас індустріалізація змінювала життя."
+    },
+    {
+     "de": "Seit 1835 verbanden Eisenbahnen immer mehr Orte; Fabriken und Bergwerke wuchsen.",
+     "ru": "З 1835 року залізниці з’єднували дедалі більше населених пунктів; зростали фабрики й шахти."
+    },
+    {
+     "de": "Viele Arbeiterfamilien litten unter langen Arbeitstagen, niedrigen Löhnen und unsicheren Lebensbedingungen.",
+     "ru": "Багато робітничих сімей потерпали від довгого робочого дня, низької оплати й нестабільних умов життя."
+    }
+   ]
+  },
+  {
+   "sourceIds": [
+    "einheit"
+   ],
+   "s": [
+    {
+     "de": "Nach 1849 wurde die nationale Einheit vor allem durch Preußens Machtpolitik vorangetrieben.",
+     "ru": "Після 1849 року національне об’єднання просувалося насамперед силовою політикою Пруссії."
+    },
+    {
+     "de": "Nach mehreren Kriegen entstand 1871 das Deutsche Kaiserreich.",
+     "ru": "Після кількох воєн у 1871 році виникла Німецька імперія."
+    }
+   ]
+  }
+ ],
+ "sourceTitle": "Джерела та перевірка фактів",
+ "sources": [
+  {
+   "id": "bund",
+   "name": "LeMO · Vormärz und Revolution",
+   "url": "https://www.dhm.de/lemo/kapitel/vormaerz-und-revolution"
+  },
+  {
+   "id": "parlament",
+   "name": "Deutscher Bundestag · Revolution und Paulskirche",
+   "url": "https://www.bundestag.de/parlament/geschichte/paulskirche"
+  },
+  {
+   "id": "bahn",
+   "name": "LeMO · Erste Eisenbahnen in Deutschland",
+   "url": "https://www.dhm.de/lemo/rueckblick/lemo-rueckblick-erste-eisenbahnen-in-deutschland"
+  },
+  {
+   "id": "arbeit",
+   "name": "LeMO · Fabrikproletariat",
+   "url": "https://www.dhm.de/lemo/kapitel/reaktionszeit/industrie/fabrikproletariat"
+  },
+  {
+   "id": "einheit",
+   "name": "Deutschlandmuseum · Deutscher Bund",
+   "url": "https://www.deutschlandmuseum.de/geschichte/deutscher-bund/"
+  }
+ ],
+ "checked": "2026-11-17"
+}

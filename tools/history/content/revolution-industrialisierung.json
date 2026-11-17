@@ -1,0 +1,147 @@
+{
+  "id": "revolution-industrialisierung",
+  "sources": [
+    {
+      "id": "bund",
+      "name": "LeMO · Vormärz und Revolution",
+      "url": "https://www.dhm.de/lemo/kapitel/vormaerz-und-revolution"
+    },
+    {
+      "id": "parlament",
+      "name": "Deutscher Bundestag · Revolution und Paulskirche",
+      "url": "https://www.bundestag.de/parlament/geschichte/paulskirche"
+    },
+    {
+      "id": "bahn",
+      "name": "LeMO · Erste Eisenbahnen in Deutschland",
+      "url": "https://www.dhm.de/lemo/rueckblick/lemo-rueckblick-erste-eisenbahnen-in-deutschland"
+    },
+    {
+      "id": "arbeit",
+      "name": "LeMO · Fabrikproletariat",
+      "url": "https://www.dhm.de/lemo/kapitel/reaktionszeit/industrie/fabrikproletariat"
+    },
+    {
+      "id": "einheit",
+      "name": "Deutschlandmuseum · Deutscher Bund",
+      "url": "https://www.deutschlandmuseum.de/geschichte/deutscher-bund/"
+    }
+  ],
+  "paragraphs": [
+    {
+      "sourceIds": [
+        "bund"
+      ],
+      "sentences": [
+        [
+          "1815 entstand der Deutsche Bund, ein Zusammenschluss souveräner Staaten und freier Städte.",
+          "В 1815 году возник Германский союз — объединение суверенных государств и вольных городов.",
+          "У 1815 році виник Німецький союз — об’єднання суверенних держав і вільних міст.",
+          "في عام 1815 نشأ الاتحاد الألماني، وهو تجمع لدول ذات سيادة ومدن حرة."
+        ],
+        [
+          "Viele Menschen forderten nationale Einheit und politische Freiheit.",
+          "Многие люди требовали национального единства и политической свободы.",
+          "Багато людей вимагали національної єдності й політичної свободи.",
+          "طالب كثير من الناس بالوحدة الوطنية والحرية السياسية."
+        ],
+        [
+          "Die Regierungen reagierten häufig mit Zensur und Überwachung.",
+          "Правительства часто отвечали цензурой и слежкой.",
+          "Уряди часто відповідали цензурою та стеженням.",
+          "ردت الحكومات غالبًا بالرقابة على النشر والمراقبة."
+        ]
+      ]
+    },
+    {
+      "sourceIds": [
+        "parlament"
+      ],
+      "sentences": [
+        [
+          "1848 brachen in vielen europäischen Ländern Revolutionen aus.",
+          "В 1848 году во многих европейских странах вспыхнули революции.",
+          "У 1848 році в багатьох європейських країнах спалахнули революції.",
+          "في عام 1848 اندلعت ثورات في دول أوروبية كثيرة."
+        ],
+        [
+          "In der Frankfurter Paulskirche beriet die Nationalversammlung über Grundrechte und eine Verfassung.",
+          "Во франкфуртской Паульскирхе Национальное собрание обсуждало основные права и конституцию.",
+          "У франкфуртській Паульскірхе Національні збори обговорювали основні права й конституцію.",
+          "ناقشت الجمعية الوطنية في كنيسة القديس بولس بفرانكفورت الحقوق الأساسية والدستور."
+        ],
+        [
+          "Doch 1849 scheiterte die Revolution am Widerstand der alten Machthaber; ihre Ideen wirkten weiter.",
+          "Но в 1849 году революция потерпела неудачу из-за сопротивления прежних правителей; её идеи продолжали жить.",
+          "Але 1849 року революція зазнала невдачі через опір попередніх правителів; її ідеї продовжували жити.",
+          "لكن الثورة فشلت عام 1849 أمام مقاومة الحكام القدامى، وبقيت أفكارها مؤثرة."
+        ]
+      ]
+    },
+    {
+      "fig": {
+        "src": "data/history/revolution-industrialisierung/img/paulskirche.jpg",
+        "w": 611,
+        "h": 1000,
+        "credit": "Dietmar Rabich / Wikimedia Commons",
+        "creditUrl": "https://commons.wikimedia.org/wiki/File:Frankfurt_am_Main,_Paulskirche_--_2015_--_6701.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "cap": "Паульскирхе во Франкфурте сегодня: здесь в 1848–1849 годах заседало Национальное собрание. Фото уменьшено."
+      }
+    },
+    {
+      "sourceIds": [
+        "bahn",
+        "arbeit"
+      ],
+      "sentences": [
+        [
+          "Gleichzeitig veränderte die Industrialisierung das Leben.",
+          "Одновременно индустриализация меняла жизнь.",
+          "Водночас індустріалізація змінювала життя.",
+          "وفي الوقت نفسه غير التصنيع الحياة."
+        ],
+        [
+          "Seit 1835 verbanden Eisenbahnen immer mehr Orte; Fabriken und Bergwerke wuchsen.",
+          "С 1835 года железные дороги соединяли всё больше населённых пунктов; росли фабрики и шахты.",
+          "З 1835 року залізниці з’єднували дедалі більше населених пунктів; зростали фабрики й шахти.",
+          "منذ عام 1835 ربطت السكك الحديدية مزيدًا من الأماكن، ونمت المصانع والمناجم."
+        ],
+        [
+          "Viele Arbeiterfamilien litten unter langen Arbeitstagen, niedrigen Löhnen und unsicheren Lebensbedingungen.",
+          "Многие рабочие семьи страдали от долгого рабочего дня, низкой оплаты и нестабильных условий жизни.",
+          "Багато робітничих сімей потерпали від довгого робочого дня, низької оплати й нестабільних умов життя.",
+          "عانت أسر عمالية كثيرة من أيام عمل طويلة وأجور منخفضة وظروف معيشية غير مستقرة."
+        ]
+      ]
+    },
+    {
+      "sourceIds": [
+        "einheit"
+      ],
+      "sentences": [
+        [
+          "Nach 1849 wurde die nationale Einheit vor allem durch Preußens Machtpolitik vorangetrieben.",
+          "После 1849 года национальное объединение продвигалось прежде всего силовой политикой Пруссии.",
+          "Після 1849 року національне об’єднання просувалося насамперед силовою політикою Пруссії.",
+          "بعد عام 1849 دفعت سياسة القوة البروسية أساسًا نحو الوحدة الوطنية."
+        ],
+        [
+          "Nach mehreren Kriegen entstand 1871 das Deutsche Kaiserreich.",
+          "После нескольких войн в 1871 году возникла Германская империя.",
+          "Після кількох воєн у 1871 році виникла Німецька імперія.",
+          "بعد حروب عدة تأسست الإمبراطورية الألمانية عام 1871."
+        ]
+      ]
+    }
+  ],
+  "translations": {
+    "uk": {
+      "Паульскирхе во Франкфурте сегодня: здесь в 1848–1849 годах заседало Национальное собрание. Фото уменьшено.": "Паульскірхе у Франкфурті сьогодні: тут у 1848–1849 роках засідали Національні збори. Фото зменшено."
+    },
+    "ar": {
+      "Паульскирхе во Франкфурте сегодня: здесь в 1848–1849 годах заседало Национальное собрание. Фото уменьшено.": "كنيسة القديس بولس في فرانكفورت اليوم، حيث اجتمعت الجمعية الوطنية عامي 1848 و1849. صُغرت الصورة."
+    }
+  }
+}

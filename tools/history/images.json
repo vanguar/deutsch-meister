@@ -11,5 +11,18 @@
     "sha256": "6f16c695c325eb48529d60556585042a37399fd1753f98956bf2670c95254973",
     "changes": "resized and recompressed",
     "checked": "2026-11-17"
+  },
+  "revolution-industrialisierung": {
+    "src": "data/history/revolution-industrialisierung/img/paulskirche.jpg",
+    "w": 611,
+    "h": 1000,
+    "credit": "Dietmar Rabich / Wikimedia Commons",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:Frankfurt_am_Main,_Paulskirche_--_2015_--_6701.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Frankfurt_am_Main%2C_Paulskirche_--_2015_--_6701.jpg/1280px-Frankfurt_am_Main%2C_Paulskirche_--_2015_--_6701.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "sha256": "bb718afb3ca7235a2b436b2ae68f28d07f8fc570646e3b1c0290d4a74b4c3a21",
+    "changes": "resized and recompressed",
+    "checked": "2026-11-17"
   }
 }

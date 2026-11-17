@@ -1,0 +1,506 @@
+{
+ "version": 1,
+ "w": {
+  "allem": "alle/alles",
+  "alten": "alt",
+  "am": "an",
+  "arbeiterfamilien": "Arbeiterfamilie",
+  "arbeitstagen": "Arbeitstag",
+  "aus": "aus",
+  "bergwerke": "Bergwerk",
+  "beriet": "beraten",
+  "brachen": "brechen",
+  "bund": "Bund",
+  "das": "der/die/das",
+  "der": "der/die/das",
+  "deutsche": "deutsch",
+  "die": "der/die/das",
+  "doch": "doch",
+  "durch": "durch",
+  "ein": "ein/eine",
+  "eine": "ein/eine",
+  "einheit": "Einheit",
+  "eisenbahnen": "Eisenbahn",
+  "entstand": "entstehen",
+  "europäischen": "europäisch",
+  "fabriken": "Fabrik",
+  "forderten": "fordern",
+  "frankfurter": "Frankfurter",
+  "freier": "frei",
+  "freiheit": "Freiheit",
+  "gleichzeitig": "gleichzeitig",
+  "grundrechte": "Grundrecht",
+  "häufig": "häufig",
+  "ideen": "Idee",
+  "ihre": "ihr (её, их)",
+  "immer": "immer",
+  "in": "in",
+  "industrialisierung": "Industrialisierung",
+  "kaiserreich": "Kaiserreich",
+  "kriegen": "kriegen",
+  "langen": "lang",
+  "leben": "leben",
+  "lebensbedingungen": "Lebensbedingung",
+  "litten": "leiden",
+  "ländern": "Land (земля)",
+  "löhnen": "Lohn",
+  "machthaber": "Machthaber",
+  "machtpolitik": "Machtpolitik",
+  "mehr": "mehr",
+  "mehreren": "mehrere",
+  "menschen": "Mensch",
+  "mit": "mit",
+  "nach": "nach",
+  "nationale": "national",
+  "nationalversammlung": "Nationalversammlung",
+  "niedrigen": "niedrig",
+  "orte": "Ort",
+  "paulskirche": "Paulskirche",
+  "politische": "politisch",
+  "preußens": "Preußen",
+  "reagierten": "reagieren",
+  "regierungen": "Regierung",
+  "revolution": "Revolution",
+  "revolutionen": "Revolution",
+  "scheiterte": "scheitern",
+  "seit": "seit",
+  "souveräner": "souverän",
+  "staaten": "Staat",
+  "städte": "Stadt",
+  "und": "und",
+  "unsicheren": "unsicher",
+  "unter": "unter",
+  "verbanden": "verbinden",
+  "verfassung": "Verfassung",
+  "veränderte": "verändern",
+  "viele": "viel",
+  "vielen": "viel",
+  "vor": "vor",
+  "vorangetrieben": "vorantreiben",
+  "weiter": "weit",
+  "widerstand": "Widerstand",
+  "wirkten": "wirken",
+  "wuchsen": "wachsen",
+  "wurde": "werden",
+  "zensur": "Zensur",
+  "zusammenschluss": "Zusammenschluss",
+  "über": "über",
+  "überwachung": "Überwachung"
+ },
+ "l": {
+  "Arbeiterfamilie": {
+   "ru": "أسرة عمالية",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Arbeiterfamilien"
+  },
+  "Arbeitstag": {
+   "ru": "يوم عمل",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Arbeitstage"
+  },
+  "Bergwerk": {
+   "ru": "منجم",
+   "pos": "اسم",
+   "art": "das",
+   "pl": "die Bergwerke"
+  },
+  "Bund": {
+   "ru": "اتحاد (المستوى الاتحادي للسلطة)؛ حلف",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Bünde",
+   "note": "der Bund — الدولة الاتحادية مقابل الولايات (Länder)"
+  },
+  "Einheit": {
+   "ru": "وحدة؛ كيان واحد",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Einheiten"
+  },
+  "Eisenbahn": {
+   "ru": "سكة حديدية",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Eisenbahnen"
+  },
+  "Fabrik": {
+   "ru": "مصنع",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Fabriken"
+  },
+  "Frankfurter": {
+   "ru": "متعلق بفرانكفورت",
+   "pos": "صفة"
+  },
+  "Freiheit": {
+   "ru": "حرية",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Freiheiten"
+  },
+  "Grundrecht": {
+   "ru": "حق أساسي",
+   "pos": "اسم",
+   "art": "das",
+   "pl": "die Grundrechte"
+  },
+  "Idee": {
+   "ru": "فكرة",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Ideen"
+  },
+  "Industrialisierung": {
+   "ru": "التصنيع",
+   "pos": "اسم",
+   "art": "die",
+   "pl": null
+  },
+  "Kaiserreich": {
+   "ru": "إمبراطورية",
+   "pos": "اسم",
+   "art": "das",
+   "pl": "die Kaiserreiche"
+  },
+  "Land (земля)": {
+   "ru": "ولاية (اتحادية)؛ بلد",
+   "pos": "اسم",
+   "art": "das",
+   "pl": "die Länder",
+   "note": "Bundesland — ولاية اتحادية؛ in anderen Ländern — في ولايات أخرى"
+  },
+  "Lebensbedingung": {
+   "ru": "ظرف معيشي",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Lebensbedingungen"
+  },
+  "Lohn": {
+   "ru": "أجر",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Löhne"
+  },
+  "Machthaber": {
+   "ru": "حاكم، صاحب سلطة",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Machthaber"
+  },
+  "Machtpolitik": {
+   "ru": "سياسة القوة",
+   "pos": "اسم",
+   "art": "die",
+   "pl": null
+  },
+  "Mensch": {
+   "ru": "إنسان",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Menschen",
+   "decl": "n-Deklination: des Menschen · dem/den Menschen"
+  },
+  "Nationalversammlung": {
+   "ru": "جمعية وطنية",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Nationalversammlungen"
+  },
+  "Ort": {
+   "ru": "مكان",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Orte",
+   "note": "meines Orts — من جهتي (قديم)"
+  },
+  "Paulskirche": {
+   "ru": "كنيسة القديس بولس في فرانكفورت",
+   "pos": "جغرافيا"
+  },
+  "Preußen": {
+   "ru": "بروسيا",
+   "pos": "جغرافيا"
+  },
+  "Regierung": {
+   "ru": "حكومة",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Regierungen"
+  },
+  "Revolution": {
+   "ru": "ثورة",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Revolutionen"
+  },
+  "Staat": {
+   "ru": "دولة",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Staaten"
+  },
+  "Stadt": {
+   "ru": "مدينة",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Städte"
+  },
+  "Verfassung": {
+   "ru": "الدستور",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Verfassungen"
+  },
+  "Widerstand": {
+   "ru": "مقاومة",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Widerstände"
+  },
+  "Zensur": {
+   "ru": "رقابة على النشر",
+   "pos": "اسم",
+   "art": "die",
+   "pl": null
+  },
+  "Zusammenschluss": {
+   "ru": "اتحاد، تجمع",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Zusammenschlüsse"
+  },
+  "alle/alles": {
+   "ru": "الجميع؛ كل شيء",
+   "pos": "ضمير"
+  },
+  "alt": {
+   "ru": "قديم / كبير في السن",
+   "pos": "صفة",
+   "forms": "alt · älter · am ältesten"
+  },
+  "an": {
+   "ru": "عند، إلى، على",
+   "pos": "حرف جر",
+   "note": "am = an dem. وهي أيضًا سابقة منفصلة: anfangen «يبدأ»، annehmen، ansehen، anzünden"
+  },
+  "aus": {
+   "ru": "من",
+   "pos": "حرف جر",
+   "note": "وهي أيضًا سابقة منفصلة: auslöschen «يُطفئ»"
+  },
+  "beraten": {
+   "ru": "يناقش، يتشاور",
+   "pos": "فعل",
+   "forms": "berät · beriet · hat beraten"
+  },
+  "brechen": {
+   "ru": "يكسر",
+   "pos": "فعل",
+   "forms": "brach · hat gebrochen",
+   "note": "den Hals brechen — يكسر رقبته"
+  },
+  "der/die/das": {
+   "ru": "أداة التعريف",
+   "pos": "أداة تعريف",
+   "note": "وهي أيضًا اسم موصول بمعنى «الذي»"
+  },
+  "deutsch": {
+   "ru": "الألمانية",
+   "pos": "صفة"
+  },
+  "doch": {
+   "ru": "ومع ذلك؛ إذن",
+   "pos": "أداة"
+  },
+  "durch": {
+   "ru": "عبر، من خلال، بسبب",
+   "pos": "حرف جر"
+  },
+  "ein/eine": {
+   "ru": "أداة النكرة",
+   "pos": "أداة تعريف",
+   "note": "einer — «واحد، شخص ما»"
+  },
+  "entstehen": {
+   "pos": "فعل",
+   "ru": "ينشأ",
+   "forms": "entsteht · entstand · ist entstanden"
+  },
+  "europäisch": {
+   "ru": "أوروبي",
+   "pos": "صفة"
+  },
+  "fordern": {
+   "ru": "يطلب؛ يدعو",
+   "pos": "فعل",
+   "forms": "forderte · hat gefordert",
+   "note": "jemanden auffordern, etwas zu tun — يطلب من أحد أن يفعل شيئًا"
+  },
+  "frei": {
+   "ru": "حر",
+   "pos": "صفة"
+  },
+  "gleichzeitig": {
+   "ru": "في الوقت نفسه",
+   "pos": "ظرف"
+  },
+  "häufig": {
+   "ru": "غالبًا",
+   "pos": "ظرف"
+  },
+  "ihr (её, их)": {
+   "ru": "لها؛ لهم",
+   "pos": "ضمير"
+  },
+  "immer": {
+   "ru": "دائمًا؛ أكثر فأكثر",
+   "pos": "ظرف",
+   "note": "immer größer — أكبر فأكبر"
+  },
+  "in": {
+   "ru": "في (im = in dem، ins = in das)",
+   "pos": "حرف جر"
+  },
+  "kriegen": {
+   "ru": "ينال، يُصاب بـ",
+   "pos": "فعل",
+   "forms": "kriegte · hat gekriegt",
+   "note": "عامية؛ die Schwerenot kriegen — ليصبهم الصرع"
+  },
+  "lang": {
+   "ru": "طويل",
+   "pos": "صفة",
+   "forms": "lang · länger · am längsten"
+  },
+  "leben": {
+   "ru": "يسكن",
+   "pos": "فعل",
+   "forms": "lebte · hat gelebt"
+  },
+  "leiden": {
+   "ru": "يعاني",
+   "pos": "فعل",
+   "forms": "leidet · litt · hat gelitten"
+  },
+  "mehr": {
+   "ru": "أكثر",
+   "pos": "ظرف",
+   "note": "في nicht/kein … mehr — لم يعد. وهي شكليًا صيغة التفضيل من viel"
+  },
+  "mehrere": {
+   "pos": "ضمير",
+   "ru": "بضع"
+  },
+  "mit": {
+   "ru": "ث",
+   "pos": "حرف جر",
+   "note": "وهي أيضًا سابقة منفصلة: mitgehen «يذهب معه»"
+  },
+  "nach": {
+   "ru": "إلى، بعد، حسب",
+   "pos": "حرف جر"
+  },
+  "national": {
+   "ru": "وطني، قومي",
+   "pos": "صفة"
+  },
+  "niedrig": {
+   "ru": "منخفض",
+   "pos": "صفة"
+  },
+  "politisch": {
+   "ru": "سياسي",
+   "pos": "صفة"
+  },
+  "reagieren": {
+   "ru": "يرد، يتفاعل",
+   "pos": "فعل",
+   "forms": "reagiert · reagierte · hat reagiert"
+  },
+  "scheitern": {
+   "ru": "يفشل",
+   "pos": "فعل",
+   "forms": "scheitert · scheiterte · ist gescheitert"
+  },
+  "seit": {
+   "ru": "منذ (وقت ما)",
+   "pos": "حرف جر"
+  },
+  "souverän": {
+   "ru": "ذو سيادة، مستقل",
+   "pos": "صفة"
+  },
+  "und": {
+   "ru": "و",
+   "pos": "أداة ربط"
+  },
+  "unsicher": {
+   "ru": "غير مستقر، غير آمن",
+   "pos": "صفة"
+  },
+  "unter": {
+   "ru": "تحت، بين",
+   "pos": "حرف جر"
+  },
+  "verbinden": {
+   "ru": "يضمّد (جرحًا)؛ يربط",
+   "pos": "فعل",
+   "forms": "verband · hat verbunden",
+   "note": "sich verbinden lassen — يدع جرحه يُضمَّد"
+  },
+  "verändern": {
+   "pos": "فعل",
+   "ru": "يغيّر",
+   "forms": "verändert · veränderte · hat verändert"
+  },
+  "viel": {
+   "ru": "كثير، الكثير",
+   "pos": "ضمير"
+  },
+  "vor": {
+   "ru": "أمام، قبل؛ من (الخوف)",
+   "pos": "حرف جر"
+  },
+  "vorantreiben": {
+   "ru": "يدفع إلى الأمام",
+   "pos": "فعل",
+   "forms": "treibt voran · trieb voran · hat vorangetrieben"
+  },
+  "wachsen": {
+   "ru": "ينمو",
+   "pos": "فعل",
+   "forms": "wuchs · ist gewachsen",
+   "note": "er wächst — مع Umlaut في المفرد للمخاطب والغائب"
+  },
+  "weit": {
+   "ru": "بعيد",
+   "pos": "صفة",
+   "forms": "weit · weiter · am weitesten",
+   "note": "weiter — أبعد، إلى الأمام؛ von weitem — من بعيد"
+  },
+  "werden": {
+   "ru": "يصبح",
+   "pos": "فعل",
+   "forms": "wurde · ist geworden",
+   "note": "فعل مساعد للمستقبل والمبني للمجهول"
+  },
+  "wirken": {
+   "ru": "يبدو",
+   "pos": "فعل",
+   "forms": "wirkte · hat gewirkt"
+  },
+  "Überwachung": {
+   "ru": "مراقبة",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Überwachungen"
+  },
+  "über": {
+   "ru": "فوق، عبر، عن",
+   "pos": "حرف جر"
+  }
+ }
+}

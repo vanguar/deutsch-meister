@@ -1,0 +1,122 @@
+{
+  "id": "ch-01",
+  "title": "Deutscher Bund, Revolution und Industrialisierung",
+  "titleRu": "Германский союз, революция и индустриализация",
+  "icon": "7",
+  "paragraphs": [
+    {
+      "sourceIds": [
+        "bund"
+      ],
+      "s": [
+        {
+          "de": "1815 entstand der Deutsche Bund, ein Zusammenschluss souveräner Staaten und freier Städte.",
+          "ru": "В 1815 году возник Германский союз — объединение суверенных государств и вольных городов."
+        },
+        {
+          "de": "Viele Menschen forderten nationale Einheit und politische Freiheit.",
+          "ru": "Многие люди требовали национального единства и политической свободы."
+        },
+        {
+          "de": "Die Regierungen reagierten häufig mit Zensur und Überwachung.",
+          "ru": "Правительства часто отвечали цензурой и слежкой."
+        }
+      ]
+    },
+    {
+      "sourceIds": [
+        "parlament"
+      ],
+      "s": [
+        {
+          "de": "1848 brachen in vielen europäischen Ländern Revolutionen aus.",
+          "ru": "В 1848 году во многих европейских странах вспыхнули революции."
+        },
+        {
+          "de": "In der Frankfurter Paulskirche beriet die Nationalversammlung über Grundrechte und eine Verfassung.",
+          "ru": "Во франкфуртской Паульскирхе Национальное собрание обсуждало основные права и конституцию."
+        },
+        {
+          "de": "Doch 1849 scheiterte die Revolution am Widerstand der alten Machthaber; ihre Ideen wirkten weiter.",
+          "ru": "Но в 1849 году революция потерпела неудачу из-за сопротивления прежних правителей; её идеи продолжали жить."
+        }
+      ]
+    },
+    {
+      "fig": {
+        "src": "data/history/revolution-industrialisierung/img/paulskirche.jpg",
+        "w": 611,
+        "h": 1000,
+        "credit": "Dietmar Rabich / Wikimedia Commons",
+        "creditUrl": "https://commons.wikimedia.org/wiki/File:Frankfurt_am_Main,_Paulskirche_--_2015_--_6701.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "cap": "Паульскирхе во Франкфурте сегодня: здесь в 1848–1849 годах заседало Национальное собрание. Фото уменьшено."
+      }
+    },
+    {
+      "sourceIds": [
+        "bahn",
+        "arbeit"
+      ],
+      "s": [
+        {
+          "de": "Gleichzeitig veränderte die Industrialisierung das Leben.",
+          "ru": "Одновременно индустриализация меняла жизнь."
+        },
+        {
+          "de": "Seit 1835 verbanden Eisenbahnen immer mehr Orte; Fabriken und Bergwerke wuchsen.",
+          "ru": "С 1835 года железные дороги соединяли всё больше населённых пунктов; росли фабрики и шахты."
+        },
+        {
+          "de": "Viele Arbeiterfamilien litten unter langen Arbeitstagen, niedrigen Löhnen und unsicheren Lebensbedingungen.",
+          "ru": "Многие рабочие семьи страдали от долгого рабочего дня, низкой оплаты и нестабильных условий жизни."
+        }
+      ]
+    },
+    {
+      "sourceIds": [
+        "einheit"
+      ],
+      "s": [
+        {
+          "de": "Nach 1849 wurde die nationale Einheit vor allem durch Preußens Machtpolitik vorangetrieben.",
+          "ru": "После 1849 года национальное объединение продвигалось прежде всего силовой политикой Пруссии."
+        },
+        {
+          "de": "Nach mehreren Kriegen entstand 1871 das Deutsche Kaiserreich.",
+          "ru": "После нескольких войн в 1871 году возникла Германская империя."
+        }
+      ]
+    }
+  ],
+  "sourceTitle": "Источники и проверка фактов",
+  "sources": [
+    {
+      "id": "bund",
+      "name": "LeMO · Vormärz und Revolution",
+      "url": "https://www.dhm.de/lemo/kapitel/vormaerz-und-revolution"
+    },
+    {
+      "id": "parlament",
+      "name": "Deutscher Bundestag · Revolution und Paulskirche",
+      "url": "https://www.bundestag.de/parlament/geschichte/paulskirche"
+    },
+    {
+      "id": "bahn",
+      "name": "LeMO · Erste Eisenbahnen in Deutschland",
+      "url": "https://www.dhm.de/lemo/rueckblick/lemo-rueckblick-erste-eisenbahnen-in-deutschland"
+    },
+    {
+      "id": "arbeit",
+      "name": "LeMO · Fabrikproletariat",
+      "url": "https://www.dhm.de/lemo/kapitel/reaktionszeit/industrie/fabrikproletariat"
+    },
+    {
+      "id": "einheit",
+      "name": "Deutschlandmuseum · Deutscher Bund",
+      "url": "https://www.deutschlandmuseum.de/geschichte/deutscher-bund/"
+    }
+  ],
+  "checked": "2026-11-17"
+}

@@ -1,0 +1,506 @@
+{
+ "version": 1,
+ "w": {
+  "allem": "alle/alles",
+  "alten": "alt",
+  "am": "an",
+  "arbeiterfamilien": "Arbeiterfamilie",
+  "arbeitstagen": "Arbeitstag",
+  "aus": "aus",
+  "bergwerke": "Bergwerk",
+  "beriet": "beraten",
+  "brachen": "brechen",
+  "bund": "Bund",
+  "das": "der/die/das",
+  "der": "der/die/das",
+  "deutsche": "deutsch",
+  "die": "der/die/das",
+  "doch": "doch",
+  "durch": "durch",
+  "ein": "ein/eine",
+  "eine": "ein/eine",
+  "einheit": "Einheit",
+  "eisenbahnen": "Eisenbahn",
+  "entstand": "entstehen",
+  "europäischen": "europäisch",
+  "fabriken": "Fabrik",
+  "forderten": "fordern",
+  "frankfurter": "Frankfurter",
+  "freier": "frei",
+  "freiheit": "Freiheit",
+  "gleichzeitig": "gleichzeitig",
+  "grundrechte": "Grundrecht",
+  "häufig": "häufig",
+  "ideen": "Idee",
+  "ihre": "ihr (её, их)",
+  "immer": "immer",
+  "in": "in",
+  "industrialisierung": "Industrialisierung",
+  "kaiserreich": "Kaiserreich",
+  "kriegen": "kriegen",
+  "langen": "lang",
+  "leben": "leben",
+  "lebensbedingungen": "Lebensbedingung",
+  "litten": "leiden",
+  "ländern": "Land (земля)",
+  "löhnen": "Lohn",
+  "machthaber": "Machthaber",
+  "machtpolitik": "Machtpolitik",
+  "mehr": "mehr",
+  "mehreren": "mehrere",
+  "menschen": "Mensch",
+  "mit": "mit",
+  "nach": "nach",
+  "nationale": "national",
+  "nationalversammlung": "Nationalversammlung",
+  "niedrigen": "niedrig",
+  "orte": "Ort",
+  "paulskirche": "Paulskirche",
+  "politische": "politisch",
+  "preußens": "Preußen",
+  "reagierten": "reagieren",
+  "regierungen": "Regierung",
+  "revolution": "Revolution",
+  "revolutionen": "Revolution",
+  "scheiterte": "scheitern",
+  "seit": "seit",
+  "souveräner": "souverän",
+  "staaten": "Staat",
+  "städte": "Stadt",
+  "und": "und",
+  "unsicheren": "unsicher",
+  "unter": "unter",
+  "verbanden": "verbinden",
+  "verfassung": "Verfassung",
+  "veränderte": "verändern",
+  "viele": "viel",
+  "vielen": "viel",
+  "vor": "vor",
+  "vorangetrieben": "vorantreiben",
+  "weiter": "weit",
+  "widerstand": "Widerstand",
+  "wirkten": "wirken",
+  "wuchsen": "wachsen",
+  "wurde": "werden",
+  "zensur": "Zensur",
+  "zusammenschluss": "Zusammenschluss",
+  "über": "über",
+  "überwachung": "Überwachung"
+ },
+ "l": {
+  "Arbeiterfamilie": {
+   "ru": "робітнича сім’я",
+   "pos": "ім.",
+   "art": "die",
+   "pl": "die Arbeiterfamilien"
+  },
+  "Arbeitstag": {
+   "ru": "робочий день",
+   "pos": "ім.",
+   "art": "der",
+   "pl": "die Arbeitstage"
+  },
+  "Bergwerk": {
+   "ru": "шахта, копальня",
+   "pos": "ім.",
+   "art": "das",
+   "pl": "die Bergwerke"
+  },
+  "Bund": {
+   "ru": "федерація (федеральний рівень влади); союз",
+   "pos": "ім.",
+   "art": "der",
+   "pl": "die Bünde",
+   "note": "der Bund — федеративна держава на відміну від земель (Länder)"
+  },
+  "Einheit": {
+   "ru": "єдність; єдине ціле",
+   "pos": "ім.",
+   "art": "die",
+   "pl": "die Einheiten"
+  },
+  "Eisenbahn": {
+   "ru": "залізниця",
+   "pos": "ім.",
+   "art": "die",
+   "pl": "die Eisenbahnen"
+  },
+  "Fabrik": {
+   "ru": "фабрика, завод",
+   "pos": "ім.",
+   "art": "die",
+   "pl": "die Fabriken"
+  },
+  "Frankfurter": {
+   "ru": "франкфуртський",
+   "pos": "прикм."
+  },
+  "Freiheit": {
+   "ru": "свобода",
+   "pos": "ім.",
+   "art": "die",
+   "pl": "die Freiheiten"
+  },
+  "Grundrecht": {
+   "ru": "основне право",
+   "pos": "ім.",
+   "art": "das",
+   "pl": "die Grundrechte"
+  },
+  "Idee": {
+   "ru": "ідея",
+   "pos": "ім.",
+   "art": "die",
+   "pl": "die Ideen"
+  },
+  "Industrialisierung": {
+   "ru": "індустріалізація",
+   "pos": "ім.",
+   "art": "die",
+   "pl": null
+  },
+  "Kaiserreich": {
+   "ru": "імперія",
+   "pos": "ім.",
+   "art": "das",
+   "pl": "die Kaiserreiche"
+  },
+  "Land (земля)": {
+   "ru": "земля (федеральна); країна",
+   "pos": "ім.",
+   "art": "das",
+   "pl": "die Länder",
+   "note": "Bundesland — федеральна земля; in anderen Ländern — в інших землях"
+  },
+  "Lebensbedingung": {
+   "ru": "умова життя",
+   "pos": "ім.",
+   "art": "die",
+   "pl": "die Lebensbedingungen"
+  },
+  "Lohn": {
+   "ru": "заробітна плата",
+   "pos": "ім.",
+   "art": "der",
+   "pl": "die Löhne"
+  },
+  "Machthaber": {
+   "ru": "правитель, володар влади",
+   "pos": "ім.",
+   "art": "der",
+   "pl": "die Machthaber"
+  },
+  "Machtpolitik": {
+   "ru": "силова політика",
+   "pos": "ім.",
+   "art": "die",
+   "pl": null
+  },
+  "Mensch": {
+   "ru": "людина",
+   "pos": "ім.",
+   "art": "der",
+   "pl": "die Menschen",
+   "decl": "n-Deklination: des Menschen · dem/den Menschen"
+  },
+  "Nationalversammlung": {
+   "ru": "Національні збори",
+   "pos": "ім.",
+   "art": "die",
+   "pl": "die Nationalversammlungen"
+  },
+  "Ort": {
+   "ru": "місце",
+   "pos": "ім.",
+   "art": "der",
+   "pl": "die Orte",
+   "note": "meines Orts — зі свого боку (заст.)"
+  },
+  "Paulskirche": {
+   "ru": "церква Святого Павла у Франкфурті",
+   "pos": "геогр."
+  },
+  "Preußen": {
+   "ru": "Пруссія",
+   "pos": "геогр."
+  },
+  "Regierung": {
+   "ru": "уряд",
+   "pos": "ім.",
+   "art": "die",
+   "pl": "die Regierungen"
+  },
+  "Revolution": {
+   "ru": "революція",
+   "pos": "ім.",
+   "art": "die",
+   "pl": "die Revolutionen"
+  },
+  "Staat": {
+   "ru": "держава",
+   "pos": "ім.",
+   "art": "der",
+   "pl": "die Staaten"
+  },
+  "Stadt": {
+   "ru": "місто",
+   "pos": "ім.",
+   "art": "die",
+   "pl": "die Städte"
+  },
+  "Verfassung": {
+   "ru": "конституція",
+   "pos": "ім.",
+   "art": "die",
+   "pl": "die Verfassungen"
+  },
+  "Widerstand": {
+   "ru": "опір",
+   "pos": "ім.",
+   "art": "der",
+   "pl": "die Widerstände"
+  },
+  "Zensur": {
+   "ru": "цензура",
+   "pos": "ім.",
+   "art": "die",
+   "pl": null
+  },
+  "Zusammenschluss": {
+   "ru": "об’єднання, союз",
+   "pos": "ім.",
+   "art": "der",
+   "pl": "die Zusammenschlüsse"
+  },
+  "alle/alles": {
+   "ru": "усі; усе",
+   "pos": "займ."
+  },
+  "alt": {
+   "ru": "старий",
+   "pos": "прикм.",
+   "forms": "alt · älter · am ältesten"
+  },
+  "an": {
+   "ru": "біля, до, на",
+   "pos": "прийм.",
+   "note": "am = an dem. Також відокремлюваний префікс: anfangen «починати», annehmen, ansehen, anzünden"
+  },
+  "aus": {
+   "ru": "з",
+   "pos": "прийм.",
+   "note": "Також відокремлюваний префікс: auslöschen «погасити»"
+  },
+  "beraten": {
+   "ru": "обговорювати, радитися",
+   "pos": "дієсл.",
+   "forms": "berät · beriet · hat beraten"
+  },
+  "brechen": {
+   "ru": "ламати",
+   "pos": "дієсл.",
+   "forms": "brach · hat gebrochen",
+   "note": "den Hals brechen — скрутити в'язи"
+  },
+  "der/die/das": {
+   "ru": "означений артикль",
+   "pos": "артикль",
+   "note": "Також відносний займенник «який»"
+  },
+  "deutsch": {
+   "ru": "німецька",
+   "pos": "прикм."
+  },
+  "doch": {
+   "ru": "все ж, усе-таки; адже",
+   "pos": "частка"
+  },
+  "durch": {
+   "ru": "через, крізь",
+   "pos": "прийм."
+  },
+  "ein/eine": {
+   "ru": "неозначений артикль",
+   "pos": "артикль",
+   "note": "einer — «один, хтось»"
+  },
+  "entstehen": {
+   "pos": "дієсл.",
+   "ru": "виникати",
+   "forms": "entsteht · entstand · ist entstanden"
+  },
+  "europäisch": {
+   "ru": "європейський",
+   "pos": "прикм."
+  },
+  "fordern": {
+   "ru": "вимагати; закликати",
+   "pos": "дієсл.",
+   "forms": "forderte · hat gefordert",
+   "note": "jemanden auffordern, etwas zu tun — пропонувати, вимагати від когось"
+  },
+  "frei": {
+   "ru": "вільний",
+   "pos": "прикм."
+  },
+  "gleichzeitig": {
+   "ru": "водночас",
+   "pos": "присл."
+  },
+  "häufig": {
+   "ru": "часто",
+   "pos": "присл."
+  },
+  "ihr (её, их)": {
+   "ru": "її; їх",
+   "pos": "займ."
+  },
+  "immer": {
+   "ru": "завжди, дедалі",
+   "pos": "присл.",
+   "note": "immer größer — дедалі більше"
+  },
+  "in": {
+   "ru": "у (im = in dem, ins = in das)",
+   "pos": "прийм."
+  },
+  "kriegen": {
+   "ru": "отримувати, схопити",
+   "pos": "дієсл.",
+   "forms": "kriegte · hat gekriegt",
+   "note": "розмовне; die Schwerenot kriegen — щоб їх падуча вхопила"
+  },
+  "lang": {
+   "ru": "довгий, тривалий",
+   "pos": "прикм.",
+   "forms": "lang · länger · am längsten"
+  },
+  "leben": {
+   "ru": "жити",
+   "pos": "дієсл.",
+   "forms": "lebte · hat gelebt"
+  },
+  "leiden": {
+   "ru": "страждати",
+   "pos": "дієсл.",
+   "forms": "leidet · litt · hat gelitten"
+  },
+  "mehr": {
+   "ru": "більше",
+   "pos": "присл.",
+   "note": "У nicht/kein … mehr — більше не. Формально компаратив від viel"
+  },
+  "mehrere": {
+   "pos": "займ.",
+   "ru": "кілька"
+  },
+  "mit": {
+   "ru": "с",
+   "pos": "прийм.",
+   "note": "Також відокремлюваний префікс: mitgehen «піти разом»"
+  },
+  "nach": {
+   "ru": "в, на, після, по",
+   "pos": "прийм."
+  },
+  "national": {
+   "ru": "національний",
+   "pos": "прикм."
+  },
+  "niedrig": {
+   "ru": "низький",
+   "pos": "прикм."
+  },
+  "politisch": {
+   "ru": "політичний",
+   "pos": "прикм."
+  },
+  "reagieren": {
+   "ru": "реагувати",
+   "pos": "дієсл.",
+   "forms": "reagiert · reagierte · hat reagiert"
+  },
+  "scheitern": {
+   "ru": "зазнавати невдачі",
+   "pos": "дієсл.",
+   "forms": "scheitert · scheiterte · ist gescheitert"
+  },
+  "seit": {
+   "ru": "з (якогось часу)",
+   "pos": "прийм."
+  },
+  "souverän": {
+   "ru": "суверенний, незалежний",
+   "pos": "прикм."
+  },
+  "und": {
+   "ru": "і, а",
+   "pos": "спол."
+  },
+  "unsicher": {
+   "ru": "нестабільний, ненадійний",
+   "pos": "прикм."
+  },
+  "unter": {
+   "ru": "під, серед",
+   "pos": "прийм."
+  },
+  "verbinden": {
+   "ru": "перев'язувати (рану); з'єднувати",
+   "pos": "дієсл.",
+   "forms": "verband · hat verbunden",
+   "note": "sich verbinden lassen — дати себе перев'язати"
+  },
+  "verändern": {
+   "pos": "дієсл.",
+   "ru": "змінювати",
+   "forms": "verändert · veränderte · hat verändert"
+  },
+  "viel": {
+   "ru": "багато, чимало",
+   "pos": "займ."
+  },
+  "vor": {
+   "ru": "перед, до; від (страху)",
+   "pos": "прийм."
+  },
+  "vorantreiben": {
+   "ru": "просувати вперед",
+   "pos": "дієсл.",
+   "forms": "treibt voran · trieb voran · hat vorangetrieben"
+  },
+  "wachsen": {
+   "ru": "рости",
+   "pos": "дієсл.",
+   "forms": "wuchs · ist gewachsen",
+   "note": "er wächst — з умлаутом у 2-й і 3-й ос."
+  },
+  "weit": {
+   "ru": "далекий, далеко",
+   "pos": "прикм.",
+   "forms": "weit · weiter · am weitesten",
+   "note": "weiter — далі; von weitem — здалеку"
+  },
+  "werden": {
+   "ru": "ставати",
+   "pos": "дієсл.",
+   "forms": "wurde · ist geworden",
+   "note": "Допоміжне дієслово майбутнього часу й пасиву"
+  },
+  "wirken": {
+   "ru": "здаватися",
+   "pos": "дієсл.",
+   "forms": "wirkte · hat gewirkt"
+  },
+  "Überwachung": {
+   "ru": "спостереження, стеження",
+   "pos": "ім.",
+   "art": "die",
+   "pl": "die Überwachungen"
+  },
+  "über": {
+   "ru": "над, через, про",
+   "pos": "прийм."
+  }
+ }
+}

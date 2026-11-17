@@ -70,7 +70,7 @@
       "titleRu": "Германский союз, революция и индустриализация",
       "period": "1815–1871",
       "summary": "Борьба за права и единство, фабрики и социальный вопрос.",
-      "ready": false
+      "ready": true
     },
     {
       "id": "kaiserreich",
@@ -252,6 +252,24 @@
       "number": 6,
       "source": "Deutsches Historisches Museum / Deutscher Bundestag / LeMO / Land Berlin",
       "sourceUrl": "https://www.dhm.de/bildung/ida/revolutionen/1789/",
+      "checked": "2026-11-17",
+      "license": "Авторская учебная адаптация German Morning; ссылки на материалы — в главе."
+    },
+    {
+      "id": "revolution-industrialisierung",
+      "kind": "history",
+      "title": "Deutscher Bund, Revolution und Industrialisierung",
+      "titleRu": "Германский союз, революция и индустриализация",
+      "author": "German Morning",
+      "level": "B1",
+      "year": "2026",
+      "chapters": 1,
+      "words": 104,
+      "minutes": 3,
+      "cover": "7",
+      "number": 7,
+      "source": "LeMO / Deutscher Bundestag / Deutschlandmuseum",
+      "sourceUrl": "https://www.dhm.de/lemo/kapitel/vormaerz-und-revolution",
       "checked": "2026-11-17",
       "license": "Авторская учебная адаптация German Morning; ссылки на материалы — в главе."
     }
