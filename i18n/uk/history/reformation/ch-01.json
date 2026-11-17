@@ -1,0 +1,119 @@
+{
+ "id": "ch-01",
+ "title": "Reformation und Dreißigjähriger Krieg",
+ "titleRu": "Реформація та Тридцятилітня війна",
+ "icon": "4",
+ "paragraphs": [
+  {
+   "sourceIds": [
+    "luther"
+   ],
+   "s": [
+    {
+     "de": "1517 kritisierte Martin Luther den Ablasshandel der katholischen Kirche.",
+     "ru": "У 1517 році Мартін Лютер виступив із критикою продажу індульгенцій католицькою церквою."
+    },
+    {
+     "de": "Seine Thesen und weitere Schriften verbreiteten sich durch den Buchdruck.",
+     "ru": "Його тези та інші твори поширювалися завдяки книгодрукуванню."
+    },
+    {
+     "de": "Die Reformation veränderte Glauben, Politik und Gesellschaft.",
+     "ru": "Реформація змінила віру, політику й суспільство."
+    }
+   ]
+  },
+  {
+   "sourceIds": [
+    "wartburg",
+    "reich"
+   ],
+   "s": [
+    {
+     "de": "Auf der Wartburg übersetzte Luther 1521/22 das Neue Testament ins Deutsche.",
+     "ru": "У Вартбурзі Лютер у 1521–1522 роках переклав Новий Завіт німецькою мовою."
+    },
+    {
+     "de": "Im Reich entstanden katholische und protestantische Gebiete.",
+     "ru": "В імперії з’явилися католицькі й протестантські території."
+    },
+    {
+     "de": "Der Augsburger Religionsfrieden von 1555 brachte vorläufig einen Ausgleich, aber keine allgemeine Religionsfreiheit.",
+     "ru": "Аугсбурзький релігійний мир 1555 року тимчасово встановив згоду, але не загальну свободу віросповідання."
+    }
+   ]
+  },
+  {
+   "fig": {
+    "src": "data/history/reformation/img/wartburg.jpg",
+    "w": 1000,
+    "h": 663,
+    "credit": "marsupium photography / Flickr",
+    "creditUrl": "https://www.flickr.com/photos/hagdorned/35272578844/",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "cap": "Замок Вартбург сьогодні. Тут у 1521–1522 роках Лютер перекладав Новий Завіт. Фото зменшено."
+   }
+  },
+  {
+   "sourceIds": [
+    "krieg",
+    "reich"
+   ],
+   "s": [
+    {
+     "de": "1618 begann in Böhmen der Dreißigjährige Krieg.",
+     "ru": "У 1618 році в Богемії почалася Тридцятилітня війна."
+    },
+    {
+     "de": "Neben religiösen Gegensätzen ging es um Macht und politische Interessen europäischer Staaten.",
+     "ru": "Крім релігійних суперечностей, ішлося про владу й політичні інтереси європейських держав."
+    },
+    {
+     "de": "Kämpfe, Hunger und Seuchen verwüsteten viele Regionen.",
+     "ru": "Бойові дії, голод та епідемії спустошили багато регіонів."
+    }
+   ]
+  },
+  {
+   "sourceIds": [
+    "krieg",
+    "reich"
+   ],
+   "s": [
+    {
+     "de": "1648 beendete der Westfälische Friede den Krieg im Reich.",
+     "ru": "У 1648 році Вестфальський мир завершив війну в імперії."
+    },
+    {
+     "de": "Er regelte das Zusammenleben der Konfessionen neu und bestätigte wichtige Rechte der Reichsstände.",
+     "ru": "Він заново врегулював співіснування конфесій і підтвердив важливі права імперських станів."
+    }
+   ]
+  }
+ ],
+ "sourceTitle": "Джерела та перевірка фактів",
+ "sources": [
+  {
+   "id": "luther",
+   "name": "Deutschlandmuseum · Reformation",
+   "url": "https://www.deutschlandmuseum.de/geschichte/reformation/"
+  },
+  {
+   "id": "wartburg",
+   "name": "Wartburg-Stiftung · Martin Luther",
+   "url": "https://www.wartburg.de/personen/martin-luther"
+  },
+  {
+   "id": "reich",
+   "name": "Deutsches Historisches Museum · Reformation und Dreißigjähriger Krieg",
+   "url": "https://www.dhm.de/ausstellungen/dauerausstellung/reformation-und-dreissigjaehriger-krieg/"
+  },
+  {
+   "id": "krieg",
+   "name": "bpb · Wegmarken des Dreißigjährigen Krieges",
+   "url": "https://www.bpb.de/shop/zeitschriften/apuz/272899/zeittafel-wegmarken-des-dreissigjaehrigen-krieges/"
+  }
+ ],
+ "checked": "2026-11-17"
+}

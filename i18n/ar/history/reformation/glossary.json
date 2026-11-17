@@ -1,0 +1,472 @@
+{
+ "version": 1,
+ "w": {
+  "aber": "aber",
+  "ablasshandel": "Ablasshandel",
+  "allgemeine": "allgemein",
+  "auf": "auf",
+  "augsburger": "Augsburger",
+  "ausgleich": "Ausgleich",
+  "beendete": "beenden",
+  "begann": "beginnen",
+  "bestätigte": "bestätigen",
+  "brachte": "bringen",
+  "buchdruck": "Buchdruck",
+  "böhmen": "Böhmen",
+  "das": "der/die/das",
+  "den": "der/die/das",
+  "der": "der/die/das",
+  "deutsche": "deutsch",
+  "die": "der/die/das",
+  "dreißigjährige": "dreißigjährig",
+  "durch": "durch",
+  "einen": "ein/eine",
+  "entstanden": "entstehen",
+  "er": "er",
+  "es": "es",
+  "europäischer": "europäisch",
+  "friede": "Friede",
+  "gebiete": "Gebiet",
+  "gegensätzen": "Gegensatz",
+  "gesellschaft": "Gesellschaft",
+  "ging": "gehen",
+  "glauben": "Glaube",
+  "hunger": "Hunger",
+  "im": "in",
+  "in": "in",
+  "ins": "in",
+  "interessen": "Interesse",
+  "katholische": "katholisch",
+  "katholischen": "katholisch",
+  "keine": "kein",
+  "kirche": "Kirche",
+  "konfessionen": "Konfession",
+  "krieg": "Krieg",
+  "kritisierte": "kritisieren",
+  "kämpfe": "Kampf",
+  "luther": "Luther",
+  "macht": "machen",
+  "martin": "Martin (Vorname)",
+  "neben": "neben",
+  "neu": {
+   "l": "neu",
+   "old": "в обороте aufs neu — снова; сегодня aufs Neue"
+  },
+  "neue": "neu",
+  "politik": "Politik",
+  "politische": "politisch",
+  "protestantische": "protestantisch",
+  "rechte": "Recht",
+  "reformation": "Reformation",
+  "regelte": "regeln",
+  "regionen": "Region",
+  "reich": "Reich",
+  "reichsstände": "Reichsstand",
+  "religionsfreiheit": "Religionsfreiheit",
+  "religionsfrieden": "Religionsfrieden",
+  "religiösen": "religiös",
+  "schriften": "Schrift",
+  "seine": "sein (его, свой)",
+  "seuchen": "Seuche",
+  "sich": "sich",
+  "staaten": "Staat",
+  "testament": "Testament",
+  "thesen": "These",
+  "um": "um",
+  "und": "und",
+  "verbreiteten": "verbreiten",
+  "verwüsteten": "verwüsten",
+  "veränderte": "verändern",
+  "viele": "viel",
+  "von": "von",
+  "vorläufig": "vorläufig",
+  "wartburg": "Wartburg",
+  "weitere": "weiter",
+  "westfälische": "westfälisch",
+  "wichtige": "wichtig",
+  "zusammenleben": "Zusammenleben",
+  "übersetzte": "übersetzen"
+ },
+ "l": {
+  "Ablasshandel": {
+   "ru": "تجارة صكوك الغفران",
+   "pos": "اسم",
+   "art": "der",
+   "pl": null
+  },
+  "Augsburger": {
+   "ru": "متعلق بأوغسبورغ",
+   "pos": "صفة"
+  },
+  "Ausgleich": {
+   "ru": "تسوية، تعويض",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Ausgleiche"
+  },
+  "Buchdruck": {
+   "ru": "طباعة الكتب",
+   "pos": "اسم",
+   "art": "der",
+   "pl": null
+  },
+  "Böhmen": {
+   "ru": "بوهيميا، إقليم تاريخي في التشيك",
+   "pos": "جغرافيا"
+  },
+  "Friede": {
+   "ru": "سلام، انعدام الحرب",
+   "pos": "اسم",
+   "art": "der",
+   "pl": null
+  },
+  "Gebiet": {
+   "pos": "اسم",
+   "ru": "منطقة، إقليم",
+   "art": "das",
+   "pl": "die Gebiete"
+  },
+  "Gegensatz": {
+   "ru": "تعارض، تناقض",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Gegensätze"
+  },
+  "Gesellschaft": {
+   "pos": "اسم",
+   "ru": "المجلس",
+   "art": "die",
+   "pl": "die Gesellschaften"
+  },
+  "Glaube": {
+   "art": "der",
+   "decl": "التصريف الضعيف: des Glaubens، dem Glauben، den Glauben",
+   "note": "Glauben beimessen — يصدّق شيئًا",
+   "pl": null,
+   "pos": "اسم",
+   "ru": "إيمان، تصديق"
+  },
+  "Hunger": {
+   "ru": "جوع",
+   "pos": "اسم",
+   "art": "der",
+   "pl": null
+  },
+  "Interesse": {
+   "ru": "اهتمام",
+   "pos": "اسم",
+   "art": "das",
+   "pl": "die Interessen"
+  },
+  "Kampf": {
+   "ru": "صراع، معركة",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Kämpfe"
+  },
+  "Kirche": {
+   "ru": "كنيسة",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Kirchen"
+  },
+  "Konfession": {
+   "ru": "طائفة، مذهب",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Konfessionen"
+  },
+  "Krieg": {
+   "ru": "حرب",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Kriege"
+  },
+  "Luther": {
+   "ru": "لوثر",
+   "pos": "اسم علم"
+  },
+  "Martin (Vorname)": {
+   "ru": "مارتن (اسم شخصي)",
+   "pos": "اسم علم"
+  },
+  "Politik": {
+   "ru": "السياسة",
+   "pos": "اسم",
+   "art": "die",
+   "pl": null
+  },
+  "Recht": {
+   "ru": "حق",
+   "pos": "اسم",
+   "art": "das",
+   "pl": "die Rechte"
+  },
+  "Reformation": {
+   "ru": "الإصلاح الديني",
+   "pos": "اسم",
+   "art": "die",
+   "pl": null
+  },
+  "Region": {
+   "ru": "منطقة",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Regionen"
+  },
+  "Reich": {
+   "pos": "اسم",
+   "ru": "إمبراطورية؛ دولة",
+   "art": "das",
+   "pl": "die Reiche"
+  },
+  "Reichsstand": {
+   "ru": "هيئة إمبراطورية لها حق التصويت في مجلس الإمبراطورية",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Reichsstände"
+  },
+  "Religionsfreiheit": {
+   "ru": "حرية الدين",
+   "pos": "اسم",
+   "art": "die",
+   "pl": null
+  },
+  "Religionsfrieden": {
+   "ru": "صلح ديني",
+   "pos": "اسم",
+   "art": "der",
+   "pl": null
+  },
+  "Schrift": {
+   "ru": "خطّ، كتابة؛ نقش",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Schriften"
+  },
+  "Seuche": {
+   "ru": "وباء",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Seuchen"
+  },
+  "Staat": {
+   "ru": "دولة",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Staaten"
+  },
+  "Testament": {
+   "ru": "عهد؛ وصية",
+   "pos": "اسم",
+   "art": "das",
+   "pl": "die Testamente"
+  },
+  "These": {
+   "ru": "أطروحة",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Thesen"
+  },
+  "Wartburg": {
+   "ru": "فارتبورغ",
+   "pos": "جغرافيا"
+  },
+  "Zusammenleben": {
+   "ru": "تعايش",
+   "pos": "اسم",
+   "art": "das",
+   "pl": null
+  },
+  "aber": {
+   "ru": "لكن، غير أنّ",
+   "pos": "أداة ربط"
+  },
+  "allgemein": {
+   "ru": "عام",
+   "pos": "صفة"
+  },
+  "auf": {
+   "ru": "على، في",
+   "pos": "حرف جر",
+   "note": "وهي أيضًا سابقة منفصلة: aufspringen «يقفز واقفًا»، sich aufmachen"
+  },
+  "beenden": {
+   "ru": "ينهي",
+   "pos": "فعل",
+   "forms": "beendet · beendete · hat beendet"
+  },
+  "beginnen": {
+   "ru": "يبدأ",
+   "pos": "فعل",
+   "forms": "begann · hat begonnen"
+  },
+  "bestätigen": {
+   "ru": "يؤكّد، يُقرّ",
+   "pos": "فعل",
+   "forms": "bestätigte · hat bestätigt"
+  },
+  "bringen": {
+   "ru": "يُحضر، يجلب",
+   "pos": "فعل",
+   "forms": "brachte · hat gebracht"
+  },
+  "der/die/das": {
+   "ru": "أداة التعريف",
+   "pos": "أداة تعريف",
+   "note": "وهي أيضًا اسم موصول بمعنى «الذي»"
+  },
+  "deutsch": {
+   "ru": "الألمانية",
+   "pos": "صفة"
+  },
+  "dreißigjährig": {
+   "ru": "يدوم ثلاثين عامًا",
+   "pos": "صفة"
+  },
+  "durch": {
+   "ru": "عبر، من خلال، بسبب",
+   "pos": "حرف جر"
+  },
+  "ein/eine": {
+   "ru": "أداة النكرة",
+   "pos": "أداة تعريف",
+   "note": "einer — «واحد، شخص ما»"
+  },
+  "entstehen": {
+   "pos": "فعل",
+   "ru": "ينشأ",
+   "forms": "entsteht · entstand · ist entstanden"
+  },
+  "er": {
+   "ru": "هو",
+   "pos": "ضمير",
+   "note": "ihn — إيّاه، ihm — له"
+  },
+  "es": {
+   "ru": "هو (للمحايد)؛ هذا",
+   "pos": "ضمير"
+  },
+  "europäisch": {
+   "ru": "أوروبي",
+   "pos": "صفة"
+  },
+  "gehen": {
+   "forms": "ging · ist gegangen",
+   "note": "zu Bett gehen — يذهب إلى النوم. في النص مع سابقة منفصلة: ging das Rollen wieder an — angehen «يبدأ»",
+   "pos": "فعل",
+   "ru": "يذهب، يمشي"
+  },
+  "in": {
+   "ru": "في (im = in dem، ins = in das)",
+   "pos": "حرف جر"
+  },
+  "katholisch": {
+   "ru": "كاثوليكي",
+   "pos": "صفة"
+  },
+  "kein": {
+   "ru": "لا أيّ، ولا واحد",
+   "pos": "ضمير"
+  },
+  "kritisieren": {
+   "ru": "ينتقد",
+   "pos": "فعل",
+   "forms": "kritisiert · kritisierte · hat kritisiert"
+  },
+  "machen": {
+   "ru": "يفعل",
+   "pos": "فعل",
+   "forms": "machte · hat gemacht",
+   "note": "sich auf den Weg machen — ينطلق في طريقه"
+  },
+  "neben": {
+   "pos": "حرف جر",
+   "ru": "بجانب، قرب"
+  },
+  "neu": {
+   "ru": "جديد",
+   "pos": "صفة"
+  },
+  "politisch": {
+   "ru": "سياسي",
+   "pos": "صفة"
+  },
+  "protestantisch": {
+   "ru": "بروتستانتي",
+   "pos": "صفة"
+  },
+  "regeln": {
+   "ru": "ينظم",
+   "pos": "فعل",
+   "forms": "regelt · regelte · hat geregelt"
+  },
+  "religiös": {
+   "ru": "ديني",
+   "pos": "صفة"
+  },
+  "sein (его, свой)": {
+   "ru": "ـه (ضمير الملكية)، خاصّته",
+   "pos": "ضمير"
+  },
+  "sich": {
+   "ru": "نفسه، لنفسه",
+   "pos": "ضمير",
+   "note": "ضمير انعكاسي، جزء من الفعل الانعكاسي: sich auf den Weg machen، sich setzen، sich legen، sich nähern، sich gefallen lassen، sich getrauen، sich umsehen"
+  },
+  "um": {
+   "ru": "حول، في (للوقت)",
+   "pos": "حرف جر",
+   "note": "um … zu — لكي. وهي أيضًا سابقة منفصلة: sich umsehen «يتلفّت حوله»"
+  },
+  "und": {
+   "ru": "و",
+   "pos": "أداة ربط"
+  },
+  "verbreiten": {
+   "ru": "ينشر",
+   "pos": "فعل",
+   "forms": "verbreitet · verbreitete · hat verbreitet"
+  },
+  "verwüsten": {
+   "ru": "يدمر، يخرب",
+   "pos": "فعل",
+   "forms": "verwüstet · verwüstete · hat verwüstet"
+  },
+  "verändern": {
+   "pos": "فعل",
+   "ru": "يغيّر",
+   "forms": "verändert · veränderte · hat verändert"
+  },
+  "viel": {
+   "ru": "كثير، الكثير",
+   "pos": "ضمير"
+  },
+  "von": {
+   "ru": "من، عن (vom = von dem)",
+   "pos": "حرف جر"
+  },
+  "vorläufig": {
+   "ru": "مؤقتًا",
+   "pos": "ظرف"
+  },
+  "weiter": {
+   "ru": "إضافي؛ آخر (weitere — أخرى، إضافية)",
+   "pos": "صفة",
+   "note": "30 weitere Sparkassen — 30 بنك ادخار إضافيًا"
+  },
+  "westfälisch": {
+   "ru": "وستفالي",
+   "pos": "صفة"
+  },
+  "wichtig": {
+   "ru": "مهم",
+   "pos": "صفة"
+  },
+  "übersetzen": {
+   "ru": "يترجم",
+   "pos": "فعل",
+   "forms": "übersetzte · hat übersetzt"
+  }
+ }
+}

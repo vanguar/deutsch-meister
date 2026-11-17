@@ -1,0 +1,144 @@
+{
+  "id": "reformation",
+  "sources": [
+    {
+      "id": "luther",
+      "name": "Deutschlandmuseum · Reformation",
+      "url": "https://www.deutschlandmuseum.de/geschichte/reformation/"
+    },
+    {
+      "id": "wartburg",
+      "name": "Wartburg-Stiftung · Martin Luther",
+      "url": "https://www.wartburg.de/personen/martin-luther"
+    },
+    {
+      "id": "reich",
+      "name": "Deutsches Historisches Museum · Reformation und Dreißigjähriger Krieg",
+      "url": "https://www.dhm.de/ausstellungen/dauerausstellung/reformation-und-dreissigjaehriger-krieg/"
+    },
+    {
+      "id": "krieg",
+      "name": "bpb · Wegmarken des Dreißigjährigen Krieges",
+      "url": "https://www.bpb.de/shop/zeitschriften/apuz/272899/zeittafel-wegmarken-des-dreissigjaehrigen-krieges/"
+    }
+  ],
+  "paragraphs": [
+    {
+      "sourceIds": [
+        "luther"
+      ],
+      "sentences": [
+        [
+          "1517 kritisierte Martin Luther den Ablasshandel der katholischen Kirche.",
+          "В 1517 году Мартин Лютер выступил с критикой продажи индульгенций католической церковью.",
+          "У 1517 році Мартін Лютер виступив із критикою продажу індульгенцій католицькою церквою.",
+          "في عام 1517 انتقد مارتن لوثر بيع صكوك الغفران في الكنيسة الكاثوليكية."
+        ],
+        [
+          "Seine Thesen und weitere Schriften verbreiteten sich durch den Buchdruck.",
+          "Его тезисы и другие сочинения распространялись благодаря книгопечатанию.",
+          "Його тези та інші твори поширювалися завдяки книгодрукуванню.",
+          "انتشرت أطروحاته وكتاباته الأخرى بفضل الطباعة."
+        ],
+        [
+          "Die Reformation veränderte Glauben, Politik und Gesellschaft.",
+          "Реформация изменила веру, политику и общество.",
+          "Реформація змінила віру, політику й суспільство.",
+          "غير الإصلاح الديني الإيمان والسياسة والمجتمع."
+        ]
+      ]
+    },
+    {
+      "sourceIds": [
+        "wartburg",
+        "reich"
+      ],
+      "sentences": [
+        [
+          "Auf der Wartburg übersetzte Luther 1521/22 das Neue Testament ins Deutsche.",
+          "В Вартбурге Лютер в 1521–1522 годах перевёл Новый Завет на немецкий язык.",
+          "У Вартбурзі Лютер у 1521–1522 роках переклав Новий Завіт німецькою мовою.",
+          "في قلعة فارتبورغ ترجم لوثر العهد الجديد إلى الألمانية عامي 1521 و1522."
+        ],
+        [
+          "Im Reich entstanden katholische und protestantische Gebiete.",
+          "В империи появились католические и протестантские территории.",
+          "В імперії з’явилися католицькі й протестантські території.",
+          "نشأت في الإمبراطورية أقاليم كاثوليكية وأخرى بروتستانتية."
+        ],
+        [
+          "Der Augsburger Religionsfrieden von 1555 brachte vorläufig einen Ausgleich, aber keine allgemeine Religionsfreiheit.",
+          "Аугсбургский религиозный мир 1555 года временно установил согласие, но не всеобщую свободу вероисповедания.",
+          "Аугсбурзький релігійний мир 1555 року тимчасово встановив згоду, але не загальну свободу віросповідання.",
+          "حقق صلح أوغسبورغ الديني عام 1555 تسوية مؤقتة، لكنه لم يمنح حرية دينية عامة."
+        ]
+      ]
+    },
+    {
+      "fig": {
+        "src": "data/history/reformation/img/wartburg.jpg",
+        "w": 1000,
+        "h": 663,
+        "credit": "marsupium photography / Flickr",
+        "creditUrl": "https://www.flickr.com/photos/hagdorned/35272578844/",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "cap": "Замок Вартбург сегодня. Здесь в 1521–1522 годах Лютер переводил Новый Завет. Фото уменьшено."
+      }
+    },
+    {
+      "sourceIds": [
+        "krieg",
+        "reich"
+      ],
+      "sentences": [
+        [
+          "1618 begann in Böhmen der Dreißigjährige Krieg.",
+          "В 1618 году в Богемии началась Тридцатилетняя война.",
+          "У 1618 році в Богемії почалася Тридцятилітня війна.",
+          "في عام 1618 بدأت حرب الثلاثين عامًا في بوهيميا."
+        ],
+        [
+          "Neben religiösen Gegensätzen ging es um Macht und politische Interessen europäischer Staaten.",
+          "Кроме религиозных разногласий, речь шла о власти и политических интересах европейских государств.",
+          "Крім релігійних суперечностей, ішлося про владу й політичні інтереси європейських держав.",
+          "إلى جانب الخلافات الدينية دار الصراع حول السلطة والمصالح السياسية للدول الأوروبية."
+        ],
+        [
+          "Kämpfe, Hunger und Seuchen verwüsteten viele Regionen.",
+          "Боевые действия, голод и эпидемии опустошили многие регионы.",
+          "Бойові дії, голод та епідемії спустошили багато регіонів.",
+          "دمرت المعارك والمجاعة والأوبئة مناطق كثيرة."
+        ]
+      ]
+    },
+    {
+      "sourceIds": [
+        "krieg",
+        "reich"
+      ],
+      "sentences": [
+        [
+          "1648 beendete der Westfälische Friede den Krieg im Reich.",
+          "В 1648 году Вестфальский мир завершил войну в империи.",
+          "У 1648 році Вестфальський мир завершив війну в імперії.",
+          "في عام 1648 أنهى صلح وستفاليا الحرب داخل الإمبراطورية."
+        ],
+        [
+          "Er regelte das Zusammenleben der Konfessionen neu und bestätigte wichtige Rechte der Reichsstände.",
+          "Он заново урегулировал сосуществование конфессий и подтвердил важные права имперских сословий.",
+          "Він заново врегулював співіснування конфесій і підтвердив важливі права імперських станів.",
+          "أعاد تنظيم التعايش بين الطوائف وأكد حقوقًا مهمة لهيئات الإمبراطورية."
+        ]
+      ]
+    }
+  ],
+  "translations": {
+    "uk": {
+      "Замок Вартбург сегодня. Здесь в 1521–1522 годах Лютер переводил Новый Завет. Фото уменьшено.": "Замок Вартбург сьогодні. Тут у 1521–1522 роках Лютер перекладав Новий Завіт. Фото зменшено."
+    },
+    "ar": {
+      "Замок Вартбург сегодня. Здесь в 1521–1522 годах Лютер переводил Новый Завет. Фото уменьшено.": "قلعة فارتبورغ اليوم. هنا ترجم لوثر العهد الجديد عامي 1521 و1522. صُغرت الصورة."
+    }
+  }
+}

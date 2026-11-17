@@ -1,0 +1,119 @@
+{
+  "id": "ch-01",
+  "title": "Reformation und Dreißigjähriger Krieg",
+  "titleRu": "Реформация и Тридцатилетняя война",
+  "icon": "4",
+  "paragraphs": [
+    {
+      "sourceIds": [
+        "luther"
+      ],
+      "s": [
+        {
+          "de": "1517 kritisierte Martin Luther den Ablasshandel der katholischen Kirche.",
+          "ru": "В 1517 году Мартин Лютер выступил с критикой продажи индульгенций католической церковью."
+        },
+        {
+          "de": "Seine Thesen und weitere Schriften verbreiteten sich durch den Buchdruck.",
+          "ru": "Его тезисы и другие сочинения распространялись благодаря книгопечатанию."
+        },
+        {
+          "de": "Die Reformation veränderte Glauben, Politik und Gesellschaft.",
+          "ru": "Реформация изменила веру, политику и общество."
+        }
+      ]
+    },
+    {
+      "sourceIds": [
+        "wartburg",
+        "reich"
+      ],
+      "s": [
+        {
+          "de": "Auf der Wartburg übersetzte Luther 1521/22 das Neue Testament ins Deutsche.",
+          "ru": "В Вартбурге Лютер в 1521–1522 годах перевёл Новый Завет на немецкий язык."
+        },
+        {
+          "de": "Im Reich entstanden katholische und protestantische Gebiete.",
+          "ru": "В империи появились католические и протестантские территории."
+        },
+        {
+          "de": "Der Augsburger Religionsfrieden von 1555 brachte vorläufig einen Ausgleich, aber keine allgemeine Religionsfreiheit.",
+          "ru": "Аугсбургский религиозный мир 1555 года временно установил согласие, но не всеобщую свободу вероисповедания."
+        }
+      ]
+    },
+    {
+      "fig": {
+        "src": "data/history/reformation/img/wartburg.jpg",
+        "w": 1000,
+        "h": 663,
+        "credit": "marsupium photography / Flickr",
+        "creditUrl": "https://www.flickr.com/photos/hagdorned/35272578844/",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "cap": "Замок Вартбург сегодня. Здесь в 1521–1522 годах Лютер переводил Новый Завет. Фото уменьшено."
+      }
+    },
+    {
+      "sourceIds": [
+        "krieg",
+        "reich"
+      ],
+      "s": [
+        {
+          "de": "1618 begann in Böhmen der Dreißigjährige Krieg.",
+          "ru": "В 1618 году в Богемии началась Тридцатилетняя война."
+        },
+        {
+          "de": "Neben religiösen Gegensätzen ging es um Macht und politische Interessen europäischer Staaten.",
+          "ru": "Кроме религиозных разногласий, речь шла о власти и политических интересах европейских государств."
+        },
+        {
+          "de": "Kämpfe, Hunger und Seuchen verwüsteten viele Regionen.",
+          "ru": "Боевые действия, голод и эпидемии опустошили многие регионы."
+        }
+      ]
+    },
+    {
+      "sourceIds": [
+        "krieg",
+        "reich"
+      ],
+      "s": [
+        {
+          "de": "1648 beendete der Westfälische Friede den Krieg im Reich.",
+          "ru": "В 1648 году Вестфальский мир завершил войну в империи."
+        },
+        {
+          "de": "Er regelte das Zusammenleben der Konfessionen neu und bestätigte wichtige Rechte der Reichsstände.",
+          "ru": "Он заново урегулировал сосуществование конфессий и подтвердил важные права имперских сословий."
+        }
+      ]
+    }
+  ],
+  "sourceTitle": "Источники и проверка фактов",
+  "sources": [
+    {
+      "id": "luther",
+      "name": "Deutschlandmuseum · Reformation",
+      "url": "https://www.deutschlandmuseum.de/geschichte/reformation/"
+    },
+    {
+      "id": "wartburg",
+      "name": "Wartburg-Stiftung · Martin Luther",
+      "url": "https://www.wartburg.de/personen/martin-luther"
+    },
+    {
+      "id": "reich",
+      "name": "Deutsches Historisches Museum · Reformation und Dreißigjähriger Krieg",
+      "url": "https://www.dhm.de/ausstellungen/dauerausstellung/reformation-und-dreissigjaehriger-krieg/"
+    },
+    {
+      "id": "krieg",
+      "name": "bpb · Wegmarken des Dreißigjährigen Krieges",
+      "url": "https://www.bpb.de/shop/zeitschriften/apuz/272899/zeittafel-wegmarken-des-dreissigjaehrigen-krieges/"
+    }
+  ],
+  "checked": "2026-11-17"
+}

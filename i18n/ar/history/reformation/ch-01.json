@@ -1,0 +1,119 @@
+{
+ "id": "ch-01",
+ "title": "Reformation und Dreißigjähriger Krieg",
+ "titleRu": "الإصلاح الديني وحرب الثلاثين عامًا",
+ "icon": "4",
+ "paragraphs": [
+  {
+   "sourceIds": [
+    "luther"
+   ],
+   "s": [
+    {
+     "de": "1517 kritisierte Martin Luther den Ablasshandel der katholischen Kirche.",
+     "ru": "في عام 1517 انتقد مارتن لوثر بيع صكوك الغفران في الكنيسة الكاثوليكية."
+    },
+    {
+     "de": "Seine Thesen und weitere Schriften verbreiteten sich durch den Buchdruck.",
+     "ru": "انتشرت أطروحاته وكتاباته الأخرى بفضل الطباعة."
+    },
+    {
+     "de": "Die Reformation veränderte Glauben, Politik und Gesellschaft.",
+     "ru": "غير الإصلاح الديني الإيمان والسياسة والمجتمع."
+    }
+   ]
+  },
+  {
+   "sourceIds": [
+    "wartburg",
+    "reich"
+   ],
+   "s": [
+    {
+     "de": "Auf der Wartburg übersetzte Luther 1521/22 das Neue Testament ins Deutsche.",
+     "ru": "في قلعة فارتبورغ ترجم لوثر العهد الجديد إلى الألمانية عامي 1521 و1522."
+    },
+    {
+     "de": "Im Reich entstanden katholische und protestantische Gebiete.",
+     "ru": "نشأت في الإمبراطورية أقاليم كاثوليكية وأخرى بروتستانتية."
+    },
+    {
+     "de": "Der Augsburger Religionsfrieden von 1555 brachte vorläufig einen Ausgleich, aber keine allgemeine Religionsfreiheit.",
+     "ru": "حقق صلح أوغسبورغ الديني عام 1555 تسوية مؤقتة، لكنه لم يمنح حرية دينية عامة."
+    }
+   ]
+  },
+  {
+   "fig": {
+    "src": "data/history/reformation/img/wartburg.jpg",
+    "w": 1000,
+    "h": 663,
+    "credit": "marsupium photography / Flickr",
+    "creditUrl": "https://www.flickr.com/photos/hagdorned/35272578844/",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "cap": "قلعة فارتبورغ اليوم. هنا ترجم لوثر العهد الجديد عامي 1521 و1522. صُغرت الصورة."
+   }
+  },
+  {
+   "sourceIds": [
+    "krieg",
+    "reich"
+   ],
+   "s": [
+    {
+     "de": "1618 begann in Böhmen der Dreißigjährige Krieg.",
+     "ru": "في عام 1618 بدأت حرب الثلاثين عامًا في بوهيميا."
+    },
+    {
+     "de": "Neben religiösen Gegensätzen ging es um Macht und politische Interessen europäischer Staaten.",
+     "ru": "إلى جانب الخلافات الدينية دار الصراع حول السلطة والمصالح السياسية للدول الأوروبية."
+    },
+    {
+     "de": "Kämpfe, Hunger und Seuchen verwüsteten viele Regionen.",
+     "ru": "دمرت المعارك والمجاعة والأوبئة مناطق كثيرة."
+    }
+   ]
+  },
+  {
+   "sourceIds": [
+    "krieg",
+    "reich"
+   ],
+   "s": [
+    {
+     "de": "1648 beendete der Westfälische Friede den Krieg im Reich.",
+     "ru": "في عام 1648 أنهى صلح وستفاليا الحرب داخل الإمبراطورية."
+    },
+    {
+     "de": "Er regelte das Zusammenleben der Konfessionen neu und bestätigte wichtige Rechte der Reichsstände.",
+     "ru": "أعاد تنظيم التعايش بين الطوائف وأكد حقوقًا مهمة لهيئات الإمبراطورية."
+    }
+   ]
+  }
+ ],
+ "sourceTitle": "المصادر والتحقق من المعلومات",
+ "sources": [
+  {
+   "id": "luther",
+   "name": "Deutschlandmuseum · Reformation",
+   "url": "https://www.deutschlandmuseum.de/geschichte/reformation/"
+  },
+  {
+   "id": "wartburg",
+   "name": "Wartburg-Stiftung · Martin Luther",
+   "url": "https://www.wartburg.de/personen/martin-luther"
+  },
+  {
+   "id": "reich",
+   "name": "Deutsches Historisches Museum · Reformation und Dreißigjähriger Krieg",
+   "url": "https://www.dhm.de/ausstellungen/dauerausstellung/reformation-und-dreissigjaehriger-krieg/"
+  },
+  {
+   "id": "krieg",
+   "name": "bpb · Wegmarken des Dreißigjährigen Krieges",
+   "url": "https://www.bpb.de/shop/zeitschriften/apuz/272899/zeittafel-wegmarken-des-dreissigjaehrigen-krieges/"
+  }
+ ],
+ "checked": "2026-11-17"
+}

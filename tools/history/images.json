@@ -1,0 +1,15 @@
+{
+  "reformation": {
+    "src": "data/history/reformation/img/wartburg.jpg",
+    "w": 1000,
+    "h": 663,
+    "credit": "marsupium photography / Flickr",
+    "creditUrl": "https://www.flickr.com/photos/hagdorned/35272578844/",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "downloadUrl": "https://live.staticflickr.com/4314/35272578844_d66907e943_b.jpg",
+    "sha256": "6f16c695c325eb48529d60556585042a37399fd1753f98956bf2670c95254973",
+    "changes": "resized and recompressed",
+    "checked": "2026-11-17"
+  }
+}
