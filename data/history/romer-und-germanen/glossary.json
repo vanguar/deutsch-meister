@@ -17,7 +17,6 @@
     "dem": "der/die/das",
     "den": "der/die/das",
     "denen": "der/die/das (Relativpronomen)",
-    "der": "der/die/das",
     "des": "der/die/das",
     "deshalb": "deshalb",
     "deutschland": "Deutschland",
@@ -25,7 +24,6 @@
     "die": "der/die/das",
     "diese": "dieser",
     "doch": "doch",
-    "donau": "Donau",
     "durchgänge": "Durchgang",
     "eine": "ein/eine",
     "einheitliches": "einheitlich",
@@ -72,7 +70,6 @@
     "nigra": "Porta Nigra",
     "noch": "noch",
     "nur": "nur",
-    "nördlich": "nördlich",
     "porta": "Porta Nigra",
     "regionen": "Region",
     "reich": "Reich",
@@ -134,10 +131,6 @@
     "Deutschland": {
       "ru": "Германия",
       "pos": "геогр."
-    },
-    "Donau": {
-      "pos": "геогр.",
-      "ru": "Дунай"
     },
     "Durchgang": {
       "pos": "сущ.",
@@ -532,10 +525,6 @@
     "nur": {
       "ru": "только, лишь",
       "pos": "частица"
-    },
-    "nördlich": {
-      "pos": "нареч.",
-      "ru": "к северу"
     },
     "rund": {
       "pos": "нареч.",

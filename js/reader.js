@@ -362,14 +362,12 @@ const Reader = (() => {
     const size = w && h
       ? ` width="${w}" height="${h}" style="--ar:${(w / h).toFixed(4)};aspect-ratio:${w} / ${h}"`
       : '';
-    const motion = fig.motion
-      ? ` data-motion="${esc(fig.motion)}" data-still="${esc(fig.src)}"` : '';
     const credit = fig.creditUrl && /^https:\/\//.test(fig.creditUrl)
-      ? `<a href="${esc(fig.creditUrl)}" target="_blank" rel="noopener noreferrer">${esc(fig.credit)}</a>` : esc(fig.credit || '');
+      ? `<a data-reader-external href="${esc(fig.creditUrl)}" rel="noopener noreferrer">${esc(fig.credit)} <span aria-hidden="true">↗</span></a>` : esc(fig.credit || '');
     const license = fig.licenseUrl && /^https:\/\//.test(fig.licenseUrl)
-      ? ` · <a href="${esc(fig.licenseUrl)}" target="_blank" rel="noopener noreferrer">${esc(fig.license || '')}</a>` : '';
+      ? ` · <a data-reader-external href="${esc(fig.licenseUrl)}" rel="noopener noreferrer">${esc(fig.license || '')} <span aria-hidden="true">↗</span></a>` : '';
     return `<figure class="rd-fig${p === 0 ? ' rd-fig--lead' : ''}" data-p="${p}">
-      <img src="${esc(fig.src)}" alt="${esc(fig.cap || '')}"${size}${motion} decoding="async">
+      <img src="${esc(fig.src)}" alt="${esc(fig.cap || '')}"${size} decoding="async">
       <figcaption>${esc(fig.cap || '')}${fig.credit ? ` <span class="rd-fig-credit">${credit}${license}</span>` : ''}</figcaption>
     </figure>`;
   }
@@ -414,7 +412,7 @@ const Reader = (() => {
       return `<p class="${cls}"${dir}>${inner}</p>`;
     }).join('');
     const sources = Array.isArray(ch && ch.sources) ? ch.sources.filter(s => /^https:\/\//.test(s.url || '')) : [];
-    const sourceBlock = sources.length ? `<aside class="rd-chapter-sources"><h2>${esc(ch.sourceTitle || '')}</h2><ul>${sources.map(s => `<li><a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.name)}</a></li>`).join('')}</ul></aside>` : '';
+    const sourceBlock = sources.length ? `<aside class="rd-chapter-sources"><h2>${esc(ch.sourceTitle || '')}</h2><ul>${sources.map(s => `<li><a class="hi-source-link" data-reader-external href="${esc(s.url)}" rel="noopener noreferrer"><span class="hi-source-name">${esc(s.name)}</span><span class="hi-source-domain">${esc(new URL(s.url).hostname.replace(/^www\./, ''))}${/\.pdf(?:$|[?#])/i.test(s.url) ? ' · PDF' : ''}</span><span class="hi-link-icon" aria-hidden="true">↗</span></a></li>`).join('')}</ul></aside>` : '';
     return chapterOpening(ch || {}, chapterIndex) + prose + sourceBlock;
   }
 
@@ -436,7 +434,6 @@ const Reader = (() => {
   function renderChapter(ch) {
     elContent.innerHTML = chapterHtml(ch, st.chIndex);
     watchFigures();
-    document.dispatchEvent(new CustomEvent('dm:reader-render'));
     ImageReveal.show(elContent);
     elContent.lang = st.fullTranslation ? TR_LANG : 'de';
     elContent.classList.toggle('rd-interlinear', st.interlinear && !st.fullTranslation);

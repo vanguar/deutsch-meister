@@ -4,9 +4,11 @@
 .hi-page .news-h1 { max-width: 650px; font-size: clamp(29px, 5vw, 43px); line-height: 1.14; }
 .hi-intro { max-width: 680px; margin: 15px 0 24px; line-height: 1.65; }
 .hi-feature { display: grid; grid-template-columns: 1.1fr 1fr; border: 1px solid var(--border); border-radius: var(--r-lg); background: var(--surface2); overflow: hidden; }
-.hi-feature-art { display: flex; flex-direction: column; justify-content: center; padding: 20px 10px; background: #f8f7f4; color: #343434; }
-.hi-feature-art img { display: block; width: 100%; height: auto; }
-.hi-art-note { text-align: center; font-size: 11px; letter-spacing: .04em; margin-top: 12px; }
+.hi-feature-art { display: flex; flex-direction: column; background: var(--surface); color: var(--text-muted); }
+.hi-feature-art img { display: block; width: 100%; height: auto; flex: 1; object-fit: cover; min-height: 0; }
+.hi-art-note { text-align: center; font-size: 11px; letter-spacing: .04em; margin: 10px 10px 5px; }
+.hi-art-credit { text-align: center; font-size: 9px; line-height: 1.5; padding: 0 10px 10px; }
+.hi-art-credit a, .rd-fig-credit a { color: var(--rd-accent, var(--accent2-text)); text-decoration: underline; text-underline-offset: 2px; }
 .hi-feature-body { padding: 25px; display: flex; align-items: flex-start; flex-direction: column; gap: 12px; }
 .hi-kicker { color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: .04em; }
 .hi-feature h2 { font-family: 'Playfair Display', serif; font-size: 26px; color: var(--text-strong); line-height: 1.15; }
@@ -47,20 +49,27 @@ html[data-theme="light"] .hi-item.is-soon .hi-status { color: #676c73; backgroun
 .hi-sources { padding-top: 28px; margin-top: 12px; }
 .hi-sources p, .hi-sources li { font-size: 12px; line-height: 1.7; color: var(--text-muted); }
 .hi-sources p { margin-top: 10px; }
-.hi-sources ul { padding-left: 19px; margin-top: 12px; }
-.hi-sources li { margin-bottom: 7px; }
-.hi-sources a { color: var(--text); text-underline-offset: 3px; overflow-wrap: anywhere; }
+.hi-sources ul { list-style: none; padding: 0; margin-top: 12px; }
+.hi-sources li { margin-bottom: 8px; }
 .hi-checked { padding-top: 10px; border-top: 1px solid var(--border); }
-.rd-chapter-sources { font-size: 12px; line-height: 1.6; padding: 18px 0; border-top: 1px solid currentColor; }
+.rd-chapter-sources { font-size: 12px; line-height: 1.6; padding: 8px 0; break-before: column; }
 .rd-chapter-sources h2 { font-size: 15px; break-after: avoid; margin-bottom: 12px; }
-.rd-chapter-sources ul { padding-left: 18px; }
-.rd-chapter-sources li { break-inside: avoid; margin-bottom: 12px; }
-.rd-chapter-sources a { color: inherit; overflow-wrap: anywhere; text-underline-offset: 3px; }
+.rd-chapter-sources ul { list-style: none; padding: 0; }
+.rd-chapter-sources li { break-inside: avoid; margin-bottom: 8px; }
+.hi-sources, .rd-chapter-sources { --hi-link: #94caff; --hi-link-bg: rgba(65, 147, 226, .09); --hi-link-border: rgba(128, 186, 243, .32); }
+html[data-theme="light"] .hi-sources,
+html[data-theme="light"] .rd-view[data-rd-theme="system"] .rd-chapter-sources,
+.rd-view[data-rd-theme="light"] .rd-chapter-sources,
+.rd-view[data-rd-theme="sepia"] .rd-chapter-sources { --hi-link: #175d9e; --hi-link-bg: rgba(30, 111, 186, .06); --hi-link-border: rgba(30, 111, 186, .27); }
+.hi-source-link { display: block; position: relative; box-sizing: border-box; padding: 9px 36px 9px 12px; border: 1px solid var(--hi-link-border); border-radius: 10px; color: var(--hi-link); background: var(--hi-link-bg); text-decoration: none; font-size: 12px; line-height: 1.45; overflow-wrap: anywhere; break-inside: avoid; }
+.hi-source-name { text-decoration: underline; text-underline-offset: 3px; }
+.hi-source-domain { display: block; font-size: 10px; margin-top: 3px; opacity: .9; }
+.hi-link-icon { position: absolute; right: 12px; top: 9px; font-size: 18px; line-height: 1; }
+.hi-source-link:hover { border-color: var(--hi-link); }
+.hi-source-link:focus-visible { outline: 2px solid var(--hi-link); outline-offset: 3px; }
 @media (max-width: 600px) {
   .hi-feature { grid-template-columns: 1fr; }
-  .hi-feature-art { padding: 10px; }
-  .hi-feature-art img { max-height: 165px; }
-  .hi-art-note { margin-top: 2px; }
+  .hi-feature-art img { max-height: 230px; object-position: center 45%; }
   .hi-feature-body { padding: 21px; gap: 10px; }
   .hi-chapter { grid-template-columns: 26px minmax(0, 1fr); gap: 6px 12px; padding: 18px 3px; }
   .hi-status { grid-column: 2; justify-self: start; margin-top: 4px; }

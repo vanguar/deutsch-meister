@@ -1,4 +1,4 @@
-/* History pilot: source integrity, unpublished chapters, navigation and motion. */
+/* History pilot: source integrity, unpublished chapters and external navigation. */
 'use strict';
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
@@ -28,29 +28,28 @@ for (const item of published) {
     }
     if (para.fig) {
       assert.ok(fs.existsSync(path.join(root, para.fig.src)));
-      if (para.fig.motion) assert.ok(fs.existsSync(path.join(root, para.fig.motion)));
+      assert.equal(para.fig.motion, undefined, 'History illustrations must be static');
       if (para.fig.src.endsWith('.jpg')) assert.ok(para.fig.creditUrl && para.fig.licenseUrl);
     }
   }
 }
 
-async function boot({ hash = '', reduce = false, hidden = false, fail = false } = {}) {
+async function boot({ hash = '', telegram = null } = {}) {
   const docEvents = {}, winEvents = {}, calls = [], timers = new Map();
   const elements = Object.fromEntries(['hiToc', 'hiCount', 'hiSources', 'rdContent', 'rdViewport', 'hiRetry', 'hiErrorTemplate']
     .map(id => [id, { innerHTML: '', textContent: '', setAttribute() {}, addEventListener() {},
       replaceChildren() {}, querySelectorAll() { return []; }, content: { cloneNode() { return {}; } } }]));
   const ctx = {
-    console, Set, Number, String, JSON, Promise,
-    document: { hidden, getElementById: id => elements[id], addEventListener: (name, fn) => { docEvents[name] = fn; } },
+    console: { ...console, warn() {} }, Set, Number, String, JSON, Promise, URL,
+    Telegram: telegram,
+    document: { getElementById: id => elements[id], addEventListener: (name, fn) => { docEvents[name] = fn; } },
     location: { hash, pathname: '/history.html', search: '' },
     history: { state: null, replaceState(state, _, url) { this.state = state; ctx.location.hash = url.includes('#') ? '#' + url.split('#')[1] : ''; } },
     localStorage: { getItem: () => null },
     Reader: { state: { open: false, bookId: 'romer-und-germanen' }, open(id, options) { calls.push({ id, options }); this.state.open = true; this.state.bookId = id; } },
-    fetch: async () => { if (fail) throw new Error('offline'); return { ok: true, json: async () => catalog }; },
+    fetch: async () => ({ ok: true, json: async () => catalog }),
     setTimeout(fn) { const id = timers.size + 1; timers.set(id, fn); return id; }, clearTimeout(id) { timers.delete(id); },
-    matchMedia: () => ({ matches: reduce, addEventListener() {} }),
     addEventListener: (name, fn) => { winEvents[name] = fn; },
-    IntersectionObserver: class { constructor(fn) { ctx.intersect = fn; } observe() {} disconnect() {} },
   };
   ctx.window = ctx;
   vm.createContext(ctx);
@@ -77,34 +76,32 @@ async function boot({ hash = '', reduce = false, hidden = false, fail = false } 
   deep.ctx.location.hash = '#history=romer-und-germanen';
   deep.winEvents.popstate();
   assert.equal(deep.calls.at(-1).options.fromHistory, true, 'Forward restores without adding browser history');
-  function image() { return { src: 'still.svg', isConnected: true, dataset: { still: 'still.svg', motion: 'motion.svg' }, addEventListener() {}, removeEventListener() {} }; }
-  const img = image();
-  normal.elements.rdContent.querySelectorAll = () => [img];
-  normal.docEvents['dm:reader-render']();
-  normal.ctx.intersect([{ target: img, isIntersecting: true, intersectionRatio: 0.3 }]);
-  assert.equal(img.src, 'still.svg', 'Offscreen art stays still');
-  normal.ctx.intersect([{ target: img, isIntersecting: true, intersectionRatio: 1 }]);
-  assert.equal(img.src, 'motion.svg', 'Visible art autoplays');
-  for (const fn of normal.timers.values()) fn();
-  assert.equal(img.src, 'motion.svg', 'One-shot SVG retains its final frame');
-  img.src = 'still.svg';
-  normal.ctx.intersect([{ target: img, isIntersecting: true, intersectionRatio: 1 }]);
-  assert.equal(img.src, 'still.svg', 'Already seen art does not replay');
-  const quiet = await boot({ reduce: true });
-  const quietImg = image();
-  quiet.elements.rdContent.querySelectorAll = () => [quietImg];
-  quiet.docEvents['dm:reader-render']();
-  assert.equal(quiet.ctx.intersect, undefined, 'Reduced motion never schedules animation');
-  assert.equal(quietImg.src, 'still.svg');
-  const inactive = await boot({ hidden: true });
-  const inactiveImg = image();
-  inactive.elements.rdContent.querySelectorAll = () => [inactiveImg];
-  inactive.docEvents['dm:reader-render']();
-  inactive.ctx.intersect([{ target: inactiveImg, isIntersecting: true, intersectionRatio: 1 }]);
-  assert.equal(inactiveImg.src, 'still.svg', 'Background tabs do not animate');
-  inactive.ctx.document.hidden = false;
-  inactive.docEvents.visibilitychange();
-  inactive.ctx.intersect([{ target: inactiveImg, isIntersecting: true, intersectionRatio: 1 }]);
-  assert.equal(inactiveImg.src, 'motion.svg', 'Art starts when tab becomes visible');
-  console.log('PASS history: sources, catalog, disabled chapters, links, history, autoplay and reduced motion');
+  assert.equal((normal.elements.hiSources.innerHTML.match(/data-reader-external/g) || []).length, catalog.sources.length);
+  assert.ok(!normal.elements.hiSources.innerHTML.includes('target="_blank"'), 'Embedded browsers must not depend on pop-up tabs');
+  assert.ok(normal.elements.hiSources.innerHTML.includes('↗') && normal.elements.hiSources.innerHTML.includes('PDF'));
+  function external(url, extra = {}) {
+    return { target: { closest: selector => selector === 'a[data-reader-external]' ? { href: url } : null },
+      button: 0, prevented: false, preventDefault() { this.prevented = true; }, ...extra };
+  }
+  for (const source of catalog.sources) {
+    const event = external(source.url);
+    normal.docEvents.click(event);
+    assert.equal(event.prevented, false, 'Normal browser keeps native same-tab navigation: ' + source.id);
+  }
+  const opened = [];
+  const telegram = await boot({ telegram: { WebApp: { openLink: (url, options) => opened.push({ url, options }) } } });
+  const event = external(catalog.sources[0].url);
+  telegram.docEvents.click(event);
+  assert.equal(event.prevented, true);
+  assert.equal(opened[0].url, catalog.sources[0].url);
+  assert.equal(opened[0].options.try_instant_view, false);
+  const modified = external(catalog.sources[1].url, { ctrlKey: true });
+  telegram.docEvents.click(modified);
+  assert.equal(modified.prevented, false, 'Modified clicks keep native behavior');
+  assert.equal(opened.length, 1);
+  const fallback = await boot({ telegram: { WebApp: { openLink() { throw new Error('SDK unavailable'); } } } });
+  const failed = external(catalog.sources[2].url);
+  fallback.docEvents.click(failed);
+  assert.equal(failed.prevented, false, 'SDK failures fall back to working native navigation');
+  console.log('PASS history: sources, static photos, disabled chapters, browser links, Telegram links and fallback');
 })().catch(err => { console.error(err); process.exitCode = 1; });

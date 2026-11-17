@@ -1,10 +1,6 @@
 /* Russian history pilot. Reader content and UI labels live in its catalog. */
 const HistoryCourse = (() => {
   let catalog = null;
-  let observer = null;
-  let motion = null;
-  const played = new Set();
-  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
   const $ = id => document.getElementById(id);
   const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({
     '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
@@ -38,7 +34,10 @@ const HistoryCourse = (() => {
     }).join('');
     $('hiToc').setAttribute('aria-busy', 'false');
     $('hiSources').innerHTML = '<ul>' + catalog.sources.filter(s => /^https:\/\//.test(s.url))
-      .map(s => `<li><a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.name)}</a></li>`).join('') + '</ul>';
+      .map(s => `<li><a class="hi-source-link" data-reader-external href="${esc(s.url)}" rel="noopener noreferrer">
+        <span class="hi-source-name">${esc(s.name)}</span>
+        <span class="hi-source-domain">${esc(new URL(s.url).hostname.replace(/^www\./, ''))}${/\.pdf(?:$|[?#])/i.test(s.url) ? ' · PDF' : ''}</span>
+        <span class="hi-link-icon" aria-hidden="true">↗</span></a></li>`).join('') + '</ul>';
   }
 
   function requestedId() {
@@ -46,57 +45,11 @@ const HistoryCourse = (() => {
     return match && ready(match[1]) ? match[1] : null;
   }
 
-  function stopMotion() {
-    if (!motion) return;
-    clearTimeout(motion.timer);
-    const { img } = motion;
-    img.removeEventListener('error', motion.onError);
-    img.src = img.dataset.still;
-    motion = null;
-  }
-
-  function playMotion(img) {
-    if (!catalog || reduced.matches || document.hidden || !img.isConnected) return false;
-    stopMotion();
-    img.src = img.dataset.motion;
-    const onError = () => stopMotion();
-    img.addEventListener('error', onError, { once: true });
-    motion = { img, onError, timer: setTimeout(() => {
-      img.removeEventListener('error', onError);
-      motion = null; // The one-shot SVG keeps its final still frame.
-    }, 4200) };
-    return true;
-  }
-
-  function prepareMotion() {
-    stopMotion();
-    if (observer) observer.disconnect();
-    const images = $('rdContent').querySelectorAll('img[data-motion]');
-    if (reduced.matches || !window.IntersectionObserver) return;
-    observer = new IntersectionObserver(entries => {
-      for (const entry of entries) {
-        if (!entry.isIntersecting || entry.intersectionRatio < 0.5) {
-          if (motion && motion.img === entry.target) stopMotion();
-          continue;
-        }
-        const img = entry.target;
-        const key = Reader.state.bookId + ':' + img.dataset.motion;
-        if (!played.has(key) && playMotion(img)) {
-          played.add(key);
-        }
-      }
-    }, { root: $('rdViewport'), threshold: [0, 0.5] });
-    images.forEach(img => observer.observe(img));
-  }
-
   function refresh() {
-    stopMotion();
-    if (observer) observer.disconnect();
     if (catalog) render();
   }
 
   function onHistory() {
-    stopMotion();
     const id = requestedId();
     if (id && (!Reader.state.open || Reader.state.bookId !== id)) Reader.open(id, { fromHistory: true });
   }
@@ -131,18 +84,25 @@ const HistoryCourse = (() => {
   function init() {
     if (!$('hiToc')) return;
     document.addEventListener('click', event => {
+      const external = event.target.closest('a[data-reader-external]');
+      if (external && !event.defaultPrevented && event.button === 0 && !event.ctrlKey && !event.metaKey && !event.shiftKey && !event.altKey) {
+        const tg = window.Telegram && window.Telegram.WebApp;
+        if (tg && typeof tg.openLink === 'function' && /^https:\/\//.test(external.href)) {
+          try {
+            tg.openLink(external.href, { try_instant_view: false });
+            event.preventDefault();
+          } catch (err) {
+            // Native same-tab navigation remains available if the SDK fails.
+            console.warn('[History] External link fallback', err);
+          }
+        }
+      }
       const link = event.target.closest('[data-history-open]');
       if (link && !event.ctrlKey && !event.metaKey && !event.shiftKey && !event.altKey && event.button === 0) {
         event.preventDefault();
         if (ready(link.dataset.historyOpen)) Reader.open(link.dataset.historyOpen);
       }
     });
-    document.addEventListener('dm:reader-render', prepareMotion);
-    document.addEventListener('visibilitychange', () => {
-      if (document.hidden) stopMotion();
-      else prepareMotion();
-    });
-    reduced.addEventListener('change', prepareMotion);
     window.addEventListener('popstate', onHistory);
     load();
   }

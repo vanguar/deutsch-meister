@@ -12,8 +12,8 @@ Each factual paragraph in `ch-01.json` records its `sourceIds`. Sources are
 listed in the chapter and in the catalog. The text is an original B1 educational
 adaptation, not an official textbook. Sources were reviewed on 2026-11-17:
 
-- Staatliche Museen zu Berlin: teaching materials, PDF page 3, for the meaning
-  of “Germanen” and the diversity of communities.
+- Landesmuseum für Vorgeschichte Halle: *Die Erfindung der Germanen*, for
+  the Roman name for communities east of the Rhine and their diversity.
 - bpb: *Meilensteine der deutschen Geschichte*, sample PDF page 12, for Roman
   territories and settlements around military camps.
 - Limesmuseum Aalen: *Das römische Aalen – Militärbasis am Limes*, for the
@@ -24,10 +24,10 @@ adaptation, not an official textbook. Sources were reviewed on 2026-11-17:
   and cultural contacts.
 - Stadt Trier: *Weltkulturerbe*, for the Porta Nigra as a surviving Roman gate.
 
-The two Limes SVGs are original schematic drawings, not reconstructions of an
-identified site. The animated variant runs once for four seconds and holds its
-last frame. The controller starts it when at least half the image is visible,
-respects reduced-motion preferences, and adds no controls.
+The chapter and its catalog use a photograph of a surviving Roman monument.
+Source links are marked with an external-link icon, domain and PDF indicator.
+They use native same-tab navigation in browsers and Telegram openLink inside
+the Mini App, avoiding unsupported pop-up tabs.
 
 `porta-nigra.jpg`: original photo by Valeri Koshelev, downloaded unchanged from
 [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Porta_Nigra_in_Trier.jpg),
