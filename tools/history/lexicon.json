@@ -131,7 +131,28 @@
     "vergrößerte": "vergrößern",
     "vertrag": "Vertrag",
     "völker": "Volk",
-    "wanderten": "wandern"
+    "wanderten": "wandern",
+    "gekrönt": "krönen",
+    "kaufleute": "Kaufmann",
+    "märkten": "Markt",
+    "prägte": "prägen",
+    "verbanden": "verbinden",
+    "vorstellungen": "Vorstellung",
+    "abhängig": "abhängig",
+    "ausgegrenzt": "ausgrenzen",
+    "bischöfe": "Bischof",
+    "christliche": "christlich",
+    "ermordet": "ermorden",
+    "fürsten": "Fürst",
+    "grundherren": "Grundherr",
+    "handelswege": "Handelsweg",
+    "herrschaft": "Herrschaft",
+    "juden": "Jude",
+    "mittelalterlichen": "mittelalterlich",
+    "pogromen": "Pogrom",
+    "wiederholt": "wiederholt",
+    "umfasste": "umfassen",
+    "nationalstaat": "Nationalstaat"
   },
   "l": {
     "Aalen": {
@@ -723,6 +744,115 @@
       "ru": "странствовать, переселяться",
       "pos": "гл.",
       "forms": "wandert · wanderte · ist gewandert"
+    },
+    "krönen": {
+      "ru": "короновать",
+      "pos": "гл.",
+      "forms": "krönte · hat gekrönt",
+      "note": "sich krönen — короноваться"
+    },
+    "Kaufmann": {
+      "ru": "купец",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Kaufleute",
+      "note": "мн. ч. die Kaufleute, НЕ Kaufmänner"
+    },
+    "Markt": {
+      "ru": "рынок",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Märkte"
+    },
+    "prägen": {
+      "ru": "определять облик, формировать",
+      "pos": "гл.",
+      "forms": "prägte · hat geprägt"
+    },
+    "verbinden": {
+      "ru": "перевязывать (рану); соединять",
+      "pos": "гл.",
+      "forms": "verband · hat verbunden",
+      "note": "sich verbinden lassen — дать себя перевязать"
+    },
+    "Vorstellung": {
+      "ru": "представление (зрелище)",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Vorstellungen"
+    },
+    "abhängig": {
+      "ru": "зависимый",
+      "pos": "прил."
+    },
+    "ausgrenzen": {
+      "ru": "исключать, подвергать дискриминации",
+      "pos": "гл.",
+      "forms": "grenzt aus · grenzte aus · hat ausgegrenzt"
+    },
+    "Bischof": {
+      "ru": "епископ",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Bischöfe"
+    },
+    "christlich": {
+      "ru": "христианский",
+      "pos": "прил."
+    },
+    "ermorden": {
+      "ru": "убивать",
+      "pos": "гл.",
+      "forms": "ermordet · ermordete · hat ermordet"
+    },
+    "Fürst": {
+      "ru": "князь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Fürsten"
+    },
+    "Grundherr": {
+      "ru": "феодальный землевладелец",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Grundherren"
+    },
+    "Handelsweg": {
+      "ru": "торговый путь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Handelswege"
+    },
+    "Herrschaft": {
+      "ru": "правление, власть",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Herrschaften"
+    },
+    "Jude": {
+      "ru": "еврей",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Juden"
+    },
+    "mittelalterlich": {
+      "ru": "средневековый",
+      "pos": "прил."
+    },
+    "Pogrom": {
+      "ru": "погром",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Pogrome"
+    },
+    "wiederholt": {
+      "ru": "неоднократно",
+      "pos": "нареч."
+    },
+    "umfassen": {
+      "ru": "охватывать, включать",
+      "pos": "гл.",
+      "forms": "umfasst · umfasste · hat umfasst"
     }
   },
   "translations": {
@@ -779,7 +909,21 @@
       "увеличивать, расширять": "збільшувати, розширювати",
       "договор": "договір",
       "народ": "народ",
-      "странствовать, переселяться": "мандрувати, переселятися"
+      "странствовать, переселяться": "мандрувати, переселятися",
+      "зависимый": "залежний",
+      "исключать, подвергать дискриминации": "виключати, дискримінувати",
+      "епископ": "єпископ",
+      "христианский": "християнський",
+      "убивать": "убивати",
+      "князь": "князь",
+      "феодальный землевладелец": "феодальний землевласник",
+      "торговый путь": "торговельний шлях",
+      "правление, власть": "правління, влада",
+      "еврей": "єврей",
+      "средневековый": "середньовічний",
+      "погром": "погром",
+      "неоднократно": "неодноразово",
+      "охватывать, включать": "охоплювати, включати"
     },
     "ar": {
       "Аален": "آلن",
@@ -834,7 +978,21 @@
       "увеличивать, расширять": "يوسع",
       "договор": "معاهدة",
       "народ": "شعب",
-      "странствовать, переселяться": "يرتحل، يهاجر"
+      "странствовать, переселяться": "يرتحل، يهاجر",
+      "зависимый": "تابع، معتمد على غيره",
+      "исключать, подвергать дискриминации": "يقصي، يميز ضد",
+      "епископ": "أسقف",
+      "христианский": "مسيحي",
+      "убивать": "يقتل",
+      "князь": "أمير",
+      "феодальный землевладелец": "مالك أرض إقطاعي",
+      "торговый путь": "طريق تجاري",
+      "правление, власть": "حكم، سلطة",
+      "еврей": "يهودي",
+      "средневековый": "من العصور الوسطى",
+      "погром": "مذبحة تستهدف جماعة",
+      "неоднократно": "مرارًا",
+      "охватывать, включать": "يشمل"
     }
   }
 }

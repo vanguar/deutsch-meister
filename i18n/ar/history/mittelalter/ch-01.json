@@ -1,0 +1,123 @@
+{
+ "id": "ch-01",
+ "title": "Mittelalter und Heiliges Römisches Reich",
+ "titleRu": "العصور الوسطى والإمبراطورية الرومانية المقدسة",
+ "icon": "3",
+ "paragraphs": [
+  {
+   "sourceIds": [
+    "otto",
+    "reich"
+   ],
+   "s": [
+    {
+     "de": "962 wurde Otto I. in Rom zum Kaiser gekrönt.",
+     "ru": "في عام 962 توج أوتو الأول إمبراطورًا في روما."
+    },
+    {
+     "de": "Seine Herrschaft gilt als wichtiger Anfang des später sogenannten Heiligen Römischen Reiches.",
+     "ru": "يُعد حكمه بداية مهمة لما سُمي لاحقًا الإمبراطورية الرومانية المقدسة."
+    },
+    {
+     "de": "Dieses Reich umfasste viele Gebiete und Sprachen; es war kein deutscher Nationalstaat.",
+     "ru": "ضمت هذه الإمبراطورية أراضي ولغات كثيرة؛ ولم تكن دولة قومية ألمانية."
+    },
+    {
+     "de": "Kaiser, Fürsten und Bischöfe teilten sich die Macht.",
+     "ru": "تقاسم الإمبراطور والأمراء والأساقفة السلطة."
+    }
+   ]
+  },
+  {
+   "sourceIds": [
+    "alltag"
+   ],
+   "s": [
+    {
+     "de": "Die meisten Menschen lebten auf dem Land und arbeiteten in der Landwirtschaft.",
+     "ru": "عاش معظم الناس في الريف وعملوا في الزراعة."
+    },
+    {
+     "de": "Viele Bauern waren von Grundherren abhängig.",
+     "ru": "كان فلاحون كثيرون يعتمدون على ملاك الأراضي."
+    },
+    {
+     "de": "Die christliche Kirche prägte den Alltag, die Bildung und die Vorstellungen der Menschen.",
+     "ru": "أثرت الكنيسة المسيحية في الحياة اليومية والتعليم وتصورات الناس."
+    }
+   ]
+  },
+  {
+   "fig": {
+    "src": "data/laender/bremen/img/roland.jpg",
+    "w": 1200,
+    "h": 800,
+    "credit": "Dietmar Rabich / Wikimedia Commons",
+    "creditUrl": "https://commons.wikimedia.org/wiki/User:XRay",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "cap": "تمثال رولاند في بريمن من عام 1404، رمز لحقوق المدينة. صورة حديثة للمصور Dietmar Rabich."
+   }
+  },
+  {
+   "sourceIds": [
+    "hanse",
+    "alltag"
+   ],
+   "s": [
+    {
+     "de": "Zugleich wuchsen Städte mit Märkten und Handwerksbetrieben.",
+     "ru": "وفي الوقت نفسه نمت مدن تضم أسواقًا وورشًا حرفية."
+    },
+    {
+     "de": "Kaufleute der Hanse verbanden Städte über weite Handelswege.",
+     "ru": "ربط تجار الهانزا المدن بطرق تجارية بعيدة."
+    }
+   ]
+  },
+  {
+   "sourceIds": [
+    "juedisch"
+   ],
+   "s": [
+    {
+     "de": "Auch jüdische Gemeinden gehörten zum mittelalterlichen Leben.",
+     "ru": "كانت الجماعات اليهودية أيضًا جزءًا من الحياة في العصور الوسطى."
+    },
+    {
+     "de": "Doch Juden wurden wiederholt ausgegrenzt, vertrieben und bei Pogromen ermordet.",
+     "ru": "لكن اليهود تعرضوا مرارًا للإقصاء والطرد والقتل في المذابح."
+    }
+   ]
+  }
+ ],
+ "sourceTitle": "المصادر والتحقق من المعلومات",
+ "sources": [
+  {
+   "id": "reich",
+   "name": "Deutsches Historisches Museum · Heiliges Römisches Reich",
+   "url": "https://www.dhm.de/publikation/heiliges-roemisches-reich-deutscher-nation-962-1806/"
+  },
+  {
+   "id": "otto",
+   "name": "Stadt Magdeburg · Otto und die Kaiserkrönung",
+   "url": "https://www.magdeburg.de/B%C3%BCrger-Stadt/Stadt/Geschichte/index.php?La=&NavID=37.446&oNavID=37.446&object=tx%2C698.42610.1"
+  },
+  {
+   "id": "alltag",
+   "name": "Deutsches Historisches Museum · Mittelalter im Lernportal IDA",
+   "url": "https://www.dhm.de/bildung/ida"
+  },
+  {
+   "id": "hanse",
+   "name": "Europäisches Hansemuseum · Die Hanse",
+   "url": "https://www.hansemuseum.eu/ausstellung/dauerausstellung-die-hanse/"
+  },
+  {
+   "id": "juedisch",
+   "name": "bpb · Jüdisches Leben im Mittelalter",
+   "url": "https://www.bpb.de/shop/zeitschriften/izpb/juedisches-leben-in-deutschland-304/7653/10-bis-14-jahrhundert-bedrohte-bluetezeit/"
+  }
+ ],
+ "checked": "2026-11-17"
+}

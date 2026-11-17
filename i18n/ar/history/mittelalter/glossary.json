@@ -1,0 +1,503 @@
+{
+ "version": 1,
+ "w": {
+  "abhängig": "abhängig",
+  "alltag": "Alltag",
+  "als": "als",
+  "anfang": "Anfang",
+  "arbeiteten": "arbeiten",
+  "auch": "auch",
+  "auf": "auf",
+  "ausgegrenzt": "ausgrenzen",
+  "bauern": "Bauer",
+  "bei": "bei",
+  "bildung": "Bildung",
+  "bischöfe": "Bischof",
+  "christliche": "christlich",
+  "dem": "der/die/das",
+  "den": "der/die/das",
+  "der": "der/die/das",
+  "des": "der/die/das",
+  "deutscher": "deutsch",
+  "die": "der/die/das",
+  "dieses": "dieser",
+  "doch": "doch",
+  "ermordet": "ermorden",
+  "es": "es",
+  "fürsten": "Fürst",
+  "gebiete": "Gebiet",
+  "gehörten": "gehören",
+  "gekrönt": "krönen",
+  "gemeinden": "Gemeinde",
+  "gilt": "gelten",
+  "grundherren": "Grundherr",
+  "handelswege": "Handelsweg",
+  "handwerksbetrieben": "Handwerksbetrieb",
+  "hanse": "Hanse",
+  "heiligen": "heilig",
+  "herrschaft": "Herrschaft",
+  "i": "i (буква)",
+  "in": "in",
+  "juden": "Jude",
+  "jüdische": "jüdisch",
+  "kaiser": "Kaiser",
+  "kaufleute": "Kaufmann",
+  "kein": "kein",
+  "kirche": "Kirche",
+  "land": "Land (земля)",
+  "landwirtschaft": "Landwirtschaft",
+  "leben": "leben",
+  "lebten": "leben",
+  "macht": "machen",
+  "meisten": "meist (больше всех)",
+  "menschen": "Mensch",
+  "mit": "mit",
+  "mittelalterlichen": "mittelalterlich",
+  "märkten": "Markt",
+  "nationalstaat": "Nationalstaat",
+  "otto": "Otto",
+  "pogromen": "Pogrom",
+  "prägte": "prägen",
+  "reich": "Reich",
+  "reiches": "Reich",
+  "rom": "Rom",
+  "römischen": "römisch",
+  "seine": "sein (его, свой)",
+  "sich": "sich",
+  "sogenannten": "sogenannt",
+  "sprachen": "Sprache",
+  "später": "später",
+  "städte": "Stadt",
+  "teilten": "teilen",
+  "umfasste": "umfassen",
+  "und": "und",
+  "verbanden": "verbinden",
+  "vertrieben": "vertreiben",
+  "viele": "viel",
+  "von": "von",
+  "vorstellungen": "Vorstellung",
+  "war": "sein",
+  "waren": "Ware",
+  "weite": "weit (обширный)",
+  "wichtiger": "wichtig",
+  "wiederholt": "wiederholt",
+  "wuchsen": "wachsen",
+  "wurde": "werden",
+  "wurden": "werden",
+  "zugleich": "zugleich",
+  "zum": "zu",
+  "über": "über"
+ },
+ "l": {
+  "Alltag": {
+   "ru": "الحياة اليومية",
+   "pos": "اسم",
+   "art": "der",
+   "pl": null,
+   "note": "im Alltag — في الحياة اليومية"
+  },
+  "Anfang": {
+   "ru": "بداية",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Anfänge",
+   "note": "Anfang der Woche — في بداية الأسبوع"
+  },
+  "Bauer": {
+   "ru": "فلّاح",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Bauern",
+   "decl": "n-Deklination: der Bauer / des Bauern / dem Bauern / den Bauern"
+  },
+  "Bildung": {
+   "ru": "تأسيس؛ تعليم",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Bildungen"
+  },
+  "Bischof": {
+   "ru": "أسقف",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Bischöfe"
+  },
+  "Fürst": {
+   "ru": "أمير",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Fürsten"
+  },
+  "Gebiet": {
+   "pos": "اسم",
+   "ru": "منطقة، إقليم",
+   "art": "das",
+   "pl": "die Gebiete"
+  },
+  "Gemeinde": {
+   "ru": "بلدة، جماعة القرية",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Gemeinden"
+  },
+  "Grundherr": {
+   "ru": "مالك أرض إقطاعي",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Grundherren"
+  },
+  "Handelsweg": {
+   "ru": "طريق تجاري",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Handelswege"
+  },
+  "Handwerksbetrieb": {
+   "ru": "منشأة حرفية",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Handwerksbetriebe"
+  },
+  "Hanse": {
+   "ru": "الهانزا (اتحاد تجاري للمدن)",
+   "pos": "اسم",
+   "art": "die",
+   "pl": null
+  },
+  "Herrschaft": {
+   "ru": "حكم، سلطة",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Herrschaften"
+  },
+  "Jude": {
+   "ru": "يهودي",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Juden"
+  },
+  "Kaiser": {
+   "ru": "الإمبراطور",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Kaiser"
+  },
+  "Kaufmann": {
+   "ru": "تاجر",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Kaufleute",
+   "note": "الجمع die Kaufleute، لا Kaufmänner"
+  },
+  "Kirche": {
+   "ru": "كنيسة",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Kirchen"
+  },
+  "Land (земля)": {
+   "ru": "ولاية (اتحادية)؛ بلد",
+   "pos": "اسم",
+   "art": "das",
+   "pl": "die Länder",
+   "note": "Bundesland — ولاية اتحادية؛ in anderen Ländern — في ولايات أخرى"
+  },
+  "Landwirtschaft": {
+   "ru": "الزراعة",
+   "pos": "اسم",
+   "art": "die",
+   "pl": null
+  },
+  "Markt": {
+   "ru": "سوق",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Märkte"
+  },
+  "Mensch": {
+   "ru": "إنسان",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Menschen",
+   "decl": "n-Deklination: des Menschen · dem/den Menschen"
+  },
+  "Nationalstaat": {
+   "ru": "دولة قومية",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Nationalstaaten"
+  },
+  "Otto": {
+   "ru": "Otto (Otto Group — مجموعة تجارية)",
+   "pos": "اسم علم"
+  },
+  "Pogrom": {
+   "ru": "مذبحة تستهدف جماعة",
+   "pos": "اسم",
+   "art": "das",
+   "pl": "die Pogrome"
+  },
+  "Reich": {
+   "pos": "اسم",
+   "ru": "إمبراطورية؛ دولة",
+   "art": "das",
+   "pl": "die Reiche"
+  },
+  "Rom": {
+   "ru": "روما",
+   "pos": "جغرافيا"
+  },
+  "Sprache": {
+   "art": "die",
+   "pl": "die Sprachen",
+   "pos": "اسم",
+   "ru": "لغة، كلام"
+  },
+  "Stadt": {
+   "ru": "مدينة",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Städte"
+  },
+  "Vorstellung": {
+   "ru": "عرض (مشهد)",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Vorstellungen"
+  },
+  "Ware": {
+   "pos": "اسم",
+   "ru": "بضاعة",
+   "art": "die",
+   "pl": "die Waren"
+  },
+  "abhängig": {
+   "ru": "تابع، معتمد على غيره",
+   "pos": "صفة"
+  },
+  "als": {
+   "ru": "عندما؛ كـ؛ من (في المقارنة)",
+   "pos": "أداة ربط"
+  },
+  "arbeiten": {
+   "ru": "يعمل",
+   "pos": "فعل",
+   "forms": "arbeitete · hat gearbeitet"
+  },
+  "auch": {
+   "ru": "أيضًا؛ حتى",
+   "pos": "أداة"
+  },
+  "auf": {
+   "ru": "على، في",
+   "pos": "حرف جر",
+   "note": "وهي أيضًا سابقة منفصلة: aufspringen «يقفز واقفًا»، sich aufmachen"
+  },
+  "ausgrenzen": {
+   "ru": "يقصي، يميز ضد",
+   "pos": "فعل",
+   "forms": "grenzt aus · grenzte aus · hat ausgegrenzt"
+  },
+  "bei": {
+   "ru": "عند، لدى، قرب",
+   "pos": "حرف جر"
+  },
+  "christlich": {
+   "ru": "مسيحي",
+   "pos": "صفة"
+  },
+  "der/die/das": {
+   "ru": "أداة التعريف",
+   "pos": "أداة تعريف",
+   "note": "وهي أيضًا اسم موصول بمعنى «الذي»"
+  },
+  "deutsch": {
+   "ru": "الألمانية",
+   "pos": "صفة"
+  },
+  "dieser": {
+   "ru": "هذا، هذه",
+   "pos": "ضمير"
+  },
+  "doch": {
+   "ru": "ومع ذلك؛ إذن",
+   "pos": "أداة"
+  },
+  "ermorden": {
+   "ru": "يقتل",
+   "pos": "فعل",
+   "forms": "ermordet · ermordete · hat ermordet"
+  },
+  "es": {
+   "ru": "هو (للمحايد)؛ هذا",
+   "pos": "ضمير"
+  },
+  "gehören": {
+   "pos": "فعل",
+   "ru": "ينتمي؛ يكون جزءًا من",
+   "forms": "gehört · gehörte · hat gehört"
+  },
+  "gelten": {
+   "ru": "يُعَدّ؛ يكون ساريًا",
+   "pos": "فعل",
+   "forms": "galt · hat gegolten",
+   "note": "als … gelten — يُعَدّ كذا"
+  },
+  "heilig": {
+   "ru": "مقدّس",
+   "pos": "صفة",
+   "note": "an heiliger Stätte — في المكان المقدّس"
+  },
+  "i (буква)": {
+   "ru": "حرف i",
+   "pos": "اسم",
+   "art": "das",
+   "pl": "die i"
+  },
+  "in": {
+   "ru": "في (im = in dem، ins = in das)",
+   "pos": "حرف جر"
+  },
+  "jüdisch": {
+   "ru": "يهودي",
+   "pos": "صفة"
+  },
+  "kein": {
+   "ru": "لا أيّ، ولا واحد",
+   "pos": "ضمير"
+  },
+  "krönen": {
+   "ru": "يتوّج",
+   "pos": "فعل",
+   "forms": "krönte · hat gekrönt",
+   "note": "sich krönen — يتوّج نفسه"
+  },
+  "leben": {
+   "ru": "يسكن",
+   "pos": "فعل",
+   "forms": "lebte · hat gelebt"
+  },
+  "machen": {
+   "ru": "يفعل",
+   "pos": "فعل",
+   "forms": "machte · hat gemacht",
+   "note": "sich auf den Weg machen — ينطلق في طريقه"
+  },
+  "meist (больше всех)": {
+   "ru": "الأكثر",
+   "pos": "ظرف",
+   "note": "am meisten — أكثر من الجميع"
+  },
+  "mit": {
+   "ru": "ث",
+   "pos": "حرف جر",
+   "note": "وهي أيضًا سابقة منفصلة: mitgehen «يذهب معه»"
+  },
+  "mittelalterlich": {
+   "ru": "من العصور الوسطى",
+   "pos": "صفة"
+  },
+  "prägen": {
+   "ru": "يشكّل الطابع، يطبع",
+   "pos": "فعل",
+   "forms": "prägte · hat geprägt"
+  },
+  "römisch": {
+   "pos": "صفة",
+   "ru": "روماني"
+  },
+  "sein": {
+   "ru": "يكون",
+   "pos": "فعل",
+   "forms": "war · ist gewesen",
+   "note": "Konjunktiv I: er sei، du seiest. والصيغة نفسها waren هي أيضًا جمع die Waren «بضائع»: allerhand Waren"
+  },
+  "sein (его, свой)": {
+   "ru": "ـه (ضمير الملكية)، خاصّته",
+   "pos": "ضمير"
+  },
+  "sich": {
+   "ru": "نفسه، لنفسه",
+   "pos": "ضمير",
+   "note": "ضمير انعكاسي، جزء من الفعل الانعكاسي: sich auf den Weg machen، sich setzen، sich legen، sich nähern، sich gefallen lassen، sich getrauen، sich umsehen"
+  },
+  "sogenannt": {
+   "ru": "ما يُسمّى",
+   "pos": "صفة"
+  },
+  "später": {
+   "ru": "لاحقًا، فيما بعد",
+   "pos": "ظرف"
+  },
+  "teilen": {
+   "ru": "يقسم",
+   "pos": "فعل",
+   "forms": "teilte · hat geteilt"
+  },
+  "umfassen": {
+   "ru": "يشمل",
+   "pos": "فعل",
+   "forms": "umfasst · umfasste · hat umfasst"
+  },
+  "und": {
+   "ru": "و",
+   "pos": "أداة ربط"
+  },
+  "verbinden": {
+   "ru": "يضمّد (جرحًا)؛ يربط",
+   "pos": "فعل",
+   "forms": "verband · hat verbunden",
+   "note": "sich verbinden lassen — يدع جرحه يُضمَّد"
+  },
+  "vertreiben": {
+   "ru": "يطرد",
+   "pos": "فعل",
+   "forms": "vertrieb · hat vertrieben"
+  },
+  "viel": {
+   "ru": "كثير، الكثير",
+   "pos": "ضمير"
+  },
+  "von": {
+   "ru": "من، عن (vom = von dem)",
+   "pos": "حرف جر"
+  },
+  "wachsen": {
+   "ru": "ينمو",
+   "pos": "فعل",
+   "forms": "wuchs · ist gewachsen",
+   "note": "er wächst — مع Umlaut في المفرد للمخاطب والغائب"
+  },
+  "weit (обширный)": {
+   "ru": "واسع، ممتد",
+   "pos": "صفة"
+  },
+  "werden": {
+   "ru": "يصبح",
+   "pos": "فعل",
+   "forms": "wurde · ist geworden",
+   "note": "فعل مساعد للمستقبل والمبني للمجهول"
+  },
+  "wichtig": {
+   "ru": "مهم",
+   "pos": "صفة"
+  },
+  "wiederholt": {
+   "ru": "مرارًا",
+   "pos": "ظرف"
+  },
+  "zu": {
+   "ru": "إلى، في؛ أكثر من اللازم",
+   "pos": "حرف جر",
+   "note": "zur = zu der, zum = zu dem"
+  },
+  "zugleich": {
+   "ru": "في الوقت نفسه",
+   "pos": "ظرف"
+  },
+  "über": {
+   "ru": "فوق، عبر، عن",
+   "pos": "حرف جر"
+  }
+ }
+}

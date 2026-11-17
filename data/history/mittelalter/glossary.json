@@ -1,0 +1,503 @@
+{
+  "version": 1,
+  "w": {
+    "abhängig": "abhängig",
+    "alltag": "Alltag",
+    "als": "als",
+    "anfang": "Anfang",
+    "arbeiteten": "arbeiten",
+    "auch": "auch",
+    "auf": "auf",
+    "ausgegrenzt": "ausgrenzen",
+    "bauern": "Bauer",
+    "bei": "bei",
+    "bildung": "Bildung",
+    "bischöfe": "Bischof",
+    "christliche": "christlich",
+    "dem": "der/die/das",
+    "den": "der/die/das",
+    "der": "der/die/das",
+    "des": "der/die/das",
+    "deutscher": "deutsch",
+    "die": "der/die/das",
+    "dieses": "dieser",
+    "doch": "doch",
+    "ermordet": "ermorden",
+    "es": "es",
+    "fürsten": "Fürst",
+    "gebiete": "Gebiet",
+    "gehörten": "gehören",
+    "gekrönt": "krönen",
+    "gemeinden": "Gemeinde",
+    "gilt": "gelten",
+    "grundherren": "Grundherr",
+    "handelswege": "Handelsweg",
+    "handwerksbetrieben": "Handwerksbetrieb",
+    "hanse": "Hanse",
+    "heiligen": "heilig",
+    "herrschaft": "Herrschaft",
+    "i": "i (буква)",
+    "in": "in",
+    "juden": "Jude",
+    "jüdische": "jüdisch",
+    "kaiser": "Kaiser",
+    "kaufleute": "Kaufmann",
+    "kein": "kein",
+    "kirche": "Kirche",
+    "land": "Land (земля)",
+    "landwirtschaft": "Landwirtschaft",
+    "leben": "leben",
+    "lebten": "leben",
+    "macht": "machen",
+    "meisten": "meist (больше всех)",
+    "menschen": "Mensch",
+    "mit": "mit",
+    "mittelalterlichen": "mittelalterlich",
+    "märkten": "Markt",
+    "nationalstaat": "Nationalstaat",
+    "otto": "Otto",
+    "pogromen": "Pogrom",
+    "prägte": "prägen",
+    "reich": "Reich",
+    "reiches": "Reich",
+    "rom": "Rom",
+    "römischen": "römisch",
+    "seine": "sein (его, свой)",
+    "sich": "sich",
+    "sogenannten": "sogenannt",
+    "sprachen": "Sprache",
+    "später": "später",
+    "städte": "Stadt",
+    "teilten": "teilen",
+    "umfasste": "umfassen",
+    "und": "und",
+    "verbanden": "verbinden",
+    "vertrieben": "vertreiben",
+    "viele": "viel",
+    "von": "von",
+    "vorstellungen": "Vorstellung",
+    "war": "sein",
+    "waren": "Ware",
+    "weite": "weit (обширный)",
+    "wichtiger": "wichtig",
+    "wiederholt": "wiederholt",
+    "wuchsen": "wachsen",
+    "wurde": "werden",
+    "wurden": "werden",
+    "zugleich": "zugleich",
+    "zum": "zu",
+    "über": "über"
+  },
+  "l": {
+    "Alltag": {
+      "ru": "будни, повседневная жизнь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null,
+      "note": "im Alltag — в быту"
+    },
+    "Anfang": {
+      "ru": "начало",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Anfänge",
+      "note": "Anfang der Woche — в начале недели"
+    },
+    "Bauer": {
+      "ru": "крестьянин",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Bauern",
+      "decl": "n-Deklination: der Bauer / des Bauern / dem Bauern / den Bauern"
+    },
+    "Bildung": {
+      "ru": "образование (создание); образование (учёба)",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Bildungen"
+    },
+    "Bischof": {
+      "ru": "епископ",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Bischöfe"
+    },
+    "Fürst": {
+      "ru": "князь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Fürsten"
+    },
+    "Gebiet": {
+      "pos": "сущ.",
+      "ru": "территория, область",
+      "art": "das",
+      "pl": "die Gebiete"
+    },
+    "Gemeinde": {
+      "ru": "община, сельский мир",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Gemeinden"
+    },
+    "Grundherr": {
+      "ru": "феодальный землевладелец",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Grundherren"
+    },
+    "Handelsweg": {
+      "ru": "торговый путь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Handelswege"
+    },
+    "Handwerksbetrieb": {
+      "ru": "ремесленное предприятие",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Handwerksbetriebe"
+    },
+    "Hanse": {
+      "ru": "Ганза (торговый союз городов)",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "Herrschaft": {
+      "ru": "правление, власть",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Herrschaften"
+    },
+    "Jude": {
+      "ru": "еврей",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Juden"
+    },
+    "Kaiser": {
+      "ru": "император",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Kaiser"
+    },
+    "Kaufmann": {
+      "ru": "купец",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Kaufleute",
+      "note": "мн. ч. die Kaufleute, НЕ Kaufmänner"
+    },
+    "Kirche": {
+      "ru": "церковь",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Kirchen"
+    },
+    "Land (земля)": {
+      "ru": "земля (федеральная); страна",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Länder",
+      "note": "Bundesland — федеральная земля; in anderen Ländern — в других землях"
+    },
+    "Landwirtschaft": {
+      "ru": "сельское хозяйство",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "Markt": {
+      "ru": "рынок",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Märkte"
+    },
+    "Mensch": {
+      "ru": "человек",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Menschen",
+      "decl": "n-Deklination: des Menschen · dem/den Menschen"
+    },
+    "Nationalstaat": {
+      "ru": "национальное государство",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Nationalstaaten"
+    },
+    "Otto": {
+      "ru": "Otto (Otto Group — торговый концерн)",
+      "pos": "имя собств."
+    },
+    "Pogrom": {
+      "ru": "погром",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Pogrome"
+    },
+    "Reich": {
+      "pos": "сущ.",
+      "ru": "империя; государство",
+      "art": "das",
+      "pl": "die Reiche"
+    },
+    "Rom": {
+      "ru": "Рим",
+      "pos": "геогр."
+    },
+    "Sprache": {
+      "art": "die",
+      "pl": "die Sprachen",
+      "pos": "сущ.",
+      "ru": "язык, речь"
+    },
+    "Stadt": {
+      "ru": "город",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Städte"
+    },
+    "Vorstellung": {
+      "ru": "представление (зрелище)",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Vorstellungen"
+    },
+    "Ware": {
+      "pos": "сущ.",
+      "ru": "товар",
+      "art": "die",
+      "pl": "die Waren"
+    },
+    "abhängig": {
+      "ru": "зависимый",
+      "pos": "прил."
+    },
+    "als": {
+      "ru": "когда; как; чем",
+      "pos": "союз"
+    },
+    "arbeiten": {
+      "ru": "работать",
+      "pos": "гл.",
+      "forms": "arbeitete · hat gearbeitet"
+    },
+    "auch": {
+      "ru": "тоже, также; даже",
+      "pos": "частица"
+    },
+    "auf": {
+      "ru": "на, в",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: aufspringen «вскочить», sich aufmachen"
+    },
+    "ausgrenzen": {
+      "ru": "исключать, подвергать дискриминации",
+      "pos": "гл.",
+      "forms": "grenzt aus · grenzte aus · hat ausgegrenzt"
+    },
+    "bei": {
+      "ru": "у, при, возле",
+      "pos": "предл."
+    },
+    "christlich": {
+      "ru": "христианский",
+      "pos": "прил."
+    },
+    "der/die/das": {
+      "ru": "определённый артикль",
+      "pos": "артикль",
+      "note": "Тж. относительное местоимение «который»"
+    },
+    "deutsch": {
+      "ru": "немецкий",
+      "pos": "прил."
+    },
+    "dieser": {
+      "ru": "этот, эта, это",
+      "pos": "мест."
+    },
+    "doch": {
+      "ru": "всё же, всё-таки; ведь",
+      "pos": "частица"
+    },
+    "ermorden": {
+      "ru": "убивать",
+      "pos": "гл.",
+      "forms": "ermordet · ermordete · hat ermordet"
+    },
+    "es": {
+      "ru": "оно; это",
+      "pos": "мест."
+    },
+    "gehören": {
+      "pos": "гл.",
+      "ru": "принадлежать; входить в состав",
+      "forms": "gehört · gehörte · hat gehört"
+    },
+    "gelten": {
+      "ru": "считаться; быть действительным",
+      "pos": "гл.",
+      "forms": "galt · hat gegolten",
+      "note": "als … gelten — считаться кем-то"
+    },
+    "heilig": {
+      "ru": "святой",
+      "pos": "прил.",
+      "note": "an heiliger Stätte — в святом месте"
+    },
+    "i (буква)": {
+      "ru": "буква i",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die i"
+    },
+    "in": {
+      "ru": "в (im = in dem, ins = in das)",
+      "pos": "предл."
+    },
+    "jüdisch": {
+      "ru": "еврейский",
+      "pos": "прил."
+    },
+    "kein": {
+      "ru": "никакой, ни один",
+      "pos": "мест."
+    },
+    "krönen": {
+      "ru": "короновать",
+      "pos": "гл.",
+      "forms": "krönte · hat gekrönt",
+      "note": "sich krönen — короноваться"
+    },
+    "leben": {
+      "ru": "жить",
+      "pos": "гл.",
+      "forms": "lebte · hat gelebt"
+    },
+    "machen": {
+      "ru": "делать",
+      "pos": "гл.",
+      "forms": "machte · hat gemacht",
+      "note": "sich auf den Weg machen — отправиться в путь"
+    },
+    "meist (больше всех)": {
+      "ru": "больше всего",
+      "pos": "нареч.",
+      "note": "am meisten — больше всех"
+    },
+    "mit": {
+      "ru": "с",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: mitgehen «пойти вместе»"
+    },
+    "mittelalterlich": {
+      "ru": "средневековый",
+      "pos": "прил."
+    },
+    "prägen": {
+      "ru": "определять облик, формировать",
+      "pos": "гл.",
+      "forms": "prägte · hat geprägt"
+    },
+    "römisch": {
+      "pos": "прил.",
+      "ru": "римский"
+    },
+    "sein": {
+      "ru": "быть",
+      "pos": "гл.",
+      "forms": "war · ist gewesen",
+      "note": "Konjunktiv I: er sei, du seiest. Та же форма waren — и мн. ч. die Waren «товары»: allerhand Waren"
+    },
+    "sein (его, свой)": {
+      "ru": "его, свой",
+      "pos": "мест."
+    },
+    "sich": {
+      "ru": "себя, себе",
+      "pos": "мест.",
+      "note": "Возвратное местоимение, часть возвратного глагола: sich auf den Weg machen, sich setzen, sich legen, sich nähern, sich gefallen lassen, sich getrauen, sich umsehen"
+    },
+    "sogenannt": {
+      "ru": "так называемый",
+      "pos": "прил."
+    },
+    "später": {
+      "ru": "позже, потом",
+      "pos": "нареч."
+    },
+    "teilen": {
+      "ru": "делить",
+      "pos": "гл.",
+      "forms": "teilte · hat geteilt"
+    },
+    "umfassen": {
+      "ru": "охватывать, включать",
+      "pos": "гл.",
+      "forms": "umfasst · umfasste · hat umfasst"
+    },
+    "und": {
+      "ru": "и, а",
+      "pos": "союз"
+    },
+    "verbinden": {
+      "ru": "перевязывать (рану); соединять",
+      "pos": "гл.",
+      "forms": "verband · hat verbunden",
+      "note": "sich verbinden lassen — дать себя перевязать"
+    },
+    "vertreiben": {
+      "ru": "изгонять",
+      "pos": "гл.",
+      "forms": "vertrieb · hat vertrieben"
+    },
+    "viel": {
+      "ru": "много, многое",
+      "pos": "мест."
+    },
+    "von": {
+      "ru": "от, из, о (vom = von dem)",
+      "pos": "предл."
+    },
+    "wachsen": {
+      "ru": "расти",
+      "pos": "гл.",
+      "forms": "wuchs · ist gewachsen",
+      "note": "er wächst — с умлаутом в 2-м и 3-м л."
+    },
+    "weit (обширный)": {
+      "ru": "обширный, широкий",
+      "pos": "прил."
+    },
+    "werden": {
+      "ru": "становиться",
+      "pos": "гл.",
+      "forms": "wurde · ist geworden",
+      "note": "Вспомогательный глагол будущего времени и пассива"
+    },
+    "wichtig": {
+      "ru": "важный",
+      "pos": "прил."
+    },
+    "wiederholt": {
+      "ru": "неоднократно",
+      "pos": "нареч."
+    },
+    "zu": {
+      "ru": "к, в; слишком",
+      "pos": "предл.",
+      "note": "zur = zu der, zum = zu dem"
+    },
+    "zugleich": {
+      "ru": "одновременно, заодно",
+      "pos": "нареч."
+    },
+    "über": {
+      "ru": "над, через, о",
+      "pos": "предл."
+    }
+  }
+}

@@ -38,7 +38,7 @@
    "titleRu": "العصور الوسطى والإمبراطورية الرومانية المقدسة",
    "period": "القرون العاشر–الخامس عشر",
    "summary": "الأباطرة والأمراء والمدن والرابطة الهانزية والحياة اليومية.",
-   "ready": false
+   "ready": true
   },
   {
    "id": "reformation",
@@ -180,6 +180,24 @@
    "number": 2,
    "source": "Badisches Landesmuseum / Deutsche Biographie / Universitätsbibliothek Heidelberg",
    "sourceUrl": "https://www.landesmuseum.de/archaeologie-in-baden/aib-screen-11",
+   "checked": "2026-11-17",
+   "license": "صياغة تعليمية أعدّها German Morning؛ روابط المواد مذكورة في الفصل."
+  },
+  {
+   "id": "mittelalter",
+   "kind": "history",
+   "title": "Mittelalter und Heiliges Römisches Reich",
+   "titleRu": "العصور الوسطى والإمبراطورية الرومانية المقدسة",
+   "author": "German Morning",
+   "level": "B1",
+   "year": "2026",
+   "chapters": 1,
+   "words": 103,
+   "minutes": 3,
+   "cover": "3",
+   "number": 3,
+   "source": "Deutsches Historisches Museum / Stadt Magdeburg / Europäisches Hansemuseum / bpb",
+   "sourceUrl": "https://www.dhm.de/publikation/heiliges-roemisches-reich-deutscher-nation-962-1806/",
    "checked": "2026-11-17",
    "license": "صياغة تعليمية أعدّها German Morning؛ روابط المواد مذكورة في الفصل."
   }

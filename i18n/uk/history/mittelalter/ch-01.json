@@ -1,0 +1,123 @@
+{
+ "id": "ch-01",
+ "title": "Mittelalter und Heiliges Römisches Reich",
+ "titleRu": "Середньовіччя та Священна Римська імперія",
+ "icon": "3",
+ "paragraphs": [
+  {
+   "sourceIds": [
+    "otto",
+    "reich"
+   ],
+   "s": [
+    {
+     "de": "962 wurde Otto I. in Rom zum Kaiser gekrönt.",
+     "ru": "У 962 році Оттона I коронували в Римі імператором."
+    },
+    {
+     "de": "Seine Herrschaft gilt als wichtiger Anfang des später sogenannten Heiligen Römischen Reiches.",
+     "ru": "Його правління вважають важливим етапом початку держави, пізніше названої Священною Римською імперією."
+    },
+    {
+     "de": "Dieses Reich umfasste viele Gebiete und Sprachen; es war kein deutscher Nationalstaat.",
+     "ru": "Ця імперія охоплювала багато територій і мов; вона не була німецькою національною державою."
+    },
+    {
+     "de": "Kaiser, Fürsten und Bischöfe teilten sich die Macht.",
+     "ru": "Імператор, князі та єпископи ділили владу."
+    }
+   ]
+  },
+  {
+   "sourceIds": [
+    "alltag"
+   ],
+   "s": [
+    {
+     "de": "Die meisten Menschen lebten auf dem Land und arbeiteten in der Landwirtschaft.",
+     "ru": "Більшість людей жили в сільській місцевості й займалися сільським господарством."
+    },
+    {
+     "de": "Viele Bauern waren von Grundherren abhängig.",
+     "ru": "Багато селян залежали від землевласників."
+    },
+    {
+     "de": "Die christliche Kirche prägte den Alltag, die Bildung und die Vorstellungen der Menschen.",
+     "ru": "Християнська церква визначала повсякденне життя, освіту й уявлення людей."
+    }
+   ]
+  },
+  {
+   "fig": {
+    "src": "data/laender/bremen/img/roland.jpg",
+    "w": 1200,
+    "h": 800,
+    "credit": "Dietmar Rabich / Wikimedia Commons",
+    "creditUrl": "https://commons.wikimedia.org/wiki/User:XRay",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "cap": "Бременський Роланд 1404 року — пам’ятник міським правам. Сучасна фотографія Dietmar Rabich."
+   }
+  },
+  {
+   "sourceIds": [
+    "hanse",
+    "alltag"
+   ],
+   "s": [
+    {
+     "de": "Zugleich wuchsen Städte mit Märkten und Handwerksbetrieben.",
+     "ru": "Водночас зростали міста з ринками й ремісничими майстернями."
+    },
+    {
+     "de": "Kaufleute der Hanse verbanden Städte über weite Handelswege.",
+     "ru": "Ганзейські купці пов’язували міста далекими торговельними шляхами."
+    }
+   ]
+  },
+  {
+   "sourceIds": [
+    "juedisch"
+   ],
+   "s": [
+    {
+     "de": "Auch jüdische Gemeinden gehörten zum mittelalterlichen Leben.",
+     "ru": "Єврейські громади також були частиною середньовічного життя."
+    },
+    {
+     "de": "Doch Juden wurden wiederholt ausgegrenzt, vertrieben und bei Pogromen ermordet.",
+     "ru": "Проте євреїв неодноразово дискримінували, виганяли й убивали під час погромів."
+    }
+   ]
+  }
+ ],
+ "sourceTitle": "Джерела та перевірка фактів",
+ "sources": [
+  {
+   "id": "reich",
+   "name": "Deutsches Historisches Museum · Heiliges Römisches Reich",
+   "url": "https://www.dhm.de/publikation/heiliges-roemisches-reich-deutscher-nation-962-1806/"
+  },
+  {
+   "id": "otto",
+   "name": "Stadt Magdeburg · Otto und die Kaiserkrönung",
+   "url": "https://www.magdeburg.de/B%C3%BCrger-Stadt/Stadt/Geschichte/index.php?La=&NavID=37.446&oNavID=37.446&object=tx%2C698.42610.1"
+  },
+  {
+   "id": "alltag",
+   "name": "Deutsches Historisches Museum · Mittelalter im Lernportal IDA",
+   "url": "https://www.dhm.de/bildung/ida"
+  },
+  {
+   "id": "hanse",
+   "name": "Europäisches Hansemuseum · Die Hanse",
+   "url": "https://www.hansemuseum.eu/ausstellung/dauerausstellung-die-hanse/"
+  },
+  {
+   "id": "juedisch",
+   "name": "bpb · Jüdisches Leben im Mittelalter",
+   "url": "https://www.bpb.de/shop/zeitschriften/izpb/juedisches-leben-in-deutschland-304/7653/10-bis-14-jahrhundert-bedrohte-bluetezeit/"
+  }
+ ],
+ "checked": "2026-11-17"
+}
