@@ -348,6 +348,7 @@ def main():
     ap.add_argument('book_id', nargs='?', help='проверить только одну книгу')
     ap.add_argument('--news', action='store_true', help='проверить статьи data/news')
     ap.add_argument('--laender', action='store_true', help='проверить тексты земель data/laender')
+    ap.add_argument('--history', action='store_true', help='check the history pilot')
     args = ap.parse_args()
 
     list_key, fields = 'books', INDEX_FIELDS
@@ -357,6 +358,10 @@ def main():
     if args.laender:
         BOOKS_DIR = os.path.join(BASE, 'data', 'laender')
         list_key, fields = 'items', LAND_INDEX_FIELDS
+
+    if args.history:
+        BOOKS_DIR = os.path.join(BASE, 'data', 'history')
+        list_key, fields = 'items', INDEX_FIELDS
 
     index, ok = load_json(os.path.join(BOOKS_DIR, 'index.json'), 'books/index.json')
     entries = {}
@@ -393,7 +398,7 @@ def main():
         if os.path.isdir(BOOKS_DIR):
             for name in sorted(os.listdir(BOOKS_DIR)):
                 # у земель рядом с текстами лежат flags/ и фото <земля>/img — это не книги
-                if args.laender and not os.path.isfile(os.path.join(BOOKS_DIR, name, 'meta.json')):
+                if (args.laender or args.history) and not os.path.isfile(os.path.join(BOOKS_DIR, name, 'meta.json')):
                     continue
                 if os.path.isdir(os.path.join(BOOKS_DIR, name)) and name not in entries:
                     err('data/books/%s: папка книги не перечислена в index.json' % name)

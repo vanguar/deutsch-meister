@@ -1,0 +1,183 @@
+{
+  "version": 1,
+  "titleRu": "Краткая история Германии",
+  "teaserRu": "От античности до наших дней · B1",
+  "ui": {
+    "ready": "Можно читать",
+    "soon": "В работе",
+    "read": "Прочитано",
+    "open": "Читать главу",
+    "contents": "Оглавление",
+    "level": "Уровень B1",
+    "error": "Не удалось загрузить оглавление.",
+    "retry": "Повторить",
+    "counter": "Готово глав",
+    "sources": "Источники первой главы",
+    "checked": "Факты сверены 17 ноября 2026 года."
+  },
+  "chapters": [
+    {
+      "id": "romer-und-germanen",
+      "title": "Römer und Germanen",
+      "titleRu": "Римляне и германцы",
+      "period": "I век до н. э. — V век н. э.",
+      "summary": "Римские поселения, разные сообщества и жизнь на границе.",
+      "ready": true
+    },
+    {
+      "id": "frankenreich",
+      "title": "Völkerwanderung und Frankenreich",
+      "titleRu": "Переселение народов и Франкское государство",
+      "period": "IV–IX века",
+      "summary": "Новые королевства, христианство и Карл Великий.",
+      "ready": false
+    },
+    {
+      "id": "mittelalter",
+      "title": "Mittelalter und Heiliges Römisches Reich",
+      "titleRu": "Средневековье и Священная Римская империя",
+      "period": "X–XV века",
+      "summary": "Императоры и князья, города, Ганза и повседневная жизнь.",
+      "ready": false
+    },
+    {
+      "id": "reformation",
+      "title": "Reformation und Dreißigjähriger Krieg",
+      "titleRu": "Реформация и Тридцатилетняя война",
+      "period": "1517–1648",
+      "summary": "Лютер, религиозный раскол и Вестфальский мир.",
+      "ready": false
+    },
+    {
+      "id": "preussen-aufklaerung",
+      "title": "Fürstenstaaten, Preußen und Aufklärung",
+      "titleRu": "Княжества, Пруссия и Просвещение",
+      "period": "1648–1789",
+      "summary": "Множество государств, усиление Пруссии и новые идеи.",
+      "ready": false
+    },
+    {
+      "id": "napoleon",
+      "title": "Napoleon und das Ende des Alten Reiches",
+      "titleRu": "Наполеон и конец старой империи",
+      "period": "1789–1815",
+      "summary": "Французская революция, реформы и перемены на карте Европы.",
+      "ready": false
+    },
+    {
+      "id": "revolution-industrialisierung",
+      "title": "Deutscher Bund, Revolution und Industrialisierung",
+      "titleRu": "Германский союз, революция и индустриализация",
+      "period": "1815–1871",
+      "summary": "Борьба за права и единство, фабрики и социальный вопрос.",
+      "ready": false
+    },
+    {
+      "id": "kaiserreich",
+      "title": "Kaiserreich und Kolonialismus",
+      "titleRu": "Германская империя и колониализм",
+      "period": "1871–1914",
+      "summary": "Объединение страны, общество империи и колониальное насилие.",
+      "ready": false
+    },
+    {
+      "id": "erster-weltkrieg",
+      "title": "Erster Weltkrieg und Ende der Monarchie",
+      "titleRu": "Первая мировая война и конец монархии",
+      "period": "1914–1918",
+      "summary": "Причины войны, жизнь во время войны и революция 1918 года.",
+      "ready": false
+    },
+    {
+      "id": "weimar",
+      "title": "Die Weimarer Republik",
+      "titleRu": "Веймарская республика",
+      "period": "1918–1933",
+      "summary": "Первая немецкая демократия, её достижения и кризисы.",
+      "ready": false
+    },
+    {
+      "id": "nationalsozialismus",
+      "title": "NS-Diktatur, Zweiter Weltkrieg und Holocaust",
+      "titleRu": "Нацистская диктатура, Вторая мировая война и Холокост",
+      "period": "1933–1945",
+      "summary": "Уничтожение демократии, преследования, война и геноцид.",
+      "ready": false
+    },
+    {
+      "id": "geteiltes-deutschland",
+      "title": "Nachkriegszeit, Bundesrepublik und DDR",
+      "titleRu": "Послевоенные годы, ФРГ и ГДР",
+      "period": "1945–1989",
+      "summary": "Последствия войны, два государства и жизнь по обе стороны стены.",
+      "ready": false
+    },
+    {
+      "id": "deutsche-einheit",
+      "title": "Friedliche Revolution und deutsche Einheit",
+      "titleRu": "Мирная революция и объединение Германии",
+      "period": "1989–1990",
+      "summary": "Протесты в ГДР, открытие границы и путь к единству.",
+      "ready": false
+    },
+    {
+      "id": "nach-der-einheit",
+      "title": "Deutschland nach der Einheit",
+      "titleRu": "Германия после объединения",
+      "period": "С 1990 года",
+      "summary": "Общественные перемены, память о прошлом и европейская интеграция.",
+      "ready": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "smb",
+      "name": "Staatliche Museen zu Berlin · учебные материалы «Wer und was waren Germanen?»",
+      "url": "https://www.smb.museum/fileadmin/website/Bildung_Vermittlung/06_Schulen_Kindertageseinrichtungen/Unterrichtsmaterialien_Germanen/201001_SMB-Germanen-Arbeitsbla%E2%95%A0%C3%AAtter_Download_C.pdf"
+    },
+    {
+      "id": "bpb",
+      "name": "bpb · «Meilensteine der deutschen Geschichte», раздел «Römer und Germanen»",
+      "url": "https://www.bpb.de/system/files/dokument_pdf/Meilensteine%20der%20deutschen%20Geschichte_Leseprobe.pdf"
+    },
+    {
+      "id": "aalen",
+      "name": "Limesmuseum Aalen · «Das römische Aalen – Militärbasis am Limes»",
+      "url": "https://www.limesmuseum.de/dauerausstellung/das-roemische-aalen-militaerbasis-am-limes"
+    },
+    {
+      "id": "schule",
+      "name": "Planet Schule (SWR) · «Welche Handelswaren standen bei den Römern hoch im Kurs?»",
+      "url": "https://www.planet-schule.de/schwerpunkt/frage-trifft-antwort/welche-handelswaren-standen-bei-den-roemern-hoch-im-kurs-film-100.html"
+    },
+    {
+      "id": "limes",
+      "name": "Limesmuseum Aalen · «Der Limes – Eine Grenze für Rom»",
+      "url": "https://www.limesmuseum.de/dauerausstellung/der-limes-eine-grenze-fuer-rom"
+    },
+    {
+      "id": "trier",
+      "name": "Stadt Trier · римские памятники и Порта Нигра",
+      "url": "https://www.trier.de/leben-in-trier/stadtportrait/geschichte/weltkulturerbe"
+    }
+  ],
+  "items": [
+    {
+      "id": "romer-und-germanen",
+      "kind": "history",
+      "title": "Römer und Germanen",
+      "titleRu": "Римляне и германцы",
+      "author": "German Morning",
+      "level": "B1",
+      "year": "2026",
+      "chapters": 1,
+      "words": 157,
+      "minutes": 4,
+      "cover": "Ⅰ",
+      "source": "Staatliche Museen zu Berlin, bpb, Limesmuseum Aalen, Planet Schule (SWR)",
+      "sourceUrl": "https://www.smb.museum/fileadmin/website/Bildung_Vermittlung/06_Schulen_Kindertageseinrichtungen/Unterrichtsmaterialien_Germanen/201001_SMB-Germanen-Arbeitsbla%E2%95%A0%C3%AAtter_Download_C.pdf",
+      "checked": "2026-11-17",
+      "license": "Авторская учебная адаптация German Morning; ссылки на материалы — в главе."
+    }
+  ]
+}

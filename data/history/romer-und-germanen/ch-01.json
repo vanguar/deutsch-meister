@@ -1,0 +1,199 @@
+{
+  "id": "ch-01",
+  "title": "Römer und Germanen",
+  "titleRu": "Римляне и германцы",
+  "icon": "Ⅰ",
+  "paragraphs": [
+    {
+      "fig": {
+        "src": "data/history/romer-und-germanen/img/limes.svg",
+        "motion": "data/history/romer-und-germanen/img/limes-motion.svg",
+        "w": 900,
+        "h": 360,
+        "cap": "Лимес: граница и место обмена. Условная иллюстрация.",
+        "credit": "German Morning · не реконструкция конкретного места"
+      }
+    },
+    {
+      "sourceIds": [
+        "bpb"
+      ],
+      "s": [
+        {
+          "de": "Vor etwa 2.000 Jahren gab es Deutschland als Staat noch nicht.",
+          "ru": "Около 2000 лет назад Германии как государства ещё не существовало.",
+          "g": {
+            "0-2": "около 2000 лет назад",
+            "3-4": "существовало",
+            "6-7": "как государство"
+          }
+        },
+        {
+          "de": "Im Süden und Westen des heutigen Deutschlands gehörten große Gebiete zum Römischen Reich.",
+          "ru": "На юге и западе современной Германии обширные территории входили в состав Римской империи.",
+          "g": {
+            "10-12": "в состав Римской империи"
+          }
+        },
+        {
+          "de": "Rund um römische Militärlager entstanden Siedlungen, aus denen später Städte wurden.",
+          "ru": "Вокруг римских военных лагерей возникали поселения, которые позднее становились городами.",
+          "g": {
+            "0-1": "вокруг",
+            "6-7": "из которых"
+          }
+        }
+      ]
+    },
+    {
+      "sourceIds": [
+        "trier"
+      ],
+      "s": [
+        {
+          "de": "Die Porta Nigra in Trier erinnert heute noch an die römische Zeit.",
+          "ru": "Порта Нигра в Трире и сегодня напоминает о римской эпохе.",
+          "g": {
+            "5": "напоминает",
+            "8": "о"
+          }
+        }
+      ]
+    },
+    {
+      "fig": {
+        "src": "data/history/romer-und-germanen/img/porta-nigra.jpg",
+        "w": 1723,
+        "h": 1136,
+        "cap": "Порта Нигра в Трире — сохранившиеся римские городские ворота. Современная фотография.",
+        "credit": "Valeri Koshelev / Wikimedia Commons",
+        "creditUrl": "https://commons.wikimedia.org/wiki/File:Porta_Nigra_in_Trier.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+      }
+    },
+    {
+      "sourceIds": [
+        "smb"
+      ],
+      "s": [
+        {
+          "de": "Römische Autoren nannten viele Gruppen östlich des Rheins und nördlich der Donau „Germanen“.",
+          "ru": "Римские авторы называли многие группы к востоку от Рейна и к северу от Дуная «германцами»."
+        },
+        {
+          "de": "Diese Gruppen bildeten kein einheitliches Volk.",
+          "ru": "Эти группы не составляли единого народа."
+        },
+        {
+          "de": "Sie hatten unterschiedliche Lebensweisen und lebten in verschiedenen Gemeinschaften.",
+          "ru": "У них был разный уклад жизни, и они жили в разных сообществах."
+        }
+      ]
+    },
+    {
+      "sourceIds": [
+        "aalen"
+      ],
+      "s": [
+        {
+          "de": "Im römischen Aalen lebten Menschen aus verschiedenen Regionen zusammen.",
+          "ru": "В римском Аалене вместе жили люди из разных регионов."
+        },
+        {
+          "de": "Soldaten bewachten den Limes von Wachtürmen aus.",
+          "ru": "Солдаты охраняли лимес со сторожевых башен.",
+          "g": {
+            "4-6": "со сторожевых башен"
+          }
+        },
+        {
+          "de": "An bestimmten Stellen gab es Durchgänge für Menschen und Waren.",
+          "ru": "В определённых местах были проходы для людей и товаров.",
+          "g": {
+            "3-4": "существовало"
+          }
+        }
+      ]
+    },
+    {
+      "sourceIds": [
+        "schule"
+      ],
+      "s": [
+        {
+          "de": "Die Grenze bedeutete also nicht nur Trennung.",
+          "ru": "Таким образом, граница означала не только разделение."
+        },
+        {
+          "de": "Die Römer und ihre Nachbarn handelten miteinander.",
+          "ru": "Римляне и их соседи торговали друг с другом."
+        },
+        {
+          "de": "Für die Römer spielten Rohstoffe und Waren aus den benachbarten Gebieten eine wichtige Rolle.",
+          "ru": "Для римлян сырьё и товары из соседних областей играли важную роль.",
+          "g": {
+            "3": "играли",
+            "11-13": "важную роль"
+          }
+        }
+      ]
+    },
+    {
+      "sourceIds": [
+        "limes"
+      ],
+      "s": [
+        {
+          "de": "Zwischen dem Römischen Reich und den germanischen Gruppen gab es auch Konflikte.",
+          "ru": "Между Римской империей и германскими группами происходили и конфликты.",
+          "g": {
+            "8-9": "существовало"
+          }
+        },
+        {
+          "de": "Doch ihre Kontakte veränderten die Gesellschaften.",
+          "ru": "Однако контакты между ними меняли эти общества."
+        },
+        {
+          "de": "Diese frühe Geschichte erzählt deshalb von verschiedenen Gemeinschaften und ihren Beziehungen.",
+          "ru": "Поэтому эта ранняя история рассказывает о разных сообществах и их отношениях."
+        }
+      ]
+    }
+  ],
+  "sourceTitle": "Источники и проверка фактов",
+  "sources": [
+    {
+      "id": "smb",
+      "name": "Staatliche Museen zu Berlin · учебные материалы «Wer und was waren Germanen?»",
+      "url": "https://www.smb.museum/fileadmin/website/Bildung_Vermittlung/06_Schulen_Kindertageseinrichtungen/Unterrichtsmaterialien_Germanen/201001_SMB-Germanen-Arbeitsbla%E2%95%A0%C3%AAtter_Download_C.pdf"
+    },
+    {
+      "id": "bpb",
+      "name": "bpb · «Meilensteine der deutschen Geschichte», раздел «Römer und Germanen»",
+      "url": "https://www.bpb.de/system/files/dokument_pdf/Meilensteine%20der%20deutschen%20Geschichte_Leseprobe.pdf"
+    },
+    {
+      "id": "aalen",
+      "name": "Limesmuseum Aalen · «Das römische Aalen – Militärbasis am Limes»",
+      "url": "https://www.limesmuseum.de/dauerausstellung/das-roemische-aalen-militaerbasis-am-limes"
+    },
+    {
+      "id": "schule",
+      "name": "Planet Schule (SWR) · «Welche Handelswaren standen bei den Römern hoch im Kurs?»",
+      "url": "https://www.planet-schule.de/schwerpunkt/frage-trifft-antwort/welche-handelswaren-standen-bei-den-roemern-hoch-im-kurs-film-100.html"
+    },
+    {
+      "id": "limes",
+      "name": "Limesmuseum Aalen · «Der Limes – Eine Grenze für Rom»",
+      "url": "https://www.limesmuseum.de/dauerausstellung/der-limes-eine-grenze-fuer-rom"
+    },
+    {
+      "id": "trier",
+      "name": "Stadt Trier · римские памятники и Порта Нигра",
+      "url": "https://www.trier.de/leben-in-trier/stadtportrait/geschichte/weltkulturerbe"
+    }
+  ],
+  "checked": "2026-11-17"
+}

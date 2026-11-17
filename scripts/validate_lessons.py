@@ -291,7 +291,8 @@ def check_versions():
                   os.path.join(BASE, 'news.html'),
                   os.path.join(BASE, 'dialogs.html'),
                   os.path.join(BASE, 'fahrschule.html'),
-                  os.path.join(BASE, 'laender.html')]
+                  os.path.join(BASE, 'laender.html'),
+                  os.path.join(BASE, 'history.html')]
     html_files += glob.glob(os.path.join(BASE, 'lessons', '*', '*', 'index.html'))
 
     versions = {}

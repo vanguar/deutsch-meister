@@ -47,7 +47,8 @@ const Reader = (() => {
   // «Земли Германии» (laender.html, data-reader-dir="data/laender/"): текст
   // земли — книга из нескольких глав, адрес #land=<земля>-<b1|b2>
   const IS_LAND   = BOOKS_DIR.indexOf('laender') >= 0;
-  const HASH_KEY  = IS_LAND ? '#land=' : IS_NEWS ? '#news=' : '#book=';
+  const IS_HISTORY = BOOKS_DIR.indexOf('history') >= 0;
+  const HASH_KEY  = IS_HISTORY ? '#history=' : IS_LAND ? '#land=' : IS_NEWS ? '#news=' : '#book=';
   const POS_KEY   = 'dm_book_pos:';
   const GAP_MIN   = 32;    // px, минимальный зазор между колонками-страницами
   const ANIM_MS   = 180;   // длительность листания, синхронно с css
@@ -361,9 +362,15 @@ const Reader = (() => {
     const size = w && h
       ? ` width="${w}" height="${h}" style="--ar:${(w / h).toFixed(4)};aspect-ratio:${w} / ${h}"`
       : '';
+    const motion = fig.motion
+      ? ` data-motion="${esc(fig.motion)}" data-still="${esc(fig.src)}"` : '';
+    const credit = fig.creditUrl && /^https:\/\//.test(fig.creditUrl)
+      ? `<a href="${esc(fig.creditUrl)}" target="_blank" rel="noopener noreferrer">${esc(fig.credit)}</a>` : esc(fig.credit || '');
+    const license = fig.licenseUrl && /^https:\/\//.test(fig.licenseUrl)
+      ? ` · <a href="${esc(fig.licenseUrl)}" target="_blank" rel="noopener noreferrer">${esc(fig.license || '')}</a>` : '';
     return `<figure class="rd-fig${p === 0 ? ' rd-fig--lead' : ''}" data-p="${p}">
-      <img src="${esc(fig.src)}" alt="${esc(fig.cap || '')}"${size} decoding="async">
-      <figcaption>${esc(fig.cap || '')}${fig.credit ? ` <span class="rd-fig-credit">${esc(fig.credit)}</span>` : ''}</figcaption>
+      <img src="${esc(fig.src)}" alt="${esc(fig.cap || '')}"${size}${motion} decoding="async">
+      <figcaption>${esc(fig.cap || '')}${fig.credit ? ` <span class="rd-fig-credit">${credit}${license}</span>` : ''}</figcaption>
     </figure>`;
   }
 
@@ -406,7 +413,9 @@ const Reader = (() => {
       )).join(glue);
       return `<p class="${cls}"${dir}>${inner}</p>`;
     }).join('');
-    return chapterOpening(ch || {}, chapterIndex) + prose;
+    const sources = Array.isArray(ch && ch.sources) ? ch.sources.filter(s => /^https:\/\//.test(s.url || '')) : [];
+    const sourceBlock = sources.length ? `<aside class="rd-chapter-sources"><h2>${esc(ch.sourceTitle || '')}</h2><ul>${sources.map(s => `<li><a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.name)}</a></li>`).join('')}</ul></aside>` : '';
+    return chapterOpening(ch || {}, chapterIndex) + prose + sourceBlock;
   }
 
   // Страховка к расчёту размеров в css: когда фото догрузилось, страницы
@@ -427,6 +436,7 @@ const Reader = (() => {
   function renderChapter(ch) {
     elContent.innerHTML = chapterHtml(ch, st.chIndex);
     watchFigures();
+    document.dispatchEvent(new CustomEvent('dm:reader-render'));
     ImageReveal.show(elContent);
     elContent.lang = st.fullTranslation ? TR_LANG : 'de';
     elContent.classList.toggle('rd-interlinear', st.interlinear && !st.fullTranslation);
@@ -756,7 +766,7 @@ const Reader = (() => {
         st.meta    = meta;
         st.gloss   = gloss;
         st.chTotal = Number(meta.chapters) || 1;
-        if (!IS_NEWS && !IS_LAND && window.Offline) Offline.book(document.getElementById('rdOffline'), id, st.chTotal, meta.title || id);
+        if (!IS_NEWS && !IS_LAND && !IS_HISTORY && window.Offline) Offline.book(document.getElementById('rdOffline'), id, st.chTotal, meta.title || id);
         // Состав панели зависит от КНИГИ (кнопка «в рифму» есть не у всех),
         // а open() успел отрисовать её до загрузки meta.json — обновляем,
         // как только книга известна.
@@ -1685,7 +1695,7 @@ const Reader = (() => {
 
   /* ── Открыть / закрыть ── */
 
-  function open(id) {
+  function open(id, options = {}) {
     if (!elView || !id) return;
 
     // readPos() ниже строит ключ через st.bookId. Раньше id ставился только
@@ -1709,7 +1719,7 @@ const Reader = (() => {
     if (typeof ReaderWords !== 'undefined') ReaderWords.load(id);
 
     try {
-      history.pushState({ view: 'reader', book: id }, '',
+      if (!options.fromHistory) history.pushState({ view: 'reader', book: id }, '',
         HASH_KEY + encodeURIComponent(id));
       st.pushed = true;
     } catch (e) {
@@ -1754,6 +1764,7 @@ const Reader = (() => {
     if (typeof NewsFeed !== 'undefined' && typeof NewsFeed.refresh === 'function') NewsFeed.refresh();
     // Земли — процент прочтения и закрашенная земля на карте
     if (typeof Laender !== 'undefined' && typeof Laender.refresh === 'function') Laender.refresh();
+    if (typeof HistoryCourse !== 'undefined') HistoryCourse.refresh();
   }
 
   /* ── Инициализация ── */
@@ -1829,7 +1840,7 @@ const Reader = (() => {
     });
     updateTranslationControls();
     // A downloaded book must open directly from the saved-materials list.
-    if (!IS_NEWS && !IS_LAND && location.hash.startsWith('#book=')) {
+    if (!IS_NEWS && !IS_LAND && !IS_HISTORY && location.hash.startsWith('#book=')) {
       try {
         const id = decodeURIComponent(location.hash.slice(6));
         if (/^[a-z0-9-]+$/.test(id)) {

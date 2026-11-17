@@ -412,8 +412,28 @@ const Home = (() => {
     });
   }
 
+  // Russian pilot; other language catalogs and layouts stay unchanged.
+  function initHistory() {
+    if (window.I18N && I18N.lang !== 'ru') return;
+    const template = $('historyHomeTemplate');
+    const anchor = $('readLaender');
+    if (!template || !anchor) return;
+    fetch('data/history/index.json', { cache: 'no-cache' }).then(r => {
+      if (!r.ok) throw new Error('History catalog: HTTP ' + r.status);
+      return r.json();
+    }).then(data => {
+      if (!data.titleRu || !data.teaserRu || $('readHistory')) return;
+      const tile = template.content.firstElementChild.cloneNode(true);
+      tile.querySelector('.read-title').textContent = data.titleRu;
+      tile.querySelector('.read-sub').textContent = data.teaserRu;
+      anchor.after(tile);
+      $('readFahrschule')?.classList.remove('is-wide');
+    }).catch(err => console.warn('[History]', err));
+  }
+
   function init() {
     initShare();
+    initHistory();
     document.querySelectorAll('[data-tab-btn]').forEach(b => b.addEventListener('click', () => go(b.dataset.tabBtn)));
     document.querySelectorAll('[data-level-btn]').forEach(b => b.addEventListener('click', () => pickLevel(b.dataset.levelBtn)));
     buildLevelNext();
