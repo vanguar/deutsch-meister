@@ -62,7 +62,7 @@
    "titleRu": "Наполеон і кінець старої імперії",
    "period": "1789–1815",
    "summary": "Французька революція, реформи та зміни на карті Європи.",
-   "ready": false
+   "ready": true
   },
   {
    "id": "revolution-industrialisierung",
@@ -234,6 +234,24 @@
    "number": 5,
    "source": "Brandenburgische Landeszentrale für politische Bildung / Brandenburgische Landeszentrale / bpb / Deutsches Historisches Museum / German History in Documents and Images",
    "sourceUrl": "https://www.politische-bildung-brandenburg.de/lexikon/preussen",
+   "checked": "2026-11-17",
+   "license": "Авторська навчальна адаптація German Morning; посилання на матеріали — у розділі."
+  },
+  {
+   "id": "napoleon",
+   "kind": "history",
+   "title": "Napoleon und das Ende des Alten Reiches",
+   "titleRu": "Наполеон і кінець старої імперії",
+   "author": "German Morning",
+   "level": "B1",
+   "year": "2026",
+   "chapters": 1,
+   "words": 109,
+   "minutes": 3,
+   "cover": "6",
+   "number": 6,
+   "source": "Deutsches Historisches Museum / Deutscher Bundestag / LeMO / Land Berlin",
+   "sourceUrl": "https://www.dhm.de/bildung/ida/revolutionen/1789/",
    "checked": "2026-11-17",
    "license": "Авторська навчальна адаптація German Morning; посилання на матеріали — у розділі."
   }

@@ -1,0 +1,511 @@
+{
+  "version": 1,
+  "w": {
+    "abgaben": "Abgabe",
+    "allem": "alle/alles",
+    "alte": "alt",
+    "armee": "Armee",
+    "auch": "auch",
+    "bedeutete": "bedeuten",
+    "begann": "beginnen",
+    "bei": "bei",
+    "besatzung": "Besatzung",
+    "besiegte": "besiegen",
+    "bildeten": "bilden",
+    "bonaparte": "Bonaparte",
+    "das": "der/die/das",
+    "den": "der/die/das",
+    "der": "der/die/das",
+    "deutsche": "deutsch",
+    "die": "der/die/das",
+    "doch": "doch",
+    "ein": "ein/eine",
+    "eine": "ein/eine",
+    "einfluss": "Einfluss",
+    "endete": "enden",
+    "endgültig": "endgültig",
+    "er": "er",
+    "es": "es",
+    "europa": "Europa (континент)",
+    "folgten": "folgen",
+    "forderungen": "Forderung",
+    "frankreich": "Frankreich",
+    "franzosen": "Franzose",
+    "französische": "französisch",
+    "französischer": "französisch",
+    "freiheit": "Freiheit",
+    "förderte": "fördern",
+    "für": "für",
+    "gegen": "gegen",
+    "gewalt": "Gewalt",
+    "gleichheit": "Gleichheit",
+    "heilige": "heilig",
+    "herrschaft": "Herrschaft",
+    "in": "in",
+    "kaiser": "Kaiser",
+    "koalition": "Koalition",
+    "kongress": "Kongress",
+    "kriege": "Krieg",
+    "landkarte": "Landkarte",
+    "leipzig": "Leipzig",
+    "leitete": "einleiten",
+    "macht": "machen",
+    "mehrere": "mehrere",
+    "mitteleuropas": "Mitteleuropa",
+    "monarchien": "Monarchie",
+    "nach": "nach",
+    "napoleon": "Napoleon",
+    "napoleons": "Napoleon",
+    "neu": {
+      "l": "neu",
+      "old": "в обороте aufs neu — снова; сегодня aufs Neue"
+    },
+    "niederlage": "Niederlage",
+    "ordnete": "anordnen",
+    "ordnung": "Ordnung",
+    "politische": "politisch",
+    "preußen": "Preußen",
+    "recht": "recht",
+    "reformen": "Reform",
+    "reich": "Reich",
+    "revolution": "Revolution",
+    "rheinbund": "Rheinbund",
+    "römische": "römisch",
+    "schutz": "Schutz",
+    "seine": "sein (его, свой)",
+    "seiner": "sein (его, свой)",
+    "sicherte": "sichern",
+    "soldaten": "Soldat",
+    "soziale": "sozial",
+    "später": "später",
+    "staaten": "Staat",
+    "terror": "Terror",
+    "und": "und",
+    "unter": "unter",
+    "verlor": "verlieren",
+    "verwaltung": "Verwaltung",
+    "veränderten": "verändern",
+    "von": "von",
+    "vor": "vor",
+    "waterloo": "Waterloo",
+    "wiener": "Wiener",
+    "wurde": "werden",
+    "wurden": "werden",
+    "zentrale": "zentral",
+    "zugleich": "zugleich",
+    "übernahm": "übernehmen"
+  },
+  "l": {
+    "Abgabe": {
+      "ru": "сбор, взнос",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Abgaben"
+    },
+    "Armee": {
+      "ru": "армия",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Armeen"
+    },
+    "Besatzung": {
+      "ru": "оккупация (в этой главе)",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Besatzungen"
+    },
+    "Bonaparte": {
+      "ru": "Бонапарт",
+      "pos": "имя собств."
+    },
+    "Einfluss": {
+      "ru": "влияние",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Einflüsse"
+    },
+    "Europa (континент)": {
+      "ru": "Европа",
+      "pos": "геогр."
+    },
+    "Forderung": {
+      "ru": "требование",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Forderungen"
+    },
+    "Frankreich": {
+      "ru": "Франция",
+      "pos": "геогр."
+    },
+    "Franzose": {
+      "ru": "француз",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Franzosen",
+      "decl": "слабое склонение: des Franzosen, dem Franzosen"
+    },
+    "Freiheit": {
+      "ru": "свобода",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Freiheiten"
+    },
+    "Gewalt": {
+      "ru": "сила, мощь",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Gewalten"
+    },
+    "Gleichheit": {
+      "ru": "равенство",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "Herrschaft": {
+      "ru": "правление, власть",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Herrschaften"
+    },
+    "Kaiser": {
+      "ru": "император",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Kaiser"
+    },
+    "Koalition": {
+      "ru": "коалиция",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Koalitionen"
+    },
+    "Kongress": {
+      "ru": "конгресс",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Kongresse"
+    },
+    "Krieg": {
+      "ru": "война",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Kriege"
+    },
+    "Landkarte": {
+      "ru": "географическая карта",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Landkarten"
+    },
+    "Leipzig": {
+      "ru": "Лейпциг",
+      "pos": "геогр."
+    },
+    "Mitteleuropa": {
+      "ru": "Центральная Европа",
+      "pos": "геогр."
+    },
+    "Monarchie": {
+      "ru": "монархия",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Monarchien"
+    },
+    "Napoleon": {
+      "ru": "Наполеон",
+      "pos": "имя собств."
+    },
+    "Niederlage": {
+      "ru": "поражение, разгром",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Niederlagen"
+    },
+    "Ordnung": {
+      "ru": "порядок, устройство",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Ordnungen"
+    },
+    "Preußen": {
+      "ru": "Пруссия",
+      "pos": "геогр."
+    },
+    "Reform": {
+      "ru": "реформа",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Reformen"
+    },
+    "Reich": {
+      "pos": "сущ.",
+      "ru": "империя; государство",
+      "art": "das",
+      "pl": "die Reiche"
+    },
+    "Revolution": {
+      "ru": "революция",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Revolutionen",
+      "note": "die Friedliche Revolution — Мирная революция в ГДР 1989 года"
+    },
+    "Rheinbund": {
+      "ru": "Рейнский союз",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "Schutz": {
+      "ru": "защита",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null,
+      "note": "zu seinem Schutz — ради его защиты"
+    },
+    "Soldat": {
+      "pos": "сущ.",
+      "ru": "солдат",
+      "art": "der",
+      "pl": "die Soldaten"
+    },
+    "Staat": {
+      "ru": "государство",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Staaten"
+    },
+    "Terror": {
+      "ru": "террор",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "Verwaltung": {
+      "ru": "администрация, управление",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Verwaltungen"
+    },
+    "Waterloo": {
+      "ru": "Ватерлоо",
+      "pos": "геогр."
+    },
+    "Wiener": {
+      "ru": "венский",
+      "pos": "прил.",
+      "note": "der Wiener Kongress — Венский конгресс 1814–1815"
+    },
+    "alle/alles": {
+      "ru": "все; всё",
+      "pos": "мест."
+    },
+    "alt": {
+      "ru": "старый",
+      "pos": "прил.",
+      "forms": "alt · älter · am ältesten"
+    },
+    "anordnen": {
+      "ru": "распоряжаться",
+      "pos": "гл.",
+      "forms": "ordnete an · hat angeordnet"
+    },
+    "auch": {
+      "ru": "тоже, также; даже",
+      "pos": "частица"
+    },
+    "bedeuten": {
+      "pos": "гл.",
+      "ru": "означать",
+      "forms": "bedeutet · bedeutete · hat bedeutet"
+    },
+    "beginnen": {
+      "ru": "начинать, начинаться",
+      "pos": "гл.",
+      "forms": "begann · hat begonnen"
+    },
+    "bei": {
+      "ru": "у, при, возле",
+      "pos": "предл."
+    },
+    "besiegen": {
+      "ru": "побеждать",
+      "pos": "гл.",
+      "forms": "besiegt · besiegte · hat besiegt"
+    },
+    "bilden": {
+      "pos": "гл.",
+      "ru": "образовывать, составлять",
+      "forms": "bildet · bildete · hat gebildet"
+    },
+    "der/die/das": {
+      "ru": "определённый артикль",
+      "pos": "артикль",
+      "note": "Тж. относительное местоимение «который»"
+    },
+    "deutsch": {
+      "ru": "немецкий",
+      "pos": "прил."
+    },
+    "doch": {
+      "ru": "всё же, всё-таки; ведь",
+      "pos": "частица"
+    },
+    "ein/eine": {
+      "ru": "неопределённый артикль",
+      "pos": "артикль",
+      "note": "einer — «один, некто»"
+    },
+    "einleiten": {
+      "ru": "начинать, приступать к чему-либо",
+      "pos": "гл.",
+      "forms": "leitet ein · leitete ein · hat eingeleitet"
+    },
+    "enden": {
+      "ru": "кончать(ся)",
+      "pos": "гл.",
+      "forms": "endete · hat geendet"
+    },
+    "endgültig": {
+      "ru": "окончательный",
+      "pos": "прил."
+    },
+    "er": {
+      "ru": "он",
+      "pos": "мест.",
+      "note": "ihn — его, ihm — ему"
+    },
+    "es": {
+      "ru": "оно; это",
+      "pos": "мест."
+    },
+    "folgen": {
+      "ru": "следовать",
+      "pos": "гл.",
+      "forms": "folgte · ist gefolgt",
+      "note": "nachfolgen — последовать за"
+    },
+    "französisch": {
+      "ru": "французский",
+      "pos": "прил."
+    },
+    "fördern": {
+      "ru": "поддерживать, содействовать",
+      "pos": "гл.",
+      "forms": "förderte · hat gefördert"
+    },
+    "für": {
+      "ru": "для, за",
+      "pos": "предл."
+    },
+    "gegen": {
+      "ru": "против; около (о времени)",
+      "pos": "предл.",
+      "note": "gegen Mitternacht — около полуночи"
+    },
+    "heilig": {
+      "ru": "святой",
+      "pos": "прил.",
+      "note": "an heiliger Stätte — в святом месте"
+    },
+    "in": {
+      "ru": "в (im = in dem, ins = in das)",
+      "pos": "предл."
+    },
+    "machen": {
+      "ru": "делать",
+      "pos": "гл.",
+      "forms": "machte · hat gemacht",
+      "note": "sich auf den Weg machen — отправиться в путь"
+    },
+    "mehrere": {
+      "pos": "мест.",
+      "ru": "несколько"
+    },
+    "nach": {
+      "ru": "в, на, после, по",
+      "pos": "предл."
+    },
+    "neu": {
+      "ru": "новый",
+      "pos": "прил."
+    },
+    "politisch": {
+      "ru": "политический",
+      "pos": "прил."
+    },
+    "recht": {
+      "ru": "правый; верный",
+      "pos": "прил.",
+      "note": "auf dem rechten Ufer — на правом берегу; Sie haben recht — вы правы; nicht recht wissen — толком не знать"
+    },
+    "römisch": {
+      "pos": "прил.",
+      "ru": "римский"
+    },
+    "sein (его, свой)": {
+      "ru": "его, свой",
+      "pos": "мест."
+    },
+    "sichern": {
+      "ru": "обеспечивать, защищать",
+      "pos": "гл.",
+      "forms": "sichert · sicherte · hat gesichert"
+    },
+    "sozial": {
+      "ru": "социальный, общественный",
+      "pos": "прил."
+    },
+    "später": {
+      "ru": "позже, потом",
+      "pos": "нареч."
+    },
+    "und": {
+      "ru": "и, а",
+      "pos": "союз"
+    },
+    "unter": {
+      "ru": "под, среди",
+      "pos": "предл."
+    },
+    "verlieren": {
+      "forms": "verlor · hat verloren",
+      "pos": "гл.",
+      "ru": "терять"
+    },
+    "verändern": {
+      "pos": "гл.",
+      "ru": "менять",
+      "forms": "verändert · veränderte · hat verändert"
+    },
+    "von": {
+      "ru": "от, из, о (vom = von dem)",
+      "pos": "предл."
+    },
+    "vor": {
+      "ru": "перед, до; от (страха)",
+      "pos": "предл."
+    },
+    "werden": {
+      "ru": "становиться",
+      "pos": "гл.",
+      "forms": "wurde · ist geworden",
+      "note": "Вспомогательный глагол будущего времени и пассива"
+    },
+    "zentral": {
+      "ru": "центральный, главный",
+      "pos": "прил."
+    },
+    "zugleich": {
+      "ru": "одновременно, заодно",
+      "pos": "нареч."
+    },
+    "übernehmen": {
+      "ru": "принимать на себя, перенимать",
+      "pos": "гл.",
+      "forms": "übernimmt · übernahm · hat übernommen"
+    }
+  }
+}

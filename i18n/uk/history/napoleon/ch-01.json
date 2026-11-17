@@ -1,0 +1,119 @@
+{
+ "id": "ch-01",
+ "title": "Napoleon und das Ende des Alten Reiches",
+ "titleRu": "Наполеон і кінець старої імперії",
+ "icon": "6",
+ "paragraphs": [
+  {
+   "sourceIds": [
+    "revolution"
+   ],
+   "s": [
+    {
+     "de": "1789 begann in Frankreich eine Revolution gegen die alte politische und soziale Ordnung.",
+     "ru": "У 1789 році у Франції почалася революція проти попереднього політичного й суспільного порядку."
+    },
+    {
+     "de": "Freiheit und Gleichheit wurden zentrale Forderungen, doch es folgten auch Gewalt und Terror.",
+     "ru": "Свобода й рівність стали головними вимогами, але за ними настали також насильство й терор."
+    },
+    {
+     "de": "Napoleon Bonaparte übernahm später die Macht und wurde 1804 Kaiser der Franzosen.",
+     "ru": "Пізніше Наполеон Бонапарт захопив владу й у 1804 році став імператором французів."
+    }
+   ]
+  },
+  {
+   "sourceIds": [
+    "reformen"
+   ],
+   "s": [
+    {
+     "de": "Seine Kriege veränderten die Landkarte Mitteleuropas.",
+     "ru": "Його війни змінили карту Центральної Європи."
+    },
+    {
+     "de": "1806 endete das Heilige Römische Reich; mehrere deutsche Staaten bildeten unter Napoleons Schutz den Rheinbund.",
+     "ru": "У 1806 році припинила існування Священна Римська імперія; кілька німецьких держав утворили Рейнський союз під протекторатом Наполеона."
+    }
+   ]
+  },
+  {
+   "fig": {
+    "src": "data/laender/berlin/img/tor.jpg",
+    "w": 1200,
+    "h": 800,
+    "credit": "Thomas Wolf, www.foto-tw.de / Wikimedia Commons",
+    "creditUrl": "https://www.foto-tw.de/",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "cap": "Бранденбурзькі ворота сьогодні. Наполеон вивіз їхню квадригу до Парижа 1806 року; 1814 року вона повернулася до Берліна."
+   }
+  },
+  {
+   "sourceIds": [
+    "reformen",
+    "kriege"
+   ],
+   "s": [
+    {
+     "de": "Französische Herrschaft bedeutete Besatzung, Abgaben und Soldaten für Napoleons Armee.",
+     "ru": "Французьке панування означало окупацію, побори й набір солдатів до армії Наполеона."
+    },
+    {
+     "de": "Zugleich förderte französischer Einfluss Reformen von Recht und Verwaltung.",
+     "ru": "Водночас французький вплив сприяв реформам права й управління."
+    },
+    {
+     "de": "Auch Preußen leitete nach seiner Niederlage 1806 Reformen ein.",
+     "ru": "Пруссія після поразки 1806 року також розпочала реформи."
+    }
+   ]
+  },
+  {
+   "sourceIds": [
+    "kriege",
+    "kongress"
+   ],
+   "s": [
+    {
+     "de": "1813 besiegte eine Koalition Napoleon bei Leipzig; 1815 verlor er endgültig bei Waterloo.",
+     "ru": "У 1813 році коаліція перемогла Наполеона під Лейпцигом; у 1815 році він остаточно програв під Ватерлоо."
+    },
+    {
+     "de": "Der Wiener Kongress von 1814/15 ordnete Europa neu und sicherte vor allem die Macht der Monarchien.",
+     "ru": "Віденський конгрес 1814–1815 років переустроїв Європу й насамперед зміцнив владу монархій."
+    }
+   ]
+  }
+ ],
+ "sourceTitle": "Джерела та перевірка фактів",
+ "sources": [
+  {
+   "id": "revolution",
+   "name": "Deutsches Historisches Museum · Französische Revolution 1789",
+   "url": "https://www.dhm.de/bildung/ida/revolutionen/1789/"
+  },
+  {
+   "id": "reformen",
+   "name": "Deutscher Bundestag · Freiheit und Einheit",
+   "url": "https://www.bundestag.de/besuche/ausstellungen/verfassung/tafel05/tafel05-199776"
+  },
+  {
+   "id": "kriege",
+   "name": "Deutsches Historisches Museum · Kriege gegen Napoleon",
+   "url": "https://www.dhm.de/bildung/ida/krieg-frieden/nation/"
+  },
+  {
+   "id": "kongress",
+   "name": "LeMO · Wiener Kongress",
+   "url": "https://www.dhm.de/lemo/kapitel/vormaerz-und-revolution/wiener-kongress"
+  },
+  {
+   "id": "tor",
+   "name": "Land Berlin · Brandenburger Tor in der Denkmaldatenbank",
+   "url": "https://denkmaldatenbank.berlin.de/daobj.php?obj_dok_nr=09065019"
+  }
+ ],
+ "checked": "2026-11-17"
+}

@@ -1,0 +1,511 @@
+{
+ "version": 1,
+ "w": {
+  "abgaben": "Abgabe",
+  "allem": "alle/alles",
+  "alte": "alt",
+  "armee": "Armee",
+  "auch": "auch",
+  "bedeutete": "bedeuten",
+  "begann": "beginnen",
+  "bei": "bei",
+  "besatzung": "Besatzung",
+  "besiegte": "besiegen",
+  "bildeten": "bilden",
+  "bonaparte": "Bonaparte",
+  "das": "der/die/das",
+  "den": "der/die/das",
+  "der": "der/die/das",
+  "deutsche": "deutsch",
+  "die": "der/die/das",
+  "doch": "doch",
+  "ein": "ein/eine",
+  "eine": "ein/eine",
+  "einfluss": "Einfluss",
+  "endete": "enden",
+  "endgültig": "endgültig",
+  "er": "er",
+  "es": "es",
+  "europa": "Europa (континент)",
+  "folgten": "folgen",
+  "forderungen": "Forderung",
+  "frankreich": "Frankreich",
+  "franzosen": "Franzose",
+  "französische": "französisch",
+  "französischer": "französisch",
+  "freiheit": "Freiheit",
+  "förderte": "fördern",
+  "für": "für",
+  "gegen": "gegen",
+  "gewalt": "Gewalt",
+  "gleichheit": "Gleichheit",
+  "heilige": "heilig",
+  "herrschaft": "Herrschaft",
+  "in": "in",
+  "kaiser": "Kaiser",
+  "koalition": "Koalition",
+  "kongress": "Kongress",
+  "kriege": "Krieg",
+  "landkarte": "Landkarte",
+  "leipzig": "Leipzig",
+  "leitete": "einleiten",
+  "macht": "machen",
+  "mehrere": "mehrere",
+  "mitteleuropas": "Mitteleuropa",
+  "monarchien": "Monarchie",
+  "nach": "nach",
+  "napoleon": "Napoleon",
+  "napoleons": "Napoleon",
+  "neu": {
+   "l": "neu",
+   "old": "в обороте aufs neu — снова; сегодня aufs Neue"
+  },
+  "niederlage": "Niederlage",
+  "ordnete": "anordnen",
+  "ordnung": "Ordnung",
+  "politische": "politisch",
+  "preußen": "Preußen",
+  "recht": "recht",
+  "reformen": "Reform",
+  "reich": "Reich",
+  "revolution": "Revolution",
+  "rheinbund": "Rheinbund",
+  "römische": "römisch",
+  "schutz": "Schutz",
+  "seine": "sein (его, свой)",
+  "seiner": "sein (его, свой)",
+  "sicherte": "sichern",
+  "soldaten": "Soldat",
+  "soziale": "sozial",
+  "später": "später",
+  "staaten": "Staat",
+  "terror": "Terror",
+  "und": "und",
+  "unter": "unter",
+  "verlor": "verlieren",
+  "verwaltung": "Verwaltung",
+  "veränderten": "verändern",
+  "von": "von",
+  "vor": "vor",
+  "waterloo": "Waterloo",
+  "wiener": "Wiener",
+  "wurde": "werden",
+  "wurden": "werden",
+  "zentrale": "zentral",
+  "zugleich": "zugleich",
+  "übernahm": "übernehmen"
+ },
+ "l": {
+  "Abgabe": {
+   "ru": "збір, внесок",
+   "pos": "ім.",
+   "art": "die",
+   "pl": "die Abgaben"
+  },
+  "Armee": {
+   "ru": "армія",
+   "pos": "ім.",
+   "art": "die",
+   "pl": "die Armeen"
+  },
+  "Besatzung": {
+   "ru": "окупація (у цьому розділі)",
+   "pos": "ім.",
+   "art": "die",
+   "pl": "die Besatzungen"
+  },
+  "Bonaparte": {
+   "ru": "Бонапарт",
+   "pos": "власна назва"
+  },
+  "Einfluss": {
+   "ru": "вплив",
+   "pos": "ім.",
+   "art": "der",
+   "pl": "die Einflüsse"
+  },
+  "Europa (континент)": {
+   "ru": "Європа",
+   "pos": "геогр."
+  },
+  "Forderung": {
+   "ru": "вимога",
+   "pos": "ім.",
+   "art": "die",
+   "pl": "die Forderungen"
+  },
+  "Frankreich": {
+   "ru": "Франція",
+   "pos": "геогр."
+  },
+  "Franzose": {
+   "ru": "француз",
+   "pos": "ім.",
+   "art": "der",
+   "pl": "die Franzosen",
+   "decl": "слабка відміна: des Franzosen, dem Franzosen"
+  },
+  "Freiheit": {
+   "ru": "свобода",
+   "pos": "ім.",
+   "art": "die",
+   "pl": "die Freiheiten"
+  },
+  "Gewalt": {
+   "ru": "сила, міць",
+   "pos": "ім.",
+   "art": "die",
+   "pl": "die Gewalten"
+  },
+  "Gleichheit": {
+   "ru": "рівність",
+   "pos": "ім.",
+   "art": "die",
+   "pl": null
+  },
+  "Herrschaft": {
+   "ru": "правління, влада",
+   "pos": "ім.",
+   "art": "die",
+   "pl": "die Herrschaften"
+  },
+  "Kaiser": {
+   "ru": "імператор",
+   "pos": "ім.",
+   "art": "der",
+   "pl": "die Kaiser"
+  },
+  "Koalition": {
+   "ru": "коаліція",
+   "pos": "ім.",
+   "art": "die",
+   "pl": "die Koalitionen"
+  },
+  "Kongress": {
+   "ru": "конгрес",
+   "pos": "ім.",
+   "art": "der",
+   "pl": "die Kongresse"
+  },
+  "Krieg": {
+   "ru": "війна",
+   "pos": "ім.",
+   "art": "der",
+   "pl": "die Kriege"
+  },
+  "Landkarte": {
+   "ru": "географічна карта",
+   "pos": "ім.",
+   "art": "die",
+   "pl": "die Landkarten"
+  },
+  "Leipzig": {
+   "ru": "Лейпциг",
+   "pos": "геогр."
+  },
+  "Mitteleuropa": {
+   "ru": "Центральна Європа",
+   "pos": "геогр."
+  },
+  "Monarchie": {
+   "ru": "монархія",
+   "pos": "ім.",
+   "art": "die",
+   "pl": "die Monarchien"
+  },
+  "Napoleon": {
+   "ru": "Наполеон",
+   "pos": "власна назва"
+  },
+  "Niederlage": {
+   "ru": "поразка, розгром",
+   "pos": "ім.",
+   "art": "die",
+   "pl": "die Niederlagen"
+  },
+  "Ordnung": {
+   "ru": "порядок, устрій",
+   "pos": "ім.",
+   "art": "die",
+   "pl": "die Ordnungen"
+  },
+  "Preußen": {
+   "ru": "Пруссія",
+   "pos": "геогр."
+  },
+  "Reform": {
+   "ru": "реформа",
+   "pos": "ім.",
+   "art": "die",
+   "pl": "die Reformen"
+  },
+  "Reich": {
+   "pos": "ім.",
+   "ru": "імперія; держава",
+   "art": "das",
+   "pl": "die Reiche"
+  },
+  "Revolution": {
+   "ru": "революція",
+   "pos": "ім.",
+   "art": "die",
+   "pl": "die Revolutionen",
+   "note": "die Friedliche Revolution — Мирна революція в НДР 1989 року"
+  },
+  "Rheinbund": {
+   "ru": "Рейнський союз",
+   "pos": "ім.",
+   "art": "der",
+   "pl": null
+  },
+  "Schutz": {
+   "ru": "захист",
+   "pos": "ім.",
+   "art": "der",
+   "pl": null,
+   "note": "zu seinem Schutz — задля його захисту"
+  },
+  "Soldat": {
+   "pos": "ім.",
+   "ru": "солдат",
+   "art": "der",
+   "pl": "die Soldaten"
+  },
+  "Staat": {
+   "ru": "держава",
+   "pos": "ім.",
+   "art": "der",
+   "pl": "die Staaten"
+  },
+  "Terror": {
+   "ru": "терор",
+   "pos": "ім.",
+   "art": "der",
+   "pl": null
+  },
+  "Verwaltung": {
+   "ru": "адміністрація, управління",
+   "pos": "ім.",
+   "art": "die",
+   "pl": "die Verwaltungen"
+  },
+  "Waterloo": {
+   "ru": "Ватерлоо",
+   "pos": "геогр."
+  },
+  "Wiener": {
+   "ru": "віденський",
+   "pos": "прикм.",
+   "note": "der Wiener Kongress — Віденський конгрес 1814–1815"
+  },
+  "alle/alles": {
+   "ru": "усі; усе",
+   "pos": "займ."
+  },
+  "alt": {
+   "ru": "старий",
+   "pos": "прикм.",
+   "forms": "alt · älter · am ältesten"
+  },
+  "anordnen": {
+   "ru": "розпоряджатися",
+   "pos": "дієсл.",
+   "forms": "ordnete an · hat angeordnet"
+  },
+  "auch": {
+   "ru": "теж, також; навіть",
+   "pos": "частка"
+  },
+  "bedeuten": {
+   "pos": "дієсл.",
+   "ru": "означати",
+   "forms": "bedeutet · bedeutete · hat bedeutet"
+  },
+  "beginnen": {
+   "ru": "починати, починатися",
+   "pos": "дієсл.",
+   "forms": "begann · hat begonnen"
+  },
+  "bei": {
+   "ru": "біля, при, коло",
+   "pos": "прийм."
+  },
+  "besiegen": {
+   "ru": "перемагати",
+   "pos": "дієсл.",
+   "forms": "besiegt · besiegte · hat besiegt"
+  },
+  "bilden": {
+   "pos": "дієсл.",
+   "ru": "утворювати, становити",
+   "forms": "bildet · bildete · hat gebildet"
+  },
+  "der/die/das": {
+   "ru": "означений артикль",
+   "pos": "артикль",
+   "note": "Також відносний займенник «який»"
+  },
+  "deutsch": {
+   "ru": "німецька",
+   "pos": "прикм."
+  },
+  "doch": {
+   "ru": "все ж, усе-таки; адже",
+   "pos": "частка"
+  },
+  "ein/eine": {
+   "ru": "неозначений артикль",
+   "pos": "артикль",
+   "note": "einer — «один, хтось»"
+  },
+  "einleiten": {
+   "ru": "починати, розпочинати",
+   "pos": "дієсл.",
+   "forms": "leitet ein · leitete ein · hat eingeleitet"
+  },
+  "enden": {
+   "ru": "кінчати(ся)",
+   "pos": "дієсл.",
+   "forms": "endete · hat geendet"
+  },
+  "endgültig": {
+   "ru": "остаточний",
+   "pos": "прикм."
+  },
+  "er": {
+   "ru": "він",
+   "pos": "займ.",
+   "note": "ihn — його, ihm — йому"
+  },
+  "es": {
+   "ru": "воно; це",
+   "pos": "займ."
+  },
+  "folgen": {
+   "ru": "іти слідом",
+   "pos": "дієсл.",
+   "forms": "folgte · ist gefolgt",
+   "note": "nachfolgen — піти слідом"
+  },
+  "französisch": {
+   "ru": "французький",
+   "pos": "прикм."
+  },
+  "fördern": {
+   "ru": "підтримувати, сприяти",
+   "pos": "дієсл.",
+   "forms": "förderte · hat gefördert"
+  },
+  "für": {
+   "ru": "для, за",
+   "pos": "прийм."
+  },
+  "gegen": {
+   "ru": "проти; близько (про час)",
+   "pos": "прийм.",
+   "note": "gegen Mitternacht — близько опівночі"
+  },
+  "heilig": {
+   "ru": "святий",
+   "pos": "прикм.",
+   "note": "an heiliger Stätte — у святому місці"
+  },
+  "in": {
+   "ru": "у (im = in dem, ins = in das)",
+   "pos": "прийм."
+  },
+  "machen": {
+   "ru": "робити",
+   "pos": "дієсл.",
+   "forms": "machte · hat gemacht",
+   "note": "sich auf den Weg machen — вирушити в путь"
+  },
+  "mehrere": {
+   "pos": "займ.",
+   "ru": "кілька"
+  },
+  "nach": {
+   "ru": "в, на, після, по",
+   "pos": "прийм."
+  },
+  "neu": {
+   "ru": "новий",
+   "pos": "прикм."
+  },
+  "politisch": {
+   "ru": "політичний",
+   "pos": "прикм."
+  },
+  "recht": {
+   "ru": "правий; вірний",
+   "pos": "прикм.",
+   "note": "auf dem rechten Ufer — на правому березі; Sie haben recht — ви маєте рацію; nicht recht wissen — до пуття не знати"
+  },
+  "römisch": {
+   "pos": "прикм.",
+   "ru": "римський"
+  },
+  "sein (его, свой)": {
+   "ru": "його, свій",
+   "pos": "займ."
+  },
+  "sichern": {
+   "ru": "забезпечувати, захищати",
+   "pos": "дієсл.",
+   "forms": "sichert · sicherte · hat gesichert"
+  },
+  "sozial": {
+   "ru": "соціальний, суспільний",
+   "pos": "прикм."
+  },
+  "später": {
+   "ru": "пізніше, згодом",
+   "pos": "присл."
+  },
+  "und": {
+   "ru": "і, а",
+   "pos": "спол."
+  },
+  "unter": {
+   "ru": "під, серед",
+   "pos": "прийм."
+  },
+  "verlieren": {
+   "forms": "verlor · hat verloren",
+   "pos": "дієсл.",
+   "ru": "втрачати"
+  },
+  "verändern": {
+   "pos": "дієсл.",
+   "ru": "змінювати",
+   "forms": "verändert · veränderte · hat verändert"
+  },
+  "von": {
+   "ru": "від, з, про (vom = von dem)",
+   "pos": "прийм."
+  },
+  "vor": {
+   "ru": "перед, до; від (страху)",
+   "pos": "прийм."
+  },
+  "werden": {
+   "ru": "ставати",
+   "pos": "дієсл.",
+   "forms": "wurde · ist geworden",
+   "note": "Допоміжне дієслово майбутнього часу й пасиву"
+  },
+  "zentral": {
+   "ru": "центральний, головний",
+   "pos": "прикм."
+  },
+  "zugleich": {
+   "ru": "одночасно, заразом",
+   "pos": "присл."
+  },
+  "übernehmen": {
+   "ru": "брати на себе, переймати",
+   "pos": "дієсл.",
+   "forms": "übernimmt · übernahm · hat übernommen"
+  }
+ }
+}

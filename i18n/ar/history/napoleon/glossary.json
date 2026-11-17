@@ -1,0 +1,511 @@
+{
+ "version": 1,
+ "w": {
+  "abgaben": "Abgabe",
+  "allem": "alle/alles",
+  "alte": "alt",
+  "armee": "Armee",
+  "auch": "auch",
+  "bedeutete": "bedeuten",
+  "begann": "beginnen",
+  "bei": "bei",
+  "besatzung": "Besatzung",
+  "besiegte": "besiegen",
+  "bildeten": "bilden",
+  "bonaparte": "Bonaparte",
+  "das": "der/die/das",
+  "den": "der/die/das",
+  "der": "der/die/das",
+  "deutsche": "deutsch",
+  "die": "der/die/das",
+  "doch": "doch",
+  "ein": "ein/eine",
+  "eine": "ein/eine",
+  "einfluss": "Einfluss",
+  "endete": "enden",
+  "endgültig": "endgültig",
+  "er": "er",
+  "es": "es",
+  "europa": "Europa (континент)",
+  "folgten": "folgen",
+  "forderungen": "Forderung",
+  "frankreich": "Frankreich",
+  "franzosen": "Franzose",
+  "französische": "französisch",
+  "französischer": "französisch",
+  "freiheit": "Freiheit",
+  "förderte": "fördern",
+  "für": "für",
+  "gegen": "gegen",
+  "gewalt": "Gewalt",
+  "gleichheit": "Gleichheit",
+  "heilige": "heilig",
+  "herrschaft": "Herrschaft",
+  "in": "in",
+  "kaiser": "Kaiser",
+  "koalition": "Koalition",
+  "kongress": "Kongress",
+  "kriege": "Krieg",
+  "landkarte": "Landkarte",
+  "leipzig": "Leipzig",
+  "leitete": "einleiten",
+  "macht": "machen",
+  "mehrere": "mehrere",
+  "mitteleuropas": "Mitteleuropa",
+  "monarchien": "Monarchie",
+  "nach": "nach",
+  "napoleon": "Napoleon",
+  "napoleons": "Napoleon",
+  "neu": {
+   "l": "neu",
+   "old": "в обороте aufs neu — снова; сегодня aufs Neue"
+  },
+  "niederlage": "Niederlage",
+  "ordnete": "anordnen",
+  "ordnung": "Ordnung",
+  "politische": "politisch",
+  "preußen": "Preußen",
+  "recht": "recht",
+  "reformen": "Reform",
+  "reich": "Reich",
+  "revolution": "Revolution",
+  "rheinbund": "Rheinbund",
+  "römische": "römisch",
+  "schutz": "Schutz",
+  "seine": "sein (его, свой)",
+  "seiner": "sein (его, свой)",
+  "sicherte": "sichern",
+  "soldaten": "Soldat",
+  "soziale": "sozial",
+  "später": "später",
+  "staaten": "Staat",
+  "terror": "Terror",
+  "und": "und",
+  "unter": "unter",
+  "verlor": "verlieren",
+  "verwaltung": "Verwaltung",
+  "veränderten": "verändern",
+  "von": "von",
+  "vor": "vor",
+  "waterloo": "Waterloo",
+  "wiener": "Wiener",
+  "wurde": "werden",
+  "wurden": "werden",
+  "zentrale": "zentral",
+  "zugleich": "zugleich",
+  "übernahm": "übernehmen"
+ },
+ "l": {
+  "Abgabe": {
+   "ru": "رسم، مساهمة",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Abgaben"
+  },
+  "Armee": {
+   "ru": "جيش",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Armeen"
+  },
+  "Besatzung": {
+   "ru": "احتلال، في هذا الفصل",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Besatzungen"
+  },
+  "Bonaparte": {
+   "ru": "بونابرت",
+   "pos": "اسم علم"
+  },
+  "Einfluss": {
+   "ru": "نفوذ، تأثير",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Einflüsse"
+  },
+  "Europa (континент)": {
+   "ru": "أوروبا",
+   "pos": "جغرافيا"
+  },
+  "Forderung": {
+   "ru": "مطلب",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Forderungen"
+  },
+  "Frankreich": {
+   "ru": "فرنسا",
+   "pos": "جغرافيا"
+  },
+  "Franzose": {
+   "ru": "فرنسي",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Franzosen",
+   "decl": "التصريف الضعيف: des Franzosen، dem Franzosen"
+  },
+  "Freiheit": {
+   "ru": "حرية",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Freiheiten"
+  },
+  "Gewalt": {
+   "ru": "قوّة، شدّة",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Gewalten"
+  },
+  "Gleichheit": {
+   "ru": "المساواة",
+   "pos": "اسم",
+   "art": "die",
+   "pl": null
+  },
+  "Herrschaft": {
+   "ru": "حكم، سلطة",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Herrschaften"
+  },
+  "Kaiser": {
+   "ru": "الإمبراطور",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Kaiser"
+  },
+  "Koalition": {
+   "ru": "تحالف",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Koalitionen"
+  },
+  "Kongress": {
+   "ru": "مؤتمر",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Kongresse"
+  },
+  "Krieg": {
+   "ru": "حرب",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Kriege"
+  },
+  "Landkarte": {
+   "ru": "خريطة جغرافية",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Landkarten"
+  },
+  "Leipzig": {
+   "ru": "لايبزيغ",
+   "pos": "جغرافيا"
+  },
+  "Mitteleuropa": {
+   "ru": "أوروبا الوسطى",
+   "pos": "جغرافيا"
+  },
+  "Monarchie": {
+   "ru": "نظام ملكي",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Monarchien"
+  },
+  "Napoleon": {
+   "ru": "نابليون",
+   "pos": "اسم علم"
+  },
+  "Niederlage": {
+   "ru": "هزيمة",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Niederlagen"
+  },
+  "Ordnung": {
+   "ru": "نظام",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Ordnungen"
+  },
+  "Preußen": {
+   "ru": "بروسيا",
+   "pos": "جغرافيا"
+  },
+  "Reform": {
+   "ru": "إصلاح",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Reformen"
+  },
+  "Reich": {
+   "pos": "اسم",
+   "ru": "إمبراطورية؛ دولة",
+   "art": "das",
+   "pl": "die Reiche"
+  },
+  "Revolution": {
+   "ru": "ثورة",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Revolutionen",
+   "note": "die Friedliche Revolution — الثورة السلمية في ألمانيا الشرقية عام 1989"
+  },
+  "Rheinbund": {
+   "ru": "اتحاد الراين",
+   "pos": "اسم",
+   "art": "der",
+   "pl": null
+  },
+  "Schutz": {
+   "ru": "حماية",
+   "pos": "اسم",
+   "art": "der",
+   "pl": null,
+   "note": "zu seinem Schutz — لحمايته"
+  },
+  "Soldat": {
+   "pos": "اسم",
+   "ru": "جندي",
+   "art": "der",
+   "pl": "die Soldaten"
+  },
+  "Staat": {
+   "ru": "دولة",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Staaten"
+  },
+  "Terror": {
+   "ru": "إرهاب",
+   "pos": "اسم",
+   "art": "der",
+   "pl": null
+  },
+  "Verwaltung": {
+   "ru": "إدارة",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Verwaltungen"
+  },
+  "Waterloo": {
+   "ru": "واترلو",
+   "pos": "جغرافيا"
+  },
+  "Wiener": {
+   "ru": "فييني",
+   "pos": "صفة",
+   "note": "der Wiener Kongress — مؤتمر فيينا 1814–1815"
+  },
+  "alle/alles": {
+   "ru": "الجميع؛ كل شيء",
+   "pos": "ضمير"
+  },
+  "alt": {
+   "ru": "قديم / كبير في السن",
+   "pos": "صفة",
+   "forms": "alt · älter · am ältesten"
+  },
+  "anordnen": {
+   "ru": "يأمر، يرتّب",
+   "pos": "فعل",
+   "forms": "ordnete an · hat angeordnet"
+  },
+  "auch": {
+   "ru": "أيضًا؛ حتى",
+   "pos": "أداة"
+  },
+  "bedeuten": {
+   "pos": "فعل",
+   "ru": "يعني",
+   "forms": "bedeutet · bedeutete · hat bedeutet"
+  },
+  "beginnen": {
+   "ru": "يبدأ",
+   "pos": "فعل",
+   "forms": "begann · hat begonnen"
+  },
+  "bei": {
+   "ru": "عند، لدى، قرب",
+   "pos": "حرف جر"
+  },
+  "besiegen": {
+   "ru": "يهزم",
+   "pos": "فعل",
+   "forms": "besiegt · besiegte · hat besiegt"
+  },
+  "bilden": {
+   "pos": "فعل",
+   "ru": "يشكّل، يكوّن",
+   "forms": "bildet · bildete · hat gebildet"
+  },
+  "der/die/das": {
+   "ru": "أداة التعريف",
+   "pos": "أداة تعريف",
+   "note": "وهي أيضًا اسم موصول بمعنى «الذي»"
+  },
+  "deutsch": {
+   "ru": "الألمانية",
+   "pos": "صفة"
+  },
+  "doch": {
+   "ru": "ومع ذلك؛ إذن",
+   "pos": "أداة"
+  },
+  "ein/eine": {
+   "ru": "أداة النكرة",
+   "pos": "أداة تعريف",
+   "note": "einer — «واحد، شخص ما»"
+  },
+  "einleiten": {
+   "ru": "يبدأ، يشرع في",
+   "pos": "فعل",
+   "forms": "leitet ein · leitete ein · hat eingeleitet"
+  },
+  "enden": {
+   "ru": "ينهي؛ ينتهي",
+   "pos": "فعل",
+   "forms": "endete · hat geendet"
+  },
+  "endgültig": {
+   "ru": "نهائي",
+   "pos": "صفة"
+  },
+  "er": {
+   "ru": "هو",
+   "pos": "ضمير",
+   "note": "ihn — إيّاه، ihm — له"
+  },
+  "es": {
+   "ru": "هو (للمحايد)؛ هذا",
+   "pos": "ضمير"
+  },
+  "folgen": {
+   "ru": "يتبع",
+   "pos": "فعل",
+   "forms": "folgte · ist gefolgt",
+   "note": "nachfolgen — يتبع"
+  },
+  "französisch": {
+   "ru": "فرنسي",
+   "pos": "صفة"
+  },
+  "fördern": {
+   "ru": "يشجّع، يدعم",
+   "pos": "فعل",
+   "forms": "förderte · hat gefördert"
+  },
+  "für": {
+   "ru": "لـ، من أجل",
+   "pos": "حرف جر"
+  },
+  "gegen": {
+   "ru": "ضدّ؛ نحو (للوقت)",
+   "pos": "حرف جر",
+   "note": "gegen Mitternacht — نحو منتصف الليل"
+  },
+  "heilig": {
+   "ru": "مقدّس",
+   "pos": "صفة",
+   "note": "an heiliger Stätte — في المكان المقدّس"
+  },
+  "in": {
+   "ru": "في (im = in dem، ins = in das)",
+   "pos": "حرف جر"
+  },
+  "machen": {
+   "ru": "يفعل",
+   "pos": "فعل",
+   "forms": "machte · hat gemacht",
+   "note": "sich auf den Weg machen — ينطلق في طريقه"
+  },
+  "mehrere": {
+   "pos": "ضمير",
+   "ru": "بضع"
+  },
+  "nach": {
+   "ru": "إلى، بعد، حسب",
+   "pos": "حرف جر"
+  },
+  "neu": {
+   "ru": "جديد",
+   "pos": "صفة"
+  },
+  "politisch": {
+   "ru": "سياسي",
+   "pos": "صفة"
+  },
+  "recht": {
+   "ru": "أيمن؛ صحيح",
+   "pos": "صفة",
+   "note": "auf dem rechten Ufer — على الضفة اليمنى؛ Sie haben recht — أنتم محقّون؛ nicht recht wissen — لا يدري تمامًا"
+  },
+  "römisch": {
+   "pos": "صفة",
+   "ru": "روماني"
+  },
+  "sein (его, свой)": {
+   "ru": "ـه (ضمير الملكية)، خاصّته",
+   "pos": "ضمير"
+  },
+  "sichern": {
+   "ru": "يضمن، يحمي",
+   "pos": "فعل",
+   "forms": "sichert · sicherte · hat gesichert"
+  },
+  "sozial": {
+   "ru": "اجتماعي",
+   "pos": "صفة"
+  },
+  "später": {
+   "ru": "لاحقًا، فيما بعد",
+   "pos": "ظرف"
+  },
+  "und": {
+   "ru": "و",
+   "pos": "أداة ربط"
+  },
+  "unter": {
+   "ru": "تحت، بين",
+   "pos": "حرف جر"
+  },
+  "verlieren": {
+   "forms": "verlor · hat verloren",
+   "pos": "فعل",
+   "ru": "يفقد"
+  },
+  "verändern": {
+   "pos": "فعل",
+   "ru": "يغيّر",
+   "forms": "verändert · veränderte · hat verändert"
+  },
+  "von": {
+   "ru": "من، عن (vom = von dem)",
+   "pos": "حرف جر"
+  },
+  "vor": {
+   "ru": "أمام، قبل؛ من (الخوف)",
+   "pos": "حرف جر"
+  },
+  "werden": {
+   "ru": "يصبح",
+   "pos": "فعل",
+   "forms": "wurde · ist geworden",
+   "note": "فعل مساعد للمستقبل والمبني للمجهول"
+  },
+  "zentral": {
+   "ru": "مركزي، أساسي",
+   "pos": "صفة"
+  },
+  "zugleich": {
+   "ru": "في الوقت نفسه",
+   "pos": "ظرف"
+  },
+  "übernehmen": {
+   "ru": "يتولى، يتبنى",
+   "pos": "فعل",
+   "forms": "übernimmt · übernahm · hat übernommen"
+  }
+ }
+}
