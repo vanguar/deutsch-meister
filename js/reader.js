@@ -412,7 +412,7 @@ const Reader = (() => {
       return `<p class="${cls}"${dir}>${inner}</p>`;
     }).join('');
     const sources = Array.isArray(ch && ch.sources) ? ch.sources.filter(s => /^https:\/\//.test(s.url || '')) : [];
-    const sourceBlock = sources.length ? `<aside class="rd-chapter-sources"><h2>${esc(ch.sourceTitle || '')}</h2><ul>${sources.map(s => `<li><a class="hi-source-link" data-reader-external href="${esc(s.url)}" rel="noopener noreferrer"><span class="hi-source-name">${esc(s.name)}</span><span class="hi-source-domain">${esc(new URL(s.url).hostname.replace(/^www\./, ''))}${/\.pdf(?:$|[?#])/i.test(s.url) ? ' · PDF' : ''}</span><span class="hi-link-icon" aria-hidden="true">↗</span></a></li>`).join('')}</ul></aside>` : '';
+    const sourceBlock = sources.length ? `<aside class="rd-chapter-sources"><h2>${esc(ch.sourceTitle || '')}</h2><ul>${sources.map((s, i) => `<li><a class="hi-source-link" data-reader-external data-source-index="${i}" href="${esc(s.url)}" rel="noopener noreferrer"><span class="hi-source-name">${esc(s.name)}</span><span class="hi-source-domain">${esc(new URL(s.url).hostname.replace(/^www\./, ''))}${/\.pdf(?:$|[?#])/i.test(s.url) ? ' · PDF' : ''}</span><span class="hi-link-icon" aria-hidden="true">↗</span></a></li>`).join('')}</ul></aside>` : '';
     return chapterOpening(ch || {}, chapterIndex) + prose + sourceBlock;
   }
 
@@ -584,11 +584,26 @@ const Reader = (() => {
       }
       if (col > st.page) break;
     }
-    return fallback || elContent.querySelector('.bw');
+    if (fallback) return fallback;
+    // Sources and photographs can occupy a whole page without word spans.
+    for (const item of elContent.querySelectorAll('.rd-chapter-sources [data-source-index], .rd-fig[data-p]')) {
+      if (colOf(item) === st.page) return item;
+    }
+    return elContent.querySelector(st.fullTranslation ? '.brw' : '.bw');
   }
 
   function syncAnchor() {
     const el = anchorFromPage();
+    if (el && el.hasAttribute('data-source-index')) {
+      // Reserve the paragraph after the prose for source links. Numeric p/s/w
+      // keep compatibility with existing local and cloud progress formats.
+      st.anchor = { p: st.chapter.paragraphs.length, s: 0, w: Number(el.dataset.sourceIndex) || 0 };
+      return;
+    }
+    if (el && el.matches('.rd-fig[data-p]')) {
+      st.anchor = { p: Number(el.dataset.p), s: 0, w: 0 };
+      return;
+    }
     const bs = el ? el.closest('.bs') : null;
     st.anchor = bs
       ? { p: Number(bs.dataset.p), s: Number(bs.dataset.s), w: Number(el.dataset.w) || 0 }
@@ -599,8 +614,12 @@ const Reader = (() => {
   // якорь был по предложению, или текст главы изменился) — берём предложение.
   function anchorEl(anchor) {
     if (!anchor) return null;
+    if (st.chapter && anchor.p === st.chapter.paragraphs.length) {
+      return elContent.querySelector(`.rd-chapter-sources [data-source-index="${Number(anchor.w) || 0}"]`)
+        || elContent.querySelector('.rd-chapter-sources [data-source-index]');
+    }
     const bs = elContent.querySelector(`.bs[data-p="${anchor.p}"][data-s="${anchor.s}"]`);
-    if (!bs) return null;
+    if (!bs) return elContent.querySelector(`.rd-fig[data-p="${anchor.p}"]`);
     if (typeof anchor.w === 'number') {
       const word = bs.querySelector(`${st.fullTranslation ? '.brw' : '.bw'}[data-w="${anchor.w}"]`);
       if (word) return word;

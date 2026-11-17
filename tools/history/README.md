@@ -34,5 +34,14 @@ the Mini App, avoiding unsupported pop-up tabs.
 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Attribution and
 license links are visible below the image. No image model was used.
 
+`saalburg.jpg`: 1280 × 720 Wikimedia thumbnail of an aerial photograph by
+Archaecopteryx, [source](https://commons.wikimedia.org/wiki/File:Luftbild_saalburg.jpg),
+[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). The cover identifies
+the fort as reconstructed; the chapter uses a different photograph, Porta Nigra.
+
+Reader positions include source links and figures, so browser Back and reload
+return to those pages. Source anchors use the paragraph after the prose and the
+source index in the existing numeric p/s/w progress format.
+
 Validation: `python -B -X utf8 scripts/validate_books.py --history` and
 `node tools/test_history.js`; both are included in `scripts/check_all.py`.

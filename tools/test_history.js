@@ -8,6 +8,8 @@ const root = path.resolve(__dirname, '..');
 const read = name => fs.readFileSync(path.join(root, name), 'utf8');
 const catalog = JSON.parse(read('data/history/index.json'));
 const published = catalog.chapters.filter(ch => ch.ready);
+const cover = /<img src="([^"]+)"/.exec(read('history.html'))[1];
+assert.ok(fs.existsSync(path.join(root, cover)), 'History cover photograph exists');
 assert.equal(catalog.chapters.length, 14);
 assert.equal(published.length, 1);
 assert.equal(new Set(catalog.chapters.map(ch => ch.id)).size, catalog.chapters.length);
@@ -27,6 +29,7 @@ for (const item of published) {
       para.s.forEach(s => assert.ok(s.de.trim() && s.ru.trim()));
     }
     if (para.fig) {
+      assert.notEqual(para.fig.src, cover, 'Cover photograph must not repeat inside the chapter');
       assert.ok(fs.existsSync(path.join(root, para.fig.src)));
       assert.equal(para.fig.motion, undefined, 'History illustrations must be static');
       if (para.fig.src.endsWith('.jpg')) assert.ok(para.fig.creditUrl && para.fig.licenseUrl);

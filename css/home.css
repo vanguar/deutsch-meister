@@ -254,6 +254,7 @@ html[dir="rtl"] .ico.flip { transform: scaleX(-1); }
 .read-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .read.is-wide { grid-column: 1 / -1; }
 .read {
+  --t-press: scale 145ms ease-out, filter 145ms ease-out;
   position: relative; display: flex; flex-direction: column; align-items: flex-start; gap: 4px;
   background: var(--h-card); border: 0; border-radius: 20px; padding: 16px;
   color: var(--h-text); font: inherit; text-align: start; cursor: pointer; min-width: 0;
@@ -261,6 +262,7 @@ html[dir="rtl"] .ico.flip { transform: scaleX(-1); }
   transition: background .15s ease, var(--t-press);
 }
 @media (hover: hover) { .read:hover { background: var(--h-card2); } }
+.read:active:not(:disabled, [aria-disabled="true"]) { background: color-mix(in srgb, var(--h-btn) 28%, var(--h-card)); scale: .96; filter: brightness(.9); transition-duration: 0s; }
 .read .ico { color: var(--h-accent); }
 .read-title { display: block; font-size: 17px; font-weight: 700; color: var(--h-text); margin-top: 6px; }
 .read-sub { display: block; font-size: 14px; color: var(--h-hint); }

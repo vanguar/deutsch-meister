@@ -16,6 +16,7 @@ commands = [
     PY + ['scripts/validate_books.py', '--laender'],
     PY + ['scripts/validate_books.py', '--history'],
     ['node', 'tools/test_history.js'],
+    ['node', 'tools/test_reader_anchors.js'],
     PY + ['scripts/test_progress_merge.py'],
     PY + ['scripts/test_progress_reliability.py'],
     PY + ['scripts/test_bot_lang.py'],
