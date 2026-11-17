@@ -1,0 +1,141 @@
+{
+  "id": "frankenreich",
+  "sources": [
+    {
+      "id": "wanderung",
+      "name": "Badisches Landesmuseum · Völkerwanderung",
+      "url": "https://www.landesmuseum.de/archaeologie-in-baden/aib-screen-11"
+    },
+    {
+      "id": "chlodwig",
+      "name": "Deutsche Biographie · Chlodwig I.",
+      "url": "https://www.deutsche-biographie.de/sfz60857.html"
+    },
+    {
+      "id": "karl",
+      "name": "Deutsche Biographie · Karl der Große",
+      "url": "https://www.deutsche-biographie.de/sfz70315.html"
+    },
+    {
+      "id": "verdun",
+      "name": "Universitätsbibliothek Heidelberg · Verträge von Verdun und Coulaines 843",
+      "url": "https://journals.ub.uni-heidelberg.de/index.php/vuf/article/download/16138/9996"
+    }
+  ],
+  "paragraphs": [
+    {
+      "sourceIds": [
+        "wanderung"
+      ],
+      "sentences": [
+        [
+          "Seit dem 4. Jahrhundert zogen verschiedene Gruppen durch Europa.",
+          "С IV века разные группы переселялись по Европе.",
+          "З IV століття різні групи переселялися Європою.",
+          "منذ القرن الرابع تنقلت جماعات مختلفة عبر أوروبا."
+        ],
+        [
+          "Diese Bewegungen nennen wir heute Völkerwanderung.",
+          "Сегодня эти перемещения называют Великим переселением народов.",
+          "Сьогодні ці переміщення називають Великим переселенням народів.",
+          "نسمي هذه التحركات اليوم هجرة الشعوب."
+        ],
+        [
+          "Dabei wanderten keine unveränderten, einheitlichen Völker: Gruppen teilten sich und schlossen sich neu zusammen.",
+          "При этом переселялись не неизменные, единые народы: группы разделялись и объединялись заново.",
+          "При цьому переселялися не незмінні, єдині народи: групи розділялися й об’єднувалися заново.",
+          "ولم تكن المهاجرة شعوبًا موحدة وثابتة؛ بل انقسمت جماعات وتشكلت منها تجمعات جديدة."
+        ]
+      ]
+    },
+    {
+      "sourceIds": [
+        "chlodwig"
+      ],
+      "sentences": [
+        [
+          "Auf früherem römischem Gebiet entstanden neue Königreiche.",
+          "На бывших римских территориях возникали новые королевства.",
+          "На колишніх римських територіях виникали нові королівства.",
+          "نشأت ممالك جديدة في أراضٍ رومانية سابقة."
+        ],
+        [
+          "Der Frankenkönig Chlodwig vergrößerte sein Reich und nahm um 500 das katholische Christentum an.",
+          "Король франков Хлодвиг расширил своё королевство и около 500 года принял католическое христианство.",
+          "Король франків Хлодвіг розширив своє королівство й близько 500 року прийняв католицьке християнство.",
+          "وسع ملك الفرنجة كلوفيس مملكته واعتنق المسيحية الكاثوليكية نحو عام 500."
+        ]
+      ]
+    },
+    {
+      "fig": {
+        "src": "data/history/frankenreich/img/aachen.jpg",
+        "w": 1000,
+        "h": 750,
+        "credit": "Jim Linwood / Wikimedia Commons",
+        "creditUrl": "https://commons.wikimedia.org/wiki/File:Aachen_Cathedral_And_Palatine_Chapel,_Germany.jpg",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "cap": "Ахенский собор сегодня: в центре — восьмиугольная капелла Карла Великого, позднее окружённая пристройками. Фото уменьшено."
+      }
+    },
+    {
+      "sourceIds": [
+        "karl"
+      ],
+      "sentences": [
+        [
+          "Karl der Große eroberte weitere Gebiete, auch in langen Kriegen gegen die Sachsen.",
+          "Карл Великий завоевал новые территории, в том числе в длительных войнах против саксов.",
+          "Карл Великий завоював нові території, зокрема в тривалих війнах проти саксів.",
+          "فتح شارلمان أراضي أخرى، ومنها أراضٍ في حروب طويلة ضد السكسونيين."
+        ],
+        [
+          "Im Jahr 800 krönte ihn der Papst in Rom zum Kaiser.",
+          "В 800 году папа короновал его в Риме императором.",
+          "У 800 році папа коронував його в Римі імператором.",
+          "في عام 800 توجه البابا إمبراطورًا في روما."
+        ],
+        [
+          "Sein Hof förderte Bildung und die Arbeit an alten Texten.",
+          "Его двор поддерживал образование и работу с древними текстами.",
+          "Його двір підтримував освіту та роботу з давніми текстами.",
+          "شجع بلاطه التعليم والعمل على النصوص القديمة."
+        ]
+      ]
+    },
+    {
+      "sourceIds": [
+        "verdun"
+      ],
+      "sentences": [
+        [
+          "843 teilten seine Enkel das Frankenreich im Vertrag von Verdun.",
+          "В 843 году его внуки разделили Франкское государство по Верденскому договору.",
+          "У 843 році його онуки розділили Франкську державу за Верденським договором.",
+          "في عام 843 قسم أحفاده مملكة الفرنجة بمعاهدة فردان."
+        ],
+        [
+          "Aus dem westlichen und östlichen Teil entwickelten sich später Frankreich und das mittelalterliche Reich.",
+          "Из западной и восточной частей позднее развились Франция и средневековая империя.",
+          "Із західної та східної частин пізніше розвинулися Франція й середньовічна імперія.",
+          "تطورت من القسمين الغربي والشرقي لاحقًا فرنسا والإمبراطورية في العصور الوسطى."
+        ],
+        [
+          "Das waren noch keine Nationalstaaten im heutigen Sinn.",
+          "Это ещё не были национальные государства в современном смысле.",
+          "Це ще не були національні держави в сучасному розумінні.",
+          "ولم تكن هذه دولًا قومية بالمعنى الحالي."
+        ]
+      ]
+    }
+  ],
+  "translations": {
+    "uk": {
+      "Ахенский собор сегодня: в центре — восьмиугольная капелла Карла Великого, позднее окружённая пристройками. Фото уменьшено.": "Ахенський собор сьогодні: у центрі — восьмикутна капела Карла Великого, пізніше оточена прибудовами. Фото зменшено."
+    },
+    "ar": {
+      "Ахенский собор сегодня: в центре — восьмиугольная капелла Карла Великого, позднее окружённая пристройками. Фото уменьшено.": "كاتدرائية آخن اليوم: في الوسط مصلى شارلمان المثمن، تحيط به إضافات لاحقة. صُغرت الصورة."
+    }
+  }
+}

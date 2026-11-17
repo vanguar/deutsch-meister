@@ -1,0 +1,521 @@
+{
+ "version": 1,
+ "w": {
+  "alten": "alt",
+  "an": "an",
+  "arbeit": "Arbeit",
+  "auch": "auch",
+  "auf": "auf",
+  "aus": "aus",
+  "bewegungen": "Bewegung",
+  "bildung": "Bildung",
+  "chlodwig": "Chlodwig",
+  "christentum": "Christentum",
+  "dabei": "dabei",
+  "das": "der/die/das",
+  "dem": "der/die/das",
+  "der": "der/die/das",
+  "die": "der/die/das",
+  "diese": "dieser",
+  "durch": "durch",
+  "einheitlichen": "einheitlich",
+  "enkel": "Enkel",
+  "entstanden": "entstehen",
+  "entwickelten": "entwickeln",
+  "eroberte": "erobern",
+  "europa": "Europa (континент)",
+  "frankenkönig": "Frankenkönig",
+  "frankenreich": "Frankenreich",
+  "frankreich": "Frankreich",
+  "früherem": "früh",
+  "förderte": "fördern",
+  "gebiet": "Gebiet",
+  "gebiete": "Gebiet",
+  "gegen": "gegen",
+  "große": "groß",
+  "gruppen": "Gruppe",
+  "heute": "heute",
+  "heutigen": "heutig",
+  "hof": "Hof",
+  "ihn": "er",
+  "im": "in",
+  "in": "in",
+  "jahr": "Jahr",
+  "jahrhundert": "Jahrhundert",
+  "kaiser": "Kaiser",
+  "karl": "Karl",
+  "katholische": "katholisch",
+  "keine": "kein",
+  "kriegen": "kriegen",
+  "krönte": "krönen",
+  "königreiche": "Königreich",
+  "langen": "lang",
+  "mittelalterliche": "mittelalterlich",
+  "nahm": "nehmen",
+  "nationalstaaten": "Nationalstaat",
+  "nennen": "nennen",
+  "neu": {
+   "l": "neu",
+   "old": "в обороте aufs neu — снова; сегодня aufs Neue"
+  },
+  "neue": "neu",
+  "noch": "noch",
+  "papst": "Papst",
+  "reich": "Reich",
+  "rom": "Rom",
+  "römischem": "römisch",
+  "sachsen": "Sachsen",
+  "schlossen": "schließen",
+  "sein": "sein",
+  "seine": "sein (его, свой)",
+  "seit": "seit",
+  "sich": "sich",
+  "sinn": "Sinn",
+  "später": "später",
+  "teil": "Teil",
+  "teilten": "teilen",
+  "texten": "Text",
+  "um": "um",
+  "und": "und",
+  "unveränderten": "unverändert",
+  "verdun": "Verdun",
+  "vergrößerte": "vergrößern",
+  "verschiedene": "verschieden",
+  "vertrag": "Vertrag",
+  "von": "von",
+  "völker": "Volk",
+  "völkerwanderung": "Völkerwanderung",
+  "wanderten": "wandern",
+  "waren": "Ware",
+  "weitere": "weiter",
+  "westlichen": "westlich",
+  "wir": "wir",
+  "zogen": "ziehen",
+  "zum": "zu",
+  "zusammen": "zusammen",
+  "östlichen": "östlich"
+ },
+ "l": {
+  "Arbeit": {
+   "ru": "робота",
+   "pos": "ім.",
+   "art": "die",
+   "pl": "die Arbeiten"
+  },
+  "Bewegung": {
+   "ru": "рух",
+   "pos": "ім.",
+   "art": "die",
+   "pl": "die Bewegungen"
+  },
+  "Bildung": {
+   "ru": "утворення; освіта",
+   "pos": "ім.",
+   "art": "die",
+   "pl": "die Bildungen"
+  },
+  "Chlodwig": {
+   "ru": "Хлодвіг",
+   "pos": "власна назва"
+  },
+  "Christentum": {
+   "ru": "християнство",
+   "pos": "ім.",
+   "art": "das",
+   "pl": null
+  },
+  "Enkel": {
+   "ru": "онук",
+   "pos": "ім.",
+   "art": "der",
+   "pl": "die Enkel"
+  },
+  "Europa (континент)": {
+   "ru": "Європа",
+   "pos": "геогр."
+  },
+  "Frankenkönig": {
+   "ru": "король франків",
+   "pos": "ім.",
+   "art": "der",
+   "pl": "die Frankenkönige"
+  },
+  "Frankenreich": {
+   "ru": "Франкська держава",
+   "pos": "ім.",
+   "art": "das",
+   "pl": null
+  },
+  "Frankreich": {
+   "ru": "Франція",
+   "pos": "геогр."
+  },
+  "Gebiet": {
+   "pos": "ім.",
+   "ru": "територія, область",
+   "art": "das",
+   "pl": "die Gebiete"
+  },
+  "Gruppe": {
+   "pos": "ім.",
+   "ru": "група",
+   "art": "die",
+   "pl": "die Gruppen"
+  },
+  "Hof": {
+   "ru": "двір",
+   "pos": "ім.",
+   "art": "der",
+   "pl": "die Höfe"
+  },
+  "Jahr": {
+   "ru": "рік",
+   "pos": "ім.",
+   "art": "das",
+   "pl": "die Jahre"
+  },
+  "Jahrhundert": {
+   "ru": "століття, вік",
+   "pos": "ім.",
+   "art": "das",
+   "pl": "die Jahrhunderte"
+  },
+  "Kaiser": {
+   "ru": "імператор",
+   "pos": "ім.",
+   "art": "der",
+   "pl": "die Kaiser"
+  },
+  "Karl": {
+   "ru": "Карл",
+   "pos": "власна назва",
+   "note": "Karl der Große — Карл Великий"
+  },
+  "Königreich": {
+   "ru": "королівство",
+   "pos": "ім.",
+   "art": "das",
+   "pl": "die Königreiche"
+  },
+  "Nationalstaat": {
+   "ru": "національна держава",
+   "pos": "ім.",
+   "art": "der",
+   "pl": "die Nationalstaaten"
+  },
+  "Papst": {
+   "ru": "папа римський",
+   "pos": "ім.",
+   "art": "der",
+   "pl": "die Päpste"
+  },
+  "Reich": {
+   "pos": "ім.",
+   "ru": "імперія; держава",
+   "art": "das",
+   "pl": "die Reiche"
+  },
+  "Rom": {
+   "ru": "Рим",
+   "pos": "геогр."
+  },
+  "Sachsen": {
+   "ru": "Саксонія",
+   "pos": "геогр."
+  },
+  "Sinn": {
+   "ru": "сенс",
+   "pos": "ім.",
+   "art": "der",
+   "pl": "die Sinne"
+  },
+  "Teil": {
+   "ru": "частина; частка",
+   "pos": "ім.",
+   "art": "der",
+   "pl": "die Teile",
+   "note": "sein Teil haben — отримати своє"
+  },
+  "Text": {
+   "ru": "текст",
+   "pos": "ім.",
+   "art": "der",
+   "pl": "die Texte"
+  },
+  "Verdun": {
+   "ru": "Верден",
+   "pos": "геогр."
+  },
+  "Vertrag": {
+   "ru": "договір",
+   "pos": "ім.",
+   "art": "der",
+   "pl": "die Verträge"
+  },
+  "Volk": {
+   "ru": "народ",
+   "pos": "ім.",
+   "art": "das",
+   "pl": "die Völker"
+  },
+  "Völkerwanderung": {
+   "ru": "Велике переселення народів",
+   "pos": "ім.",
+   "art": "die",
+   "pl": null
+  },
+  "Ware": {
+   "pos": "ім.",
+   "ru": "товар",
+   "art": "die",
+   "pl": "die Waren"
+  },
+  "alt": {
+   "ru": "старий",
+   "pos": "прикм.",
+   "forms": "alt · älter · am ältesten"
+  },
+  "an": {
+   "ru": "біля, до, на",
+   "pos": "прийм.",
+   "note": "am = an dem. Також відокремлюваний префікс: anfangen «починати», annehmen, ansehen, anzünden"
+  },
+  "auch": {
+   "ru": "теж, також; навіть",
+   "pos": "частка"
+  },
+  "auf": {
+   "ru": "на, в",
+   "pos": "прийм.",
+   "note": "Також відокремлюваний префікс: aufspringen «схопитися», sich aufmachen"
+  },
+  "aus": {
+   "ru": "з",
+   "pos": "прийм.",
+   "note": "Також відокремлюваний префікс: auslöschen «погасити»"
+  },
+  "dabei": {
+   "ru": "при цьому",
+   "pos": "присл."
+  },
+  "der/die/das": {
+   "ru": "означений артикль",
+   "pos": "артикль",
+   "note": "Також відносний займенник «який»"
+  },
+  "dieser": {
+   "ru": "цей, ця, це",
+   "pos": "займ."
+  },
+  "durch": {
+   "ru": "через, крізь",
+   "pos": "прийм."
+  },
+  "einheitlich": {
+   "pos": "прикм.",
+   "ru": "єдиний, однорідний"
+  },
+  "entstehen": {
+   "pos": "дієсл.",
+   "ru": "виникати",
+   "forms": "entsteht · entstand · ist entstanden"
+  },
+  "entwickeln": {
+   "ru": "розвивати",
+   "pos": "дієсл.",
+   "forms": "entwickelte · hat entwickelt",
+   "note": "sich entwickeln — розвиватися"
+  },
+  "er": {
+   "ru": "він",
+   "pos": "займ.",
+   "note": "ihn — його, ihm — йому"
+  },
+  "erobern": {
+   "ru": "завойовувати, захоплювати",
+   "pos": "дієсл.",
+   "forms": "eroberte · hat erobert",
+   "note": "zurückerobern — відвоювати (у тексті: eroberte … zurück)"
+  },
+  "früh": {
+   "pos": "прикм.",
+   "ru": "ранній"
+  },
+  "fördern": {
+   "ru": "підтримувати, сприяти",
+   "pos": "дієсл.",
+   "forms": "förderte · hat gefördert"
+  },
+  "gegen": {
+   "ru": "проти; близько (про час)",
+   "pos": "прийм.",
+   "note": "gegen Mitternacht — близько опівночі"
+  },
+  "groß": {
+   "ru": "великий",
+   "pos": "прикм.",
+   "forms": "groß · größer · am größten"
+  },
+  "heute": {
+   "ru": "сьогодні",
+   "pos": "присл."
+  },
+  "heutig": {
+   "ru": "нинішній, сьогоднішній",
+   "pos": "прикм."
+  },
+  "in": {
+   "ru": "у (im = in dem, ins = in das)",
+   "pos": "прийм."
+  },
+  "katholisch": {
+   "ru": "католицький",
+   "pos": "прикм."
+  },
+  "kein": {
+   "ru": "жодний, ні один",
+   "pos": "займ."
+  },
+  "kriegen": {
+   "ru": "отримувати, схопити",
+   "pos": "дієсл.",
+   "forms": "kriegte · hat gekriegt",
+   "note": "розмовне; die Schwerenot kriegen — щоб їх падуча вхопила"
+  },
+  "krönen": {
+   "ru": "коронувати",
+   "pos": "дієсл.",
+   "forms": "krönte · hat gekrönt",
+   "note": "sich krönen — коронуватися"
+  },
+  "lang": {
+   "ru": "довгий, тривалий",
+   "pos": "прикм.",
+   "forms": "lang · länger · am längsten"
+  },
+  "mittelalterlich": {
+   "ru": "середньовічний",
+   "pos": "прикм."
+  },
+  "nehmen": {
+   "ru": "брати",
+   "pos": "дієсл.",
+   "forms": "nahm · hat genommen",
+   "note": "У тексті з відокремлюваним префіксом: nahmen vorlieb — vorliebnehmen «задовольнятися»; Reißaus genommen — Reißaus nehmen «дременути»"
+  },
+  "nennen": {
+   "pos": "дієсл.",
+   "ru": "називати",
+   "forms": "nennt · nannte · hat genannt"
+  },
+  "neu": {
+   "ru": "новий",
+   "pos": "прикм."
+  },
+  "noch": {
+   "ru": "ще",
+   "pos": "присл."
+  },
+  "römisch": {
+   "pos": "прикм.",
+   "ru": "римський"
+  },
+  "schließen": {
+   "ru": "зачиняти, замикати",
+   "pos": "дієсл.",
+   "forms": "schloss · hat geschlossen"
+  },
+  "sein": {
+   "ru": "бути",
+   "pos": "дієсл.",
+   "forms": "war · ist gewesen",
+   "note": "Konjunktiv I: er sei, du seiest. Та сама форма waren — і мн. die Waren «товари»: allerhand Waren"
+  },
+  "sein (его, свой)": {
+   "ru": "його, свій",
+   "pos": "займ."
+  },
+  "seit": {
+   "ru": "з (якогось часу)",
+   "pos": "прийм."
+  },
+  "sich": {
+   "ru": "себе, собі",
+   "pos": "займ.",
+   "note": "Зворотний займенник, частина зворотного дієслова: sich auf den Weg machen, sich setzen, sich legen, sich nähern, sich gefallen lassen, sich getrauen, sich umsehen"
+  },
+  "später": {
+   "ru": "пізніше, згодом",
+   "pos": "присл."
+  },
+  "teilen": {
+   "ru": "ділити",
+   "pos": "дієсл.",
+   "forms": "teilte · hat geteilt"
+  },
+  "um": {
+   "ru": "навколо, о (про час)",
+   "pos": "прийм.",
+   "note": "um … zu — щоб. Також відокремлюваний префікс: sich umsehen «озирнутися»"
+  },
+  "und": {
+   "ru": "і, а",
+   "pos": "спол."
+  },
+  "unverändert": {
+   "ru": "незмінний",
+   "pos": "прикм."
+  },
+  "vergrößern": {
+   "ru": "збільшувати, розширювати",
+   "pos": "дієсл.",
+   "forms": "vergrößert · vergrößerte · hat vergrößert"
+  },
+  "verschieden": {
+   "ru": "різний",
+   "pos": "прикм."
+  },
+  "von": {
+   "ru": "від, з, про (vom = von dem)",
+   "pos": "прийм."
+  },
+  "wandern": {
+   "ru": "мандрувати, переселятися",
+   "pos": "дієсл.",
+   "forms": "wandert · wanderte · ist gewandert"
+  },
+  "weiter": {
+   "ru": "подальший; ще (weitere — ще, інші)",
+   "pos": "прикм.",
+   "note": "30 weitere Sparkassen — ще 30 ощадних кас"
+  },
+  "westlich": {
+   "ru": "західний",
+   "pos": "прикм."
+  },
+  "wir": {
+   "ru": "ми",
+   "pos": "займ.",
+   "note": "uns — нас, нам"
+  },
+  "ziehen": {
+   "ru": "рухатися, вирушати; тягнути",
+   "pos": "дієсл.",
+   "forms": "zog · ist gezogen (рухатися) / hat gezogen (тягнути)",
+   "note": "У тексті — «рухатися, вирушати». З відокремлюваним префіксом: zieh fort — fortziehen «іти геть, вирушати»"
+  },
+  "zu": {
+   "ru": "до, в; занадто",
+   "pos": "прийм.",
+   "note": "zur = zu der, zum = zu dem"
+  },
+  "zusammen": {
+   "ru": "разом",
+   "pos": "присл."
+  },
+  "östlich": {
+   "pos": "присл.",
+   "ru": "на схід"
+  }
+ }
+}

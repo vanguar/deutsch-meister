@@ -1,0 +1,521 @@
+{
+ "version": 1,
+ "w": {
+  "alten": "alt",
+  "an": "an",
+  "arbeit": "Arbeit",
+  "auch": "auch",
+  "auf": "auf",
+  "aus": "aus",
+  "bewegungen": "Bewegung",
+  "bildung": "Bildung",
+  "chlodwig": "Chlodwig",
+  "christentum": "Christentum",
+  "dabei": "dabei",
+  "das": "der/die/das",
+  "dem": "der/die/das",
+  "der": "der/die/das",
+  "die": "der/die/das",
+  "diese": "dieser",
+  "durch": "durch",
+  "einheitlichen": "einheitlich",
+  "enkel": "Enkel",
+  "entstanden": "entstehen",
+  "entwickelten": "entwickeln",
+  "eroberte": "erobern",
+  "europa": "Europa (континент)",
+  "frankenkönig": "Frankenkönig",
+  "frankenreich": "Frankenreich",
+  "frankreich": "Frankreich",
+  "früherem": "früh",
+  "förderte": "fördern",
+  "gebiet": "Gebiet",
+  "gebiete": "Gebiet",
+  "gegen": "gegen",
+  "große": "groß",
+  "gruppen": "Gruppe",
+  "heute": "heute",
+  "heutigen": "heutig",
+  "hof": "Hof",
+  "ihn": "er",
+  "im": "in",
+  "in": "in",
+  "jahr": "Jahr",
+  "jahrhundert": "Jahrhundert",
+  "kaiser": "Kaiser",
+  "karl": "Karl",
+  "katholische": "katholisch",
+  "keine": "kein",
+  "kriegen": "kriegen",
+  "krönte": "krönen",
+  "königreiche": "Königreich",
+  "langen": "lang",
+  "mittelalterliche": "mittelalterlich",
+  "nahm": "nehmen",
+  "nationalstaaten": "Nationalstaat",
+  "nennen": "nennen",
+  "neu": {
+   "l": "neu",
+   "old": "в обороте aufs neu — снова; сегодня aufs Neue"
+  },
+  "neue": "neu",
+  "noch": "noch",
+  "papst": "Papst",
+  "reich": "Reich",
+  "rom": "Rom",
+  "römischem": "römisch",
+  "sachsen": "Sachsen",
+  "schlossen": "schließen",
+  "sein": "sein",
+  "seine": "sein (его, свой)",
+  "seit": "seit",
+  "sich": "sich",
+  "sinn": "Sinn",
+  "später": "später",
+  "teil": "Teil",
+  "teilten": "teilen",
+  "texten": "Text",
+  "um": "um",
+  "und": "und",
+  "unveränderten": "unverändert",
+  "verdun": "Verdun",
+  "vergrößerte": "vergrößern",
+  "verschiedene": "verschieden",
+  "vertrag": "Vertrag",
+  "von": "von",
+  "völker": "Volk",
+  "völkerwanderung": "Völkerwanderung",
+  "wanderten": "wandern",
+  "waren": "Ware",
+  "weitere": "weiter",
+  "westlichen": "westlich",
+  "wir": "wir",
+  "zogen": "ziehen",
+  "zum": "zu",
+  "zusammen": "zusammen",
+  "östlichen": "östlich"
+ },
+ "l": {
+  "Arbeit": {
+   "ru": "عمل",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Arbeiten"
+  },
+  "Bewegung": {
+   "ru": "حركة",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Bewegungen"
+  },
+  "Bildung": {
+   "ru": "تأسيس؛ تعليم",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Bildungen"
+  },
+  "Chlodwig": {
+   "ru": "كلوفيس",
+   "pos": "اسم علم"
+  },
+  "Christentum": {
+   "ru": "المسيحية",
+   "pos": "اسم",
+   "art": "das",
+   "pl": null
+  },
+  "Enkel": {
+   "ru": "حفيد",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Enkel"
+  },
+  "Europa (континент)": {
+   "ru": "أوروبا",
+   "pos": "جغرافيا"
+  },
+  "Frankenkönig": {
+   "ru": "ملك الفرنجة",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Frankenkönige"
+  },
+  "Frankenreich": {
+   "ru": "مملكة الفرنجة",
+   "pos": "اسم",
+   "art": "das",
+   "pl": null
+  },
+  "Frankreich": {
+   "ru": "فرنسا",
+   "pos": "جغرافيا"
+  },
+  "Gebiet": {
+   "pos": "اسم",
+   "ru": "منطقة، إقليم",
+   "art": "das",
+   "pl": "die Gebiete"
+  },
+  "Gruppe": {
+   "pos": "اسم",
+   "ru": "مجموعة",
+   "art": "die",
+   "pl": "die Gruppen"
+  },
+  "Hof": {
+   "ru": "فناء",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Höfe"
+  },
+  "Jahr": {
+   "ru": "سنة",
+   "pos": "اسم",
+   "art": "das",
+   "pl": "die Jahre"
+  },
+  "Jahrhundert": {
+   "ru": "قرن",
+   "pos": "اسم",
+   "art": "das",
+   "pl": "die Jahrhunderte"
+  },
+  "Kaiser": {
+   "ru": "الإمبراطور",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Kaiser"
+  },
+  "Karl": {
+   "ru": "كارل",
+   "pos": "اسم علم",
+   "note": "Karl der Große — شارلمان"
+  },
+  "Königreich": {
+   "ru": "مملكة",
+   "pos": "اسم",
+   "art": "das",
+   "pl": "die Königreiche"
+  },
+  "Nationalstaat": {
+   "ru": "دولة قومية",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Nationalstaaten"
+  },
+  "Papst": {
+   "ru": "البابا",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Päpste"
+  },
+  "Reich": {
+   "pos": "اسم",
+   "ru": "إمبراطورية؛ دولة",
+   "art": "das",
+   "pl": "die Reiche"
+  },
+  "Rom": {
+   "ru": "روما",
+   "pos": "جغرافيا"
+  },
+  "Sachsen": {
+   "ru": "سكسونيا",
+   "pos": "جغرافيا"
+  },
+  "Sinn": {
+   "ru": "معنى",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Sinne"
+  },
+  "Teil": {
+   "ru": "جزء؛ نصيب",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Teile",
+   "note": "sein Teil haben — ينال نصيبه"
+  },
+  "Text": {
+   "ru": "نص",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Texte"
+  },
+  "Verdun": {
+   "ru": "فردان",
+   "pos": "جغرافيا"
+  },
+  "Vertrag": {
+   "ru": "معاهدة",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Verträge"
+  },
+  "Volk": {
+   "ru": "شعب",
+   "pos": "اسم",
+   "art": "das",
+   "pl": "die Völker"
+  },
+  "Völkerwanderung": {
+   "ru": "عصر هجرة الشعوب",
+   "pos": "اسم",
+   "art": "die",
+   "pl": null
+  },
+  "Ware": {
+   "pos": "اسم",
+   "ru": "بضاعة",
+   "art": "die",
+   "pl": "die Waren"
+  },
+  "alt": {
+   "ru": "قديم / كبير في السن",
+   "pos": "صفة",
+   "forms": "alt · älter · am ältesten"
+  },
+  "an": {
+   "ru": "عند، إلى، على",
+   "pos": "حرف جر",
+   "note": "am = an dem. وهي أيضًا سابقة منفصلة: anfangen «يبدأ»، annehmen، ansehen، anzünden"
+  },
+  "auch": {
+   "ru": "أيضًا؛ حتى",
+   "pos": "أداة"
+  },
+  "auf": {
+   "ru": "على، في",
+   "pos": "حرف جر",
+   "note": "وهي أيضًا سابقة منفصلة: aufspringen «يقفز واقفًا»، sich aufmachen"
+  },
+  "aus": {
+   "ru": "من",
+   "pos": "حرف جر",
+   "note": "وهي أيضًا سابقة منفصلة: auslöschen «يُطفئ»"
+  },
+  "dabei": {
+   "ru": "في أثناء ذلك، مع ذلك",
+   "pos": "ظرف"
+  },
+  "der/die/das": {
+   "ru": "أداة التعريف",
+   "pos": "أداة تعريف",
+   "note": "وهي أيضًا اسم موصول بمعنى «الذي»"
+  },
+  "dieser": {
+   "ru": "هذا، هذه",
+   "pos": "ضمير"
+  },
+  "durch": {
+   "ru": "عبر، من خلال، بسبب",
+   "pos": "حرف جر"
+  },
+  "einheitlich": {
+   "pos": "صفة",
+   "ru": "موحّد، متجانس"
+  },
+  "entstehen": {
+   "pos": "فعل",
+   "ru": "ينشأ",
+   "forms": "entsteht · entstand · ist entstanden"
+  },
+  "entwickeln": {
+   "ru": "يطوّر",
+   "pos": "فعل",
+   "forms": "entwickelte · hat entwickelt",
+   "note": "sich entwickeln — يتطوّر"
+  },
+  "er": {
+   "ru": "هو",
+   "pos": "ضمير",
+   "note": "ihn — إيّاه، ihm — له"
+  },
+  "erobern": {
+   "ru": "يفتح، يستولي على",
+   "pos": "فعل",
+   "forms": "eroberte · hat erobert",
+   "note": "zurückerobern — يستعيد (في النص: eroberte … zurück)"
+  },
+  "früh": {
+   "pos": "صفة",
+   "ru": "مبكر"
+  },
+  "fördern": {
+   "ru": "يشجّع، يدعم",
+   "pos": "فعل",
+   "forms": "förderte · hat gefördert"
+  },
+  "gegen": {
+   "ru": "ضدّ؛ نحو (للوقت)",
+   "pos": "حرف جر",
+   "note": "gegen Mitternacht — نحو منتصف الليل"
+  },
+  "groß": {
+   "ru": "كبير",
+   "pos": "صفة",
+   "forms": "groß · größer · am größten"
+  },
+  "heute": {
+   "ru": "اليوم",
+   "pos": "ظرف"
+  },
+  "heutig": {
+   "ru": "حالي، معاصر",
+   "pos": "صفة"
+  },
+  "in": {
+   "ru": "في (im = in dem، ins = in das)",
+   "pos": "حرف جر"
+  },
+  "katholisch": {
+   "ru": "كاثوليكي",
+   "pos": "صفة"
+  },
+  "kein": {
+   "ru": "لا أيّ، ولا واحد",
+   "pos": "ضمير"
+  },
+  "kriegen": {
+   "ru": "ينال، يُصاب بـ",
+   "pos": "فعل",
+   "forms": "kriegte · hat gekriegt",
+   "note": "عامية؛ die Schwerenot kriegen — ليصبهم الصرع"
+  },
+  "krönen": {
+   "ru": "يتوّج",
+   "pos": "فعل",
+   "forms": "krönte · hat gekrönt",
+   "note": "sich krönen — يتوّج نفسه"
+  },
+  "lang": {
+   "ru": "طويل",
+   "pos": "صفة",
+   "forms": "lang · länger · am längsten"
+  },
+  "mittelalterlich": {
+   "ru": "من العصور الوسطى",
+   "pos": "صفة"
+  },
+  "nehmen": {
+   "ru": "يأخذ",
+   "pos": "فعل",
+   "forms": "nahm · hat genommen",
+   "note": "في النص مع سابقة منفصلة: nahmen vorlieb — vorliebnehmen «اكتفوا»؛ Reißaus genommen — Reißaus nehmen «أطلق ساقيه للريح»"
+  },
+  "nennen": {
+   "pos": "فعل",
+   "ru": "يسمّي",
+   "forms": "nennt · nannte · hat genannt"
+  },
+  "neu": {
+   "ru": "جديد",
+   "pos": "صفة"
+  },
+  "noch": {
+   "ru": "بعدُ / أيضًا",
+   "pos": "ظرف"
+  },
+  "römisch": {
+   "pos": "صفة",
+   "ru": "روماني"
+  },
+  "schließen": {
+   "ru": "يغلق، يُقفل",
+   "pos": "فعل",
+   "forms": "schloss · hat geschlossen"
+  },
+  "sein": {
+   "ru": "يكون",
+   "pos": "فعل",
+   "forms": "war · ist gewesen",
+   "note": "Konjunktiv I: er sei، du seiest. والصيغة نفسها waren هي أيضًا جمع die Waren «بضائع»: allerhand Waren"
+  },
+  "sein (его, свой)": {
+   "ru": "ـه (ضمير الملكية)، خاصّته",
+   "pos": "ضمير"
+  },
+  "seit": {
+   "ru": "منذ (وقت ما)",
+   "pos": "حرف جر"
+  },
+  "sich": {
+   "ru": "نفسه، لنفسه",
+   "pos": "ضمير",
+   "note": "ضمير انعكاسي، جزء من الفعل الانعكاسي: sich auf den Weg machen، sich setzen، sich legen، sich nähern، sich gefallen lassen، sich getrauen، sich umsehen"
+  },
+  "später": {
+   "ru": "لاحقًا، فيما بعد",
+   "pos": "ظرف"
+  },
+  "teilen": {
+   "ru": "يقسم",
+   "pos": "فعل",
+   "forms": "teilte · hat geteilt"
+  },
+  "um": {
+   "ru": "حول، في (للوقت)",
+   "pos": "حرف جر",
+   "note": "um … zu — لكي. وهي أيضًا سابقة منفصلة: sich umsehen «يتلفّت حوله»"
+  },
+  "und": {
+   "ru": "و",
+   "pos": "أداة ربط"
+  },
+  "unverändert": {
+   "ru": "ثابت دون تغيير",
+   "pos": "صفة"
+  },
+  "vergrößern": {
+   "ru": "يوسع",
+   "pos": "فعل",
+   "forms": "vergrößert · vergrößerte · hat vergrößert"
+  },
+  "verschieden": {
+   "ru": "مختلف",
+   "pos": "صفة"
+  },
+  "von": {
+   "ru": "من، عن (vom = von dem)",
+   "pos": "حرف جر"
+  },
+  "wandern": {
+   "ru": "يرتحل، يهاجر",
+   "pos": "فعل",
+   "forms": "wandert · wanderte · ist gewandert"
+  },
+  "weiter": {
+   "ru": "إضافي؛ آخر (weitere — أخرى، إضافية)",
+   "pos": "صفة",
+   "note": "30 weitere Sparkassen — 30 بنك ادخار إضافيًا"
+  },
+  "westlich": {
+   "ru": "غربي",
+   "pos": "صفة"
+  },
+  "wir": {
+   "ru": "نحن",
+   "pos": "ضمير",
+   "note": "uns — إيّانا، لنا"
+  },
+  "ziehen": {
+   "ru": "يتحرّك، يمضي؛ يسحب",
+   "pos": "فعل",
+   "forms": "zog · ist gezogen (يتحرّك) / hat gezogen (يسحب)",
+   "note": "في النص بمعنى «يتحرّك، يمضي». مع سابقة منفصلة: zieh fort — fortziehen «يرحل، يمضي»"
+  },
+  "zu": {
+   "ru": "إلى، في؛ أكثر من اللازم",
+   "pos": "حرف جر",
+   "note": "zur = zu der, zum = zu dem"
+  },
+  "zusammen": {
+   "ru": "معًا",
+   "pos": "ظرف"
+  },
+  "östlich": {
+   "pos": "ظرف",
+   "ru": "شرقًا"
+  }
+ }
+}

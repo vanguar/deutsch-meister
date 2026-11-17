@@ -1,0 +1,116 @@
+{
+  "id": "ch-01",
+  "title": "Völkerwanderung und Frankenreich",
+  "titleRu": "Переселение народов и Франкское государство",
+  "icon": "2",
+  "paragraphs": [
+    {
+      "sourceIds": [
+        "wanderung"
+      ],
+      "s": [
+        {
+          "de": "Seit dem 4. Jahrhundert zogen verschiedene Gruppen durch Europa.",
+          "ru": "С IV века разные группы переселялись по Европе."
+        },
+        {
+          "de": "Diese Bewegungen nennen wir heute Völkerwanderung.",
+          "ru": "Сегодня эти перемещения называют Великим переселением народов."
+        },
+        {
+          "de": "Dabei wanderten keine unveränderten, einheitlichen Völker: Gruppen teilten sich und schlossen sich neu zusammen.",
+          "ru": "При этом переселялись не неизменные, единые народы: группы разделялись и объединялись заново."
+        }
+      ]
+    },
+    {
+      "sourceIds": [
+        "chlodwig"
+      ],
+      "s": [
+        {
+          "de": "Auf früherem römischem Gebiet entstanden neue Königreiche.",
+          "ru": "На бывших римских территориях возникали новые королевства."
+        },
+        {
+          "de": "Der Frankenkönig Chlodwig vergrößerte sein Reich und nahm um 500 das katholische Christentum an.",
+          "ru": "Король франков Хлодвиг расширил своё королевство и около 500 года принял католическое христианство."
+        }
+      ]
+    },
+    {
+      "fig": {
+        "src": "data/history/frankenreich/img/aachen.jpg",
+        "w": 1000,
+        "h": 750,
+        "credit": "Jim Linwood / Wikimedia Commons",
+        "creditUrl": "https://commons.wikimedia.org/wiki/File:Aachen_Cathedral_And_Palatine_Chapel,_Germany.jpg",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "cap": "Ахенский собор сегодня: в центре — восьмиугольная капелла Карла Великого, позднее окружённая пристройками. Фото уменьшено."
+      }
+    },
+    {
+      "sourceIds": [
+        "karl"
+      ],
+      "s": [
+        {
+          "de": "Karl der Große eroberte weitere Gebiete, auch in langen Kriegen gegen die Sachsen.",
+          "ru": "Карл Великий завоевал новые территории, в том числе в длительных войнах против саксов."
+        },
+        {
+          "de": "Im Jahr 800 krönte ihn der Papst in Rom zum Kaiser.",
+          "ru": "В 800 году папа короновал его в Риме императором."
+        },
+        {
+          "de": "Sein Hof förderte Bildung und die Arbeit an alten Texten.",
+          "ru": "Его двор поддерживал образование и работу с древними текстами."
+        }
+      ]
+    },
+    {
+      "sourceIds": [
+        "verdun"
+      ],
+      "s": [
+        {
+          "de": "843 teilten seine Enkel das Frankenreich im Vertrag von Verdun.",
+          "ru": "В 843 году его внуки разделили Франкское государство по Верденскому договору."
+        },
+        {
+          "de": "Aus dem westlichen und östlichen Teil entwickelten sich später Frankreich und das mittelalterliche Reich.",
+          "ru": "Из западной и восточной частей позднее развились Франция и средневековая империя."
+        },
+        {
+          "de": "Das waren noch keine Nationalstaaten im heutigen Sinn.",
+          "ru": "Это ещё не были национальные государства в современном смысле."
+        }
+      ]
+    }
+  ],
+  "sourceTitle": "Источники и проверка фактов",
+  "sources": [
+    {
+      "id": "wanderung",
+      "name": "Badisches Landesmuseum · Völkerwanderung",
+      "url": "https://www.landesmuseum.de/archaeologie-in-baden/aib-screen-11"
+    },
+    {
+      "id": "chlodwig",
+      "name": "Deutsche Biographie · Chlodwig I.",
+      "url": "https://www.deutsche-biographie.de/sfz60857.html"
+    },
+    {
+      "id": "karl",
+      "name": "Deutsche Biographie · Karl der Große",
+      "url": "https://www.deutsche-biographie.de/sfz70315.html"
+    },
+    {
+      "id": "verdun",
+      "name": "Universitätsbibliothek Heidelberg · Verträge von Verdun und Coulaines 843",
+      "url": "https://journals.ub.uni-heidelberg.de/index.php/vuf/article/download/16138/9996"
+    }
+  ],
+  "checked": "2026-11-17"
+}

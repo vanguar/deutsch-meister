@@ -1,0 +1,521 @@
+{
+  "version": 1,
+  "w": {
+    "alten": "alt",
+    "an": "an",
+    "arbeit": "Arbeit",
+    "auch": "auch",
+    "auf": "auf",
+    "aus": "aus",
+    "bewegungen": "Bewegung",
+    "bildung": "Bildung",
+    "chlodwig": "Chlodwig",
+    "christentum": "Christentum",
+    "dabei": "dabei",
+    "das": "der/die/das",
+    "dem": "der/die/das",
+    "der": "der/die/das",
+    "die": "der/die/das",
+    "diese": "dieser",
+    "durch": "durch",
+    "einheitlichen": "einheitlich",
+    "enkel": "Enkel",
+    "entstanden": "entstehen",
+    "entwickelten": "entwickeln",
+    "eroberte": "erobern",
+    "europa": "Europa (континент)",
+    "frankenkönig": "Frankenkönig",
+    "frankenreich": "Frankenreich",
+    "frankreich": "Frankreich",
+    "früherem": "früh",
+    "förderte": "fördern",
+    "gebiet": "Gebiet",
+    "gebiete": "Gebiet",
+    "gegen": "gegen",
+    "große": "groß",
+    "gruppen": "Gruppe",
+    "heute": "heute",
+    "heutigen": "heutig",
+    "hof": "Hof",
+    "ihn": "er",
+    "im": "in",
+    "in": "in",
+    "jahr": "Jahr",
+    "jahrhundert": "Jahrhundert",
+    "kaiser": "Kaiser",
+    "karl": "Karl",
+    "katholische": "katholisch",
+    "keine": "kein",
+    "kriegen": "kriegen",
+    "krönte": "krönen",
+    "königreiche": "Königreich",
+    "langen": "lang",
+    "mittelalterliche": "mittelalterlich",
+    "nahm": "nehmen",
+    "nationalstaaten": "Nationalstaat",
+    "nennen": "nennen",
+    "neu": {
+      "l": "neu",
+      "old": "в обороте aufs neu — снова; сегодня aufs Neue"
+    },
+    "neue": "neu",
+    "noch": "noch",
+    "papst": "Papst",
+    "reich": "Reich",
+    "rom": "Rom",
+    "römischem": "römisch",
+    "sachsen": "Sachsen",
+    "schlossen": "schließen",
+    "sein": "sein",
+    "seine": "sein (его, свой)",
+    "seit": "seit",
+    "sich": "sich",
+    "sinn": "Sinn",
+    "später": "später",
+    "teil": "Teil",
+    "teilten": "teilen",
+    "texten": "Text",
+    "um": "um",
+    "und": "und",
+    "unveränderten": "unverändert",
+    "verdun": "Verdun",
+    "vergrößerte": "vergrößern",
+    "verschiedene": "verschieden",
+    "vertrag": "Vertrag",
+    "von": "von",
+    "völker": "Volk",
+    "völkerwanderung": "Völkerwanderung",
+    "wanderten": "wandern",
+    "waren": "Ware",
+    "weitere": "weiter",
+    "westlichen": "westlich",
+    "wir": "wir",
+    "zogen": "ziehen",
+    "zum": "zu",
+    "zusammen": "zusammen",
+    "östlichen": "östlich"
+  },
+  "l": {
+    "Arbeit": {
+      "ru": "работа",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Arbeiten"
+    },
+    "Bewegung": {
+      "ru": "движение",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Bewegungen"
+    },
+    "Bildung": {
+      "ru": "образование (создание); образование (учёба)",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Bildungen"
+    },
+    "Chlodwig": {
+      "ru": "Хлодвиг",
+      "pos": "имя собств."
+    },
+    "Christentum": {
+      "ru": "христианство",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "Enkel": {
+      "ru": "внук",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Enkel"
+    },
+    "Europa (континент)": {
+      "ru": "Европа",
+      "pos": "геогр."
+    },
+    "Frankenkönig": {
+      "ru": "король франков",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Frankenkönige"
+    },
+    "Frankenreich": {
+      "ru": "Франкское государство",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "Frankreich": {
+      "ru": "Франция",
+      "pos": "геогр."
+    },
+    "Gebiet": {
+      "pos": "сущ.",
+      "ru": "территория, область",
+      "art": "das",
+      "pl": "die Gebiete"
+    },
+    "Gruppe": {
+      "pos": "сущ.",
+      "ru": "группа",
+      "art": "die",
+      "pl": "die Gruppen"
+    },
+    "Hof": {
+      "ru": "двор",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Höfe"
+    },
+    "Jahr": {
+      "ru": "год",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Jahre"
+    },
+    "Jahrhundert": {
+      "ru": "век, столетие",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Jahrhunderte"
+    },
+    "Kaiser": {
+      "ru": "император",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Kaiser"
+    },
+    "Karl": {
+      "ru": "Карл",
+      "pos": "имя собств.",
+      "note": "Karl der Große — Карл Великий"
+    },
+    "Königreich": {
+      "ru": "королевство",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Königreiche"
+    },
+    "Nationalstaat": {
+      "ru": "национальное государство",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Nationalstaaten"
+    },
+    "Papst": {
+      "ru": "папа римский",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Päpste"
+    },
+    "Reich": {
+      "pos": "сущ.",
+      "ru": "империя; государство",
+      "art": "das",
+      "pl": "die Reiche"
+    },
+    "Rom": {
+      "ru": "Рим",
+      "pos": "геогр."
+    },
+    "Sachsen": {
+      "ru": "Саксония",
+      "pos": "геогр."
+    },
+    "Sinn": {
+      "ru": "смысл",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Sinne"
+    },
+    "Teil": {
+      "ru": "часть; доля",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Teile",
+      "note": "sein Teil haben — получить своё"
+    },
+    "Text": {
+      "ru": "текст",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Texte"
+    },
+    "Verdun": {
+      "ru": "Верден",
+      "pos": "геогр."
+    },
+    "Vertrag": {
+      "ru": "договор",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Verträge"
+    },
+    "Volk": {
+      "ru": "народ",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Völker"
+    },
+    "Völkerwanderung": {
+      "ru": "Великое переселение народов",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "Ware": {
+      "pos": "сущ.",
+      "ru": "товар",
+      "art": "die",
+      "pl": "die Waren"
+    },
+    "alt": {
+      "ru": "старый",
+      "pos": "прил.",
+      "forms": "alt · älter · am ältesten"
+    },
+    "an": {
+      "ru": "у, к, на",
+      "pos": "предл.",
+      "note": "am = an dem. Тж. отделяемая приставка: anfangen «начинать», annehmen, ansehen, anzünden"
+    },
+    "auch": {
+      "ru": "тоже, также; даже",
+      "pos": "частица"
+    },
+    "auf": {
+      "ru": "на, в",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: aufspringen «вскочить», sich aufmachen"
+    },
+    "aus": {
+      "ru": "из",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: auslöschen «погасить»"
+    },
+    "dabei": {
+      "ru": "при этом, при том",
+      "pos": "нареч."
+    },
+    "der/die/das": {
+      "ru": "определённый артикль",
+      "pos": "артикль",
+      "note": "Тж. относительное местоимение «который»"
+    },
+    "dieser": {
+      "ru": "этот, эта, это",
+      "pos": "мест."
+    },
+    "durch": {
+      "ru": "через, сквозь, из-за",
+      "pos": "предл."
+    },
+    "einheitlich": {
+      "pos": "прил.",
+      "ru": "единый, однородный"
+    },
+    "entstehen": {
+      "pos": "гл.",
+      "ru": "возникать",
+      "forms": "entsteht · entstand · ist entstanden"
+    },
+    "entwickeln": {
+      "ru": "развивать",
+      "pos": "гл.",
+      "forms": "entwickelte · hat entwickelt",
+      "note": "sich entwickeln — развиваться"
+    },
+    "er": {
+      "ru": "он",
+      "pos": "мест.",
+      "note": "ihn — его, ihm — ему"
+    },
+    "erobern": {
+      "ru": "завоёвывать, захватывать",
+      "pos": "гл.",
+      "forms": "eroberte · hat erobert",
+      "note": "zurückerobern — отвоевать (в тексте: eroberte … zurück)"
+    },
+    "früh": {
+      "pos": "прил.",
+      "ru": "ранний"
+    },
+    "fördern": {
+      "ru": "поддерживать, содействовать",
+      "pos": "гл.",
+      "forms": "förderte · hat gefördert"
+    },
+    "gegen": {
+      "ru": "против; около (о времени)",
+      "pos": "предл.",
+      "note": "gegen Mitternacht — около полуночи"
+    },
+    "groß": {
+      "ru": "большой",
+      "pos": "прил.",
+      "forms": "groß · größer · am größten"
+    },
+    "heute": {
+      "ru": "сегодня",
+      "pos": "нареч."
+    },
+    "heutig": {
+      "ru": "нынешний, сегодняшний",
+      "pos": "прил."
+    },
+    "in": {
+      "ru": "в (im = in dem, ins = in das)",
+      "pos": "предл."
+    },
+    "katholisch": {
+      "ru": "католический",
+      "pos": "прил."
+    },
+    "kein": {
+      "ru": "никакой, ни один",
+      "pos": "мест."
+    },
+    "kriegen": {
+      "ru": "получать, схватить",
+      "pos": "гл.",
+      "forms": "kriegte · hat gekriegt",
+      "note": "разговорное; die Schwerenot kriegen — чтоб их падучая взяла"
+    },
+    "krönen": {
+      "ru": "короновать",
+      "pos": "гл.",
+      "forms": "krönte · hat gekrönt",
+      "note": "sich krönen — короноваться"
+    },
+    "lang": {
+      "ru": "длинный, долгий",
+      "pos": "прил.",
+      "forms": "lang · länger · am längsten"
+    },
+    "mittelalterlich": {
+      "ru": "средневековый",
+      "pos": "прил."
+    },
+    "nehmen": {
+      "ru": "брать",
+      "pos": "гл.",
+      "forms": "nahm · hat genommen",
+      "note": "В тексте с отделяемой приставкой: nahmen vorlieb — vorliebnehmen «довольствоваться»; Reißaus genommen — Reißaus nehmen «дать дёру»"
+    },
+    "nennen": {
+      "pos": "гл.",
+      "ru": "называть",
+      "forms": "nennt · nannte · hat genannt"
+    },
+    "neu": {
+      "ru": "новый",
+      "pos": "прил."
+    },
+    "noch": {
+      "ru": "ещё",
+      "pos": "нареч."
+    },
+    "römisch": {
+      "pos": "прил.",
+      "ru": "римский"
+    },
+    "schließen": {
+      "ru": "закрывать, запирать",
+      "pos": "гл.",
+      "forms": "schloss · hat geschlossen"
+    },
+    "sein": {
+      "ru": "быть",
+      "pos": "гл.",
+      "forms": "war · ist gewesen",
+      "note": "Konjunktiv I: er sei, du seiest. Та же форма waren — и мн. ч. die Waren «товары»: allerhand Waren"
+    },
+    "sein (его, свой)": {
+      "ru": "его, свой",
+      "pos": "мест."
+    },
+    "seit": {
+      "ru": "с (какого-то времени)",
+      "pos": "предл."
+    },
+    "sich": {
+      "ru": "себя, себе",
+      "pos": "мест.",
+      "note": "Возвратное местоимение, часть возвратного глагола: sich auf den Weg machen, sich setzen, sich legen, sich nähern, sich gefallen lassen, sich getrauen, sich umsehen"
+    },
+    "später": {
+      "ru": "позже, потом",
+      "pos": "нареч."
+    },
+    "teilen": {
+      "ru": "делить",
+      "pos": "гл.",
+      "forms": "teilte · hat geteilt"
+    },
+    "um": {
+      "ru": "вокруг, в (о времени)",
+      "pos": "предл.",
+      "note": "um … zu — чтобы. Тж. отделяемая приставка: sich umsehen «оглядеться»"
+    },
+    "und": {
+      "ru": "и, а",
+      "pos": "союз"
+    },
+    "unverändert": {
+      "ru": "неизменный",
+      "pos": "прил."
+    },
+    "vergrößern": {
+      "ru": "увеличивать, расширять",
+      "pos": "гл.",
+      "forms": "vergrößert · vergrößerte · hat vergrößert"
+    },
+    "verschieden": {
+      "ru": "разный",
+      "pos": "прил."
+    },
+    "von": {
+      "ru": "от, из, о (vom = von dem)",
+      "pos": "предл."
+    },
+    "wandern": {
+      "ru": "странствовать, переселяться",
+      "pos": "гл.",
+      "forms": "wandert · wanderte · ist gewandert"
+    },
+    "weiter": {
+      "ru": "дальнейший; ещё (weitere — ещё, другие)",
+      "pos": "прил.",
+      "note": "30 weitere Sparkassen — ещё 30 сберкасс"
+    },
+    "westlich": {
+      "ru": "западный",
+      "pos": "прил."
+    },
+    "wir": {
+      "ru": "мы",
+      "pos": "мест.",
+      "note": "uns — нас, нам"
+    },
+    "ziehen": {
+      "ru": "двигаться, отправляться; тянуть",
+      "pos": "гл.",
+      "forms": "zog · ist gezogen (двигаться) / hat gezogen (тянуть)",
+      "note": "В тексте — «двигаться, отправляться». С отделяемой приставкой: zieh fort — fortziehen «уходить, отправляться»"
+    },
+    "zu": {
+      "ru": "к, в; слишком",
+      "pos": "предл.",
+      "note": "zur = zu der, zum = zu dem"
+    },
+    "zusammen": {
+      "ru": "вместе",
+      "pos": "нареч."
+    },
+    "östlich": {
+      "pos": "нареч.",
+      "ru": "к востоку"
+    }
+  }
+}

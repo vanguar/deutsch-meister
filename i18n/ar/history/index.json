@@ -30,7 +30,7 @@
    "titleRu": "هجرة الشعوب ومملكة الفرنجة",
    "period": "القرون الرابع–التاسع",
    "summary": "ممالك جديدة والمسيحية وشارلمان.",
-   "ready": false
+   "ready": true
   },
   {
    "id": "mittelalter",
@@ -162,6 +162,24 @@
    "number": 1,
    "source": "Landesmuseum für Vorgeschichte Halle / bpb / Limesmuseum Aalen / Planet Schule (SWR) / Stadt Trier",
    "sourceUrl": "https://www.landesmuseum-vorgeschichte.de/dauerausstellung/erfindung-der-germanen",
+   "checked": "2026-11-17",
+   "license": "صياغة تعليمية أعدّها German Morning؛ روابط المواد مذكورة في الفصل."
+  },
+  {
+   "id": "frankenreich",
+   "kind": "history",
+   "title": "Völkerwanderung und Frankenreich",
+   "titleRu": "هجرة الشعوب ومملكة الفرنجة",
+   "author": "German Morning",
+   "level": "B1",
+   "year": "2026",
+   "chapters": 1,
+   "words": 112,
+   "minutes": 3,
+   "cover": "2",
+   "number": 2,
+   "source": "Badisches Landesmuseum / Deutsche Biographie / Universitätsbibliothek Heidelberg",
+   "sourceUrl": "https://www.landesmuseum.de/archaeologie-in-baden/aib-screen-11",
    "checked": "2026-11-17",
    "license": "صياغة تعليمية أعدّها German Morning؛ روابط المواد مذكورة في الفصل."
   }

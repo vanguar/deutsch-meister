@@ -1,0 +1,116 @@
+{
+ "id": "ch-01",
+ "title": "Völkerwanderung und Frankenreich",
+ "titleRu": "هجرة الشعوب ومملكة الفرنجة",
+ "icon": "2",
+ "paragraphs": [
+  {
+   "sourceIds": [
+    "wanderung"
+   ],
+   "s": [
+    {
+     "de": "Seit dem 4. Jahrhundert zogen verschiedene Gruppen durch Europa.",
+     "ru": "منذ القرن الرابع تنقلت جماعات مختلفة عبر أوروبا."
+    },
+    {
+     "de": "Diese Bewegungen nennen wir heute Völkerwanderung.",
+     "ru": "نسمي هذه التحركات اليوم هجرة الشعوب."
+    },
+    {
+     "de": "Dabei wanderten keine unveränderten, einheitlichen Völker: Gruppen teilten sich und schlossen sich neu zusammen.",
+     "ru": "ولم تكن المهاجرة شعوبًا موحدة وثابتة؛ بل انقسمت جماعات وتشكلت منها تجمعات جديدة."
+    }
+   ]
+  },
+  {
+   "sourceIds": [
+    "chlodwig"
+   ],
+   "s": [
+    {
+     "de": "Auf früherem römischem Gebiet entstanden neue Königreiche.",
+     "ru": "نشأت ممالك جديدة في أراضٍ رومانية سابقة."
+    },
+    {
+     "de": "Der Frankenkönig Chlodwig vergrößerte sein Reich und nahm um 500 das katholische Christentum an.",
+     "ru": "وسع ملك الفرنجة كلوفيس مملكته واعتنق المسيحية الكاثوليكية نحو عام 500."
+    }
+   ]
+  },
+  {
+   "fig": {
+    "src": "data/history/frankenreich/img/aachen.jpg",
+    "w": 1000,
+    "h": 750,
+    "credit": "Jim Linwood / Wikimedia Commons",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:Aachen_Cathedral_And_Palatine_Chapel,_Germany.jpg",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+    "cap": "كاتدرائية آخن اليوم: في الوسط مصلى شارلمان المثمن، تحيط به إضافات لاحقة. صُغرت الصورة."
+   }
+  },
+  {
+   "sourceIds": [
+    "karl"
+   ],
+   "s": [
+    {
+     "de": "Karl der Große eroberte weitere Gebiete, auch in langen Kriegen gegen die Sachsen.",
+     "ru": "فتح شارلمان أراضي أخرى، ومنها أراضٍ في حروب طويلة ضد السكسونيين."
+    },
+    {
+     "de": "Im Jahr 800 krönte ihn der Papst in Rom zum Kaiser.",
+     "ru": "في عام 800 توجه البابا إمبراطورًا في روما."
+    },
+    {
+     "de": "Sein Hof förderte Bildung und die Arbeit an alten Texten.",
+     "ru": "شجع بلاطه التعليم والعمل على النصوص القديمة."
+    }
+   ]
+  },
+  {
+   "sourceIds": [
+    "verdun"
+   ],
+   "s": [
+    {
+     "de": "843 teilten seine Enkel das Frankenreich im Vertrag von Verdun.",
+     "ru": "في عام 843 قسم أحفاده مملكة الفرنجة بمعاهدة فردان."
+    },
+    {
+     "de": "Aus dem westlichen und östlichen Teil entwickelten sich später Frankreich und das mittelalterliche Reich.",
+     "ru": "تطورت من القسمين الغربي والشرقي لاحقًا فرنسا والإمبراطورية في العصور الوسطى."
+    },
+    {
+     "de": "Das waren noch keine Nationalstaaten im heutigen Sinn.",
+     "ru": "ولم تكن هذه دولًا قومية بالمعنى الحالي."
+    }
+   ]
+  }
+ ],
+ "sourceTitle": "المصادر والتحقق من المعلومات",
+ "sources": [
+  {
+   "id": "wanderung",
+   "name": "Badisches Landesmuseum · Völkerwanderung",
+   "url": "https://www.landesmuseum.de/archaeologie-in-baden/aib-screen-11"
+  },
+  {
+   "id": "chlodwig",
+   "name": "Deutsche Biographie · Chlodwig I.",
+   "url": "https://www.deutsche-biographie.de/sfz60857.html"
+  },
+  {
+   "id": "karl",
+   "name": "Deutsche Biographie · Karl der Große",
+   "url": "https://www.deutsche-biographie.de/sfz70315.html"
+  },
+  {
+   "id": "verdun",
+   "name": "Universitätsbibliothek Heidelberg · Verträge von Verdun und Coulaines 843",
+   "url": "https://journals.ub.uni-heidelberg.de/index.php/vuf/article/download/16138/9996"
+  }
+ ],
+ "checked": "2026-11-17"
+}
