@@ -1,0 +1,504 @@
+{
+  "version": 1,
+  "w": {
+    "aber": "aber",
+    "alle": "alle/alles",
+    "als": "als",
+    "armee": "Armee",
+    "auch": "auch",
+    "aufklärung": "Aufklärung",
+    "aus": "aus",
+    "bauen": "einbauen",
+    "bauten": "aufbauen",
+    "bevölkerung": "Bevölkerung",
+    "bildung": "Bildung",
+    "bis": "bis",
+    "blieb": "bleiben",
+    "blieben": "bleiben",
+    "brandenburgische": "brandenburgisch",
+    "dafür": "dafür",
+    "das": "der/die/das",
+    "denken": "denken",
+    "denker": "Denker",
+    "der": "der/die/das",
+    "die": "der/die/das",
+    "doch": "doch",
+    "ein": "ein/eine",
+    "einfluss": "Einfluss",
+    "er": "er",
+    "erweiterung": "Erweiterung",
+    "forderten": "fordern",
+    "friedrich": "Friedrich",
+    "förderte": "fördern",
+    "führte": "führen",
+    "für": "für",
+    "fürstenstaaten": "Fürstenstaat",
+    "gleiche": "gleich",
+    "herrscher": "Herrscher",
+    "hieß": "heißen",
+    "i": "i (буква)",
+    "ideale": "Ideal",
+    "ii": "II",
+    "iii": "III.",
+    "im": "in",
+    "immanuel": "Immanuel",
+    "in": "in",
+    "jahrhundert": "Jahrhundert",
+    "kant": "Kant",
+    "konkurrierten": "konkurrieren",
+    "kriege": "Krieg",
+    "krönte": "krönen",
+    "kurfürst": "Kurfürst",
+    "könig": "König",
+    "ließen": "lassen",
+    "macht": "machen",
+    "mitbestimmung": "Mitbestimmung",
+    "musste": "müssen",
+    "nach": "nach",
+    "politische": "politisch",
+    "preußen": "Preußen",
+    "prächtige": "prächtig",
+    "rechte": "Recht",
+    "reformen": "Reform",
+    "regierte": "regieren",
+    "reich": "Reich",
+    "schlösser": "Schloss (дворец)",
+    "seiner": "sein (его, свой)",
+    "selbstständig": "selbstständig",
+    "sich": "sich",
+    "sie": "sie",
+    "steuern": "Steuer",
+    "territorien": "Territorium",
+    "toleranz": "Toleranz",
+    "um": "um",
+    "und": "und",
+    "unerfüllt": "unerfüllt",
+    "verband": "verbinden",
+    "vernunft": "Vernunft",
+    "verwaltung": "Verwaltung",
+    "vieler": "viel",
+    "von": "von",
+    "weitgehend": "weitgehend",
+    "wichtige": "wichtig",
+    "wie": "wie",
+    "wurden": "werden",
+    "zahlen": "Zahl",
+    "zahlreichen": "zahlreich",
+    "zu": "zu",
+    "zum": "zu",
+    "zur": "zu",
+    "österreich": "Österreich"
+  },
+  "l": {
+    "Armee": {
+      "ru": "армия",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Armeen"
+    },
+    "Aufklärung": {
+      "ru": "Просвещение",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "Bevölkerung": {
+      "ru": "население",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Bevölkerungen"
+    },
+    "Bildung": {
+      "ru": "образование (создание); образование (учёба)",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Bildungen"
+    },
+    "Denker": {
+      "ru": "мыслитель",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Denker"
+    },
+    "Einfluss": {
+      "ru": "влияние",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Einflüsse"
+    },
+    "Erweiterung": {
+      "ru": "расширение",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Erweiterungen"
+    },
+    "Friedrich": {
+      "ru": "Фридрих (имя, фамилия)",
+      "pos": "имя собств."
+    },
+    "Fürstenstaat": {
+      "ru": "княжество, государство под властью князя",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Fürstenstaaten"
+    },
+    "Herrscher": {
+      "ru": "властитель, государь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Herrscher"
+    },
+    "II": {
+      "ru": "второй (римская цифра)",
+      "pos": "числ.",
+      "note": "Ludwig II. — Людвиг Второй"
+    },
+    "III.": {
+      "ru": "третий (о монархе)",
+      "pos": "числ.",
+      "note": "Friedrich III. — Фридрих Третий"
+    },
+    "Ideal": {
+      "ru": "идеал",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Ideale"
+    },
+    "Immanuel": {
+      "ru": "Иммануил",
+      "pos": "имя собств."
+    },
+    "Jahrhundert": {
+      "ru": "век, столетие",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Jahrhunderte"
+    },
+    "Kant": {
+      "ru": "Кант",
+      "pos": "имя собств."
+    },
+    "Krieg": {
+      "ru": "война",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Kriege"
+    },
+    "Kurfürst": {
+      "ru": "курфюрст",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Kurfürsten",
+      "note": "der Große Kurfürst — Великий курфюрст Фридрих Вильгельм"
+    },
+    "König": {
+      "ru": "король",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Könige"
+    },
+    "Mitbestimmung": {
+      "ru": "участие в принятии решений",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "Preußen": {
+      "ru": "Пруссия",
+      "pos": "геогр."
+    },
+    "Recht": {
+      "ru": "право",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Rechte"
+    },
+    "Reform": {
+      "ru": "реформа",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Reformen"
+    },
+    "Reich": {
+      "pos": "сущ.",
+      "ru": "империя; государство",
+      "art": "das",
+      "pl": "die Reiche"
+    },
+    "Schloss (дворец)": {
+      "ru": "дворец, замок",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Schlösser"
+    },
+    "Steuer": {
+      "ru": "налог",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Steuern"
+    },
+    "Territorium": {
+      "ru": "территория",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Territorien"
+    },
+    "Toleranz": {
+      "ru": "терпимость",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "Vernunft": {
+      "ru": "разум",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "Verwaltung": {
+      "ru": "администрация, управление",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Verwaltungen"
+    },
+    "Zahl": {
+      "ru": "число, цифра",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Zahlen"
+    },
+    "aber": {
+      "ru": "но, однако",
+      "pos": "союз"
+    },
+    "alle/alles": {
+      "ru": "все; всё",
+      "pos": "мест."
+    },
+    "als": {
+      "ru": "когда; как; чем",
+      "pos": "союз"
+    },
+    "auch": {
+      "ru": "тоже, также; даже",
+      "pos": "частица"
+    },
+    "aufbauen": {
+      "ru": "строить, устанавливать",
+      "pos": "гл.",
+      "forms": "baute auf · hat aufgebaut"
+    },
+    "aus": {
+      "ru": "из",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: auslöschen «погасить»"
+    },
+    "bis": {
+      "ru": "до; пока не",
+      "pos": "союз"
+    },
+    "bleiben": {
+      "ru": "оставаться",
+      "pos": "гл.",
+      "forms": "blieb · ist geblieben"
+    },
+    "brandenburgisch": {
+      "ru": "бранденбургский",
+      "pos": "прил."
+    },
+    "dafür": {
+      "ru": "за это, для этого",
+      "pos": "нареч.",
+      "note": "dafür sorgen, dass … — позаботиться, чтобы …"
+    },
+    "denken": {
+      "ru": "думать",
+      "pos": "гл.",
+      "forms": "dachte · hat gedacht"
+    },
+    "der/die/das": {
+      "ru": "определённый артикль",
+      "pos": "артикль",
+      "note": "Тж. относительное местоимение «который»"
+    },
+    "doch": {
+      "ru": "всё же, всё-таки; ведь",
+      "pos": "частица"
+    },
+    "ein/eine": {
+      "ru": "неопределённый артикль",
+      "pos": "артикль",
+      "note": "einer — «один, некто»"
+    },
+    "einbauen": {
+      "ru": "встраивать",
+      "pos": "гл.",
+      "forms": "baute ein · hat eingebaut"
+    },
+    "er": {
+      "ru": "он",
+      "pos": "мест.",
+      "note": "ihn — его, ihm — ему"
+    },
+    "fordern": {
+      "ru": "требовать; призывать",
+      "pos": "гл.",
+      "forms": "forderte · hat gefordert",
+      "note": "jemanden auffordern, etwas zu tun — предлагать, требовать от кого-л."
+    },
+    "fördern": {
+      "ru": "поддерживать, содействовать",
+      "pos": "гл.",
+      "forms": "förderte · hat gefördert"
+    },
+    "führen": {
+      "ru": "вести",
+      "pos": "гл.",
+      "forms": "führte · hat geführt",
+      "note": "einen Beweis führen — привести доказательство"
+    },
+    "für": {
+      "ru": "для, за",
+      "pos": "предл."
+    },
+    "gleich": {
+      "ru": "равный, одинаковый",
+      "pos": "прил."
+    },
+    "heißen": {
+      "ru": "велеть; называться",
+      "pos": "гл.",
+      "forms": "hieß · hat geheißen",
+      "note": "hatte aufstehen heißen — велел встать"
+    },
+    "i (буква)": {
+      "ru": "буква i",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die i"
+    },
+    "in": {
+      "ru": "в (im = in dem, ins = in das)",
+      "pos": "предл."
+    },
+    "konkurrieren": {
+      "ru": "конкурировать, соперничать",
+      "pos": "гл.",
+      "forms": "konkurrierte · hat konkurriert"
+    },
+    "krönen": {
+      "ru": "короновать",
+      "pos": "гл.",
+      "forms": "krönte · hat gekrönt",
+      "note": "sich krönen — короноваться"
+    },
+    "lassen": {
+      "ru": "позволять, велеть; оставлять",
+      "pos": "гл.",
+      "forms": "ließ · hat gelassen"
+    },
+    "machen": {
+      "ru": "делать",
+      "pos": "гл.",
+      "forms": "machte · hat gemacht",
+      "note": "sich auf den Weg machen — отправиться в путь"
+    },
+    "müssen": {
+      "ru": "быть вынужденным, должен",
+      "pos": "гл.",
+      "forms": "musste · hat gemusst"
+    },
+    "nach": {
+      "ru": "в, на, после, по",
+      "pos": "предл."
+    },
+    "politisch": {
+      "ru": "политический",
+      "pos": "прил."
+    },
+    "prächtig": {
+      "ru": "роскошный, великолепный",
+      "pos": "прил."
+    },
+    "regieren": {
+      "ru": "править, управлять",
+      "pos": "гл.",
+      "forms": "regierte · hat regiert"
+    },
+    "sein (его, свой)": {
+      "ru": "его, свой",
+      "pos": "мест."
+    },
+    "selbstständig": {
+      "ru": "самостоятельно",
+      "pos": "нареч."
+    },
+    "sich": {
+      "ru": "себя, себе",
+      "pos": "мест.",
+      "note": "Возвратное местоимение, часть возвратного глагола: sich auf den Weg machen, sich setzen, sich legen, sich nähern, sich gefallen lassen, sich getrauen, sich umsehen"
+    },
+    "sie": {
+      "ru": "она; они; Вы",
+      "pos": "мест."
+    },
+    "um": {
+      "ru": "вокруг, в (о времени)",
+      "pos": "предл.",
+      "note": "um … zu — чтобы. Тж. отделяемая приставка: sich umsehen «оглядеться»"
+    },
+    "und": {
+      "ru": "и, а",
+      "pos": "союз"
+    },
+    "unerfüllt": {
+      "ru": "неосуществлённый",
+      "pos": "прил."
+    },
+    "verbinden": {
+      "ru": "перевязывать (рану); соединять",
+      "pos": "гл.",
+      "forms": "verband · hat verbunden",
+      "note": "sich verbinden lassen — дать себя перевязать"
+    },
+    "viel": {
+      "ru": "много, многое",
+      "pos": "мест."
+    },
+    "von": {
+      "ru": "от, из, о (vom = von dem)",
+      "pos": "предл."
+    },
+    "weitgehend": {
+      "ru": "в значительной мере, в основном",
+      "pos": "нареч."
+    },
+    "werden": {
+      "ru": "становиться",
+      "pos": "гл.",
+      "forms": "wurde · ist geworden",
+      "note": "Вспомогательный глагол будущего времени и пассива"
+    },
+    "wichtig": {
+      "ru": "важный",
+      "pos": "прил."
+    },
+    "wie": {
+      "ru": "как; какой",
+      "pos": "союз"
+    },
+    "zahlreich": {
+      "ru": "многочисленный",
+      "pos": "прил."
+    },
+    "zu": {
+      "ru": "к, в; слишком",
+      "pos": "предл.",
+      "note": "zur = zu der, zum = zu dem"
+    },
+    "Österreich": {
+      "ru": "Австрия",
+      "pos": "геогр."
+    }
+  }
+}

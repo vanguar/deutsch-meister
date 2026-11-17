@@ -1,0 +1,504 @@
+{
+ "version": 1,
+ "w": {
+  "aber": "aber",
+  "alle": "alle/alles",
+  "als": "als",
+  "armee": "Armee",
+  "auch": "auch",
+  "aufklärung": "Aufklärung",
+  "aus": "aus",
+  "bauen": "einbauen",
+  "bauten": "aufbauen",
+  "bevölkerung": "Bevölkerung",
+  "bildung": "Bildung",
+  "bis": "bis",
+  "blieb": "bleiben",
+  "blieben": "bleiben",
+  "brandenburgische": "brandenburgisch",
+  "dafür": "dafür",
+  "das": "der/die/das",
+  "denken": "denken",
+  "denker": "Denker",
+  "der": "der/die/das",
+  "die": "der/die/das",
+  "doch": "doch",
+  "ein": "ein/eine",
+  "einfluss": "Einfluss",
+  "er": "er",
+  "erweiterung": "Erweiterung",
+  "forderten": "fordern",
+  "friedrich": "Friedrich",
+  "förderte": "fördern",
+  "führte": "führen",
+  "für": "für",
+  "fürstenstaaten": "Fürstenstaat",
+  "gleiche": "gleich",
+  "herrscher": "Herrscher",
+  "hieß": "heißen",
+  "i": "i (буква)",
+  "ideale": "Ideal",
+  "ii": "II",
+  "iii": "III.",
+  "im": "in",
+  "immanuel": "Immanuel",
+  "in": "in",
+  "jahrhundert": "Jahrhundert",
+  "kant": "Kant",
+  "konkurrierten": "konkurrieren",
+  "kriege": "Krieg",
+  "krönte": "krönen",
+  "kurfürst": "Kurfürst",
+  "könig": "König",
+  "ließen": "lassen",
+  "macht": "machen",
+  "mitbestimmung": "Mitbestimmung",
+  "musste": "müssen",
+  "nach": "nach",
+  "politische": "politisch",
+  "preußen": "Preußen",
+  "prächtige": "prächtig",
+  "rechte": "Recht",
+  "reformen": "Reform",
+  "regierte": "regieren",
+  "reich": "Reich",
+  "schlösser": "Schloss (дворец)",
+  "seiner": "sein (его, свой)",
+  "selbstständig": "selbstständig",
+  "sich": "sich",
+  "sie": "sie",
+  "steuern": "Steuer",
+  "territorien": "Territorium",
+  "toleranz": "Toleranz",
+  "um": "um",
+  "und": "und",
+  "unerfüllt": "unerfüllt",
+  "verband": "verbinden",
+  "vernunft": "Vernunft",
+  "verwaltung": "Verwaltung",
+  "vieler": "viel",
+  "von": "von",
+  "weitgehend": "weitgehend",
+  "wichtige": "wichtig",
+  "wie": "wie",
+  "wurden": "werden",
+  "zahlen": "Zahl",
+  "zahlreichen": "zahlreich",
+  "zu": "zu",
+  "zum": "zu",
+  "zur": "zu",
+  "österreich": "Österreich"
+ },
+ "l": {
+  "Armee": {
+   "ru": "армія",
+   "pos": "ім.",
+   "art": "die",
+   "pl": "die Armeen"
+  },
+  "Aufklärung": {
+   "ru": "Просвітництво",
+   "pos": "ім.",
+   "art": "die",
+   "pl": null
+  },
+  "Bevölkerung": {
+   "ru": "населення",
+   "pos": "ім.",
+   "art": "die",
+   "pl": "die Bevölkerungen"
+  },
+  "Bildung": {
+   "ru": "утворення; освіта",
+   "pos": "ім.",
+   "art": "die",
+   "pl": "die Bildungen"
+  },
+  "Denker": {
+   "ru": "мислитель",
+   "pos": "ім.",
+   "art": "der",
+   "pl": "die Denker"
+  },
+  "Einfluss": {
+   "ru": "вплив",
+   "pos": "ім.",
+   "art": "der",
+   "pl": "die Einflüsse"
+  },
+  "Erweiterung": {
+   "ru": "розширення",
+   "pos": "ім.",
+   "art": "die",
+   "pl": "die Erweiterungen"
+  },
+  "Friedrich": {
+   "ru": "Фрідріх (ім'я, прізвище)",
+   "pos": "власна назва"
+  },
+  "Fürstenstaat": {
+   "ru": "князівство, держава під владою князя",
+   "pos": "ім.",
+   "art": "der",
+   "pl": "die Fürstenstaaten"
+  },
+  "Herrscher": {
+   "ru": "володар, государ",
+   "pos": "ім.",
+   "art": "der",
+   "pl": "die Herrscher"
+  },
+  "II": {
+   "ru": "другий (римська цифра)",
+   "pos": "числ.",
+   "note": "Ludwig II. — Людвіг Другий"
+  },
+  "III.": {
+   "ru": "третій (про монарха)",
+   "pos": "числ.",
+   "note": "Friedrich III. — Фрідріх Третій"
+  },
+  "Ideal": {
+   "ru": "ідеал",
+   "pos": "ім.",
+   "art": "das",
+   "pl": "die Ideale"
+  },
+  "Immanuel": {
+   "ru": "Іммануїл",
+   "pos": "власна назва"
+  },
+  "Jahrhundert": {
+   "ru": "століття, вік",
+   "pos": "ім.",
+   "art": "das",
+   "pl": "die Jahrhunderte"
+  },
+  "Kant": {
+   "ru": "Кант",
+   "pos": "власна назва"
+  },
+  "Krieg": {
+   "ru": "війна",
+   "pos": "ім.",
+   "art": "der",
+   "pl": "die Kriege"
+  },
+  "Kurfürst": {
+   "ru": "курфюрст",
+   "pos": "ім.",
+   "art": "der",
+   "pl": "die Kurfürsten",
+   "note": "der Große Kurfürst — Великий курфюрст Фрідріх Вільгельм"
+  },
+  "König": {
+   "ru": "король",
+   "pos": "ім.",
+   "art": "der",
+   "pl": "die Könige"
+  },
+  "Mitbestimmung": {
+   "ru": "участь в ухваленні рішень",
+   "pos": "ім.",
+   "art": "die",
+   "pl": null
+  },
+  "Preußen": {
+   "ru": "Пруссія",
+   "pos": "геогр."
+  },
+  "Recht": {
+   "ru": "право",
+   "pos": "ім.",
+   "art": "das",
+   "pl": "die Rechte"
+  },
+  "Reform": {
+   "ru": "реформа",
+   "pos": "ім.",
+   "art": "die",
+   "pl": "die Reformen"
+  },
+  "Reich": {
+   "pos": "ім.",
+   "ru": "імперія; держава",
+   "art": "das",
+   "pl": "die Reiche"
+  },
+  "Schloss (дворец)": {
+   "ru": "палац, замок",
+   "pos": "ім.",
+   "art": "das",
+   "pl": "die Schlösser"
+  },
+  "Steuer": {
+   "ru": "податок",
+   "pos": "ім.",
+   "art": "die",
+   "pl": "die Steuern"
+  },
+  "Territorium": {
+   "ru": "територія",
+   "pos": "ім.",
+   "art": "das",
+   "pl": "die Territorien"
+  },
+  "Toleranz": {
+   "ru": "толерантність",
+   "pos": "ім.",
+   "art": "die",
+   "pl": null
+  },
+  "Vernunft": {
+   "ru": "розум",
+   "pos": "ім.",
+   "art": "die",
+   "pl": null
+  },
+  "Verwaltung": {
+   "ru": "адміністрація, управління",
+   "pos": "ім.",
+   "art": "die",
+   "pl": "die Verwaltungen"
+  },
+  "Zahl": {
+   "ru": "число, цифра",
+   "pos": "ім.",
+   "art": "die",
+   "pl": "die Zahlen"
+  },
+  "aber": {
+   "ru": "але, однак",
+   "pos": "спол."
+  },
+  "alle/alles": {
+   "ru": "усі; усе",
+   "pos": "займ."
+  },
+  "als": {
+   "ru": "коли; як; ніж",
+   "pos": "спол."
+  },
+  "auch": {
+   "ru": "теж, також; навіть",
+   "pos": "частка"
+  },
+  "aufbauen": {
+   "ru": "будувати, встановлювати",
+   "pos": "дієсл.",
+   "forms": "baute auf · hat aufgebaut"
+  },
+  "aus": {
+   "ru": "з",
+   "pos": "прийм.",
+   "note": "Також відокремлюваний префікс: auslöschen «погасити»"
+  },
+  "bis": {
+   "ru": "до; поки не",
+   "pos": "спол."
+  },
+  "bleiben": {
+   "ru": "залишатися",
+   "pos": "дієсл.",
+   "forms": "blieb · ist geblieben"
+  },
+  "brandenburgisch": {
+   "ru": "бранденбурзький",
+   "pos": "прикм."
+  },
+  "dafür": {
+   "ru": "за це, для цього",
+   "pos": "присл.",
+   "note": "dafür sorgen, dass … — подбати, щоб …"
+  },
+  "denken": {
+   "ru": "думати",
+   "pos": "дієсл.",
+   "forms": "dachte · hat gedacht"
+  },
+  "der/die/das": {
+   "ru": "означений артикль",
+   "pos": "артикль",
+   "note": "Також відносний займенник «який»"
+  },
+  "doch": {
+   "ru": "все ж, усе-таки; адже",
+   "pos": "частка"
+  },
+  "ein/eine": {
+   "ru": "неозначений артикль",
+   "pos": "артикль",
+   "note": "einer — «один, хтось»"
+  },
+  "einbauen": {
+   "ru": "вбудовувати",
+   "pos": "дієсл.",
+   "forms": "baute ein · hat eingebaut"
+  },
+  "er": {
+   "ru": "він",
+   "pos": "займ.",
+   "note": "ihn — його, ihm — йому"
+  },
+  "fordern": {
+   "ru": "вимагати; закликати",
+   "pos": "дієсл.",
+   "forms": "forderte · hat gefordert",
+   "note": "jemanden auffordern, etwas zu tun — пропонувати, вимагати від когось"
+  },
+  "fördern": {
+   "ru": "підтримувати, сприяти",
+   "pos": "дієсл.",
+   "forms": "förderte · hat gefördert"
+  },
+  "führen": {
+   "ru": "вести",
+   "pos": "дієсл.",
+   "forms": "führte · hat geführt",
+   "note": "einen Beweis führen — навести доказ"
+  },
+  "für": {
+   "ru": "для, за",
+   "pos": "прийм."
+  },
+  "gleich": {
+   "ru": "рівний, однаковий",
+   "pos": "прикм."
+  },
+  "heißen": {
+   "ru": "веліти; називатися",
+   "pos": "дієсл.",
+   "forms": "hieß · hat geheißen",
+   "note": "hatte aufstehen heißen — звелів устати"
+  },
+  "i (буква)": {
+   "ru": "літера i",
+   "pos": "ім.",
+   "art": "das",
+   "pl": "die i"
+  },
+  "in": {
+   "ru": "у (im = in dem, ins = in das)",
+   "pos": "прийм."
+  },
+  "konkurrieren": {
+   "ru": "конкурувати, змагатися",
+   "pos": "дієсл.",
+   "forms": "konkurrierte · hat konkurriert"
+  },
+  "krönen": {
+   "ru": "коронувати",
+   "pos": "дієсл.",
+   "forms": "krönte · hat gekrönt",
+   "note": "sich krönen — коронуватися"
+  },
+  "lassen": {
+   "ru": "дозволяти, веліти; залишати",
+   "pos": "дієсл.",
+   "forms": "ließ · hat gelassen"
+  },
+  "machen": {
+   "ru": "робити",
+   "pos": "дієсл.",
+   "forms": "machte · hat gemacht",
+   "note": "sich auf den Weg machen — вирушити в путь"
+  },
+  "müssen": {
+   "ru": "бути змушеним, мусити",
+   "pos": "дієсл.",
+   "forms": "musste · hat gemusst"
+  },
+  "nach": {
+   "ru": "в, на, після, по",
+   "pos": "прийм."
+  },
+  "politisch": {
+   "ru": "політичний",
+   "pos": "прикм."
+  },
+  "prächtig": {
+   "ru": "розкішний, чудовий",
+   "pos": "прикм."
+  },
+  "regieren": {
+   "ru": "правити, керувати",
+   "pos": "дієсл.",
+   "forms": "regierte · hat regiert"
+  },
+  "sein (его, свой)": {
+   "ru": "його, свій",
+   "pos": "займ."
+  },
+  "selbstständig": {
+   "ru": "самостійно",
+   "pos": "присл."
+  },
+  "sich": {
+   "ru": "себе, собі",
+   "pos": "займ.",
+   "note": "Зворотний займенник, частина зворотного дієслова: sich auf den Weg machen, sich setzen, sich legen, sich nähern, sich gefallen lassen, sich getrauen, sich umsehen"
+  },
+  "sie": {
+   "ru": "вона; вони; Ви",
+   "pos": "займ."
+  },
+  "um": {
+   "ru": "навколо, о (про час)",
+   "pos": "прийм.",
+   "note": "um … zu — щоб. Також відокремлюваний префікс: sich umsehen «озирнутися»"
+  },
+  "und": {
+   "ru": "і, а",
+   "pos": "спол."
+  },
+  "unerfüllt": {
+   "ru": "нездійснений",
+   "pos": "прикм."
+  },
+  "verbinden": {
+   "ru": "перев'язувати (рану); з'єднувати",
+   "pos": "дієсл.",
+   "forms": "verband · hat verbunden",
+   "note": "sich verbinden lassen — дати себе перев'язати"
+  },
+  "viel": {
+   "ru": "багато, чимало",
+   "pos": "займ."
+  },
+  "von": {
+   "ru": "від, з, про (vom = von dem)",
+   "pos": "прийм."
+  },
+  "weitgehend": {
+   "ru": "значною мірою, здебільшого",
+   "pos": "присл."
+  },
+  "werden": {
+   "ru": "ставати",
+   "pos": "дієсл.",
+   "forms": "wurde · ist geworden",
+   "note": "Допоміжне дієслово майбутнього часу й пасиву"
+  },
+  "wichtig": {
+   "ru": "важливий",
+   "pos": "прикм."
+  },
+  "wie": {
+   "ru": "як; який",
+   "pos": "спол."
+  },
+  "zahlreich": {
+   "ru": "численний",
+   "pos": "прикм."
+  },
+  "zu": {
+   "ru": "до, в; занадто",
+   "pos": "прийм.",
+   "note": "zur = zu der, zum = zu dem"
+  },
+  "Österreich": {
+   "ru": "Австрія",
+   "pos": "геогр."
+  }
+ }
+}

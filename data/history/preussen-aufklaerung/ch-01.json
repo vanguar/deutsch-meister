@@ -1,0 +1,122 @@
+{
+  "id": "ch-01",
+  "title": "Fürstenstaaten, Preußen und Aufklärung",
+  "titleRu": "Княжества, Пруссия и Просвещение",
+  "icon": "5",
+  "paragraphs": [
+    {
+      "sourceIds": [
+        "staaten"
+      ],
+      "s": [
+        {
+          "de": "Nach 1648 blieb das Reich ein Verband vieler Territorien.",
+          "ru": "После 1648 года империя оставалась объединением многих территорий."
+        },
+        {
+          "de": "In zahlreichen Fürstenstaaten bauten die Herrscher Verwaltung und Armee aus.",
+          "ru": "Во многих княжествах правители укрепляли управление и армию."
+        },
+        {
+          "de": "Sie ließen prächtige Schlösser bauen; die Bevölkerung musste dafür Steuern zahlen.",
+          "ru": "Они строили роскошные дворцы; население должно было платить за это налоги."
+        }
+      ]
+    },
+    {
+      "sourceIds": [
+        "preussen",
+        "geschichte"
+      ],
+      "s": [
+        {
+          "de": "1701 krönte sich der brandenburgische Kurfürst Friedrich III. zum König in Preußen.",
+          "ru": "В 1701 году бранденбургский курфюрст Фридрих III короновался как король в Пруссии."
+        },
+        {
+          "de": "Als König hieß er Friedrich I.",
+          "ru": "Как король он носил имя Фридрих I."
+        },
+        {
+          "de": "Im 18. Jahrhundert konkurrierten Preußen und Österreich um Einfluss im Reich.",
+          "ru": "В XVIII веке Пруссия и Австрия соперничали за влияние в империи."
+        }
+      ]
+    },
+    {
+      "fig": {
+        "src": "data/laender/brandenburg/img/sanssouci.jpg",
+        "w": 1200,
+        "h": 800,
+        "credit": "Romzig / Wikimedia Commons",
+        "creditUrl": "https://commons.wikimedia.org/wiki/User:Romzig",
+        "license": "CC0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "cap": "Сан-Суси в Потсдаме — летний дворец Фридриха II. Современная фотография."
+      }
+    },
+    {
+      "sourceIds": [
+        "friedrich"
+      ],
+      "s": [
+        {
+          "de": "Friedrich II. regierte Preußen von 1740 bis 1786.",
+          "ru": "Фридрих II правил Пруссией с 1740 по 1786 год."
+        },
+        {
+          "de": "Er förderte Reformen, führte aber auch Kriege zur Erweiterung seiner Macht.",
+          "ru": "Он поддерживал реформы, но также вёл войны ради расширения своей власти."
+        }
+      ]
+    },
+    {
+      "sourceIds": [
+        "vernunft"
+      ],
+      "s": [
+        {
+          "de": "In der Aufklärung forderten Denker wie Immanuel Kant, selbstständig zu denken.",
+          "ru": "В эпоху Просвещения мыслители, например Иммануил Кант, призывали мыслить самостоятельно."
+        },
+        {
+          "de": "Vernunft, Bildung und Toleranz wurden wichtige Ideale.",
+          "ru": "Разум, образование и терпимость стали важными идеалами."
+        },
+        {
+          "de": "Doch politische Mitbestimmung und gleiche Rechte für alle blieben weitgehend unerfüllt.",
+          "ru": "Однако участие в политике и равные права для всех оставались в основном нереализованными."
+        }
+      ]
+    }
+  ],
+  "sourceTitle": "Источники и проверка фактов",
+  "sources": [
+    {
+      "id": "preussen",
+      "name": "Brandenburgische Landeszentrale für politische Bildung · Preußen",
+      "url": "https://www.politische-bildung-brandenburg.de/lexikon/preussen"
+    },
+    {
+      "id": "geschichte",
+      "name": "Brandenburgische Landeszentrale · Geschichte Brandenburgs",
+      "url": "https://www.politische-bildung-brandenburg.de/brandenburg/geschichte"
+    },
+    {
+      "id": "vernunft",
+      "name": "bpb · Aufklärung",
+      "url": "https://www.bpb.de/kurz-knapp/lexika/das-junge-politik-lexikon/319867/aufklaerung/"
+    },
+    {
+      "id": "staaten",
+      "name": "Deutsches Historisches Museum · Fürstenmacht und Allianzen",
+      "url": "https://www.dhm.de/ausstellungen/dauerausstellung/fuerstenmacht-und-allianzen-in-europa/"
+    },
+    {
+      "id": "friedrich",
+      "name": "German History in Documents and Images · Friedrich II.",
+      "url": "https://germanhistorydocs.org/de/das-heilige-roemische-reich-1648-1815/friedrich-ii-der-grosse-1781"
+    }
+  ],
+  "checked": "2026-11-17"
+}

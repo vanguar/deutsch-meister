@@ -1,0 +1,122 @@
+{
+ "id": "ch-01",
+ "title": "Fürstenstaaten, Preußen und Aufklärung",
+ "titleRu": "الإمارات وبروسيا وعصر التنوير",
+ "icon": "5",
+ "paragraphs": [
+  {
+   "sourceIds": [
+    "staaten"
+   ],
+   "s": [
+    {
+     "de": "Nach 1648 blieb das Reich ein Verband vieler Territorien.",
+     "ru": "بعد عام 1648 بقيت الإمبراطورية اتحادًا يضم أقاليم كثيرة."
+    },
+    {
+     "de": "In zahlreichen Fürstenstaaten bauten die Herrscher Verwaltung und Armee aus.",
+     "ru": "في إمارات عديدة عزز الحكام الإدارة والجيش."
+    },
+    {
+     "de": "Sie ließen prächtige Schlösser bauen; die Bevölkerung musste dafür Steuern zahlen.",
+     "ru": "شيدوا قصورًا فخمة، وكان على السكان دفع الضرائب لتمويل ذلك."
+    }
+   ]
+  },
+  {
+   "sourceIds": [
+    "preussen",
+    "geschichte"
+   ],
+   "s": [
+    {
+     "de": "1701 krönte sich der brandenburgische Kurfürst Friedrich III. zum König in Preußen.",
+     "ru": "في عام 1701 توج ناخب براندنبورغ فريدريش الثالث نفسه ملكًا في بروسيا."
+    },
+    {
+     "de": "Als König hieß er Friedrich I.",
+     "ru": "وأصبح اسمه بصفته ملكًا فريدريش الأول."
+    },
+    {
+     "de": "Im 18. Jahrhundert konkurrierten Preußen und Österreich um Einfluss im Reich.",
+     "ru": "في القرن الثامن عشر تنافست بروسيا والنمسا على النفوذ في الإمبراطورية."
+    }
+   ]
+  },
+  {
+   "fig": {
+    "src": "data/laender/brandenburg/img/sanssouci.jpg",
+    "w": 1200,
+    "h": 800,
+    "credit": "Romzig / Wikimedia Commons",
+    "creditUrl": "https://commons.wikimedia.org/wiki/User:Romzig",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "cap": "قصر سانسوسي في بوتسدام، المقر الصيفي لفريدريش الثاني. صورة حديثة."
+   }
+  },
+  {
+   "sourceIds": [
+    "friedrich"
+   ],
+   "s": [
+    {
+     "de": "Friedrich II. regierte Preußen von 1740 bis 1786.",
+     "ru": "حكم فريدريش الثاني بروسيا من عام 1740 إلى عام 1786."
+    },
+    {
+     "de": "Er förderte Reformen, führte aber auch Kriege zur Erweiterung seiner Macht.",
+     "ru": "شجع الإصلاحات، لكنه خاض أيضًا حروبًا لتوسيع سلطته."
+    }
+   ]
+  },
+  {
+   "sourceIds": [
+    "vernunft"
+   ],
+   "s": [
+    {
+     "de": "In der Aufklärung forderten Denker wie Immanuel Kant, selbstständig zu denken.",
+     "ru": "في عصر التنوير دعا مفكرون مثل إيمانويل كانط إلى التفكير المستقل."
+    },
+    {
+     "de": "Vernunft, Bildung und Toleranz wurden wichtige Ideale.",
+     "ru": "أصبح العقل والتعليم والتسامح مُثلًا مهمة."
+    },
+    {
+     "de": "Doch politische Mitbestimmung und gleiche Rechte für alle blieben weitgehend unerfüllt.",
+     "ru": "لكن المشاركة السياسية والمساواة في الحقوق للجميع بقيتا إلى حد كبير غير متحققتين."
+    }
+   ]
+  }
+ ],
+ "sourceTitle": "المصادر والتحقق من المعلومات",
+ "sources": [
+  {
+   "id": "preussen",
+   "name": "Brandenburgische Landeszentrale für politische Bildung · Preußen",
+   "url": "https://www.politische-bildung-brandenburg.de/lexikon/preussen"
+  },
+  {
+   "id": "geschichte",
+   "name": "Brandenburgische Landeszentrale · Geschichte Brandenburgs",
+   "url": "https://www.politische-bildung-brandenburg.de/brandenburg/geschichte"
+  },
+  {
+   "id": "vernunft",
+   "name": "bpb · Aufklärung",
+   "url": "https://www.bpb.de/kurz-knapp/lexika/das-junge-politik-lexikon/319867/aufklaerung/"
+  },
+  {
+   "id": "staaten",
+   "name": "Deutsches Historisches Museum · Fürstenmacht und Allianzen",
+   "url": "https://www.dhm.de/ausstellungen/dauerausstellung/fuerstenmacht-und-allianzen-in-europa/"
+  },
+  {
+   "id": "friedrich",
+   "name": "German History in Documents and Images · Friedrich II.",
+   "url": "https://germanhistorydocs.org/de/das-heilige-roemische-reich-1648-1815/friedrich-ii-der-grosse-1781"
+  }
+ ],
+ "checked": "2026-11-17"
+}

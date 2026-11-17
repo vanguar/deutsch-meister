@@ -1,0 +1,504 @@
+{
+ "version": 1,
+ "w": {
+  "aber": "aber",
+  "alle": "alle/alles",
+  "als": "als",
+  "armee": "Armee",
+  "auch": "auch",
+  "aufklärung": "Aufklärung",
+  "aus": "aus",
+  "bauen": "einbauen",
+  "bauten": "aufbauen",
+  "bevölkerung": "Bevölkerung",
+  "bildung": "Bildung",
+  "bis": "bis",
+  "blieb": "bleiben",
+  "blieben": "bleiben",
+  "brandenburgische": "brandenburgisch",
+  "dafür": "dafür",
+  "das": "der/die/das",
+  "denken": "denken",
+  "denker": "Denker",
+  "der": "der/die/das",
+  "die": "der/die/das",
+  "doch": "doch",
+  "ein": "ein/eine",
+  "einfluss": "Einfluss",
+  "er": "er",
+  "erweiterung": "Erweiterung",
+  "forderten": "fordern",
+  "friedrich": "Friedrich",
+  "förderte": "fördern",
+  "führte": "führen",
+  "für": "für",
+  "fürstenstaaten": "Fürstenstaat",
+  "gleiche": "gleich",
+  "herrscher": "Herrscher",
+  "hieß": "heißen",
+  "i": "i (буква)",
+  "ideale": "Ideal",
+  "ii": "II",
+  "iii": "III.",
+  "im": "in",
+  "immanuel": "Immanuel",
+  "in": "in",
+  "jahrhundert": "Jahrhundert",
+  "kant": "Kant",
+  "konkurrierten": "konkurrieren",
+  "kriege": "Krieg",
+  "krönte": "krönen",
+  "kurfürst": "Kurfürst",
+  "könig": "König",
+  "ließen": "lassen",
+  "macht": "machen",
+  "mitbestimmung": "Mitbestimmung",
+  "musste": "müssen",
+  "nach": "nach",
+  "politische": "politisch",
+  "preußen": "Preußen",
+  "prächtige": "prächtig",
+  "rechte": "Recht",
+  "reformen": "Reform",
+  "regierte": "regieren",
+  "reich": "Reich",
+  "schlösser": "Schloss (дворец)",
+  "seiner": "sein (его, свой)",
+  "selbstständig": "selbstständig",
+  "sich": "sich",
+  "sie": "sie",
+  "steuern": "Steuer",
+  "territorien": "Territorium",
+  "toleranz": "Toleranz",
+  "um": "um",
+  "und": "und",
+  "unerfüllt": "unerfüllt",
+  "verband": "verbinden",
+  "vernunft": "Vernunft",
+  "verwaltung": "Verwaltung",
+  "vieler": "viel",
+  "von": "von",
+  "weitgehend": "weitgehend",
+  "wichtige": "wichtig",
+  "wie": "wie",
+  "wurden": "werden",
+  "zahlen": "Zahl",
+  "zahlreichen": "zahlreich",
+  "zu": "zu",
+  "zum": "zu",
+  "zur": "zu",
+  "österreich": "Österreich"
+ },
+ "l": {
+  "Armee": {
+   "ru": "جيش",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Armeen"
+  },
+  "Aufklärung": {
+   "ru": "التنوير",
+   "pos": "اسم",
+   "art": "die",
+   "pl": null
+  },
+  "Bevölkerung": {
+   "ru": "السكان",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Bevölkerungen"
+  },
+  "Bildung": {
+   "ru": "تأسيس؛ تعليم",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Bildungen"
+  },
+  "Denker": {
+   "ru": "مفكر",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Denker"
+  },
+  "Einfluss": {
+   "ru": "نفوذ، تأثير",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Einflüsse"
+  },
+  "Erweiterung": {
+   "ru": "توسيع",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Erweiterungen"
+  },
+  "Friedrich": {
+   "ru": "فريدريش (اسم، اسم عائلة)",
+   "pos": "اسم علم"
+  },
+  "Fürstenstaat": {
+   "ru": "إمارة يحكمها أمير",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Fürstenstaaten"
+  },
+  "Herrscher": {
+   "ru": "حاكم، سلطان",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Herrscher"
+  },
+  "II": {
+   "ru": "الثاني (رقم روماني)",
+   "pos": "عدد",
+   "note": "Ludwig II. — لودفيغ الثاني"
+  },
+  "III.": {
+   "ru": "الثالث (عن الملوك)",
+   "pos": "عدد",
+   "note": "Friedrich III. — فريدريك الثالث"
+  },
+  "Ideal": {
+   "ru": "مثل أعلى",
+   "pos": "اسم",
+   "art": "das",
+   "pl": "die Ideale"
+  },
+  "Immanuel": {
+   "ru": "إيمانويل",
+   "pos": "اسم علم"
+  },
+  "Jahrhundert": {
+   "ru": "قرن",
+   "pos": "اسم",
+   "art": "das",
+   "pl": "die Jahrhunderte"
+  },
+  "Kant": {
+   "ru": "كانط",
+   "pos": "اسم علم"
+  },
+  "Krieg": {
+   "ru": "حرب",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Kriege"
+  },
+  "Kurfürst": {
+   "ru": "أمير ناخب",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Kurfürsten",
+   "note": "der Große Kurfürst — الأمير الناخب الأكبر فريدريش فيلهلم"
+  },
+  "König": {
+   "ru": "ملك",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Könige"
+  },
+  "Mitbestimmung": {
+   "ru": "مشاركة في اتخاذ القرار",
+   "pos": "اسم",
+   "art": "die",
+   "pl": null
+  },
+  "Preußen": {
+   "ru": "بروسيا",
+   "pos": "جغرافيا"
+  },
+  "Recht": {
+   "ru": "حق",
+   "pos": "اسم",
+   "art": "das",
+   "pl": "die Rechte"
+  },
+  "Reform": {
+   "ru": "إصلاح",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Reformen"
+  },
+  "Reich": {
+   "pos": "اسم",
+   "ru": "إمبراطورية؛ دولة",
+   "art": "das",
+   "pl": "die Reiche"
+  },
+  "Schloss (дворец)": {
+   "ru": "قصر، قلعة",
+   "pos": "اسم",
+   "art": "das",
+   "pl": "die Schlösser"
+  },
+  "Steuer": {
+   "ru": "ضريبة",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Steuern"
+  },
+  "Territorium": {
+   "ru": "المنطقة",
+   "pos": "اسم",
+   "art": "das",
+   "pl": "die Territorien"
+  },
+  "Toleranz": {
+   "ru": "تسامح",
+   "pos": "اسم",
+   "art": "die",
+   "pl": null
+  },
+  "Vernunft": {
+   "ru": "عقل",
+   "pos": "اسم",
+   "art": "die",
+   "pl": null
+  },
+  "Verwaltung": {
+   "ru": "إدارة",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Verwaltungen"
+  },
+  "Zahl": {
+   "ru": "عدد، رقم",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Zahlen"
+  },
+  "aber": {
+   "ru": "لكن، غير أنّ",
+   "pos": "أداة ربط"
+  },
+  "alle/alles": {
+   "ru": "الجميع؛ كل شيء",
+   "pos": "ضمير"
+  },
+  "als": {
+   "ru": "عندما؛ كـ؛ من (في المقارنة)",
+   "pos": "أداة ربط"
+  },
+  "auch": {
+   "ru": "أيضًا؛ حتى",
+   "pos": "أداة"
+  },
+  "aufbauen": {
+   "ru": "يبني، يقيم",
+   "pos": "فعل",
+   "forms": "baute auf · hat aufgebaut"
+  },
+  "aus": {
+   "ru": "من",
+   "pos": "حرف جر",
+   "note": "وهي أيضًا سابقة منفصلة: auslöschen «يُطفئ»"
+  },
+  "bis": {
+   "ru": "حتى؛ إلى أن",
+   "pos": "أداة ربط"
+  },
+  "bleiben": {
+   "ru": "يبقى",
+   "pos": "فعل",
+   "forms": "blieb · ist geblieben"
+  },
+  "brandenburgisch": {
+   "ru": "متعلق ببراندنبورغ",
+   "pos": "صفة"
+  },
+  "dafür": {
+   "ru": "لهذا، من أجل ذلك",
+   "pos": "ظرف",
+   "note": "dafür sorgen, dass … — يحرص على أن …"
+  },
+  "denken": {
+   "ru": "يفكّر",
+   "pos": "فعل",
+   "forms": "dachte · hat gedacht"
+  },
+  "der/die/das": {
+   "ru": "أداة التعريف",
+   "pos": "أداة تعريف",
+   "note": "وهي أيضًا اسم موصول بمعنى «الذي»"
+  },
+  "doch": {
+   "ru": "ومع ذلك؛ إذن",
+   "pos": "أداة"
+  },
+  "ein/eine": {
+   "ru": "أداة النكرة",
+   "pos": "أداة تعريف",
+   "note": "einer — «واحد، شخص ما»"
+  },
+  "einbauen": {
+   "ru": "يدمج، يُدخل",
+   "pos": "فعل",
+   "forms": "baute ein · hat eingebaut"
+  },
+  "er": {
+   "ru": "هو",
+   "pos": "ضمير",
+   "note": "ihn — إيّاه، ihm — له"
+  },
+  "fordern": {
+   "ru": "يطلب؛ يدعو",
+   "pos": "فعل",
+   "forms": "forderte · hat gefordert",
+   "note": "jemanden auffordern, etwas zu tun — يطلب من أحد أن يفعل شيئًا"
+  },
+  "fördern": {
+   "ru": "يشجّع، يدعم",
+   "pos": "فعل",
+   "forms": "förderte · hat gefördert"
+  },
+  "führen": {
+   "ru": "يقود",
+   "pos": "فعل",
+   "forms": "führte · hat geführt",
+   "note": "einen Beweis führen — يقيم دليلًا"
+  },
+  "für": {
+   "ru": "لـ، من أجل",
+   "pos": "حرف جر"
+  },
+  "gleich": {
+   "ru": "متساوٍ، مماثل",
+   "pos": "صفة"
+  },
+  "heißen": {
+   "ru": "يأمر؛ يُسمّى",
+   "pos": "فعل",
+   "forms": "hieß · hat geheißen",
+   "note": "hatte aufstehen heißen — كان قد أمرها بأن تقوم"
+  },
+  "i (буква)": {
+   "ru": "حرف i",
+   "pos": "اسم",
+   "art": "das",
+   "pl": "die i"
+  },
+  "in": {
+   "ru": "في (im = in dem، ins = in das)",
+   "pos": "حرف جر"
+  },
+  "konkurrieren": {
+   "ru": "يتنافس",
+   "pos": "فعل",
+   "forms": "konkurrierte · hat konkurriert"
+  },
+  "krönen": {
+   "ru": "يتوّج",
+   "pos": "فعل",
+   "forms": "krönte · hat gekrönt",
+   "note": "sich krönen — يتوّج نفسه"
+  },
+  "lassen": {
+   "ru": "يسمح، يأمر؛ يترك",
+   "pos": "فعل",
+   "forms": "ließ · hat gelassen"
+  },
+  "machen": {
+   "ru": "يفعل",
+   "pos": "فعل",
+   "forms": "machte · hat gemacht",
+   "note": "sich auf den Weg machen — ينطلق في طريقه"
+  },
+  "müssen": {
+   "ru": "مُضطرّ، يجب",
+   "pos": "فعل",
+   "forms": "musste · hat gemusst"
+  },
+  "nach": {
+   "ru": "إلى، بعد، حسب",
+   "pos": "حرف جر"
+  },
+  "politisch": {
+   "ru": "سياسي",
+   "pos": "صفة"
+  },
+  "prächtig": {
+   "ru": "فخم، رائع",
+   "pos": "صفة"
+  },
+  "regieren": {
+   "ru": "يحكم، يدير",
+   "pos": "فعل",
+   "forms": "regierte · hat regiert"
+  },
+  "sein (его, свой)": {
+   "ru": "ـه (ضمير الملكية)، خاصّته",
+   "pos": "ضمير"
+  },
+  "selbstständig": {
+   "ru": "باستقلالية",
+   "pos": "ظرف"
+  },
+  "sich": {
+   "ru": "نفسه، لنفسه",
+   "pos": "ضمير",
+   "note": "ضمير انعكاسي، جزء من الفعل الانعكاسي: sich auf den Weg machen، sich setzen، sich legen، sich nähern، sich gefallen lassen، sich getrauen، sich umsehen"
+  },
+  "sie": {
+   "ru": "هي؛ هم؛ حضرتك",
+   "pos": "ضمير"
+  },
+  "um": {
+   "ru": "حول، في (للوقت)",
+   "pos": "حرف جر",
+   "note": "um … zu — لكي. وهي أيضًا سابقة منفصلة: sich umsehen «يتلفّت حوله»"
+  },
+  "und": {
+   "ru": "و",
+   "pos": "أداة ربط"
+  },
+  "unerfüllt": {
+   "ru": "غير متحقق",
+   "pos": "صفة"
+  },
+  "verbinden": {
+   "ru": "يضمّد (جرحًا)؛ يربط",
+   "pos": "فعل",
+   "forms": "verband · hat verbunden",
+   "note": "sich verbinden lassen — يدع جرحه يُضمَّد"
+  },
+  "viel": {
+   "ru": "كثير، الكثير",
+   "pos": "ضمير"
+  },
+  "von": {
+   "ru": "من، عن (vom = von dem)",
+   "pos": "حرف جر"
+  },
+  "weitgehend": {
+   "ru": "إلى حد كبير، في الأساس",
+   "pos": "ظرف"
+  },
+  "werden": {
+   "ru": "يصبح",
+   "pos": "فعل",
+   "forms": "wurde · ist geworden",
+   "note": "فعل مساعد للمستقبل والمبني للمجهول"
+  },
+  "wichtig": {
+   "ru": "مهم",
+   "pos": "صفة"
+  },
+  "wie": {
+   "ru": "كيف؛ مثل",
+   "pos": "أداة ربط"
+  },
+  "zahlreich": {
+   "ru": "كثير العدد",
+   "pos": "صفة"
+  },
+  "zu": {
+   "ru": "إلى، في؛ أكثر من اللازم",
+   "pos": "حرف جر",
+   "note": "zur = zu der, zum = zu dem"
+  },
+  "Österreich": {
+   "ru": "النمسا",
+   "pos": "جغرافيا"
+  }
+ }
+}

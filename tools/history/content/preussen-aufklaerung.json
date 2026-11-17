@@ -1,0 +1,147 @@
+{
+  "id": "preussen-aufklaerung",
+  "sources": [
+    {
+      "id": "preussen",
+      "name": "Brandenburgische Landeszentrale für politische Bildung · Preußen",
+      "url": "https://www.politische-bildung-brandenburg.de/lexikon/preussen"
+    },
+    {
+      "id": "geschichte",
+      "name": "Brandenburgische Landeszentrale · Geschichte Brandenburgs",
+      "url": "https://www.politische-bildung-brandenburg.de/brandenburg/geschichte"
+    },
+    {
+      "id": "vernunft",
+      "name": "bpb · Aufklärung",
+      "url": "https://www.bpb.de/kurz-knapp/lexika/das-junge-politik-lexikon/319867/aufklaerung/"
+    },
+    {
+      "id": "staaten",
+      "name": "Deutsches Historisches Museum · Fürstenmacht und Allianzen",
+      "url": "https://www.dhm.de/ausstellungen/dauerausstellung/fuerstenmacht-und-allianzen-in-europa/"
+    },
+    {
+      "id": "friedrich",
+      "name": "German History in Documents and Images · Friedrich II.",
+      "url": "https://germanhistorydocs.org/de/das-heilige-roemische-reich-1648-1815/friedrich-ii-der-grosse-1781"
+    }
+  ],
+  "paragraphs": [
+    {
+      "sourceIds": [
+        "staaten"
+      ],
+      "sentences": [
+        [
+          "Nach 1648 blieb das Reich ein Verband vieler Territorien.",
+          "После 1648 года империя оставалась объединением многих территорий.",
+          "Після 1648 року імперія залишалася об’єднанням багатьох територій.",
+          "بعد عام 1648 بقيت الإمبراطورية اتحادًا يضم أقاليم كثيرة."
+        ],
+        [
+          "In zahlreichen Fürstenstaaten bauten die Herrscher Verwaltung und Armee aus.",
+          "Во многих княжествах правители укрепляли управление и армию.",
+          "У багатьох князівствах правителі зміцнювали управління та армію.",
+          "في إمارات عديدة عزز الحكام الإدارة والجيش."
+        ],
+        [
+          "Sie ließen prächtige Schlösser bauen; die Bevölkerung musste dafür Steuern zahlen.",
+          "Они строили роскошные дворцы; население должно было платить за это налоги.",
+          "Вони будували розкішні палаци; населення мало платити за це податки.",
+          "شيدوا قصورًا فخمة، وكان على السكان دفع الضرائب لتمويل ذلك."
+        ]
+      ]
+    },
+    {
+      "sourceIds": [
+        "preussen",
+        "geschichte"
+      ],
+      "sentences": [
+        [
+          "1701 krönte sich der brandenburgische Kurfürst Friedrich III. zum König in Preußen.",
+          "В 1701 году бранденбургский курфюрст Фридрих III короновался как король в Пруссии.",
+          "У 1701 році бранденбурзький курфюрст Фрідріх III коронувався як король у Пруссії.",
+          "في عام 1701 توج ناخب براندنبورغ فريدريش الثالث نفسه ملكًا في بروسيا."
+        ],
+        [
+          "Als König hieß er Friedrich I.",
+          "Как король он носил имя Фридрих I.",
+          "Як король він мав ім’я Фрідріх I.",
+          "وأصبح اسمه بصفته ملكًا فريدريش الأول."
+        ],
+        [
+          "Im 18. Jahrhundert konkurrierten Preußen und Österreich um Einfluss im Reich.",
+          "В XVIII веке Пруссия и Австрия соперничали за влияние в империи.",
+          "У XVIII столітті Пруссія та Австрія змагалися за вплив в імперії.",
+          "في القرن الثامن عشر تنافست بروسيا والنمسا على النفوذ في الإمبراطورية."
+        ]
+      ]
+    },
+    {
+      "fig": {
+        "src": "data/laender/brandenburg/img/sanssouci.jpg",
+        "w": 1200,
+        "h": 800,
+        "credit": "Romzig / Wikimedia Commons",
+        "creditUrl": "https://commons.wikimedia.org/wiki/User:Romzig",
+        "license": "CC0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "cap": "Сан-Суси в Потсдаме — летний дворец Фридриха II. Современная фотография."
+      }
+    },
+    {
+      "sourceIds": [
+        "friedrich"
+      ],
+      "sentences": [
+        [
+          "Friedrich II. regierte Preußen von 1740 bis 1786.",
+          "Фридрих II правил Пруссией с 1740 по 1786 год.",
+          "Фрідріх II правив Пруссією з 1740 до 1786 року.",
+          "حكم فريدريش الثاني بروسيا من عام 1740 إلى عام 1786."
+        ],
+        [
+          "Er förderte Reformen, führte aber auch Kriege zur Erweiterung seiner Macht.",
+          "Он поддерживал реформы, но также вёл войны ради расширения своей власти.",
+          "Він підтримував реформи, але також вів війни задля розширення своєї влади.",
+          "شجع الإصلاحات، لكنه خاض أيضًا حروبًا لتوسيع سلطته."
+        ]
+      ]
+    },
+    {
+      "sourceIds": [
+        "vernunft"
+      ],
+      "sentences": [
+        [
+          "In der Aufklärung forderten Denker wie Immanuel Kant, selbstständig zu denken.",
+          "В эпоху Просвещения мыслители, например Иммануил Кант, призывали мыслить самостоятельно.",
+          "В епоху Просвітництва мислителі, наприклад Іммануїл Кант, закликали мислити самостійно.",
+          "في عصر التنوير دعا مفكرون مثل إيمانويل كانط إلى التفكير المستقل."
+        ],
+        [
+          "Vernunft, Bildung und Toleranz wurden wichtige Ideale.",
+          "Разум, образование и терпимость стали важными идеалами.",
+          "Розум, освіта й толерантність стали важливими ідеалами.",
+          "أصبح العقل والتعليم والتسامح مُثلًا مهمة."
+        ],
+        [
+          "Doch politische Mitbestimmung und gleiche Rechte für alle blieben weitgehend unerfüllt.",
+          "Однако участие в политике и равные права для всех оставались в основном нереализованными.",
+          "Проте участь у політиці та рівні права для всіх залишалися переважно нереалізованими.",
+          "لكن المشاركة السياسية والمساواة في الحقوق للجميع بقيتا إلى حد كبير غير متحققتين."
+        ]
+      ]
+    }
+  ],
+  "translations": {
+    "uk": {
+      "Сан-Суси в Потсдаме — летний дворец Фридриха II. Современная фотография.": "Сан-Сусі в Потсдамі — літній палац Фрідріха II. Сучасна фотографія."
+    },
+    "ar": {
+      "Сан-Суси в Потсдаме — летний дворец Фридриха II. Современная фотография.": "قصر سانسوسي في بوتسدام، المقر الصيفي لفريدريش الثاني. صورة حديثة."
+    }
+  }
+}
