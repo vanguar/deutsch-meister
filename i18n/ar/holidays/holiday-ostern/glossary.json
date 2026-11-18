@@ -1,32 +1,55 @@
 {
   "version": 1,
   "w": {
+    "anderen": "ander",
+    "auf": "auf",
     "aus": "aus",
+    "beim": "bei",
     "besonders": "besonders",
+    "brauch": "Brauch",
     "brennende": "brennen",
     "bringt": "bringen",
     "den": "der/die/das",
     "der": "der/die/das",
+    "die": "der/die/das",
     "dunkel": "Dunkel",
+    "durch": "durch",
+    "einen": "ein/eine",
     "es": "es",
     "gäste": "Gast",
     "hinunter": "hinunter",
     "holzräder": "Holzrad",
     "in": "in",
+    "katholische": "katholisch",
     "lügde": "Lügde",
     "menschen": "Mensch",
+    "oberlausitz": "Oberlausitz",
     "osterberg": "Osterberg",
+    "osterreiten": "Osterreiten",
     "osterräderlauf": "Osterräderlauf",
     "ostersonntag": "Ostersonntag",
+    "pferden": "Pferd",
+    "pflegen": "pflegen",
+    "region": "Region",
     "rollen": "rollen",
+    "sie": "sie",
     "sieht": "sehen",
+    "sorben": "Sorbe",
     "stadt": "Stadt",
+    "sächsischen": "sächsisch",
     "und": "und",
     "wenn": "wenn",
     "wird": "werden",
+    "ziehen": "ziehen",
     "zusammen": "zusammen"
   },
   "l": {
+    "Brauch": {
+      "ru": "عادة، تقليد",
+      "pos": "اسم",
+      "art": "der",
+      "pl": "die Bräuche"
+    },
     "Dunkel": {
       "ru": "ظلام، عتمة",
       "pos": "اسم",
@@ -56,9 +79,19 @@
       "pl": "die Menschen",
       "decl": "n-Deklination: des Menschen · dem/den Menschen"
     },
+    "Oberlausitz": {
+      "ru": "لوساتيا العليا",
+      "pos": "جغرافيا"
+    },
     "Osterberg": {
       "ru": "تل أوستربرغ في لوغده",
       "pos": "جغرافيا"
+    },
+    "Osterreiten": {
+      "ru": "موكب الفرسان في الفصح (عند الصوربيين)",
+      "pos": "اسم",
+      "art": "das",
+      "pl": null
     },
     "Osterräderlauf": {
       "ru": "تقليد دحرجة العجلات المشتعلة في الفصح",
@@ -72,16 +105,48 @@
       "art": "der",
       "pl": null
     },
+    "Pferd": {
+      "art": "das",
+      "pl": "die Pferde",
+      "pos": "اسم",
+      "ru": "حصان، فرس"
+    },
+    "Region": {
+      "ru": "منطقة",
+      "pos": "اسم",
+      "art": "die",
+      "pl": "die Regionen"
+    },
+    "Sorbe": {
+      "ru": "صوربي",
+      "pos": "اسم",
+      "art": "der",
+      "pl": "die Sorben",
+      "note": "Sorben — شعب سلافي في لاوزيتس"
+    },
     "Stadt": {
       "ru": "مدينة",
       "pos": "اسم",
       "art": "die",
       "pl": "die Städte"
     },
+    "ander": {
+      "pos": "صفة",
+      "ru": "آخر، مختلف"
+    },
+    "auf": {
+      "ru": "على، في",
+      "pos": "حرف جر",
+      "note": "وهي أيضًا سابقة منفصلة: aufspringen «يقفز واقفًا»، sich aufmachen"
+    },
     "aus": {
       "ru": "من",
       "pos": "حرف جر",
       "note": "وهي أيضًا سابقة منفصلة: auslöschen «يُطفئ»"
+    },
+    "bei": {
+      "ru": "عند، لدى، قرب",
+      "pos": "حرف جر"
     },
     "besonders": {
       "ru": "خاصةً",
@@ -103,6 +168,15 @@
       "pos": "أداة تعريف",
       "note": "وهي أيضًا اسم موصول بمعنى «الذي»"
     },
+    "durch": {
+      "ru": "عبر، من خلال، بسبب",
+      "pos": "حرف جر"
+    },
+    "ein/eine": {
+      "ru": "أداة النكرة",
+      "pos": "أداة تعريف",
+      "note": "einer — «واحد، شخص ما»"
+    },
     "es": {
       "ru": "هو (للمحايد)؛ هذا",
       "pos": "ضمير"
@@ -115,6 +189,16 @@
       "ru": "في (im = in dem، ins = in das)",
       "pos": "حرف جر"
     },
+    "katholisch": {
+      "ru": "كاثوليكي",
+      "pos": "صفة"
+    },
+    "pflegen": {
+      "ru": "اعتاد أن",
+      "pos": "فعل",
+      "forms": "pflegte · hat gepflegt",
+      "note": "pflegen + zu + Inf. — يفعل شيئًا عادةً"
+    },
     "rollen": {
       "ru": "يدحرج، يتدحرج",
       "pos": "فعل",
@@ -126,6 +210,14 @@
       "pos": "فعل",
       "forms": "sah · hat gesehen",
       "note": "في النص مع سابقة منفصلة: sah sich um — sich umsehen «تلفّت حوله»"
+    },
+    "sie": {
+      "ru": "هي؛ هم؛ حضرتك",
+      "pos": "ضمير"
+    },
+    "sächsisch": {
+      "ru": "ساكسوني",
+      "pos": "صفة"
     },
     "und": {
       "ru": "و",
@@ -140,6 +232,12 @@
       "pos": "فعل",
       "forms": "wurde · ist geworden",
       "note": "فعل مساعد للمستقبل والمبني للمجهول"
+    },
+    "ziehen": {
+      "ru": "يتحرّك، يمضي؛ يسحب",
+      "pos": "فعل",
+      "forms": "zog · ist gezogen (يتحرّك) / hat gezogen (يسحب)",
+      "note": "في النص بمعنى «يتحرّك، يمضي». مع سابقة منفصلة: zieh fort — fortziehen «يرحل، يمضي»"
     },
     "zusammen": {
       "ru": "معًا",

@@ -1,42 +1,65 @@
 {
   "version": 1,
   "w": {
+    "auch": "auch",
     "auf": "auf",
+    "baden-württemberg": "Baden-Württemberg",
     "bayern": "Bayern",
+    "bei": "bei",
     "bis": "bis",
     "booten": "Boot",
     "dann": "dann",
+    "das": "der/die/das",
+    "dem": "der/die/das",
+    "der": "der/die/das",
     "die": "der/die/das",
-    "dieser": "dieser",
     "donnerstag": "Donnerstag",
     "durch": "durch",
     "ein": "ein/eine",
     "einen": "ein/eine",
+    "einer": "ein/eine",
+    "einigen": "einige",
     "es": "es",
+    "fahren": "fahren",
     "feiertag": "Feiertag",
     "fest": "Fest",
     "fronleichnam": "Fronleichnam",
     "fällt": "fallen",
     "geht": "gehen",
+    "gehört": "gehören",
+    "gemeinden": "Gemeinde",
     "geschmückte": "schmücken",
     "gesetzlicher": "gesetzlich",
+    "gilt": "gelten",
+    "gottestracht": "Gottestracht",
+    "hessen": "Hessen",
+    "im": "in",
     "in": "in",
     "insel": "Insel",
     "ist": "sein",
     "katholisches": "katholisch",
+    "köln-mülheim": "Köln-Mülheim",
+    "mülheimer": "Mülheimer",
     "nach": "nach",
+    "nordrhein-westfalen": "Nordrhein-Westfalen",
     "ostern": "Ostern",
     "prozession": "Prozession",
+    "rhein": "Rhein",
+    "rheinland-pfalz": "Rheinland-Pfalz",
+    "saarland": "Saarland",
+    "sachsen": "Sachsen",
+    "schiffe": "Schiff",
     "seehausen": "Seehausen",
     "staffelsee": "Staffelsee",
     "straßen": "Straße",
-    "tag": "Tag",
     "tage": {
       "l": "Tag",
       "old": "в обороте in einem Tage — старый дательный с -e; сегодня an einem Tag. В «drei Tage Regenwetter» это обычное мн. ч."
     },
+    "thüringen": "Thüringen",
     "und": "und",
     "vielen": "viel",
+    "wasser": "Wasser",
     "weiter": "weit",
     "wörth": "Wörth",
     "zieht": "ziehen",
@@ -44,6 +67,10 @@
     "zur": "zu"
   },
   "l": {
+    "Baden-Württemberg": {
+      "ru": "بادن-فورتمبيرغ",
+      "pos": "جغرافيا"
+    },
     "Bayern": {
       "ru": "بافاريا",
       "pos": "جغرافيا"
@@ -78,11 +105,39 @@
       "art": "der",
       "pl": null
     },
+    "Gemeinde": {
+      "ru": "بلدة، جماعة القرية",
+      "pos": "اسم",
+      "art": "die",
+      "pl": "die Gemeinden"
+    },
+    "Gottestracht": {
+      "ru": "موكب ديني تقليدي في مولهايم",
+      "pos": "اسم",
+      "art": "die",
+      "pl": null
+    },
+    "Hessen": {
+      "ru": "هسن",
+      "pos": "جغرافيا"
+    },
     "Insel": {
       "ru": "جزيرة",
       "pos": "اسم",
       "art": "die",
       "pl": "die Inseln"
+    },
+    "Köln-Mülheim": {
+      "ru": "كولونيا-مولهايم",
+      "pos": "جغرافيا"
+    },
+    "Mülheimer": {
+      "ru": "من مولهايم",
+      "pos": "صفة"
+    },
+    "Nordrhein-Westfalen": {
+      "ru": "شمال الراين-وستفاليا",
+      "pos": "جغرافيا"
     },
     "Ostern": {
       "ru": "عيد الفصح",
@@ -95,6 +150,28 @@
       "pos": "اسم",
       "art": "die",
       "pl": "die Prozessionen"
+    },
+    "Rhein": {
+      "pos": "جغرافيا",
+      "ru": "الراين"
+    },
+    "Rheinland-Pfalz": {
+      "ru": "راينلاند-بفالز",
+      "pos": "جغرافيا"
+    },
+    "Saarland": {
+      "ru": "زارلاند (ولاية)",
+      "pos": "جغرافيا"
+    },
+    "Sachsen": {
+      "ru": "سكسونيا",
+      "pos": "جغرافيا"
+    },
+    "Schiff": {
+      "ru": "سفينة",
+      "pos": "اسم",
+      "art": "das",
+      "pl": "die Schiffe"
     },
     "Seehausen": {
       "ru": "زيهاوزن",
@@ -116,14 +193,32 @@
       "art": "der",
       "pl": "die Tage"
     },
+    "Thüringen": {
+      "ru": "تورينغن (ولاية اتحادية ألمانية)",
+      "pos": "جغرافيا"
+    },
+    "Wasser": {
+      "ru": "ماء",
+      "pos": "اسم",
+      "art": "das",
+      "pl": "die Wasser"
+    },
     "Wörth": {
       "ru": "جزيرة فيرت",
       "pos": "جغرافيا"
+    },
+    "auch": {
+      "ru": "أيضًا؛ حتى",
+      "pos": "أداة"
     },
     "auf": {
       "ru": "على، في",
       "pos": "حرف جر",
       "note": "وهي أيضًا سابقة منفصلة: aufspringen «يقفز واقفًا»، sich aufmachen"
+    },
+    "bei": {
+      "ru": "عند، لدى، قرب",
+      "pos": "حرف جر"
     },
     "bis": {
       "ru": "حتى؛ إلى أن",
@@ -138,10 +233,6 @@
       "pos": "أداة تعريف",
       "note": "وهي أيضًا اسم موصول بمعنى «الذي»"
     },
-    "dieser": {
-      "ru": "هذا، هذه",
-      "pos": "ضمير"
-    },
     "durch": {
       "ru": "عبر، من خلال، بسبب",
       "pos": "حرف جر"
@@ -151,9 +242,19 @@
       "pos": "أداة تعريف",
       "note": "einer — «واحد، شخص ما»"
     },
+    "einige": {
+      "ru": "بعض، عدد من",
+      "pos": "ضمير"
+    },
     "es": {
       "ru": "هو (للمحايد)؛ هذا",
       "pos": "ضمير"
+    },
+    "fahren": {
+      "ru": "يركب / يسافر",
+      "pos": "فعل",
+      "forms": "fuhr · ist gefahren",
+      "note": "in die Höhe fahren — يقفز إلى الأعلى"
     },
     "fallen": {
       "ru": "يسقط",
@@ -165,6 +266,17 @@
       "note": "zu Bett gehen — يذهب إلى النوم. في النص مع سابقة منفصلة: ging das Rollen wieder an — angehen «يبدأ»",
       "pos": "فعل",
       "ru": "يذهب، يمشي"
+    },
+    "gehören": {
+      "pos": "فعل",
+      "ru": "ينتمي؛ يكون جزءًا من",
+      "forms": "gehört · gehörte · hat gehört"
+    },
+    "gelten": {
+      "ru": "يُعَدّ؛ يكون ساريًا",
+      "pos": "فعل",
+      "forms": "galt · hat gegolten",
+      "note": "als … gelten — يُعَدّ كذا"
     },
     "gesetzlich": {
       "ru": "قانوني، رسمي",

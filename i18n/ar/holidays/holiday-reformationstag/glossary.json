@@ -2,30 +2,43 @@
   "version": 1,
   "w": {
     "am": "an",
+    "auch": "auch",
     "besuchen": "besuchen",
+    "brandenburg": "Brandenburg",
+    "bremen": "Bremen",
+    "bundesländern": "Bundesland",
     "das": "der/die/das",
+    "dazu": "dazu",
     "der": "der/die/das",
     "deutsche": "deutsch",
     "die": "der/die/das",
     "dort": "dort",
     "ein": "ein/eine",
-    "er": "er",
     "erfahren": "erfahren",
     "feiertag": "Feiertag",
+    "frei": "frei",
+    "gehören": "gehören",
     "gesetzlicher": "gesetzlich",
+    "hamburg": "Hamburg",
     "in": "in",
     "ins": "in",
     "ist": "sein",
     "kann": "können",
     "luther": "Luther",
     "martin": "Martin (Vorname)",
+    "mecklenburg-vorpommern": "Mecklenburg-Vorpommern",
     "mehr": "mehr",
     "möchte": "mögen",
     "neue": "neu",
+    "neun": "neun",
+    "niedersachsen": "Niedersachsen",
     "oktober": "Oktober",
     "reformation": "Reformation",
     "reformationstag": "Reformationstag",
     "sachsen": "Sachsen",
+    "sachsen-anhalt": "Sachsen-Anhalt",
+    "schleswig-holstein": "Schleswig-Holstein",
+    "tag": "Tag",
     "testament": "Testament",
     "thüringen": "Thüringen",
     "und": "und",
@@ -35,11 +48,29 @@
     "übersetzte": "übersetzen"
   },
   "l": {
+    "Brandenburg": {
+      "ru": "براندنبورغ",
+      "pos": "جغرافيا"
+    },
+    "Bremen": {
+      "ru": "بريمن (مدينة في شمال ألمانيا)",
+      "pos": "جغرافيا"
+    },
+    "Bundesland": {
+      "ru": "ولاية اتحادية",
+      "pos": "اسم",
+      "art": "das",
+      "pl": "die Bundesländer"
+    },
     "Feiertag": {
       "ru": "يوم عطلة رسمية",
       "pos": "اسم",
       "art": "der",
       "pl": "die Feiertage"
+    },
+    "Hamburg": {
+      "ru": "هامبورغ",
+      "pos": "جغرافيا"
     },
     "Luther": {
       "ru": "لوثر",
@@ -48,6 +79,14 @@
     "Martin (Vorname)": {
       "ru": "مارتن (اسم شخصي)",
       "pos": "اسم علم"
+    },
+    "Mecklenburg-Vorpommern": {
+      "ru": "مكلنبورغ-فوربومرن",
+      "pos": "جغرافيا"
+    },
+    "Niedersachsen": {
+      "ru": "سكسونيا السفلى",
+      "pos": "جغرافيا"
     },
     "Oktober": {
       "ru": "أكتوبر",
@@ -71,6 +110,20 @@
       "ru": "سكسونيا",
       "pos": "جغرافيا"
     },
+    "Sachsen-Anhalt": {
+      "ru": "سكسونيا-أنهالت",
+      "pos": "جغرافيا"
+    },
+    "Schleswig-Holstein": {
+      "ru": "شليسفيغ-هولشتاين",
+      "pos": "جغرافيا"
+    },
+    "Tag": {
+      "ru": "اليوم / النهار",
+      "pos": "اسم",
+      "art": "der",
+      "pl": "die Tage"
+    },
     "Testament": {
       "ru": "عهد؛ وصية",
       "pos": "اسم",
@@ -90,10 +143,18 @@
       "pos": "حرف جر",
       "note": "am = an dem. وهي أيضًا سابقة منفصلة: anfangen «يبدأ»، annehmen، ansehen، anzünden"
     },
+    "auch": {
+      "ru": "أيضًا؛ حتى",
+      "pos": "أداة"
+    },
     "besuchen": {
       "ru": "يزور",
       "pos": "فعل",
       "forms": "besuchte · hat besucht"
+    },
+    "dazu": {
+      "ru": "إلى ذلك، إضافة إليه",
+      "pos": "ظرف"
     },
     "der/die/das": {
       "ru": "أداة التعريف",
@@ -113,15 +174,19 @@
       "pos": "أداة تعريف",
       "note": "einer — «واحد، شخص ما»"
     },
-    "er": {
-      "ru": "هو",
-      "pos": "ضمير",
-      "note": "ihn — إيّاه، ihm — له"
-    },
     "erfahren": {
       "ru": "يعرف، يعلم",
       "pos": "فعل",
       "forms": "erfuhr · hat erfahren"
+    },
+    "frei": {
+      "ru": "حر",
+      "pos": "صفة"
+    },
+    "gehören": {
+      "pos": "فعل",
+      "ru": "ينتمي؛ يكون جزءًا من",
+      "forms": "gehört · gehörte · hat gehört"
     },
     "gesetzlich": {
       "ru": "قانوني، رسمي",
@@ -151,6 +216,10 @@
     "neu": {
       "ru": "جديد",
       "pos": "صفة"
+    },
+    "neun": {
+      "ru": "تسعة",
+      "pos": "عدد"
     },
     "sein": {
       "ru": "يكون",

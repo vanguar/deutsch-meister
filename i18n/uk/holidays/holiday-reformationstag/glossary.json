@@ -2,30 +2,43 @@
   "version": 1,
   "w": {
     "am": "an",
+    "auch": "auch",
     "besuchen": "besuchen",
+    "brandenburg": "Brandenburg",
+    "bremen": "Bremen",
+    "bundesländern": "Bundesland",
     "das": "der/die/das",
+    "dazu": "dazu",
     "der": "der/die/das",
     "deutsche": "deutsch",
     "die": "der/die/das",
     "dort": "dort",
     "ein": "ein/eine",
-    "er": "er",
     "erfahren": "erfahren",
     "feiertag": "Feiertag",
+    "frei": "frei",
+    "gehören": "gehören",
     "gesetzlicher": "gesetzlich",
+    "hamburg": "Hamburg",
     "in": "in",
     "ins": "in",
     "ist": "sein",
     "kann": "können",
     "luther": "Luther",
     "martin": "Martin (Vorname)",
+    "mecklenburg-vorpommern": "Mecklenburg-Vorpommern",
     "mehr": "mehr",
     "möchte": "mögen",
     "neue": "neu",
+    "neun": "neun",
+    "niedersachsen": "Niedersachsen",
     "oktober": "Oktober",
     "reformation": "Reformation",
     "reformationstag": "Reformationstag",
     "sachsen": "Sachsen",
+    "sachsen-anhalt": "Sachsen-Anhalt",
+    "schleswig-holstein": "Schleswig-Holstein",
+    "tag": "Tag",
     "testament": "Testament",
     "thüringen": "Thüringen",
     "und": "und",
@@ -35,11 +48,29 @@
     "übersetzte": "übersetzen"
   },
   "l": {
+    "Brandenburg": {
+      "ru": "Бранденбург",
+      "pos": "геогр."
+    },
+    "Bremen": {
+      "ru": "Бремен (місто на півночі Німеччини)",
+      "pos": "геогр."
+    },
+    "Bundesland": {
+      "ru": "федеральна земля",
+      "pos": "ім.",
+      "art": "das",
+      "pl": "die Bundesländer"
+    },
     "Feiertag": {
       "ru": "святковий (неробочий) день",
       "pos": "ім.",
       "art": "der",
       "pl": "die Feiertage"
+    },
+    "Hamburg": {
+      "ru": "Гамбург",
+      "pos": "геогр."
     },
     "Luther": {
       "ru": "Лютер",
@@ -48,6 +79,14 @@
     "Martin (Vorname)": {
       "ru": "Мартін (ім’я)",
       "pos": "власна назва"
+    },
+    "Mecklenburg-Vorpommern": {
+      "ru": "Мекленбург — Передня Померанія",
+      "pos": "геогр."
+    },
+    "Niedersachsen": {
+      "ru": "Нижня Саксонія",
+      "pos": "геогр."
     },
     "Oktober": {
       "ru": "жовтень",
@@ -71,6 +110,20 @@
       "ru": "Саксонія",
       "pos": "геогр."
     },
+    "Sachsen-Anhalt": {
+      "ru": "Саксонія-Ангальт",
+      "pos": "геогр."
+    },
+    "Schleswig-Holstein": {
+      "ru": "Шлезвіг-Гольштейн",
+      "pos": "геогр."
+    },
+    "Tag": {
+      "ru": "день",
+      "pos": "ім.",
+      "art": "der",
+      "pl": "die Tage"
+    },
     "Testament": {
       "ru": "завіт; заповіт",
       "pos": "ім.",
@@ -90,10 +143,18 @@
       "pos": "прийм.",
       "note": "am = an dem. Також відокремлюваний префікс: anfangen «починати», annehmen, ansehen, anzünden"
     },
+    "auch": {
+      "ru": "теж, також; навіть",
+      "pos": "частка"
+    },
     "besuchen": {
       "ru": "відвідувати, навідувати",
       "pos": "дієсл.",
       "forms": "besuchte · hat besucht"
+    },
+    "dazu": {
+      "ru": "до цього, туди ж",
+      "pos": "присл."
     },
     "der/die/das": {
       "ru": "означений артикль",
@@ -113,15 +174,19 @@
       "pos": "артикль",
       "note": "einer — «один, хтось»"
     },
-    "er": {
-      "ru": "він",
-      "pos": "займ.",
-      "note": "ihn — його, ihm — йому"
-    },
     "erfahren": {
       "ru": "дізнаватися",
       "pos": "дієсл.",
       "forms": "erfuhr · hat erfahren"
+    },
+    "frei": {
+      "ru": "вільний",
+      "pos": "прикм."
+    },
+    "gehören": {
+      "pos": "дієсл.",
+      "ru": "належати; входити до складу",
+      "forms": "gehört · gehörte · hat gehört"
     },
     "gesetzlich": {
       "ru": "законний, офіційний",
@@ -151,6 +216,10 @@
     "neu": {
       "ru": "новий",
       "pos": "прикм."
+    },
+    "neun": {
+      "ru": "дев'ять",
+      "pos": "числ."
     },
     "sein": {
       "ru": "бути",

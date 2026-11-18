@@ -1,32 +1,55 @@
 {
   "version": 1,
   "w": {
+    "anderen": "ander",
+    "auf": "auf",
     "aus": "aus",
+    "beim": "bei",
     "besonders": "besonders",
+    "brauch": "Brauch",
     "brennende": "brennen",
     "bringt": "bringen",
     "den": "der/die/das",
     "der": "der/die/das",
+    "die": "der/die/das",
     "dunkel": "Dunkel",
+    "durch": "durch",
+    "einen": "ein/eine",
     "es": "es",
     "gäste": "Gast",
     "hinunter": "hinunter",
     "holzräder": "Holzrad",
     "in": "in",
+    "katholische": "katholisch",
     "lügde": "Lügde",
     "menschen": "Mensch",
+    "oberlausitz": "Oberlausitz",
     "osterberg": "Osterberg",
+    "osterreiten": "Osterreiten",
     "osterräderlauf": "Osterräderlauf",
     "ostersonntag": "Ostersonntag",
+    "pferden": "Pferd",
+    "pflegen": "pflegen",
+    "region": "Region",
     "rollen": "rollen",
+    "sie": "sie",
     "sieht": "sehen",
+    "sorben": "Sorbe",
     "stadt": "Stadt",
+    "sächsischen": "sächsisch",
     "und": "und",
     "wenn": "wenn",
     "wird": "werden",
+    "ziehen": "ziehen",
     "zusammen": "zusammen"
   },
   "l": {
+    "Brauch": {
+      "ru": "звичай",
+      "pos": "ім.",
+      "art": "der",
+      "pl": "die Bräuche"
+    },
     "Dunkel": {
       "ru": "темрява, морок",
       "pos": "ім.",
@@ -56,9 +79,19 @@
       "pl": "die Menschen",
       "decl": "n-Deklination: des Menschen · dem/den Menschen"
     },
+    "Oberlausitz": {
+      "ru": "Верхня Лужиця",
+      "pos": "геогр."
+    },
     "Osterberg": {
       "ru": "Остерберґ, гора в Люґде",
       "pos": "геогр."
+    },
+    "Osterreiten": {
+      "ru": "великодня кінна процесія (у сорбів)",
+      "pos": "ім.",
+      "art": "das",
+      "pl": null
     },
     "Osterräderlauf": {
       "ru": "великодній спуск палаючих коліс у Люґде",
@@ -72,16 +105,48 @@
       "art": "der",
       "pl": null
     },
+    "Pferd": {
+      "art": "das",
+      "pl": "die Pferde",
+      "pos": "ім.",
+      "ru": "кінь"
+    },
+    "Region": {
+      "ru": "регіон",
+      "pos": "ім.",
+      "art": "die",
+      "pl": "die Regionen"
+    },
+    "Sorbe": {
+      "ru": "сорб, лужичанин",
+      "pos": "ім.",
+      "art": "der",
+      "pl": "die Sorben",
+      "note": "Sorben — слов'янський народ у Лаузіці"
+    },
     "Stadt": {
       "ru": "місто",
       "pos": "ім.",
       "art": "die",
       "pl": "die Städte"
     },
+    "ander": {
+      "pos": "прикм.",
+      "ru": "інший"
+    },
+    "auf": {
+      "ru": "на, в",
+      "pos": "прийм.",
+      "note": "Також відокремлюваний префікс: aufspringen «схопитися», sich aufmachen"
+    },
     "aus": {
       "ru": "з",
       "pos": "прийм.",
       "note": "Також відокремлюваний префікс: auslöschen «погасити»"
+    },
+    "bei": {
+      "ru": "біля, при, коло",
+      "pos": "прийм."
     },
     "besonders": {
       "ru": "особливо",
@@ -103,6 +168,15 @@
       "pos": "артикль",
       "note": "Також відносний займенник «який»"
     },
+    "durch": {
+      "ru": "через, крізь",
+      "pos": "прийм."
+    },
+    "ein/eine": {
+      "ru": "неозначений артикль",
+      "pos": "артикль",
+      "note": "einer — «один, хтось»"
+    },
     "es": {
       "ru": "воно; це",
       "pos": "займ."
@@ -115,6 +189,16 @@
       "ru": "у (im = in dem, ins = in das)",
       "pos": "прийм."
     },
+    "katholisch": {
+      "ru": "католицький",
+      "pos": "прикм."
+    },
+    "pflegen": {
+      "ru": "мати звичку",
+      "pos": "дієсл.",
+      "forms": "pflegte · hat gepflegt",
+      "note": "pflegen + zu + Inf. — зазвичай робити щось"
+    },
     "rollen": {
       "ru": "котити(ся)",
       "pos": "дієсл.",
@@ -126,6 +210,14 @@
       "pos": "дієсл.",
       "forms": "sah · hat gesehen",
       "note": "У тексті з відокремлюваним префіксом: sah sich um — sich umsehen «озирнутися»"
+    },
+    "sie": {
+      "ru": "вона; вони; Ви",
+      "pos": "займ."
+    },
+    "sächsisch": {
+      "ru": "саксонський",
+      "pos": "прикм."
     },
     "und": {
       "ru": "і, а",
@@ -140,6 +232,12 @@
       "pos": "дієсл.",
       "forms": "wurde · ist geworden",
       "note": "Допоміжне дієслово майбутнього часу й пасиву"
+    },
+    "ziehen": {
+      "ru": "рухатися, вирушати; тягнути",
+      "pos": "дієсл.",
+      "forms": "zog · ist gezogen (рухатися) / hat gezogen (тягнути)",
+      "note": "У тексті — «рухатися, вирушати». З відокремлюваним префіксом: zieh fort — fortziehen «іти геть, вирушати»"
     },
     "zusammen": {
       "ru": "разом",

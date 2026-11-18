@@ -5,17 +5,12 @@
   "paragraphs": [
     {
       "sourceIds": [
-        "kirche",
-        "bayern"
+        "kirche"
       ],
       "s": [
         {
           "de": "Fronleichnam ist ein katholisches Fest und fällt auf einen Donnerstag, 60 Tage nach Ostern.",
           "ru": "Праздник Тела Христова отмечают католики в четверг, через 60 дней после Пасхи."
-        },
-        {
-          "de": "In Bayern ist dieser Tag ein gesetzlicher Feiertag.",
-          "ru": "В Баварии это официальный праздник."
         }
       ]
     },
@@ -33,6 +28,40 @@
           "ru": "Затем участники пересаживаются в лодки и плывут до острова Вёрт."
         }
       ]
+    },
+    {
+      "sourceIds": [
+        "koeln"
+      ],
+      "s": [
+        {
+          "de": "Auch in Köln-Mülheim gehört das Wasser zum Fest.",
+          "ru": "В кёльнском районе Мюльхайм праздник тоже связан с водой."
+        },
+        {
+          "de": "Bei der Mülheimer Gottestracht fahren Schiffe in einer Prozession auf dem Rhein.",
+          "ru": "Во время традиционной Мюльхаймской процессии по Рейну идут суда."
+        }
+      ]
+    },
+    {
+      "sourceIds": [
+        "bundesbank"
+      ],
+      "s": [
+        {
+          "de": "Gesetzlicher Feiertag ist Fronleichnam in Baden-Württemberg, Bayern und Hessen.",
+          "ru": "Праздник Тела Христова — официальный выходной в Баден-Вюртемберге, Баварии и Гессене."
+        },
+        {
+          "de": "Das gilt auch in Nordrhein-Westfalen, Rheinland-Pfalz und im Saarland.",
+          "ru": "Это правило также действует в Северном Рейне — Вестфалии, Рейнланд-Пфальце и Сааре."
+        },
+        {
+          "de": "In Sachsen und Thüringen gilt der Feiertag in einigen Gemeinden.",
+          "ru": "В Саксонии и Тюрингии выходной действует в отдельных общинах."
+        }
+      ]
     }
   ],
   "sourceTitle": "Источники и проверка фактов",
@@ -48,9 +77,14 @@
       "url": "https://www.seehausen-am-staffelsee.de/brauchtum-feste-traditionen.html"
     },
     {
-      "id": "bayern",
-      "name": "Bayerisches Innenministerium · Feiertage",
-      "url": "https://www.stmi.bayern.de/staat-und-verfassung/feiertage/"
+      "id": "koeln",
+      "name": "Stadt Köln · Mülheimer Gottestracht",
+      "url": "https://www.stadt-koeln.de/artikel/06802/index.html"
+    },
+    {
+      "id": "bundesbank",
+      "name": "Deutsche Bundesbank · Feiertage in Deutschland",
+      "url": "https://www.bundesbank.de/resource/blob/749314/d727f4a4d67d280c9d80b52c0f275e9c/472B63F073F071307366337C94F8C870/feiertage-in-deutschland-1-data.pdf"
     }
   ],
   "checked": "2026-11-18"

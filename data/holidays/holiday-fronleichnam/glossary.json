@@ -1,42 +1,65 @@
 {
   "version": 1,
   "w": {
+    "auch": "auch",
     "auf": "auf",
+    "baden-württemberg": "Baden-Württemberg",
     "bayern": "Bayern",
+    "bei": "bei",
     "bis": "bis",
     "booten": "Boot",
     "dann": "dann",
+    "das": "der/die/das",
+    "dem": "der/die/das",
+    "der": "der/die/das",
     "die": "der/die/das",
-    "dieser": "dieser",
     "donnerstag": "Donnerstag",
     "durch": "durch",
     "ein": "ein/eine",
     "einen": "ein/eine",
+    "einer": "ein/eine",
+    "einigen": "einige",
     "es": "es",
+    "fahren": "fahren",
     "feiertag": "Feiertag",
     "fest": "Fest",
     "fronleichnam": "Fronleichnam",
     "fällt": "fallen",
     "geht": "gehen",
+    "gehört": "gehören",
+    "gemeinden": "Gemeinde",
     "geschmückte": "schmücken",
     "gesetzlicher": "gesetzlich",
+    "gilt": "gelten",
+    "gottestracht": "Gottestracht",
+    "hessen": "Hessen",
+    "im": "in",
     "in": "in",
     "insel": "Insel",
     "ist": "sein",
     "katholisches": "katholisch",
+    "köln-mülheim": "Köln-Mülheim",
+    "mülheimer": "Mülheimer",
     "nach": "nach",
+    "nordrhein-westfalen": "Nordrhein-Westfalen",
     "ostern": "Ostern",
     "prozession": "Prozession",
+    "rhein": "Rhein",
+    "rheinland-pfalz": "Rheinland-Pfalz",
+    "saarland": "Saarland",
+    "sachsen": "Sachsen",
+    "schiffe": "Schiff",
     "seehausen": "Seehausen",
     "staffelsee": "Staffelsee",
     "straßen": "Straße",
-    "tag": "Tag",
     "tage": {
       "l": "Tag",
       "old": "в обороте in einem Tage — старый дательный с -e; сегодня an einem Tag. В «drei Tage Regenwetter» это обычное мн. ч."
     },
+    "thüringen": "Thüringen",
     "und": "und",
     "vielen": "viel",
+    "wasser": "Wasser",
     "weiter": "weit",
     "wörth": "Wörth",
     "zieht": "ziehen",
@@ -44,6 +67,10 @@
     "zur": "zu"
   },
   "l": {
+    "Baden-Württemberg": {
+      "ru": "Баден-Вюртемберг",
+      "pos": "геогр."
+    },
     "Bayern": {
       "ru": "Бавария",
       "pos": "геогр."
@@ -78,11 +105,39 @@
       "art": "der",
       "pl": null
     },
+    "Gemeinde": {
+      "ru": "община, сельский мир",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Gemeinden"
+    },
+    "Gottestracht": {
+      "ru": "традиционная церковная процессия в Мюльхайме",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "Hessen": {
+      "ru": "Гессен",
+      "pos": "геогр."
+    },
     "Insel": {
       "ru": "остров",
       "pos": "сущ.",
       "art": "die",
       "pl": "die Inseln"
+    },
+    "Köln-Mülheim": {
+      "ru": "Кёльн-Мюльхайм",
+      "pos": "геогр."
+    },
+    "Mülheimer": {
+      "ru": "мюльхаймский, из Мюльхайма",
+      "pos": "прил."
+    },
+    "Nordrhein-Westfalen": {
+      "ru": "Северный Рейн — Вестфалия",
+      "pos": "геогр."
     },
     "Ostern": {
       "ru": "Пасха",
@@ -95,6 +150,28 @@
       "pos": "сущ.",
       "art": "die",
       "pl": "die Prozessionen"
+    },
+    "Rhein": {
+      "pos": "геогр.",
+      "ru": "Рейн"
+    },
+    "Rheinland-Pfalz": {
+      "ru": "Рейнланд-Пфальц",
+      "pos": "геогр."
+    },
+    "Saarland": {
+      "ru": "Саар (земля)",
+      "pos": "геогр."
+    },
+    "Sachsen": {
+      "ru": "Саксония",
+      "pos": "геогр."
+    },
+    "Schiff": {
+      "ru": "корабль",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Schiffe"
     },
     "Seehausen": {
       "ru": "Зеехаузен",
@@ -116,14 +193,32 @@
       "art": "der",
       "pl": "die Tage"
     },
+    "Thüringen": {
+      "ru": "Тюрингия (федеральная земля Германии)",
+      "pos": "геогр."
+    },
+    "Wasser": {
+      "ru": "вода",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Wasser"
+    },
     "Wörth": {
       "ru": "остров Вёрт",
       "pos": "геогр."
+    },
+    "auch": {
+      "ru": "тоже, также; даже",
+      "pos": "частица"
     },
     "auf": {
       "ru": "на, в",
       "pos": "предл.",
       "note": "Тж. отделяемая приставка: aufspringen «вскочить», sich aufmachen"
+    },
+    "bei": {
+      "ru": "у, при, возле",
+      "pos": "предл."
     },
     "bis": {
       "ru": "до; пока не",
@@ -138,10 +233,6 @@
       "pos": "артикль",
       "note": "Тж. относительное местоимение «который»"
     },
-    "dieser": {
-      "ru": "этот, эта, это",
-      "pos": "мест."
-    },
     "durch": {
       "ru": "через, сквозь, из-за",
       "pos": "предл."
@@ -151,9 +242,19 @@
       "pos": "артикль",
       "note": "einer — «один, некто»"
     },
+    "einige": {
+      "ru": "несколько, некоторые",
+      "pos": "мест."
+    },
     "es": {
       "ru": "оно; это",
       "pos": "мест."
+    },
+    "fahren": {
+      "ru": "ехать",
+      "pos": "гл.",
+      "forms": "fuhr · ist gefahren",
+      "note": "in die Höhe fahren — подскочить"
     },
     "fallen": {
       "ru": "падать",
@@ -165,6 +266,17 @@
       "note": "zu Bett gehen — ложиться спать. В тексте с отделяемой приставкой: ging das Rollen wieder an — angehen «начаться»",
       "pos": "гл.",
       "ru": "идти, ходить"
+    },
+    "gehören": {
+      "pos": "гл.",
+      "ru": "принадлежать; входить в состав",
+      "forms": "gehört · gehörte · hat gehört"
+    },
+    "gelten": {
+      "ru": "считаться; быть действительным",
+      "pos": "гл.",
+      "forms": "galt · hat gegolten",
+      "note": "als … gelten — считаться кем-то"
     },
     "gesetzlich": {
       "ru": "законный, официальный",

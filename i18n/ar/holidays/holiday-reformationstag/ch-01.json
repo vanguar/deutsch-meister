@@ -5,16 +5,21 @@
   "paragraphs": [
     {
       "sourceIds": [
+        "bundesbank",
         "sachsen"
       ],
       "s": [
         {
-          "de": "Der Reformationstag ist am 31. Oktober.",
-          "ru": "يوافق يوم الإصلاح الديني الحادي والثلاثين من أكتوبر."
+          "de": "Am 31. Oktober ist der Reformationstag in neun Bundesländern ein gesetzlicher Feiertag.",
+          "ru": "يوم الإصلاح الديني في الحادي والثلاثين من أكتوبر عطلة رسمية في تسع ولايات اتحادية."
         },
         {
-          "de": "In Sachsen ist er ein gesetzlicher Feiertag.",
-          "ru": "وهو عطلة رسمية في ساكسونيا."
+          "de": "Dazu gehören Bremen, Hamburg, Niedersachsen und Schleswig-Holstein.",
+          "ru": "من بينها بريمن وهامبورغ وساكسونيا السفلى وشليسفيغ-هولشتاين."
+        },
+        {
+          "de": "Auch in Brandenburg, Mecklenburg-Vorpommern, Sachsen, Sachsen-Anhalt und Thüringen ist der Tag frei.",
+          "ru": "وهو أيضًا يوم عطلة في براندنبورغ ومكلنبورغ-فوربومرن وساكسونيا وساكسونيا-أنهالت وتورينغن."
         }
       ]
     },
@@ -45,6 +50,11 @@
       "id": "wartburg",
       "name": "Wartburg-Stiftung · Martin Luther",
       "url": "https://www.wartburg.de/personen/martin-luther"
+    },
+    {
+      "id": "bundesbank",
+      "name": "Deutsche Bundesbank · Feiertage in Deutschland",
+      "url": "https://www.bundesbank.de/resource/blob/749314/d727f4a4d67d280c9d80b52c0f275e9c/472B63F073F071307366337C94F8C870/feiertage-in-deutschland-1-data.pdf"
     }
   ],
   "checked": "2026-11-18"

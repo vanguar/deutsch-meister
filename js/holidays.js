@@ -44,13 +44,29 @@ const HolidayDates = (() => {
       .sort((left, right) => left.date - right.date || left.item.id.localeCompare(right.item.id));
   }
 
-  return { date, key, today, occurrence, inYear };
+  function validRule(rule) {
+    if (rule?.type === 'repentance') return true;
+    if (rule?.type === 'easter') return Number.isInteger(rule.offset) && Number.isFinite(+occurrence(rule, 2026));
+    if (rule?.type !== 'fixed' || !Number.isInteger(rule.month) || !Number.isInteger(rule.day)) return false;
+    const when = occurrence(rule, 2026);
+    return when.getUTCFullYear() === 2026 && when.getUTCMonth() + 1 === rule.month && when.getUTCDate() === rule.day;
+  }
+
+  function validCatalog(catalog) {
+    if (catalog?.version !== 1 || !Array.isArray(catalog.items)) return false;
+    const valid = catalog.items.every(item => typeof item?.id === 'string' && /^holiday-[a-z0-9-]+$/.test(item.id)
+      && typeof item.titleRu === 'string' && item.titleRu.trim()
+      && typeof item.region === 'string' && item.region.trim() && validRule(item.rule));
+    return valid && new Set(catalog.items.map(item => item.id)).size === catalog.items.length;
+  }
+
+  return { date, key, today, occurrence, inYear, validCatalog };
 })();
 
 if (typeof module !== 'undefined') module.exports = HolidayDates;
 
 if (typeof document !== 'undefined') document.addEventListener('DOMContentLoaded', () => {
-  const { date, key, today, occurrence, inYear } = HolidayDates;
+  const { date, key, today, occurrence, inYear, validCatalog } = HolidayDates;
   const $ = id => document.getElementById(id);
   const root = $('holidayCalendar');
   const tile = $('readHolidays');
@@ -59,7 +75,9 @@ if (typeof document !== 'undefined') document.addEventListener('DOMContentLoaded
   const fetchCatalog = async () => {
     const response = await fetch('data/holidays/index.json', { cache: 'no-cache' });
     if (!response.ok) throw new Error('Holiday calendar: HTTP ' + response.status);
-    return response.json();
+    const catalog = await response.json();
+    if (!validCatalog(catalog)) throw new Error('Holiday calendar: invalid catalog');
+    return catalog;
   };
   const t = text => window.I18N ? I18N.t(text) : text;
 
@@ -110,6 +128,8 @@ if (typeof document !== 'undefined') document.addEventListener('DOMContentLoaded
   let shown = monthParam ? date(Number(monthParam[1]), Number(monthParam[2])) : toMonth(today());
   let items = null;
   let lastLink = null;
+  const days = $('holidayDays');
+  const agenda = $('holidayList');
   const nextDateButton = $('holidayNextDate');
 
   function render() {
@@ -118,6 +138,12 @@ if (typeof document !== 'undefined') document.addEventListener('DOMContentLoaded
     const month = shown.getUTCMonth() + 1;
     const current = key(today());
     const monthDates = items ? inYear(items, year).filter(entry => entry.date.getUTCMonth() + 1 === month) : [];
+    const byDate = new Map();
+    for (const entry of monthDates) {
+      const iso = key(entry.date);
+      if (!byDate.has(iso)) byDate.set(iso, []);
+      byDate.get(iso).push(entry.item);
+    }
     const start = (shown.getUTCDay() + 6) % 7;
     const count = date(year, month + 1, 0).getUTCDate();
     const empty = '<li aria-hidden="true"></li>';
@@ -125,40 +151,60 @@ if (typeof document !== 'undefined') document.addEventListener('DOMContentLoaded
       const day = i + 1;
       const timestamp = date(year, month, day);
       const iso = key(timestamp);
-      const events = monthDates.filter(entry => key(entry.date) === iso);
+      const events = byDate.get(iso);
       const marker = iso === current ? ' aria-current="date"' : '';
       const label = digits.format(day);
-      if (!events.length) return `<li><span class="hd-day"${marker}>${label}</span></li>`;
-      const titles = esc([longDate.format(timestamp), ...events.map(entry => entry.item.titleRu)].join(' · '));
+      if (!events) return `<li><span class="hd-day" data-date="${iso}"${marker}>${label}</span></li>`;
+      const titles = esc([longDate.format(timestamp), ...events.map(item => item.titleRu)].join(' · '));
       const anchor = events.length === 1
-        ? `href="#holiday=${esc(events[0].item.id)}" data-holiday="${esc(events[0].item.id)}"`
+        ? `href="#holiday=${esc(events[0].id)}" data-holiday="${esc(events[0].id)}"`
         : `href="#holiday-list-${iso}" data-agenda-day="${iso}"`;
-      return `<li><a class="hd-day" ${anchor}${marker} aria-label="${titles}">${label}</a></li>`;
+      return `<li><a class="hd-day" data-date="${iso}" ${anchor}${marker} aria-label="${titles}">${label}</a></li>`;
     });
-    $('holidayDays').innerHTML = empty.repeat(start) + cells.join('') + empty.repeat((7 - (start + count) % 7) % 7);
+    days.innerHTML = empty.repeat(start) + cells.join('') + empty.repeat((7 - (start + count) % 7) % 7);
     if (!items) return;
     $('holidayStatus').textContent = monthDates.length ? '' : t('В этом месяце нет дат с описанием.');
     if (nextDateButton) nextDateButton.hidden = monthDates.length > 0 || items.length === 0;
-    $('holidayList').innerHTML = monthDates.map(({ item, date: when }) => {
+    agenda.innerHTML = monthDates.map(({ item, date: when }) => {
       const iso = key(when);
-      return `<li><a class="hd-event" href="#holiday=${esc(item.id)}" data-holiday="${esc(item.id)}" data-date="${iso}">
+      const group = byDate.get(iso);
+      const target = group.length > 1 && group[0] === item ? ` id="holiday-list-${iso}"` : '';
+      return `<li><a class="hd-event"${target} href="#holiday=${esc(item.id)}" data-holiday="${esc(item.id)}" data-date="${iso}">
         <time datetime="${iso}">${esc(shortDate.format(when))}</time>
         <span><span class="hd-event-title">${esc(item.titleRu)}</span><span class="hd-event-place">${esc(item.region)}</span></span>
         <span class="hd-event-arrow" aria-hidden="true">→</span></a></li>`;
     }).join('');
   }
 
-  function changeMonth(value) {
-    shown = value;
+  function monthUrl() {
     const url = new URL(location.href);
     url.searchParams.set('month', key(shown).slice(0, 7));
-    history.replaceState(history.state, '', url);
+    return url;
+  }
+
+  function changeMonth(value) {
+    shown = value;
+    history.replaceState(history.state, '', monthUrl());
     render();
   }
 
   function fromHash() {
     const match = /^#holiday=([a-z0-9-]+)$/.exec(location.hash);
     return match && items?.find(item => item.id === match[1]);
+  }
+
+  function openHoliday(id, fromHistory = false) {
+    Reader.open(id, { fromHistory });
+    $('rdBack').focus({ preventScroll: true });
+  }
+
+  function refreshTodayMarker() {
+    if (document.hidden) return;
+    const previous = days.querySelector('[aria-current="date"]');
+    const current = days.querySelector(`[data-date="${key(today())}"]`);
+    if (previous === current) return;
+    previous?.removeAttribute('aria-current');
+    current?.setAttribute('aria-current', 'date');
   }
 
   async function load() {
@@ -170,15 +216,20 @@ if (typeof document !== 'undefined') document.addEventListener('DOMContentLoaded
       const catalog = await fetchCatalog();
       items = catalog.items;
       const item = fromHash();
+      let restored = false;
       if (item) {
         if (!monthParam) shown = toMonth(occurrence(item.rule, shown.getUTCFullYear()));
-        const restored = history.state?.view === 'reader';
-        if (!restored) history.replaceState(null, '', location.pathname + location.search);
-        Reader.open(item.id, { fromHistory: restored });
+        restored = history.state?.view === 'reader';
+        const url = monthUrl();
+        if (!restored) url.hash = '';
+        history.replaceState(restored ? history.state : null, '', url);
       } else if (location.hash.startsWith('#holiday=')) {
         history.replaceState(null, '', location.pathname + location.search);
       }
       render();
+      if (item) openHoliday(item.id, restored);
+      const group = /^#(holiday-list-\d{4}-\d{2}-\d{2})$/.exec(location.hash);
+      if (group) $(group[1])?.focus();
     } catch (err) {
       console.warn('[Holidays]', err);
       $('holidayStatus').textContent = t('Календарь не загрузился.');
@@ -200,8 +251,10 @@ if (typeof document !== 'undefined') document.addEventListener('DOMContentLoaded
     const year = shown.getUTCFullYear();
     const next = inYear(items, year).find(entry => entry.date >= shown) || inYear(items, year + 1)[0];
     changeMonth(toMonth(next.date));
-    $('holidayList').querySelector('a')?.focus();
+    agenda.querySelector('a')?.focus();
   });
+  window.addEventListener('pageshow', refreshTodayMarker);
+  document.addEventListener('visibilitychange', refreshTodayMarker);
   document.addEventListener('click', ReaderShell.openExternal);
   root.addEventListener('click', event => {
     if (event.button !== 0 || event.altKey || event.ctrlKey || event.shiftKey || event.metaKey) return;
@@ -209,21 +262,24 @@ if (typeof document !== 'undefined') document.addEventListener('DOMContentLoaded
     if (!link) return;
     if (link.dataset.agendaDay) {
       event.preventDefault();
-      $('holidayList').querySelector(`[data-date="${link.dataset.agendaDay}"]`)?.focus();
+      $(`holiday-list-${link.dataset.agendaDay}`)?.focus();
     } else if (items?.some(item => item.id === link.dataset.holiday)) {
       event.preventDefault();
       lastLink = link;
-      Reader.open(link.dataset.holiday);
-      $('rdBack').focus();
+      openHoliday(link.dataset.holiday);
     }
   });
   window.addEventListener('popstate', () => {
     const item = fromHash();
     if (item && (!Reader.state.open || Reader.state.bookId !== item.id)) {
-      Reader.open(item.id, { fromHistory: true });
-      $('rdBack').focus();
-    } else if (!item && lastLink?.isConnected) {
-      lastLink.focus();
+      openHoliday(item.id, true);
+    } else if (!item && Reader.state.bookId) {
+      const id = Reader.state.bookId;
+      const selector = `[data-holiday="${id}"]`;
+      const target = lastLink?.isConnected && lastLink.dataset.holiday === id ? lastLink
+        : days.querySelector(selector) || agenda.querySelector(selector);
+      // The browser can focus the fragment after popstate restores a shared date.
+      requestAnimationFrame(() => { if (!Reader.state.open) target?.focus(); });
     }
   });
 

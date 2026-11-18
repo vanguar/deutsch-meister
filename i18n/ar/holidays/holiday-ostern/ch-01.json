@@ -21,6 +21,21 @@
           "ru": "ويجمع هذا التقليد سكان البلدة وزوارها."
         }
       ]
+    },
+    {
+      "sourceIds": [
+        "lausitz"
+      ],
+      "s": [
+        {
+          "de": "In der sächsischen Oberlausitz pflegen katholische Sorben einen anderen Brauch.",
+          "ru": "في لوساتيا العليا بولاية ساكسونيا يحافظ الصوربيون الكاثوليك على تقليد خاص بهم."
+        },
+        {
+          "de": "Beim Osterreiten ziehen sie auf Pferden durch die Region.",
+          "ru": "ففي موكب الفصح يجوبون المنطقة على ظهور الخيل."
+        }
+      ]
     }
   ],
   "sourceTitle": "المصادر والتحقق من المعلومات",
@@ -29,6 +44,11 @@
       "id": "unesco",
       "name": "Deutsche UNESCO-Kommission · Osterräderlauf",
       "url": "https://www.unesco.de/staette/osterraederlauf-in-luegde/"
+    },
+    {
+      "id": "lausitz",
+      "name": "Deutsche UNESCO-Kommission · Bräuche der Lausitzer Sorben",
+      "url": "https://www.unesco.de/staette/gesellschaftliche-braeuche-und-feste-der-lausitzer-sorben-im-jahreslauf/"
     }
   ],
   "checked": "2026-11-18"

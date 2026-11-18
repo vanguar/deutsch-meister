@@ -37,8 +37,8 @@ a.hd-day[aria-current="date"], a.hd-day:hover { color: var(--text-on-btn); backg
 .hd-event { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: start; gap: 10px; padding: 12px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-md); color: var(--text); text-decoration: none; }
 .hd-event:hover { border-color: var(--accent2-text); background: var(--surface2); }
 .hd-event time { align-self: start; padding-top: 2px; color: var(--accent2-text); font: 500 12px/1.5 'DM Mono', monospace; white-space: nowrap; }
-.hd-event-title, .hd-event-place { display: block; }
-.hd-event-title { color: var(--text-strong); font-size: 14px; font-weight: 700; overflow-wrap: anywhere; }
+.hd-event-title, .hd-event-place { display: block; overflow-wrap: anywhere; }
+.hd-event-title { color: var(--text-strong); font-size: 14px; font-weight: 700; }
 .hd-event-place { margin-top: 4px; color: var(--text-muted); font-size: 12px; }
 .hd-event-arrow { color: var(--accent2-text); }
 html[dir="rtl"] :is(.hd-arrow span, .hd-event-arrow) { display: inline-block; transform: scaleX(-1); }

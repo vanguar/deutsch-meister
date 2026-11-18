@@ -1,15 +1,20 @@
 """Original B1 texts. Sentence order is German, Russian, Ukrainian, Arabic."""
 
+BUNDESBANK = (
+    'bundesbank', 'Deutsche Bundesbank · Feiertage in Deutschland',
+    'https://www.bundesbank.de/resource/blob/749314/d727f4a4d67d280c9d80b52c0f275e9c/472B63F073F071307366337C94F8C870/feiertage-in-deutschland-1-data.pdf',
+)
+
 EVENTS = [
     ('dreikoenige', (1, 6),
      'Heilige Drei Könige|День трёх королей|День трьох королів|عيد الملوك الثلاثة',
-     'Германия · Бавария|Німеччина · Баварія|ألمانيا · بافاريا',
+     'Германия · Баден-Вюртемберг, Бавария и Саксония-Анхальт|Німеччина · Баден-Вюртемберг, Баварія та Саксонія-Ангальт|ألمانيا · بادن-فورتمبيرغ وبافاريا وساكسونيا-أنهالت',
      [
-         ('bayern', 'Bayerisches Innenministerium · Feiertage', 'https://www.stmi.bayern.de/staat-und-verfassung/feiertage/'),
+         BUNDESBANK,
          ('segen', 'Kindermissionswerk · Fragen zum Sternsingen', 'https://www.sternsinger.de/sternsingen/faq/'),
          ('aktion', 'Kindermissionswerk · Dreikönigssingen', 'https://www.sternsinger.de/sternsingen/bischoefliche-ordnung-zur-aktion-dreikoenigssingen/'),
      ], [
-         ('bayern', '''Am 6. Januar ist in Bayern ein gesetzlicher Feiertag.|6 января в Баварии официальный праздник.|6 січня в Баварії офіційне свято.|السادس من يناير عطلة رسمية في بافاريا.'''),
+         ('bundesbank', '''Am 6. Januar ist in Baden-Württemberg, Bayern und Sachsen-Anhalt ein gesetzlicher Feiertag.|6 января — официальный праздник в Баден-Вюртемберге, Баварии и Саксонии-Анхальт.|6 січня — офіційне свято в Баден-Вюртемберзі, Баварії та Саксонії-Ангальт.|السادس من يناير عطلة رسمية في بادن-فورتمبيرغ وبافاريا وساكسونيا-أنهالت.'''),
          ('segen,aktion', '''Anfang Januar gehen vielerorts Kinder als Sternsinger von Tür zu Tür.|В начале января во многих местах дети ходят от двери к двери с рождественскими песнями и звездой.|На початку січня в багатьох місцях діти ходять від дверей до дверей із різдвяними піснями та зіркою.|في أوائل يناير يطوف الأطفال في أماكن كثيرة من باب إلى باب وهم ينشدون ويحملون نجمة الميلاد.
 Sie sammeln Spenden und hinterlassen den Segen C+M+B an der Haustür.|Они собирают пожертвования и оставляют на входной двери благословение C+M+B.|Вони збирають пожертви й залишають на вхідних дверях благословення C+M+B.|يجمعون التبرعات ويتركون البركة C+M+B على باب المنزل.
 Die drei Buchstaben bedeuten heute: Christus segne dieses Haus.|Сегодня эти три буквы означают «Христос, благослови этот дом».|Сьогодні ці три літери означають «Христе, благослови цей дім».|تعني هذه الحروف الثلاثة اليوم: ليبارك المسيح هذا البيت.'''),
@@ -28,26 +33,34 @@ In Mecklenburg-Vorpommern gilt das seit 2023.|В Мекленбурге — Пе
      ]),
     ('ostern', ('easter', 0),
      'Ostern|Пасха|Великдень|عيد الفصح',
-     'Германия · Люгде, Северный Рейн — Вестфалия|Німеччина · Люґде, Північний Рейн — Вестфалія|ألمانيا · لوغده، شمال الراين-وستفاليا',
+     'Германия · Северный Рейн — Вестфалия и Саксония|Німеччина · Північний Рейн — Вестфалія та Саксонія|ألمانيا · شمال الراين-وستفاليا وساكسونيا',
      [
          ('unesco', 'Deutsche UNESCO-Kommission · Osterräderlauf', 'https://www.unesco.de/staette/osterraederlauf-in-luegde/'),
+         ('lausitz', 'Deutsche UNESCO-Kommission · Bräuche der Lausitzer Sorben', 'https://www.unesco.de/staette/gesellschaftliche-braeuche-und-feste-der-lausitzer-sorben-im-jahreslauf/'),
      ], [
          ('unesco', '''In Lügde sieht der Ostersonntag besonders aus.|Пасхальное воскресенье в Люгде выглядит по-особенному.|Великодня неділя в Люґде має особливий вигляд.|يبدو أحد الفصح مختلفًا في بلدة لوغده.
 Wenn es dunkel wird, rollen brennende Holzräder den Osterberg hinunter.|Когда темнеет, с горы Остерберг скатываются горящие деревянные колёса.|Коли сутеніє, з гори Остерберґ скочуються палаючі дерев’яні колеса.|حين يحل الظلام تتدحرج عجلات خشبية مشتعلة من تل أوستربرغ.
 Der Osterräderlauf bringt Menschen aus der Stadt und Gäste zusammen.|На зрелище собираются и жители города, и гости.|На видовище збираються і жителі міста, і гості.|ويجمع هذا التقليد سكان البلدة وزوارها.'''),
+         ('lausitz', '''In der sächsischen Oberlausitz pflegen katholische Sorben einen anderen Brauch.|В саксонской Верхней Лужице у католиков из числа лужицких сербов есть свой обычай.|У саксонській Верхній Лужиці католики з-поміж лужицьких сербів мають свій звичай.|في لوساتيا العليا بولاية ساكسونيا يحافظ الصوربيون الكاثوليك على تقليد خاص بهم.
+Beim Osterreiten ziehen sie auf Pferden durch die Region.|Во время пасхального конного шествия они проезжают верхом по окрестностям.|Під час великодньої кінної ходи вони їдуть верхи околицями.|ففي موكب الفصح يجوبون المنطقة على ظهور الخيل.'''),
      ]),
     ('fronleichnam', ('easter', 60),
      'Fronleichnam|Праздник Тела Христова|Свято Тіла Христового|عيد جسد المسيح',
-     'Германия · Зеехаузен, Бавария|Німеччина · Зеегаузен, Баварія|ألمانيا · زيهاوزن، بافاريا',
+     'Германия · шесть земель и отдельные общины|Німеччина · шість земель і окремі громади|ألمانيا · ست ولايات وبعض البلديات',
      [
          ('kirche', 'Erzbistum München und Freising · Fronleichnam', 'https://www2.erzbistum-muenchen.de/pfarrei/pv-peiting-hohenpeissenberg/kirchenjahr-fronleichnam/117230'),
          ('seehausen', 'Gemeinde Seehausen · Seeprozession', 'https://www.seehausen-am-staffelsee.de/brauchtum-feste-traditionen.html'),
-         ('bayern', 'Bayerisches Innenministerium · Feiertage', 'https://www.stmi.bayern.de/staat-und-verfassung/feiertage/'),
+         ('koeln', 'Stadt Köln · Mülheimer Gottestracht', 'https://www.stadt-koeln.de/artikel/06802/index.html'),
+         BUNDESBANK,
      ], [
-         ('kirche,bayern', '''Fronleichnam ist ein katholisches Fest und fällt auf einen Donnerstag, 60 Tage nach Ostern.|Праздник Тела Христова отмечают католики в четверг, через 60 дней после Пасхи.|Свято Тіла Христового католики відзначають у четвер, через 60 днів після Великодня.|عيد جسد المسيح عيد كاثوليكي يوافق يوم خميس بعد الفصح بستين يومًا.
-In Bayern ist dieser Tag ein gesetzlicher Feiertag.|В Баварии это официальный праздник.|У Баварії це офіційне свято.|وهو عطلة رسمية في بافاريا.'''),
+         ('kirche', '''Fronleichnam ist ein katholisches Fest und fällt auf einen Donnerstag, 60 Tage nach Ostern.|Праздник Тела Христова отмечают католики в четверг, через 60 дней после Пасхи.|Свято Тіла Христового католики відзначають у четвер, через 60 днів після Великодня.|عيد جسد المسيح عيد كاثوليكي يوافق يوم خميس بعد الفصح بستين يومًا.'''),
          ('seehausen', '''In Seehausen zieht die Prozession durch geschmückte Straßen bis zum Staffelsee.|В Зеехаузене процессия идёт по украшенным улицам до озера Штаффельзе.|У Зеегаузені процесія йде прикрашеними вулицями до озера Штаффельзе.|في زيهاوزن يمر الموكب في شوارع مزينة حتى يصل إلى بحيرة شتافلزيه.
 Dann geht es in vielen Booten weiter bis zur Insel Wörth.|Затем участники пересаживаются в лодки и плывут до острова Вёрт.|Потім учасники сідають у човни й пливуть до острова Верть.|ثم يواصل المشاركون الرحلة في قوارب كثيرة حتى جزيرة فيرت.'''),
+         ('koeln', '''Auch in Köln-Mülheim gehört das Wasser zum Fest.|В кёльнском районе Мюльхайм праздник тоже связан с водой.|У кельнському районі Мюльгайм свято теж пов’язане з водою.|وفي حي مولهايم بمدينة كولونيا يشكل الماء أيضًا جزءًا من الاحتفال.
+Bei der Mülheimer Gottestracht fahren Schiffe in einer Prozession auf dem Rhein.|Во время традиционной Мюльхаймской процессии по Рейну идут суда.|Під час традиційної Мюльгаймської процесії Рейном ідуть судна.|فخلال موكب مولهايم التقليدي تسير السفن في نهر الراين.'''),
+         ('bundesbank', '''Gesetzlicher Feiertag ist Fronleichnam in Baden-Württemberg, Bayern und Hessen.|Праздник Тела Христова — официальный выходной в Баден-Вюртемберге, Баварии и Гессене.|Свято Тіла Христового — офіційний вихідний у Баден-Вюртемберзі, Баварії та Гессені.|عيد جسد المسيح عطلة رسمية في بادن-فورتمبيرغ وبافاريا وهيسن.
+Das gilt auch in Nordrhein-Westfalen, Rheinland-Pfalz und im Saarland.|Это правило также действует в Северном Рейне — Вестфалии, Рейнланд-Пфальце и Сааре.|Це правило також діє в Північному Рейні — Вестфалії, Рейнланд-Пфальці та Саарі.|وينطبق ذلك أيضًا في شمال الراين-وستفاليا وراينلاند-بفالتس وسارلاند.
+In Sachsen und Thüringen gilt der Feiertag in einigen Gemeinden.|В Саксонии и Тюрингии выходной действует в отдельных общинах.|У Саксонії та Тюрингії вихідний діє в окремих громадах.|وفي ساكسونيا وتورينغن تسري العطلة في بعض البلديات.'''),
      ]),
     ('bundesfeier', (8, 1),
      'Schweizer Bundesfeier|Национальный день Швейцарии|Національний день Швейцарії|العيد الوطني السويسري',
@@ -99,13 +112,15 @@ Seit 1965 ist der 26. Oktober der Nationalfeiertag.|С 1965 года 26 октя
      ]),
     ('reformationstag', (10, 31),
      'Reformationstag|День Реформации|День Реформації|يوم الإصلاح الديني',
-     'Германия · Саксония и Вартбург, Тюрингия|Німеччина · Саксонія й Вартбурґ, Тюрингія|ألمانيا · ساكسونيا وفارتبورغ في تورينغن',
+     'Германия · девять земель|Німеччина · дев’ять земель|ألمانيا · تسع ولايات',
      [
          ('sachsen', 'REVOSax · Sächsisches Feiertagsgesetz', 'https://www.revosax.sachsen.de/vorschrift/3997-SaechsSFG'),
          ('wartburg', 'Wartburg-Stiftung · Martin Luther', 'https://www.wartburg.de/personen/martin-luther'),
+         BUNDESBANK,
      ], [
-         ('sachsen', '''Der Reformationstag ist am 31. Oktober.|День Реформации приходится на 31 октября.|День Реформації припадає на 31 жовтня.|يوافق يوم الإصلاح الديني الحادي والثلاثين من أكتوبر.
-In Sachsen ist er ein gesetzlicher Feiertag.|В Саксонии это официальный праздник.|У Саксонії це офіційне свято.|وهو عطلة رسمية في ساكسونيا.'''),
+         ('bundesbank,sachsen', '''Am 31. Oktober ist der Reformationstag in neun Bundesländern ein gesetzlicher Feiertag.|31 октября День Реформации — официальный выходной в девяти федеральных землях.|31 жовтня День Реформації — офіційний вихідний у дев’ятьох федеральних землях.|يوم الإصلاح الديني في الحادي والثلاثين من أكتوبر عطلة رسمية في تسع ولايات اتحادية.
+Dazu gehören Bremen, Hamburg, Niedersachsen und Schleswig-Holstein.|В их числе Бремен, Гамбург, Нижняя Саксония и Шлезвиг-Гольштейн.|Серед них Бремен, Гамбург, Нижня Саксонія та Шлезвіг-Гольштейн.|من بينها بريمن وهامبورغ وساكسونيا السفلى وشليسفيغ-هولشتاين.
+Auch in Brandenburg, Mecklenburg-Vorpommern, Sachsen, Sachsen-Anhalt und Thüringen ist der Tag frei.|Этот день также выходной в Бранденбурге, Мекленбурге — Передней Померании, Саксонии, Саксонии-Анхальт и Тюрингии.|Цей день також вихідний у Бранденбурзі, Мекленбурзі — Передній Померанії, Саксонії, Саксонії-Ангальт і Тюрингії.|وهو أيضًا يوم عطلة في براندنبورغ ومكلنبورغ-فوربومرن وساكسونيا وساكسونيا-أنهالت وتورينغن.'''),
          ('wartburg', '''Wer mehr über die Reformation erfahren möchte, kann die Wartburg in Thüringen besuchen.|Чтобы ближе познакомиться с Реформацией, можно посетить замок Вартбург в Тюрингии.|Щоб ближче познайомитися з Реформацією, можна відвідати замок Вартбурґ у Тюрингії.|ومن يرغب في معرفة المزيد عن الإصلاح الديني يمكنه زيارة قلعة فارتبورغ في تورينغن.
 Dort übersetzte Martin Luther 1521 und 1522 das Neue Testament ins Deutsche.|Там в 1521 и 1522 годах Мартин Лютер переводил Новый Завет на немецкий.|Там у 1521 і 1522 роках Мартін Лютер перекладав Новий Заповіт німецькою.|هناك ترجم مارتن لوثر العهد الجديد إلى الألمانية في عامي 1521 و1522.'''),
      ]),

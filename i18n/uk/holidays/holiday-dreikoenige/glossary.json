@@ -6,6 +6,7 @@
     "an": "an",
     "anfang": "Anfang",
     "b": "C+M+B",
+    "baden-württemberg": "Baden-Württemberg",
     "bayern": "Bayern",
     "bedeuten": "bedeuten",
     "buchstaben": "Buchstabe",
@@ -29,6 +30,7 @@
     "januar": "Januar",
     "kinder": "Kind",
     "m": "C+M+B",
+    "sachsen-anhalt": "Sachsen-Anhalt",
     "sammeln": "sich sammeln",
     "segen": "Segen",
     "segne": "segnen",
@@ -48,6 +50,10 @@
       "art": "der",
       "pl": "die Anfänge",
       "note": "Anfang der Woche — на початку тижня"
+    },
+    "Baden-Württemberg": {
+      "ru": "Баден-Вюртемберг",
+      "pos": "геогр."
     },
     "Bayern": {
       "ru": "Баварія",
@@ -96,6 +102,10 @@
       "pos": "ім.",
       "art": "das",
       "pl": "die Kinder"
+    },
+    "Sachsen-Anhalt": {
+      "ru": "Саксонія-Ангальт",
+      "pos": "геогр."
     },
     "Segen": {
       "ru": "благодать, благословення",

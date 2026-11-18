@@ -11,6 +11,7 @@ const prefix = '/deutsch-meister/';
 const mime = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.svg': 'image/svg+xml', '.jpg': 'image/jpeg', '.png': 'image/png' };
 const requests = [];
 let failCatalog = false;
+let catalogFixture = null;
 let slowHoliday = '';
 const server = http.createServer((request, response) => {
   const url = new URL(request.url, 'http://localhost');
@@ -21,9 +22,15 @@ const server = http.createServer((request, response) => {
     response.writeHead(403).end();
     return;
   }
-  if (failCatalog && name.endsWith('holidays/index.json')) {
-    response.writeHead(503).end();
-    return;
+  if (name.endsWith('holidays/index.json')) {
+    if (failCatalog) {
+      response.writeHead(503).end();
+      return;
+    }
+    if (catalogFixture) {
+      response.writeHead(200, { 'Content-Type': 'application/json' }).end(JSON.stringify(catalogFixture));
+      return;
+    }
   }
   const reply = () => {
     try {
@@ -59,11 +66,13 @@ try {
   const reformDate = 'holiday-reformationstag';
   await send('Page.addScriptToEvaluateOnNewDocument', { source: `{
     const NativeDate = Date;
+    window.calendarTestNow = '2026-11-18T12:00:00Z';
     window.Date = class extends NativeDate {
-      constructor(...args) { super(...(args.length ? args : ['2026-11-18T12:00:00Z'])); }
-      static now() { return new NativeDate('2026-11-18T12:00:00Z').valueOf(); }
+      constructor(...args) { super(...(args.length ? args : [window.calendarTestNow])); }
+      static now() { return new NativeDate(window.calendarTestNow).valueOf(); }
     };
   }` });
+  const setTime = iso => ev(`window.calendarTestNow = '${iso}'; document.dispatchEvent(new Event('visibilitychange'))`);
   await send('Emulation.setDeviceMetricsOverride', { width: 1000, height: 900, deviceScaleFactor: 1, mobile: false });
   await go(base + 'index.html', 1000);
   await until(`!!document.querySelector('#readHolidays')`);
@@ -71,11 +80,17 @@ try {
   assert.ok(!requests.includes('data/holidays/holiday-buss-und-bettag/ch-01.json'), 'Home does not load holiday articles');
   await ev(`document.querySelector('#readHolidays').scrollIntoView()`);
   await until(`document.querySelector('#readHolidays').hash === '#holiday=${fallDate}'`);
+  await setTime('2026-11-18T23:00:00Z');
+  assert.equal(await ev(`document.querySelector('#readHolidays').getAttribute('href')`), 'holidays.html');
+  await setTime('2026-11-18T12:00:00Z');
   await click('#readHolidays');
   await opened(fallDate);
   await click('#rdBack');
   await until(calendar + ` && document.querySelector('#rdView').hidden`);
   assert.equal(await ev(`document.querySelector(${JSON.stringify(gridDate(fallDate))}).getAttribute('aria-current')`), 'date');
+  await setTime('2026-11-18T23:00:00Z');
+  assert.equal(await ev(`document.querySelector('#holidayDays [aria-current="date"]').dataset.date`), '2026-11-19');
+  await setTime('2026-11-18T12:00:00Z');
   await click('[data-month-step="-1"]');
   assert.equal(await ev(`document.querySelectorAll('.hd-days [data-holiday]').length`), 3);
   assert.equal(await ev(`getComputedStyle(document.querySelector('#holidayRetry')).display`), 'none');
@@ -108,7 +123,7 @@ try {
   await click(gridDate(reformDate));
   await opened(reformDate);
   assert.equal(await ev(`getComputedStyle(document.querySelector('#rdView')).backgroundColor`), await ev(`getComputedStyle(document.body).backgroundColor`));
-  assert.equal(await ev(`document.querySelectorAll('#rdContent [data-reader-external]').length`), 2);
+  assert.equal(await ev(`document.querySelectorAll('#rdContent [data-reader-external]').length`), 3);
   await ev(`window.holidaySpeech = []; TTS.speak = (text, options) => {
     holidaySpeech.push(text);
     options.onStart?.();
@@ -183,17 +198,109 @@ try {
   assert.deepEqual(browser.errors(), []);
 
   const catalog = JSON.parse(fs.readFileSync(path.join(root, 'data/holidays/index.json'), 'utf8'));
-  for (const { id } of catalog.items) {
-    await go(base + `holidays.html?sample=${id}#holiday=${id}`, 160);
-    await opened(id);
-    assert.ok(await ev(`document.querySelector('#rdContent [data-reader-external]')?.href.startsWith('https://')`));
-    assert.deepEqual(browser.errors(), []);
+  catalogFixture = { version: 1, items: [{ ...catalog.items[0], rule: { type: 'fixed', month: 2, day: 30 } }] };
+  await go(base + 'holidays.html?month=2026-07&fixture=malformed', 200);
+  await until(calendar);
+  assert.equal(await ev(`document.querySelector('#holidayRetry').hidden`), false);
+  await click('[data-month-step="1"]');
+  assert.equal(await ev(`document.querySelector('#holidayDays a, #holidayList a')`), null);
+  catalogFixture = null;
+  await click('#holidayRetry');
+  await until(calendar + ` && document.querySelectorAll('#holidayList a').length === 2`);
+  assert.match(await ev('location.search'), /month=2026-08/);
+  assert.deepEqual(browser.errors(), []);
+
+  const [first, second] = catalog.items;
+  catalogFixture = { version: 1, items: [first, { ...second, rule: first.rule }] };
+  await go(base + 'holidays.html?month=2027-01&fixture=shared#holiday-list-2027-01-06', 200);
+  await until(calendar);
+  assert.equal(await ev('document.activeElement.id'), 'holiday-list-2027-01-06');
+  assert.equal(await ev(`document.querySelector('#holidayDays a').hash`), '#holiday-list-2027-01-06');
+  assert.equal(await ev(`document.querySelectorAll('#holidayList a').length`), 2);
+  await click('#holidayDays a');
+  assert.equal(await ev('document.activeElement.id'), 'holiday-list-2027-01-06');
+  await click(`#holidayList a[data-holiday="${second.id}"]`);
+  await opened(second.id);
+  await click('#rdBack');
+  await until(`document.querySelector('#rdView').hidden && document.activeElement.dataset.holiday === '${second.id}'`);
+  assert.deepEqual(browser.errors(), []);
+  catalogFixture = null;
+
+  await go(base + 'holidays.html?fixture=deep#holiday=holiday-augsburger-friedensfest', 200);
+  await opened('holiday-augsburger-friedensfest');
+  assert.equal(await ev('document.activeElement.id'), 'rdBack');
+  await click('#rdBack');
+  await until(`document.querySelector('#rdView').hidden && document.activeElement.dataset.holiday === 'holiday-augsburger-friedensfest'`);
+  assert.match(await ev('location.search'), /month=2026-08/);
+  await send('Page.reload');
+  await until(calendar);
+  assert.deepEqual(await dayIds('#holidayList [data-holiday]'), ['holiday-bundesfeier', 'holiday-augsburger-friedensfest']);
+
+  await click('[data-lang-toggle]');
+  await until(calendar + ` && I18N.lang === 'uk' && document.querySelector('#holidayList a')?.textContent.includes('Швейцарії')`);
+  assert.match(await ev('location.search'), /month=2026-08/);
+
+  const fixed = [
+    ['01-06', 'dreikoenige'], ['03-08', 'frauentag'], ['08-01', 'bundesfeier'], ['08-08', 'augsburger-friedensfest'],
+    ['10-03', 'deutsche-einheit-tag'], ['10-26', 'nationalfeiertag-oesterreich'], ['10-31', 'reformationstag']
+  ];
+  const movable = {
+    2026: [['04-05', 'ostern'], ['06-04', 'fronleichnam'], ['11-18', 'buss-und-bettag']],
+    2027: [['03-28', 'ostern'], ['05-27', 'fronleichnam'], ['11-17', 'buss-und-bettag']],
+    2028: [['04-16', 'ostern'], ['06-15', 'fronleichnam'], ['11-22', 'buss-und-bettag']]
+  };
+  for (const [language, theme, width] of [['ru', 'dark', 1000], ['uk', 'light', 390], ['ar', 'dark', 320]]) {
+    await setPrefs(language, theme);
+    await send('Emulation.setDeviceMetricsOverride', { width, height: 820, deviceScaleFactor: 1, mobile: width < 600 });
+    await go(base + `holidays.html?month=2026-01&matrix=${language}`, 250);
+    await until(calendar + ` && I18N.lang === '${language}'`);
+    for (const year of [2026, 2027, 2028]) {
+      for (let month = 1; month <= 12; month++) {
+        const query = `${year}-${String(month).padStart(2, '0')}`;
+        const expected = fixed.concat(movable[year]).filter(([day]) => day.startsWith(query.slice(-2)))
+          .sort(([left], [right]) => left.localeCompare(right)).map(([day, slug]) => [`${year}-${day}`, `holiday-${slug}`]);
+        const view = await ev(`(() => {
+          const cells = [...document.querySelector('#holidayDays').children];
+          return { month: new URLSearchParams(location.search).get('month'),
+            days: cells.flatMap(cell => cell.firstElementChild ? [cell.firstElementChild.dataset.date] : []),
+            firstColumn: cells.findIndex(cell => cell.firstElementChild),
+            grid: [...document.querySelectorAll('#holidayDays a')].map(link => [link.dataset.date, link.dataset.holiday]),
+            list: [...document.querySelectorAll('#holidayList a')].map(link => [link.querySelector('time').dateTime, link.dataset.holiday]),
+            jump: !document.querySelector('#holidayNextDate').hidden,
+            fit: document.documentElement.scrollWidth <= innerWidth };
+        })()`);
+        const context = `${language} ${query}`;
+        assert.equal(view.month, query, context);
+        const count = new Date(Date.UTC(year, month, 0)).getUTCDate();
+        assert.deepEqual(view.days, Array.from({ length: count }, (_, index) => `${query}-${String(index + 1).padStart(2, '0')}`), context);
+        assert.equal(view.firstColumn, (new Date(Date.UTC(year, month - 1, 1)).getUTCDay() + 6) % 7, context);
+        assert.deepEqual(view.grid, expected, context);
+        assert.deepEqual(view.list, expected, context);
+        assert.equal(view.jump, expected.length === 0, context);
+        assert.equal(view.fit, true, context);
+        await click('[data-month-step="1"]');
+      }
+    }
+
+    const section = language === 'ru' ? 'data/holidays' : `i18n/${language}/holidays`;
+    const localized = JSON.parse(fs.readFileSync(path.join(root, section, 'index.json'), 'utf8'));
+    for (const { id, titleRu, region } of localized.items) {
+      await go(base + `holidays.html?sample=${id}#holiday=${id}`, 160);
+      await opened(id);
+      assert.equal(await ev(`document.querySelector('.rd-chapter-kicker span:nth-child(2)').textContent`), region);
+      assert.ok(await ev(`document.querySelector('#rdContent [data-reader-external]')?.href.startsWith('https://')`));
+      await click('#rdFullTranslationBtn');
+      await until(`!!document.querySelector('#rdContent .brw')`);
+      assert.equal(await ev(`document.querySelector('.rd-chapter-heading').textContent`), titleRu);
+      assert.deepEqual(browser.errors(), []);
+    }
+    console.log(`PASS Chromium ${language}: 36 months (2026–2028) and all 10 texts`);
   }
 
   await until(`!!navigator.serviceWorker.controller`);
   const cachedId = catalog.items.at(-1).id;
   const filenames = ['meta.json', 'ch-01.json', 'glossary.json'];
-  await until(`Promise.all(${JSON.stringify(filenames)}.map(name => caches.match('data/holidays/${cachedId}/' + name))).then(files => files.every(Boolean))`);
+  await until(`Promise.all(${JSON.stringify(filenames)}.map(name => caches.match('i18n/ar/holidays/${cachedId}/' + name))).then(files => files.every(Boolean))`);
   const network = { latency: 0, downloadThroughput: -1, uploadThroughput: -1 };
   await send('Network.enable');
   await send('Network.emulateNetworkConditions', { ...network, offline: true });

@@ -21,6 +21,21 @@
           "ru": "На зрелище собираются и жители города, и гости."
         }
       ]
+    },
+    {
+      "sourceIds": [
+        "lausitz"
+      ],
+      "s": [
+        {
+          "de": "In der sächsischen Oberlausitz pflegen katholische Sorben einen anderen Brauch.",
+          "ru": "В саксонской Верхней Лужице у католиков из числа лужицких сербов есть свой обычай."
+        },
+        {
+          "de": "Beim Osterreiten ziehen sie auf Pferden durch die Region.",
+          "ru": "Во время пасхального конного шествия они проезжают верхом по окрестностям."
+        }
+      ]
     }
   ],
   "sourceTitle": "Источники и проверка фактов",
@@ -29,6 +44,11 @@
       "id": "unesco",
       "name": "Deutsche UNESCO-Kommission · Osterräderlauf",
       "url": "https://www.unesco.de/staette/osterraederlauf-in-luegde/"
+    },
+    {
+      "id": "lausitz",
+      "name": "Deutsche UNESCO-Kommission · Bräuche der Lausitzer Sorben",
+      "url": "https://www.unesco.de/staette/gesellschaftliche-braeuche-und-feste-der-lausitzer-sorben-im-jahreslauf/"
     }
   ],
   "checked": "2026-11-18"
