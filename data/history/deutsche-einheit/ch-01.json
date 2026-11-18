@@ -1,0 +1,85 @@
+{
+  "id": "ch-01",
+  "title": "Friedliche Revolution und deutsche Einheit",
+  "titleRu": "Мирная революция и объединение Германии",
+  "icon": "13",
+  "paragraphs": [
+    {
+      "sourceIds": [
+        "revolution"
+      ],
+      "s": [
+        {
+          "de": "Im Herbst 1989 gingen in der DDR immer mehr Menschen auf die Straße.",
+          "ru": "Осенью 1989 года в ГДР всё больше людей выходили на улицы."
+        },
+        {
+          "de": "In Leipzig und anderen Städten demonstrierten sie friedlich und forderten freie Wahlen und das Recht, frei zu reisen.",
+          "ru": "В Лейпциге и других городах они мирно демонстрировали, требуя свободных выборов и права свободно путешествовать."
+        },
+        {
+          "de": "Am Abend des 9. November öffneten die Grenzposten in Berlin die Übergänge.",
+          "ru": "Вечером 9 ноября пограничники в Берлине открыли переходы."
+        },
+        {
+          "de": "Nach 28 Jahren konnten die Menschen die Berliner Mauer wieder frei passieren.",
+          "ru": "Спустя 28 лет люди снова могли свободно пересекать границу через Берлинскую стену."
+        }
+      ]
+    },
+    {
+      "sourceIds": [
+        "einheit",
+        "vertrag"
+      ],
+      "s": [
+        {
+          "de": "Im März 1990 fand die erste freie Wahl zur Volkskammer der DDR statt.",
+          "ru": "В марте 1990 года состоялись первые свободные выборы в Народную палату ГДР."
+        },
+        {
+          "de": "Die beiden deutschen Staaten verhandelten über die Einheit.",
+          "ru": "Два немецких государства вели переговоры об объединении."
+        },
+        {
+          "de": "Mit den vier Siegermächten des Zweiten Weltkriegs schlossen sie den Zwei-plus-Vier-Vertrag.",
+          "ru": "С четырьмя державами-победительницами во Второй мировой войне они заключили Договор «два плюс четыре»."
+        }
+      ]
+    },
+    {
+      "sourceIds": [
+        "einheit"
+      ],
+      "s": [
+        {
+          "de": "Am 3. Oktober 1990 trat die DDR der Bundesrepublik bei.",
+          "ru": "3 октября 1990 года ГДР вошла в состав Федеративной Республики Германии."
+        },
+        {
+          "de": "Der 3. Oktober ist seitdem der Tag der Deutschen Einheit.",
+          "ru": "С тех пор 3 октября отмечают День германского единства."
+        }
+      ]
+    }
+  ],
+  "sourceTitle": "Источники и проверка фактов",
+  "sources": [
+    {
+      "id": "revolution",
+      "name": "LeMO · Friedliche Revolution",
+      "url": "https://www.hdg.de/lemo/kapitel/deutsche-einheit/friedliche-revolution.html"
+    },
+    {
+      "id": "einheit",
+      "name": "LeMO · Weg zur Einheit",
+      "url": "https://www.hdg.de/lemo/kapitel/deutsche-einheit/weg-zur-einheit"
+    },
+    {
+      "id": "vertrag",
+      "name": "Bundesregierung · Zwei-plus-Vier-Vertrag",
+      "url": "https://www.bundesregierung.de/breg-de/schwerpunkte/deutsche-einheit/unterzeichnung-des-2-4-vertrags-432842"
+    }
+  ],
+  "checked": "2026-11-18"
+}

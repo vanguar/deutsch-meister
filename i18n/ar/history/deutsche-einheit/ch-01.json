@@ -1,0 +1,85 @@
+{
+ "id": "ch-01",
+ "title": "Friedliche Revolution und deutsche Einheit",
+ "titleRu": "الثورة السلمية وتوحيد ألمانيا",
+ "icon": "13",
+ "paragraphs": [
+  {
+   "sourceIds": [
+    "revolution"
+   ],
+   "s": [
+    {
+     "de": "Im Herbst 1989 gingen in der DDR immer mehr Menschen auf die Straße.",
+     "ru": "في خريف عام 1989 خرج عدد متزايد من الناس إلى الشوارع في ألمانيا الشرقية."
+    },
+    {
+     "de": "In Leipzig und anderen Städten demonstrierten sie friedlich und forderten freie Wahlen und das Recht, frei zu reisen.",
+     "ru": "تظاهروا سلميًا في لايبزيغ ومدن أخرى وطالبوا بانتخابات حرة وبحق السفر بحرية."
+    },
+    {
+     "de": "Am Abend des 9. November öffneten die Grenzposten in Berlin die Übergänge.",
+     "ru": "في مساء 9 نوفمبر فتح حرس الحدود في برلين المعابر."
+    },
+    {
+     "de": "Nach 28 Jahren konnten die Menschen die Berliner Mauer wieder frei passieren.",
+     "ru": "بعد 28 عامًا استطاع الناس من جديد عبور جدار برلين بحرية."
+    }
+   ]
+  },
+  {
+   "sourceIds": [
+    "einheit",
+    "vertrag"
+   ],
+   "s": [
+    {
+     "de": "Im März 1990 fand die erste freie Wahl zur Volkskammer der DDR statt.",
+     "ru": "في مارس 1990 جرت أول انتخابات حرة لمجلس الشعب في ألمانيا الشرقية."
+    },
+    {
+     "de": "Die beiden deutschen Staaten verhandelten über die Einheit.",
+     "ru": "تفاوضت الدولتان الألمانيتان بشأن الوحدة."
+    },
+    {
+     "de": "Mit den vier Siegermächten des Zweiten Weltkriegs schlossen sie den Zwei-plus-Vier-Vertrag.",
+     "ru": "أبرمتا مع القوى الأربع المنتصرة في الحرب العالمية الثانية معاهدة «اثنان زائد أربعة»."
+    }
+   ]
+  },
+  {
+   "sourceIds": [
+    "einheit"
+   ],
+   "s": [
+    {
+     "de": "Am 3. Oktober 1990 trat die DDR der Bundesrepublik bei.",
+     "ru": "في 3 أكتوبر 1990 انضمت ألمانيا الشرقية إلى جمهورية ألمانيا الاتحادية."
+    },
+    {
+     "de": "Der 3. Oktober ist seitdem der Tag der Deutschen Einheit.",
+     "ru": "ومنذ ذلك الحين أصبح 3 أكتوبر يوم الوحدة الألمانية."
+    }
+   ]
+  }
+ ],
+ "sourceTitle": "المصادر والتحقق من المعلومات",
+ "sources": [
+  {
+   "id": "revolution",
+   "name": "LeMO · Friedliche Revolution",
+   "url": "https://www.hdg.de/lemo/kapitel/deutsche-einheit/friedliche-revolution.html"
+  },
+  {
+   "id": "einheit",
+   "name": "LeMO · Weg zur Einheit",
+   "url": "https://www.hdg.de/lemo/kapitel/deutsche-einheit/weg-zur-einheit"
+  },
+  {
+   "id": "vertrag",
+   "name": "Bundesregierung · Zwei-plus-Vier-Vertrag",
+   "url": "https://www.bundesregierung.de/breg-de/schwerpunkte/deutsche-einheit/unterzeichnung-des-2-4-vertrags-432842"
+  }
+ ],
+ "checked": "2026-11-18"
+}

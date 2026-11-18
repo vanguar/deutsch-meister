@@ -118,7 +118,7 @@
    "titleRu": "Мирна революція та об’єднання Німеччини",
    "period": "1989–1990",
    "summary": "Протести в НДР, відкриття кордону та шлях до єдності.",
-   "ready": false
+   "ready": true
   },
   {
    "id": "nach-der-einheit",
@@ -360,6 +360,24 @@
    "number": 12,
    "source": "LeMO",
    "sourceUrl": "https://www.hdg.de/lemo/kapitel/nachkriegsjahre",
+   "checked": "2026-11-18",
+   "license": "Авторська навчальна адаптація German Morning; посилання на матеріали — у розділі."
+  },
+  {
+   "id": "deutsche-einheit",
+   "kind": "history",
+   "title": "Friedliche Revolution und deutsche Einheit",
+   "titleRu": "Мирна революція та об’єднання Німеччини",
+   "author": "German Morning",
+   "level": "B1",
+   "year": "2026",
+   "chapters": 1,
+   "words": 100,
+   "minutes": 3,
+   "cover": "13",
+   "number": 13,
+   "source": "LeMO / Bundesregierung",
+   "sourceUrl": "https://www.hdg.de/lemo/kapitel/deutsche-einheit/friedliche-revolution.html",
    "checked": "2026-11-18",
    "license": "Авторська навчальна адаптація German Morning; посилання на матеріали — у розділі."
   }

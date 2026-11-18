@@ -1,0 +1,103 @@
+{
+  "id": "deutsche-einheit",
+  "checked": "2026-11-18",
+  "sources": [
+    {
+      "id": "revolution",
+      "name": "LeMO · Friedliche Revolution",
+      "url": "https://www.hdg.de/lemo/kapitel/deutsche-einheit/friedliche-revolution.html"
+    },
+    {
+      "id": "einheit",
+      "name": "LeMO · Weg zur Einheit",
+      "url": "https://www.hdg.de/lemo/kapitel/deutsche-einheit/weg-zur-einheit"
+    },
+    {
+      "id": "vertrag",
+      "name": "Bundesregierung · Zwei-plus-Vier-Vertrag",
+      "url": "https://www.bundesregierung.de/breg-de/schwerpunkte/deutsche-einheit/unterzeichnung-des-2-4-vertrags-432842"
+    }
+  ],
+  "paragraphs": [
+    {
+      "sourceIds": [
+        "revolution"
+      ],
+      "sentences": [
+        [
+          "Im Herbst 1989 gingen in der DDR immer mehr Menschen auf die Straße.",
+          "Осенью 1989 года в ГДР всё больше людей выходили на улицы.",
+          "Восени 1989 року в НДР дедалі більше людей виходили на вулиці.",
+          "في خريف عام 1989 خرج عدد متزايد من الناس إلى الشوارع في ألمانيا الشرقية."
+        ],
+        [
+          "In Leipzig und anderen Städten demonstrierten sie friedlich und forderten freie Wahlen und das Recht, frei zu reisen.",
+          "В Лейпциге и других городах они мирно демонстрировали, требуя свободных выборов и права свободно путешествовать.",
+          "У Лейпцигу та інших містах вони мирно демонстрували, вимагаючи вільних виборів і права вільно подорожувати.",
+          "تظاهروا سلميًا في لايبزيغ ومدن أخرى وطالبوا بانتخابات حرة وبحق السفر بحرية."
+        ],
+        [
+          "Am Abend des 9. November öffneten die Grenzposten in Berlin die Übergänge.",
+          "Вечером 9 ноября пограничники в Берлине открыли переходы.",
+          "Увечері 9 листопада прикордонники в Берліні відкрили переходи.",
+          "في مساء 9 نوفمبر فتح حرس الحدود في برلين المعابر."
+        ],
+        [
+          "Nach 28 Jahren konnten die Menschen die Berliner Mauer wieder frei passieren.",
+          "Спустя 28 лет люди снова могли свободно пересекать границу через Берлинскую стену.",
+          "Через 28 років люди знову могли вільно перетинати кордон через Берлінський мур.",
+          "بعد 28 عامًا استطاع الناس من جديد عبور جدار برلين بحرية."
+        ]
+      ]
+    },
+    {
+      "sourceIds": [
+        "einheit",
+        "vertrag"
+      ],
+      "sentences": [
+        [
+          "Im März 1990 fand die erste freie Wahl zur Volkskammer der DDR statt.",
+          "В марте 1990 года состоялись первые свободные выборы в Народную палату ГДР.",
+          "У березні 1990 року відбулися перші вільні вибори до Народної палати НДР.",
+          "في مارس 1990 جرت أول انتخابات حرة لمجلس الشعب في ألمانيا الشرقية."
+        ],
+        [
+          "Die beiden deutschen Staaten verhandelten über die Einheit.",
+          "Два немецких государства вели переговоры об объединении.",
+          "Дві німецькі держави вели переговори про об’єднання.",
+          "تفاوضت الدولتان الألمانيتان بشأن الوحدة."
+        ],
+        [
+          "Mit den vier Siegermächten des Zweiten Weltkriegs schlossen sie den Zwei-plus-Vier-Vertrag.",
+          "С четырьмя державами-победительницами во Второй мировой войне они заключили Договор «два плюс четыре».",
+          "З чотирма державами-переможницями у Другій світовій війні вони уклали Договір «два плюс чотири».",
+          "أبرمتا مع القوى الأربع المنتصرة في الحرب العالمية الثانية معاهدة «اثنان زائد أربعة»."
+        ]
+      ]
+    },
+    {
+      "sourceIds": [
+        "einheit"
+      ],
+      "sentences": [
+        [
+          "Am 3. Oktober 1990 trat die DDR der Bundesrepublik bei.",
+          "3 октября 1990 года ГДР вошла в состав Федеративной Республики Германии.",
+          "3 жовтня 1990 року НДР увійшла до складу Федеративної Республіки Німеччина.",
+          "في 3 أكتوبر 1990 انضمت ألمانيا الشرقية إلى جمهورية ألمانيا الاتحادية."
+        ],
+        [
+          "Der 3. Oktober ist seitdem der Tag der Deutschen Einheit.",
+          "С тех пор 3 октября отмечают День германского единства.",
+          "Відтоді 3 жовтня відзначають День німецької єдності.",
+          "ومنذ ذلك الحين أصبح 3 أكتوبر يوم الوحدة الألمانية."
+        ]
+      ]
+    }
+  ],
+  "translations": {
+    "uk": {},
+    "ar": {}
+  }
+}

@@ -1,0 +1,403 @@
+{
+  "version": 1,
+  "w": {
+    "abend": "Abend",
+    "am": "an",
+    "anderen": "ander",
+    "auf": "auf",
+    "bei": "bei",
+    "beiden": "beide",
+    "berlin": "Berlin",
+    "berliner": "Berliner",
+    "bundesrepublik": "Bundesrepublik",
+    "das": "der/die/das",
+    "ddr": "DDR",
+    "demonstrierten": "demonstrieren",
+    "den": "der/die/das",
+    "der": "der/die/das",
+    "des": "der/die/das",
+    "deutschen": "deutsch",
+    "die": "der/die/das",
+    "einheit": "Einheit",
+    "erste": "erste",
+    "fand": "stattfinden",
+    "forderten": "fordern",
+    "frei": "frei",
+    "freie": "frei",
+    "friedlich": "friedlich",
+    "gingen": "gehen",
+    "grenzposten": "Grenzposten",
+    "herbst": "Herbst",
+    "im": "in",
+    "immer": "immer",
+    "in": "in",
+    "ist": "sein",
+    "jahren": "Jahr",
+    "konnten": "können",
+    "leipzig": "Leipzig",
+    "mauer": "Mauer",
+    "mehr": "mehr",
+    "menschen": "Mensch",
+    "mit": "mit",
+    "märz": "März",
+    "nach": "nach",
+    "november": "November",
+    "oktober": "Oktober",
+    "passieren": "passieren (vorbeigehen)",
+    "recht": "recht",
+    "reisen": "reisen",
+    "schlossen": "schließen",
+    "seitdem": "seitdem",
+    "sie": "sie",
+    "siegermächten": "Siegermacht",
+    "staaten": "Staat",
+    "statt": "stattfinden",
+    "straße": "Straße",
+    "städten": "Stadt",
+    "tag": "Tag",
+    "trat": "treten",
+    "und": "und",
+    "verhandelten": "verhandeln (переговоры)",
+    "vier": "vier",
+    "volkskammer": "Volkskammer",
+    "wahl": "Wahl",
+    "wahlen": "Wahl (выборы)",
+    "weltkriegs": "Weltkrieg",
+    "wieder": "wieder",
+    "zu": "zu",
+    "zur": "zu",
+    "zwei-plus-vier-vertrag": "Zwei-plus-Vier-Vertrag",
+    "zweiten": "zweite",
+    "öffneten": "öffnen",
+    "über": "über",
+    "übergänge": "Übergang"
+  },
+  "l": {
+    "Abend": {
+      "ru": "вечер",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Abende"
+    },
+    "Berlin": {
+      "ru": "Берлин",
+      "pos": "геогр."
+    },
+    "Berliner": {
+      "ru": "берлинец; берлинский",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Berliner",
+      "note": "как прилагательное не склоняется: die Berliner Mauer, im Berliner Schloss"
+    },
+    "Bundesrepublik": {
+      "ru": "федеративная республика",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Bundesrepubliken",
+      "note": "die Bundesrepublik Deutschland — ФРГ"
+    },
+    "DDR": {
+      "ru": "ГДР, Германская Демократическая Республика (1949–1990)",
+      "pos": "сокр."
+    },
+    "Einheit": {
+      "ru": "единство; единое целое",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Einheiten"
+    },
+    "Grenzposten": {
+      "ru": "пограничник, пограничный пост",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Grenzposten"
+    },
+    "Herbst": {
+      "ru": "осень",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Herbste"
+    },
+    "Jahr": {
+      "ru": "год",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Jahre"
+    },
+    "Leipzig": {
+      "ru": "Лейпциг",
+      "pos": "геогр."
+    },
+    "Mauer": {
+      "ru": "стена (каменная)",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Mauern"
+    },
+    "Mensch": {
+      "ru": "человек",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Menschen",
+      "decl": "n-Deklination: des Menschen · dem/den Menschen"
+    },
+    "März": {
+      "ru": "март",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Märze"
+    },
+    "November": {
+      "ru": "ноябрь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "Oktober": {
+      "ru": "октябрь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Oktober"
+    },
+    "Siegermacht": {
+      "ru": "держава-победительница",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Siegermächte"
+    },
+    "Staat": {
+      "ru": "государство",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Staaten"
+    },
+    "Stadt": {
+      "ru": "город",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Städte"
+    },
+    "Straße": {
+      "art": "die",
+      "pl": "die Straßen",
+      "pos": "сущ.",
+      "ru": "улица, дорога"
+    },
+    "Tag": {
+      "ru": "день",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Tage"
+    },
+    "Volkskammer": {
+      "ru": "Народная палата ГДР",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "Wahl": {
+      "ru": "выбор",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Wahlen",
+      "note": "die Wahl lassen — предоставить выбор"
+    },
+    "Wahl (выборы)": {
+      "ru": "выборы; выбор",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Wahlen",
+      "note": "die Wahl zum Kongress — выборы в Конгресс"
+    },
+    "Weltkrieg": {
+      "ru": "мировая война",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Weltkriege",
+      "note": "der Zweite Weltkrieg — Вторая мировая война"
+    },
+    "Zwei-plus-Vier-Vertrag": {
+      "ru": "Договор «два плюс четыре»",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "an": {
+      "ru": "у, к, на",
+      "pos": "предл.",
+      "note": "am = an dem. Тж. отделяемая приставка: anfangen «начинать», annehmen, ansehen, anzünden"
+    },
+    "ander": {
+      "pos": "прил.",
+      "ru": "другой, иной"
+    },
+    "auf": {
+      "ru": "на, в",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: aufspringen «вскочить», sich aufmachen"
+    },
+    "bei": {
+      "ru": "у, при, возле",
+      "pos": "предл."
+    },
+    "beide": {
+      "ru": "оба",
+      "pos": "мест."
+    },
+    "demonstrieren": {
+      "ru": "демонстрировать",
+      "pos": "гл.",
+      "forms": "demonstriert, demonstrierte, hat demonstriert"
+    },
+    "der/die/das": {
+      "ru": "определённый артикль",
+      "pos": "артикль",
+      "note": "Тж. относительное местоимение «который»"
+    },
+    "deutsch": {
+      "ru": "немецкий",
+      "pos": "прил."
+    },
+    "erste": {
+      "ru": "первый",
+      "pos": "числ."
+    },
+    "fordern": {
+      "ru": "требовать; призывать",
+      "pos": "гл.",
+      "forms": "forderte · hat gefordert",
+      "note": "jemanden auffordern, etwas zu tun — предлагать, требовать от кого-л."
+    },
+    "frei": {
+      "ru": "свободный",
+      "pos": "прил."
+    },
+    "friedlich": {
+      "ru": "мирный",
+      "pos": "прил."
+    },
+    "gehen": {
+      "forms": "ging · ist gegangen",
+      "note": "zu Bett gehen — ложиться спать. В тексте с отделяемой приставкой: ging das Rollen wieder an — angehen «начаться»",
+      "pos": "гл.",
+      "ru": "идти, ходить"
+    },
+    "immer": {
+      "ru": "всегда, всё",
+      "pos": "нареч.",
+      "note": "immer größer — всё больше"
+    },
+    "in": {
+      "ru": "в (im = in dem, ins = in das)",
+      "pos": "предл."
+    },
+    "können": {
+      "ru": "мочь, уметь",
+      "pos": "гл.",
+      "forms": "konnte · hat gekonnt",
+      "note": "В тексте с отделяемой приставкой: kann nicht fort — fortkönnen «не мочь уйти»"
+    },
+    "mehr": {
+      "ru": "больше",
+      "pos": "нареч.",
+      "note": "В nicht/kein … mehr — больше не. Формально компаратив от viel"
+    },
+    "mit": {
+      "ru": "с",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: mitgehen «пойти вместе»"
+    },
+    "nach": {
+      "ru": "в, на, после, по",
+      "pos": "предл."
+    },
+    "passieren (vorbeigehen)": {
+      "ru": "проходить, пересекать",
+      "pos": "гл.",
+      "forms": "passierte · hat passiert"
+    },
+    "recht": {
+      "ru": "правый; верный",
+      "pos": "прил.",
+      "note": "auf dem rechten Ufer — на правом берегу; Sie haben recht — вы правы; nicht recht wissen — толком не знать"
+    },
+    "reisen": {
+      "ru": "ездить, путешествовать",
+      "pos": "гл.",
+      "forms": "reiste · ist gereist"
+    },
+    "schließen": {
+      "ru": "закрывать, запирать",
+      "pos": "гл.",
+      "forms": "schloss · hat geschlossen"
+    },
+    "sein": {
+      "ru": "быть",
+      "pos": "гл.",
+      "forms": "war · ist gewesen",
+      "note": "Konjunktiv I: er sei, du seiest. Та же форма waren — и мн. ч. die Waren «товары»: allerhand Waren"
+    },
+    "seitdem": {
+      "ru": "с тех пор",
+      "pos": "нареч."
+    },
+    "sie": {
+      "ru": "она; они; Вы",
+      "pos": "мест."
+    },
+    "stattfinden": {
+      "ru": "иметь место, быть",
+      "pos": "гл.",
+      "forms": "fand statt · hat stattgefunden",
+      "note": "ein Zusammenhang findet statt — связь существует"
+    },
+    "treten": {
+      "ru": "ступать, шагать",
+      "pos": "гл.",
+      "forms": "trat · ist getreten"
+    },
+    "und": {
+      "ru": "и, а",
+      "pos": "союз"
+    },
+    "verhandeln (переговоры)": {
+      "ru": "вести переговоры",
+      "pos": "гл.",
+      "forms": "verhandelte · hat verhandelt"
+    },
+    "vier": {
+      "ru": "четыре",
+      "pos": "числ."
+    },
+    "wieder": {
+      "ru": "снова",
+      "pos": "нареч."
+    },
+    "zu": {
+      "ru": "к, в; слишком",
+      "pos": "предл.",
+      "note": "zur = zu der, zum = zu dem"
+    },
+    "zweite": {
+      "ru": "второй",
+      "pos": "числ.",
+      "note": "zum zweiten Mal — во второй раз"
+    },
+    "Übergang": {
+      "ru": "переход",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Übergänge"
+    },
+    "öffnen": {
+      "ru": "открывать",
+      "pos": "гл.",
+      "forms": "öffnete · hat geöffnet"
+    },
+    "über": {
+      "ru": "над, через, о",
+      "pos": "предл."
+    }
+  }
+}

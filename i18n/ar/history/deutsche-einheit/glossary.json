@@ -1,0 +1,403 @@
+{
+ "version": 1,
+ "w": {
+  "abend": "Abend",
+  "am": "an",
+  "anderen": "ander",
+  "auf": "auf",
+  "bei": "bei",
+  "beiden": "beide",
+  "berlin": "Berlin",
+  "berliner": "Berliner",
+  "bundesrepublik": "Bundesrepublik",
+  "das": "der/die/das",
+  "ddr": "DDR",
+  "demonstrierten": "demonstrieren",
+  "den": "der/die/das",
+  "der": "der/die/das",
+  "des": "der/die/das",
+  "deutschen": "deutsch",
+  "die": "der/die/das",
+  "einheit": "Einheit",
+  "erste": "erste",
+  "fand": "stattfinden",
+  "forderten": "fordern",
+  "frei": "frei",
+  "freie": "frei",
+  "friedlich": "friedlich",
+  "gingen": "gehen",
+  "grenzposten": "Grenzposten",
+  "herbst": "Herbst",
+  "im": "in",
+  "immer": "immer",
+  "in": "in",
+  "ist": "sein",
+  "jahren": "Jahr",
+  "konnten": "können",
+  "leipzig": "Leipzig",
+  "mauer": "Mauer",
+  "mehr": "mehr",
+  "menschen": "Mensch",
+  "mit": "mit",
+  "märz": "März",
+  "nach": "nach",
+  "november": "November",
+  "oktober": "Oktober",
+  "passieren": "passieren (vorbeigehen)",
+  "recht": "recht",
+  "reisen": "reisen",
+  "schlossen": "schließen",
+  "seitdem": "seitdem",
+  "sie": "sie",
+  "siegermächten": "Siegermacht",
+  "staaten": "Staat",
+  "statt": "stattfinden",
+  "straße": "Straße",
+  "städten": "Stadt",
+  "tag": "Tag",
+  "trat": "treten",
+  "und": "und",
+  "verhandelten": "verhandeln (переговоры)",
+  "vier": "vier",
+  "volkskammer": "Volkskammer",
+  "wahl": "Wahl",
+  "wahlen": "Wahl (выборы)",
+  "weltkriegs": "Weltkrieg",
+  "wieder": "wieder",
+  "zu": "zu",
+  "zur": "zu",
+  "zwei-plus-vier-vertrag": "Zwei-plus-Vier-Vertrag",
+  "zweiten": "zweite",
+  "öffneten": "öffnen",
+  "über": "über",
+  "übergänge": "Übergang"
+ },
+ "l": {
+  "Abend": {
+   "ru": "المساء",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Abende"
+  },
+  "Berlin": {
+   "ru": "برلين",
+   "pos": "جغرافيا"
+  },
+  "Berliner": {
+   "ru": "برليني؛ من سكان برلين",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Berliner",
+   "note": "لا يُصرّف عند استعماله صفة: die Berliner Mauer, im Berliner Schloss"
+  },
+  "Bundesrepublik": {
+   "ru": "جمهورية اتحادية",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Bundesrepubliken",
+   "note": "die Bundesrepublik Deutschland — جمهورية ألمانيا الاتحادية"
+  },
+  "DDR": {
+   "ru": "DDR، جمهورية ألمانيا الديمقراطية (1949–1990)",
+   "pos": "اختصار"
+  },
+  "Einheit": {
+   "ru": "وحدة؛ كيان واحد",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Einheiten"
+  },
+  "Grenzposten": {
+   "ru": "حارس حدود، نقطة حدودية",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Grenzposten"
+  },
+  "Herbst": {
+   "ru": "الخريف",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Herbste"
+  },
+  "Jahr": {
+   "ru": "سنة",
+   "pos": "اسم",
+   "art": "das",
+   "pl": "die Jahre"
+  },
+  "Leipzig": {
+   "ru": "لايبزيغ",
+   "pos": "جغرافيا"
+  },
+  "Mauer": {
+   "ru": "جدار (حجري)",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Mauern"
+  },
+  "Mensch": {
+   "ru": "إنسان",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Menschen",
+   "decl": "n-Deklination: des Menschen · dem/den Menschen"
+  },
+  "März": {
+   "ru": "مارس",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Märze"
+  },
+  "November": {
+   "ru": "نوفمبر",
+   "pos": "اسم",
+   "art": "der",
+   "pl": null
+  },
+  "Oktober": {
+   "ru": "أكتوبر",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Oktober"
+  },
+  "Siegermacht": {
+   "ru": "قوة منتصرة",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Siegermächte"
+  },
+  "Staat": {
+   "ru": "دولة",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Staaten"
+  },
+  "Stadt": {
+   "ru": "مدينة",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Städte"
+  },
+  "Straße": {
+   "art": "die",
+   "pl": "die Straßen",
+   "pos": "اسم",
+   "ru": "شارع، طريق"
+  },
+  "Tag": {
+   "ru": "اليوم / النهار",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Tage"
+  },
+  "Volkskammer": {
+   "ru": "مجلس الشعب في ألمانيا الشرقية",
+   "pos": "اسم",
+   "art": "die",
+   "pl": null
+  },
+  "Wahl": {
+   "ru": "اختيار",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Wahlen",
+   "note": "die Wahl lassen — يترك له الاختيار"
+  },
+  "Wahl (выборы)": {
+   "ru": "انتخابات؛ اختيار",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Wahlen",
+   "note": "die Wahl zum Kongress — انتخابات الكونغرس"
+  },
+  "Weltkrieg": {
+   "ru": "حرب عالمية",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Weltkriege",
+   "note": "der Zweite Weltkrieg — الحرب العالمية الثانية"
+  },
+  "Zwei-plus-Vier-Vertrag": {
+   "ru": "معاهدة «اثنان زائد أربعة»",
+   "pos": "اسم",
+   "art": "der",
+   "pl": null
+  },
+  "an": {
+   "ru": "عند، إلى، على",
+   "pos": "حرف جر",
+   "note": "am = an dem. وهي أيضًا سابقة منفصلة: anfangen «يبدأ»، annehmen، ansehen، anzünden"
+  },
+  "ander": {
+   "pos": "صفة",
+   "ru": "آخر، مختلف"
+  },
+  "auf": {
+   "ru": "على، في",
+   "pos": "حرف جر",
+   "note": "وهي أيضًا سابقة منفصلة: aufspringen «يقفز واقفًا»، sich aufmachen"
+  },
+  "bei": {
+   "ru": "عند، لدى، قرب",
+   "pos": "حرف جر"
+  },
+  "beide": {
+   "ru": "كلاهما",
+   "pos": "ضمير"
+  },
+  "demonstrieren": {
+   "ru": "يتظاهر",
+   "pos": "فعل",
+   "forms": "demonstriert, demonstrierte, hat demonstriert"
+  },
+  "der/die/das": {
+   "ru": "أداة التعريف",
+   "pos": "أداة تعريف",
+   "note": "وهي أيضًا اسم موصول بمعنى «الذي»"
+  },
+  "deutsch": {
+   "ru": "الألمانية",
+   "pos": "صفة"
+  },
+  "erste": {
+   "ru": "الأول",
+   "pos": "عدد"
+  },
+  "fordern": {
+   "ru": "يطلب؛ يدعو",
+   "pos": "فعل",
+   "forms": "forderte · hat gefordert",
+   "note": "jemanden auffordern, etwas zu tun — يطلب من أحد أن يفعل شيئًا"
+  },
+  "frei": {
+   "ru": "حر",
+   "pos": "صفة"
+  },
+  "friedlich": {
+   "ru": "سلمي",
+   "pos": "صفة"
+  },
+  "gehen": {
+   "forms": "ging · ist gegangen",
+   "note": "zu Bett gehen — يذهب إلى النوم. في النص مع سابقة منفصلة: ging das Rollen wieder an — angehen «يبدأ»",
+   "pos": "فعل",
+   "ru": "يذهب، يمشي"
+  },
+  "immer": {
+   "ru": "دائمًا؛ أكثر فأكثر",
+   "pos": "ظرف",
+   "note": "immer größer — أكبر فأكبر"
+  },
+  "in": {
+   "ru": "في (im = in dem، ins = in das)",
+   "pos": "حرف جر"
+  },
+  "können": {
+   "ru": "يستطيع، يقدر",
+   "pos": "فعل",
+   "forms": "konnte · hat gekonnt",
+   "note": "في النص مع سابقة منفصلة: kann nicht fort — fortkönnen «لا يستطيع الرحيل»"
+  },
+  "mehr": {
+   "ru": "أكثر",
+   "pos": "ظرف",
+   "note": "في nicht/kein … mehr — لم يعد. وهي شكليًا صيغة التفضيل من viel"
+  },
+  "mit": {
+   "ru": "ث",
+   "pos": "حرف جر",
+   "note": "وهي أيضًا سابقة منفصلة: mitgehen «يذهب معه»"
+  },
+  "nach": {
+   "ru": "إلى، بعد، حسب",
+   "pos": "حرف جر"
+  },
+  "passieren (vorbeigehen)": {
+   "ru": "يجتاز، يعبر",
+   "pos": "فعل",
+   "forms": "passierte · hat passiert"
+  },
+  "recht": {
+   "ru": "أيمن؛ صحيح",
+   "pos": "صفة",
+   "note": "auf dem rechten Ufer — على الضفة اليمنى؛ Sie haben recht — أنتم محقّون؛ nicht recht wissen — لا يدري تمامًا"
+  },
+  "reisen": {
+   "ru": "يسافر",
+   "pos": "فعل",
+   "forms": "reiste · ist gereist"
+  },
+  "schließen": {
+   "ru": "يغلق، يُقفل",
+   "pos": "فعل",
+   "forms": "schloss · hat geschlossen"
+  },
+  "sein": {
+   "ru": "يكون",
+   "pos": "فعل",
+   "forms": "war · ist gewesen",
+   "note": "Konjunktiv I: er sei، du seiest. والصيغة نفسها waren هي أيضًا جمع die Waren «بضائع»: allerhand Waren"
+  },
+  "seitdem": {
+   "ru": "منذ أن",
+   "pos": "ظرف"
+  },
+  "sie": {
+   "ru": "هي؛ هم؛ حضرتك",
+   "pos": "ضمير"
+  },
+  "stattfinden": {
+   "ru": "يحدث، يوجد",
+   "pos": "فعل",
+   "forms": "fand statt · hat stattgefunden",
+   "note": "ein Zusammenhang findet statt — توجد صلة"
+  },
+  "treten": {
+   "ru": "يخطو، يتقدّم",
+   "pos": "فعل",
+   "forms": "trat · ist getreten"
+  },
+  "und": {
+   "ru": "و",
+   "pos": "أداة ربط"
+  },
+  "verhandeln (переговоры)": {
+   "ru": "يتفاوض",
+   "pos": "فعل",
+   "forms": "verhandelte · hat verhandelt"
+  },
+  "vier": {
+   "ru": "أربعة",
+   "pos": "عدد"
+  },
+  "wieder": {
+   "ru": "من جديد",
+   "pos": "ظرف"
+  },
+  "zu": {
+   "ru": "إلى، في؛ أكثر من اللازم",
+   "pos": "حرف جر",
+   "note": "zur = zu der, zum = zu dem"
+  },
+  "zweite": {
+   "ru": "الثاني",
+   "pos": "عدد",
+   "note": "zum zweiten Mal — للمرة الثانية"
+  },
+  "Übergang": {
+   "ru": "انتقال",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Übergänge"
+  },
+  "öffnen": {
+   "ru": "يفتح",
+   "pos": "فعل",
+   "forms": "öffnete · hat geöffnet"
+  },
+  "über": {
+   "ru": "فوق، عبر، عن",
+   "pos": "حرف جر"
+  }
+ }
+}
