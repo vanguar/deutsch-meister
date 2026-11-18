@@ -1,0 +1,150 @@
+{
+  "id": "nach-der-einheit",
+  "checked": "2026-11-18",
+  "sources": [
+    {
+      "id": "aufbau",
+      "name": "LeMO · Baustelle Deutsche Einheit",
+      "url": "https://www.hdg.de/lemo/kapitel/deutsche-einheit/baustelle-deutsche-einheit.html"
+    },
+    {
+      "id": "berlin",
+      "name": "Deutscher Bundestag · Hauptstadtbeschluss",
+      "url": "https://www.bundestag.de/parlament/geschichte/debatte"
+    },
+    {
+      "id": "europa",
+      "name": "Europäische Union · Vertrag von Maastricht",
+      "url": "https://european-union.europa.eu/principles-countries-history/principles-and-values/founding-agreements_de"
+    },
+    {
+      "id": "euro",
+      "name": "Deutsche Bundesbank · Geschichte des Euro-Bargelds",
+      "url": "https://www.bundesbank.de/de/bundesbank/geschichte"
+    },
+    {
+      "id": "denkmal",
+      "name": "Stiftung Denkmal · Denkmal für die ermordeten Juden Europas",
+      "url": "https://www.stiftung-denkmal.de/denkmaeler/denkmal-fuer-die-ermordeten-juden-europas-mit-ausstellung-im-ort-der-information/"
+    },
+    {
+      "id": "migration",
+      "name": "LeMO · Zuwanderer und Geflüchtete",
+      "url": "https://www.hdg.de/lemo/kapitel/globalisierung/internationale-herausforderungen/zuwanderer-und-gefluechtete.html"
+    },
+    {
+      "id": "bamf",
+      "name": "BAMF · Migrationsbericht 2015",
+      "url": "https://www.bamf.de/SharedDocs/Anlagen/DE/Forschung/Migrationsberichte/migrationsbericht-2015.pdf?__blob=publicationFile"
+    },
+    {
+      "id": "ukraine",
+      "name": "Destatis · Schutzsuchende 2022",
+      "url": "https://www.destatis.de/DE/Presse/Pressemitteilungen/2023/03/PD23_125_125.html"
+    }
+  ],
+  "paragraphs": [
+    {
+      "sourceIds": [
+        "aufbau"
+      ],
+      "sentences": [
+        [
+          "Nach 1990 änderte sich der Alltag vieler Menschen, besonders in Ostdeutschland.",
+          "После 1990 года повседневная жизнь многих людей изменилась, особенно на востоке Германии.",
+          "Після 1990 року повсякденне життя багатьох людей змінилося, особливо на сході Німеччини.",
+          "بعد عام 1990 تغيرت الحياة اليومية لكثير من الناس، ولا سيما في شرق ألمانيا."
+        ],
+        [
+          "Viele Betriebe wurden geschlossen, und viele Beschäftigte verloren ihre Arbeit.",
+          "Многие предприятия закрылись, и многие сотрудники потеряли работу.",
+          "Багато підприємств закрилися, і чимало працівників утратили роботу.",
+          "أُغلقت مؤسسات كثيرة وفقد كثير من العاملين وظائفهم."
+        ],
+        [
+          "Gleichzeitig wurden Straßen, Bahnstrecken und Gebäude modernisiert.",
+          "В то же время модернизировали дороги, железнодорожные линии и здания.",
+          "Водночас модернізували дороги, залізничні колії та будівлі.",
+          "وفي الوقت نفسه جرى تحديث الطرق وخطوط السكك الحديدية والمباني."
+        ]
+      ]
+    },
+    {
+      "sourceIds": [
+        "berlin",
+        "europa",
+        "euro"
+      ],
+      "sentences": [
+        [
+          "1991 beschloss der Bundestag, den Sitz von Parlament und Regierung von Bonn nach Berlin zu verlegen.",
+          "В 1991 году Бундестаг решил перенести парламент и правительство из Бонна в Берлин.",
+          "У 1991 році Бундестаг вирішив перенести парламент і уряд із Бонна до Берліна.",
+          "في عام 1991 قرر البوندستاغ نقل مقر البرلمان والحكومة من بون إلى برلين."
+        ],
+        [
+          "1993 entstand mit dem Vertrag von Maastricht die Europäische Union.",
+          "В 1993 году Маастрихтский договор учредил Европейский союз.",
+          "У 1993 році Маастрихтський договір заснував Європейський Союз.",
+          "في عام 1993 تأسس الاتحاد الأوروبي بموجب معاهدة ماستريخت."
+        ],
+        [
+          "Seit 2002 kann man in Deutschland mit Banknoten und Münzen in Euro bezahlen.",
+          "С 2002 года в Германии можно расплачиваться банкнотами и монетами евро.",
+          "З 2002 року в Німеччині можна розраховуватися банкнотами й монетами євро.",
+          "منذ عام 2002 يمكن الدفع في ألمانيا بأوراق اليورو النقدية وعملاته المعدنية."
+        ]
+      ]
+    },
+    {
+      "sourceIds": [
+        "denkmal"
+      ],
+      "sentences": [
+        [
+          "Auch die Erinnerung an die NS-Verbrechen blieb ein öffentliches Thema.",
+          "Память о преступлениях нацизма по-прежнему обсуждалась в обществе.",
+          "Пам’ять про злочини нацизму й далі обговорювали в суспільстві.",
+          "وظلت ذكرى جرائم النازية أيضًا موضوعًا للنقاش العام."
+        ],
+        [
+          "2005 wurde in Berlin das Denkmal für die ermordeten Juden Europas eröffnet.",
+          "В 2005 году в Берлине открыли Мемориал убитым евреям Европы.",
+          "У 2005 році в Берліні відкрили Меморіал убитим євреям Європи.",
+          "في عام 2005 افتُتح في برلين النصب التذكاري ليهود أوروبا الذين قُتلوا."
+        ]
+      ]
+    },
+    {
+      "sourceIds": [
+        "migration",
+        "bamf",
+        "ukraine"
+      ],
+      "sentences": [
+        [
+          "Die deutsche Gesellschaft veränderte sich auch durch die Zuwanderung aus vielen Ländern.",
+          "Немецкое общество менялось в том числе с приездом людей из многих стран.",
+          "Німецьке суспільство змінювалося також із приїздом людей із багатьох країн.",
+          "تغير المجتمع الألماني أيضًا بفعل الهجرة إليه من بلدان كثيرة."
+        ],
+        [
+          "Im Jahr 2015 kamen viele Menschen nach Deutschland, die vor dem Krieg in Syrien flohen.",
+          "В 2015 году в Германию приехало много людей, бежавших от войны в Сирии.",
+          "У 2015 році до Німеччини приїхало багато людей, які втекли від війни в Сирії.",
+          "في عام 2015 وصل إلى ألمانيا كثيرون ممن فرّوا من الحرب في سوريا."
+        ],
+        [
+          "Nach dem Angriff Russlands auf die Ukraine 2022 suchten viele Menschen aus der Ukraine Schutz in Deutschland.",
+          "После нападения России на Украину в 2022 году многие жители Украины искали убежища в Германии.",
+          "Після нападу Росії на Україну 2022 року багато людей з України шукали захисту в Німеччині.",
+          "بعد هجوم روسيا على أوكرانيا عام 2022 طلب كثيرون من أوكرانيا الحماية في ألمانيا."
+        ]
+      ]
+    }
+  ],
+  "translations": {
+    "uk": {},
+    "ar": {}
+  }
+}

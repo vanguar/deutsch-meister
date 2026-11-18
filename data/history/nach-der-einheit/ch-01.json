@@ -1,0 +1,128 @@
+{
+  "id": "ch-01",
+  "title": "Deutschland nach der Einheit",
+  "titleRu": "Германия после объединения",
+  "icon": "14",
+  "paragraphs": [
+    {
+      "sourceIds": [
+        "aufbau"
+      ],
+      "s": [
+        {
+          "de": "Nach 1990 änderte sich der Alltag vieler Menschen, besonders in Ostdeutschland.",
+          "ru": "После 1990 года повседневная жизнь многих людей изменилась, особенно на востоке Германии."
+        },
+        {
+          "de": "Viele Betriebe wurden geschlossen, und viele Beschäftigte verloren ihre Arbeit.",
+          "ru": "Многие предприятия закрылись, и многие сотрудники потеряли работу."
+        },
+        {
+          "de": "Gleichzeitig wurden Straßen, Bahnstrecken und Gebäude modernisiert.",
+          "ru": "В то же время модернизировали дороги, железнодорожные линии и здания."
+        }
+      ]
+    },
+    {
+      "sourceIds": [
+        "berlin",
+        "europa",
+        "euro"
+      ],
+      "s": [
+        {
+          "de": "1991 beschloss der Bundestag, den Sitz von Parlament und Regierung von Bonn nach Berlin zu verlegen.",
+          "ru": "В 1991 году Бундестаг решил перенести парламент и правительство из Бонна в Берлин."
+        },
+        {
+          "de": "1993 entstand mit dem Vertrag von Maastricht die Europäische Union.",
+          "ru": "В 1993 году Маастрихтский договор учредил Европейский союз."
+        },
+        {
+          "de": "Seit 2002 kann man in Deutschland mit Banknoten und Münzen in Euro bezahlen.",
+          "ru": "С 2002 года в Германии можно расплачиваться банкнотами и монетами евро."
+        }
+      ]
+    },
+    {
+      "sourceIds": [
+        "denkmal"
+      ],
+      "s": [
+        {
+          "de": "Auch die Erinnerung an die NS-Verbrechen blieb ein öffentliches Thema.",
+          "ru": "Память о преступлениях нацизма по-прежнему обсуждалась в обществе."
+        },
+        {
+          "de": "2005 wurde in Berlin das Denkmal für die ermordeten Juden Europas eröffnet.",
+          "ru": "В 2005 году в Берлине открыли Мемориал убитым евреям Европы."
+        }
+      ]
+    },
+    {
+      "sourceIds": [
+        "migration",
+        "bamf",
+        "ukraine"
+      ],
+      "s": [
+        {
+          "de": "Die deutsche Gesellschaft veränderte sich auch durch die Zuwanderung aus vielen Ländern.",
+          "ru": "Немецкое общество менялось в том числе с приездом людей из многих стран."
+        },
+        {
+          "de": "Im Jahr 2015 kamen viele Menschen nach Deutschland, die vor dem Krieg in Syrien flohen.",
+          "ru": "В 2015 году в Германию приехало много людей, бежавших от войны в Сирии."
+        },
+        {
+          "de": "Nach dem Angriff Russlands auf die Ukraine 2022 suchten viele Menschen aus der Ukraine Schutz in Deutschland.",
+          "ru": "После нападения России на Украину в 2022 году многие жители Украины искали убежища в Германии."
+        }
+      ]
+    }
+  ],
+  "sourceTitle": "Источники и проверка фактов",
+  "sources": [
+    {
+      "id": "aufbau",
+      "name": "LeMO · Baustelle Deutsche Einheit",
+      "url": "https://www.hdg.de/lemo/kapitel/deutsche-einheit/baustelle-deutsche-einheit.html"
+    },
+    {
+      "id": "berlin",
+      "name": "Deutscher Bundestag · Hauptstadtbeschluss",
+      "url": "https://www.bundestag.de/parlament/geschichte/debatte"
+    },
+    {
+      "id": "europa",
+      "name": "Europäische Union · Vertrag von Maastricht",
+      "url": "https://european-union.europa.eu/principles-countries-history/principles-and-values/founding-agreements_de"
+    },
+    {
+      "id": "euro",
+      "name": "Deutsche Bundesbank · Geschichte des Euro-Bargelds",
+      "url": "https://www.bundesbank.de/de/bundesbank/geschichte"
+    },
+    {
+      "id": "denkmal",
+      "name": "Stiftung Denkmal · Denkmal für die ermordeten Juden Europas",
+      "url": "https://www.stiftung-denkmal.de/denkmaeler/denkmal-fuer-die-ermordeten-juden-europas-mit-ausstellung-im-ort-der-information/"
+    },
+    {
+      "id": "migration",
+      "name": "LeMO · Zuwanderer und Geflüchtete",
+      "url": "https://www.hdg.de/lemo/kapitel/globalisierung/internationale-herausforderungen/zuwanderer-und-gefluechtete.html"
+    },
+    {
+      "id": "bamf",
+      "name": "BAMF · Migrationsbericht 2015",
+      "url": "https://www.bamf.de/SharedDocs/Anlagen/DE/Forschung/Migrationsberichte/migrationsbericht-2015.pdf?__blob=publicationFile"
+    },
+    {
+      "id": "ukraine",
+      "name": "Destatis · Schutzsuchende 2022",
+      "url": "https://www.destatis.de/DE/Presse/Pressemitteilungen/2023/03/PD23_125_125.html"
+    }
+  ],
+  "checked": "2026-11-18"
+}

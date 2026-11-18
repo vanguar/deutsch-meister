@@ -1,0 +1,128 @@
+{
+ "id": "ch-01",
+ "title": "Deutschland nach der Einheit",
+ "titleRu": "ألمانيا بعد الوحدة",
+ "icon": "14",
+ "paragraphs": [
+  {
+   "sourceIds": [
+    "aufbau"
+   ],
+   "s": [
+    {
+     "de": "Nach 1990 änderte sich der Alltag vieler Menschen, besonders in Ostdeutschland.",
+     "ru": "بعد عام 1990 تغيرت الحياة اليومية لكثير من الناس، ولا سيما في شرق ألمانيا."
+    },
+    {
+     "de": "Viele Betriebe wurden geschlossen, und viele Beschäftigte verloren ihre Arbeit.",
+     "ru": "أُغلقت مؤسسات كثيرة وفقد كثير من العاملين وظائفهم."
+    },
+    {
+     "de": "Gleichzeitig wurden Straßen, Bahnstrecken und Gebäude modernisiert.",
+     "ru": "وفي الوقت نفسه جرى تحديث الطرق وخطوط السكك الحديدية والمباني."
+    }
+   ]
+  },
+  {
+   "sourceIds": [
+    "berlin",
+    "europa",
+    "euro"
+   ],
+   "s": [
+    {
+     "de": "1991 beschloss der Bundestag, den Sitz von Parlament und Regierung von Bonn nach Berlin zu verlegen.",
+     "ru": "في عام 1991 قرر البوندستاغ نقل مقر البرلمان والحكومة من بون إلى برلين."
+    },
+    {
+     "de": "1993 entstand mit dem Vertrag von Maastricht die Europäische Union.",
+     "ru": "في عام 1993 تأسس الاتحاد الأوروبي بموجب معاهدة ماستريخت."
+    },
+    {
+     "de": "Seit 2002 kann man in Deutschland mit Banknoten und Münzen in Euro bezahlen.",
+     "ru": "منذ عام 2002 يمكن الدفع في ألمانيا بأوراق اليورو النقدية وعملاته المعدنية."
+    }
+   ]
+  },
+  {
+   "sourceIds": [
+    "denkmal"
+   ],
+   "s": [
+    {
+     "de": "Auch die Erinnerung an die NS-Verbrechen blieb ein öffentliches Thema.",
+     "ru": "وظلت ذكرى جرائم النازية أيضًا موضوعًا للنقاش العام."
+    },
+    {
+     "de": "2005 wurde in Berlin das Denkmal für die ermordeten Juden Europas eröffnet.",
+     "ru": "في عام 2005 افتُتح في برلين النصب التذكاري ليهود أوروبا الذين قُتلوا."
+    }
+   ]
+  },
+  {
+   "sourceIds": [
+    "migration",
+    "bamf",
+    "ukraine"
+   ],
+   "s": [
+    {
+     "de": "Die deutsche Gesellschaft veränderte sich auch durch die Zuwanderung aus vielen Ländern.",
+     "ru": "تغير المجتمع الألماني أيضًا بفعل الهجرة إليه من بلدان كثيرة."
+    },
+    {
+     "de": "Im Jahr 2015 kamen viele Menschen nach Deutschland, die vor dem Krieg in Syrien flohen.",
+     "ru": "في عام 2015 وصل إلى ألمانيا كثيرون ممن فرّوا من الحرب في سوريا."
+    },
+    {
+     "de": "Nach dem Angriff Russlands auf die Ukraine 2022 suchten viele Menschen aus der Ukraine Schutz in Deutschland.",
+     "ru": "بعد هجوم روسيا على أوكرانيا عام 2022 طلب كثيرون من أوكرانيا الحماية في ألمانيا."
+    }
+   ]
+  }
+ ],
+ "sourceTitle": "المصادر والتحقق من المعلومات",
+ "sources": [
+  {
+   "id": "aufbau",
+   "name": "LeMO · Baustelle Deutsche Einheit",
+   "url": "https://www.hdg.de/lemo/kapitel/deutsche-einheit/baustelle-deutsche-einheit.html"
+  },
+  {
+   "id": "berlin",
+   "name": "Deutscher Bundestag · Hauptstadtbeschluss",
+   "url": "https://www.bundestag.de/parlament/geschichte/debatte"
+  },
+  {
+   "id": "europa",
+   "name": "Europäische Union · Vertrag von Maastricht",
+   "url": "https://european-union.europa.eu/principles-countries-history/principles-and-values/founding-agreements_de"
+  },
+  {
+   "id": "euro",
+   "name": "Deutsche Bundesbank · Geschichte des Euro-Bargelds",
+   "url": "https://www.bundesbank.de/de/bundesbank/geschichte"
+  },
+  {
+   "id": "denkmal",
+   "name": "Stiftung Denkmal · Denkmal für die ermordeten Juden Europas",
+   "url": "https://www.stiftung-denkmal.de/denkmaeler/denkmal-fuer-die-ermordeten-juden-europas-mit-ausstellung-im-ort-der-information/"
+  },
+  {
+   "id": "migration",
+   "name": "LeMO · Zuwanderer und Geflüchtete",
+   "url": "https://www.hdg.de/lemo/kapitel/globalisierung/internationale-herausforderungen/zuwanderer-und-gefluechtete.html"
+  },
+  {
+   "id": "bamf",
+   "name": "BAMF · Migrationsbericht 2015",
+   "url": "https://www.bamf.de/SharedDocs/Anlagen/DE/Forschung/Migrationsberichte/migrationsbericht-2015.pdf?__blob=publicationFile"
+  },
+  {
+   "id": "ukraine",
+   "name": "Destatis · Schutzsuchende 2022",
+   "url": "https://www.destatis.de/DE/Presse/Pressemitteilungen/2023/03/PD23_125_125.html"
+  }
+ ],
+ "checked": "2026-11-18"
+}

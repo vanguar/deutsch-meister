@@ -1,0 +1,508 @@
+{
+ "version": 1,
+ "w": {
+  "alltag": "Alltag",
+  "an": "an",
+  "angriff": "Angriff",
+  "arbeit": "Arbeit",
+  "auch": "auch",
+  "auf": "auf",
+  "aus": "aus",
+  "bahnstrecken": "Bahnstrecke",
+  "banknoten": "Banknote",
+  "berlin": "Berlin",
+  "beschloss": "beschließen",
+  "beschäftigte": "Beschäftigte",
+  "besonders": "besonders",
+  "betriebe": "Betrieb",
+  "bezahlen": "bezahlen",
+  "blieb": "bleiben",
+  "bonn": "Bonn",
+  "bundestag": "Bundestag",
+  "das": "der/die/das",
+  "dem": "der/die/das",
+  "den": "der/die/das",
+  "denkmal": "Denkmal",
+  "der": "der/die/das",
+  "deutsche": "deutsch",
+  "deutschland": "Deutschland",
+  "die": "der/die/das",
+  "durch": "durch",
+  "ein": "ein/eine",
+  "entstand": "entstehen",
+  "erinnerung": "Erinnerung",
+  "ermordeten": "ermorden",
+  "eröffnet": "eröffnen",
+  "euro": "Euro",
+  "europas": "Europa (континент)",
+  "europäische": "europäisch",
+  "flohen": "fliehen",
+  "für": "für",
+  "gebäude": "Gebäude",
+  "geschlossen": "schließen",
+  "gesellschaft": "Gesellschaft",
+  "gleichzeitig": "gleichzeitig",
+  "ihre": "ihr (её, их)",
+  "im": "in",
+  "in": "in",
+  "jahr": "Jahr",
+  "juden": "Jude",
+  "kamen": "kommen",
+  "kann": "können",
+  "krieg": "Krieg",
+  "ländern": "Land (земля)",
+  "maastricht": "Maastricht",
+  "man": "man",
+  "menschen": "Mensch",
+  "mit": "mit",
+  "modernisiert": "modernisieren",
+  "münzen": "Münze",
+  "nach": "nach",
+  "ns-verbrechen": "NS-Verbrechen",
+  "ostdeutschland": "Ostdeutschland",
+  "parlament": "Parlament",
+  "regierung": "Regierung",
+  "russlands": "Russland",
+  "schutz": "Schutz",
+  "seit": "seit",
+  "sich": "sich",
+  "sitz": "Sitz",
+  "straßen": "Straße",
+  "suchten": "suchen",
+  "syrien": "Syrien",
+  "thema": "Thema",
+  "ukraine": "Ukraine",
+  "und": "und",
+  "union": "Union",
+  "verlegen": "verlegen",
+  "verloren": "verlieren",
+  "vertrag": "Vertrag",
+  "veränderte": "verändern",
+  "viele": "viel",
+  "vielen": "viel",
+  "vieler": "viel",
+  "von": "von",
+  "vor": "vor",
+  "wurde": "werden",
+  "wurden": "werden",
+  "zu": "zu",
+  "zuwanderung": "Zuwanderung",
+  "änderte": "ändern",
+  "öffentliches": "öffentlich"
+ },
+ "l": {
+  "Alltag": {
+   "ru": "الحياة اليومية",
+   "pos": "اسم",
+   "art": "der",
+   "pl": null,
+   "note": "im Alltag — في الحياة اليومية"
+  },
+  "Angriff": {
+   "ru": "هجوم",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Angriffe"
+  },
+  "Arbeit": {
+   "ru": "عمل",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Arbeiten"
+  },
+  "Bahnstrecke": {
+   "ru": "خط سكك حديدية",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Bahnstrecken"
+  },
+  "Banknote": {
+   "ru": "ورقة نقدية",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Banknoten"
+  },
+  "Berlin": {
+   "ru": "برلين",
+   "pos": "جغرافيا"
+  },
+  "Beschäftigte": {
+   "ru": "عاملون",
+   "pos": "صفة بمعنى الاسم",
+   "decl": "صفة مستعملة اسما؛ جمع"
+  },
+  "Betrieb": {
+   "ru": "عمل، تشغيل",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Betriebe",
+   "note": "أيضًا «مؤسسة»"
+  },
+  "Bonn": {
+   "ru": "بون",
+   "pos": "جغرافيا"
+  },
+  "Bundestag": {
+   "ru": "البوندستاغ (البرلمان الاتحادي الألماني)",
+   "pos": "اسم",
+   "art": "der",
+   "pl": null
+  },
+  "Denkmal": {
+   "ru": "نصب تذكاري",
+   "pos": "اسم",
+   "art": "das",
+   "pl": "die Denkmäler"
+  },
+  "Deutschland": {
+   "ru": "ألمانيا",
+   "pos": "جغرافيا"
+  },
+  "Erinnerung": {
+   "ru": "ذكرى",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Erinnerungen"
+  },
+  "Euro": {
+   "ru": "يورو",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Euro"
+  },
+  "Europa (континент)": {
+   "ru": "أوروبا",
+   "pos": "جغرافيا"
+  },
+  "Gebäude": {
+   "ru": "مبنى",
+   "pos": "اسم",
+   "art": "das",
+   "pl": "die Gebäude"
+  },
+  "Gesellschaft": {
+   "pos": "اسم",
+   "ru": "المجلس",
+   "art": "die",
+   "pl": "die Gesellschaften"
+  },
+  "Jahr": {
+   "ru": "سنة",
+   "pos": "اسم",
+   "art": "das",
+   "pl": "die Jahre"
+  },
+  "Jude": {
+   "ru": "يهودي",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Juden"
+  },
+  "Krieg": {
+   "ru": "حرب",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Kriege"
+  },
+  "Land (земля)": {
+   "ru": "ولاية (اتحادية)؛ بلد",
+   "pos": "اسم",
+   "art": "das",
+   "pl": "die Länder",
+   "note": "Bundesland — ولاية اتحادية؛ in anderen Ländern — في ولايات أخرى"
+  },
+  "Maastricht": {
+   "ru": "ماستريخت",
+   "pos": "جغرافيا"
+  },
+  "Mensch": {
+   "ru": "إنسان",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Menschen",
+   "decl": "n-Deklination: des Menschen · dem/den Menschen"
+  },
+  "Münze": {
+   "ru": "قطعة نقدية",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Münzen"
+  },
+  "NS-Verbrechen": {
+   "ru": "جريمة نازية",
+   "pos": "اسم",
+   "art": "das",
+   "pl": "die NS-Verbrechen"
+  },
+  "Ostdeutschland": {
+   "ru": "شرق ألمانيا",
+   "pos": "جغرافيا"
+  },
+  "Parlament": {
+   "ru": "برلمان",
+   "pos": "اسم",
+   "art": "das",
+   "pl": "die Parlamente"
+  },
+  "Regierung": {
+   "ru": "حكومة",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Regierungen"
+  },
+  "Russland": {
+   "ru": "روسيا",
+   "pos": "جغرافيا"
+  },
+  "Schutz": {
+   "ru": "حماية",
+   "pos": "اسم",
+   "art": "der",
+   "pl": null,
+   "note": "zu seinem Schutz — لحمايته"
+  },
+  "Sitz": {
+   "ru": "مقر؛ مقعد",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Sitze",
+   "note": "seinen Sitz haben — يقع مقرها (عن شركة)؛ im Landtag — مقعد"
+  },
+  "Straße": {
+   "art": "die",
+   "pl": "die Straßen",
+   "pos": "اسم",
+   "ru": "شارع، طريق"
+  },
+  "Syrien": {
+   "ru": "سوريا",
+   "pos": "جغرافيا"
+  },
+  "Thema": {
+   "ru": "موضوع",
+   "pos": "اسم",
+   "art": "das",
+   "pl": "die Themen"
+  },
+  "Ukraine": {
+   "ru": "أوكرانيا",
+   "pos": "جغرافيا"
+  },
+  "Union": {
+   "ru": "أداة ربط",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Unionen",
+   "note": "die Europäische Union — الاتحاد الأوروبي"
+  },
+  "Vertrag": {
+   "ru": "معاهدة",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Verträge"
+  },
+  "Zuwanderung": {
+   "ru": "الهجرة إلى البلد",
+   "pos": "اسم",
+   "art": "die",
+   "pl": null
+  },
+  "an": {
+   "ru": "عند، إلى، على",
+   "pos": "حرف جر",
+   "note": "am = an dem. وهي أيضًا سابقة منفصلة: anfangen «يبدأ»، annehmen، ansehen، anzünden"
+  },
+  "auch": {
+   "ru": "أيضًا؛ حتى",
+   "pos": "أداة"
+  },
+  "auf": {
+   "ru": "على، في",
+   "pos": "حرف جر",
+   "note": "وهي أيضًا سابقة منفصلة: aufspringen «يقفز واقفًا»، sich aufmachen"
+  },
+  "aus": {
+   "ru": "من",
+   "pos": "حرف جر",
+   "note": "وهي أيضًا سابقة منفصلة: auslöschen «يُطفئ»"
+  },
+  "beschließen": {
+   "ru": "يقرّر",
+   "pos": "فعل",
+   "forms": "beschloss · hat beschlossen"
+  },
+  "besonders": {
+   "ru": "خاصةً",
+   "pos": "ظرف"
+  },
+  "bezahlen": {
+   "ru": "يدفع",
+   "pos": "فعل",
+   "forms": "bezahlte · hat bezahlt"
+  },
+  "bleiben": {
+   "ru": "يبقى",
+   "pos": "فعل",
+   "forms": "blieb · ist geblieben"
+  },
+  "der/die/das": {
+   "ru": "أداة التعريف",
+   "pos": "أداة تعريف",
+   "note": "وهي أيضًا اسم موصول بمعنى «الذي»"
+  },
+  "deutsch": {
+   "ru": "الألمانية",
+   "pos": "صفة"
+  },
+  "durch": {
+   "ru": "عبر، من خلال، بسبب",
+   "pos": "حرف جر"
+  },
+  "ein/eine": {
+   "ru": "أداة النكرة",
+   "pos": "أداة تعريف",
+   "note": "einer — «واحد، شخص ما»"
+  },
+  "entstehen": {
+   "pos": "فعل",
+   "ru": "ينشأ",
+   "forms": "entsteht · entstand · ist entstanden"
+  },
+  "ermorden": {
+   "ru": "يقتل",
+   "pos": "فعل",
+   "forms": "ermordet · ermordete · hat ermordet"
+  },
+  "eröffnen": {
+   "ru": "يفتتح (حسابًا، متجرًا)",
+   "pos": "فعل",
+   "forms": "eröffnete · hat eröffnet"
+  },
+  "europäisch": {
+   "ru": "أوروبي",
+   "pos": "صفة"
+  },
+  "fliehen": {
+   "ru": "يفرّ، يهرب",
+   "pos": "فعل",
+   "forms": "floh · ist geflohen"
+  },
+  "für": {
+   "ru": "لـ، من أجل",
+   "pos": "حرف جر"
+  },
+  "gleichzeitig": {
+   "ru": "في الوقت نفسه",
+   "pos": "ظرف"
+  },
+  "ihr (её, их)": {
+   "ru": "لها؛ لهم",
+   "pos": "ضمير"
+  },
+  "in": {
+   "ru": "في (im = in dem، ins = in das)",
+   "pos": "حرف جر"
+  },
+  "kommen": {
+   "ru": "يأتي",
+   "pos": "فعل",
+   "forms": "kam · ist gekommen"
+  },
+  "können": {
+   "ru": "يستطيع، يقدر",
+   "pos": "فعل",
+   "forms": "konnte · hat gekonnt",
+   "note": "في النص مع سابقة منفصلة: kann nicht fort — fortkönnen «لا يستطيع الرحيل»"
+  },
+  "man": {
+   "ru": "الضمير غير المحدّد «أحدهم، الناس، نحن»",
+   "pos": "ضمير"
+  },
+  "mit": {
+   "ru": "ث",
+   "pos": "حرف جر",
+   "note": "وهي أيضًا سابقة منفصلة: mitgehen «يذهب معه»"
+  },
+  "modernisieren": {
+   "ru": "يحدّث، يطوّر",
+   "pos": "فعل",
+   "forms": "modernisierte · hat modernisiert"
+  },
+  "nach": {
+   "ru": "إلى، بعد، حسب",
+   "pos": "حرف جر"
+  },
+  "schließen": {
+   "ru": "يغلق، يُقفل",
+   "pos": "فعل",
+   "forms": "schloss · hat geschlossen"
+  },
+  "seit": {
+   "ru": "منذ (وقت ما)",
+   "pos": "حرف جر"
+  },
+  "sich": {
+   "ru": "نفسه، لنفسه",
+   "pos": "ضمير",
+   "note": "ضمير انعكاسي، جزء من الفعل الانعكاسي: sich auf den Weg machen، sich setzen، sich legen، sich nähern، sich gefallen lassen، sich getrauen، sich umsehen"
+  },
+  "suchen": {
+   "ru": "يبحث",
+   "pos": "فعل",
+   "forms": "suchte · hat gesucht",
+   "note": "sich etwas suchen — يبحث عن شيء لنفسه"
+  },
+  "und": {
+   "ru": "و",
+   "pos": "أداة ربط"
+  },
+  "verlegen": {
+   "ru": "ينقل، يضع",
+   "pos": "فعل",
+   "forms": "verlegte · hat verlegt",
+   "note": "مشترك اللفظ: الصفة verlegen — محرج"
+  },
+  "verlieren": {
+   "forms": "verlor · hat verloren",
+   "pos": "فعل",
+   "ru": "يفقد"
+  },
+  "verändern": {
+   "pos": "فعل",
+   "ru": "يغيّر",
+   "forms": "verändert · veränderte · hat verändert"
+  },
+  "viel": {
+   "ru": "كثير، الكثير",
+   "pos": "ضمير"
+  },
+  "von": {
+   "ru": "من، عن (vom = von dem)",
+   "pos": "حرف جر"
+  },
+  "vor": {
+   "ru": "أمام، قبل؛ من (الخوف)",
+   "pos": "حرف جر"
+  },
+  "werden": {
+   "ru": "يصبح",
+   "pos": "فعل",
+   "forms": "wurde · ist geworden",
+   "note": "فعل مساعد للمستقبل والمبني للمجهول"
+  },
+  "zu": {
+   "ru": "إلى، في؛ أكثر من اللازم",
+   "pos": "حرف جر",
+   "note": "zur = zu der, zum = zu dem"
+  },
+  "ändern": {
+   "ru": "يغيّر",
+   "pos": "فعل",
+   "forms": "änderte · hat geändert"
+  },
+  "öffentlich": {
+   "ru": "عام، علني",
+   "pos": "صفة"
+  }
+ }
+}

@@ -1,0 +1,508 @@
+{
+  "version": 1,
+  "w": {
+    "alltag": "Alltag",
+    "an": "an",
+    "angriff": "Angriff",
+    "arbeit": "Arbeit",
+    "auch": "auch",
+    "auf": "auf",
+    "aus": "aus",
+    "bahnstrecken": "Bahnstrecke",
+    "banknoten": "Banknote",
+    "berlin": "Berlin",
+    "beschloss": "beschließen",
+    "beschäftigte": "Beschäftigte",
+    "besonders": "besonders",
+    "betriebe": "Betrieb",
+    "bezahlen": "bezahlen",
+    "blieb": "bleiben",
+    "bonn": "Bonn",
+    "bundestag": "Bundestag",
+    "das": "der/die/das",
+    "dem": "der/die/das",
+    "den": "der/die/das",
+    "denkmal": "Denkmal",
+    "der": "der/die/das",
+    "deutsche": "deutsch",
+    "deutschland": "Deutschland",
+    "die": "der/die/das",
+    "durch": "durch",
+    "ein": "ein/eine",
+    "entstand": "entstehen",
+    "erinnerung": "Erinnerung",
+    "ermordeten": "ermorden",
+    "eröffnet": "eröffnen",
+    "euro": "Euro",
+    "europas": "Europa (континент)",
+    "europäische": "europäisch",
+    "flohen": "fliehen",
+    "für": "für",
+    "gebäude": "Gebäude",
+    "geschlossen": "schließen",
+    "gesellschaft": "Gesellschaft",
+    "gleichzeitig": "gleichzeitig",
+    "ihre": "ihr (её, их)",
+    "im": "in",
+    "in": "in",
+    "jahr": "Jahr",
+    "juden": "Jude",
+    "kamen": "kommen",
+    "kann": "können",
+    "krieg": "Krieg",
+    "ländern": "Land (земля)",
+    "maastricht": "Maastricht",
+    "man": "man",
+    "menschen": "Mensch",
+    "mit": "mit",
+    "modernisiert": "modernisieren",
+    "münzen": "Münze",
+    "nach": "nach",
+    "ns-verbrechen": "NS-Verbrechen",
+    "ostdeutschland": "Ostdeutschland",
+    "parlament": "Parlament",
+    "regierung": "Regierung",
+    "russlands": "Russland",
+    "schutz": "Schutz",
+    "seit": "seit",
+    "sich": "sich",
+    "sitz": "Sitz",
+    "straßen": "Straße",
+    "suchten": "suchen",
+    "syrien": "Syrien",
+    "thema": "Thema",
+    "ukraine": "Ukraine",
+    "und": "und",
+    "union": "Union",
+    "verlegen": "verlegen",
+    "verloren": "verlieren",
+    "vertrag": "Vertrag",
+    "veränderte": "verändern",
+    "viele": "viel",
+    "vielen": "viel",
+    "vieler": "viel",
+    "von": "von",
+    "vor": "vor",
+    "wurde": "werden",
+    "wurden": "werden",
+    "zu": "zu",
+    "zuwanderung": "Zuwanderung",
+    "änderte": "ändern",
+    "öffentliches": "öffentlich"
+  },
+  "l": {
+    "Alltag": {
+      "ru": "будни, повседневная жизнь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null,
+      "note": "im Alltag — в быту"
+    },
+    "Angriff": {
+      "ru": "нападение",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Angriffe"
+    },
+    "Arbeit": {
+      "ru": "работа",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Arbeiten"
+    },
+    "Bahnstrecke": {
+      "ru": "железнодорожная линия",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Bahnstrecken"
+    },
+    "Banknote": {
+      "ru": "банкнота",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Banknoten"
+    },
+    "Berlin": {
+      "ru": "Берлин",
+      "pos": "геогр."
+    },
+    "Beschäftigte": {
+      "ru": "работники",
+      "pos": "субст. прил.",
+      "decl": "субстантивированное прилагательное; мн. ч."
+    },
+    "Betrieb": {
+      "ru": "работа, эксплуатация",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Betriebe",
+      "note": "также «предприятие»"
+    },
+    "Bonn": {
+      "ru": "Бонн",
+      "pos": "геогр."
+    },
+    "Bundestag": {
+      "ru": "бундестаг (парламент ФРГ)",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "Denkmal": {
+      "ru": "памятник, мемориал",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Denkmäler"
+    },
+    "Deutschland": {
+      "ru": "Германия",
+      "pos": "геогр."
+    },
+    "Erinnerung": {
+      "ru": "воспоминание, память",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Erinnerungen"
+    },
+    "Euro": {
+      "ru": "евро",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Euro"
+    },
+    "Europa (континент)": {
+      "ru": "Европа",
+      "pos": "геогр."
+    },
+    "Gebäude": {
+      "ru": "здание",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Gebäude"
+    },
+    "Gesellschaft": {
+      "pos": "сущ.",
+      "ru": "общество",
+      "art": "die",
+      "pl": "die Gesellschaften"
+    },
+    "Jahr": {
+      "ru": "год",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Jahre"
+    },
+    "Jude": {
+      "ru": "еврей",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Juden"
+    },
+    "Krieg": {
+      "ru": "война",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Kriege"
+    },
+    "Land (земля)": {
+      "ru": "земля (федеральная); страна",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Länder",
+      "note": "Bundesland — федеральная земля; in anderen Ländern — в других землях"
+    },
+    "Maastricht": {
+      "ru": "Маастрихт",
+      "pos": "геогр."
+    },
+    "Mensch": {
+      "ru": "человек",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Menschen",
+      "decl": "n-Deklination: des Menschen · dem/den Menschen"
+    },
+    "Münze": {
+      "ru": "монета",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Münzen"
+    },
+    "NS-Verbrechen": {
+      "ru": "преступление нацистов",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die NS-Verbrechen"
+    },
+    "Ostdeutschland": {
+      "ru": "восток Германии",
+      "pos": "геогр."
+    },
+    "Parlament": {
+      "ru": "парламент",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Parlamente"
+    },
+    "Regierung": {
+      "ru": "правительство",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Regierungen"
+    },
+    "Russland": {
+      "ru": "Россия",
+      "pos": "геогр."
+    },
+    "Schutz": {
+      "ru": "защита",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null,
+      "note": "zu seinem Schutz — ради его защиты"
+    },
+    "Sitz": {
+      "ru": "штаб-квартира; место",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Sitze",
+      "note": "seinen Sitz haben — находиться (о фирме); im Landtag — место"
+    },
+    "Straße": {
+      "art": "die",
+      "pl": "die Straßen",
+      "pos": "сущ.",
+      "ru": "улица, дорога"
+    },
+    "Syrien": {
+      "ru": "Сирия",
+      "pos": "геогр."
+    },
+    "Thema": {
+      "ru": "тема",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Themen"
+    },
+    "Ukraine": {
+      "ru": "Украина",
+      "pos": "геогр."
+    },
+    "Union": {
+      "ru": "союз",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Unionen",
+      "note": "die Europäische Union — Европейский союз"
+    },
+    "Vertrag": {
+      "ru": "договор",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Verträge"
+    },
+    "Zuwanderung": {
+      "ru": "переселение, иммиграция",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "an": {
+      "ru": "у, к, на",
+      "pos": "предл.",
+      "note": "am = an dem. Тж. отделяемая приставка: anfangen «начинать», annehmen, ansehen, anzünden"
+    },
+    "auch": {
+      "ru": "тоже, также; даже",
+      "pos": "частица"
+    },
+    "auf": {
+      "ru": "на, в",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: aufspringen «вскочить», sich aufmachen"
+    },
+    "aus": {
+      "ru": "из",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: auslöschen «погасить»"
+    },
+    "beschließen": {
+      "ru": "решать, постановлять",
+      "pos": "гл.",
+      "forms": "beschloss · hat beschlossen"
+    },
+    "besonders": {
+      "ru": "особенно",
+      "pos": "нареч."
+    },
+    "bezahlen": {
+      "ru": "платить",
+      "pos": "гл.",
+      "forms": "bezahlte · hat bezahlt"
+    },
+    "bleiben": {
+      "ru": "оставаться",
+      "pos": "гл.",
+      "forms": "blieb · ist geblieben"
+    },
+    "der/die/das": {
+      "ru": "определённый артикль",
+      "pos": "артикль",
+      "note": "Тж. относительное местоимение «который»"
+    },
+    "deutsch": {
+      "ru": "немецкий",
+      "pos": "прил."
+    },
+    "durch": {
+      "ru": "через, сквозь, из-за",
+      "pos": "предл."
+    },
+    "ein/eine": {
+      "ru": "неопределённый артикль",
+      "pos": "артикль",
+      "note": "einer — «один, некто»"
+    },
+    "entstehen": {
+      "pos": "гл.",
+      "ru": "возникать",
+      "forms": "entsteht · entstand · ist entstanden"
+    },
+    "ermorden": {
+      "ru": "убивать",
+      "pos": "гл.",
+      "forms": "ermordet · ermordete · hat ermordet"
+    },
+    "eröffnen": {
+      "ru": "открывать (счёт, магазин)",
+      "pos": "гл.",
+      "forms": "eröffnete · hat eröffnet"
+    },
+    "europäisch": {
+      "ru": "европейский",
+      "pos": "прил."
+    },
+    "fliehen": {
+      "ru": "бежать, спасаться бегством",
+      "pos": "гл.",
+      "forms": "floh · ist geflohen"
+    },
+    "für": {
+      "ru": "для, за",
+      "pos": "предл."
+    },
+    "gleichzeitig": {
+      "ru": "одновременно",
+      "pos": "нареч."
+    },
+    "ihr (её, их)": {
+      "ru": "её; их",
+      "pos": "мест."
+    },
+    "in": {
+      "ru": "в (im = in dem, ins = in das)",
+      "pos": "предл."
+    },
+    "kommen": {
+      "ru": "приходить",
+      "pos": "гл.",
+      "forms": "kam · ist gekommen"
+    },
+    "können": {
+      "ru": "мочь, уметь",
+      "pos": "гл.",
+      "forms": "konnte · hat gekonnt",
+      "note": "В тексте с отделяемой приставкой: kann nicht fort — fortkönnen «не мочь уйти»"
+    },
+    "man": {
+      "ru": "неопределённое «кто-то, люди, мы»",
+      "pos": "мест."
+    },
+    "mit": {
+      "ru": "с",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: mitgehen «пойти вместе»"
+    },
+    "modernisieren": {
+      "ru": "модернизировать, обновлять",
+      "pos": "гл.",
+      "forms": "modernisierte · hat modernisiert"
+    },
+    "nach": {
+      "ru": "в, на, после, по",
+      "pos": "предл."
+    },
+    "schließen": {
+      "ru": "закрывать, запирать",
+      "pos": "гл.",
+      "forms": "schloss · hat geschlossen"
+    },
+    "seit": {
+      "ru": "с (какого-то времени)",
+      "pos": "предл."
+    },
+    "sich": {
+      "ru": "себя, себе",
+      "pos": "мест.",
+      "note": "Возвратное местоимение, часть возвратного глагола: sich auf den Weg machen, sich setzen, sich legen, sich nähern, sich gefallen lassen, sich getrauen, sich umsehen"
+    },
+    "suchen": {
+      "ru": "искать",
+      "pos": "гл.",
+      "forms": "suchte · hat gesucht",
+      "note": "sich etwas suchen — подыскать себе"
+    },
+    "und": {
+      "ru": "и, а",
+      "pos": "союз"
+    },
+    "verlegen": {
+      "ru": "переложить, разложить",
+      "pos": "гл.",
+      "forms": "verlegte · hat verlegt",
+      "note": "омоним: прилагательное verlegen — смущённый"
+    },
+    "verlieren": {
+      "forms": "verlor · hat verloren",
+      "pos": "гл.",
+      "ru": "терять"
+    },
+    "verändern": {
+      "pos": "гл.",
+      "ru": "менять",
+      "forms": "verändert · veränderte · hat verändert"
+    },
+    "viel": {
+      "ru": "много, многое",
+      "pos": "мест."
+    },
+    "von": {
+      "ru": "от, из, о (vom = von dem)",
+      "pos": "предл."
+    },
+    "vor": {
+      "ru": "перед, до; от (страха)",
+      "pos": "предл."
+    },
+    "werden": {
+      "ru": "становиться",
+      "pos": "гл.",
+      "forms": "wurde · ist geworden",
+      "note": "Вспомогательный глагол будущего времени и пассива"
+    },
+    "zu": {
+      "ru": "к, в; слишком",
+      "pos": "предл.",
+      "note": "zur = zu der, zum = zu dem"
+    },
+    "ändern": {
+      "ru": "менять, изменять",
+      "pos": "гл.",
+      "forms": "änderte · hat geändert"
+    },
+    "öffentlich": {
+      "ru": "общественный, публичный",
+      "pos": "прил."
+    }
+  }
+}

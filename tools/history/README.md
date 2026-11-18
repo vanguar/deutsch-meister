@@ -1,16 +1,16 @@
-# History pilot
+# A short history of Germany
 
-The Russian-only pilot lives in `history.html` and `data/history/`. The home
-card is inserted only when the selected interface language is Russian.
-Ukrainian and Arabic catalogs are deliberately unchanged until editorial review.
+The 14 chapters live in `history.html` and `data/history/`. The catalog and
+reader support Russian, Ukrainian and Arabic translations alongside B1 German.
+Chapter sources and translations are authored in `tools/history/content/`.
 
-`index.json` contains the complete planned contents. Only entries with
+`index.json` contains the complete table of contents. Only entries with
 `ready: true` open in the reader, including through direct links. The `items`
 array contains the metadata of published reader texts for validation.
 
 Each factual paragraph in `ch-01.json` records its `sourceIds`. Sources are
 listed in the chapter and in the catalog. The text is an original B1 educational
-adaptation, not an official textbook. Sources were reviewed on 2026-11-17:
+adaptation. Chapter 1 sources were reviewed on 2026-11-17:
 
 - Landesmuseum für Vorgeschichte Halle: *Die Erfindung der Germanen*, for
   the Roman name for communities east of the Rhine and their diversity.
@@ -24,7 +24,7 @@ adaptation, not an official textbook. Sources were reviewed on 2026-11-17:
   and cultural contacts.
 - Stadt Trier: *Weltkulturerbe*, for the Porta Nigra as a surviving Roman gate.
 
-The chapter and its catalog use a photograph of a surviving Roman monument.
+Chapter 1 and the catalog feature photographs of Roman sites.
 Source links are marked with an external-link icon, domain and PDF indicator.
 They use native same-tab navigation in browsers and Telegram openLink inside
 the Mini App, avoiding unsupported pop-up tabs.
