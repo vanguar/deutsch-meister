@@ -80,6 +80,29 @@ try {
   assert.equal(await ev(`document.querySelectorAll('.hd-days [data-holiday]').length`), 3);
   assert.equal(await ev(`getComputedStyle(document.querySelector('#holidayRetry')).display`), 'none');
   assert.match(await ev('location.search'), /month=2026-10/);
+  const dayIds = selector => ev(`Array.from(document.querySelectorAll(${JSON.stringify(selector)}), link => link.dataset.holiday)`);
+  const assertSameDates = async () => assert.deepEqual(await dayIds('.hd-days [data-holiday]'), await dayIds('#holidayList [data-holiday]'));
+  await assertSameDates();
+
+  await click('[data-month-step="-1"]');
+  assert.match(await ev('location.search'), /month=2026-09/);
+  assert.deepEqual(await dayIds('#holidayList [data-holiday]'), []);
+  await assertSameDates();
+  assert.equal(await ev(`document.querySelector('#holidayNextDate').hidden`), false);
+  await click('#holidayNextDate');
+  assert.match(await ev('location.search'), /month=2026-10/);
+  await assertSameDates();
+  assert.equal(await ev(`document.querySelector('#holidayNextDate').hidden`), true);
+
+  await click('[data-month-step="1"]');
+  await click('[data-month-step="1"]');
+  assert.match(await ev('location.search'), /month=2026-12/);
+  assert.deepEqual(await dayIds('#holidayList [data-holiday]'), []);
+  await click('#holidayNextDate');
+  assert.match(await ev('location.search'), /month=2027-01/);
+  assert.deepEqual(await dayIds('.hd-days [data-holiday]'), ['holiday-dreikoenige']);
+  await assertSameDates();
+  for (let i = 0; i < 3; i++) await click('[data-month-step="-1"]');
   await browser.shot('dm-calendar-desktop.png');
 
   await click(gridDate(reformDate));

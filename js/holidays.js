@@ -110,14 +110,14 @@ if (typeof document !== 'undefined') document.addEventListener('DOMContentLoaded
   let shown = monthParam ? date(Number(monthParam[1]), Number(monthParam[2])) : toMonth(today());
   let items = null;
   let lastLink = null;
+  const nextDateButton = $('holidayNextDate');
 
   function render() {
     $('holidayMonth').textContent = monthTitle.format(shown);
     const year = shown.getUTCFullYear();
     const month = shown.getUTCMonth() + 1;
     const current = key(today());
-    const allDates = items ? inYear(items, year) : [];
-    const monthDates = allDates.filter(entry => entry.date.getUTCMonth() + 1 === month);
+    const monthDates = items ? inYear(items, year).filter(entry => entry.date.getUTCMonth() + 1 === month) : [];
     const start = (shown.getUTCDay() + 6) % 7;
     const count = date(year, month + 1, 0).getUTCDate();
     const empty = '<li aria-hidden="true"></li>';
@@ -137,10 +137,9 @@ if (typeof document !== 'undefined') document.addEventListener('DOMContentLoaded
     });
     $('holidayDays').innerHTML = empty.repeat(start) + cells.join('') + empty.repeat((7 - (start + count) % 7) % 7);
     if (!items) return;
-    const upcoming = monthDates.length ? monthDates : allDates.filter(entry => entry.date >= shown)
-      .concat(inYear(items, year + 1)).slice(0, 3);
-    $('holidayAgenda').textContent = t(monthDates.length ? 'Даты месяца' : 'Ближайшие даты');
-    $('holidayList').innerHTML = upcoming.map(({ item, date: when }) => {
+    $('holidayStatus').textContent = monthDates.length ? '' : t('В этом месяце нет дат с описанием.');
+    if (nextDateButton) nextDateButton.hidden = monthDates.length > 0 || items.length === 0;
+    $('holidayList').innerHTML = monthDates.map(({ item, date: when }) => {
       const iso = key(when);
       return `<li><a class="hd-event" href="#holiday=${esc(item.id)}" data-holiday="${esc(item.id)}" data-date="${iso}">
         <time datetime="${iso}">${esc(shortDate.format(when))}</time>
@@ -166,6 +165,7 @@ if (typeof document !== 'undefined') document.addEventListener('DOMContentLoaded
     root.setAttribute('aria-busy', 'true');
     $('holidayStatus').textContent = t('Загружаем календарь…');
     $('holidayRetry').hidden = true;
+    if (nextDateButton) nextDateButton.hidden = true;
     try {
       const catalog = await fetchCatalog();
       items = catalog.items;
@@ -178,7 +178,6 @@ if (typeof document !== 'undefined') document.addEventListener('DOMContentLoaded
       } else if (location.hash.startsWith('#holiday=')) {
         history.replaceState(null, '', location.pathname + location.search);
       }
-      $('holidayStatus').textContent = '';
       render();
     } catch (err) {
       console.warn('[Holidays]', err);
@@ -196,6 +195,13 @@ if (typeof document !== 'undefined') document.addEventListener('DOMContentLoaded
   }));
   $('holidayToday').addEventListener('click', () => changeMonth(toMonth(today())));
   $('holidayRetry').addEventListener('click', load);
+  nextDateButton?.addEventListener('click', () => {
+    if (!items?.length) return;
+    const year = shown.getUTCFullYear();
+    const next = inYear(items, year).find(entry => entry.date >= shown) || inYear(items, year + 1)[0];
+    changeMonth(toMonth(next.date));
+    $('holidayList').querySelector('a')?.focus();
+  });
   document.addEventListener('click', ReaderShell.openExternal);
   root.addEventListener('click', event => {
     if (event.button !== 0 || event.altKey || event.ctrlKey || event.shiftKey || event.metaKey) return;
