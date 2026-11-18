@@ -1,0 +1,445 @@
+{
+  "version": 1,
+  "w": {
+    "auch": "auch",
+    "auf": "auf",
+    "bauen": "einbauen",
+    "berlin": "Berlin",
+    "berliner": "Berliner",
+    "besatzungszonen": "Besatzungszone",
+    "besonders": "besonders",
+    "bestimmte": "bestimmen",
+    "bundesrepublik": "Bundesrepublik",
+    "ddr": "DDR",
+    "dem": "der/die/das",
+    "demokratische": "demokratisch",
+    "den": "der/die/das",
+    "der": "der/die/das",
+    "deutsche": "deutsch",
+    "deutschen": "deutsch",
+    "deutschland": "Deutschland",
+    "die": "der/die/das",
+    "dort": "dort",
+    "entstand": "entstehen",
+    "entstanden": "entstehen",
+    "er": "er",
+    "familien": "Familie",
+    "flucht": "Flucht",
+    "frankreich": "Frankreich",
+    "freien": "frei",
+    "geteilt": "teilen",
+    "großbritannien": "Großbritannien",
+    "hatten": "haben",
+    "ihre": "ihr (её, их)",
+    "im": "in",
+    "in": "in",
+    "jahren": "Jahr",
+    "kein": "kein",
+    "krieg": "Krieg",
+    "kurz": "kurz",
+    "lagen": "liegen",
+    "ließ": "lassen",
+    "marktwirtschaft": "Marktwirtschaft",
+    "mauer": "Mauer",
+    "mehr": "mehr",
+    "menschen": "Mensch",
+    "mit": "mit",
+    "nach": "nach",
+    "osten": "Osten",
+    "plante": "planen",
+    "politik": "Politik",
+    "republik": "Republik",
+    "schnell": "schnell",
+    "sed": "SED",
+    "sektoren": "Sektor",
+    "sowjetunion": "Sowjetunion",
+    "sozialer": "sozial",
+    "staat": "Staat",
+    "staaten": "Staat",
+    "stoppen": "stoppen",
+    "städte": "Stadt",
+    "symbol": "Symbol",
+    "teilten": "teilen",
+    "teilung": "Teilung",
+    "trennte": "trennen",
+    "trümmern": "Trümmer",
+    "um": "um",
+    "und": "und",
+    "usa": "USA",
+    "verließen": "verlassen",
+    "viele": "viel",
+    "vier": "vier",
+    "wahlen": "Wahl (выборы)",
+    "west-berlin": "West-Berlin",
+    "westen": "Westen",
+    "wirtschaft": "Wirtschaft",
+    "wuchs": "wachsen",
+    "wurde": "werden",
+    "zu": "zu",
+    "zuhause": "Zuhause",
+    "zum": "zu",
+    "zwei": "zwei",
+    "über": "über"
+  },
+  "l": {
+    "Berlin": {
+      "ru": "Берлин",
+      "pos": "геогр."
+    },
+    "Berliner": {
+      "ru": "берлинец; берлинский",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Berliner",
+      "note": "как прилагательное не склоняется: die Berliner Mauer, im Berliner Schloss"
+    },
+    "Besatzungszone": {
+      "ru": "оккупационная зона",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Besatzungszonen"
+    },
+    "Bundesrepublik": {
+      "ru": "федеративная республика",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Bundesrepubliken",
+      "note": "die Bundesrepublik Deutschland — ФРГ"
+    },
+    "DDR": {
+      "ru": "ГДР, Германская Демократическая Республика (1949–1990)",
+      "pos": "сокр."
+    },
+    "Deutschland": {
+      "ru": "Германия",
+      "pos": "геогр."
+    },
+    "Familie": {
+      "ru": "семья; семейство (в биологии)",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Familien"
+    },
+    "Flucht": {
+      "ru": "бегство, побег",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Fluchten"
+    },
+    "Frankreich": {
+      "ru": "Франция",
+      "pos": "геогр."
+    },
+    "Großbritannien": {
+      "ru": "Великобритания",
+      "pos": "геогр."
+    },
+    "Jahr": {
+      "ru": "год",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Jahre"
+    },
+    "Krieg": {
+      "ru": "война",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Kriege"
+    },
+    "Marktwirtschaft": {
+      "ru": "рыночная экономика",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Marktwirtschaften"
+    },
+    "Mauer": {
+      "ru": "стена (каменная)",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Mauern"
+    },
+    "Mensch": {
+      "ru": "человек",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Menschen",
+      "decl": "n-Deklination: des Menschen · dem/den Menschen"
+    },
+    "Osten": {
+      "ru": "восток",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "Politik": {
+      "ru": "политика",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "Republik": {
+      "ru": "республика",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Republiken"
+    },
+    "SED": {
+      "ru": "Социалистическая единая партия Германии",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "Sektor": {
+      "ru": "сектор",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Sektoren"
+    },
+    "Sowjetunion": {
+      "ru": "Советский Союз",
+      "pos": "геогр.",
+      "art": "die",
+      "pl": null
+    },
+    "Staat": {
+      "ru": "государство",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Staaten"
+    },
+    "Stadt": {
+      "ru": "город",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Städte"
+    },
+    "Symbol": {
+      "ru": "значок, символ",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Symbole"
+    },
+    "Teilung": {
+      "ru": "разделение",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Teilungen"
+    },
+    "Trümmer": {
+      "art": "die",
+      "note": "только мн. ч.",
+      "pl": "die Trümmer",
+      "pos": "сущ.",
+      "ru": "обломки, развалины"
+    },
+    "USA": {
+      "ru": "США",
+      "pos": "геогр.",
+      "note": "die USA — во мн. ч.: der USA (род. п.)"
+    },
+    "Wahl (выборы)": {
+      "ru": "выборы; выбор",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Wahlen",
+      "note": "die Wahl zum Kongress — выборы в Конгресс"
+    },
+    "West-Berlin": {
+      "ru": "Западный Берлин",
+      "pos": "геогр."
+    },
+    "Westen": {
+      "ru": "запад",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "Wirtschaft": {
+      "ru": "экономика, хозяйство",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Wirtschaften"
+    },
+    "Zuhause": {
+      "ru": "дом, родное жильё",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "auch": {
+      "ru": "тоже, также; даже",
+      "pos": "частица"
+    },
+    "auf": {
+      "ru": "на, в",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: aufspringen «вскочить», sich aufmachen"
+    },
+    "besonders": {
+      "ru": "особенно",
+      "pos": "нареч."
+    },
+    "bestimmen": {
+      "ru": "определять",
+      "pos": "гл.",
+      "forms": "bestimmte · hat bestimmt"
+    },
+    "demokratisch": {
+      "ru": "демократический",
+      "pos": "прил."
+    },
+    "der/die/das": {
+      "ru": "определённый артикль",
+      "pos": "артикль",
+      "note": "Тж. относительное местоимение «который»"
+    },
+    "deutsch": {
+      "ru": "немецкий",
+      "pos": "прил."
+    },
+    "dort": {
+      "ru": "там",
+      "pos": "нареч."
+    },
+    "einbauen": {
+      "ru": "встраивать",
+      "pos": "гл.",
+      "forms": "baute ein · hat eingebaut"
+    },
+    "entstehen": {
+      "pos": "гл.",
+      "ru": "возникать",
+      "forms": "entsteht · entstand · ist entstanden"
+    },
+    "er": {
+      "ru": "он",
+      "pos": "мест.",
+      "note": "ihn — его, ihm — ему"
+    },
+    "frei": {
+      "ru": "свободный",
+      "pos": "прил."
+    },
+    "haben": {
+      "ru": "иметь; вспомог. глагол",
+      "pos": "гл.",
+      "forms": "hatte · hat gehabt"
+    },
+    "ihr (её, их)": {
+      "ru": "её; их",
+      "pos": "мест."
+    },
+    "in": {
+      "ru": "в (im = in dem, ins = in das)",
+      "pos": "предл."
+    },
+    "kein": {
+      "ru": "никакой, ни один",
+      "pos": "мест."
+    },
+    "kurz": {
+      "ru": "короткий",
+      "pos": "прил."
+    },
+    "lassen": {
+      "ru": "позволять, велеть; оставлять",
+      "pos": "гл.",
+      "forms": "ließ · hat gelassen"
+    },
+    "liegen": {
+      "ru": "лежать",
+      "pos": "гл.",
+      "forms": "lag · hat gelegen",
+      "note": "an etwas gelegen sein — быть заинтересованным: ihm war viel daran gelegen"
+    },
+    "mehr": {
+      "ru": "больше",
+      "pos": "нареч.",
+      "note": "В nicht/kein … mehr — больше не. Формально компаратив от viel"
+    },
+    "mit": {
+      "ru": "с",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: mitgehen «пойти вместе»"
+    },
+    "nach": {
+      "ru": "в, на, после, по",
+      "pos": "предл."
+    },
+    "planen": {
+      "ru": "планировать",
+      "pos": "гл.",
+      "forms": "plante · hat geplant"
+    },
+    "schnell": {
+      "ru": "быстрый, быстро",
+      "pos": "прил."
+    },
+    "sozial": {
+      "ru": "социальный, общественный",
+      "pos": "прил."
+    },
+    "stoppen": {
+      "ru": "останавливать",
+      "pos": "гл.",
+      "forms": "stoppte · hat gestoppt"
+    },
+    "teilen": {
+      "ru": "делить",
+      "pos": "гл.",
+      "forms": "teilte · hat geteilt"
+    },
+    "trennen": {
+      "ru": "разделять",
+      "pos": "гл.",
+      "forms": "trennte · hat getrennt"
+    },
+    "um": {
+      "ru": "вокруг, в (о времени)",
+      "pos": "предл.",
+      "note": "um … zu — чтобы. Тж. отделяемая приставка: sich umsehen «оглядеться»"
+    },
+    "und": {
+      "ru": "и, а",
+      "pos": "союз"
+    },
+    "verlassen": {
+      "ru": "покидать",
+      "pos": "гл.",
+      "forms": "verließ · hat verlassen"
+    },
+    "viel": {
+      "ru": "много, многое",
+      "pos": "мест."
+    },
+    "vier": {
+      "ru": "четыре",
+      "pos": "числ."
+    },
+    "wachsen": {
+      "ru": "расти",
+      "pos": "гл.",
+      "forms": "wuchs · ist gewachsen",
+      "note": "er wächst — с умлаутом в 2-м и 3-м л."
+    },
+    "werden": {
+      "ru": "становиться",
+      "pos": "гл.",
+      "forms": "wurde · ist geworden",
+      "note": "Вспомогательный глагол будущего времени и пассива"
+    },
+    "zu": {
+      "ru": "к, в; слишком",
+      "pos": "предл.",
+      "note": "zur = zu der, zum = zu dem"
+    },
+    "zwei": {
+      "ru": "два",
+      "pos": "числ."
+    },
+    "über": {
+      "ru": "над, через, о",
+      "pos": "предл."
+    }
+  }
+}

@@ -110,7 +110,7 @@
    "titleRu": "سنوات ما بعد الحرب وألمانيا الاتحادية وألمانيا الشرقية",
    "period": "1945–1989",
    "summary": "عواقب الحرب ودولتان والحياة على جانبي الجدار.",
-   "ready": false
+   "ready": true
   },
   {
    "id": "deutsche-einheit",
@@ -342,6 +342,24 @@
    "number": 11,
    "source": "LeMO / United States Holocaust Memorial Museum",
    "sourceUrl": "https://www.dhm.de/lemo/kapitel/ns-regime",
+   "checked": "2026-11-18",
+   "license": "صياغة تعليمية أعدّها German Morning؛ روابط المواد مذكورة في الفصل."
+  },
+  {
+   "id": "geteiltes-deutschland",
+   "kind": "history",
+   "title": "Nachkriegszeit, Bundesrepublik und DDR",
+   "titleRu": "سنوات ما بعد الحرب وألمانيا الاتحادية وألمانيا الشرقية",
+   "author": "German Morning",
+   "level": "B1",
+   "year": "2026",
+   "chapters": 1,
+   "words": 114,
+   "minutes": 3,
+   "cover": "12",
+   "number": 12,
+   "source": "LeMO",
+   "sourceUrl": "https://www.hdg.de/lemo/kapitel/nachkriegsjahre",
    "checked": "2026-11-18",
    "license": "صياغة تعليمية أعدّها German Morning؛ روابط المواد مذكورة في الفصل."
   }

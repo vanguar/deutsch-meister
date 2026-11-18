@@ -1,0 +1,445 @@
+{
+ "version": 1,
+ "w": {
+  "auch": "auch",
+  "auf": "auf",
+  "bauen": "einbauen",
+  "berlin": "Berlin",
+  "berliner": "Berliner",
+  "besatzungszonen": "Besatzungszone",
+  "besonders": "besonders",
+  "bestimmte": "bestimmen",
+  "bundesrepublik": "Bundesrepublik",
+  "ddr": "DDR",
+  "dem": "der/die/das",
+  "demokratische": "demokratisch",
+  "den": "der/die/das",
+  "der": "der/die/das",
+  "deutsche": "deutsch",
+  "deutschen": "deutsch",
+  "deutschland": "Deutschland",
+  "die": "der/die/das",
+  "dort": "dort",
+  "entstand": "entstehen",
+  "entstanden": "entstehen",
+  "er": "er",
+  "familien": "Familie",
+  "flucht": "Flucht",
+  "frankreich": "Frankreich",
+  "freien": "frei",
+  "geteilt": "teilen",
+  "großbritannien": "Großbritannien",
+  "hatten": "haben",
+  "ihre": "ihr (её, их)",
+  "im": "in",
+  "in": "in",
+  "jahren": "Jahr",
+  "kein": "kein",
+  "krieg": "Krieg",
+  "kurz": "kurz",
+  "lagen": "liegen",
+  "ließ": "lassen",
+  "marktwirtschaft": "Marktwirtschaft",
+  "mauer": "Mauer",
+  "mehr": "mehr",
+  "menschen": "Mensch",
+  "mit": "mit",
+  "nach": "nach",
+  "osten": "Osten",
+  "plante": "planen",
+  "politik": "Politik",
+  "republik": "Republik",
+  "schnell": "schnell",
+  "sed": "SED",
+  "sektoren": "Sektor",
+  "sowjetunion": "Sowjetunion",
+  "sozialer": "sozial",
+  "staat": "Staat",
+  "staaten": "Staat",
+  "stoppen": "stoppen",
+  "städte": "Stadt",
+  "symbol": "Symbol",
+  "teilten": "teilen",
+  "teilung": "Teilung",
+  "trennte": "trennen",
+  "trümmern": "Trümmer",
+  "um": "um",
+  "und": "und",
+  "usa": "USA",
+  "verließen": "verlassen",
+  "viele": "viel",
+  "vier": "vier",
+  "wahlen": "Wahl (выборы)",
+  "west-berlin": "West-Berlin",
+  "westen": "Westen",
+  "wirtschaft": "Wirtschaft",
+  "wuchs": "wachsen",
+  "wurde": "werden",
+  "zu": "zu",
+  "zuhause": "Zuhause",
+  "zum": "zu",
+  "zwei": "zwei",
+  "über": "über"
+ },
+ "l": {
+  "Berlin": {
+   "ru": "برلين",
+   "pos": "جغرافيا"
+  },
+  "Berliner": {
+   "ru": "برليني؛ من سكان برلين",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Berliner",
+   "note": "لا يُصرّف عند استعماله صفة: die Berliner Mauer, im Berliner Schloss"
+  },
+  "Besatzungszone": {
+   "ru": "منطقة احتلال",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Besatzungszonen"
+  },
+  "Bundesrepublik": {
+   "ru": "جمهورية اتحادية",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Bundesrepubliken",
+   "note": "die Bundesrepublik Deutschland — جمهورية ألمانيا الاتحادية"
+  },
+  "DDR": {
+   "ru": "DDR، جمهورية ألمانيا الديمقراطية (1949–1990)",
+   "pos": "اختصار"
+  },
+  "Deutschland": {
+   "ru": "ألمانيا",
+   "pos": "جغرافيا"
+  },
+  "Familie": {
+   "ru": "عائلة؛ فصيلة (في علم الأحياء)",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Familien"
+  },
+  "Flucht": {
+   "ru": "فرار، هروب",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Fluchten"
+  },
+  "Frankreich": {
+   "ru": "فرنسا",
+   "pos": "جغرافيا"
+  },
+  "Großbritannien": {
+   "ru": "بريطانيا العظمى",
+   "pos": "جغرافيا"
+  },
+  "Jahr": {
+   "ru": "سنة",
+   "pos": "اسم",
+   "art": "das",
+   "pl": "die Jahre"
+  },
+  "Krieg": {
+   "ru": "حرب",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Kriege"
+  },
+  "Marktwirtschaft": {
+   "ru": "اقتصاد السوق",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Marktwirtschaften"
+  },
+  "Mauer": {
+   "ru": "جدار (حجري)",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Mauern"
+  },
+  "Mensch": {
+   "ru": "إنسان",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Menschen",
+   "decl": "n-Deklination: des Menschen · dem/den Menschen"
+  },
+  "Osten": {
+   "ru": "الشرق",
+   "pos": "اسم",
+   "art": "der",
+   "pl": null
+  },
+  "Politik": {
+   "ru": "السياسة",
+   "pos": "اسم",
+   "art": "die",
+   "pl": null
+  },
+  "Republik": {
+   "ru": "جمهورية",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Republiken"
+  },
+  "SED": {
+   "ru": "حزب الوحدة الاشتراكي الألماني",
+   "pos": "اسم",
+   "art": "die",
+   "pl": null
+  },
+  "Sektor": {
+   "ru": "قطاع",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Sektoren"
+  },
+  "Sowjetunion": {
+   "ru": "الاتحاد السوفيتي",
+   "pos": "جغرافيا",
+   "art": "die",
+   "pl": null
+  },
+  "Staat": {
+   "ru": "دولة",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Staaten"
+  },
+  "Stadt": {
+   "ru": "مدينة",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Städte"
+  },
+  "Symbol": {
+   "ru": "أيقونة، رمز",
+   "pos": "اسم",
+   "art": "das",
+   "pl": "die Symbole"
+  },
+  "Teilung": {
+   "ru": "انقسام، تقسيم",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Teilungen"
+  },
+  "Trümmer": {
+   "art": "die",
+   "note": "جمع فقط",
+   "pl": "die Trümmer",
+   "pos": "اسم",
+   "ru": "حطام، أنقاض"
+  },
+  "USA": {
+   "ru": "الولايات المتحدة",
+   "pos": "جغرافيا",
+   "note": "die USA — بصيغة الجمع: der USA (حالة الإضافة)"
+  },
+  "Wahl (выборы)": {
+   "ru": "انتخابات؛ اختيار",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Wahlen",
+   "note": "die Wahl zum Kongress — انتخابات الكونغرس"
+  },
+  "West-Berlin": {
+   "ru": "برلين الغربية",
+   "pos": "جغرافيا"
+  },
+  "Westen": {
+   "ru": "الغرب",
+   "pos": "اسم",
+   "art": "der",
+   "pl": null
+  },
+  "Wirtschaft": {
+   "ru": "اقتصاد",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Wirtschaften"
+  },
+  "Zuhause": {
+   "ru": "منزل، بيت",
+   "pos": "اسم",
+   "art": "das",
+   "pl": null
+  },
+  "auch": {
+   "ru": "أيضًا؛ حتى",
+   "pos": "أداة"
+  },
+  "auf": {
+   "ru": "على، في",
+   "pos": "حرف جر",
+   "note": "وهي أيضًا سابقة منفصلة: aufspringen «يقفز واقفًا»، sich aufmachen"
+  },
+  "besonders": {
+   "ru": "خاصةً",
+   "pos": "ظرف"
+  },
+  "bestimmen": {
+   "ru": "يحدّد",
+   "pos": "فعل",
+   "forms": "bestimmte · hat bestimmt"
+  },
+  "demokratisch": {
+   "ru": "ديمقراطي",
+   "pos": "صفة"
+  },
+  "der/die/das": {
+   "ru": "أداة التعريف",
+   "pos": "أداة تعريف",
+   "note": "وهي أيضًا اسم موصول بمعنى «الذي»"
+  },
+  "deutsch": {
+   "ru": "الألمانية",
+   "pos": "صفة"
+  },
+  "dort": {
+   "ru": "هناك",
+   "pos": "ظرف"
+  },
+  "einbauen": {
+   "ru": "يدمج، يُدخل",
+   "pos": "فعل",
+   "forms": "baute ein · hat eingebaut"
+  },
+  "entstehen": {
+   "pos": "فعل",
+   "ru": "ينشأ",
+   "forms": "entsteht · entstand · ist entstanden"
+  },
+  "er": {
+   "ru": "هو",
+   "pos": "ضمير",
+   "note": "ihn — إيّاه، ihm — له"
+  },
+  "frei": {
+   "ru": "حر",
+   "pos": "صفة"
+  },
+  "haben": {
+   "ru": "يملك؛ فعل مساعد",
+   "pos": "فعل",
+   "forms": "hatte · hat gehabt"
+  },
+  "ihr (её, их)": {
+   "ru": "لها؛ لهم",
+   "pos": "ضمير"
+  },
+  "in": {
+   "ru": "في (im = in dem، ins = in das)",
+   "pos": "حرف جر"
+  },
+  "kein": {
+   "ru": "لا أيّ، ولا واحد",
+   "pos": "ضمير"
+  },
+  "kurz": {
+   "ru": "قصير",
+   "pos": "صفة"
+  },
+  "lassen": {
+   "ru": "يسمح، يأمر؛ يترك",
+   "pos": "فعل",
+   "forms": "ließ · hat gelassen"
+  },
+  "liegen": {
+   "ru": "يرقد / موضوع",
+   "pos": "فعل",
+   "forms": "lag · hat gelegen",
+   "note": "an etwas gelegen sein — يهمّه أمر ما: ihm war viel daran gelegen"
+  },
+  "mehr": {
+   "ru": "أكثر",
+   "pos": "ظرف",
+   "note": "في nicht/kein … mehr — لم يعد. وهي شكليًا صيغة التفضيل من viel"
+  },
+  "mit": {
+   "ru": "ث",
+   "pos": "حرف جر",
+   "note": "وهي أيضًا سابقة منفصلة: mitgehen «يذهب معه»"
+  },
+  "nach": {
+   "ru": "إلى، بعد، حسب",
+   "pos": "حرف جر"
+  },
+  "planen": {
+   "ru": "يخطّط",
+   "pos": "فعل",
+   "forms": "plante · hat geplant"
+  },
+  "schnell": {
+   "ru": "سريع، بسرعة",
+   "pos": "صفة"
+  },
+  "sozial": {
+   "ru": "اجتماعي",
+   "pos": "صفة"
+  },
+  "stoppen": {
+   "ru": "يوقف",
+   "pos": "فعل",
+   "forms": "stoppte · hat gestoppt"
+  },
+  "teilen": {
+   "ru": "يقسم",
+   "pos": "فعل",
+   "forms": "teilte · hat geteilt"
+  },
+  "trennen": {
+   "ru": "يفصل",
+   "pos": "فعل",
+   "forms": "trennte · hat getrennt"
+  },
+  "um": {
+   "ru": "حول، في (للوقت)",
+   "pos": "حرف جر",
+   "note": "um … zu — لكي. وهي أيضًا سابقة منفصلة: sich umsehen «يتلفّت حوله»"
+  },
+  "und": {
+   "ru": "و",
+   "pos": "أداة ربط"
+  },
+  "verlassen": {
+   "ru": "يترك، يهجر",
+   "pos": "فعل",
+   "forms": "verließ · hat verlassen"
+  },
+  "viel": {
+   "ru": "كثير، الكثير",
+   "pos": "ضمير"
+  },
+  "vier": {
+   "ru": "أربعة",
+   "pos": "عدد"
+  },
+  "wachsen": {
+   "ru": "ينمو",
+   "pos": "فعل",
+   "forms": "wuchs · ist gewachsen",
+   "note": "er wächst — مع Umlaut في المفرد للمخاطب والغائب"
+  },
+  "werden": {
+   "ru": "يصبح",
+   "pos": "فعل",
+   "forms": "wurde · ist geworden",
+   "note": "فعل مساعد للمستقبل والمبني للمجهول"
+  },
+  "zu": {
+   "ru": "إلى، في؛ أكثر من اللازم",
+   "pos": "حرف جر",
+   "note": "zur = zu der, zum = zu dem"
+  },
+  "zwei": {
+   "ru": "اثنان",
+   "pos": "عدد"
+  },
+  "über": {
+   "ru": "فوق، عبر، عن",
+   "pos": "حرف جر"
+  }
+ }
+}

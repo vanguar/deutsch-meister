@@ -1,0 +1,99 @@
+{
+ "id": "ch-01",
+ "title": "Nachkriegszeit, Bundesrepublik und DDR",
+ "titleRu": "سنوات ما بعد الحرب وألمانيا الاتحادية وألمانيا الشرقية",
+ "icon": "12",
+ "paragraphs": [
+  {
+   "sourceIds": [
+    "nachkrieg"
+   ],
+   "s": [
+    {
+     "de": "Nach dem Krieg lagen viele Städte in Trümmern, und viele Menschen hatten kein Zuhause mehr.",
+     "ru": "بعد الحرب كانت مدن كثيرة مدمرة، وفقد كثير من الناس منازلهم."
+    },
+    {
+     "de": "Die USA, Großbritannien, Frankreich und die Sowjetunion teilten Deutschland in vier Besatzungszonen auf.",
+     "ru": "قسّمت الولايات المتحدة وبريطانيا وفرنسا والاتحاد السوفيتي ألمانيا إلى أربع مناطق احتلال."
+    },
+    {
+     "de": "Auch Berlin wurde in vier Sektoren geteilt.",
+     "ru": "وقُسّمت برلين أيضًا إلى أربعة قطاعات."
+    }
+   ]
+  },
+  {
+   "sourceIds": [
+    "teilung",
+    "wirtschaft"
+   ],
+   "s": [
+    {
+     "de": "1949 entstanden zwei deutsche Staaten.",
+     "ru": "في عام 1949 نشأت دولتان ألمانيتان."
+    },
+    {
+     "de": "Im Westen entstand die Bundesrepublik Deutschland mit freien Wahlen und sozialer Marktwirtschaft.",
+     "ru": "في الغرب تأسست جمهورية ألمانيا الاتحادية بانتخابات حرة واقتصاد سوق اجتماعي."
+    },
+    {
+     "de": "Ihre Wirtschaft wuchs in den 1950er Jahren besonders schnell.",
+     "ru": "نما اقتصادها بسرعة خاصة في خمسينيات القرن العشرين."
+    },
+    {
+     "de": "Im Osten entstand die Deutsche Demokratische Republik, kurz DDR.",
+     "ru": "في الشرق تأسست جمهورية ألمانيا الديمقراطية، المعروفة اختصارًا باسم DDR."
+    },
+    {
+     "de": "Dort bestimmte die SED die Politik, und der Staat plante die Wirtschaft.",
+     "ru": "هناك حدّد حزب الوحدة الاشتراكي السياسة وخططت الدولة للاقتصاد."
+    }
+   ]
+  },
+  {
+   "sourceIds": [
+    "teilung",
+    "mauer"
+   ],
+   "s": [
+    {
+     "de": "Viele Menschen verließen die DDR über West-Berlin.",
+     "ru": "غادر كثيرون ألمانيا الشرقية عبر برلين الغربية."
+    },
+    {
+     "de": "1961 ließ die DDR die Berliner Mauer bauen, um die Flucht in den Westen zu stoppen.",
+     "ru": "في عام 1961 بنت سلطات ألمانيا الشرقية جدار برلين لوقف الفرار إلى الغرب."
+    },
+    {
+     "de": "Die Mauer trennte Familien und wurde zum Symbol der deutschen Teilung.",
+     "ru": "فصل الجدار بين العائلات وأصبح رمزًا لانقسام ألمانيا."
+    }
+   ]
+  }
+ ],
+ "sourceTitle": "المصادر والتحقق من المعلومات",
+ "sources": [
+  {
+   "id": "nachkrieg",
+   "name": "LeMO · Nachkriegsjahre",
+   "url": "https://www.hdg.de/lemo/kapitel/nachkriegsjahre"
+  },
+  {
+   "id": "teilung",
+   "name": "LeMO · Geteiltes Deutschland",
+   "url": "https://www.hdg.de/lemo/kapitel/geteiltes-deutschland.html"
+  },
+  {
+   "id": "wirtschaft",
+   "name": "LeMO · Wirtschaftswunder",
+   "url": "https://www.hdg.de/lemo/kapitel/geteiltes-deutschland-gruenderjahre/wirtschaft-und-gesellschaft-im-westen/wirtschaftswunder.html"
+  },
+  {
+   "id": "mauer",
+   "name": "LeMO · Mauerbau",
+   "url": "https://www.hdg.de/lemo/kapitel/geteiltes-deutschland-gruenderjahre/mauerbau"
+  }
+ ],
+ "checked": "2026-11-18"
+}

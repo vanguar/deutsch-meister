@@ -1,0 +1,99 @@
+{
+ "id": "ch-01",
+ "title": "Nachkriegszeit, Bundesrepublik und DDR",
+ "titleRu": "Повоєнні роки, ФРН і НДР",
+ "icon": "12",
+ "paragraphs": [
+  {
+   "sourceIds": [
+    "nachkrieg"
+   ],
+   "s": [
+    {
+     "de": "Nach dem Krieg lagen viele Städte in Trümmern, und viele Menschen hatten kein Zuhause mehr.",
+     "ru": "Після війни багато міст лежали в руїнах, а чимало людей залишилися без домівок."
+    },
+    {
+     "de": "Die USA, Großbritannien, Frankreich und die Sowjetunion teilten Deutschland in vier Besatzungszonen auf.",
+     "ru": "США, Велика Британія, Франція та Радянський Союз поділили Німеччину на чотири окупаційні зони."
+    },
+    {
+     "de": "Auch Berlin wurde in vier Sektoren geteilt.",
+     "ru": "Берлін теж поділили на чотири сектори."
+    }
+   ]
+  },
+  {
+   "sourceIds": [
+    "teilung",
+    "wirtschaft"
+   ],
+   "s": [
+    {
+     "de": "1949 entstanden zwei deutsche Staaten.",
+     "ru": "У 1949 році постали дві німецькі держави."
+    },
+    {
+     "de": "Im Westen entstand die Bundesrepublik Deutschland mit freien Wahlen und sozialer Marktwirtschaft.",
+     "ru": "На заході постала Федеративна Республіка Німеччина з вільними виборами й соціальною ринковою економікою."
+    },
+    {
+     "de": "Ihre Wirtschaft wuchs in den 1950er Jahren besonders schnell.",
+     "ru": "У 1950-х роках її економіка зростала особливо швидко."
+    },
+    {
+     "de": "Im Osten entstand die Deutsche Demokratische Republik, kurz DDR.",
+     "ru": "На сході постала Німецька Демократична Республіка, скорочено НДР."
+    },
+    {
+     "de": "Dort bestimmte die SED die Politik, und der Staat plante die Wirtschaft.",
+     "ru": "Там політику визначала Соціалістична єдина партія Німеччини, а держава планувала економіку."
+    }
+   ]
+  },
+  {
+   "sourceIds": [
+    "teilung",
+    "mauer"
+   ],
+   "s": [
+    {
+     "de": "Viele Menschen verließen die DDR über West-Berlin.",
+     "ru": "Чимало людей залишали НДР через Західний Берлін."
+    },
+    {
+     "de": "1961 ließ die DDR die Berliner Mauer bauen, um die Flucht in den Westen zu stoppen.",
+     "ru": "У 1961 році влада НДР збудувала Берлінський мур, щоб зупинити втечу на Захід."
+    },
+    {
+     "de": "Die Mauer trennte Familien und wurde zum Symbol der deutschen Teilung.",
+     "ru": "Мур розділив родини й став символом поділу Німеччини."
+    }
+   ]
+  }
+ ],
+ "sourceTitle": "Джерела та перевірка фактів",
+ "sources": [
+  {
+   "id": "nachkrieg",
+   "name": "LeMO · Nachkriegsjahre",
+   "url": "https://www.hdg.de/lemo/kapitel/nachkriegsjahre"
+  },
+  {
+   "id": "teilung",
+   "name": "LeMO · Geteiltes Deutschland",
+   "url": "https://www.hdg.de/lemo/kapitel/geteiltes-deutschland.html"
+  },
+  {
+   "id": "wirtschaft",
+   "name": "LeMO · Wirtschaftswunder",
+   "url": "https://www.hdg.de/lemo/kapitel/geteiltes-deutschland-gruenderjahre/wirtschaft-und-gesellschaft-im-westen/wirtschaftswunder.html"
+  },
+  {
+   "id": "mauer",
+   "name": "LeMO · Mauerbau",
+   "url": "https://www.hdg.de/lemo/kapitel/geteiltes-deutschland-gruenderjahre/mauerbau"
+  }
+ ],
+ "checked": "2026-11-18"
+}

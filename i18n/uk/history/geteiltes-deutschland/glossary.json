@@ -1,0 +1,445 @@
+{
+ "version": 1,
+ "w": {
+  "auch": "auch",
+  "auf": "auf",
+  "bauen": "einbauen",
+  "berlin": "Berlin",
+  "berliner": "Berliner",
+  "besatzungszonen": "Besatzungszone",
+  "besonders": "besonders",
+  "bestimmte": "bestimmen",
+  "bundesrepublik": "Bundesrepublik",
+  "ddr": "DDR",
+  "dem": "der/die/das",
+  "demokratische": "demokratisch",
+  "den": "der/die/das",
+  "der": "der/die/das",
+  "deutsche": "deutsch",
+  "deutschen": "deutsch",
+  "deutschland": "Deutschland",
+  "die": "der/die/das",
+  "dort": "dort",
+  "entstand": "entstehen",
+  "entstanden": "entstehen",
+  "er": "er",
+  "familien": "Familie",
+  "flucht": "Flucht",
+  "frankreich": "Frankreich",
+  "freien": "frei",
+  "geteilt": "teilen",
+  "großbritannien": "Großbritannien",
+  "hatten": "haben",
+  "ihre": "ihr (её, их)",
+  "im": "in",
+  "in": "in",
+  "jahren": "Jahr",
+  "kein": "kein",
+  "krieg": "Krieg",
+  "kurz": "kurz",
+  "lagen": "liegen",
+  "ließ": "lassen",
+  "marktwirtschaft": "Marktwirtschaft",
+  "mauer": "Mauer",
+  "mehr": "mehr",
+  "menschen": "Mensch",
+  "mit": "mit",
+  "nach": "nach",
+  "osten": "Osten",
+  "plante": "planen",
+  "politik": "Politik",
+  "republik": "Republik",
+  "schnell": "schnell",
+  "sed": "SED",
+  "sektoren": "Sektor",
+  "sowjetunion": "Sowjetunion",
+  "sozialer": "sozial",
+  "staat": "Staat",
+  "staaten": "Staat",
+  "stoppen": "stoppen",
+  "städte": "Stadt",
+  "symbol": "Symbol",
+  "teilten": "teilen",
+  "teilung": "Teilung",
+  "trennte": "trennen",
+  "trümmern": "Trümmer",
+  "um": "um",
+  "und": "und",
+  "usa": "USA",
+  "verließen": "verlassen",
+  "viele": "viel",
+  "vier": "vier",
+  "wahlen": "Wahl (выборы)",
+  "west-berlin": "West-Berlin",
+  "westen": "Westen",
+  "wirtschaft": "Wirtschaft",
+  "wuchs": "wachsen",
+  "wurde": "werden",
+  "zu": "zu",
+  "zuhause": "Zuhause",
+  "zum": "zu",
+  "zwei": "zwei",
+  "über": "über"
+ },
+ "l": {
+  "Berlin": {
+   "ru": "Берлін",
+   "pos": "геогр."
+  },
+  "Berliner": {
+   "ru": "берлінець; берлінський",
+   "pos": "ім.",
+   "art": "der",
+   "pl": "die Berliner",
+   "note": "як прикметник не відмінюється: die Berliner Mauer, im Berliner Schloss"
+  },
+  "Besatzungszone": {
+   "ru": "окупаційна зона",
+   "pos": "ім.",
+   "art": "die",
+   "pl": "die Besatzungszonen"
+  },
+  "Bundesrepublik": {
+   "ru": "федеративна республіка",
+   "pos": "ім.",
+   "art": "die",
+   "pl": "die Bundesrepubliken",
+   "note": "die Bundesrepublik Deutschland — ФРН"
+  },
+  "DDR": {
+   "ru": "НДР, Німецька Демократична Республіка (1949–1990)",
+   "pos": "скор."
+  },
+  "Deutschland": {
+   "ru": "Німеччина",
+   "pos": "геогр."
+  },
+  "Familie": {
+   "ru": "сім'я; родина (у біології)",
+   "pos": "ім.",
+   "art": "die",
+   "pl": "die Familien"
+  },
+  "Flucht": {
+   "ru": "втеча",
+   "pos": "ім.",
+   "art": "die",
+   "pl": "die Fluchten"
+  },
+  "Frankreich": {
+   "ru": "Франція",
+   "pos": "геогр."
+  },
+  "Großbritannien": {
+   "ru": "Велика Британія",
+   "pos": "геогр."
+  },
+  "Jahr": {
+   "ru": "рік",
+   "pos": "ім.",
+   "art": "das",
+   "pl": "die Jahre"
+  },
+  "Krieg": {
+   "ru": "війна",
+   "pos": "ім.",
+   "art": "der",
+   "pl": "die Kriege"
+  },
+  "Marktwirtschaft": {
+   "ru": "ринкова економіка",
+   "pos": "ім.",
+   "art": "die",
+   "pl": "die Marktwirtschaften"
+  },
+  "Mauer": {
+   "ru": "мур, стіна (кам'яна)",
+   "pos": "ім.",
+   "art": "die",
+   "pl": "die Mauern"
+  },
+  "Mensch": {
+   "ru": "людина",
+   "pos": "ім.",
+   "art": "der",
+   "pl": "die Menschen",
+   "decl": "n-Deklination: des Menschen · dem/den Menschen"
+  },
+  "Osten": {
+   "ru": "схід",
+   "pos": "ім.",
+   "art": "der",
+   "pl": null
+  },
+  "Politik": {
+   "ru": "політика",
+   "pos": "ім.",
+   "art": "die",
+   "pl": null
+  },
+  "Republik": {
+   "ru": "республіка",
+   "pos": "ім.",
+   "art": "die",
+   "pl": "die Republiken"
+  },
+  "SED": {
+   "ru": "Соціалістична єдина партія Німеччини",
+   "pos": "ім.",
+   "art": "die",
+   "pl": null
+  },
+  "Sektor": {
+   "ru": "сектор",
+   "pos": "ім.",
+   "art": "der",
+   "pl": "die Sektoren"
+  },
+  "Sowjetunion": {
+   "ru": "Радянський Союз",
+   "pos": "геогр.",
+   "art": "die",
+   "pl": null
+  },
+  "Staat": {
+   "ru": "держава",
+   "pos": "ім.",
+   "art": "der",
+   "pl": "die Staaten"
+  },
+  "Stadt": {
+   "ru": "місто",
+   "pos": "ім.",
+   "art": "die",
+   "pl": "die Städte"
+  },
+  "Symbol": {
+   "ru": "піктограма, символ",
+   "pos": "ім.",
+   "art": "das",
+   "pl": "die Symbole"
+  },
+  "Teilung": {
+   "ru": "поділ",
+   "pos": "ім.",
+   "art": "die",
+   "pl": "die Teilungen"
+  },
+  "Trümmer": {
+   "art": "die",
+   "note": "лише мн.",
+   "pl": "die Trümmer",
+   "pos": "ім.",
+   "ru": "уламки, руїни"
+  },
+  "USA": {
+   "ru": "США",
+   "pos": "геогр.",
+   "note": "die USA — у мн.: der USA (род. в.)"
+  },
+  "Wahl (выборы)": {
+   "ru": "вибори; вибір",
+   "pos": "ім.",
+   "art": "die",
+   "pl": "die Wahlen",
+   "note": "die Wahl zum Kongress — вибори до Конгресу"
+  },
+  "West-Berlin": {
+   "ru": "Західний Берлін",
+   "pos": "геогр."
+  },
+  "Westen": {
+   "ru": "захід",
+   "pos": "ім.",
+   "art": "der",
+   "pl": null
+  },
+  "Wirtschaft": {
+   "ru": "економіка, господарство",
+   "pos": "ім.",
+   "art": "die",
+   "pl": "die Wirtschaften"
+  },
+  "Zuhause": {
+   "ru": "дім, домівка",
+   "pos": "ім.",
+   "art": "das",
+   "pl": null
+  },
+  "auch": {
+   "ru": "теж, також; навіть",
+   "pos": "частка"
+  },
+  "auf": {
+   "ru": "на, в",
+   "pos": "прийм.",
+   "note": "Також відокремлюваний префікс: aufspringen «схопитися», sich aufmachen"
+  },
+  "besonders": {
+   "ru": "особливо",
+   "pos": "присл."
+  },
+  "bestimmen": {
+   "ru": "визначати",
+   "pos": "дієсл.",
+   "forms": "bestimmte · hat bestimmt"
+  },
+  "demokratisch": {
+   "ru": "демократичний",
+   "pos": "прикм."
+  },
+  "der/die/das": {
+   "ru": "означений артикль",
+   "pos": "артикль",
+   "note": "Також відносний займенник «який»"
+  },
+  "deutsch": {
+   "ru": "німецька",
+   "pos": "прикм."
+  },
+  "dort": {
+   "ru": "там",
+   "pos": "присл."
+  },
+  "einbauen": {
+   "ru": "вбудовувати",
+   "pos": "дієсл.",
+   "forms": "baute ein · hat eingebaut"
+  },
+  "entstehen": {
+   "pos": "дієсл.",
+   "ru": "виникати",
+   "forms": "entsteht · entstand · ist entstanden"
+  },
+  "er": {
+   "ru": "він",
+   "pos": "займ.",
+   "note": "ihn — його, ihm — йому"
+  },
+  "frei": {
+   "ru": "вільний",
+   "pos": "прикм."
+  },
+  "haben": {
+   "ru": "мати; допоміжне дієслово",
+   "pos": "дієсл.",
+   "forms": "hatte · hat gehabt"
+  },
+  "ihr (её, их)": {
+   "ru": "її; їх",
+   "pos": "займ."
+  },
+  "in": {
+   "ru": "у (im = in dem, ins = in das)",
+   "pos": "прийм."
+  },
+  "kein": {
+   "ru": "жодний, ні один",
+   "pos": "займ."
+  },
+  "kurz": {
+   "ru": "короткий",
+   "pos": "прикм."
+  },
+  "lassen": {
+   "ru": "дозволяти, веліти; залишати",
+   "pos": "дієсл.",
+   "forms": "ließ · hat gelassen"
+  },
+  "liegen": {
+   "ru": "лежати",
+   "pos": "дієсл.",
+   "forms": "lag · hat gelegen",
+   "note": "an etwas gelegen sein — бути зацікавленим: ihm war viel daran gelegen"
+  },
+  "mehr": {
+   "ru": "більше",
+   "pos": "присл.",
+   "note": "У nicht/kein … mehr — більше не. Формально компаратив від viel"
+  },
+  "mit": {
+   "ru": "с",
+   "pos": "прийм.",
+   "note": "Також відокремлюваний префікс: mitgehen «піти разом»"
+  },
+  "nach": {
+   "ru": "в, на, після, по",
+   "pos": "прийм."
+  },
+  "planen": {
+   "ru": "планувати",
+   "pos": "дієсл.",
+   "forms": "plante · hat geplant"
+  },
+  "schnell": {
+   "ru": "швидкий, швидко",
+   "pos": "прикм."
+  },
+  "sozial": {
+   "ru": "соціальний, суспільний",
+   "pos": "прикм."
+  },
+  "stoppen": {
+   "ru": "зупиняти",
+   "pos": "дієсл.",
+   "forms": "stoppte · hat gestoppt"
+  },
+  "teilen": {
+   "ru": "ділити",
+   "pos": "дієсл.",
+   "forms": "teilte · hat geteilt"
+  },
+  "trennen": {
+   "ru": "розділяти",
+   "pos": "дієсл.",
+   "forms": "trennte · hat getrennt"
+  },
+  "um": {
+   "ru": "навколо, о (про час)",
+   "pos": "прийм.",
+   "note": "um … zu — щоб. Також відокремлюваний префікс: sich umsehen «озирнутися»"
+  },
+  "und": {
+   "ru": "і, а",
+   "pos": "спол."
+  },
+  "verlassen": {
+   "ru": "покидати",
+   "pos": "дієсл.",
+   "forms": "verließ · hat verlassen"
+  },
+  "viel": {
+   "ru": "багато, чимало",
+   "pos": "займ."
+  },
+  "vier": {
+   "ru": "чотири",
+   "pos": "числ."
+  },
+  "wachsen": {
+   "ru": "рости",
+   "pos": "дієсл.",
+   "forms": "wuchs · ist gewachsen",
+   "note": "er wächst — з умлаутом у 2-й і 3-й ос."
+  },
+  "werden": {
+   "ru": "ставати",
+   "pos": "дієсл.",
+   "forms": "wurde · ist geworden",
+   "note": "Допоміжне дієслово майбутнього часу й пасиву"
+  },
+  "zu": {
+   "ru": "до, в; занадто",
+   "pos": "прийм.",
+   "note": "zur = zu der, zum = zu dem"
+  },
+  "zwei": {
+   "ru": "два",
+   "pos": "числ."
+  },
+  "über": {
+   "ru": "над, через, про",
+   "pos": "прийм."
+  }
+ }
+}
