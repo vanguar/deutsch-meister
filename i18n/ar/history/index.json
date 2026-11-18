@@ -94,7 +94,7 @@
    "titleRu": "جمهورية فايمار",
    "period": "1918–1933",
    "summary": "أول ديمقراطية ألمانية وإنجازاتها وأزماتها.",
-   "ready": false
+   "ready": true
   },
   {
    "id": "nationalsozialismus",
@@ -306,6 +306,24 @@
    "number": 9,
    "source": "LeMO",
    "sourceUrl": "https://www.dhm.de/lemo/kapitel/erster-weltkrieg",
+   "checked": "2026-11-18",
+   "license": "صياغة تعليمية أعدّها German Morning؛ روابط المواد مذكورة في الفصل."
+  },
+  {
+   "id": "weimar",
+   "kind": "history",
+   "title": "Die Weimarer Republik",
+   "titleRu": "جمهورية فايمار",
+   "author": "German Morning",
+   "level": "B1",
+   "year": "2026",
+   "chapters": 1,
+   "words": 93,
+   "minutes": 3,
+   "cover": "10",
+   "number": 10,
+   "source": "Deutscher Bundestag / LeMO",
+   "sourceUrl": "https://www.bundestag.de/parlament/geschichte/parlamentarismus/weimar",
    "checked": "2026-11-18",
    "license": "صياغة تعليمية أعدّها German Morning؛ روابط المواد مذكورة في الفصل."
   }

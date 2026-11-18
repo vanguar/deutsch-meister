@@ -289,7 +289,20 @@
     "waffenstillstand": "Waffenstillstand",
     "westfront": "Westfront",
     "österreich-ungarn": "Österreich-Ungarn",
-    "kämpften": "kämpfen"
+    "kämpften": "kämpfen",
+    "adolf": "Adolf",
+    "blütezeit": "Blütezeit",
+    "gegner": "Gegner",
+    "hindenburg": "Hindenburg",
+    "hitler": "Hitler",
+    "kandidieren": "kandidieren",
+    "reichspräsident": "Reichspräsident",
+    "weltwirtschaftskrise": "Weltwirtschaftskrise",
+    "erlebten": "erleben",
+    "ernannte": "ernennen",
+    "konflikten": "Konflikt",
+    "parlamentarische": "parlamentarisch",
+    "politischen": "politisch"
   },
   "l": {
     "Aalen": {
@@ -1700,6 +1713,65 @@
       "pos": "гл.",
       "forms": "kämpfte · hat gekämpft",
       "note": "es wird gekämpft — идут бои"
+    },
+    "Adolf": {
+      "ru": "Адольф",
+      "pos": "имя"
+    },
+    "Blütezeit": {
+      "ru": "период расцвета",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Blütezeiten"
+    },
+    "Gegner": {
+      "ru": "противник",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Gegner"
+    },
+    "Hindenburg": {
+      "ru": "Гинденбург",
+      "pos": "имя"
+    },
+    "Hitler": {
+      "ru": "Гитлер",
+      "pos": "имя"
+    },
+    "kandidieren": {
+      "ru": "выдвигаться кандидатом",
+      "pos": "гл.",
+      "forms": "kandidierte · hat kandidiert"
+    },
+    "Reichspräsident": {
+      "ru": "рейхспрезидент",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Reichspräsidenten"
+    },
+    "Weltwirtschaftskrise": {
+      "ru": "мировой экономический кризис",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Weltwirtschaftskrisen"
+    },
+    "erleben": {
+      "ru": "видеть, переживать",
+      "pos": "гл.",
+      "forms": "erlebte · hat erlebt"
+    },
+    "ernennen": {
+      "ru": "назначать на должность",
+      "pos": "гл.",
+      "forms": "ernannte · hat ernannt"
+    },
+    "parlamentarisch": {
+      "ru": "парламентский",
+      "pos": "прил."
+    },
+    "politisch": {
+      "ru": "политический",
+      "pos": "прил."
     }
   },
   "translations": {
@@ -1900,7 +1972,15 @@
       "наследник престола": "спадкоємець престолу",
       "перемирие": "перемир’я",
       "Западный фронт": "Західний фронт",
-      "Австро-Венгрия": "Австро-Угорщина"
+      "Австро-Венгрия": "Австро-Угорщина",
+      "Адольф": "Адольф",
+      "период расцвета": "період розквіту",
+      "противник": "противник",
+      "Гинденбург": "Гінденбург",
+      "Гитлер": "Гітлер",
+      "выдвигаться кандидатом": "балотуватися",
+      "рейхспрезидент": "рейхспрезидент",
+      "мировой экономический кризис": "світова економічна криза"
     },
     "ar": {
       "Аален": "آلن",
@@ -2099,7 +2179,15 @@
       "наследник престола": "ولي العهد",
       "перемирие": "هدنة، وقف إطلاق النار",
       "Западный фронт": "الجبهة الغربية",
-      "Австро-Венгрия": "النمسا والمجر"
+      "Австро-Венгрия": "النمسا والمجر",
+      "Адольф": "أدولف",
+      "период расцвета": "عصر الازدهار",
+      "противник": "خصم، معارض",
+      "Гинденбург": "هيندنبورغ",
+      "Гитлер": "هتلر",
+      "выдвигаться кандидатом": "يترشّح",
+      "рейхспрезидент": "رئيس الرايخ",
+      "мировой экономический кризис": "الأزمة الاقتصادية العالمية"
     }
   }
 }

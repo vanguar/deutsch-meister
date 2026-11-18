@@ -1,0 +1,91 @@
+{
+  "id": "ch-01",
+  "title": "Die Weimarer Republik",
+  "titleRu": "Веймарская республика",
+  "icon": "10",
+  "paragraphs": [
+    {
+      "sourceIds": [
+        "republik"
+      ],
+      "s": [
+        {
+          "de": "Nach dem Ende der Monarchie wurde Deutschland eine parlamentarische Demokratie.",
+          "ru": "После падения монархии Германия стала парламентской демократией."
+        },
+        {
+          "de": "1919 trat die Nationalversammlung in Weimar zusammen und beschloss eine Verfassung.",
+          "ru": "В 1919 году Национальное собрание собралось в Веймаре и приняло конституцию."
+        },
+        {
+          "de": "Zum ersten Mal konnten Frauen bei einer Wahl in ganz Deutschland wählen und selbst kandidieren.",
+          "ru": "Впервые на общегерманских выборах женщины могли голосовать и сами выдвигаться кандидатами."
+        }
+      ]
+    },
+    {
+      "sourceIds": [
+        "ueberblick",
+        "inflation"
+      ],
+      "s": [
+        {
+          "de": "Die ersten Jahre waren von politischen Konflikten geprägt.",
+          "ru": "Первые годы прошли на фоне политических конфликтов."
+        },
+        {
+          "de": "1923 verlor das Geld sehr schnell an Wert.",
+          "ru": "В 1923 году деньги обесценивались очень быстро."
+        },
+        {
+          "de": "Danach erholte sich die Wirtschaft für einige Jahre, und Film, Kunst und Theater erlebten eine Blütezeit.",
+          "ru": "Затем экономика на несколько лет восстановилась, а кино, искусство и театр переживали расцвет."
+        }
+      ]
+    },
+    {
+      "sourceIds": [
+        "krise",
+        "republik"
+      ],
+      "s": [
+        {
+          "de": "Ab 1929 verloren in der Weltwirtschaftskrise Millionen Menschen ihre Arbeit.",
+          "ru": "С 1929 года из-за мирового экономического кризиса миллионы людей потеряли работу."
+        },
+        {
+          "de": "Die Gegner der Demokratie wurden stärker, darunter die Nationalsozialisten.",
+          "ru": "Противники демократии набирали силу, в том числе национал-социалисты."
+        },
+        {
+          "de": "Am 30. Januar 1933 ernannte Reichspräsident Hindenburg Adolf Hitler zum Reichskanzler.",
+          "ru": "30 января 1933 года рейхспрезидент Гинденбург назначил Адольфа Гитлера рейхсканцлером."
+        }
+      ]
+    }
+  ],
+  "sourceTitle": "Источники и проверка фактов",
+  "sources": [
+    {
+      "id": "republik",
+      "name": "Deutscher Bundestag · Weimarer Republik",
+      "url": "https://www.bundestag.de/parlament/geschichte/parlamentarismus/weimar"
+    },
+    {
+      "id": "ueberblick",
+      "name": "LeMO · Die Weimarer Republik",
+      "url": "https://www.dhm.de/lemo/kapitel/weimarer-republik"
+    },
+    {
+      "id": "inflation",
+      "name": "LeMO · Inflation 1923",
+      "url": "https://www.dhm.de/lemo/kapitel/weimarer-republik/innenpolitik/inflation"
+    },
+    {
+      "id": "krise",
+      "name": "LeMO · Weltwirtschaftskrise",
+      "url": "https://www.dhm.de/lemo/kapitel/weimarer-republik/industrie-und-wirtschaft/weltwirtschaftskrise"
+    }
+  ],
+  "checked": "2026-11-18"
+}

@@ -94,7 +94,7 @@
    "titleRu": "Веймарська республіка",
    "period": "1918–1933",
    "summary": "Перша німецька демократія, її здобутки та кризи.",
-   "ready": false
+   "ready": true
   },
   {
    "id": "nationalsozialismus",
@@ -306,6 +306,24 @@
    "number": 9,
    "source": "LeMO",
    "sourceUrl": "https://www.dhm.de/lemo/kapitel/erster-weltkrieg",
+   "checked": "2026-11-18",
+   "license": "Авторська навчальна адаптація German Morning; посилання на матеріали — у розділі."
+  },
+  {
+   "id": "weimar",
+   "kind": "history",
+   "title": "Die Weimarer Republik",
+   "titleRu": "Веймарська республіка",
+   "author": "German Morning",
+   "level": "B1",
+   "year": "2026",
+   "chapters": 1,
+   "words": 93,
+   "minutes": 3,
+   "cover": "10",
+   "number": 10,
+   "source": "Deutscher Bundestag / LeMO",
+   "sourceUrl": "https://www.bundestag.de/parlament/geschichte/parlamentarismus/weimar",
    "checked": "2026-11-18",
    "license": "Авторська навчальна адаптація German Morning; посилання на матеріали — у розділі."
   }

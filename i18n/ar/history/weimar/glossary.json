@@ -1,0 +1,431 @@
+{
+ "version": 1,
+ "w": {
+  "ab": "ab",
+  "adolf": "Adolf",
+  "am": "an",
+  "an": "an",
+  "arbeit": "Arbeit",
+  "bei": "bei",
+  "beschloss": "beschließen",
+  "blütezeit": "Blütezeit",
+  "danach": "danach",
+  "darunter": "darunter",
+  "das": "der/die/das",
+  "dem": "der/die/das",
+  "demokratie": "Demokratie",
+  "der": "der/die/das",
+  "deutschland": "Deutschland",
+  "die": "der/die/das",
+  "eine": "ein/eine",
+  "einer": "ein/eine",
+  "einige": "einige",
+  "ende": "Ende",
+  "erholte": "sich erholen",
+  "erlebten": "erleben",
+  "ernannte": "ernennen",
+  "ersten": "erste",
+  "film": "Film",
+  "frauen": "Frau",
+  "für": "für",
+  "ganz": "ganz",
+  "gegner": "Gegner",
+  "geld": "Geld",
+  "geprägt": "prägen",
+  "hindenburg": "Hindenburg",
+  "hitler": "Hitler",
+  "ihre": "ihr (её, их)",
+  "in": "in",
+  "jahre": "Jahr",
+  "januar": "Januar",
+  "kandidieren": "kandidieren",
+  "konflikten": "Konflikt",
+  "konnten": "können",
+  "kunst": "Kunst",
+  "mal": "Mal",
+  "menschen": "Mensch",
+  "millionen": "Million",
+  "monarchie": "Monarchie",
+  "nach": "nach",
+  "nationalsozialisten": "Nationalsozialist",
+  "nationalversammlung": "Nationalversammlung",
+  "parlamentarische": "parlamentarisch",
+  "politischen": "politisch",
+  "reichskanzler": "Reichskanzler",
+  "reichspräsident": "Reichspräsident",
+  "schnell": "schnell",
+  "sehr": "sehr",
+  "selbst": "selbst",
+  "sich": "sich",
+  "stärker": "stark",
+  "theater": "Theater",
+  "trat": "treten",
+  "und": "und",
+  "verfassung": "Verfassung",
+  "verlor": "verlieren",
+  "verloren": "verlieren",
+  "von": "von",
+  "wahl": "Wahl",
+  "waren": "Ware",
+  "weimar": "Weimar",
+  "weltwirtschaftskrise": "Weltwirtschaftskrise",
+  "wert": "Wert",
+  "wirtschaft": "Wirtschaft",
+  "wurde": "werden",
+  "wurden": "werden",
+  "wählen": "wählen",
+  "zum": "zu",
+  "zusammen": "zusammen"
+ },
+ "l": {
+  "Adolf": {
+   "ru": "أدولف",
+   "pos": "الاسم"
+  },
+  "Arbeit": {
+   "ru": "عمل",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Arbeiten"
+  },
+  "Blütezeit": {
+   "ru": "عصر الازدهار",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Blütezeiten"
+  },
+  "Demokratie": {
+   "ru": "ديمقراطية",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Demokratien"
+  },
+  "Deutschland": {
+   "ru": "ألمانيا",
+   "pos": "جغرافيا"
+  },
+  "Ende": {
+   "ru": "نهاية",
+   "pos": "اسم",
+   "art": "das",
+   "pl": "die Enden"
+  },
+  "Film": {
+   "ru": "فيلم",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Filme"
+  },
+  "Frau": {
+   "ru": "امرأة؛ ربّة البيت؛ سيّدة",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Frauen"
+  },
+  "Gegner": {
+   "ru": "خصم، معارض",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Gegner"
+  },
+  "Geld": {
+   "art": "das",
+   "pl": "die Gelder",
+   "pos": "اسم",
+   "ru": "مال"
+  },
+  "Hindenburg": {
+   "ru": "هيندنبورغ",
+   "pos": "الاسم"
+  },
+  "Hitler": {
+   "ru": "هتلر",
+   "pos": "الاسم"
+  },
+  "Jahr": {
+   "ru": "سنة",
+   "pos": "اسم",
+   "art": "das",
+   "pl": "die Jahre"
+  },
+  "Januar": {
+   "ru": "يناير",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Januare"
+  },
+  "Konflikt": {
+   "pos": "اسم",
+   "ru": "نزاع",
+   "art": "der",
+   "pl": "die Konflikte"
+  },
+  "Kunst": {
+   "ru": "فنّ، مهارة",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Künste",
+   "note": "in geheimen Künsten — في الفنون الخفيّة"
+  },
+  "Mal": {
+   "ru": "واحد",
+   "pos": "اسم",
+   "art": "das",
+   "pl": "die Male",
+   "note": "zum zweiten Male — للمرة الثانية"
+  },
+  "Mensch": {
+   "ru": "إنسان",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Menschen",
+   "decl": "n-Deklination: des Menschen · dem/den Menschen"
+  },
+  "Million": {
+   "ru": "مليون",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Millionen"
+  },
+  "Monarchie": {
+   "ru": "نظام ملكي",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Monarchien"
+  },
+  "Nationalsozialist": {
+   "ru": "اشتراكي قومي",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Nationalsozialisten"
+  },
+  "Nationalversammlung": {
+   "ru": "جمعية وطنية",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Nationalversammlungen"
+  },
+  "Reichskanzler": {
+   "ru": "مستشار الإمبراطورية",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Reichskanzler"
+  },
+  "Reichspräsident": {
+   "ru": "رئيس الرايخ",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Reichspräsidenten"
+  },
+  "Theater": {
+   "ru": "مسرح؛ عرض مسرحي",
+   "pos": "اسم",
+   "art": "das",
+   "pl": "die Theater"
+  },
+  "Verfassung": {
+   "ru": "الدستور",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Verfassungen"
+  },
+  "Wahl": {
+   "ru": "اختيار",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Wahlen",
+   "note": "die Wahl lassen — يترك له الاختيار"
+  },
+  "Ware": {
+   "pos": "اسم",
+   "ru": "بضاعة",
+   "art": "die",
+   "pl": "die Waren"
+  },
+  "Weimar": {
+   "ru": "فايمار (مدينة في تورينغن)",
+   "pos": "جغرافيا"
+  },
+  "Weltwirtschaftskrise": {
+   "ru": "الأزمة الاقتصادية العالمية",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Weltwirtschaftskrisen"
+  },
+  "Wert": {
+   "ru": "قيمة، ثمن",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Werte"
+  },
+  "Wirtschaft": {
+   "ru": "اقتصاد",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Wirtschaften"
+  },
+  "ab": {
+   "note": "وهي أيضًا سابقة منفصلة: absteigen «ينزل»، abnehmen",
+   "pos": "حرف جر",
+   "ru": "من، عن؛ بعيدًا"
+  },
+  "an": {
+   "ru": "عند، إلى، على",
+   "pos": "حرف جر",
+   "note": "am = an dem. وهي أيضًا سابقة منفصلة: anfangen «يبدأ»، annehmen، ansehen، anzünden"
+  },
+  "bei": {
+   "ru": "عند، لدى، قرب",
+   "pos": "حرف جر"
+  },
+  "beschließen": {
+   "ru": "يقرّر",
+   "pos": "فعل",
+   "forms": "beschloss · hat beschlossen"
+  },
+  "danach": {
+   "ru": "بعد ذلك",
+   "pos": "ظرف"
+  },
+  "darunter": {
+   "ru": "بينها؛ تحت ذلك",
+   "pos": "ظرف"
+  },
+  "der/die/das": {
+   "ru": "أداة التعريف",
+   "pos": "أداة تعريف",
+   "note": "وهي أيضًا اسم موصول بمعنى «الذي»"
+  },
+  "ein/eine": {
+   "ru": "أداة النكرة",
+   "pos": "أداة تعريف",
+   "note": "einer — «واحد، شخص ما»"
+  },
+  "einige": {
+   "ru": "بعض، عدد من",
+   "pos": "ضمير"
+  },
+  "erleben": {
+   "ru": "يرى، يعيش (تجربة)",
+   "pos": "فعل",
+   "forms": "erlebte · hat erlebt"
+  },
+  "ernennen": {
+   "ru": "يعيّن في منصب",
+   "pos": "فعل",
+   "forms": "ernannte · hat ernannt"
+  },
+  "erste": {
+   "ru": "الأول",
+   "pos": "عدد"
+  },
+  "für": {
+   "ru": "لـ، من أجل",
+   "pos": "حرف جر"
+  },
+  "ganz": {
+   "ru": "كلّ، كامل؛ تمامًا",
+   "pos": "صفة"
+  },
+  "ihr (её, их)": {
+   "ru": "لها؛ لهم",
+   "pos": "ضمير"
+  },
+  "in": {
+   "ru": "في (im = in dem، ins = in das)",
+   "pos": "حرف جر"
+  },
+  "kandidieren": {
+   "ru": "يترشّح",
+   "pos": "فعل",
+   "forms": "kandidierte · hat kandidiert"
+  },
+  "können": {
+   "ru": "يستطيع، يقدر",
+   "pos": "فعل",
+   "forms": "konnte · hat gekonnt",
+   "note": "في النص مع سابقة منفصلة: kann nicht fort — fortkönnen «لا يستطيع الرحيل»"
+  },
+  "nach": {
+   "ru": "إلى، بعد، حسب",
+   "pos": "حرف جر"
+  },
+  "parlamentarisch": {
+   "ru": "برلماني",
+   "pos": "صفة"
+  },
+  "politisch": {
+   "ru": "سياسي",
+   "pos": "صفة"
+  },
+  "prägen": {
+   "ru": "يشكّل الطابع، يطبع",
+   "pos": "فعل",
+   "forms": "prägte · hat geprägt"
+  },
+  "schnell": {
+   "ru": "سريع، بسرعة",
+   "pos": "صفة"
+  },
+  "sehr": {
+   "pos": "ظرف",
+   "ru": "جدًا"
+  },
+  "selbst": {
+   "ru": "نفسه؛ حتى",
+   "pos": "ضمير"
+  },
+  "sich": {
+   "ru": "نفسه، لنفسه",
+   "pos": "ضمير",
+   "note": "ضمير انعكاسي، جزء من الفعل الانعكاسي: sich auf den Weg machen، sich setzen، sich legen، sich nähern، sich gefallen lassen، sich getrauen، sich umsehen"
+  },
+  "sich erholen": {
+   "ru": "يتعافى، يستريح",
+   "pos": "فعل",
+   "forms": "erholte sich · hat sich erholt"
+  },
+  "stark": {
+   "ru": "قويّ، متين",
+   "pos": "صفة"
+  },
+  "treten": {
+   "ru": "يخطو، يتقدّم",
+   "pos": "فعل",
+   "forms": "trat · ist getreten"
+  },
+  "und": {
+   "ru": "و",
+   "pos": "أداة ربط"
+  },
+  "verlieren": {
+   "forms": "verlor · hat verloren",
+   "pos": "فعل",
+   "ru": "يفقد"
+  },
+  "von": {
+   "ru": "من، عن (vom = von dem)",
+   "pos": "حرف جر"
+  },
+  "werden": {
+   "ru": "يصبح",
+   "pos": "فعل",
+   "forms": "wurde · ist geworden",
+   "note": "فعل مساعد للمستقبل والمبني للمجهول"
+  },
+  "wählen": {
+   "ru": "أن يختار",
+   "pos": "فعل",
+   "forms": "wählte · hat gewählt"
+  },
+  "zu": {
+   "ru": "إلى، في؛ أكثر من اللازم",
+   "pos": "حرف جر",
+   "note": "zur = zu der, zum = zu dem"
+  },
+  "zusammen": {
+   "ru": "معًا",
+   "pos": "ظرف"
+  }
+ }
+}

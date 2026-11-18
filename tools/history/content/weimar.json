@@ -1,0 +1,113 @@
+{
+  "id": "weimar",
+  "checked": "2026-11-18",
+  "sources": [
+    {
+      "id": "republik",
+      "name": "Deutscher Bundestag · Weimarer Republik",
+      "url": "https://www.bundestag.de/parlament/geschichte/parlamentarismus/weimar"
+    },
+    {
+      "id": "ueberblick",
+      "name": "LeMO · Die Weimarer Republik",
+      "url": "https://www.dhm.de/lemo/kapitel/weimarer-republik"
+    },
+    {
+      "id": "inflation",
+      "name": "LeMO · Inflation 1923",
+      "url": "https://www.dhm.de/lemo/kapitel/weimarer-republik/innenpolitik/inflation"
+    },
+    {
+      "id": "krise",
+      "name": "LeMO · Weltwirtschaftskrise",
+      "url": "https://www.dhm.de/lemo/kapitel/weimarer-republik/industrie-und-wirtschaft/weltwirtschaftskrise"
+    }
+  ],
+  "paragraphs": [
+    {
+      "sourceIds": [
+        "republik"
+      ],
+      "sentences": [
+        [
+          "Nach dem Ende der Monarchie wurde Deutschland eine parlamentarische Demokratie.",
+          "После падения монархии Германия стала парламентской демократией.",
+          "Після падіння монархії Німеччина стала парламентською демократією.",
+          "بعد انتهاء الحكم الملكي أصبحت ألمانيا ديمقراطية برلمانية."
+        ],
+        [
+          "1919 trat die Nationalversammlung in Weimar zusammen und beschloss eine Verfassung.",
+          "В 1919 году Национальное собрание собралось в Веймаре и приняло конституцию.",
+          "У 1919 році Національні збори зібралися у Веймарі й ухвалили конституцію.",
+          "في عام 1919 اجتمعت الجمعية الوطنية في فايمار وأقرت دستورًا."
+        ],
+        [
+          "Zum ersten Mal konnten Frauen bei einer Wahl in ganz Deutschland wählen und selbst kandidieren.",
+          "Впервые на общегерманских выборах женщины могли голосовать и сами выдвигаться кандидатами.",
+          "Уперше на загальнонімецьких виборах жінки могли голосувати й самі балотуватися.",
+          "لأول مرة استطاعت النساء التصويت والترشح في انتخابات على مستوى ألمانيا كلها."
+        ]
+      ]
+    },
+    {
+      "sourceIds": [
+        "ueberblick",
+        "inflation"
+      ],
+      "sentences": [
+        [
+          "Die ersten Jahre waren von politischen Konflikten geprägt.",
+          "Первые годы прошли на фоне политических конфликтов.",
+          "Перші роки минули на тлі політичних конфліктів.",
+          "شهدت السنوات الأولى صراعات سياسية."
+        ],
+        [
+          "1923 verlor das Geld sehr schnell an Wert.",
+          "В 1923 году деньги обесценивались очень быстро.",
+          "У 1923 році гроші знецінювалися дуже швидко.",
+          "في عام 1923 فقدت النقود قيمتها بسرعة كبيرة."
+        ],
+        [
+          "Danach erholte sich die Wirtschaft für einige Jahre, und Film, Kunst und Theater erlebten eine Blütezeit.",
+          "Затем экономика на несколько лет восстановилась, а кино, искусство и театр переживали расцвет.",
+          "Потім економіка на кілька років відновилася, а кіно, мистецтво й театр переживали розквіт.",
+          "بعد ذلك تعافى الاقتصاد لبضع سنوات وازدهرت السينما والفنون والمسرح."
+        ]
+      ]
+    },
+    {
+      "sourceIds": [
+        "krise",
+        "republik"
+      ],
+      "sentences": [
+        [
+          "Ab 1929 verloren in der Weltwirtschaftskrise Millionen Menschen ihre Arbeit.",
+          "С 1929 года из-за мирового экономического кризиса миллионы людей потеряли работу.",
+          "З 1929 року через світову економічну кризу мільйони людей втратили роботу.",
+          "ابتداءً من عام 1929 فقد ملايين الناس عملهم بسبب الأزمة الاقتصادية العالمية."
+        ],
+        [
+          "Die Gegner der Demokratie wurden stärker, darunter die Nationalsozialisten.",
+          "Противники демократии набирали силу, в том числе национал-социалисты.",
+          "Противники демократії набирали сили, зокрема націонал-соціалісти.",
+          "ازدادت قوة معارضي الديمقراطية، ومنهم النازيون."
+        ],
+        [
+          "Am 30. Januar 1933 ernannte Reichspräsident Hindenburg Adolf Hitler zum Reichskanzler.",
+          "30 января 1933 года рейхспрезидент Гинденбург назначил Адольфа Гитлера рейхсканцлером.",
+          "30 січня 1933 року рейхспрезидент Гінденбург призначив Адольфа Гітлера рейхсканцлером.",
+          "في 30 يناير 1933 عيّن رئيس الرايخ هيندنبورغ أدولف هتلر مستشارًا للرايخ."
+        ]
+      ]
+    }
+  ],
+  "translations": {
+    "uk": {
+      "стоимость, ценность": "вартість, цінність"
+    },
+    "ar": {
+      "стоимость, ценность": "قيمة، ثمن"
+    }
+  }
+}

@@ -1,0 +1,91 @@
+{
+ "id": "ch-01",
+ "title": "Die Weimarer Republik",
+ "titleRu": "Веймарська республіка",
+ "icon": "10",
+ "paragraphs": [
+  {
+   "sourceIds": [
+    "republik"
+   ],
+   "s": [
+    {
+     "de": "Nach dem Ende der Monarchie wurde Deutschland eine parlamentarische Demokratie.",
+     "ru": "Після падіння монархії Німеччина стала парламентською демократією."
+    },
+    {
+     "de": "1919 trat die Nationalversammlung in Weimar zusammen und beschloss eine Verfassung.",
+     "ru": "У 1919 році Національні збори зібралися у Веймарі й ухвалили конституцію."
+    },
+    {
+     "de": "Zum ersten Mal konnten Frauen bei einer Wahl in ganz Deutschland wählen und selbst kandidieren.",
+     "ru": "Уперше на загальнонімецьких виборах жінки могли голосувати й самі балотуватися."
+    }
+   ]
+  },
+  {
+   "sourceIds": [
+    "ueberblick",
+    "inflation"
+   ],
+   "s": [
+    {
+     "de": "Die ersten Jahre waren von politischen Konflikten geprägt.",
+     "ru": "Перші роки минули на тлі політичних конфліктів."
+    },
+    {
+     "de": "1923 verlor das Geld sehr schnell an Wert.",
+     "ru": "У 1923 році гроші знецінювалися дуже швидко."
+    },
+    {
+     "de": "Danach erholte sich die Wirtschaft für einige Jahre, und Film, Kunst und Theater erlebten eine Blütezeit.",
+     "ru": "Потім економіка на кілька років відновилася, а кіно, мистецтво й театр переживали розквіт."
+    }
+   ]
+  },
+  {
+   "sourceIds": [
+    "krise",
+    "republik"
+   ],
+   "s": [
+    {
+     "de": "Ab 1929 verloren in der Weltwirtschaftskrise Millionen Menschen ihre Arbeit.",
+     "ru": "З 1929 року через світову економічну кризу мільйони людей втратили роботу."
+    },
+    {
+     "de": "Die Gegner der Demokratie wurden stärker, darunter die Nationalsozialisten.",
+     "ru": "Противники демократії набирали сили, зокрема націонал-соціалісти."
+    },
+    {
+     "de": "Am 30. Januar 1933 ernannte Reichspräsident Hindenburg Adolf Hitler zum Reichskanzler.",
+     "ru": "30 січня 1933 року рейхспрезидент Гінденбург призначив Адольфа Гітлера рейхсканцлером."
+    }
+   ]
+  }
+ ],
+ "sourceTitle": "Джерела та перевірка фактів",
+ "sources": [
+  {
+   "id": "republik",
+   "name": "Deutscher Bundestag · Weimarer Republik",
+   "url": "https://www.bundestag.de/parlament/geschichte/parlamentarismus/weimar"
+  },
+  {
+   "id": "ueberblick",
+   "name": "LeMO · Die Weimarer Republik",
+   "url": "https://www.dhm.de/lemo/kapitel/weimarer-republik"
+  },
+  {
+   "id": "inflation",
+   "name": "LeMO · Inflation 1923",
+   "url": "https://www.dhm.de/lemo/kapitel/weimarer-republik/innenpolitik/inflation"
+  },
+  {
+   "id": "krise",
+   "name": "LeMO · Weltwirtschaftskrise",
+   "url": "https://www.dhm.de/lemo/kapitel/weimarer-republik/industrie-und-wirtschaft/weltwirtschaftskrise"
+  }
+ ],
+ "checked": "2026-11-18"
+}
