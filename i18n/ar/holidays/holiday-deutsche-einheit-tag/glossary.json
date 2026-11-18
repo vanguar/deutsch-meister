@@ -1,0 +1,141 @@
+{
+  "version": 1,
+  "w": {
+    "am": "an",
+    "anderes": "ander",
+    "bremen": "Bremen",
+    "bundesland": "Bundesland",
+    "der": "der/die/das",
+    "deutschland": "Deutschland",
+    "die": "der/die/das",
+    "ein": "ein/eine",
+    "feier": "Feier",
+    "feiertag": "Feiertag",
+    "ganz": "ganz",
+    "in": "in",
+    "ist": "sein",
+    "jahr": "Jahr",
+    "jedes": "jeder",
+    "land": "Land (земля)",
+    "lädt": "einladen",
+    "oktober": "Oktober",
+    "seitdem": "seitdem",
+    "war": "sein",
+    "wieder": "wieder",
+    "wurde": "werden",
+    "zentralen": "zentral",
+    "zur": "zu"
+  },
+  "l": {
+    "Bremen": {
+      "ru": "بريمن (مدينة في شمال ألمانيا)",
+      "pos": "جغرافيا"
+    },
+    "Bundesland": {
+      "ru": "ولاية اتحادية",
+      "pos": "اسم",
+      "art": "das",
+      "pl": "die Bundesländer"
+    },
+    "Deutschland": {
+      "ru": "ألمانيا",
+      "pos": "جغرافيا"
+    },
+    "Feier": {
+      "ru": "احتفال، مناسبة",
+      "pos": "اسم",
+      "art": "die",
+      "pl": "die Feiern"
+    },
+    "Feiertag": {
+      "ru": "يوم عطلة رسمية",
+      "pos": "اسم",
+      "art": "der",
+      "pl": "die Feiertage"
+    },
+    "Jahr": {
+      "ru": "سنة",
+      "pos": "اسم",
+      "art": "das",
+      "pl": "die Jahre"
+    },
+    "Land (земля)": {
+      "ru": "ولاية (اتحادية)؛ بلد",
+      "pos": "اسم",
+      "art": "das",
+      "pl": "die Länder",
+      "note": "Bundesland — ولاية اتحادية؛ in anderen Ländern — في ولايات أخرى"
+    },
+    "Oktober": {
+      "ru": "أكتوبر",
+      "pos": "اسم",
+      "art": "der",
+      "pl": "die Oktober"
+    },
+    "an": {
+      "ru": "عند، إلى، على",
+      "pos": "حرف جر",
+      "note": "am = an dem. وهي أيضًا سابقة منفصلة: anfangen «يبدأ»، annehmen، ansehen، anzünden"
+    },
+    "ander": {
+      "pos": "صفة",
+      "ru": "آخر، مختلف"
+    },
+    "der/die/das": {
+      "ru": "أداة التعريف",
+      "pos": "أداة تعريف",
+      "note": "وهي أيضًا اسم موصول بمعنى «الذي»"
+    },
+    "ein/eine": {
+      "ru": "أداة النكرة",
+      "pos": "أداة تعريف",
+      "note": "einer — «واحد، شخص ما»"
+    },
+    "einladen": {
+      "ru": "يدعو",
+      "pos": "فعل",
+      "forms": "lud ein · hat eingeladen"
+    },
+    "ganz": {
+      "ru": "كلّ، كامل؛ تمامًا",
+      "pos": "صفة"
+    },
+    "in": {
+      "ru": "في (im = in dem، ins = in das)",
+      "pos": "حرف جر"
+    },
+    "jeder": {
+      "pos": "ضمير",
+      "ru": "كلّ"
+    },
+    "sein": {
+      "ru": "يكون",
+      "pos": "فعل",
+      "forms": "war · ist gewesen",
+      "note": "Konjunktiv I: er sei، du seiest. والصيغة نفسها waren هي أيضًا جمع die Waren «بضائع»: allerhand Waren"
+    },
+    "seitdem": {
+      "ru": "منذ أن",
+      "pos": "ظرف"
+    },
+    "werden": {
+      "ru": "يصبح",
+      "pos": "فعل",
+      "forms": "wurde · ist geworden",
+      "note": "فعل مساعد للمستقبل والمبني للمجهول"
+    },
+    "wieder": {
+      "ru": "من جديد",
+      "pos": "ظرف"
+    },
+    "zentral": {
+      "ru": "مركزي، أساسي",
+      "pos": "صفة"
+    },
+    "zu": {
+      "ru": "إلى، في؛ أكثر من اللازم",
+      "pos": "حرف جر",
+      "note": "zur = zu der, zum = zu dem"
+    }
+  }
+}

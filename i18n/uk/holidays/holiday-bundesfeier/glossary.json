@@ -1,0 +1,182 @@
+{
+  "version": 1,
+  "w": {
+    "am": "an",
+    "an": "an",
+    "auf": "auf",
+    "august": "August",
+    "bekannte": "bekannt",
+    "bundesbrief": "Bundesbrief",
+    "dem": "der/die/das",
+    "den": "der/die/das",
+    "der": "der/die/das",
+    "die": "der/die/das",
+    "durch": "durch",
+    "eine": "ein/eine",
+    "erinnert": "erinnern",
+    "feier": "Feier",
+    "feiert": "feiern",
+    "findet": "stattfinden",
+    "gehen": "gehen",
+    "ihren": "ihr (её, их)",
+    "in": "in",
+    "kinder": "Kind",
+    "lampions": "Lampion",
+    "manchen": "mancher",
+    "mit": "mit",
+    "nationalfeiertag": "Nationalfeiertag",
+    "orten": "Ort",
+    "rütliwiese": "Rütliwiese",
+    "schweiz": "Schweiz",
+    "statt": "stattfinden",
+    "straßen": "Straße",
+    "tag": "Tag",
+    "vierwaldstättersee": "Vierwaldstättersee",
+    "von": "von",
+    "über": "über"
+  },
+  "l": {
+    "August": {
+      "ru": "серпень",
+      "pos": "ім.",
+      "art": "der",
+      "pl": null
+    },
+    "Bundesbrief": {
+      "ru": "Союзна грамота Швейцарії",
+      "pos": "ім.",
+      "art": "der",
+      "pl": null
+    },
+    "Feier": {
+      "ru": "свято, урочистість",
+      "pos": "ім.",
+      "art": "die",
+      "pl": "die Feiern"
+    },
+    "Kind": {
+      "ru": "дитина",
+      "pos": "ім.",
+      "art": "das",
+      "pl": "die Kinder"
+    },
+    "Lampion": {
+      "ru": "паперовий ліхтарик",
+      "pos": "ім.",
+      "art": "der",
+      "pl": "die Lampions"
+    },
+    "Nationalfeiertag": {
+      "ru": "національне свято",
+      "pos": "ім.",
+      "art": "der",
+      "pl": "die Nationalfeiertage"
+    },
+    "Ort": {
+      "ru": "місце",
+      "pos": "ім.",
+      "art": "der",
+      "pl": "die Orte",
+      "note": "meines Orts — зі свого боку (заст.)"
+    },
+    "Rütliwiese": {
+      "ru": "луг Рютлі",
+      "pos": "геогр."
+    },
+    "Schweiz": {
+      "ru": "Швейцарія",
+      "pos": "геогр."
+    },
+    "Straße": {
+      "art": "die",
+      "pl": "die Straßen",
+      "pos": "ім.",
+      "ru": "вулиця, дорога"
+    },
+    "Tag": {
+      "ru": "день",
+      "pos": "ім.",
+      "art": "der",
+      "pl": "die Tage"
+    },
+    "Vierwaldstättersee": {
+      "ru": "Фірвальдштетське озеро",
+      "pos": "геогр."
+    },
+    "an": {
+      "ru": "біля, до, на",
+      "pos": "прийм.",
+      "note": "am = an dem. Також відокремлюваний префікс: anfangen «починати», annehmen, ansehen, anzünden"
+    },
+    "auf": {
+      "ru": "на, в",
+      "pos": "прийм.",
+      "note": "Також відокремлюваний префікс: aufspringen «схопитися», sich aufmachen"
+    },
+    "bekannt": {
+      "ru": "відомий, знайомий",
+      "pos": "прикм."
+    },
+    "der/die/das": {
+      "ru": "означений артикль",
+      "pos": "артикль",
+      "note": "Також відносний займенник «який»"
+    },
+    "durch": {
+      "ru": "через, крізь",
+      "pos": "прийм."
+    },
+    "ein/eine": {
+      "ru": "неозначений артикль",
+      "pos": "артикль",
+      "note": "einer — «один, хтось»"
+    },
+    "erinnern": {
+      "ru": "нагадувати",
+      "pos": "дієсл.",
+      "forms": "erinnerte · hat erinnert"
+    },
+    "feiern": {
+      "ru": "святкувати",
+      "pos": "дієсл.",
+      "forms": "feierte · hat gefeiert"
+    },
+    "gehen": {
+      "forms": "ging · ist gegangen",
+      "note": "zu Bett gehen — лягати спати. У тексті з відокремлюваним префіксом: ging das Rollen wieder an — angehen «початися»",
+      "pos": "дієсл.",
+      "ru": "іти, ходити"
+    },
+    "ihr (её, их)": {
+      "ru": "її; їх",
+      "pos": "займ."
+    },
+    "in": {
+      "ru": "у (im = in dem, ins = in das)",
+      "pos": "прийм."
+    },
+    "mancher": {
+      "ru": "інший, деякий",
+      "pos": "займ."
+    },
+    "mit": {
+      "ru": "с",
+      "pos": "прийм.",
+      "note": "Також відокремлюваний префікс: mitgehen «піти разом»"
+    },
+    "stattfinden": {
+      "ru": "мати місце, бути",
+      "pos": "дієсл.",
+      "forms": "fand statt · hat stattgefunden",
+      "note": "ein Zusammenhang findet statt — зв'язок існує"
+    },
+    "von": {
+      "ru": "від, з, про (vom = von dem)",
+      "pos": "прийм."
+    },
+    "über": {
+      "ru": "над, через, про",
+      "pos": "прийм."
+    }
+  }
+}

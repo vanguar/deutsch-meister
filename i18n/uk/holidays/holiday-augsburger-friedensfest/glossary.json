@@ -1,0 +1,237 @@
+{
+  "version": 1,
+  "w": {
+    "an": "an",
+    "auch": "auch",
+    "auf": "auf",
+    "augsburg": "Augsburg",
+    "august": "August",
+    "daran": "daran",
+    "das": "der/die/das",
+    "dass": "dass",
+    "dem": "der/die/das",
+    "den": "der/die/das",
+    "der": "der/die/das",
+    "die": "der/die/das",
+    "dreißigjährigen": "dreißigjährig",
+    "eigener": "eigen",
+    "ein": "ein/eine",
+    "erinnert": "erinnern",
+    "es": "es",
+    "feiertag": "Feiertag",
+    "fest": "Fest",
+    "frei": "frei",
+    "friedenstafel": "Friedenstafel",
+    "gesetzlicher": "gesetzlich",
+    "gibt": "geben",
+    "glauben": "Glaube",
+    "heute": "heute",
+    "ihren": "ihr (её, их)",
+    "in": "in",
+    "ist": "sein",
+    "konnten": "können",
+    "krieg": "Krieg",
+    "leben": "leben",
+    "menschen": "Mensch",
+    "nach": "nach",
+    "protestanten": "Protestant",
+    "rathausplatz": "Rathausplatz",
+    "sitzen": "sitzen",
+    "solche": "solch",
+    "stadtteilen": "Stadtteil",
+    "tische": {
+      "l": "Tisch",
+      "old": "старый дательный с -e: auf dem Tische, bei Tische"
+    },
+    "wieder": "wieder",
+    "zusammen": "zusammen"
+  },
+  "l": {
+    "Augsburg": {
+      "ru": "Аугсбург",
+      "pos": "геогр."
+    },
+    "August": {
+      "ru": "серпень",
+      "pos": "ім.",
+      "art": "der",
+      "pl": null
+    },
+    "Feiertag": {
+      "ru": "святковий (неробочий) день",
+      "pos": "ім.",
+      "art": "der",
+      "pl": "die Feiertage"
+    },
+    "Fest": {
+      "ru": "свято",
+      "pos": "ім.",
+      "art": "das",
+      "pl": "die Feste"
+    },
+    "Friedenstafel": {
+      "ru": "стіл миру, спільна трапеза в Аугсбурзі",
+      "pos": "ім.",
+      "art": "die",
+      "pl": "die Friedenstafeln"
+    },
+    "Glaube": {
+      "art": "der",
+      "decl": "слабка відміна: des Glaubens, dem Glauben, den Glauben",
+      "note": "Glauben beimessen — вірити чомусь",
+      "pl": null,
+      "pos": "ім.",
+      "ru": "віра, довіра"
+    },
+    "Krieg": {
+      "ru": "війна",
+      "pos": "ім.",
+      "art": "der",
+      "pl": "die Kriege"
+    },
+    "Mensch": {
+      "ru": "людина",
+      "pos": "ім.",
+      "art": "der",
+      "pl": "die Menschen",
+      "decl": "n-Deklination: des Menschen · dem/den Menschen"
+    },
+    "Protestant": {
+      "ru": "протестант",
+      "pos": "ім.",
+      "art": "der",
+      "pl": "die Protestanten"
+    },
+    "Rathausplatz": {
+      "ru": "Ратушна площа",
+      "pos": "ім.",
+      "art": "der",
+      "pl": "die Rathausplätze"
+    },
+    "Stadtteil": {
+      "ru": "частина міста, міський район",
+      "pos": "ім.",
+      "art": "der",
+      "pl": "die Stadtteile"
+    },
+    "Tisch": {
+      "ru": "стіл",
+      "pos": "ім.",
+      "art": "der",
+      "pl": "die Tische"
+    },
+    "an": {
+      "ru": "біля, до, на",
+      "pos": "прийм.",
+      "note": "am = an dem. Також відокремлюваний префікс: anfangen «починати», annehmen, ansehen, anzünden"
+    },
+    "auch": {
+      "ru": "теж, також; навіть",
+      "pos": "частка"
+    },
+    "auf": {
+      "ru": "на, в",
+      "pos": "прийм.",
+      "note": "Також відокремлюваний префікс: aufspringen «схопитися», sich aufmachen"
+    },
+    "daran": {
+      "ru": "на цьому, про це",
+      "pos": "присл.",
+      "note": "dran — розмовна форма"
+    },
+    "dass": {
+      "ru": "що; щоб",
+      "pos": "спол."
+    },
+    "der/die/das": {
+      "ru": "означений артикль",
+      "pos": "артикль",
+      "note": "Також відносний займенник «який»"
+    },
+    "dreißigjährig": {
+      "ru": "тридцятилітній",
+      "pos": "прикм."
+    },
+    "eigen": {
+      "ru": "власний",
+      "pos": "прикм."
+    },
+    "ein/eine": {
+      "ru": "неозначений артикль",
+      "pos": "артикль",
+      "note": "einer — «один, хтось»"
+    },
+    "erinnern": {
+      "ru": "нагадувати",
+      "pos": "дієсл.",
+      "forms": "erinnerte · hat erinnert"
+    },
+    "es": {
+      "ru": "воно; це",
+      "pos": "займ."
+    },
+    "frei": {
+      "ru": "вільний",
+      "pos": "прикм."
+    },
+    "geben": {
+      "ru": "давати",
+      "pos": "дієсл.",
+      "forms": "gab · hat gegeben"
+    },
+    "gesetzlich": {
+      "ru": "законний, офіційний",
+      "pos": "прикм."
+    },
+    "heute": {
+      "ru": "сьогодні",
+      "pos": "присл."
+    },
+    "ihr (её, их)": {
+      "ru": "її; їх",
+      "pos": "займ."
+    },
+    "in": {
+      "ru": "у (im = in dem, ins = in das)",
+      "pos": "прийм."
+    },
+    "können": {
+      "ru": "могти, вміти",
+      "pos": "дієсл.",
+      "forms": "konnte · hat gekonnt",
+      "note": "У тексті з відокремлюваним префіксом: kann nicht fort — fortkönnen «не могти піти»"
+    },
+    "leben": {
+      "ru": "жити",
+      "pos": "дієсл.",
+      "forms": "lebte · hat gelebt"
+    },
+    "nach": {
+      "ru": "в, на, після, по",
+      "pos": "прийм."
+    },
+    "sein": {
+      "ru": "бути",
+      "pos": "дієсл.",
+      "forms": "war · ist gewesen",
+      "note": "Konjunktiv I: er sei, du seiest. Та сама форма waren — і мн. die Waren «товари»: allerhand Waren"
+    },
+    "sitzen": {
+      "ru": "сидіти",
+      "pos": "дієсл.",
+      "forms": "saß · hat gesessen"
+    },
+    "solch": {
+      "ru": "такий",
+      "pos": "займ."
+    },
+    "wieder": {
+      "ru": "знову",
+      "pos": "присл."
+    },
+    "zusammen": {
+      "ru": "разом",
+      "pos": "присл."
+    }
+  }
+}

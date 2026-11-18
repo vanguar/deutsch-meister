@@ -1,0 +1,149 @@
+{
+  "version": 1,
+  "w": {
+    "aus": "aus",
+    "besonders": "besonders",
+    "brennende": "brennen",
+    "bringt": "bringen",
+    "den": "der/die/das",
+    "der": "der/die/das",
+    "dunkel": "Dunkel",
+    "es": "es",
+    "gäste": "Gast",
+    "hinunter": "hinunter",
+    "holzräder": "Holzrad",
+    "in": "in",
+    "lügde": "Lügde",
+    "menschen": "Mensch",
+    "osterberg": "Osterberg",
+    "osterräderlauf": "Osterräderlauf",
+    "ostersonntag": "Ostersonntag",
+    "rollen": "rollen",
+    "sieht": "sehen",
+    "stadt": "Stadt",
+    "und": "und",
+    "wenn": "wenn",
+    "wird": "werden",
+    "zusammen": "zusammen"
+  },
+  "l": {
+    "Dunkel": {
+      "ru": "ظلام، عتمة",
+      "pos": "اسم",
+      "art": "das",
+      "pl": null
+    },
+    "Gast": {
+      "ru": "ضيف",
+      "pos": "اسم",
+      "art": "der",
+      "pl": "die Gäste"
+    },
+    "Holzrad": {
+      "ru": "عجلة خشبية",
+      "pos": "اسم",
+      "art": "das",
+      "pl": "die Holzräder"
+    },
+    "Lügde": {
+      "ru": "لوغده",
+      "pos": "جغرافيا"
+    },
+    "Mensch": {
+      "ru": "إنسان",
+      "pos": "اسم",
+      "art": "der",
+      "pl": "die Menschen",
+      "decl": "n-Deklination: des Menschen · dem/den Menschen"
+    },
+    "Osterberg": {
+      "ru": "تل أوستربرغ في لوغده",
+      "pos": "جغرافيا"
+    },
+    "Osterräderlauf": {
+      "ru": "تقليد دحرجة العجلات المشتعلة في الفصح",
+      "pos": "اسم",
+      "art": "der",
+      "pl": null
+    },
+    "Ostersonntag": {
+      "ru": "أحد الفصح",
+      "pos": "اسم",
+      "art": "der",
+      "pl": null
+    },
+    "Stadt": {
+      "ru": "مدينة",
+      "pos": "اسم",
+      "art": "die",
+      "pl": "die Städte"
+    },
+    "aus": {
+      "ru": "من",
+      "pos": "حرف جر",
+      "note": "وهي أيضًا سابقة منفصلة: auslöschen «يُطفئ»"
+    },
+    "besonders": {
+      "ru": "خاصةً",
+      "pos": "ظرف"
+    },
+    "brennen": {
+      "ru": "يحترق، يشتعل",
+      "pos": "فعل",
+      "forms": "brannte · hat gebrannt",
+      "note": "eine brennende Kerze — شمعة مشتعلة"
+    },
+    "bringen": {
+      "ru": "يُحضر، يجلب",
+      "pos": "فعل",
+      "forms": "brachte · hat gebracht"
+    },
+    "der/die/das": {
+      "ru": "أداة التعريف",
+      "pos": "أداة تعريف",
+      "note": "وهي أيضًا اسم موصول بمعنى «الذي»"
+    },
+    "es": {
+      "ru": "هو (للمحايد)؛ هذا",
+      "pos": "ضمير"
+    },
+    "hinunter": {
+      "ru": "إلى الأسفل",
+      "pos": "ظرف"
+    },
+    "in": {
+      "ru": "في (im = in dem، ins = in das)",
+      "pos": "حرف جر"
+    },
+    "rollen": {
+      "ru": "يدحرج، يتدحرج",
+      "pos": "فعل",
+      "forms": "rollte · hat/ist gerollt",
+      "note": "keine Rollen — عجلات صغيرة (die Rolle)؛ das Rollen — الدحرجة (مصدر بمعنى الاسم)"
+    },
+    "sehen": {
+      "ru": "يرى",
+      "pos": "فعل",
+      "forms": "sah · hat gesehen",
+      "note": "في النص مع سابقة منفصلة: sah sich um — sich umsehen «تلفّت حوله»"
+    },
+    "und": {
+      "ru": "و",
+      "pos": "أداة ربط"
+    },
+    "wenn": {
+      "ru": "إذا؛ عندما",
+      "pos": "أداة ربط"
+    },
+    "werden": {
+      "ru": "يصبح",
+      "pos": "فعل",
+      "forms": "wurde · ist geworden",
+      "note": "فعل مساعد للمستقبل والمبني للمجهول"
+    },
+    "zusammen": {
+      "ru": "معًا",
+      "pos": "ظرف"
+    }
+  }
+}

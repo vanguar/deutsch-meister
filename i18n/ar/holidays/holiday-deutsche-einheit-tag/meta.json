@@ -1,0 +1,23 @@
+{
+  "id": "holiday-deutsche-einheit-tag",
+  "kind": "holiday",
+  "rule": {
+    "type": "fixed",
+    "month": 10,
+    "day": 3
+  },
+  "title": "Tag der Deutschen Einheit",
+  "titleRu": "يوم الوحدة الألمانية",
+  "region": "ألمانيا · جميع أنحاء البلاد",
+  "cover": "✦",
+  "author": "German Morning",
+  "level": "B1",
+  "year": "2026",
+  "chapters": 1,
+  "words": 31,
+  "minutes": 1,
+  "source": "Bundesregierung · 3. Oktober 1990",
+  "sourceUrl": "https://www.bundesregierung.de/breg-de/schwerpunkte/deutsche-einheit/die-einheit-ist-wirklichkeit-432814",
+  "license": "نص تعليمي من إعداد German Morning.",
+  "checked": "2026-11-18"
+}

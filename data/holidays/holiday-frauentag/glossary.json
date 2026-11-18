@@ -1,0 +1,176 @@
+{
+  "version": 1,
+  "w": {
+    "am": "an",
+    "auch": "auch",
+    "ausgezeichnet": "auszeichnen",
+    "berlin": "Berlin",
+    "das": "der/die/das",
+    "der": "der/die/das",
+    "die": "der/die/das",
+    "dort": "dort",
+    "ein": "ein/eine",
+    "engagement": "Engagement",
+    "es": "es",
+    "feiertag": "Feiertag",
+    "frauen": "Frau",
+    "für": "für",
+    "geht": "gehen",
+    "gesetzlicher": "gesetzlich",
+    "gilt": "gelten",
+    "gleichen": "gleich",
+    "ihr": "sie",
+    "in": "in",
+    "ist": "sein",
+    "mecklenburg-vorpommern": "Mecklenburg-Vorpommern",
+    "männer": "Mann",
+    "märz": "März",
+    "rechte": "Recht",
+    "seit": "seit",
+    "tag": "Tag",
+    "um": "um",
+    "und": "und",
+    "werden": "werden"
+  },
+  "l": {
+    "Berlin": {
+      "ru": "Берлин",
+      "pos": "геогр."
+    },
+    "Engagement": {
+      "ru": "активное участие, общественная деятельность",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Engagements"
+    },
+    "Feiertag": {
+      "ru": "праздничный (нерабочий) день",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Feiertage"
+    },
+    "Frau": {
+      "ru": "женщина; хозяйка; госпожа",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Frauen"
+    },
+    "Mann": {
+      "ru": "мужчина, человек",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Männer"
+    },
+    "Mecklenburg-Vorpommern": {
+      "ru": "Мекленбург — Передняя Померания",
+      "pos": "геогр."
+    },
+    "März": {
+      "ru": "март",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Märze"
+    },
+    "Recht": {
+      "ru": "право",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Rechte"
+    },
+    "Tag": {
+      "ru": "день",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Tage"
+    },
+    "an": {
+      "ru": "у, к, на",
+      "pos": "предл.",
+      "note": "am = an dem. Тж. отделяемая приставка: anfangen «начинать», annehmen, ansehen, anzünden"
+    },
+    "auch": {
+      "ru": "тоже, также; даже",
+      "pos": "частица"
+    },
+    "auszeichnen": {
+      "ru": "награждать, отмечать заслуги",
+      "pos": "гл.",
+      "forms": "zeichnete aus · hat ausgezeichnet"
+    },
+    "der/die/das": {
+      "ru": "определённый артикль",
+      "pos": "артикль",
+      "note": "Тж. относительное местоимение «который»"
+    },
+    "dort": {
+      "ru": "там",
+      "pos": "нареч."
+    },
+    "ein/eine": {
+      "ru": "неопределённый артикль",
+      "pos": "артикль",
+      "note": "einer — «один, некто»"
+    },
+    "es": {
+      "ru": "оно; это",
+      "pos": "мест."
+    },
+    "für": {
+      "ru": "для, за",
+      "pos": "предл."
+    },
+    "gehen": {
+      "forms": "ging · ist gegangen",
+      "note": "zu Bett gehen — ложиться спать. В тексте с отделяемой приставкой: ging das Rollen wieder an — angehen «начаться»",
+      "pos": "гл.",
+      "ru": "идти, ходить"
+    },
+    "gelten": {
+      "ru": "считаться; быть действительным",
+      "pos": "гл.",
+      "forms": "galt · hat gegolten",
+      "note": "als … gelten — считаться кем-то"
+    },
+    "gesetzlich": {
+      "ru": "законный, официальный",
+      "pos": "прил."
+    },
+    "gleich": {
+      "ru": "равный, одинаковый",
+      "pos": "прил."
+    },
+    "in": {
+      "ru": "в (im = in dem, ins = in das)",
+      "pos": "предл."
+    },
+    "sein": {
+      "ru": "быть",
+      "pos": "гл.",
+      "forms": "war · ist gewesen",
+      "note": "Konjunktiv I: er sei, du seiest. Та же форма waren — и мн. ч. die Waren «товары»: allerhand Waren"
+    },
+    "seit": {
+      "ru": "с (какого-то времени)",
+      "pos": "предл."
+    },
+    "sie": {
+      "ru": "она; они; Вы",
+      "pos": "мест."
+    },
+    "um": {
+      "ru": "вокруг, в (о времени)",
+      "pos": "предл.",
+      "note": "um … zu — чтобы. Тж. отделяемая приставка: sich umsehen «оглядеться»"
+    },
+    "und": {
+      "ru": "и, а",
+      "pos": "союз"
+    },
+    "werden": {
+      "ru": "становиться",
+      "pos": "гл.",
+      "forms": "wurde · ist geworden",
+      "note": "Вспомогательный глагол будущего времени и пассива"
+    }
+  }
+}

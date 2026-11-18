@@ -1,0 +1,45 @@
+{
+  "id": "ch-01",
+  "title": "Österreichischer Nationalfeiertag",
+  "titleRu": "العيد الوطني النمساوي",
+  "paragraphs": [
+    {
+      "sourceIds": [
+        "parlament",
+        "archiv"
+      ],
+      "s": [
+        {
+          "de": "Am 26. Oktober feiert Österreich seinen Nationalfeiertag.",
+          "ru": "تحتفل النمسا بعيدها الوطني في السادس والعشرين من أكتوبر."
+        },
+        {
+          "de": "An diesem Tag beschloss das Parlament im Jahr 1955 die Neutralität Österreichs.",
+          "ru": "في هذا اليوم من عام 1955 أقر البرلمان حياد النمسا."
+        },
+        {
+          "de": "1956 hieß die Feier noch Tag der Fahne.",
+          "ru": "في عام 1956 كان الاحتفال يُعرف باسم يوم العَلَم."
+        },
+        {
+          "de": "Seit 1965 ist der 26. Oktober der Nationalfeiertag.",
+          "ru": "ومنذ عام 1965 أصبح السادس والعشرون من أكتوبر العيد الوطني."
+        }
+      ]
+    }
+  ],
+  "sourceTitle": "المصادر والتحقق من المعلومات",
+  "sources": [
+    {
+      "id": "parlament",
+      "name": "Österreichisches Parlament · Staatsvertrag und Neutralität",
+      "url": "https://www.parlament.gv.at/verstehen/historisches/1945-1995/staatsvertrag"
+    },
+    {
+      "id": "archiv",
+      "name": "Parlamentsarchiv · Eine freiwillige Verpflichtung",
+      "url": "https://www.parlament.gv.at/fachinfos/parlamentsarchiv/Eine-freiwillige-Verpflichtung"
+    }
+  ],
+  "checked": "2026-11-18"
+}

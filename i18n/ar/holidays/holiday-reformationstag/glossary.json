@@ -1,0 +1,180 @@
+{
+  "version": 1,
+  "w": {
+    "am": "an",
+    "besuchen": "besuchen",
+    "das": "der/die/das",
+    "der": "der/die/das",
+    "deutsche": "deutsch",
+    "die": "der/die/das",
+    "dort": "dort",
+    "ein": "ein/eine",
+    "er": "er",
+    "erfahren": "erfahren",
+    "feiertag": "Feiertag",
+    "gesetzlicher": "gesetzlich",
+    "in": "in",
+    "ins": "in",
+    "ist": "sein",
+    "kann": "können",
+    "luther": "Luther",
+    "martin": "Martin (Vorname)",
+    "mehr": "mehr",
+    "möchte": "mögen",
+    "neue": "neu",
+    "oktober": "Oktober",
+    "reformation": "Reformation",
+    "reformationstag": "Reformationstag",
+    "sachsen": "Sachsen",
+    "testament": "Testament",
+    "thüringen": "Thüringen",
+    "und": "und",
+    "wartburg": "Wartburg",
+    "wer": "wer",
+    "über": "über",
+    "übersetzte": "übersetzen"
+  },
+  "l": {
+    "Feiertag": {
+      "ru": "يوم عطلة رسمية",
+      "pos": "اسم",
+      "art": "der",
+      "pl": "die Feiertage"
+    },
+    "Luther": {
+      "ru": "لوثر",
+      "pos": "اسم علم"
+    },
+    "Martin (Vorname)": {
+      "ru": "مارتن (اسم شخصي)",
+      "pos": "اسم علم"
+    },
+    "Oktober": {
+      "ru": "أكتوبر",
+      "pos": "اسم",
+      "art": "der",
+      "pl": "die Oktober"
+    },
+    "Reformation": {
+      "ru": "الإصلاح الديني",
+      "pos": "اسم",
+      "art": "die",
+      "pl": null
+    },
+    "Reformationstag": {
+      "ru": "يوم الإصلاح الديني (31 أكتوبر)",
+      "pos": "اسم",
+      "art": "der",
+      "pl": null
+    },
+    "Sachsen": {
+      "ru": "سكسونيا",
+      "pos": "جغرافيا"
+    },
+    "Testament": {
+      "ru": "عهد؛ وصية",
+      "pos": "اسم",
+      "art": "das",
+      "pl": "die Testamente"
+    },
+    "Thüringen": {
+      "ru": "تورينغن (ولاية اتحادية ألمانية)",
+      "pos": "جغرافيا"
+    },
+    "Wartburg": {
+      "ru": "فارتبورغ",
+      "pos": "جغرافيا"
+    },
+    "an": {
+      "ru": "عند، إلى، على",
+      "pos": "حرف جر",
+      "note": "am = an dem. وهي أيضًا سابقة منفصلة: anfangen «يبدأ»، annehmen، ansehen، anzünden"
+    },
+    "besuchen": {
+      "ru": "يزور",
+      "pos": "فعل",
+      "forms": "besuchte · hat besucht"
+    },
+    "der/die/das": {
+      "ru": "أداة التعريف",
+      "pos": "أداة تعريف",
+      "note": "وهي أيضًا اسم موصول بمعنى «الذي»"
+    },
+    "deutsch": {
+      "ru": "الألمانية",
+      "pos": "صفة"
+    },
+    "dort": {
+      "ru": "هناك",
+      "pos": "ظرف"
+    },
+    "ein/eine": {
+      "ru": "أداة النكرة",
+      "pos": "أداة تعريف",
+      "note": "einer — «واحد، شخص ما»"
+    },
+    "er": {
+      "ru": "هو",
+      "pos": "ضمير",
+      "note": "ihn — إيّاه، ihm — له"
+    },
+    "erfahren": {
+      "ru": "يعرف، يعلم",
+      "pos": "فعل",
+      "forms": "erfuhr · hat erfahren"
+    },
+    "gesetzlich": {
+      "ru": "قانوني، رسمي",
+      "pos": "صفة"
+    },
+    "in": {
+      "ru": "في (im = in dem، ins = in das)",
+      "pos": "حرف جر"
+    },
+    "können": {
+      "ru": "يستطيع، يقدر",
+      "pos": "فعل",
+      "forms": "konnte · hat gekonnt",
+      "note": "في النص مع سابقة منفصلة: kann nicht fort — fortkönnen «لا يستطيع الرحيل»"
+    },
+    "mehr": {
+      "ru": "أكثر",
+      "pos": "ظرف",
+      "note": "في nicht/kein … mehr — لم يعد. وهي شكليًا صيغة التفضيل من viel"
+    },
+    "mögen": {
+      "ru": "يحبّ؛ يريد",
+      "pos": "فعل",
+      "forms": "mochte · hat gemocht",
+      "note": "leiden mögen — يطيق، يحتمل"
+    },
+    "neu": {
+      "ru": "جديد",
+      "pos": "صفة"
+    },
+    "sein": {
+      "ru": "يكون",
+      "pos": "فعل",
+      "forms": "war · ist gewesen",
+      "note": "Konjunktiv I: er sei، du seiest. والصيغة نفسها waren هي أيضًا جمع die Waren «بضائع»: allerhand Waren"
+    },
+    "und": {
+      "ru": "و",
+      "pos": "أداة ربط"
+    },
+    "wer": {
+      "ru": "مَن",
+      "pos": "ضمير",
+      "note": "wem — حالة الجرّ: لمن"
+    },
+    "über": {
+      "ru": "فوق، عبر، عن",
+      "pos": "حرف جر"
+    },
+    "übersetzen": {
+      "ru": "يترجم",
+      "pos": "فعل",
+      "forms": "übersetzte · hat übersetzt"
+    }
+  }
+}

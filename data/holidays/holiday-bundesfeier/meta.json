@@ -1,0 +1,23 @@
+{
+  "id": "holiday-bundesfeier",
+  "kind": "holiday",
+  "rule": {
+    "type": "fixed",
+    "month": 8,
+    "day": 1
+  },
+  "title": "Schweizer Bundesfeier",
+  "titleRu": "Национальный день Швейцарии",
+  "region": "Швейцария",
+  "cover": "✦",
+  "author": "German Morning",
+  "level": "B1",
+  "year": "2026",
+  "chapters": 1,
+  "words": 35,
+  "minutes": 1,
+  "source": "Schweiz Tourismus · 1. August",
+  "sourceUrl": "https://www.myswitzerland.com/de/erlebnisse/veranstaltungen/braeuche-im-sommer-und-herbst/der-1-august-bundesfeier/",
+  "license": "Авторская учебная адаптация German Morning.",
+  "checked": "2026-11-18"
+}

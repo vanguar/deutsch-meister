@@ -1,0 +1,237 @@
+{
+  "version": 1,
+  "w": {
+    "an": "an",
+    "auch": "auch",
+    "auf": "auf",
+    "augsburg": "Augsburg",
+    "august": "August",
+    "daran": "daran",
+    "das": "der/die/das",
+    "dass": "dass",
+    "dem": "der/die/das",
+    "den": "der/die/das",
+    "der": "der/die/das",
+    "die": "der/die/das",
+    "dreißigjährigen": "dreißigjährig",
+    "eigener": "eigen",
+    "ein": "ein/eine",
+    "erinnert": "erinnern",
+    "es": "es",
+    "feiertag": "Feiertag",
+    "fest": "Fest",
+    "frei": "frei",
+    "friedenstafel": "Friedenstafel",
+    "gesetzlicher": "gesetzlich",
+    "gibt": "geben",
+    "glauben": "Glaube",
+    "heute": "heute",
+    "ihren": "ihr (её, их)",
+    "in": "in",
+    "ist": "sein",
+    "konnten": "können",
+    "krieg": "Krieg",
+    "leben": "leben",
+    "menschen": "Mensch",
+    "nach": "nach",
+    "protestanten": "Protestant",
+    "rathausplatz": "Rathausplatz",
+    "sitzen": "sitzen",
+    "solche": "solch",
+    "stadtteilen": "Stadtteil",
+    "tische": {
+      "l": "Tisch",
+      "old": "старый дательный с -e: auf dem Tische, bei Tische"
+    },
+    "wieder": "wieder",
+    "zusammen": "zusammen"
+  },
+  "l": {
+    "Augsburg": {
+      "ru": "أوغسبورغ",
+      "pos": "جغرافيا"
+    },
+    "August": {
+      "ru": "أغسطس",
+      "pos": "اسم",
+      "art": "der",
+      "pl": null
+    },
+    "Feiertag": {
+      "ru": "يوم عطلة رسمية",
+      "pos": "اسم",
+      "art": "der",
+      "pl": "die Feiertage"
+    },
+    "Fest": {
+      "ru": "عيد",
+      "pos": "اسم",
+      "art": "das",
+      "pl": "die Feste"
+    },
+    "Friedenstafel": {
+      "ru": "مائدة السلام في أوغسبورغ",
+      "pos": "اسم",
+      "art": "die",
+      "pl": "die Friedenstafeln"
+    },
+    "Glaube": {
+      "art": "der",
+      "decl": "التصريف الضعيف: des Glaubens، dem Glauben، den Glauben",
+      "note": "Glauben beimessen — يصدّق شيئًا",
+      "pl": null,
+      "pos": "اسم",
+      "ru": "إيمان، تصديق"
+    },
+    "Krieg": {
+      "ru": "حرب",
+      "pos": "اسم",
+      "art": "der",
+      "pl": "die Kriege"
+    },
+    "Mensch": {
+      "ru": "إنسان",
+      "pos": "اسم",
+      "art": "der",
+      "pl": "die Menschen",
+      "decl": "n-Deklination: des Menschen · dem/den Menschen"
+    },
+    "Protestant": {
+      "ru": "بروتستانتي",
+      "pos": "اسم",
+      "art": "der",
+      "pl": "die Protestanten"
+    },
+    "Rathausplatz": {
+      "ru": "ساحة دار البلدية",
+      "pos": "اسم",
+      "art": "der",
+      "pl": "die Rathausplätze"
+    },
+    "Stadtteil": {
+      "ru": "جزء من المدينة، حي",
+      "pos": "اسم",
+      "art": "der",
+      "pl": "die Stadtteile"
+    },
+    "Tisch": {
+      "ru": "طاولة",
+      "pos": "اسم",
+      "art": "der",
+      "pl": "die Tische"
+    },
+    "an": {
+      "ru": "عند، إلى، على",
+      "pos": "حرف جر",
+      "note": "am = an dem. وهي أيضًا سابقة منفصلة: anfangen «يبدأ»، annehmen، ansehen، anzünden"
+    },
+    "auch": {
+      "ru": "أيضًا؛ حتى",
+      "pos": "أداة"
+    },
+    "auf": {
+      "ru": "على، في",
+      "pos": "حرف جر",
+      "note": "وهي أيضًا سابقة منفصلة: aufspringen «يقفز واقفًا»، sich aufmachen"
+    },
+    "daran": {
+      "ru": "في هذا، عن هذا",
+      "pos": "ظرف",
+      "note": "dran — صيغة عامية"
+    },
+    "dass": {
+      "ru": "أنّ؛ لكي",
+      "pos": "أداة ربط"
+    },
+    "der/die/das": {
+      "ru": "أداة التعريف",
+      "pos": "أداة تعريف",
+      "note": "وهي أيضًا اسم موصول بمعنى «الذي»"
+    },
+    "dreißigjährig": {
+      "ru": "يدوم ثلاثين عامًا",
+      "pos": "صفة"
+    },
+    "eigen": {
+      "ru": "خاص، ذاتي",
+      "pos": "صفة"
+    },
+    "ein/eine": {
+      "ru": "أداة النكرة",
+      "pos": "أداة تعريف",
+      "note": "einer — «واحد، شخص ما»"
+    },
+    "erinnern": {
+      "ru": "يذكّر",
+      "pos": "فعل",
+      "forms": "erinnerte · hat erinnert"
+    },
+    "es": {
+      "ru": "هو (للمحايد)؛ هذا",
+      "pos": "ضمير"
+    },
+    "frei": {
+      "ru": "حر",
+      "pos": "صفة"
+    },
+    "geben": {
+      "ru": "يعطي",
+      "pos": "فعل",
+      "forms": "gab · hat gegeben"
+    },
+    "gesetzlich": {
+      "ru": "قانوني، رسمي",
+      "pos": "صفة"
+    },
+    "heute": {
+      "ru": "اليوم",
+      "pos": "ظرف"
+    },
+    "ihr (её, их)": {
+      "ru": "لها؛ لهم",
+      "pos": "ضمير"
+    },
+    "in": {
+      "ru": "في (im = in dem، ins = in das)",
+      "pos": "حرف جر"
+    },
+    "können": {
+      "ru": "يستطيع، يقدر",
+      "pos": "فعل",
+      "forms": "konnte · hat gekonnt",
+      "note": "في النص مع سابقة منفصلة: kann nicht fort — fortkönnen «لا يستطيع الرحيل»"
+    },
+    "leben": {
+      "ru": "يسكن",
+      "pos": "فعل",
+      "forms": "lebte · hat gelebt"
+    },
+    "nach": {
+      "ru": "إلى، بعد، حسب",
+      "pos": "حرف جر"
+    },
+    "sein": {
+      "ru": "يكون",
+      "pos": "فعل",
+      "forms": "war · ist gewesen",
+      "note": "Konjunktiv I: er sei، du seiest. والصيغة نفسها waren هي أيضًا جمع die Waren «بضائع»: allerhand Waren"
+    },
+    "sitzen": {
+      "ru": "يجلس",
+      "pos": "فعل",
+      "forms": "saß · hat gesessen"
+    },
+    "solch": {
+      "ru": "بهذا القدر",
+      "pos": "ضمير"
+    },
+    "wieder": {
+      "ru": "من جديد",
+      "pos": "ظرف"
+    },
+    "zusammen": {
+      "ru": "معًا",
+      "pos": "ظرف"
+    }
+  }
+}

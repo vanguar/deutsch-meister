@@ -1,0 +1,222 @@
+{
+  "version": 1,
+  "w": {
+    "auf": "auf",
+    "bayern": "Bayern",
+    "bis": "bis",
+    "booten": "Boot",
+    "dann": "dann",
+    "die": "der/die/das",
+    "dieser": "dieser",
+    "donnerstag": "Donnerstag",
+    "durch": "durch",
+    "ein": "ein/eine",
+    "einen": "ein/eine",
+    "es": "es",
+    "feiertag": "Feiertag",
+    "fest": "Fest",
+    "fronleichnam": "Fronleichnam",
+    "fällt": "fallen",
+    "geht": "gehen",
+    "geschmückte": "schmücken",
+    "gesetzlicher": "gesetzlich",
+    "in": "in",
+    "insel": "Insel",
+    "ist": "sein",
+    "katholisches": "katholisch",
+    "nach": "nach",
+    "ostern": "Ostern",
+    "prozession": "Prozession",
+    "seehausen": "Seehausen",
+    "staffelsee": "Staffelsee",
+    "straßen": "Straße",
+    "tag": "Tag",
+    "tage": {
+      "l": "Tag",
+      "old": "в обороте in einem Tage — старый дательный с -e; сегодня an einem Tag. В «drei Tage Regenwetter» это обычное мн. ч."
+    },
+    "und": "und",
+    "vielen": "viel",
+    "weiter": "weit",
+    "wörth": "Wörth",
+    "zieht": "ziehen",
+    "zum": "zu",
+    "zur": "zu"
+  },
+  "l": {
+    "Bayern": {
+      "ru": "بافاريا",
+      "pos": "جغرافيا"
+    },
+    "Boot": {
+      "ru": "قارب",
+      "pos": "اسم",
+      "art": "das",
+      "pl": "die Boote"
+    },
+    "Donnerstag": {
+      "ru": "الخميس",
+      "pos": "اسم",
+      "art": "der",
+      "pl": "die Donnerstage"
+    },
+    "Feiertag": {
+      "ru": "يوم عطلة رسمية",
+      "pos": "اسم",
+      "art": "der",
+      "pl": "die Feiertage"
+    },
+    "Fest": {
+      "ru": "عيد",
+      "pos": "اسم",
+      "art": "das",
+      "pl": "die Feste"
+    },
+    "Fronleichnam": {
+      "ru": "عيد جسد المسيح ودمه",
+      "pos": "اسم",
+      "art": "der",
+      "pl": null
+    },
+    "Insel": {
+      "ru": "جزيرة",
+      "pos": "اسم",
+      "art": "die",
+      "pl": "die Inseln"
+    },
+    "Ostern": {
+      "ru": "عيد الفصح",
+      "pos": "اسم",
+      "art": "das",
+      "pl": null
+    },
+    "Prozession": {
+      "ru": "موكب ديني",
+      "pos": "اسم",
+      "art": "die",
+      "pl": "die Prozessionen"
+    },
+    "Seehausen": {
+      "ru": "زيهاوزن",
+      "pos": "جغرافيا"
+    },
+    "Staffelsee": {
+      "ru": "بحيرة شتافلزيه",
+      "pos": "جغرافيا"
+    },
+    "Straße": {
+      "art": "die",
+      "pl": "die Straßen",
+      "pos": "اسم",
+      "ru": "شارع، طريق"
+    },
+    "Tag": {
+      "ru": "اليوم / النهار",
+      "pos": "اسم",
+      "art": "der",
+      "pl": "die Tage"
+    },
+    "Wörth": {
+      "ru": "جزيرة فيرت",
+      "pos": "جغرافيا"
+    },
+    "auf": {
+      "ru": "على، في",
+      "pos": "حرف جر",
+      "note": "وهي أيضًا سابقة منفصلة: aufspringen «يقفز واقفًا»، sich aufmachen"
+    },
+    "bis": {
+      "ru": "حتى؛ إلى أن",
+      "pos": "أداة ربط"
+    },
+    "dann": {
+      "ru": "ثم، بعد ذلك",
+      "pos": "ظرف"
+    },
+    "der/die/das": {
+      "ru": "أداة التعريف",
+      "pos": "أداة تعريف",
+      "note": "وهي أيضًا اسم موصول بمعنى «الذي»"
+    },
+    "dieser": {
+      "ru": "هذا، هذه",
+      "pos": "ضمير"
+    },
+    "durch": {
+      "ru": "عبر، من خلال، بسبب",
+      "pos": "حرف جر"
+    },
+    "ein/eine": {
+      "ru": "أداة النكرة",
+      "pos": "أداة تعريف",
+      "note": "einer — «واحد، شخص ما»"
+    },
+    "es": {
+      "ru": "هو (للمحايد)؛ هذا",
+      "pos": "ضمير"
+    },
+    "fallen": {
+      "ru": "يسقط",
+      "pos": "فعل",
+      "forms": "fiel · ist gefallen"
+    },
+    "gehen": {
+      "forms": "ging · ist gegangen",
+      "note": "zu Bett gehen — يذهب إلى النوم. في النص مع سابقة منفصلة: ging das Rollen wieder an — angehen «يبدأ»",
+      "pos": "فعل",
+      "ru": "يذهب، يمشي"
+    },
+    "gesetzlich": {
+      "ru": "قانوني، رسمي",
+      "pos": "صفة"
+    },
+    "in": {
+      "ru": "في (im = in dem، ins = in das)",
+      "pos": "حرف جر"
+    },
+    "katholisch": {
+      "ru": "كاثوليكي",
+      "pos": "صفة"
+    },
+    "nach": {
+      "ru": "إلى، بعد، حسب",
+      "pos": "حرف جر"
+    },
+    "schmücken": {
+      "ru": "يزيّن",
+      "pos": "فعل",
+      "forms": "schmückte · hat geschmückt"
+    },
+    "sein": {
+      "ru": "يكون",
+      "pos": "فعل",
+      "forms": "war · ist gewesen",
+      "note": "Konjunktiv I: er sei، du seiest. والصيغة نفسها waren هي أيضًا جمع die Waren «بضائع»: allerhand Waren"
+    },
+    "und": {
+      "ru": "و",
+      "pos": "أداة ربط"
+    },
+    "viel": {
+      "ru": "كثير، الكثير",
+      "pos": "ضمير"
+    },
+    "weit": {
+      "ru": "بعيد",
+      "pos": "صفة",
+      "forms": "weit · weiter · am weitesten",
+      "note": "weiter — أبعد، إلى الأمام؛ von weitem — من بعيد"
+    },
+    "ziehen": {
+      "ru": "يتحرّك، يمضي؛ يسحب",
+      "pos": "فعل",
+      "forms": "zog · ist gezogen (يتحرّك) / hat gezogen (يسحب)",
+      "note": "في النص بمعنى «يتحرّك، يمضي». مع سابقة منفصلة: zieh fort — fortziehen «يرحل، يمضي»"
+    },
+    "zu": {
+      "ru": "إلى، في؛ أكثر من اللازم",
+      "pos": "حرف جر",
+      "note": "zur = zu der, zum = zu dem"
+    }
+  }
+}

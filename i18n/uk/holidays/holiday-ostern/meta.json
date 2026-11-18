@@ -1,0 +1,22 @@
+{
+  "id": "holiday-ostern",
+  "kind": "holiday",
+  "rule": {
+    "type": "easter",
+    "offset": 0
+  },
+  "title": "Ostern",
+  "titleRu": "Великдень",
+  "region": "Німеччина · Люґде, Північний Рейн — Вестфалія",
+  "cover": "✦",
+  "author": "German Morning",
+  "level": "B1",
+  "year": "2026",
+  "chapters": 1,
+  "words": 27,
+  "minutes": 1,
+  "source": "Deutsche UNESCO-Kommission · Osterräderlauf",
+  "sourceUrl": "https://www.unesco.de/staette/osterraederlauf-in-luegde/",
+  "license": "Авторська навчальна адаптація German Morning.",
+  "checked": "2026-11-18"
+}

@@ -1,0 +1,231 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "id": "holiday-dreikoenige",
+      "kind": "holiday",
+      "rule": {
+        "type": "fixed",
+        "month": 1,
+        "day": 6
+      },
+      "title": "Heilige Drei Könige",
+      "titleRu": "عيد الملوك الثلاثة",
+      "region": "ألمانيا · بافاريا",
+      "cover": "✦",
+      "author": "German Morning",
+      "level": "B1",
+      "year": "2026",
+      "chapters": 1,
+      "words": 41,
+      "minutes": 1,
+      "source": "Bayerisches Innenministerium · Feiertage",
+      "sourceUrl": "https://www.stmi.bayern.de/staat-und-verfassung/feiertage/",
+      "license": "نص تعليمي من إعداد German Morning.",
+      "checked": "2026-11-18"
+    },
+    {
+      "id": "holiday-frauentag",
+      "kind": "holiday",
+      "rule": {
+        "type": "fixed",
+        "month": 3,
+        "day": 8
+      },
+      "title": "Internationaler Frauentag",
+      "titleRu": "اليوم العالمي للمرأة",
+      "region": "ألمانيا · برلين ومكلنبورغ-فوربومرن",
+      "cover": "✦",
+      "author": "German Morning",
+      "level": "B1",
+      "year": "2026",
+      "chapters": 1,
+      "words": 33,
+      "minutes": 1,
+      "source": "Land Berlin · Sonn- und Feiertagsrecht",
+      "sourceUrl": "https://www.berlin.de/sen/inneres/buerger-und-staat/verfassungs-und-verwaltungsrecht/artikel.1435639.php",
+      "license": "نص تعليمي من إعداد German Morning.",
+      "checked": "2026-11-18"
+    },
+    {
+      "id": "holiday-ostern",
+      "kind": "holiday",
+      "rule": {
+        "type": "easter",
+        "offset": 0
+      },
+      "title": "Ostern",
+      "titleRu": "عيد الفصح",
+      "region": "ألمانيا · لوغده، شمال الراين-وستفاليا",
+      "cover": "✦",
+      "author": "German Morning",
+      "level": "B1",
+      "year": "2026",
+      "chapters": 1,
+      "words": 27,
+      "minutes": 1,
+      "source": "Deutsche UNESCO-Kommission · Osterräderlauf",
+      "sourceUrl": "https://www.unesco.de/staette/osterraederlauf-in-luegde/",
+      "license": "نص تعليمي من إعداد German Morning.",
+      "checked": "2026-11-18"
+    },
+    {
+      "id": "holiday-fronleichnam",
+      "kind": "holiday",
+      "rule": {
+        "type": "easter",
+        "offset": 60
+      },
+      "title": "Fronleichnam",
+      "titleRu": "عيد جسد المسيح",
+      "region": "ألمانيا · زيهاوزن، بافاريا",
+      "cover": "✦",
+      "author": "German Morning",
+      "level": "B1",
+      "year": "2026",
+      "chapters": 1,
+      "words": 43,
+      "minutes": 1,
+      "source": "Erzbistum München und Freising · Fronleichnam",
+      "sourceUrl": "https://www2.erzbistum-muenchen.de/pfarrei/pv-peiting-hohenpeissenberg/kirchenjahr-fronleichnam/117230",
+      "license": "نص تعليمي من إعداد German Morning.",
+      "checked": "2026-11-18"
+    },
+    {
+      "id": "holiday-bundesfeier",
+      "kind": "holiday",
+      "rule": {
+        "type": "fixed",
+        "month": 8,
+        "day": 1
+      },
+      "title": "Schweizer Bundesfeier",
+      "titleRu": "العيد الوطني السويسري",
+      "region": "سويسرا",
+      "cover": "✦",
+      "author": "German Morning",
+      "level": "B1",
+      "year": "2026",
+      "chapters": 1,
+      "words": 35,
+      "minutes": 1,
+      "source": "Schweiz Tourismus · 1. August",
+      "sourceUrl": "https://www.myswitzerland.com/de/erlebnisse/veranstaltungen/braeuche-im-sommer-und-herbst/der-1-august-bundesfeier/",
+      "license": "نص تعليمي من إعداد German Morning.",
+      "checked": "2026-11-18"
+    },
+    {
+      "id": "holiday-augsburger-friedensfest",
+      "kind": "holiday",
+      "rule": {
+        "type": "fixed",
+        "month": 8,
+        "day": 8
+      },
+      "title": "Augsburger Hohes Friedensfest",
+      "titleRu": "عيد السلام في أوغسبورغ",
+      "region": "ألمانيا · أوغسبورغ، بافاريا",
+      "cover": "✦",
+      "author": "German Morning",
+      "level": "B1",
+      "year": "2026",
+      "chapters": 1,
+      "words": 44,
+      "minutes": 1,
+      "source": "Stadt Augsburg · Hohes Friedensfest",
+      "sourceUrl": "https://www.augsburg.de/kultur/friedensstadt-augsburg/hohes-friedensfest",
+      "license": "نص تعليمي من إعداد German Morning.",
+      "checked": "2026-11-18"
+    },
+    {
+      "id": "holiday-deutsche-einheit-tag",
+      "kind": "holiday",
+      "rule": {
+        "type": "fixed",
+        "month": 10,
+        "day": 3
+      },
+      "title": "Tag der Deutschen Einheit",
+      "titleRu": "يوم الوحدة الألمانية",
+      "region": "ألمانيا · جميع أنحاء البلاد",
+      "cover": "✦",
+      "author": "German Morning",
+      "level": "B1",
+      "year": "2026",
+      "chapters": 1,
+      "words": 31,
+      "minutes": 1,
+      "source": "Bundesregierung · 3. Oktober 1990",
+      "sourceUrl": "https://www.bundesregierung.de/breg-de/schwerpunkte/deutsche-einheit/die-einheit-ist-wirklichkeit-432814",
+      "license": "نص تعليمي من إعداد German Morning.",
+      "checked": "2026-11-18"
+    },
+    {
+      "id": "holiday-nationalfeiertag-oesterreich",
+      "kind": "holiday",
+      "rule": {
+        "type": "fixed",
+        "month": 10,
+        "day": 26
+      },
+      "title": "Österreichischer Nationalfeiertag",
+      "titleRu": "العيد الوطني النمساوي",
+      "region": "النمسا",
+      "cover": "✦",
+      "author": "German Morning",
+      "level": "B1",
+      "year": "2026",
+      "chapters": 1,
+      "words": 30,
+      "minutes": 1,
+      "source": "Österreichisches Parlament · Staatsvertrag und Neutralität",
+      "sourceUrl": "https://www.parlament.gv.at/verstehen/historisches/1945-1995/staatsvertrag",
+      "license": "نص تعليمي من إعداد German Morning.",
+      "checked": "2026-11-18"
+    },
+    {
+      "id": "holiday-reformationstag",
+      "kind": "holiday",
+      "rule": {
+        "type": "fixed",
+        "month": 10,
+        "day": 31
+      },
+      "title": "Reformationstag",
+      "titleRu": "يوم الإصلاح الديني",
+      "region": "ألمانيا · ساكسونيا وفارتبورغ في تورينغن",
+      "cover": "✦",
+      "author": "German Morning",
+      "level": "B1",
+      "year": "2026",
+      "chapters": 1,
+      "words": 35,
+      "minutes": 1,
+      "source": "REVOSax · Sächsisches Feiertagsgesetz",
+      "sourceUrl": "https://www.revosax.sachsen.de/vorschrift/3997-SaechsSFG",
+      "license": "نص تعليمي من إعداد German Morning.",
+      "checked": "2026-11-18"
+    },
+    {
+      "id": "holiday-buss-und-bettag",
+      "kind": "holiday",
+      "rule": {
+        "type": "repentance"
+      },
+      "title": "Buß- und Bettag",
+      "titleRu": "يوم التوبة والصلاة",
+      "region": "ألمانيا · ساكسونيا وبافاريا",
+      "cover": "✦",
+      "author": "German Morning",
+      "level": "B1",
+      "year": "2026",
+      "chapters": 1,
+      "words": 45,
+      "minutes": 1,
+      "source": "REVOSax · Sächsisches Feiertagsgesetz",
+      "sourceUrl": "https://www.revosax.sachsen.de/vorschrift/3997-SaechsSFG",
+      "license": "نص تعليمي من إعداد German Morning.",
+      "checked": "2026-11-18"
+    }
+  ]
+}

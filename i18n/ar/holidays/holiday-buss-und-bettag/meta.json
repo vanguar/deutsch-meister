@@ -1,0 +1,21 @@
+{
+  "id": "holiday-buss-und-bettag",
+  "kind": "holiday",
+  "rule": {
+    "type": "repentance"
+  },
+  "title": "Buß- und Bettag",
+  "titleRu": "يوم التوبة والصلاة",
+  "region": "ألمانيا · ساكسونيا وبافاريا",
+  "cover": "✦",
+  "author": "German Morning",
+  "level": "B1",
+  "year": "2026",
+  "chapters": 1,
+  "words": 45,
+  "minutes": 1,
+  "source": "REVOSax · Sächsisches Feiertagsgesetz",
+  "sourceUrl": "https://www.revosax.sachsen.de/vorschrift/3997-SaechsSFG",
+  "license": "نص تعليمي من إعداد German Morning.",
+  "checked": "2026-11-18"
+}

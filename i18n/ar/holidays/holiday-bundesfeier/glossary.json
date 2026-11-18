@@ -1,0 +1,182 @@
+{
+  "version": 1,
+  "w": {
+    "am": "an",
+    "an": "an",
+    "auf": "auf",
+    "august": "August",
+    "bekannte": "bekannt",
+    "bundesbrief": "Bundesbrief",
+    "dem": "der/die/das",
+    "den": "der/die/das",
+    "der": "der/die/das",
+    "die": "der/die/das",
+    "durch": "durch",
+    "eine": "ein/eine",
+    "erinnert": "erinnern",
+    "feier": "Feier",
+    "feiert": "feiern",
+    "findet": "stattfinden",
+    "gehen": "gehen",
+    "ihren": "ihr (её, их)",
+    "in": "in",
+    "kinder": "Kind",
+    "lampions": "Lampion",
+    "manchen": "mancher",
+    "mit": "mit",
+    "nationalfeiertag": "Nationalfeiertag",
+    "orten": "Ort",
+    "rütliwiese": "Rütliwiese",
+    "schweiz": "Schweiz",
+    "statt": "stattfinden",
+    "straßen": "Straße",
+    "tag": "Tag",
+    "vierwaldstättersee": "Vierwaldstättersee",
+    "von": "von",
+    "über": "über"
+  },
+  "l": {
+    "August": {
+      "ru": "أغسطس",
+      "pos": "اسم",
+      "art": "der",
+      "pl": null
+    },
+    "Bundesbrief": {
+      "ru": "الميثاق الاتحادي السويسري",
+      "pos": "اسم",
+      "art": "der",
+      "pl": null
+    },
+    "Feier": {
+      "ru": "احتفال، مناسبة",
+      "pos": "اسم",
+      "art": "die",
+      "pl": "die Feiern"
+    },
+    "Kind": {
+      "ru": "طفل",
+      "pos": "اسم",
+      "art": "das",
+      "pl": "die Kinder"
+    },
+    "Lampion": {
+      "ru": "فانوس ورقي",
+      "pos": "اسم",
+      "art": "der",
+      "pl": "die Lampions"
+    },
+    "Nationalfeiertag": {
+      "ru": "عيد وطني",
+      "pos": "اسم",
+      "art": "der",
+      "pl": "die Nationalfeiertage"
+    },
+    "Ort": {
+      "ru": "مكان",
+      "pos": "اسم",
+      "art": "der",
+      "pl": "die Orte",
+      "note": "meines Orts — من جهتي (قديم)"
+    },
+    "Rütliwiese": {
+      "ru": "مرج روتلي",
+      "pos": "جغرافيا"
+    },
+    "Schweiz": {
+      "ru": "سويسرا",
+      "pos": "جغرافيا"
+    },
+    "Straße": {
+      "art": "die",
+      "pl": "die Straßen",
+      "pos": "اسم",
+      "ru": "شارع، طريق"
+    },
+    "Tag": {
+      "ru": "اليوم / النهار",
+      "pos": "اسم",
+      "art": "der",
+      "pl": "die Tage"
+    },
+    "Vierwaldstättersee": {
+      "ru": "بحيرة لوتسرن",
+      "pos": "جغرافيا"
+    },
+    "an": {
+      "ru": "عند، إلى، على",
+      "pos": "حرف جر",
+      "note": "am = an dem. وهي أيضًا سابقة منفصلة: anfangen «يبدأ»، annehmen، ansehen، anzünden"
+    },
+    "auf": {
+      "ru": "على، في",
+      "pos": "حرف جر",
+      "note": "وهي أيضًا سابقة منفصلة: aufspringen «يقفز واقفًا»، sich aufmachen"
+    },
+    "bekannt": {
+      "ru": "معروف، مألوف",
+      "pos": "صفة"
+    },
+    "der/die/das": {
+      "ru": "أداة التعريف",
+      "pos": "أداة تعريف",
+      "note": "وهي أيضًا اسم موصول بمعنى «الذي»"
+    },
+    "durch": {
+      "ru": "عبر، من خلال، بسبب",
+      "pos": "حرف جر"
+    },
+    "ein/eine": {
+      "ru": "أداة النكرة",
+      "pos": "أداة تعريف",
+      "note": "einer — «واحد، شخص ما»"
+    },
+    "erinnern": {
+      "ru": "يذكّر",
+      "pos": "فعل",
+      "forms": "erinnerte · hat erinnert"
+    },
+    "feiern": {
+      "ru": "يحتفل",
+      "pos": "فعل",
+      "forms": "feierte · hat gefeiert"
+    },
+    "gehen": {
+      "forms": "ging · ist gegangen",
+      "note": "zu Bett gehen — يذهب إلى النوم. في النص مع سابقة منفصلة: ging das Rollen wieder an — angehen «يبدأ»",
+      "pos": "فعل",
+      "ru": "يذهب، يمشي"
+    },
+    "ihr (её, их)": {
+      "ru": "لها؛ لهم",
+      "pos": "ضمير"
+    },
+    "in": {
+      "ru": "في (im = in dem، ins = in das)",
+      "pos": "حرف جر"
+    },
+    "mancher": {
+      "ru": "بعض، كثير من",
+      "pos": "ضمير"
+    },
+    "mit": {
+      "ru": "ث",
+      "pos": "حرف جر",
+      "note": "وهي أيضًا سابقة منفصلة: mitgehen «يذهب معه»"
+    },
+    "stattfinden": {
+      "ru": "يحدث، يوجد",
+      "pos": "فعل",
+      "forms": "fand statt · hat stattgefunden",
+      "note": "ein Zusammenhang findet statt — توجد صلة"
+    },
+    "von": {
+      "ru": "من، عن (vom = von dem)",
+      "pos": "حرف جر"
+    },
+    "über": {
+      "ru": "فوق، عبر، عن",
+      "pos": "حرف جر"
+    }
+  }
+}

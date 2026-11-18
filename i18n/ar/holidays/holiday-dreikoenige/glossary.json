@@ -1,0 +1,217 @@
+{
+  "version": 1,
+  "w": {
+    "als": "als",
+    "am": "an",
+    "an": "an",
+    "anfang": "Anfang",
+    "b": "C+M+B",
+    "bayern": "Bayern",
+    "bedeuten": "bedeuten",
+    "buchstaben": "Buchstabe",
+    "c": "C+M+B",
+    "christus": "Christus",
+    "den": "der/die/das",
+    "der": "der/die/das",
+    "die": "der/die/das",
+    "dieses": "dieser",
+    "drei": "drei",
+    "ein": "ein/eine",
+    "feiertag": "Feiertag",
+    "gehen": "gehen",
+    "gesetzlicher": "gesetzlich",
+    "haus": "Haus",
+    "haustür": "Haustür",
+    "heute": "heute",
+    "hinterlassen": "hinterlassen",
+    "in": "in",
+    "ist": "sein",
+    "januar": "Januar",
+    "kinder": "Kind",
+    "m": "C+M+B",
+    "sammeln": "sich sammeln",
+    "segen": "Segen",
+    "segne": "segnen",
+    "sie": "sie",
+    "spenden": "Spende",
+    "sternsinger": "Sternsinger",
+    "tür": "Tür",
+    "und": "und",
+    "vielerorts": "vielerorts",
+    "von": "von",
+    "zu": "zu"
+  },
+  "l": {
+    "Anfang": {
+      "ru": "بداية",
+      "pos": "اسم",
+      "art": "der",
+      "pl": "die Anfänge",
+      "note": "Anfang der Woche — في بداية الأسبوع"
+    },
+    "Bayern": {
+      "ru": "بافاريا",
+      "pos": "جغرافيا"
+    },
+    "Buchstabe": {
+      "ru": "حرف",
+      "pos": "اسم",
+      "art": "der",
+      "pl": "die Buchstaben"
+    },
+    "C+M+B": {
+      "ru": "صيغة مباركة البيت",
+      "pos": "اختصار"
+    },
+    "Christus": {
+      "ru": "المسيح",
+      "pos": "الاسم"
+    },
+    "Feiertag": {
+      "ru": "يوم عطلة رسمية",
+      "pos": "اسم",
+      "art": "der",
+      "pl": "die Feiertage"
+    },
+    "Haus": {
+      "ru": "بيت",
+      "pos": "اسم",
+      "art": "das",
+      "pl": "die Häuser"
+    },
+    "Haustür": {
+      "ru": "باب المنزل",
+      "pos": "اسم",
+      "art": "die",
+      "pl": "die Haustüren"
+    },
+    "Januar": {
+      "ru": "يناير",
+      "pos": "اسم",
+      "art": "der",
+      "pl": "die Januare"
+    },
+    "Kind": {
+      "ru": "طفل",
+      "pos": "اسم",
+      "art": "das",
+      "pl": "die Kinder"
+    },
+    "Segen": {
+      "ru": "بركة، نعمة",
+      "pos": "اسم",
+      "art": "der",
+      "pl": null
+    },
+    "Spende": {
+      "ru": "تبرّع",
+      "pos": "اسم",
+      "art": "die",
+      "pl": "die Spenden"
+    },
+    "Sternsinger": {
+      "ru": "منشد يحمل نجمة الميلاد",
+      "pos": "اسم",
+      "art": "der",
+      "pl": "die Sternsinger"
+    },
+    "Tür": {
+      "art": "die",
+      "pl": "die Türen",
+      "pos": "اسم",
+      "ru": "باب"
+    },
+    "als": {
+      "ru": "عندما؛ كـ؛ من (في المقارنة)",
+      "pos": "أداة ربط"
+    },
+    "an": {
+      "ru": "عند، إلى، على",
+      "pos": "حرف جر",
+      "note": "am = an dem. وهي أيضًا سابقة منفصلة: anfangen «يبدأ»، annehmen، ansehen، anzünden"
+    },
+    "bedeuten": {
+      "ru": "يعني",
+      "pos": "فعل",
+      "forms": "bedeutete · hat bedeutet"
+    },
+    "der/die/das": {
+      "ru": "أداة التعريف",
+      "pos": "أداة تعريف",
+      "note": "وهي أيضًا اسم موصول بمعنى «الذي»"
+    },
+    "dieser": {
+      "ru": "هذا، هذه",
+      "pos": "ضمير"
+    },
+    "drei": {
+      "ru": "ثلاثة",
+      "pos": "عدد"
+    },
+    "ein/eine": {
+      "ru": "أداة النكرة",
+      "pos": "أداة تعريف",
+      "note": "einer — «واحد، شخص ما»"
+    },
+    "gehen": {
+      "forms": "ging · ist gegangen",
+      "note": "zu Bett gehen — يذهب إلى النوم. في النص مع سابقة منفصلة: ging das Rollen wieder an — angehen «يبدأ»",
+      "pos": "فعل",
+      "ru": "يذهب، يمشي"
+    },
+    "gesetzlich": {
+      "ru": "قانوني، رسمي",
+      "pos": "صفة"
+    },
+    "heute": {
+      "ru": "اليوم",
+      "pos": "ظرف"
+    },
+    "hinterlassen": {
+      "ru": "يترك (خلفه)",
+      "pos": "فعل",
+      "forms": "hinterließ · hat hinterlassen"
+    },
+    "in": {
+      "ru": "في (im = in dem، ins = in das)",
+      "pos": "حرف جر"
+    },
+    "segnen": {
+      "ru": "يبارك",
+      "pos": "فعل",
+      "forms": "segnete · hat gesegnet"
+    },
+    "sein": {
+      "ru": "يكون",
+      "pos": "فعل",
+      "forms": "war · ist gewesen",
+      "note": "Konjunktiv I: er sei، du seiest. والصيغة نفسها waren هي أيضًا جمع die Waren «بضائع»: allerhand Waren"
+    },
+    "sich sammeln": {
+      "ru": "يتجمّع، يتراكم",
+      "pos": "فعل",
+      "forms": "sammelte sich · hat sich gesammelt"
+    },
+    "sie": {
+      "ru": "هي؛ هم؛ حضرتك",
+      "pos": "ضمير"
+    },
+    "und": {
+      "ru": "و",
+      "pos": "أداة ربط"
+    },
+    "vielerorts": {
+      "ru": "في أماكن كثيرة",
+      "pos": "ظرف"
+    },
+    "von": {
+      "ru": "من، عن (vom = von dem)",
+      "pos": "حرف جر"
+    },
+    "zu": {
+      "ru": "إلى، في؛ أكثر من اللازم",
+      "pos": "حرف جر",
+      "note": "zur = zu der, zum = zu dem"
+    }
+  }
+}

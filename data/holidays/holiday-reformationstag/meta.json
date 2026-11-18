@@ -1,0 +1,23 @@
+{
+  "id": "holiday-reformationstag",
+  "kind": "holiday",
+  "rule": {
+    "type": "fixed",
+    "month": 10,
+    "day": 31
+  },
+  "title": "Reformationstag",
+  "titleRu": "День Реформации",
+  "region": "Германия · Саксония и Вартбург, Тюрингия",
+  "cover": "✦",
+  "author": "German Morning",
+  "level": "B1",
+  "year": "2026",
+  "chapters": 1,
+  "words": 35,
+  "minutes": 1,
+  "source": "REVOSax · Sächsisches Feiertagsgesetz",
+  "sourceUrl": "https://www.revosax.sachsen.de/vorschrift/3997-SaechsSFG",
+  "license": "Авторская учебная адаптация German Morning.",
+  "checked": "2026-11-18"
+}

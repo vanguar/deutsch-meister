@@ -338,7 +338,7 @@
     if (typeof orig !== 'function') return;
     window.fetch = function (input, init) {
       var url = typeof input === 'string' ? input : (input && input.url) || '';
-      var m = url.match(/^(.*?)data\/(books|news|dialogs|vocab|fahrschule|laender|history)\/(.+\.json)(\?.*)?$/);
+      var m = url.match(/^(.*?)data\/(books|news|dialogs|vocab|fahrschule|laender|history|holidays)\/(.+\.json)(\?.*)?$/);
       if (!m) return orig.apply(this, arguments);
       var alt = m[1] + 'i18n/' + lang + '/' + m[2] + '/' + m[3] + (m[4] || '');
       var self = this, args = arguments;

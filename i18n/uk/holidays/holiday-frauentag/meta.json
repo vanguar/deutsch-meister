@@ -1,0 +1,23 @@
+{
+  "id": "holiday-frauentag",
+  "kind": "holiday",
+  "rule": {
+    "type": "fixed",
+    "month": 3,
+    "day": 8
+  },
+  "title": "Internationaler Frauentag",
+  "titleRu": "Міжнародний жіночий день",
+  "region": "Німеччина · Берлін і Мекленбург — Передня Померанія",
+  "cover": "✦",
+  "author": "German Morning",
+  "level": "B1",
+  "year": "2026",
+  "chapters": 1,
+  "words": 33,
+  "minutes": 1,
+  "source": "Land Berlin · Sonn- und Feiertagsrecht",
+  "sourceUrl": "https://www.berlin.de/sen/inneres/buerger-und-staat/verfassungs-und-verwaltungsrecht/artikel.1435639.php",
+  "license": "Авторська навчальна адаптація German Morning.",
+  "checked": "2026-11-18"
+}

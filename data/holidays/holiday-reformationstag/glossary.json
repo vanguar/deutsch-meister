@@ -1,0 +1,180 @@
+{
+  "version": 1,
+  "w": {
+    "am": "an",
+    "besuchen": "besuchen",
+    "das": "der/die/das",
+    "der": "der/die/das",
+    "deutsche": "deutsch",
+    "die": "der/die/das",
+    "dort": "dort",
+    "ein": "ein/eine",
+    "er": "er",
+    "erfahren": "erfahren",
+    "feiertag": "Feiertag",
+    "gesetzlicher": "gesetzlich",
+    "in": "in",
+    "ins": "in",
+    "ist": "sein",
+    "kann": "können",
+    "luther": "Luther",
+    "martin": "Martin (Vorname)",
+    "mehr": "mehr",
+    "möchte": "mögen",
+    "neue": "neu",
+    "oktober": "Oktober",
+    "reformation": "Reformation",
+    "reformationstag": "Reformationstag",
+    "sachsen": "Sachsen",
+    "testament": "Testament",
+    "thüringen": "Thüringen",
+    "und": "und",
+    "wartburg": "Wartburg",
+    "wer": "wer",
+    "über": "über",
+    "übersetzte": "übersetzen"
+  },
+  "l": {
+    "Feiertag": {
+      "ru": "праздничный (нерабочий) день",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Feiertage"
+    },
+    "Luther": {
+      "ru": "Лютер",
+      "pos": "имя собств."
+    },
+    "Martin (Vorname)": {
+      "ru": "Мартин (имя)",
+      "pos": "имя собств."
+    },
+    "Oktober": {
+      "ru": "октябрь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Oktober"
+    },
+    "Reformation": {
+      "ru": "Реформация",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "Reformationstag": {
+      "ru": "День Реформации (31 октября)",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "Sachsen": {
+      "ru": "Саксония",
+      "pos": "геогр."
+    },
+    "Testament": {
+      "ru": "завет; завещание",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Testamente"
+    },
+    "Thüringen": {
+      "ru": "Тюрингия (федеральная земля Германии)",
+      "pos": "геогр."
+    },
+    "Wartburg": {
+      "ru": "Вартбург",
+      "pos": "геогр."
+    },
+    "an": {
+      "ru": "у, к, на",
+      "pos": "предл.",
+      "note": "am = an dem. Тж. отделяемая приставка: anfangen «начинать», annehmen, ansehen, anzünden"
+    },
+    "besuchen": {
+      "ru": "посещать, навещать",
+      "pos": "гл.",
+      "forms": "besuchte · hat besucht"
+    },
+    "der/die/das": {
+      "ru": "определённый артикль",
+      "pos": "артикль",
+      "note": "Тж. относительное местоимение «который»"
+    },
+    "deutsch": {
+      "ru": "немецкий",
+      "pos": "прил."
+    },
+    "dort": {
+      "ru": "там",
+      "pos": "нареч."
+    },
+    "ein/eine": {
+      "ru": "неопределённый артикль",
+      "pos": "артикль",
+      "note": "einer — «один, некто»"
+    },
+    "er": {
+      "ru": "он",
+      "pos": "мест.",
+      "note": "ihn — его, ihm — ему"
+    },
+    "erfahren": {
+      "ru": "узнавать",
+      "pos": "гл.",
+      "forms": "erfuhr · hat erfahren"
+    },
+    "gesetzlich": {
+      "ru": "законный, официальный",
+      "pos": "прил."
+    },
+    "in": {
+      "ru": "в (im = in dem, ins = in das)",
+      "pos": "предл."
+    },
+    "können": {
+      "ru": "мочь, уметь",
+      "pos": "гл.",
+      "forms": "konnte · hat gekonnt",
+      "note": "В тексте с отделяемой приставкой: kann nicht fort — fortkönnen «не мочь уйти»"
+    },
+    "mehr": {
+      "ru": "больше",
+      "pos": "нареч.",
+      "note": "В nicht/kein … mehr — больше не. Формально компаратив от viel"
+    },
+    "mögen": {
+      "ru": "любить; хотеть",
+      "pos": "гл.",
+      "forms": "mochte · hat gemocht",
+      "note": "leiden mögen — выносить, терпеть"
+    },
+    "neu": {
+      "ru": "новый",
+      "pos": "прил."
+    },
+    "sein": {
+      "ru": "быть",
+      "pos": "гл.",
+      "forms": "war · ist gewesen",
+      "note": "Konjunktiv I: er sei, du seiest. Та же форма waren — и мн. ч. die Waren «товары»: allerhand Waren"
+    },
+    "und": {
+      "ru": "и, а",
+      "pos": "союз"
+    },
+    "wer": {
+      "ru": "кто",
+      "pos": "мест.",
+      "note": "wem — дат. п.: кому"
+    },
+    "über": {
+      "ru": "над, через, о",
+      "pos": "предл."
+    },
+    "übersetzen": {
+      "ru": "переводить",
+      "pos": "гл.",
+      "forms": "übersetzte · hat übersetzt"
+    }
+  }
+}

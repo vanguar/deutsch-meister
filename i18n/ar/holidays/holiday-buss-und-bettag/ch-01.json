@@ -1,0 +1,57 @@
+{
+  "id": "ch-01",
+  "title": "Buß- und Bettag",
+  "titleRu": "يوم التوبة والصلاة",
+  "paragraphs": [
+    {
+      "sourceIds": [
+        "kirche"
+      ],
+      "s": [
+        {
+          "de": "Der Buß- und Bettag liegt im November und fällt immer auf einen Mittwoch.",
+          "ru": "يقع يوم التوبة والصلاة في نوفمبر، ويوافق دائمًا يوم أربعاء."
+        },
+        {
+          "de": "Für evangelische Christen ist er eine Zeit zum Beten und Nachdenken.",
+          "ru": "وهو وقت للصلاة والتأمل لدى المسيحيين البروتستانت."
+        }
+      ]
+    },
+    {
+      "sourceIds": [
+        "sachsen",
+        "bayern"
+      ],
+      "s": [
+        {
+          "de": "In Sachsen ist der Buß- und Bettag ein gesetzlicher Feiertag.",
+          "ru": "يوم التوبة والصلاة عطلة رسمية في ساكسونيا."
+        },
+        {
+          "de": "In Bayern haben Schülerinnen und Schüler an diesem Tag keinen Unterricht.",
+          "ru": "وفي بافاريا لا يتلقى تلاميذ المدارس دروسًا في هذا اليوم."
+        }
+      ]
+    }
+  ],
+  "sourceTitle": "المصادر والتحقق من المعلومات",
+  "sources": [
+    {
+      "id": "sachsen",
+      "name": "REVOSax · Sächsisches Feiertagsgesetz",
+      "url": "https://www.revosax.sachsen.de/vorschrift/3997-SaechsSFG"
+    },
+    {
+      "id": "bayern",
+      "name": "Bayerisches Kultusministerium · Ferien und Feiertage",
+      "url": "https://www.km.bayern.de/termine/ferien-und-feiertage"
+    },
+    {
+      "id": "kirche",
+      "name": "Evangelisch.de · Einkehr und Umkehr",
+      "url": "https://www.evangelisch.de/inhalte/113462/11-09-2013/buss-und-bettag-einkehr-und-umkehr"
+    }
+  ],
+  "checked": "2026-11-18"
+}

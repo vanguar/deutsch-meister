@@ -1,0 +1,23 @@
+{
+  "id": "holiday-dreikoenige",
+  "kind": "holiday",
+  "rule": {
+    "type": "fixed",
+    "month": 1,
+    "day": 6
+  },
+  "title": "Heilige Drei Könige",
+  "titleRu": "День трьох королів",
+  "region": "Німеччина · Баварія",
+  "cover": "✦",
+  "author": "German Morning",
+  "level": "B1",
+  "year": "2026",
+  "chapters": 1,
+  "words": 41,
+  "minutes": 1,
+  "source": "Bayerisches Innenministerium · Feiertage",
+  "sourceUrl": "https://www.stmi.bayern.de/staat-und-verfassung/feiertage/",
+  "license": "Авторська навчальна адаптація German Morning.",
+  "checked": "2026-11-18"
+}

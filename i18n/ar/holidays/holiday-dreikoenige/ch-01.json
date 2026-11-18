@@ -1,0 +1,57 @@
+{
+  "id": "ch-01",
+  "title": "Heilige Drei Könige",
+  "titleRu": "عيد الملوك الثلاثة",
+  "paragraphs": [
+    {
+      "sourceIds": [
+        "bayern"
+      ],
+      "s": [
+        {
+          "de": "Am 6. Januar ist in Bayern ein gesetzlicher Feiertag.",
+          "ru": "السادس من يناير عطلة رسمية في بافاريا."
+        }
+      ]
+    },
+    {
+      "sourceIds": [
+        "segen",
+        "aktion"
+      ],
+      "s": [
+        {
+          "de": "Anfang Januar gehen vielerorts Kinder als Sternsinger von Tür zu Tür.",
+          "ru": "في أوائل يناير يطوف الأطفال في أماكن كثيرة من باب إلى باب وهم ينشدون ويحملون نجمة الميلاد."
+        },
+        {
+          "de": "Sie sammeln Spenden und hinterlassen den Segen C+M+B an der Haustür.",
+          "ru": "يجمعون التبرعات ويتركون البركة C+M+B على باب المنزل."
+        },
+        {
+          "de": "Die drei Buchstaben bedeuten heute: Christus segne dieses Haus.",
+          "ru": "تعني هذه الحروف الثلاثة اليوم: ليبارك المسيح هذا البيت."
+        }
+      ]
+    }
+  ],
+  "sourceTitle": "المصادر والتحقق من المعلومات",
+  "sources": [
+    {
+      "id": "bayern",
+      "name": "Bayerisches Innenministerium · Feiertage",
+      "url": "https://www.stmi.bayern.de/staat-und-verfassung/feiertage/"
+    },
+    {
+      "id": "segen",
+      "name": "Kindermissionswerk · Fragen zum Sternsingen",
+      "url": "https://www.sternsinger.de/sternsingen/faq/"
+    },
+    {
+      "id": "aktion",
+      "name": "Kindermissionswerk · Dreikönigssingen",
+      "url": "https://www.sternsinger.de/sternsingen/bischoefliche-ordnung-zur-aktion-dreikoenigssingen/"
+    }
+  ],
+  "checked": "2026-11-18"
+}

@@ -1,0 +1,45 @@
+{
+  "id": "ch-01",
+  "title": "Österreichischer Nationalfeiertag",
+  "titleRu": "Национальный день Австрии",
+  "paragraphs": [
+    {
+      "sourceIds": [
+        "parlament",
+        "archiv"
+      ],
+      "s": [
+        {
+          "de": "Am 26. Oktober feiert Österreich seinen Nationalfeiertag.",
+          "ru": "26 октября Австрия отмечает национальный праздник."
+        },
+        {
+          "de": "An diesem Tag beschloss das Parlament im Jahr 1955 die Neutralität Österreichs.",
+          "ru": "В этот день в 1955 году парламент принял закон о нейтралитете Австрии."
+        },
+        {
+          "de": "1956 hieß die Feier noch Tag der Fahne.",
+          "ru": "В 1956 году праздник ещё называли Днём флага."
+        },
+        {
+          "de": "Seit 1965 ist der 26. Oktober der Nationalfeiertag.",
+          "ru": "С 1965 года 26 октября стало национальным праздником."
+        }
+      ]
+    }
+  ],
+  "sourceTitle": "Источники и проверка фактов",
+  "sources": [
+    {
+      "id": "parlament",
+      "name": "Österreichisches Parlament · Staatsvertrag und Neutralität",
+      "url": "https://www.parlament.gv.at/verstehen/historisches/1945-1995/staatsvertrag"
+    },
+    {
+      "id": "archiv",
+      "name": "Parlamentsarchiv · Eine freiwillige Verpflichtung",
+      "url": "https://www.parlament.gv.at/fachinfos/parlamentsarchiv/Eine-freiwillige-Verpflichtung"
+    }
+  ],
+  "checked": "2026-11-18"
+}

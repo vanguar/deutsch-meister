@@ -1,0 +1,52 @@
+{
+  "id": "ch-01",
+  "title": "Augsburger Hohes Friedensfest",
+  "titleRu": "Праздник мира в Аугсбурге",
+  "paragraphs": [
+    {
+      "sourceIds": [
+        "stadt",
+        "gesetz"
+      ],
+      "s": [
+        {
+          "de": "Der 8. August ist in Augsburg ein eigener gesetzlicher Feiertag.",
+          "ru": "8 августа в Аугсбурге свой официальный выходной."
+        },
+        {
+          "de": "Das Fest erinnert daran, dass die Protestanten nach dem Dreißigjährigen Krieg ihren Glauben wieder frei leben konnten.",
+          "ru": "Праздник напоминает о том, что после Тридцатилетней войны протестанты снова могли свободно исповедовать свою веру."
+        }
+      ]
+    },
+    {
+      "sourceIds": [
+        "stadt"
+      ],
+      "s": [
+        {
+          "de": "Heute sitzen Menschen auf dem Rathausplatz zusammen an der Friedenstafel.",
+          "ru": "Сегодня на Ратушной площади жители и гости садятся за общий стол мира."
+        },
+        {
+          "de": "Auch in den Stadtteilen gibt es solche Tische.",
+          "ru": "Такие столы накрывают и в районах города."
+        }
+      ]
+    }
+  ],
+  "sourceTitle": "Источники и проверка фактов",
+  "sources": [
+    {
+      "id": "stadt",
+      "name": "Stadt Augsburg · Hohes Friedensfest",
+      "url": "https://www.augsburg.de/kultur/friedensstadt-augsburg/hohes-friedensfest"
+    },
+    {
+      "id": "gesetz",
+      "name": "Bayerisches Feiertagsgesetz · Art. 1",
+      "url": "https://www.gesetze-bayern.de/Content/Document/BayFTG-1"
+    }
+  ],
+  "checked": "2026-11-18"
+}

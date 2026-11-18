@@ -1,0 +1,135 @@
+{
+  "version": 1,
+  "w": {
+    "am": "an",
+    "an": "an",
+    "beschloss": "beschließen",
+    "das": "der/die/das",
+    "der": "der/die/das",
+    "die": "der/die/das",
+    "diesem": "dieser",
+    "fahne": "Fahne",
+    "feier": "Feier",
+    "feiert": "feiern",
+    "hieß": "heißen",
+    "im": "in",
+    "ist": "sein",
+    "jahr": "Jahr",
+    "nationalfeiertag": "Nationalfeiertag",
+    "neutralität": "Neutralität",
+    "noch": "noch",
+    "oktober": "Oktober",
+    "parlament": "Parlament",
+    "seinen": "sein (его, свой)",
+    "seit": "seit",
+    "tag": "Tag",
+    "österreich": "Österreich",
+    "österreichs": "Österreich"
+  },
+  "l": {
+    "Fahne": {
+      "ru": "راية",
+      "pos": "اسم",
+      "art": "die",
+      "pl": "die Fahnen"
+    },
+    "Feier": {
+      "ru": "احتفال، مناسبة",
+      "pos": "اسم",
+      "art": "die",
+      "pl": "die Feiern"
+    },
+    "Jahr": {
+      "ru": "سنة",
+      "pos": "اسم",
+      "art": "das",
+      "pl": "die Jahre"
+    },
+    "Nationalfeiertag": {
+      "ru": "عيد وطني",
+      "pos": "اسم",
+      "art": "der",
+      "pl": "die Nationalfeiertage"
+    },
+    "Neutralität": {
+      "ru": "حياد",
+      "pos": "اسم",
+      "art": "die",
+      "pl": null
+    },
+    "Oktober": {
+      "ru": "أكتوبر",
+      "pos": "اسم",
+      "art": "der",
+      "pl": "die Oktober"
+    },
+    "Parlament": {
+      "ru": "برلمان",
+      "pos": "اسم",
+      "art": "das",
+      "pl": "die Parlamente"
+    },
+    "Tag": {
+      "ru": "اليوم / النهار",
+      "pos": "اسم",
+      "art": "der",
+      "pl": "die Tage"
+    },
+    "an": {
+      "ru": "عند، إلى، على",
+      "pos": "حرف جر",
+      "note": "am = an dem. وهي أيضًا سابقة منفصلة: anfangen «يبدأ»، annehmen، ansehen، anzünden"
+    },
+    "beschließen": {
+      "ru": "يقرّر",
+      "pos": "فعل",
+      "forms": "beschloss · hat beschlossen"
+    },
+    "der/die/das": {
+      "ru": "أداة التعريف",
+      "pos": "أداة تعريف",
+      "note": "وهي أيضًا اسم موصول بمعنى «الذي»"
+    },
+    "dieser": {
+      "ru": "هذا، هذه",
+      "pos": "ضمير"
+    },
+    "feiern": {
+      "ru": "يحتفل",
+      "pos": "فعل",
+      "forms": "feierte · hat gefeiert"
+    },
+    "heißen": {
+      "ru": "يأمر؛ يُسمّى",
+      "pos": "فعل",
+      "forms": "hieß · hat geheißen",
+      "note": "hatte aufstehen heißen — كان قد أمرها بأن تقوم"
+    },
+    "in": {
+      "ru": "في (im = in dem، ins = in das)",
+      "pos": "حرف جر"
+    },
+    "noch": {
+      "ru": "بعدُ / أيضًا",
+      "pos": "ظرف"
+    },
+    "sein": {
+      "ru": "يكون",
+      "pos": "فعل",
+      "forms": "war · ist gewesen",
+      "note": "Konjunktiv I: er sei، du seiest. والصيغة نفسها waren هي أيضًا جمع die Waren «بضائع»: allerhand Waren"
+    },
+    "sein (его, свой)": {
+      "ru": "ـه (ضمير الملكية)، خاصّته",
+      "pos": "ضمير"
+    },
+    "seit": {
+      "ru": "منذ (وقت ما)",
+      "pos": "حرف جر"
+    },
+    "Österreich": {
+      "ru": "النمسا",
+      "pos": "جغرافيا"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "ch-01",
+  "title": "Internationaler Frauentag",
+  "titleRu": "Международный женский день",
+  "paragraphs": [
+    {
+      "sourceIds": [
+        "berlin",
+        "mv"
+      ],
+      "s": [
+        {
+          "de": "Am 8. März geht es um die gleichen Rechte für Frauen und Männer.",
+          "ru": "8 марта говорят о равных правах женщин и мужчин."
+        },
+        {
+          "de": "In Berlin ist der Tag ein gesetzlicher Feiertag.",
+          "ru": "В Берлине это официальный праздник."
+        },
+        {
+          "de": "In Mecklenburg-Vorpommern gilt das seit 2023.",
+          "ru": "В Мекленбурге — Передней Померании официальный выходной появился в 2023 году."
+        }
+      ]
+    },
+    {
+      "sourceIds": [
+        "mv"
+      ],
+      "s": [
+        {
+          "de": "Dort werden auch Frauen für ihr Engagement ausgezeichnet.",
+          "ru": "Там также награждают женщин за их вклад в общественную жизнь."
+        }
+      ]
+    }
+  ],
+  "sourceTitle": "Источники и проверка фактов",
+  "sources": [
+    {
+      "id": "berlin",
+      "name": "Land Berlin · Sonn- und Feiertagsrecht",
+      "url": "https://www.berlin.de/sen/inneres/buerger-und-staat/verfassungs-und-verwaltungsrecht/artikel.1435639.php"
+    },
+    {
+      "id": "mv",
+      "name": "Landesregierung Mecklenburg-Vorpommern · Frauentag",
+      "url": "https://www.regierung-mv.de/Aktuell/?id=211797&processor=processor.sa.pressemitteilung"
+    }
+  ],
+  "checked": "2026-11-18"
+}

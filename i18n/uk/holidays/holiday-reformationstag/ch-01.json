@@ -1,0 +1,51 @@
+{
+  "id": "ch-01",
+  "title": "Reformationstag",
+  "titleRu": "День Реформації",
+  "paragraphs": [
+    {
+      "sourceIds": [
+        "sachsen"
+      ],
+      "s": [
+        {
+          "de": "Der Reformationstag ist am 31. Oktober.",
+          "ru": "День Реформації припадає на 31 жовтня."
+        },
+        {
+          "de": "In Sachsen ist er ein gesetzlicher Feiertag.",
+          "ru": "У Саксонії це офіційне свято."
+        }
+      ]
+    },
+    {
+      "sourceIds": [
+        "wartburg"
+      ],
+      "s": [
+        {
+          "de": "Wer mehr über die Reformation erfahren möchte, kann die Wartburg in Thüringen besuchen.",
+          "ru": "Щоб ближче познайомитися з Реформацією, можна відвідати замок Вартбурґ у Тюрингії."
+        },
+        {
+          "de": "Dort übersetzte Martin Luther 1521 und 1522 das Neue Testament ins Deutsche.",
+          "ru": "Там у 1521 і 1522 роках Мартін Лютер перекладав Новий Заповіт німецькою."
+        }
+      ]
+    }
+  ],
+  "sourceTitle": "Джерела і перевірка фактів",
+  "sources": [
+    {
+      "id": "sachsen",
+      "name": "REVOSax · Sächsisches Feiertagsgesetz",
+      "url": "https://www.revosax.sachsen.de/vorschrift/3997-SaechsSFG"
+    },
+    {
+      "id": "wartburg",
+      "name": "Wartburg-Stiftung · Martin Luther",
+      "url": "https://www.wartburg.de/personen/martin-luther"
+    }
+  ],
+  "checked": "2026-11-18"
+}

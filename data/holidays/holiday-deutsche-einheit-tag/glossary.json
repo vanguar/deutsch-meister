@@ -1,0 +1,141 @@
+{
+  "version": 1,
+  "w": {
+    "am": "an",
+    "anderes": "ander",
+    "bremen": "Bremen",
+    "bundesland": "Bundesland",
+    "der": "der/die/das",
+    "deutschland": "Deutschland",
+    "die": "der/die/das",
+    "ein": "ein/eine",
+    "feier": "Feier",
+    "feiertag": "Feiertag",
+    "ganz": "ganz",
+    "in": "in",
+    "ist": "sein",
+    "jahr": "Jahr",
+    "jedes": "jeder",
+    "land": "Land (земля)",
+    "lädt": "einladen",
+    "oktober": "Oktober",
+    "seitdem": "seitdem",
+    "war": "sein",
+    "wieder": "wieder",
+    "wurde": "werden",
+    "zentralen": "zentral",
+    "zur": "zu"
+  },
+  "l": {
+    "Bremen": {
+      "ru": "Бремен (город на севере Германии)",
+      "pos": "геогр."
+    },
+    "Bundesland": {
+      "ru": "федеральная земля",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Bundesländer"
+    },
+    "Deutschland": {
+      "ru": "Германия",
+      "pos": "геогр."
+    },
+    "Feier": {
+      "ru": "праздник, торжество",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Feiern"
+    },
+    "Feiertag": {
+      "ru": "праздничный (нерабочий) день",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Feiertage"
+    },
+    "Jahr": {
+      "ru": "год",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Jahre"
+    },
+    "Land (земля)": {
+      "ru": "земля (федеральная); страна",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Länder",
+      "note": "Bundesland — федеральная земля; in anderen Ländern — в других землях"
+    },
+    "Oktober": {
+      "ru": "октябрь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Oktober"
+    },
+    "an": {
+      "ru": "у, к, на",
+      "pos": "предл.",
+      "note": "am = an dem. Тж. отделяемая приставка: anfangen «начинать», annehmen, ansehen, anzünden"
+    },
+    "ander": {
+      "pos": "прил.",
+      "ru": "другой, иной"
+    },
+    "der/die/das": {
+      "ru": "определённый артикль",
+      "pos": "артикль",
+      "note": "Тж. относительное местоимение «который»"
+    },
+    "ein/eine": {
+      "ru": "неопределённый артикль",
+      "pos": "артикль",
+      "note": "einer — «один, некто»"
+    },
+    "einladen": {
+      "ru": "приглашать",
+      "pos": "гл.",
+      "forms": "lud ein · hat eingeladen"
+    },
+    "ganz": {
+      "ru": "весь, целый; совсем",
+      "pos": "прил."
+    },
+    "in": {
+      "ru": "в (im = in dem, ins = in das)",
+      "pos": "предл."
+    },
+    "jeder": {
+      "pos": "мест.",
+      "ru": "каждый"
+    },
+    "sein": {
+      "ru": "быть",
+      "pos": "гл.",
+      "forms": "war · ist gewesen",
+      "note": "Konjunktiv I: er sei, du seiest. Та же форма waren — и мн. ч. die Waren «товары»: allerhand Waren"
+    },
+    "seitdem": {
+      "ru": "с тех пор",
+      "pos": "нареч."
+    },
+    "werden": {
+      "ru": "становиться",
+      "pos": "гл.",
+      "forms": "wurde · ist geworden",
+      "note": "Вспомогательный глагол будущего времени и пассива"
+    },
+    "wieder": {
+      "ru": "снова",
+      "pos": "нареч."
+    },
+    "zentral": {
+      "ru": "центральный, главный",
+      "pos": "прил."
+    },
+    "zu": {
+      "ru": "к, в; слишком",
+      "pos": "предл.",
+      "note": "zur = zu der, zum = zu dem"
+    }
+  }
+}

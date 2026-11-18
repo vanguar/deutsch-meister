@@ -1,0 +1,222 @@
+{
+  "version": 1,
+  "w": {
+    "auf": "auf",
+    "bayern": "Bayern",
+    "bis": "bis",
+    "booten": "Boot",
+    "dann": "dann",
+    "die": "der/die/das",
+    "dieser": "dieser",
+    "donnerstag": "Donnerstag",
+    "durch": "durch",
+    "ein": "ein/eine",
+    "einen": "ein/eine",
+    "es": "es",
+    "feiertag": "Feiertag",
+    "fest": "Fest",
+    "fronleichnam": "Fronleichnam",
+    "fällt": "fallen",
+    "geht": "gehen",
+    "geschmückte": "schmücken",
+    "gesetzlicher": "gesetzlich",
+    "in": "in",
+    "insel": "Insel",
+    "ist": "sein",
+    "katholisches": "katholisch",
+    "nach": "nach",
+    "ostern": "Ostern",
+    "prozession": "Prozession",
+    "seehausen": "Seehausen",
+    "staffelsee": "Staffelsee",
+    "straßen": "Straße",
+    "tag": "Tag",
+    "tage": {
+      "l": "Tag",
+      "old": "в обороте in einem Tage — старый дательный с -e; сегодня an einem Tag. В «drei Tage Regenwetter» это обычное мн. ч."
+    },
+    "und": "und",
+    "vielen": "viel",
+    "weiter": "weit",
+    "wörth": "Wörth",
+    "zieht": "ziehen",
+    "zum": "zu",
+    "zur": "zu"
+  },
+  "l": {
+    "Bayern": {
+      "ru": "Баварія",
+      "pos": "геогр."
+    },
+    "Boot": {
+      "ru": "човен",
+      "pos": "ім.",
+      "art": "das",
+      "pl": "die Boote"
+    },
+    "Donnerstag": {
+      "ru": "четвер",
+      "pos": "ім.",
+      "art": "der",
+      "pl": "die Donnerstage"
+    },
+    "Feiertag": {
+      "ru": "святковий (неробочий) день",
+      "pos": "ім.",
+      "art": "der",
+      "pl": "die Feiertage"
+    },
+    "Fest": {
+      "ru": "свято",
+      "pos": "ім.",
+      "art": "das",
+      "pl": "die Feste"
+    },
+    "Fronleichnam": {
+      "ru": "свято Тіла і Крові Христових",
+      "pos": "ім.",
+      "art": "der",
+      "pl": null
+    },
+    "Insel": {
+      "ru": "острів",
+      "pos": "ім.",
+      "art": "die",
+      "pl": "die Inseln"
+    },
+    "Ostern": {
+      "ru": "Великдень",
+      "pos": "ім.",
+      "art": "das",
+      "pl": null
+    },
+    "Prozession": {
+      "ru": "релігійна процесія",
+      "pos": "ім.",
+      "art": "die",
+      "pl": "die Prozessionen"
+    },
+    "Seehausen": {
+      "ru": "Зеегаузен",
+      "pos": "геогр."
+    },
+    "Staffelsee": {
+      "ru": "озеро Штаффельзе",
+      "pos": "геогр."
+    },
+    "Straße": {
+      "art": "die",
+      "pl": "die Straßen",
+      "pos": "ім.",
+      "ru": "вулиця, дорога"
+    },
+    "Tag": {
+      "ru": "день",
+      "pos": "ім.",
+      "art": "der",
+      "pl": "die Tage"
+    },
+    "Wörth": {
+      "ru": "острів Верть",
+      "pos": "геогр."
+    },
+    "auf": {
+      "ru": "на, в",
+      "pos": "прийм.",
+      "note": "Також відокремлюваний префікс: aufspringen «схопитися», sich aufmachen"
+    },
+    "bis": {
+      "ru": "до; поки не",
+      "pos": "спол."
+    },
+    "dann": {
+      "ru": "потім, після того",
+      "pos": "присл."
+    },
+    "der/die/das": {
+      "ru": "означений артикль",
+      "pos": "артикль",
+      "note": "Також відносний займенник «який»"
+    },
+    "dieser": {
+      "ru": "цей, ця, це",
+      "pos": "займ."
+    },
+    "durch": {
+      "ru": "через, крізь",
+      "pos": "прийм."
+    },
+    "ein/eine": {
+      "ru": "неозначений артикль",
+      "pos": "артикль",
+      "note": "einer — «один, хтось»"
+    },
+    "es": {
+      "ru": "воно; це",
+      "pos": "займ."
+    },
+    "fallen": {
+      "ru": "падати",
+      "pos": "дієсл.",
+      "forms": "fiel · ist gefallen"
+    },
+    "gehen": {
+      "forms": "ging · ist gegangen",
+      "note": "zu Bett gehen — лягати спати. У тексті з відокремлюваним префіксом: ging das Rollen wieder an — angehen «початися»",
+      "pos": "дієсл.",
+      "ru": "іти, ходити"
+    },
+    "gesetzlich": {
+      "ru": "законний, офіційний",
+      "pos": "прикм."
+    },
+    "in": {
+      "ru": "у (im = in dem, ins = in das)",
+      "pos": "прийм."
+    },
+    "katholisch": {
+      "ru": "католицький",
+      "pos": "прикм."
+    },
+    "nach": {
+      "ru": "в, на, після, по",
+      "pos": "прийм."
+    },
+    "schmücken": {
+      "ru": "прикрашати",
+      "pos": "дієсл.",
+      "forms": "schmückte · hat geschmückt"
+    },
+    "sein": {
+      "ru": "бути",
+      "pos": "дієсл.",
+      "forms": "war · ist gewesen",
+      "note": "Konjunktiv I: er sei, du seiest. Та сама форма waren — і мн. die Waren «товари»: allerhand Waren"
+    },
+    "und": {
+      "ru": "і, а",
+      "pos": "спол."
+    },
+    "viel": {
+      "ru": "багато, чимало",
+      "pos": "займ."
+    },
+    "weit": {
+      "ru": "далекий, далеко",
+      "pos": "прикм.",
+      "forms": "weit · weiter · am weitesten",
+      "note": "weiter — далі; von weitem — здалеку"
+    },
+    "ziehen": {
+      "ru": "рухатися, вирушати; тягнути",
+      "pos": "дієсл.",
+      "forms": "zog · ist gezogen (рухатися) / hat gezogen (тягнути)",
+      "note": "У тексті — «рухатися, вирушати». З відокремлюваним префіксом: zieh fort — fortziehen «іти геть, вирушати»"
+    },
+    "zu": {
+      "ru": "до, в; занадто",
+      "pos": "прийм.",
+      "note": "zur = zu der, zum = zu dem"
+    }
+  }
+}

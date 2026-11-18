@@ -85,19 +85,7 @@ const HistoryCourse = (() => {
     if (!$('hiToc')) return;
     if (window.I18N) document.title = I18N.t(document.title);
     document.addEventListener('click', event => {
-      const external = event.target.closest('a[data-reader-external]');
-      if (external && !event.defaultPrevented && event.button === 0 && !event.ctrlKey && !event.metaKey && !event.shiftKey && !event.altKey) {
-        const tg = window.Telegram && window.Telegram.WebApp;
-        if (tg && typeof tg.openLink === 'function' && /^https:\/\//.test(external.href)) {
-          try {
-            tg.openLink(external.href, { try_instant_view: false });
-            event.preventDefault();
-          } catch (err) {
-            // Native same-tab navigation remains available if the SDK fails.
-            console.warn('[History] External link fallback', err);
-          }
-        }
-      }
+      ReaderShell.openExternal(event);
       const link = event.target.closest('[data-history-open]');
       if (link && !event.ctrlKey && !event.metaKey && !event.shiftKey && !event.altKey && event.button === 0) {
         event.preventDefault();

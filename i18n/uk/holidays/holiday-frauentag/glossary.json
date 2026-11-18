@@ -1,0 +1,176 @@
+{
+  "version": 1,
+  "w": {
+    "am": "an",
+    "auch": "auch",
+    "ausgezeichnet": "auszeichnen",
+    "berlin": "Berlin",
+    "das": "der/die/das",
+    "der": "der/die/das",
+    "die": "der/die/das",
+    "dort": "dort",
+    "ein": "ein/eine",
+    "engagement": "Engagement",
+    "es": "es",
+    "feiertag": "Feiertag",
+    "frauen": "Frau",
+    "für": "für",
+    "geht": "gehen",
+    "gesetzlicher": "gesetzlich",
+    "gilt": "gelten",
+    "gleichen": "gleich",
+    "ihr": "sie",
+    "in": "in",
+    "ist": "sein",
+    "mecklenburg-vorpommern": "Mecklenburg-Vorpommern",
+    "männer": "Mann",
+    "märz": "März",
+    "rechte": "Recht",
+    "seit": "seit",
+    "tag": "Tag",
+    "um": "um",
+    "und": "und",
+    "werden": "werden"
+  },
+  "l": {
+    "Berlin": {
+      "ru": "Берлін",
+      "pos": "геогр."
+    },
+    "Engagement": {
+      "ru": "активна участь, громадська діяльність",
+      "pos": "ім.",
+      "art": "das",
+      "pl": "die Engagements"
+    },
+    "Feiertag": {
+      "ru": "святковий (неробочий) день",
+      "pos": "ім.",
+      "art": "der",
+      "pl": "die Feiertage"
+    },
+    "Frau": {
+      "ru": "жінка; господиня; пані",
+      "pos": "ім.",
+      "art": "die",
+      "pl": "die Frauen"
+    },
+    "Mann": {
+      "ru": "чоловік, людина",
+      "pos": "ім.",
+      "art": "der",
+      "pl": "die Männer"
+    },
+    "Mecklenburg-Vorpommern": {
+      "ru": "Мекленбург — Передня Померанія",
+      "pos": "геогр."
+    },
+    "März": {
+      "ru": "березень",
+      "pos": "ім.",
+      "art": "der",
+      "pl": "die Märze"
+    },
+    "Recht": {
+      "ru": "право",
+      "pos": "ім.",
+      "art": "das",
+      "pl": "die Rechte"
+    },
+    "Tag": {
+      "ru": "день",
+      "pos": "ім.",
+      "art": "der",
+      "pl": "die Tage"
+    },
+    "an": {
+      "ru": "біля, до, на",
+      "pos": "прийм.",
+      "note": "am = an dem. Також відокремлюваний префікс: anfangen «починати», annehmen, ansehen, anzünden"
+    },
+    "auch": {
+      "ru": "теж, також; навіть",
+      "pos": "частка"
+    },
+    "auszeichnen": {
+      "ru": "нагороджувати, відзначати заслуги",
+      "pos": "дієсл.",
+      "forms": "zeichnete aus · hat ausgezeichnet"
+    },
+    "der/die/das": {
+      "ru": "означений артикль",
+      "pos": "артикль",
+      "note": "Також відносний займенник «який»"
+    },
+    "dort": {
+      "ru": "там",
+      "pos": "присл."
+    },
+    "ein/eine": {
+      "ru": "неозначений артикль",
+      "pos": "артикль",
+      "note": "einer — «один, хтось»"
+    },
+    "es": {
+      "ru": "воно; це",
+      "pos": "займ."
+    },
+    "für": {
+      "ru": "для, за",
+      "pos": "прийм."
+    },
+    "gehen": {
+      "forms": "ging · ist gegangen",
+      "note": "zu Bett gehen — лягати спати. У тексті з відокремлюваним префіксом: ging das Rollen wieder an — angehen «початися»",
+      "pos": "дієсл.",
+      "ru": "іти, ходити"
+    },
+    "gelten": {
+      "ru": "вважатися; бути чинним",
+      "pos": "дієсл.",
+      "forms": "galt · hat gegolten",
+      "note": "als … gelten — вважатися кимось"
+    },
+    "gesetzlich": {
+      "ru": "законний, офіційний",
+      "pos": "прикм."
+    },
+    "gleich": {
+      "ru": "рівний, однаковий",
+      "pos": "прикм."
+    },
+    "in": {
+      "ru": "у (im = in dem, ins = in das)",
+      "pos": "прийм."
+    },
+    "sein": {
+      "ru": "бути",
+      "pos": "дієсл.",
+      "forms": "war · ist gewesen",
+      "note": "Konjunktiv I: er sei, du seiest. Та сама форма waren — і мн. die Waren «товари»: allerhand Waren"
+    },
+    "seit": {
+      "ru": "з (якогось часу)",
+      "pos": "прийм."
+    },
+    "sie": {
+      "ru": "вона; вони; Ви",
+      "pos": "займ."
+    },
+    "um": {
+      "ru": "навколо, о (про час)",
+      "pos": "прийм.",
+      "note": "um … zu — щоб. Також відокремлюваний префікс: sich umsehen «озирнутися»"
+    },
+    "und": {
+      "ru": "і, а",
+      "pos": "спол."
+    },
+    "werden": {
+      "ru": "ставати",
+      "pos": "дієсл.",
+      "forms": "wurde · ist geworden",
+      "note": "Допоміжне дієслово майбутнього часу й пасиву"
+    }
+  }
+}

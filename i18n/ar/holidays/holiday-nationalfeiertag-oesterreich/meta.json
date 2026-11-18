@@ -1,0 +1,23 @@
+{
+  "id": "holiday-nationalfeiertag-oesterreich",
+  "kind": "holiday",
+  "rule": {
+    "type": "fixed",
+    "month": 10,
+    "day": 26
+  },
+  "title": "Österreichischer Nationalfeiertag",
+  "titleRu": "العيد الوطني النمساوي",
+  "region": "النمسا",
+  "cover": "✦",
+  "author": "German Morning",
+  "level": "B1",
+  "year": "2026",
+  "chapters": 1,
+  "words": 30,
+  "minutes": 1,
+  "source": "Österreichisches Parlament · Staatsvertrag und Neutralität",
+  "sourceUrl": "https://www.parlament.gv.at/verstehen/historisches/1945-1995/staatsvertrag",
+  "license": "نص تعليمي من إعداد German Morning.",
+  "checked": "2026-11-18"
+}

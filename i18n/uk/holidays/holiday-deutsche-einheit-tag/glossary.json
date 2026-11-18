@@ -1,0 +1,141 @@
+{
+  "version": 1,
+  "w": {
+    "am": "an",
+    "anderes": "ander",
+    "bremen": "Bremen",
+    "bundesland": "Bundesland",
+    "der": "der/die/das",
+    "deutschland": "Deutschland",
+    "die": "der/die/das",
+    "ein": "ein/eine",
+    "feier": "Feier",
+    "feiertag": "Feiertag",
+    "ganz": "ganz",
+    "in": "in",
+    "ist": "sein",
+    "jahr": "Jahr",
+    "jedes": "jeder",
+    "land": "Land (земля)",
+    "lädt": "einladen",
+    "oktober": "Oktober",
+    "seitdem": "seitdem",
+    "war": "sein",
+    "wieder": "wieder",
+    "wurde": "werden",
+    "zentralen": "zentral",
+    "zur": "zu"
+  },
+  "l": {
+    "Bremen": {
+      "ru": "Бремен (місто на півночі Німеччини)",
+      "pos": "геогр."
+    },
+    "Bundesland": {
+      "ru": "федеральна земля",
+      "pos": "ім.",
+      "art": "das",
+      "pl": "die Bundesländer"
+    },
+    "Deutschland": {
+      "ru": "Німеччина",
+      "pos": "геогр."
+    },
+    "Feier": {
+      "ru": "свято, урочистість",
+      "pos": "ім.",
+      "art": "die",
+      "pl": "die Feiern"
+    },
+    "Feiertag": {
+      "ru": "святковий (неробочий) день",
+      "pos": "ім.",
+      "art": "der",
+      "pl": "die Feiertage"
+    },
+    "Jahr": {
+      "ru": "рік",
+      "pos": "ім.",
+      "art": "das",
+      "pl": "die Jahre"
+    },
+    "Land (земля)": {
+      "ru": "земля (федеральна); країна",
+      "pos": "ім.",
+      "art": "das",
+      "pl": "die Länder",
+      "note": "Bundesland — федеральна земля; in anderen Ländern — в інших землях"
+    },
+    "Oktober": {
+      "ru": "жовтень",
+      "pos": "ім.",
+      "art": "der",
+      "pl": "die Oktober"
+    },
+    "an": {
+      "ru": "біля, до, на",
+      "pos": "прийм.",
+      "note": "am = an dem. Також відокремлюваний префікс: anfangen «починати», annehmen, ansehen, anzünden"
+    },
+    "ander": {
+      "pos": "прикм.",
+      "ru": "інший"
+    },
+    "der/die/das": {
+      "ru": "означений артикль",
+      "pos": "артикль",
+      "note": "Також відносний займенник «який»"
+    },
+    "ein/eine": {
+      "ru": "неозначений артикль",
+      "pos": "артикль",
+      "note": "einer — «один, хтось»"
+    },
+    "einladen": {
+      "ru": "запрошувати",
+      "pos": "дієсл.",
+      "forms": "lud ein · hat eingeladen"
+    },
+    "ganz": {
+      "ru": "весь, цілий; зовсім",
+      "pos": "прикм."
+    },
+    "in": {
+      "ru": "у (im = in dem, ins = in das)",
+      "pos": "прийм."
+    },
+    "jeder": {
+      "pos": "займ.",
+      "ru": "кожний"
+    },
+    "sein": {
+      "ru": "бути",
+      "pos": "дієсл.",
+      "forms": "war · ist gewesen",
+      "note": "Konjunktiv I: er sei, du seiest. Та сама форма waren — і мн. die Waren «товари»: allerhand Waren"
+    },
+    "seitdem": {
+      "ru": "відтоді",
+      "pos": "присл."
+    },
+    "werden": {
+      "ru": "ставати",
+      "pos": "дієсл.",
+      "forms": "wurde · ist geworden",
+      "note": "Допоміжне дієслово майбутнього часу й пасиву"
+    },
+    "wieder": {
+      "ru": "знову",
+      "pos": "присл."
+    },
+    "zentral": {
+      "ru": "центральний, головний",
+      "pos": "прикм."
+    },
+    "zu": {
+      "ru": "до, в; занадто",
+      "pos": "прийм.",
+      "note": "zur = zu der, zum = zu dem"
+    }
+  }
+}

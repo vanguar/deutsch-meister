@@ -48,7 +48,9 @@ const Reader = (() => {
   // земли — книга из нескольких глав, адрес #land=<земля>-<b1|b2>
   const IS_LAND   = BOOKS_DIR.indexOf('laender') >= 0;
   const IS_HISTORY = BOOKS_DIR.indexOf('history') >= 0;
-  const HASH_KEY  = IS_HISTORY ? '#history=' : IS_LAND ? '#land=' : IS_NEWS ? '#news=' : '#book=';
+  const IS_HOLIDAYS = BOOKS_DIR === 'data/holidays/';
+  const IS_CULTURE = IS_HISTORY || IS_HOLIDAYS;
+  const HASH_KEY  = IS_HOLIDAYS ? '#holiday=' : IS_HISTORY ? '#history=' : IS_LAND ? '#land=' : IS_NEWS ? '#news=' : '#book=';
   const POS_KEY   = 'dm_book_pos:';
   const GAP_MIN   = 32;    // px, минимальный зазор между колонками-страницами
   const ANIM_MS   = 180;   // длительность листания, синхронно с css
@@ -98,10 +100,10 @@ const Reader = (() => {
       opts: FS_STEPS.map((_, i) => ({ v: i, text: 'A', cls: 'fs-' + i })) },
     { key: 'lh',     label: 'Межстрочный интервал',
       opts: [{ v: 0, text: 'Плотно' }, { v: 1, text: 'Обычно' }, { v: 2, text: 'Свободно' }] },
-    { key: 'theme',  label: 'Тема страницы', segCls: IS_HISTORY ? '' : 'rd-seg--grid',
+    { key: 'theme',  label: 'Тема страницы', segCls: IS_CULTURE ? '' : 'rd-seg--grid',
       opts: [{ v: 'system', text: 'Как в приложении' }, { v: 'sepia', text: 'Сепия' },
              { v: 'light',  text: 'Светлая' },          { v: 'dark',  text: 'Тёмная' }]
-        .filter(option => !IS_HISTORY || option.v !== 'sepia') },
+        .filter(option => !IS_CULTURE || option.v !== 'sepia') },
     { key: 'margin', label: 'Поля',
       opts: [{ v: 0, text: 'Узкие' }, { v: 1, text: 'Средние' }, { v: 2, text: 'Широкие' }] },
     { key: 'font',   label: 'Шрифт',
@@ -168,6 +170,7 @@ const Reader = (() => {
   };
 
   /* ── DOM ── */
+  let loadRequest = 0;
   let elLib, elView, elViewport, elContent, elState,
       elTitle, elSub, elPages, elBar, elPrev, elNext,
       elSheet, elSheetBack, elSheetBody,
@@ -377,7 +380,7 @@ const Reader = (() => {
     if (st.meta && st.meta.kind === 'news') return newsOpening(ch);
     const no = IS_HISTORY && st.meta && st.meta.number ? st.meta.number : Math.max(1, Number(chapterIndex) + 1);
     const russian = st.fullTranslation;
-    const label = russian ? `Глава ${no}` : `Kapitel ${no}`;
+    const label = IS_HOLIDAYS ? st.meta.region : russian ? `Глава ${no}` : `Kapitel ${no}`;
     const title = russian
       ? (ch.titleRu || ch.title || '')
       : (ch.title || ch.titleRu || '');
@@ -717,7 +720,7 @@ const Reader = (() => {
         </p>
         <div class="rd-state-actions">
           <button class="btn btn-primary" id="rdRetry">Повторить</button>
-          <button class="btn btn-ghost" id="rdToLib">${IS_LAND ? 'К землям' : IS_NEWS ? 'К новостям' : 'В библиотеку'}</button>
+          <button class="btn btn-ghost" id="rdToLib">${IS_HOLIDAYS ? 'К календарю' : IS_LAND ? 'К землям' : IS_NEWS ? 'К новостям' : 'В библиотеку'}</button>
         </div>
       </div>`;
     const retry = document.getElementById('rdRetry');
@@ -770,9 +773,10 @@ const Reader = (() => {
   }
 
   function loadBook(id, startPos) {
+    const request = ++loadRequest;
     st.bookId = id;
     st.retry  = () => loadBook(id, startPos);
-    showLoading(IS_LAND ? 'Открываем текст' : IS_NEWS ? 'Открываем статью' : 'Открываем книгу');
+    showLoading(IS_LAND || IS_HOLIDAYS ? 'Открываем текст' : IS_NEWS ? 'Открываем статью' : 'Открываем книгу');
 
     // Глоссарий грузим здесь же — в 2C он понадобится сразу, без дозагрузки
     return Promise.all([
@@ -780,10 +784,11 @@ const Reader = (() => {
       getJson(`${BOOKS_DIR}${id}/glossary.json`)
     ])
       .then(([meta, gloss]) => {
+        if (request !== loadRequest) return;
         st.meta    = meta;
         st.gloss   = gloss;
         st.chTotal = Number(meta.chapters) || 1;
-        if (!IS_NEWS && !IS_LAND && !IS_HISTORY && window.Offline) Offline.book(document.getElementById('rdOffline'), id, st.chTotal, meta.title || id);
+        if (!IS_NEWS && !IS_LAND && !IS_CULTURE && window.Offline) Offline.book(document.getElementById('rdOffline'), id, st.chTotal, meta.title || id);
         // Состав панели зависит от КНИГИ (кнопка «в рифму» есть не у всех),
         // а open() успел отрисовать её до загрузки meta.json — обновляем,
         // как только книга известна.
@@ -795,6 +800,7 @@ const Reader = (() => {
         const files = [];
         for (let i = 0; i < st.chTotal; i++) files.push(getJson(chapterFile(i)));
         return Promise.all(files).then(chapters => {
+          if (request !== loadRequest) return;
           st.chapters = chapters;
           st.chPages  = chapters.map(() => 1);
           st.pagesKey = null;
@@ -816,9 +822,10 @@ const Reader = (() => {
         });
       })
       .catch(err => {
+        if (request !== loadRequest) return;
         console.error('[Reader] книга не открылась:', err);
         showError(err && err.message ? err.message : String(err),
-          IS_LAND ? 'Текст не открылся' : IS_NEWS ? 'Статья не открылась' : 'Книга не открылась');
+          IS_LAND || IS_HOLIDAYS ? 'Текст не открылся' : IS_NEWS ? 'Статья не открылась' : 'Книга не открылась');
       });
   }
 
@@ -981,7 +988,7 @@ const Reader = (() => {
       elFullTranslationBtn.classList.toggle('is-active', st.fullTranslation);
       elFullTranslationBtn.setAttribute('aria-pressed', st.fullTranslation ? 'true' : 'false');
       elFullTranslationBtn.title = st.fullTranslation
-        ? 'Показать немецкий текст' : IS_HISTORY ? 'Показать перевод главы' : 'Показать художественный перевод';
+        ? 'Показать немецкий текст' : IS_CULTURE ? 'Показать перевод главы' : 'Показать художественный перевод';
       elFullTranslationBtn.setAttribute('aria-label', elFullTranslationBtn.title);
       const icon = elFullTranslationBtn.querySelector('.rd-btn-icon');
       const label = elFullTranslationBtn.querySelector('.rd-btn-label');
@@ -1613,7 +1620,7 @@ const Reader = (() => {
 
   function themeName() {
     const theme = (st.prefs && st.prefs.theme) || readPrefs().theme;
-    return IS_HISTORY && theme === 'sepia' ? 'system' : theme;
+    return IS_CULTURE && theme === 'sepia' ? 'system' : theme;
   }
 
   /* ── Панели: скрыть / показать ── */
@@ -1760,6 +1767,7 @@ const Reader = (() => {
       history.back();          // popstate закроет ридер
       return;
     }
+    loadRequest++;
     st.pushed = false;
     st.open = false;
     st.chapter = null;
@@ -1862,7 +1870,7 @@ const Reader = (() => {
     });
     updateTranslationControls();
     // A downloaded book must open directly from the saved-materials list.
-    if (!IS_NEWS && !IS_LAND && !IS_HISTORY && location.hash.startsWith('#book=')) {
+    if (!IS_NEWS && !IS_LAND && !IS_CULTURE && location.hash.startsWith('#book=')) {
       try {
         const id = decodeURIComponent(location.hash.slice(6));
         if (/^[a-z0-9-]+$/.test(id)) {

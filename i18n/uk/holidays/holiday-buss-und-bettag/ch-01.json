@@ -1,0 +1,57 @@
+{
+  "id": "ch-01",
+  "title": "Buß- und Bettag",
+  "titleRu": "День покаяння і молитви",
+  "paragraphs": [
+    {
+      "sourceIds": [
+        "kirche"
+      ],
+      "s": [
+        {
+          "de": "Der Buß- und Bettag liegt im November und fällt immer auf einen Mittwoch.",
+          "ru": "День покаяння і молитви припадає на листопад і завжди випадає на середу."
+        },
+        {
+          "de": "Für evangelische Christen ist er eine Zeit zum Beten und Nachdenken.",
+          "ru": "Для протестантів це час молитви й роздумів."
+        }
+      ]
+    },
+    {
+      "sourceIds": [
+        "sachsen",
+        "bayern"
+      ],
+      "s": [
+        {
+          "de": "In Sachsen ist der Buß- und Bettag ein gesetzlicher Feiertag.",
+          "ru": "У Саксонії День покаяння і молитви — офіційне свято."
+        },
+        {
+          "de": "In Bayern haben Schülerinnen und Schüler an diesem Tag keinen Unterricht.",
+          "ru": "У Баварії цього дня в школярів немає уроків."
+        }
+      ]
+    }
+  ],
+  "sourceTitle": "Джерела і перевірка фактів",
+  "sources": [
+    {
+      "id": "sachsen",
+      "name": "REVOSax · Sächsisches Feiertagsgesetz",
+      "url": "https://www.revosax.sachsen.de/vorschrift/3997-SaechsSFG"
+    },
+    {
+      "id": "bayern",
+      "name": "Bayerisches Kultusministerium · Ferien und Feiertage",
+      "url": "https://www.km.bayern.de/termine/ferien-und-feiertage"
+    },
+    {
+      "id": "kirche",
+      "name": "Evangelisch.de · Einkehr und Umkehr",
+      "url": "https://www.evangelisch.de/inhalte/113462/11-09-2013/buss-und-bettag-einkehr-und-umkehr"
+    }
+  ],
+  "checked": "2026-11-18"
+}

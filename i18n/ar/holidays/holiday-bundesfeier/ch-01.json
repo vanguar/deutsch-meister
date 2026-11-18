@@ -1,0 +1,52 @@
+{
+  "id": "ch-01",
+  "title": "Schweizer Bundesfeier",
+  "titleRu": "العيد الوطني السويسري",
+  "paragraphs": [
+    {
+      "sourceIds": [
+        "tourismus"
+      ],
+      "s": [
+        {
+          "de": "Am 1. August feiert die Schweiz ihren Nationalfeiertag.",
+          "ru": "تحتفل سويسرا بعيدها الوطني في الأول من أغسطس."
+        },
+        {
+          "de": "Der Tag erinnert an den Bundesbrief von 1291.",
+          "ru": "يذكّر هذا اليوم بالميثاق الاتحادي لعام 1291."
+        }
+      ]
+    },
+    {
+      "sourceIds": [
+        "tourismus",
+        "bundesrat"
+      ],
+      "s": [
+        {
+          "de": "In manchen Orten gehen Kinder mit Lampions durch die Straßen.",
+          "ru": "في بعض الأماكن يمشي الأطفال في الشوارع حاملين فوانيس ورقية."
+        },
+        {
+          "de": "Eine bekannte Feier findet auf der Rütliwiese über dem Vierwaldstättersee statt.",
+          "ru": "ومن أشهر الاحتفالات ذلك الذي يقام في مرج روتلي المطل على بحيرة لوتسرن."
+        }
+      ]
+    }
+  ],
+  "sourceTitle": "المصادر والتحقق من المعلومات",
+  "sources": [
+    {
+      "id": "tourismus",
+      "name": "Schweiz Tourismus · 1. August",
+      "url": "https://www.myswitzerland.com/de/erlebnisse/veranstaltungen/braeuche-im-sommer-und-herbst/der-1-august-bundesfeier/"
+    },
+    {
+      "id": "bundesrat",
+      "name": "Eidgenössisches Finanzdepartement · Bundesfeier auf dem Rütli",
+      "url": "https://www.efd.admin.ch/de/rede-brkks-1-august-2025-ruetli-de"
+    }
+  ],
+  "checked": "2026-11-18"
+}

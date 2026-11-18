@@ -1,0 +1,35 @@
+{
+  "id": "ch-01",
+  "title": "Ostern",
+  "titleRu": "Великдень",
+  "paragraphs": [
+    {
+      "sourceIds": [
+        "unesco"
+      ],
+      "s": [
+        {
+          "de": "In Lügde sieht der Ostersonntag besonders aus.",
+          "ru": "Великодня неділя в Люґде має особливий вигляд."
+        },
+        {
+          "de": "Wenn es dunkel wird, rollen brennende Holzräder den Osterberg hinunter.",
+          "ru": "Коли сутеніє, з гори Остерберґ скочуються палаючі дерев’яні колеса."
+        },
+        {
+          "de": "Der Osterräderlauf bringt Menschen aus der Stadt und Gäste zusammen.",
+          "ru": "На видовище збираються і жителі міста, і гості."
+        }
+      ]
+    }
+  ],
+  "sourceTitle": "Джерела і перевірка фактів",
+  "sources": [
+    {
+      "id": "unesco",
+      "name": "Deutsche UNESCO-Kommission · Osterräderlauf",
+      "url": "https://www.unesco.de/staette/osterraederlauf-in-luegde/"
+    }
+  ],
+  "checked": "2026-11-18"
+}

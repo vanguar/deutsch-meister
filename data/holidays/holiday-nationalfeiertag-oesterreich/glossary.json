@@ -1,0 +1,135 @@
+{
+  "version": 1,
+  "w": {
+    "am": "an",
+    "an": "an",
+    "beschloss": "beschließen",
+    "das": "der/die/das",
+    "der": "der/die/das",
+    "die": "der/die/das",
+    "diesem": "dieser",
+    "fahne": "Fahne",
+    "feier": "Feier",
+    "feiert": "feiern",
+    "hieß": "heißen",
+    "im": "in",
+    "ist": "sein",
+    "jahr": "Jahr",
+    "nationalfeiertag": "Nationalfeiertag",
+    "neutralität": "Neutralität",
+    "noch": "noch",
+    "oktober": "Oktober",
+    "parlament": "Parlament",
+    "seinen": "sein (его, свой)",
+    "seit": "seit",
+    "tag": "Tag",
+    "österreich": "Österreich",
+    "österreichs": "Österreich"
+  },
+  "l": {
+    "Fahne": {
+      "ru": "знамя",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Fahnen"
+    },
+    "Feier": {
+      "ru": "праздник, торжество",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Feiern"
+    },
+    "Jahr": {
+      "ru": "год",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Jahre"
+    },
+    "Nationalfeiertag": {
+      "ru": "национальный праздник",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Nationalfeiertage"
+    },
+    "Neutralität": {
+      "ru": "нейтралитет",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "Oktober": {
+      "ru": "октябрь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Oktober"
+    },
+    "Parlament": {
+      "ru": "парламент",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Parlamente"
+    },
+    "Tag": {
+      "ru": "день",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Tage"
+    },
+    "an": {
+      "ru": "у, к, на",
+      "pos": "предл.",
+      "note": "am = an dem. Тж. отделяемая приставка: anfangen «начинать», annehmen, ansehen, anzünden"
+    },
+    "beschließen": {
+      "ru": "решать, постановлять",
+      "pos": "гл.",
+      "forms": "beschloss · hat beschlossen"
+    },
+    "der/die/das": {
+      "ru": "определённый артикль",
+      "pos": "артикль",
+      "note": "Тж. относительное местоимение «который»"
+    },
+    "dieser": {
+      "ru": "этот, эта, это",
+      "pos": "мест."
+    },
+    "feiern": {
+      "ru": "праздновать",
+      "pos": "гл.",
+      "forms": "feierte · hat gefeiert"
+    },
+    "heißen": {
+      "ru": "велеть; называться",
+      "pos": "гл.",
+      "forms": "hieß · hat geheißen",
+      "note": "hatte aufstehen heißen — велел встать"
+    },
+    "in": {
+      "ru": "в (im = in dem, ins = in das)",
+      "pos": "предл."
+    },
+    "noch": {
+      "ru": "ещё",
+      "pos": "нареч."
+    },
+    "sein": {
+      "ru": "быть",
+      "pos": "гл.",
+      "forms": "war · ist gewesen",
+      "note": "Konjunktiv I: er sei, du seiest. Та же форма waren — и мн. ч. die Waren «товары»: allerhand Waren"
+    },
+    "sein (его, свой)": {
+      "ru": "его, свой",
+      "pos": "мест."
+    },
+    "seit": {
+      "ru": "с (какого-то времени)",
+      "pos": "предл."
+    },
+    "Österreich": {
+      "ru": "Австрия",
+      "pos": "геогр."
+    }
+  }
+}

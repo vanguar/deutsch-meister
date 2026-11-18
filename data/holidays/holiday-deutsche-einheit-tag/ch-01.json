@@ -1,0 +1,51 @@
+{
+  "id": "ch-01",
+  "title": "Tag der Deutschen Einheit",
+  "titleRu": "День германского единства",
+  "paragraphs": [
+    {
+      "sourceIds": [
+        "chronik"
+      ],
+      "s": [
+        {
+          "de": "Am 3. Oktober 1990 wurde Deutschland wieder ein Land.",
+          "ru": "3 октября 1990 года Германия снова стала единой страной."
+        },
+        {
+          "de": "Seitdem ist der 3. Oktober in ganz Deutschland ein Feiertag.",
+          "ru": "С тех пор 3 октября — праздник во всей Германии."
+        }
+      ]
+    },
+    {
+      "sourceIds": [
+        "bremen"
+      ],
+      "s": [
+        {
+          "de": "Jedes Jahr lädt ein anderes Bundesland zur zentralen Feier ein.",
+          "ru": "Каждый год на главное празднование приглашает новая федеральная земля."
+        },
+        {
+          "de": "2026 war die Feier in Bremen.",
+          "ru": "В 2026 году праздник принимал Бремен."
+        }
+      ]
+    }
+  ],
+  "sourceTitle": "Источники и проверка фактов",
+  "sources": [
+    {
+      "id": "chronik",
+      "name": "Bundesregierung · 3. Oktober 1990",
+      "url": "https://www.bundesregierung.de/breg-de/schwerpunkte/deutsche-einheit/die-einheit-ist-wirklichkeit-432814"
+    },
+    {
+      "id": "bremen",
+      "name": "Bundesregierung · Tag der Deutschen Einheit in Bremen",
+      "url": "https://www.bundesregierung.de/breg-de/leichte-sprache/tag-der-deutschen-einheit-2454562"
+    }
+  ],
+  "checked": "2026-11-18"
+}

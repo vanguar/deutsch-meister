@@ -1,0 +1,208 @@
+{
+  "version": 1,
+  "w": {
+    "an": "an",
+    "auf": "auf",
+    "bayern": "Bayern",
+    "beten": "beten",
+    "bettag": "Buß- und Bettag",
+    "buß": "Buß- und Bettag",
+    "christen": "Christ",
+    "der": "der/die/das",
+    "diesem": "dieser",
+    "ein": "ein/eine",
+    "eine": "ein/eine",
+    "einen": "ein/eine",
+    "er": "er",
+    "evangelische": "evangelisch",
+    "feiertag": "Feiertag",
+    "fällt": "fallen",
+    "für": "für",
+    "gesetzlicher": "gesetzlich",
+    "haben": "haben",
+    "im": "in",
+    "immer": "immer",
+    "in": "in",
+    "ist": "sein",
+    "keinen": "kein",
+    "liegt": "liegen",
+    "mittwoch": "Mittwoch",
+    "nachdenken": "Nachdenken",
+    "november": "November",
+    "sachsen": "Sachsen",
+    "schüler": "Schüler",
+    "schülerinnen": "Schülerin",
+    "tag": "Tag",
+    "und": "und",
+    "unterricht": "Unterricht",
+    "zeit": "Zeit",
+    "zum": "zu"
+  },
+  "l": {
+    "Bayern": {
+      "ru": "Баварія",
+      "pos": "геогр."
+    },
+    "Buß- und Bettag": {
+      "ru": "День покаяння і молитви",
+      "pos": "ім.",
+      "art": "der",
+      "pl": null
+    },
+    "Christ": {
+      "ru": "християнин",
+      "pos": "ім.",
+      "art": "der",
+      "pl": "die Christen"
+    },
+    "Feiertag": {
+      "ru": "святковий (неробочий) день",
+      "pos": "ім.",
+      "art": "der",
+      "pl": "die Feiertage"
+    },
+    "Mittwoch": {
+      "ru": "середа",
+      "pos": "ім.",
+      "art": "der",
+      "pl": "die Mittwoche"
+    },
+    "Nachdenken": {
+      "ru": "роздум",
+      "pos": "ім.",
+      "art": "das",
+      "pl": null,
+      "note": "in tiefes Nachdenken versunken — поринувши в глибоку задуму"
+    },
+    "November": {
+      "ru": "листопад",
+      "pos": "ім.",
+      "art": "der",
+      "pl": null
+    },
+    "Sachsen": {
+      "ru": "Саксонія",
+      "pos": "геогр."
+    },
+    "Schüler": {
+      "ru": "школяр",
+      "pos": "ім.",
+      "art": "der",
+      "pl": "die Schüler"
+    },
+    "Schülerin": {
+      "ru": "школярка",
+      "pos": "ім.",
+      "art": "die",
+      "pl": "die Schülerinnen"
+    },
+    "Tag": {
+      "ru": "день",
+      "pos": "ім.",
+      "art": "der",
+      "pl": "die Tage"
+    },
+    "Unterricht": {
+      "ru": "урок, заняття",
+      "pos": "ім.",
+      "art": "der",
+      "pl": null
+    },
+    "Zeit": {
+      "ru": "час",
+      "pos": "ім.",
+      "art": "die",
+      "pl": "die Zeiten"
+    },
+    "an": {
+      "ru": "біля, до, на",
+      "pos": "прийм.",
+      "note": "am = an dem. Також відокремлюваний префікс: anfangen «починати», annehmen, ansehen, anzünden"
+    },
+    "auf": {
+      "ru": "на, в",
+      "pos": "прийм.",
+      "note": "Також відокремлюваний префікс: aufspringen «схопитися», sich aufmachen"
+    },
+    "beten": {
+      "ru": "молитися",
+      "pos": "дієсл.",
+      "forms": "betete · hat gebetet"
+    },
+    "der/die/das": {
+      "ru": "означений артикль",
+      "pos": "артикль",
+      "note": "Також відносний займенник «який»"
+    },
+    "dieser": {
+      "ru": "цей, ця, це",
+      "pos": "займ."
+    },
+    "ein/eine": {
+      "ru": "неозначений артикль",
+      "pos": "артикль",
+      "note": "einer — «один, хтось»"
+    },
+    "er": {
+      "ru": "він",
+      "pos": "займ.",
+      "note": "ihn — його, ihm — йому"
+    },
+    "evangelisch": {
+      "ru": "євангелічний (протестантський)",
+      "pos": "прикм."
+    },
+    "fallen": {
+      "ru": "падати",
+      "pos": "дієсл.",
+      "forms": "fiel · ist gefallen"
+    },
+    "für": {
+      "ru": "для, за",
+      "pos": "прийм."
+    },
+    "gesetzlich": {
+      "ru": "законний, офіційний",
+      "pos": "прикм."
+    },
+    "haben": {
+      "ru": "мати; допоміжне дієслово",
+      "pos": "дієсл.",
+      "forms": "hatte · hat gehabt"
+    },
+    "immer": {
+      "ru": "завжди, дедалі",
+      "pos": "присл.",
+      "note": "immer größer — дедалі більше"
+    },
+    "in": {
+      "ru": "у (im = in dem, ins = in das)",
+      "pos": "прийм."
+    },
+    "kein": {
+      "ru": "жодний, ні один",
+      "pos": "займ."
+    },
+    "liegen": {
+      "ru": "лежати",
+      "pos": "дієсл.",
+      "forms": "lag · hat gelegen",
+      "note": "an etwas gelegen sein — бути зацікавленим: ihm war viel daran gelegen"
+    },
+    "sein": {
+      "ru": "бути",
+      "pos": "дієсл.",
+      "forms": "war · ist gewesen",
+      "note": "Konjunktiv I: er sei, du seiest. Та сама форма waren — і мн. die Waren «товари»: allerhand Waren"
+    },
+    "und": {
+      "ru": "і, а",
+      "pos": "спол."
+    },
+    "zu": {
+      "ru": "до, в; занадто",
+      "pos": "прийм.",
+      "note": "zur = zu der, zum = zu dem"
+    }
+  }
+}

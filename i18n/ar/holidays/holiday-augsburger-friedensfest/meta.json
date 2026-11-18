@@ -1,0 +1,23 @@
+{
+  "id": "holiday-augsburger-friedensfest",
+  "kind": "holiday",
+  "rule": {
+    "type": "fixed",
+    "month": 8,
+    "day": 8
+  },
+  "title": "Augsburger Hohes Friedensfest",
+  "titleRu": "عيد السلام في أوغسبورغ",
+  "region": "ألمانيا · أوغسبورغ، بافاريا",
+  "cover": "✦",
+  "author": "German Morning",
+  "level": "B1",
+  "year": "2026",
+  "chapters": 1,
+  "words": 44,
+  "minutes": 1,
+  "source": "Stadt Augsburg · Hohes Friedensfest",
+  "sourceUrl": "https://www.augsburg.de/kultur/friedensstadt-augsburg/hohes-friedensfest",
+  "license": "نص تعليمي من إعداد German Morning.",
+  "checked": "2026-11-18"
+}

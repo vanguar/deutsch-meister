@@ -1,0 +1,57 @@
+{
+  "id": "ch-01",
+  "title": "Fronleichnam",
+  "titleRu": "Свято Тіла Христового",
+  "paragraphs": [
+    {
+      "sourceIds": [
+        "kirche",
+        "bayern"
+      ],
+      "s": [
+        {
+          "de": "Fronleichnam ist ein katholisches Fest und fällt auf einen Donnerstag, 60 Tage nach Ostern.",
+          "ru": "Свято Тіла Христового католики відзначають у четвер, через 60 днів після Великодня."
+        },
+        {
+          "de": "In Bayern ist dieser Tag ein gesetzlicher Feiertag.",
+          "ru": "У Баварії це офіційне свято."
+        }
+      ]
+    },
+    {
+      "sourceIds": [
+        "seehausen"
+      ],
+      "s": [
+        {
+          "de": "In Seehausen zieht die Prozession durch geschmückte Straßen bis zum Staffelsee.",
+          "ru": "У Зеегаузені процесія йде прикрашеними вулицями до озера Штаффельзе."
+        },
+        {
+          "de": "Dann geht es in vielen Booten weiter bis zur Insel Wörth.",
+          "ru": "Потім учасники сідають у човни й пливуть до острова Верть."
+        }
+      ]
+    }
+  ],
+  "sourceTitle": "Джерела і перевірка фактів",
+  "sources": [
+    {
+      "id": "kirche",
+      "name": "Erzbistum München und Freising · Fronleichnam",
+      "url": "https://www2.erzbistum-muenchen.de/pfarrei/pv-peiting-hohenpeissenberg/kirchenjahr-fronleichnam/117230"
+    },
+    {
+      "id": "seehausen",
+      "name": "Gemeinde Seehausen · Seeprozession",
+      "url": "https://www.seehausen-am-staffelsee.de/brauchtum-feste-traditionen.html"
+    },
+    {
+      "id": "bayern",
+      "name": "Bayerisches Innenministerium · Feiertage",
+      "url": "https://www.stmi.bayern.de/staat-und-verfassung/feiertage/"
+    }
+  ],
+  "checked": "2026-11-18"
+}

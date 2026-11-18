@@ -1,0 +1,35 @@
+{
+  "id": "ch-01",
+  "title": "Ostern",
+  "titleRu": "عيد الفصح",
+  "paragraphs": [
+    {
+      "sourceIds": [
+        "unesco"
+      ],
+      "s": [
+        {
+          "de": "In Lügde sieht der Ostersonntag besonders aus.",
+          "ru": "يبدو أحد الفصح مختلفًا في بلدة لوغده."
+        },
+        {
+          "de": "Wenn es dunkel wird, rollen brennende Holzräder den Osterberg hinunter.",
+          "ru": "حين يحل الظلام تتدحرج عجلات خشبية مشتعلة من تل أوستربرغ."
+        },
+        {
+          "de": "Der Osterräderlauf bringt Menschen aus der Stadt und Gäste zusammen.",
+          "ru": "ويجمع هذا التقليد سكان البلدة وزوارها."
+        }
+      ]
+    }
+  ],
+  "sourceTitle": "المصادر والتحقق من المعلومات",
+  "sources": [
+    {
+      "id": "unesco",
+      "name": "Deutsche UNESCO-Kommission · Osterräderlauf",
+      "url": "https://www.unesco.de/staette/osterraederlauf-in-luegde/"
+    }
+  ],
+  "checked": "2026-11-18"
+}

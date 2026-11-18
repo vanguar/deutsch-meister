@@ -1,0 +1,217 @@
+{
+  "version": 1,
+  "w": {
+    "als": "als",
+    "am": "an",
+    "an": "an",
+    "anfang": "Anfang",
+    "b": "C+M+B",
+    "bayern": "Bayern",
+    "bedeuten": "bedeuten",
+    "buchstaben": "Buchstabe",
+    "c": "C+M+B",
+    "christus": "Christus",
+    "den": "der/die/das",
+    "der": "der/die/das",
+    "die": "der/die/das",
+    "dieses": "dieser",
+    "drei": "drei",
+    "ein": "ein/eine",
+    "feiertag": "Feiertag",
+    "gehen": "gehen",
+    "gesetzlicher": "gesetzlich",
+    "haus": "Haus",
+    "haustür": "Haustür",
+    "heute": "heute",
+    "hinterlassen": "hinterlassen",
+    "in": "in",
+    "ist": "sein",
+    "januar": "Januar",
+    "kinder": "Kind",
+    "m": "C+M+B",
+    "sammeln": "sich sammeln",
+    "segen": "Segen",
+    "segne": "segnen",
+    "sie": "sie",
+    "spenden": "Spende",
+    "sternsinger": "Sternsinger",
+    "tür": "Tür",
+    "und": "und",
+    "vielerorts": "vielerorts",
+    "von": "von",
+    "zu": "zu"
+  },
+  "l": {
+    "Anfang": {
+      "ru": "начало",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Anfänge",
+      "note": "Anfang der Woche — в начале недели"
+    },
+    "Bayern": {
+      "ru": "Бавария",
+      "pos": "геогр."
+    },
+    "Buchstabe": {
+      "ru": "буква",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Buchstaben"
+    },
+    "C+M+B": {
+      "ru": "формула благословения дома",
+      "pos": "сокр."
+    },
+    "Christus": {
+      "ru": "Христос",
+      "pos": "имя"
+    },
+    "Feiertag": {
+      "ru": "праздничный (нерабочий) день",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Feiertage"
+    },
+    "Haus": {
+      "ru": "дом",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Häuser"
+    },
+    "Haustür": {
+      "ru": "входная дверь",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Haustüren"
+    },
+    "Januar": {
+      "ru": "январь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Januare"
+    },
+    "Kind": {
+      "ru": "ребёнок",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Kinder"
+    },
+    "Segen": {
+      "ru": "благодать, благословение",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "Spende": {
+      "ru": "пожертвование",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Spenden"
+    },
+    "Sternsinger": {
+      "ru": "колядник со звездой",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Sternsinger"
+    },
+    "Tür": {
+      "art": "die",
+      "pl": "die Türen",
+      "pos": "сущ.",
+      "ru": "дверь"
+    },
+    "als": {
+      "ru": "когда; как; чем",
+      "pos": "союз"
+    },
+    "an": {
+      "ru": "у, к, на",
+      "pos": "предл.",
+      "note": "am = an dem. Тж. отделяемая приставка: anfangen «начинать», annehmen, ansehen, anzünden"
+    },
+    "bedeuten": {
+      "ru": "означать",
+      "pos": "гл.",
+      "forms": "bedeutete · hat bedeutet"
+    },
+    "der/die/das": {
+      "ru": "определённый артикль",
+      "pos": "артикль",
+      "note": "Тж. относительное местоимение «который»"
+    },
+    "dieser": {
+      "ru": "этот, эта, это",
+      "pos": "мест."
+    },
+    "drei": {
+      "ru": "три",
+      "pos": "числ."
+    },
+    "ein/eine": {
+      "ru": "неопределённый артикль",
+      "pos": "артикль",
+      "note": "einer — «один, некто»"
+    },
+    "gehen": {
+      "forms": "ging · ist gegangen",
+      "note": "zu Bett gehen — ложиться спать. В тексте с отделяемой приставкой: ging das Rollen wieder an — angehen «начаться»",
+      "pos": "гл.",
+      "ru": "идти, ходить"
+    },
+    "gesetzlich": {
+      "ru": "законный, официальный",
+      "pos": "прил."
+    },
+    "heute": {
+      "ru": "сегодня",
+      "pos": "нареч."
+    },
+    "hinterlassen": {
+      "ru": "оставлять (после себя)",
+      "pos": "гл.",
+      "forms": "hinterließ · hat hinterlassen"
+    },
+    "in": {
+      "ru": "в (im = in dem, ins = in das)",
+      "pos": "предл."
+    },
+    "segnen": {
+      "ru": "благословлять",
+      "pos": "гл.",
+      "forms": "segnete · hat gesegnet"
+    },
+    "sein": {
+      "ru": "быть",
+      "pos": "гл.",
+      "forms": "war · ist gewesen",
+      "note": "Konjunktiv I: er sei, du seiest. Та же форма waren — и мн. ч. die Waren «товары»: allerhand Waren"
+    },
+    "sich sammeln": {
+      "ru": "собираться, скапливаться",
+      "pos": "гл.",
+      "forms": "sammelte sich · hat sich gesammelt"
+    },
+    "sie": {
+      "ru": "она; они; Вы",
+      "pos": "мест."
+    },
+    "und": {
+      "ru": "и, а",
+      "pos": "союз"
+    },
+    "vielerorts": {
+      "ru": "во многих местах",
+      "pos": "нареч."
+    },
+    "von": {
+      "ru": "от, из, о (vom = von dem)",
+      "pos": "предл."
+    },
+    "zu": {
+      "ru": "к, в; слишком",
+      "pos": "предл.",
+      "note": "zur = zu der, zum = zu dem"
+    }
+  }
+}

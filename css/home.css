@@ -266,6 +266,9 @@ html[dir="rtl"] .ico.flip { transform: scaleX(-1); }
 .read .ico { color: var(--h-accent); }
 .read-title { display: block; font-size: 17px; font-weight: 700; color: var(--h-text); margin-top: 6px; }
 .read-sub { display: block; font-size: 14px; color: var(--h-hint); }
+.read-holidays { display: flex; align-items: center; gap: 12px; margin-top: 12px; padding-block: 13px; text-decoration: none; }
+.read-holidays .ico { flex: none; }
+.read-holidays .read-title { margin-top: 0; }
 .fresh {
   position: absolute; top: 12px; inset-inline-end: 12px;
   padding: 3px 9px; border-radius: 8px;

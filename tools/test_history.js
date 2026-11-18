@@ -72,6 +72,7 @@ async function boot({ hash = '', telegram = null } = {}) {
   };
   ctx.window = ctx;
   vm.createContext(ctx);
+  vm.runInContext(read('js/reader-shell.js'), ctx);
   vm.runInContext(read('js/history.js'), ctx);
   docEvents.DOMContentLoaded();
   await new Promise(resolve => setImmediate(resolve));

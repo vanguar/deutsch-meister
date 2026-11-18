@@ -1,0 +1,208 @@
+{
+  "version": 1,
+  "w": {
+    "an": "an",
+    "auf": "auf",
+    "bayern": "Bayern",
+    "beten": "beten",
+    "bettag": "Buß- und Bettag",
+    "buß": "Buß- und Bettag",
+    "christen": "Christ",
+    "der": "der/die/das",
+    "diesem": "dieser",
+    "ein": "ein/eine",
+    "eine": "ein/eine",
+    "einen": "ein/eine",
+    "er": "er",
+    "evangelische": "evangelisch",
+    "feiertag": "Feiertag",
+    "fällt": "fallen",
+    "für": "für",
+    "gesetzlicher": "gesetzlich",
+    "haben": "haben",
+    "im": "in",
+    "immer": "immer",
+    "in": "in",
+    "ist": "sein",
+    "keinen": "kein",
+    "liegt": "liegen",
+    "mittwoch": "Mittwoch",
+    "nachdenken": "Nachdenken",
+    "november": "November",
+    "sachsen": "Sachsen",
+    "schüler": "Schüler",
+    "schülerinnen": "Schülerin",
+    "tag": "Tag",
+    "und": "und",
+    "unterricht": "Unterricht",
+    "zeit": "Zeit",
+    "zum": "zu"
+  },
+  "l": {
+    "Bayern": {
+      "ru": "بافاريا",
+      "pos": "جغرافيا"
+    },
+    "Buß- und Bettag": {
+      "ru": "يوم التوبة والصلاة",
+      "pos": "اسم",
+      "art": "der",
+      "pl": null
+    },
+    "Christ": {
+      "ru": "مسيحي",
+      "pos": "اسم",
+      "art": "der",
+      "pl": "die Christen"
+    },
+    "Feiertag": {
+      "ru": "يوم عطلة رسمية",
+      "pos": "اسم",
+      "art": "der",
+      "pl": "die Feiertage"
+    },
+    "Mittwoch": {
+      "ru": "الأربعاء",
+      "pos": "اسم",
+      "art": "der",
+      "pl": "die Mittwoche"
+    },
+    "Nachdenken": {
+      "ru": "تفكّر، تأمّل",
+      "pos": "اسم",
+      "art": "das",
+      "pl": null,
+      "note": "in tiefes Nachdenken versunken — غارق في تفكير عميق"
+    },
+    "November": {
+      "ru": "نوفمبر",
+      "pos": "اسم",
+      "art": "der",
+      "pl": null
+    },
+    "Sachsen": {
+      "ru": "سكسونيا",
+      "pos": "جغرافيا"
+    },
+    "Schüler": {
+      "ru": "تلميذ",
+      "pos": "اسم",
+      "art": "der",
+      "pl": "die Schüler"
+    },
+    "Schülerin": {
+      "ru": "تلميذة",
+      "pos": "اسم",
+      "art": "die",
+      "pl": "die Schülerinnen"
+    },
+    "Tag": {
+      "ru": "اليوم / النهار",
+      "pos": "اسم",
+      "art": "der",
+      "pl": "die Tage"
+    },
+    "Unterricht": {
+      "ru": "درس، دراسة صفية",
+      "pos": "اسم",
+      "art": "der",
+      "pl": null
+    },
+    "Zeit": {
+      "ru": "وقت",
+      "pos": "اسم",
+      "art": "die",
+      "pl": "die Zeiten"
+    },
+    "an": {
+      "ru": "عند، إلى، على",
+      "pos": "حرف جر",
+      "note": "am = an dem. وهي أيضًا سابقة منفصلة: anfangen «يبدأ»، annehmen، ansehen، anzünden"
+    },
+    "auf": {
+      "ru": "على، في",
+      "pos": "حرف جر",
+      "note": "وهي أيضًا سابقة منفصلة: aufspringen «يقفز واقفًا»، sich aufmachen"
+    },
+    "beten": {
+      "ru": "يصلّي",
+      "pos": "فعل",
+      "forms": "betete · hat gebetet"
+    },
+    "der/die/das": {
+      "ru": "أداة التعريف",
+      "pos": "أداة تعريف",
+      "note": "وهي أيضًا اسم موصول بمعنى «الذي»"
+    },
+    "dieser": {
+      "ru": "هذا، هذه",
+      "pos": "ضمير"
+    },
+    "ein/eine": {
+      "ru": "أداة النكرة",
+      "pos": "أداة تعريف",
+      "note": "einer — «واحد، شخص ما»"
+    },
+    "er": {
+      "ru": "هو",
+      "pos": "ضمير",
+      "note": "ihn — إيّاه، ihm — له"
+    },
+    "evangelisch": {
+      "ru": "إنجيلي (بروتستانتي)",
+      "pos": "صفة"
+    },
+    "fallen": {
+      "ru": "يسقط",
+      "pos": "فعل",
+      "forms": "fiel · ist gefallen"
+    },
+    "für": {
+      "ru": "لـ، من أجل",
+      "pos": "حرف جر"
+    },
+    "gesetzlich": {
+      "ru": "قانوني، رسمي",
+      "pos": "صفة"
+    },
+    "haben": {
+      "ru": "يملك؛ فعل مساعد",
+      "pos": "فعل",
+      "forms": "hatte · hat gehabt"
+    },
+    "immer": {
+      "ru": "دائمًا؛ أكثر فأكثر",
+      "pos": "ظرف",
+      "note": "immer größer — أكبر فأكبر"
+    },
+    "in": {
+      "ru": "في (im = in dem، ins = in das)",
+      "pos": "حرف جر"
+    },
+    "kein": {
+      "ru": "لا أيّ، ولا واحد",
+      "pos": "ضمير"
+    },
+    "liegen": {
+      "ru": "يرقد / موضوع",
+      "pos": "فعل",
+      "forms": "lag · hat gelegen",
+      "note": "an etwas gelegen sein — يهمّه أمر ما: ihm war viel daran gelegen"
+    },
+    "sein": {
+      "ru": "يكون",
+      "pos": "فعل",
+      "forms": "war · ist gewesen",
+      "note": "Konjunktiv I: er sei، du seiest. والصيغة نفسها waren هي أيضًا جمع die Waren «بضائع»: allerhand Waren"
+    },
+    "und": {
+      "ru": "و",
+      "pos": "أداة ربط"
+    },
+    "zu": {
+      "ru": "إلى، في؛ أكثر من اللازم",
+      "pos": "حرف جر",
+      "note": "zur = zu der, zum = zu dem"
+    }
+  }
+}

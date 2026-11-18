@@ -1,0 +1,149 @@
+{
+  "version": 1,
+  "w": {
+    "aus": "aus",
+    "besonders": "besonders",
+    "brennende": "brennen",
+    "bringt": "bringen",
+    "den": "der/die/das",
+    "der": "der/die/das",
+    "dunkel": "Dunkel",
+    "es": "es",
+    "gäste": "Gast",
+    "hinunter": "hinunter",
+    "holzräder": "Holzrad",
+    "in": "in",
+    "lügde": "Lügde",
+    "menschen": "Mensch",
+    "osterberg": "Osterberg",
+    "osterräderlauf": "Osterräderlauf",
+    "ostersonntag": "Ostersonntag",
+    "rollen": "rollen",
+    "sieht": "sehen",
+    "stadt": "Stadt",
+    "und": "und",
+    "wenn": "wenn",
+    "wird": "werden",
+    "zusammen": "zusammen"
+  },
+  "l": {
+    "Dunkel": {
+      "ru": "темрява, морок",
+      "pos": "ім.",
+      "art": "das",
+      "pl": null
+    },
+    "Gast": {
+      "ru": "гість",
+      "pos": "ім.",
+      "art": "der",
+      "pl": "die Gäste"
+    },
+    "Holzrad": {
+      "ru": "дерев’яне колесо",
+      "pos": "ім.",
+      "art": "das",
+      "pl": "die Holzräder"
+    },
+    "Lügde": {
+      "ru": "Люґде",
+      "pos": "геогр."
+    },
+    "Mensch": {
+      "ru": "людина",
+      "pos": "ім.",
+      "art": "der",
+      "pl": "die Menschen",
+      "decl": "n-Deklination: des Menschen · dem/den Menschen"
+    },
+    "Osterberg": {
+      "ru": "Остерберґ, гора в Люґде",
+      "pos": "геогр."
+    },
+    "Osterräderlauf": {
+      "ru": "великодній спуск палаючих коліс у Люґде",
+      "pos": "ім.",
+      "art": "der",
+      "pl": null
+    },
+    "Ostersonntag": {
+      "ru": "Великоднє воскресіння",
+      "pos": "ім.",
+      "art": "der",
+      "pl": null
+    },
+    "Stadt": {
+      "ru": "місто",
+      "pos": "ім.",
+      "art": "die",
+      "pl": "die Städte"
+    },
+    "aus": {
+      "ru": "з",
+      "pos": "прийм.",
+      "note": "Також відокремлюваний префікс: auslöschen «погасити»"
+    },
+    "besonders": {
+      "ru": "особливо",
+      "pos": "присл."
+    },
+    "brennen": {
+      "ru": "горіти",
+      "pos": "дієсл.",
+      "forms": "brannte · hat gebrannt",
+      "note": "eine brennende Kerze — палаюча свічка"
+    },
+    "bringen": {
+      "ru": "приносити, приводити",
+      "pos": "дієсл.",
+      "forms": "brachte · hat gebracht"
+    },
+    "der/die/das": {
+      "ru": "означений артикль",
+      "pos": "артикль",
+      "note": "Також відносний займенник «який»"
+    },
+    "es": {
+      "ru": "воно; це",
+      "pos": "займ."
+    },
+    "hinunter": {
+      "ru": "униз",
+      "pos": "присл."
+    },
+    "in": {
+      "ru": "у (im = in dem, ins = in das)",
+      "pos": "прийм."
+    },
+    "rollen": {
+      "ru": "котити(ся)",
+      "pos": "дієсл.",
+      "forms": "rollte · hat/ist gerollt",
+      "note": "keine Rollen — коліщата (die Rolle); das Rollen — катання (субстантивований інфінітив)"
+    },
+    "sehen": {
+      "ru": "бачити",
+      "pos": "дієсл.",
+      "forms": "sah · hat gesehen",
+      "note": "У тексті з відокремлюваним префіксом: sah sich um — sich umsehen «озирнутися»"
+    },
+    "und": {
+      "ru": "і, а",
+      "pos": "спол."
+    },
+    "wenn": {
+      "ru": "якщо; коли",
+      "pos": "спол."
+    },
+    "werden": {
+      "ru": "ставати",
+      "pos": "дієсл.",
+      "forms": "wurde · ist geworden",
+      "note": "Допоміжне дієслово майбутнього часу й пасиву"
+    },
+    "zusammen": {
+      "ru": "разом",
+      "pos": "присл."
+    }
+  }
+}

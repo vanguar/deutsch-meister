@@ -349,7 +349,8 @@ def main():
     ap.add_argument('--news', action='store_true', help='проверить статьи data/news')
     ap.add_argument('--laender', action='store_true', help='проверить тексты земель data/laender')
     ap.add_argument('--history', action='store_true', help='check the history pilot')
-    ap.add_argument('--lang', choices=('uk','ar'), help='check localized history data')
+    ap.add_argument('--holidays', action='store_true', help='check holiday calendar texts')
+    ap.add_argument('--lang', choices=('uk','ar'), help='check localized history or holiday data')
     args = ap.parse_args()
 
     list_key, fields = 'books', INDEX_FIELDS
@@ -360,8 +361,9 @@ def main():
         BOOKS_DIR = os.path.join(BASE, 'data', 'laender')
         list_key, fields = 'items', LAND_INDEX_FIELDS
 
-    if args.history:
-        BOOKS_DIR = os.path.join(BASE, 'i18n', args.lang, 'history') if args.lang else os.path.join(BASE, 'data', 'history')
+    if args.history or args.holidays:
+        section = 'holidays' if args.holidays else 'history'
+        BOOKS_DIR = os.path.join(BASE, 'i18n', args.lang, section) if args.lang else os.path.join(BASE, 'data', section)
         list_key, fields = 'items', INDEX_FIELDS
 
     index, ok = load_json(os.path.join(BOOKS_DIR, 'index.json'), 'books/index.json')

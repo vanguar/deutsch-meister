@@ -57,7 +57,8 @@ def html_files():
              os.path.join(BASE, 'dialogs.html'),
              os.path.join(BASE, 'fahrschule.html'),
              os.path.join(BASE, 'laender.html'),
-             os.path.join(BASE, 'history.html')]
+             os.path.join(BASE, 'history.html'),
+             os.path.join(BASE, 'holidays.html')]
     files += glob.glob(os.path.join(BASE, 'lessons', '*', '*', 'index.html'))
     return [f for f in files if os.path.isfile(f)]
 

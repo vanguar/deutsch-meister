@@ -1,0 +1,22 @@
+{
+  "id": "holiday-fronleichnam",
+  "kind": "holiday",
+  "rule": {
+    "type": "easter",
+    "offset": 60
+  },
+  "title": "Fronleichnam",
+  "titleRu": "Свято Тіла Христового",
+  "region": "Німеччина · Зеегаузен, Баварія",
+  "cover": "✦",
+  "author": "German Morning",
+  "level": "B1",
+  "year": "2026",
+  "chapters": 1,
+  "words": 43,
+  "minutes": 1,
+  "source": "Erzbistum München und Freising · Fronleichnam",
+  "sourceUrl": "https://www2.erzbistum-muenchen.de/pfarrei/pv-peiting-hohenpeissenberg/kirchenjahr-fronleichnam/117230",
+  "license": "Авторська навчальна адаптація German Morning.",
+  "checked": "2026-11-18"
+}
