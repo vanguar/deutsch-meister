@@ -1,0 +1,447 @@
+{
+ "version": 1,
+ "w": {
+  "am": "an",
+  "an": "an",
+  "anderem": "ander",
+  "attentat": "Attentat",
+  "auch": "auch",
+  "aufstand": "aufstehen",
+  "aus": "aus",
+  "ausgerufen": "ausrufen (proklamieren)",
+  "bald": "bald",
+  "beendete": "beenden",
+  "begann": "beginnen",
+  "berlin": "Berlin",
+  "beteiligt": "beteiligt",
+  "das": "der/die/das",
+  "dem": "der/die/das",
+  "den": "der/die/das",
+  "der": "der/die/das",
+  "deutsche": "deutsch",
+  "deutschland": "Deutschland",
+  "die": "der/die/das",
+  "ein": "ein/eine",
+  "endete": "enden",
+  "entwickelte": "entwickeln",
+  "ermordet": "ermorden",
+  "erreichte": "erreichen",
+  "es": "es",
+  "europäischen": "europäisch",
+  "familien": "Familie",
+  "ferdinand": "Ferdinand",
+  "frankreich": "Frankreich",
+  "franz": "Franz",
+  "gab": "geben",
+  "gegen": "gegen",
+  "großbritannien": "Großbritannien",
+  "großmächten": "Großmacht",
+  "herbst": "Herbst",
+  "hunger": "Hunger",
+  "im": "in",
+  "in": "in",
+  "jahrelang": "jahrelang",
+  "juni": "Juni",
+  "kiel": "Kiel",
+  "konflikte": "Konflikt",
+  "krieg": "Krieg",
+  "krise": "Krise",
+  "kämpfe": "Kampf",
+  "kämpften": "kämpfen",
+  "litten": "leiden",
+  "länder": "Land (земля)",
+  "matrosen": "Matrose",
+  "menschen": "Mensch",
+  "monarchie": "Monarchie",
+  "nach": "nach",
+  "november": "November",
+  "reich": "Reich",
+  "republik": "Republik",
+  "revolution": "Revolution",
+  "russland": "Russland",
+  "sarajevo": "Sarajevo",
+  "schützengräben": "Schützengraben",
+  "sich": "sich",
+  "soldaten": "Soldat",
+  "starben": "sterben",
+  "starke": "stark",
+  "thronfolger": "Thronfolger",
+  "traten": "treten",
+  "und": "und",
+  "unter": "unter",
+  "usa": "USA",
+  "viele": "viel",
+  "von": "von",
+  "vor": "vor",
+  "waffenstillstand": "Waffenstillstand",
+  "waren": "Ware",
+  "westfront": "Westfront",
+  "wurde": "werden",
+  "zwischen": "zwischen",
+  "österreich-ungarn": "Österreich-Ungarn"
+ },
+ "l": {
+  "Attentat": {
+   "ru": "замах, політичне вбивство",
+   "pos": "ім.",
+   "art": "das",
+   "pl": "die Attentate"
+  },
+  "Berlin": {
+   "ru": "Берлін",
+   "pos": "геогр."
+  },
+  "Deutschland": {
+   "ru": "Німеччина",
+   "pos": "геогр."
+  },
+  "Familie": {
+   "ru": "сім'я; родина (у біології)",
+   "pos": "ім.",
+   "art": "die",
+   "pl": "die Familien"
+  },
+  "Ferdinand": {
+   "ru": "Фердинанд",
+   "pos": "ім'я"
+  },
+  "Frankreich": {
+   "ru": "Франція",
+   "pos": "геогр."
+  },
+  "Franz": {
+   "ru": "Франц",
+   "pos": "ім'я"
+  },
+  "Großbritannien": {
+   "ru": "Велика Британія",
+   "pos": "геогр."
+  },
+  "Großmacht": {
+   "ru": "велика держава",
+   "pos": "ім.",
+   "art": "die",
+   "pl": "die Großmächte"
+  },
+  "Herbst": {
+   "ru": "осінь",
+   "pos": "ім.",
+   "art": "der",
+   "pl": "die Herbste"
+  },
+  "Hunger": {
+   "ru": "голод",
+   "pos": "ім.",
+   "art": "der",
+   "pl": null
+  },
+  "Juni": {
+   "ru": "червень",
+   "pos": "ім.",
+   "art": "der",
+   "pl": null
+  },
+  "Kampf": {
+   "ru": "боротьба, бій",
+   "pos": "ім.",
+   "art": "der",
+   "pl": "die Kämpfe"
+  },
+  "Kiel": {
+   "ru": "Кіль",
+   "pos": "геогр."
+  },
+  "Konflikt": {
+   "pos": "ім.",
+   "ru": "конфлікт",
+   "art": "der",
+   "pl": "die Konflikte"
+  },
+  "Krieg": {
+   "ru": "війна",
+   "pos": "ім.",
+   "art": "der",
+   "pl": "die Kriege"
+  },
+  "Krise": {
+   "ru": "криза",
+   "pos": "ім.",
+   "art": "die",
+   "pl": "die Krisen"
+  },
+  "Land (земля)": {
+   "ru": "земля (федеральна); країна",
+   "pos": "ім.",
+   "art": "das",
+   "pl": "die Länder",
+   "note": "Bundesland — федеральна земля; in anderen Ländern — в інших землях"
+  },
+  "Matrose": {
+   "ru": "матрос",
+   "pos": "ім.",
+   "art": "der",
+   "pl": "die Matrosen"
+  },
+  "Mensch": {
+   "ru": "людина",
+   "pos": "ім.",
+   "art": "der",
+   "pl": "die Menschen",
+   "decl": "n-Deklination: des Menschen · dem/den Menschen"
+  },
+  "Monarchie": {
+   "ru": "монархія",
+   "pos": "ім.",
+   "art": "die",
+   "pl": "die Monarchien"
+  },
+  "November": {
+   "ru": "листопад",
+   "pos": "ім.",
+   "art": "der",
+   "pl": null
+  },
+  "Reich": {
+   "pos": "ім.",
+   "ru": "імперія; держава",
+   "art": "das",
+   "pl": "die Reiche"
+  },
+  "Republik": {
+   "ru": "республіка",
+   "pos": "ім.",
+   "art": "die",
+   "pl": "die Republiken"
+  },
+  "Revolution": {
+   "ru": "революція",
+   "pos": "ім.",
+   "art": "die",
+   "pl": "die Revolutionen"
+  },
+  "Russland": {
+   "ru": "Росія",
+   "pos": "геогр."
+  },
+  "Sarajevo": {
+   "ru": "Сараєво",
+   "pos": "геогр."
+  },
+  "Schützengraben": {
+   "ru": "окоп",
+   "pos": "ім.",
+   "art": "der",
+   "pl": "die Schützengräben"
+  },
+  "Soldat": {
+   "pos": "ім.",
+   "ru": "солдат",
+   "art": "der",
+   "pl": "die Soldaten"
+  },
+  "Thronfolger": {
+   "ru": "спадкоємець престолу",
+   "pos": "ім.",
+   "art": "der",
+   "pl": "die Thronfolger"
+  },
+  "USA": {
+   "ru": "США",
+   "pos": "геогр.",
+   "note": "die USA — у мн.: der USA (род. в.)"
+  },
+  "Waffenstillstand": {
+   "ru": "перемир’я",
+   "pos": "ім.",
+   "art": "der",
+   "pl": "die Waffenstillstände"
+  },
+  "Ware": {
+   "pos": "ім.",
+   "ru": "товар",
+   "art": "die",
+   "pl": "die Waren"
+  },
+  "Westfront": {
+   "ru": "Західний фронт",
+   "pos": "ім.",
+   "art": "die",
+   "pl": null
+  },
+  "an": {
+   "ru": "біля, до, на",
+   "pos": "прийм.",
+   "note": "am = an dem. Також відокремлюваний префікс: anfangen «починати», annehmen, ansehen, anzünden"
+  },
+  "ander": {
+   "pos": "прикм.",
+   "ru": "інший"
+  },
+  "auch": {
+   "ru": "теж, також; навіть",
+   "pos": "частка"
+  },
+  "aufstehen": {
+   "ru": "вставати",
+   "pos": "дієсл.",
+   "forms": "stand auf · ist aufgestanden"
+  },
+  "aus": {
+   "ru": "з",
+   "pos": "прийм.",
+   "note": "Також відокремлюваний префікс: auslöschen «погасити»"
+  },
+  "ausrufen (proklamieren)": {
+   "ru": "проголошувати",
+   "pos": "дієсл.",
+   "forms": "rief aus · hat ausgerufen"
+  },
+  "bald": {
+   "ru": "скоро",
+   "pos": "присл."
+  },
+  "beenden": {
+   "ru": "завершувати",
+   "pos": "дієсл.",
+   "forms": "beendet · beendete · hat beendet"
+  },
+  "beginnen": {
+   "ru": "починати, починатися",
+   "pos": "дієсл.",
+   "forms": "begann · hat begonnen"
+  },
+  "beteiligt": {
+   "ru": "залучений",
+   "pos": "прикм."
+  },
+  "der/die/das": {
+   "ru": "означений артикль",
+   "pos": "артикль",
+   "note": "Також відносний займенник «який»"
+  },
+  "deutsch": {
+   "ru": "німецька",
+   "pos": "прикм."
+  },
+  "ein/eine": {
+   "ru": "неозначений артикль",
+   "pos": "артикль",
+   "note": "einer — «один, хтось»"
+  },
+  "enden": {
+   "ru": "кінчати(ся)",
+   "pos": "дієсл.",
+   "forms": "endete · hat geendet"
+  },
+  "entwickeln": {
+   "ru": "розвивати",
+   "pos": "дієсл.",
+   "forms": "entwickelte · hat entwickelt",
+   "note": "sich entwickeln — розвиватися"
+  },
+  "ermorden": {
+   "ru": "убивати",
+   "pos": "дієсл.",
+   "forms": "ermordet · ermordete · hat ermordet"
+  },
+  "erreichen": {
+   "ru": "досягати",
+   "pos": "дієсл.",
+   "forms": "erreichte · hat erreicht"
+  },
+  "es": {
+   "ru": "воно; це",
+   "pos": "займ."
+  },
+  "europäisch": {
+   "ru": "європейський",
+   "pos": "прикм."
+  },
+  "geben": {
+   "ru": "давати",
+   "pos": "дієсл.",
+   "forms": "gab · hat gegeben"
+  },
+  "gegen": {
+   "ru": "проти; близько (про час)",
+   "pos": "прийм.",
+   "note": "gegen Mitternacht — близько опівночі"
+  },
+  "in": {
+   "ru": "у (im = in dem, ins = in das)",
+   "pos": "прийм."
+  },
+  "jahrelang": {
+   "ru": "роками, багато років",
+   "pos": "присл."
+  },
+  "kämpfen": {
+   "ru": "битися, боротися",
+   "pos": "дієсл.",
+   "forms": "kämpfte · hat gekämpft",
+   "note": "es wird gekämpft — точаться бої"
+  },
+  "leiden": {
+   "ru": "страждати",
+   "pos": "дієсл.",
+   "forms": "leidet · litt · hat gelitten"
+  },
+  "nach": {
+   "ru": "в, на, після, по",
+   "pos": "прийм."
+  },
+  "sich": {
+   "ru": "себе, собі",
+   "pos": "займ.",
+   "note": "Зворотний займенник, частина зворотного дієслова: sich auf den Weg machen, sich setzen, sich legen, sich nähern, sich gefallen lassen, sich getrauen, sich umsehen"
+  },
+  "stark": {
+   "ru": "сильний, міцний",
+   "pos": "прикм."
+  },
+  "sterben": {
+   "ru": "помирати",
+   "pos": "дієсл.",
+   "forms": "starb · ist gestorben"
+  },
+  "treten": {
+   "ru": "ступати, крокувати",
+   "pos": "дієсл.",
+   "forms": "trat · ist getreten"
+  },
+  "und": {
+   "ru": "і, а",
+   "pos": "спол."
+  },
+  "unter": {
+   "ru": "під, серед",
+   "pos": "прийм."
+  },
+  "viel": {
+   "ru": "багато, чимало",
+   "pos": "займ."
+  },
+  "von": {
+   "ru": "від, з, про (vom = von dem)",
+   "pos": "прийм."
+  },
+  "vor": {
+   "ru": "перед, до; від (страху)",
+   "pos": "прийм."
+  },
+  "werden": {
+   "ru": "ставати",
+   "pos": "дієсл.",
+   "forms": "wurde · ist geworden",
+   "note": "Допоміжне дієслово майбутнього часу й пасиву"
+  },
+  "zwischen": {
+   "pos": "прийм.",
+   "ru": "між"
+  },
+  "Österreich-Ungarn": {
+   "ru": "Австро-Угорщина",
+   "pos": "геогр."
+  }
+ }
+}

@@ -86,7 +86,7 @@
       "titleRu": "Первая мировая война и конец монархии",
       "period": "1914–1918",
       "summary": "Причины войны, жизнь во время войны и революция 1918 года.",
-      "ready": false
+      "ready": true
     },
     {
       "id": "weimar",
@@ -288,6 +288,24 @@
       "number": 8,
       "source": "LeMO / Bundesarchiv / bpb / UNESCO",
       "sourceUrl": "https://www.dhm.de/lemo/kapitel/kaiserreich/reich",
+      "checked": "2026-11-18",
+      "license": "Авторская учебная адаптация German Morning; ссылки на материалы — в главе."
+    },
+    {
+      "id": "erster-weltkrieg",
+      "kind": "history",
+      "title": "Erster Weltkrieg und Ende der Monarchie",
+      "titleRu": "Первая мировая война и конец монархии",
+      "author": "German Morning",
+      "level": "B1",
+      "year": "2026",
+      "chapters": 1,
+      "words": 107,
+      "minutes": 3,
+      "cover": "9",
+      "number": 9,
+      "source": "LeMO",
+      "sourceUrl": "https://www.dhm.de/lemo/kapitel/erster-weltkrieg",
       "checked": "2026-11-18",
       "license": "Авторская учебная адаптация German Morning; ссылки на материалы — в главе."
     }

@@ -1,0 +1,116 @@
+{
+  "id": "erster-weltkrieg",
+  "checked": "2026-11-18",
+  "sources": [
+    {
+      "id": "krieg",
+      "name": "LeMO · Der Erste Weltkrieg",
+      "url": "https://www.dhm.de/lemo/kapitel/erster-weltkrieg"
+    },
+    {
+      "id": "verlauf",
+      "name": "LeMO · Kriegsverlauf",
+      "url": "https://www.dhm.de/lemo/kapitel/erster-weltkrieg/kriegsverlauf"
+    },
+    {
+      "id": "revolution",
+      "name": "LeMO · Revolution 1918/19",
+      "url": "https://www.dhm.de/lemo/kapitel/weimarer-republik/revolution"
+    }
+  ],
+  "paragraphs": [
+    {
+      "sourceIds": [
+        "krieg"
+      ],
+      "sentences": [
+        [
+          "Vor 1914 gab es starke Konflikte zwischen den europäischen Großmächten.",
+          "До 1914 года между европейскими державами существовали серьёзные противоречия.",
+          "До 1914 року між європейськими державами існували серйозні суперечності.",
+          "قبل عام 1914 كانت هناك خلافات حادة بين القوى الأوروبية الكبرى."
+        ],
+        [
+          "Im Juni 1914 wurde der Thronfolger von Österreich-Ungarn, Franz Ferdinand, in Sarajevo ermordet.",
+          "В июне 1914 года в Сараеве убили наследника престола Австро-Венгрии Франца Фердинанда.",
+          "У червні 1914 року в Сараєві вбили спадкоємця престолу Австро-Угорщини Франца Фердинанда.",
+          "في يونيو 1914 اغتيل ولي عهد النمسا والمجر فرانتس فرديناند في سراييفو."
+        ],
+        [
+          "Aus der Krise nach dem Attentat entwickelte sich ein Krieg, an dem bald viele Länder beteiligt waren.",
+          "Кризис после убийства перерос в войну, в которую вскоре вступили многие страны.",
+          "Криза після вбивства переросла у війну, до якої невдовзі долучилося багато країн.",
+          "تحولت الأزمة بعد الاغتيال إلى حرب سرعان ما شاركت فيها دول كثيرة."
+        ],
+        [
+          "Das Deutsche Reich und Österreich-Ungarn kämpften unter anderem gegen Frankreich, Großbritannien und Russland.",
+          "Германская империя и Австро-Венгрия воевали, в частности, против Франции, Великобритании и России.",
+          "Німецька імперія та Австро-Угорщина воювали, зокрема, проти Франції, Великої Британії та Росії.",
+          "حاربت الإمبراطورية الألمانية والنمسا والمجر ضد دول منها فرنسا وبريطانيا وروسيا."
+        ]
+      ]
+    },
+    {
+      "sourceIds": [
+        "krieg",
+        "verlauf"
+      ],
+      "sentences": [
+        [
+          "An der Westfront kämpften Soldaten jahrelang in Schützengräben.",
+          "На Западном фронте солдаты годами сражались в окопах.",
+          "На Західному фронті солдати роками воювали в окопах.",
+          "على الجبهة الغربية قاتل الجنود في الخنادق لسنوات."
+        ],
+        [
+          "Viele Menschen starben, und in Deutschland litten auch Familien unter Hunger.",
+          "Погибло много людей, а в Германии от голода страдали и семьи в тылу.",
+          "Загинуло багато людей, а в Німеччині від голоду страждали й родини в тилу.",
+          "مات كثير من الناس، وعانت أسر في ألمانيا أيضًا من الجوع."
+        ],
+        [
+          "1917 traten die USA in den Krieg ein.",
+          "В 1917 году в войну вступили США.",
+          "У 1917 році у війну вступили США.",
+          "في عام 1917 دخلت الولايات المتحدة الحرب."
+        ]
+      ]
+    },
+    {
+      "sourceIds": [
+        "revolution",
+        "krieg"
+      ],
+      "sentences": [
+        [
+          "Im Herbst 1918 begann in Kiel ein Aufstand von Matrosen.",
+          "Осенью 1918 года в Киле началось восстание моряков.",
+          "Восени 1918 року в Кілі почалося повстання матросів.",
+          "في خريف عام 1918 بدأ تمرد للبحارة في كيل."
+        ],
+        [
+          "Die Revolution erreichte Berlin, und die Monarchie endete.",
+          "Революция дошла до Берлина, и монархия пала.",
+          "Революція дійшла до Берліна, і монархія впала.",
+          "وصلت الثورة إلى برلين وانتهى الحكم الملكي."
+        ],
+        [
+          "Am 9. November wurde die Republik ausgerufen.",
+          "9 ноября провозгласили республику.",
+          "9 листопада проголосили республіку.",
+          "في 9 نوفمبر أُعلنت الجمهورية."
+        ],
+        [
+          "Am 11. November beendete ein Waffenstillstand die Kämpfe.",
+          "11 ноября перемирие положило конец боевым действиям.",
+          "11 листопада перемир’я поклало край бойовим діям.",
+          "في 11 نوفمبر أوقفت هدنة القتال."
+        ]
+      ]
+    }
+  ],
+  "translations": {
+    "uk": {},
+    "ar": {}
+  }
+}

@@ -1,0 +1,94 @@
+{
+ "id": "ch-01",
+ "title": "Erster Weltkrieg und Ende der Monarchie",
+ "titleRu": "الحرب العالمية الأولى ونهاية الملكية",
+ "icon": "9",
+ "paragraphs": [
+  {
+   "sourceIds": [
+    "krieg"
+   ],
+   "s": [
+    {
+     "de": "Vor 1914 gab es starke Konflikte zwischen den europäischen Großmächten.",
+     "ru": "قبل عام 1914 كانت هناك خلافات حادة بين القوى الأوروبية الكبرى."
+    },
+    {
+     "de": "Im Juni 1914 wurde der Thronfolger von Österreich-Ungarn, Franz Ferdinand, in Sarajevo ermordet.",
+     "ru": "في يونيو 1914 اغتيل ولي عهد النمسا والمجر فرانتس فرديناند في سراييفو."
+    },
+    {
+     "de": "Aus der Krise nach dem Attentat entwickelte sich ein Krieg, an dem bald viele Länder beteiligt waren.",
+     "ru": "تحولت الأزمة بعد الاغتيال إلى حرب سرعان ما شاركت فيها دول كثيرة."
+    },
+    {
+     "de": "Das Deutsche Reich und Österreich-Ungarn kämpften unter anderem gegen Frankreich, Großbritannien und Russland.",
+     "ru": "حاربت الإمبراطورية الألمانية والنمسا والمجر ضد دول منها فرنسا وبريطانيا وروسيا."
+    }
+   ]
+  },
+  {
+   "sourceIds": [
+    "krieg",
+    "verlauf"
+   ],
+   "s": [
+    {
+     "de": "An der Westfront kämpften Soldaten jahrelang in Schützengräben.",
+     "ru": "على الجبهة الغربية قاتل الجنود في الخنادق لسنوات."
+    },
+    {
+     "de": "Viele Menschen starben, und in Deutschland litten auch Familien unter Hunger.",
+     "ru": "مات كثير من الناس، وعانت أسر في ألمانيا أيضًا من الجوع."
+    },
+    {
+     "de": "1917 traten die USA in den Krieg ein.",
+     "ru": "في عام 1917 دخلت الولايات المتحدة الحرب."
+    }
+   ]
+  },
+  {
+   "sourceIds": [
+    "revolution",
+    "krieg"
+   ],
+   "s": [
+    {
+     "de": "Im Herbst 1918 begann in Kiel ein Aufstand von Matrosen.",
+     "ru": "في خريف عام 1918 بدأ تمرد للبحارة في كيل."
+    },
+    {
+     "de": "Die Revolution erreichte Berlin, und die Monarchie endete.",
+     "ru": "وصلت الثورة إلى برلين وانتهى الحكم الملكي."
+    },
+    {
+     "de": "Am 9. November wurde die Republik ausgerufen.",
+     "ru": "في 9 نوفمبر أُعلنت الجمهورية."
+    },
+    {
+     "de": "Am 11. November beendete ein Waffenstillstand die Kämpfe.",
+     "ru": "في 11 نوفمبر أوقفت هدنة القتال."
+    }
+   ]
+  }
+ ],
+ "sourceTitle": "المصادر والتحقق من المعلومات",
+ "sources": [
+  {
+   "id": "krieg",
+   "name": "LeMO · Der Erste Weltkrieg",
+   "url": "https://www.dhm.de/lemo/kapitel/erster-weltkrieg"
+  },
+  {
+   "id": "verlauf",
+   "name": "LeMO · Kriegsverlauf",
+   "url": "https://www.dhm.de/lemo/kapitel/erster-weltkrieg/kriegsverlauf"
+  },
+  {
+   "id": "revolution",
+   "name": "LeMO · Revolution 1918/19",
+   "url": "https://www.dhm.de/lemo/kapitel/weimarer-republik/revolution"
+  }
+ ],
+ "checked": "2026-11-18"
+}

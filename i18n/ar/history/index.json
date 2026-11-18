@@ -86,7 +86,7 @@
    "titleRu": "الحرب العالمية الأولى ونهاية الملكية",
    "period": "1914–1918",
    "summary": "أسباب الحرب والحياة خلالها وثورة عام 1918.",
-   "ready": false
+   "ready": true
   },
   {
    "id": "weimar",
@@ -288,6 +288,24 @@
    "number": 8,
    "source": "LeMO / Bundesarchiv / bpb / UNESCO",
    "sourceUrl": "https://www.dhm.de/lemo/kapitel/kaiserreich/reich",
+   "checked": "2026-11-18",
+   "license": "صياغة تعليمية أعدّها German Morning؛ روابط المواد مذكورة في الفصل."
+  },
+  {
+   "id": "erster-weltkrieg",
+   "kind": "history",
+   "title": "Erster Weltkrieg und Ende der Monarchie",
+   "titleRu": "الحرب العالمية الأولى ونهاية الملكية",
+   "author": "German Morning",
+   "level": "B1",
+   "year": "2026",
+   "chapters": 1,
+   "words": 107,
+   "minutes": 3,
+   "cover": "9",
+   "number": 9,
+   "source": "LeMO",
+   "sourceUrl": "https://www.dhm.de/lemo/kapitel/erster-weltkrieg",
    "checked": "2026-11-18",
    "license": "صياغة تعليمية أعدّها German Morning؛ روابط المواد مذكورة في الفصل."
   }

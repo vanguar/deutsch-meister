@@ -1,0 +1,447 @@
+{
+  "version": 1,
+  "w": {
+    "am": "an",
+    "an": "an",
+    "anderem": "ander",
+    "attentat": "Attentat",
+    "auch": "auch",
+    "aufstand": "aufstehen",
+    "aus": "aus",
+    "ausgerufen": "ausrufen (proklamieren)",
+    "bald": "bald",
+    "beendete": "beenden",
+    "begann": "beginnen",
+    "berlin": "Berlin",
+    "beteiligt": "beteiligt",
+    "das": "der/die/das",
+    "dem": "der/die/das",
+    "den": "der/die/das",
+    "der": "der/die/das",
+    "deutsche": "deutsch",
+    "deutschland": "Deutschland",
+    "die": "der/die/das",
+    "ein": "ein/eine",
+    "endete": "enden",
+    "entwickelte": "entwickeln",
+    "ermordet": "ermorden",
+    "erreichte": "erreichen",
+    "es": "es",
+    "europäischen": "europäisch",
+    "familien": "Familie",
+    "ferdinand": "Ferdinand",
+    "frankreich": "Frankreich",
+    "franz": "Franz",
+    "gab": "geben",
+    "gegen": "gegen",
+    "großbritannien": "Großbritannien",
+    "großmächten": "Großmacht",
+    "herbst": "Herbst",
+    "hunger": "Hunger",
+    "im": "in",
+    "in": "in",
+    "jahrelang": "jahrelang",
+    "juni": "Juni",
+    "kiel": "Kiel",
+    "konflikte": "Konflikt",
+    "krieg": "Krieg",
+    "krise": "Krise",
+    "kämpfe": "Kampf",
+    "kämpften": "kämpfen",
+    "litten": "leiden",
+    "länder": "Land (земля)",
+    "matrosen": "Matrose",
+    "menschen": "Mensch",
+    "monarchie": "Monarchie",
+    "nach": "nach",
+    "november": "November",
+    "reich": "Reich",
+    "republik": "Republik",
+    "revolution": "Revolution",
+    "russland": "Russland",
+    "sarajevo": "Sarajevo",
+    "schützengräben": "Schützengraben",
+    "sich": "sich",
+    "soldaten": "Soldat",
+    "starben": "sterben",
+    "starke": "stark",
+    "thronfolger": "Thronfolger",
+    "traten": "treten",
+    "und": "und",
+    "unter": "unter",
+    "usa": "USA",
+    "viele": "viel",
+    "von": "von",
+    "vor": "vor",
+    "waffenstillstand": "Waffenstillstand",
+    "waren": "Ware",
+    "westfront": "Westfront",
+    "wurde": "werden",
+    "zwischen": "zwischen",
+    "österreich-ungarn": "Österreich-Ungarn"
+  },
+  "l": {
+    "Attentat": {
+      "ru": "покушение, политическое убийство",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Attentate"
+    },
+    "Berlin": {
+      "ru": "Берлин",
+      "pos": "геогр."
+    },
+    "Deutschland": {
+      "ru": "Германия",
+      "pos": "геогр."
+    },
+    "Familie": {
+      "ru": "семья; семейство (в биологии)",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Familien"
+    },
+    "Ferdinand": {
+      "ru": "Фердинанд",
+      "pos": "имя"
+    },
+    "Frankreich": {
+      "ru": "Франция",
+      "pos": "геогр."
+    },
+    "Franz": {
+      "ru": "Франц",
+      "pos": "имя"
+    },
+    "Großbritannien": {
+      "ru": "Великобритания",
+      "pos": "геогр."
+    },
+    "Großmacht": {
+      "ru": "великая держава",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Großmächte"
+    },
+    "Herbst": {
+      "ru": "осень",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Herbste"
+    },
+    "Hunger": {
+      "ru": "голод",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "Juni": {
+      "ru": "июнь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "Kampf": {
+      "ru": "борьба, бой",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Kämpfe"
+    },
+    "Kiel": {
+      "ru": "Киль",
+      "pos": "геогр."
+    },
+    "Konflikt": {
+      "pos": "сущ.",
+      "ru": "конфликт",
+      "art": "der",
+      "pl": "die Konflikte"
+    },
+    "Krieg": {
+      "ru": "война",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Kriege"
+    },
+    "Krise": {
+      "ru": "кризис",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Krisen"
+    },
+    "Land (земля)": {
+      "ru": "земля (федеральная); страна",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Länder",
+      "note": "Bundesland — федеральная земля; in anderen Ländern — в других землях"
+    },
+    "Matrose": {
+      "ru": "матрос",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Matrosen"
+    },
+    "Mensch": {
+      "ru": "человек",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Menschen",
+      "decl": "n-Deklination: des Menschen · dem/den Menschen"
+    },
+    "Monarchie": {
+      "ru": "монархия",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Monarchien"
+    },
+    "November": {
+      "ru": "ноябрь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "Reich": {
+      "pos": "сущ.",
+      "ru": "империя; государство",
+      "art": "das",
+      "pl": "die Reiche"
+    },
+    "Republik": {
+      "ru": "республика",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Republiken"
+    },
+    "Revolution": {
+      "ru": "революция",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Revolutionen"
+    },
+    "Russland": {
+      "ru": "Россия",
+      "pos": "геогр."
+    },
+    "Sarajevo": {
+      "ru": "Сараево",
+      "pos": "геогр."
+    },
+    "Schützengraben": {
+      "ru": "окоп",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Schützengräben"
+    },
+    "Soldat": {
+      "pos": "сущ.",
+      "ru": "солдат",
+      "art": "der",
+      "pl": "die Soldaten"
+    },
+    "Thronfolger": {
+      "ru": "наследник престола",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Thronfolger"
+    },
+    "USA": {
+      "ru": "США",
+      "pos": "геогр.",
+      "note": "die USA — во мн. ч.: der USA (род. п.)"
+    },
+    "Waffenstillstand": {
+      "ru": "перемирие",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Waffenstillstände"
+    },
+    "Ware": {
+      "pos": "сущ.",
+      "ru": "товар",
+      "art": "die",
+      "pl": "die Waren"
+    },
+    "Westfront": {
+      "ru": "Западный фронт",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": null
+    },
+    "an": {
+      "ru": "у, к, на",
+      "pos": "предл.",
+      "note": "am = an dem. Тж. отделяемая приставка: anfangen «начинать», annehmen, ansehen, anzünden"
+    },
+    "ander": {
+      "pos": "прил.",
+      "ru": "другой, иной"
+    },
+    "auch": {
+      "ru": "тоже, также; даже",
+      "pos": "частица"
+    },
+    "aufstehen": {
+      "ru": "вставать",
+      "pos": "гл.",
+      "forms": "stand auf · ist aufgestanden"
+    },
+    "aus": {
+      "ru": "из",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: auslöschen «погасить»"
+    },
+    "ausrufen (proklamieren)": {
+      "ru": "провозглашать",
+      "pos": "гл.",
+      "forms": "rief aus · hat ausgerufen"
+    },
+    "bald": {
+      "ru": "скоро",
+      "pos": "нареч."
+    },
+    "beenden": {
+      "ru": "завершать",
+      "pos": "гл.",
+      "forms": "beendet · beendete · hat beendet"
+    },
+    "beginnen": {
+      "ru": "начинать, начинаться",
+      "pos": "гл.",
+      "forms": "begann · hat begonnen"
+    },
+    "beteiligt": {
+      "ru": "вовлечённый",
+      "pos": "прил."
+    },
+    "der/die/das": {
+      "ru": "определённый артикль",
+      "pos": "артикль",
+      "note": "Тж. относительное местоимение «который»"
+    },
+    "deutsch": {
+      "ru": "немецкий",
+      "pos": "прил."
+    },
+    "ein/eine": {
+      "ru": "неопределённый артикль",
+      "pos": "артикль",
+      "note": "einer — «один, некто»"
+    },
+    "enden": {
+      "ru": "кончать(ся)",
+      "pos": "гл.",
+      "forms": "endete · hat geendet"
+    },
+    "entwickeln": {
+      "ru": "развивать",
+      "pos": "гл.",
+      "forms": "entwickelte · hat entwickelt",
+      "note": "sich entwickeln — развиваться"
+    },
+    "ermorden": {
+      "ru": "убивать",
+      "pos": "гл.",
+      "forms": "ermordet · ermordete · hat ermordet"
+    },
+    "erreichen": {
+      "ru": "достигать",
+      "pos": "гл.",
+      "forms": "erreichte · hat erreicht"
+    },
+    "es": {
+      "ru": "оно; это",
+      "pos": "мест."
+    },
+    "europäisch": {
+      "ru": "европейский",
+      "pos": "прил."
+    },
+    "geben": {
+      "ru": "давать",
+      "pos": "гл.",
+      "forms": "gab · hat gegeben"
+    },
+    "gegen": {
+      "ru": "против; около (о времени)",
+      "pos": "предл.",
+      "note": "gegen Mitternacht — около полуночи"
+    },
+    "in": {
+      "ru": "в (im = in dem, ins = in das)",
+      "pos": "предл."
+    },
+    "jahrelang": {
+      "ru": "годами, много лет",
+      "pos": "нареч."
+    },
+    "kämpfen": {
+      "ru": "сражаться, бороться",
+      "pos": "гл.",
+      "forms": "kämpfte · hat gekämpft",
+      "note": "es wird gekämpft — идут бои"
+    },
+    "leiden": {
+      "ru": "страдать",
+      "pos": "гл.",
+      "forms": "leidet · litt · hat gelitten"
+    },
+    "nach": {
+      "ru": "в, на, после, по",
+      "pos": "предл."
+    },
+    "sich": {
+      "ru": "себя, себе",
+      "pos": "мест.",
+      "note": "Возвратное местоимение, часть возвратного глагола: sich auf den Weg machen, sich setzen, sich legen, sich nähern, sich gefallen lassen, sich getrauen, sich umsehen"
+    },
+    "stark": {
+      "ru": "сильный, крепкий",
+      "pos": "прил."
+    },
+    "sterben": {
+      "ru": "умирать",
+      "pos": "гл.",
+      "forms": "starb · ist gestorben"
+    },
+    "treten": {
+      "ru": "ступать, шагать",
+      "pos": "гл.",
+      "forms": "trat · ist getreten"
+    },
+    "und": {
+      "ru": "и, а",
+      "pos": "союз"
+    },
+    "unter": {
+      "ru": "под, среди",
+      "pos": "предл."
+    },
+    "viel": {
+      "ru": "много, многое",
+      "pos": "мест."
+    },
+    "von": {
+      "ru": "от, из, о (vom = von dem)",
+      "pos": "предл."
+    },
+    "vor": {
+      "ru": "перед, до; от (страха)",
+      "pos": "предл."
+    },
+    "werden": {
+      "ru": "становиться",
+      "pos": "гл.",
+      "forms": "wurde · ist geworden",
+      "note": "Вспомогательный глагол будущего времени и пассива"
+    },
+    "zwischen": {
+      "pos": "предл.",
+      "ru": "между"
+    },
+    "Österreich-Ungarn": {
+      "ru": "Австро-Венгрия",
+      "pos": "геогр."
+    }
+  }
+}

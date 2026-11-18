@@ -1,0 +1,94 @@
+{
+ "id": "ch-01",
+ "title": "Erster Weltkrieg und Ende der Monarchie",
+ "titleRu": "Перша світова війна та кінець монархії",
+ "icon": "9",
+ "paragraphs": [
+  {
+   "sourceIds": [
+    "krieg"
+   ],
+   "s": [
+    {
+     "de": "Vor 1914 gab es starke Konflikte zwischen den europäischen Großmächten.",
+     "ru": "До 1914 року між європейськими державами існували серйозні суперечності."
+    },
+    {
+     "de": "Im Juni 1914 wurde der Thronfolger von Österreich-Ungarn, Franz Ferdinand, in Sarajevo ermordet.",
+     "ru": "У червні 1914 року в Сараєві вбили спадкоємця престолу Австро-Угорщини Франца Фердинанда."
+    },
+    {
+     "de": "Aus der Krise nach dem Attentat entwickelte sich ein Krieg, an dem bald viele Länder beteiligt waren.",
+     "ru": "Криза після вбивства переросла у війну, до якої невдовзі долучилося багато країн."
+    },
+    {
+     "de": "Das Deutsche Reich und Österreich-Ungarn kämpften unter anderem gegen Frankreich, Großbritannien und Russland.",
+     "ru": "Німецька імперія та Австро-Угорщина воювали, зокрема, проти Франції, Великої Британії та Росії."
+    }
+   ]
+  },
+  {
+   "sourceIds": [
+    "krieg",
+    "verlauf"
+   ],
+   "s": [
+    {
+     "de": "An der Westfront kämpften Soldaten jahrelang in Schützengräben.",
+     "ru": "На Західному фронті солдати роками воювали в окопах."
+    },
+    {
+     "de": "Viele Menschen starben, und in Deutschland litten auch Familien unter Hunger.",
+     "ru": "Загинуло багато людей, а в Німеччині від голоду страждали й родини в тилу."
+    },
+    {
+     "de": "1917 traten die USA in den Krieg ein.",
+     "ru": "У 1917 році у війну вступили США."
+    }
+   ]
+  },
+  {
+   "sourceIds": [
+    "revolution",
+    "krieg"
+   ],
+   "s": [
+    {
+     "de": "Im Herbst 1918 begann in Kiel ein Aufstand von Matrosen.",
+     "ru": "Восени 1918 року в Кілі почалося повстання матросів."
+    },
+    {
+     "de": "Die Revolution erreichte Berlin, und die Monarchie endete.",
+     "ru": "Революція дійшла до Берліна, і монархія впала."
+    },
+    {
+     "de": "Am 9. November wurde die Republik ausgerufen.",
+     "ru": "9 листопада проголосили республіку."
+    },
+    {
+     "de": "Am 11. November beendete ein Waffenstillstand die Kämpfe.",
+     "ru": "11 листопада перемир’я поклало край бойовим діям."
+    }
+   ]
+  }
+ ],
+ "sourceTitle": "Джерела та перевірка фактів",
+ "sources": [
+  {
+   "id": "krieg",
+   "name": "LeMO · Der Erste Weltkrieg",
+   "url": "https://www.dhm.de/lemo/kapitel/erster-weltkrieg"
+  },
+  {
+   "id": "verlauf",
+   "name": "LeMO · Kriegsverlauf",
+   "url": "https://www.dhm.de/lemo/kapitel/erster-weltkrieg/kriegsverlauf"
+  },
+  {
+   "id": "revolution",
+   "name": "LeMO · Revolution 1918/19",
+   "url": "https://www.dhm.de/lemo/kapitel/weimarer-republik/revolution"
+  }
+ ],
+ "checked": "2026-11-18"
+}
