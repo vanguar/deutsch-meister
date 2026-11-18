@@ -36,6 +36,7 @@ const Vocab = (() => {
   let filter = 'all';
   let query = '';
   let known = readKnown();
+  let renderedState = null;
   window.addEventListener('dm:progress-import', () => { known = readKnown(); if (items) { render(); renderHead(); } });
 
   const $ = id => document.getElementById(id);
@@ -120,6 +121,10 @@ const Vocab = (() => {
   function render() {
     const list = $('vocabList');
     if (!list || !items) return;
+    // A tab change does not change the list. Keep its DOM (and avoid waking
+    // translation observers) unless a filter, search or saved progress changed.
+    const state = JSON.stringify([level, filter, query, known]);
+    if (state === renderedState) return;
     const q = fold(query.trim());
     let pool = q ? items.filter(it => it.f.includes(q)) : levelItems();
     if (filter === 'known') pool = pool.filter(it => known[it.de]);
@@ -131,6 +136,7 @@ const Vocab = (() => {
     empty.hidden = shown.length > 0;
     document.querySelector('[data-tab="dict"]').classList.toggle('is-search', !!q);
     renderHead();
+    renderedState = state;
   }
 
   function renderHead() {

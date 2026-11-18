@@ -1,4 +1,4 @@
-const CACHE = 'deutsch-meister-v237';
+const CACHE = 'deutsch-meister-v238';
 const SCOPE_PATH = new URL(self.registration.scope).pathname.replace(/\/$/, '');
 const BASE = SCOPE_PATH === '' ? '' : SCOPE_PATH;
 
@@ -7,64 +7,64 @@ const STATIC = [
   BASE + '/',
   BASE + '/index.html',
   BASE + '/manifest.json',
-  BASE + '/css/base.css?v=222',
-  BASE + '/css/sidebar.css?v=222',
-  BASE + '/css/home.css?v=222',
-  BASE + '/css/lesson.css?v=222',
-  BASE + '/css/exercises.css?v=222',
-  BASE + '/js/i18n.js?v=222',
-  BASE + '/js/tg-theme.js?v=222',
-  BASE + '/js/theme.js?v=222',
-  BASE + '/js/progress-model.js?v=222',
-  BASE + '/js/progress.js?v=222',
-  BASE + '/js/offline.js?v=222',
-  BASE + '/css/offline.css?v=222',
-  BASE + '/js/lesson-render.js?v=222',
-  BASE + '/js/exercises.js?v=222',
-  BASE + '/js/flashcards.js?v=222',
-  BASE + '/js/tts.js?v=222',
-  BASE + '/js/telegram.js?v=222',
-  BASE + '/js/cloud-sync.js?v=222',
-  BASE + '/js/install-app.js?v=222',
-  BASE + '/js/support.js?v=222',
-  BASE + '/js/home.js?v=222',
-  BASE + '/js/vocab.js?v=222',
-  BASE + '/js/sw-register.js?v=222',
+  BASE + '/css/base.css?v=223',
+  BASE + '/css/sidebar.css?v=223',
+  BASE + '/css/home.css?v=223',
+  BASE + '/css/lesson.css?v=223',
+  BASE + '/css/exercises.css?v=223',
+  BASE + '/js/i18n.js?v=223',
+  BASE + '/js/tg-theme.js?v=223',
+  BASE + '/js/theme.js?v=223',
+  BASE + '/js/progress-model.js?v=223',
+  BASE + '/js/progress.js?v=223',
+  BASE + '/js/offline.js?v=223',
+  BASE + '/css/offline.css?v=223',
+  BASE + '/js/lesson-render.js?v=223',
+  BASE + '/js/exercises.js?v=223',
+  BASE + '/js/flashcards.js?v=223',
+  BASE + '/js/tts.js?v=223',
+  BASE + '/js/telegram.js?v=223',
+  BASE + '/js/cloud-sync.js?v=223',
+  BASE + '/js/install-app.js?v=223',
+  BASE + '/js/support.js?v=223',
+  BASE + '/js/home.js?v=223',
+  BASE + '/js/vocab.js?v=223',
+  BASE + '/js/sw-register.js?v=223',
   // Читалка: оболочка библиотеки и её движок. Каталог книг — маленький
   // и нужен сразу, поэтому он в прекеше; ?v= у .json нет намеренно:
   // bump_version.py версионирует только .js/.css, а запросы всё равно
   // идут network-first, так что свежее приходит из сети.
   BASE + '/books.html',
   BASE + '/news.html',
-  BASE + '/css/reader.css?v=222',
-  BASE + '/js/image-reveal.js?v=222',
-  BASE + '/js/library.js?v=222',
-  BASE + '/js/reader.js?v=222',
-  BASE + '/js/reader-tip.js?v=222',
-  BASE + '/js/reader-gloss.js?v=222',
-  BASE + '/js/reader-words.js?v=222',
-  BASE + '/js/reader-speak.js?v=222',
-  BASE + '/js/reader-cards.js?v=222',
-  BASE + '/js/reader-dict.js?v=222',
-  BASE + '/css/news.css?v=222',
-  BASE + '/js/news.js?v=222',
+  BASE + '/css/reader.css?v=223',
+  BASE + '/js/image-reveal.js?v=223',
+  BASE + '/js/library.js?v=223',
+  BASE + '/js/reader.js?v=223',
+  BASE + '/js/reader-tip.js?v=223',
+  BASE + '/js/reader-gloss.js?v=223',
+  BASE + '/js/reader-words.js?v=223',
+  BASE + '/js/reader-speak.js?v=223',
+  BASE + '/js/reader-cards.js?v=223',
+  BASE + '/js/reader-dict.js?v=223',
+  BASE + '/css/news.css?v=223',
+  BASE + '/js/news.js?v=223',
   // Диалоги: оболочка, движок и оглавление; сами диалоги (data/dialogs/*.json)
   // и фото кладутся в кеш при первом открытии, как главы книг
   BASE + '/dialogs.html',
-  BASE + '/css/dialogs.css?v=222',
-  BASE + '/js/dialogs.js?v=222',
+  BASE + '/css/dialogs.css?v=223',
+  BASE + '/js/dialogs.js?v=223',
   // Автошкола: оболочка, движок и оглавление; уроки и знаки — при открытии
   BASE + '/fahrschule.html',
-  BASE + '/css/fahrschule.css?v=222',
-  BASE + '/js/fahrschule.js?v=222',
+  BASE + '/css/fahrschule.css?v=223',
+  BASE + '/js/fahrschule.js?v=223',
   // Земли Германии: оболочка, движок, витрина и карта; тексты — при открытии
   BASE + '/history.html',
-  BASE + '/css/history.css?v=222',
-  BASE + '/js/history.js?v=222',
+  BASE + '/css/history.css?v=223',
+  BASE + '/js/history.js?v=223',
   BASE + '/data/history/index.json',
   BASE + '/laender.html',
-  BASE + '/css/laender.css?v=222',
-  BASE + '/js/laender.js?v=222',
+  BASE + '/css/laender.css?v=223',
+  BASE + '/js/laender.js?v=223',
   BASE + '/data/laender/lands.json',
   BASE + '/data/laender/map.json',
   BASE + '/data/books/index.json',
@@ -229,6 +229,15 @@ async function cached(req) {
   return null;
 }
 
+async function rememberResponse(req, response) {
+  try {
+    const cache = await caches.open(RUNTIME);
+    await cache.put(ownedUrl(req.url), response);
+    const entries = await cache.keys();
+    for (const old of entries.slice(0, Math.max(0, entries.length - 400))) await cache.delete(old);
+  } catch (_) { /* Storage/quota failures must not break an online page. */ }
+}
+
 self.addEventListener('fetch', e => {
   const req = e.request, u = new URL(req.url);
   if (req.method !== 'GET' || u.origin !== self.location.origin || !u.pathname.startsWith(BASE + '/') || isNoStore(req.url)) return;
@@ -245,14 +254,9 @@ self.addEventListener('fetch', e => {
       // The host caches HTML for ten minutes. Revalidate it on navigation so
       // an online reopen gets the latest versioned scripts along with the page.
       const res = await fetch(req, req.mode === 'navigate' ? { cache: 'no-cache' } : undefined);
-      if (res.ok) {
-        const cache = await caches.open(RUNTIME);
-        try {
-          await cache.put(ownedUrl(req.url), res.clone());
-          const entries = await cache.keys();
-          for (const old of entries.slice(0, Math.max(0, entries.length - 400))) await cache.delete(old);
-        } catch (_) { /* Storage/quota failures must not break an online page. */ }
-      }
+      // Keep the worker alive for persistence without holding the response
+      // behind disk writes and a full runtime-cache enumeration.
+      if (res.ok) e.waitUntil(rememberResponse(req, res.clone()));
       return res;
     } catch (_) {
       const hit = await cached(req); if (hit) return hit;

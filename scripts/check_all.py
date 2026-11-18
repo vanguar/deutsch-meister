@@ -34,6 +34,7 @@ commands = [
     ['node', 'tools/test_flashcards.js'],
     ['node', 'tools/test_progress.js'],
     ['node', 'tools/test_offline.js'],
+    ['node', 'tools/test_performance.js'],
     ['node', 'tools/vocab/build.js', '--check'],
     ['node', 'tools/i18n.js', 'check'],
     ['node', 'tools/i18n.js', 'check', 'ar'],

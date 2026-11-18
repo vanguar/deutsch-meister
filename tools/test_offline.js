@@ -44,8 +44,12 @@ async function send(data) {
 }
 async function load(path, mode = 'cors') {
   let promise;
-  events.fetch({ request: { url: scope + path, method: 'GET', mode, headers: new Headers() }, respondWith: p => { promise = p; } });
-  return promise;
+  const jobs = [];
+  events.fetch({ request: { url: scope + path, method: 'GET', mode, headers: new Headers() },
+    respondWith: p => { promise = p; }, waitUntil: p => { jobs.push(p); } });
+  const response = await promise;
+  await Promise.all(jobs);
+  return response;
 }
 (async () => {
   await (await caches.open('unrelated-app-v1')).put('https://test/other/app.js', new Response('other'));

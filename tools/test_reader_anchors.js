@@ -4,7 +4,7 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 const vm = require('node:vm');
-const original = fs.readFileSync(path.join(__dirname, '../js/reader.js'), 'utf8');
+const original = fs.readFileSync(path.join(__dirname, '../js/reader.js'), 'utf8').replace(/\r\n/g, '\n');
 // Expose the closure only in this VM; production's public API stays unchanged.
 const source = original.replace('    theme: themeName\n', `    theme: themeName,
     anchors: { syncAnchor, anchorEl, pageOfAnchor, savePos, readPos,
