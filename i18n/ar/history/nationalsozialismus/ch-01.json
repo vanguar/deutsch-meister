@@ -1,0 +1,99 @@
+{
+ "id": "ch-01",
+ "title": "NS-Diktatur, Zweiter Weltkrieg und Holocaust",
+ "titleRu": "الديكتاتورية النازية والحرب العالمية الثانية والهولوكوست",
+ "icon": "11",
+ "paragraphs": [
+  {
+   "sourceIds": [
+    "diktatur",
+    "holocaust"
+   ],
+   "s": [
+    {
+     "de": "Im Jahr 1933 zerstörten Hitler und die Nationalsozialisten die Demokratie in Deutschland.",
+     "ru": "في عام 1933 قضى هتلر والنازيون على الديمقراطية في ألمانيا."
+    },
+    {
+     "de": "Sie verfolgten politische Gegner und schalteten andere Parteien aus.",
+     "ru": "اضطهدوا خصومهم السياسيين وألغوا الأحزاب الأخرى."
+    },
+    {
+     "de": "Mit den Nürnberger Gesetzen von 1935 verloren Jüdinnen und Juden wichtige Rechte.",
+     "ru": "بموجب قوانين نورمبرغ لعام 1935 فقد اليهود حقوقًا أساسية."
+    }
+   ]
+  },
+  {
+   "sourceIds": [
+    "krieg",
+    "holocaust"
+   ],
+   "s": [
+    {
+     "de": "Am 1. September 1939 griff das nationalsozialistische Deutschland Polen an und begann den Zweiten Weltkrieg in Europa.",
+     "ru": "في 1 سبتمبر 1939 هاجمت ألمانيا النازية بولندا وبدأت الحرب العالمية الثانية في أوروبا."
+    },
+    {
+     "de": "1941 griff Deutschland die Sowjetunion an.",
+     "ru": "في عام 1941 هاجمت ألمانيا الاتحاد السوفيتي."
+    }
+   ]
+  },
+  {
+   "sourceIds": [
+    "holocaust",
+    "opfer"
+   ],
+   "s": [
+    {
+     "de": "Im Holocaust ermordete das NS-Regime mit seinen Verbündeten und Helfern etwa sechs Millionen jüdische Männer, Frauen und Kinder.",
+     "ru": "خلال الهولوكوست قتل النظام النازي وحلفاؤه والمتعاونون معه نحو ستة ملايين يهودي ويهودية من الرجال والنساء والأطفال."
+    },
+    {
+     "de": "Die Nationalsozialisten verfolgten und ermordeten auch Sinti und Roma sowie Menschen mit Behinderungen und weitere Opfergruppen.",
+     "ru": "اضطهد النازيون أيضًا جماعات أخرى وقتلوا أفرادًا منها، بينهم السنتي والروما وذوو الإعاقة."
+    }
+   ]
+  },
+  {
+   "sourceIds": [
+    "krieg"
+   ],
+   "s": [
+    {
+     "de": "Im Mai 1945 kapitulierte Deutschland bedingungslos.",
+     "ru": "في مايو 1945 استسلمت ألمانيا دون شروط."
+    },
+    {
+     "de": "Damit endete der Krieg in Europa.",
+     "ru": "وبذلك انتهت الحرب في أوروبا."
+    }
+   ]
+  }
+ ],
+ "sourceTitle": "المصادر والتحقق من المعلومات",
+ "sources": [
+  {
+   "id": "diktatur",
+   "name": "LeMO · Das NS-Regime",
+   "url": "https://www.dhm.de/lemo/kapitel/ns-regime"
+  },
+  {
+   "id": "krieg",
+   "name": "LeMO · Der Zweite Weltkrieg",
+   "url": "https://www.dhm.de/lemo/kapitel/zweiter-weltkrieg"
+  },
+  {
+   "id": "holocaust",
+   "name": "United States Holocaust Memorial Museum · Introduction to the Holocaust",
+   "url": "https://encyclopedia.ushmm.org/content/en/article/introduction-to-the-holocaust"
+  },
+  {
+   "id": "opfer",
+   "name": "United States Holocaust Memorial Museum · Opfer der NS-Verfolgung",
+   "url": "https://encyclopedia.ushmm.org/content/en/article/documenting-numbers-of-victims-of-the-holocaust-and-nazi-persecution"
+  }
+ ],
+ "checked": "2026-11-18"
+}

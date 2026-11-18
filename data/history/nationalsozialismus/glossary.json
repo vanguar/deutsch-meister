@@ -1,0 +1,401 @@
+{
+  "version": 1,
+  "w": {
+    "am": "an",
+    "an": "an",
+    "andere": "ander",
+    "auch": "auch",
+    "aus": "aus",
+    "bedingungslos": "bedingungslos",
+    "begann": "beginnen",
+    "behinderungen": "Behinderung",
+    "damit": "damit",
+    "das": "der/die/das",
+    "demokratie": "Demokratie",
+    "den": "der/die/das",
+    "der": "der/die/das",
+    "deutschland": "Deutschland",
+    "die": "der/die/das",
+    "endete": "enden",
+    "ermordete": "ermorden",
+    "ermordeten": "ermorden",
+    "etwa": "etwa",
+    "europa": "Europa (континент)",
+    "frauen": "Frau",
+    "gegner": "Gegner",
+    "gesetzen": "Gesetz",
+    "griff": "angreifen",
+    "helfern": "Helfer",
+    "hitler": "Hitler",
+    "holocaust": "Holocaust",
+    "im": "in",
+    "in": "in",
+    "jahr": "Jahr",
+    "juden": "Jude",
+    "jüdinnen": "Jüdin",
+    "jüdische": "jüdisch",
+    "kapitulierte": "kapitulieren",
+    "kinder": "Kind",
+    "krieg": "Krieg",
+    "mai": "Mai",
+    "menschen": "Mensch",
+    "millionen": "Million",
+    "mit": "mit",
+    "männer": "Mann",
+    "nationalsozialisten": "Nationalsozialist",
+    "nationalsozialistische": "nationalsozialistisch",
+    "ns-regime": "NS-Regime",
+    "nürnberger": "Nürnberger",
+    "opfergruppen": "Opfergruppe",
+    "parteien": "Partei",
+    "polen": "Polen",
+    "politische": "politisch",
+    "rechte": "Recht",
+    "roma": "Roma",
+    "schalteten": "einschalten",
+    "sechs": "sechs",
+    "seinen": "sein (его, свой)",
+    "september": "September",
+    "sie": "sie",
+    "sinti": "Sinti",
+    "sowie": "sowie",
+    "sowjetunion": "Sowjetunion",
+    "und": "und",
+    "verbündeten": "Verbündete",
+    "verfolgten": "verfolgen",
+    "verloren": "verlieren",
+    "von": "von",
+    "weitere": "weiter",
+    "weltkrieg": "Weltkrieg",
+    "wichtige": "wichtig",
+    "zerstörten": "zerstören",
+    "zweiten": "zweite"
+  },
+  "l": {
+    "Behinderung": {
+      "ru": "инвалидность",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Behinderungen"
+    },
+    "Demokratie": {
+      "ru": "демократия",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Demokratien"
+    },
+    "Deutschland": {
+      "ru": "Германия",
+      "pos": "геогр."
+    },
+    "Europa (континент)": {
+      "ru": "Европа",
+      "pos": "геогр."
+    },
+    "Frau": {
+      "ru": "женщина; хозяйка; госпожа",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Frauen"
+    },
+    "Gegner": {
+      "ru": "противник",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Gegner"
+    },
+    "Gesetz": {
+      "ru": "закон",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Gesetze"
+    },
+    "Helfer": {
+      "ru": "помощник, пособник",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Helfer"
+    },
+    "Hitler": {
+      "ru": "Гитлер",
+      "pos": "имя"
+    },
+    "Holocaust": {
+      "ru": "Холокост",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "Jahr": {
+      "ru": "год",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Jahre"
+    },
+    "Jude": {
+      "ru": "еврей",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Juden"
+    },
+    "Jüdin": {
+      "ru": "еврейка",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Jüdinnen"
+    },
+    "Kind": {
+      "ru": "ребёнок",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Kinder"
+    },
+    "Krieg": {
+      "ru": "война",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Kriege"
+    },
+    "Mai": {
+      "ru": "май",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": null
+    },
+    "Mann": {
+      "ru": "мужчина, человек",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Männer"
+    },
+    "Mensch": {
+      "ru": "человек",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Menschen",
+      "decl": "n-Deklination: des Menschen · dem/den Menschen"
+    },
+    "Million": {
+      "ru": "миллион",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Millionen"
+    },
+    "NS-Regime": {
+      "ru": "нацистский режим",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": null
+    },
+    "Nationalsozialist": {
+      "ru": "национал-социалист",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Nationalsozialisten"
+    },
+    "Nürnberger": {
+      "ru": "нюрнбергский",
+      "pos": "прил.",
+      "note": "die Nürnberger Gesetze (1935) — Нюрнбергские расовые законы"
+    },
+    "Opfergruppe": {
+      "ru": "группа жертв",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Opfergruppen"
+    },
+    "Partei": {
+      "ru": "партия",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Parteien"
+    },
+    "Polen": {
+      "ru": "Польша",
+      "pos": "геогр."
+    },
+    "Recht": {
+      "ru": "право",
+      "pos": "сущ.",
+      "art": "das",
+      "pl": "die Rechte"
+    },
+    "Roma": {
+      "ru": "рома, ромы",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Roma"
+    },
+    "September": {
+      "ru": "сентябрь",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die September"
+    },
+    "Sinti": {
+      "ru": "синти",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Sinti"
+    },
+    "Sowjetunion": {
+      "ru": "Советский Союз",
+      "pos": "геогр.",
+      "art": "die",
+      "pl": null
+    },
+    "Verbündete": {
+      "ru": "союзник, союзница",
+      "pos": "сущ.",
+      "art": "die",
+      "pl": "die Verbündeten"
+    },
+    "Weltkrieg": {
+      "ru": "мировая война",
+      "pos": "сущ.",
+      "art": "der",
+      "pl": "die Weltkriege",
+      "note": "der Zweite Weltkrieg — Вторая мировая война"
+    },
+    "an": {
+      "ru": "у, к, на",
+      "pos": "предл.",
+      "note": "am = an dem. Тж. отделяемая приставка: anfangen «начинать», annehmen, ansehen, anzünden"
+    },
+    "ander": {
+      "pos": "прил.",
+      "ru": "другой, иной"
+    },
+    "angreifen": {
+      "ru": "браться за; нападать",
+      "pos": "гл.",
+      "forms": "griff an · hat angegriffen",
+      "note": "приставка отделяемая: griff die Sache so an"
+    },
+    "auch": {
+      "ru": "тоже, также; даже",
+      "pos": "частица"
+    },
+    "aus": {
+      "ru": "из",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: auslöschen «погасить»"
+    },
+    "bedingungslos": {
+      "ru": "безоговорочно",
+      "pos": "нареч."
+    },
+    "beginnen": {
+      "ru": "начинать, начинаться",
+      "pos": "гл.",
+      "forms": "begann · hat begonnen"
+    },
+    "damit": {
+      "ru": "чтобы; тем самым",
+      "pos": "союз"
+    },
+    "der/die/das": {
+      "ru": "определённый артикль",
+      "pos": "артикль",
+      "note": "Тж. относительное местоимение «который»"
+    },
+    "einschalten": {
+      "ru": "включать",
+      "pos": "гл.",
+      "forms": "schaltete ein · hat eingeschaltet"
+    },
+    "enden": {
+      "ru": "кончать(ся)",
+      "pos": "гл.",
+      "forms": "endete · hat geendet"
+    },
+    "ermorden": {
+      "ru": "убивать",
+      "pos": "гл.",
+      "forms": "ermordet · ermordete · hat ermordet"
+    },
+    "etwa": {
+      "ru": "примерно, около",
+      "pos": "нареч."
+    },
+    "in": {
+      "ru": "в (im = in dem, ins = in das)",
+      "pos": "предл."
+    },
+    "jüdisch": {
+      "ru": "еврейский",
+      "pos": "прил."
+    },
+    "kapitulieren": {
+      "ru": "капитулировать",
+      "pos": "гл.",
+      "forms": "kapitulierte · hat kapituliert"
+    },
+    "mit": {
+      "ru": "с",
+      "pos": "предл.",
+      "note": "Тж. отделяемая приставка: mitgehen «пойти вместе»"
+    },
+    "nationalsozialistisch": {
+      "ru": "национал-социалистический, нацистский",
+      "pos": "прил."
+    },
+    "politisch": {
+      "ru": "политический",
+      "pos": "прил."
+    },
+    "sechs": {
+      "ru": "шесть",
+      "pos": "числ."
+    },
+    "sein (его, свой)": {
+      "ru": "его, свой",
+      "pos": "мест."
+    },
+    "sie": {
+      "ru": "она; они; Вы",
+      "pos": "мест."
+    },
+    "sowie": {
+      "ru": "а также",
+      "pos": "союз"
+    },
+    "und": {
+      "ru": "и, а",
+      "pos": "союз"
+    },
+    "verfolgen": {
+      "ru": "преследовать",
+      "pos": "гл.",
+      "forms": "verfolgte · hat verfolgt"
+    },
+    "verlieren": {
+      "forms": "verlor · hat verloren",
+      "pos": "гл.",
+      "ru": "терять"
+    },
+    "von": {
+      "ru": "от, из, о (vom = von dem)",
+      "pos": "предл."
+    },
+    "weiter": {
+      "ru": "дальнейший; ещё (weitere — ещё, другие)",
+      "pos": "прил.",
+      "note": "30 weitere Sparkassen — ещё 30 сберкасс"
+    },
+    "wichtig": {
+      "ru": "важный",
+      "pos": "прил."
+    },
+    "zerstören": {
+      "ru": "разрушать, уничтожать",
+      "pos": "гл.",
+      "forms": "zerstörte · hat zerstört"
+    },
+    "zweite": {
+      "ru": "второй",
+      "pos": "числ.",
+      "note": "zum zweiten Mal — во второй раз"
+    }
+  }
+}

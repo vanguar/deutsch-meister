@@ -1,0 +1,117 @@
+{
+  "id": "nationalsozialismus",
+  "checked": "2026-11-18",
+  "sources": [
+    {
+      "id": "diktatur",
+      "name": "LeMO · Das NS-Regime",
+      "url": "https://www.dhm.de/lemo/kapitel/ns-regime"
+    },
+    {
+      "id": "krieg",
+      "name": "LeMO · Der Zweite Weltkrieg",
+      "url": "https://www.dhm.de/lemo/kapitel/zweiter-weltkrieg"
+    },
+    {
+      "id": "holocaust",
+      "name": "United States Holocaust Memorial Museum · Introduction to the Holocaust",
+      "url": "https://encyclopedia.ushmm.org/content/en/article/introduction-to-the-holocaust"
+    },
+    {
+      "id": "opfer",
+      "name": "United States Holocaust Memorial Museum · Opfer der NS-Verfolgung",
+      "url": "https://encyclopedia.ushmm.org/content/en/article/documenting-numbers-of-victims-of-the-holocaust-and-nazi-persecution"
+    }
+  ],
+  "paragraphs": [
+    {
+      "sourceIds": [
+        "diktatur",
+        "holocaust"
+      ],
+      "sentences": [
+        [
+          "Im Jahr 1933 zerstörten Hitler und die Nationalsozialisten die Demokratie in Deutschland.",
+          "В 1933 году Гитлер и национал-социалисты уничтожили демократию в Германии.",
+          "У 1933 році Гітлер і націонал-соціалісти знищили демократію в Німеччині.",
+          "في عام 1933 قضى هتلر والنازيون على الديمقراطية في ألمانيا."
+        ],
+        [
+          "Sie verfolgten politische Gegner und schalteten andere Parteien aus.",
+          "Они преследовали политических противников и ликвидировали другие партии.",
+          "Вони переслідували політичних противників і ліквідували інші партії.",
+          "اضطهدوا خصومهم السياسيين وألغوا الأحزاب الأخرى."
+        ],
+        [
+          "Mit den Nürnberger Gesetzen von 1935 verloren Jüdinnen und Juden wichtige Rechte.",
+          "По Нюрнбергским законам 1935 года евреи лишились важных прав.",
+          "За Нюрнберзькими законами 1935 року євреї втратили важливі права.",
+          "بموجب قوانين نورمبرغ لعام 1935 فقد اليهود حقوقًا أساسية."
+        ]
+      ]
+    },
+    {
+      "sourceIds": [
+        "krieg",
+        "holocaust"
+      ],
+      "sentences": [
+        [
+          "Am 1. September 1939 griff das nationalsozialistische Deutschland Polen an und begann den Zweiten Weltkrieg in Europa.",
+          "1 сентября 1939 года нацистская Германия напала на Польшу и начала Вторую мировую войну в Европе.",
+          "1 вересня 1939 року нацистська Німеччина напала на Польщу й розпочала Другу світову війну в Європі.",
+          "في 1 سبتمبر 1939 هاجمت ألمانيا النازية بولندا وبدأت الحرب العالمية الثانية في أوروبا."
+        ],
+        [
+          "1941 griff Deutschland die Sowjetunion an.",
+          "В 1941 году Германия напала на Советский Союз.",
+          "У 1941 році Німеччина напала на Радянський Союз.",
+          "في عام 1941 هاجمت ألمانيا الاتحاد السوفيتي."
+        ]
+      ]
+    },
+    {
+      "sourceIds": [
+        "holocaust",
+        "opfer"
+      ],
+      "sentences": [
+        [
+          "Im Holocaust ermordete das NS-Regime mit seinen Verbündeten und Helfern etwa sechs Millionen jüdische Männer, Frauen und Kinder.",
+          "Во время Холокоста нацистский режим и его союзники и пособники убили около шести миллионов еврейских мужчин, женщин и детей.",
+          "Під час Голокосту нацистський режим і його союзники та пособники вбили близько шести мільйонів єврейських чоловіків, жінок і дітей.",
+          "خلال الهولوكوست قتل النظام النازي وحلفاؤه والمتعاونون معه نحو ستة ملايين يهودي ويهودية من الرجال والنساء والأطفال."
+        ],
+        [
+          "Die Nationalsozialisten verfolgten und ermordeten auch Sinti und Roma sowie Menschen mit Behinderungen und weitere Opfergruppen.",
+          "Нацисты также преследовали и убивали синти и рома, людей с инвалидностью и представителей других групп.",
+          "Нацисти також переслідували й убивали сінті та ромів, людей з інвалідністю та представників інших груп.",
+          "اضطهد النازيون أيضًا جماعات أخرى وقتلوا أفرادًا منها، بينهم السنتي والروما وذوو الإعاقة."
+        ]
+      ]
+    },
+    {
+      "sourceIds": [
+        "krieg"
+      ],
+      "sentences": [
+        [
+          "Im Mai 1945 kapitulierte Deutschland bedingungslos.",
+          "В мае 1945 года Германия безоговорочно капитулировала.",
+          "У травні 1945 року Німеччина беззастережно капітулювала.",
+          "في مايو 1945 استسلمت ألمانيا دون شروط."
+        ],
+        [
+          "Damit endete der Krieg in Europa.",
+          "Так закончилась война в Европе.",
+          "Так закінчилася війна в Європі.",
+          "وبذلك انتهت الحرب في أوروبا."
+        ]
+      ]
+    }
+  ],
+  "translations": {
+    "uk": {},
+    "ar": {}
+  }
+}

@@ -1,0 +1,401 @@
+{
+ "version": 1,
+ "w": {
+  "am": "an",
+  "an": "an",
+  "andere": "ander",
+  "auch": "auch",
+  "aus": "aus",
+  "bedingungslos": "bedingungslos",
+  "begann": "beginnen",
+  "behinderungen": "Behinderung",
+  "damit": "damit",
+  "das": "der/die/das",
+  "demokratie": "Demokratie",
+  "den": "der/die/das",
+  "der": "der/die/das",
+  "deutschland": "Deutschland",
+  "die": "der/die/das",
+  "endete": "enden",
+  "ermordete": "ermorden",
+  "ermordeten": "ermorden",
+  "etwa": "etwa",
+  "europa": "Europa (континент)",
+  "frauen": "Frau",
+  "gegner": "Gegner",
+  "gesetzen": "Gesetz",
+  "griff": "angreifen",
+  "helfern": "Helfer",
+  "hitler": "Hitler",
+  "holocaust": "Holocaust",
+  "im": "in",
+  "in": "in",
+  "jahr": "Jahr",
+  "juden": "Jude",
+  "jüdinnen": "Jüdin",
+  "jüdische": "jüdisch",
+  "kapitulierte": "kapitulieren",
+  "kinder": "Kind",
+  "krieg": "Krieg",
+  "mai": "Mai",
+  "menschen": "Mensch",
+  "millionen": "Million",
+  "mit": "mit",
+  "männer": "Mann",
+  "nationalsozialisten": "Nationalsozialist",
+  "nationalsozialistische": "nationalsozialistisch",
+  "ns-regime": "NS-Regime",
+  "nürnberger": "Nürnberger",
+  "opfergruppen": "Opfergruppe",
+  "parteien": "Partei",
+  "polen": "Polen",
+  "politische": "politisch",
+  "rechte": "Recht",
+  "roma": "Roma",
+  "schalteten": "einschalten",
+  "sechs": "sechs",
+  "seinen": "sein (его, свой)",
+  "september": "September",
+  "sie": "sie",
+  "sinti": "Sinti",
+  "sowie": "sowie",
+  "sowjetunion": "Sowjetunion",
+  "und": "und",
+  "verbündeten": "Verbündete",
+  "verfolgten": "verfolgen",
+  "verloren": "verlieren",
+  "von": "von",
+  "weitere": "weiter",
+  "weltkrieg": "Weltkrieg",
+  "wichtige": "wichtig",
+  "zerstörten": "zerstören",
+  "zweiten": "zweite"
+ },
+ "l": {
+  "Behinderung": {
+   "ru": "إعاقة",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Behinderungen"
+  },
+  "Demokratie": {
+   "ru": "ديمقراطية",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Demokratien"
+  },
+  "Deutschland": {
+   "ru": "ألمانيا",
+   "pos": "جغرافيا"
+  },
+  "Europa (континент)": {
+   "ru": "أوروبا",
+   "pos": "جغرافيا"
+  },
+  "Frau": {
+   "ru": "امرأة؛ ربّة البيت؛ سيّدة",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Frauen"
+  },
+  "Gegner": {
+   "ru": "خصم، معارض",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Gegner"
+  },
+  "Gesetz": {
+   "ru": "قانون",
+   "pos": "اسم",
+   "art": "das",
+   "pl": "die Gesetze"
+  },
+  "Helfer": {
+   "ru": "مساعد، متعاون",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Helfer"
+  },
+  "Hitler": {
+   "ru": "هتلر",
+   "pos": "الاسم"
+  },
+  "Holocaust": {
+   "ru": "الهولوكوست، المحرقة",
+   "pos": "اسم",
+   "art": "der",
+   "pl": null
+  },
+  "Jahr": {
+   "ru": "سنة",
+   "pos": "اسم",
+   "art": "das",
+   "pl": "die Jahre"
+  },
+  "Jude": {
+   "ru": "يهودي",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Juden"
+  },
+  "Jüdin": {
+   "ru": "امرأة يهودية",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Jüdinnen"
+  },
+  "Kind": {
+   "ru": "طفل",
+   "pos": "اسم",
+   "art": "das",
+   "pl": "die Kinder"
+  },
+  "Krieg": {
+   "ru": "حرب",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Kriege"
+  },
+  "Mai": {
+   "ru": "مايو",
+   "pos": "اسم",
+   "art": "der",
+   "pl": null
+  },
+  "Mann": {
+   "ru": "رجل، إنسان",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Männer"
+  },
+  "Mensch": {
+   "ru": "إنسان",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Menschen",
+   "decl": "n-Deklination: des Menschen · dem/den Menschen"
+  },
+  "Million": {
+   "ru": "مليون",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Millionen"
+  },
+  "NS-Regime": {
+   "ru": "النظام النازي",
+   "pos": "اسم",
+   "art": "das",
+   "pl": null
+  },
+  "Nationalsozialist": {
+   "ru": "اشتراكي قومي",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Nationalsozialisten"
+  },
+  "Nürnberger": {
+   "ru": "نورنبرغي",
+   "pos": "صفة",
+   "note": "die Nürnberger Gesetze (1935) — قوانين نورنبرغ العنصرية"
+  },
+  "Opfergruppe": {
+   "ru": "فئة من الضحايا",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Opfergruppen"
+  },
+  "Partei": {
+   "ru": "حزب",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Parteien"
+  },
+  "Polen": {
+   "ru": "بولندا",
+   "pos": "جغرافيا"
+  },
+  "Recht": {
+   "ru": "حق",
+   "pos": "اسم",
+   "art": "das",
+   "pl": "die Rechte"
+  },
+  "Roma": {
+   "ru": "الروما",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Roma"
+  },
+  "September": {
+   "ru": "سبتمبر",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die September"
+  },
+  "Sinti": {
+   "ru": "السنتي",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Sinti"
+  },
+  "Sowjetunion": {
+   "ru": "الاتحاد السوفيتي",
+   "pos": "جغرافيا",
+   "art": "die",
+   "pl": null
+  },
+  "Verbündete": {
+   "ru": "حليف، حليفة",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Verbündeten"
+  },
+  "Weltkrieg": {
+   "ru": "حرب عالمية",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Weltkriege",
+   "note": "der Zweite Weltkrieg — الحرب العالمية الثانية"
+  },
+  "an": {
+   "ru": "عند، إلى، على",
+   "pos": "حرف جر",
+   "note": "am = an dem. وهي أيضًا سابقة منفصلة: anfangen «يبدأ»، annehmen، ansehen، anzünden"
+  },
+  "ander": {
+   "pos": "صفة",
+   "ru": "آخر، مختلف"
+  },
+  "angreifen": {
+   "ru": "يتناول الأمر؛ يهاجم",
+   "pos": "فعل",
+   "forms": "griff an · hat angegriffen",
+   "note": "السابقة منفصلة: griff die Sache so an"
+  },
+  "auch": {
+   "ru": "أيضًا؛ حتى",
+   "pos": "أداة"
+  },
+  "aus": {
+   "ru": "من",
+   "pos": "حرف جر",
+   "note": "وهي أيضًا سابقة منفصلة: auslöschen «يُطفئ»"
+  },
+  "bedingungslos": {
+   "ru": "دون شروط",
+   "pos": "ظرف"
+  },
+  "beginnen": {
+   "ru": "يبدأ",
+   "pos": "فعل",
+   "forms": "begann · hat begonnen"
+  },
+  "damit": {
+   "ru": "لكي؛ بذلك",
+   "pos": "أداة ربط"
+  },
+  "der/die/das": {
+   "ru": "أداة التعريف",
+   "pos": "أداة تعريف",
+   "note": "وهي أيضًا اسم موصول بمعنى «الذي»"
+  },
+  "einschalten": {
+   "ru": "يُشغّل",
+   "pos": "فعل",
+   "forms": "schaltete ein · hat eingeschaltet"
+  },
+  "enden": {
+   "ru": "ينهي؛ ينتهي",
+   "pos": "فعل",
+   "forms": "endete · hat geendet"
+  },
+  "ermorden": {
+   "ru": "يقتل",
+   "pos": "فعل",
+   "forms": "ermordet · ermordete · hat ermordet"
+  },
+  "etwa": {
+   "ru": "تقريبًا، حوالي",
+   "pos": "ظرف"
+  },
+  "in": {
+   "ru": "في (im = in dem، ins = in das)",
+   "pos": "حرف جر"
+  },
+  "jüdisch": {
+   "ru": "يهودي",
+   "pos": "صفة"
+  },
+  "kapitulieren": {
+   "ru": "يستسلم",
+   "pos": "فعل",
+   "forms": "kapitulierte · hat kapituliert"
+  },
+  "mit": {
+   "ru": "ث",
+   "pos": "حرف جر",
+   "note": "وهي أيضًا سابقة منفصلة: mitgehen «يذهب معه»"
+  },
+  "nationalsozialistisch": {
+   "ru": "نازي، قومي اشتراكي",
+   "pos": "صفة"
+  },
+  "politisch": {
+   "ru": "سياسي",
+   "pos": "صفة"
+  },
+  "sechs": {
+   "ru": "ستة",
+   "pos": "عدد"
+  },
+  "sein (его, свой)": {
+   "ru": "ـه (ضمير الملكية)، خاصّته",
+   "pos": "ضمير"
+  },
+  "sie": {
+   "ru": "هي؛ هم؛ حضرتك",
+   "pos": "ضمير"
+  },
+  "sowie": {
+   "ru": "وكذلك",
+   "pos": "أداة ربط"
+  },
+  "und": {
+   "ru": "و",
+   "pos": "أداة ربط"
+  },
+  "verfolgen": {
+   "ru": "يلاحق",
+   "pos": "فعل",
+   "forms": "verfolgte · hat verfolgt"
+  },
+  "verlieren": {
+   "forms": "verlor · hat verloren",
+   "pos": "فعل",
+   "ru": "يفقد"
+  },
+  "von": {
+   "ru": "من، عن (vom = von dem)",
+   "pos": "حرف جر"
+  },
+  "weiter": {
+   "ru": "إضافي؛ آخر (weitere — أخرى، إضافية)",
+   "pos": "صفة",
+   "note": "30 weitere Sparkassen — 30 بنك ادخار إضافيًا"
+  },
+  "wichtig": {
+   "ru": "مهم",
+   "pos": "صفة"
+  },
+  "zerstören": {
+   "ru": "يدمّر",
+   "pos": "فعل",
+   "forms": "zerstörte · hat zerstört"
+  },
+  "zweite": {
+   "ru": "الثاني",
+   "pos": "عدد",
+   "note": "zum zweiten Mal — للمرة الثانية"
+  }
+ }
+}

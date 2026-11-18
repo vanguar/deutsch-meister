@@ -1,0 +1,99 @@
+{
+  "id": "ch-01",
+  "title": "NS-Diktatur, Zweiter Weltkrieg und Holocaust",
+  "titleRu": "Нацистская диктатура, Вторая мировая война и Холокост",
+  "icon": "11",
+  "paragraphs": [
+    {
+      "sourceIds": [
+        "diktatur",
+        "holocaust"
+      ],
+      "s": [
+        {
+          "de": "Im Jahr 1933 zerstörten Hitler und die Nationalsozialisten die Demokratie in Deutschland.",
+          "ru": "В 1933 году Гитлер и национал-социалисты уничтожили демократию в Германии."
+        },
+        {
+          "de": "Sie verfolgten politische Gegner und schalteten andere Parteien aus.",
+          "ru": "Они преследовали политических противников и ликвидировали другие партии."
+        },
+        {
+          "de": "Mit den Nürnberger Gesetzen von 1935 verloren Jüdinnen und Juden wichtige Rechte.",
+          "ru": "По Нюрнбергским законам 1935 года евреи лишились важных прав."
+        }
+      ]
+    },
+    {
+      "sourceIds": [
+        "krieg",
+        "holocaust"
+      ],
+      "s": [
+        {
+          "de": "Am 1. September 1939 griff das nationalsozialistische Deutschland Polen an und begann den Zweiten Weltkrieg in Europa.",
+          "ru": "1 сентября 1939 года нацистская Германия напала на Польшу и начала Вторую мировую войну в Европе."
+        },
+        {
+          "de": "1941 griff Deutschland die Sowjetunion an.",
+          "ru": "В 1941 году Германия напала на Советский Союз."
+        }
+      ]
+    },
+    {
+      "sourceIds": [
+        "holocaust",
+        "opfer"
+      ],
+      "s": [
+        {
+          "de": "Im Holocaust ermordete das NS-Regime mit seinen Verbündeten und Helfern etwa sechs Millionen jüdische Männer, Frauen und Kinder.",
+          "ru": "Во время Холокоста нацистский режим и его союзники и пособники убили около шести миллионов еврейских мужчин, женщин и детей."
+        },
+        {
+          "de": "Die Nationalsozialisten verfolgten und ermordeten auch Sinti und Roma sowie Menschen mit Behinderungen und weitere Opfergruppen.",
+          "ru": "Нацисты также преследовали и убивали синти и рома, людей с инвалидностью и представителей других групп."
+        }
+      ]
+    },
+    {
+      "sourceIds": [
+        "krieg"
+      ],
+      "s": [
+        {
+          "de": "Im Mai 1945 kapitulierte Deutschland bedingungslos.",
+          "ru": "В мае 1945 года Германия безоговорочно капитулировала."
+        },
+        {
+          "de": "Damit endete der Krieg in Europa.",
+          "ru": "Так закончилась война в Европе."
+        }
+      ]
+    }
+  ],
+  "sourceTitle": "Источники и проверка фактов",
+  "sources": [
+    {
+      "id": "diktatur",
+      "name": "LeMO · Das NS-Regime",
+      "url": "https://www.dhm.de/lemo/kapitel/ns-regime"
+    },
+    {
+      "id": "krieg",
+      "name": "LeMO · Der Zweite Weltkrieg",
+      "url": "https://www.dhm.de/lemo/kapitel/zweiter-weltkrieg"
+    },
+    {
+      "id": "holocaust",
+      "name": "United States Holocaust Memorial Museum · Introduction to the Holocaust",
+      "url": "https://encyclopedia.ushmm.org/content/en/article/introduction-to-the-holocaust"
+    },
+    {
+      "id": "opfer",
+      "name": "United States Holocaust Memorial Museum · Opfer der NS-Verfolgung",
+      "url": "https://encyclopedia.ushmm.org/content/en/article/documenting-numbers-of-victims-of-the-holocaust-and-nazi-persecution"
+    }
+  ],
+  "checked": "2026-11-18"
+}
