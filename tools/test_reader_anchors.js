@@ -21,6 +21,10 @@ vm.runInContext(source + '\nthis.subject = Reader;', ctx);
 const { state, anchors } = ctx.subject;
 storage.set('dm_reader_prefs', JSON.stringify({ theme: 'sepia' }));
 assert.equal(ctx.subject.theme(), 'system', 'History follows the app when a saved reader theme is sepia');
+state.prefs = { theme: 'sepia' };
+ctx.subject.setPref('theme', 'system');
+assert.equal(JSON.parse(storage.get('dm_reader_prefs')).theme, 'sepia', 'Clicking the active history theme preserves the saved preference');
+state.prefs = null;
 const books = vm.createContext({
   console, window: {}, localStorage: ctx.localStorage,
   document: { ...ctx.document, body: { dataset: { readerDir: 'data/books/' } } }

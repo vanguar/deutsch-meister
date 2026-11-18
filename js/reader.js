@@ -925,7 +925,7 @@ const Reader = (() => {
     if (!st.prefs || !(key in st.prefs)) return;
     const strKey = (key === 'theme' || key === 'font' || key === 'ruStyle');
     const next = strKey ? String(value) : Number(value);
-    if (st.prefs[key] === next) return;
+    if (displayedPref(key) === next) return;
     st.prefs[key] = next;
     savePrefs();
     applyPrefs();
