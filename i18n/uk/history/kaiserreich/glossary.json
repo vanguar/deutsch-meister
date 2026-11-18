@@ -1,0 +1,515 @@
+{
+ "version": 1,
+ "w": {
+  "aber": "aber",
+  "abhängig": "abhängig",
+  "afrika": "Afrika",
+  "altersarmut": "Altersarmut",
+  "an": "an",
+  "arbeiterbewegung": "Arbeiterbewegung",
+  "auf": "auf",
+  "ausbeutung": "Ausbeutung",
+  "ausgeschlossen": "ausschließen",
+  "begingen": "begehen",
+  "bekämpfte": "bekämpfen",
+  "beruhte": "beruhen",
+  "bis": "bis",
+  "bismarck": "Bismarck",
+  "blieben": "bleiben",
+  "bundesrat": "Bundesrat",
+  "bundesstaat": "Bundesstaat",
+  "das": "der/die/das",
+  "den": "der/die/das",
+  "der": "der/die/das",
+  "des": "der/die/das",
+  "deutsche": "deutsch",
+  "deutscher": "deutsch",
+  "die": "der/die/das",
+  "doch": "doch",
+  "durften": "dürfen",
+  "ein": "ein/eine",
+  "einen": "ein/eine",
+  "einer": "ein/eine",
+  "entschieden": "entscheiden",
+  "entstand": "entstehen",
+  "entstanden": "entstehen",
+  "er": "er",
+  "erwarb": "erwerben",
+  "frankreich": "Frankreich",
+  "frauen": "Frau",
+  "gegen": "gegen",
+  "gesetze": "Gesetz",
+  "gesetzliche": "gesetzlich",
+  "gewalt": "Gewalt",
+  "groß": "groß",
+  "großstädte": "Großstadt",
+  "herero": "Herero",
+  "heutigen": "heutig",
+  "i": "i (буква)",
+  "im": "in",
+  "in": "in",
+  "industrie": "Industrie",
+  "jahren": "Jahr",
+  "kaiser": "Kaiser",
+  "kaiserreich": "Kaiserreich",
+  "kanzler": "Kanzler",
+  "kolonialherrschaft": "Kolonialherrschaft",
+  "kolonien": "Kolonie",
+  "krankheit": "Krankheit",
+  "krieges": "Krieg",
+  "könig": "König",
+  "mit": "mit",
+  "männer": "Mann",
+  "nama": "Nama",
+  "namibia": "Namibia",
+  "noch": "noch",
+  "otto": "Otto",
+  "pazifik": "Pazifik",
+  "preußens": "Preußen",
+  "preußische": "preußisch",
+  "rassismus": "Rassismus",
+  "reich": "Reich",
+  "reichskanzler": "Reichskanzler",
+  "reichstag": "Reichstag",
+  "schnell": "schnell",
+  "soziale": "sozial",
+  "sozialistische": "sozialistisch",
+  "starken": "stark",
+  "stellung": "Stellung",
+  "truppen": "Truppe",
+  "und": "und",
+  "unfälle": "Unfall",
+  "unterschiede": "Unterschied",
+  "versicherungen": "Versicherung (страховая)",
+  "vom": "von",
+  "von": "von",
+  "völkermord": "Völkermord",
+  "war": "sein",
+  "waren": "Ware",
+  "wilhelm": "Wilhelm",
+  "wuchsen": "wachsen",
+  "wurde": "werden",
+  "wählen": "wählen",
+  "während": "während",
+  "zugleich": "zugleich",
+  "über": "über"
+ },
+ "l": {
+  "Afrika": {
+   "ru": "Африка",
+   "pos": "геогр."
+  },
+  "Altersarmut": {
+   "ru": "бідність у старості",
+   "pos": "ім.",
+   "art": "die",
+   "pl": null
+  },
+  "Arbeiterbewegung": {
+   "ru": "робітничий рух",
+   "pos": "ім.",
+   "art": "die",
+   "pl": "die Arbeiterbewegungen"
+  },
+  "Ausbeutung": {
+   "ru": "експлуатація",
+   "pos": "ім.",
+   "art": "die",
+   "pl": null
+  },
+  "Bismarck": {
+   "ru": "Бісмарк",
+   "pos": "власна назва"
+  },
+  "Bundesrat": {
+   "ru": "бундесрат (палата земель)",
+   "pos": "ім.",
+   "art": "der",
+   "pl": null
+  },
+  "Bundesstaat": {
+   "ru": "федеративна держава",
+   "pos": "ім.",
+   "art": "der",
+   "pl": "die Bundesstaaten"
+  },
+  "Frankreich": {
+   "ru": "Франція",
+   "pos": "геогр."
+  },
+  "Frau": {
+   "ru": "жінка; господиня; пані",
+   "pos": "ім.",
+   "art": "die",
+   "pl": "die Frauen"
+  },
+  "Gesetz": {
+   "ru": "закон",
+   "pos": "ім.",
+   "art": "das",
+   "pl": "die Gesetze"
+  },
+  "Gewalt": {
+   "ru": "сила, міць",
+   "pos": "ім.",
+   "art": "die",
+   "pl": "die Gewalten"
+  },
+  "Großstadt": {
+   "ru": "велике місто (понад 100 000 жителів)",
+   "pos": "ім.",
+   "art": "die",
+   "pl": "die Großstädte"
+  },
+  "Herero": {
+   "ru": "гереро (народ)",
+   "pos": "власна назва"
+  },
+  "Industrie": {
+   "ru": "промисловість",
+   "pos": "ім.",
+   "art": "die",
+   "pl": "die Industrien"
+  },
+  "Jahr": {
+   "ru": "рік",
+   "pos": "ім.",
+   "art": "das",
+   "pl": "die Jahre"
+  },
+  "Kaiser": {
+   "ru": "імператор",
+   "pos": "ім.",
+   "art": "der",
+   "pl": "die Kaiser"
+  },
+  "Kaiserreich": {
+   "ru": "імперія",
+   "pos": "ім.",
+   "art": "das",
+   "pl": "die Kaiserreiche"
+  },
+  "Kanzler": {
+   "ru": "канцлер",
+   "pos": "ім.",
+   "art": "der",
+   "pl": "die Kanzler"
+  },
+  "Kolonialherrschaft": {
+   "ru": "колоніальне панування",
+   "pos": "ім.",
+   "art": "die",
+   "pl": null
+  },
+  "Kolonie": {
+   "ru": "колонія",
+   "pos": "ім.",
+   "art": "die",
+   "pl": "die Kolonien"
+  },
+  "Krankheit": {
+   "ru": "хвороба",
+   "pos": "ім.",
+   "art": "die",
+   "pl": "die Krankheiten"
+  },
+  "Krieg": {
+   "ru": "війна",
+   "pos": "ім.",
+   "art": "der",
+   "pl": "die Kriege"
+  },
+  "König": {
+   "ru": "король",
+   "pos": "ім.",
+   "art": "der",
+   "pl": "die Könige"
+  },
+  "Mann": {
+   "ru": "чоловік, людина",
+   "pos": "ім.",
+   "art": "der",
+   "pl": "die Männer"
+  },
+  "Nama": {
+   "ru": "нама (народ)",
+   "pos": "власна назва"
+  },
+  "Namibia": {
+   "ru": "Намібія",
+   "pos": "геогр."
+  },
+  "Otto": {
+   "ru": "Otto (Otto Group — торговий концерн)",
+   "pos": "власна назва"
+  },
+  "Pazifik": {
+   "ru": "Тихий океан",
+   "pos": "геогр."
+  },
+  "Preußen": {
+   "ru": "Пруссія",
+   "pos": "геогр."
+  },
+  "Rassismus": {
+   "ru": "расизм",
+   "pos": "ім.",
+   "art": "der",
+   "pl": null
+  },
+  "Reich": {
+   "pos": "ім.",
+   "ru": "імперія; держава",
+   "art": "das",
+   "pl": "die Reiche"
+  },
+  "Reichskanzler": {
+   "ru": "рейхсканцлер",
+   "pos": "ім.",
+   "art": "der",
+   "pl": "die Reichskanzler"
+  },
+  "Reichstag": {
+   "ru": "рейхстаг (парламент)",
+   "pos": "ім.",
+   "art": "der",
+   "pl": "die Reichstage"
+  },
+  "Stellung": {
+   "ru": "поза, положення",
+   "pos": "ім.",
+   "art": "die",
+   "pl": "die Stellungen"
+  },
+  "Truppe": {
+   "ru": "загін, військо",
+   "pos": "ім.",
+   "art": "die",
+   "pl": "die Truppen"
+  },
+  "Unfall": {
+   "ru": "нещасний випадок",
+   "pos": "ім.",
+   "art": "der",
+   "pl": "die Unfälle"
+  },
+  "Unterschied": {
+   "ru": "відмінність",
+   "pos": "ім.",
+   "art": "der",
+   "pl": "die Unterschiede"
+  },
+  "Versicherung (страховая)": {
+   "ru": "страхування; страхова компанія",
+   "pos": "ім.",
+   "art": "die",
+   "pl": "die Versicherungen"
+  },
+  "Völkermord": {
+   "ru": "геноцид",
+   "pos": "ім.",
+   "art": "der",
+   "pl": "die Völkermorde"
+  },
+  "Ware": {
+   "pos": "ім.",
+   "ru": "товар",
+   "art": "die",
+   "pl": "die Waren"
+  },
+  "Wilhelm": {
+   "ru": "Вільгельм (ім'я)",
+   "pos": "власна назва"
+  },
+  "aber": {
+   "ru": "але, однак",
+   "pos": "спол."
+  },
+  "abhängig": {
+   "ru": "залежний",
+   "pos": "прикм."
+  },
+  "an": {
+   "ru": "біля, до, на",
+   "pos": "прийм.",
+   "note": "am = an dem. Також відокремлюваний префікс: anfangen «починати», annehmen, ansehen, anzünden"
+  },
+  "auf": {
+   "ru": "на, в",
+   "pos": "прийм.",
+   "note": "Також відокремлюваний префікс: aufspringen «схопитися», sich aufmachen"
+  },
+  "ausschließen": {
+   "ru": "виключати",
+   "pos": "дієсл.",
+   "forms": "schließt aus · schloss aus · hat ausgeschlossen"
+  },
+  "begehen": {
+   "ru": "вчиняти (злочин)",
+   "pos": "дієсл.",
+   "forms": "begeht · beging · hat begangen"
+  },
+  "bekämpfen": {
+   "ru": "боротися проти",
+   "pos": "дієсл.",
+   "forms": "bekämpft · bekämpfte · hat bekämpft"
+  },
+  "beruhen": {
+   "ru": "ґрунтуватися",
+   "pos": "дієсл.",
+   "forms": "beruht · beruhte · hat beruht"
+  },
+  "bis": {
+   "ru": "до; поки не",
+   "pos": "спол."
+  },
+  "bleiben": {
+   "ru": "залишатися",
+   "pos": "дієсл.",
+   "forms": "blieb · ist geblieben"
+  },
+  "der/die/das": {
+   "ru": "означений артикль",
+   "pos": "артикль",
+   "note": "Також відносний займенник «який»"
+  },
+  "deutsch": {
+   "ru": "німецька",
+   "pos": "прикм."
+  },
+  "doch": {
+   "ru": "все ж, усе-таки; адже",
+   "pos": "частка"
+  },
+  "dürfen": {
+   "ru": "сміти, мати право",
+   "pos": "дієсл.",
+   "forms": "durfte · hat gedurft"
+  },
+  "ein/eine": {
+   "ru": "неозначений артикль",
+   "pos": "артикль",
+   "note": "einer — «один, хтось»"
+  },
+  "entscheiden": {
+   "ru": "вирішувати",
+   "pos": "дієсл.",
+   "forms": "entschied · hat entschieden"
+  },
+  "entstehen": {
+   "pos": "дієсл.",
+   "ru": "виникати",
+   "forms": "entsteht · entstand · ist entstanden"
+  },
+  "er": {
+   "ru": "він",
+   "pos": "займ.",
+   "note": "ihn — його, ihm — йому"
+  },
+  "erwerben": {
+   "ru": "набувати",
+   "pos": "дієсл.",
+   "forms": "erwirbt · erwarb · hat erworben"
+  },
+  "gegen": {
+   "ru": "проти; близько (про час)",
+   "pos": "прийм.",
+   "note": "gegen Mitternacht — близько опівночі"
+  },
+  "gesetzlich": {
+   "ru": "законний, офіційний",
+   "pos": "прикм."
+  },
+  "groß": {
+   "ru": "великий",
+   "pos": "прикм.",
+   "forms": "groß · größer · am größten"
+  },
+  "heutig": {
+   "ru": "нинішній, сьогоднішній",
+   "pos": "прикм."
+  },
+  "i (буква)": {
+   "ru": "літера i",
+   "pos": "ім.",
+   "art": "das",
+   "pl": "die i"
+  },
+  "in": {
+   "ru": "у (im = in dem, ins = in das)",
+   "pos": "прийм."
+  },
+  "mit": {
+   "ru": "с",
+   "pos": "прийм.",
+   "note": "Також відокремлюваний префікс: mitgehen «піти разом»"
+  },
+  "noch": {
+   "ru": "ще",
+   "pos": "присл."
+  },
+  "preußisch": {
+   "ru": "прусський",
+   "pos": "прикм."
+  },
+  "schnell": {
+   "ru": "швидкий, швидко",
+   "pos": "прикм."
+  },
+  "sein": {
+   "ru": "бути",
+   "pos": "дієсл.",
+   "forms": "war · ist gewesen",
+   "note": "Konjunktiv I: er sei, du seiest. Та сама форма waren — і мн. die Waren «товари»: allerhand Waren"
+  },
+  "sozial": {
+   "ru": "соціальний, суспільний",
+   "pos": "прикм."
+  },
+  "sozialistisch": {
+   "ru": "соціалістичний",
+   "pos": "прикм."
+  },
+  "stark": {
+   "ru": "сильний, міцний",
+   "pos": "прикм."
+  },
+  "und": {
+   "ru": "і, а",
+   "pos": "спол."
+  },
+  "von": {
+   "ru": "від, з, про (vom = von dem)",
+   "pos": "прийм."
+  },
+  "wachsen": {
+   "ru": "рости",
+   "pos": "дієсл.",
+   "forms": "wuchs · ist gewachsen",
+   "note": "er wächst — з умлаутом у 2-й і 3-й ос."
+  },
+  "werden": {
+   "ru": "ставати",
+   "pos": "дієсл.",
+   "forms": "wurde · ist geworden",
+   "note": "Допоміжне дієслово майбутнього часу й пасиву"
+  },
+  "wählen": {
+   "ru": "вибирати",
+   "pos": "дієсл.",
+   "forms": "wählte · hat gewählt"
+  },
+  "während": {
+   "pos": "прийменник",
+   "ru": "протягом, під час"
+  },
+  "zugleich": {
+   "ru": "одночасно, заразом",
+   "pos": "присл."
+  },
+  "über": {
+   "ru": "над, через, про",
+   "pos": "прийм."
+  }
+ }
+}

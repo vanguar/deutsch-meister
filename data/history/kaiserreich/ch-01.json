@@ -1,0 +1,135 @@
+{
+  "id": "ch-01",
+  "title": "Kaiserreich und Kolonialismus",
+  "titleRu": "Германская империя и колониализм",
+  "icon": "8",
+  "paragraphs": [
+    {
+      "sourceIds": [
+        "reich",
+        "verfassung"
+      ],
+      "s": [
+        {
+          "de": "1871 entstand das Deutsche Kaiserreich noch während des Krieges gegen Frankreich.",
+          "ru": "В 1871 году, ещё во время войны с Францией, возникла Германская империя."
+        },
+        {
+          "de": "Der preußische König Wilhelm I. wurde Deutscher Kaiser; Otto von Bismarck wurde Reichskanzler.",
+          "ru": "Прусский король Вильгельм I стал германским императором; Отто фон Бисмарк стал рейхсканцлером."
+        },
+        {
+          "de": "Das Reich war ein Bundesstaat mit einer starken Stellung Preußens.",
+          "ru": "Империя была федеративным государством с сильной позицией Пруссии."
+        }
+      ]
+    },
+    {
+      "sourceIds": [
+        "verfassung"
+      ],
+      "s": [
+        {
+          "de": "Männer durften den Reichstag wählen, Frauen waren ausgeschlossen.",
+          "ru": "Мужчины могли избирать рейхстаг, женщины были исключены из выборов."
+        },
+        {
+          "de": "Der Reichstag und der Bundesrat entschieden über Gesetze, doch der Kanzler war vom Kaiser abhängig.",
+          "ru": "Рейхстаг и бундесрат принимали решения о законах, а канцлер зависел от императора."
+        }
+      ]
+    },
+    {
+      "fig": {
+        "src": "data/laender/hamburg/img/speicherstadt.jpg",
+        "w": 1200,
+        "h": 800,
+        "credit": "Dietmar Rabich / Wikimedia Commons",
+        "creditUrl": "https://commons.wikimedia.org/wiki/User:XRay",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "cap": "Шпайхерштадт в Гамбурге. Этот район портовых складов начали строить в конце XIX века. Современная фотография."
+      }
+    },
+    {
+      "sourceIds": [
+        "reich",
+        "sozial"
+      ],
+      "s": [
+        {
+          "de": "Industrie und Großstädte wuchsen schnell, aber soziale Unterschiede blieben groß.",
+          "ru": "Промышленность и крупные города быстро росли, но социальные различия оставались значительными."
+        },
+        {
+          "de": "In den 1880er Jahren entstanden gesetzliche Versicherungen gegen Krankheit, Unfälle und Altersarmut.",
+          "ru": "В 1880-е годы появилось государственное страхование на случай болезни, несчастных случаев и бедности в старости."
+        },
+        {
+          "de": "Zugleich bekämpfte Bismarck die sozialistische Arbeiterbewegung.",
+          "ru": "Одновременно Бисмарк боролся с социалистическим рабочим движением."
+        }
+      ]
+    },
+    {
+      "sourceIds": [
+        "kolonien",
+        "nama",
+        "kolonialpolitik"
+      ],
+      "s": [
+        {
+          "de": "Das Reich erwarb Kolonien in Afrika und im Pazifik.",
+          "ru": "Империя приобрела колонии в Африке и Тихоокеанском регионе."
+        },
+        {
+          "de": "Die Kolonialherrschaft beruhte auf Rassismus, Ausbeutung und Gewalt.",
+          "ru": "Колониальное господство основывалось на расизме, эксплуатации и насилии."
+        },
+        {
+          "de": "Von 1904 bis 1908 begingen deutsche Truppen einen Völkermord an Herero und Nama im heutigen Namibia.",
+          "ru": "С 1904 по 1908 год немецкие войска совершили геноцид гереро и нама на территории современной Намибии."
+        }
+      ]
+    }
+  ],
+  "sourceTitle": "Источники и проверка фактов",
+  "sources": [
+    {
+      "id": "reich",
+      "name": "LeMO · Reichsgründung und Kaiserreich",
+      "url": "https://www.dhm.de/lemo/kapitel/kaiserreich/reich"
+    },
+    {
+      "id": "verfassung",
+      "name": "LeMO · Reichsverfassung 1871",
+      "url": "https://www.dhm.de/lemo/kapitel/kaiserreich/reich/verfassung"
+    },
+    {
+      "id": "sozial",
+      "name": "LeMO · Sozialgesetzgebung",
+      "url": "https://www.dhm.de/lemo/kapitel/kaiserreich/innenpolitik/sozialgesetze"
+    },
+    {
+      "id": "kolonien",
+      "name": "Bundesarchiv · Krieg gegen die Herero",
+      "url": "https://www.bundesarchiv.de/themen-entdecken/online-entdecken/geschichtsgalerien/der-krieg-gegen-die-herero-1904/"
+    },
+    {
+      "id": "nama",
+      "name": "bpb · Gedenken an Herero und Nama",
+      "url": "https://www.bpb.de/kurz-knapp/taegliche-dosis-politik/582067/gedenken-an-herero-und-nama/"
+    },
+    {
+      "id": "kolonialpolitik",
+      "name": "LeMO · Kolonialpolitik",
+      "url": "https://www.dhm.de/lemo/kapitel/kaiserreich/aussenpolitik/kolonialpolitik"
+    },
+    {
+      "id": "hamburg",
+      "name": "UNESCO · Speicherstadt",
+      "url": "https://whc.unesco.org/en/list/1467/"
+    }
+  ],
+  "checked": "2026-11-18"
+}

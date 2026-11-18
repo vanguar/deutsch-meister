@@ -1,0 +1,135 @@
+{
+ "id": "ch-01",
+ "title": "Kaiserreich und Kolonialismus",
+ "titleRu": "Німецька імперія та колоніалізм",
+ "icon": "8",
+ "paragraphs": [
+  {
+   "sourceIds": [
+    "reich",
+    "verfassung"
+   ],
+   "s": [
+    {
+     "de": "1871 entstand das Deutsche Kaiserreich noch während des Krieges gegen Frankreich.",
+     "ru": "У 1871 році, ще під час війни з Францією, постала Німецька імперія."
+    },
+    {
+     "de": "Der preußische König Wilhelm I. wurde Deutscher Kaiser; Otto von Bismarck wurde Reichskanzler.",
+     "ru": "Прусський король Вільгельм I став німецьким імператором; Отто фон Бісмарк став рейхсканцлером."
+    },
+    {
+     "de": "Das Reich war ein Bundesstaat mit einer starken Stellung Preußens.",
+     "ru": "Імперія була федеративною державою із сильною позицією Пруссії."
+    }
+   ]
+  },
+  {
+   "sourceIds": [
+    "verfassung"
+   ],
+   "s": [
+    {
+     "de": "Männer durften den Reichstag wählen, Frauen waren ausgeschlossen.",
+     "ru": "Чоловіки могли обирати рейхстаг, жінки були виключені з виборів."
+    },
+    {
+     "de": "Der Reichstag und der Bundesrat entschieden über Gesetze, doch der Kanzler war vom Kaiser abhängig.",
+     "ru": "Рейхстаг і бундесрат ухвалювали рішення щодо законів, а канцлер залежав від імператора."
+    }
+   ]
+  },
+  {
+   "fig": {
+    "src": "data/laender/hamburg/img/speicherstadt.jpg",
+    "w": 1200,
+    "h": 800,
+    "credit": "Dietmar Rabich / Wikimedia Commons",
+    "creditUrl": "https://commons.wikimedia.org/wiki/User:XRay",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "cap": "Шпайхерштадт у Гамбурзі. Цей район портових складів почали будувати наприкінці XIX століття. Сучасна фотографія."
+   }
+  },
+  {
+   "sourceIds": [
+    "reich",
+    "sozial"
+   ],
+   "s": [
+    {
+     "de": "Industrie und Großstädte wuchsen schnell, aber soziale Unterschiede blieben groß.",
+     "ru": "Промисловість і великі міста швидко зростали, але соціальні відмінності залишалися значними."
+    },
+    {
+     "de": "In den 1880er Jahren entstanden gesetzliche Versicherungen gegen Krankheit, Unfälle und Altersarmut.",
+     "ru": "У 1880-х роках з’явилося державне страхування на випадок хвороби, нещасних випадків і бідності в старості."
+    },
+    {
+     "de": "Zugleich bekämpfte Bismarck die sozialistische Arbeiterbewegung.",
+     "ru": "Водночас Бісмарк боровся із соціалістичним робітничим рухом."
+    }
+   ]
+  },
+  {
+   "sourceIds": [
+    "kolonien",
+    "nama",
+    "kolonialpolitik"
+   ],
+   "s": [
+    {
+     "de": "Das Reich erwarb Kolonien in Afrika und im Pazifik.",
+     "ru": "Імперія здобула колонії в Африці й Тихоокеанському регіоні."
+    },
+    {
+     "de": "Die Kolonialherrschaft beruhte auf Rassismus, Ausbeutung und Gewalt.",
+     "ru": "Колоніальне панування ґрунтувалося на расизмі, експлуатації та насильстві."
+    },
+    {
+     "de": "Von 1904 bis 1908 begingen deutsche Truppen einen Völkermord an Herero und Nama im heutigen Namibia.",
+     "ru": "З 1904 до 1908 року німецькі війська вчинили геноцид гереро й нама на території сучасної Намібії."
+    }
+   ]
+  }
+ ],
+ "sourceTitle": "Джерела та перевірка фактів",
+ "sources": [
+  {
+   "id": "reich",
+   "name": "LeMO · Reichsgründung und Kaiserreich",
+   "url": "https://www.dhm.de/lemo/kapitel/kaiserreich/reich"
+  },
+  {
+   "id": "verfassung",
+   "name": "LeMO · Reichsverfassung 1871",
+   "url": "https://www.dhm.de/lemo/kapitel/kaiserreich/reich/verfassung"
+  },
+  {
+   "id": "sozial",
+   "name": "LeMO · Sozialgesetzgebung",
+   "url": "https://www.dhm.de/lemo/kapitel/kaiserreich/innenpolitik/sozialgesetze"
+  },
+  {
+   "id": "kolonien",
+   "name": "Bundesarchiv · Krieg gegen die Herero",
+   "url": "https://www.bundesarchiv.de/themen-entdecken/online-entdecken/geschichtsgalerien/der-krieg-gegen-die-herero-1904/"
+  },
+  {
+   "id": "nama",
+   "name": "bpb · Gedenken an Herero und Nama",
+   "url": "https://www.bpb.de/kurz-knapp/taegliche-dosis-politik/582067/gedenken-an-herero-und-nama/"
+  },
+  {
+   "id": "kolonialpolitik",
+   "name": "LeMO · Kolonialpolitik",
+   "url": "https://www.dhm.de/lemo/kapitel/kaiserreich/aussenpolitik/kolonialpolitik"
+  },
+  {
+   "id": "hamburg",
+   "name": "UNESCO · Speicherstadt",
+   "url": "https://whc.unesco.org/en/list/1467/"
+  }
+ ],
+ "checked": "2026-11-18"
+}

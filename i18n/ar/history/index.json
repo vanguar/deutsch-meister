@@ -78,7 +78,7 @@
    "titleRu": "الإمبراطورية الألمانية والاستعمار",
    "period": "1871–1914",
    "summary": "توحيد البلاد ومجتمع الإمبراطورية والعنف الاستعماري.",
-   "ready": false
+   "ready": true
   },
   {
    "id": "erster-weltkrieg",
@@ -271,6 +271,24 @@
    "source": "LeMO / Deutscher Bundestag / Deutschlandmuseum",
    "sourceUrl": "https://www.dhm.de/lemo/kapitel/vormaerz-und-revolution",
    "checked": "2026-11-17",
+   "license": "صياغة تعليمية أعدّها German Morning؛ روابط المواد مذكورة في الفصل."
+  },
+  {
+   "id": "kaiserreich",
+   "kind": "history",
+   "title": "Kaiserreich und Kolonialismus",
+   "titleRu": "الإمبراطورية الألمانية والاستعمار",
+   "author": "German Morning",
+   "level": "B1",
+   "year": "2026",
+   "chapters": 1,
+   "words": 115,
+   "minutes": 3,
+   "cover": "8",
+   "number": 8,
+   "source": "LeMO / Bundesarchiv / bpb / UNESCO",
+   "sourceUrl": "https://www.dhm.de/lemo/kapitel/kaiserreich/reich",
+   "checked": "2026-11-18",
    "license": "صياغة تعليمية أعدّها German Morning؛ روابط المواد مذكورة في الفصل."
   }
  ]

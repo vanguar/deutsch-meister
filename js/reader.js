@@ -98,9 +98,10 @@ const Reader = (() => {
       opts: FS_STEPS.map((_, i) => ({ v: i, text: 'A', cls: 'fs-' + i })) },
     { key: 'lh',     label: 'Межстрочный интервал',
       opts: [{ v: 0, text: 'Плотно' }, { v: 1, text: 'Обычно' }, { v: 2, text: 'Свободно' }] },
-    { key: 'theme',  label: 'Тема страницы', segCls: 'rd-seg--grid',
+    { key: 'theme',  label: 'Тема страницы', segCls: IS_HISTORY ? '' : 'rd-seg--grid',
       opts: [{ v: 'system', text: 'Как в приложении' }, { v: 'sepia', text: 'Сепия' },
-             { v: 'light',  text: 'Светлая' },          { v: 'dark',  text: 'Тёмная' }] },
+             { v: 'light',  text: 'Светлая' },          { v: 'dark',  text: 'Тёмная' }]
+        .filter(option => !IS_HISTORY || option.v !== 'sepia') },
     { key: 'margin', label: 'Поля',
       opts: [{ v: 0, text: 'Узкие' }, { v: 1, text: 'Средние' }, { v: 2, text: 'Широкие' }] },
     { key: 'font',   label: 'Шрифт',
@@ -904,7 +905,7 @@ const Reader = (() => {
     elView.style.setProperty('--rd-font', FONTS[p.font]);
     elView.style.setProperty('--rd-pad-x', m.pad + 'px');
     elView.style.setProperty('--rd-measure', m.measure + 'px');
-    elView.setAttribute('data-rd-theme', p.theme);
+    elView.setAttribute('data-rd-theme', themeName());
   }
 
   // После смены настройки перепагинируем с сохранением якоря сразу же:
@@ -1087,7 +1088,7 @@ const Reader = (() => {
         <div class="rd-seg ${esc(row.segCls || '')}" role="group" aria-label="${esc(row.label)}">
           ${row.opts.map(o => `<button type="button" class="${esc(o.cls || '')}"
             data-pref="${esc(row.key)}" data-value="${esc(o.v)}"
-            aria-pressed="${String(st.prefs[row.key]) === String(o.v)}"
+            aria-pressed="${String(displayedPref(row.key)) === String(o.v)}"
             >${esc(o.text)}</button>`).join('')}
         </div>
       </div>`).join('') + sheetFooterHtml();
@@ -1103,9 +1104,13 @@ const Reader = (() => {
   function markSheet() {
     if (!elSheetBody) return;
     elSheetBody.querySelectorAll('button[data-pref]').forEach(btn => {
-      const same = String(st.prefs[btn.dataset.pref]) === String(btn.dataset.value);
+      const same = String(displayedPref(btn.dataset.pref)) === String(btn.dataset.value);
       btn.setAttribute('aria-pressed', same ? 'true' : 'false');
     });
+  }
+
+  function displayedPref(key) {
+    return key === 'theme' ? themeName() : st.prefs[key];
   }
 
   function openSheet() {
@@ -1200,7 +1205,7 @@ const Reader = (() => {
     const bs = el.closest('.bs');
     const opened = ReaderTip.open(el, {
       gloss: st.gloss,
-      theme: st.prefs ? st.prefs.theme : 'system',
+      theme: themeName(),
       sentenceRu: sentenceRuOf(bs),
       bs: bs,
       onAct: tipAct
@@ -1607,7 +1612,8 @@ const Reader = (() => {
   }
 
   function themeName() {
-    return (st.prefs && st.prefs.theme) || readPrefs().theme;
+    const theme = (st.prefs && st.prefs.theme) || readPrefs().theme;
+    return IS_HISTORY && theme === 'sepia' ? 'system' : theme;
   }
 
   /* ── Панели: скрыть / показать ── */

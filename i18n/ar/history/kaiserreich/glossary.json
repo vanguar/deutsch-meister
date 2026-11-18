@@ -1,0 +1,515 @@
+{
+ "version": 1,
+ "w": {
+  "aber": "aber",
+  "abhängig": "abhängig",
+  "afrika": "Afrika",
+  "altersarmut": "Altersarmut",
+  "an": "an",
+  "arbeiterbewegung": "Arbeiterbewegung",
+  "auf": "auf",
+  "ausbeutung": "Ausbeutung",
+  "ausgeschlossen": "ausschließen",
+  "begingen": "begehen",
+  "bekämpfte": "bekämpfen",
+  "beruhte": "beruhen",
+  "bis": "bis",
+  "bismarck": "Bismarck",
+  "blieben": "bleiben",
+  "bundesrat": "Bundesrat",
+  "bundesstaat": "Bundesstaat",
+  "das": "der/die/das",
+  "den": "der/die/das",
+  "der": "der/die/das",
+  "des": "der/die/das",
+  "deutsche": "deutsch",
+  "deutscher": "deutsch",
+  "die": "der/die/das",
+  "doch": "doch",
+  "durften": "dürfen",
+  "ein": "ein/eine",
+  "einen": "ein/eine",
+  "einer": "ein/eine",
+  "entschieden": "entscheiden",
+  "entstand": "entstehen",
+  "entstanden": "entstehen",
+  "er": "er",
+  "erwarb": "erwerben",
+  "frankreich": "Frankreich",
+  "frauen": "Frau",
+  "gegen": "gegen",
+  "gesetze": "Gesetz",
+  "gesetzliche": "gesetzlich",
+  "gewalt": "Gewalt",
+  "groß": "groß",
+  "großstädte": "Großstadt",
+  "herero": "Herero",
+  "heutigen": "heutig",
+  "i": "i (буква)",
+  "im": "in",
+  "in": "in",
+  "industrie": "Industrie",
+  "jahren": "Jahr",
+  "kaiser": "Kaiser",
+  "kaiserreich": "Kaiserreich",
+  "kanzler": "Kanzler",
+  "kolonialherrschaft": "Kolonialherrschaft",
+  "kolonien": "Kolonie",
+  "krankheit": "Krankheit",
+  "krieges": "Krieg",
+  "könig": "König",
+  "mit": "mit",
+  "männer": "Mann",
+  "nama": "Nama",
+  "namibia": "Namibia",
+  "noch": "noch",
+  "otto": "Otto",
+  "pazifik": "Pazifik",
+  "preußens": "Preußen",
+  "preußische": "preußisch",
+  "rassismus": "Rassismus",
+  "reich": "Reich",
+  "reichskanzler": "Reichskanzler",
+  "reichstag": "Reichstag",
+  "schnell": "schnell",
+  "soziale": "sozial",
+  "sozialistische": "sozialistisch",
+  "starken": "stark",
+  "stellung": "Stellung",
+  "truppen": "Truppe",
+  "und": "und",
+  "unfälle": "Unfall",
+  "unterschiede": "Unterschied",
+  "versicherungen": "Versicherung (страховая)",
+  "vom": "von",
+  "von": "von",
+  "völkermord": "Völkermord",
+  "war": "sein",
+  "waren": "Ware",
+  "wilhelm": "Wilhelm",
+  "wuchsen": "wachsen",
+  "wurde": "werden",
+  "wählen": "wählen",
+  "während": "während",
+  "zugleich": "zugleich",
+  "über": "über"
+ },
+ "l": {
+  "Afrika": {
+   "ru": "أفريقيا",
+   "pos": "جغرافيا"
+  },
+  "Altersarmut": {
+   "ru": "فقر الشيخوخة",
+   "pos": "اسم",
+   "art": "die",
+   "pl": null
+  },
+  "Arbeiterbewegung": {
+   "ru": "حركة عمالية",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Arbeiterbewegungen"
+  },
+  "Ausbeutung": {
+   "ru": "استغلال",
+   "pos": "اسم",
+   "art": "die",
+   "pl": null
+  },
+  "Bismarck": {
+   "ru": "بسمارك",
+   "pos": "اسم علم"
+  },
+  "Bundesrat": {
+   "ru": "البوندسرات (مجلس الولايات)",
+   "pos": "اسم",
+   "art": "der",
+   "pl": null
+  },
+  "Bundesstaat": {
+   "ru": "دولة اتحادية",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Bundesstaaten"
+  },
+  "Frankreich": {
+   "ru": "فرنسا",
+   "pos": "جغرافيا"
+  },
+  "Frau": {
+   "ru": "امرأة؛ ربّة البيت؛ سيّدة",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Frauen"
+  },
+  "Gesetz": {
+   "ru": "قانون",
+   "pos": "اسم",
+   "art": "das",
+   "pl": "die Gesetze"
+  },
+  "Gewalt": {
+   "ru": "قوّة، شدّة",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Gewalten"
+  },
+  "Großstadt": {
+   "ru": "مدينة كبرى (أكثر من 100 000 نسمة)",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Großstädte"
+  },
+  "Herero": {
+   "ru": "الهيريرو، شعب",
+   "pos": "اسم علم"
+  },
+  "Industrie": {
+   "ru": "الصناعة",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Industrien"
+  },
+  "Jahr": {
+   "ru": "سنة",
+   "pos": "اسم",
+   "art": "das",
+   "pl": "die Jahre"
+  },
+  "Kaiser": {
+   "ru": "الإمبراطور",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Kaiser"
+  },
+  "Kaiserreich": {
+   "ru": "إمبراطورية",
+   "pos": "اسم",
+   "art": "das",
+   "pl": "die Kaiserreiche"
+  },
+  "Kanzler": {
+   "ru": "مستشار الدولة",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Kanzler"
+  },
+  "Kolonialherrschaft": {
+   "ru": "حكم استعماري",
+   "pos": "اسم",
+   "art": "die",
+   "pl": null
+  },
+  "Kolonie": {
+   "ru": "مستعمرة",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Kolonien"
+  },
+  "Krankheit": {
+   "ru": "مرض",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Krankheiten"
+  },
+  "Krieg": {
+   "ru": "حرب",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Kriege"
+  },
+  "König": {
+   "ru": "ملك",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Könige"
+  },
+  "Mann": {
+   "ru": "رجل، إنسان",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Männer"
+  },
+  "Nama": {
+   "ru": "الناما، شعب",
+   "pos": "اسم علم"
+  },
+  "Namibia": {
+   "ru": "ناميبيا",
+   "pos": "جغرافيا"
+  },
+  "Otto": {
+   "ru": "Otto (Otto Group — مجموعة تجارية)",
+   "pos": "اسم علم"
+  },
+  "Pazifik": {
+   "ru": "المحيط الهادئ",
+   "pos": "جغرافيا"
+  },
+  "Preußen": {
+   "ru": "بروسيا",
+   "pos": "جغرافيا"
+  },
+  "Rassismus": {
+   "ru": "عنصرية",
+   "pos": "اسم",
+   "art": "der",
+   "pl": null
+  },
+  "Reich": {
+   "pos": "اسم",
+   "ru": "إمبراطورية؛ دولة",
+   "art": "das",
+   "pl": "die Reiche"
+  },
+  "Reichskanzler": {
+   "ru": "مستشار الإمبراطورية",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Reichskanzler"
+  },
+  "Reichstag": {
+   "ru": "الرايخستاغ، البرلمان",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Reichstage"
+  },
+  "Stellung": {
+   "ru": "وضعية، موقف",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Stellungen"
+  },
+  "Truppe": {
+   "ru": "فرقة، جند",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Truppen"
+  },
+  "Unfall": {
+   "ru": "حادث",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Unfälle"
+  },
+  "Unterschied": {
+   "ru": "فرق",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Unterschiede"
+  },
+  "Versicherung (страховая)": {
+   "ru": "تأمين؛ شركة تأمين",
+   "pos": "اسم",
+   "art": "die",
+   "pl": "die Versicherungen"
+  },
+  "Völkermord": {
+   "ru": "إبادة جماعية",
+   "pos": "اسم",
+   "art": "der",
+   "pl": "die Völkermorde"
+  },
+  "Ware": {
+   "pos": "اسم",
+   "ru": "بضاعة",
+   "art": "die",
+   "pl": "die Waren"
+  },
+  "Wilhelm": {
+   "ru": "فيلهلم (اسم)",
+   "pos": "اسم علم"
+  },
+  "aber": {
+   "ru": "لكن، غير أنّ",
+   "pos": "أداة ربط"
+  },
+  "abhängig": {
+   "ru": "تابع، معتمد على غيره",
+   "pos": "صفة"
+  },
+  "an": {
+   "ru": "عند، إلى، على",
+   "pos": "حرف جر",
+   "note": "am = an dem. وهي أيضًا سابقة منفصلة: anfangen «يبدأ»، annehmen، ansehen، anzünden"
+  },
+  "auf": {
+   "ru": "على، في",
+   "pos": "حرف جر",
+   "note": "وهي أيضًا سابقة منفصلة: aufspringen «يقفز واقفًا»، sich aufmachen"
+  },
+  "ausschließen": {
+   "ru": "يستبعد",
+   "pos": "فعل",
+   "forms": "schließt aus · schloss aus · hat ausgeschlossen"
+  },
+  "begehen": {
+   "ru": "يرتكب جريمة",
+   "pos": "فعل",
+   "forms": "begeht · beging · hat begangen"
+  },
+  "bekämpfen": {
+   "ru": "يحارب",
+   "pos": "فعل",
+   "forms": "bekämpft · bekämpfte · hat bekämpft"
+  },
+  "beruhen": {
+   "ru": "يقوم على",
+   "pos": "فعل",
+   "forms": "beruht · beruhte · hat beruht"
+  },
+  "bis": {
+   "ru": "حتى؛ إلى أن",
+   "pos": "أداة ربط"
+  },
+  "bleiben": {
+   "ru": "يبقى",
+   "pos": "فعل",
+   "forms": "blieb · ist geblieben"
+  },
+  "der/die/das": {
+   "ru": "أداة التعريف",
+   "pos": "أداة تعريف",
+   "note": "وهي أيضًا اسم موصول بمعنى «الذي»"
+  },
+  "deutsch": {
+   "ru": "الألمانية",
+   "pos": "صفة"
+  },
+  "doch": {
+   "ru": "ومع ذلك؛ إذن",
+   "pos": "أداة"
+  },
+  "dürfen": {
+   "ru": "يجوز له، يحقّ له",
+   "pos": "فعل",
+   "forms": "durfte · hat gedurft"
+  },
+  "ein/eine": {
+   "ru": "أداة النكرة",
+   "pos": "أداة تعريف",
+   "note": "einer — «واحد، شخص ما»"
+  },
+  "entscheiden": {
+   "ru": "يحلّ",
+   "pos": "فعل",
+   "forms": "entschied · hat entschieden"
+  },
+  "entstehen": {
+   "pos": "فعل",
+   "ru": "ينشأ",
+   "forms": "entsteht · entstand · ist entstanden"
+  },
+  "er": {
+   "ru": "هو",
+   "pos": "ضمير",
+   "note": "ihn — إيّاه، ihm — له"
+  },
+  "erwerben": {
+   "ru": "يكتسب",
+   "pos": "فعل",
+   "forms": "erwirbt · erwarb · hat erworben"
+  },
+  "gegen": {
+   "ru": "ضدّ؛ نحو (للوقت)",
+   "pos": "حرف جر",
+   "note": "gegen Mitternacht — نحو منتصف الليل"
+  },
+  "gesetzlich": {
+   "ru": "قانوني، رسمي",
+   "pos": "صفة"
+  },
+  "groß": {
+   "ru": "كبير",
+   "pos": "صفة",
+   "forms": "groß · größer · am größten"
+  },
+  "heutig": {
+   "ru": "حالي، معاصر",
+   "pos": "صفة"
+  },
+  "i (буква)": {
+   "ru": "حرف i",
+   "pos": "اسم",
+   "art": "das",
+   "pl": "die i"
+  },
+  "in": {
+   "ru": "في (im = in dem، ins = in das)",
+   "pos": "حرف جر"
+  },
+  "mit": {
+   "ru": "ث",
+   "pos": "حرف جر",
+   "note": "وهي أيضًا سابقة منفصلة: mitgehen «يذهب معه»"
+  },
+  "noch": {
+   "ru": "بعدُ / أيضًا",
+   "pos": "ظرف"
+  },
+  "preußisch": {
+   "ru": "بروسي",
+   "pos": "صفة"
+  },
+  "schnell": {
+   "ru": "سريع، بسرعة",
+   "pos": "صفة"
+  },
+  "sein": {
+   "ru": "يكون",
+   "pos": "فعل",
+   "forms": "war · ist gewesen",
+   "note": "Konjunktiv I: er sei، du seiest. والصيغة نفسها waren هي أيضًا جمع die Waren «بضائع»: allerhand Waren"
+  },
+  "sozial": {
+   "ru": "اجتماعي",
+   "pos": "صفة"
+  },
+  "sozialistisch": {
+   "ru": "اشتراكي",
+   "pos": "صفة"
+  },
+  "stark": {
+   "ru": "قويّ، متين",
+   "pos": "صفة"
+  },
+  "und": {
+   "ru": "و",
+   "pos": "أداة ربط"
+  },
+  "von": {
+   "ru": "من، عن (vom = von dem)",
+   "pos": "حرف جر"
+  },
+  "wachsen": {
+   "ru": "ينمو",
+   "pos": "فعل",
+   "forms": "wuchs · ist gewachsen",
+   "note": "er wächst — مع Umlaut في المفرد للمخاطب والغائب"
+  },
+  "werden": {
+   "ru": "يصبح",
+   "pos": "فعل",
+   "forms": "wurde · ist geworden",
+   "note": "فعل مساعد للمستقبل والمبني للمجهول"
+  },
+  "wählen": {
+   "ru": "أن يختار",
+   "pos": "فعل",
+   "forms": "wählte · hat gewählt"
+  },
+  "während": {
+   "pos": "حرف جر",
+   "ru": "خلال، أثناء"
+  },
+  "zugleich": {
+   "ru": "في الوقت نفسه",
+   "pos": "ظرف"
+  },
+  "über": {
+   "ru": "فوق، عبر، عن",
+   "pos": "حرف جر"
+  }
+ }
+}

@@ -61,9 +61,10 @@ def build(chapter_id):
     entry=next(c for c in catalog['chapters'] if c['id']==chapter_id)
     number=catalog['chapters'].index(entry)+1
     words,lemmas,memories=pool()
+    checked=definition.get('checked','2026-11-17')
     chapter={'id':'ch-01','title':entry['title'],'titleRu':entry['titleRu'],'icon':str(number),
              'paragraphs':[], 'sourceTitle':'Источники и проверка фактов',
-             'sources':definition['sources'],'checked':'2026-11-17'}
+             'sources':definition['sources'],'checked':checked}
     for para in definition['paragraphs']:
         if 'fig' in para:
             chapter['paragraphs'].append(copy.deepcopy(para)); continue
@@ -86,7 +87,7 @@ def build(chapter_id):
           'author':'German Morning','level':'B1','year':'2026','chapters':1,
           'words':len(tokens),'minutes':max(3,round(len(tokens)/45)), 'cover':str(number),'number':number,
           'source':definition.get('source',' / '.join(dict.fromkeys(s['name'].split(' · ')[0] for s in definition['sources']))),
-          'sourceUrl':definition['sources'][0]['url'],'checked':'2026-11-17',
+          'sourceUrl':definition['sources'][0]['url'],'checked':checked,
           'license':'Авторская учебная адаптация German Morning; ссылки на материалы — в главе.'}
     for name,data in (('ch-01.json',chapter),('glossary.json',glossary),('meta.json',meta)):
         write(ROOT/f'data/history/{chapter_id}/{name}',data)

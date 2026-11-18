@@ -1,0 +1,161 @@
+{
+  "id": "kaiserreich",
+  "checked": "2026-11-18",
+  "sources": [
+    {
+      "id": "reich",
+      "name": "LeMO · Reichsgründung und Kaiserreich",
+      "url": "https://www.dhm.de/lemo/kapitel/kaiserreich/reich"
+    },
+    {
+      "id": "verfassung",
+      "name": "LeMO · Reichsverfassung 1871",
+      "url": "https://www.dhm.de/lemo/kapitel/kaiserreich/reich/verfassung"
+    },
+    {
+      "id": "sozial",
+      "name": "LeMO · Sozialgesetzgebung",
+      "url": "https://www.dhm.de/lemo/kapitel/kaiserreich/innenpolitik/sozialgesetze"
+    },
+    {
+      "id": "kolonien",
+      "name": "Bundesarchiv · Krieg gegen die Herero",
+      "url": "https://www.bundesarchiv.de/themen-entdecken/online-entdecken/geschichtsgalerien/der-krieg-gegen-die-herero-1904/"
+    },
+    {
+      "id": "nama",
+      "name": "bpb · Gedenken an Herero und Nama",
+      "url": "https://www.bpb.de/kurz-knapp/taegliche-dosis-politik/582067/gedenken-an-herero-und-nama/"
+    },
+    {
+      "id": "kolonialpolitik",
+      "name": "LeMO · Kolonialpolitik",
+      "url": "https://www.dhm.de/lemo/kapitel/kaiserreich/aussenpolitik/kolonialpolitik"
+    },
+    {
+      "id": "hamburg",
+      "name": "UNESCO · Speicherstadt",
+      "url": "https://whc.unesco.org/en/list/1467/"
+    }
+  ],
+  "paragraphs": [
+    {
+      "sourceIds": [
+        "reich",
+        "verfassung"
+      ],
+      "sentences": [
+        [
+          "1871 entstand das Deutsche Kaiserreich noch während des Krieges gegen Frankreich.",
+          "В 1871 году, ещё во время войны с Францией, возникла Германская империя.",
+          "У 1871 році, ще під час війни з Францією, постала Німецька імперія.",
+          "نشأت الإمبراطورية الألمانية عام 1871 بينما كانت الحرب مع فرنسا لا تزال مستمرة."
+        ],
+        [
+          "Der preußische König Wilhelm I. wurde Deutscher Kaiser; Otto von Bismarck wurde Reichskanzler.",
+          "Прусский король Вильгельм I стал германским императором; Отто фон Бисмарк стал рейхсканцлером.",
+          "Прусський король Вільгельм I став німецьким імператором; Отто фон Бісмарк став рейхсканцлером.",
+          "أصبح الملك البروسي فيلهلم الأول إمبراطورًا ألمانيًا، وأصبح أوتو فون بسمارك مستشار الإمبراطورية."
+        ],
+        [
+          "Das Reich war ein Bundesstaat mit einer starken Stellung Preußens.",
+          "Империя была федеративным государством с сильной позицией Пруссии.",
+          "Імперія була федеративною державою із сильною позицією Пруссії.",
+          "كانت الإمبراطورية دولة اتحادية تتمتع فيها بروسيا بمكانة قوية."
+        ]
+      ]
+    },
+    {
+      "sourceIds": [
+        "verfassung"
+      ],
+      "sentences": [
+        [
+          "Männer durften den Reichstag wählen, Frauen waren ausgeschlossen.",
+          "Мужчины могли избирать рейхстаг, женщины были исключены из выборов.",
+          "Чоловіки могли обирати рейхстаг, жінки були виключені з виборів.",
+          "كان الرجال يستطيعون انتخاب مجلس الرايخستاغ، بينما استُبعدت النساء."
+        ],
+        [
+          "Der Reichstag und der Bundesrat entschieden über Gesetze, doch der Kanzler war vom Kaiser abhängig.",
+          "Рейхстаг и бундесрат принимали решения о законах, а канцлер зависел от императора.",
+          "Рейхстаг і бундесрат ухвалювали рішення щодо законів, а канцлер залежав від імператора.",
+          "كان الرايخستاغ والمجلس الاتحادي يبتّان في القوانين، وكان المستشار تابعًا للإمبراطور."
+        ]
+      ]
+    },
+    {
+      "fig": {
+        "src": "data/laender/hamburg/img/speicherstadt.jpg",
+        "w": 1200,
+        "h": 800,
+        "credit": "Dietmar Rabich / Wikimedia Commons",
+        "creditUrl": "https://commons.wikimedia.org/wiki/User:XRay",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "cap": "Шпайхерштадт в Гамбурге. Этот район портовых складов начали строить в конце XIX века. Современная фотография."
+      }
+    },
+    {
+      "sourceIds": [
+        "reich",
+        "sozial"
+      ],
+      "sentences": [
+        [
+          "Industrie und Großstädte wuchsen schnell, aber soziale Unterschiede blieben groß.",
+          "Промышленность и крупные города быстро росли, но социальные различия оставались значительными.",
+          "Промисловість і великі міста швидко зростали, але соціальні відмінності залишалися значними.",
+          "نمت الصناعة والمدن الكبرى بسرعة، لكن الفوارق الاجتماعية ظلت كبيرة."
+        ],
+        [
+          "In den 1880er Jahren entstanden gesetzliche Versicherungen gegen Krankheit, Unfälle und Altersarmut.",
+          "В 1880-е годы появилось государственное страхование на случай болезни, несчастных случаев и бедности в старости.",
+          "У 1880-х роках з’явилося державне страхування на випадок хвороби, нещасних випадків і бідності в старості.",
+          "في ثمانينيات القرن التاسع عشر نشأت أنظمة تأمين قانونية ضد المرض والحوادث والفقر في الشيخوخة."
+        ],
+        [
+          "Zugleich bekämpfte Bismarck die sozialistische Arbeiterbewegung.",
+          "Одновременно Бисмарк боролся с социалистическим рабочим движением.",
+          "Водночас Бісмарк боровся із соціалістичним робітничим рухом.",
+          "وفي الوقت نفسه حارب بسمارك الحركة العمالية الاشتراكية."
+        ]
+      ]
+    },
+    {
+      "sourceIds": [
+        "kolonien",
+        "nama",
+        "kolonialpolitik"
+      ],
+      "sentences": [
+        [
+          "Das Reich erwarb Kolonien in Afrika und im Pazifik.",
+          "Империя приобрела колонии в Африке и Тихоокеанском регионе.",
+          "Імперія здобула колонії в Африці й Тихоокеанському регіоні.",
+          "استحوذت الإمبراطورية على مستعمرات في أفريقيا والمحيط الهادئ."
+        ],
+        [
+          "Die Kolonialherrschaft beruhte auf Rassismus, Ausbeutung und Gewalt.",
+          "Колониальное господство основывалось на расизме, эксплуатации и насилии.",
+          "Колоніальне панування ґрунтувалося на расизмі, експлуатації та насильстві.",
+          "قام الحكم الاستعماري على العنصرية والاستغلال والعنف."
+        ],
+        [
+          "Von 1904 bis 1908 begingen deutsche Truppen einen Völkermord an Herero und Nama im heutigen Namibia.",
+          "С 1904 по 1908 год немецкие войска совершили геноцид гереро и нама на территории современной Намибии.",
+          "З 1904 до 1908 року німецькі війська вчинили геноцид гереро й нама на території сучасної Намібії.",
+          "من عام 1904 إلى عام 1908 ارتكبت القوات الألمانية إبادة جماعية بحق الهيريرو والناما في ناميبيا الحالية."
+        ]
+      ]
+    }
+  ],
+  "translations": {
+    "uk": {
+      "Шпайхерштадт в Гамбурге. Этот район портовых складов начали строить в конце XIX века. Современная фотография.": "Шпайхерштадт у Гамбурзі. Цей район портових складів почали будувати наприкінці XIX століття. Сучасна фотографія."
+    },
+    "ar": {
+      "Шпайхерштадт в Гамбурге. Этот район портовых складов начали строить в конце XIX века. Современная фотография.": "شبايخرشتات في هامبورغ. بدأ بناء حي مستودعات الميناء هذا في أواخر القرن التاسع عشر. صورة حديثة."
+    }
+  }
+}

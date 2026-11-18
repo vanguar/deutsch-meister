@@ -19,6 +19,17 @@ const ctx = vm.createContext({
 });
 vm.runInContext(source + '\nthis.subject = Reader;', ctx);
 const { state, anchors } = ctx.subject;
+storage.set('dm_reader_prefs', JSON.stringify({ theme: 'sepia' }));
+assert.equal(ctx.subject.theme(), 'system', 'History follows the app when a saved reader theme is sepia');
+const books = vm.createContext({
+  console, window: {}, localStorage: ctx.localStorage,
+  document: { ...ctx.document, body: { dataset: { readerDir: 'data/books/' } } }
+});
+vm.runInContext(original + '\nthis.subject = Reader;', books);
+assert.equal(books.subject.theme(), 'sepia', 'Books still honor the saved sepia preference');
+storage.set('dm_reader_prefs', JSON.stringify({ theme: 'light' }));
+assert.equal(ctx.subject.theme(), 'light', 'History still honors an explicit light theme');
+storage.delete('dm_reader_prefs');
 Object.assign(state, { bookId: 'test', chapter: { paragraphs: Array(6).fill({}) }, chTotal: 1,
   chIndex: 0, chPages: [4], bookPages: 4, pages: 4, width: 320, gap: 32 });
 const json = value => JSON.parse(JSON.stringify(value));
