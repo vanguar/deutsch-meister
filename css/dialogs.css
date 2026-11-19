@@ -113,7 +113,7 @@ html[dir="rtl"] .dlg-item-go { transform: scaleX(-1); }
 .dlg-situation { margin: 8px 0 0; font-size: 14px; line-height: 1.55; color: var(--text); }
 
 /* Управление: главная кнопка и чипы; на узком экране кнопка — во всю ширину */
-.dlg-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.dlg-symbols { position: absolute; pointer-events: none; }
 .dlg-play {
   display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px;
   padding: 10px 20px; border: 0; border-radius: var(--r-full); cursor: pointer;
@@ -125,9 +125,57 @@ html[dir="rtl"] .dlg-item-go { transform: scaleX(-1); }
 .dlg-play-ico { font-size: 13px; }
 .news-chip[aria-pressed="true"] { border-color: var(--accent2); background: var(--dlg-a-soft); color: var(--text-strong); }
 .dlg-tone[hidden] { display: none; }
-@media (max-width: 480px) {
-  .dlg-play { flex: 1 1 100%; }
-  .dlg-controls .news-chip { flex: 1 1 0; justify-content: center; }
+
+.dlg-icon {
+  display: block; flex: none; width: 20px; height: 20px;
+  fill: none; stroke: currentColor; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round;
+}
+.dlg-icon-solid { fill: currentColor; stroke: none; }
+.dlg-controls {
+  display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 7px;
+  padding: 7px; border: 1px solid var(--border); border-radius: var(--r-lg); background: var(--surface);
+}
+.dlg-controls :is(.dlg-play, .dlg-tr-toggle) {
+  display: flex; justify-content: flex-start; align-items: center; gap: 7px;
+  min-width: 0; min-height: 48px; padding: 7px 9px; border: 1px solid transparent; border-radius: 11px;
+  font: inherit; font-size: 13px; font-weight: 800; line-height: 1.2; text-align: start; cursor: pointer;
+  box-shadow: none; -webkit-tap-highlight-color: transparent;
+  transition: background var(--t-fast), border-color var(--t-fast);
+}
+.dlg-controls .dlg-play { background: var(--accent2); color: var(--text-on-btn); }
+.dlg-controls .dlg-play.is-on {
+  border-color: var(--accent2); background: var(--dlg-a-soft); color: var(--accent2-text);
+}
+.dlg-control-icon {
+  display: grid; place-items: center; flex: none; width: 30px; height: 30px; border-radius: 8px;
+  background: rgb(255 255 255 / .17);
+}
+.dlg-control-icon .dlg-icon { width: 18px; height: 18px; }
+.dlg-controls .dlg-tr-toggle {
+  background: var(--surface2); border-color: var(--border); color: var(--text-strong);
+}
+.dlg-tr-toggle .dlg-control-icon, .dlg-play.is-on .dlg-control-icon { background: var(--dlg-a-soft); color: var(--accent2-text); }
+.dlg-controls .dlg-tr-toggle[aria-pressed="true"] { border-color: var(--accent2); background: var(--dlg-a-soft); }
+.dlg-tr-indicator {
+  position: relative; flex: none; width: 20px; height: 12px; margin-inline-start: auto;
+  border-radius: var(--r-full); background: var(--surface3); color: var(--text-muted);
+}
+.dlg-tr-indicator::after {
+  content: ''; position: absolute; inset-block-start: 3px; inset-inline-start: 3px;
+  width: 6px; height: 6px; border-radius: 50%; background: currentColor;
+}
+.dlg-tr-toggle[aria-pressed="true"] .dlg-tr-indicator { background: var(--accent2); color: var(--text-on-btn); }
+.dlg-tr-toggle[aria-pressed="true"] .dlg-tr-indicator::after { inset-inline-start: auto; inset-inline-end: 3px; }
+.dlg-controls .dlg-tone { grid-column: 1 / -1; justify-self: start; }
+.dlg-view :is(.dlg-play, .dlg-tr-toggle, .dlg-say):focus-visible { outline: 2px solid var(--accent2-text); outline-offset: 2px; }
+@media (hover: hover) {
+  .dlg-controls .dlg-play:hover { filter: brightness(1.1); }
+  .dlg-controls .dlg-tr-toggle:hover { border-color: var(--accent2); }
+}
+@media (max-width: 360px) {
+  .dlg-controls :is(.dlg-play, .dlg-tr-toggle) { padding-inline: 6px; gap: 5px; }
+  .dlg-control-icon { width: 24px; height: 26px; }
+  .dlg-tr-indicator { width: 18px; }
 }
 .dlg-voice-note { margin: 8px 0 0; font-size: 12px; line-height: 1.5; color: var(--text-dim); }
 .dlg-voice-note:empty { display: none; }
@@ -137,6 +185,8 @@ html[dir="rtl"] .dlg-item-go { transform: scaleX(-1); }
 .dlg-line { display: flex; align-items: flex-end; gap: 6px; max-width: 92%; }
 .dlg-line.side-a { align-self: flex-start; }
 .dlg-line.side-b { align-self: flex-end; flex-direction: row-reverse; }
+.dlg-view .side-a { --dlg-voice: var(--accent2-text); --dlg-voice-soft: var(--dlg-a-soft); }
+.dlg-view .side-b { --dlg-voice: var(--dlg-b); --dlg-voice-soft: var(--dlg-b-soft); }
 .dlg-bubble {
   min-width: 0; padding: 9px 13px 10px; border-radius: 16px; cursor: pointer;
   border: 1px solid var(--border); transition: box-shadow .25s ease, border-color .25s ease;
@@ -160,10 +210,35 @@ html[dir="rtl"] .dlg-tr { text-align: right; }
 }
 .dlg-say.is-on { border-color: var(--dlg-speak); box-shadow: 0 0 0 2px var(--dlg-speak) inset; }
 
-/* Активная реплика при прослушивании */
-.dlg-line.is-speaking .dlg-bubble {
-  border-color: var(--dlg-speak);
-  box-shadow: 0 0 0 1px var(--dlg-speak) inset, 0 4px 18px rgba(232, 197, 71, .25);
+.dlg-view .dlg-line { gap: 9px; }
+.dlg-view .dlg-say {
+  position: relative; width: 44px; height: 44px; padding: 0; border-radius: 13px;
+  background: var(--dlg-voice-soft); color: var(--dlg-voice); box-shadow: none;
+  transition: background var(--t-fast), border-color var(--t-fast);
+}
+.dlg-view .dlg-say.is-on { border-color: var(--dlg-voice); }
+.dlg-say .dlg-say-badge {
+  position: absolute; inset-block-end: -1px; inset-inline-end: -2px; width: 16px; height: 16px;
+  padding: 1px; border: 1px solid var(--border); border-radius: 50%; background: var(--surface);
+}
+.dlg-view .dlg-line.is-speaking .dlg-bubble { border-color: var(--dlg-voice); box-shadow: 0 0 0 1px var(--dlg-voice) inset; }
+.dlg-say-wave { display: none; align-items: center; justify-content: center; gap: 3px; }
+.dlg-line.is-speaking .dlg-say-scene { display: none; }
+.dlg-line.is-speaking .dlg-say-wave { display: flex; }
+.dlg-say-wave > span { width: 3px; height: 10px; border-radius: 4px; background: currentColor; }
+.dlg-say-wave > :nth-child(2) { height: 19px; }
+.dlg-say-wave > :nth-child(3) { height: 14px; }
+@media (hover: hover) {
+  .dlg-view .dlg-say:hover { border-color: var(--dlg-voice); }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .dlg-line.is-speaking .dlg-say-wave > span { animation: dlg-speech-wave .72s ease-in-out infinite alternate; }
+  .dlg-line.is-speaking .dlg-say-wave > :nth-child(2) { animation-delay: -.32s; }
+  .dlg-line.is-speaking .dlg-say-wave > :nth-child(3) { animation-delay: -.5s; }
+}
+@keyframes dlg-speech-wave {
+  from { transform: scaleY(.45); }
+  to { transform: scaleY(1); }
 }
 
 /* ── Соседние диалоги ── */
@@ -172,5 +247,5 @@ html[dir="rtl"] .dlg-tr { text-align: right; }
 html[dir="rtl"] .dlg-pager { direction: rtl; }
 
 @media (prefers-reduced-motion: reduce) {
-  .dlg-item, .dlg-bubble { transition: none; }
+  .dlg-item, .dlg-bubble, .dlg-view .dlg-say, .dlg-controls :is(.dlg-play, .dlg-tr-toggle) { transition: none; }
 }

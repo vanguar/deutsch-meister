@@ -25,12 +25,22 @@ async function waitFor(expr, ms = 6000) {
   return false;
 }
 
-// Заглушка озвучки: каждая фраза «звучит» 60 мс, журнал — window.__said
+// Заглушка озвучки: начало и конец разнесены по времени, журнал — window.__said
 const STUB = `(() => { window.__said = []; TTS.speak = (text, o) => { o = o || {};
   const rec = { text, voiceName: o.voiceName || null, pitch: o.pitch, detune: o.detune || 0, t: Date.now() };
-  window.__said.push(rec); clearTimeout(window.__sayT);
-  if (o.onEnd) window.__sayT = setTimeout(() => o.onEnd({ ok: true, reason: 'end' }), 60); };
-  TTS.stop = () => { clearTimeout(window.__sayT); }; return true; })()`;
+  window.__said.push(rec);
+  window.__sayStart = setTimeout(() => o.onStart?.(), 80);
+  window.__sayEnd = setTimeout(() => o.onEnd?.({ ok: true, reason: 'end' }), 240); };
+  TTS.stop = () => { clearTimeout(window.__sayStart); clearTimeout(window.__sayEnd); }; return true; })()`;
+
+const speakingIcon = index => `(() => {
+  const active = document.querySelectorAll('.dlg-line.is-speaking');
+  const line = active[0];
+  return active.length === 1 && Number(line.dataset.i) === ${index} &&
+    getComputedStyle(line.querySelector('.dlg-say-wave')).display === 'flex' &&
+    getComputedStyle(line.querySelector('.dlg-say-scene')).display === 'none' &&
+    line.querySelector('.dlg-say').getAttribute('aria-label') === 'Остановить озвучку';
+})()`;
 
 // Каждый переход — новая загрузка страницы: смена одного хэша на том же
 // адресе браузер делает без перезагрузки, а язык и тема читаются при загрузке
@@ -82,11 +92,16 @@ for (const lv of LEVELS) {
       title: document.getElementById('dlgTitle').textContent, tr: document.querySelectorAll('.dlg-tr').length,
       emptyTr: [...document.querySelectorAll('.dlg-tr')].filter(e => !e.textContent.trim()).length,
       counter: document.getElementById('dlgCounter').textContent, hs: ${NO_HSCROLL},
+      sceneIcons: [...document.querySelectorAll('.dlg-say-scene use')].filter(icon => {
+        const href = icon.getAttribute('href');
+        return href !== '#dlg-icon-chat' && document.getElementById(href.slice(1));
+      }).length,
       sides: [...document.querySelectorAll('.dlg-line')].map(l => l.classList.contains('side-a') ? 'a' : 'b').join('') })`));
     ok(d.lines === d.want && d.lines >= 8, `${id}: реплик ${d.lines}`);
     ok(d.img === 800, `${id}: фото загрузилось (${d.img}px)`);
     ok(/Фото/.test(d.credit) && /CC|Public/.test(d.credit), `${id}: автор и лицензия: ${d.credit.trim()}`);
     ok(d.tr === d.lines && d.emptyTr === 0, `${id}: перевод у каждой реплики`);
+    ok(d.sceneIcons === d.lines, `${id}: тематическая иконка у каждой реплики`);
     ok(!/aa|bb/.test(d.sides), `${id}: реплики чередуются по сторонам`);
     ok(d.counter === `${k + 1} / 10`, `${id}: счётчик ${d.counter}`);
     ok(d.hs, `${id}: нет горизонтальной прокрутки`);
@@ -104,15 +119,17 @@ const first = idx.find(i => i.level === LEVELS[0]).id;
 await c.go(`${B}/dialogs.html#d=${first}`, 1500);
 await waitFor(`Dialogs.dialog && document.querySelectorAll('.dlg-line').length > 0`);
 await c.ev(STUB);
-await c.ev(`document.getElementById('dlgPlay').click()`);
-ok(await waitFor(`document.querySelector('.dlg-line.is-speaking') !== null`, 2000), 'подсветка активной реплики');
-ok(await c.ev(`document.getElementById('dlgPlay').getAttribute('aria-pressed') === 'true' && /Стоп/.test(document.getElementById('dlgPlay').textContent)`), 'кнопка → «Стоп»');
-ok(await waitFor(`Dialogs.playing === null`, 8000), 'диалог доигран до конца');
+ok(await c.ev(`document.getElementById('dlgPlay').click(); !document.querySelector('.dlg-line.is-speaking')`), 'до старта звука подсветки нет');
+ok(await waitFor(speakingIcon(0), 1000), 'на первой звучащей реплике видна звуковая волна');
+ok(await c.ev(`document.querySelector('#dlgPlay use').getAttribute('href') === '#dlg-icon-stop' && /Стоп/.test(document.getElementById('dlgPlay').textContent)`), 'кнопка → «Стоп»');
+ok(await waitFor(`Dialogs.playing === 'all' && window.__said.length === 1 && !document.querySelector('.dlg-line.is-speaking')`, 600), 'в паузе между репликами волны нет');
+ok(await waitFor(speakingIcon(1), 1000), 'волна переходит ко второй реплике');
+ok(await waitFor(`Dialogs.playing === null`, 16000), 'диалог доигран до конца');
 const said = JSON.parse(await c.ev(`JSON.stringify(window.__said)`));
 const want = JSON.parse(await c.ev(`JSON.stringify(Dialogs.dialog.lines.map(l => l.de))`));
 ok(said.map(s => s.text).join('|') === want.join('|'), `все ${want.length} реплик по порядку`);
 const gaps = said.slice(1).map((s, i) => s.t - said[i].t);
-ok(gaps.every(g => g >= 60 + 300), `паузы между репликами (${Math.min(...gaps)}–${Math.max(...gaps)} мс)`);
+ok(gaps.every(g => g >= 240 + 300), `паузы между репликами (${Math.min(...gaps)}–${Math.max(...gaps)} мс)`);
 const plan = JSON.parse(await c.ev(`JSON.stringify(Dialogs.voicePlan())`));
 const perSpeaker = JSON.parse(await c.ev(`JSON.stringify(Dialogs.dialog.lines.map(l => l.s))`));
 const distinct = said.every((s, i) => JSON.stringify([s.voiceName, s.pitch, s.detune]) ===
@@ -120,7 +137,7 @@ const distinct = said.every((s, i) => JSON.stringify([s.voiceName, s.pitch, s.de
 ok(distinct, `у персонажей свои параметры голоса (режим ${plan.mode}: A=${JSON.stringify(plan.A)} B=${JSON.stringify(plan.B)})`);
 ok(plan.two ? JSON.stringify(plan.A) !== JSON.stringify(plan.B) : JSON.stringify(plan.A) === JSON.stringify(plan.B) && !plan.A.pitch && !plan.A.detune,
   plan.two ? 'два «живых» голоса у разных персонажей' : 'один лучший голос без искажения тона — как в уроках и книгах');
-ok(await c.ev(`document.querySelector('.dlg-line.is-speaking') === null && document.getElementById('dlgPlay').getAttribute('aria-pressed') === 'false'`), 'после конца — подсветка снята, кнопка «Слушать»');
+ok(await c.ev(`!document.querySelector('.dlg-line.is-speaking, .dlg-say.is-on') && document.querySelector('#dlgPlay use').getAttribute('href') === '#dlg-icon-play'`), 'после конца — подсветка снята, кнопка «Слушать»');
 ok((await c.ev(`document.getElementById('dlgVoiceNote').textContent`)).length > 10, 'подпись о голосах: ' + await c.ev(`document.getElementById('dlgVoiceNote').textContent`));
 // стоп посередине и повтор
 await c.ev(`window.__said = []; document.getElementById('dlgPlay').click()`);
@@ -130,16 +147,21 @@ const n1 = await c.ev(`window.__said.length`);
 await c.wait(700);
 ok(n1 > 0 && n1 < want.length && await c.ev(`window.__said.length`) === n1 && await c.ev(`!ReaderSpeak.isPlaying() && Dialogs.playing === null`), `стоп: остановилось на ${n1}-й реплике`);
 await c.ev(`window.__said = []; document.getElementById('dlgPlay').click()`);
-ok(await waitFor(`Dialogs.playing === null && window.__said.length === ${want.length}`, 8000), 'повторный запуск играет диалог целиком');
-// одна реплика: кнопка 🔊
+ok(await waitFor(`Dialogs.playing === null && window.__said.length === ${want.length}`, 16000), 'повторный запуск играет диалог целиком');
+// одна реплика
 await c.ev(`window.__said = []; document.querySelectorAll('.dlg-say')[2].click()`);
-ok(await waitFor(`Dialogs.playing === null`, 3000) && await c.ev(`window.__said.length === 1 && window.__said[0].text === Dialogs.dialog.lines[2].de`), 'кнопка 🔊 у реплики озвучивает только её');
+ok(await waitFor(speakingIcon(2), 1000), 'у отдельно запущенной реплики появляется волна');
+ok(await waitFor(`Dialogs.playing === null`, 3000) && await c.ev(`window.__said.length === 1 && window.__said[0].text === Dialogs.dialog.lines[2].de && !document.querySelector('.dlg-line.is-speaking, .dlg-say.is-on')`), 'озвучивается только выбранная реплика, затем возвращается иконка');
+await c.ev(`window.__said = []; document.getElementById('dlgPlay').click()`);
+await waitFor(speakingIcon(0), 1000);
+await c.ev(`document.querySelector('.dlg-say').click()`);
+ok(await c.ev(`Dialogs.playing === null && !document.querySelector('.dlg-line.is-speaking, .dlg-say.is-on') && window.__said.length === 1`), 'тап по звучащей реплике останавливает очередь');
 // реплика прерывает диалог
 await c.ev(`window.__said = []; document.getElementById('dlgPlay').click()`);
 await c.wait(300);
 await c.ev(`document.querySelectorAll('.dlg-say')[1].click()`);
 await c.wait(400);
-ok(await c.ev(`Dialogs.playing === null && window.__said[window.__said.length - 1].text === Dialogs.dialog.lines[1].de && document.getElementById('dlgPlay').getAttribute('aria-pressed') === 'false'`),
+ok(await c.ev(`Dialogs.playing === null && window.__said[window.__said.length - 1].text === Dialogs.dialog.lines[1].de && !document.getElementById('dlgPlay').classList.contains('is-on')`),
   'другая озвучка корректно прерывает диалог');
 // уход со страницы диалога останавливает озвучку
 await c.ev(`window.__said = []; document.getElementById('dlgPlay').click()`);

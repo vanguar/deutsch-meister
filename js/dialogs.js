@@ -52,6 +52,16 @@ const Dialogs = (() => {
   // Медленнее 0.85 системные голоса звучат «механически» — держим скорость
   // уроков (0.85) и книг (0.9).
   const RATE = { a1: 0.85, a2: 0.9, b1: 0.9, b2: 0.9 };
+  const SCENE_ICONS = {
+    'a1-01': 'bread', 'a1-02': 'door', 'a1-03': 'cart', 'a1-04': 'ticket', 'a1-05': 'coffee',
+    'a1-06': 'route', 'a1-07': 'medical', 'a1-08': 'apple', 'a1-09': 'shirt', 'a1-10': 'book',
+    'a2-01': 'medical', 'a2-02': 'pills', 'a2-03': 'utensils', 'a2-04': 'package', 'a2-05': 'train',
+    'a2-06': 'scissors', 'a2-07': 'bank', 'a2-08': 'gift', 'a2-09': 'dumbbell', 'a2-10': 'phone',
+    'b1-01': 'home', 'b1-02': 'briefcase', 'b1-03': 'office', 'b1-04': 'bank', 'b1-05': 'heat',
+    'b1-06': 'neighbors', 'b1-07': 'medical', 'b1-08': 'toy', 'b1-09': 'wrench', 'b1-10': 'phone',
+    'b2-01': 'euro', 'b2-02': 'receipt', 'b2-03': 'team', 'b2-04': 'cap', 'b2-05': 'laptop',
+    'b2-06': 'shield', 'b2-07': 'compass', 'b2-08': 'school', 'b2-09': 'bike', 'b2-10': 'bed'
+  };
 
   let el = {};
   let items  = [];          // оглавление (index.json)
@@ -346,15 +356,20 @@ const Dialogs = (() => {
     el.situation.textContent = d.situation || '';
     document.title = d.title + ' | German Morning';
     const sp = d.speakers || {};
+    const sceneIcon = SCENE_ICONS[d.id] || 'chat';
     el.lines.innerHTML = d.lines.map((ln, i) => {
       const who = sp[ln.s] || { name: ln.s };
       return `<li class="dlg-line side-${ln.s === 'A' ? 'a' : 'b'}" data-i="${i}">
-        <div class="dlg-bubble">
+        <div class="dlg-bubble" id="dlgLine-${i}">
           <div class="dlg-who" lang="de" dir="ltr">${esc(who.name)}</div>
           <div class="dlg-de" lang="de" dir="ltr">${esc(ln.de)}</div>
           <div class="dlg-tr" dir="auto">${esc(ln.tr || '')}</div>
         </div>
-        <button class="dlg-say" type="button" data-say="${i}" title="Озвучить реплику" aria-label="Озвучить реплику">🔊</button>
+        <button class="dlg-say" type="button" data-say="${i}" aria-controls="dlgLine-${i}" title="Озвучить реплику" aria-label="Озвучить реплику">
+          <svg class="dlg-icon dlg-say-scene" aria-hidden="true"><use href="#dlg-icon-${sceneIcon}"/></svg>
+          <span class="dlg-say-wave" aria-hidden="true"><span></span><span></span><span></span></span>
+          <svg class="dlg-icon dlg-icon-solid dlg-say-badge" aria-hidden="true"><use href="#dlg-icon-play"/></svg>
+        </button>
       </li>`;
     }).join('');
     el.prev.disabled = pos <= 0;
@@ -446,34 +461,41 @@ const Dialogs = (() => {
 
   /* ── Озвучка ── */
 
-  function lineEls() { return el.lines.querySelectorAll('.dlg-line'); }
+  function paintSay(line) {
+    const button = line.querySelector('.dlg-say');
+    const canStop = line.classList.contains('is-speaking') || playing === Number(line.dataset.i);
+    if (button.classList.contains('is-on') === canStop) return;
+    button.classList.toggle('is-on', canStop);
+    const label = canStop ? 'Остановить озвучку' : 'Озвучить реплику';
+    button.setAttribute('aria-label', label);
+    button.title = label;
+    button.querySelector('.dlg-say-badge use').setAttribute('href', canStop ? '#dlg-icon-stop' : '#dlg-icon-play');
+  }
 
-  function mark(i) {
-    lineEls().forEach(li => li.classList.toggle('is-speaking', Number(li.dataset.i) === i));
-    if (i == null || i < 0) return;
-    const li = el.lines.querySelector(`.dlg-line[data-i="${i}"]`);
-    if (li && li.scrollIntoView) {
-      try { li.scrollIntoView({ block: 'nearest', behavior: 'smooth' }); } catch (e) { li.scrollIntoView(false); }
+  function markSound(item, audible) {
+    const line = el.lines.querySelector(`.dlg-line[data-i="${item.idx}"]`);
+    if (!line) return;
+    line.classList.toggle('is-speaking', audible);
+    paintSay(line);
+    if (audible && line.scrollIntoView) {
+      const reducedMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+      try { line.scrollIntoView({ block: 'nearest', behavior: reducedMotion ? 'auto' : 'smooth' }); }
+      catch (e) { line.scrollIntoView(false); }
     }
   }
 
   function paintPlay() {
     const on = playing === 'all';
-    el.play.setAttribute('aria-pressed', on ? 'true' : 'false');
     el.play.classList.toggle('is-on', on);
-    el.playIco.textContent = on ? '■' : '▶';
+    el.playIco.setAttribute('href', on ? '#dlg-icon-stop' : '#dlg-icon-play');
     el.playLabel.textContent = on ? 'Стоп' : 'Слушать диалог';
-    lineEls().forEach(li => {
-      const b = li.querySelector('.dlg-say');
-      if (b) b.classList.toggle('is-on', playing === Number(li.dataset.i));
-    });
+    el.lines.querySelectorAll('.dlg-line').forEach(paintSay);
   }
 
   function stopSpeech() {
     if (playing === null) return;
     playing = null;
     try { ReaderSpeak.stop(); } catch (e) {}
-    mark(-1);
     paintPlay();
   }
 
@@ -494,12 +516,11 @@ const Dialogs = (() => {
       rate: RATE[dialog.level] || 0.9,
       gap: GAP_MS,
       preload: true,
-      onItem: item => mark(item.idx),
+      onSound: markSound,
       onDone: () => {
         // onDone приходит и при остановке; чужую очередь (уже новую) не трогаем
         if (playing !== kind) return;
         playing = null;
-        mark(-1);
         paintPlay();
       }
     });
@@ -512,7 +533,7 @@ const Dialogs = (() => {
   }
 
   function sayLine(i) {
-    if (playing === i) { stopSpeech(); return; }
+    if (playing === i || el.lines.querySelector(`.dlg-line.is-speaking[data-i="${i}"]`)) { stopSpeech(); return; }
     speakLines(i, i + 1, i);
   }
 
@@ -577,7 +598,7 @@ const Dialogs = (() => {
       lines: $('dlgLines'), prev: $('dlgPrev'), next: $('dlgNext')
     };
     if (!el.hub || !el.view) return;
-    el.playIco = el.play.querySelector('.dlg-play-ico');
+    el.playIco = el.play.querySelector('use');
     el.playLabel = el.play.querySelector('.dlg-play-label');
 
     const app = $('dlgApp');

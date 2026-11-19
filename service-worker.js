@@ -1,4 +1,4 @@
-const CACHE = 'deutsch-meister-v243';
+const CACHE = 'deutsch-meister-v244';
 const SCOPE_PATH = new URL(self.registration.scope).pathname.replace(/\/$/, '');
 const BASE = SCOPE_PATH === '' ? '' : SCOPE_PATH;
 
@@ -51,8 +51,9 @@ const STATIC = [
   // Диалоги: оболочка, движок и оглавление; сами диалоги (data/dialogs/*.json)
   // и фото кладутся в кеш при первом открытии, как главы книг
   BASE + '/dialogs.html',
+  BASE + '/css/dialogs.css?v=244',
   BASE + '/css/dialogs.css?v=228',
-  BASE + '/js/dialogs.js?v=228',
+  BASE + '/js/dialogs.js?v=244',
   // Автошкола: оболочка, движок и оглавление; уроки и знаки — при открытии
   BASE + '/fahrschule.html',
   BASE + '/css/fahrschule.css?v=228',
