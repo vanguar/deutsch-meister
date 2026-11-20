@@ -449,17 +449,50 @@
   color: var(--text);
   overflow-wrap: anywhere;
 }
-.vocab-speak {
+.lesson-speak {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  border-radius: var(--r-sm);
+  color: var(--text-strong);
+  cursor: pointer;
+}
+.lesson-speak:focus-visible {
+  outline: 2px solid var(--accent2-text);
+  outline-offset: 1px;
+}
+.lesson-speak:is(.speak-btn, .vocab-speak) {
   width: 44px;
   height: 44px;
-  border: none;
-  background: none;
-  border-radius: var(--r-sm);
-  font-size: 16px;
-  cursor: pointer;
-  opacity: .85;
+  padding: 0;
+  background: transparent;
+  transform: none;
 }
-.vocab-speak:hover { background: var(--tint); opacity: 1; }
+.lesson-speak.speak-btn::after { content: none; }
+.lesson-speak-icon {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: var(--r-sm);
+  background: var(--tint);
+  color: var(--accent2-text);
+}
+.lesson-speak-icon svg:last-child,
+.lesson-speak.is-active .lesson-speak-icon svg:first-child { display: none; }
+.lesson-speak.is-active .lesson-speak-icon svg:last-child { display: block; }
+.lesson-speak.is-active .lesson-speak-icon {
+  background: var(--accent2);
+  color: var(--text-on-btn);
+}
+@media (hover: hover) {
+  .lesson-speak:not(.is-active):hover .lesson-speak-icon {
+    background: color-mix(in srgb, var(--accent2) 18%, var(--surface2));
+  }
+}
 
 /* ── Grammar Box ── */
 .grammar-box {
@@ -500,26 +533,24 @@
   margin-block-start: 6px;
 }
 
-/* Conjugation word with speaker icon */
-.conj-word {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  cursor: pointer;
-  border-radius: 6px;
-  padding: 2px 6px;
-  transition: background var(--t-fast), color var(--t-fast);
+/* A single button for the German form and its speaker. */
+.lesson-speak.conj-word {
+  justify-content: flex-start;
+  gap: 6px;
+  min-height: 44px;
+  max-width: 100%;
+  padding: 4px 6px;
+  font: inherit;
+  text-align: start;
 }
-.conj-word:hover {
-  background: rgba(47,109,181,.12);
-  color: var(--accent2-text);
+.conj-form {
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
-.conj-word .wi {
-  font-size: 12px;
-  opacity: 0;
-  transition: opacity var(--t-fast);
+.conj-word .lesson-speak-icon {
+  width: 26px;
+  height: 26px;
 }
-.conj-word:hover .wi { opacity: 1; }
 .pattern-table {
   width: 100%;
   border-collapse: collapse;
@@ -538,10 +569,7 @@
 .pattern-table td:nth-child(2) {
   font-weight: 600;
   color: var(--text-strong);
-  cursor: pointer;
-  transition: color var(--t-fast);
 }
-.pattern-table td:nth-child(2):hover { color: var(--accent); }
 .pattern-table td:last-child {
   color: var(--text-muted);
   font-size: 13px;
@@ -560,6 +588,21 @@
   animation: fadeUp .5s both;
 }
 .lesson-complete.show { display: block; }
+
+.flashcard-restart {
+  min-height: 44px;
+  padding: 8px 14px;
+  white-space: normal;
+}
+.lesson-next {
+  display: none;
+  width: fit-content;
+  min-height: 44px;
+  margin-block-start: 12px;
+  white-space: normal;
+}
+.flashcard-restart ~ .lesson-next,
+.lesson-complete.show + .lesson-next { display: flex; }
 
 .lesson-support {
   max-width: 36rem;
@@ -638,20 +681,16 @@
   }
   .pattern-table td:nth-child(2) { width: 38%; }
   .pattern-table td:last-child  { width: 31%; font-size: 12px; }
-  .conj-word {
-    max-width: 100%;
-    min-width: 0;
-    flex-wrap: wrap;
-    white-space: normal;
-    row-gap: 2px;
-  }
-  .conj-word strong {
-    min-width: 0;
-    overflow-wrap: anywhere;
+  .lesson-speak.conj-word {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 4px;
+    padding-inline: 0;
   }
 }
 
-/* ── Конец уровня: переход к следующему (js/lesson-render.js initLevelNext) ── */
+/* ── Конец уровня: переход к следующему ── */
 .level-next {
   margin: 8px 0 32px;
   padding: 24px 22px;

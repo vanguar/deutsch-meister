@@ -436,8 +436,8 @@ const Flashcards = (() => {
     if (elActions && !restartButton) {
       restartButton = document.createElement('button');
       restartButton.type = 'button';
-      restartButton.className = 'card-btn good flashcard-restart';
-      const label = '↻ Повторить';
+      restartButton.className = 'btn btn-ghost flashcard-restart';
+      const label = '↻ Повторить флешкарты';
       restartButton.textContent = window.I18N ? I18N.t(label) : label;
       restartButton.addEventListener('click', () => init(null, true));
       elActions.before(restartButton);

@@ -697,8 +697,8 @@ function speakPhrase(text) { TTS.speakPhrase(text); }
 function speakSlow(text) { TTS.speakSlow(text); }
 
 // Озвучка фразы с синхронной подсветкой слов внутри её карточки.
-function speakPhraseEl(btn, text) {
+function speakPhraseEl(btn, text, opts) {
   const card = btn.closest('.phrase-card');
   const spans = card ? Array.from(card.querySelectorAll('.phrase-de .word-speak')) : [];
-  TTS.speakPhrase(text, spans, { noticeHost: card });
+  TTS.speakPhrase(text, spans, { noticeHost: card, ...opts });
 }

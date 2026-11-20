@@ -109,6 +109,7 @@ const LessonRender = (() => {
     clock:   svg('<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>'),
     book:    svg('<path d="M2 4h6a4 4 0 0 1 4 4v13a3 3 0 0 0-3-3H2z"/><path d="M22 4h-6a4 4 0 0 0-4 4v13a3 3 0 0 1 3-3h7z"/>'),
     speaker: svg('<path d="M11 5 6 9H2v6h4l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M19 5a10 10 0 0 1 0 14"/>'),
+    stop:    svg('<rect x="6" y="6" width="12" height="12" rx="2" fill="currentColor" stroke="none"/>'),
   };
 
   function pluralRu(n, one, few, many) {
@@ -131,6 +132,63 @@ const LessonRender = (() => {
       .replace(/'/g, "\\'")
       .replace(/\r?\n/g, ' ');
   }
+
+  let activeSpeech = null;
+
+  function speechLabel(action, text) {
+    const title = window.I18N ? I18N.t(action) : action;
+    return { title, name: `${title} — ${text}` };
+  }
+
+  function speechButton(text, action, kind, form = '') {
+    const { title, name } = speechLabel(action, form || text);
+    return `<button class="lesson-speak ${kind}" type="button" data-speech="${esc(text)}"
+        data-speech-action="${esc(action)}" title="${esc(title)}" aria-label="${esc(name)}">
+      ${form ? `<strong class="conj-form" lang="de" dir="ltr">${esc(form)}</strong>` : ''}
+      <span class="lesson-speak-icon">${ICONS.speaker}${ICONS.stop}</span>
+    </button>`;
+  }
+
+  function paintSpeechButton(button, active) {
+    const action = active ? 'Остановить озвучку' : button.dataset.speechAction;
+    const text = button.querySelector('.conj-form')?.textContent || button.dataset.speech;
+    const { title, name } = speechLabel(action, text);
+    button.classList.toggle('is-active', active);
+    button.title = title;
+    button.setAttribute('aria-label', name);
+  }
+
+  document.addEventListener('click', event => {
+    const button = event.target.closest?.('.lesson-speak');
+    if (!button) return;
+
+    const stop = activeSpeech?.button === button;
+    activeSpeech?.finish();
+    if (stop) {
+      TTS.stop();
+      return;
+    }
+
+    const speech = {
+      button,
+      finish() {
+        if (activeSpeech !== speech) return;
+        activeSpeech = null;
+        paintSpeechButton(button, false);
+      }
+    };
+    activeSpeech = speech;
+    paintSpeechButton(button, true);
+    const text = button.dataset.speech;
+    if (button.classList.contains('speak-btn')) {
+      speakPhraseEl(button, text, { onEnd: speech.finish });
+    } else {
+      TTS.speak(text, {
+        noticeHost: button.closest('.vocab-item, .grammar-box'),
+        onEnd: speech.finish
+      });
+    }
+  });
 
   const BASIC_WORDS = {
     der: { ru: 'артикль мужского рода / форма родительного или дательного падежа', kind: 'Артикль' },
@@ -2197,7 +2255,7 @@ Kraft|сила|Существительное|in Kraft treten — вступат
           <div class="phrase-ru">${esc(p.ru)}</div>
           ${p.note ? `<div class="phrase-note">${esc(p.note)}</div>` : ''}
         </div>
-        <button class="speak-btn" type="button" onclick="event.stopPropagation();speakPhraseEl(this,'${jsStr(p.audio || p.de)}')" title="Озвучить фразу">🔊</button>
+        ${speechButton(p.audio || p.de, 'Озвучить фразу', 'speak-btn')}
       `;
       grid.appendChild(card);
     });
@@ -2286,14 +2344,21 @@ Kraft|сила|Существительное|in Kraft treten — вступат
           ${w.ipa ? `<div class="vocab-ipa">${esc(w.ipa)}</div>` : ''}
         </div>
         <div class="vocab-ru">${esc(w.ru)}${w.note ? `<small class="vocab-note">${esc(w.note)}</small>` : ''}</div>
-        <button class="vocab-speak" type="button" title="Озвучить" aria-label="Озвучить"
-          onclick="speak('${jsStr(w.de)}', {noticeHost: this.closest('.vocab-item')})">🔊</button>
+        ${speechButton(w.de, 'Озвучить слово', 'vocab-speak')}
       `;
       list.appendChild(li);
     });
   }
 
   /* ── Grammar boxes ── */
+  function conjugationRows(rows) {
+    return rows.map(row => `<tr>
+      <td>${esc(row.pronoun)}</td>
+      <td>${speechButton(row.audio || row.form, 'Озвучить фразу', 'conj-word', row.form)}</td>
+      <td>${esc(row.translation)}</td>
+    </tr>`).join('');
+  }
+
   function renderGrammar() {
     const container = document.getElementById('grammarBoxes');
     const titleEl   = document.getElementById('grammarTitle');
@@ -2303,7 +2368,7 @@ Kraft|сила|Существительное|in Kraft treten — вступат
       titleEl.textContent = LESSON_DATA.grammar[0].title.replace(/^[^ ]+ /, '');
     }
 
-    LESSON_DATA.grammar.forEach((g, gi) => {
+    LESSON_DATA.grammar.forEach(g => {
       const box = document.createElement('div');
       box.className = 'grammar-box';
       box.style.marginBottom = '16px';
@@ -2313,17 +2378,7 @@ Kraft|сила|Существительное|in Kraft treten — вступат
                    <div class="grammar-rule">${body}</div>`;
 
       if (g.conjugation) {
-        inner += `<table class="pattern-table" style="margin-top:16px">`;
-        g.conjugation.forEach(row => {
-          inner += `<tr>
-            <td>${esc(row.pronoun)}</td>
-            <td><span class="conj-word" onclick="speak('${esc(row.audio)}')">
-              <strong>${esc(row.form)}</strong><span class="wi">🔊</span>
-            </span></td>
-            <td>${esc(row.translation)}</td>
-          </tr>`;
-        });
-        inner += `</table>`;
+        inner += `<table class="pattern-table">${conjugationRows(g.conjugation)}</table>`;
       }
       if (g.table) inner += renderTable(g.table);
 
@@ -2382,7 +2437,7 @@ Kraft|сила|Существительное|in Kraft treten — вступат
     renderFillBlanks();
   }
 
-  return { init, wordHtml: renderWord, initWordTips, renderNav, renderVocab };
+  return { init, wordHtml: renderWord, initWordTips, renderNav, renderVocab, renderPhrases, conjugationRows };
 })();
 
 /* ── Global helpers called from inline HTML ── */
@@ -2460,12 +2515,12 @@ function toggleLevel(id) { document.getElementById(id)?.classList.toggle('collap
   }, { passive: true });
 })();
 
-/* ── Конец уровня: переход к следующему ──
+/* ── Переход к следующему уроку или уровню ──
    В последнем уроке уровня (A1-20, A2-20, B1-14, B2-14) внизу страницы
    и в плашке «Урок завершён» — кнопка к первому уроку следующего
    уровня: иначе после A1-20 непонятно, куда идти дальше. После B2 —
    приглашение закреплять материал в книгах, новостях и диалогах. */
-(function initLevelNext() {
+(function initLessonNavigation() {
   const LAST = { a1: 20, a2: 20, b1: 14, b2: 14 };
   const NEXT = { a1: 'a2', a2: 'b1', b1: 'b2' };
   const NAMES = { a2: 'Элементарный', b1: 'Средний', b2: 'Выше среднего' };
@@ -2473,7 +2528,19 @@ function toggleLevel(id) { document.getElementById(id)?.classList.toggle('collap
     const lv = typeof CURRENT_LESSON_LEVEL !== 'undefined' ? CURRENT_LESSON_LEVEL : null;
     const num = typeof CURRENT_LESSON_NUM !== 'undefined' ? CURRENT_LESSON_NUM : 0;
     const content = document.querySelector('.lesson-content');
-    if (!lv || LAST[lv] !== num || !content || content.querySelector('.level-next')) return;
+    if (!LAST[lv] || !num || !content) return;
+    if (num < LAST[lv]) {
+      const done = document.getElementById('lessonComplete');
+      if (!done || content.querySelector('.lesson-next')) return;
+      const next = document.createElement('a');
+      next.className = 'btn btn-primary lesson-next';
+      next.href = `../lesson-${String(num + 1).padStart(2, '0')}/index.html`;
+      next.textContent = 'Следующий урок';
+      done.querySelector('a.btn-primary')?.classList.replace('btn-primary', 'btn-ghost');
+      done.after(next);
+      return;
+    }
+    if (num !== LAST[lv] || content.querySelector('.level-next')) return;
     let base = '';
     try {
       const href = document.querySelector('link[rel="manifest"]')?.getAttribute('href') || '';

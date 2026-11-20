@@ -171,11 +171,13 @@ for (const lang of ['ru', 'uk', 'ar']) {
 
   env.nodes.conjugationTable = env.element();
   env.ctx.renderConjugation();
-  const forms = () => env.nodes.conjugationTable.children.map(row => (row.innerHTML.match(/<strong>(.*?)<\/strong>/) || [])[1]);
+  const forms = () => Array.from(
+    env.nodes.conjugationTable.innerHTML.matchAll(/<strong class="conj-form"[^>]*>(.*?)<\/strong>/g),
+    match => match[1]
+  );
   const expected = ['heiße', 'heißt', 'heißt', 'heißen', 'heißt', 'heißen'];
   check(lang + ': таблица heißen', JSON.stringify(forms()) === JSON.stringify(expected), forms());
   vm.runInContext('LESSON_DATA.grammar.reverse()', env.ctx);
-  env.nodes.conjugationTable.children = [];
   env.ctx.renderConjugation();
   check(lang + ': таблица не зависит от порядка блоков', JSON.stringify(forms()) === JSON.stringify(expected), forms());
 
