@@ -16,6 +16,8 @@ const active = selector => query(selector) + '.classList.contains("is-active")';
 const wave = selector => selector + ' .speech-wave';
 const animated = selector => 'getComputedStyle(' + query(wave(selector) + ' span') + ').animationName === "speech-wave"';
 const markExercises = 'for (const name of ["fill", "choice", "match", "dict"]) Progress.markSectionDone(name, 100)';
+const markRemainingCards = 'for (let i = 0; i < LESSON_DATA.vocabulary.length && ' +
+  'document.querySelector("#flashcard").getClientRects().length; i++) { cardFlip(); cardGood(); } TTS.stop()';
 
 async function expect(expression, message) {
   assert.ok(await ev(expression), message);
@@ -35,6 +37,14 @@ async function capture(selector, filename) {
   await ev(query(selector) + '.scrollIntoView({ block: "center", behavior: "instant" })');
   await browser.wait(140);
   await shot(filename);
+}
+
+async function tap(selector) {
+  const point = await ev('(() => { const button = ' + query(selector) +
+    '; button.scrollIntoView({block:"center",behavior:"instant"}); const rect = button.getBoundingClientRect();' +
+    'return { x: rect.left + rect.width / 2, y: rect.top + rect.height / 2 }; })()');
+  await send('Input.dispatchTouchEvent', { type: 'touchStart', touchPoints: [point] });
+  await send('Input.dispatchTouchEvent', { type: 'touchEnd', touchPoints: [] });
 }
 
 try {
@@ -127,20 +137,40 @@ try {
   await ev('testSpeech.voice = true; delete navigator.onLine');
 
   await expect('!(' + visible('.lesson-next') + ') && !(' + visible('.flashcard-restart') + ')',
-    'Both actions are hidden while the lesson is incomplete');
-  await ev('Progress.markSectionDone("fill", 100); for (const card of LESSON_DATA.vocabulary) { cardFlip(); cardGood(); } TTS.stop()');
-  await expect('!(' + visible('.lesson-next') + ') && !(' + visible('.flashcard-restart') + ') && !Progress.isLessonFullyDone()',
-    'Finishing only flashcards leaves both actions hidden');
+    'Completion actions are hidden while the lesson is incomplete');
+  await expect(visible('#flashcard') + ' && !(' + visible('.flashcard-open') + ')',
+    'An active deck is directly available without a separate opener');
+  await ev('Progress.markSectionDone("fill", 100); ' + markRemainingCards);
+  await expect(visible('.flashcard-open') + ' && !(' + visible('.lesson-next') + ') && !(' +
+    visible('.flashcard-restart') + ') && !Progress.isLessonFullyDone()',
+    'Finishing flashcards first exposes the section opener and keeps completion actions hidden');
+  const xp = await ev('Progress.getXP()');
   await go(base + lessonPath, 850);
-  await expect('!(' + visible('.lesson-next') + ') && !(' + visible('.flashcard-restart') + ')',
-    'Both actions stay hidden after reloading a partially completed lesson');
+  await expect(visible('.flashcard-open') + ' && !(' + visible('#flashcard') + ') && !(' +
+    visible('.lesson-next') + ') && !(' + visible('.flashcard-restart') + ')',
+    'A saved completed deck can still be opened after reloading an incomplete lesson');
+  await send('Emulation.setDeviceMetricsOverride', { width: 320, height: 720, deviceScaleFactor: 1, mobile: true });
+  await send('Emulation.setTouchEmulationEnabled', { enabled: true, maxTouchPoints: 1 });
+  await capture('.flashcard-open', 'lesson-flashcards-open.png');
+  await tap('.flashcard-open');
+  await expect(visible('#flashcard') + ' && !(' + visible('.flashcard-open') + ') && ' +
+    'document.activeElement.id === "flashcard" && document.querySelector("#cardCounter").textContent.startsWith("Карточка 1 из") && ' +
+    'Progress.getCompletionStatus().done.includes("fill") && Progress.getCompletionStatus().done.includes("flashcards")',
+    'A touch on the opener restores the deck at card one and preserves recorded progress');
+  await ev('cardFlip(); cardGood(); TTS.stop()');
+  await go(base + lessonPath, 850);
+  await expect(visible('#flashcard') + ' && document.querySelector("#cardCounter").textContent.startsWith("Карточка 2 из")',
+    'An optional review resumes from the last card after reloading');
+  await ev(markRemainingCards);
+  await expect(visible('.flashcard-open') + ' && Progress.getXP() === ' + xp,
+    'Finishing a repeated deck restores the opener without awarding XP twice');
   await ev(markExercises);
   await until(visible('.lesson-preview-example'), 'The next lesson preview loads after all five sections are complete');
-  await expect(visible('.lesson-next') + ' && ' + visible('.flashcard-restart.btn-ghost') +
+  await expect(visible('.lesson-next') + ' && ' + visible('.flashcard-restart.btn-ghost') + ' && !(' + visible('.flashcard-open') + ')' +
     ' && ' + query('.lesson-preview h3') + '.textContent === "Komplexe Texte" && ' +
     query('.lesson-preview-details') + '.textContent.includes("Анализ и стилистика") && ' +
     query('.lesson-preview-example bdi') + '.textContent === "Den Text zusammenfassen"',
-    'Completion shows the new topic, a sample phrase and both actions');
+    'Completion shows the new topic, a sample phrase and one flashcard action');
   await capture('.lesson-preview', 'lesson-completion-preview.png');
   await go(base + lessonPath, 850);
   await expect(visible('.lesson-next') + ' && ' + visible('.flashcard-restart'), 'Both actions stay visible after reloading the completed lesson');

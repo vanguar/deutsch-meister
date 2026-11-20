@@ -15,6 +15,11 @@ class Element {
   }; }
   appendChild(el) { this.children.push(el); el.parentElement = this; return el; }
   before(el) { this.parentElement.appendChild(el); }
+  after(el) {
+    const parent = this.parentElement;
+    parent.children.splice(parent.children.indexOf(this) + 1, 0, el);
+    el.parentElement = parent;
+  }
   remove() { this.parentElement.children = this.parentElement.children.filter(el => el !== this); }
   set innerHTML(_) { this.children = []; }
   querySelectorAll() { return []; }
@@ -33,6 +38,7 @@ function boot(store = {}, words = vocabulary) {
   viewport.appendChild(ids.flashcard); ids.flashcard.section = section;
   const back = ids.flashcard.appendChild(new Element()); back.appendChild(ids.cardRU);
   section.appendChild(ids.cardActions);
+  section.appendChild(ids.lessonComplete);
   const awards = [], completions = [], speaks = [];
   const document = { getElementById: id => ids[id], querySelector: () => null,
     createElement: () => new Element(), addEventListener() {}, removeEventListener() {} };
@@ -76,6 +82,14 @@ assert.equal(app.awards.length, 0, 'completed reload never grants XP again');
 assert.equal(app.completions.length, 0);
 const recovered = boot({ ...app.store, 'dm_sections:test': '[]' });
 assert.deepEqual(recovered.completions, [['flashcards', 75]], 'a saved completed deck restores a missing section result');
+const reopened = boot({ ...app.store });
+const openButton = reopened.ids.lessonComplete.parentElement.children.find(el => el.classList.contains('flashcard-open'));
+openButton.listeners.click();
+assert.equal(reopened.ids.cardCounter.textContent, 'Карточка 1 из 4', 'the section can reopen a saved completed deck');
+assert.equal(reopened.ids.flashcard.focused, true);
+assert.equal(reopened.ids.lessonComplete.parentElement.children.includes(openButton), false, 'the opener is removed while the deck is active');
+assert.equal(reopened.completions.length, 0, 'reopening does not change the saved result');
+assert.equal(reopened.awards.length, 0, 'reopening does not award XP');
 app.ids.lessonComplete.children.find(el => el.className.includes('flashcard-restart')).listeners.click();
 assert.equal(app.ids.cardCounter.textContent, 'Карточка 1 из 4', 'completed cards can be deliberately reviewed again');
 assert.equal(app.ids.flashcard.style.display, '');

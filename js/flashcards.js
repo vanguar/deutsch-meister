@@ -64,6 +64,7 @@ const Flashcards = (() => {
   let onKeyDown = null;
   let onCardTap = null;
   let restartButton = null;
+  let openButton = null;
 
   function byId(key) {
     const id = ids[key];
@@ -76,8 +77,10 @@ const Flashcards = (() => {
      странице давал бы два переворота на один Пробел.                  */
 
   function destroy() {
-    if (restartButton) restartButton.remove();
+    restartButton?.remove();
+    openButton?.remove();
     restartButton = null;
+    openButton = null;
     if (onKeyDown) document.removeEventListener('keydown', onKeyDown);
     if (onCardTap && elCard) elCard.removeEventListener('click', onCardTap);
     onKeyDown = null;
@@ -435,17 +438,21 @@ const Flashcards = (() => {
     Progress.markSectionDone('flashcards', computeScore());
   }
 
+  function reviewButton(className, label) {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'btn btn-ghost ' + className;
+    button.textContent = window.I18N ? I18N.t(label) : label;
+    button.addEventListener('click', () => {
+      if (init(null, true)) elCard.focus();
+    });
+    return button;
+  }
+
   function mountRestartButton() {
     const completionActions = elComplete?.querySelector('.lesson-complete-actions') || elComplete;
     if (!completionActions) return;
-    restartButton = document.createElement('button');
-    restartButton.type = 'button';
-    restartButton.className = 'btn btn-ghost flashcard-restart';
-    const label = '↻ Повторить флешкарты';
-    restartButton.textContent = window.I18N ? I18N.t(label) : label;
-    restartButton.addEventListener('click', () => {
-      if (init(null, true)) elCard.focus();
-    });
+    restartButton = reviewButton('flashcard-restart', '↻ Повторить флешкарты');
     completionActions.appendChild(restartButton);
   }
 
@@ -458,6 +465,11 @@ const Flashcards = (() => {
     if (elCounter) {
       const message = 'Все карточки повторены';
       elCounter.textContent = window.I18N ? I18N.t(message) : message;
+    }
+    const anchor = elComplete || elActions;
+    if (anchor) {
+      openButton = reviewButton('flashcard-open', 'Открыть флешкарты');
+      anchor.after(openButton);
     }
     syncDots();
   }

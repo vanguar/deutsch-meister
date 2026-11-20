@@ -121,10 +121,18 @@ document.getElementById('run').onclick = async () => {
     doc = await load();
     check(doc.querySelectorAll('.fc-dot.done').length === 24 && doc.getElementById('flashcard').style.display === 'none', 'completed review survives reload');
     const restart = doc.querySelector('.flashcard-restart');
-    check(restart && !restart.getClientRects().length, 'repeat stays hidden until the whole lesson is done');
+    const open = doc.querySelector('.flashcard-open');
+    check(restart && !restart.getClientRects().length && open?.getClientRects().length > 0,
+      'the completed deck can be opened from its own section before the lesson is done');
+    open.click();
+    check(doc.getElementById('cardCounter').textContent === 'Карточка 1 из 24' && !doc.querySelector('.flashcard-open'),
+      'the section opener starts the deck and disappears until the review ends');
+    for (let i = 0; i < 24; i++) rate(doc);
     for (const section of ['fill', 'choice', 'match', 'dict']) doc.defaultView.eval(`Progress.markSectionDone('${section}', 100)`);
-    check(restart.getClientRects().length > 0, 'repeat becomes available after lesson completion');
-    restart.click();
+    const completedRestart = doc.querySelector('.flashcard-restart');
+    check(completedRestart.getClientRects().length > 0 && !doc.querySelector('.flashcard-open').getClientRects().length,
+      'after lesson completion only the banner repeat action is visible');
+    completedRestart.click();
     check(doc.getElementById('cardCounter').textContent === 'Карточка 1 из 24' && doc.querySelectorAll('.fc-dot.done').length === 0,
       'completed cards can be reviewed again using the restart button');
     localStorage.removeItem(key);

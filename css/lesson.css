@@ -598,11 +598,13 @@
   justify-content: center;
   gap: 8px;
 }
-.lesson-complete-actions .btn {
+.lesson-complete-actions .btn,
+.flashcard-open {
   min-height: 44px;
   padding: 8px 14px;
   white-space: normal;
 }
+.lesson-complete.show + .flashcard-open { display: none; }
 .lesson-preview {
   max-width: 34rem;
   margin: 0 auto 16px;
