@@ -145,7 +145,10 @@ const LessonRender = (() => {
     return `<button class="lesson-speak ${kind}" type="button" data-speech="${esc(text)}"
         data-speech-action="${esc(action)}" title="${esc(title)}" aria-label="${esc(name)}">
       ${form ? `<strong class="conj-form" lang="de" dir="ltr">${esc(form)}</strong>` : ''}
-      <span class="lesson-speak-icon">${ICONS.speaker}${ICONS.stop}</span>
+      <span class="lesson-speak-icon">
+        ${ICONS.speaker}${ICONS.stop}
+        <span class="speech-wave lesson-speak-wave" aria-hidden="true"><span></span><span></span><span></span></span>
+      </span>
     </button>`;
   }
 
@@ -154,6 +157,7 @@ const LessonRender = (() => {
     const text = button.querySelector('.conj-form')?.textContent || button.dataset.speech;
     const { title, name } = speechLabel(action, text);
     button.classList.toggle('is-active', active);
+    if (!active) button.classList.remove('is-speaking');
     button.title = title;
     button.setAttribute('aria-label', name);
   }
@@ -180,12 +184,18 @@ const LessonRender = (() => {
     activeSpeech = speech;
     paintSpeechButton(button, true);
     const text = button.dataset.speech;
+    const events = {
+      onStart() {
+        if (activeSpeech === speech) button.classList.add('is-speaking');
+      },
+      onEnd: speech.finish
+    };
     if (button.classList.contains('speak-btn')) {
-      speakPhraseEl(button, text, { onEnd: speech.finish });
+      speakPhraseEl(button, text, events);
     } else {
       TTS.speak(text, {
         noticeHost: button.closest('.vocab-item, .grammar-box'),
-        onEnd: speech.finish
+        ...events
       });
     }
   });
@@ -2418,8 +2428,82 @@ Kraft|сила|Существительное|in Kraft treten — вступат
     });
   }
 
-  /* ── Theme ── */
+  async function fillLessonPreview(panel, id) {
+    try {
+      const response = await fetch('../../../data/course/previews.json');
+      if (!response.ok) return;
+      const { title, subtitle, example } = (await response.json())[id] || {};
+      if (!title) return;
+      const heading = panel.querySelector('h3');
+      heading.textContent = title;
+      heading.lang = 'de';
+      heading.dir = 'auto';
 
+      const details = panel.querySelector('.lesson-preview-details');
+      const topic = document.createElement('p');
+      topic.textContent = subtitle;
+      if (subtitle) details.append(topic);
+      if (example?.de && example.ru) {
+        const sample = document.createElement('p');
+        sample.className = 'lesson-preview-example';
+        const de = document.createElement('bdi');
+        de.lang = 'de';
+        de.textContent = example.de;
+        sample.append(de, example.ru);
+        details.append(sample);
+      }
+    } catch (_) {
+      // The topic from navigation and the lesson link are already available.
+    }
+  }
+
+  function renderCompletionNavigation() {
+    const banner = document.getElementById('lessonComplete');
+    const home = banner?.querySelector('a.btn');
+    if (!home || typeof LESSON_DATA === 'undefined' || banner.querySelector('.lesson-complete-actions')) return;
+    const [key, unit] = LESSON_DATA.id.split('-');
+    const levelIndex = ALL_LEVELS.findIndex(level => level.key === key);
+    if (levelIndex < 0) return;
+
+    const current = ALL_LEVELS[levelIndex];
+    const following = current.lessons.find(lesson => lesson.num === Number(unit) + 1);
+    const level = following ? current : ALL_LEVELS[levelIndex + 1];
+    const next = following || level?.lessons[0];
+    const preview = document.createElement('section');
+    preview.className = 'lesson-preview';
+    const actions = document.createElement('div');
+    actions.className = 'lesson-complete-actions';
+    home.before(preview, actions);
+    actions.append(home);
+
+    if (!next) {
+      preview.innerHTML = `<h3>Весь курс A1–B2 позади</h3>
+        <div class="lesson-preview-details"><p>Закрепляйте немецкий на живом материале: диалоги, книги, новости, земли Германии и автошкола.</p></div>`;
+      home.textContent = 'Читать и слушать →';
+      return;
+    }
+    const num = String(next.num).padStart(2, '0');
+    home.classList.replace('btn-primary', 'btn-ghost');
+    preview.innerHTML = `<div class="lesson-preview-kicker"><span>Следующий урок</span> · <bdi>${level.label}·${next.num}</bdi></div>
+      <h3>${esc(next.title)}</h3>
+      <div class="lesson-preview-details"></div>
+      <a class="btn btn-primary lesson-next" href="../../${level.key}/lesson-${num}/index.html">Перейти к уроку</a>`;
+
+    const observer = new MutationObserver(loadWhenComplete);
+    function loadWhenComplete() {
+      if (!banner.classList.contains('show')) return;
+      observer.disconnect();
+      fillLessonPreview(preview, level.key + '-' + num);
+    }
+    observer.observe(banner, { attributes: true, attributeFilter: ['class'] });
+    loadWhenComplete();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', renderCompletionNavigation, { once: true });
+  } else {
+    renderCompletionNavigation();
+  }
 
   /* ── Public init ── */
   function init() {
@@ -2513,68 +2597,6 @@ function toggleLevel(id) { document.getElementById(id)?.classList.toggle('collap
   window.addEventListener('scroll', () => {
     if (!ticking) { ticking = true; requestAnimationFrame(update); }
   }, { passive: true });
-})();
-
-/* ── Переход к следующему уроку или уровню ──
-   В последнем уроке уровня (A1-20, A2-20, B1-14, B2-14) внизу страницы
-   и в плашке «Урок завершён» — кнопка к первому уроку следующего
-   уровня: иначе после A1-20 непонятно, куда идти дальше. После B2 —
-   приглашение закреплять материал в книгах, новостях и диалогах. */
-(function initLessonNavigation() {
-  const LAST = { a1: 20, a2: 20, b1: 14, b2: 14 };
-  const NEXT = { a1: 'a2', a2: 'b1', b1: 'b2' };
-  const NAMES = { a2: 'Элементарный', b1: 'Средний', b2: 'Выше среднего' };
-  function run() {
-    const lv = typeof CURRENT_LESSON_LEVEL !== 'undefined' ? CURRENT_LESSON_LEVEL : null;
-    const num = typeof CURRENT_LESSON_NUM !== 'undefined' ? CURRENT_LESSON_NUM : 0;
-    const content = document.querySelector('.lesson-content');
-    if (!LAST[lv] || !num || !content) return;
-    if (num < LAST[lv]) {
-      const done = document.getElementById('lessonComplete');
-      if (!done || content.querySelector('.lesson-next')) return;
-      const next = document.createElement('a');
-      next.className = 'btn btn-primary lesson-next';
-      next.href = `../lesson-${String(num + 1).padStart(2, '0')}/index.html`;
-      next.textContent = 'Следующий урок';
-      done.querySelector('a.btn-primary')?.classList.replace('btn-primary', 'btn-ghost');
-      done.after(next);
-      return;
-    }
-    if (num !== LAST[lv] || content.querySelector('.level-next')) return;
-    let base = '';
-    try {
-      const href = document.querySelector('link[rel="manifest"]')?.getAttribute('href') || '';
-      if (/manifest\.json/.test(href)) base = href.replace(/manifest\.json(?:\?.*)?$/, '');
-    } catch (e) {}
-    const nx = NEXT[lv];
-    const LV = lv.toUpperCase();
-    const box = document.createElement('section');
-    box.className = 'level-next' + (nx ? '' : ' is-final');
-    box.innerHTML = nx
-      ? `<div class="lvn-kicker"><span>Это последний урок уровня</span> <b>${LV}</b></div>
-         <h2 class="lvn-title"><span>Дальше —</span> <b>${nx.toUpperCase()}</b> · <span>${NAMES[nx]}</span></h2>
-         <p class="lvn-sub">Пройдите этот урок до конца и переходите к следующему уровню.</p>
-         <a class="btn btn-primary lvn-btn" href="${base}lessons/${nx}/lesson-01/index.html"><span>Начать уровень</span> <b>${nx.toUpperCase()}</b> →</a>`
-      : `<div class="lvn-kicker"><span>Это последний урок курса</span></div>
-         <h2 class="lvn-title">Весь курс A1–B2 позади</h2>
-         <p class="lvn-sub">Закрепляйте немецкий на живом материале: диалоги, книги, новости, земли Германии и автошкола.</p>
-         <a class="btn btn-primary lvn-btn" href="${base}index.html">Читать и слушать →</a>`;
-    content.appendChild(box);
-    // та же кнопка в плашке «Урок завершён» — рядом с «На главную»
-    // (после B2 она и так ведёт на главную — второй не нужно)
-    const done = nx && document.getElementById('lessonComplete');
-    if (done && !done.querySelector('.lvn-btn')) {
-      const home = done.querySelector('a.btn');
-      const b = box.querySelector('.lvn-btn').cloneNode(true);
-      if (home) {
-        home.classList.remove('btn-primary');
-        home.classList.add('btn-ghost');
-        home.before(b);
-      } else done.appendChild(b);
-    }
-  }
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run);
-  else run();
 })();
 
 /* ── «Продолжить урок»: место в уроке ──

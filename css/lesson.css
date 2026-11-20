@@ -481,12 +481,14 @@
   background: var(--tint);
   color: var(--accent2-text);
 }
-.lesson-speak-icon svg:last-child,
+.lesson-speak-icon svg:nth-child(2),
+.lesson-speak-wave,
 .lesson-speak.is-active .lesson-speak-icon svg:first-child { display: none; }
-.lesson-speak.is-active .lesson-speak-icon svg:last-child { display: block; }
+.lesson-speak.is-active:not(.is-speaking) .lesson-speak-icon svg:nth-child(2) { display: block; }
+.lesson-speak.is-speaking .lesson-speak-wave { display: inline-flex; }
 .lesson-speak.is-active .lesson-speak-icon {
-  background: var(--accent2);
-  color: var(--text-on-btn);
+  background: var(--surface3);
+  color: var(--text-strong);
 }
 @media (hover: hover) {
   .lesson-speak:not(.is-active):hover .lesson-speak-icon {
@@ -588,21 +590,45 @@
   animation: fadeUp .5s both;
 }
 .lesson-complete.show { display: block; }
+.lesson-complete > br { display: none; }
 
-.flashcard-restart {
+.lesson-complete-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+.lesson-complete-actions .btn {
   min-height: 44px;
   padding: 8px 14px;
   white-space: normal;
 }
-.lesson-next {
-  display: none;
-  width: fit-content;
-  min-height: 44px;
-  margin-block-start: 12px;
-  white-space: normal;
+.lesson-preview {
+  max-width: 34rem;
+  margin: 0 auto 16px;
+  padding: clamp(14px, 4vw, 22px);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  background: var(--surface);
+  color: var(--text-strong);
+  text-align: start;
+  overflow-wrap: anywhere;
 }
-.flashcard-restart ~ .lesson-next,
-.lesson-complete.show + .lesson-next { display: flex; }
+.lesson-preview-kicker {
+  margin-block-end: 6px;
+  color: var(--text-muted);
+  font-size: 12px;
+  font-weight: 600;
+}
+.lesson-preview h3 { margin: 0; font-size: 20px; line-height: 1.3; }
+.lesson-preview-details p { margin: 6px 0 0; color: var(--text-muted); font-size: 14px; }
+.lesson-preview-details .lesson-preview-example {
+  margin-block-start: 12px;
+  padding-inline-start: 10px;
+  border-inline-start: 2px solid var(--border);
+}
+.lesson-preview-example bdi { display: block; color: var(--text-strong); font-weight: 600; }
+.lesson-next { min-height: 44px; margin-block-start: 14px; padding: 8px 16px; white-space: normal; }
 
 .lesson-support {
   max-width: 36rem;
@@ -654,6 +680,7 @@
 
 /* ── Responsive ── */
 @media (max-width: 860px) {
+  .lesson-complete { padding: 24px clamp(12px, 4vw, 24px); }
   .lesson-header {
     padding: 24px 20px 0;
   }
@@ -689,22 +716,3 @@
     padding-inline: 0;
   }
 }
-
-/* ── Конец уровня: переход к следующему ── */
-.level-next {
-  margin: 8px 0 32px;
-  padding: 24px 22px;
-  border-radius: var(--r-lg);
-  background: var(--surface2);
-  border: 1px solid var(--accent2);
-  animation: fadeUp .5s both;
-}
-.lvn-kicker {
-  font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
-  color: var(--text-muted);
-}
-.lvn-title { font-size: 24px; font-weight: 800; line-height: 1.25; color: var(--text); margin: 8px 0 6px; }
-.lvn-title b { color: var(--accent2-text); }
-.lvn-sub { font-size: 15px; line-height: 1.5; color: var(--text-muted); margin: 0 0 18px; }
-.lvn-btn { width: 100%; font-size: 16px; padding: 14px 20px; white-space: normal; }
-.lesson-complete .lvn-btn { width: auto; margin: 0 6px 10px; }

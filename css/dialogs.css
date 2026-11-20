@@ -222,25 +222,12 @@ html[dir="rtl"] .dlg-tr { text-align: right; }
   padding: 1px; border: 1px solid var(--border); border-radius: 50%; background: var(--surface);
 }
 .dlg-view .dlg-line.is-speaking .dlg-bubble { border-color: var(--dlg-voice); box-shadow: 0 0 0 1px var(--dlg-voice) inset; }
-.dlg-say-wave { display: none; align-items: center; justify-content: center; gap: 3px; }
+.dlg-say-wave { display: none; }
 .dlg-line.is-speaking .dlg-say-scene { display: none; }
 .dlg-line.is-speaking .dlg-say-wave { display: flex; }
-.dlg-say-wave > span { width: 3px; height: 10px; border-radius: 4px; background: currentColor; }
-.dlg-say-wave > :nth-child(2) { height: 19px; }
-.dlg-say-wave > :nth-child(3) { height: 14px; }
 @media (hover: hover) {
   .dlg-view .dlg-say:hover { border-color: var(--dlg-voice); }
 }
-@media (prefers-reduced-motion: no-preference) {
-  .dlg-line.is-speaking .dlg-say-wave > span { animation: dlg-speech-wave .72s ease-in-out infinite alternate; }
-  .dlg-line.is-speaking .dlg-say-wave > :nth-child(2) { animation-delay: -.32s; }
-  .dlg-line.is-speaking .dlg-say-wave > :nth-child(3) { animation-delay: -.5s; }
-}
-@keyframes dlg-speech-wave {
-  from { transform: scaleY(.45); }
-  to { transform: scaleY(1); }
-}
-
 /* ── Соседние диалоги ── */
 .dlg-pager { display: flex; justify-content: space-between; gap: 10px; margin-top: 20px; }
 .dlg-pager .news-chip:disabled { opacity: .4; cursor: default; }

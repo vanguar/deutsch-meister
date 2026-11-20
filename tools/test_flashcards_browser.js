@@ -62,9 +62,12 @@ document.getElementById('vocab').onclick = () => preview(true);
 document.getElementById('run').onclick = async () => {
   const run = document.getElementById('run'); run.disabled = true;
   original = localStorage.getItem(key);
+  const progressKeys = ['dm_progress', 'dm_sections:b2-04'];
+  const originalProgress = progressKeys.map(key => localStorage.getItem(key));
   results.textContent = 'Running…';
   try {
     localStorage.removeItem(key);
+    localStorage.removeItem('dm_sections:b2-04');
     let doc = await load();
     const phrase = doc.querySelectorAll('#phraseGrid .phrase-card')[3];
     const phraseBody = phrase.querySelector('.phrase-body');
@@ -117,7 +120,11 @@ document.getElementById('run').onclick = async () => {
     rate(doc);
     doc = await load();
     check(doc.querySelectorAll('.fc-dot.done').length === 24 && doc.getElementById('flashcard').style.display === 'none', 'completed review survives reload');
-    doc.querySelector('.flashcard-restart').click();
+    const restart = doc.querySelector('.flashcard-restart');
+    check(restart && !restart.getClientRects().length, 'repeat stays hidden until the whole lesson is done');
+    for (const section of ['fill', 'choice', 'match', 'dict']) doc.defaultView.eval(`Progress.markSectionDone('${section}', 100)`);
+    check(restart.getClientRects().length > 0, 'repeat becomes available after lesson completion');
+    restart.click();
     check(doc.getElementById('cardCounter').textContent === 'Карточка 1 из 24' && doc.querySelectorAll('.fc-dot.done').length === 0,
       'completed cards can be reviewed again using the restart button');
     localStorage.removeItem(key);
@@ -146,5 +153,12 @@ document.getElementById('run').onclick = async () => {
     }
     results.textContent += '\nALL BROWSER CHECKS PASSED';
   } catch (error) { results.textContent += '\nERROR ' + error.message; }
-  finally { restore(); run.disabled = false; }
+  finally {
+    restore();
+    progressKeys.forEach((key, i) => {
+      if (originalProgress[i] === null) localStorage.removeItem(key);
+      else localStorage.setItem(key, originalProgress[i]);
+    });
+    run.disabled = false;
+  }
 };

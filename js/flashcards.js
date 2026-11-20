@@ -128,7 +128,10 @@ const Flashcards = (() => {
 
     if (!elCard) return false;
 
-    if (mode === 'lesson') trimUI();   // лишний UI живёт только в оболочках
+    if (mode === 'lesson') {
+      trimUI();
+      mountRestartButton();
+    }
 
     // Build deck from vocabulary
     deck = source.map((w, i) => ({ ...w, _id: i }));
@@ -175,7 +178,11 @@ const Flashcards = (() => {
     if (elCard.parentElement) elCard.parentElement.style.display = '';
     if (elCounter) elCounter.style.display = '';
     buildDots();
-    if (completed) { showCompleted(); return true; }
+    if (completed) {
+      showCompleted();
+      if (!Progress.getCompletionStatus().done.includes('flashcards')) recordCompletion();
+      return true;
+    }
     showCard(current);
 
     // Flip on click
@@ -419,12 +426,27 @@ const Flashcards = (() => {
       // All cards reviewed — hide the deck UI for this section
       showCompleted();
       saveResume(true);
-      Progress.addXP(25, LESSON_DATA.id + ':cards:complete');
-
-      // ✦ Mark this section as done; lesson-completion banner
-      //   will only appear once ALL sections are finished.
-      Progress.markSectionDone('flashcards', computeScore());
+      recordCompletion();
     }
+  }
+
+  function recordCompletion() {
+    Progress.addXP(25, LESSON_DATA.id + ':cards:complete');
+    Progress.markSectionDone('flashcards', computeScore());
+  }
+
+  function mountRestartButton() {
+    const completionActions = elComplete?.querySelector('.lesson-complete-actions') || elComplete;
+    if (!completionActions) return;
+    restartButton = document.createElement('button');
+    restartButton.type = 'button';
+    restartButton.className = 'btn btn-ghost flashcard-restart';
+    const label = '↻ Повторить флешкарты';
+    restartButton.textContent = window.I18N ? I18N.t(label) : label;
+    restartButton.addEventListener('click', () => {
+      if (init(null, true)) elCard.focus();
+    });
+    completionActions.appendChild(restartButton);
   }
 
   function showCompleted() {
@@ -433,15 +455,6 @@ const Flashcards = (() => {
     elCard.style.display = 'none';
     if (elCard.parentElement) elCard.parentElement.style.display = 'none';
     if (elActions) elActions.style.display = 'none';
-    if (elActions && !restartButton) {
-      restartButton = document.createElement('button');
-      restartButton.type = 'button';
-      restartButton.className = 'btn btn-ghost flashcard-restart';
-      const label = '↻ Повторить флешкарты';
-      restartButton.textContent = window.I18N ? I18N.t(label) : label;
-      restartButton.addEventListener('click', () => init(null, true));
-      elActions.before(restartButton);
-    }
     if (elCounter) {
       const message = 'Все карточки повторены';
       elCounter.textContent = window.I18N ? I18N.t(message) : message;

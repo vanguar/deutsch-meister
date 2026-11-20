@@ -24,6 +24,7 @@ class Element {
   addEventListener(k, fn) { this.listeners[k] = fn; }
   removeEventListener(k) { delete this.listeners[k]; }
   getClientRects() { return [1]; }
+  focus() { this.focused = true; }
 }
 const vocabulary = ['eins', 'zwei', 'drei', 'vier'].map(de => ({ de, ru: de, ipa: '' }));
 function boot(store = {}, words = vocabulary) {
@@ -38,7 +39,11 @@ function boot(store = {}, words = vocabulary) {
   const ctx = vm.createContext({ document, window: {}, console, LESSON_DATA: { id: 'test', vocabulary: words },
     localStorage: { getItem: k => store[k] || null, setItem: (k, v) => { store[k] = v; } },
     TTS: { speak: (...args) => speaks.push(args) },
-    Progress: { addXP: (...args) => awards.push(args), markSectionDone: (...args) => completions.push(args) }
+    Progress: {
+      addXP: (...args) => awards.push(args),
+      markSectionDone: (...args) => { completions.push(args); store['dm_sections:test'] = JSON.stringify([args[0]]); },
+      getCompletionStatus: () => ({ done: JSON.parse(store['dm_sections:test'] || '[]') })
+    }
   });
   vm.runInContext(source + '\nthis.F = Flashcards;', ctx);
   ctx.F.init();
@@ -69,9 +74,12 @@ assert.equal(app.ids.flashcard.style.display, 'none');
 assert.equal(app.ids.cardCounter.textContent, 'Все карточки повторены');
 assert.equal(app.awards.length, 0, 'completed reload never grants XP again');
 assert.equal(app.completions.length, 0);
-app.ids.cardActions.parentElement.children.find(el => el.className.includes('flashcard-restart')).listeners.click();
+const recovered = boot({ ...app.store, 'dm_sections:test': '[]' });
+assert.deepEqual(recovered.completions, [['flashcards', 75]], 'a saved completed deck restores a missing section result');
+app.ids.lessonComplete.children.find(el => el.className.includes('flashcard-restart')).listeners.click();
 assert.equal(app.ids.cardCounter.textContent, 'Карточка 1 из 4', 'completed cards can be deliberately reviewed again');
 assert.equal(app.ids.flashcard.style.display, '');
+assert.equal(app.ids.flashcard.focused, true);
 
 const legacy = { signature: JSON.stringify(vocabulary), deck: [0,1,2,3], again: [0], current: 2, missed: [0], done: false };
 app = boot({ 'dm_cards:test': JSON.stringify(legacy) });

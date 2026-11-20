@@ -228,7 +228,7 @@ const Progress = (() => {
     _currentLessonId = null;
     _ensureLessonContext();
     renderSectionProgress();
-    if (isLessonFullyDone()) tryFinishLesson();
+    tryFinishLesson();
   }
 
   function getCompletionStatus() {
@@ -250,26 +250,25 @@ const Progress = (() => {
     if (lessonId) {
       try { localStorage.removeItem(SECTIONS_KEY_PREFIX + lessonId); } catch {}
       try { localStorage.removeItem(LESSON_POS_PREFIX + lessonId); } catch {}
+      try { localStorage.removeItem('dm_cards:' + lessonId); } catch {}
       const state = load();
       state.completedLessons = state.completedLessons.filter(id => id !== lessonId);
       delete state.lessonScores[lessonId];
       save(state);
-      if (_currentLessonId === lessonId) {
-        _doneSections  = new Set();
-        _sectionScores = {};
-        renderSectionProgress();
-      }
+      if (_currentLessonId !== lessonId) return;
     } else {
       // Reset everything (use with care)
       try {
         Object.keys(localStorage)
-          .filter(k => k === STORAGE_KEY || k.startsWith(SECTIONS_KEY_PREFIX) || k.startsWith(LESSON_POS_PREFIX))
+          .filter(k => k === STORAGE_KEY || k.startsWith(SECTIONS_KEY_PREFIX) ||
+            k.startsWith(LESSON_POS_PREFIX) || k.startsWith('dm_cards:'))
           .forEach(k => localStorage.removeItem(k));
       } catch {}
-      _doneSections  = new Set();
-      _sectionScores = {};
-      renderSectionProgress();
     }
+    _doneSections  = new Set();
+    _sectionScores = {};
+    renderSectionProgress();
+    tryFinishLesson();
   }
 
   function _averageScore() {
@@ -283,12 +282,12 @@ const Progress = (() => {
    * the first time only, persist completion. Idempotent.
    */
   function tryFinishLesson(fromExercise = false) {
-    if (!isLessonFullyDone()) return;
+    const finished = isLessonFullyDone();
+    const banner = document.getElementById('lessonComplete');
+    banner?.classList.toggle('show', finished);
+    if (!finished) return;
     const id = (typeof LESSON_DATA !== 'undefined') ? LESSON_DATA?.id : null;
     if (!id) return;
-
-    const banner = document.getElementById('lessonComplete');
-    if (banner) banner.classList.add('show');
 
     const alreadyCompleted = isCompleted(id);
     const reward = (typeof LESSON_DATA !== 'undefined' && LESSON_DATA?.meta?.xpReward) || 100;
@@ -767,9 +766,7 @@ const Progress = (() => {
 
     // If the lesson was already fully completed in a previous session,
     // re-show the completion banner (no XP awarded again).
-    if (isLessonFullyDone()) {
-      tryFinishLesson();
-    }
+    tryFinishLesson();
   }
 
   return {

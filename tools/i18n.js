@@ -17,6 +17,7 @@
                                          — file: переводы построчно в том же
                                            порядке, что выдал todo
      node tools/i18n.js build [lang]     — рантайм-файлы в i18n/<lang>/
+     node tools/i18n.js build-previews   — краткие описания уроков для всех языков
      node tools/i18n.js check [lang]     — покрытие; exit 1, если есть пропуски
    ═══════════════════════════════════════════════ */
 'use strict';
@@ -378,6 +379,25 @@ function translateObj(obj, tm) {
   return obj;
 }
 
+function syncLessonPreviews(lang, tm, check = false) {
+  const file = lang === 'ru' ? 'data/course/previews.json' : `i18n/${lang}/course/previews.json`;
+  const entries = lessonIds().map(id => {
+    const { title, subtitle, phrases } = lessonData(id);
+    const { de, ru } = phrases[0];
+    const preview = translateObj({ title, subtitle, example: { de, ru } }, tm);
+    return `  "${id}": ${JSON.stringify(preview)}`;
+  });
+  const json = '{\n' + entries.join(',\n') + '\n}\n';
+  if (check) {
+    if (exists(file) && read(file) === json) return true;
+    console.error(`${file} устарел. Запусти node tools/i18n.js build-previews`);
+    return false;
+  }
+  fs.mkdirSync(path.dirname(rel(file)), { recursive: true });
+  fs.writeFileSync(rel(file), json);
+  return true;
+}
+
 function dictJs(keys, tm, title) {
   const d = {};
   // Ключи нормализуем так же, как рантайм ищет: без краёв и без отступов
@@ -438,6 +458,8 @@ function cmdBuild(lang = 'uk') {
   const { groups } = extract();
   const trial = TRIAL[lang];
   const { tm, files } = loadTM(lang);
+  syncLessonPreviews('ru', {});
+  syncLessonPreviews(lang, tm);
   const out = `i18n/${lang}`;
   // UI: интерфейс + ручные шаблоны из src/ui.json (ключи с {n} и т.п.)
   const uiKeys = uniq([...groups.ui, ...Object.keys(files.ui || {})]);
@@ -531,7 +553,9 @@ function cmdCheck(lang = 'uk') {
   }
   console.log(missing ? `НЕ ПЕРЕВЕДЕНО строк: ${missing}` : 'Все строки переведены');
   // рантайм-файлы должны быть собраны из текущих переводов
-  process.exitCode = missing ? 1 : 0;
+  const sourcePreviewsCurrent = syncLessonPreviews('ru', {}, true);
+  const translatedPreviewsCurrent = syncLessonPreviews(lang, tm, true);
+  process.exitCode = missing || !sourcePreviewsCurrent || !translatedPreviewsCurrent ? 1 : 0;
 }
 
 const [cmd, ...args] = process.argv.slice(2);
@@ -557,7 +581,11 @@ if (cmd === 'extract') {
 } else if (cmd === 'todo') cmdTodo(args[0], args[1] || 'uk', args[2] ? +args[2] : Infinity);
 else if (cmd === 'merge') cmdMerge(args[0], args[1], args[2] || 'uk');
 else if (cmd === 'build') cmdBuild(args[0] || 'uk');
+else if (cmd === 'build-previews') {
+  syncLessonPreviews('ru', {});
+  for (const lang of ['uk', 'ar']) syncLessonPreviews(lang, loadTM(lang).tm);
+}
 else if (cmd === 'check') cmdCheck(args[0] || 'uk');
-else { console.log('команды: extract | todo <group> | merge <group> <file> | build | check'); }
+else { console.log('команды: extract | todo <group> | merge <group> <file> | build | build-previews | check'); }
 
 module.exports = { jsStrings, fragments, htmlStrings, extract };

@@ -330,7 +330,7 @@
     });
   }
 
-  /* Книги, новости, диалоги, автошкола, земли и словарь курса: переведённые копии JSON лежат в
+  /* Книги, новости, диалоги, автошкола, земли, словарь и превью уроков: переведённые копии JSON лежат в
      i18n/<lang>/books/, …/news/, …/dialogs/, …/vocab/, …/fahrschule/ и …/laender/ с той же структурой. Нет копии
      (сеть, новая книга) — берём исходный файл. */
   function wrapFetch() {
@@ -338,7 +338,7 @@
     if (typeof orig !== 'function') return;
     window.fetch = function (input, init) {
       var url = typeof input === 'string' ? input : (input && input.url) || '';
-      var m = url.match(/^(.*?)data\/(books|news|dialogs|vocab|fahrschule|laender|history|holidays)\/(.+\.json)(\?.*)?$/);
+      var m = url.match(/^(.*?)data\/(books|news|dialogs|vocab|fahrschule|laender|history|holidays|course)\/(.+\.json)(\?.*)?$/);
       if (!m) return orig.apply(this, arguments);
       var alt = m[1] + 'i18n/' + lang + '/' + m[2] + '/' + m[3] + (m[4] || '');
       var self = this, args = arguments;

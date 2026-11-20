@@ -3,9 +3,8 @@
 //   node --experimental-websocket tools/e2e/level_next_flow.mjs
 // Вкладка «Курс»: в конце пути каждого уровня — карточка «Дальше — A2 …»
 // (после B2 — «Это последний уровень»), кнопка переключает уровень; когда
-// уровень пройден, карточка подсвечена. Последний урок уровня (A1-20,
-// A2-20, B1-14, B2-14): внизу страницы и в плашке «Урок завершён» —
-// кнопка к первому уроку следующего уровня; в остальных уроках блока нет.
+// уровень пройден, карточка подсвечена. В конце урока доступно превью
+// следующего урока, включая переход между уровнями. У B2-14 — итог курса.
 // uk/ar — без кириллицы русского в новых блоках.
 import { start } from './cdp.mjs';
 
@@ -17,6 +16,7 @@ const waitFor = async (expr, ms = 6000) => { for (let t = 0; t < ms; t += 100) {
 const J = async expr => JSON.parse(await c.ev(`JSON.stringify(${expr})`));
 const today = new Date().toISOString().slice(0, 10);
 const A1 = Array.from({ length: 20 }, (_, i) => 'a1-' + String(i + 1).padStart(2, '0'));
+const finish = 'for (const name of ["flashcards", "fill", "choice", "match", "dict"]) Progress.markSectionDone(name, 100)';
 
 async function fresh(url, storage = {}) {
   await c.go(B + '/404.html', 500);
@@ -63,37 +63,44 @@ console.log('2. Последний урок уровня');
 const LAST = [['a1', 20, 'a2'], ['a2', 20, 'b1'], ['b1', 14, 'b2'], ['b2', 14, null]];
 for (const [lv, n, nx] of LAST) {
   await fresh(`/lessons/${lv}/lesson-${n}/index.html`, { dm_theme: 'dark' });
-  await waitFor(`!!document.querySelector('.level-next')`);
-  s = await J(`(() => { const b = document.querySelector('.level-next'); const d = document.querySelector('#lessonComplete .lvn-btn');
-    return { has: !!b, last: b && b === document.querySelector('.lesson-content').lastElementChild,
-      href: b && b.querySelector('.lvn-btn').getAttribute('href'), done: d && d.getAttribute('href'),
-      ghost: !!document.querySelector('#lessonComplete a.btn-ghost') }; })()`);
-  const want = nx ? new RegExp(`lessons/${nx}/lesson-01/index\\.html$`) : /index\.html$/;
-  ok(s.has && s.last && want.test(s.href || ''), `${lv}-${n}: блок внизу → ${s.href}`, s);
-  if (nx) ok(s.done === s.href && s.ghost, `${lv}-${n}: кнопка и в плашке «Урок завершён», «На главную» вторичная`);
-  else ok(!s.done && !s.ghost, `${lv}-${n}: в плашке «Урок завершён» только «На главную»`);
+  await waitFor(`!!document.querySelector('#lessonComplete .lesson-preview')`);
+  ok(!(await c.ev(`document.querySelector('.lesson-preview').getClientRects().length`)),
+    `${lv}-${n}: превью скрыто до завершения урока`);
+  await c.ev(finish);
+  if (nx) await waitFor(`!!document.querySelector('.lesson-preview-example')`);
+  s = await J(`(() => {
+    const preview = document.querySelector('#lessonComplete .lesson-preview');
+    const link = preview.querySelector('.lesson-next');
+    return { visible: preview.getClientRects().length > 0, link: link?.pathname,
+      sample: !!preview.querySelector('.lesson-preview-example'),
+      home: !!document.querySelector('#lessonComplete .lesson-complete-actions a') };
+  })()`);
+  if (nx) ok(s.visible && s.sample && s.link?.endsWith('/lessons/' + nx + '/lesson-01/index.html'),
+    `${lv}-${n}: после завершения показан первый урок ${nx.toUpperCase()}`, s);
+  else ok(s.visible && !s.link && s.home, 'B2-14: итог курса и ссылка на главную', s);
   if (lv === 'a1') {
-    await c.ev(`document.querySelector('.level-next').scrollIntoView({ block: 'center', behavior: 'instant' })`); await c.wait(300);
+    await c.ev(`document.querySelector('.lesson-preview').scrollIntoView({ block: 'center', behavior: 'instant' })`); await c.wait(300);
     await c.shot('level-next-lesson.png');
     ok(!(await c.ev(`document.documentElement.scrollWidth > innerWidth + 1`)), 'урок: нет горизонтальной прокрутки');
   }
   if (lv === 'b2') {
-    await c.ev(`document.getElementById('lessonComplete').classList.add('show'); document.getElementById('lessonComplete').scrollIntoView({ block: 'center', behavior: 'instant' })`); await c.wait(300);
+    await c.ev(`document.getElementById('lessonComplete').scrollIntoView({ block: 'center', behavior: 'instant' })`); await c.wait(300);
     await c.shot('level-next-final.png');
   }
 }
 await fresh('/lessons/a1/lesson-19/index.html');
 await c.wait(500);
-ok(!(await c.ev(`!!document.querySelector('.level-next')`)), 'a1-19: блока нет');
+ok(!(await c.ev(`document.querySelector('.lesson-preview').getClientRects().length`)), 'a1-19: превью скрыто');
 
 // ── 3. uk / ar ──
 console.log('3. Переводы');
 for (const lang of ['uk', 'ar']) {
   for (const url of ['/index.html#course', '/lessons/a1/lesson-20/index.html', '/lessons/b2/lesson-14/index.html']) {
     await fresh(url, { dm_lang: { lang, ts: Date.now() } });
-    await waitFor(`!!document.querySelector('.lvl-next, .level-next')`);
+    await waitFor(`!!document.querySelector('.lvl-next, .lesson-preview')`);
+    if (url.includes('/lessons/')) await c.ev(finish);
     await c.wait(800);
-    const ru = await J(`[...document.querySelectorAll('.lvl-next *, .level-next *, #lessonComplete .lvn-btn *')].filter(e => !e.children.length && (${lang === 'ar' ? '/[а-яА-ЯёЁіїєІЇЄ]/' : '/[ыэъЫЭЪёЁ]/'}).test(e.textContent)).map(e => e.textContent.trim())`);
+    const ru = await J(`[...document.querySelectorAll('.lvl-next *, .lesson-preview *')].filter(e => (${lang === 'ar' ? '/[а-яА-ЯёЁіїєІЇЄ]/' : '/[ыэъЫЭЪёЁ]/'}).test([...e.childNodes].filter(n => n.nodeType === 3).map(n => n.textContent).join(''))).map(e => e.textContent.trim())`);
     ok(ru.length === 0, `${lang} ${url}: перевод`, ru);
     if (lang === 'ar' && url.includes('a1')) await c.shot('level-next-ar.png');
   }

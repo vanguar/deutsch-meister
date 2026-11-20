@@ -100,6 +100,9 @@ async function load(path, mode = 'cors') {
   assert.equal(fetched.length, requestCount, 'retired URL cannot be satisfied by a stale browser HTTP cache');
   offline = true;
   assert.equal(await (await load(oldTts)).text(), scope + currentTts, 'old saved page gets updated shared code even with an exact stale cache hit');
+  for (const preview of ['data/course/previews.json', 'i18n/uk/course/previews.json', 'i18n/ar/course/previews.json']) {
+    assert.equal(await (await load(preview)).text(), scope + preview, 'preview stays available offline: ' + preview);
+  }
   assert.equal(await (await load(nextTts)).text(), scope + nextTts, 'worker must respect an exact newer asset');
   const shell = buckets.get(workerSource.match(/const CACHE = '([^']+)'/)[1]);
   await shell.delete(scope + currentTts);

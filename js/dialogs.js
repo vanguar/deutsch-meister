@@ -367,7 +367,7 @@ const Dialogs = (() => {
         </div>
         <button class="dlg-say" type="button" data-say="${i}" aria-controls="dlgLine-${i}" title="Озвучить реплику" aria-label="Озвучить реплику">
           <svg class="dlg-icon dlg-say-scene" aria-hidden="true"><use href="#dlg-icon-${sceneIcon}"/></svg>
-          <span class="dlg-say-wave" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span class="speech-wave dlg-say-wave" aria-hidden="true"><span></span><span></span><span></span></span>
           <svg class="dlg-icon dlg-icon-solid dlg-say-badge" aria-hidden="true"><use href="#dlg-icon-play"/></svg>
         </button>
       </li>`;
