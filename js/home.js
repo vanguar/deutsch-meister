@@ -63,7 +63,7 @@ const Home = (() => {
     const secs = sectionsDone(id);
     let read = 0;
     try { read = (Progress.getLessonPos(id) || {}).read || 0; } catch (e) {}
-
+    if (secs.length) read = 1;
     return STEPS.map(s => s === 'theory' ? read : (secs.includes(s) ? 1 : 0));
   }
 

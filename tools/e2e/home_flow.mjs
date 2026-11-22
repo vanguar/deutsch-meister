@@ -306,7 +306,9 @@ await fresh(PROG);
 await c.ev(`Progress.importAll({ progress: { xp: 520, streak: 7, completedLessons: ['a1-01','a1-02','a1-03','a1-04'] } }); Progress.renderHomeProgress();`);
 await c.wait(200);
 s = await J(SNAP);
-ok(s.statXp === '520' && s.statDone === '4' && s.xpLevel === '3' && s.xpNow === '120' && s.streak === '7', `после слияния: XP ${s.statXp}, уроков ${s.statDone}, уровень ${s.xpLevel}, серия ${s.streak}`);
+// серия считается по дням активности (js/progress-model.js): облачная streak 7
+// без activeDays/lastActive дней не добавляет — остаётся локальная 5
+ok(s.statXp === '520' && s.statDone === '4' && s.xpLevel === '3' && s.xpNow === '120' && s.streak === '5', `после слияния: XP ${s.statXp}, уроков ${s.statDone}, уровень ${s.xpLevel}, серия ${s.streak}`);
 ok(s.done.length + s.cur.length === 4 && s.courseCount === '4 из 68 уроков', `путь перерисован: ${s.done.length} пройдено + текущий ${s.cur}, ${s.courseCount}`);
 
 // ── 5. Переходы и действия ──
