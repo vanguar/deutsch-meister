@@ -1989,7 +1989,7 @@ Kraft|сила|Существительное|in Kraft treten — вступат
   function closeWordTips(except = null) {
     clearTimeout(wordTipCloseTimer);
     if (activeWordTip && activeWordTip.el !== except) {
-      activeWordTip.tip.classList.remove('word-tip-visible', 'word-tip-below');
+      activeWordTip.tip.classList.remove('word-tip-visible', 'word-tip-below', 'word-tip-dragging');
       activeWordTip.tip.removeAttribute('style');
       activeWordTip.placeholder.replaceWith(activeWordTip.tip);
       activeWordTip = null;
@@ -2098,7 +2098,59 @@ Kraft|сила|Существительное|in Kraft treten — вступат
       wordTipCloseTimer = setTimeout(() => closeWordTips(), 120);
     }, true);
 
+    // Свайп влево/вправо по открытой подсказке смахивает её: карточка едет
+    // за пальцем, а после порога улетает в сторону и закрывается.
+    let swipe = null;
+    let swipeClickGuard = 0;
+    document.addEventListener('touchstart', event => {
+      swipe = null;
+      if (!inOpenTip(event.target) || event.touches.length !== 1) return;
+      const touch = event.touches[0];
+      swipe = { tip: activeWordTip.tip, x: touch.clientX, y: touch.clientY, dx: 0, at: Date.now(), dragging: false };
+    }, { capture: true, passive: true });
+
+    document.addEventListener('touchmove', event => {
+      if (!swipe || activeWordTip?.tip !== swipe.tip) return;
+      const touch = event.touches[0];
+      const dx = touch.clientX - swipe.x;
+      const dy = touch.clientY - swipe.y;
+      if (!swipe.dragging) {
+        if (Math.abs(dx) < 8 && Math.abs(dy) < 8) return;
+        if (Math.abs(dy) >= Math.abs(dx)) { swipe = null; return; }
+        swipe.dragging = true;
+        swipe.tip.classList.add('word-tip-dragging');
+      }
+      swipe.dx = dx;
+      swipe.tip.style.translate = `${Math.round(dx)}px 0`;
+      swipe.tip.style.rotate = `${(dx / 30).toFixed(1)}deg`;
+      swipe.tip.style.opacity = String(Math.max(0.25, 1 - Math.abs(dx) / 220));
+    }, { capture: true, passive: true });
+
+    const endSwipe = () => {
+      const current = swipe;
+      swipe = null;
+      if (!current?.dragging || activeWordTip?.tip !== current.tip) return;
+      const { tip, dx } = current;
+      const fast = Math.abs(dx) / Math.max(1, Date.now() - current.at) > 0.5;
+      swipeClickGuard = Date.now() + 400;
+      tip.classList.remove('word-tip-dragging');
+      if (Math.abs(dx) < 70 && !(fast && Math.abs(dx) > 30)) {
+        ['translate', 'rotate', 'opacity'].forEach(prop => tip.style.removeProperty(prop));
+        return;
+      }
+      const side = Math.sign(dx);
+      tip.style.translate = `${Math.round(side * (window.innerWidth + 40))}px 0`;
+      tip.style.rotate = `${side * 12}deg`;
+      tip.style.opacity = '0';
+      const swiped = activeWordTip;
+      setTimeout(() => { if (activeWordTip === swiped) closeWordTips(); }, 180);
+    };
+    document.addEventListener('touchend', endSwipe, { capture: true, passive: true });
+    document.addEventListener('touchcancel', endSwipe, { capture: true, passive: true });
+
     document.addEventListener('click', event => {
+      // Клик, который браузер досылает после свайпа, не должен заново открыть подсказку
+      if (Date.now() < swipeClickGuard) return;
       if (inOpenTip(event.target)) {
         const play = event.target.closest('.word-tip-play');
         if (play && typeof speak === 'function') speak(play.dataset.say, { noticeHost: activeWordTip.el.closest('.phrase-card') });
@@ -2457,10 +2509,17 @@ Kraft|сила|Существительное|in Kraft treten — вступат
     }
   }
 
+  // Секция прогресса → вкладка упражнений, к которой ведёт чип «осталось».
+  const PENDING_TABS = { fill: 'fill', choice: 'choice', match: 'match', dict: 'dictation' };
+
+  /* Финиш урока (#lessonFinish) — сразу после баннера «Урок завершён».
+     Открывается, как только пройдены флешкарты (это конец страницы), а не
+     только после всех пяти секций: следующий урок, повтор карточек, главная.
+     Пока урок не засчитан, сверху — чипы с оставшимися упражнениями. */
   function renderCompletionNavigation() {
     const banner = document.getElementById('lessonComplete');
     const home = banner?.querySelector('a.btn');
-    if (!home || typeof LESSON_DATA === 'undefined' || banner.querySelector('.lesson-complete-actions')) return;
+    if (!home || typeof LESSON_DATA === 'undefined' || document.getElementById('lessonFinish')) return;
     const [key, unit] = LESSON_DATA.id.split('-');
     const levelIndex = ALL_LEVELS.findIndex(level => level.key === key);
     if (levelIndex < 0) return;
@@ -2469,34 +2528,77 @@ Kraft|сила|Существительное|in Kraft treten — вступат
     const following = current.lessons.find(lesson => lesson.num === Number(unit) + 1);
     const level = following ? current : ALL_LEVELS[levelIndex + 1];
     const next = following || level?.lessons[0];
-    const preview = document.createElement('section');
+    const finish = document.createElement('section');
+    finish.className = 'lesson-finish';
+    finish.id = 'lessonFinish';
+    const pending = document.createElement('div');
+    pending.className = 'lesson-finish-pending';
+    pending.hidden = true;
+    const preview = document.createElement('div');
     preview.className = 'lesson-preview';
     const actions = document.createElement('div');
     actions.className = 'lesson-complete-actions';
-    home.before(preview, actions);
+    finish.append(pending, preview, actions);
+    banner.after(finish);
     actions.append(home);
 
-    if (!next) {
+    if (next) {
+      const num = String(next.num).padStart(2, '0');
+      home.classList.replace('btn-primary', 'btn-ghost');
+      preview.innerHTML = `<div class="lesson-preview-route" aria-hidden="true"><bdi>${current.label}·${Number(unit)}</bdi><i></i><bdi>${level.label}·${next.num}</bdi></div>
+        <div class="lesson-preview-kicker"><span>Дальше по курсу</span></div>
+        <h3>${esc(next.title)}</h3>
+        <div class="lesson-preview-details"></div>
+        <a class="btn btn-primary lesson-next" href="../../${level.key}/lesson-${num}/index.html"><span>Следующий урок</span><span class="lesson-next-arrow" aria-hidden="true">→</span></a>`;
+    } else {
       preview.innerHTML = `<h3>Весь курс A1–B2 позади</h3>
         <div class="lesson-preview-details"><p>Закрепляйте немецкий на живом материале: диалоги, книги, новости, земли Германии и автошкола.</p></div>`;
       home.textContent = 'Читать и слушать →';
-      return;
     }
-    const num = String(next.num).padStart(2, '0');
-    home.classList.replace('btn-primary', 'btn-ghost');
-    preview.innerHTML = `<div class="lesson-preview-kicker"><span>Следующий урок</span> · <bdi>${level.label}·${next.num}</bdi></div>
-      <h3>${esc(next.title)}</h3>
-      <div class="lesson-preview-details"></div>
-      <a class="btn btn-primary lesson-next" href="../../${level.key}/lesson-${num}/index.html">Перейти к уроку</a>`;
 
-    const observer = new MutationObserver(loadWhenComplete);
-    function loadWhenComplete() {
-      if (!banner.classList.contains('show')) return;
-      observer.disconnect();
-      fillLessonPreview(preview, level.key + '-' + num);
+    let previewLoaded = !next;
+    function sync() {
+      if (typeof Progress === 'undefined' || !Progress.getCompletionStatus) return;
+      const status = Progress.getCompletionStatus();
+      const ready = !status.pending.length || status.done.includes('flashcards');
+      finish.classList.toggle('is-ready', ready);
+      renderPending(status.pending);
+      if (ready && !previewLoaded) {
+        previewLoaded = true;
+        fillLessonPreview(preview, level.key + '-' + String(next.num).padStart(2, '0'));
+      }
     }
-    observer.observe(banner, { attributes: true, attributeFilter: ['class'] });
-    loadWhenComplete();
+
+    function renderPending(sections) {
+      const tabs = sections.map(name => document.querySelector(`.ex-tab[data-panel="${PENDING_TABS[name]}"]`)).filter(Boolean);
+      const keyNow = tabs.map(tab => tab.dataset.panel).join();
+      if (pending.dataset.tabs === keyNow) return;
+      pending.dataset.tabs = keyNow;
+      pending.hidden = !tabs.length;
+      pending.textContent = '';
+      if (!tabs.length) return;
+      const lead = document.createElement('p');
+      lead.textContent = 'Чтобы урок засчитался, осталось:';
+      const list = document.createElement('div');
+      list.className = 'lesson-finish-chips';
+      tabs.forEach(tab => {
+        const chip = document.createElement('button');
+        chip.type = 'button';
+        chip.className = 'lesson-finish-chip';
+        chip.textContent = tab.textContent.trim();
+        chip.addEventListener('click', () => {
+          tab.click();
+          const reduce = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+          tab.closest('.lesson-section')?.scrollIntoView({ block: 'start', behavior: reduce ? 'auto' : 'smooth' });
+          tab.focus({ preventScroll: true });
+        });
+        list.append(chip);
+      });
+      pending.append(lead, list);
+    }
+
+    window.addEventListener('dm:lesson-sections', sync);
+    sync();
   }
 
   if (document.readyState === 'loading') {

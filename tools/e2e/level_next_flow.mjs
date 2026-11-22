@@ -63,17 +63,17 @@ console.log('2. Последний урок уровня');
 const LAST = [['a1', 20, 'a2'], ['a2', 20, 'b1'], ['b1', 14, 'b2'], ['b2', 14, null]];
 for (const [lv, n, nx] of LAST) {
   await fresh(`/lessons/${lv}/lesson-${n}/index.html`, { dm_theme: 'dark' });
-  await waitFor(`!!document.querySelector('#lessonComplete .lesson-preview')`);
+  await waitFor(`!!document.querySelector('#lessonFinish .lesson-preview')`);
   ok(!(await c.ev(`document.querySelector('.lesson-preview').getClientRects().length`)),
     `${lv}-${n}: превью скрыто до завершения урока`);
   await c.ev(finish);
   if (nx) await waitFor(`!!document.querySelector('.lesson-preview-example')`);
   s = await J(`(() => {
-    const preview = document.querySelector('#lessonComplete .lesson-preview');
+    const preview = document.querySelector('#lessonFinish .lesson-preview');
     const link = preview.querySelector('.lesson-next');
     return { visible: preview.getClientRects().length > 0, link: link?.pathname,
       sample: !!preview.querySelector('.lesson-preview-example'),
-      home: !!document.querySelector('#lessonComplete .lesson-complete-actions a') };
+      home: !!document.querySelector('#lessonFinish .lesson-complete-actions a') };
   })()`);
   if (nx) ok(s.visible && s.sample && s.link?.endsWith('/lessons/' + nx + '/lesson-01/index.html'),
     `${lv}-${n}: после завершения показан первый урок ${nx.toUpperCase()}`, s);

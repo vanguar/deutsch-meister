@@ -121,17 +121,17 @@ document.getElementById('run').onclick = async () => {
     doc = await load();
     check(doc.querySelectorAll('.fc-dot.done').length === 24 && doc.getElementById('flashcard').style.display === 'none', 'completed review survives reload');
     const restart = doc.querySelector('.flashcard-restart');
-    const open = doc.querySelector('.flashcard-open');
-    check(restart && !restart.getClientRects().length && open?.getClientRects().length > 0,
-      'the completed deck can be opened from its own section before the lesson is done');
-    open.click();
-    check(doc.getElementById('cardCounter').textContent === 'Карточка 1 из 24' && !doc.querySelector('.flashcard-open'),
-      'the section opener starts the deck and disappears until the review ends');
+    check(restart?.getClientRects().length > 0 && doc.querySelector('.lesson-next')?.getClientRects().length > 0 &&
+      doc.querySelector('.lesson-finish-chip')?.getClientRects().length > 0,
+      'the completed deck offers repeat, next lesson and the remaining exercises before the lesson is done');
+    restart.click();
+    check(doc.getElementById('cardCounter').textContent === 'Карточка 1 из 24' && !doc.querySelector('.flashcard-restart').getClientRects().length,
+      'the repeat action starts the deck and hides until the review ends');
     for (let i = 0; i < 24; i++) rate(doc);
     for (const section of ['fill', 'choice', 'match', 'dict']) doc.defaultView.eval(`Progress.markSectionDone('${section}', 100)`);
     const completedRestart = doc.querySelector('.flashcard-restart');
-    check(completedRestart.getClientRects().length > 0 && !doc.querySelector('.flashcard-open').getClientRects().length,
-      'after lesson completion only the banner repeat action is visible');
+    check(completedRestart.getClientRects().length > 0 && !doc.querySelector('.lesson-finish-pending').getClientRects().length,
+      'after lesson completion the remaining-exercise hint disappears');
     completedRestart.click();
     check(doc.getElementById('cardCounter').textContent === 'Карточка 1 из 24' && doc.querySelectorAll('.fc-dot.done').length === 0,
       'completed cards can be reviewed again using the restart button');

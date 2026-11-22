@@ -282,10 +282,14 @@
   visibility: hidden;
   pointer-events: none;
   z-index: 1000;
-  transition: opacity .18s ease, transform .18s ease, visibility .18s ease;
+  transition: opacity .18s ease, transform .18s ease, visibility .18s ease, translate .18s ease, rotate .18s ease;
   white-space: normal;
   text-align: left;
+  /* горизонтальный жест — наш (смахнуть подсказку), вертикальный — прокрутка */
+  touch-action: pan-y;
 }
+/* Свайп (js/lesson-render.js): пока палец ведёт карточку — без задержек */
+.word-tip.word-tip-dragging { transition: none; }
 
 .word-tip::after {
   content: '';
@@ -592,35 +596,122 @@
 .lesson-complete.show { display: block; }
 .lesson-complete > br { display: none; }
 
+/* ── Финиш урока (#lessonFinish, js/lesson-render.js) ──
+   Появляется после флешкарт: «билет» на следующий урок с маршрутом
+   A1·7 → A1·8, ниже — повтор карточек и главная. */
+.lesson-finish {
+  display: none;
+  max-width: 34rem;
+  margin: 20px auto 0;
+}
+.lesson-finish.is-ready { display: block; animation: fadeUp .5s both; }
+
+.lesson-finish-pending {
+  margin-block-end: 12px;
+  padding: 12px 14px;
+  border: 1px dashed color-mix(in srgb, var(--accent2) 45%, var(--border));
+  border-radius: var(--r-md);
+  background: color-mix(in srgb, var(--accent2) 6%, transparent);
+}
+.lesson-finish-pending[hidden] { display: none; }
+.lesson-finish-pending p { margin: 0 0 8px; color: var(--text-muted); font-size: 13px; }
+.lesson-finish-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.lesson-finish-chip {
+  min-height: 36px;
+  padding: 6px 12px;
+  border: 1px solid color-mix(in srgb, var(--accent2) 40%, var(--border));
+  border-radius: var(--r-full);
+  background: var(--surface);
+  color: var(--accent2-text);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.lesson-finish-chip:hover { border-color: var(--accent2); }
+.lesson-finish-chip:focus-visible { outline: 2px solid var(--accent2-text); outline-offset: 2px; }
+
 .lesson-complete-actions {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 8px;
 }
-.lesson-complete-actions .btn,
-.flashcard-open {
+.lesson-complete-actions .btn {
   min-height: 44px;
   padding: 8px 14px;
   white-space: normal;
 }
-.lesson-complete.show + .flashcard-open { display: none; }
+.flashcard-restart[hidden] { display: none; }
+.flashcard-restart-icon { flex: none; overflow: visible; }
+.flashcard-restart-icon rect {
+  fill: var(--surface);
+  stroke: currentColor;
+  stroke-width: 1.6;
+  transition: transform var(--t-normal);
+}
+.flashcard-restart-icon .stack-back { opacity: .55; }
+.flashcard-restart:hover .stack-front,
+.flashcard-restart:focus-visible .stack-front { transform: translate(-2px, 2px) rotate(-6deg); transform-origin: 14px 10px; }
+.flashcard-restart:hover .stack-back,
+.flashcard-restart:focus-visible .stack-back { transform: translate(1px, -1px) rotate(5deg); transform-origin: 9px 13px; }
+
 .lesson-preview {
-  max-width: 34rem;
-  margin: 0 auto 16px;
-  padding: clamp(14px, 4vw, 22px);
+  position: relative;
+  margin: 0 0 14px;
+  padding: clamp(16px, 4vw, 22px);
   border: 1px solid var(--border);
-  border-radius: var(--r-md);
-  background: var(--surface);
+  border-radius: var(--r-lg);
+  background:
+    radial-gradient(120% 90% at 100% 0%, color-mix(in srgb, var(--accent2) 12%, transparent), transparent 60%),
+    var(--surface);
+  box-shadow: var(--shadow-sm);
   color: var(--text-strong);
   text-align: start;
   overflow-wrap: anywhere;
 }
+/* Маршрут: пройденная остановка — заливка, следующая — кольцо, между ними пунктир */
+.lesson-preview-route {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-block-end: 12px;
+  color: var(--text-muted);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .02em;
+}
+.lesson-preview-route bdi { display: inline-flex; align-items: center; gap: 6px; }
+.lesson-preview-route bdi::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent2);
+}
+.lesson-preview-route bdi:last-child { color: var(--accent2-text); }
+.lesson-preview-route bdi:last-child::before {
+  background: var(--surface);
+  box-shadow: inset 0 0 0 2px var(--accent2-text);
+}
+.lesson-preview-route i {
+  flex: 1;
+  min-width: 24px;
+  height: 2px;
+  background: repeating-linear-gradient(90deg, var(--accent2) 0 6px, transparent 6px 11px);
+  background-size: 22px 2px;
+  animation: lesson-route 1.4s linear infinite;
+}
+html[dir="rtl"] .lesson-preview-route i { animation-direction: reverse; }
+@keyframes lesson-route { to { background-position: 22px 0; } }
+
 .lesson-preview-kicker {
-  margin-block-end: 6px;
+  margin-block-end: 4px;
   color: var(--text-muted);
   font-size: 12px;
   font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .06em;
 }
 .lesson-preview h3 { margin: 0; font-size: 20px; line-height: 1.3; }
 .lesson-preview-details p { margin: 6px 0 0; color: var(--text-muted); font-size: 14px; }
@@ -630,7 +721,30 @@
   border-inline-start: 2px solid var(--border);
 }
 .lesson-preview-example bdi { display: block; color: var(--text-strong); font-weight: 600; }
-.lesson-next { min-height: 44px; margin-block-start: 14px; padding: 8px 16px; white-space: normal; }
+.lesson-next {
+  width: 100%;
+  min-height: 48px;
+  margin-block-start: 16px;
+  padding: 10px 18px;
+  font-size: 15px;
+  white-space: normal;
+}
+.lesson-next-arrow {
+  display: inline-block;
+  transition: transform var(--t-normal);
+  animation: lesson-next-nudge 2.4s ease-in-out 1s infinite;
+}
+/* scale применяется до transform: в RTL стрелка смотрит влево и «толкается» влево */
+html[dir="rtl"] .lesson-next-arrow { scale: -1 1; }
+.lesson-next:hover .lesson-next-arrow { animation: none; transform: translateX(4px); }
+@keyframes lesson-next-nudge {
+  0%, 70%, 100% { transform: translateX(0); }
+  80% { transform: translateX(4px); }
+  90% { transform: translateX(1px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .lesson-preview-route i, .lesson-next-arrow { animation: none; }
+}
 
 .lesson-support {
   max-width: 36rem;

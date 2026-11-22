@@ -285,6 +285,8 @@ const Progress = (() => {
     const finished = isLessonFullyDone();
     const banner = document.getElementById('lessonComplete');
     banner?.classList.toggle('show', finished);
+    // Финиш урока (lesson-render.js) следит за секциями по этому событию
+    window.dispatchEvent(new Event('dm:lesson-sections'));
     if (!finished) return;
     const id = (typeof LESSON_DATA !== 'undefined') ? LESSON_DATA?.id : null;
     if (!id) return;

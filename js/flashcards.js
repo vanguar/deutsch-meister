@@ -36,7 +36,8 @@ const Flashcards = (() => {
     actions:  'cardActions',
     counter:  'cardCounter',
     dots:     'cardDots',
-    complete: 'lessonComplete'
+    complete: 'lessonComplete',
+    finish:   'lessonFinish'   // финиш урока из lesson-render.js
   };
 
   /* ── Состояние сессии ── */
@@ -64,7 +65,6 @@ const Flashcards = (() => {
   let onKeyDown = null;
   let onCardTap = null;
   let restartButton = null;
-  let openButton = null;
 
   function byId(key) {
     const id = ids[key];
@@ -78,9 +78,7 @@ const Flashcards = (() => {
 
   function destroy() {
     restartButton?.remove();
-    openButton?.remove();
     restartButton = null;
-    openButton = null;
     if (onKeyDown) document.removeEventListener('keydown', onKeyDown);
     if (onCardTap && elCard) elCard.removeEventListener('click', onCardTap);
     onKeyDown = null;
@@ -438,22 +436,34 @@ const Flashcards = (() => {
     Progress.markSectionDone('flashcards', computeScore());
   }
 
-  function reviewButton(className, label) {
-    const button = document.createElement('button');
-    button.type = 'button';
-    button.className = 'btn btn-ghost ' + className;
-    button.textContent = window.I18N ? I18N.t(label) : label;
-    button.addEventListener('click', () => {
-      if (init(null, true)) elCard.focus();
-    });
-    return button;
-  }
+  // Стопка карточек: на наведении верхняя «соскальзывает» (css/lesson.css)
+  const STACK_ICON = '<svg class="flashcard-restart-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">' +
+    '<rect class="stack-back" x="3" y="6" width="13" height="15" rx="2.5"/>' +
+    '<rect class="stack-front" x="8" y="3" width="13" height="15" rx="2.5"/></svg>';
 
+  // Кнопка повтора живёт в финише урока рядом со «Следующим уроком» и
+  // видна, только когда колода пройдена (во время повтора она не нужна).
   function mountRestartButton() {
-    const completionActions = elComplete?.querySelector('.lesson-complete-actions') || elComplete;
-    if (!completionActions) return;
-    restartButton = reviewButton('flashcard-restart', '↻ Повторить флешкарты');
-    completionActions.appendChild(restartButton);
+    const host = byId('finish')?.querySelector('.lesson-complete-actions') ||
+      elComplete?.querySelector('.lesson-complete-actions') || elComplete;
+    if (!host) return;
+    const label = document.createElement('span');
+    const text = 'Повторить флешкарты';
+    label.textContent = window.I18N ? I18N.t(text) : text;
+    restartButton = document.createElement('button');
+    restartButton.type = 'button';
+    restartButton.className = 'btn btn-ghost flashcard-restart';
+    restartButton.hidden = true;
+    restartButton.innerHTML = STACK_ICON;
+    restartButton.append(label);
+    restartButton.addEventListener('click', () => {
+      if (!init(null, true)) return;
+      const reduce = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+      elCard.scrollIntoView?.({ block: 'center', behavior: reduce ? 'auto' : 'smooth' });
+      elCard.focus({ preventScroll: true });
+    });
+    const home = host.querySelector('a.btn');
+    host.insertBefore(restartButton, home || null);
   }
 
   function showCompleted() {
@@ -466,11 +476,7 @@ const Flashcards = (() => {
       const message = 'Все карточки повторены';
       elCounter.textContent = window.I18N ? I18N.t(message) : message;
     }
-    const anchor = elComplete || elActions;
-    if (anchor) {
-      openButton = reviewButton('flashcard-open', 'Открыть флешкарты');
-      anchor.after(openButton);
-    }
+    if (restartButton) restartButton.hidden = false;
     syncDots();
   }
 

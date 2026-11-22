@@ -14,6 +14,13 @@ class Element {
     toggle: (c, yes) => yes ? this.classList.add(c) : this.classList.remove(c)
   }; }
   appendChild(el) { this.children.push(el); el.parentElement = this; return el; }
+  append(...els) { els.forEach(el => this.appendChild(el)); }
+  insertBefore(el, ref) {
+    if (!ref) return this.appendChild(el);
+    this.children.splice(this.children.indexOf(ref), 0, el);
+    el.parentElement = this;
+    return el;
+  }
   before(el) { this.parentElement.appendChild(el); }
   after(el) {
     const parent = this.parentElement;
@@ -83,11 +90,14 @@ assert.equal(app.completions.length, 0);
 const recovered = boot({ ...app.store, 'dm_sections:test': '[]' });
 assert.deepEqual(recovered.completions, [['flashcards', 75]], 'a saved completed deck restores a missing section result');
 const reopened = boot({ ...app.store });
-const openButton = reopened.ids.lessonComplete.parentElement.children.find(el => el.classList.contains('flashcard-open'));
-openButton.listeners.click();
-assert.equal(reopened.ids.cardCounter.textContent, 'Карточка 1 из 4', 'the section can reopen a saved completed deck');
+const restartButton = () => reopened.ids.lessonComplete.children.find(el => el.classList.contains('flashcard-restart'));
+const repeat = restartButton();
+assert.equal(repeat.hidden, false, 'a saved completed deck offers the repeat action');
+repeat.listeners.click();
+assert.equal(reopened.ids.cardCounter.textContent, 'Карточка 1 из 4', 'the repeat action reopens a saved completed deck');
 assert.equal(reopened.ids.flashcard.focused, true);
-assert.equal(reopened.ids.lessonComplete.parentElement.children.includes(openButton), false, 'the opener is removed while the deck is active');
+assert.equal(reopened.ids.lessonComplete.children.includes(repeat), false, 'the previous button is replaced on restart');
+assert.equal(restartButton().hidden, true, 'the repeat action is hidden while the deck is active');
 assert.equal(reopened.completions.length, 0, 'reopening does not change the saved result');
 assert.equal(reopened.awards.length, 0, 'reopening does not award XP');
 app.ids.lessonComplete.children.find(el => el.className.includes('flashcard-restart')).listeners.click();

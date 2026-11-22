@@ -137,36 +137,40 @@ try {
   await ev('testSpeech.voice = true; delete navigator.onLine');
 
   await expect('!(' + visible('.lesson-next') + ') && !(' + visible('.flashcard-restart') + ')',
-    'Completion actions are hidden while the lesson is incomplete');
-  await expect(visible('#flashcard') + ' && !(' + visible('.flashcard-open') + ')',
+    'Finish actions are hidden while the flashcards are unfinished');
+  await expect(visible('#flashcard') + ' && !(' + visible('.flashcard-restart') + ')',
     'An active deck is directly available without a separate opener');
   await ev('Progress.markSectionDone("fill", 100); ' + markRemainingCards);
-  await expect(visible('.flashcard-open') + ' && !(' + visible('.lesson-next') + ') && !(' +
-    visible('.flashcard-restart') + ') && !Progress.isLessonFullyDone()',
-    'Finishing flashcards first exposes the section opener and keeps completion actions hidden');
+  await until(visible('.lesson-preview-example'), 'The next lesson preview loads as soon as the flashcards are done');
+  await expect(visible('.flashcard-restart') + ' && ' + visible('.lesson-next') + ' && !(' + visible('#lessonComplete') + ')' +
+    ' && [...document.querySelectorAll(".lesson-finish-chip")].map(chip => chip.textContent).join() === "Выбор ответа,Сопоставление,Диктант"' +
+    ' && !Progress.isLessonFullyDone()',
+    'Finishing flashcards first shows repeat, next lesson and the remaining exercises without completing the lesson');
   const xp = await ev('Progress.getXP()');
   await go(base + lessonPath, 850);
-  await expect(visible('.flashcard-open') + ' && !(' + visible('#flashcard') + ') && !(' +
-    visible('.lesson-next') + ') && !(' + visible('.flashcard-restart') + ')',
-    'A saved completed deck can still be opened after reloading an incomplete lesson');
+  await expect(visible('.flashcard-restart') + ' && !(' + visible('#flashcard') + ') && ' + visible('.lesson-next'),
+    'A saved completed deck keeps the finish actions after reloading an incomplete lesson');
   await send('Emulation.setDeviceMetricsOverride', { width: 320, height: 720, deviceScaleFactor: 1, mobile: true });
   await send('Emulation.setTouchEmulationEnabled', { enabled: true, maxTouchPoints: 1 });
-  await capture('.flashcard-open', 'lesson-flashcards-open.png');
-  await tap('.flashcard-open');
-  await expect(visible('#flashcard') + ' && !(' + visible('.flashcard-open') + ') && ' +
+  await capture('#lessonFinish', 'lesson-finish-pending.png');
+  await expect('document.documentElement.scrollWidth <= innerWidth + 1', 'Finish block fits a 320px screen');
+  await tap('.lesson-finish-chip:last-child');
+  await until('document.querySelector(".ex-tab.active")?.dataset.panel === "dictation"', 'A remaining-exercise chip opens its tab');
+  await tap('.flashcard-restart');
+  await expect(visible('#flashcard') + ' && !(' + visible('.flashcard-restart') + ') && ' +
     'document.activeElement.id === "flashcard" && document.querySelector("#cardCounter").textContent.startsWith("Карточка 1 из") && ' +
     'Progress.getCompletionStatus().done.includes("fill") && Progress.getCompletionStatus().done.includes("flashcards")',
-    'A touch on the opener restores the deck at card one and preserves recorded progress');
+    'A touch on repeat restores the deck at card one and preserves recorded progress');
   await ev('cardFlip(); cardGood(); TTS.stop()');
   await go(base + lessonPath, 850);
   await expect(visible('#flashcard') + ' && document.querySelector("#cardCounter").textContent.startsWith("Карточка 2 из")',
     'An optional review resumes from the last card after reloading');
   await ev(markRemainingCards);
-  await expect(visible('.flashcard-open') + ' && Progress.getXP() === ' + xp,
-    'Finishing a repeated deck restores the opener without awarding XP twice');
+  await expect(visible('.flashcard-restart') + ' && Progress.getXP() === ' + xp,
+    'Finishing a repeated deck restores the repeat action without awarding XP twice');
   await ev(markExercises);
-  await until(visible('.lesson-preview-example'), 'The next lesson preview loads after all five sections are complete');
-  await expect(visible('.lesson-next') + ' && ' + visible('.flashcard-restart.btn-ghost') + ' && !(' + visible('.flashcard-open') + ')' +
+  await until(visible('#lessonComplete'), 'The completion banner appears after all five sections are complete');
+  await expect(visible('.lesson-next') + ' && ' + visible('.flashcard-restart.btn-ghost') + ' && !(' + visible('.lesson-finish-pending') + ')' +
     ' && ' + query('.lesson-preview h3') + '.textContent === "Komplexe Texte" && ' +
     query('.lesson-preview-details') + '.textContent.includes("Анализ и стилистика") && ' +
     query('.lesson-preview-example bdi') + '.textContent === "Den Text zusammenfassen"',
@@ -175,7 +179,7 @@ try {
   await go(base + lessonPath, 850);
   await expect(visible('.lesson-next') + ' && ' + visible('.flashcard-restart'), 'Both actions stay visible after reloading the completed lesson');
   await click('.flashcard-restart');
-  await expect(visible('.lesson-next') + ' && ' + visible('.flashcard-restart') + ' && ' + visible('#flashcard') +
+  await expect(visible('.lesson-next') + ' && !(' + visible('.flashcard-restart') + ') && ' + visible('#flashcard') +
     ' && document.activeElement.id === "flashcard" && Progress.isLessonFullyDone()',
     'Repeating flashcards returns focus to the deck and preserves lesson completion');
   await click('.lesson-next');
@@ -184,8 +188,8 @@ try {
   assert.deepEqual(errors(), []);
 
   for (const [lang, label, example, direction] of [
-    ['uk', 'Перейти до уроку', 'Скільки тобі років', 'ltr'],
-    ['ar', 'انتقل إلى الدرس', 'كم عمرك', 'rtl']
+    ['uk', 'Наступний урок→', 'Скільки тобі років', 'ltr'],
+    ['ar', 'الدرس التالي→', 'كم عمرك', 'rtl']
   ]) {
     await go(base + '/lessons/a1/lesson-01/index.html?lang=' + lang + '&lts=' + Date.now(), 850);
     await expect(visible(grammar) + ' && ' + visible(phrase) + ' && ' + visible(vocab) +
@@ -200,7 +204,8 @@ try {
   }
   await ev('localStorage.removeItem("dm_cards:a1-01")');
   await go(base + '/lessons/a1/lesson-01/index.html', 850);
-  await expect(visible('.lesson-next') + ' && ' + visible('.flashcard-restart'), 'Both actions work with synced completion and no local deck');
+  await expect(visible('.lesson-next') + ' && ' + visible('#flashcard') + ' && !(' + visible('.flashcard-restart') + ')',
+    'Synced completion without a local deck opens the deck and keeps the next lesson');
   await ev('Progress.resetLessonProgress(LESSON_DATA.id)');
   await expect('!(' + visible('.lesson-next') + ') && !(' + visible('.flashcard-restart') + ')',
     'Resetting the lesson hides both completion actions');
