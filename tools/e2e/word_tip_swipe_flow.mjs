@@ -1,4 +1,6 @@
-// E2E: подсказку над словом можно смахнуть свайпом влево или вправо.
+// E2E: подсказку над словом можно смахнуть свайпом влево или вправо —
+// в уроках (js/lesson-render.js) и в ридере книг (js/reader-tip.js),
+// общий жест — js/tip-swipe.js.
 //   python -m http.server 8765   (из корня репо)
 //   node --experimental-websocket tools/e2e/word_tip_swipe_flow.mjs
 // Короткий сдвиг возвращает карточку на место, тап по «озвучить» после
@@ -65,6 +67,40 @@ ok(!(await c.ev(isOpen)), 'быстрый флик тоже смахивает')
 at = await openTip();
 await c.ev(`window.scrollBy(0, 40)`); await c.wait(300);
 ok(!(await c.ev(isOpen)), 'прокрутка по-прежнему закрывает подсказку');
+
+// ── Ридер книг ──
+console.log('Ридер');
+await c.go(B + '/books.html?lang=ru&lts=' + Date.now(), 2500);
+await c.ev(`Reader.open('bremer')`);
+for (let t = 0; t < 8000 && !(await c.ev(`/гл\./.test(document.getElementById('rdPages')?.textContent || '')`)); t += 100) await c.wait(100);
+await c.wait(600);
+const bookTip = `document.querySelector('.word-tip--book')`;
+const bookOpen = `ReaderTip.isOpen() && !!document.querySelector('.word-tip--book.word-tip-visible')`;
+async function openBookWord(n) {
+  const p = await J(`(() => { const v = document.querySelector('.rd-viewport').getBoundingClientRect();
+    const words = [...document.querySelectorAll('#rdContent .bw')].filter(w => { const b = w.getBoundingClientRect();
+      return b.width && b.left >= v.left && b.right <= v.right && b.top >= v.top + 40 && b.bottom <= v.bottom - 40; });
+    const r = words[${n}].getBoundingClientRect(); return { x: r.left + r.width / 2, y: r.top + r.height / 2 }; })()`);
+  await touch('touchStart', p.x, p.y); await touch('touchEnd');
+  await c.wait(400);
+  return J(`(() => { const r = ${bookTip}.getBoundingClientRect(); return { x: r.left + r.width / 2, y: r.top + 24 }; })()`);
+}
+const pageBefore = await c.ev(`document.getElementById('rdPages').textContent + '|' + document.querySelector('.rd-viewport').scrollLeft`);
+for (const [n, dx] of [[0, -140], [3, 140]]) {
+  at = await openBookWord(n);
+  ok(await c.ev(bookOpen), `ридер: подсказка открыта (${dx < 0 ? 'влево' : 'вправо'})`);
+  await drag(at, dx);
+  await c.wait(450);
+  ok(!(await c.ev(`ReaderTip.isOpen()`)), `ридер: свайп ${dx < 0 ? 'влево' : 'вправо'} закрывает подсказку`);
+}
+ok(await c.ev(`document.getElementById('rdPages').textContent + '|' + document.querySelector('.rd-viewport').scrollLeft`) === pageBefore,
+  'ридер: свайп по подсказке не листает страницу');
+at = await openBookWord(1);
+s = await J(`(() => { const t = ${bookTip}; return { open: ReaderTip.isOpen(), translate: t.style.translate, opacity: t.style.opacity }; })()`);
+ok(s.open && !s.translate && !s.opacity, 'ридер: после свайпа следующая подсказка открывается без сдвига', s);
+await drag(at, 30, 4);
+await c.wait(300);
+ok(await c.ev(bookOpen), 'ридер: короткий сдвиг возвращает подсказку на место');
 
 const errs = c.errors();
 ok(errs.length === 0, 'без ошибок JS', errs);

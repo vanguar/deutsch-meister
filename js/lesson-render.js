@@ -1989,7 +1989,7 @@ Kraft|сила|Существительное|in Kraft treten — вступат
   function closeWordTips(except = null) {
     clearTimeout(wordTipCloseTimer);
     if (activeWordTip && activeWordTip.el !== except) {
-      activeWordTip.tip.classList.remove('word-tip-visible', 'word-tip-below', 'word-tip-dragging');
+      activeWordTip.tip.classList.remove('word-tip-visible', 'word-tip-below');
       activeWordTip.tip.removeAttribute('style');
       activeWordTip.placeholder.replaceWith(activeWordTip.tip);
       activeWordTip = null;
@@ -2098,59 +2098,15 @@ Kraft|сила|Существительное|in Kraft treten — вступат
       wordTipCloseTimer = setTimeout(() => closeWordTips(), 120);
     }, true);
 
-    // Свайп влево/вправо по открытой подсказке смахивает её: карточка едет
-    // за пальцем, а после порога улетает в сторону и закрывается.
-    let swipe = null;
-    let swipeClickGuard = 0;
-    document.addEventListener('touchstart', event => {
-      swipe = null;
-      if (!inOpenTip(event.target) || event.touches.length !== 1) return;
-      const touch = event.touches[0];
-      swipe = { tip: activeWordTip.tip, x: touch.clientX, y: touch.clientY, dx: 0, at: Date.now(), dragging: false };
-    }, { capture: true, passive: true });
-
-    document.addEventListener('touchmove', event => {
-      if (!swipe || activeWordTip?.tip !== swipe.tip) return;
-      const touch = event.touches[0];
-      const dx = touch.clientX - swipe.x;
-      const dy = touch.clientY - swipe.y;
-      if (!swipe.dragging) {
-        if (Math.abs(dx) < 8 && Math.abs(dy) < 8) return;
-        if (Math.abs(dy) >= Math.abs(dx)) { swipe = null; return; }
-        swipe.dragging = true;
-        swipe.tip.classList.add('word-tip-dragging');
-      }
-      swipe.dx = dx;
-      swipe.tip.style.translate = `${Math.round(dx)}px 0`;
-      swipe.tip.style.rotate = `${(dx / 30).toFixed(1)}deg`;
-      swipe.tip.style.opacity = String(Math.max(0.25, 1 - Math.abs(dx) / 220));
-    }, { capture: true, passive: true });
-
-    const endSwipe = () => {
-      const current = swipe;
-      swipe = null;
-      if (!current?.dragging || activeWordTip?.tip !== current.tip) return;
-      const { tip, dx } = current;
-      const fast = Math.abs(dx) / Math.max(1, Date.now() - current.at) > 0.5;
-      swipeClickGuard = Date.now() + 400;
-      tip.classList.remove('word-tip-dragging');
-      if (Math.abs(dx) < 70 && !(fast && Math.abs(dx) > 30)) {
-        ['translate', 'rotate', 'opacity'].forEach(prop => tip.style.removeProperty(prop));
-        return;
-      }
-      const side = Math.sign(dx);
-      tip.style.translate = `${Math.round(side * (window.innerWidth + 40))}px 0`;
-      tip.style.rotate = `${side * 12}deg`;
-      tip.style.opacity = '0';
-      const swiped = activeWordTip;
-      setTimeout(() => { if (activeWordTip === swiped) closeWordTips(); }, 180);
-    };
-    document.addEventListener('touchend', endSwipe, { capture: true, passive: true });
-    document.addEventListener('touchcancel', endSwipe, { capture: true, passive: true });
+    // Свайп влево/вправо смахивает подсказку (js/tip-swipe.js)
+    if (typeof TipSwipe !== 'undefined') {
+      TipSwipe.attach({
+        active: () => activeWordTip && { tip: activeWordTip.tip, key: activeWordTip },
+        dismiss: () => closeWordTips()
+      });
+    }
 
     document.addEventListener('click', event => {
-      // Клик, который браузер досылает после свайпа, не должен заново открыть подсказку
-      if (Date.now() < swipeClickGuard) return;
       if (inOpenTip(event.target)) {
         const play = event.target.closest('.word-tip-play');
         if (play && typeof speak === 'function') speak(play.dataset.say, { noticeHost: activeWordTip.el.closest('.phrase-card') });

@@ -28,7 +28,8 @@
    (js/reader.js + js/reader-speak.js). Состояние «играет» ставится
    снаружи через setSpeaking().
 
-   Zero dependencies.
+   Свайп влево/вправо смахивает тултип — общий жест из js/tip-swipe.js
+   (подключается до этого файла; без него тултип просто не смахивается).
    ═══════════════════════════════════════════════ */
 
 const ReaderTip = (() => {
@@ -344,6 +345,15 @@ const ReaderTip = (() => {
     document.addEventListener('keydown', e => {
       if (e.key === 'Escape') close();
     });
+
+    // Свайп влево/вправо смахивает подсказку (js/tip-swipe.js). Тултип
+    // живёт в body, вне .rd-viewport, — страницу этот жест не листает.
+    if (typeof TipSwipe !== 'undefined') {
+      TipSwipe.attach({
+        active: () => (target && elTip && !collapsed) ? { tip: elTip, key: target } : null,
+        dismiss: close
+      });
+    }
 
     window.addEventListener('resize', close);
     window.addEventListener('orientationchange', close);
